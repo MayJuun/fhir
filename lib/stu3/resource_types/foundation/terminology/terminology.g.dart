@@ -365,8 +365,8 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$ConceptMapStatusEnumMap, json['status'],
-        unknownValue: ConceptMapStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -420,7 +420,7 @@ Map<String, dynamic> _$_$_ConceptMapToJson(_$_ConceptMap instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$ConceptMapStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -439,13 +439,6 @@ Map<String, dynamic> _$_$_ConceptMapToJson(_$_ConceptMap instance) {
   writeNotNull('group', instance.group?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$ConceptMapStatusEnumMap = {
-  ConceptMapStatus.draft: 'draft',
-  ConceptMapStatus.active: 'active',
-  ConceptMapStatus.retired: 'retired',
-  ConceptMapStatus.unknown: 'unknown',
-};
 
 _$_ConceptMapGroup _$_$_ConceptMapGroupFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['element']);
@@ -637,9 +630,8 @@ _$_ExpansionProfile _$_$_ExpansionProfileFromJson(Map<String, dynamic> json) {
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     version: json['version'] as String,
     name: json['name'] as String,
-    status: _$enumDecodeNullable(
-        _$ExpansionProfileStatusEnumMap, json['status'],
-        unknownValue: ExpansionProfileStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -714,7 +706,7 @@ Map<String, dynamic> _$_$_ExpansionProfileToJson(_$_ExpansionProfile instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
-  writeNotNull('status', _$ExpansionProfileStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -739,13 +731,6 @@ Map<String, dynamic> _$_$_ExpansionProfileToJson(_$_ExpansionProfile instance) {
   writeNotNull('limitedExpansion', instance.limitedExpansion?.toJson());
   return val;
 }
-
-const _$ExpansionProfileStatusEnumMap = {
-  ExpansionProfileStatus.draft: 'draft',
-  ExpansionProfileStatus.active: 'active',
-  ExpansionProfileStatus.retired: 'retired',
-  ExpansionProfileStatus.unknown: 'unknown',
-};
 
 _$_ExpansionProfileFixedVersion _$_$_ExpansionProfileFixedVersionFromJson(
     Map<String, dynamic> json) {
@@ -943,8 +928,8 @@ _$_NamingSystem _$_$_NamingSystemFromJson(Map<String, dynamic> json) {
   return _$_NamingSystem(
     resourceType: json['resourceType'] as String ?? 'NamingSystem',
     name: json['name'] as String,
-    status: _$enumDecodeNullable(_$NamingSystemStatusEnumMap, json['status'],
-        unknownValue: NamingSystemStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     kind: _$enumDecodeNullable(_$NamingSystemKindEnumMap, json['kind'],
         unknownValue: NamingSystemKind.unknown),
     date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
@@ -991,7 +976,7 @@ Map<String, dynamic> _$_$_NamingSystemToJson(_$_NamingSystem instance) {
 
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull('name', instance.name);
-  writeNotNull('status', _$NamingSystemStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('kind', _$NamingSystemKindEnumMap[instance.kind]);
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -1009,13 +994,6 @@ Map<String, dynamic> _$_$_NamingSystemToJson(_$_NamingSystem instance) {
   writeNotNull('replacedBy', instance.replacedBy?.toJson());
   return val;
 }
-
-const _$NamingSystemStatusEnumMap = {
-  NamingSystemStatus.draft: 'draft',
-  NamingSystemStatus.active: 'active',
-  NamingSystemStatus.retired: 'retired',
-  NamingSystemStatus.unknown: 'unknown',
-};
 
 const _$NamingSystemKindEnumMap = {
   NamingSystemKind.codesystem: 'codesystem',
@@ -1077,8 +1055,8 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$ValueSetStatusEnumMap, json['status'],
-        unknownValue: ValueSetStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -1131,7 +1109,7 @@ Map<String, dynamic> _$_$_ValueSetToJson(_$_ValueSet instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$ValueSetStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -1149,13 +1127,6 @@ Map<String, dynamic> _$_$_ValueSetToJson(_$_ValueSet instance) {
   writeNotNull('expansion', instance.expansion?.toJson());
   return val;
 }
-
-const _$ValueSetStatusEnumMap = {
-  ValueSetStatus.draft: 'draft',
-  ValueSetStatus.active: 'active',
-  ValueSetStatus.retired: 'retired',
-  ValueSetStatus.unknown: 'unknown',
-};
 
 _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['include']);

@@ -528,8 +528,8 @@ _$_CapabilityStatementSearchParam _$_$_CapabilityStatementSearchParamFromJson(
   return _$_CapabilityStatementSearchParam(
     name: json['name'] as String,
     definition: json['definition'] as String,
-    type: _$enumDecodeNullable(_$SearchParamTypeEnumMap, json['type'],
-        unknownValue: SearchParamType.unknown),
+    type: _$enumDecodeNullable(_$ParameterSearchTypeEnumMap, json['type'],
+        unknownValue: ParameterSearchType.unknown),
     documentation: json['documentation'] as String,
   );
 }
@@ -546,21 +546,21 @@ Map<String, dynamic> _$_$_CapabilityStatementSearchParamToJson(
 
   writeNotNull('name', instance.name);
   writeNotNull('definition', instance.definition);
-  writeNotNull('type', _$SearchParamTypeEnumMap[instance.type]);
+  writeNotNull('type', _$ParameterSearchTypeEnumMap[instance.type]);
   writeNotNull('documentation', instance.documentation);
   return val;
 }
 
-const _$SearchParamTypeEnumMap = {
-  SearchParamType.number: 'number',
-  SearchParamType.date: 'date',
-  SearchParamType.string: 'string',
-  SearchParamType.token: 'token',
-  SearchParamType.reference: 'reference',
-  SearchParamType.composite: 'composite',
-  SearchParamType.quantity: 'quantity',
-  SearchParamType.uri: 'uri',
-  SearchParamType.unknown: 'unknown',
+const _$ParameterSearchTypeEnumMap = {
+  ParameterSearchType.number: 'number',
+  ParameterSearchType.date: 'date',
+  ParameterSearchType.string: 'string',
+  ParameterSearchType.token: 'token',
+  ParameterSearchType.reference: 'reference',
+  ParameterSearchType.composite: 'composite',
+  ParameterSearchType.quantity: 'quantity',
+  ParameterSearchType.uri: 'uri',
+  ParameterSearchType.unknown: 'unknown',
 };
 
 _$_CapabilityStatementInteraction1 _$_$_CapabilityStatementInteraction1FromJson(
@@ -698,8 +698,8 @@ _$_CapabilityStatementSupportedMessage
         Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['definition']);
   return _$_CapabilityStatementSupportedMessage(
-    mode: _$enumDecodeNullable(_$SupportedMessageModeEnumMap, json['mode'],
-        unknownValue: SupportedMessageMode.unknown),
+    mode: _$enumDecodeNullable(_$ModeEnumMap, json['mode'],
+        unknownValue: Mode.unknown),
     definition: json['definition'] == null
         ? null
         : Reference.fromJson(json['definition'] as Map<String, dynamic>),
@@ -716,15 +716,15 @@ Map<String, dynamic> _$_$_CapabilityStatementSupportedMessageToJson(
     }
   }
 
-  writeNotNull('mode', _$SupportedMessageModeEnumMap[instance.mode]);
+  writeNotNull('mode', _$ModeEnumMap[instance.mode]);
   writeNotNull('definition', instance.definition?.toJson());
   return val;
 }
 
-const _$SupportedMessageModeEnumMap = {
-  SupportedMessageMode.sender: 'sender',
-  SupportedMessageMode.receiver: 'receiver',
-  SupportedMessageMode.unknown: 'unknown',
+const _$ModeEnumMap = {
+  Mode.sender: 'sender',
+  Mode.receiver: 'receiver',
+  Mode.unknown: 'unknown',
 };
 
 _$_CapabilityStatementEvent _$_$_CapabilityStatementEventFromJson(
@@ -736,8 +736,8 @@ _$_CapabilityStatementEvent _$_$_CapabilityStatementEventFromJson(
         : Coding.fromJson(json['code'] as Map<String, dynamic>),
     category: _$enumDecodeNullable(_$EventCategoryEnumMap, json['category'],
         unknownValue: EventCategory.unknown),
-    mode: _$enumDecodeNullable(_$EventModeEnumMap, json['mode'],
-        unknownValue: EventMode.unknown),
+    mode: _$enumDecodeNullable(_$ModeEnumMap, json['mode'],
+        unknownValue: Mode.unknown),
     focus:
         json['focus'] == null ? null : Code.fromJson(json['focus'] as String),
     request: json['request'] == null
@@ -762,7 +762,7 @@ Map<String, dynamic> _$_$_CapabilityStatementEventToJson(
 
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('category', _$EventCategoryEnumMap[instance.category]);
-  writeNotNull('mode', _$EventModeEnumMap[instance.mode]);
+  writeNotNull('mode', _$ModeEnumMap[instance.mode]);
   writeNotNull('focus', instance.focus?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());
@@ -775,12 +775,6 @@ const _$EventCategoryEnumMap = {
   EventCategory.currency: 'Currency',
   EventCategory.notification: 'Notification',
   EventCategory.unknown: 'unknown',
-};
-
-const _$EventModeEnumMap = {
-  EventMode.sender: 'sender',
-  EventMode.receiver: 'receiver',
-  EventMode.unknown: 'unknown',
 };
 
 _$_CapabilityStatementDocument _$_$_CapabilityStatementDocumentFromJson(
@@ -826,9 +820,8 @@ _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(
     url: json['url'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(
-        _$CompartmentDefinitionStatusEnumMap, json['status'],
-        unknownValue: CompartmentDefinitionStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -875,7 +868,7 @@ Map<String, dynamic> _$_$_CompartmentDefinitionToJson(
   writeNotNull('url', instance.url);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$CompartmentDefinitionStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -892,13 +885,6 @@ Map<String, dynamic> _$_$_CompartmentDefinitionToJson(
       'resource', instance.resource?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$CompartmentDefinitionStatusEnumMap = {
-  CompartmentDefinitionStatus.draft: 'draft',
-  CompartmentDefinitionStatus.active: 'active',
-  CompartmentDefinitionStatus.retired: 'retired',
-  CompartmentDefinitionStatus.unknown: 'unknown',
-};
 
 const _$CompartmentDefinitionCodeEnumMap = {
   CompartmentDefinitionCode.patient: 'Patient',
@@ -944,8 +930,8 @@ _$_DataElement _$_$_DataElementFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     version: json['version'] as String,
-    status: _$enumDecodeNullable(_$DataElementStatusEnumMap, json['status'],
-        unknownValue: DataElementStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -998,7 +984,7 @@ Map<String, dynamic> _$_$_DataElementToJson(_$_DataElement instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('version', instance.version);
-  writeNotNull('status', _$DataElementStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -1016,13 +1002,6 @@ Map<String, dynamic> _$_$_DataElementToJson(_$_DataElement instance) {
   writeNotNull('element', instance.element?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$DataElementStatusEnumMap = {
-  DataElementStatus.draft: 'draft',
-  DataElementStatus.active: 'active',
-  DataElementStatus.retired: 'retired',
-  DataElementStatus.unknown: 'unknown',
-};
 
 const _$DataElementStringencyEnumMap = {
   DataElementStringency.comparable: 'comparable',
@@ -1070,8 +1049,8 @@ _$_GraphDefinition _$_$_GraphDefinitionFromJson(Map<String, dynamic> json) {
     url: json['url'] as String,
     version: json['version'] as String,
     name: json['name'] as String,
-    status: _$enumDecodeNullable(_$GraphDefinitionStatusEnumMap, json['status'],
-        unknownValue: GraphDefinitionStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -1117,7 +1096,7 @@ Map<String, dynamic> _$_$_GraphDefinitionToJson(_$_GraphDefinition instance) {
   writeNotNull('url', instance.url);
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
-  writeNotNull('status', _$GraphDefinitionStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -1133,13 +1112,6 @@ Map<String, dynamic> _$_$_GraphDefinitionToJson(_$_GraphDefinition instance) {
   writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$GraphDefinitionStatusEnumMap = {
-  GraphDefinitionStatus.draft: 'draft',
-  GraphDefinitionStatus.active: 'active',
-  GraphDefinitionStatus.retired: 'retired',
-  GraphDefinitionStatus.unknown: 'unknown',
-};
 
 _$_GraphDefinitionLink _$_$_GraphDefinitionLinkFromJson(
     Map<String, dynamic> json) {
@@ -1257,9 +1229,8 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
     url: json['url'] as String,
     version: json['version'] as String,
     name: json['name'] as String,
-    status: _$enumDecodeNullable(
-        _$ImplementationGuideStatusEnumMap, json['status'],
-        unknownValue: ImplementationGuideStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -1321,7 +1292,7 @@ Map<String, dynamic> _$_$_ImplementationGuideToJson(
   writeNotNull('url', instance.url);
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
-  writeNotNull('status', _$ImplementationGuideStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -1341,13 +1312,6 @@ Map<String, dynamic> _$_$_ImplementationGuideToJson(
   writeNotNull('page', instance.page?.toJson());
   return val;
 }
-
-const _$ImplementationGuideStatusEnumMap = {
-  ImplementationGuideStatus.draft: 'draft',
-  ImplementationGuideStatus.active: 'active',
-  ImplementationGuideStatus.retired: 'retired',
-  ImplementationGuideStatus.unknown: 'unknown',
-};
 
 _$_ImplementationGuideDependency _$_$_ImplementationGuideDependencyFromJson(
     Map<String, dynamic> json) {
@@ -1537,9 +1501,8 @@ _$_MessageDefinition _$_$_MessageDefinitionFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(
-        _$MessageDefinitionStatusEnumMap, json['status'],
-        unknownValue: MessageDefinitionStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -1612,7 +1575,7 @@ Map<String, dynamic> _$_$_MessageDefinitionToJson(
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$MessageDefinitionStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -1636,13 +1599,6 @@ Map<String, dynamic> _$_$_MessageDefinitionToJson(
       instance.allowedResponse?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$MessageDefinitionStatusEnumMap = {
-  MessageDefinitionStatus.draft: 'draft',
-  MessageDefinitionStatus.active: 'active',
-  MessageDefinitionStatus.retired: 'retired',
-  MessageDefinitionStatus.unknown: 'unknown',
-};
 
 _$_MessageDefinitionFocus _$_$_MessageDefinitionFocusFromJson(
     Map<String, dynamic> json) {
@@ -1707,9 +1663,8 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     url: json['url'] as String,
     version: json['version'] as String,
     name: json['name'] as String,
-    status: _$enumDecodeNullable(
-        _$OperationDefinitionStatusEnumMap, json['status'],
-        unknownValue: OperationDefinitionStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     kind: _$enumDecodeNullable(_$OperationDefinitionKindEnumMap, json['kind'],
         unknownValue: OperationDefinitionKind.unknown),
     experimental: json['experimental'] == null
@@ -1775,7 +1730,7 @@ Map<String, dynamic> _$_$_OperationDefinitionToJson(
   writeNotNull('url', instance.url);
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
-  writeNotNull('status', _$OperationDefinitionStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('kind', _$OperationDefinitionKindEnumMap[instance.kind]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
@@ -1802,13 +1757,6 @@ Map<String, dynamic> _$_$_OperationDefinitionToJson(
       'overload', instance.overload?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$OperationDefinitionStatusEnumMap = {
-  OperationDefinitionStatus.draft: 'draft',
-  OperationDefinitionStatus.active: 'active',
-  OperationDefinitionStatus.retired: 'retired',
-  OperationDefinitionStatus.unknown: 'unknown',
-};
 
 const _$OperationDefinitionKindEnumMap = {
   OperationDefinitionKind.operation: 'operation',
@@ -1871,18 +1819,6 @@ const _$ParameterUseEnumMap = {
   ParameterUse.in_: 'in',
   ParameterUse.out: 'out',
   ParameterUse.unknown: 'unknown',
-};
-
-const _$ParameterSearchTypeEnumMap = {
-  ParameterSearchType.number: 'number',
-  ParameterSearchType.date: 'date',
-  ParameterSearchType.string: 'string',
-  ParameterSearchType.token: 'token',
-  ParameterSearchType.reference: 'reference',
-  ParameterSearchType.composite: 'composite',
-  ParameterSearchType.quantity: 'quantity',
-  ParameterSearchType.uri: 'uri',
-  ParameterSearchType.unknown: 'unknown',
 };
 
 _$_OperationDefinitionBinding _$_$_OperationDefinitionBindingFromJson(
@@ -1952,8 +1888,8 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     url: json['url'] as String,
     version: json['version'] as String,
     name: json['name'] as String,
-    status: _$enumDecodeNullable(_$SearchParameterStatusEnumMap, json['status'],
-        unknownValue: SearchParameterStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -1978,8 +1914,8 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     base: (json['base'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    type: _$enumDecodeNullable(_$SearchParameterTypeEnumMap, json['type'],
-        unknownValue: SearchParameterType.unknown),
+    type: _$enumDecodeNullable(_$ParameterSearchTypeEnumMap, json['type'],
+        unknownValue: ParameterSearchType.unknown),
     derivedFrom: json['derivedFrom'] as String,
     description: json['description'] as String,
     expression: json['expression'] as String,
@@ -2019,7 +1955,7 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull('url', instance.url);
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
-  writeNotNull('status', _$SearchParameterStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -2031,7 +1967,7 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull('purpose', instance.purpose);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('base', instance.base?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', _$SearchParameterTypeEnumMap[instance.type]);
+  writeNotNull('type', _$ParameterSearchTypeEnumMap[instance.type]);
   writeNotNull('derivedFrom', instance.derivedFrom);
   writeNotNull('description', instance.description);
   writeNotNull('expression', instance.expression);
@@ -2054,25 +1990,6 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
       'component', instance.component?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$SearchParameterStatusEnumMap = {
-  SearchParameterStatus.draft: 'draft',
-  SearchParameterStatus.active: 'active',
-  SearchParameterStatus.retired: 'retired',
-  SearchParameterStatus.unknown: 'unknown',
-};
-
-const _$SearchParameterTypeEnumMap = {
-  SearchParameterType.number: 'number',
-  SearchParameterType.date: 'date',
-  SearchParameterType.string: 'string',
-  SearchParameterType.token: 'token',
-  SearchParameterType.reference: 'reference',
-  SearchParameterType.composite: 'composite',
-  SearchParameterType.quantity: 'quantity',
-  SearchParameterType.uri: 'uri',
-  SearchParameterType.unknown: 'unknown',
-};
 
 const _$SearchParameterXpathUsageEnumMap = {
   SearchParameterXpathUsage.normal: 'normal',
@@ -2149,9 +2066,8 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(
-        _$StructureDefinitionStatusEnumMap, json['status'],
-        unknownValue: StructureDefinitionStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -2229,7 +2145,7 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$StructureDefinitionStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -2258,13 +2174,6 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('differential', instance.differential?.toJson());
   return val;
 }
-
-const _$StructureDefinitionStatusEnumMap = {
-  StructureDefinitionStatus.draft: 'draft',
-  StructureDefinitionStatus.active: 'active',
-  StructureDefinitionStatus.retired: 'retired',
-  StructureDefinitionStatus.unknown: 'unknown',
-};
 
 const _$StructureDefinitionKindEnumMap = {
   StructureDefinitionKind.primitive_type: 'primitive-type',
@@ -2380,8 +2289,8 @@ _$_StructureMap _$_$_StructureMapFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$StructureMapStatusEnumMap, json['status'],
-        unknownValue: StructureMapStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -2434,7 +2343,7 @@ Map<String, dynamic> _$_$_StructureMapToJson(_$_StructureMap instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$StructureMapStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -2452,13 +2361,6 @@ Map<String, dynamic> _$_$_StructureMapToJson(_$_StructureMap instance) {
   writeNotNull('group', instance.group?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$StructureMapStatusEnumMap = {
-  StructureMapStatus.draft: 'draft',
-  StructureMapStatus.active: 'active',
-  StructureMapStatus.retired: 'retired',
-  StructureMapStatus.unknown: 'unknown',
-};
 
 _$_StructureMapStructure _$_$_StructureMapStructureFromJson(
     Map<String, dynamic> json) {

@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
 import '../../resource_types.enums.dart';
+import 'management.enums.dart';
 
 part 'management.freezed.dart';
 part 'management.g.dart';
@@ -41,8 +42,7 @@ abstract class Encounter with _$Encounter implements Resource {
 @freezed
 abstract class EncounterStatusHistory with _$EncounterStatusHistory {
   const factory EncounterStatusHistory({
-    @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-        EncounterHistoryStatus status,
+    @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus status,
     @JsonKey(required: true) Period period,
   }) = _EncounterStatusHistory;
   factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -137,8 +137,8 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
 @freezed
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   const factory EpisodeOfCareStatusHistory({
-    @JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-        EpisodeOfCareHistoryStatus status,
+    @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+        EpisodeOfCareStatus status,
     @JsonKey(required: true) Period period,
   }) = _EpisodeOfCareStatusHistory;
   factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -163,7 +163,7 @@ abstract class Flag with _$Flag implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
+    @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     CodeableConcept category,
     @JsonKey(required: true) CodeableConcept code,
     @JsonKey(required: true) Reference subject,
@@ -185,7 +185,7 @@ abstract class Library with _$Library implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     @JsonKey(required: true) CodeableConcept type,
     DateTime date,

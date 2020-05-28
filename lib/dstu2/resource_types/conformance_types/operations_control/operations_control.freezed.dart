@@ -16,7 +16,9 @@ class _$ConformanceTearOff {
   const _$ConformanceTearOff();
 
   _Conformance call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Conformance')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -32,7 +34,7 @@ class _$ConformanceTearOff {
           ConformanceStatus status,
       Boolean experimental,
       String publisher,
-      ConformanceContact contact,
+      List<ConformanceContact> contact,
       @required
       @JsonKey(required: true)
           FhirDateTime date,
@@ -51,13 +53,14 @@ class _$ConformanceTearOff {
       @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
           ConformanceAcceptUnknown acceptUnknown,
       @required
-      @JsonKey(required: true, unknownEnumValue: ConformanceFormat.unknown)
-          ConformanceFormat format,
-      Reference profile,
-      ConformanceRest rest,
-      ConformanceMessaging messaging,
-      ConformanceDocument document}) {
+      @JsonKey(required: true)
+          List<ConformanceFormat> format,
+      List<Reference> profile,
+      List<ConformanceRest> rest,
+      List<ConformanceMessaging> messaging,
+      List<ConformanceDocument> document}) {
     return _Conformance(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -95,6 +98,8 @@ class _$ConformanceTearOff {
 const $Conformance = _$ConformanceTearOff();
 
 mixin _$Conformance {
+  @JsonKey(defaultValue: 'Conformance')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -111,7 +116,7 @@ mixin _$Conformance {
   ConformanceStatus get status;
   Boolean get experimental;
   String get publisher;
-  ConformanceContact get contact;
+  List<ConformanceContact> get contact;
   @JsonKey(required: true)
   FhirDateTime get date;
   String get description;
@@ -125,12 +130,12 @@ mixin _$Conformance {
   Id get fhirVersion;
   @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
   ConformanceAcceptUnknown get acceptUnknown;
-  @JsonKey(required: true, unknownEnumValue: ConformanceFormat.unknown)
-  ConformanceFormat get format;
-  Reference get profile;
-  ConformanceRest get rest;
-  ConformanceMessaging get messaging;
-  ConformanceDocument get document;
+  @JsonKey(required: true)
+  List<ConformanceFormat> get format;
+  List<Reference> get profile;
+  List<ConformanceRest> get rest;
+  List<ConformanceMessaging> get messaging;
+  List<ConformanceDocument> get document;
 
   Map<String, dynamic> toJson();
   $ConformanceCopyWith<Conformance> get copyWith;
@@ -141,7 +146,9 @@ abstract class $ConformanceCopyWith<$Res> {
           Conformance value, $Res Function(Conformance) then) =
       _$ConformanceCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Conformance')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -157,7 +164,7 @@ abstract class $ConformanceCopyWith<$Res> {
           ConformanceStatus status,
       Boolean experimental,
       String publisher,
-      ConformanceContact contact,
+      List<ConformanceContact> contact,
       @JsonKey(required: true)
           FhirDateTime date,
       String description,
@@ -171,24 +178,19 @@ abstract class $ConformanceCopyWith<$Res> {
           Id fhirVersion,
       @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
           ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(required: true, unknownEnumValue: ConformanceFormat.unknown)
-          ConformanceFormat format,
-      Reference profile,
-      ConformanceRest rest,
-      ConformanceMessaging messaging,
-      ConformanceDocument document});
+      @JsonKey(required: true)
+          List<ConformanceFormat> format,
+      List<Reference> profile,
+      List<ConformanceRest> rest,
+      List<ConformanceMessaging> messaging,
+      List<ConformanceDocument> document});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ConformanceContactCopyWith<$Res> get contact;
   $ConformanceSoftwareCopyWith<$Res> get software;
   $ConformanceImplementationCopyWith<$Res> get implementation;
-  $ReferenceCopyWith<$Res> get profile;
-  $ConformanceRestCopyWith<$Res> get rest;
-  $ConformanceMessagingCopyWith<$Res> get messaging;
-  $ConformanceDocumentCopyWith<$Res> get document;
 }
 
 class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
@@ -200,6 +202,7 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -231,6 +234,9 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
     Object document = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -254,8 +260,9 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
           ? _value.experimental
           : experimental as Boolean,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact:
-          contact == freezed ? _value.contact : contact as ConformanceContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ConformanceContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
@@ -275,15 +282,16 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
       acceptUnknown: acceptUnknown == freezed
           ? _value.acceptUnknown
           : acceptUnknown as ConformanceAcceptUnknown,
-      format: format == freezed ? _value.format : format as ConformanceFormat,
-      profile: profile == freezed ? _value.profile : profile as Reference,
-      rest: rest == freezed ? _value.rest : rest as ConformanceRest,
+      format:
+          format == freezed ? _value.format : format as List<ConformanceFormat>,
+      profile: profile == freezed ? _value.profile : profile as List<Reference>,
+      rest: rest == freezed ? _value.rest : rest as List<ConformanceRest>,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as ConformanceMessaging,
+          : messaging as List<ConformanceMessaging>,
       document: document == freezed
           ? _value.document
-          : document as ConformanceDocument,
+          : document as List<ConformanceDocument>,
     ));
   }
 
@@ -328,16 +336,6 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
   }
 
   @override
-  $ConformanceContactCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $ConformanceContactCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
-    });
-  }
-
-  @override
   $ConformanceSoftwareCopyWith<$Res> get software {
     if (_value.software == null) {
       return null;
@@ -357,46 +355,6 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
       return _then(_value.copyWith(implementation: value));
     });
   }
-
-  @override
-  $ReferenceCopyWith<$Res> get profile {
-    if (_value.profile == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.profile, (value) {
-      return _then(_value.copyWith(profile: value));
-    });
-  }
-
-  @override
-  $ConformanceRestCopyWith<$Res> get rest {
-    if (_value.rest == null) {
-      return null;
-    }
-    return $ConformanceRestCopyWith<$Res>(_value.rest, (value) {
-      return _then(_value.copyWith(rest: value));
-    });
-  }
-
-  @override
-  $ConformanceMessagingCopyWith<$Res> get messaging {
-    if (_value.messaging == null) {
-      return null;
-    }
-    return $ConformanceMessagingCopyWith<$Res>(_value.messaging, (value) {
-      return _then(_value.copyWith(messaging: value));
-    });
-  }
-
-  @override
-  $ConformanceDocumentCopyWith<$Res> get document {
-    if (_value.document == null) {
-      return null;
-    }
-    return $ConformanceDocumentCopyWith<$Res>(_value.document, (value) {
-      return _then(_value.copyWith(document: value));
-    });
-  }
 }
 
 abstract class _$ConformanceCopyWith<$Res>
@@ -406,7 +364,9 @@ abstract class _$ConformanceCopyWith<$Res>
       __$ConformanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Conformance')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -422,7 +382,7 @@ abstract class _$ConformanceCopyWith<$Res>
           ConformanceStatus status,
       Boolean experimental,
       String publisher,
-      ConformanceContact contact,
+      List<ConformanceContact> contact,
       @JsonKey(required: true)
           FhirDateTime date,
       String description,
@@ -436,12 +396,12 @@ abstract class _$ConformanceCopyWith<$Res>
           Id fhirVersion,
       @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
           ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(required: true, unknownEnumValue: ConformanceFormat.unknown)
-          ConformanceFormat format,
-      Reference profile,
-      ConformanceRest rest,
-      ConformanceMessaging messaging,
-      ConformanceDocument document});
+      @JsonKey(required: true)
+          List<ConformanceFormat> format,
+      List<Reference> profile,
+      List<ConformanceRest> rest,
+      List<ConformanceMessaging> messaging,
+      List<ConformanceDocument> document});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -452,19 +412,9 @@ abstract class _$ConformanceCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $ConformanceContactCopyWith<$Res> get contact;
-  @override
   $ConformanceSoftwareCopyWith<$Res> get software;
   @override
   $ConformanceImplementationCopyWith<$Res> get implementation;
-  @override
-  $ReferenceCopyWith<$Res> get profile;
-  @override
-  $ConformanceRestCopyWith<$Res> get rest;
-  @override
-  $ConformanceMessagingCopyWith<$Res> get messaging;
-  @override
-  $ConformanceDocumentCopyWith<$Res> get document;
 }
 
 class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
@@ -478,6 +428,7 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -509,6 +460,9 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
     Object document = freezed,
   }) {
     return _then(_Conformance(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -532,8 +486,9 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
           ? _value.experimental
           : experimental as Boolean,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact:
-          contact == freezed ? _value.contact : contact as ConformanceContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ConformanceContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
@@ -553,15 +508,16 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
       acceptUnknown: acceptUnknown == freezed
           ? _value.acceptUnknown
           : acceptUnknown as ConformanceAcceptUnknown,
-      format: format == freezed ? _value.format : format as ConformanceFormat,
-      profile: profile == freezed ? _value.profile : profile as Reference,
-      rest: rest == freezed ? _value.rest : rest as ConformanceRest,
+      format:
+          format == freezed ? _value.format : format as List<ConformanceFormat>,
+      profile: profile == freezed ? _value.profile : profile as List<Reference>,
+      rest: rest == freezed ? _value.rest : rest as List<ConformanceRest>,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as ConformanceMessaging,
+          : messaging as List<ConformanceMessaging>,
       document: document == freezed
           ? _value.document
-          : document as ConformanceDocument,
+          : document as List<ConformanceDocument>,
     ));
   }
 }
@@ -569,7 +525,9 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Conformance implements _Conformance {
   const _$_Conformance(
-      {this.id,
+      {@JsonKey(defaultValue: 'Conformance')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -604,7 +562,7 @@ class _$_Conformance implements _Conformance {
       @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
           this.acceptUnknown,
       @required
-      @JsonKey(required: true, unknownEnumValue: ConformanceFormat.unknown)
+      @JsonKey(required: true)
           this.format,
       this.profile,
       this.rest,
@@ -619,6 +577,9 @@ class _$_Conformance implements _Conformance {
   factory _$_Conformance.fromJson(Map<String, dynamic> json) =>
       _$_$_ConformanceFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'Conformance')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -650,7 +611,7 @@ class _$_Conformance implements _Conformance {
   @override
   final String publisher;
   @override
-  final ConformanceContact contact;
+  final List<ConformanceContact> contact;
   @override
   @JsonKey(required: true)
   final FhirDateTime date;
@@ -674,26 +635,29 @@ class _$_Conformance implements _Conformance {
   @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
   final ConformanceAcceptUnknown acceptUnknown;
   @override
-  @JsonKey(required: true, unknownEnumValue: ConformanceFormat.unknown)
-  final ConformanceFormat format;
+  @JsonKey(required: true)
+  final List<ConformanceFormat> format;
   @override
-  final Reference profile;
+  final List<Reference> profile;
   @override
-  final ConformanceRest rest;
+  final List<ConformanceRest> rest;
   @override
-  final ConformanceMessaging messaging;
+  final List<ConformanceMessaging> messaging;
   @override
-  final ConformanceDocument document;
+  final List<ConformanceDocument> document;
 
   @override
   String toString() {
-    return 'Conformance(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, acceptUnknown: $acceptUnknown, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
+    return 'Conformance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, acceptUnknown: $acceptUnknown, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Conformance &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -760,9 +724,7 @@ class _$_Conformance implements _Conformance {
                     .equals(other.acceptUnknown, acceptUnknown)) &&
             (identical(other.format, format) ||
                 const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality()
-                    .equals(other.profile, profile)) &&
+            (identical(other.profile, profile) || const DeepCollectionEquality().equals(other.profile, profile)) &&
             (identical(other.rest, rest) || const DeepCollectionEquality().equals(other.rest, rest)) &&
             (identical(other.messaging, messaging) || const DeepCollectionEquality().equals(other.messaging, messaging)) &&
             (identical(other.document, document) || const DeepCollectionEquality().equals(other.document, document)));
@@ -771,6 +733,7 @@ class _$_Conformance implements _Conformance {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -813,7 +776,9 @@ class _$_Conformance implements _Conformance {
 
 abstract class _Conformance implements Conformance {
   const factory _Conformance(
-      {Id id,
+      {@JsonKey(defaultValue: 'Conformance')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -829,7 +794,7 @@ abstract class _Conformance implements Conformance {
           ConformanceStatus status,
       Boolean experimental,
       String publisher,
-      ConformanceContact contact,
+      List<ConformanceContact> contact,
       @required
       @JsonKey(required: true)
           FhirDateTime date,
@@ -848,16 +813,19 @@ abstract class _Conformance implements Conformance {
       @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
           ConformanceAcceptUnknown acceptUnknown,
       @required
-      @JsonKey(required: true, unknownEnumValue: ConformanceFormat.unknown)
-          ConformanceFormat format,
-      Reference profile,
-      ConformanceRest rest,
-      ConformanceMessaging messaging,
-      ConformanceDocument document}) = _$_Conformance;
+      @JsonKey(required: true)
+          List<ConformanceFormat> format,
+      List<Reference> profile,
+      List<ConformanceRest> rest,
+      List<ConformanceMessaging> messaging,
+      List<ConformanceDocument> document}) = _$_Conformance;
 
   factory _Conformance.fromJson(Map<String, dynamic> json) =
       _$_Conformance.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Conformance')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -889,7 +857,7 @@ abstract class _Conformance implements Conformance {
   @override
   String get publisher;
   @override
-  ConformanceContact get contact;
+  List<ConformanceContact> get contact;
   @override
   @JsonKey(required: true)
   FhirDateTime get date;
@@ -913,16 +881,16 @@ abstract class _Conformance implements Conformance {
   @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
   ConformanceAcceptUnknown get acceptUnknown;
   @override
-  @JsonKey(required: true, unknownEnumValue: ConformanceFormat.unknown)
-  ConformanceFormat get format;
+  @JsonKey(required: true)
+  List<ConformanceFormat> get format;
   @override
-  Reference get profile;
+  List<Reference> get profile;
   @override
-  ConformanceRest get rest;
+  List<ConformanceRest> get rest;
   @override
-  ConformanceMessaging get messaging;
+  List<ConformanceMessaging> get messaging;
   @override
-  ConformanceDocument get document;
+  List<ConformanceDocument> get document;
   @override
   _$ConformanceCopyWith<_Conformance> get copyWith;
 }
@@ -935,7 +903,9 @@ class _$OperationDefinitionTearOff {
   const _$OperationDefinitionTearOff();
 
   _OperationDefinition call(
-      {Id id,
+      {@JsonKey(defaultValue: 'OperationDefinition')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -957,7 +927,7 @@ class _$OperationDefinitionTearOff {
           OperationDefinitionKind kind,
       Boolean experimental,
       String publisher,
-      OperationDefinitionContact contact,
+      List<OperationDefinitionContact> contact,
       FhirDateTime date,
       String description,
       String requirements,
@@ -970,12 +940,13 @@ class _$OperationDefinitionTearOff {
       @required
       @JsonKey(required: true)
           Boolean system,
-      Code type,
+      List<Code> type,
       @required
       @JsonKey(required: true)
           Boolean instance,
-      OperationDefinitionParameter parameter}) {
+      List<OperationDefinitionParameter> parameter}) {
     return _OperationDefinition(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1011,6 +982,8 @@ class _$OperationDefinitionTearOff {
 const $OperationDefinition = _$OperationDefinitionTearOff();
 
 mixin _$OperationDefinition {
+  @JsonKey(defaultValue: 'OperationDefinition')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1030,7 +1003,7 @@ mixin _$OperationDefinition {
   OperationDefinitionKind get kind;
   Boolean get experimental;
   String get publisher;
-  OperationDefinitionContact get contact;
+  List<OperationDefinitionContact> get contact;
   FhirDateTime get date;
   String get description;
   String get requirements;
@@ -1041,10 +1014,10 @@ mixin _$OperationDefinition {
   Reference get base;
   @JsonKey(required: true)
   Boolean get system;
-  Code get type;
+  List<Code> get type;
   @JsonKey(required: true)
   Boolean get instance;
-  OperationDefinitionParameter get parameter;
+  List<OperationDefinitionParameter> get parameter;
 
   Map<String, dynamic> toJson();
   $OperationDefinitionCopyWith<OperationDefinition> get copyWith;
@@ -1055,7 +1028,9 @@ abstract class $OperationDefinitionCopyWith<$Res> {
           OperationDefinition value, $Res Function(OperationDefinition) then) =
       _$OperationDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'OperationDefinition')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1074,7 +1049,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
           OperationDefinitionKind kind,
       Boolean experimental,
       String publisher,
-      OperationDefinitionContact contact,
+      List<OperationDefinitionContact> contact,
       FhirDateTime date,
       String description,
       String requirements,
@@ -1085,18 +1060,16 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       Reference base,
       @JsonKey(required: true)
           Boolean system,
-      Code type,
+      List<Code> type,
       @JsonKey(required: true)
           Boolean instance,
-      OperationDefinitionParameter parameter});
+      List<OperationDefinitionParameter> parameter});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $OperationDefinitionContactCopyWith<$Res> get contact;
   $ReferenceCopyWith<$Res> get base;
-  $OperationDefinitionParameterCopyWith<$Res> get parameter;
 }
 
 class _$OperationDefinitionCopyWithImpl<$Res>
@@ -1109,6 +1082,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1138,6 +1112,9 @@ class _$OperationDefinitionCopyWithImpl<$Res>
     Object parameter = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1166,7 +1143,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact: contact == freezed
           ? _value.contact
-          : contact as OperationDefinitionContact,
+          : contact as List<OperationDefinitionContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
@@ -1179,11 +1156,11 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       notes: notes == freezed ? _value.notes : notes as String,
       base: base == freezed ? _value.base : base as Reference,
       system: system == freezed ? _value.system : system as Boolean,
-      type: type == freezed ? _value.type : type as Code,
+      type: type == freezed ? _value.type : type as List<Code>,
       instance: instance == freezed ? _value.instance : instance as Boolean,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as OperationDefinitionParameter,
+          : parameter as List<OperationDefinitionParameter>,
     ));
   }
 
@@ -1228,33 +1205,12 @@ class _$OperationDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $OperationDefinitionContactCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $OperationDefinitionContactCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get base {
     if (_value.base == null) {
       return null;
     }
     return $ReferenceCopyWith<$Res>(_value.base, (value) {
       return _then(_value.copyWith(base: value));
-    });
-  }
-
-  @override
-  $OperationDefinitionParameterCopyWith<$Res> get parameter {
-    if (_value.parameter == null) {
-      return null;
-    }
-    return $OperationDefinitionParameterCopyWith<$Res>(_value.parameter,
-        (value) {
-      return _then(_value.copyWith(parameter: value));
     });
   }
 }
@@ -1266,7 +1222,9 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       __$OperationDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'OperationDefinition')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1285,7 +1243,7 @@ abstract class _$OperationDefinitionCopyWith<$Res>
           OperationDefinitionKind kind,
       Boolean experimental,
       String publisher,
-      OperationDefinitionContact contact,
+      List<OperationDefinitionContact> contact,
       FhirDateTime date,
       String description,
       String requirements,
@@ -1296,10 +1254,10 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       Reference base,
       @JsonKey(required: true)
           Boolean system,
-      Code type,
+      List<Code> type,
       @JsonKey(required: true)
           Boolean instance,
-      OperationDefinitionParameter parameter});
+      List<OperationDefinitionParameter> parameter});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1310,11 +1268,7 @@ abstract class _$OperationDefinitionCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $OperationDefinitionContactCopyWith<$Res> get contact;
-  @override
   $ReferenceCopyWith<$Res> get base;
-  @override
-  $OperationDefinitionParameterCopyWith<$Res> get parameter;
 }
 
 class __$OperationDefinitionCopyWithImpl<$Res>
@@ -1329,6 +1283,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1358,6 +1313,9 @@ class __$OperationDefinitionCopyWithImpl<$Res>
     Object parameter = freezed,
   }) {
     return _then(_OperationDefinition(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1386,7 +1344,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact: contact == freezed
           ? _value.contact
-          : contact as OperationDefinitionContact,
+          : contact as List<OperationDefinitionContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
@@ -1399,11 +1357,11 @@ class __$OperationDefinitionCopyWithImpl<$Res>
       notes: notes == freezed ? _value.notes : notes as String,
       base: base == freezed ? _value.base : base as Reference,
       system: system == freezed ? _value.system : system as Boolean,
-      type: type == freezed ? _value.type : type as Code,
+      type: type == freezed ? _value.type : type as List<Code>,
       instance: instance == freezed ? _value.instance : instance as Boolean,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as OperationDefinitionParameter,
+          : parameter as List<OperationDefinitionParameter>,
     ));
   }
 }
@@ -1411,7 +1369,9 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_OperationDefinition implements _OperationDefinition {
   const _$_OperationDefinition(
-      {this.id,
+      {@JsonKey(defaultValue: 'OperationDefinition')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1462,6 +1422,9 @@ class _$_OperationDefinition implements _OperationDefinition {
       _$_$_OperationDefinitionFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'OperationDefinition')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -1496,7 +1459,7 @@ class _$_OperationDefinition implements _OperationDefinition {
   @override
   final String publisher;
   @override
-  final OperationDefinitionContact contact;
+  final List<OperationDefinitionContact> contact;
   @override
   final FhirDateTime date;
   @override
@@ -1516,22 +1479,25 @@ class _$_OperationDefinition implements _OperationDefinition {
   @JsonKey(required: true)
   final Boolean system;
   @override
-  final Code type;
+  final List<Code> type;
   @override
   @JsonKey(required: true)
   final Boolean instance;
   @override
-  final OperationDefinitionParameter parameter;
+  final List<OperationDefinitionParameter> parameter;
 
   @override
   String toString() {
-    return 'OperationDefinition(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, idempotent: $idempotent, code: $code, notes: $notes, base: $base, system: $system, type: $type, instance: $instance, parameter: $parameter)';
+    return 'OperationDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, idempotent: $idempotent, code: $code, notes: $notes, base: $base, system: $system, type: $type, instance: $instance, parameter: $parameter)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _OperationDefinition &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1605,6 +1571,7 @@ class _$_OperationDefinition implements _OperationDefinition {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1646,7 +1613,9 @@ class _$_OperationDefinition implements _OperationDefinition {
 
 abstract class _OperationDefinition implements OperationDefinition {
   const factory _OperationDefinition(
-      {Id id,
+      {@JsonKey(defaultValue: 'OperationDefinition')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1668,7 +1637,7 @@ abstract class _OperationDefinition implements OperationDefinition {
           OperationDefinitionKind kind,
       Boolean experimental,
       String publisher,
-      OperationDefinitionContact contact,
+      List<OperationDefinitionContact> contact,
       FhirDateTime date,
       String description,
       String requirements,
@@ -1681,15 +1650,18 @@ abstract class _OperationDefinition implements OperationDefinition {
       @required
       @JsonKey(required: true)
           Boolean system,
-      Code type,
+      List<Code> type,
       @required
       @JsonKey(required: true)
           Boolean instance,
-      OperationDefinitionParameter parameter}) = _$_OperationDefinition;
+      List<OperationDefinitionParameter> parameter}) = _$_OperationDefinition;
 
   factory _OperationDefinition.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinition.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'OperationDefinition')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1725,7 +1697,7 @@ abstract class _OperationDefinition implements OperationDefinition {
   @override
   String get publisher;
   @override
-  OperationDefinitionContact get contact;
+  List<OperationDefinitionContact> get contact;
   @override
   FhirDateTime get date;
   @override
@@ -1745,12 +1717,12 @@ abstract class _OperationDefinition implements OperationDefinition {
   @JsonKey(required: true)
   Boolean get system;
   @override
-  Code get type;
+  List<Code> get type;
   @override
   @JsonKey(required: true)
   Boolean get instance;
   @override
-  OperationDefinitionParameter get parameter;
+  List<OperationDefinitionParameter> get parameter;
   @override
   _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith;
 }
@@ -1763,7 +1735,9 @@ class _$SearchParameterTearOff {
   const _$SearchParameterTearOff();
 
   _SearchParameter call(
-      {Id id,
+      {@JsonKey(defaultValue: 'SearchParameter')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1782,7 +1756,7 @@ class _$SearchParameterTearOff {
           SearchParameterStatus status,
       Boolean experimental,
       String publisher,
-      SearchParameterContact contact,
+      List<SearchParameterContact> contact,
       FhirDateTime date,
       String requirements,
       @required
@@ -1800,8 +1774,9 @@ class _$SearchParameterTearOff {
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
-      Code target}) {
+      List<Code> target}) {
     return _SearchParameter(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1833,6 +1808,8 @@ class _$SearchParameterTearOff {
 const $SearchParameter = _$SearchParameterTearOff();
 
 mixin _$SearchParameter {
+  @JsonKey(defaultValue: 'SearchParameter')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1850,7 +1827,7 @@ mixin _$SearchParameter {
   SearchParameterStatus get status;
   Boolean get experimental;
   String get publisher;
-  SearchParameterContact get contact;
+  List<SearchParameterContact> get contact;
   FhirDateTime get date;
   String get requirements;
   @JsonKey(required: true)
@@ -1864,7 +1841,7 @@ mixin _$SearchParameter {
   String get xpath;
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
   SearchParameterXpathUsage get xpathUsage;
-  Code get target;
+  List<Code> get target;
 
   Map<String, dynamic> toJson();
   $SearchParameterCopyWith<SearchParameter> get copyWith;
@@ -1875,7 +1852,9 @@ abstract class $SearchParameterCopyWith<$Res> {
           SearchParameter value, $Res Function(SearchParameter) then) =
       _$SearchParameterCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'SearchParameter')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1892,7 +1871,7 @@ abstract class $SearchParameterCopyWith<$Res> {
           SearchParameterStatus status,
       Boolean experimental,
       String publisher,
-      SearchParameterContact contact,
+      List<SearchParameterContact> contact,
       FhirDateTime date,
       String requirements,
       @JsonKey(required: true)
@@ -1906,13 +1885,12 @@ abstract class $SearchParameterCopyWith<$Res> {
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
-      Code target});
+      List<Code> target});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $SearchParameterContactCopyWith<$Res> get contact;
 }
 
 class _$SearchParameterCopyWithImpl<$Res>
@@ -1925,6 +1903,7 @@ class _$SearchParameterCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1950,6 +1929,9 @@ class _$SearchParameterCopyWithImpl<$Res>
     Object target = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1975,7 +1957,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact: contact == freezed
           ? _value.contact
-          : contact as SearchParameterContact,
+          : contact as List<SearchParameterContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       requirements: requirements == freezed
           ? _value.requirements
@@ -1989,7 +1971,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       xpathUsage: xpathUsage == freezed
           ? _value.xpathUsage
           : xpathUsage as SearchParameterXpathUsage,
-      target: target == freezed ? _value.target : target as Code,
+      target: target == freezed ? _value.target : target as List<Code>,
     ));
   }
 
@@ -2032,16 +2014,6 @@ class _$SearchParameterCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $SearchParameterContactCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $SearchParameterContactCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
-    });
-  }
 }
 
 abstract class _$SearchParameterCopyWith<$Res>
@@ -2051,7 +2023,9 @@ abstract class _$SearchParameterCopyWith<$Res>
       __$SearchParameterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'SearchParameter')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2068,7 +2042,7 @@ abstract class _$SearchParameterCopyWith<$Res>
           SearchParameterStatus status,
       Boolean experimental,
       String publisher,
-      SearchParameterContact contact,
+      List<SearchParameterContact> contact,
       FhirDateTime date,
       String requirements,
       @JsonKey(required: true)
@@ -2082,7 +2056,7 @@ abstract class _$SearchParameterCopyWith<$Res>
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
-      Code target});
+      List<Code> target});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2092,8 +2066,6 @@ abstract class _$SearchParameterCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $SearchParameterContactCopyWith<$Res> get contact;
 }
 
 class __$SearchParameterCopyWithImpl<$Res>
@@ -2108,6 +2080,7 @@ class __$SearchParameterCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2133,6 +2106,9 @@ class __$SearchParameterCopyWithImpl<$Res>
     Object target = freezed,
   }) {
     return _then(_SearchParameter(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2158,7 +2134,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact: contact == freezed
           ? _value.contact
-          : contact as SearchParameterContact,
+          : contact as List<SearchParameterContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       requirements: requirements == freezed
           ? _value.requirements
@@ -2172,7 +2148,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       xpathUsage: xpathUsage == freezed
           ? _value.xpathUsage
           : xpathUsage as SearchParameterXpathUsage,
-      target: target == freezed ? _value.target : target as Code,
+      target: target == freezed ? _value.target : target as List<Code>,
     ));
   }
 }
@@ -2180,7 +2156,9 @@ class __$SearchParameterCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SearchParameter implements _SearchParameter {
   const _$_SearchParameter(
-      {this.id,
+      {@JsonKey(defaultValue: 'SearchParameter')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -2229,6 +2207,9 @@ class _$_SearchParameter implements _SearchParameter {
       _$_$_SearchParameterFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'SearchParameter')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -2259,7 +2240,7 @@ class _$_SearchParameter implements _SearchParameter {
   @override
   final String publisher;
   @override
-  final SearchParameterContact contact;
+  final List<SearchParameterContact> contact;
   @override
   final FhirDateTime date;
   @override
@@ -2282,17 +2263,20 @@ class _$_SearchParameter implements _SearchParameter {
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
   final SearchParameterXpathUsage xpathUsage;
   @override
-  final Code target;
+  final List<Code> target;
 
   @override
   String toString() {
-    return 'SearchParameter(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target)';
+    return 'SearchParameter(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _SearchParameter &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -2355,6 +2339,7 @@ class _$_SearchParameter implements _SearchParameter {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -2391,7 +2376,9 @@ class _$_SearchParameter implements _SearchParameter {
 
 abstract class _SearchParameter implements SearchParameter {
   const factory _SearchParameter(
-      {Id id,
+      {@JsonKey(defaultValue: 'SearchParameter')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2410,7 +2397,7 @@ abstract class _SearchParameter implements SearchParameter {
           SearchParameterStatus status,
       Boolean experimental,
       String publisher,
-      SearchParameterContact contact,
+      List<SearchParameterContact> contact,
       FhirDateTime date,
       String requirements,
       @required
@@ -2428,11 +2415,14 @@ abstract class _SearchParameter implements SearchParameter {
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
-      Code target}) = _$_SearchParameter;
+      List<Code> target}) = _$_SearchParameter;
 
   factory _SearchParameter.fromJson(Map<String, dynamic> json) =
       _$_SearchParameter.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'SearchParameter')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -2464,7 +2454,7 @@ abstract class _SearchParameter implements SearchParameter {
   @override
   String get publisher;
   @override
-  SearchParameterContact get contact;
+  List<SearchParameterContact> get contact;
   @override
   FhirDateTime get date;
   @override
@@ -2487,7 +2477,7 @@ abstract class _SearchParameter implements SearchParameter {
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
   SearchParameterXpathUsage get xpathUsage;
   @override
-  Code get target;
+  List<Code> get target;
   @override
   _$SearchParameterCopyWith<_SearchParameter> get copyWith;
 }
@@ -2504,7 +2494,7 @@ class _$ConformanceContactTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) {
+      List<ContactPoint> telecom}) {
     return _ConformanceContact(
       id: id,
       extension_: extension_,
@@ -2524,7 +2514,7 @@ mixin _$ConformanceContact {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
   $ConformanceContactCopyWith<ConformanceContact> get copyWith;
@@ -2539,11 +2529,10 @@ abstract class $ConformanceContactCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class _$ConformanceContactCopyWithImpl<$Res>
@@ -2571,7 +2560,8 @@ class _$ConformanceContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 
@@ -2594,16 +2584,6 @@ class _$ConformanceContactCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
 }
 
 abstract class _$ConformanceContactCopyWith<$Res>
@@ -2617,14 +2597,12 @@ abstract class _$ConformanceContactCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class __$ConformanceContactCopyWithImpl<$Res>
@@ -2654,7 +2632,8 @@ class __$ConformanceContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -2681,7 +2660,7 @@ class _$_ConformanceContact implements _ConformanceContact {
   @override
   final String name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -2731,7 +2710,7 @@ abstract class _ConformanceContact implements ConformanceContact {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) = _$_ConformanceContact;
+      List<ContactPoint> telecom}) = _$_ConformanceContact;
 
   factory _ConformanceContact.fromJson(Map<String, dynamic> json) =
       _$_ConformanceContact.fromJson;
@@ -2746,7 +2725,7 @@ abstract class _ConformanceContact implements ConformanceContact {
   @override
   String get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   _$ConformanceContactCopyWith<_ConformanceContact> get copyWith;
 }
@@ -3302,13 +3281,13 @@ class _$ConformanceRestTearOff {
       ConformanceSecurity security,
       @required
       @JsonKey(required: true)
-          ConformanceResource resource,
-      ConformanceRestInteraction interaction,
+          List<ConformanceResource> resource,
+      List<ConformanceRestInteraction> interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
           RestTransactionMode transactionMode,
       List<ConformanceSearchParam> searchParam,
-      ConformanceOperation operation,
-      FhirUri compartment}) {
+      List<ConformanceOperation> operation,
+      List<FhirUri> compartment}) {
     return _ConformanceRest(
       id: id,
       extension_: extension_,
@@ -3339,13 +3318,13 @@ mixin _$ConformanceRest {
   String get documentation;
   ConformanceSecurity get security;
   @JsonKey(required: true)
-  ConformanceResource get resource;
-  ConformanceRestInteraction get interaction;
+  List<ConformanceResource> get resource;
+  List<ConformanceRestInteraction> get interaction;
   @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
   RestTransactionMode get transactionMode;
   List<ConformanceSearchParam> get searchParam;
-  ConformanceOperation get operation;
-  FhirUri get compartment;
+  List<ConformanceOperation> get operation;
+  List<FhirUri> get compartment;
 
   Map<String, dynamic> toJson();
   $ConformanceRestCopyWith<ConformanceRest> get copyWith;
@@ -3365,20 +3344,17 @@ abstract class $ConformanceRestCopyWith<$Res> {
       String documentation,
       ConformanceSecurity security,
       @JsonKey(required: true)
-          ConformanceResource resource,
-      ConformanceRestInteraction interaction,
+          List<ConformanceResource> resource,
+      List<ConformanceRestInteraction> interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
           RestTransactionMode transactionMode,
       List<ConformanceSearchParam> searchParam,
-      ConformanceOperation operation,
-      FhirUri compartment});
+      List<ConformanceOperation> operation,
+      List<FhirUri> compartment});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ConformanceSecurityCopyWith<$Res> get security;
-  $ConformanceResourceCopyWith<$Res> get resource;
-  $ConformanceRestInteractionCopyWith<$Res> get interaction;
-  $ConformanceOperationCopyWith<$Res> get operation;
 }
 
 class _$ConformanceRestCopyWithImpl<$Res>
@@ -3421,10 +3397,10 @@ class _$ConformanceRestCopyWithImpl<$Res>
           : security as ConformanceSecurity,
       resource: resource == freezed
           ? _value.resource
-          : resource as ConformanceResource,
+          : resource as List<ConformanceResource>,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as ConformanceRestInteraction,
+          : interaction as List<ConformanceRestInteraction>,
       transactionMode: transactionMode == freezed
           ? _value.transactionMode
           : transactionMode as RestTransactionMode,
@@ -3433,9 +3409,10 @@ class _$ConformanceRestCopyWithImpl<$Res>
           : searchParam as List<ConformanceSearchParam>,
       operation: operation == freezed
           ? _value.operation
-          : operation as ConformanceOperation,
-      compartment:
-          compartment == freezed ? _value.compartment : compartment as FhirUri,
+          : operation as List<ConformanceOperation>,
+      compartment: compartment == freezed
+          ? _value.compartment
+          : compartment as List<FhirUri>,
     ));
   }
 
@@ -3468,37 +3445,6 @@ class _$ConformanceRestCopyWithImpl<$Res>
       return _then(_value.copyWith(security: value));
     });
   }
-
-  @override
-  $ConformanceResourceCopyWith<$Res> get resource {
-    if (_value.resource == null) {
-      return null;
-    }
-    return $ConformanceResourceCopyWith<$Res>(_value.resource, (value) {
-      return _then(_value.copyWith(resource: value));
-    });
-  }
-
-  @override
-  $ConformanceRestInteractionCopyWith<$Res> get interaction {
-    if (_value.interaction == null) {
-      return null;
-    }
-    return $ConformanceRestInteractionCopyWith<$Res>(_value.interaction,
-        (value) {
-      return _then(_value.copyWith(interaction: value));
-    });
-  }
-
-  @override
-  $ConformanceOperationCopyWith<$Res> get operation {
-    if (_value.operation == null) {
-      return null;
-    }
-    return $ConformanceOperationCopyWith<$Res>(_value.operation, (value) {
-      return _then(_value.copyWith(operation: value));
-    });
-  }
 }
 
 abstract class _$ConformanceRestCopyWith<$Res>
@@ -3517,13 +3463,13 @@ abstract class _$ConformanceRestCopyWith<$Res>
       String documentation,
       ConformanceSecurity security,
       @JsonKey(required: true)
-          ConformanceResource resource,
-      ConformanceRestInteraction interaction,
+          List<ConformanceResource> resource,
+      List<ConformanceRestInteraction> interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
           RestTransactionMode transactionMode,
       List<ConformanceSearchParam> searchParam,
-      ConformanceOperation operation,
-      FhirUri compartment});
+      List<ConformanceOperation> operation,
+      List<FhirUri> compartment});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -3531,12 +3477,6 @@ abstract class _$ConformanceRestCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ConformanceSecurityCopyWith<$Res> get security;
-  @override
-  $ConformanceResourceCopyWith<$Res> get resource;
-  @override
-  $ConformanceRestInteractionCopyWith<$Res> get interaction;
-  @override
-  $ConformanceOperationCopyWith<$Res> get operation;
 }
 
 class __$ConformanceRestCopyWithImpl<$Res>
@@ -3581,10 +3521,10 @@ class __$ConformanceRestCopyWithImpl<$Res>
           : security as ConformanceSecurity,
       resource: resource == freezed
           ? _value.resource
-          : resource as ConformanceResource,
+          : resource as List<ConformanceResource>,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as ConformanceRestInteraction,
+          : interaction as List<ConformanceRestInteraction>,
       transactionMode: transactionMode == freezed
           ? _value.transactionMode
           : transactionMode as RestTransactionMode,
@@ -3593,9 +3533,10 @@ class __$ConformanceRestCopyWithImpl<$Res>
           : searchParam as List<ConformanceSearchParam>,
       operation: operation == freezed
           ? _value.operation
-          : operation as ConformanceOperation,
-      compartment:
-          compartment == freezed ? _value.compartment : compartment as FhirUri,
+          : operation as List<ConformanceOperation>,
+      compartment: compartment == freezed
+          ? _value.compartment
+          : compartment as List<FhirUri>,
     ));
   }
 }
@@ -3643,18 +3584,18 @@ class _$_ConformanceRest implements _ConformanceRest {
   final ConformanceSecurity security;
   @override
   @JsonKey(required: true)
-  final ConformanceResource resource;
+  final List<ConformanceResource> resource;
   @override
-  final ConformanceRestInteraction interaction;
+  final List<ConformanceRestInteraction> interaction;
   @override
   @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
   final RestTransactionMode transactionMode;
   @override
   final List<ConformanceSearchParam> searchParam;
   @override
-  final ConformanceOperation operation;
+  final List<ConformanceOperation> operation;
   @override
-  final FhirUri compartment;
+  final List<FhirUri> compartment;
 
   @override
   String toString() {
@@ -3740,13 +3681,13 @@ abstract class _ConformanceRest implements ConformanceRest {
       ConformanceSecurity security,
       @required
       @JsonKey(required: true)
-          ConformanceResource resource,
-      ConformanceRestInteraction interaction,
+          List<ConformanceResource> resource,
+      List<ConformanceRestInteraction> interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
           RestTransactionMode transactionMode,
       List<ConformanceSearchParam> searchParam,
-      ConformanceOperation operation,
-      FhirUri compartment}) = _$_ConformanceRest;
+      List<ConformanceOperation> operation,
+      List<FhirUri> compartment}) = _$_ConformanceRest;
 
   factory _ConformanceRest.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRest.fromJson;
@@ -3767,18 +3708,18 @@ abstract class _ConformanceRest implements ConformanceRest {
   ConformanceSecurity get security;
   @override
   @JsonKey(required: true)
-  ConformanceResource get resource;
+  List<ConformanceResource> get resource;
   @override
-  ConformanceRestInteraction get interaction;
+  List<ConformanceRestInteraction> get interaction;
   @override
   @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
   RestTransactionMode get transactionMode;
   @override
   List<ConformanceSearchParam> get searchParam;
   @override
-  ConformanceOperation get operation;
+  List<ConformanceOperation> get operation;
   @override
-  FhirUri get compartment;
+  List<FhirUri> get compartment;
   @override
   _$ConformanceRestCopyWith<_ConformanceRest> get copyWith;
 }
@@ -3794,7 +3735,7 @@ class _$ConformanceMessagingTearOff {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      ConformanceEndpoint endpoint,
+      List<ConformanceEndpoint> endpoint,
       UnsignedInt reliableCache,
       String documentation,
       @required @JsonKey(required: true) ConformanceEvent event}) {
@@ -3818,7 +3759,7 @@ mixin _$ConformanceMessaging {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  ConformanceEndpoint get endpoint;
+  List<ConformanceEndpoint> get endpoint;
   UnsignedInt get reliableCache;
   String get documentation;
   @JsonKey(required: true)
@@ -3836,14 +3777,13 @@ abstract class $ConformanceMessagingCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      ConformanceEndpoint endpoint,
+      List<ConformanceEndpoint> endpoint,
       UnsignedInt reliableCache,
       String documentation,
       @JsonKey(required: true) ConformanceEvent event});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ConformanceEndpointCopyWith<$Res> get endpoint;
   $ConformanceEventCopyWith<$Res> get event;
 }
 
@@ -3875,7 +3815,7 @@ class _$ConformanceMessagingCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as ConformanceEndpoint,
+          : endpoint as List<ConformanceEndpoint>,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
           : reliableCache as UnsignedInt,
@@ -3907,16 +3847,6 @@ class _$ConformanceMessagingCopyWithImpl<$Res>
   }
 
   @override
-  $ConformanceEndpointCopyWith<$Res> get endpoint {
-    if (_value.endpoint == null) {
-      return null;
-    }
-    return $ConformanceEndpointCopyWith<$Res>(_value.endpoint, (value) {
-      return _then(_value.copyWith(endpoint: value));
-    });
-  }
-
-  @override
   $ConformanceEventCopyWith<$Res> get event {
     if (_value.event == null) {
       return null;
@@ -3937,7 +3867,7 @@ abstract class _$ConformanceMessagingCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      ConformanceEndpoint endpoint,
+      List<ConformanceEndpoint> endpoint,
       UnsignedInt reliableCache,
       String documentation,
       @JsonKey(required: true) ConformanceEvent event});
@@ -3946,8 +3876,6 @@ abstract class _$ConformanceMessagingCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ConformanceEndpointCopyWith<$Res> get endpoint;
   @override
   $ConformanceEventCopyWith<$Res> get event;
 }
@@ -3982,7 +3910,7 @@ class __$ConformanceMessagingCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as ConformanceEndpoint,
+          : endpoint as List<ConformanceEndpoint>,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
           : reliableCache as UnsignedInt,
@@ -4017,7 +3945,7 @@ class _$_ConformanceMessaging implements _ConformanceMessaging {
   @override
   final FhirExtension modifierExtension;
   @override
-  final ConformanceEndpoint endpoint;
+  final List<ConformanceEndpoint> endpoint;
   @override
   final UnsignedInt reliableCache;
   @override
@@ -4083,7 +4011,7 @@ abstract class _ConformanceMessaging implements ConformanceMessaging {
           {Id id,
           @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
-          ConformanceEndpoint endpoint,
+          List<ConformanceEndpoint> endpoint,
           UnsignedInt reliableCache,
           String documentation,
           @required @JsonKey(required: true) ConformanceEvent event}) =
@@ -4100,7 +4028,7 @@ abstract class _ConformanceMessaging implements ConformanceMessaging {
   @override
   FhirExtension get modifierExtension;
   @override
-  ConformanceEndpoint get endpoint;
+  List<ConformanceEndpoint> get endpoint;
   @override
   UnsignedInt get reliableCache;
   @override
@@ -4437,7 +4365,7 @@ class _$OperationDefinitionContactTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) {
+      List<ContactPoint> telecom}) {
     return _OperationDefinitionContact(
       id: id,
       extension_: extension_,
@@ -4457,7 +4385,7 @@ mixin _$OperationDefinitionContact {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
   $OperationDefinitionContactCopyWith<OperationDefinitionContact> get copyWith;
@@ -4472,11 +4400,10 @@ abstract class $OperationDefinitionContactCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class _$OperationDefinitionContactCopyWithImpl<$Res>
@@ -4504,7 +4431,8 @@ class _$OperationDefinitionContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 
@@ -4527,16 +4455,6 @@ class _$OperationDefinitionContactCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
 }
 
 abstract class _$OperationDefinitionContactCopyWith<$Res>
@@ -4551,14 +4469,12 @@ abstract class _$OperationDefinitionContactCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class __$OperationDefinitionContactCopyWithImpl<$Res>
@@ -4589,7 +4505,8 @@ class __$OperationDefinitionContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -4616,7 +4533,7 @@ class _$_OperationDefinitionContact implements _OperationDefinitionContact {
   @override
   final String name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -4668,7 +4585,7 @@ abstract class _OperationDefinitionContact
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) = _$_OperationDefinitionContact;
+      List<ContactPoint> telecom}) = _$_OperationDefinitionContact;
 
   factory _OperationDefinitionContact.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionContact.fromJson;
@@ -4683,7 +4600,7 @@ abstract class _OperationDefinitionContact
   @override
   String get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   _$OperationDefinitionContactCopyWith<_OperationDefinitionContact>
       get copyWith;
@@ -5178,7 +5095,7 @@ class _$SearchParameterContactTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) {
+      List<ContactPoint> telecom}) {
     return _SearchParameterContact(
       id: id,
       extension_: extension_,
@@ -5198,7 +5115,7 @@ mixin _$SearchParameterContact {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
   $SearchParameterContactCopyWith<SearchParameterContact> get copyWith;
@@ -5213,11 +5130,10 @@ abstract class $SearchParameterContactCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class _$SearchParameterContactCopyWithImpl<$Res>
@@ -5245,7 +5161,8 @@ class _$SearchParameterContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 
@@ -5268,16 +5185,6 @@ class _$SearchParameterContactCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
 }
 
 abstract class _$SearchParameterContactCopyWith<$Res>
@@ -5291,14 +5198,12 @@ abstract class _$SearchParameterContactCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class __$SearchParameterContactCopyWithImpl<$Res>
@@ -5328,7 +5233,8 @@ class __$SearchParameterContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -5355,7 +5261,7 @@ class _$_SearchParameterContact implements _SearchParameterContact {
   @override
   final String name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -5406,7 +5312,7 @@ abstract class _SearchParameterContact implements SearchParameterContact {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) = _$_SearchParameterContact;
+      List<ContactPoint> telecom}) = _$_SearchParameterContact;
 
   factory _SearchParameterContact.fromJson(Map<String, dynamic> json) =
       _$_SearchParameterContact.fromJson;
@@ -5421,7 +5327,7 @@ abstract class _SearchParameterContact implements SearchParameterContact {
   @override
   String get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   _$SearchParameterContactCopyWith<_SearchParameterContact> get copyWith;
 }
@@ -5438,9 +5344,9 @@ class _$ConformanceSecurityTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Boolean cors,
-      CodeableConcept service,
+      List<CodeableConcept> service,
       String description,
-      ConformanceCertificate certificate}) {
+      List<ConformanceCertificate> certificate}) {
     return _ConformanceSecurity(
       id: id,
       extension_: extension_,
@@ -5462,9 +5368,9 @@ mixin _$ConformanceSecurity {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   Boolean get cors;
-  CodeableConcept get service;
+  List<CodeableConcept> get service;
   String get description;
-  ConformanceCertificate get certificate;
+  List<ConformanceCertificate> get certificate;
 
   Map<String, dynamic> toJson();
   $ConformanceSecurityCopyWith<ConformanceSecurity> get copyWith;
@@ -5479,14 +5385,12 @@ abstract class $ConformanceSecurityCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Boolean cors,
-      CodeableConcept service,
+      List<CodeableConcept> service,
       String description,
-      ConformanceCertificate certificate});
+      List<ConformanceCertificate> certificate});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get service;
-  $ConformanceCertificateCopyWith<$Res> get certificate;
 }
 
 class _$ConformanceSecurityCopyWithImpl<$Res>
@@ -5516,12 +5420,14 @@ class _$ConformanceSecurityCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       cors: cors == freezed ? _value.cors : cors as Boolean,
-      service: service == freezed ? _value.service : service as CodeableConcept,
+      service: service == freezed
+          ? _value.service
+          : service as List<CodeableConcept>,
       description:
           description == freezed ? _value.description : description as String,
       certificate: certificate == freezed
           ? _value.certificate
-          : certificate as ConformanceCertificate,
+          : certificate as List<ConformanceCertificate>,
     ));
   }
 
@@ -5544,26 +5450,6 @@ class _$ConformanceSecurityCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get service {
-    if (_value.service == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.service, (value) {
-      return _then(_value.copyWith(service: value));
-    });
-  }
-
-  @override
-  $ConformanceCertificateCopyWith<$Res> get certificate {
-    if (_value.certificate == null) {
-      return null;
-    }
-    return $ConformanceCertificateCopyWith<$Res>(_value.certificate, (value) {
-      return _then(_value.copyWith(certificate: value));
-    });
-  }
 }
 
 abstract class _$ConformanceSecurityCopyWith<$Res>
@@ -5577,18 +5463,14 @@ abstract class _$ConformanceSecurityCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Boolean cors,
-      CodeableConcept service,
+      List<CodeableConcept> service,
       String description,
-      ConformanceCertificate certificate});
+      List<ConformanceCertificate> certificate});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $CodeableConceptCopyWith<$Res> get service;
-  @override
-  $ConformanceCertificateCopyWith<$Res> get certificate;
 }
 
 class __$ConformanceSecurityCopyWithImpl<$Res>
@@ -5620,12 +5502,14 @@ class __$ConformanceSecurityCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       cors: cors == freezed ? _value.cors : cors as Boolean,
-      service: service == freezed ? _value.service : service as CodeableConcept,
+      service: service == freezed
+          ? _value.service
+          : service as List<CodeableConcept>,
       description:
           description == freezed ? _value.description : description as String,
       certificate: certificate == freezed
           ? _value.certificate
-          : certificate as ConformanceCertificate,
+          : certificate as List<ConformanceCertificate>,
     ));
   }
 }
@@ -5654,11 +5538,11 @@ class _$_ConformanceSecurity implements _ConformanceSecurity {
   @override
   final Boolean cors;
   @override
-  final CodeableConcept service;
+  final List<CodeableConcept> service;
   @override
   final String description;
   @override
-  final ConformanceCertificate certificate;
+  final List<ConformanceCertificate> certificate;
 
   @override
   String toString() {
@@ -5718,9 +5602,9 @@ abstract class _ConformanceSecurity implements ConformanceSecurity {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       Boolean cors,
-      CodeableConcept service,
+      List<CodeableConcept> service,
       String description,
-      ConformanceCertificate certificate}) = _$_ConformanceSecurity;
+      List<ConformanceCertificate> certificate}) = _$_ConformanceSecurity;
 
   factory _ConformanceSecurity.fromJson(Map<String, dynamic> json) =
       _$_ConformanceSecurity.fromJson;
@@ -5735,11 +5619,11 @@ abstract class _ConformanceSecurity implements ConformanceSecurity {
   @override
   Boolean get cors;
   @override
-  CodeableConcept get service;
+  List<CodeableConcept> get service;
   @override
   String get description;
   @override
-  ConformanceCertificate get certificate;
+  List<ConformanceCertificate> get certificate;
   @override
   _$ConformanceSecurityCopyWith<_ConformanceSecurity> get copyWith;
 }
@@ -5762,7 +5646,7 @@ class _$ConformanceResourceTearOff {
       Reference profile,
       @required
       @JsonKey(required: true)
-          ConformanceResourceInteraction interaction,
+          List<ConformanceResourceInteraction> interaction,
       @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
           ResourceVersioning versioning,
       Boolean readHistory,
@@ -5771,9 +5655,9 @@ class _$ConformanceResourceTearOff {
       Boolean conditionalUpdate,
       @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
           ResourceConditionalDelete conditionalDelete,
-      String searchInclude,
-      String searchRevInclude,
-      ConformanceSearchParam searchParam}) {
+      List<String> searchInclude,
+      List<String> searchRevInclude,
+      List<ConformanceSearchParam> searchParam}) {
     return _ConformanceResource(
       id: id,
       extension_: extension_,
@@ -5806,7 +5690,7 @@ mixin _$ConformanceResource {
   Code get type;
   Reference get profile;
   @JsonKey(required: true)
-  ConformanceResourceInteraction get interaction;
+  List<ConformanceResourceInteraction> get interaction;
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
   ResourceVersioning get versioning;
   Boolean get readHistory;
@@ -5815,9 +5699,9 @@ mixin _$ConformanceResource {
   Boolean get conditionalUpdate;
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
   ResourceConditionalDelete get conditionalDelete;
-  String get searchInclude;
-  String get searchRevInclude;
-  ConformanceSearchParam get searchParam;
+  List<String> get searchInclude;
+  List<String> get searchRevInclude;
+  List<ConformanceSearchParam> get searchParam;
 
   Map<String, dynamic> toJson();
   $ConformanceResourceCopyWith<ConformanceResource> get copyWith;
@@ -5836,7 +5720,7 @@ abstract class $ConformanceResourceCopyWith<$Res> {
           Code type,
       Reference profile,
       @JsonKey(required: true)
-          ConformanceResourceInteraction interaction,
+          List<ConformanceResourceInteraction> interaction,
       @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
           ResourceVersioning versioning,
       Boolean readHistory,
@@ -5845,15 +5729,13 @@ abstract class $ConformanceResourceCopyWith<$Res> {
       Boolean conditionalUpdate,
       @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
           ResourceConditionalDelete conditionalDelete,
-      String searchInclude,
-      String searchRevInclude,
-      ConformanceSearchParam searchParam});
+      List<String> searchInclude,
+      List<String> searchRevInclude,
+      List<ConformanceSearchParam> searchParam});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get profile;
-  $ConformanceResourceInteractionCopyWith<$Res> get interaction;
-  $ConformanceSearchParamCopyWith<$Res> get searchParam;
 }
 
 class _$ConformanceResourceCopyWithImpl<$Res>
@@ -5894,7 +5776,7 @@ class _$ConformanceResourceCopyWithImpl<$Res>
       profile: profile == freezed ? _value.profile : profile as Reference,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as ConformanceResourceInteraction,
+          : interaction as List<ConformanceResourceInteraction>,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as ResourceVersioning,
@@ -5914,13 +5796,13 @@ class _$ConformanceResourceCopyWithImpl<$Res>
           : conditionalDelete as ResourceConditionalDelete,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as String,
+          : searchInclude as List<String>,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as String,
+          : searchRevInclude as List<String>,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as ConformanceSearchParam,
+          : searchParam as List<ConformanceSearchParam>,
     ));
   }
 
@@ -5953,27 +5835,6 @@ class _$ConformanceResourceCopyWithImpl<$Res>
       return _then(_value.copyWith(profile: value));
     });
   }
-
-  @override
-  $ConformanceResourceInteractionCopyWith<$Res> get interaction {
-    if (_value.interaction == null) {
-      return null;
-    }
-    return $ConformanceResourceInteractionCopyWith<$Res>(_value.interaction,
-        (value) {
-      return _then(_value.copyWith(interaction: value));
-    });
-  }
-
-  @override
-  $ConformanceSearchParamCopyWith<$Res> get searchParam {
-    if (_value.searchParam == null) {
-      return null;
-    }
-    return $ConformanceSearchParamCopyWith<$Res>(_value.searchParam, (value) {
-      return _then(_value.copyWith(searchParam: value));
-    });
-  }
 }
 
 abstract class _$ConformanceResourceCopyWith<$Res>
@@ -5991,7 +5852,7 @@ abstract class _$ConformanceResourceCopyWith<$Res>
           Code type,
       Reference profile,
       @JsonKey(required: true)
-          ConformanceResourceInteraction interaction,
+          List<ConformanceResourceInteraction> interaction,
       @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
           ResourceVersioning versioning,
       Boolean readHistory,
@@ -6000,9 +5861,9 @@ abstract class _$ConformanceResourceCopyWith<$Res>
       Boolean conditionalUpdate,
       @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
           ResourceConditionalDelete conditionalDelete,
-      String searchInclude,
-      String searchRevInclude,
-      ConformanceSearchParam searchParam});
+      List<String> searchInclude,
+      List<String> searchRevInclude,
+      List<ConformanceSearchParam> searchParam});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -6010,10 +5871,6 @@ abstract class _$ConformanceResourceCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ReferenceCopyWith<$Res> get profile;
-  @override
-  $ConformanceResourceInteractionCopyWith<$Res> get interaction;
-  @override
-  $ConformanceSearchParamCopyWith<$Res> get searchParam;
 }
 
 class __$ConformanceResourceCopyWithImpl<$Res>
@@ -6056,7 +5913,7 @@ class __$ConformanceResourceCopyWithImpl<$Res>
       profile: profile == freezed ? _value.profile : profile as Reference,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as ConformanceResourceInteraction,
+          : interaction as List<ConformanceResourceInteraction>,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as ResourceVersioning,
@@ -6076,13 +5933,13 @@ class __$ConformanceResourceCopyWithImpl<$Res>
           : conditionalDelete as ResourceConditionalDelete,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as String,
+          : searchInclude as List<String>,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as String,
+          : searchRevInclude as List<String>,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as ConformanceSearchParam,
+          : searchParam as List<ConformanceSearchParam>,
     ));
   }
 }
@@ -6132,7 +5989,7 @@ class _$_ConformanceResource implements _ConformanceResource {
   final Reference profile;
   @override
   @JsonKey(required: true)
-  final ConformanceResourceInteraction interaction;
+  final List<ConformanceResourceInteraction> interaction;
   @override
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
   final ResourceVersioning versioning;
@@ -6148,11 +6005,11 @@ class _$_ConformanceResource implements _ConformanceResource {
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
   final ResourceConditionalDelete conditionalDelete;
   @override
-  final String searchInclude;
+  final List<String> searchInclude;
   @override
-  final String searchRevInclude;
+  final List<String> searchRevInclude;
   @override
-  final ConformanceSearchParam searchParam;
+  final List<ConformanceSearchParam> searchParam;
 
   @override
   String toString() {
@@ -6250,7 +6107,7 @@ abstract class _ConformanceResource implements ConformanceResource {
       Reference profile,
       @required
       @JsonKey(required: true)
-          ConformanceResourceInteraction interaction,
+          List<ConformanceResourceInteraction> interaction,
       @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
           ResourceVersioning versioning,
       Boolean readHistory,
@@ -6259,9 +6116,9 @@ abstract class _ConformanceResource implements ConformanceResource {
       Boolean conditionalUpdate,
       @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
           ResourceConditionalDelete conditionalDelete,
-      String searchInclude,
-      String searchRevInclude,
-      ConformanceSearchParam searchParam}) = _$_ConformanceResource;
+      List<String> searchInclude,
+      List<String> searchRevInclude,
+      List<ConformanceSearchParam> searchParam}) = _$_ConformanceResource;
 
   factory _ConformanceResource.fromJson(Map<String, dynamic> json) =
       _$_ConformanceResource.fromJson;
@@ -6280,7 +6137,7 @@ abstract class _ConformanceResource implements ConformanceResource {
   Reference get profile;
   @override
   @JsonKey(required: true)
-  ConformanceResourceInteraction get interaction;
+  List<ConformanceResourceInteraction> get interaction;
   @override
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
   ResourceVersioning get versioning;
@@ -6296,11 +6153,11 @@ abstract class _ConformanceResource implements ConformanceResource {
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
   ResourceConditionalDelete get conditionalDelete;
   @override
-  String get searchInclude;
+  List<String> get searchInclude;
   @override
-  String get searchRevInclude;
+  List<String> get searchRevInclude;
   @override
-  ConformanceSearchParam get searchParam;
+  List<ConformanceSearchParam> get searchParam;
   @override
   _$ConformanceResourceCopyWith<_ConformanceResource> get copyWith;
 }
@@ -7600,16 +7457,17 @@ class _$OperationDefinitionBindingTearOff {
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
-          BindingStrength strength,
-      @required
       @JsonKey(required: true)
-          FhirUri valueSetX}) {
+          BindingStrength strength,
+      FhirUri valueSetUri,
+      Reference valueSetReference}) {
     return _OperationDefinitionBinding(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       strength: strength,
-      valueSetX: valueSetX,
+      valueSetUri: valueSetUri,
+      valueSetReference: valueSetReference,
     );
   }
 }
@@ -7623,9 +7481,10 @@ mixin _$OperationDefinitionBinding {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
-  BindingStrength get strength;
   @JsonKey(required: true)
-  FhirUri get valueSetX;
+  BindingStrength get strength;
+  FhirUri get valueSetUri;
+  Reference get valueSetReference;
 
   Map<String, dynamic> toJson();
   $OperationDefinitionBindingCopyWith<OperationDefinitionBinding> get copyWith;
@@ -7641,12 +7500,14 @@ abstract class $OperationDefinitionBindingCopyWith<$Res> {
           FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
-          BindingStrength strength,
       @JsonKey(required: true)
-          FhirUri valueSetX});
+          BindingStrength strength,
+      FhirUri valueSetUri,
+      Reference valueSetReference});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ReferenceCopyWith<$Res> get valueSetReference;
 }
 
 class _$OperationDefinitionBindingCopyWithImpl<$Res>
@@ -7663,7 +7524,8 @@ class _$OperationDefinitionBindingCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object strength = freezed,
-    Object valueSetX = freezed,
+    Object valueSetUri = freezed,
+    Object valueSetReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -7675,7 +7537,11 @@ class _$OperationDefinitionBindingCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       strength:
           strength == freezed ? _value.strength : strength as BindingStrength,
-      valueSetX: valueSetX == freezed ? _value.valueSetX : valueSetX as FhirUri,
+      valueSetUri:
+          valueSetUri == freezed ? _value.valueSetUri : valueSetUri as FhirUri,
+      valueSetReference: valueSetReference == freezed
+          ? _value.valueSetReference
+          : valueSetReference as Reference,
     ));
   }
 
@@ -7698,6 +7564,16 @@ class _$OperationDefinitionBindingCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
+
+  @override
+  $ReferenceCopyWith<$Res> get valueSetReference {
+    if (_value.valueSetReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.valueSetReference, (value) {
+      return _then(_value.copyWith(valueSetReference: value));
+    });
+  }
 }
 
 abstract class _$OperationDefinitionBindingCopyWith<$Res>
@@ -7713,14 +7589,17 @@ abstract class _$OperationDefinitionBindingCopyWith<$Res>
           FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
-          BindingStrength strength,
       @JsonKey(required: true)
-          FhirUri valueSetX});
+          BindingStrength strength,
+      FhirUri valueSetUri,
+      Reference valueSetReference});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ReferenceCopyWith<$Res> get valueSetReference;
 }
 
 class __$OperationDefinitionBindingCopyWithImpl<$Res>
@@ -7740,7 +7619,8 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object strength = freezed,
-    Object valueSetX = freezed,
+    Object valueSetUri = freezed,
+    Object valueSetReference = freezed,
   }) {
     return _then(_OperationDefinitionBinding(
       id: id == freezed ? _value.id : id as Id,
@@ -7752,7 +7632,11 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       strength:
           strength == freezed ? _value.strength : strength as BindingStrength,
-      valueSetX: valueSetX == freezed ? _value.valueSetX : valueSetX as FhirUri,
+      valueSetUri:
+          valueSetUri == freezed ? _value.valueSetUri : valueSetUri as FhirUri,
+      valueSetReference: valueSetReference == freezed
+          ? _value.valueSetReference
+          : valueSetReference as Reference,
     ));
   }
 }
@@ -7766,12 +7650,11 @@ class _$_OperationDefinitionBinding implements _OperationDefinitionBinding {
       this.modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
-          this.strength,
-      @required
       @JsonKey(required: true)
-          this.valueSetX})
-      : assert(strength != null),
-        assert(valueSetX != null);
+          this.strength,
+      this.valueSetUri,
+      this.valueSetReference})
+      : assert(strength != null);
 
   factory _$_OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationDefinitionBindingFromJson(json);
@@ -7785,14 +7668,16 @@ class _$_OperationDefinitionBinding implements _OperationDefinitionBinding {
   final FhirExtension modifierExtension;
   @override
   @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+  @JsonKey(required: true)
   final BindingStrength strength;
   @override
-  @JsonKey(required: true)
-  final FhirUri valueSetX;
+  final FhirUri valueSetUri;
+  @override
+  final Reference valueSetReference;
 
   @override
   String toString() {
-    return 'OperationDefinitionBinding(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, strength: $strength, valueSetX: $valueSetX)';
+    return 'OperationDefinitionBinding(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, strength: $strength, valueSetUri: $valueSetUri, valueSetReference: $valueSetReference)';
   }
 
   @override
@@ -7810,9 +7695,12 @@ class _$_OperationDefinitionBinding implements _OperationDefinitionBinding {
             (identical(other.strength, strength) ||
                 const DeepCollectionEquality()
                     .equals(other.strength, strength)) &&
-            (identical(other.valueSetX, valueSetX) ||
+            (identical(other.valueSetUri, valueSetUri) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueSetX, valueSetX)));
+                    .equals(other.valueSetUri, valueSetUri)) &&
+            (identical(other.valueSetReference, valueSetReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueSetReference, valueSetReference)));
   }
 
   @override
@@ -7822,7 +7710,8 @@ class _$_OperationDefinitionBinding implements _OperationDefinitionBinding {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(strength) ^
-      const DeepCollectionEquality().hash(valueSetX);
+      const DeepCollectionEquality().hash(valueSetUri) ^
+      const DeepCollectionEquality().hash(valueSetReference);
 
   @override
   _$OperationDefinitionBindingCopyWith<_OperationDefinitionBinding>
@@ -7844,10 +7733,10 @@ abstract class _OperationDefinitionBinding
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
-          BindingStrength strength,
-      @required
       @JsonKey(required: true)
-          FhirUri valueSetX}) = _$_OperationDefinitionBinding;
+          BindingStrength strength,
+      FhirUri valueSetUri,
+      Reference valueSetReference}) = _$_OperationDefinitionBinding;
 
   factory _OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionBinding.fromJson;
@@ -7861,10 +7750,12 @@ abstract class _OperationDefinitionBinding
   FhirExtension get modifierExtension;
   @override
   @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
+  @JsonKey(required: true)
   BindingStrength get strength;
   @override
-  @JsonKey(required: true)
-  FhirUri get valueSetX;
+  FhirUri get valueSetUri;
+  @override
+  Reference get valueSetReference;
   @override
   _$OperationDefinitionBindingCopyWith<_OperationDefinitionBinding>
       get copyWith;
@@ -8414,9 +8305,8 @@ class _$ConformanceSearchParamTearOff {
           SearchParamType type,
       String documentation,
       Code target,
-      @JsonKey(unknownEnumValue: SearchParamModifier.unknown)
-          SearchParamModifier modifier,
-      String chain}) {
+      List<SearchParamModifier> modifier,
+      List<String> chain}) {
     return _ConformanceSearchParam(
       id: id,
       extension_: extension_,
@@ -8447,9 +8337,8 @@ mixin _$ConformanceSearchParam {
   SearchParamType get type;
   String get documentation;
   Code get target;
-  @JsonKey(unknownEnumValue: SearchParamModifier.unknown)
-  SearchParamModifier get modifier;
-  String get chain;
+  List<SearchParamModifier> get modifier;
+  List<String> get chain;
 
   Map<String, dynamic> toJson();
   $ConformanceSearchParamCopyWith<ConformanceSearchParam> get copyWith;
@@ -8471,9 +8360,8 @@ abstract class $ConformanceSearchParamCopyWith<$Res> {
           SearchParamType type,
       String documentation,
       Code target,
-      @JsonKey(unknownEnumValue: SearchParamModifier.unknown)
-          SearchParamModifier modifier,
-      String chain});
+      List<SearchParamModifier> modifier,
+      List<String> chain});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -8518,8 +8406,8 @@ class _$ConformanceSearchParamCopyWithImpl<$Res>
       target: target == freezed ? _value.target : target as Code,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as SearchParamModifier,
-      chain: chain == freezed ? _value.chain : chain as String,
+          : modifier as List<SearchParamModifier>,
+      chain: chain == freezed ? _value.chain : chain as List<String>,
     ));
   }
 
@@ -8562,9 +8450,8 @@ abstract class _$ConformanceSearchParamCopyWith<$Res>
           SearchParamType type,
       String documentation,
       Code target,
-      @JsonKey(unknownEnumValue: SearchParamModifier.unknown)
-          SearchParamModifier modifier,
-      String chain});
+      List<SearchParamModifier> modifier,
+      List<String> chain});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -8613,8 +8500,8 @@ class __$ConformanceSearchParamCopyWithImpl<$Res>
       target: target == freezed ? _value.target : target as Code,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as SearchParamModifier,
-      chain: chain == freezed ? _value.chain : chain as String,
+          : modifier as List<SearchParamModifier>,
+      chain: chain == freezed ? _value.chain : chain as List<String>,
     ));
   }
 }
@@ -8635,8 +8522,7 @@ class _$_ConformanceSearchParam implements _ConformanceSearchParam {
           this.type,
       this.documentation,
       this.target,
-      @JsonKey(unknownEnumValue: SearchParamModifier.unknown)
-          this.modifier,
+      this.modifier,
       this.chain})
       : assert(name != null),
         assert(type != null);
@@ -8664,10 +8550,9 @@ class _$_ConformanceSearchParam implements _ConformanceSearchParam {
   @override
   final Code target;
   @override
-  @JsonKey(unknownEnumValue: SearchParamModifier.unknown)
-  final SearchParamModifier modifier;
+  final List<SearchParamModifier> modifier;
   @override
-  final String chain;
+  final List<String> chain;
 
   @override
   String toString() {
@@ -8745,9 +8630,8 @@ abstract class _ConformanceSearchParam implements ConformanceSearchParam {
           SearchParamType type,
       String documentation,
       Code target,
-      @JsonKey(unknownEnumValue: SearchParamModifier.unknown)
-          SearchParamModifier modifier,
-      String chain}) = _$_ConformanceSearchParam;
+      List<SearchParamModifier> modifier,
+      List<String> chain}) = _$_ConformanceSearchParam;
 
   factory _ConformanceSearchParam.fromJson(Map<String, dynamic> json) =
       _$_ConformanceSearchParam.fromJson;
@@ -8772,10 +8656,9 @@ abstract class _ConformanceSearchParam implements ConformanceSearchParam {
   @override
   Code get target;
   @override
-  @JsonKey(unknownEnumValue: SearchParamModifier.unknown)
-  SearchParamModifier get modifier;
+  List<SearchParamModifier> get modifier;
   @override
-  String get chain;
+  List<String> get chain;
   @override
   _$ConformanceSearchParamCopyWith<_ConformanceSearchParam> get copyWith;
 }

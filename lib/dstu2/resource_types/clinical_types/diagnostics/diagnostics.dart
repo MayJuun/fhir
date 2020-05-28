@@ -277,7 +277,9 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
     @JsonKey(required: true) @required Oid uid,
     FhirUri url,
     Reference imagingStudy,
-    @JsonKey(required: true) @required List<ImagingObjectSelectionSeries> series,
+    @JsonKey(required: true)
+    @required
+        List<ImagingObjectSelectionSeries> series,
   }) = _ImagingObjectSelectionStudy;
 
   factory ImagingObjectSelectionStudy.fromJson(Map<String, dynamic> json) =>
@@ -331,7 +333,7 @@ abstract class ObservationComponent with _$ObservationComponent {
     Attachment valueAttachment,
     Time valueTime,
     FhirDateTime valueDateTime,
-    Period valuePeriod
+    Period valuePeriod,
     CodeableConcept dataAbsentReason,
     List<ObservationReferenceRange> referenceRange,
   }) = _ObservationComponent;
@@ -453,7 +455,9 @@ abstract class ImagingObjectSelectionSeries
     FhirExtension modifierExtension,
     Oid uid,
     FhirUri url,
-    @JsonKey(required: true) @required List<ImagingObjectSelectionInstance> instance,
+    @JsonKey(required: true)
+    @required
+        List<ImagingObjectSelectionInstance> instance,
   }) = _ImagingObjectSelectionSeries;
 
   factory ImagingObjectSelectionSeries.fromJson(Map<String, dynamic> json) =>

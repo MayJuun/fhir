@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
 import '../../resource_types.enums.dart';
+import 'general.enums.dart';
 
 part 'general.freezed.dart';
 part 'general.g.dart';
@@ -13,7 +14,7 @@ abstract class Account with _$Account implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
+    @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     CodeableConcept type,
     String name,
     Reference subject,

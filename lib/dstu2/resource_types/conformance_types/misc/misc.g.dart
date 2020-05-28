@@ -11,6 +11,7 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
   $checkKeys(json,
       requiredKeys: const ['url', 'name', 'status', 'package', 'page']);
   return _$_ImplementationGuide(
+    resourceType: json['resourceType'] as String ?? 'ImplementationGuide',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -44,36 +45,42 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
         ? null
         : Boolean.fromJson(json['experimental']),
     publisher: json['publisher'] as String,
-    contact: json['contact'] == null
-        ? null
-        : ImplementationGuideContact.fromJson(
-            json['contact'] as Map<String, dynamic>),
+    contact: (json['contact'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ImplementationGuideContact.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
     description: json['description'] as String,
-    useContext: json['useContext'] == null
-        ? null
-        : CodeableConcept.fromJson(json['useContext'] as Map<String, dynamic>),
+    useContext: (json['useContext'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     copyright: json['copyright'] as String,
     fhirVersion: json['fhirVersion'] == null
         ? null
         : Id.fromJson(json['fhirVersion'] as String),
-    dependency: json['dependency'] == null
-        ? null
-        : ImplementationGuideDependency.fromJson(
-            json['dependency'] as Map<String, dynamic>),
-    package: json['package'] == null
-        ? null
-        : ImplementationGuidePackage.fromJson(
-            json['package'] as Map<String, dynamic>),
-    global: json['global'] == null
-        ? null
-        : ImplementationGuideGlobal.fromJson(
-            json['global'] as Map<String, dynamic>),
-    binary: json['binary'] == null
-        ? null
-        : FhirUri.fromJson(json['binary'] as String),
+    dependency: (json['dependency'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ImplementationGuideDependency.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    package: (json['package'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ImplementationGuidePackage.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    global: (json['global'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ImplementationGuideGlobal.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    binary: (json['binary'] as List)
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.toList(),
     page: json['page'] == null
         ? null
         : ImplementationGuidePage.fromJson(
@@ -91,6 +98,7 @@ Map<String, dynamic> _$_$_ImplementationGuideToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -105,16 +113,18 @@ Map<String, dynamic> _$_$_ImplementationGuideToJson(
   writeNotNull('status', _$ImplementationGuideStatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
-  writeNotNull('contact', instance.contact?.toJson());
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('description', instance.description);
-  writeNotNull('useContext', instance.useContext?.toJson());
+  writeNotNull(
+      'useContext', instance.useContext?.map((e) => e?.toJson())?.toList());
   writeNotNull('copyright', instance.copyright);
   writeNotNull('fhirVersion', instance.fhirVersion?.toJson());
-  writeNotNull('dependency', instance.dependency?.toJson());
-  writeNotNull('package', instance.package?.toJson());
-  writeNotNull('global', instance.global?.toJson());
-  writeNotNull('binary', instance.binary?.toJson());
+  writeNotNull(
+      'dependency', instance.dependency?.map((e) => e?.toJson())?.toList());
+  writeNotNull('package', instance.package?.map((e) => e?.toJson())?.toList());
+  writeNotNull('global', instance.global?.map((e) => e?.toJson())?.toList());
+  writeNotNull('binary', instance.binary?.map((e) => e?.toJson())?.toList());
   writeNotNull('page', instance.page?.toJson());
   return val;
 }
@@ -170,9 +180,10 @@ _$_ImplementationGuideContact _$_$_ImplementationGuideContactFromJson(
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] as String,
-    telecom: json['telecom'] == null
-        ? null
-        : ContactPoint.fromJson(json['telecom'] as Map<String, dynamic>),
+    telecom: (json['telecom'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -190,7 +201,7 @@ Map<String, dynamic> _$_$_ImplementationGuideContactToJson(
   writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom?.toJson());
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -250,10 +261,11 @@ _$_ImplementationGuidePackage _$_$_ImplementationGuidePackageFromJson(
             json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] as String,
     description: json['description'] as String,
-    resource: json['resource'] == null
-        ? null
-        : ImplementationGuideResource.fromJson(
-            json['resource'] as Map<String, dynamic>),
+    resource: (json['resource'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ImplementationGuideResource.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -272,7 +284,8 @@ Map<String, dynamic> _$_$_ImplementationGuidePackageToJson(
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('description', instance.description);
-  writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull(
+      'resource', instance.resource?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -331,8 +344,10 @@ _$_ImplementationGuidePage _$_$_ImplementationGuidePageFromJson(
     name: json['name'] as String,
     kind: _$enumDecodeNullable(_$PageKindEnumMap, json['kind'],
         unknownValue: PageKind.unknown),
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
-    package: json['package'] as String,
+    type: (json['type'] as List)
+        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.toList(),
+    package: (json['package'] as List)?.map((e) => e as String)?.toList(),
     format:
         json['format'] == null ? null : Code.fromJson(json['format'] as String),
     page: (json['page'] as List)
@@ -359,7 +374,7 @@ Map<String, dynamic> _$_$_ImplementationGuidePageToJson(
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('kind', _$PageKindEnumMap[instance.kind]);
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
   writeNotNull('package', instance.package);
   writeNotNull('format', instance.format?.toJson());
   writeNotNull('page', instance.page?.map((e) => e?.toJson())?.toList());
@@ -439,6 +454,7 @@ const _$ResourcePurposeEnumMap = {
 _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['url', 'name', 'status']);
   return _$_TestScript(
+    resourceType: json['resourceType'] as String ?? 'TestScript',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -474,16 +490,20 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
         ? null
         : Boolean.fromJson(json['experimental']),
     publisher: json['publisher'] as String,
-    contact: json['contact'] == null
-        ? null
-        : TestScriptContact.fromJson(json['contact'] as Map<String, dynamic>),
+    contact: (json['contact'] as List)
+        ?.map((e) => e == null
+            ? null
+            : TestScriptContact.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
     description: json['description'] as String,
-    useContext: json['useContext'] == null
-        ? null
-        : CodeableConcept.fromJson(json['useContext'] as Map<String, dynamic>),
+    useContext: (json['useContext'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     requirements: json['requirements'] as String,
     copyright: json['copyright'] as String,
     metadata: json['metadata'] == null
@@ -492,21 +512,28 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
     multiserver: json['multiserver'] == null
         ? null
         : Boolean.fromJson(json['multiserver']),
-    fixture: json['fixture'] == null
-        ? null
-        : TestScriptFixture.fromJson(json['fixture'] as Map<String, dynamic>),
-    profile: json['profile'] == null
-        ? null
-        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
-    variable: json['variable'] == null
-        ? null
-        : TestScriptVariable.fromJson(json['variable'] as Map<String, dynamic>),
+    fixture: (json['fixture'] as List)
+        ?.map((e) => e == null
+            ? null
+            : TestScriptFixture.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    profile: (json['profile'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    variable: (json['variable'] as List)
+        ?.map((e) => e == null
+            ? null
+            : TestScriptVariable.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     setup: json['setup'] == null
         ? null
         : TestScriptSetup.fromJson(json['setup'] as Map<String, dynamic>),
-    test: json['test'] == null
-        ? null
-        : TestScriptTest.fromJson(json['test'] as Map<String, dynamic>),
+    test: (json['test'] as List)
+        ?.map((e) => e == null
+            ? null
+            : TestScriptTest.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     teardown: json['teardown'] == null
         ? null
         : TestScriptTeardown.fromJson(json['teardown'] as Map<String, dynamic>),
@@ -522,6 +549,7 @@ Map<String, dynamic> _$_$_TestScriptToJson(_$_TestScript instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -537,19 +565,21 @@ Map<String, dynamic> _$_$_TestScriptToJson(_$_TestScript instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
-  writeNotNull('contact', instance.contact?.toJson());
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('description', instance.description);
-  writeNotNull('useContext', instance.useContext?.toJson());
+  writeNotNull(
+      'useContext', instance.useContext?.map((e) => e?.toJson())?.toList());
   writeNotNull('requirements', instance.requirements);
   writeNotNull('copyright', instance.copyright);
   writeNotNull('metadata', instance.metadata?.toJson());
   writeNotNull('multiserver', instance.multiserver?.toJson());
-  writeNotNull('fixture', instance.fixture?.toJson());
-  writeNotNull('profile', instance.profile?.toJson());
-  writeNotNull('variable', instance.variable?.toJson());
+  writeNotNull('fixture', instance.fixture?.map((e) => e?.toJson())?.toList());
+  writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'variable', instance.variable?.map((e) => e?.toJson())?.toList());
   writeNotNull('setup', instance.setup?.toJson());
-  writeNotNull('test', instance.test?.toJson());
+  writeNotNull('test', instance.test?.map((e) => e?.toJson())?.toList());
   writeNotNull('teardown', instance.teardown?.toJson());
   return val;
 }
@@ -572,9 +602,10 @@ _$_TestScriptContact _$_$_TestScriptContactFromJson(Map<String, dynamic> json) {
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
     name: json['name'] as String,
-    telecom: json['telecom'] == null
-        ? null
-        : ContactPoint.fromJson(json['telecom'] as Map<String, dynamic>),
+    telecom: (json['telecom'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -592,7 +623,7 @@ Map<String, dynamic> _$_$_TestScriptContactToJson(
   writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom?.toJson());
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -608,9 +639,11 @@ _$_TestScriptMetadata _$_$_TestScriptMetadataFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    link: json['link'] == null
-        ? null
-        : TestScriptLink.fromJson(json['link'] as Map<String, dynamic>),
+    link: (json['link'] as List)
+        ?.map((e) => e == null
+            ? null
+            : TestScriptLink.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     capability: json['capability'] == null
         ? null
         : TestScriptCapability.fromJson(
@@ -631,7 +664,7 @@ Map<String, dynamic> _$_$_TestScriptMetadataToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('link', instance.link?.toJson());
+  writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
   writeNotNull('capability', instance.capability?.toJson());
   return val;
 }
@@ -689,8 +722,9 @@ _$_TestScriptCapability _$_$_TestScriptCapabilityFromJson(
     destination: json['destination'] == null
         ? null
         : Integer.fromJson(json['destination']),
-    link:
-        json['link'] == null ? null : FhirUri.fromJson(json['link'] as String),
+    link: (json['link'] as List)
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.toList(),
     conformance: json['conformance'] == null
         ? null
         : Reference.fromJson(json['conformance'] as Map<String, dynamic>),
@@ -714,7 +748,7 @@ Map<String, dynamic> _$_$_TestScriptCapabilityToJson(
   writeNotNull('validated', instance.validated?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('destination', instance.destination?.toJson());
-  writeNotNull('link', instance.link?.toJson());
+  writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
   writeNotNull('conformance', instance.conformance?.toJson());
   return val;
 }
@@ -905,10 +939,11 @@ _$_ActionOperation _$_$_ActionOperationFromJson(Map<String, dynamic> json) {
         ? null
         : Boolean.fromJson(json['encodeRequestUrl']),
     params: json['params'] as String,
-    requestHeader: json['requestHeader'] == null
-        ? null
-        : TestScriptRequestHeader.fromJson(
-            json['requestHeader'] as Map<String, dynamic>),
+    requestHeader: (json['requestHeader'] as List)
+        ?.map((e) => e == null
+            ? null
+            : TestScriptRequestHeader.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     responseId: json['responseId'] == null
         ? null
         : Id.fromJson(json['responseId'] as String),
@@ -944,7 +979,8 @@ Map<String, dynamic> _$_$_ActionOperationToJson(_$_ActionOperation instance) {
   writeNotNull('destination', instance.destination?.toJson());
   writeNotNull('encodeRequestUrl', instance.encodeRequestUrl?.toJson());
   writeNotNull('params', instance.params);
-  writeNotNull('requestHeader', instance.requestHeader?.toJson());
+  writeNotNull('requestHeader',
+      instance.requestHeader?.map((e) => e?.toJson())?.toList());
   writeNotNull('responseId', instance.responseId?.toJson());
   writeNotNull('sourceId', instance.sourceId?.toJson());
   writeNotNull('targetId', instance.targetId?.toJson());

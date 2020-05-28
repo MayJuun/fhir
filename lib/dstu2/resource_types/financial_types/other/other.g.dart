@@ -9,6 +9,7 @@ part of 'other.dart';
 _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     Map<String, dynamic> json) {
   return _$_ExplanationOfBenefit(
+    resourceType: json['resourceType'] as String ?? 'ExplanationOfBenefit',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -32,9 +33,10 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
@@ -74,6 +76,7 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -82,7 +85,8 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
   writeNotNull('contained', instance.contained?.toJson());
   writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull(
       'outcome', _$ExplanationOfBenefitOutcomeEnumMap[instance.outcome]);

@@ -24,8 +24,8 @@ class _$ActivityDefinitionTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-          ActivityDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -113,8 +113,8 @@ mixin _$ActivityDefinition {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-  ActivityDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -164,8 +164,8 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-          ActivityDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -272,9 +272,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed
-          ? _value.status
-          : status as ActivityDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -461,8 +459,8 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-          ActivityDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -581,9 +579,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed
-          ? _value.status
-          : status as ActivityDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -666,7 +662,7 @@ class _$_ActivityDefinition implements _ActivityDefinition {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -719,8 +715,8 @@ class _$_ActivityDefinition implements _ActivityDefinition {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-  final ActivityDefinitionStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -942,8 +938,8 @@ abstract class _ActivityDefinition implements ActivityDefinition {
           String version,
           String name,
           String title,
-          @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-              ActivityDefinitionStatus status,
+          @JsonKey(unknownEnumValue: Status.unknown)
+              Status status,
           Boolean experimental,
           DateTime date,
           String publisher,
@@ -995,8 +991,8 @@ abstract class _ActivityDefinition implements ActivityDefinition {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-  ActivityDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -1444,8 +1440,8 @@ class _$PlanDefinitionTearOff {
       String name,
       String title,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-          PlanDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -1509,8 +1505,8 @@ mixin _$PlanDefinition {
   String get name;
   String get title;
   CodeableConcept get type;
-  @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-  PlanDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -1548,8 +1544,8 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       String name,
       String title,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-          PlanDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -1624,8 +1620,7 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      status:
-          status == freezed ? _value.status : status as PlanDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -1703,8 +1698,8 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       String name,
       String title,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-          PlanDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -1783,8 +1778,7 @@ class __$PlanDefinitionCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      status:
-          status == freezed ? _value.status : status as PlanDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -1839,7 +1833,7 @@ class _$_PlanDefinition implements _PlanDefinition {
       this.name,
       this.title,
       this.type,
-      @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -1881,8 +1875,8 @@ class _$_PlanDefinition implements _PlanDefinition {
   @override
   final CodeableConcept type;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-  final PlanDefinitionStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -2055,8 +2049,8 @@ abstract class _PlanDefinition implements PlanDefinition {
       String name,
       String title,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-          PlanDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -2096,8 +2090,8 @@ abstract class _PlanDefinition implements PlanDefinition {
   @override
   CodeableConcept get type;
   @override
-  @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-  PlanDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -4446,8 +4440,8 @@ class _$QuestionnaireTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          QuestionnaireStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4501,8 +4495,8 @@ mixin _$Questionnaire {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-  QuestionnaireStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -4535,8 +4529,8 @@ abstract class $QuestionnaireCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          QuestionnaireStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4600,7 +4594,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as QuestionnaireStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -4659,8 +4653,8 @@ abstract class _$QuestionnaireCopyWith<$Res>
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          QuestionnaireStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4727,7 +4721,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as QuestionnaireStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -4773,7 +4767,7 @@ class _$_Questionnaire implements _Questionnaire {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -4809,8 +4803,8 @@ class _$_Questionnaire implements _Questionnaire {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-  final QuestionnaireStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -4958,8 +4952,8 @@ abstract class _Questionnaire implements Questionnaire {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          QuestionnaireStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4993,8 +4987,8 @@ abstract class _Questionnaire implements Questionnaire {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-  QuestionnaireStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -6483,8 +6477,8 @@ class _$ServiceDefinitionTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ServiceDefinitionStatus.unknown)
-          ServiceDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6546,8 +6540,8 @@ mixin _$ServiceDefinition {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: ServiceDefinitionStatus.unknown)
-  ServiceDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -6584,8 +6578,8 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ServiceDefinitionStatus.unknown)
-          ServiceDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6658,8 +6652,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status:
-          status == freezed ? _value.status : status as ServiceDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -6740,8 +6733,8 @@ abstract class _$ServiceDefinitionCopyWith<$Res>
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ServiceDefinitionStatus.unknown)
-          ServiceDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6818,8 +6811,7 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status:
-          status == freezed ? _value.status : status as ServiceDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -6877,7 +6869,7 @@ class _$_ServiceDefinition implements _ServiceDefinition {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: ServiceDefinitionStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -6917,8 +6909,8 @@ class _$_ServiceDefinition implements _ServiceDefinition {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: ServiceDefinitionStatus.unknown)
-  final ServiceDefinitionStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -7088,8 +7080,8 @@ abstract class _ServiceDefinition implements ServiceDefinition {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ServiceDefinitionStatus.unknown)
-          ServiceDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -7127,8 +7119,8 @@ abstract class _ServiceDefinition implements ServiceDefinition {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: ServiceDefinitionStatus.unknown)
-  ServiceDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override

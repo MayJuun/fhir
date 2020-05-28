@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
-import '../../resource_types.enums.dart';
+import 'diagnostics.enums.dart';
 
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
@@ -133,8 +133,7 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     Oid uid,
     Identifier accession,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-        ImagingStudyAvailability availability,
+    @JsonKey(unknownEnumValue: Availability.unknown) Availability availability,
     List<Coding> modalityList,
     @JsonKey(required: true) Reference patient,
     Reference context,
@@ -163,8 +162,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     @JsonKey(required: true) Coding modality,
     String description,
     UnsignedInt numberOfInstances,
-    @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-        SeriesAvailability availability,
+    @JsonKey(unknownEnumValue: Availability.unknown) Availability availability,
     List<Reference> endpoint,
     Coding bodySite,
     Coding laterality,

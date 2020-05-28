@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
-import '../../resource_types.enums.dart';
+import 'documents.enums.dart';
 
 part 'documents.freezed.dart';
 part 'documents.g.dart';
@@ -90,8 +90,7 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
         String resourceType,
     Identifier masterIdentifier,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-        DocumentManifestStatus status,
+    @JsonKey(unknownEnumValue: DocumentStatus.unknown) DocumentStatus status,
     CodeableConcept type,
     Reference subject,
     DateTime created,
@@ -134,8 +133,7 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
         String resourceType,
     Identifier masterIdentifier,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-        DocumentReferenceStatus status,
+    @JsonKey(unknownEnumValue: DocumentStatus.unknown) DocumentStatus status,
     Code docStatus,
     @JsonKey(required: true) CodeableConcept type,
     @JsonKey(name: 'class') CodeableConcept class_,

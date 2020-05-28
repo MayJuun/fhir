@@ -1464,8 +1464,8 @@ class _$DocumentManifestTearOff {
           String resourceType,
       Identifier masterIdentifier,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-          DocumentManifestStatus status,
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+          DocumentStatus status,
       CodeableConcept type,
       Reference subject,
       DateTime created,
@@ -1502,8 +1502,8 @@ mixin _$DocumentManifest {
   String get resourceType;
   Identifier get masterIdentifier;
   List<Identifier> get identifier;
-  @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-  DocumentManifestStatus get status;
+  @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+  DocumentStatus get status;
   CodeableConcept get type;
   Reference get subject;
   DateTime get created;
@@ -1528,8 +1528,8 @@ abstract class $DocumentManifestCopyWith<$Res> {
           String resourceType,
       Identifier masterIdentifier,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-          DocumentManifestStatus status,
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+          DocumentStatus status,
       CodeableConcept type,
       Reference subject,
       DateTime created,
@@ -1580,8 +1580,7 @@ class _$DocumentManifestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status:
-          status == freezed ? _value.status : status as DocumentManifestStatus,
+      status: status == freezed ? _value.status : status as DocumentStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       created: created == freezed ? _value.created : created as DateTime,
@@ -1643,8 +1642,8 @@ abstract class _$DocumentManifestCopyWith<$Res>
           String resourceType,
       Identifier masterIdentifier,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-          DocumentManifestStatus status,
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+          DocumentStatus status,
       CodeableConcept type,
       Reference subject,
       DateTime created,
@@ -1700,8 +1699,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status:
-          status == freezed ? _value.status : status as DocumentManifestStatus,
+      status: status == freezed ? _value.status : status as DocumentStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       created: created == freezed ? _value.created : created as DateTime,
@@ -1730,7 +1728,7 @@ class _$_DocumentManifest implements _DocumentManifest {
           this.resourceType,
       this.masterIdentifier,
       this.identifier,
-      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
           this.status,
       this.type,
       this.subject,
@@ -1755,8 +1753,8 @@ class _$_DocumentManifest implements _DocumentManifest {
   @override
   final List<Identifier> identifier;
   @override
-  @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-  final DocumentManifestStatus status;
+  @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+  final DocumentStatus status;
   @override
   final CodeableConcept type;
   @override
@@ -1856,8 +1854,8 @@ abstract class _DocumentManifest implements DocumentManifest {
           String resourceType,
       Identifier masterIdentifier,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-          DocumentManifestStatus status,
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+          DocumentStatus status,
       CodeableConcept type,
       Reference subject,
       DateTime created,
@@ -1880,8 +1878,8 @@ abstract class _DocumentManifest implements DocumentManifest {
   @override
   List<Identifier> get identifier;
   @override
-  @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-  DocumentManifestStatus get status;
+  @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+  DocumentStatus get status;
   @override
   CodeableConcept get type;
   @override
@@ -2277,8 +2275,8 @@ class _$DocumentReferenceTearOff {
           String resourceType,
       Identifier masterIdentifier,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-          DocumentReferenceStatus status,
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+          DocumentStatus status,
       Code docStatus,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -2327,8 +2325,8 @@ mixin _$DocumentReference {
   String get resourceType;
   Identifier get masterIdentifier;
   List<Identifier> get identifier;
-  @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-  DocumentReferenceStatus get status;
+  @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+  DocumentStatus get status;
   Code get docStatus;
   @JsonKey(required: true)
   CodeableConcept get type;
@@ -2360,8 +2358,8 @@ abstract class $DocumentReferenceCopyWith<$Res> {
           String resourceType,
       Identifier masterIdentifier,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-          DocumentReferenceStatus status,
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+          DocumentStatus status,
       Code docStatus,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -2428,8 +2426,7 @@ class _$DocumentReferenceCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status:
-          status == freezed ? _value.status : status as DocumentReferenceStatus,
+      status: status == freezed ? _value.status : status as DocumentStatus,
       docStatus: docStatus == freezed ? _value.docStatus : docStatus as Code,
       type: type == freezed ? _value.type : type as CodeableConcept,
       class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept,
@@ -2541,8 +2538,8 @@ abstract class _$DocumentReferenceCopyWith<$Res>
           String resourceType,
       Identifier masterIdentifier,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-          DocumentReferenceStatus status,
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+          DocumentStatus status,
       Code docStatus,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -2618,8 +2615,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status:
-          status == freezed ? _value.status : status as DocumentReferenceStatus,
+      status: status == freezed ? _value.status : status as DocumentStatus,
       docStatus: docStatus == freezed ? _value.docStatus : docStatus as Code,
       type: type == freezed ? _value.type : type as CodeableConcept,
       class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept,
@@ -2658,7 +2654,7 @@ class _$_DocumentReference implements _DocumentReference {
           this.resourceType,
       this.masterIdentifier,
       this.identifier,
-      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
           this.status,
       this.docStatus,
       @JsonKey(required: true)
@@ -2690,8 +2686,8 @@ class _$_DocumentReference implements _DocumentReference {
   @override
   final List<Identifier> identifier;
   @override
-  @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-  final DocumentReferenceStatus status;
+  @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+  final DocumentStatus status;
   @override
   final Code docStatus;
   @override
@@ -2823,8 +2819,8 @@ abstract class _DocumentReference implements DocumentReference {
           String resourceType,
       Identifier masterIdentifier,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-          DocumentReferenceStatus status,
+      @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+          DocumentStatus status,
       Code docStatus,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -2854,8 +2850,8 @@ abstract class _DocumentReference implements DocumentReference {
   @override
   List<Identifier> get identifier;
   @override
-  @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-  DocumentReferenceStatus get status;
+  @JsonKey(unknownEnumValue: DocumentStatus.unknown)
+  DocumentStatus get status;
   @override
   Code get docStatus;
   @override

@@ -9,6 +9,7 @@ part of 'workflow2.dart';
 _$_ProcessRequest _$_$_ProcessRequestFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['action']);
   return _$_ProcessRequest(
+    resourceType: json['resourceType'] as String ?? 'ProcessRequest',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,9 +35,10 @@ _$_ProcessRequest _$_$_ProcessRequestFromJson(Map<String, dynamic> json) {
             json['modifierExtension'] as Map<String, dynamic>),
     action: _$enumDecodeNullable(_$ProcessRequestActionEnumMap, json['action'],
         unknownValue: ProcessRequestAction.unknown),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     ruleset: json['ruleset'] == null
         ? null
         : Coding.fromJson(json['ruleset'] as Map<String, dynamic>),
@@ -63,11 +65,13 @@ _$_ProcessRequest _$_$_ProcessRequestFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['response'] as Map<String, dynamic>),
     nullify: json['nullify'] == null ? null : Boolean.fromJson(json['nullify']),
     reference: json['reference'] as String,
-    item: json['item'] == null
-        ? null
-        : ProcessRequestItem.fromJson(json['item'] as Map<String, dynamic>),
-    include: json['include'] as String,
-    exclude: json['exclude'] as String,
+    item: (json['item'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ProcessRequestItem.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    include: (json['include'] as List)?.map((e) => e as String)?.toList(),
+    exclude: (json['exclude'] as List)?.map((e) => e as String)?.toList(),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -83,6 +87,7 @@ Map<String, dynamic> _$_$_ProcessRequestToJson(_$_ProcessRequest instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -92,7 +97,8 @@ Map<String, dynamic> _$_$_ProcessRequestToJson(_$_ProcessRequest instance) {
   writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('action', _$ProcessRequestActionEnumMap[instance.action]);
-  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('ruleset', instance.ruleset?.toJson());
   writeNotNull('originalRuleset', instance.originalRuleset?.toJson());
   writeNotNull('created', instance.created?.toJson());
@@ -103,7 +109,7 @@ Map<String, dynamic> _$_$_ProcessRequestToJson(_$_ProcessRequest instance) {
   writeNotNull('response', instance.response?.toJson());
   writeNotNull('nullify', instance.nullify?.toJson());
   writeNotNull('reference', instance.reference);
-  writeNotNull('item', instance.item?.toJson());
+  writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
   writeNotNull('include', instance.include);
   writeNotNull('exclude', instance.exclude);
   writeNotNull('period', instance.period?.toJson());
@@ -152,6 +158,7 @@ const _$ProcessRequestActionEnumMap = {
 
 _$_SupplyDelivery _$_$_SupplyDeliveryFromJson(Map<String, dynamic> json) {
   return _$_SupplyDelivery(
+    resourceType: json['resourceType'] as String ?? 'SupplyDelivery',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -204,9 +211,10 @@ _$_SupplyDelivery _$_$_SupplyDeliveryFromJson(Map<String, dynamic> json) {
     destination: json['destination'] == null
         ? null
         : Reference.fromJson(json['destination'] as Map<String, dynamic>),
-    receiver: json['receiver'] == null
-        ? null
-        : Reference.fromJson(json['receiver'] as Map<String, dynamic>),
+    receiver: (json['receiver'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -219,6 +227,7 @@ Map<String, dynamic> _$_$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -237,7 +246,8 @@ Map<String, dynamic> _$_$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
   writeNotNull('whenPrepared', instance.whenPrepared?.toJson());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('destination', instance.destination?.toJson());
-  writeNotNull('receiver', instance.receiver?.toJson());
+  writeNotNull(
+      'receiver', instance.receiver?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -273,9 +283,10 @@ _$_ProcessResponse _$_$_ProcessResponseFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
@@ -305,12 +316,15 @@ _$_ProcessResponse _$_$_ProcessResponseFromJson(Map<String, dynamic> json) {
     form: json['form'] == null
         ? null
         : Coding.fromJson(json['form'] as Map<String, dynamic>),
-    notes: json['notes'] == null
-        ? null
-        : ProcessResponseNotes.fromJson(json['notes'] as Map<String, dynamic>),
-    error: json['error'] == null
-        ? null
-        : Coding.fromJson(json['error'] as Map<String, dynamic>),
+    notes: (json['notes'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ProcessResponseNotes.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    error: (json['error'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -331,7 +345,8 @@ Map<String, dynamic> _$_$_ProcessResponseToJson(_$_ProcessResponse instance) {
   writeNotNull('contained', instance.contained?.toJson());
   writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('disposition', instance.disposition);
@@ -342,13 +357,14 @@ Map<String, dynamic> _$_$_ProcessResponseToJson(_$_ProcessResponse instance) {
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
   writeNotNull('form', instance.form?.toJson());
-  writeNotNull('notes', instance.notes?.toJson());
-  writeNotNull('error', instance.error?.toJson());
+  writeNotNull('notes', instance.notes?.map((e) => e?.toJson())?.toList());
+  writeNotNull('error', instance.error?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
 _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
   return _$_SupplyRequest(
+    resourceType: json['resourceType'] as String ?? 'SupplyRequest',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -392,12 +408,17 @@ _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
     orderedItem: json['orderedItem'] == null
         ? null
         : Reference.fromJson(json['orderedItem'] as Map<String, dynamic>),
-    supplier: json['supplier'] == null
+    supplier: (json['supplier'] as List)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    reasonCodeableConcept: json['reasonCodeableConcept'] == null
         ? null
-        : Reference.fromJson(json['supplier'] as Map<String, dynamic>),
-    reasonX: json['reasonX'] == null
+        : CodeableConcept.fromJson(
+            json['reasonCodeableConcept'] as Map<String, dynamic>),
+    reasonReference: json['reasonReference'] == null
         ? null
-        : CodeableConcept.fromJson(json['reasonX'] as Map<String, dynamic>),
+        : Reference.fromJson(json['reasonReference'] as Map<String, dynamic>),
     when: json['when'] == null
         ? null
         : SupplyRequestWhen.fromJson(json['when'] as Map<String, dynamic>),
@@ -413,6 +434,7 @@ Map<String, dynamic> _$_$_SupplyRequestToJson(_$_SupplyRequest instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -428,8 +450,11 @@ Map<String, dynamic> _$_$_SupplyRequestToJson(_$_SupplyRequest instance) {
   writeNotNull('status', _$SupplyRequestStatusEnumMap[instance.status]);
   writeNotNull('kind', instance.kind?.toJson());
   writeNotNull('orderedItem', instance.orderedItem?.toJson());
-  writeNotNull('supplier', instance.supplier?.toJson());
-  writeNotNull('reasonX', instance.reasonX?.toJson());
+  writeNotNull(
+      'supplier', instance.supplier?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'reasonCodeableConcept', instance.reasonCodeableConcept?.toJson());
+  writeNotNull('reasonReference', instance.reasonReference?.toJson());
   writeNotNull('when', instance.when?.toJson());
   return val;
 }

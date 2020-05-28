@@ -10,6 +10,7 @@ part 'information_tracking.g.dart';
 @freezed
 abstract class Questionnaire with _$Questionnaire implements Resource {
   const factory Questionnaire({
+    @JsonKey(defaultValue: 'Questionnaire') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -18,15 +19,15 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     String version,
     @JsonKey(required: true, unknownEnumValue: QuestionnaireStatus.unknown)
     @required
         QuestionnaireStatus status,
     FhirDateTime date,
     String publisher,
-    ContactPoint telecom,
-    Code subjectType,
+    List<ContactPoint> telecom,
+    List<Code> subjectType,
     @JsonKey(required: true) @required QuestionnaireGroup group,
   }) = _Questionnaire;
 
@@ -37,6 +38,7 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
 @freezed
 abstract class Provenance with _$Provenance implements Resource {
   const factory Provenance({
+    @JsonKey(defaultValue: 'Provenance') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -45,16 +47,16 @@ abstract class Provenance with _$Provenance implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required Reference target,
+    @JsonKey(required: true) @required List<Reference> target,
     Period period,
     @JsonKey(required: true) @required Instant recorded,
-    CodeableConcept reason,
+    List<CodeableConcept> reason,
     CodeableConcept activity,
     Reference location,
-    FhirUri policy,
-    ProvenanceAgent agent,
-    ProvenanceEntity entity,
-    Signature signature,
+    List<FhirUri> policy,
+    List<ProvenanceAgent> agent,
+    List<ProvenanceEntity> entity,
+    List<Signature> signature,
   }) = _Provenance;
 
   factory Provenance.fromJson(Map<String, dynamic> json) =>
@@ -66,6 +68,7 @@ abstract class QuestionnaireResponse
     with _$QuestionnaireResponse
     implements Resource {
   const factory QuestionnaireResponse({
+    @JsonKey(defaultValue: 'QuestionnaireResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -95,6 +98,7 @@ abstract class QuestionnaireResponse
 @freezed
 abstract class AuditEvent with _$AuditEvent implements Resource {
   const factory AuditEvent({
+    @JsonKey(defaultValue: 'AuditEvent') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -104,9 +108,9 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required AuditEventEvent event,
-    @JsonKey(required: true) @required AuditEventParticipant participant,
+    @JsonKey(required: true) @required List<AuditEventParticipant> participant,
     @JsonKey(required: true) @required AuditEventSource source,
-    AuditEventObject object,
+    List<AuditEventObject> object,
   }) = _AuditEvent;
 
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
@@ -121,12 +125,12 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
     FhirExtension modifierExtension,
     String linkId,
     String title,
-    Coding concept,
+    List<Coding> concept,
     String text,
     @JsonKey(name: 'required') Boolean required_,
     Boolean repeats,
     List<QuestionnaireGroup> group,
-    QuestionnaireQuestion question,
+    List<QuestionnaireQuestion> question,
   }) = _QuestionnaireGroup;
 
   factory QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
@@ -142,7 +146,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
     @JsonKey(required: true) @required Coding role,
     Reference actor,
     Identifier userId,
-    ProvenanceRelatedAgent relatedAgent,
+    List<ProvenanceRelatedAgent> relatedAgent,
   }) = _ProvenanceAgent;
 
   factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
@@ -178,7 +182,8 @@ abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
     String title,
     String text,
     Reference subject,
-    QuestionnaireResponseQuestion question,
+    List<QuestionnaireResponseGroup> group,
+    List<QuestionnaireResponseQuestion> question,
   }) = _QuestionnaireResponseGroup;
 
   factory QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
@@ -192,12 +197,12 @@ abstract class AuditEventEvent with _$AuditEventEvent {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding type,
-    Coding subtype,
+    List<Coding> subtype,
     Code action,
     @JsonKey(required: true) @required Instant dateTime,
     Code outcome,
     String outcomeDesc,
-    Coding purposeOfEvent,
+    List<Coding> purposeOfEvent,
   }) = _AuditEventEvent;
 
   factory AuditEventEvent.fromJson(Map<String, dynamic> json) =>
@@ -210,14 +215,14 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    CodeableConcept role,
+    List<CodeableConcept> role,
     Reference reference,
     Identifier userId,
     String altId,
     String name,
     @JsonKey(required: true) @required Boolean requestor,
     Reference location,
-    FhirUri policy,
+    List<FhirUri> policy,
     Coding media,
     AuditEventNetwork network,
     Coding purposeOfUse,
@@ -235,7 +240,7 @@ abstract class AuditEventSource with _$AuditEventSource {
     FhirExtension modifierExtension,
     String site,
     @JsonKey(required: true) @required Identifier identifier,
-    Coding type,
+    List<Coding> type,
   }) = _AuditEventSource;
 
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
@@ -253,11 +258,11 @@ abstract class AuditEventObject with _$AuditEventObject {
     Coding type,
     Coding role,
     Coding lifecycle,
-    Coding securityLabel,
+    List<Coding> securityLabel,
     String name,
     String description,
     Base64Binary query,
-    AuditEventDetail detail,
+    List<AuditEventDetail> detail,
   }) = _AuditEventObject;
 
   factory AuditEventObject.fromJson(Map<String, dynamic> json) =>
@@ -271,13 +276,13 @@ abstract class QuestionnaireQuestion with _$QuestionnaireQuestion {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     String linkId,
-    Coding concept,
+    List<Coding> concept,
     String text,
     @JsonKey(unknownEnumValue: QuestionType.unknown) QuestionType type,
     Boolean required,
     Boolean repeats,
     Reference options,
-    Coding option,
+    List<Coding> option,
     List<QuestionnaireGroup> group,
   }) = _QuestionnaireQuestion;
 
@@ -308,7 +313,7 @@ abstract class QuestionnaireResponseQuestion
     FhirExtension modifierExtension,
     String linkId,
     String text,
-    QuestionnaireResponseAnswer answer,
+    List<QuestionnaireResponseAnswer> answer,
   }) = _QuestionnaireResponseQuestion;
 
   factory QuestionnaireResponseQuestion.fromJson(Map<String, dynamic> json) =>
@@ -349,7 +354,19 @@ abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Boolean valueX,
+    Boolean valueBoolean,
+    Decimal valueDecimal,
+    Integer valueInteger,
+    Date valueDate,
+    FhirDateTime valueDateTime,
+    Instant valueInstant,
+    Time valueTime,
+    String valueString,
+    FhirUri valueUri,
+    Attachment valueAttachment,
+    Coding valueCoding,
+    Quantity valueQuantity,
+    Reference valueReference,
     List<QuestionnaireResponseGroup> group,
   }) = _QuestionnaireResponseAnswer;
 

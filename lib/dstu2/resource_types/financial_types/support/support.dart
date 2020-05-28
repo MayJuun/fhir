@@ -10,6 +10,7 @@ part 'support.g.dart';
 @freezed
 abstract class Coverage with _$Coverage implements Resource {
   const factory Coverage({
+    @JsonKey(defaultValue: 'Coverage') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -23,7 +24,7 @@ abstract class Coverage with _$Coverage implements Resource {
     Period period,
     Coding type,
     Identifier subscriberId,
-    Identifier identifier,
+    List<Identifier> identifier,
     String group,
     String plan,
     String subPlan,
@@ -31,7 +32,7 @@ abstract class Coverage with _$Coverage implements Resource {
     PositiveInt sequence,
     Reference subscriber,
     Identifier network,
-    Reference contract,
+    List<Reference> contract,
   }) = _Coverage;
 
   factory Coverage.fromJson(Map<String, dynamic> json) =>
@@ -43,6 +44,7 @@ abstract class EligibilityRequest
     with _$EligibilityRequest
     implements Resource {
   const factory EligibilityRequest({
+    @JsonKey(defaultValue: 'EligibilityRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -51,7 +53,7 @@ abstract class EligibilityRequest
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Coding ruleset,
     Coding originalRuleset,
     FhirDateTime created,
@@ -67,6 +69,7 @@ abstract class EligibilityRequest
 @freezed
 abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
   const factory EnrollmentRequest({
+    @JsonKey(defaultValue: 'EnrollmentRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -75,7 +78,7 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Coding ruleset,
     Coding originalRuleset,
     FhirDateTime created,
@@ -96,6 +99,7 @@ abstract class EnrollmentResponse
     with _$EnrollmentResponse
     implements Resource {
   const factory EnrollmentResponse({
+    @JsonKey(defaultValue: 'EnrollmentResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -104,7 +108,7 @@ abstract class EnrollmentResponse
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference request,
     @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
         EnrollmentResponseOutcome outcome,
@@ -126,6 +130,7 @@ abstract class EligibilityResponse
     with _$EligibilityResponse
     implements Resource {
   const factory EligibilityResponse({
+    @JsonKey(defaultValue: 'EligibilityResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -134,7 +139,7 @@ abstract class EligibilityResponse
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference request,
     @JsonKey(unknownEnumValue: EligibilityResponseOutcome.unknown)
         EligibilityResponseOutcome outcome,

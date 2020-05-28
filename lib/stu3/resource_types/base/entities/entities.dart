@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
 import '../../resource_types.enums.dart';
+import 'entities.enums.dart';
 
 part 'entities.freezed.dart';
 part 'entities.g.dart';
@@ -14,7 +15,7 @@ abstract class Device with _$Device implements Resource {
         String resourceType,
     List<Identifier> identifier,
     DeviceUdi udi,
-    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
+    @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     CodeableConcept type,
     String lotNumber,
     String manufacturer,
@@ -276,7 +277,7 @@ abstract class Substance with _$Substance implements Resource {
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus status,
+    @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     List<CodeableConcept> category,
     @JsonKey(required: true) CodeableConcept code,
     String description,

@@ -178,8 +178,8 @@ abstract class MedicationAdministration
     with _$MedicationAdministration
     implements Resource {
   const factory MedicationAdministration({
-    @JsonKey(defaultValue: 'MedicationAdministration') Sting resourceType,
-        Id id,
+    @JsonKey(defaultValue: 'MedicationAdministration') String resourceType,
+    Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,

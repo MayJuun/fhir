@@ -10,6 +10,7 @@ part 'scheduling.g.dart';
 @freezed
 abstract class Appointment with _$Appointment implements Resource {
   const factory Appointment({
+    @JsonKey(defaultValue: 'Appointment') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -18,7 +19,7 @@ abstract class Appointment with _$Appointment implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
     @required
         AppointmentStatus status,
@@ -29,9 +30,9 @@ abstract class Appointment with _$Appointment implements Resource {
     Instant start,
     Instant end,
     PositiveInt minutesDuration,
-    Reference slot,
+    List<Reference> slot,
     String comment,
-    @JsonKey(required: true) @required AppointmentParticipant participant,
+    @JsonKey(required: true) @required List<AppointmentParticipant> participant,
   }) = _Appointment;
 
   factory Appointment.fromJson(Map<String, dynamic> json) =>
@@ -41,6 +42,7 @@ abstract class Appointment with _$Appointment implements Resource {
 @freezed
 abstract class Slot with _$Slot implements Resource {
   const factory Slot({
+    @JsonKey(defaultValue: 'Slot') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -49,7 +51,7 @@ abstract class Slot with _$Slot implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     CodeableConcept type,
     @JsonKey(required: true) @required Reference schedule,
     @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
@@ -69,6 +71,7 @@ abstract class AppointmentResponse
     with _$AppointmentResponse
     implements Resource {
   const factory AppointmentResponse({
+    @JsonKey(defaultValue: 'AppointmentResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -77,11 +80,11 @@ abstract class AppointmentResponse
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required Reference appointment,
     Instant start,
     Instant end,
-    CodeableConcept participantType,
+    List<CodeableConcept> participantType,
     Reference actor,
     @JsonKey(
         required: true,
@@ -98,6 +101,7 @@ abstract class AppointmentResponse
 @freezed
 abstract class Schedule with _$Schedule implements Resource {
   const factory Schedule({
+    @JsonKey(defaultValue: 'Schedule') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -106,8 +110,8 @@ abstract class Schedule with _$Schedule implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
-    CodeableConcept type,
+    List<Identifier> identifier,
+    List<CodeableConcept> type,
     @JsonKey(required: true) @required Reference actor,
     Period planningHorizon,
     String comment,
@@ -123,7 +127,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    CodeableConcept type,
+    List<CodeableConcept> type,
     Reference actor,
     @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
         ParticipantRequired required_,

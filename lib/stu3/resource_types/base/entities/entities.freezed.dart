@@ -21,8 +21,8 @@ class _$DeviceTearOff {
           String resourceType,
       List<Identifier> identifier,
       DeviceUdi udi,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-          DeviceStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       CodeableConcept type,
       String lotNumber,
       String manufacturer,
@@ -68,8 +68,8 @@ mixin _$Device {
   String get resourceType;
   List<Identifier> get identifier;
   DeviceUdi get udi;
-  @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-  DeviceStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   CodeableConcept get type;
   String get lotNumber;
   String get manufacturer;
@@ -96,7 +96,7 @@ abstract class $DeviceCopyWith<$Res> {
       {@JsonKey(required: true, defaultValue: 'Device') String resourceType,
       List<Identifier> identifier,
       DeviceUdi udi,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       CodeableConcept type,
       String lotNumber,
       String manufacturer,
@@ -155,7 +155,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
           ? _value.identifier
           : identifier as List<Identifier>,
       udi: udi == freezed ? _value.udi : udi as DeviceUdi,
-      status: status == freezed ? _value.status : status as DeviceStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       type: type == freezed ? _value.type : type as CodeableConcept,
       lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String,
       manufacturer: manufacturer == freezed
@@ -240,7 +240,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       {@JsonKey(required: true, defaultValue: 'Device') String resourceType,
       List<Identifier> identifier,
       DeviceUdi udi,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       CodeableConcept type,
       String lotNumber,
       String manufacturer,
@@ -305,7 +305,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       udi: udi == freezed ? _value.udi : udi as DeviceUdi,
-      status: status == freezed ? _value.status : status as DeviceStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       type: type == freezed ? _value.type : type as CodeableConcept,
       lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String,
       manufacturer: manufacturer == freezed
@@ -340,7 +340,7 @@ class _$_Device implements _Device {
           this.resourceType,
       this.identifier,
       this.udi,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
           this.status,
       this.type,
       this.lotNumber,
@@ -369,8 +369,8 @@ class _$_Device implements _Device {
   @override
   final DeviceUdi udi;
   @override
-  @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-  final DeviceStatus status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  final ActiveInactive status;
   @override
   final CodeableConcept type;
   @override
@@ -496,8 +496,8 @@ abstract class _Device implements Device {
           String resourceType,
       List<Identifier> identifier,
       DeviceUdi udi,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-          DeviceStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       CodeableConcept type,
       String lotNumber,
       String manufacturer,
@@ -523,8 +523,8 @@ abstract class _Device implements Device {
   @override
   DeviceUdi get udi;
   @override
-  @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-  DeviceStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   @override
   CodeableConcept get type;
   @override
@@ -5011,8 +5011,8 @@ class _$SubstanceTearOff {
       @JsonKey(required: true, defaultValue: 'Substance')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
-          SubstanceStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       List<CodeableConcept> category,
       @JsonKey(required: true)
           CodeableConcept code,
@@ -5039,8 +5039,8 @@ mixin _$Substance {
   @JsonKey(required: true, defaultValue: 'Substance')
   String get resourceType;
   List<Identifier> get identifier;
-  @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
-  SubstanceStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   List<CodeableConcept> get category;
   @JsonKey(required: true)
   CodeableConcept get code;
@@ -5056,14 +5056,11 @@ abstract class $SubstanceCopyWith<$Res> {
   factory $SubstanceCopyWith(Substance value, $Res Function(Substance) then) =
       _$SubstanceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Substance')
-          String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Substance') String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
-          SubstanceStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       List<CodeableConcept> category,
-      @JsonKey(required: true)
-          CodeableConcept code,
+      @JsonKey(required: true) CodeableConcept code,
       String description,
       List<SubstanceInstance> instance,
       List<SubstanceIngredient> ingredient});
@@ -5096,7 +5093,7 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as SubstanceStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
@@ -5129,14 +5126,11 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       __$SubstanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Substance')
-          String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Substance') String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
-          SubstanceStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       List<CodeableConcept> category,
-      @JsonKey(required: true)
-          CodeableConcept code,
+      @JsonKey(required: true) CodeableConcept code,
       String description,
       List<SubstanceInstance> instance,
       List<SubstanceIngredient> ingredient});
@@ -5171,7 +5165,7 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as SubstanceStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
@@ -5195,7 +5189,7 @@ class _$_Substance implements _Substance {
       @JsonKey(required: true, defaultValue: 'Substance')
           this.resourceType,
       this.identifier,
-      @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
           this.status,
       this.category,
       @JsonKey(required: true)
@@ -5214,8 +5208,8 @@ class _$_Substance implements _Substance {
   @override
   final List<Identifier> identifier;
   @override
-  @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
-  final SubstanceStatus status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  final ActiveInactive status;
   @override
   final List<CodeableConcept> category;
   @override
@@ -5289,8 +5283,8 @@ abstract class _Substance implements Substance {
       @JsonKey(required: true, defaultValue: 'Substance')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
-          SubstanceStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       List<CodeableConcept> category,
       @JsonKey(required: true)
           CodeableConcept code,
@@ -5307,8 +5301,8 @@ abstract class _Substance implements Substance {
   @override
   List<Identifier> get identifier;
   @override
-  @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
-  SubstanceStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   @override
   List<CodeableConcept> get category;
   @override

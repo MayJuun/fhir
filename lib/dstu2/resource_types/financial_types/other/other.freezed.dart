@@ -16,7 +16,9 @@ class _$ExplanationOfBenefitTearOff {
   const _$ExplanationOfBenefitTearOff();
 
   _ExplanationOfBenefit call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -25,7 +27,7 @@ class _$ExplanationOfBenefitTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
           ExplanationOfBenefitOutcome outcome,
@@ -37,6 +39,7 @@ class _$ExplanationOfBenefitTearOff {
       Reference requestProvider,
       Reference requestOrganization}) {
     return _ExplanationOfBenefit(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -63,6 +66,8 @@ class _$ExplanationOfBenefitTearOff {
 const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
 mixin _$ExplanationOfBenefit {
+  @JsonKey(defaultValue: 'ExplanationOfBenefit')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -72,7 +77,7 @@ mixin _$ExplanationOfBenefit {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   Reference get request;
   @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
   ExplanationOfBenefitOutcome get outcome;
@@ -93,7 +98,9 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           $Res Function(ExplanationOfBenefit) then) =
       _$ExplanationOfBenefitCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -102,7 +109,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
           ExplanationOfBenefitOutcome outcome,
@@ -118,7 +125,6 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get request;
   $CodingCopyWith<$Res> get ruleset;
   $CodingCopyWith<$Res> get originalRuleset;
@@ -137,6 +143,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -157,6 +164,9 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
     Object requestOrganization = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -172,8 +182,9 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed
           ? _value.outcome
@@ -234,16 +245,6 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -315,7 +316,9 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       __$ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -324,7 +327,7 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
           ExplanationOfBenefitOutcome outcome,
@@ -344,8 +347,6 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ReferenceCopyWith<$Res> get request;
   @override
@@ -372,6 +373,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -392,6 +394,9 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
     Object requestOrganization = freezed,
   }) {
     return _then(_ExplanationOfBenefit(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -407,8 +412,9 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed
           ? _value.outcome
@@ -436,7 +442,9 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
   const _$_ExplanationOfBenefit(
-      {this.id,
+      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -461,6 +469,9 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
       _$_$_ExplanationOfBenefitFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'ExplanationOfBenefit')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -478,7 +489,7 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final Reference request;
   @override
@@ -501,13 +512,16 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
 
   @override
   String toString() {
-    return 'ExplanationOfBenefit(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, outcome: $outcome, disposition: $disposition, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization)';
+    return 'ExplanationOfBenefit(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, outcome: $outcome, disposition: $disposition, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ExplanationOfBenefit &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -564,6 +578,7 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -596,7 +611,9 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
 
 abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
   const factory _ExplanationOfBenefit(
-      {Id id,
+      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -605,7 +622,7 @@ abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
           ExplanationOfBenefitOutcome outcome,
@@ -620,6 +637,9 @@ abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
   factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefit.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'ExplanationOfBenefit')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -638,7 +658,7 @@ abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   Reference get request;
   @override

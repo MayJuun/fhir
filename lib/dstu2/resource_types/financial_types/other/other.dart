@@ -12,6 +12,7 @@ abstract class ExplanationOfBenefit
     with _$ExplanationOfBenefit
     implements Resource {
   const factory ExplanationOfBenefit({
+    @JsonKey(defaultValue: 'ExplanationOfBenefit') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -20,7 +21,7 @@ abstract class ExplanationOfBenefit
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference request,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
         ExplanationOfBenefitOutcome outcome,

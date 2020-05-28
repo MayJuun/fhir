@@ -17,8 +17,8 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     udi: json['udi'] == null
         ? null
         : DeviceUdi.fromJson(json['udi'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
-        unknownValue: DeviceStatus.unknown),
+    status: _$enumDecodeNullable(_$ActiveInactiveEnumMap, json['status'],
+        unknownValue: ActiveInactive.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -71,7 +71,7 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('udi', instance.udi?.toJson());
-  writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
+  writeNotNull('status', _$ActiveInactiveEnumMap[instance.status]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('lotNumber', instance.lotNumber);
   writeNotNull('manufacturer', instance.manufacturer);
@@ -121,11 +121,11 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$DeviceStatusEnumMap = {
-  DeviceStatus.active: 'active',
-  DeviceStatus.inactive: 'inactive',
-  DeviceStatus.entered_in_error: 'entered-in-error',
-  DeviceStatus.unknown: 'unknown',
+const _$ActiveInactiveEnumMap = {
+  ActiveInactive.active: 'active',
+  ActiveInactive.inactive: 'inactive',
+  ActiveInactive.entered_in_error: 'entered-in-error',
+  ActiveInactive.unknown: 'unknown',
 };
 
 _$_DeviceUdi _$_$_DeviceUdiFromJson(Map<String, dynamic> json) {
@@ -349,7 +349,7 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
 }
 
 const _$DeviceMetricOperationalStatusEnumMap = {
-  DeviceMetricOperationalStatus.on: 'on',
+  DeviceMetricOperationalStatus.on_: 'on',
   DeviceMetricOperationalStatus.off: 'off',
   DeviceMetricOperationalStatus.standby: 'standby',
   DeviceMetricOperationalStatus.entered_in_error: 'entered-in-error',
@@ -928,8 +928,8 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$SubstanceStatusEnumMap, json['status'],
-        unknownValue: SubstanceStatus.unknown),
+    status: _$enumDecodeNullable(_$ActiveInactiveEnumMap, json['status'],
+        unknownValue: ActiveInactive.unknown),
     category: (json['category'] as List)
         ?.map((e) => e == null
             ? null
@@ -964,7 +964,7 @@ Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$SubstanceStatusEnumMap[instance.status]);
+  writeNotNull('status', _$ActiveInactiveEnumMap[instance.status]);
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
@@ -975,13 +975,6 @@ Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
       'ingredient', instance.ingredient?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$SubstanceStatusEnumMap = {
-  SubstanceStatus.active: 'active',
-  SubstanceStatus.inactive: 'inactive',
-  SubstanceStatus.entered_in_error: 'entered-in-error',
-  SubstanceStatus.unknown: 'unknown',
-};
 
 _$_SubstanceInstance _$_$_SubstanceInstanceFromJson(Map<String, dynamic> json) {
   return _$_SubstanceInstance(

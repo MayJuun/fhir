@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
-import '../../resource_types.enums.dart';
+import 'security.enums.dart';
 
 part 'security.freezed.dart';
 part 'security.g.dart';
@@ -189,7 +189,7 @@ abstract class ConsentActor1 with _$ConsentActor1 {
 @freezed
 abstract class ConsentData1 with _$ConsentData1 {
   const factory ConsentData1({
-    @JsonKey(unknownEnumValue: Data1Meaning.unknown) Data1Meaning meaning,
+    @JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
     @JsonKey(required: true) Reference reference,
   }) = _ConsentData1;
   factory ConsentData1.fromJson(Map<String, dynamic> json) =>

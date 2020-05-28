@@ -2167,8 +2167,8 @@ class _$ImagingStudyTearOff {
       Oid uid,
       Identifier accession,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-          ImagingStudyAvailability availability,
+      @JsonKey(unknownEnumValue: Availability.unknown)
+          Availability availability,
       List<Coding> modalityList,
       @JsonKey(required: true)
           Reference patient,
@@ -2219,8 +2219,8 @@ mixin _$ImagingStudy {
   Oid get uid;
   Identifier get accession;
   List<Identifier> get identifier;
-  @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-  ImagingStudyAvailability get availability;
+  @JsonKey(unknownEnumValue: Availability.unknown)
+  Availability get availability;
   List<Coding> get modalityList;
   @JsonKey(required: true)
   Reference get patient;
@@ -2252,8 +2252,8 @@ abstract class $ImagingStudyCopyWith<$Res> {
       Oid uid,
       Identifier accession,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-          ImagingStudyAvailability availability,
+      @JsonKey(unknownEnumValue: Availability.unknown)
+          Availability availability,
       List<Coding> modalityList,
       @JsonKey(required: true)
           Reference patient,
@@ -2320,7 +2320,7 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
           : identifier as List<Identifier>,
       availability: availability == freezed
           ? _value.availability
-          : availability as ImagingStudyAvailability,
+          : availability as Availability,
       modalityList: modalityList == freezed
           ? _value.modalityList
           : modalityList as List<Coding>,
@@ -2418,8 +2418,8 @@ abstract class _$ImagingStudyCopyWith<$Res>
       Oid uid,
       Identifier accession,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-          ImagingStudyAvailability availability,
+      @JsonKey(unknownEnumValue: Availability.unknown)
+          Availability availability,
       List<Coding> modalityList,
       @JsonKey(required: true)
           Reference patient,
@@ -2493,7 +2493,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       availability: availability == freezed
           ? _value.availability
-          : availability as ImagingStudyAvailability,
+          : availability as Availability,
       modalityList: modalityList == freezed
           ? _value.modalityList
           : modalityList as List<Coding>,
@@ -2538,7 +2538,7 @@ class _$_ImagingStudy implements _ImagingStudy {
       this.uid,
       this.accession,
       this.identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
+      @JsonKey(unknownEnumValue: Availability.unknown)
           this.availability,
       this.modalityList,
       @JsonKey(required: true)
@@ -2571,8 +2571,8 @@ class _$_ImagingStudy implements _ImagingStudy {
   @override
   final List<Identifier> identifier;
   @override
-  @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-  final ImagingStudyAvailability availability;
+  @JsonKey(unknownEnumValue: Availability.unknown)
+  final Availability availability;
   @override
   final List<Coding> modalityList;
   @override
@@ -2715,8 +2715,8 @@ abstract class _ImagingStudy implements ImagingStudy {
       Oid uid,
       Identifier accession,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-          ImagingStudyAvailability availability,
+      @JsonKey(unknownEnumValue: Availability.unknown)
+          Availability availability,
       List<Coding> modalityList,
       @JsonKey(required: true)
           Reference patient,
@@ -2747,8 +2747,8 @@ abstract class _ImagingStudy implements ImagingStudy {
   @override
   List<Identifier> get identifier;
   @override
-  @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-  ImagingStudyAvailability get availability;
+  @JsonKey(unknownEnumValue: Availability.unknown)
+  Availability get availability;
   @override
   List<Coding> get modalityList;
   @override
@@ -2798,8 +2798,8 @@ class _$ImagingStudySeriesTearOff {
           Coding modality,
       String description,
       UnsignedInt numberOfInstances,
-      @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-          SeriesAvailability availability,
+      @JsonKey(unknownEnumValue: Availability.unknown)
+          Availability availability,
       List<Reference> endpoint,
       Coding bodySite,
       Coding laterality,
@@ -2833,8 +2833,8 @@ mixin _$ImagingStudySeries {
   Coding get modality;
   String get description;
   UnsignedInt get numberOfInstances;
-  @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-  SeriesAvailability get availability;
+  @JsonKey(unknownEnumValue: Availability.unknown)
+  Availability get availability;
   List<Reference> get endpoint;
   Coding get bodySite;
   Coding get laterality;
@@ -2857,8 +2857,8 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
           Coding modality,
       String description,
       UnsignedInt numberOfInstances,
-      @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-          SeriesAvailability availability,
+      @JsonKey(unknownEnumValue: Availability.unknown)
+          Availability availability,
       List<Reference> endpoint,
       Coding bodySite,
       Coding laterality,
@@ -2905,7 +2905,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res>
           : numberOfInstances as UnsignedInt,
       availability: availability == freezed
           ? _value.availability
-          : availability as SeriesAvailability,
+          : availability as Availability,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
       bodySite: bodySite == freezed ? _value.bodySite : bodySite as Coding,
@@ -2965,8 +2965,8 @@ abstract class _$ImagingStudySeriesCopyWith<$Res>
           Coding modality,
       String description,
       UnsignedInt numberOfInstances,
-      @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-          SeriesAvailability availability,
+      @JsonKey(unknownEnumValue: Availability.unknown)
+          Availability availability,
       List<Reference> endpoint,
       Coding bodySite,
       Coding laterality,
@@ -3018,7 +3018,7 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
           : numberOfInstances as UnsignedInt,
       availability: availability == freezed
           ? _value.availability
-          : availability as SeriesAvailability,
+          : availability as Availability,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
       bodySite: bodySite == freezed ? _value.bodySite : bodySite as Coding,
@@ -3043,7 +3043,7 @@ class _$_ImagingStudySeries implements _ImagingStudySeries {
       @JsonKey(required: true) this.modality,
       this.description,
       this.numberOfInstances,
-      @JsonKey(unknownEnumValue: SeriesAvailability.unknown) this.availability,
+      @JsonKey(unknownEnumValue: Availability.unknown) this.availability,
       this.endpoint,
       this.bodySite,
       this.laterality,
@@ -3066,8 +3066,8 @@ class _$_ImagingStudySeries implements _ImagingStudySeries {
   @override
   final UnsignedInt numberOfInstances;
   @override
-  @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-  final SeriesAvailability availability;
+  @JsonKey(unknownEnumValue: Availability.unknown)
+  final Availability availability;
   @override
   final List<Reference> endpoint;
   @override
@@ -3160,8 +3160,8 @@ abstract class _ImagingStudySeries implements ImagingStudySeries {
           Coding modality,
       String description,
       UnsignedInt numberOfInstances,
-      @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-          SeriesAvailability availability,
+      @JsonKey(unknownEnumValue: Availability.unknown)
+          Availability availability,
       List<Reference> endpoint,
       Coding bodySite,
       Coding laterality,
@@ -3184,8 +3184,8 @@ abstract class _ImagingStudySeries implements ImagingStudySeries {
   @override
   UnsignedInt get numberOfInstances;
   @override
-  @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-  SeriesAvailability get availability;
+  @JsonKey(unknownEnumValue: Availability.unknown)
+  Availability get availability;
   @override
   List<Reference> get endpoint;
   @override

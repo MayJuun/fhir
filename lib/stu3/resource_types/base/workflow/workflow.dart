@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
-import '../../resource_types.enums.dart';
+import 'workflow.enums.dart';
 
 part 'workflow.freezed.dart';
 part 'workflow.g.dart';

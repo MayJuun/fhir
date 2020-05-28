@@ -10,6 +10,7 @@ part 'devices.g.dart';
 @freezed
 abstract class DeviceComponent with _$DeviceComponent implements Resource {
   const factory DeviceComponent({
+    @JsonKey(defaultValue: 'DeviceComponent') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -23,11 +24,11 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
     @JsonKey(required: true) @required Instant lastSystemChange,
     Reference source,
     Reference parent,
-    CodeableConcept operationalStatus,
+    List<CodeableConcept> operationalStatus,
     CodeableConcept parameterGroup,
     @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
         DeviceComponentMeasurementPrinciple measurementPrinciple,
-    DeviceComponentProductionSpecification productionSpecification,
+    List<DeviceComponentProductionSpecification> productionSpecification,
     CodeableConcept languageCode,
   }) = _DeviceComponent;
 
@@ -38,6 +39,7 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
 @freezed
 abstract class DeviceMetric with _$DeviceMetric implements Resource {
   const factory DeviceMetric({
+    @JsonKey(defaultValue: 'DeviceMetric') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -59,7 +61,7 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
     @required
         DeviceMetricCategory category,
     Timing measurementPeriod,
-    DeviceMetricCalibration calibration,
+    List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
 
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
@@ -69,6 +71,7 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
 @freezed
 abstract class Device with _$Device implements Resource {
   const factory Device({
+    @JsonKey(defaultValue: 'Device') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -77,9 +80,9 @@ abstract class Device with _$Device implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required CodeableConcept type,
-    Annotation note,
+    List<Annotation> note,
     @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
     String manufacturer,
     String model,
@@ -91,7 +94,7 @@ abstract class Device with _$Device implements Resource {
     Reference owner,
     Reference location,
     Reference patient,
-    ContactPoint contact,
+    List<ContactPoint> contact,
     FhirUri url,
   }) = _Device;
 

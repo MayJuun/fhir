@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
-import '../../resource_types.enums.dart';
+import 'request_and_response.enums.dart';
 
 part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
@@ -158,8 +158,7 @@ abstract class DeviceUseStatement
     @required
         String resourceType,
     List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-        DeviceUseStatementStatus status,
+    @JsonKey(unknownEnumValue: StatementStatus.unknown) StatementStatus status,
     @JsonKey(required: true) Reference subject,
     Period whenUsed,
     Timing timingTiming,

@@ -16,7 +16,9 @@ class _$MediaTearOff {
   const _$MediaTearOff();
 
   _Media call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Media')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -29,7 +31,7 @@ class _$MediaTearOff {
       @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
           MediaType type,
       CodeableConcept subtype,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference subject,
       @JsonKey(name: 'operator')
           Reference operator_,
@@ -43,6 +45,7 @@ class _$MediaTearOff {
       @JsonKey(required: true)
           Attachment content}) {
     return _Media(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -71,6 +74,8 @@ class _$MediaTearOff {
 const $Media = _$MediaTearOff();
 
 mixin _$Media {
+  @JsonKey(defaultValue: 'Media')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -83,7 +88,7 @@ mixin _$Media {
   @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
   MediaType get type;
   CodeableConcept get subtype;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   Reference get subject;
   @JsonKey(name: 'operator')
   Reference get operator_;
@@ -104,7 +109,9 @@ abstract class $MediaCopyWith<$Res> {
   factory $MediaCopyWith(Media value, $Res Function(Media) then) =
       _$MediaCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Media')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -116,7 +123,7 @@ abstract class $MediaCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
           MediaType type,
       CodeableConcept subtype,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference subject,
       @JsonKey(name: 'operator')
           Reference operator_,
@@ -134,7 +141,6 @@ abstract class $MediaCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get subtype;
-  $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get operator_;
   $CodeableConceptCopyWith<$Res> get view;
@@ -150,6 +156,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -172,6 +179,9 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
     Object content = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -189,8 +199,9 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as MediaType,
       subtype: subtype == freezed ? _value.subtype : subtype as CodeableConcept,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       operator_:
           operator_ == freezed ? _value.operator_ : operator_ as Reference,
@@ -256,16 +267,6 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get subject {
     if (_value.subject == null) {
       return null;
@@ -311,7 +312,9 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       __$MediaCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Media')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -323,7 +326,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
           MediaType type,
       CodeableConcept subtype,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference subject,
       @JsonKey(name: 'operator')
           Reference operator_,
@@ -347,8 +350,6 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   @override
   $CodeableConceptCopyWith<$Res> get subtype;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res> get operator_;
@@ -368,6 +369,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -390,6 +392,9 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
     Object content = freezed,
   }) {
     return _then(_Media(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -407,8 +412,9 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as MediaType,
       subtype: subtype == freezed ? _value.subtype : subtype as CodeableConcept,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       operator_:
           operator_ == freezed ? _value.operator_ : operator_ as Reference,
@@ -427,7 +433,9 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Media implements _Media {
   const _$_Media(
-      {this.id,
+      {@JsonKey(defaultValue: 'Media')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -460,6 +468,9 @@ class _$_Media implements _Media {
       _$_$_MediaFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Media')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -482,7 +493,7 @@ class _$_Media implements _Media {
   @override
   final CodeableConcept subtype;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final Reference subject;
   @override
@@ -506,13 +517,16 @@ class _$_Media implements _Media {
 
   @override
   String toString() {
-    return 'Media(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subtype: $subtype, identifier: $identifier, subject: $subject, operator_: $operator_, view: $view, deviceName: $deviceName, height: $height, width: $width, frames: $frames, duration: $duration, content: $content)';
+    return 'Media(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subtype: $subtype, identifier: $identifier, subject: $subject, operator_: $operator_, view: $view, deviceName: $deviceName, height: $height, width: $width, frames: $frames, duration: $duration, content: $content)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Media &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -569,6 +583,7 @@ class _$_Media implements _Media {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -602,7 +617,9 @@ class _$_Media implements _Media {
 
 abstract class _Media implements Media {
   const factory _Media(
-      {Id id,
+      {@JsonKey(defaultValue: 'Media')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -615,7 +632,7 @@ abstract class _Media implements Media {
       @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
           MediaType type,
       CodeableConcept subtype,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference subject,
       @JsonKey(name: 'operator')
           Reference operator_,
@@ -631,6 +648,9 @@ abstract class _Media implements Media {
 
   factory _Media.fromJson(Map<String, dynamic> json) = _$_Media.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Media')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -654,7 +674,7 @@ abstract class _Media implements Media {
   @override
   CodeableConcept get subtype;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   Reference get subject;
   @override
@@ -687,7 +707,8 @@ class _$BasicTearOff {
   const _$BasicTearOff();
 
   _Basic call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Basic') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -695,12 +716,13 @@ class _$BasicTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required @JsonKey(required: true) CodeableConcept code,
       Reference subject,
       Reference author,
       Date created}) {
     return _Basic(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -722,6 +744,8 @@ class _$BasicTearOff {
 const $Basic = _$BasicTearOff();
 
 mixin _$Basic {
+  @JsonKey(defaultValue: 'Basic')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -731,7 +755,7 @@ mixin _$Basic {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @JsonKey(required: true)
   CodeableConcept get code;
   Reference get subject;
@@ -746,7 +770,8 @@ abstract class $BasicCopyWith<$Res> {
   factory $BasicCopyWith(Basic value, $Res Function(Basic) then) =
       _$BasicCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Basic') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -754,7 +779,7 @@ abstract class $BasicCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true) CodeableConcept code,
       Reference subject,
       Reference author,
@@ -764,7 +789,6 @@ abstract class $BasicCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get author;
@@ -779,6 +803,7 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -794,6 +819,9 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
     Object created = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -809,8 +837,9 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       author: author == freezed ? _value.author : author as Reference,
@@ -859,16 +888,6 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get code {
     if (_value.code == null) {
       return null;
@@ -904,7 +923,8 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       __$BasicCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Basic') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -912,7 +932,7 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true) CodeableConcept code,
       Reference subject,
       Reference author,
@@ -926,8 +946,6 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -946,6 +964,7 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -961,6 +980,9 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
     Object created = freezed,
   }) {
     return _then(_Basic(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -976,8 +998,9 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       author: author == freezed ? _value.author : author as Reference,
@@ -989,7 +1012,8 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Basic implements _Basic {
   const _$_Basic(
-      {this.id,
+      {@JsonKey(defaultValue: 'Basic') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1008,6 +1032,9 @@ class _$_Basic implements _Basic {
       _$_$_BasicFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Basic')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -1025,7 +1052,7 @@ class _$_Basic implements _Basic {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   @JsonKey(required: true)
   final CodeableConcept code;
@@ -1038,13 +1065,16 @@ class _$_Basic implements _Basic {
 
   @override
   String toString() {
-    return 'Basic(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, subject: $subject, author: $author, created: $created)';
+    return 'Basic(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, subject: $subject, author: $author, created: $created)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Basic &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1083,6 +1113,7 @@ class _$_Basic implements _Basic {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1109,7 +1140,8 @@ class _$_Basic implements _Basic {
 
 abstract class _Basic implements Basic {
   const factory _Basic(
-      {Id id,
+      {@JsonKey(defaultValue: 'Basic') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1117,7 +1149,7 @@ abstract class _Basic implements Basic {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required @JsonKey(required: true) CodeableConcept code,
       Reference subject,
       Reference author,
@@ -1125,6 +1157,9 @@ abstract class _Basic implements Basic {
 
   factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Basic')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1143,7 +1178,7 @@ abstract class _Basic implements Basic {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   @JsonKey(required: true)
   CodeableConcept get code;
@@ -1165,13 +1200,15 @@ class _$BinaryTearOff {
   const _$BinaryTearOff();
 
   _Binary call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Binary') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Code contentType,
       Base64Binary content}) {
     return _Binary(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1186,6 +1223,8 @@ class _$BinaryTearOff {
 const $Binary = _$BinaryTearOff();
 
 mixin _$Binary {
+  @JsonKey(defaultValue: 'Binary')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1201,7 +1240,8 @@ abstract class $BinaryCopyWith<$Res> {
   factory $BinaryCopyWith(Binary value, $Res Function(Binary) then) =
       _$BinaryCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Binary') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1220,6 +1260,7 @@ class _$BinaryCopyWithImpl<$Res> implements $BinaryCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1228,6 +1269,9 @@ class _$BinaryCopyWithImpl<$Res> implements $BinaryCopyWith<$Res> {
     Object content = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1256,7 +1300,8 @@ abstract class _$BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
       __$BinaryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Binary') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1277,6 +1322,7 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1285,6 +1331,9 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
     Object content = freezed,
   }) {
     return _then(_Binary(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1301,7 +1350,8 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Binary implements _Binary {
   const _$_Binary(
-      {this.id,
+      {@JsonKey(defaultValue: 'Binary') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1311,6 +1361,9 @@ class _$_Binary implements _Binary {
   factory _$_Binary.fromJson(Map<String, dynamic> json) =>
       _$_$_BinaryFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'Binary')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -1326,13 +1379,16 @@ class _$_Binary implements _Binary {
 
   @override
   String toString() {
-    return 'Binary(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, contentType: $contentType, content: $content)';
+    return 'Binary(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, contentType: $contentType, content: $content)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Binary &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1353,6 +1409,7 @@ class _$_Binary implements _Binary {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1372,7 +1429,8 @@ class _$_Binary implements _Binary {
 
 abstract class _Binary implements Binary {
   const factory _Binary(
-      {Id id,
+      {@JsonKey(defaultValue: 'Binary') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1381,6 +1439,9 @@ abstract class _Binary implements Binary {
 
   factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Binary')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1405,7 +1466,9 @@ class _$BundleTearOff {
   const _$BundleTearOff();
 
   _Bundle call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Bundle')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1419,6 +1482,7 @@ class _$BundleTearOff {
       List<BundleEntry> entry,
       Signature signature}) {
     return _Bundle(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1436,6 +1500,8 @@ class _$BundleTearOff {
 const $Bundle = _$BundleTearOff();
 
 mixin _$Bundle {
+  @JsonKey(defaultValue: 'Bundle')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1456,7 +1522,9 @@ abstract class $BundleCopyWith<$Res> {
   factory $BundleCopyWith(Bundle value, $Res Function(Bundle) then) =
       _$BundleCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Bundle')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1481,6 +1549,7 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1492,6 +1561,9 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
     Object signature = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1533,7 +1605,9 @@ abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       __$BundleCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Bundle')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1561,6 +1635,7 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1572,6 +1647,9 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
     Object signature = freezed,
   }) {
     return _then(_Bundle(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1591,7 +1669,9 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Bundle implements _Bundle {
   const _$_Bundle(
-      {this.id,
+      {@JsonKey(defaultValue: 'Bundle')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1610,6 +1690,9 @@ class _$_Bundle implements _Bundle {
   factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'Bundle')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -1633,13 +1716,16 @@ class _$_Bundle implements _Bundle {
 
   @override
   String toString() {
-    return 'Bundle(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, type: $type, total: $total, link: $link, entry: $entry, signature: $signature)';
+    return 'Bundle(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, type: $type, total: $total, link: $link, entry: $entry, signature: $signature)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Bundle &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1666,6 +1752,7 @@ class _$_Bundle implements _Bundle {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1688,7 +1775,9 @@ class _$_Bundle implements _Bundle {
 
 abstract class _Bundle implements Bundle {
   const factory _Bundle(
-      {Id id,
+      {@JsonKey(defaultValue: 'Bundle')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1704,6 +1793,9 @@ abstract class _Bundle implements Bundle {
 
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Bundle')
+  String get resourceType;
   @override
   Id get id;
   @override

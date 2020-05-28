@@ -2928,8 +2928,8 @@ class _$DeviceUseStatementTearOff {
       @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus status,
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
+          StatementStatus status,
       @JsonKey(required: true)
           Reference subject,
       Period whenUsed,
@@ -2969,8 +2969,8 @@ mixin _$DeviceUseStatement {
   @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
   String get resourceType;
   List<Identifier> get identifier;
-  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-  DeviceUseStatementStatus get status;
+  @JsonKey(unknownEnumValue: StatementStatus.unknown)
+  StatementStatus get status;
   @JsonKey(required: true)
   Reference get subject;
   Period get whenUsed;
@@ -2997,8 +2997,8 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       {@JsonKey(required: true, defaultValue: 'DeviceUseStatement')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus status,
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
+          StatementStatus status,
       @JsonKey(required: true)
           Reference subject,
       Period whenUsed,
@@ -3054,9 +3054,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed
-          ? _value.status
-          : status as DeviceUseStatementStatus,
+      status: status == freezed ? _value.status : status as StatementStatus,
       subject: subject == freezed ? _value.subject : subject as Reference,
       whenUsed: whenUsed == freezed ? _value.whenUsed : whenUsed as Period,
       timingTiming: timingTiming == freezed
@@ -3162,8 +3160,8 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       {@JsonKey(required: true, defaultValue: 'DeviceUseStatement')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus status,
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
+          StatementStatus status,
       @JsonKey(required: true)
           Reference subject,
       Period whenUsed,
@@ -3228,9 +3226,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed
-          ? _value.status
-          : status as DeviceUseStatementStatus,
+      status: status == freezed ? _value.status : status as StatementStatus,
       subject: subject == freezed ? _value.subject : subject as Reference,
       whenUsed: whenUsed == freezed ? _value.whenUsed : whenUsed as Period,
       timingTiming: timingTiming == freezed
@@ -3263,7 +3259,7 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
           this.resourceType,
       this.identifier,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
           this.status,
       @JsonKey(required: true)
           this.subject,
@@ -3289,8 +3285,8 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
   @override
   final List<Identifier> identifier;
   @override
-  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-  final DeviceUseStatementStatus status;
+  @JsonKey(unknownEnumValue: StatementStatus.unknown)
+  final StatementStatus status;
   @override
   @JsonKey(required: true)
   final Reference subject;
@@ -3399,8 +3395,8 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
       @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus status,
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
+          StatementStatus status,
       @JsonKey(required: true)
           Reference subject,
       Period whenUsed,
@@ -3424,8 +3420,8 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
   @override
   List<Identifier> get identifier;
   @override
-  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-  DeviceUseStatementStatus get status;
+  @JsonKey(unknownEnumValue: StatementStatus.unknown)
+  StatementStatus get status;
   @override
   @JsonKey(required: true)
   Reference get subject;

@@ -16,7 +16,9 @@ class _$ImplementationGuideTearOff {
   const _$ImplementationGuideTearOff();
 
   _ImplementationGuide call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ImplementationGuide')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -37,22 +39,23 @@ class _$ImplementationGuideTearOff {
           ImplementationGuideStatus status,
       Boolean experimental,
       String publisher,
-      ImplementationGuideContact contact,
+      List<ImplementationGuideContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String copyright,
       Id fhirVersion,
-      ImplementationGuideDependency dependency,
+      List<ImplementationGuideDependency> dependency,
       @required
       @JsonKey(required: true)
-          ImplementationGuidePackage package,
-      ImplementationGuideGlobal global,
-      FhirUri binary,
+          List<ImplementationGuidePackage> package,
+      List<ImplementationGuideGlobal> global,
+      List<FhirUri> binary,
       @required
       @JsonKey(required: true)
           ImplementationGuidePage page}) {
     return _ImplementationGuide(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -86,6 +89,8 @@ class _$ImplementationGuideTearOff {
 const $ImplementationGuide = _$ImplementationGuideTearOff();
 
 mixin _$ImplementationGuide {
+  @JsonKey(defaultValue: 'ImplementationGuide')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -104,17 +109,17 @@ mixin _$ImplementationGuide {
   ImplementationGuideStatus get status;
   Boolean get experimental;
   String get publisher;
-  ImplementationGuideContact get contact;
+  List<ImplementationGuideContact> get contact;
   FhirDateTime get date;
   String get description;
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   String get copyright;
   Id get fhirVersion;
-  ImplementationGuideDependency get dependency;
+  List<ImplementationGuideDependency> get dependency;
   @JsonKey(required: true)
-  ImplementationGuidePackage get package;
-  ImplementationGuideGlobal get global;
-  FhirUri get binary;
+  List<ImplementationGuidePackage> get package;
+  List<ImplementationGuideGlobal> get global;
+  List<FhirUri> get binary;
   @JsonKey(required: true)
   ImplementationGuidePage get page;
 
@@ -127,7 +132,9 @@ abstract class $ImplementationGuideCopyWith<$Res> {
           ImplementationGuide value, $Res Function(ImplementationGuide) then) =
       _$ImplementationGuideCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ImplementationGuide')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -145,17 +152,17 @@ abstract class $ImplementationGuideCopyWith<$Res> {
           ImplementationGuideStatus status,
       Boolean experimental,
       String publisher,
-      ImplementationGuideContact contact,
+      List<ImplementationGuideContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String copyright,
       Id fhirVersion,
-      ImplementationGuideDependency dependency,
+      List<ImplementationGuideDependency> dependency,
       @JsonKey(required: true)
-          ImplementationGuidePackage package,
-      ImplementationGuideGlobal global,
-      FhirUri binary,
+          List<ImplementationGuidePackage> package,
+      List<ImplementationGuideGlobal> global,
+      List<FhirUri> binary,
       @JsonKey(required: true)
           ImplementationGuidePage page});
 
@@ -163,11 +170,6 @@ abstract class $ImplementationGuideCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ImplementationGuideContactCopyWith<$Res> get contact;
-  $CodeableConceptCopyWith<$Res> get useContext;
-  $ImplementationGuideDependencyCopyWith<$Res> get dependency;
-  $ImplementationGuidePackageCopyWith<$Res> get package;
-  $ImplementationGuideGlobalCopyWith<$Res> get global;
   $ImplementationGuidePageCopyWith<$Res> get page;
 }
 
@@ -181,6 +183,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -208,6 +211,9 @@ class _$ImplementationGuideCopyWithImpl<$Res>
     Object page = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -235,26 +241,26 @@ class _$ImplementationGuideCopyWithImpl<$Res>
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact: contact == freezed
           ? _value.contact
-          : contact as ImplementationGuideContact,
+          : contact as List<ImplementationGuideContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
       fhirVersion:
           fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id,
       dependency: dependency == freezed
           ? _value.dependency
-          : dependency as ImplementationGuideDependency,
+          : dependency as List<ImplementationGuideDependency>,
       package: package == freezed
           ? _value.package
-          : package as ImplementationGuidePackage,
+          : package as List<ImplementationGuidePackage>,
       global: global == freezed
           ? _value.global
-          : global as ImplementationGuideGlobal,
-      binary: binary == freezed ? _value.binary : binary as FhirUri,
+          : global as List<ImplementationGuideGlobal>,
+      binary: binary == freezed ? _value.binary : binary as List<FhirUri>,
       page: page == freezed ? _value.page : page as ImplementationGuidePage,
     ));
   }
@@ -300,57 +306,6 @@ class _$ImplementationGuideCopyWithImpl<$Res>
   }
 
   @override
-  $ImplementationGuideContactCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $ImplementationGuideContactCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get useContext {
-    if (_value.useContext == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.useContext, (value) {
-      return _then(_value.copyWith(useContext: value));
-    });
-  }
-
-  @override
-  $ImplementationGuideDependencyCopyWith<$Res> get dependency {
-    if (_value.dependency == null) {
-      return null;
-    }
-    return $ImplementationGuideDependencyCopyWith<$Res>(_value.dependency,
-        (value) {
-      return _then(_value.copyWith(dependency: value));
-    });
-  }
-
-  @override
-  $ImplementationGuidePackageCopyWith<$Res> get package {
-    if (_value.package == null) {
-      return null;
-    }
-    return $ImplementationGuidePackageCopyWith<$Res>(_value.package, (value) {
-      return _then(_value.copyWith(package: value));
-    });
-  }
-
-  @override
-  $ImplementationGuideGlobalCopyWith<$Res> get global {
-    if (_value.global == null) {
-      return null;
-    }
-    return $ImplementationGuideGlobalCopyWith<$Res>(_value.global, (value) {
-      return _then(_value.copyWith(global: value));
-    });
-  }
-
-  @override
   $ImplementationGuidePageCopyWith<$Res> get page {
     if (_value.page == null) {
       return null;
@@ -368,7 +323,9 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       __$ImplementationGuideCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ImplementationGuide')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -386,17 +343,17 @@ abstract class _$ImplementationGuideCopyWith<$Res>
           ImplementationGuideStatus status,
       Boolean experimental,
       String publisher,
-      ImplementationGuideContact contact,
+      List<ImplementationGuideContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String copyright,
       Id fhirVersion,
-      ImplementationGuideDependency dependency,
+      List<ImplementationGuideDependency> dependency,
       @JsonKey(required: true)
-          ImplementationGuidePackage package,
-      ImplementationGuideGlobal global,
-      FhirUri binary,
+          List<ImplementationGuidePackage> package,
+      List<ImplementationGuideGlobal> global,
+      List<FhirUri> binary,
       @JsonKey(required: true)
           ImplementationGuidePage page});
 
@@ -408,16 +365,6 @@ abstract class _$ImplementationGuideCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ImplementationGuideContactCopyWith<$Res> get contact;
-  @override
-  $CodeableConceptCopyWith<$Res> get useContext;
-  @override
-  $ImplementationGuideDependencyCopyWith<$Res> get dependency;
-  @override
-  $ImplementationGuidePackageCopyWith<$Res> get package;
-  @override
-  $ImplementationGuideGlobalCopyWith<$Res> get global;
   @override
   $ImplementationGuidePageCopyWith<$Res> get page;
 }
@@ -434,6 +381,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -461,6 +409,9 @@ class __$ImplementationGuideCopyWithImpl<$Res>
     Object page = freezed,
   }) {
     return _then(_ImplementationGuide(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -488,26 +439,26 @@ class __$ImplementationGuideCopyWithImpl<$Res>
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact: contact == freezed
           ? _value.contact
-          : contact as ImplementationGuideContact,
+          : contact as List<ImplementationGuideContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
       fhirVersion:
           fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id,
       dependency: dependency == freezed
           ? _value.dependency
-          : dependency as ImplementationGuideDependency,
+          : dependency as List<ImplementationGuideDependency>,
       package: package == freezed
           ? _value.package
-          : package as ImplementationGuidePackage,
+          : package as List<ImplementationGuidePackage>,
       global: global == freezed
           ? _value.global
-          : global as ImplementationGuideGlobal,
-      binary: binary == freezed ? _value.binary : binary as FhirUri,
+          : global as List<ImplementationGuideGlobal>,
+      binary: binary == freezed ? _value.binary : binary as List<FhirUri>,
       page: page == freezed ? _value.page : page as ImplementationGuidePage,
     ));
   }
@@ -516,7 +467,9 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImplementationGuide implements _ImplementationGuide {
   const _$_ImplementationGuide(
-      {this.id,
+      {@JsonKey(defaultValue: 'ImplementationGuide')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -562,6 +515,9 @@ class _$_ImplementationGuide implements _ImplementationGuide {
       _$_$_ImplementationGuideFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'ImplementationGuide')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -594,39 +550,42 @@ class _$_ImplementationGuide implements _ImplementationGuide {
   @override
   final String publisher;
   @override
-  final ImplementationGuideContact contact;
+  final List<ImplementationGuideContact> contact;
   @override
   final FhirDateTime date;
   @override
   final String description;
   @override
-  final CodeableConcept useContext;
+  final List<CodeableConcept> useContext;
   @override
   final String copyright;
   @override
   final Id fhirVersion;
   @override
-  final ImplementationGuideDependency dependency;
+  final List<ImplementationGuideDependency> dependency;
   @override
   @JsonKey(required: true)
-  final ImplementationGuidePackage package;
+  final List<ImplementationGuidePackage> package;
   @override
-  final ImplementationGuideGlobal global;
+  final List<ImplementationGuideGlobal> global;
   @override
-  final FhirUri binary;
+  final List<FhirUri> binary;
   @override
   @JsonKey(required: true)
   final ImplementationGuidePage page;
 
   @override
   String toString() {
-    return 'ImplementationGuide(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, copyright: $copyright, fhirVersion: $fhirVersion, dependency: $dependency, package: $package, global: $global, binary: $binary, page: $page)';
+    return 'ImplementationGuide(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, copyright: $copyright, fhirVersion: $fhirVersion, dependency: $dependency, package: $package, global: $global, binary: $binary, page: $page)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ImplementationGuide &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -697,6 +656,7 @@ class _$_ImplementationGuide implements _ImplementationGuide {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -736,7 +696,9 @@ class _$_ImplementationGuide implements _ImplementationGuide {
 
 abstract class _ImplementationGuide implements ImplementationGuide {
   const factory _ImplementationGuide(
-      {Id id,
+      {@JsonKey(defaultValue: 'ImplementationGuide')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -757,18 +719,18 @@ abstract class _ImplementationGuide implements ImplementationGuide {
           ImplementationGuideStatus status,
       Boolean experimental,
       String publisher,
-      ImplementationGuideContact contact,
+      List<ImplementationGuideContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String copyright,
       Id fhirVersion,
-      ImplementationGuideDependency dependency,
+      List<ImplementationGuideDependency> dependency,
       @required
       @JsonKey(required: true)
-          ImplementationGuidePackage package,
-      ImplementationGuideGlobal global,
-      FhirUri binary,
+          List<ImplementationGuidePackage> package,
+      List<ImplementationGuideGlobal> global,
+      List<FhirUri> binary,
       @required
       @JsonKey(required: true)
           ImplementationGuidePage page}) = _$_ImplementationGuide;
@@ -776,6 +738,9 @@ abstract class _ImplementationGuide implements ImplementationGuide {
   factory _ImplementationGuide.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuide.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'ImplementationGuide')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -809,26 +774,26 @@ abstract class _ImplementationGuide implements ImplementationGuide {
   @override
   String get publisher;
   @override
-  ImplementationGuideContact get contact;
+  List<ImplementationGuideContact> get contact;
   @override
   FhirDateTime get date;
   @override
   String get description;
   @override
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   @override
   String get copyright;
   @override
   Id get fhirVersion;
   @override
-  ImplementationGuideDependency get dependency;
+  List<ImplementationGuideDependency> get dependency;
   @override
   @JsonKey(required: true)
-  ImplementationGuidePackage get package;
+  List<ImplementationGuidePackage> get package;
   @override
-  ImplementationGuideGlobal get global;
+  List<ImplementationGuideGlobal> get global;
   @override
-  FhirUri get binary;
+  List<FhirUri> get binary;
   @override
   @JsonKey(required: true)
   ImplementationGuidePage get page;
@@ -849,7 +814,7 @@ class _$ImplementationGuideContactTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) {
+      List<ContactPoint> telecom}) {
     return _ImplementationGuideContact(
       id: id,
       extension_: extension_,
@@ -869,7 +834,7 @@ mixin _$ImplementationGuideContact {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
   $ImplementationGuideContactCopyWith<ImplementationGuideContact> get copyWith;
@@ -884,11 +849,10 @@ abstract class $ImplementationGuideContactCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class _$ImplementationGuideContactCopyWithImpl<$Res>
@@ -916,7 +880,8 @@ class _$ImplementationGuideContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 
@@ -939,16 +904,6 @@ class _$ImplementationGuideContactCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
 }
 
 abstract class _$ImplementationGuideContactCopyWith<$Res>
@@ -963,14 +918,12 @@ abstract class _$ImplementationGuideContactCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class __$ImplementationGuideContactCopyWithImpl<$Res>
@@ -1001,7 +954,8 @@ class __$ImplementationGuideContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -1028,7 +982,7 @@ class _$_ImplementationGuideContact implements _ImplementationGuideContact {
   @override
   final String name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -1080,7 +1034,7 @@ abstract class _ImplementationGuideContact
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) = _$_ImplementationGuideContact;
+      List<ContactPoint> telecom}) = _$_ImplementationGuideContact;
 
   factory _ImplementationGuideContact.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideContact.fromJson;
@@ -1095,7 +1049,7 @@ abstract class _ImplementationGuideContact
   @override
   String get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   _$ImplementationGuideContactCopyWith<_ImplementationGuideContact>
       get copyWith;
@@ -1406,7 +1360,7 @@ class _$ImplementationGuidePackageTearOff {
       String description,
       @required
       @JsonKey(required: true)
-          ImplementationGuideResource resource}) {
+          List<ImplementationGuideResource> resource}) {
     return _ImplementationGuidePackage(
       id: id,
       extension_: extension_,
@@ -1430,7 +1384,7 @@ mixin _$ImplementationGuidePackage {
   String get name;
   String get description;
   @JsonKey(required: true)
-  ImplementationGuideResource get resource;
+  List<ImplementationGuideResource> get resource;
 
   Map<String, dynamic> toJson();
   $ImplementationGuidePackageCopyWith<ImplementationGuidePackage> get copyWith;
@@ -1446,11 +1400,10 @@ abstract class $ImplementationGuidePackageCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true) String name,
       String description,
-      @JsonKey(required: true) ImplementationGuideResource resource});
+      @JsonKey(required: true) List<ImplementationGuideResource> resource});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ImplementationGuideResourceCopyWith<$Res> get resource;
 }
 
 class _$ImplementationGuidePackageCopyWithImpl<$Res>
@@ -1483,7 +1436,7 @@ class _$ImplementationGuidePackageCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       resource: resource == freezed
           ? _value.resource
-          : resource as ImplementationGuideResource,
+          : resource as List<ImplementationGuideResource>,
     ));
   }
 
@@ -1506,16 +1459,6 @@ class _$ImplementationGuidePackageCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ImplementationGuideResourceCopyWith<$Res> get resource {
-    if (_value.resource == null) {
-      return null;
-    }
-    return $ImplementationGuideResourceCopyWith<$Res>(_value.resource, (value) {
-      return _then(_value.copyWith(resource: value));
-    });
-  }
 }
 
 abstract class _$ImplementationGuidePackageCopyWith<$Res>
@@ -1531,14 +1474,12 @@ abstract class _$ImplementationGuidePackageCopyWith<$Res>
       FhirExtension modifierExtension,
       @JsonKey(required: true) String name,
       String description,
-      @JsonKey(required: true) ImplementationGuideResource resource});
+      @JsonKey(required: true) List<ImplementationGuideResource> resource});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ImplementationGuideResourceCopyWith<$Res> get resource;
 }
 
 class __$ImplementationGuidePackageCopyWithImpl<$Res>
@@ -1574,7 +1515,7 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       resource: resource == freezed
           ? _value.resource
-          : resource as ImplementationGuideResource,
+          : resource as List<ImplementationGuideResource>,
     ));
   }
 }
@@ -1608,7 +1549,7 @@ class _$_ImplementationGuidePackage implements _ImplementationGuidePackage {
   final String description;
   @override
   @JsonKey(required: true)
-  final ImplementationGuideResource resource;
+  final List<ImplementationGuideResource> resource;
 
   @override
   String toString() {
@@ -1671,7 +1612,7 @@ abstract class _ImplementationGuidePackage
           String description,
           @required
           @JsonKey(required: true)
-              ImplementationGuideResource resource}) =
+              List<ImplementationGuideResource> resource}) =
       _$_ImplementationGuidePackage;
 
   factory _ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =
@@ -1691,7 +1632,7 @@ abstract class _ImplementationGuidePackage
   String get description;
   @override
   @JsonKey(required: true)
-  ImplementationGuideResource get resource;
+  List<ImplementationGuideResource> get resource;
   @override
   _$ImplementationGuidePackageCopyWith<_ImplementationGuidePackage>
       get copyWith;
@@ -1991,8 +1932,8 @@ class _$ImplementationGuidePageTearOff {
       @required
       @JsonKey(required: true, unknownEnumValue: PageKind.unknown)
           PageKind kind,
-      Code type,
-      String package,
+      List<Code> type,
+      List<String> package,
       Code format,
       List<ImplementationGuidePage> page}) {
     return _ImplementationGuidePage(
@@ -2024,8 +1965,8 @@ mixin _$ImplementationGuidePage {
   String get name;
   @JsonKey(required: true, unknownEnumValue: PageKind.unknown)
   PageKind get kind;
-  Code get type;
-  String get package;
+  List<Code> get type;
+  List<String> get package;
   Code get format;
   List<ImplementationGuidePage> get page;
 
@@ -2048,8 +1989,8 @@ abstract class $ImplementationGuidePageCopyWith<$Res> {
           String name,
       @JsonKey(required: true, unknownEnumValue: PageKind.unknown)
           PageKind kind,
-      Code type,
-      String package,
+      List<Code> type,
+      List<String> package,
       Code format,
       List<ImplementationGuidePage> page});
 
@@ -2089,8 +2030,8 @@ class _$ImplementationGuidePageCopyWithImpl<$Res>
       source: source == freezed ? _value.source : source as FhirUri,
       name: name == freezed ? _value.name : name as String,
       kind: kind == freezed ? _value.kind : kind as PageKind,
-      type: type == freezed ? _value.type : type as Code,
-      package: package == freezed ? _value.package : package as String,
+      type: type == freezed ? _value.type : type as List<Code>,
+      package: package == freezed ? _value.package : package as List<String>,
       format: format == freezed ? _value.format : format as Code,
       page:
           page == freezed ? _value.page : page as List<ImplementationGuidePage>,
@@ -2135,8 +2076,8 @@ abstract class _$ImplementationGuidePageCopyWith<$Res>
           String name,
       @JsonKey(required: true, unknownEnumValue: PageKind.unknown)
           PageKind kind,
-      Code type,
-      String package,
+      List<Code> type,
+      List<String> package,
       Code format,
       List<ImplementationGuidePage> page});
 
@@ -2181,8 +2122,8 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
       source: source == freezed ? _value.source : source as FhirUri,
       name: name == freezed ? _value.name : name as String,
       kind: kind == freezed ? _value.kind : kind as PageKind,
-      type: type == freezed ? _value.type : type as Code,
-      package: package == freezed ? _value.package : package as String,
+      type: type == freezed ? _value.type : type as List<Code>,
+      package: package == freezed ? _value.package : package as List<String>,
       format: format == freezed ? _value.format : format as Code,
       page:
           page == freezed ? _value.page : page as List<ImplementationGuidePage>,
@@ -2234,9 +2175,9 @@ class _$_ImplementationGuidePage implements _ImplementationGuidePage {
   @JsonKey(required: true, unknownEnumValue: PageKind.unknown)
   final PageKind kind;
   @override
-  final Code type;
+  final List<Code> type;
   @override
-  final String package;
+  final List<String> package;
   @override
   final Code format;
   @override
@@ -2316,8 +2257,8 @@ abstract class _ImplementationGuidePage implements ImplementationGuidePage {
       @required
       @JsonKey(required: true, unknownEnumValue: PageKind.unknown)
           PageKind kind,
-      Code type,
-      String package,
+      List<Code> type,
+      List<String> package,
       Code format,
       List<ImplementationGuidePage> page}) = _$_ImplementationGuidePage;
 
@@ -2341,9 +2282,9 @@ abstract class _ImplementationGuidePage implements ImplementationGuidePage {
   @JsonKey(required: true, unknownEnumValue: PageKind.unknown)
   PageKind get kind;
   @override
-  Code get type;
+  List<Code> get type;
   @override
-  String get package;
+  List<String> get package;
   @override
   Code get format;
   @override
@@ -2738,7 +2679,9 @@ class _$TestScriptTearOff {
   const _$TestScriptTearOff();
 
   _TestScript call(
-      {Id id,
+      {@JsonKey(defaultValue: 'TestScript')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2760,21 +2703,22 @@ class _$TestScriptTearOff {
       Identifier identifier,
       Boolean experimental,
       String publisher,
-      TestScriptContact contact,
+      List<TestScriptContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String requirements,
       String copyright,
       TestScriptMetadata metadata,
       Boolean multiserver,
-      TestScriptFixture fixture,
-      Reference profile,
-      TestScriptVariable variable,
+      List<TestScriptFixture> fixture,
+      List<Reference> profile,
+      List<TestScriptVariable> variable,
       TestScriptSetup setup,
-      TestScriptTest test,
+      List<TestScriptTest> test,
       TestScriptTeardown teardown}) {
     return _TestScript(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -2812,6 +2756,8 @@ class _$TestScriptTearOff {
 const $TestScript = _$TestScriptTearOff();
 
 mixin _$TestScript {
+  @JsonKey(defaultValue: 'TestScript')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2831,19 +2777,19 @@ mixin _$TestScript {
   Identifier get identifier;
   Boolean get experimental;
   String get publisher;
-  TestScriptContact get contact;
+  List<TestScriptContact> get contact;
   FhirDateTime get date;
   String get description;
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   String get requirements;
   String get copyright;
   TestScriptMetadata get metadata;
   Boolean get multiserver;
-  TestScriptFixture get fixture;
-  Reference get profile;
-  TestScriptVariable get variable;
+  List<TestScriptFixture> get fixture;
+  List<Reference> get profile;
+  List<TestScriptVariable> get variable;
   TestScriptSetup get setup;
-  TestScriptTest get test;
+  List<TestScriptTest> get test;
   TestScriptTeardown get teardown;
 
   Map<String, dynamic> toJson();
@@ -2855,7 +2801,9 @@ abstract class $TestScriptCopyWith<$Res> {
           TestScript value, $Res Function(TestScript) then) =
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'TestScript')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2874,19 +2822,19 @@ abstract class $TestScriptCopyWith<$Res> {
       Identifier identifier,
       Boolean experimental,
       String publisher,
-      TestScriptContact contact,
+      List<TestScriptContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String requirements,
       String copyright,
       TestScriptMetadata metadata,
       Boolean multiserver,
-      TestScriptFixture fixture,
-      Reference profile,
-      TestScriptVariable variable,
+      List<TestScriptFixture> fixture,
+      List<Reference> profile,
+      List<TestScriptVariable> variable,
       TestScriptSetup setup,
-      TestScriptTest test,
+      List<TestScriptTest> test,
       TestScriptTeardown teardown});
 
   $MetaCopyWith<$Res> get meta;
@@ -2894,14 +2842,8 @@ abstract class $TestScriptCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get identifier;
-  $TestScriptContactCopyWith<$Res> get contact;
-  $CodeableConceptCopyWith<$Res> get useContext;
   $TestScriptMetadataCopyWith<$Res> get metadata;
-  $TestScriptFixtureCopyWith<$Res> get fixture;
-  $ReferenceCopyWith<$Res> get profile;
-  $TestScriptVariableCopyWith<$Res> get variable;
   $TestScriptSetupCopyWith<$Res> get setup;
-  $TestScriptTestCopyWith<$Res> get test;
   $TestScriptTeardownCopyWith<$Res> get teardown;
 }
 
@@ -2914,6 +2856,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2945,6 +2888,9 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
     Object teardown = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2970,14 +2916,15 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
           ? _value.experimental
           : experimental as Boolean,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact:
-          contact == freezed ? _value.contact : contact as TestScriptContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<TestScriptContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       requirements: requirements == freezed
           ? _value.requirements
           : requirements as String,
@@ -2987,14 +2934,15 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
           : metadata as TestScriptMetadata,
       multiserver:
           multiserver == freezed ? _value.multiserver : multiserver as Boolean,
-      fixture:
-          fixture == freezed ? _value.fixture : fixture as TestScriptFixture,
-      profile: profile == freezed ? _value.profile : profile as Reference,
+      fixture: fixture == freezed
+          ? _value.fixture
+          : fixture as List<TestScriptFixture>,
+      profile: profile == freezed ? _value.profile : profile as List<Reference>,
       variable: variable == freezed
           ? _value.variable
-          : variable as TestScriptVariable,
+          : variable as List<TestScriptVariable>,
       setup: setup == freezed ? _value.setup : setup as TestScriptSetup,
-      test: test == freezed ? _value.test : test as TestScriptTest,
+      test: test == freezed ? _value.test : test as List<TestScriptTest>,
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestScriptTeardown,
@@ -3052,26 +3000,6 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
   }
 
   @override
-  $TestScriptContactCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $TestScriptContactCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get useContext {
-    if (_value.useContext == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.useContext, (value) {
-      return _then(_value.copyWith(useContext: value));
-    });
-  }
-
-  @override
   $TestScriptMetadataCopyWith<$Res> get metadata {
     if (_value.metadata == null) {
       return null;
@@ -3082,52 +3010,12 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
   }
 
   @override
-  $TestScriptFixtureCopyWith<$Res> get fixture {
-    if (_value.fixture == null) {
-      return null;
-    }
-    return $TestScriptFixtureCopyWith<$Res>(_value.fixture, (value) {
-      return _then(_value.copyWith(fixture: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get profile {
-    if (_value.profile == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.profile, (value) {
-      return _then(_value.copyWith(profile: value));
-    });
-  }
-
-  @override
-  $TestScriptVariableCopyWith<$Res> get variable {
-    if (_value.variable == null) {
-      return null;
-    }
-    return $TestScriptVariableCopyWith<$Res>(_value.variable, (value) {
-      return _then(_value.copyWith(variable: value));
-    });
-  }
-
-  @override
   $TestScriptSetupCopyWith<$Res> get setup {
     if (_value.setup == null) {
       return null;
     }
     return $TestScriptSetupCopyWith<$Res>(_value.setup, (value) {
       return _then(_value.copyWith(setup: value));
-    });
-  }
-
-  @override
-  $TestScriptTestCopyWith<$Res> get test {
-    if (_value.test == null) {
-      return null;
-    }
-    return $TestScriptTestCopyWith<$Res>(_value.test, (value) {
-      return _then(_value.copyWith(test: value));
     });
   }
 
@@ -3148,7 +3036,9 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       __$TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'TestScript')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -3167,19 +3057,19 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       Identifier identifier,
       Boolean experimental,
       String publisher,
-      TestScriptContact contact,
+      List<TestScriptContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String requirements,
       String copyright,
       TestScriptMetadata metadata,
       Boolean multiserver,
-      TestScriptFixture fixture,
-      Reference profile,
-      TestScriptVariable variable,
+      List<TestScriptFixture> fixture,
+      List<Reference> profile,
+      List<TestScriptVariable> variable,
       TestScriptSetup setup,
-      TestScriptTest test,
+      List<TestScriptTest> test,
       TestScriptTeardown teardown});
 
   @override
@@ -3193,21 +3083,9 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
-  $TestScriptContactCopyWith<$Res> get contact;
-  @override
-  $CodeableConceptCopyWith<$Res> get useContext;
-  @override
   $TestScriptMetadataCopyWith<$Res> get metadata;
   @override
-  $TestScriptFixtureCopyWith<$Res> get fixture;
-  @override
-  $ReferenceCopyWith<$Res> get profile;
-  @override
-  $TestScriptVariableCopyWith<$Res> get variable;
-  @override
   $TestScriptSetupCopyWith<$Res> get setup;
-  @override
-  $TestScriptTestCopyWith<$Res> get test;
   @override
   $TestScriptTeardownCopyWith<$Res> get teardown;
 }
@@ -3223,6 +3101,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -3254,6 +3133,9 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
     Object teardown = freezed,
   }) {
     return _then(_TestScript(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3279,14 +3161,15 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           ? _value.experimental
           : experimental as Boolean,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact:
-          contact == freezed ? _value.contact : contact as TestScriptContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<TestScriptContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       requirements: requirements == freezed
           ? _value.requirements
           : requirements as String,
@@ -3296,14 +3179,15 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : metadata as TestScriptMetadata,
       multiserver:
           multiserver == freezed ? _value.multiserver : multiserver as Boolean,
-      fixture:
-          fixture == freezed ? _value.fixture : fixture as TestScriptFixture,
-      profile: profile == freezed ? _value.profile : profile as Reference,
+      fixture: fixture == freezed
+          ? _value.fixture
+          : fixture as List<TestScriptFixture>,
+      profile: profile == freezed ? _value.profile : profile as List<Reference>,
       variable: variable == freezed
           ? _value.variable
-          : variable as TestScriptVariable,
+          : variable as List<TestScriptVariable>,
       setup: setup == freezed ? _value.setup : setup as TestScriptSetup,
-      test: test == freezed ? _value.test : test as TestScriptTest,
+      test: test == freezed ? _value.test : test as List<TestScriptTest>,
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestScriptTeardown,
@@ -3314,7 +3198,9 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScript implements _TestScript {
   const _$_TestScript(
-      {this.id,
+      {@JsonKey(defaultValue: 'TestScript')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -3358,6 +3244,9 @@ class _$_TestScript implements _TestScript {
       _$_$_TestScriptFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'TestScript')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -3392,13 +3281,13 @@ class _$_TestScript implements _TestScript {
   @override
   final String publisher;
   @override
-  final TestScriptContact contact;
+  final List<TestScriptContact> contact;
   @override
   final FhirDateTime date;
   @override
   final String description;
   @override
-  final CodeableConcept useContext;
+  final List<CodeableConcept> useContext;
   @override
   final String requirements;
   @override
@@ -3408,27 +3297,30 @@ class _$_TestScript implements _TestScript {
   @override
   final Boolean multiserver;
   @override
-  final TestScriptFixture fixture;
+  final List<TestScriptFixture> fixture;
   @override
-  final Reference profile;
+  final List<Reference> profile;
   @override
-  final TestScriptVariable variable;
+  final List<TestScriptVariable> variable;
   @override
   final TestScriptSetup setup;
   @override
-  final TestScriptTest test;
+  final List<TestScriptTest> test;
   @override
   final TestScriptTeardown teardown;
 
   @override
   String toString() {
-    return 'TestScript(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, identifier: $identifier, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, metadata: $metadata, multiserver: $multiserver, fixture: $fixture, profile: $profile, variable: $variable, setup: $setup, test: $test, teardown: $teardown)';
+    return 'TestScript(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, identifier: $identifier, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, metadata: $metadata, multiserver: $multiserver, fixture: $fixture, profile: $profile, variable: $variable, setup: $setup, test: $test, teardown: $teardown)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _TestScript &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -3494,9 +3386,7 @@ class _$_TestScript implements _TestScript {
             (identical(other.fixture, fixture) ||
                 const DeepCollectionEquality()
                     .equals(other.fixture, fixture)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality()
-                    .equals(other.profile, profile)) &&
+            (identical(other.profile, profile) || const DeepCollectionEquality().equals(other.profile, profile)) &&
             (identical(other.variable, variable) || const DeepCollectionEquality().equals(other.variable, variable)) &&
             (identical(other.setup, setup) || const DeepCollectionEquality().equals(other.setup, setup)) &&
             (identical(other.test, test) || const DeepCollectionEquality().equals(other.test, test)) &&
@@ -3506,6 +3396,7 @@ class _$_TestScript implements _TestScript {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -3548,7 +3439,9 @@ class _$_TestScript implements _TestScript {
 
 abstract class _TestScript implements TestScript {
   const factory _TestScript(
-      {Id id,
+      {@JsonKey(defaultValue: 'TestScript')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -3570,24 +3463,27 @@ abstract class _TestScript implements TestScript {
       Identifier identifier,
       Boolean experimental,
       String publisher,
-      TestScriptContact contact,
+      List<TestScriptContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String requirements,
       String copyright,
       TestScriptMetadata metadata,
       Boolean multiserver,
-      TestScriptFixture fixture,
-      Reference profile,
-      TestScriptVariable variable,
+      List<TestScriptFixture> fixture,
+      List<Reference> profile,
+      List<TestScriptVariable> variable,
       TestScriptSetup setup,
-      TestScriptTest test,
+      List<TestScriptTest> test,
       TestScriptTeardown teardown}) = _$_TestScript;
 
   factory _TestScript.fromJson(Map<String, dynamic> json) =
       _$_TestScript.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'TestScript')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -3623,13 +3519,13 @@ abstract class _TestScript implements TestScript {
   @override
   String get publisher;
   @override
-  TestScriptContact get contact;
+  List<TestScriptContact> get contact;
   @override
   FhirDateTime get date;
   @override
   String get description;
   @override
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   @override
   String get requirements;
   @override
@@ -3639,15 +3535,15 @@ abstract class _TestScript implements TestScript {
   @override
   Boolean get multiserver;
   @override
-  TestScriptFixture get fixture;
+  List<TestScriptFixture> get fixture;
   @override
-  Reference get profile;
+  List<Reference> get profile;
   @override
-  TestScriptVariable get variable;
+  List<TestScriptVariable> get variable;
   @override
   TestScriptSetup get setup;
   @override
-  TestScriptTest get test;
+  List<TestScriptTest> get test;
   @override
   TestScriptTeardown get teardown;
   @override
@@ -3666,7 +3562,7 @@ class _$TestScriptContactTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) {
+      List<ContactPoint> telecom}) {
     return _TestScriptContact(
       id: id,
       extension_: extension_,
@@ -3686,7 +3582,7 @@ mixin _$TestScriptContact {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
   $TestScriptContactCopyWith<TestScriptContact> get copyWith;
@@ -3701,11 +3597,10 @@ abstract class $TestScriptContactCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class _$TestScriptContactCopyWithImpl<$Res>
@@ -3733,7 +3628,8 @@ class _$TestScriptContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 
@@ -3756,16 +3652,6 @@ class _$TestScriptContactCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
 }
 
 abstract class _$TestScriptContactCopyWith<$Res>
@@ -3779,14 +3665,12 @@ abstract class _$TestScriptContactCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class __$TestScriptContactCopyWithImpl<$Res>
@@ -3816,7 +3700,8 @@ class __$TestScriptContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -3843,7 +3728,7 @@ class _$_TestScriptContact implements _TestScriptContact {
   @override
   final String name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -3893,7 +3778,7 @@ abstract class _TestScriptContact implements TestScriptContact {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) = _$_TestScriptContact;
+      List<ContactPoint> telecom}) = _$_TestScriptContact;
 
   factory _TestScriptContact.fromJson(Map<String, dynamic> json) =
       _$_TestScriptContact.fromJson;
@@ -3908,7 +3793,7 @@ abstract class _TestScriptContact implements TestScriptContact {
   @override
   String get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   _$TestScriptContactCopyWith<_TestScriptContact> get copyWith;
 }
@@ -3924,7 +3809,7 @@ class _$TestScriptMetadataTearOff {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      TestScriptLink link,
+      List<TestScriptLink> link,
       @required @JsonKey(required: true) TestScriptCapability capability}) {
     return _TestScriptMetadata(
       id: id,
@@ -3944,7 +3829,7 @@ mixin _$TestScriptMetadata {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  TestScriptLink get link;
+  List<TestScriptLink> get link;
   @JsonKey(required: true)
   TestScriptCapability get capability;
 
@@ -3960,12 +3845,11 @@ abstract class $TestScriptMetadataCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      TestScriptLink link,
+      List<TestScriptLink> link,
       @JsonKey(required: true) TestScriptCapability capability});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $TestScriptLinkCopyWith<$Res> get link;
   $TestScriptCapabilityCopyWith<$Res> get capability;
 }
 
@@ -3993,7 +3877,7 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      link: link == freezed ? _value.link : link as TestScriptLink,
+      link: link == freezed ? _value.link : link as List<TestScriptLink>,
       capability: capability == freezed
           ? _value.capability
           : capability as TestScriptCapability,
@@ -4021,16 +3905,6 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
   }
 
   @override
-  $TestScriptLinkCopyWith<$Res> get link {
-    if (_value.link == null) {
-      return null;
-    }
-    return $TestScriptLinkCopyWith<$Res>(_value.link, (value) {
-      return _then(_value.copyWith(link: value));
-    });
-  }
-
-  @override
   $TestScriptCapabilityCopyWith<$Res> get capability {
     if (_value.capability == null) {
       return null;
@@ -4051,15 +3925,13 @@ abstract class _$TestScriptMetadataCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      TestScriptLink link,
+      List<TestScriptLink> link,
       @JsonKey(required: true) TestScriptCapability capability});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $TestScriptLinkCopyWith<$Res> get link;
   @override
   $TestScriptCapabilityCopyWith<$Res> get capability;
 }
@@ -4090,7 +3962,7 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      link: link == freezed ? _value.link : link as TestScriptLink,
+      link: link == freezed ? _value.link : link as List<TestScriptLink>,
       capability: capability == freezed
           ? _value.capability
           : capability as TestScriptCapability,
@@ -4119,7 +3991,7 @@ class _$_TestScriptMetadata implements _TestScriptMetadata {
   @override
   final FhirExtension modifierExtension;
   @override
-  final TestScriptLink link;
+  final List<TestScriptLink> link;
   @override
   @JsonKey(required: true)
   final TestScriptCapability capability;
@@ -4172,7 +4044,7 @@ abstract class _TestScriptMetadata implements TestScriptMetadata {
           {Id id,
           @JsonKey(name: 'extension') FhirExtension extension_,
           FhirExtension modifierExtension,
-          TestScriptLink link,
+          List<TestScriptLink> link,
           @required @JsonKey(required: true) TestScriptCapability capability}) =
       _$_TestScriptMetadata;
 
@@ -4187,7 +4059,7 @@ abstract class _TestScriptMetadata implements TestScriptMetadata {
   @override
   FhirExtension get modifierExtension;
   @override
-  TestScriptLink get link;
+  List<TestScriptLink> get link;
   @override
   @JsonKey(required: true)
   TestScriptCapability get capability;
@@ -4463,7 +4335,7 @@ class _$TestScriptCapabilityTearOff {
       Boolean validated,
       String description,
       Integer destination,
-      FhirUri link,
+      List<FhirUri> link,
       @required @JsonKey(required: true) Reference conformance}) {
     return _TestScriptCapability(
       id: id,
@@ -4492,7 +4364,7 @@ mixin _$TestScriptCapability {
   Boolean get validated;
   String get description;
   Integer get destination;
-  FhirUri get link;
+  List<FhirUri> get link;
   @JsonKey(required: true)
   Reference get conformance;
 
@@ -4512,7 +4384,7 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       Boolean validated,
       String description,
       Integer destination,
-      FhirUri link,
+      List<FhirUri> link,
       @JsonKey(required: true) Reference conformance});
 
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -4554,7 +4426,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       destination:
           destination == freezed ? _value.destination : destination as Integer,
-      link: link == freezed ? _value.link : link as FhirUri,
+      link: link == freezed ? _value.link : link as List<FhirUri>,
       conformance: conformance == freezed
           ? _value.conformance
           : conformance as Reference,
@@ -4606,7 +4478,7 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
       Boolean validated,
       String description,
       Integer destination,
-      FhirUri link,
+      List<FhirUri> link,
       @JsonKey(required: true) Reference conformance});
 
   @override
@@ -4653,7 +4525,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       destination:
           destination == freezed ? _value.destination : destination as Integer,
-      link: link == freezed ? _value.link : link as FhirUri,
+      link: link == freezed ? _value.link : link as List<FhirUri>,
       conformance: conformance == freezed
           ? _value.conformance
           : conformance as Reference,
@@ -4695,7 +4567,7 @@ class _$_TestScriptCapability implements _TestScriptCapability {
   @override
   final Integer destination;
   @override
-  final FhirUri link;
+  final List<FhirUri> link;
   @override
   @JsonKey(required: true)
   final Reference conformance;
@@ -4769,7 +4641,7 @@ abstract class _TestScriptCapability implements TestScriptCapability {
           Boolean validated,
           String description,
           Integer destination,
-          FhirUri link,
+          List<FhirUri> link,
           @required @JsonKey(required: true) Reference conformance}) =
       _$_TestScriptCapability;
 
@@ -4793,7 +4665,7 @@ abstract class _TestScriptCapability implements TestScriptCapability {
   @override
   Integer get destination;
   @override
-  FhirUri get link;
+  List<FhirUri> get link;
   @override
   @JsonKey(required: true)
   Reference get conformance;
@@ -5945,7 +5817,7 @@ class _$ActionOperationTearOff {
       Integer destination,
       Boolean encodeRequestUrl,
       String params,
-      TestScriptRequestHeader requestHeader,
+      List<TestScriptRequestHeader> requestHeader,
       Id responseId,
       Id sourceId,
       Id targetId,
@@ -5991,7 +5863,7 @@ mixin _$ActionOperation {
   Integer get destination;
   Boolean get encodeRequestUrl;
   String get params;
-  TestScriptRequestHeader get requestHeader;
+  List<TestScriptRequestHeader> get requestHeader;
   Id get responseId;
   Id get sourceId;
   Id get targetId;
@@ -6021,7 +5893,7 @@ abstract class $ActionOperationCopyWith<$Res> {
       Integer destination,
       Boolean encodeRequestUrl,
       String params,
-      TestScriptRequestHeader requestHeader,
+      List<TestScriptRequestHeader> requestHeader,
       Id responseId,
       Id sourceId,
       Id targetId,
@@ -6030,7 +5902,6 @@ abstract class $ActionOperationCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
-  $TestScriptRequestHeaderCopyWith<$Res> get requestHeader;
 }
 
 class _$ActionOperationCopyWithImpl<$Res>
@@ -6086,7 +5957,7 @@ class _$ActionOperationCopyWithImpl<$Res>
       params: params == freezed ? _value.params : params as String,
       requestHeader: requestHeader == freezed
           ? _value.requestHeader
-          : requestHeader as TestScriptRequestHeader,
+          : requestHeader as List<TestScriptRequestHeader>,
       responseId: responseId == freezed ? _value.responseId : responseId as Id,
       sourceId: sourceId == freezed ? _value.sourceId : sourceId as Id,
       targetId: targetId == freezed ? _value.targetId : targetId as Id,
@@ -6123,17 +5994,6 @@ class _$ActionOperationCopyWithImpl<$Res>
       return _then(_value.copyWith(type: value));
     });
   }
-
-  @override
-  $TestScriptRequestHeaderCopyWith<$Res> get requestHeader {
-    if (_value.requestHeader == null) {
-      return null;
-    }
-    return $TestScriptRequestHeaderCopyWith<$Res>(_value.requestHeader,
-        (value) {
-      return _then(_value.copyWith(requestHeader: value));
-    });
-  }
 }
 
 abstract class _$ActionOperationCopyWith<$Res>
@@ -6158,7 +6018,7 @@ abstract class _$ActionOperationCopyWith<$Res>
       Integer destination,
       Boolean encodeRequestUrl,
       String params,
-      TestScriptRequestHeader requestHeader,
+      List<TestScriptRequestHeader> requestHeader,
       Id responseId,
       Id sourceId,
       Id targetId,
@@ -6170,8 +6030,6 @@ abstract class _$ActionOperationCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $CodingCopyWith<$Res> get type;
-  @override
-  $TestScriptRequestHeaderCopyWith<$Res> get requestHeader;
 }
 
 class __$ActionOperationCopyWithImpl<$Res>
@@ -6229,7 +6087,7 @@ class __$ActionOperationCopyWithImpl<$Res>
       params: params == freezed ? _value.params : params as String,
       requestHeader: requestHeader == freezed
           ? _value.requestHeader
-          : requestHeader as TestScriptRequestHeader,
+          : requestHeader as List<TestScriptRequestHeader>,
       responseId: responseId == freezed ? _value.responseId : responseId as Id,
       sourceId: sourceId == freezed ? _value.sourceId : sourceId as Id,
       targetId: targetId == freezed ? _value.targetId : targetId as Id,
@@ -6290,7 +6148,7 @@ class _$_ActionOperation implements _ActionOperation {
   @override
   final String params;
   @override
-  final TestScriptRequestHeader requestHeader;
+  final List<TestScriptRequestHeader> requestHeader;
   @override
   final Id responseId;
   @override
@@ -6404,7 +6262,7 @@ abstract class _ActionOperation implements ActionOperation {
       Integer destination,
       Boolean encodeRequestUrl,
       String params,
-      TestScriptRequestHeader requestHeader,
+      List<TestScriptRequestHeader> requestHeader,
       Id responseId,
       Id sourceId,
       Id targetId,
@@ -6441,7 +6299,7 @@ abstract class _ActionOperation implements ActionOperation {
   @override
   String get params;
   @override
-  TestScriptRequestHeader get requestHeader;
+  List<TestScriptRequestHeader> get requestHeader;
   @override
   Id get responseId;
   @override

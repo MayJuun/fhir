@@ -738,8 +738,8 @@ class _$EncounterStatusHistoryTearOff {
   const _$EncounterStatusHistoryTearOff();
 
   _EncounterStatusHistory call(
-      {@JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-          EncounterHistoryStatus status,
+      {@JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       @JsonKey(required: true)
           Period period}) {
     return _EncounterStatusHistory(
@@ -753,8 +753,8 @@ class _$EncounterStatusHistoryTearOff {
 const $EncounterStatusHistory = _$EncounterStatusHistoryTearOff();
 
 mixin _$EncounterStatusHistory {
-  @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-  EncounterHistoryStatus get status;
+  @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+  EncounterStatus get status;
   @JsonKey(required: true)
   Period get period;
 
@@ -767,8 +767,8 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
           $Res Function(EncounterStatusHistory) then) =
       _$EncounterStatusHistoryCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-          EncounterHistoryStatus status,
+      {@JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       @JsonKey(required: true)
           Period period});
 
@@ -789,8 +789,7 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
     Object period = freezed,
   }) {
     return _then(_value.copyWith(
-      status:
-          status == freezed ? _value.status : status as EncounterHistoryStatus,
+      status: status == freezed ? _value.status : status as EncounterStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -813,8 +812,8 @@ abstract class _$EncounterStatusHistoryCopyWith<$Res>
       __$EncounterStatusHistoryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-          EncounterHistoryStatus status,
+      {@JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       @JsonKey(required: true)
           Period period});
 
@@ -838,8 +837,7 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
     Object period = freezed,
   }) {
     return _then(_EncounterStatusHistory(
-      status:
-          status == freezed ? _value.status : status as EncounterHistoryStatus,
+      status: status == freezed ? _value.status : status as EncounterStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -848,15 +846,15 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EncounterStatusHistory implements _EncounterStatusHistory {
   const _$_EncounterStatusHistory(
-      {@JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown) this.status,
+      {@JsonKey(unknownEnumValue: EncounterStatus.unknown) this.status,
       @JsonKey(required: true) this.period});
 
   factory _$_EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$_$_EncounterStatusHistoryFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-  final EncounterHistoryStatus status;
+  @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+  final EncounterStatus status;
   @override
   @JsonKey(required: true)
   final Period period;
@@ -895,8 +893,8 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
 
 abstract class _EncounterStatusHistory implements EncounterStatusHistory {
   const factory _EncounterStatusHistory(
-      {@JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-          EncounterHistoryStatus status,
+      {@JsonKey(unknownEnumValue: EncounterStatus.unknown)
+          EncounterStatus status,
       @JsonKey(required: true)
           Period period}) = _$_EncounterStatusHistory;
 
@@ -904,8 +902,8 @@ abstract class _EncounterStatusHistory implements EncounterStatusHistory {
       _$_EncounterStatusHistory.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-  EncounterHistoryStatus get status;
+  @JsonKey(unknownEnumValue: EncounterStatus.unknown)
+  EncounterStatus get status;
   @override
   @JsonKey(required: true)
   Period get period;
@@ -2581,8 +2579,8 @@ class _$EpisodeOfCareStatusHistoryTearOff {
   const _$EpisodeOfCareStatusHistoryTearOff();
 
   _EpisodeOfCareStatusHistory call(
-      {@JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-          EpisodeOfCareHistoryStatus status,
+      {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       @JsonKey(required: true)
           Period period}) {
     return _EpisodeOfCareStatusHistory(
@@ -2596,8 +2594,8 @@ class _$EpisodeOfCareStatusHistoryTearOff {
 const $EpisodeOfCareStatusHistory = _$EpisodeOfCareStatusHistoryTearOff();
 
 mixin _$EpisodeOfCareStatusHistory {
-  @JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-  EpisodeOfCareHistoryStatus get status;
+  @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+  EpisodeOfCareStatus get status;
   @JsonKey(required: true)
   Period get period;
 
@@ -2610,8 +2608,8 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
           $Res Function(EpisodeOfCareStatusHistory) then) =
       _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-          EpisodeOfCareHistoryStatus status,
+      {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       @JsonKey(required: true)
           Period period});
 
@@ -2632,9 +2630,7 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
     Object period = freezed,
   }) {
     return _then(_value.copyWith(
-      status: status == freezed
-          ? _value.status
-          : status as EpisodeOfCareHistoryStatus,
+      status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -2658,8 +2654,8 @@ abstract class _$EpisodeOfCareStatusHistoryCopyWith<$Res>
       __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-          EpisodeOfCareHistoryStatus status,
+      {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       @JsonKey(required: true)
           Period period});
 
@@ -2684,9 +2680,7 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
     Object period = freezed,
   }) {
     return _then(_EpisodeOfCareStatusHistory(
-      status: status == freezed
-          ? _value.status
-          : status as EpisodeOfCareHistoryStatus,
+      status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -2695,17 +2689,15 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
   const _$_EpisodeOfCareStatusHistory(
-      {@JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-          this.status,
-      @JsonKey(required: true)
-          this.period});
+      {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown) this.status,
+      @JsonKey(required: true) this.period});
 
   factory _$_EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$_$_EpisodeOfCareStatusHistoryFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-  final EpisodeOfCareHistoryStatus status;
+  @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+  final EpisodeOfCareStatus status;
   @override
   @JsonKey(required: true)
   final Period period;
@@ -2745,8 +2737,8 @@ class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
 abstract class _EpisodeOfCareStatusHistory
     implements EpisodeOfCareStatusHistory {
   const factory _EpisodeOfCareStatusHistory(
-      {@JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-          EpisodeOfCareHistoryStatus status,
+      {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+          EpisodeOfCareStatus status,
       @JsonKey(required: true)
           Period period}) = _$_EpisodeOfCareStatusHistory;
 
@@ -2754,8 +2746,8 @@ abstract class _EpisodeOfCareStatusHistory
       _$_EpisodeOfCareStatusHistory.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-  EpisodeOfCareHistoryStatus get status;
+  @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+  EpisodeOfCareStatus get status;
   @override
   @JsonKey(required: true)
   Period get period;
@@ -2979,8 +2971,8 @@ class _$FlagTearOff {
       @JsonKey(required: true, defaultValue: 'Flag')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: FlagStatus.unknown)
-          FlagStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       CodeableConcept category,
       @JsonKey(required: true)
           CodeableConcept code,
@@ -3010,8 +3002,8 @@ mixin _$Flag {
   @JsonKey(required: true, defaultValue: 'Flag')
   String get resourceType;
   List<Identifier> get identifier;
-  @JsonKey(unknownEnumValue: FlagStatus.unknown)
-  FlagStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   CodeableConcept get category;
   @JsonKey(required: true)
   CodeableConcept get code;
@@ -3031,7 +3023,7 @@ abstract class $FlagCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Flag') String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       CodeableConcept category,
       @JsonKey(required: true) CodeableConcept code,
       @JsonKey(required: true) Reference subject,
@@ -3073,7 +3065,7 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as FlagStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -3153,7 +3145,7 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Flag') String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       CodeableConcept category,
       @JsonKey(required: true) CodeableConcept code,
       @JsonKey(required: true) Reference subject,
@@ -3202,7 +3194,7 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as FlagStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -3222,7 +3214,7 @@ class _$_Flag implements _Flag {
       @JsonKey(required: true, defaultValue: 'Flag')
           this.resourceType,
       this.identifier,
-      @JsonKey(unknownEnumValue: FlagStatus.unknown)
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
           this.status,
       this.category,
       @JsonKey(required: true)
@@ -3243,8 +3235,8 @@ class _$_Flag implements _Flag {
   @override
   final List<Identifier> identifier;
   @override
-  @JsonKey(unknownEnumValue: FlagStatus.unknown)
-  final FlagStatus status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  final ActiveInactive status;
   @override
   final CodeableConcept category;
   @override
@@ -3323,8 +3315,8 @@ abstract class _Flag implements Flag {
       @JsonKey(required: true, defaultValue: 'Flag')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: FlagStatus.unknown)
-          FlagStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       CodeableConcept category,
       @JsonKey(required: true)
           CodeableConcept code,
@@ -3342,8 +3334,8 @@ abstract class _Flag implements Flag {
   @override
   List<Identifier> get identifier;
   @override
-  @JsonKey(unknownEnumValue: FlagStatus.unknown)
-  FlagStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   @override
   CodeableConcept get category;
   @override
@@ -3378,8 +3370,8 @@ class _$LibraryTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: LibraryStatus.unknown)
-          LibraryStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -3444,8 +3436,8 @@ mixin _$Library {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: LibraryStatus.unknown)
-  LibraryStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   @JsonKey(required: true)
   CodeableConcept get type;
@@ -3482,7 +3474,7 @@ abstract class $LibraryCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       @JsonKey(required: true) CodeableConcept type,
       DateTime date,
@@ -3556,7 +3548,7 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as LibraryStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -3634,7 +3626,7 @@ abstract class _$LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       @JsonKey(required: true) CodeableConcept type,
       DateTime date,
@@ -3711,7 +3703,7 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as LibraryStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -3769,7 +3761,7 @@ class _$_Library implements _Library {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: LibraryStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       @JsonKey(required: true)
@@ -3811,8 +3803,8 @@ class _$_Library implements _Library {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: LibraryStatus.unknown)
-  final LibraryStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -3987,8 +3979,8 @@ abstract class _Library implements Library {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: LibraryStatus.unknown)
-          LibraryStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       @JsonKey(required: true)
           CodeableConcept type,
@@ -4027,8 +4019,8 @@ abstract class _Library implements Library {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: LibraryStatus.unknown)
-  LibraryStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override

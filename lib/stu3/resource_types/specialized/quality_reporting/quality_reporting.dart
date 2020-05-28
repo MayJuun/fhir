@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
 import '../../resource_types.enums.dart';
+import 'quality_reporting.enums.dart';
 
 part 'quality_reporting.freezed.dart';
 part 'quality_reporting.g.dart';
@@ -17,7 +18,7 @@ abstract class Measure with _$Measure implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: MeasureStatus.unknown) MeasureStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,

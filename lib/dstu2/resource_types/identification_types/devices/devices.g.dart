@@ -10,6 +10,7 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
   $checkKeys(json,
       requiredKeys: const ['type', 'identifier', 'lastSystemChange']);
   return _$_DeviceComponent(
+    resourceType: json['resourceType'] as String ?? 'DeviceComponent',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -48,10 +49,11 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
     parent: json['parent'] == null
         ? null
         : Reference.fromJson(json['parent'] as Map<String, dynamic>),
-    operationalStatus: json['operationalStatus'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['operationalStatus'] as Map<String, dynamic>),
+    operationalStatus: (json['operationalStatus'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     parameterGroup: json['parameterGroup'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -60,10 +62,12 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
         _$DeviceComponentMeasurementPrincipleEnumMap,
         json['measurementPrinciple'],
         unknownValue: DeviceComponentMeasurementPrinciple.unknown),
-    productionSpecification: json['productionSpecification'] == null
-        ? null
-        : DeviceComponentProductionSpecification.fromJson(
-            json['productionSpecification'] as Map<String, dynamic>),
+    productionSpecification: (json['productionSpecification'] as List)
+        ?.map((e) => e == null
+            ? null
+            : DeviceComponentProductionSpecification.fromJson(
+                e as Map<String, dynamic>))
+        ?.toList(),
     languageCode: json['languageCode'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -80,6 +84,7 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -93,14 +98,15 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
   writeNotNull('lastSystemChange', instance.lastSystemChange?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('parent', instance.parent?.toJson());
-  writeNotNull('operationalStatus', instance.operationalStatus?.toJson());
+  writeNotNull('operationalStatus',
+      instance.operationalStatus?.map((e) => e?.toJson())?.toList());
   writeNotNull('parameterGroup', instance.parameterGroup?.toJson());
   writeNotNull(
       'measurementPrinciple',
       _$DeviceComponentMeasurementPrincipleEnumMap[
           instance.measurementPrinciple]);
-  writeNotNull(
-      'productionSpecification', instance.productionSpecification?.toJson());
+  writeNotNull('productionSpecification',
+      instance.productionSpecification?.map((e) => e?.toJson())?.toList());
   writeNotNull('languageCode', instance.languageCode?.toJson());
   return val;
 }
@@ -155,6 +161,7 @@ const _$DeviceComponentMeasurementPrincipleEnumMap = {
 _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'identifier', 'category']);
   return _$_DeviceMetric(
+    resourceType: json['resourceType'] as String ?? 'DeviceMetric',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -204,10 +211,11 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
     measurementPeriod: json['measurementPeriod'] == null
         ? null
         : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
-    calibration: json['calibration'] == null
-        ? null
-        : DeviceMetricCalibration.fromJson(
-            json['calibration'] as Map<String, dynamic>),
+    calibration: (json['calibration'] as List)
+        ?.map((e) => e == null
+            ? null
+            : DeviceMetricCalibration.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -220,6 +228,7 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -238,7 +247,8 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
   writeNotNull('color', _$DeviceMetricColorEnumMap[instance.color]);
   writeNotNull('category', _$DeviceMetricCategoryEnumMap[instance.category]);
   writeNotNull('measurementPeriod', instance.measurementPeriod?.toJson());
-  writeNotNull('calibration', instance.calibration?.toJson());
+  writeNotNull(
+      'calibration', instance.calibration?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -272,6 +282,7 @@ const _$DeviceMetricCategoryEnumMap = {
 _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type']);
   return _$_Device(
+    resourceType: json['resourceType'] as String ?? 'Device',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -295,15 +306,17 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    note: json['note'] == null
-        ? null
-        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
         unknownValue: DeviceStatus.unknown),
     manufacturer: json['manufacturer'] as String,
@@ -326,9 +339,10 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    contact: json['contact'] == null
-        ? null
-        : ContactPoint.fromJson(json['contact'] as Map<String, dynamic>),
+    contact: (json['contact'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
   );
 }
@@ -342,6 +356,7 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -350,9 +365,10 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull('contained', instance.contained?.toJson());
   writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('note', instance.note?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
   writeNotNull('manufacturer', instance.manufacturer);
   writeNotNull('model', instance.model);
@@ -364,7 +380,7 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull('owner', instance.owner?.toJson());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('contact', instance.contact?.toJson());
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('url', instance.url?.toJson());
   return val;
 }

@@ -10,6 +10,7 @@ part 'workflow2.g.dart';
 @freezed
 abstract class ProcessRequest with _$ProcessRequest implements Resource {
   const factory ProcessRequest({
+    @JsonKey(defaultValue: 'ProcessRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -21,7 +22,7 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
     @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
     @required
         ProcessRequestAction action,
-    Identifier identifier,
+    List<Identifier> identifier,
     Coding ruleset,
     Coding originalRuleset,
     FhirDateTime created,
@@ -32,9 +33,9 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
     Reference response,
     Boolean nullify,
     String reference,
-    ProcessRequestItem item,
-    String include,
-    String exclude,
+    List<ProcessRequestItem> item,
+    List<String> include,
+    List<String> exclude,
     Period period,
   }) = _ProcessRequest;
 
@@ -45,6 +46,7 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
 @freezed
 abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
   const factory SupplyDelivery({
+    @JsonKey(defaultValue: 'SupplyDelivery') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -64,7 +66,7 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
     Period whenPrepared,
     FhirDateTime time,
     Reference destination,
-    Reference receiver,
+    List<Reference> receiver,
   }) = _SupplyDelivery;
 
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
@@ -82,7 +84,7 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference request,
     Coding outcome,
     String disposition,
@@ -93,8 +95,8 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
     Reference requestProvider,
     Reference requestOrganization,
     Coding form,
-    ProcessResponseNotes notes,
-    Coding error,
+    List<ProcessResponseNotes> notes,
+    List<Coding> error,
   }) = _ProcessResponse;
 
   factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
@@ -104,6 +106,7 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
 @freezed
 abstract class SupplyRequest with _$SupplyRequest implements Resource {
   const factory SupplyRequest({
+    @JsonKey(defaultValue: 'SupplyRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -120,8 +123,9 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
         SupplyRequestStatus status,
     CodeableConcept kind,
     Reference orderedItem,
-    Reference supplier,
-    CodeableConcept reasonX,
+    List<Reference> supplier,
+    CodeableConcept reasonCodeableConcept,
+    Reference reasonReference,
     SupplyRequestWhen when,
   }) = _SupplyRequest;
 

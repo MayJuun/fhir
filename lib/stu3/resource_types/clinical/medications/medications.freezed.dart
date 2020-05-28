@@ -2666,8 +2666,8 @@ class _$MedicationTearOff {
       @JsonKey(required: true, defaultValue: 'Medication')
           String resourceType,
       CodeableConcept code,
-      @JsonKey(unknownEnumValue: MedicationStatus.unknown)
-          MedicationStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       Boolean isBrand,
       Boolean isOverTheCounter,
       Reference manufacturer,
@@ -2697,8 +2697,8 @@ mixin _$Medication {
   @JsonKey(required: true, defaultValue: 'Medication')
   String get resourceType;
   CodeableConcept get code;
-  @JsonKey(unknownEnumValue: MedicationStatus.unknown)
-  MedicationStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   Boolean get isBrand;
   Boolean get isOverTheCounter;
   Reference get manufacturer;
@@ -2716,11 +2716,9 @@ abstract class $MedicationCopyWith<$Res> {
           Medication value, $Res Function(Medication) then) =
       _$MedicationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Medication')
-          String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Medication') String resourceType,
       CodeableConcept code,
-      @JsonKey(unknownEnumValue: MedicationStatus.unknown)
-          MedicationStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       Boolean isBrand,
       Boolean isOverTheCounter,
       Reference manufacturer,
@@ -2760,7 +2758,7 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
           ? _value.resourceType
           : resourceType as String,
       code: code == freezed ? _value.code : code as CodeableConcept,
-      status: status == freezed ? _value.status : status as MedicationStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       isBrand: isBrand == freezed ? _value.isBrand : isBrand as Boolean,
       isOverTheCounter: isOverTheCounter == freezed
           ? _value.isOverTheCounter
@@ -2825,11 +2823,9 @@ abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
       __$MedicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Medication')
-          String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Medication') String resourceType,
       CodeableConcept code,
-      @JsonKey(unknownEnumValue: MedicationStatus.unknown)
-          MedicationStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       Boolean isBrand,
       Boolean isOverTheCounter,
       Reference manufacturer,
@@ -2875,7 +2871,7 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType as String,
       code: code == freezed ? _value.code : code as CodeableConcept,
-      status: status == freezed ? _value.status : status as MedicationStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       isBrand: isBrand == freezed ? _value.isBrand : isBrand as Boolean,
       isOverTheCounter: isOverTheCounter == freezed
           ? _value.isOverTheCounter
@@ -2901,7 +2897,7 @@ class _$_Medication implements _Medication {
       @JsonKey(required: true, defaultValue: 'Medication')
           this.resourceType,
       this.code,
-      @JsonKey(unknownEnumValue: MedicationStatus.unknown)
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
           this.status,
       this.isBrand,
       this.isOverTheCounter,
@@ -2921,8 +2917,8 @@ class _$_Medication implements _Medication {
   @override
   final CodeableConcept code;
   @override
-  @JsonKey(unknownEnumValue: MedicationStatus.unknown)
-  final MedicationStatus status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  final ActiveInactive status;
   @override
   final Boolean isBrand;
   @override
@@ -3005,8 +3001,8 @@ abstract class _Medication implements Medication {
       @JsonKey(required: true, defaultValue: 'Medication')
           String resourceType,
       CodeableConcept code,
-      @JsonKey(unknownEnumValue: MedicationStatus.unknown)
-          MedicationStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       Boolean isBrand,
       Boolean isOverTheCounter,
       Reference manufacturer,
@@ -3024,8 +3020,8 @@ abstract class _Medication implements Medication {
   @override
   CodeableConcept get code;
   @override
-  @JsonKey(unknownEnumValue: MedicationStatus.unknown)
-  MedicationStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   @override
   Boolean get isBrand;
   @override
@@ -7916,8 +7912,8 @@ class _$MedicationStatementTearOff {
       List<Reference> basedOn,
       List<Reference> partOf,
       Reference context,
-      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
-          MedicationStatementStatus status,
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
+          StatementStatus status,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
@@ -7971,8 +7967,8 @@ mixin _$MedicationStatement {
   List<Reference> get basedOn;
   List<Reference> get partOf;
   Reference get context;
-  @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
-  MedicationStatementStatus get status;
+  @JsonKey(unknownEnumValue: StatementStatus.unknown)
+  StatementStatus get status;
   CodeableConcept get category;
   CodeableConcept get medicationCodeableConcept;
   Reference get medicationReference;
@@ -8006,8 +8002,8 @@ abstract class $MedicationStatementCopyWith<$Res> {
       List<Reference> basedOn,
       List<Reference> partOf,
       Reference context,
-      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
-          MedicationStatementStatus status,
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
+          StatementStatus status,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
@@ -8077,9 +8073,7 @@ class _$MedicationStatementCopyWithImpl<$Res>
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       context: context == freezed ? _value.context : context as Reference,
-      status: status == freezed
-          ? _value.status
-          : status as MedicationStatementStatus,
+      status: status == freezed ? _value.status : status as StatementStatus,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
@@ -8205,8 +8199,8 @@ abstract class _$MedicationStatementCopyWith<$Res>
       List<Reference> basedOn,
       List<Reference> partOf,
       Reference context,
-      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
-          MedicationStatementStatus status,
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
+          StatementStatus status,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
@@ -8285,9 +8279,7 @@ class __$MedicationStatementCopyWithImpl<$Res>
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       context: context == freezed ? _value.context : context as Reference,
-      status: status == freezed
-          ? _value.status
-          : status as MedicationStatementStatus,
+      status: status == freezed ? _value.status : status as StatementStatus,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
@@ -8339,7 +8331,7 @@ class _$_MedicationStatement implements _MedicationStatement {
       this.basedOn,
       this.partOf,
       this.context,
-      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
           this.status,
       this.category,
       this.medicationCodeableConcept,
@@ -8375,8 +8367,8 @@ class _$_MedicationStatement implements _MedicationStatement {
   @override
   final Reference context;
   @override
-  @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
-  final MedicationStatementStatus status;
+  @JsonKey(unknownEnumValue: StatementStatus.unknown)
+  final StatementStatus status;
   @override
   final CodeableConcept category;
   @override
@@ -8524,8 +8516,8 @@ abstract class _MedicationStatement implements MedicationStatement {
       List<Reference> basedOn,
       List<Reference> partOf,
       Reference context,
-      @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
-          MedicationStatementStatus status,
+      @JsonKey(unknownEnumValue: StatementStatus.unknown)
+          StatementStatus status,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
@@ -8559,8 +8551,8 @@ abstract class _MedicationStatement implements MedicationStatement {
   @override
   Reference get context;
   @override
-  @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
-  MedicationStatementStatus get status;
+  @JsonKey(unknownEnumValue: StatementStatus.unknown)
+  StatementStatus get status;
   @override
   CodeableConcept get category;
   @override

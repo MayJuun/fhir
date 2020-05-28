@@ -293,9 +293,8 @@ _$_DocumentManifest _$_$_DocumentManifestFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(
-        _$DocumentManifestStatusEnumMap, json['status'],
-        unknownValue: DocumentManifestStatus.unknown),
+    status: _$enumDecodeNullable(_$DocumentStatusEnumMap, json['status'],
+        unknownValue: DocumentStatus.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -341,7 +340,7 @@ Map<String, dynamic> _$_$_DocumentManifestToJson(_$_DocumentManifest instance) {
   writeNotNull('masterIdentifier', instance.masterIdentifier?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$DocumentManifestStatusEnumMap[instance.status]);
+  writeNotNull('status', _$DocumentStatusEnumMap[instance.status]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('created', instance.created?.toIso8601String());
@@ -355,11 +354,11 @@ Map<String, dynamic> _$_$_DocumentManifestToJson(_$_DocumentManifest instance) {
   return val;
 }
 
-const _$DocumentManifestStatusEnumMap = {
-  DocumentManifestStatus.current: 'current',
-  DocumentManifestStatus.superseded: 'superseded',
-  DocumentManifestStatus.entered_in_error: 'entered-in-error',
-  DocumentManifestStatus.unknown: 'unknown',
+const _$DocumentStatusEnumMap = {
+  DocumentStatus.current: 'current',
+  DocumentStatus.superseded: 'superseded',
+  DocumentStatus.entered_in_error: 'entered-in-error',
+  DocumentStatus.unknown: 'unknown',
 };
 
 _$_DocumentManifestContent _$_$_DocumentManifestContentFromJson(
@@ -427,9 +426,8 @@ _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(
-        _$DocumentReferenceStatusEnumMap, json['status'],
-        unknownValue: DocumentReferenceStatus.unknown),
+    status: _$enumDecodeNullable(_$DocumentStatusEnumMap, json['status'],
+        unknownValue: DocumentStatus.unknown),
     docStatus: json['docStatus'] == null
         ? null
         : Code.fromJson(json['docStatus'] as String),
@@ -493,7 +491,7 @@ Map<String, dynamic> _$_$_DocumentReferenceToJson(
   writeNotNull('masterIdentifier', instance.masterIdentifier?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$DocumentReferenceStatusEnumMap[instance.status]);
+  writeNotNull('status', _$DocumentStatusEnumMap[instance.status]);
   writeNotNull('docStatus', instance.docStatus?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('class', instance.class_?.toJson());
@@ -512,13 +510,6 @@ Map<String, dynamic> _$_$_DocumentReferenceToJson(
   writeNotNull('context', instance.context?.toJson());
   return val;
 }
-
-const _$DocumentReferenceStatusEnumMap = {
-  DocumentReferenceStatus.current: 'current',
-  DocumentReferenceStatus.superseded: 'superseded',
-  DocumentReferenceStatus.entered_in_error: 'entered-in-error',
-  DocumentReferenceStatus.unknown: 'unknown',
-};
 
 _$_DocumentReferenceRelatesTo _$_$_DocumentReferenceRelatesToFromJson(
     Map<String, dynamic> json) {

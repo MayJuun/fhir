@@ -16,7 +16,8 @@ class _$OperationOutcomeTearOff {
   const _$OperationOutcomeTearOff();
 
   _OperationOutcome call(
-      {Id id,
+      {@JsonKey(defaultValue: 'OperationOutcome') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -24,8 +25,9 @@ class _$OperationOutcomeTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @required @JsonKey(required: true) OperationOutcomeIssue issue}) {
+      @required @JsonKey(required: true) List<OperationOutcomeIssue> issue}) {
     return _OperationOutcome(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -43,6 +45,8 @@ class _$OperationOutcomeTearOff {
 const $OperationOutcome = _$OperationOutcomeTearOff();
 
 mixin _$OperationOutcome {
+  @JsonKey(defaultValue: 'OperationOutcome')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -53,7 +57,7 @@ mixin _$OperationOutcome {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
-  OperationOutcomeIssue get issue;
+  List<OperationOutcomeIssue> get issue;
 
   Map<String, dynamic> toJson();
   $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
@@ -64,7 +68,8 @@ abstract class $OperationOutcomeCopyWith<$Res> {
           OperationOutcome value, $Res Function(OperationOutcome) then) =
       _$OperationOutcomeCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'OperationOutcome') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -72,13 +77,12 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) OperationOutcomeIssue issue});
+      @JsonKey(required: true) List<OperationOutcomeIssue> issue});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $OperationOutcomeIssueCopyWith<$Res> get issue;
 }
 
 class _$OperationOutcomeCopyWithImpl<$Res>
@@ -91,6 +95,7 @@ class _$OperationOutcomeCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -102,6 +107,9 @@ class _$OperationOutcomeCopyWithImpl<$Res>
     Object issue = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -117,7 +125,9 @@ class _$OperationOutcomeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      issue: issue == freezed ? _value.issue : issue as OperationOutcomeIssue,
+      issue: issue == freezed
+          ? _value.issue
+          : issue as List<OperationOutcomeIssue>,
     ));
   }
 
@@ -160,16 +170,6 @@ class _$OperationOutcomeCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $OperationOutcomeIssueCopyWith<$Res> get issue {
-    if (_value.issue == null) {
-      return null;
-    }
-    return $OperationOutcomeIssueCopyWith<$Res>(_value.issue, (value) {
-      return _then(_value.copyWith(issue: value));
-    });
-  }
 }
 
 abstract class _$OperationOutcomeCopyWith<$Res>
@@ -179,7 +179,8 @@ abstract class _$OperationOutcomeCopyWith<$Res>
       __$OperationOutcomeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'OperationOutcome') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -187,7 +188,7 @@ abstract class _$OperationOutcomeCopyWith<$Res>
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) OperationOutcomeIssue issue});
+      @JsonKey(required: true) List<OperationOutcomeIssue> issue});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -197,8 +198,6 @@ abstract class _$OperationOutcomeCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $OperationOutcomeIssueCopyWith<$Res> get issue;
 }
 
 class __$OperationOutcomeCopyWithImpl<$Res>
@@ -213,6 +212,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -224,6 +224,9 @@ class __$OperationOutcomeCopyWithImpl<$Res>
     Object issue = freezed,
   }) {
     return _then(_OperationOutcome(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -239,7 +242,9 @@ class __$OperationOutcomeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      issue: issue == freezed ? _value.issue : issue as OperationOutcomeIssue,
+      issue: issue == freezed
+          ? _value.issue
+          : issue as List<OperationOutcomeIssue>,
     ));
   }
 }
@@ -247,7 +252,8 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_OperationOutcome implements _OperationOutcome {
   const _$_OperationOutcome(
-      {this.id,
+      {@JsonKey(defaultValue: 'OperationOutcome') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -261,6 +267,9 @@ class _$_OperationOutcome implements _OperationOutcome {
   factory _$_OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationOutcomeFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'OperationOutcome')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -280,17 +289,20 @@ class _$_OperationOutcome implements _OperationOutcome {
   final FhirExtension modifierExtension;
   @override
   @JsonKey(required: true)
-  final OperationOutcomeIssue issue;
+  final List<OperationOutcomeIssue> issue;
 
   @override
   String toString() {
-    return 'OperationOutcome(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, issue: $issue)';
+    return 'OperationOutcome(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, issue: $issue)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _OperationOutcome &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -319,6 +331,7 @@ class _$_OperationOutcome implements _OperationOutcome {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -341,20 +354,27 @@ class _$_OperationOutcome implements _OperationOutcome {
 
 abstract class _OperationOutcome implements OperationOutcome {
   const factory _OperationOutcome(
-          {Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          Resource contained,
-          @JsonKey(name: 'extension') FhirExtension extension_,
-          FhirExtension modifierExtension,
-          @required @JsonKey(required: true) OperationOutcomeIssue issue}) =
-      _$_OperationOutcome;
+      {@JsonKey(defaultValue: 'OperationOutcome')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      Resource contained,
+      @JsonKey(name: 'extension')
+          FhirExtension extension_,
+      FhirExtension modifierExtension,
+      @required
+      @JsonKey(required: true)
+          List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcome.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'OperationOutcome')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -374,7 +394,7 @@ abstract class _OperationOutcome implements OperationOutcome {
   FhirExtension get modifierExtension;
   @override
   @JsonKey(required: true)
-  OperationOutcomeIssue get issue;
+  List<OperationOutcomeIssue> get issue;
   @override
   _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith;
 }
@@ -387,7 +407,9 @@ class _$SubscriptionTearOff {
   const _$SubscriptionTearOff();
 
   _Subscription call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Subscription')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -399,7 +421,7 @@ class _$SubscriptionTearOff {
       @required
       @JsonKey(required: true)
           String criteria,
-      ContactPoint contact,
+      List<ContactPoint> contact,
       @required
       @JsonKey(required: true)
           String reason,
@@ -411,8 +433,9 @@ class _$SubscriptionTearOff {
       @JsonKey(required: true)
           SubscriptionChannel channel,
       Instant end,
-      Coding tag}) {
+      List<Coding> tag}) {
     return _Subscription(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -437,6 +460,8 @@ class _$SubscriptionTearOff {
 const $Subscription = _$SubscriptionTearOff();
 
 mixin _$Subscription {
+  @JsonKey(defaultValue: 'Subscription')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -448,7 +473,7 @@ mixin _$Subscription {
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   String get criteria;
-  ContactPoint get contact;
+  List<ContactPoint> get contact;
   @JsonKey(required: true)
   String get reason;
   @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
@@ -457,7 +482,7 @@ mixin _$Subscription {
   @JsonKey(required: true)
   SubscriptionChannel get channel;
   Instant get end;
-  Coding get tag;
+  List<Coding> get tag;
 
   Map<String, dynamic> toJson();
   $SubscriptionCopyWith<Subscription> get copyWith;
@@ -468,7 +493,9 @@ abstract class $SubscriptionCopyWith<$Res> {
           Subscription value, $Res Function(Subscription) then) =
       _$SubscriptionCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Subscription')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -479,7 +506,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           String criteria,
-      ContactPoint contact,
+      List<ContactPoint> contact,
       @JsonKey(required: true)
           String reason,
       @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
@@ -488,15 +515,13 @@ abstract class $SubscriptionCopyWith<$Res> {
       @JsonKey(required: true)
           SubscriptionChannel channel,
       Instant end,
-      Coding tag});
+      List<Coding> tag});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ContactPointCopyWith<$Res> get contact;
   $SubscriptionChannelCopyWith<$Res> get channel;
-  $CodingCopyWith<$Res> get tag;
 }
 
 class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
@@ -508,6 +533,7 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -526,6 +552,9 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
     Object tag = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -542,14 +571,15 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
-      contact: contact == freezed ? _value.contact : contact as ContactPoint,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactPoint>,
       reason: reason == freezed ? _value.reason : reason as String,
       status: status == freezed ? _value.status : status as SubscriptionStatus,
       error: error == freezed ? _value.error : error as String,
       channel:
           channel == freezed ? _value.channel : channel as SubscriptionChannel,
       end: end == freezed ? _value.end : end as Instant,
-      tag: tag == freezed ? _value.tag : tag as Coding,
+      tag: tag == freezed ? _value.tag : tag as List<Coding>,
     ));
   }
 
@@ -594,32 +624,12 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
   }
 
   @override
-  $ContactPointCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
-    });
-  }
-
-  @override
   $SubscriptionChannelCopyWith<$Res> get channel {
     if (_value.channel == null) {
       return null;
     }
     return $SubscriptionChannelCopyWith<$Res>(_value.channel, (value) {
       return _then(_value.copyWith(channel: value));
-    });
-  }
-
-  @override
-  $CodingCopyWith<$Res> get tag {
-    if (_value.tag == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.tag, (value) {
-      return _then(_value.copyWith(tag: value));
     });
   }
 }
@@ -631,7 +641,9 @@ abstract class _$SubscriptionCopyWith<$Res>
       __$SubscriptionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Subscription')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -642,7 +654,7 @@ abstract class _$SubscriptionCopyWith<$Res>
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           String criteria,
-      ContactPoint contact,
+      List<ContactPoint> contact,
       @JsonKey(required: true)
           String reason,
       @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
@@ -651,7 +663,7 @@ abstract class _$SubscriptionCopyWith<$Res>
       @JsonKey(required: true)
           SubscriptionChannel channel,
       Instant end,
-      Coding tag});
+      List<Coding> tag});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -662,11 +674,7 @@ abstract class _$SubscriptionCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $ContactPointCopyWith<$Res> get contact;
-  @override
   $SubscriptionChannelCopyWith<$Res> get channel;
-  @override
-  $CodingCopyWith<$Res> get tag;
 }
 
 class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
@@ -680,6 +688,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -698,6 +707,9 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
     Object tag = freezed,
   }) {
     return _then(_Subscription(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -714,14 +726,15 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
-      contact: contact == freezed ? _value.contact : contact as ContactPoint,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactPoint>,
       reason: reason == freezed ? _value.reason : reason as String,
       status: status == freezed ? _value.status : status as SubscriptionStatus,
       error: error == freezed ? _value.error : error as String,
       channel:
           channel == freezed ? _value.channel : channel as SubscriptionChannel,
       end: end == freezed ? _value.end : end as Instant,
-      tag: tag == freezed ? _value.tag : tag as Coding,
+      tag: tag == freezed ? _value.tag : tag as List<Coding>,
     ));
   }
 }
@@ -729,7 +742,9 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Subscription implements _Subscription {
   const _$_Subscription(
-      {this.id,
+      {@JsonKey(defaultValue: 'Subscription')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -763,6 +778,9 @@ class _$_Subscription implements _Subscription {
       _$_$_SubscriptionFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Subscription')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -783,7 +801,7 @@ class _$_Subscription implements _Subscription {
   @JsonKey(required: true)
   final String criteria;
   @override
-  final ContactPoint contact;
+  final List<ContactPoint> contact;
   @override
   @JsonKey(required: true)
   final String reason;
@@ -798,17 +816,20 @@ class _$_Subscription implements _Subscription {
   @override
   final Instant end;
   @override
-  final Coding tag;
+  final List<Coding> tag;
 
   @override
   String toString() {
-    return 'Subscription(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, criteria: $criteria, contact: $contact, reason: $reason, status: $status, error: $error, channel: $channel, end: $end, tag: $tag)';
+    return 'Subscription(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, criteria: $criteria, contact: $contact, reason: $reason, status: $status, error: $error, channel: $channel, end: $end, tag: $tag)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Subscription &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -854,6 +875,7 @@ class _$_Subscription implements _Subscription {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -883,7 +905,9 @@ class _$_Subscription implements _Subscription {
 
 abstract class _Subscription implements Subscription {
   const factory _Subscription(
-      {Id id,
+      {@JsonKey(defaultValue: 'Subscription')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -895,7 +919,7 @@ abstract class _Subscription implements Subscription {
       @required
       @JsonKey(required: true)
           String criteria,
-      ContactPoint contact,
+      List<ContactPoint> contact,
       @required
       @JsonKey(required: true)
           String reason,
@@ -907,11 +931,14 @@ abstract class _Subscription implements Subscription {
       @JsonKey(required: true)
           SubscriptionChannel channel,
       Instant end,
-      Coding tag}) = _$_Subscription;
+      List<Coding> tag}) = _$_Subscription;
 
   factory _Subscription.fromJson(Map<String, dynamic> json) =
       _$_Subscription.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Subscription')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -933,7 +960,7 @@ abstract class _Subscription implements Subscription {
   @JsonKey(required: true)
   String get criteria;
   @override
-  ContactPoint get contact;
+  List<ContactPoint> get contact;
   @override
   @JsonKey(required: true)
   String get reason;
@@ -948,7 +975,7 @@ abstract class _Subscription implements Subscription {
   @override
   Instant get end;
   @override
-  Coding get tag;
+  List<Coding> get tag;
   @override
   _$SubscriptionCopyWith<_Subscription> get copyWith;
 }
@@ -961,7 +988,8 @@ class _$MessageHeaderTearOff {
   const _$MessageHeaderTearOff();
 
   _MessageHeader call(
-      {Id id,
+      {@JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -973,14 +1001,15 @@ class _$MessageHeaderTearOff {
       @required @JsonKey(required: true) Coding event,
       MessageHeaderResponse response,
       @required @JsonKey(required: true) MessageHeaderSource source,
-      MessageHeaderDestination destination,
+      List<MessageHeaderDestination> destination,
       Reference enterer,
       Reference author,
       Reference receiver,
       Reference responsible,
       CodeableConcept reason,
-      Reference data}) {
+      List<Reference> data}) {
     return _MessageHeader(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1008,6 +1037,8 @@ class _$MessageHeaderTearOff {
 const $MessageHeader = _$MessageHeaderTearOff();
 
 mixin _$MessageHeader {
+  @JsonKey(defaultValue: 'MessageHeader')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1024,13 +1055,13 @@ mixin _$MessageHeader {
   MessageHeaderResponse get response;
   @JsonKey(required: true)
   MessageHeaderSource get source;
-  MessageHeaderDestination get destination;
+  List<MessageHeaderDestination> get destination;
   Reference get enterer;
   Reference get author;
   Reference get receiver;
   Reference get responsible;
   CodeableConcept get reason;
-  Reference get data;
+  List<Reference> get data;
 
   Map<String, dynamic> toJson();
   $MessageHeaderCopyWith<MessageHeader> get copyWith;
@@ -1041,7 +1072,8 @@ abstract class $MessageHeaderCopyWith<$Res> {
           MessageHeader value, $Res Function(MessageHeader) then) =
       _$MessageHeaderCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1053,13 +1085,13 @@ abstract class $MessageHeaderCopyWith<$Res> {
       @JsonKey(required: true) Coding event,
       MessageHeaderResponse response,
       @JsonKey(required: true) MessageHeaderSource source,
-      MessageHeaderDestination destination,
+      List<MessageHeaderDestination> destination,
       Reference enterer,
       Reference author,
       Reference receiver,
       Reference responsible,
       CodeableConcept reason,
-      Reference data});
+      List<Reference> data});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1068,13 +1100,11 @@ abstract class $MessageHeaderCopyWith<$Res> {
   $CodingCopyWith<$Res> get event;
   $MessageHeaderResponseCopyWith<$Res> get response;
   $MessageHeaderSourceCopyWith<$Res> get source;
-  $MessageHeaderDestinationCopyWith<$Res> get destination;
   $ReferenceCopyWith<$Res> get enterer;
   $ReferenceCopyWith<$Res> get author;
   $ReferenceCopyWith<$Res> get receiver;
   $ReferenceCopyWith<$Res> get responsible;
   $CodeableConceptCopyWith<$Res> get reason;
-  $ReferenceCopyWith<$Res> get data;
 }
 
 class _$MessageHeaderCopyWithImpl<$Res>
@@ -1087,6 +1117,7 @@ class _$MessageHeaderCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1108,6 +1139,9 @@ class _$MessageHeaderCopyWithImpl<$Res>
     Object data = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1131,7 +1165,7 @@ class _$MessageHeaderCopyWithImpl<$Res>
       source: source == freezed ? _value.source : source as MessageHeaderSource,
       destination: destination == freezed
           ? _value.destination
-          : destination as MessageHeaderDestination,
+          : destination as List<MessageHeaderDestination>,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       author: author == freezed ? _value.author : author as Reference,
       receiver: receiver == freezed ? _value.receiver : receiver as Reference,
@@ -1139,7 +1173,7 @@ class _$MessageHeaderCopyWithImpl<$Res>
           ? _value.responsible
           : responsible as Reference,
       reason: reason == freezed ? _value.reason : reason as CodeableConcept,
-      data: data == freezed ? _value.data : data as Reference,
+      data: data == freezed ? _value.data : data as List<Reference>,
     ));
   }
 
@@ -1214,16 +1248,6 @@ class _$MessageHeaderCopyWithImpl<$Res>
   }
 
   @override
-  $MessageHeaderDestinationCopyWith<$Res> get destination {
-    if (_value.destination == null) {
-      return null;
-    }
-    return $MessageHeaderDestinationCopyWith<$Res>(_value.destination, (value) {
-      return _then(_value.copyWith(destination: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get enterer {
     if (_value.enterer == null) {
       return null;
@@ -1272,16 +1296,6 @@ class _$MessageHeaderCopyWithImpl<$Res>
       return _then(_value.copyWith(reason: value));
     });
   }
-
-  @override
-  $ReferenceCopyWith<$Res> get data {
-    if (_value.data == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.data, (value) {
-      return _then(_value.copyWith(data: value));
-    });
-  }
 }
 
 abstract class _$MessageHeaderCopyWith<$Res>
@@ -1291,7 +1305,8 @@ abstract class _$MessageHeaderCopyWith<$Res>
       __$MessageHeaderCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1303,13 +1318,13 @@ abstract class _$MessageHeaderCopyWith<$Res>
       @JsonKey(required: true) Coding event,
       MessageHeaderResponse response,
       @JsonKey(required: true) MessageHeaderSource source,
-      MessageHeaderDestination destination,
+      List<MessageHeaderDestination> destination,
       Reference enterer,
       Reference author,
       Reference receiver,
       Reference responsible,
       CodeableConcept reason,
-      Reference data});
+      List<Reference> data});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1326,8 +1341,6 @@ abstract class _$MessageHeaderCopyWith<$Res>
   @override
   $MessageHeaderSourceCopyWith<$Res> get source;
   @override
-  $MessageHeaderDestinationCopyWith<$Res> get destination;
-  @override
   $ReferenceCopyWith<$Res> get enterer;
   @override
   $ReferenceCopyWith<$Res> get author;
@@ -1337,8 +1350,6 @@ abstract class _$MessageHeaderCopyWith<$Res>
   $ReferenceCopyWith<$Res> get responsible;
   @override
   $CodeableConceptCopyWith<$Res> get reason;
-  @override
-  $ReferenceCopyWith<$Res> get data;
 }
 
 class __$MessageHeaderCopyWithImpl<$Res>
@@ -1353,6 +1364,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1374,6 +1386,9 @@ class __$MessageHeaderCopyWithImpl<$Res>
     Object data = freezed,
   }) {
     return _then(_MessageHeader(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1397,7 +1412,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
       source: source == freezed ? _value.source : source as MessageHeaderSource,
       destination: destination == freezed
           ? _value.destination
-          : destination as MessageHeaderDestination,
+          : destination as List<MessageHeaderDestination>,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       author: author == freezed ? _value.author : author as Reference,
       receiver: receiver == freezed ? _value.receiver : receiver as Reference,
@@ -1405,7 +1420,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
           ? _value.responsible
           : responsible as Reference,
       reason: reason == freezed ? _value.reason : reason as CodeableConcept,
-      data: data == freezed ? _value.data : data as Reference,
+      data: data == freezed ? _value.data : data as List<Reference>,
     ));
   }
 }
@@ -1413,7 +1428,8 @@ class __$MessageHeaderCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MessageHeader implements _MessageHeader {
   const _$_MessageHeader(
-      {this.id,
+      {@JsonKey(defaultValue: 'MessageHeader') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1439,6 +1455,9 @@ class _$_MessageHeader implements _MessageHeader {
   factory _$_MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$_$_MessageHeaderFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'MessageHeader')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -1468,7 +1487,7 @@ class _$_MessageHeader implements _MessageHeader {
   @JsonKey(required: true)
   final MessageHeaderSource source;
   @override
-  final MessageHeaderDestination destination;
+  final List<MessageHeaderDestination> destination;
   @override
   final Reference enterer;
   @override
@@ -1480,17 +1499,20 @@ class _$_MessageHeader implements _MessageHeader {
   @override
   final CodeableConcept reason;
   @override
-  final Reference data;
+  final List<Reference> data;
 
   @override
   String toString() {
-    return 'MessageHeader(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, timestamp: $timestamp, event: $event, response: $response, source: $source, destination: $destination, enterer: $enterer, author: $author, receiver: $receiver, responsible: $responsible, reason: $reason, data: $data)';
+    return 'MessageHeader(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, timestamp: $timestamp, event: $event, response: $response, source: $source, destination: $destination, enterer: $enterer, author: $author, receiver: $receiver, responsible: $responsible, reason: $reason, data: $data)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _MessageHeader &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1545,6 +1567,7 @@ class _$_MessageHeader implements _MessageHeader {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1577,7 +1600,8 @@ class _$_MessageHeader implements _MessageHeader {
 
 abstract class _MessageHeader implements MessageHeader {
   const factory _MessageHeader(
-      {Id id,
+      {@JsonKey(defaultValue: 'MessageHeader') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1589,17 +1613,20 @@ abstract class _MessageHeader implements MessageHeader {
       @required @JsonKey(required: true) Coding event,
       MessageHeaderResponse response,
       @required @JsonKey(required: true) MessageHeaderSource source,
-      MessageHeaderDestination destination,
+      List<MessageHeaderDestination> destination,
       Reference enterer,
       Reference author,
       Reference receiver,
       Reference responsible,
       CodeableConcept reason,
-      Reference data}) = _$_MessageHeader;
+      List<Reference> data}) = _$_MessageHeader;
 
   factory _MessageHeader.fromJson(Map<String, dynamic> json) =
       _$_MessageHeader.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'MessageHeader')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1629,7 +1656,7 @@ abstract class _MessageHeader implements MessageHeader {
   @JsonKey(required: true)
   MessageHeaderSource get source;
   @override
-  MessageHeaderDestination get destination;
+  List<MessageHeaderDestination> get destination;
   @override
   Reference get enterer;
   @override
@@ -1641,7 +1668,7 @@ abstract class _MessageHeader implements MessageHeader {
   @override
   CodeableConcept get reason;
   @override
-  Reference get data;
+  List<Reference> get data;
   @override
   _$MessageHeaderCopyWith<_MessageHeader> get copyWith;
 }
@@ -2825,7 +2852,7 @@ class _$OperationOutcomeIssueTearOff {
           Code code,
       CodeableConcept details,
       String diagnostics,
-      String location}) {
+      List<String> location}) {
     return _OperationOutcomeIssue(
       id: id,
       extension_: extension_,
@@ -2853,7 +2880,7 @@ mixin _$OperationOutcomeIssue {
   Code get code;
   CodeableConcept get details;
   String get diagnostics;
-  String get location;
+  List<String> get location;
 
   Map<String, dynamic> toJson();
   $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith;
@@ -2874,7 +2901,7 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
           Code code,
       CodeableConcept details,
       String diagnostics,
-      String location});
+      List<String> location});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -2914,7 +2941,8 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
       details: details == freezed ? _value.details : details as CodeableConcept,
       diagnostics:
           diagnostics == freezed ? _value.diagnostics : diagnostics as String,
-      location: location == freezed ? _value.location : location as String,
+      location:
+          location == freezed ? _value.location : location as List<String>,
     ));
   }
 
@@ -2966,7 +2994,7 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
           Code code,
       CodeableConcept details,
       String diagnostics,
-      String location});
+      List<String> location});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -3011,7 +3039,8 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
       details: details == freezed ? _value.details : details as CodeableConcept,
       diagnostics:
           diagnostics == freezed ? _value.diagnostics : diagnostics as String,
-      location: location == freezed ? _value.location : location as String,
+      location:
+          location == freezed ? _value.location : location as List<String>,
     ));
   }
 }
@@ -3056,7 +3085,7 @@ class _$_OperationOutcomeIssue implements _OperationOutcomeIssue {
   @override
   final String diagnostics;
   @override
-  final String location;
+  final List<String> location;
 
   @override
   String toString() {
@@ -3128,7 +3157,7 @@ abstract class _OperationOutcomeIssue implements OperationOutcomeIssue {
           Code code,
       CodeableConcept details,
       String diagnostics,
-      String location}) = _$_OperationOutcomeIssue;
+      List<String> location}) = _$_OperationOutcomeIssue;
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
@@ -3151,7 +3180,7 @@ abstract class _OperationOutcomeIssue implements OperationOutcomeIssue {
   @override
   String get diagnostics;
   @override
-  String get location;
+  List<String> get location;
   @override
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;
 }

@@ -11996,8 +11996,8 @@ class _$ElementDefinitionBindingTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: BindingStrength.unknown)
-          BindingStrength strength,
+      @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
+          ElementBindingStrength strength,
       String description,
       Canonical valueSet}) {
     return _ElementDefinitionBinding(
@@ -12019,8 +12019,8 @@ mixin _$ElementDefinitionBinding {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  @JsonKey(unknownEnumValue: BindingStrength.unknown)
-  BindingStrength get strength;
+  @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
+  ElementBindingStrength get strength;
   String get description;
   Canonical get valueSet;
 
@@ -12037,8 +12037,8 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: BindingStrength.unknown)
-          BindingStrength strength,
+      @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
+          ElementBindingStrength strength,
       String description,
       Canonical valueSet});
 }
@@ -12068,8 +12068,9 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      strength:
-          strength == freezed ? _value.strength : strength as BindingStrength,
+      strength: strength == freezed
+          ? _value.strength
+          : strength as ElementBindingStrength,
       description:
           description == freezed ? _value.description : description as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
@@ -12088,8 +12089,8 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: BindingStrength.unknown)
-          BindingStrength strength,
+      @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
+          ElementBindingStrength strength,
       String description,
       Canonical valueSet});
 }
@@ -12122,8 +12123,9 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      strength:
-          strength == freezed ? _value.strength : strength as BindingStrength,
+      strength: strength == freezed
+          ? _value.strength
+          : strength as ElementBindingStrength,
       description:
           description == freezed ? _value.description : description as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
@@ -12137,7 +12139,7 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: BindingStrength.unknown) this.strength,
+      @JsonKey(unknownEnumValue: ElementBindingStrength.unknown) this.strength,
       this.description,
       this.valueSet});
 
@@ -12152,8 +12154,8 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: BindingStrength.unknown)
-  final BindingStrength strength;
+  @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
+  final ElementBindingStrength strength;
   @override
   final String description;
   @override
@@ -12214,8 +12216,8 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: BindingStrength.unknown)
-          BindingStrength strength,
+      @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
+          ElementBindingStrength strength,
       String description,
       Canonical valueSet}) = _$_ElementDefinitionBinding;
 
@@ -12230,8 +12232,8 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: BindingStrength.unknown)
-  BindingStrength get strength;
+  @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
+  ElementBindingStrength get strength;
   @override
   String get description;
   @override

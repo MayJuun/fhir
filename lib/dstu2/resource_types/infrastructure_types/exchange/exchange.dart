@@ -10,6 +10,7 @@ part 'exchange.g.dart';
 @freezed
 abstract class OperationOutcome with _$OperationOutcome implements Resource {
   const factory OperationOutcome({
+    @JsonKey(defaultValue: 'OperationOutcome') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -18,7 +19,7 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required OperationOutcomeIssue issue,
+    @JsonKey(required: true) @required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
@@ -28,6 +29,7 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
 @freezed
 abstract class Subscription with _$Subscription implements Resource {
   const factory Subscription({
+    @JsonKey(defaultValue: 'Subscription') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -37,7 +39,7 @@ abstract class Subscription with _$Subscription implements Resource {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String criteria,
-    ContactPoint contact,
+    List<ContactPoint> contact,
     @JsonKey(required: true) @required String reason,
     @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
     @required
@@ -45,7 +47,7 @@ abstract class Subscription with _$Subscription implements Resource {
     String error,
     @JsonKey(required: true) @required SubscriptionChannel channel,
     Instant end,
-    Coding tag,
+    List<Coding> tag,
   }) = _Subscription;
 
   factory Subscription.fromJson(Map<String, dynamic> json) =>
@@ -55,6 +57,7 @@ abstract class Subscription with _$Subscription implements Resource {
 @freezed
 abstract class MessageHeader with _$MessageHeader implements Resource {
   const factory MessageHeader({
+    @JsonKey(defaultValue: 'MessageHeader') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -67,13 +70,13 @@ abstract class MessageHeader with _$MessageHeader implements Resource {
     @JsonKey(required: true) @required Coding event,
     MessageHeaderResponse response,
     @JsonKey(required: true) @required MessageHeaderSource source,
-    MessageHeaderDestination destination,
+    List<MessageHeaderDestination> destination,
     Reference enterer,
     Reference author,
     Reference receiver,
     Reference responsible,
     CodeableConcept reason,
-    Reference data,
+    List<Reference> data,
   }) = _MessageHeader;
 
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
@@ -144,7 +147,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
     @JsonKey(required: true) @required Code code,
     CodeableConcept details,
     String diagnostics,
-    String location,
+    List<String> location,
   }) = _OperationOutcomeIssue;
 
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>

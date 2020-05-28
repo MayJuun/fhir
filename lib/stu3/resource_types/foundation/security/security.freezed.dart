@@ -3370,7 +3370,7 @@ class _$ConsentData1TearOff {
   const _$ConsentData1TearOff();
 
   _ConsentData1 call(
-      {@JsonKey(unknownEnumValue: Data1Meaning.unknown) Data1Meaning meaning,
+      {@JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
       @JsonKey(required: true) Reference reference}) {
     return _ConsentData1(
       meaning: meaning,
@@ -3383,8 +3383,8 @@ class _$ConsentData1TearOff {
 const $ConsentData1 = _$ConsentData1TearOff();
 
 mixin _$ConsentData1 {
-  @JsonKey(unknownEnumValue: Data1Meaning.unknown)
-  Data1Meaning get meaning;
+  @JsonKey(unknownEnumValue: DataMeaning.unknown)
+  DataMeaning get meaning;
   @JsonKey(required: true)
   Reference get reference;
 
@@ -3397,7 +3397,7 @@ abstract class $ConsentData1CopyWith<$Res> {
           ConsentData1 value, $Res Function(ConsentData1) then) =
       _$ConsentData1CopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: Data1Meaning.unknown) Data1Meaning meaning,
+      {@JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
       @JsonKey(required: true) Reference reference});
 
   $ReferenceCopyWith<$Res> get reference;
@@ -3416,7 +3416,7 @@ class _$ConsentData1CopyWithImpl<$Res> implements $ConsentData1CopyWith<$Res> {
     Object reference = freezed,
   }) {
     return _then(_value.copyWith(
-      meaning: meaning == freezed ? _value.meaning : meaning as Data1Meaning,
+      meaning: meaning == freezed ? _value.meaning : meaning as DataMeaning,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
     ));
@@ -3440,7 +3440,7 @@ abstract class _$ConsentData1CopyWith<$Res>
       __$ConsentData1CopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: Data1Meaning.unknown) Data1Meaning meaning,
+      {@JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
       @JsonKey(required: true) Reference reference});
 
   @override
@@ -3462,7 +3462,7 @@ class __$ConsentData1CopyWithImpl<$Res> extends _$ConsentData1CopyWithImpl<$Res>
     Object reference = freezed,
   }) {
     return _then(_ConsentData1(
-      meaning: meaning == freezed ? _value.meaning : meaning as Data1Meaning,
+      meaning: meaning == freezed ? _value.meaning : meaning as DataMeaning,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
     ));
@@ -3472,15 +3472,15 @@ class __$ConsentData1CopyWithImpl<$Res> extends _$ConsentData1CopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConsentData1 implements _ConsentData1 {
   const _$_ConsentData1(
-      {@JsonKey(unknownEnumValue: Data1Meaning.unknown) this.meaning,
+      {@JsonKey(unknownEnumValue: DataMeaning.unknown) this.meaning,
       @JsonKey(required: true) this.reference});
 
   factory _$_ConsentData1.fromJson(Map<String, dynamic> json) =>
       _$_$_ConsentData1FromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: Data1Meaning.unknown)
-  final Data1Meaning meaning;
+  @JsonKey(unknownEnumValue: DataMeaning.unknown)
+  final DataMeaning meaning;
   @override
   @JsonKey(required: true)
   final Reference reference;
@@ -3520,15 +3520,15 @@ class _$_ConsentData1 implements _ConsentData1 {
 
 abstract class _ConsentData1 implements ConsentData1 {
   const factory _ConsentData1(
-      {@JsonKey(unknownEnumValue: Data1Meaning.unknown) Data1Meaning meaning,
+      {@JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
       @JsonKey(required: true) Reference reference}) = _$_ConsentData1;
 
   factory _ConsentData1.fromJson(Map<String, dynamic> json) =
       _$_ConsentData1.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: Data1Meaning.unknown)
-  Data1Meaning get meaning;
+  @JsonKey(unknownEnumValue: DataMeaning.unknown)
+  DataMeaning get meaning;
   @override
   @JsonKey(required: true)
   Reference get reference;

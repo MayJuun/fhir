@@ -10,6 +10,7 @@ part 'individuals.g.dart';
 @freezed
 abstract class Practitioner with _$Practitioner implements Resource {
   const factory Practitioner({
+    @JsonKey(defaultValue: 'Practitioner') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -18,18 +19,18 @@ abstract class Practitioner with _$Practitioner implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Boolean active,
     HumanName name,
-    ContactPoint telecom,
-    Address address,
+    List<ContactPoint> telecom,
+    List<Address> address,
     @JsonKey(unknownEnumValue: PractitionerGender.unknown)
         PractitionerGender gender,
     Date birthDate,
-    Attachment photo,
-    PractitionerPractitionerRole practitionerRole,
-    PractitionerQualification qualification,
-    CodeableConcept communication,
+    List<Attachment> photo,
+    List<PractitionerPractitionerRole> practitionerRole,
+    List<PractitionerQualification> qualification,
+    List<CodeableConcept> communication,
   }) = _Practitioner;
 
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
@@ -39,6 +40,7 @@ abstract class Practitioner with _$Practitioner implements Resource {
 @freezed
 abstract class RelatedPerson with _$RelatedPerson implements Resource {
   const factory RelatedPerson({
+    @JsonKey(defaultValue: 'RelatedPerson') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -47,16 +49,16 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required Reference patient,
     CodeableConcept relationship,
     HumanName name,
-    ContactPoint telecom,
+    List<ContactPoint> telecom,
     @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
         RelatedPersonGender gender,
     Date birthDate,
-    Address address,
-    Attachment photo,
+    List<Address> address,
+    List<Attachment> photo,
     Period period,
   }) = _RelatedPerson;
 
@@ -67,6 +69,7 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
 @freezed
 abstract class Patient with _$Patient implements Resource {
   const factory Patient({
+    @JsonKey(defaultValue: 'Patient') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -75,23 +78,25 @@ abstract class Patient with _$Patient implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Boolean active,
-    HumanName name,
-    ContactPoint telecom,
+    List<HumanName> name,
+    List<ContactPoint> telecom,
     @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
     Date birthDate,
-    Boolean deceasedX,
-    Address address,
+    Boolean deceasedBoolean,
+    FhirDateTime deceasedDateTime,
+    List<Address> address,
     CodeableConcept maritalStatus,
-    Boolean multipleBirthX,
-    Attachment photo,
-    PatientContact contact,
+    Boolean multipleBirthBoolean,
+    Integer multipleBirthInteger,
+    List<Attachment> photo,
+    List<PatientContact> contact,
     PatientAnimal animal,
-    PatientCommunication communication,
-    Reference careProvider,
+    List<PatientCommunication> communication,
+    List<Reference> careProvider,
     Reference managingOrganization,
-    PatientLink link,
+    List<PatientLink> link,
   }) = _Patient;
 
   factory Patient.fromJson(Map<String, dynamic> json) =>
@@ -107,10 +112,10 @@ abstract class PractitionerPractitionerRole
     FhirExtension modifierExtension,
     Reference managingOrganization,
     CodeableConcept role,
-    CodeableConcept specialty,
+    List<CodeableConcept> specialty,
     Period period,
-    Reference location,
-    Reference healthcareService,
+    List<Reference> location,
+    List<Reference> healthcareService,
   }) = _PractitionerPractitionerRole;
 
   factory PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =>
@@ -123,7 +128,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required CodeableConcept code,
     Period period,
     Reference issuer,
@@ -141,7 +146,7 @@ abstract class PatientContact with _$PatientContact {
     FhirExtension modifierExtension,
     CodeableConcept relationship,
     HumanName name,
-    ContactPoint telecom,
+    List<ContactPoint> telecom,
     Address address,
     @JsonKey(unknownEnumValue: ContactGender.unknown) ContactGender gender,
     Reference organization,

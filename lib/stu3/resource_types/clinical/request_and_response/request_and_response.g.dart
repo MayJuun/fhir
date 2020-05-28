@@ -513,9 +513,8 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(
-        _$DeviceUseStatementStatusEnumMap, json['status'],
-        unknownValue: DeviceUseStatementStatus.unknown),
+    status: _$enumDecodeNullable(_$StatementStatusEnumMap, json['status'],
+        unknownValue: StatementStatus.unknown),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -568,7 +567,7 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$DeviceUseStatementStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatementStatusEnumMap[instance.status]);
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('whenUsed', instance.whenUsed?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
@@ -616,14 +615,11 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$DeviceUseStatementStatusEnumMap = {
-  DeviceUseStatementStatus.active: 'active',
-  DeviceUseStatementStatus.completed: 'completed',
-  DeviceUseStatementStatus.entered_in_error: 'entered-in-error',
-  DeviceUseStatementStatus.intended: 'intended',
-  DeviceUseStatementStatus.stopped: 'stopped',
-  DeviceUseStatementStatus.on_hold: 'on-hold',
-  DeviceUseStatementStatus.unknown: 'unknown',
+const _$StatementStatusEnumMap = {
+  StatementStatus.active: 'active',
+  StatementStatus.completed: 'completed',
+  StatementStatus.entered_in_error: 'entered-in-error',
+  StatementStatus.unknown: 'unknown',
 };
 
 _$_SupplyDelivery _$_$_SupplyDeliveryFromJson(Map<String, dynamic> json) {

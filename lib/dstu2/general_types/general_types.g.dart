@@ -349,9 +349,10 @@ _$_CodeableConcept _$_$_CodeableConceptFromJson(Map<String, dynamic> json) {
     extension_: json['extension'] == null
         ? null
         : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
-    coding: json['coding'] == null
-        ? null
-        : Coding.fromJson(json['coding'] as Map<String, dynamic>),
+    coding: (json['coding'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     text: json['text'] as String,
   );
 }
@@ -367,7 +368,7 @@ Map<String, dynamic> _$_$_CodeableConceptToJson(_$_CodeableConcept instance) {
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension_?.toJson());
-  writeNotNull('coding', instance.coding?.toJson());
+  writeNotNull('coding', instance.coding?.map((e) => e?.toJson())?.toList());
   writeNotNull('text', instance.text);
   return val;
 }
@@ -432,9 +433,10 @@ _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
     extension_: json['extension'] == null
         ? null
         : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
-    type: json['type'] == null
-        ? null
-        : Coding.fromJson(json['type'] as Map<String, dynamic>),
+    type: (json['type'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     when:
         json['when'] == null ? null : Instant.fromJson(json['when'] as String),
     whoX:
@@ -459,7 +461,7 @@ Map<String, dynamic> _$_$_SignatureToJson(_$_Signature instance) {
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension_?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
   writeNotNull('when', instance.when?.toJson());
   writeNotNull('whoX', instance.whoX?.toJson());
   writeNotNull('contentType', instance.contentType?.toJson());
@@ -473,9 +475,9 @@ _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
     extension_: json['extension'] == null
         ? null
         : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
-    event: json['event'] == null
-        ? null
-        : FhirDateTime.fromJson(json['event'] as String),
+    event: (json['event'] as List)
+        ?.map((e) => e == null ? null : FhirDateTime.fromJson(e as String))
+        ?.toList(),
     repeat: json['repeat'] == null
         ? null
         : Element.fromJson(json['repeat'] as Map<String, dynamic>),
@@ -496,7 +498,7 @@ Map<String, dynamic> _$_$_TimingToJson(_$_Timing instance) {
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension_?.toJson());
-  writeNotNull('event', instance.event?.toJson());
+  writeNotNull('event', instance.event?.map((e) => e?.toJson())?.toList());
   writeNotNull('repeat', instance.repeat?.toJson());
   writeNotNull('code', instance.code?.toJson());
   return val;
@@ -513,7 +515,7 @@ _$_Address _$_$_AddressFromJson(Map<String, dynamic> json) {
     type: _$enumDecodeNullable(_$AddressTypeEnumMap, json['type'],
         unknownValue: AddressType.unknown),
     text: json['text'] as String,
-    line: json['line'] as String,
+    line: (json['line'] as List)?.map((e) => e as String)?.toList(),
     city: json['city'] as String,
     district: json['district'] as String,
     state: json['state'] as String,
@@ -573,10 +575,10 @@ _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
     use: _$enumDecodeNullable(_$HumanNameUseEnumMap, json['use'],
         unknownValue: HumanNameUse.unknown),
     text: json['text'] as String,
-    family: json['family'] as String,
-    given: json['given'] as String,
-    prefix: json['prefix'] as String,
-    suffix: json['suffix'] as String,
+    family: (json['family'] as List)?.map((e) => e as String)?.toList(),
+    given: (json['given'] as List)?.map((e) => e as String)?.toList(),
+    prefix: (json['prefix'] as List)?.map((e) => e as String)?.toList(),
+    suffix: (json['suffix'] as List)?.map((e) => e as String)?.toList(),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),

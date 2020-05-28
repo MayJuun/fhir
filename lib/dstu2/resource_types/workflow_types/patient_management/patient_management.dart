@@ -10,6 +10,7 @@ part 'patient_management.g.dart';
 @freezed
 abstract class Communication with _$Communication implements Resource {
   const factory Communication({
+    @JsonKey(defaultValue: 'Communication') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -18,18 +19,18 @@ abstract class Communication with _$Communication implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     CodeableConcept category,
     Reference sender,
-    Reference recipient,
-    CommunicationPayload payload,
-    CodeableConcept medium,
+    List<Reference> recipient,
+    List<CommunicationPayload> payload,
+    List<CodeableConcept> medium,
     @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
         CommunicationStatus status,
     Reference encounter,
     FhirDateTime sent,
     FhirDateTime received,
-    CodeableConcept reason,
+    List<CodeableConcept> reason,
     Reference subject,
     Reference requestDetail,
   }) = _Communication;
@@ -41,6 +42,7 @@ abstract class Communication with _$Communication implements Resource {
 @freezed
 abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
   const factory EpisodeOfCare({
+    @JsonKey(defaultValue: 'EpisodeOfCare') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -49,19 +51,19 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
     @required
         EpisodeOfCareStatus status,
-    EpisodeOfCareStatusHistory statusHistory,
-    CodeableConcept type,
-    Reference condition,
+    List<EpisodeOfCareStatusHistory> statusHistory,
+    List<CodeableConcept> type,
+    List<Reference> condition,
     @JsonKey(required: true) @required Reference patient,
     Reference managingOrganization,
     Period period,
-    Reference referralRequest,
+    List<Reference> referralRequest,
     Reference careManager,
-    EpisodeOfCareCareTeam careTeam,
+    List<EpisodeOfCareCareTeam> careTeam,
   }) = _EpisodeOfCare;
 
   factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
@@ -71,6 +73,7 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
 @freezed
 abstract class Encounter with _$Encounter implements Resource {
   const factory Encounter({
+    @JsonKey(defaultValue: 'Encounter') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -79,26 +82,26 @@ abstract class Encounter with _$Encounter implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
     @required
         EncounterStatus status,
-    EncounterStatusHistory statusHistory,
+    List<EncounterStatusHistory> statusHistory,
     @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
         EncounterClass class_,
-    CodeableConcept type,
+    List<CodeableConcept> type,
     CodeableConcept priority,
     Reference patient,
-    Reference episodeOfCare,
-    Reference incomingReferral,
-    EncounterParticipant participant,
+    List<Reference> episodeOfCare,
+    List<Reference> incomingReferral,
+    List<EncounterParticipant> participant,
     Reference appointment,
     Period period,
     Quantity length,
-    CodeableConcept reason,
-    Reference indication,
+    List<CodeableConcept> reason,
+    List<Reference> indication,
     EncounterHospitalization hospitalization,
-    EncounterLocation location,
+    List<EncounterLocation> location,
     Reference serviceProvider,
     Reference partOf,
   }) = _Encounter;
@@ -110,6 +113,7 @@ abstract class Encounter with _$Encounter implements Resource {
 @freezed
 abstract class Flag with _$Flag implements Resource {
   const factory Flag({
+    @JsonKey(defaultValue: 'Flag') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -118,7 +122,7 @@ abstract class Flag with _$Flag implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     CodeableConcept category,
     @JsonKey(required: true, unknownEnumValue: FlagStatus.unknown)
     @required
@@ -139,7 +143,9 @@ abstract class CommunicationPayload with _$CommunicationPayload {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required String contentX,
+    String contentString,
+    Attachment contentAttachment,
+    Reference contentReference,
   }) = _CommunicationPayload;
 
   factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
@@ -169,7 +175,7 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    CodeableConcept role,
+    List<CodeableConcept> role,
     Period period,
     Reference member,
   }) = _EpisodeOfCareCareTeam;
@@ -200,7 +206,7 @@ abstract class EncounterParticipant with _$EncounterParticipant {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    CodeableConcept type,
+    List<CodeableConcept> type,
     Period period,
     Reference individual,
   }) = _EncounterParticipant;
@@ -218,14 +224,14 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
     Identifier preAdmissionIdentifier,
     Reference origin,
     CodeableConcept admitSource,
-    Reference admittingDiagnosis,
+    List<Reference> admittingDiagnosis,
     CodeableConcept reAdmission,
-    CodeableConcept dietPreference,
-    CodeableConcept specialCourtesy,
-    CodeableConcept specialArrangement,
+    List<CodeableConcept> dietPreference,
+    List<CodeableConcept> specialCourtesy,
+    List<CodeableConcept> specialArrangement,
     Reference destination,
     CodeableConcept dischargeDisposition,
-    Reference dischargeDiagnosis,
+    List<Reference> dischargeDiagnosis,
   }) = _EncounterHospitalization;
 
   factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>

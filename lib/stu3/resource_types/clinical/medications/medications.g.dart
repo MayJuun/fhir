@@ -434,8 +434,8 @@ _$_Medication _$_$_MedicationFromJson(Map<String, dynamic> json) {
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(_$MedicationStatusEnumMap, json['status'],
-        unknownValue: MedicationStatus.unknown),
+    status: _$enumDecodeNullable(_$ActiveInactiveEnumMap, json['status'],
+        unknownValue: ActiveInactive.unknown),
     isBrand: json['isBrand'] == null ? null : Boolean.fromJson(json['isBrand']),
     isOverTheCounter: json['isOverTheCounter'] == null
         ? null
@@ -472,7 +472,7 @@ Map<String, dynamic> _$_$_MedicationToJson(_$_Medication instance) {
 
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('status', _$MedicationStatusEnumMap[instance.status]);
+  writeNotNull('status', _$ActiveInactiveEnumMap[instance.status]);
   writeNotNull('isBrand', instance.isBrand?.toJson());
   writeNotNull('isOverTheCounter', instance.isOverTheCounter?.toJson());
   writeNotNull('manufacturer', instance.manufacturer?.toJson());
@@ -516,11 +516,11 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$MedicationStatusEnumMap = {
-  MedicationStatus.active: 'active',
-  MedicationStatus.inactive: 'inactive',
-  MedicationStatus.entered_in_error: 'entered-in-error',
-  MedicationStatus.unknown: 'unknown',
+const _$ActiveInactiveEnumMap = {
+  ActiveInactive.active: 'active',
+  ActiveInactive.inactive: 'inactive',
+  ActiveInactive.entered_in_error: 'entered-in-error',
+  ActiveInactive.unknown: 'unknown',
 };
 
 _$_MedicationIngredient _$_$_MedicationIngredientFromJson(
@@ -1383,9 +1383,8 @@ _$_MedicationStatement _$_$_MedicationStatementFromJson(
     context: json['context'] == null
         ? null
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(
-        _$MedicationStatementStatusEnumMap, json['status'],
-        unknownValue: MedicationStatementStatus.unknown),
+    status: _$enumDecodeNullable(_$StatementStatusEnumMap, json['status'],
+        unknownValue: StatementStatus.unknown),
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -1460,7 +1459,7 @@ Map<String, dynamic> _$_$_MedicationStatementToJson(
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull('status', _$MedicationStatementStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatementStatusEnumMap[instance.status]);
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('medicationCodeableConcept',
       instance.medicationCodeableConcept?.toJson());
@@ -1485,14 +1484,14 @@ Map<String, dynamic> _$_$_MedicationStatementToJson(
   return val;
 }
 
-const _$MedicationStatementStatusEnumMap = {
-  MedicationStatementStatus.active: 'active',
-  MedicationStatementStatus.completed: 'completed',
-  MedicationStatementStatus.entered_in_error: 'entered-in-error',
-  MedicationStatementStatus.intended: 'intended',
-  MedicationStatementStatus.stopped: 'stopped',
-  MedicationStatementStatus.on_hold: 'on-hold',
-  MedicationStatementStatus.unknown: 'unknown',
+const _$StatementStatusEnumMap = {
+  StatementStatus.active: 'active',
+  StatementStatus.completed: 'completed',
+  StatementStatus.entered_in_error: 'entered-in-error',
+  StatementStatus.intended: 'intended',
+  StatementStatus.stopped: 'stopped',
+  StatementStatus.on_hold: 'on-hold',
+  StatementStatus.unknown: 'unknown',
 };
 
 const _$MedicationStatementTakenEnumMap = {

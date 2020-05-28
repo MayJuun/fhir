@@ -10,6 +10,7 @@ part 'workflow1.g.dart';
 @freezed
 abstract class OrderResponse with _$OrderResponse implements Resource {
   const factory OrderResponse({
+    @JsonKey(defaultValue: 'OrderResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -18,7 +19,7 @@ abstract class OrderResponse with _$OrderResponse implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required Reference request,
     FhirDateTime date,
     Reference who,
@@ -26,7 +27,7 @@ abstract class OrderResponse with _$OrderResponse implements Resource {
     @required
         OrderResponseOrderStatus orderStatus,
     String description,
-    Reference fulfillment,
+    List<Reference> fulfillment,
   }) = _OrderResponse;
 
   factory OrderResponse.fromJson(Map<String, dynamic> json) =>
@@ -36,6 +37,7 @@ abstract class OrderResponse with _$OrderResponse implements Resource {
 @freezed
 abstract class Order with _$Order implements Resource {
   const factory Order({
+    @JsonKey(defaultValue: 'Order') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -44,14 +46,15 @@ abstract class Order with _$Order implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     FhirDateTime date,
     Reference subject,
     Reference source,
     Reference target,
-    CodeableConcept reasonX,
+    CodeableConcept reasonCodeableConcept,
+    Reference reasonReference,
     OrderWhen when,
-    @JsonKey(required: true) @required Reference detail,
+    @JsonKey(required: true) @required List<Reference> detail,
   }) = _Order;
 
   factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
@@ -60,6 +63,7 @@ abstract class Order with _$Order implements Resource {
 @freezed
 abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
   const factory DeviceUseRequest({
+    @JsonKey(defaultValue: 'DeviceUseRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -73,14 +77,16 @@ abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
         DeviceUseRequestStatus status,
     @JsonKey(required: true) @required Reference device,
     Reference encounter,
-    Identifier identifier,
-    CodeableConcept indication,
+    List<Identifier> identifier,
+    List<CodeableConcept> indication,
     String notes,
-    CodeableConcept prnReason,
+    List<CodeableConcept> prnReason,
     FhirDateTime orderedOn,
     FhirDateTime recordedOn,
     @JsonKey(required: true) @required Reference subject,
-    Timing timingX,
+    Timing timingTiming,
+    Period timingPeriod,
+    FhirDateTime timingDateTime,
     @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
         DeviceUseRequestPriority priority,
   }) = _DeviceUseRequest;
@@ -94,6 +100,7 @@ abstract class DeviceUseStatement
     with _$DeviceUseStatement
     implements Resource {
   const factory DeviceUseStatement({
+    @JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -102,15 +109,18 @@ abstract class DeviceUseStatement
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    CodeableConcept bodySiteX,
+    CodeableConcept bodySiteCodeableConcept,
+    Reference bodySiteReference,
     Period whenUsed,
     @JsonKey(required: true) @required Reference device,
-    Identifier identifier,
-    CodeableConcept indication,
-    String notes,
+    List<Identifier> identifier,
+    List<CodeableConcept> indication,
+    List<String> notes,
     FhirDateTime recordedOn,
     @JsonKey(required: true) @required Reference subject,
-    Timing timingX,
+    Timing timingTiming,
+    Period timingPeriod,
+    FhirDateTime timingDateTime,
   }) = _DeviceUseStatement;
 
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
@@ -122,6 +132,7 @@ abstract class CommunicationRequest
     with _$CommunicationRequest
     implements Resource {
   const factory CommunicationRequest({
+    @JsonKey(defaultValue: 'CommunicationRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -130,18 +141,19 @@ abstract class CommunicationRequest
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     CodeableConcept category,
     Reference sender,
-    Reference recipient,
+    List<Reference> recipient,
     CommunicationRequestPayload payload,
-    CodeableConcept medium,
+    List<CodeableConcept> medium,
     Reference requester,
     @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
         CommunicationRequestStatus status,
     Reference encounter,
-    FhirDateTime scheduledX,
-    CodeableConcept reason,
+    FhirDateTime scheduledDateTime,
+    Period scheduledPeriod,
+    List<CodeableConcept> reason,
     FhirDateTime requestedOn,
     Reference subject,
     CodeableConcept priority,
@@ -171,7 +183,9 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required String contentX,
+    String contentString,
+    Attachment contentAttachment,
+    Reference contentReference,
   }) = _CommunicationRequestPayload;
 
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>

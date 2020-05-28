@@ -14,8 +14,8 @@ _$_Account _$_$_AccountFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$AccountStatusEnumMap, json['status'],
-        unknownValue: AccountStatus.unknown),
+    status: _$enumDecodeNullable(_$ActiveInactiveEnumMap, json['status'],
+        unknownValue: ActiveInactive.unknown),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -61,7 +61,7 @@ Map<String, dynamic> _$_$_AccountToJson(_$_Account instance) {
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$AccountStatusEnumMap[instance.status]);
+  writeNotNull('status', _$ActiveInactiveEnumMap[instance.status]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('subject', instance.subject?.toJson());
@@ -109,11 +109,11 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$AccountStatusEnumMap = {
-  AccountStatus.active: 'active',
-  AccountStatus.inactive: 'inactive',
-  AccountStatus.entered_in_error: 'entered-in-error',
-  AccountStatus.unknown: 'unknown',
+const _$ActiveInactiveEnumMap = {
+  ActiveInactive.active: 'active',
+  ActiveInactive.inactive: 'inactive',
+  ActiveInactive.entered_in_error: 'entered-in-error',
+  ActiveInactive.unknown: 'unknown',
 };
 
 _$_AccountCoverage _$_$_AccountCoverageFromJson(Map<String, dynamic> json) {

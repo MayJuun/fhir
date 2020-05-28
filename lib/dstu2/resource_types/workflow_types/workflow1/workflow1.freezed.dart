@@ -16,7 +16,9 @@ class _$OrderResponseTearOff {
   const _$OrderResponseTearOff();
 
   _OrderResponse call(
-      {Id id,
+      {@JsonKey(defaultValue: 'OrderResponse')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -25,7 +27,7 @@ class _$OrderResponseTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required
       @JsonKey(required: true)
           Reference request,
@@ -35,8 +37,9 @@ class _$OrderResponseTearOff {
       @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
           OrderResponseOrderStatus orderStatus,
       String description,
-      Reference fulfillment}) {
+      List<Reference> fulfillment}) {
     return _OrderResponse(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -60,6 +63,8 @@ class _$OrderResponseTearOff {
 const $OrderResponse = _$OrderResponseTearOff();
 
 mixin _$OrderResponse {
+  @JsonKey(defaultValue: 'OrderResponse')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -69,7 +74,7 @@ mixin _$OrderResponse {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @JsonKey(required: true)
   Reference get request;
   FhirDateTime get date;
@@ -77,7 +82,7 @@ mixin _$OrderResponse {
   @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
   OrderResponseOrderStatus get orderStatus;
   String get description;
-  Reference get fulfillment;
+  List<Reference> get fulfillment;
 
   Map<String, dynamic> toJson();
   $OrderResponseCopyWith<OrderResponse> get copyWith;
@@ -88,7 +93,9 @@ abstract class $OrderResponseCopyWith<$Res> {
           OrderResponse value, $Res Function(OrderResponse) then) =
       _$OrderResponseCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'OrderResponse')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -97,7 +104,7 @@ abstract class $OrderResponseCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true)
           Reference request,
       FhirDateTime date,
@@ -105,16 +112,14 @@ abstract class $OrderResponseCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
           OrderResponseOrderStatus orderStatus,
       String description,
-      Reference fulfillment});
+      List<Reference> fulfillment});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get request;
   $ReferenceCopyWith<$Res> get who;
-  $ReferenceCopyWith<$Res> get fulfillment;
 }
 
 class _$OrderResponseCopyWithImpl<$Res>
@@ -127,6 +132,7 @@ class _$OrderResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -144,6 +150,9 @@ class _$OrderResponseCopyWithImpl<$Res>
     Object fulfillment = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -159,8 +168,9 @@ class _$OrderResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       request: request == freezed ? _value.request : request as Reference,
       date: date == freezed ? _value.date : date as FhirDateTime,
       who: who == freezed ? _value.who : who as Reference,
@@ -171,7 +181,7 @@ class _$OrderResponseCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       fulfillment: fulfillment == freezed
           ? _value.fulfillment
-          : fulfillment as Reference,
+          : fulfillment as List<Reference>,
     ));
   }
 
@@ -216,16 +226,6 @@ class _$OrderResponseCopyWithImpl<$Res>
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get request {
     if (_value.request == null) {
       return null;
@@ -244,16 +244,6 @@ class _$OrderResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(who: value));
     });
   }
-
-  @override
-  $ReferenceCopyWith<$Res> get fulfillment {
-    if (_value.fulfillment == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.fulfillment, (value) {
-      return _then(_value.copyWith(fulfillment: value));
-    });
-  }
 }
 
 abstract class _$OrderResponseCopyWith<$Res>
@@ -263,7 +253,9 @@ abstract class _$OrderResponseCopyWith<$Res>
       __$OrderResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'OrderResponse')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -272,7 +264,7 @@ abstract class _$OrderResponseCopyWith<$Res>
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true)
           Reference request,
       FhirDateTime date,
@@ -280,7 +272,7 @@ abstract class _$OrderResponseCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
           OrderResponseOrderStatus orderStatus,
       String description,
-      Reference fulfillment});
+      List<Reference> fulfillment});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -291,13 +283,9 @@ abstract class _$OrderResponseCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $ReferenceCopyWith<$Res> get request;
   @override
   $ReferenceCopyWith<$Res> get who;
-  @override
-  $ReferenceCopyWith<$Res> get fulfillment;
 }
 
 class __$OrderResponseCopyWithImpl<$Res>
@@ -312,6 +300,7 @@ class __$OrderResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -329,6 +318,9 @@ class __$OrderResponseCopyWithImpl<$Res>
     Object fulfillment = freezed,
   }) {
     return _then(_OrderResponse(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -344,8 +336,9 @@ class __$OrderResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       request: request == freezed ? _value.request : request as Reference,
       date: date == freezed ? _value.date : date as FhirDateTime,
       who: who == freezed ? _value.who : who as Reference,
@@ -356,7 +349,7 @@ class __$OrderResponseCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       fulfillment: fulfillment == freezed
           ? _value.fulfillment
-          : fulfillment as Reference,
+          : fulfillment as List<Reference>,
     ));
   }
 }
@@ -364,7 +357,9 @@ class __$OrderResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_OrderResponse implements _OrderResponse {
   const _$_OrderResponse(
-      {this.id,
+      {@JsonKey(defaultValue: 'OrderResponse')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -391,6 +386,9 @@ class _$_OrderResponse implements _OrderResponse {
       _$_$_OrderResponseFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'OrderResponse')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -408,7 +406,7 @@ class _$_OrderResponse implements _OrderResponse {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   @JsonKey(required: true)
   final Reference request;
@@ -422,17 +420,20 @@ class _$_OrderResponse implements _OrderResponse {
   @override
   final String description;
   @override
-  final Reference fulfillment;
+  final List<Reference> fulfillment;
 
   @override
   String toString() {
-    return 'OrderResponse(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, date: $date, who: $who, orderStatus: $orderStatus, description: $description, fulfillment: $fulfillment)';
+    return 'OrderResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, date: $date, who: $who, orderStatus: $orderStatus, description: $description, fulfillment: $fulfillment)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _OrderResponse &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -478,6 +479,7 @@ class _$_OrderResponse implements _OrderResponse {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -506,7 +508,9 @@ class _$_OrderResponse implements _OrderResponse {
 
 abstract class _OrderResponse implements OrderResponse {
   const factory _OrderResponse(
-      {Id id,
+      {@JsonKey(defaultValue: 'OrderResponse')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -515,7 +519,7 @@ abstract class _OrderResponse implements OrderResponse {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required
       @JsonKey(required: true)
           Reference request,
@@ -525,11 +529,14 @@ abstract class _OrderResponse implements OrderResponse {
       @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
           OrderResponseOrderStatus orderStatus,
       String description,
-      Reference fulfillment}) = _$_OrderResponse;
+      List<Reference> fulfillment}) = _$_OrderResponse;
 
   factory _OrderResponse.fromJson(Map<String, dynamic> json) =
       _$_OrderResponse.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'OrderResponse')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -548,7 +555,7 @@ abstract class _OrderResponse implements OrderResponse {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   @JsonKey(required: true)
   Reference get request;
@@ -562,7 +569,7 @@ abstract class _OrderResponse implements OrderResponse {
   @override
   String get description;
   @override
-  Reference get fulfillment;
+  List<Reference> get fulfillment;
   @override
   _$OrderResponseCopyWith<_OrderResponse> get copyWith;
 }
@@ -575,7 +582,8 @@ class _$OrderTearOff {
   const _$OrderTearOff();
 
   _Order call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Order') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -583,15 +591,17 @@ class _$OrderTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       FhirDateTime date,
       Reference subject,
       Reference source,
       Reference target,
-      CodeableConcept reasonX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       OrderWhen when,
-      @required @JsonKey(required: true) Reference detail}) {
+      @required @JsonKey(required: true) List<Reference> detail}) {
     return _Order(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -605,7 +615,8 @@ class _$OrderTearOff {
       subject: subject,
       source: source,
       target: target,
-      reasonX: reasonX,
+      reasonCodeableConcept: reasonCodeableConcept,
+      reasonReference: reasonReference,
       when: when,
       detail: detail,
     );
@@ -616,6 +627,8 @@ class _$OrderTearOff {
 const $Order = _$OrderTearOff();
 
 mixin _$Order {
+  @JsonKey(defaultValue: 'Order')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -625,15 +638,16 @@ mixin _$Order {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   FhirDateTime get date;
   Reference get subject;
   Reference get source;
   Reference get target;
-  CodeableConcept get reasonX;
+  CodeableConcept get reasonCodeableConcept;
+  Reference get reasonReference;
   OrderWhen get when;
   @JsonKey(required: true)
-  Reference get detail;
+  List<Reference> get detail;
 
   Map<String, dynamic> toJson();
   $OrderCopyWith<Order> get copyWith;
@@ -643,7 +657,8 @@ abstract class $OrderCopyWith<$Res> {
   factory $OrderCopyWith(Order value, $Res Function(Order) then) =
       _$OrderCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Order') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -651,26 +666,26 @@ abstract class $OrderCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       FhirDateTime date,
       Reference subject,
       Reference source,
       Reference target,
-      CodeableConcept reasonX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       OrderWhen when,
-      @JsonKey(required: true) Reference detail});
+      @JsonKey(required: true) List<Reference> detail});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get source;
   $ReferenceCopyWith<$Res> get target;
-  $CodeableConceptCopyWith<$Res> get reasonX;
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
+  $ReferenceCopyWith<$Res> get reasonReference;
   $OrderWhenCopyWith<$Res> get when;
-  $ReferenceCopyWith<$Res> get detail;
 }
 
 class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
@@ -682,6 +697,7 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -695,11 +711,15 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
     Object subject = freezed,
     Object source = freezed,
     Object target = freezed,
-    Object reasonX = freezed,
+    Object reasonCodeableConcept = freezed,
+    Object reasonReference = freezed,
     Object when = freezed,
     Object detail = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -715,15 +735,21 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       subject: subject == freezed ? _value.subject : subject as Reference,
       source: source == freezed ? _value.source : source as Reference,
       target: target == freezed ? _value.target : target as Reference,
-      reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
+      reasonCodeableConcept: reasonCodeableConcept == freezed
+          ? _value.reasonCodeableConcept
+          : reasonCodeableConcept as CodeableConcept,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference as Reference,
       when: when == freezed ? _value.when : when as OrderWhen,
-      detail: detail == freezed ? _value.detail : detail as Reference,
+      detail: detail == freezed ? _value.detail : detail as List<Reference>,
     ));
   }
 
@@ -768,16 +794,6 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get subject {
     if (_value.subject == null) {
       return null;
@@ -808,12 +824,23 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get reasonX {
-    if (_value.reasonX == null) {
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept {
+    if (_value.reasonCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.reasonX, (value) {
-      return _then(_value.copyWith(reasonX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.reasonCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(reasonCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get reasonReference {
+    if (_value.reasonReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.reasonReference, (value) {
+      return _then(_value.copyWith(reasonReference: value));
     });
   }
 
@@ -826,16 +853,6 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
       return _then(_value.copyWith(when: value));
     });
   }
-
-  @override
-  $ReferenceCopyWith<$Res> get detail {
-    if (_value.detail == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.detail, (value) {
-      return _then(_value.copyWith(detail: value));
-    });
-  }
 }
 
 abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
@@ -843,7 +860,8 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
       __$OrderCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Order') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -851,14 +869,15 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       FhirDateTime date,
       Reference subject,
       Reference source,
       Reference target,
-      CodeableConcept reasonX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       OrderWhen when,
-      @JsonKey(required: true) Reference detail});
+      @JsonKey(required: true) List<Reference> detail});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -869,19 +888,17 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res> get source;
   @override
   $ReferenceCopyWith<$Res> get target;
   @override
-  $CodeableConceptCopyWith<$Res> get reasonX;
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get reasonReference;
   @override
   $OrderWhenCopyWith<$Res> get when;
-  @override
-  $ReferenceCopyWith<$Res> get detail;
 }
 
 class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
@@ -894,6 +911,7 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -907,11 +925,15 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
     Object subject = freezed,
     Object source = freezed,
     Object target = freezed,
-    Object reasonX = freezed,
+    Object reasonCodeableConcept = freezed,
+    Object reasonReference = freezed,
     Object when = freezed,
     Object detail = freezed,
   }) {
     return _then(_Order(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -927,15 +949,21 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       subject: subject == freezed ? _value.subject : subject as Reference,
       source: source == freezed ? _value.source : source as Reference,
       target: target == freezed ? _value.target : target as Reference,
-      reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
+      reasonCodeableConcept: reasonCodeableConcept == freezed
+          ? _value.reasonCodeableConcept
+          : reasonCodeableConcept as CodeableConcept,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference as Reference,
       when: when == freezed ? _value.when : when as OrderWhen,
-      detail: detail == freezed ? _value.detail : detail as Reference,
+      detail: detail == freezed ? _value.detail : detail as List<Reference>,
     ));
   }
 }
@@ -943,7 +971,8 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Order implements _Order {
   const _$_Order(
-      {this.id,
+      {@JsonKey(defaultValue: 'Order') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -956,7 +985,8 @@ class _$_Order implements _Order {
       this.subject,
       this.source,
       this.target,
-      this.reasonX,
+      this.reasonCodeableConcept,
+      this.reasonReference,
       this.when,
       @required @JsonKey(required: true) this.detail})
       : assert(detail != null);
@@ -964,6 +994,9 @@ class _$_Order implements _Order {
   factory _$_Order.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'Order')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -982,7 +1015,7 @@ class _$_Order implements _Order {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final FhirDateTime date;
   @override
@@ -992,22 +1025,27 @@ class _$_Order implements _Order {
   @override
   final Reference target;
   @override
-  final CodeableConcept reasonX;
+  final CodeableConcept reasonCodeableConcept;
+  @override
+  final Reference reasonReference;
   @override
   final OrderWhen when;
   @override
   @JsonKey(required: true)
-  final Reference detail;
+  final List<Reference> detail;
 
   @override
   String toString() {
-    return 'Order(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, date: $date, subject: $subject, source: $source, target: $target, reasonX: $reasonX, when: $when, detail: $detail)';
+    return 'Order(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, date: $date, subject: $subject, source: $source, target: $target, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, when: $when, detail: $detail)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Order &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1041,9 +1079,12 @@ class _$_Order implements _Order {
                 const DeepCollectionEquality().equals(other.source, source)) &&
             (identical(other.target, target) ||
                 const DeepCollectionEquality().equals(other.target, target)) &&
-            (identical(other.reasonX, reasonX) ||
+            (identical(other.reasonCodeableConcept, reasonCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.reasonCodeableConcept, reasonCodeableConcept)) &&
+            (identical(other.reasonReference, reasonReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.reasonX, reasonX)) &&
+                    .equals(other.reasonReference, reasonReference)) &&
             (identical(other.when, when) ||
                 const DeepCollectionEquality().equals(other.when, when)) &&
             (identical(other.detail, detail) ||
@@ -1053,6 +1094,7 @@ class _$_Order implements _Order {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1066,7 +1108,8 @@ class _$_Order implements _Order {
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(source) ^
       const DeepCollectionEquality().hash(target) ^
-      const DeepCollectionEquality().hash(reasonX) ^
+      const DeepCollectionEquality().hash(reasonCodeableConcept) ^
+      const DeepCollectionEquality().hash(reasonReference) ^
       const DeepCollectionEquality().hash(when) ^
       const DeepCollectionEquality().hash(detail);
 
@@ -1082,7 +1125,8 @@ class _$_Order implements _Order {
 
 abstract class _Order implements Order {
   const factory _Order(
-      {Id id,
+      {@JsonKey(defaultValue: 'Order') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1090,17 +1134,21 @@ abstract class _Order implements Order {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       FhirDateTime date,
       Reference subject,
       Reference source,
       Reference target,
-      CodeableConcept reasonX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       OrderWhen when,
-      @required @JsonKey(required: true) Reference detail}) = _$_Order;
+      @required @JsonKey(required: true) List<Reference> detail}) = _$_Order;
 
   factory _Order.fromJson(Map<String, dynamic> json) = _$_Order.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Order')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1119,7 +1167,7 @@ abstract class _Order implements Order {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   FhirDateTime get date;
   @override
@@ -1129,12 +1177,14 @@ abstract class _Order implements Order {
   @override
   Reference get target;
   @override
-  CodeableConcept get reasonX;
+  CodeableConcept get reasonCodeableConcept;
+  @override
+  Reference get reasonReference;
   @override
   OrderWhen get when;
   @override
   @JsonKey(required: true)
-  Reference get detail;
+  List<Reference> get detail;
   @override
   _$OrderCopyWith<_Order> get copyWith;
 }
@@ -1147,7 +1197,9 @@ class _$DeviceUseRequestTearOff {
   const _$DeviceUseRequestTearOff();
 
   _DeviceUseRequest call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceUseRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1163,19 +1215,22 @@ class _$DeviceUseRequestTearOff {
       @JsonKey(required: true)
           Reference device,
       Reference encounter,
-      Identifier identifier,
-      CodeableConcept indication,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
       String notes,
-      CodeableConcept prnReason,
+      List<CodeableConcept> prnReason,
       FhirDateTime orderedOn,
       FhirDateTime recordedOn,
       @required
       @JsonKey(required: true)
           Reference subject,
-      Timing timingX,
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
           DeviceUseRequestPriority priority}) {
     return _DeviceUseRequest(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1195,7 +1250,9 @@ class _$DeviceUseRequestTearOff {
       orderedOn: orderedOn,
       recordedOn: recordedOn,
       subject: subject,
-      timingX: timingX,
+      timingTiming: timingTiming,
+      timingPeriod: timingPeriod,
+      timingDateTime: timingDateTime,
       priority: priority,
     );
   }
@@ -1205,6 +1262,8 @@ class _$DeviceUseRequestTearOff {
 const $DeviceUseRequest = _$DeviceUseRequestTearOff();
 
 mixin _$DeviceUseRequest {
+  @JsonKey(defaultValue: 'DeviceUseRequest')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1220,15 +1279,17 @@ mixin _$DeviceUseRequest {
   @JsonKey(required: true)
   Reference get device;
   Reference get encounter;
-  Identifier get identifier;
-  CodeableConcept get indication;
+  List<Identifier> get identifier;
+  List<CodeableConcept> get indication;
   String get notes;
-  CodeableConcept get prnReason;
+  List<CodeableConcept> get prnReason;
   FhirDateTime get orderedOn;
   FhirDateTime get recordedOn;
   @JsonKey(required: true)
   Reference get subject;
-  Timing get timingX;
+  Timing get timingTiming;
+  Period get timingPeriod;
+  FhirDateTime get timingDateTime;
   @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
   DeviceUseRequestPriority get priority;
 
@@ -1241,7 +1302,9 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
           DeviceUseRequest value, $Res Function(DeviceUseRequest) then) =
       _$DeviceUseRequestCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceUseRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1256,15 +1319,17 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
       @JsonKey(required: true)
           Reference device,
       Reference encounter,
-      Identifier identifier,
-      CodeableConcept indication,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
       String notes,
-      CodeableConcept prnReason,
+      List<CodeableConcept> prnReason,
       FhirDateTime orderedOn,
       FhirDateTime recordedOn,
       @JsonKey(required: true)
           Reference subject,
-      Timing timingX,
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
           DeviceUseRequestPriority priority});
 
@@ -1275,11 +1340,9 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get bodySiteX;
   $ReferenceCopyWith<$Res> get device;
   $ReferenceCopyWith<$Res> get encounter;
-  $IdentifierCopyWith<$Res> get identifier;
-  $CodeableConceptCopyWith<$Res> get indication;
-  $CodeableConceptCopyWith<$Res> get prnReason;
   $ReferenceCopyWith<$Res> get subject;
-  $TimingCopyWith<$Res> get timingX;
+  $TimingCopyWith<$Res> get timingTiming;
+  $PeriodCopyWith<$Res> get timingPeriod;
 }
 
 class _$DeviceUseRequestCopyWithImpl<$Res>
@@ -1292,6 +1355,7 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1311,10 +1375,15 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
     Object orderedOn = freezed,
     Object recordedOn = freezed,
     Object subject = freezed,
-    Object timingX = freezed,
+    Object timingTiming = freezed,
+    Object timingPeriod = freezed,
+    Object timingDateTime = freezed,
     Object priority = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1338,22 +1407,31 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
       device: device == freezed ? _value.device : device as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       indication: indication == freezed
           ? _value.indication
-          : indication as CodeableConcept,
+          : indication as List<CodeableConcept>,
       notes: notes == freezed ? _value.notes : notes as String,
       prnReason: prnReason == freezed
           ? _value.prnReason
-          : prnReason as CodeableConcept,
+          : prnReason as List<CodeableConcept>,
       orderedOn:
           orderedOn == freezed ? _value.orderedOn : orderedOn as FhirDateTime,
       recordedOn: recordedOn == freezed
           ? _value.recordedOn
           : recordedOn as FhirDateTime,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      timingX: timingX == freezed ? _value.timingX : timingX as Timing,
+      timingTiming: timingTiming == freezed
+          ? _value.timingTiming
+          : timingTiming as Timing,
+      timingPeriod: timingPeriod == freezed
+          ? _value.timingPeriod
+          : timingPeriod as Period,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       priority: priority == freezed
           ? _value.priority
           : priority as DeviceUseRequestPriority,
@@ -1431,36 +1509,6 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get indication {
-    if (_value.indication == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.indication, (value) {
-      return _then(_value.copyWith(indication: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get prnReason {
-    if (_value.prnReason == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.prnReason, (value) {
-      return _then(_value.copyWith(prnReason: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get subject {
     if (_value.subject == null) {
       return null;
@@ -1471,12 +1519,22 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
   }
 
   @override
-  $TimingCopyWith<$Res> get timingX {
-    if (_value.timingX == null) {
+  $TimingCopyWith<$Res> get timingTiming {
+    if (_value.timingTiming == null) {
       return null;
     }
-    return $TimingCopyWith<$Res>(_value.timingX, (value) {
-      return _then(_value.copyWith(timingX: value));
+    return $TimingCopyWith<$Res>(_value.timingTiming, (value) {
+      return _then(_value.copyWith(timingTiming: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get timingPeriod {
+    if (_value.timingPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.timingPeriod, (value) {
+      return _then(_value.copyWith(timingPeriod: value));
     });
   }
 }
@@ -1488,7 +1546,9 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
       __$DeviceUseRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceUseRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1503,15 +1563,17 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
       @JsonKey(required: true)
           Reference device,
       Reference encounter,
-      Identifier identifier,
-      CodeableConcept indication,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
       String notes,
-      CodeableConcept prnReason,
+      List<CodeableConcept> prnReason,
       FhirDateTime orderedOn,
       FhirDateTime recordedOn,
       @JsonKey(required: true)
           Reference subject,
-      Timing timingX,
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
           DeviceUseRequestPriority priority});
 
@@ -1530,15 +1592,11 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get encounter;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $CodeableConceptCopyWith<$Res> get indication;
-  @override
-  $CodeableConceptCopyWith<$Res> get prnReason;
-  @override
   $ReferenceCopyWith<$Res> get subject;
   @override
-  $TimingCopyWith<$Res> get timingX;
+  $TimingCopyWith<$Res> get timingTiming;
+  @override
+  $PeriodCopyWith<$Res> get timingPeriod;
 }
 
 class __$DeviceUseRequestCopyWithImpl<$Res>
@@ -1553,6 +1611,7 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1572,10 +1631,15 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
     Object orderedOn = freezed,
     Object recordedOn = freezed,
     Object subject = freezed,
-    Object timingX = freezed,
+    Object timingTiming = freezed,
+    Object timingPeriod = freezed,
+    Object timingDateTime = freezed,
     Object priority = freezed,
   }) {
     return _then(_DeviceUseRequest(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1599,22 +1663,31 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
       device: device == freezed ? _value.device : device as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       indication: indication == freezed
           ? _value.indication
-          : indication as CodeableConcept,
+          : indication as List<CodeableConcept>,
       notes: notes == freezed ? _value.notes : notes as String,
       prnReason: prnReason == freezed
           ? _value.prnReason
-          : prnReason as CodeableConcept,
+          : prnReason as List<CodeableConcept>,
       orderedOn:
           orderedOn == freezed ? _value.orderedOn : orderedOn as FhirDateTime,
       recordedOn: recordedOn == freezed
           ? _value.recordedOn
           : recordedOn as FhirDateTime,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      timingX: timingX == freezed ? _value.timingX : timingX as Timing,
+      timingTiming: timingTiming == freezed
+          ? _value.timingTiming
+          : timingTiming as Timing,
+      timingPeriod: timingPeriod == freezed
+          ? _value.timingPeriod
+          : timingPeriod as Period,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
       priority: priority == freezed
           ? _value.priority
           : priority as DeviceUseRequestPriority,
@@ -1625,7 +1698,9 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceUseRequest implements _DeviceUseRequest {
   const _$_DeviceUseRequest(
-      {this.id,
+      {@JsonKey(defaultValue: 'DeviceUseRequest')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1650,7 +1725,9 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
       @required
       @JsonKey(required: true)
           this.subject,
-      this.timingX,
+      this.timingTiming,
+      this.timingPeriod,
+      this.timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
           this.priority})
       : assert(device != null),
@@ -1659,6 +1736,9 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
   factory _$_DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceUseRequestFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'DeviceUseRequest')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -1687,13 +1767,13 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
   @override
   final Reference encounter;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
-  final CodeableConcept indication;
+  final List<CodeableConcept> indication;
   @override
   final String notes;
   @override
-  final CodeableConcept prnReason;
+  final List<CodeableConcept> prnReason;
   @override
   final FhirDateTime orderedOn;
   @override
@@ -1702,20 +1782,27 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
   @JsonKey(required: true)
   final Reference subject;
   @override
-  final Timing timingX;
+  final Timing timingTiming;
+  @override
+  final Period timingPeriod;
+  @override
+  final FhirDateTime timingDateTime;
   @override
   @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
   final DeviceUseRequestPriority priority;
 
   @override
   String toString() {
-    return 'DeviceUseRequest(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteX: $bodySiteX, status: $status, device: $device, encounter: $encounter, identifier: $identifier, indication: $indication, notes: $notes, prnReason: $prnReason, orderedOn: $orderedOn, recordedOn: $recordedOn, subject: $subject, timingX: $timingX, priority: $priority)';
+    return 'DeviceUseRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteX: $bodySiteX, status: $status, device: $device, encounter: $encounter, identifier: $identifier, indication: $indication, notes: $notes, prnReason: $prnReason, orderedOn: $orderedOn, recordedOn: $recordedOn, subject: $subject, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime, priority: $priority)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _DeviceUseRequest &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1767,9 +1854,15 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
             (identical(other.subject, subject) ||
                 const DeepCollectionEquality()
                     .equals(other.subject, subject)) &&
-            (identical(other.timingX, timingX) ||
+            (identical(other.timingTiming, timingTiming) ||
                 const DeepCollectionEquality()
-                    .equals(other.timingX, timingX)) &&
+                    .equals(other.timingTiming, timingTiming)) &&
+            (identical(other.timingPeriod, timingPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingPeriod, timingPeriod)) &&
+            (identical(other.timingDateTime, timingDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingDateTime, timingDateTime)) &&
             (identical(other.priority, priority) ||
                 const DeepCollectionEquality()
                     .equals(other.priority, priority)));
@@ -1778,6 +1871,7 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1797,7 +1891,9 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
       const DeepCollectionEquality().hash(orderedOn) ^
       const DeepCollectionEquality().hash(recordedOn) ^
       const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(timingX) ^
+      const DeepCollectionEquality().hash(timingTiming) ^
+      const DeepCollectionEquality().hash(timingPeriod) ^
+      const DeepCollectionEquality().hash(timingDateTime) ^
       const DeepCollectionEquality().hash(priority);
 
   @override
@@ -1812,7 +1908,9 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
 
 abstract class _DeviceUseRequest implements DeviceUseRequest {
   const factory _DeviceUseRequest(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceUseRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1828,22 +1926,27 @@ abstract class _DeviceUseRequest implements DeviceUseRequest {
       @JsonKey(required: true)
           Reference device,
       Reference encounter,
-      Identifier identifier,
-      CodeableConcept indication,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
       String notes,
-      CodeableConcept prnReason,
+      List<CodeableConcept> prnReason,
       FhirDateTime orderedOn,
       FhirDateTime recordedOn,
       @required
       @JsonKey(required: true)
           Reference subject,
-      Timing timingX,
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
           DeviceUseRequestPriority priority}) = _$_DeviceUseRequest;
 
   factory _DeviceUseRequest.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseRequest.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'DeviceUseRequest')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1872,13 +1975,13 @@ abstract class _DeviceUseRequest implements DeviceUseRequest {
   @override
   Reference get encounter;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
-  CodeableConcept get indication;
+  List<CodeableConcept> get indication;
   @override
   String get notes;
   @override
-  CodeableConcept get prnReason;
+  List<CodeableConcept> get prnReason;
   @override
   FhirDateTime get orderedOn;
   @override
@@ -1887,7 +1990,11 @@ abstract class _DeviceUseRequest implements DeviceUseRequest {
   @JsonKey(required: true)
   Reference get subject;
   @override
-  Timing get timingX;
+  Timing get timingTiming;
+  @override
+  Period get timingPeriod;
+  @override
+  FhirDateTime get timingDateTime;
   @override
   @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
   DeviceUseRequestPriority get priority;
@@ -1903,7 +2010,8 @@ class _$DeviceUseStatementTearOff {
   const _$DeviceUseStatementTearOff();
 
   _DeviceUseStatement call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1911,16 +2019,20 @@ class _$DeviceUseStatementTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept bodySiteX,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
       Period whenUsed,
       @required @JsonKey(required: true) Reference device,
-      Identifier identifier,
-      CodeableConcept indication,
-      String notes,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
+      List<String> notes,
       FhirDateTime recordedOn,
       @required @JsonKey(required: true) Reference subject,
-      Timing timingX}) {
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime}) {
     return _DeviceUseStatement(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1929,7 +2041,8 @@ class _$DeviceUseStatementTearOff {
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      bodySiteX: bodySiteX,
+      bodySiteCodeableConcept: bodySiteCodeableConcept,
+      bodySiteReference: bodySiteReference,
       whenUsed: whenUsed,
       device: device,
       identifier: identifier,
@@ -1937,7 +2050,9 @@ class _$DeviceUseStatementTearOff {
       notes: notes,
       recordedOn: recordedOn,
       subject: subject,
-      timingX: timingX,
+      timingTiming: timingTiming,
+      timingPeriod: timingPeriod,
+      timingDateTime: timingDateTime,
     );
   }
 }
@@ -1946,6 +2061,8 @@ class _$DeviceUseStatementTearOff {
 const $DeviceUseStatement = _$DeviceUseStatementTearOff();
 
 mixin _$DeviceUseStatement {
+  @JsonKey(defaultValue: 'DeviceUseStatement')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1955,17 +2072,20 @@ mixin _$DeviceUseStatement {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  CodeableConcept get bodySiteX;
+  CodeableConcept get bodySiteCodeableConcept;
+  Reference get bodySiteReference;
   Period get whenUsed;
   @JsonKey(required: true)
   Reference get device;
-  Identifier get identifier;
-  CodeableConcept get indication;
-  String get notes;
+  List<Identifier> get identifier;
+  List<CodeableConcept> get indication;
+  List<String> get notes;
   FhirDateTime get recordedOn;
   @JsonKey(required: true)
   Reference get subject;
-  Timing get timingX;
+  Timing get timingTiming;
+  Period get timingPeriod;
+  FhirDateTime get timingDateTime;
 
   Map<String, dynamic> toJson();
   $DeviceUseStatementCopyWith<DeviceUseStatement> get copyWith;
@@ -1976,7 +2096,8 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
           DeviceUseStatement value, $Res Function(DeviceUseStatement) then) =
       _$DeviceUseStatementCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1984,27 +2105,30 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept bodySiteX,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
       Period whenUsed,
       @JsonKey(required: true) Reference device,
-      Identifier identifier,
-      CodeableConcept indication,
-      String notes,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
+      List<String> notes,
       FhirDateTime recordedOn,
       @JsonKey(required: true) Reference subject,
-      Timing timingX});
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get bodySiteX;
+  $CodeableConceptCopyWith<$Res> get bodySiteCodeableConcept;
+  $ReferenceCopyWith<$Res> get bodySiteReference;
   $PeriodCopyWith<$Res> get whenUsed;
   $ReferenceCopyWith<$Res> get device;
-  $IdentifierCopyWith<$Res> get identifier;
-  $CodeableConceptCopyWith<$Res> get indication;
   $ReferenceCopyWith<$Res> get subject;
-  $TimingCopyWith<$Res> get timingX;
+  $TimingCopyWith<$Res> get timingTiming;
+  $PeriodCopyWith<$Res> get timingPeriod;
 }
 
 class _$DeviceUseStatementCopyWithImpl<$Res>
@@ -2017,6 +2141,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2025,7 +2150,8 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object bodySiteX = freezed,
+    Object bodySiteCodeableConcept = freezed,
+    Object bodySiteReference = freezed,
     Object whenUsed = freezed,
     Object device = freezed,
     Object identifier = freezed,
@@ -2033,9 +2159,14 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
     Object notes = freezed,
     Object recordedOn = freezed,
     Object subject = freezed,
-    Object timingX = freezed,
+    Object timingTiming = freezed,
+    Object timingPeriod = freezed,
+    Object timingDateTime = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2051,22 +2182,34 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      bodySiteX: bodySiteX == freezed
-          ? _value.bodySiteX
-          : bodySiteX as CodeableConcept,
+      bodySiteCodeableConcept: bodySiteCodeableConcept == freezed
+          ? _value.bodySiteCodeableConcept
+          : bodySiteCodeableConcept as CodeableConcept,
+      bodySiteReference: bodySiteReference == freezed
+          ? _value.bodySiteReference
+          : bodySiteReference as Reference,
       whenUsed: whenUsed == freezed ? _value.whenUsed : whenUsed as Period,
       device: device == freezed ? _value.device : device as Reference,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       indication: indication == freezed
           ? _value.indication
-          : indication as CodeableConcept,
-      notes: notes == freezed ? _value.notes : notes as String,
+          : indication as List<CodeableConcept>,
+      notes: notes == freezed ? _value.notes : notes as List<String>,
       recordedOn: recordedOn == freezed
           ? _value.recordedOn
           : recordedOn as FhirDateTime,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      timingX: timingX == freezed ? _value.timingX : timingX as Timing,
+      timingTiming: timingTiming == freezed
+          ? _value.timingTiming
+          : timingTiming as Timing,
+      timingPeriod: timingPeriod == freezed
+          ? _value.timingPeriod
+          : timingPeriod as Period,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
     ));
   }
 
@@ -2111,12 +2254,23 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get bodySiteX {
-    if (_value.bodySiteX == null) {
+  $CodeableConceptCopyWith<$Res> get bodySiteCodeableConcept {
+    if (_value.bodySiteCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.bodySiteX, (value) {
-      return _then(_value.copyWith(bodySiteX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.bodySiteCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(bodySiteCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get bodySiteReference {
+    if (_value.bodySiteReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.bodySiteReference, (value) {
+      return _then(_value.copyWith(bodySiteReference: value));
     });
   }
 
@@ -2141,26 +2295,6 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get indication {
-    if (_value.indication == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.indication, (value) {
-      return _then(_value.copyWith(indication: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get subject {
     if (_value.subject == null) {
       return null;
@@ -2171,12 +2305,22 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
   }
 
   @override
-  $TimingCopyWith<$Res> get timingX {
-    if (_value.timingX == null) {
+  $TimingCopyWith<$Res> get timingTiming {
+    if (_value.timingTiming == null) {
       return null;
     }
-    return $TimingCopyWith<$Res>(_value.timingX, (value) {
-      return _then(_value.copyWith(timingX: value));
+    return $TimingCopyWith<$Res>(_value.timingTiming, (value) {
+      return _then(_value.copyWith(timingTiming: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get timingPeriod {
+    if (_value.timingPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.timingPeriod, (value) {
+      return _then(_value.copyWith(timingPeriod: value));
     });
   }
 }
@@ -2188,7 +2332,8 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       __$DeviceUseStatementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2196,15 +2341,18 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept bodySiteX,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
       Period whenUsed,
       @JsonKey(required: true) Reference device,
-      Identifier identifier,
-      CodeableConcept indication,
-      String notes,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
+      List<String> notes,
       FhirDateTime recordedOn,
       @JsonKey(required: true) Reference subject,
-      Timing timingX});
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2215,19 +2363,19 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $CodeableConceptCopyWith<$Res> get bodySiteX;
+  $CodeableConceptCopyWith<$Res> get bodySiteCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get bodySiteReference;
   @override
   $PeriodCopyWith<$Res> get whenUsed;
   @override
   $ReferenceCopyWith<$Res> get device;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $CodeableConceptCopyWith<$Res> get indication;
-  @override
   $ReferenceCopyWith<$Res> get subject;
   @override
-  $TimingCopyWith<$Res> get timingX;
+  $TimingCopyWith<$Res> get timingTiming;
+  @override
+  $PeriodCopyWith<$Res> get timingPeriod;
 }
 
 class __$DeviceUseStatementCopyWithImpl<$Res>
@@ -2242,6 +2390,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2250,7 +2399,8 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object bodySiteX = freezed,
+    Object bodySiteCodeableConcept = freezed,
+    Object bodySiteReference = freezed,
     Object whenUsed = freezed,
     Object device = freezed,
     Object identifier = freezed,
@@ -2258,9 +2408,14 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
     Object notes = freezed,
     Object recordedOn = freezed,
     Object subject = freezed,
-    Object timingX = freezed,
+    Object timingTiming = freezed,
+    Object timingPeriod = freezed,
+    Object timingDateTime = freezed,
   }) {
     return _then(_DeviceUseStatement(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2276,22 +2431,34 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      bodySiteX: bodySiteX == freezed
-          ? _value.bodySiteX
-          : bodySiteX as CodeableConcept,
+      bodySiteCodeableConcept: bodySiteCodeableConcept == freezed
+          ? _value.bodySiteCodeableConcept
+          : bodySiteCodeableConcept as CodeableConcept,
+      bodySiteReference: bodySiteReference == freezed
+          ? _value.bodySiteReference
+          : bodySiteReference as Reference,
       whenUsed: whenUsed == freezed ? _value.whenUsed : whenUsed as Period,
       device: device == freezed ? _value.device : device as Reference,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       indication: indication == freezed
           ? _value.indication
-          : indication as CodeableConcept,
-      notes: notes == freezed ? _value.notes : notes as String,
+          : indication as List<CodeableConcept>,
+      notes: notes == freezed ? _value.notes : notes as List<String>,
       recordedOn: recordedOn == freezed
           ? _value.recordedOn
           : recordedOn as FhirDateTime,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      timingX: timingX == freezed ? _value.timingX : timingX as Timing,
+      timingTiming: timingTiming == freezed
+          ? _value.timingTiming
+          : timingTiming as Timing,
+      timingPeriod: timingPeriod == freezed
+          ? _value.timingPeriod
+          : timingPeriod as Period,
+      timingDateTime: timingDateTime == freezed
+          ? _value.timingDateTime
+          : timingDateTime as FhirDateTime,
     ));
   }
 }
@@ -2299,7 +2466,8 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceUseStatement implements _DeviceUseStatement {
   const _$_DeviceUseStatement(
-      {this.id,
+      {@JsonKey(defaultValue: 'DeviceUseStatement') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -2307,7 +2475,8 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       this.contained,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.bodySiteX,
+      this.bodySiteCodeableConcept,
+      this.bodySiteReference,
       this.whenUsed,
       @required @JsonKey(required: true) this.device,
       this.identifier,
@@ -2315,13 +2484,18 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       this.notes,
       this.recordedOn,
       @required @JsonKey(required: true) this.subject,
-      this.timingX})
+      this.timingTiming,
+      this.timingPeriod,
+      this.timingDateTime})
       : assert(device != null),
         assert(subject != null);
 
   factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceUseStatementFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'DeviceUseStatement')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -2340,35 +2514,44 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
   @override
   final FhirExtension modifierExtension;
   @override
-  final CodeableConcept bodySiteX;
+  final CodeableConcept bodySiteCodeableConcept;
+  @override
+  final Reference bodySiteReference;
   @override
   final Period whenUsed;
   @override
   @JsonKey(required: true)
   final Reference device;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
-  final CodeableConcept indication;
+  final List<CodeableConcept> indication;
   @override
-  final String notes;
+  final List<String> notes;
   @override
   final FhirDateTime recordedOn;
   @override
   @JsonKey(required: true)
   final Reference subject;
   @override
-  final Timing timingX;
+  final Timing timingTiming;
+  @override
+  final Period timingPeriod;
+  @override
+  final FhirDateTime timingDateTime;
 
   @override
   String toString() {
-    return 'DeviceUseStatement(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteX: $bodySiteX, whenUsed: $whenUsed, device: $device, identifier: $identifier, indication: $indication, notes: $notes, recordedOn: $recordedOn, subject: $subject, timingX: $timingX)';
+    return 'DeviceUseStatement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteCodeableConcept: $bodySiteCodeableConcept, bodySiteReference: $bodySiteReference, whenUsed: $whenUsed, device: $device, identifier: $identifier, indication: $indication, notes: $notes, recordedOn: $recordedOn, subject: $subject, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _DeviceUseStatement &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -2390,9 +2573,12 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.bodySiteX, bodySiteX) ||
+            (identical(other.bodySiteCodeableConcept, bodySiteCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.bodySiteCodeableConcept, bodySiteCodeableConcept)) &&
+            (identical(other.bodySiteReference, bodySiteReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.bodySiteX, bodySiteX)) &&
+                    .equals(other.bodySiteReference, bodySiteReference)) &&
             (identical(other.whenUsed, whenUsed) ||
                 const DeepCollectionEquality()
                     .equals(other.whenUsed, whenUsed)) &&
@@ -2412,13 +2598,20 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
             (identical(other.subject, subject) ||
                 const DeepCollectionEquality()
                     .equals(other.subject, subject)) &&
-            (identical(other.timingX, timingX) ||
-                const DeepCollectionEquality().equals(other.timingX, timingX)));
+            (identical(other.timingTiming, timingTiming) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingTiming, timingTiming)) &&
+            (identical(other.timingPeriod, timingPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingPeriod, timingPeriod)) &&
+            (identical(other.timingDateTime, timingDateTime) ||
+                const DeepCollectionEquality().equals(other.timingDateTime, timingDateTime)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -2427,7 +2620,8 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(bodySiteX) ^
+      const DeepCollectionEquality().hash(bodySiteCodeableConcept) ^
+      const DeepCollectionEquality().hash(bodySiteReference) ^
       const DeepCollectionEquality().hash(whenUsed) ^
       const DeepCollectionEquality().hash(device) ^
       const DeepCollectionEquality().hash(identifier) ^
@@ -2435,7 +2629,9 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       const DeepCollectionEquality().hash(notes) ^
       const DeepCollectionEquality().hash(recordedOn) ^
       const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(timingX);
+      const DeepCollectionEquality().hash(timingTiming) ^
+      const DeepCollectionEquality().hash(timingPeriod) ^
+      const DeepCollectionEquality().hash(timingDateTime);
 
   @override
   _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith =>
@@ -2449,7 +2645,8 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
 
 abstract class _DeviceUseStatement implements DeviceUseStatement {
   const factory _DeviceUseStatement(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2457,19 +2654,25 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept bodySiteX,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
       Period whenUsed,
       @required @JsonKey(required: true) Reference device,
-      Identifier identifier,
-      CodeableConcept indication,
-      String notes,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
+      List<String> notes,
       FhirDateTime recordedOn,
       @required @JsonKey(required: true) Reference subject,
-      Timing timingX}) = _$_DeviceUseStatement;
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime}) = _$_DeviceUseStatement;
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseStatement.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'DeviceUseStatement')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -2488,25 +2691,31 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
   @override
   FhirExtension get modifierExtension;
   @override
-  CodeableConcept get bodySiteX;
+  CodeableConcept get bodySiteCodeableConcept;
+  @override
+  Reference get bodySiteReference;
   @override
   Period get whenUsed;
   @override
   @JsonKey(required: true)
   Reference get device;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
-  CodeableConcept get indication;
+  List<CodeableConcept> get indication;
   @override
-  String get notes;
+  List<String> get notes;
   @override
   FhirDateTime get recordedOn;
   @override
   @JsonKey(required: true)
   Reference get subject;
   @override
-  Timing get timingX;
+  Timing get timingTiming;
+  @override
+  Period get timingPeriod;
+  @override
+  FhirDateTime get timingDateTime;
   @override
   _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith;
 }
@@ -2519,7 +2728,9 @@ class _$CommunicationRequestTearOff {
   const _$CommunicationRequestTearOff();
 
   _CommunicationRequest call(
-      {Id id,
+      {@JsonKey(defaultValue: 'CommunicationRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2528,22 +2739,24 @@ class _$CommunicationRequestTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       Reference sender,
-      Reference recipient,
+      List<Reference> recipient,
       CommunicationRequestPayload payload,
-      CodeableConcept medium,
+      List<CodeableConcept> medium,
       Reference requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
           CommunicationRequestStatus status,
       Reference encounter,
-      FhirDateTime scheduledX,
-      CodeableConcept reason,
+      FhirDateTime scheduledDateTime,
+      Period scheduledPeriod,
+      List<CodeableConcept> reason,
       FhirDateTime requestedOn,
       Reference subject,
       CodeableConcept priority}) {
     return _CommunicationRequest(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -2561,7 +2774,8 @@ class _$CommunicationRequestTearOff {
       requester: requester,
       status: status,
       encounter: encounter,
-      scheduledX: scheduledX,
+      scheduledDateTime: scheduledDateTime,
+      scheduledPeriod: scheduledPeriod,
       reason: reason,
       requestedOn: requestedOn,
       subject: subject,
@@ -2574,6 +2788,8 @@ class _$CommunicationRequestTearOff {
 const $CommunicationRequest = _$CommunicationRequestTearOff();
 
 mixin _$CommunicationRequest {
+  @JsonKey(defaultValue: 'CommunicationRequest')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2583,18 +2799,19 @@ mixin _$CommunicationRequest {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   CodeableConcept get category;
   Reference get sender;
-  Reference get recipient;
+  List<Reference> get recipient;
   CommunicationRequestPayload get payload;
-  CodeableConcept get medium;
+  List<CodeableConcept> get medium;
   Reference get requester;
   @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
   CommunicationRequestStatus get status;
   Reference get encounter;
-  FhirDateTime get scheduledX;
-  CodeableConcept get reason;
+  FhirDateTime get scheduledDateTime;
+  Period get scheduledPeriod;
+  List<CodeableConcept> get reason;
   FhirDateTime get requestedOn;
   Reference get subject;
   CodeableConcept get priority;
@@ -2608,7 +2825,9 @@ abstract class $CommunicationRequestCopyWith<$Res> {
           $Res Function(CommunicationRequest) then) =
       _$CommunicationRequestCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'CommunicationRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2617,18 +2836,19 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       Reference sender,
-      Reference recipient,
+      List<Reference> recipient,
       CommunicationRequestPayload payload,
-      CodeableConcept medium,
+      List<CodeableConcept> medium,
       Reference requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
           CommunicationRequestStatus status,
       Reference encounter,
-      FhirDateTime scheduledX,
-      CodeableConcept reason,
+      FhirDateTime scheduledDateTime,
+      Period scheduledPeriod,
+      List<CodeableConcept> reason,
       FhirDateTime requestedOn,
       Reference subject,
       CodeableConcept priority});
@@ -2637,15 +2857,12 @@ abstract class $CommunicationRequestCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get category;
   $ReferenceCopyWith<$Res> get sender;
-  $ReferenceCopyWith<$Res> get recipient;
   $CommunicationRequestPayloadCopyWith<$Res> get payload;
-  $CodeableConceptCopyWith<$Res> get medium;
   $ReferenceCopyWith<$Res> get requester;
   $ReferenceCopyWith<$Res> get encounter;
-  $CodeableConceptCopyWith<$Res> get reason;
+  $PeriodCopyWith<$Res> get scheduledPeriod;
   $ReferenceCopyWith<$Res> get subject;
   $CodeableConceptCopyWith<$Res> get priority;
 }
@@ -2660,6 +2877,7 @@ class _$CommunicationRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2677,13 +2895,17 @@ class _$CommunicationRequestCopyWithImpl<$Res>
     Object requester = freezed,
     Object status = freezed,
     Object encounter = freezed,
-    Object scheduledX = freezed,
+    Object scheduledDateTime = freezed,
+    Object scheduledPeriod = freezed,
     Object reason = freezed,
     Object requestedOn = freezed,
     Object subject = freezed,
     Object priority = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2699,17 +2921,20 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       sender: sender == freezed ? _value.sender : sender as Reference,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as Reference,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient as List<Reference>,
       payload: payload == freezed
           ? _value.payload
           : payload as CommunicationRequestPayload,
-      medium: medium == freezed ? _value.medium : medium as CodeableConcept,
+      medium:
+          medium == freezed ? _value.medium : medium as List<CodeableConcept>,
       requester:
           requester == freezed ? _value.requester : requester as Reference,
       status: status == freezed
@@ -2717,10 +2942,14 @@ class _$CommunicationRequestCopyWithImpl<$Res>
           : status as CommunicationRequestStatus,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      scheduledX: scheduledX == freezed
-          ? _value.scheduledX
-          : scheduledX as FhirDateTime,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
+      scheduledDateTime: scheduledDateTime == freezed
+          ? _value.scheduledDateTime
+          : scheduledDateTime as FhirDateTime,
+      scheduledPeriod: scheduledPeriod == freezed
+          ? _value.scheduledPeriod
+          : scheduledPeriod as Period,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
       requestedOn: requestedOn == freezed
           ? _value.requestedOn
           : requestedOn as FhirDateTime,
@@ -2771,16 +3000,6 @@ class _$CommunicationRequestCopyWithImpl<$Res>
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get category {
     if (_value.category == null) {
       return null;
@@ -2801,32 +3020,12 @@ class _$CommunicationRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res> get recipient {
-    if (_value.recipient == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.recipient, (value) {
-      return _then(_value.copyWith(recipient: value));
-    });
-  }
-
-  @override
   $CommunicationRequestPayloadCopyWith<$Res> get payload {
     if (_value.payload == null) {
       return null;
     }
     return $CommunicationRequestPayloadCopyWith<$Res>(_value.payload, (value) {
       return _then(_value.copyWith(payload: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get medium {
-    if (_value.medium == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.medium, (value) {
-      return _then(_value.copyWith(medium: value));
     });
   }
 
@@ -2851,12 +3050,12 @@ class _$CommunicationRequestCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get reason {
-    if (_value.reason == null) {
+  $PeriodCopyWith<$Res> get scheduledPeriod {
+    if (_value.scheduledPeriod == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
-      return _then(_value.copyWith(reason: value));
+    return $PeriodCopyWith<$Res>(_value.scheduledPeriod, (value) {
+      return _then(_value.copyWith(scheduledPeriod: value));
     });
   }
 
@@ -2888,7 +3087,9 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       __$CommunicationRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'CommunicationRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2897,18 +3098,19 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       Reference sender,
-      Reference recipient,
+      List<Reference> recipient,
       CommunicationRequestPayload payload,
-      CodeableConcept medium,
+      List<CodeableConcept> medium,
       Reference requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
           CommunicationRequestStatus status,
       Reference encounter,
-      FhirDateTime scheduledX,
-      CodeableConcept reason,
+      FhirDateTime scheduledDateTime,
+      Period scheduledPeriod,
+      List<CodeableConcept> reason,
       FhirDateTime requestedOn,
       Reference subject,
       CodeableConcept priority});
@@ -2922,23 +3124,17 @@ abstract class _$CommunicationRequestCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $CodeableConceptCopyWith<$Res> get category;
   @override
   $ReferenceCopyWith<$Res> get sender;
   @override
-  $ReferenceCopyWith<$Res> get recipient;
-  @override
   $CommunicationRequestPayloadCopyWith<$Res> get payload;
-  @override
-  $CodeableConceptCopyWith<$Res> get medium;
   @override
   $ReferenceCopyWith<$Res> get requester;
   @override
   $ReferenceCopyWith<$Res> get encounter;
   @override
-  $CodeableConceptCopyWith<$Res> get reason;
+  $PeriodCopyWith<$Res> get scheduledPeriod;
   @override
   $ReferenceCopyWith<$Res> get subject;
   @override
@@ -2957,6 +3153,7 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2974,13 +3171,17 @@ class __$CommunicationRequestCopyWithImpl<$Res>
     Object requester = freezed,
     Object status = freezed,
     Object encounter = freezed,
-    Object scheduledX = freezed,
+    Object scheduledDateTime = freezed,
+    Object scheduledPeriod = freezed,
     Object reason = freezed,
     Object requestedOn = freezed,
     Object subject = freezed,
     Object priority = freezed,
   }) {
     return _then(_CommunicationRequest(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2996,17 +3197,20 @@ class __$CommunicationRequestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       sender: sender == freezed ? _value.sender : sender as Reference,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as Reference,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient as List<Reference>,
       payload: payload == freezed
           ? _value.payload
           : payload as CommunicationRequestPayload,
-      medium: medium == freezed ? _value.medium : medium as CodeableConcept,
+      medium:
+          medium == freezed ? _value.medium : medium as List<CodeableConcept>,
       requester:
           requester == freezed ? _value.requester : requester as Reference,
       status: status == freezed
@@ -3014,10 +3218,14 @@ class __$CommunicationRequestCopyWithImpl<$Res>
           : status as CommunicationRequestStatus,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      scheduledX: scheduledX == freezed
-          ? _value.scheduledX
-          : scheduledX as FhirDateTime,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
+      scheduledDateTime: scheduledDateTime == freezed
+          ? _value.scheduledDateTime
+          : scheduledDateTime as FhirDateTime,
+      scheduledPeriod: scheduledPeriod == freezed
+          ? _value.scheduledPeriod
+          : scheduledPeriod as Period,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
       requestedOn: requestedOn == freezed
           ? _value.requestedOn
           : requestedOn as FhirDateTime,
@@ -3031,7 +3239,9 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CommunicationRequest implements _CommunicationRequest {
   const _$_CommunicationRequest(
-      {this.id,
+      {@JsonKey(defaultValue: 'CommunicationRequest')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -3050,7 +3260,8 @@ class _$_CommunicationRequest implements _CommunicationRequest {
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
           this.status,
       this.encounter,
-      this.scheduledX,
+      this.scheduledDateTime,
+      this.scheduledPeriod,
       this.reason,
       this.requestedOn,
       this.subject,
@@ -3059,6 +3270,9 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'CommunicationRequest')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -3077,17 +3291,17 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final CodeableConcept category;
   @override
   final Reference sender;
   @override
-  final Reference recipient;
+  final List<Reference> recipient;
   @override
   final CommunicationRequestPayload payload;
   @override
-  final CodeableConcept medium;
+  final List<CodeableConcept> medium;
   @override
   final Reference requester;
   @override
@@ -3096,9 +3310,11 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   @override
   final Reference encounter;
   @override
-  final FhirDateTime scheduledX;
+  final FhirDateTime scheduledDateTime;
   @override
-  final CodeableConcept reason;
+  final Period scheduledPeriod;
+  @override
+  final List<CodeableConcept> reason;
   @override
   final FhirDateTime requestedOn;
   @override
@@ -3108,13 +3324,16 @@ class _$_CommunicationRequest implements _CommunicationRequest {
 
   @override
   String toString() {
-    return 'CommunicationRequest(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, sender: $sender, recipient: $recipient, payload: $payload, medium: $medium, requester: $requester, status: $status, encounter: $encounter, scheduledX: $scheduledX, reason: $reason, requestedOn: $requestedOn, subject: $subject, priority: $priority)';
+    return 'CommunicationRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, sender: $sender, recipient: $recipient, payload: $payload, medium: $medium, requester: $requester, status: $status, encounter: $encounter, scheduledDateTime: $scheduledDateTime, scheduledPeriod: $scheduledPeriod, reason: $reason, requestedOn: $requestedOn, subject: $subject, priority: $priority)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CommunicationRequest &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -3160,9 +3379,12 @@ class _$_CommunicationRequest implements _CommunicationRequest {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
-            (identical(other.scheduledX, scheduledX) ||
+            (identical(other.scheduledDateTime, scheduledDateTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.scheduledX, scheduledX)) &&
+                    .equals(other.scheduledDateTime, scheduledDateTime)) &&
+            (identical(other.scheduledPeriod, scheduledPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.scheduledPeriod, scheduledPeriod)) &&
             (identical(other.reason, reason) ||
                 const DeepCollectionEquality().equals(other.reason, reason)) &&
             (identical(other.requestedOn, requestedOn) ||
@@ -3179,6 +3401,7 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -3196,7 +3419,8 @@ class _$_CommunicationRequest implements _CommunicationRequest {
       const DeepCollectionEquality().hash(requester) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(scheduledX) ^
+      const DeepCollectionEquality().hash(scheduledDateTime) ^
+      const DeepCollectionEquality().hash(scheduledPeriod) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(requestedOn) ^
       const DeepCollectionEquality().hash(subject) ^
@@ -3215,7 +3439,9 @@ class _$_CommunicationRequest implements _CommunicationRequest {
 
 abstract class _CommunicationRequest implements CommunicationRequest {
   const factory _CommunicationRequest(
-      {Id id,
+      {@JsonKey(defaultValue: 'CommunicationRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -3224,18 +3450,19 @@ abstract class _CommunicationRequest implements CommunicationRequest {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       Reference sender,
-      Reference recipient,
+      List<Reference> recipient,
       CommunicationRequestPayload payload,
-      CodeableConcept medium,
+      List<CodeableConcept> medium,
       Reference requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
           CommunicationRequestStatus status,
       Reference encounter,
-      FhirDateTime scheduledX,
-      CodeableConcept reason,
+      FhirDateTime scheduledDateTime,
+      Period scheduledPeriod,
+      List<CodeableConcept> reason,
       FhirDateTime requestedOn,
       Reference subject,
       CodeableConcept priority}) = _$_CommunicationRequest;
@@ -3243,6 +3470,9 @@ abstract class _CommunicationRequest implements CommunicationRequest {
   factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequest.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'CommunicationRequest')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -3261,17 +3491,17 @@ abstract class _CommunicationRequest implements CommunicationRequest {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   CodeableConcept get category;
   @override
   Reference get sender;
   @override
-  Reference get recipient;
+  List<Reference> get recipient;
   @override
   CommunicationRequestPayload get payload;
   @override
-  CodeableConcept get medium;
+  List<CodeableConcept> get medium;
   @override
   Reference get requester;
   @override
@@ -3280,9 +3510,11 @@ abstract class _CommunicationRequest implements CommunicationRequest {
   @override
   Reference get encounter;
   @override
-  FhirDateTime get scheduledX;
+  FhirDateTime get scheduledDateTime;
   @override
-  CodeableConcept get reason;
+  Period get scheduledPeriod;
+  @override
+  List<CodeableConcept> get reason;
   @override
   FhirDateTime get requestedOn;
   @override
@@ -3573,12 +3805,16 @@ class _$CommunicationRequestPayloadTearOff {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @required @JsonKey(required: true) String contentX}) {
+      String contentString,
+      Attachment contentAttachment,
+      Reference contentReference}) {
     return _CommunicationRequestPayload(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      contentX: contentX,
+      contentString: contentString,
+      contentAttachment: contentAttachment,
+      contentReference: contentReference,
     );
   }
 }
@@ -3591,8 +3827,9 @@ mixin _$CommunicationRequestPayload {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  @JsonKey(required: true)
-  String get contentX;
+  String get contentString;
+  Attachment get contentAttachment;
+  Reference get contentReference;
 
   Map<String, dynamic> toJson();
   $CommunicationRequestPayloadCopyWith<CommunicationRequestPayload>
@@ -3608,10 +3845,14 @@ abstract class $CommunicationRequestPayloadCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) String contentX});
+      String contentString,
+      Attachment contentAttachment,
+      Reference contentReference});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  $ReferenceCopyWith<$Res> get contentReference;
 }
 
 class _$CommunicationRequestPayloadCopyWithImpl<$Res>
@@ -3627,7 +3868,9 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentString = freezed,
+    Object contentAttachment = freezed,
+    Object contentReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3637,7 +3880,15 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as String,
+      contentString: contentString == freezed
+          ? _value.contentString
+          : contentString as String,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      contentReference: contentReference == freezed
+          ? _value.contentReference
+          : contentReference as Reference,
     ));
   }
 
@@ -3660,6 +3911,26 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
+
+  @override
+  $AttachmentCopyWith<$Res> get contentAttachment {
+    if (_value.contentAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.contentAttachment, (value) {
+      return _then(_value.copyWith(contentAttachment: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get contentReference {
+    if (_value.contentReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.contentReference, (value) {
+      return _then(_value.copyWith(contentReference: value));
+    });
+  }
 }
 
 abstract class _$CommunicationRequestPayloadCopyWith<$Res>
@@ -3673,12 +3944,18 @@ abstract class _$CommunicationRequestPayloadCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) String contentX});
+      String contentString,
+      Attachment contentAttachment,
+      Reference contentReference});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  @override
+  $ReferenceCopyWith<$Res> get contentReference;
 }
 
 class __$CommunicationRequestPayloadCopyWithImpl<$Res>
@@ -3698,7 +3975,9 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentString = freezed,
+    Object contentAttachment = freezed,
+    Object contentReference = freezed,
   }) {
     return _then(_CommunicationRequestPayload(
       id: id == freezed ? _value.id : id as Id,
@@ -3708,7 +3987,15 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as String,
+      contentString: contentString == freezed
+          ? _value.contentString
+          : contentString as String,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      contentReference: contentReference == freezed
+          ? _value.contentReference
+          : contentReference as Reference,
     ));
   }
 }
@@ -3719,8 +4006,9 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required @JsonKey(required: true) this.contentX})
-      : assert(contentX != null);
+      this.contentString,
+      this.contentAttachment,
+      this.contentReference});
 
   factory _$_CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestPayloadFromJson(json);
@@ -3733,12 +4021,15 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
   @override
   final FhirExtension modifierExtension;
   @override
-  @JsonKey(required: true)
-  final String contentX;
+  final String contentString;
+  @override
+  final Attachment contentAttachment;
+  @override
+  final Reference contentReference;
 
   @override
   String toString() {
-    return 'CommunicationRequestPayload(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentX: $contentX)';
+    return 'CommunicationRequestPayload(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentString: $contentString, contentAttachment: $contentAttachment, contentReference: $contentReference)';
   }
 
   @override
@@ -3753,9 +4044,15 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.contentX, contentX) ||
+            (identical(other.contentString, contentString) ||
                 const DeepCollectionEquality()
-                    .equals(other.contentX, contentX)));
+                    .equals(other.contentString, contentString)) &&
+            (identical(other.contentAttachment, contentAttachment) ||
+                const DeepCollectionEquality()
+                    .equals(other.contentAttachment, contentAttachment)) &&
+            (identical(other.contentReference, contentReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.contentReference, contentReference)));
   }
 
   @override
@@ -3764,7 +4061,9 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(contentX);
+      const DeepCollectionEquality().hash(contentString) ^
+      const DeepCollectionEquality().hash(contentAttachment) ^
+      const DeepCollectionEquality().hash(contentReference);
 
   @override
   _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
@@ -3780,11 +4079,12 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
 abstract class _CommunicationRequestPayload
     implements CommunicationRequestPayload {
   const factory _CommunicationRequestPayload(
-          {Id id,
-          @JsonKey(name: 'extension') FhirExtension extension_,
-          FhirExtension modifierExtension,
-          @required @JsonKey(required: true) String contentX}) =
-      _$_CommunicationRequestPayload;
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      String contentString,
+      Attachment contentAttachment,
+      Reference contentReference}) = _$_CommunicationRequestPayload;
 
   factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequestPayload.fromJson;
@@ -3797,8 +4097,11 @@ abstract class _CommunicationRequestPayload
   @override
   FhirExtension get modifierExtension;
   @override
-  @JsonKey(required: true)
-  String get contentX;
+  String get contentString;
+  @override
+  Attachment get contentAttachment;
+  @override
+  Reference get contentReference;
   @override
   _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
       get copyWith;

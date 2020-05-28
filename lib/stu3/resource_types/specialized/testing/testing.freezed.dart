@@ -974,8 +974,7 @@ class _$TestReportOperationTearOff {
   const _$TestReportOperationTearOff();
 
   _TestReportOperation call(
-      {@JsonKey(unknownEnumValue: OperationResult.unknown)
-          OperationResult result,
+      {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
       String detail}) {
     return _TestReportOperation(
@@ -990,8 +989,8 @@ class _$TestReportOperationTearOff {
 const $TestReportOperation = _$TestReportOperationTearOff();
 
 mixin _$TestReportOperation {
-  @JsonKey(unknownEnumValue: OperationResult.unknown)
-  OperationResult get result;
+  @JsonKey(unknownEnumValue: Result.unknown)
+  Result get result;
   String get message;
   String get detail;
 
@@ -1004,8 +1003,7 @@ abstract class $TestReportOperationCopyWith<$Res> {
           TestReportOperation value, $Res Function(TestReportOperation) then) =
       _$TestReportOperationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: OperationResult.unknown)
-          OperationResult result,
+      {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
       String detail});
 }
@@ -1025,7 +1023,7 @@ class _$TestReportOperationCopyWithImpl<$Res>
     Object detail = freezed,
   }) {
     return _then(_value.copyWith(
-      result: result == freezed ? _value.result : result as OperationResult,
+      result: result == freezed ? _value.result : result as Result,
       message: message == freezed ? _value.message : message as String,
       detail: detail == freezed ? _value.detail : detail as String,
     ));
@@ -1039,8 +1037,7 @@ abstract class _$TestReportOperationCopyWith<$Res>
       __$TestReportOperationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: OperationResult.unknown)
-          OperationResult result,
+      {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
       String detail});
 }
@@ -1062,7 +1059,7 @@ class __$TestReportOperationCopyWithImpl<$Res>
     Object detail = freezed,
   }) {
     return _then(_TestReportOperation(
-      result: result == freezed ? _value.result : result as OperationResult,
+      result: result == freezed ? _value.result : result as Result,
       message: message == freezed ? _value.message : message as String,
       detail: detail == freezed ? _value.detail : detail as String,
     ));
@@ -1072,7 +1069,7 @@ class __$TestReportOperationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestReportOperation implements _TestReportOperation {
   const _$_TestReportOperation(
-      {@JsonKey(unknownEnumValue: OperationResult.unknown) this.result,
+      {@JsonKey(unknownEnumValue: Result.unknown) this.result,
       this.message,
       this.detail});
 
@@ -1080,8 +1077,8 @@ class _$_TestReportOperation implements _TestReportOperation {
       _$_$_TestReportOperationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: OperationResult.unknown)
-  final OperationResult result;
+  @JsonKey(unknownEnumValue: Result.unknown)
+  final Result result;
   @override
   final String message;
   @override
@@ -1125,8 +1122,7 @@ class _$_TestReportOperation implements _TestReportOperation {
 
 abstract class _TestReportOperation implements TestReportOperation {
   const factory _TestReportOperation(
-      {@JsonKey(unknownEnumValue: OperationResult.unknown)
-          OperationResult result,
+      {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
       String detail}) = _$_TestReportOperation;
 
@@ -1134,8 +1130,8 @@ abstract class _TestReportOperation implements TestReportOperation {
       _$_TestReportOperation.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: OperationResult.unknown)
-  OperationResult get result;
+  @JsonKey(unknownEnumValue: Result.unknown)
+  Result get result;
   @override
   String get message;
   @override
@@ -1152,7 +1148,7 @@ class _$TestReportAssertTearOff {
   const _$TestReportAssertTearOff();
 
   _TestReportAssert call(
-      {@JsonKey(unknownEnumValue: AssertResult.unknown) AssertResult result,
+      {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
       String detail}) {
     return _TestReportAssert(
@@ -1167,8 +1163,8 @@ class _$TestReportAssertTearOff {
 const $TestReportAssert = _$TestReportAssertTearOff();
 
 mixin _$TestReportAssert {
-  @JsonKey(unknownEnumValue: AssertResult.unknown)
-  AssertResult get result;
+  @JsonKey(unknownEnumValue: Result.unknown)
+  Result get result;
   String get message;
   String get detail;
 
@@ -1181,7 +1177,7 @@ abstract class $TestReportAssertCopyWith<$Res> {
           TestReportAssert value, $Res Function(TestReportAssert) then) =
       _$TestReportAssertCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: AssertResult.unknown) AssertResult result,
+      {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
       String detail});
 }
@@ -1201,7 +1197,7 @@ class _$TestReportAssertCopyWithImpl<$Res>
     Object detail = freezed,
   }) {
     return _then(_value.copyWith(
-      result: result == freezed ? _value.result : result as AssertResult,
+      result: result == freezed ? _value.result : result as Result,
       message: message == freezed ? _value.message : message as String,
       detail: detail == freezed ? _value.detail : detail as String,
     ));
@@ -1215,7 +1211,7 @@ abstract class _$TestReportAssertCopyWith<$Res>
       __$TestReportAssertCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: AssertResult.unknown) AssertResult result,
+      {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
       String detail});
 }
@@ -1237,7 +1233,7 @@ class __$TestReportAssertCopyWithImpl<$Res>
     Object detail = freezed,
   }) {
     return _then(_TestReportAssert(
-      result: result == freezed ? _value.result : result as AssertResult,
+      result: result == freezed ? _value.result : result as Result,
       message: message == freezed ? _value.message : message as String,
       detail: detail == freezed ? _value.detail : detail as String,
     ));
@@ -1247,7 +1243,7 @@ class __$TestReportAssertCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestReportAssert implements _TestReportAssert {
   const _$_TestReportAssert(
-      {@JsonKey(unknownEnumValue: AssertResult.unknown) this.result,
+      {@JsonKey(unknownEnumValue: Result.unknown) this.result,
       this.message,
       this.detail});
 
@@ -1255,8 +1251,8 @@ class _$_TestReportAssert implements _TestReportAssert {
       _$_$_TestReportAssertFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: AssertResult.unknown)
-  final AssertResult result;
+  @JsonKey(unknownEnumValue: Result.unknown)
+  final Result result;
   @override
   final String message;
   @override
@@ -1299,7 +1295,7 @@ class _$_TestReportAssert implements _TestReportAssert {
 
 abstract class _TestReportAssert implements TestReportAssert {
   const factory _TestReportAssert(
-      {@JsonKey(unknownEnumValue: AssertResult.unknown) AssertResult result,
+      {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
       String detail}) = _$_TestReportAssert;
 
@@ -1307,8 +1303,8 @@ abstract class _TestReportAssert implements TestReportAssert {
       _$_TestReportAssert.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: AssertResult.unknown)
-  AssertResult get result;
+  @JsonKey(unknownEnumValue: Result.unknown)
+  Result get result;
   @override
   String get message;
   @override
@@ -1986,8 +1982,8 @@ class _$TestScriptTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -2051,8 +2047,8 @@ mixin _$TestScript {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-  TestScriptStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -2083,15 +2079,13 @@ abstract class $TestScriptCopyWith<$Res> {
           TestScript value, $Res Function(TestScript) then) =
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'TestScript')
-          String resourceType,
+      {@JsonKey(required: true, defaultValue: 'TestScript') String resourceType,
       String url,
       Identifier identifier,
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -2166,7 +2160,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as TestScriptStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -2258,15 +2252,13 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       __$TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'TestScript')
-          String resourceType,
+      {@JsonKey(required: true, defaultValue: 'TestScript') String resourceType,
       String url,
       Identifier identifier,
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -2347,7 +2339,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as TestScriptStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -2404,7 +2396,7 @@ class _$_TestScript implements _TestScript {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -2445,8 +2437,8 @@ class _$_TestScript implements _TestScript {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-  final TestScriptStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -2620,8 +2612,8 @@ abstract class _TestScript implements TestScript {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -2660,8 +2652,8 @@ abstract class _TestScript implements TestScript {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-  TestScriptStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -5169,10 +5161,8 @@ class _$TestScriptOperationTearOff {
       Code resource,
       String label,
       String description,
-      @JsonKey(unknownEnumValue: OperationAccept.unknown)
-          OperationAccept accept,
-      @JsonKey(unknownEnumValue: OperationContentType.unknown)
-          OperationContentType contentType,
+      @JsonKey(unknownEnumValue: ContentType.unknown) ContentType accept,
+      @JsonKey(unknownEnumValue: ContentType.unknown) ContentType contentType,
       Integer destination,
       Boolean encodeRequestUrl,
       Integer origin,
@@ -5212,10 +5202,10 @@ mixin _$TestScriptOperation {
   Code get resource;
   String get label;
   String get description;
-  @JsonKey(unknownEnumValue: OperationAccept.unknown)
-  OperationAccept get accept;
-  @JsonKey(unknownEnumValue: OperationContentType.unknown)
-  OperationContentType get contentType;
+  @JsonKey(unknownEnumValue: ContentType.unknown)
+  ContentType get accept;
+  @JsonKey(unknownEnumValue: ContentType.unknown)
+  ContentType get contentType;
   Integer get destination;
   Boolean get encodeRequestUrl;
   Integer get origin;
@@ -5240,10 +5230,8 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       Code resource,
       String label,
       String description,
-      @JsonKey(unknownEnumValue: OperationAccept.unknown)
-          OperationAccept accept,
-      @JsonKey(unknownEnumValue: OperationContentType.unknown)
-          OperationContentType contentType,
+      @JsonKey(unknownEnumValue: ContentType.unknown) ContentType accept,
+      @JsonKey(unknownEnumValue: ContentType.unknown) ContentType contentType,
       Integer destination,
       Boolean encodeRequestUrl,
       Integer origin,
@@ -5291,10 +5279,10 @@ class _$TestScriptOperationCopyWithImpl<$Res>
       label: label == freezed ? _value.label : label as String,
       description:
           description == freezed ? _value.description : description as String,
-      accept: accept == freezed ? _value.accept : accept as OperationAccept,
+      accept: accept == freezed ? _value.accept : accept as ContentType,
       contentType: contentType == freezed
           ? _value.contentType
-          : contentType as OperationContentType,
+          : contentType as ContentType,
       destination:
           destination == freezed ? _value.destination : destination as Integer,
       encodeRequestUrl: encodeRequestUrl == freezed
@@ -5335,10 +5323,8 @@ abstract class _$TestScriptOperationCopyWith<$Res>
       Code resource,
       String label,
       String description,
-      @JsonKey(unknownEnumValue: OperationAccept.unknown)
-          OperationAccept accept,
-      @JsonKey(unknownEnumValue: OperationContentType.unknown)
-          OperationContentType contentType,
+      @JsonKey(unknownEnumValue: ContentType.unknown) ContentType accept,
+      @JsonKey(unknownEnumValue: ContentType.unknown) ContentType contentType,
       Integer destination,
       Boolean encodeRequestUrl,
       Integer origin,
@@ -5389,10 +5375,10 @@ class __$TestScriptOperationCopyWithImpl<$Res>
       label: label == freezed ? _value.label : label as String,
       description:
           description == freezed ? _value.description : description as String,
-      accept: accept == freezed ? _value.accept : accept as OperationAccept,
+      accept: accept == freezed ? _value.accept : accept as ContentType,
       contentType: contentType == freezed
           ? _value.contentType
-          : contentType as OperationContentType,
+          : contentType as ContentType,
       destination:
           destination == freezed ? _value.destination : destination as Integer,
       encodeRequestUrl: encodeRequestUrl == freezed
@@ -5419,8 +5405,8 @@ class _$_TestScriptOperation implements _TestScriptOperation {
       this.resource,
       this.label,
       this.description,
-      @JsonKey(unknownEnumValue: OperationAccept.unknown) this.accept,
-      @JsonKey(unknownEnumValue: OperationContentType.unknown) this.contentType,
+      @JsonKey(unknownEnumValue: ContentType.unknown) this.accept,
+      @JsonKey(unknownEnumValue: ContentType.unknown) this.contentType,
       this.destination,
       this.encodeRequestUrl,
       this.origin,
@@ -5444,11 +5430,11 @@ class _$_TestScriptOperation implements _TestScriptOperation {
   @override
   final String description;
   @override
-  @JsonKey(unknownEnumValue: OperationAccept.unknown)
-  final OperationAccept accept;
+  @JsonKey(unknownEnumValue: ContentType.unknown)
+  final ContentType accept;
   @override
-  @JsonKey(unknownEnumValue: OperationContentType.unknown)
-  final OperationContentType contentType;
+  @JsonKey(unknownEnumValue: ContentType.unknown)
+  final ContentType contentType;
   @override
   final Integer destination;
   @override
@@ -5560,10 +5546,8 @@ abstract class _TestScriptOperation implements TestScriptOperation {
       Code resource,
       String label,
       String description,
-      @JsonKey(unknownEnumValue: OperationAccept.unknown)
-          OperationAccept accept,
-      @JsonKey(unknownEnumValue: OperationContentType.unknown)
-          OperationContentType contentType,
+      @JsonKey(unknownEnumValue: ContentType.unknown) ContentType accept,
+      @JsonKey(unknownEnumValue: ContentType.unknown) ContentType contentType,
       Integer destination,
       Boolean encodeRequestUrl,
       Integer origin,
@@ -5587,11 +5571,11 @@ abstract class _TestScriptOperation implements TestScriptOperation {
   @override
   String get description;
   @override
-  @JsonKey(unknownEnumValue: OperationAccept.unknown)
-  OperationAccept get accept;
+  @JsonKey(unknownEnumValue: ContentType.unknown)
+  ContentType get accept;
   @override
-  @JsonKey(unknownEnumValue: OperationContentType.unknown)
-  OperationContentType get contentType;
+  @JsonKey(unknownEnumValue: ContentType.unknown)
+  ContentType get contentType;
   @override
   Integer get destination;
   @override
@@ -5776,8 +5760,8 @@ class _$TestScriptAssertTearOff {
       String compareToSourceId,
       String compareToSourceExpression,
       String compareToSourcePath,
-      @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          AssertContentType contentType,
+      @JsonKey(unknownEnumValue: ContentType.unknown)
+          ContentType contentType,
       String expression,
       String headerField,
       String minimumId,
@@ -5838,8 +5822,8 @@ mixin _$TestScriptAssert {
   String get compareToSourceId;
   String get compareToSourceExpression;
   String get compareToSourcePath;
-  @JsonKey(unknownEnumValue: AssertContentType.unknown)
-  AssertContentType get contentType;
+  @JsonKey(unknownEnumValue: ContentType.unknown)
+  ContentType get contentType;
   String get expression;
   String get headerField;
   String get minimumId;
@@ -5877,8 +5861,8 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String compareToSourceId,
       String compareToSourceExpression,
       String compareToSourcePath,
-      @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          AssertContentType contentType,
+      @JsonKey(unknownEnumValue: ContentType.unknown)
+          ContentType contentType,
       String expression,
       String headerField,
       String minimumId,
@@ -5957,7 +5941,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
           : compareToSourcePath as String,
       contentType: contentType == freezed
           ? _value.contentType
-          : contentType as AssertContentType,
+          : contentType as ContentType,
       expression:
           expression == freezed ? _value.expression : expression as String,
       headerField:
@@ -6028,8 +6012,8 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       String compareToSourceId,
       String compareToSourceExpression,
       String compareToSourcePath,
-      @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          AssertContentType contentType,
+      @JsonKey(unknownEnumValue: ContentType.unknown)
+          ContentType contentType,
       String expression,
       String headerField,
       String minimumId,
@@ -6112,7 +6096,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
           : compareToSourcePath as String,
       contentType: contentType == freezed
           ? _value.contentType
-          : contentType as AssertContentType,
+          : contentType as ContentType,
       expression:
           expression == freezed ? _value.expression : expression as String,
       headerField:
@@ -6159,7 +6143,7 @@ class _$_TestScriptAssert implements _TestScriptAssert {
       this.compareToSourceId,
       this.compareToSourceExpression,
       this.compareToSourcePath,
-      @JsonKey(unknownEnumValue: AssertContentType.unknown)
+      @JsonKey(unknownEnumValue: ContentType.unknown)
           this.contentType,
       this.expression,
       this.headerField,
@@ -6199,8 +6183,8 @@ class _$_TestScriptAssert implements _TestScriptAssert {
   @override
   final String compareToSourcePath;
   @override
-  @JsonKey(unknownEnumValue: AssertContentType.unknown)
-  final AssertContentType contentType;
+  @JsonKey(unknownEnumValue: ContentType.unknown)
+  final ContentType contentType;
   @override
   final String expression;
   @override
@@ -6356,8 +6340,8 @@ abstract class _TestScriptAssert implements TestScriptAssert {
       String compareToSourceId,
       String compareToSourceExpression,
       String compareToSourcePath,
-      @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          AssertContentType contentType,
+      @JsonKey(unknownEnumValue: ContentType.unknown)
+          ContentType contentType,
       String expression,
       String headerField,
       String minimumId,
@@ -6396,8 +6380,8 @@ abstract class _TestScriptAssert implements TestScriptAssert {
   @override
   String get compareToSourcePath;
   @override
-  @JsonKey(unknownEnumValue: AssertContentType.unknown)
-  AssertContentType get contentType;
+  @JsonKey(unknownEnumValue: ContentType.unknown)
+  ContentType get contentType;
   @override
   String get expression;
   @override

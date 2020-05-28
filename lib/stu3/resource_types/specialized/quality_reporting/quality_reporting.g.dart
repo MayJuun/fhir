@@ -18,8 +18,8 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$MeasureStatusEnumMap, json['status'],
-        unknownValue: MeasureStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -120,7 +120,7 @@ Map<String, dynamic> _$_$_MeasureToJson(_$_Measure instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$MeasureStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -193,11 +193,11 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$MeasureStatusEnumMap = {
-  MeasureStatus.draft: 'draft',
-  MeasureStatus.active: 'active',
-  MeasureStatus.retired: 'retired',
-  MeasureStatus.unknown: 'unknown',
+const _$StatusEnumMap = {
+  Status.draft: 'draft',
+  Status.active: 'active',
+  Status.retired: 'retired',
+  Status.unknown: 'unknown',
 };
 
 _$_MeasureGroup _$_$_MeasureGroupFromJson(Map<String, dynamic> json) {

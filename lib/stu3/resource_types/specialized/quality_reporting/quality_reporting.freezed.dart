@@ -24,8 +24,8 @@ class _$MeasureTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-          MeasureStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -111,8 +111,8 @@ mixin _$Measure {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-  MeasureStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -159,7 +159,7 @@ abstract class $MeasureCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown) MeasureStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -256,7 +256,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as MeasureStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -366,7 +366,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown) MeasureStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -467,7 +467,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as MeasureStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -547,7 +547,7 @@ class _$_Measure implements _Measure {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -599,8 +599,8 @@ class _$_Measure implements _Measure {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-  final MeasureStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -818,8 +818,8 @@ abstract class _Measure implements Measure {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-          MeasureStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -868,8 +868,8 @@ abstract class _Measure implements Measure {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-  MeasureStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override

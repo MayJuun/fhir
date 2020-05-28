@@ -9,6 +9,7 @@ part of 'structure.dart';
 _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'content']);
   return _$_Media(
+    resourceType: json['resourceType'] as String ?? 'Media',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -37,9 +38,10 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     subtype: json['subtype'] == null
         ? null
         : CodeableConcept.fromJson(json['subtype'] as Map<String, dynamic>),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -73,6 +75,7 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -83,7 +86,8 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', _$MediaTypeEnumMap[instance.type]);
   writeNotNull('subtype', instance.subtype?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('operator', instance.operator_?.toJson());
   writeNotNull('view', instance.view?.toJson());
@@ -138,6 +142,7 @@ const _$MediaTypeEnumMap = {
 _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_Basic(
+    resourceType: json['resourceType'] as String ?? 'Basic',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -161,9 +166,10 @@ _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -188,6 +194,7 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -196,7 +203,8 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
   writeNotNull('contained', instance.contained?.toJson());
   writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('author', instance.author?.toJson());
@@ -206,6 +214,7 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
 
 _$_Binary _$_$_BinaryFromJson(Map<String, dynamic> json) {
   return _$_Binary(
+    resourceType: json['resourceType'] as String ?? 'Binary',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -234,6 +243,7 @@ Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -246,6 +256,7 @@ Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
 _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'link']);
   return _$_Bundle(
+    resourceType: json['resourceType'] as String ?? 'Bundle',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -282,6 +293,7 @@ Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
 import '../../resource_types.enums.dart';
+import 'terminology.enums.dart';
 
 part 'terminology.freezed.dart';
 part 'terminology.g.dart';
@@ -119,8 +120,7 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-        ConceptMapStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -214,8 +214,7 @@ abstract class ExpansionProfile with _$ExpansionProfile implements Resource {
     Identifier identifier,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
-        ExpansionProfileStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -319,8 +318,7 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     @required
         String resourceType,
     String name,
-    @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-        NamingSystemStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     @JsonKey(unknownEnumValue: NamingSystemKind.unknown) NamingSystemKind kind,
     DateTime date,
     String publisher,
@@ -362,7 +360,7 @@ abstract class ValueSet with _$ValueSet implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,

@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
 import '../../resource_types.enums.dart';
+import 'definitional_artifacts.enums.dart';
 
 part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
@@ -19,8 +20,7 @@ abstract class ActivityDefinition
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-        ActivityDefinitionStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -94,8 +94,7 @@ abstract class PlanDefinition with _$PlanDefinition implements Resource {
     String name,
     String title,
     CodeableConcept type,
-    @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-        PlanDefinitionStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -249,8 +248,7 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-        QuestionnaireStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -352,8 +350,7 @@ abstract class ServiceDefinition with _$ServiceDefinition implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: ServiceDefinitionStatus.unknown)
-        ServiceDefinitionStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,

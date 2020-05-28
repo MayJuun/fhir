@@ -40,9 +40,7 @@ abstract class Conformance with _$Conformance implements Resource {
     @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
     @required
         ConformanceAcceptUnknown acceptUnknown,
-    @JsonKey(required: true, unknownEnumValue: ConformanceFormat.unknown)
-    @required
-        List<ConformanceFormat> format,
+    @JsonKey(required: true) @required List<ConformanceFormat> format,
     List<Reference> profile,
     List<ConformanceRest> rest,
     List<ConformanceMessaging> messaging,
@@ -403,7 +401,9 @@ abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
-    @JsonKey(required: true) @required BindingStrength strength,
+    @JsonKey(required: true)
+    @required
+        BindingStrength strength,
     FhirUri valueSetUri,
     Reference valueSetReference,
   }) = _OperationDefinitionBinding;
@@ -455,8 +455,7 @@ abstract class ConformanceSearchParam with _$ConformanceSearchParam {
         SearchParamType type,
     String documentation,
     Code target,
-    @JsonKey(unknownEnumValue: SearchParamModifier.unknown)
-        List<SearchParamModifier> modifier,
+    List<SearchParamModifier> modifier,
     List<String> chain,
   }) = _ConformanceSearchParam;
 

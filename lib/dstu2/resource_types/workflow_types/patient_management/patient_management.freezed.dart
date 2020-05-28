@@ -16,7 +16,9 @@ class _$CommunicationTearOff {
   const _$CommunicationTearOff();
 
   _Communication call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Communication')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -25,21 +27,22 @@ class _$CommunicationTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       Reference sender,
-      Reference recipient,
-      CommunicationPayload payload,
-      CodeableConcept medium,
+      List<Reference> recipient,
+      List<CommunicationPayload> payload,
+      List<CodeableConcept> medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus status,
       Reference encounter,
       FhirDateTime sent,
       FhirDateTime received,
-      CodeableConcept reason,
+      List<CodeableConcept> reason,
       Reference subject,
       Reference requestDetail}) {
     return _Communication(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -69,6 +72,8 @@ class _$CommunicationTearOff {
 const $Communication = _$CommunicationTearOff();
 
 mixin _$Communication {
+  @JsonKey(defaultValue: 'Communication')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -78,18 +83,18 @@ mixin _$Communication {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   CodeableConcept get category;
   Reference get sender;
-  Reference get recipient;
-  CommunicationPayload get payload;
-  CodeableConcept get medium;
+  List<Reference> get recipient;
+  List<CommunicationPayload> get payload;
+  List<CodeableConcept> get medium;
   @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
   CommunicationStatus get status;
   Reference get encounter;
   FhirDateTime get sent;
   FhirDateTime get received;
-  CodeableConcept get reason;
+  List<CodeableConcept> get reason;
   Reference get subject;
   Reference get requestDetail;
 
@@ -102,7 +107,9 @@ abstract class $CommunicationCopyWith<$Res> {
           Communication value, $Res Function(Communication) then) =
       _$CommunicationCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Communication')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -111,18 +118,18 @@ abstract class $CommunicationCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       Reference sender,
-      Reference recipient,
-      CommunicationPayload payload,
-      CodeableConcept medium,
+      List<Reference> recipient,
+      List<CommunicationPayload> payload,
+      List<CodeableConcept> medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus status,
       Reference encounter,
       FhirDateTime sent,
       FhirDateTime received,
-      CodeableConcept reason,
+      List<CodeableConcept> reason,
       Reference subject,
       Reference requestDetail});
 
@@ -130,14 +137,9 @@ abstract class $CommunicationCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get category;
   $ReferenceCopyWith<$Res> get sender;
-  $ReferenceCopyWith<$Res> get recipient;
-  $CommunicationPayloadCopyWith<$Res> get payload;
-  $CodeableConceptCopyWith<$Res> get medium;
   $ReferenceCopyWith<$Res> get encounter;
-  $CodeableConceptCopyWith<$Res> get reason;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get requestDetail;
 }
@@ -152,6 +154,7 @@ class _$CommunicationCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -175,6 +178,9 @@ class _$CommunicationCopyWithImpl<$Res>
     Object requestDetail = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -190,23 +196,28 @@ class _$CommunicationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       sender: sender == freezed ? _value.sender : sender as Reference,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as Reference,
-      payload:
-          payload == freezed ? _value.payload : payload as CommunicationPayload,
-      medium: medium == freezed ? _value.medium : medium as CodeableConcept,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient as List<Reference>,
+      payload: payload == freezed
+          ? _value.payload
+          : payload as List<CommunicationPayload>,
+      medium:
+          medium == freezed ? _value.medium : medium as List<CodeableConcept>,
       status: status == freezed ? _value.status : status as CommunicationStatus,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
       sent: sent == freezed ? _value.sent : sent as FhirDateTime,
       received:
           received == freezed ? _value.received : received as FhirDateTime,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       requestDetail: requestDetail == freezed
           ? _value.requestDetail
@@ -255,16 +266,6 @@ class _$CommunicationCopyWithImpl<$Res>
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get category {
     if (_value.category == null) {
       return null;
@@ -285,52 +286,12 @@ class _$CommunicationCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res> get recipient {
-    if (_value.recipient == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.recipient, (value) {
-      return _then(_value.copyWith(recipient: value));
-    });
-  }
-
-  @override
-  $CommunicationPayloadCopyWith<$Res> get payload {
-    if (_value.payload == null) {
-      return null;
-    }
-    return $CommunicationPayloadCopyWith<$Res>(_value.payload, (value) {
-      return _then(_value.copyWith(payload: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get medium {
-    if (_value.medium == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.medium, (value) {
-      return _then(_value.copyWith(medium: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get encounter {
     if (_value.encounter == null) {
       return null;
     }
     return $ReferenceCopyWith<$Res>(_value.encounter, (value) {
       return _then(_value.copyWith(encounter: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get reason {
-    if (_value.reason == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
-      return _then(_value.copyWith(reason: value));
     });
   }
 
@@ -362,7 +323,9 @@ abstract class _$CommunicationCopyWith<$Res>
       __$CommunicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Communication')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -371,18 +334,18 @@ abstract class _$CommunicationCopyWith<$Res>
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       Reference sender,
-      Reference recipient,
-      CommunicationPayload payload,
-      CodeableConcept medium,
+      List<Reference> recipient,
+      List<CommunicationPayload> payload,
+      List<CodeableConcept> medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus status,
       Reference encounter,
       FhirDateTime sent,
       FhirDateTime received,
-      CodeableConcept reason,
+      List<CodeableConcept> reason,
       Reference subject,
       Reference requestDetail});
 
@@ -395,21 +358,11 @@ abstract class _$CommunicationCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $CodeableConceptCopyWith<$Res> get category;
   @override
   $ReferenceCopyWith<$Res> get sender;
   @override
-  $ReferenceCopyWith<$Res> get recipient;
-  @override
-  $CommunicationPayloadCopyWith<$Res> get payload;
-  @override
-  $CodeableConceptCopyWith<$Res> get medium;
-  @override
   $ReferenceCopyWith<$Res> get encounter;
-  @override
-  $CodeableConceptCopyWith<$Res> get reason;
   @override
   $ReferenceCopyWith<$Res> get subject;
   @override
@@ -428,6 +381,7 @@ class __$CommunicationCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -451,6 +405,9 @@ class __$CommunicationCopyWithImpl<$Res>
     Object requestDetail = freezed,
   }) {
     return _then(_Communication(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -466,23 +423,28 @@ class __$CommunicationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       sender: sender == freezed ? _value.sender : sender as Reference,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as Reference,
-      payload:
-          payload == freezed ? _value.payload : payload as CommunicationPayload,
-      medium: medium == freezed ? _value.medium : medium as CodeableConcept,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient as List<Reference>,
+      payload: payload == freezed
+          ? _value.payload
+          : payload as List<CommunicationPayload>,
+      medium:
+          medium == freezed ? _value.medium : medium as List<CodeableConcept>,
       status: status == freezed ? _value.status : status as CommunicationStatus,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
       sent: sent == freezed ? _value.sent : sent as FhirDateTime,
       received:
           received == freezed ? _value.received : received as FhirDateTime,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       requestDetail: requestDetail == freezed
           ? _value.requestDetail
@@ -494,7 +456,8 @@ class __$CommunicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Communication implements _Communication {
   const _$_Communication(
-      {this.id,
+      {@JsonKey(defaultValue: 'Communication') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -520,6 +483,9 @@ class _$_Communication implements _Communication {
       _$_$_CommunicationFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Communication')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -537,17 +503,17 @@ class _$_Communication implements _Communication {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final CodeableConcept category;
   @override
   final Reference sender;
   @override
-  final Reference recipient;
+  final List<Reference> recipient;
   @override
-  final CommunicationPayload payload;
+  final List<CommunicationPayload> payload;
   @override
-  final CodeableConcept medium;
+  final List<CodeableConcept> medium;
   @override
   @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
   final CommunicationStatus status;
@@ -558,7 +524,7 @@ class _$_Communication implements _Communication {
   @override
   final FhirDateTime received;
   @override
-  final CodeableConcept reason;
+  final List<CodeableConcept> reason;
   @override
   final Reference subject;
   @override
@@ -566,13 +532,16 @@ class _$_Communication implements _Communication {
 
   @override
   String toString() {
-    return 'Communication(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, sender: $sender, recipient: $recipient, payload: $payload, medium: $medium, status: $status, encounter: $encounter, sent: $sent, received: $received, reason: $reason, subject: $subject, requestDetail: $requestDetail)';
+    return 'Communication(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, sender: $sender, recipient: $recipient, payload: $payload, medium: $medium, status: $status, encounter: $encounter, sent: $sent, received: $received, reason: $reason, subject: $subject, requestDetail: $requestDetail)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Communication &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -633,6 +602,7 @@ class _$_Communication implements _Communication {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -667,7 +637,9 @@ class _$_Communication implements _Communication {
 
 abstract class _Communication implements Communication {
   const factory _Communication(
-      {Id id,
+      {@JsonKey(defaultValue: 'Communication')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -676,24 +648,27 @@ abstract class _Communication implements Communication {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       Reference sender,
-      Reference recipient,
-      CommunicationPayload payload,
-      CodeableConcept medium,
+      List<Reference> recipient,
+      List<CommunicationPayload> payload,
+      List<CodeableConcept> medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus status,
       Reference encounter,
       FhirDateTime sent,
       FhirDateTime received,
-      CodeableConcept reason,
+      List<CodeableConcept> reason,
       Reference subject,
       Reference requestDetail}) = _$_Communication;
 
   factory _Communication.fromJson(Map<String, dynamic> json) =
       _$_Communication.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Communication')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -712,17 +687,17 @@ abstract class _Communication implements Communication {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   CodeableConcept get category;
   @override
   Reference get sender;
   @override
-  Reference get recipient;
+  List<Reference> get recipient;
   @override
-  CommunicationPayload get payload;
+  List<CommunicationPayload> get payload;
   @override
-  CodeableConcept get medium;
+  List<CodeableConcept> get medium;
   @override
   @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
   CommunicationStatus get status;
@@ -733,7 +708,7 @@ abstract class _Communication implements Communication {
   @override
   FhirDateTime get received;
   @override
-  CodeableConcept get reason;
+  List<CodeableConcept> get reason;
   @override
   Reference get subject;
   @override
@@ -750,7 +725,9 @@ class _$EpisodeOfCareTearOff {
   const _$EpisodeOfCareTearOff();
 
   _EpisodeOfCare call(
-      {Id id,
+      {@JsonKey(defaultValue: 'EpisodeOfCare')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -759,22 +736,23 @@ class _$EpisodeOfCareTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
-      EpisodeOfCareStatusHistory statusHistory,
-      CodeableConcept type,
-      Reference condition,
+      List<EpisodeOfCareStatusHistory> statusHistory,
+      List<CodeableConcept> type,
+      List<Reference> condition,
       @required
       @JsonKey(required: true)
           Reference patient,
       Reference managingOrganization,
       Period period,
-      Reference referralRequest,
+      List<Reference> referralRequest,
       Reference careManager,
-      EpisodeOfCareCareTeam careTeam}) {
+      List<EpisodeOfCareCareTeam> careTeam}) {
     return _EpisodeOfCare(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -802,6 +780,8 @@ class _$EpisodeOfCareTearOff {
 const $EpisodeOfCare = _$EpisodeOfCareTearOff();
 
 mixin _$EpisodeOfCare {
+  @JsonKey(defaultValue: 'EpisodeOfCare')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -811,19 +791,19 @@ mixin _$EpisodeOfCare {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
   EpisodeOfCareStatus get status;
-  EpisodeOfCareStatusHistory get statusHistory;
-  CodeableConcept get type;
-  Reference get condition;
+  List<EpisodeOfCareStatusHistory> get statusHistory;
+  List<CodeableConcept> get type;
+  List<Reference> get condition;
   @JsonKey(required: true)
   Reference get patient;
   Reference get managingOrganization;
   Period get period;
-  Reference get referralRequest;
+  List<Reference> get referralRequest;
   Reference get careManager;
-  EpisodeOfCareCareTeam get careTeam;
+  List<EpisodeOfCareCareTeam> get careTeam;
 
   Map<String, dynamic> toJson();
   $EpisodeOfCareCopyWith<EpisodeOfCare> get copyWith;
@@ -834,7 +814,9 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
           EpisodeOfCare value, $Res Function(EpisodeOfCare) then) =
       _$EpisodeOfCareCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'EpisodeOfCare')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -843,34 +825,28 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
-      EpisodeOfCareStatusHistory statusHistory,
-      CodeableConcept type,
-      Reference condition,
+      List<EpisodeOfCareStatusHistory> statusHistory,
+      List<CodeableConcept> type,
+      List<Reference> condition,
       @JsonKey(required: true)
           Reference patient,
       Reference managingOrganization,
       Period period,
-      Reference referralRequest,
+      List<Reference> referralRequest,
       Reference careManager,
-      EpisodeOfCareCareTeam careTeam});
+      List<EpisodeOfCareCareTeam> careTeam});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
-  $EpisodeOfCareStatusHistoryCopyWith<$Res> get statusHistory;
-  $CodeableConceptCopyWith<$Res> get type;
-  $ReferenceCopyWith<$Res> get condition;
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res> get managingOrganization;
   $PeriodCopyWith<$Res> get period;
-  $ReferenceCopyWith<$Res> get referralRequest;
   $ReferenceCopyWith<$Res> get careManager;
-  $EpisodeOfCareCareTeamCopyWith<$Res> get careTeam;
 }
 
 class _$EpisodeOfCareCopyWithImpl<$Res>
@@ -883,6 +859,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -904,6 +881,9 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
     Object careTeam = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -919,15 +899,17 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as EpisodeOfCareStatusHistory,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      condition:
-          condition == freezed ? _value.condition : condition as Reference,
+          : statusHistory as List<EpisodeOfCareStatusHistory>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+      condition: condition == freezed
+          ? _value.condition
+          : condition as List<Reference>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
@@ -935,13 +917,13 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period,
       referralRequest: referralRequest == freezed
           ? _value.referralRequest
-          : referralRequest as Reference,
+          : referralRequest as List<Reference>,
       careManager: careManager == freezed
           ? _value.careManager
           : careManager as Reference,
       careTeam: careTeam == freezed
           ? _value.careTeam
-          : careTeam as EpisodeOfCareCareTeam,
+          : careTeam as List<EpisodeOfCareCareTeam>,
     ));
   }
 
@@ -986,47 +968,6 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $EpisodeOfCareStatusHistoryCopyWith<$Res> get statusHistory {
-    if (_value.statusHistory == null) {
-      return null;
-    }
-    return $EpisodeOfCareStatusHistoryCopyWith<$Res>(_value.statusHistory,
-        (value) {
-      return _then(_value.copyWith(statusHistory: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get condition {
-    if (_value.condition == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.condition, (value) {
-      return _then(_value.copyWith(condition: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get patient {
     if (_value.patient == null) {
       return null;
@@ -1057,32 +998,12 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res> get referralRequest {
-    if (_value.referralRequest == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.referralRequest, (value) {
-      return _then(_value.copyWith(referralRequest: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get careManager {
     if (_value.careManager == null) {
       return null;
     }
     return $ReferenceCopyWith<$Res>(_value.careManager, (value) {
       return _then(_value.copyWith(careManager: value));
-    });
-  }
-
-  @override
-  $EpisodeOfCareCareTeamCopyWith<$Res> get careTeam {
-    if (_value.careTeam == null) {
-      return null;
-    }
-    return $EpisodeOfCareCareTeamCopyWith<$Res>(_value.careTeam, (value) {
-      return _then(_value.copyWith(careTeam: value));
     });
   }
 }
@@ -1094,7 +1015,9 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       __$EpisodeOfCareCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'EpisodeOfCare')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1103,19 +1026,19 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
-      EpisodeOfCareStatusHistory statusHistory,
-      CodeableConcept type,
-      Reference condition,
+      List<EpisodeOfCareStatusHistory> statusHistory,
+      List<CodeableConcept> type,
+      List<Reference> condition,
       @JsonKey(required: true)
           Reference patient,
       Reference managingOrganization,
       Period period,
-      Reference referralRequest,
+      List<Reference> referralRequest,
       Reference careManager,
-      EpisodeOfCareCareTeam careTeam});
+      List<EpisodeOfCareCareTeam> careTeam});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1126,25 +1049,13 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $EpisodeOfCareStatusHistoryCopyWith<$Res> get statusHistory;
-  @override
-  $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $ReferenceCopyWith<$Res> get condition;
-  @override
   $ReferenceCopyWith<$Res> get patient;
   @override
   $ReferenceCopyWith<$Res> get managingOrganization;
   @override
   $PeriodCopyWith<$Res> get period;
   @override
-  $ReferenceCopyWith<$Res> get referralRequest;
-  @override
   $ReferenceCopyWith<$Res> get careManager;
-  @override
-  $EpisodeOfCareCareTeamCopyWith<$Res> get careTeam;
 }
 
 class __$EpisodeOfCareCopyWithImpl<$Res>
@@ -1159,6 +1070,7 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1180,6 +1092,9 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
     Object careTeam = freezed,
   }) {
     return _then(_EpisodeOfCare(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1195,15 +1110,17 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as EpisodeOfCareStatusHistory,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      condition:
-          condition == freezed ? _value.condition : condition as Reference,
+          : statusHistory as List<EpisodeOfCareStatusHistory>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+      condition: condition == freezed
+          ? _value.condition
+          : condition as List<Reference>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
@@ -1211,13 +1128,13 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period,
       referralRequest: referralRequest == freezed
           ? _value.referralRequest
-          : referralRequest as Reference,
+          : referralRequest as List<Reference>,
       careManager: careManager == freezed
           ? _value.careManager
           : careManager as Reference,
       careTeam: careTeam == freezed
           ? _value.careTeam
-          : careTeam as EpisodeOfCareCareTeam,
+          : careTeam as List<EpisodeOfCareCareTeam>,
     ));
   }
 }
@@ -1225,7 +1142,9 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EpisodeOfCare implements _EpisodeOfCare {
   const _$_EpisodeOfCare(
-      {this.id,
+      {@JsonKey(defaultValue: 'EpisodeOfCare')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1256,6 +1175,9 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
       _$_$_EpisodeOfCareFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'EpisodeOfCare')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -1273,16 +1195,16 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
   final EpisodeOfCareStatus status;
   @override
-  final EpisodeOfCareStatusHistory statusHistory;
+  final List<EpisodeOfCareStatusHistory> statusHistory;
   @override
-  final CodeableConcept type;
+  final List<CodeableConcept> type;
   @override
-  final Reference condition;
+  final List<Reference> condition;
   @override
   @JsonKey(required: true)
   final Reference patient;
@@ -1291,21 +1213,24 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   @override
   final Period period;
   @override
-  final Reference referralRequest;
+  final List<Reference> referralRequest;
   @override
   final Reference careManager;
   @override
-  final EpisodeOfCareCareTeam careTeam;
+  final List<EpisodeOfCareCareTeam> careTeam;
 
   @override
   String toString() {
-    return 'EpisodeOfCare(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusHistory: $statusHistory, type: $type, condition: $condition, patient: $patient, managingOrganization: $managingOrganization, period: $period, referralRequest: $referralRequest, careManager: $careManager, careTeam: $careTeam)';
+    return 'EpisodeOfCare(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusHistory: $statusHistory, type: $type, condition: $condition, patient: $patient, managingOrganization: $managingOrganization, period: $period, referralRequest: $referralRequest, careManager: $careManager, careTeam: $careTeam)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _EpisodeOfCare &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1362,6 +1287,7 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1394,7 +1320,9 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
 
 abstract class _EpisodeOfCare implements EpisodeOfCare {
   const factory _EpisodeOfCare(
-      {Id id,
+      {@JsonKey(defaultValue: 'EpisodeOfCare')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1403,25 +1331,28 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
-      EpisodeOfCareStatusHistory statusHistory,
-      CodeableConcept type,
-      Reference condition,
+      List<EpisodeOfCareStatusHistory> statusHistory,
+      List<CodeableConcept> type,
+      List<Reference> condition,
       @required
       @JsonKey(required: true)
           Reference patient,
       Reference managingOrganization,
       Period period,
-      Reference referralRequest,
+      List<Reference> referralRequest,
       Reference careManager,
-      EpisodeOfCareCareTeam careTeam}) = _$_EpisodeOfCare;
+      List<EpisodeOfCareCareTeam> careTeam}) = _$_EpisodeOfCare;
 
   factory _EpisodeOfCare.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCare.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'EpisodeOfCare')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1440,16 +1371,16 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
   EpisodeOfCareStatus get status;
   @override
-  EpisodeOfCareStatusHistory get statusHistory;
+  List<EpisodeOfCareStatusHistory> get statusHistory;
   @override
-  CodeableConcept get type;
+  List<CodeableConcept> get type;
   @override
-  Reference get condition;
+  List<Reference> get condition;
   @override
   @JsonKey(required: true)
   Reference get patient;
@@ -1458,11 +1389,11 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
   @override
   Period get period;
   @override
-  Reference get referralRequest;
+  List<Reference> get referralRequest;
   @override
   Reference get careManager;
   @override
-  EpisodeOfCareCareTeam get careTeam;
+  List<EpisodeOfCareCareTeam> get careTeam;
   @override
   _$EpisodeOfCareCopyWith<_EpisodeOfCare> get copyWith;
 }
@@ -1475,7 +1406,9 @@ class _$EncounterTearOff {
   const _$EncounterTearOff();
 
   _Encounter call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Encounter')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1484,29 +1417,30 @@ class _$EncounterTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required
       @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
-      EncounterStatusHistory statusHistory,
+      List<EncounterStatusHistory> statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass class_,
-      CodeableConcept type,
+      List<CodeableConcept> type,
       CodeableConcept priority,
       Reference patient,
-      Reference episodeOfCare,
-      Reference incomingReferral,
-      EncounterParticipant participant,
+      List<Reference> episodeOfCare,
+      List<Reference> incomingReferral,
+      List<EncounterParticipant> participant,
       Reference appointment,
       Period period,
       Quantity length,
-      CodeableConcept reason,
-      Reference indication,
+      List<CodeableConcept> reason,
+      List<Reference> indication,
       EncounterHospitalization hospitalization,
-      EncounterLocation location,
+      List<EncounterLocation> location,
       Reference serviceProvider,
       Reference partOf}) {
     return _Encounter(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1542,6 +1476,8 @@ class _$EncounterTearOff {
 const $Encounter = _$EncounterTearOff();
 
 mixin _$Encounter {
+  @JsonKey(defaultValue: 'Encounter')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1551,25 +1487,25 @@ mixin _$Encounter {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
-  EncounterStatusHistory get statusHistory;
+  List<EncounterStatusHistory> get statusHistory;
   @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
   EncounterClass get class_;
-  CodeableConcept get type;
+  List<CodeableConcept> get type;
   CodeableConcept get priority;
   Reference get patient;
-  Reference get episodeOfCare;
-  Reference get incomingReferral;
-  EncounterParticipant get participant;
+  List<Reference> get episodeOfCare;
+  List<Reference> get incomingReferral;
+  List<EncounterParticipant> get participant;
   Reference get appointment;
   Period get period;
   Quantity get length;
-  CodeableConcept get reason;
-  Reference get indication;
+  List<CodeableConcept> get reason;
+  List<Reference> get indication;
   EncounterHospitalization get hospitalization;
-  EncounterLocation get location;
+  List<EncounterLocation> get location;
   Reference get serviceProvider;
   Reference get partOf;
 
@@ -1581,7 +1517,9 @@ abstract class $EncounterCopyWith<$Res> {
   factory $EncounterCopyWith(Encounter value, $Res Function(Encounter) then) =
       _$EncounterCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Encounter')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1590,25 +1528,25 @@ abstract class $EncounterCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
-      EncounterStatusHistory statusHistory,
+      List<EncounterStatusHistory> statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass class_,
-      CodeableConcept type,
+      List<CodeableConcept> type,
       CodeableConcept priority,
       Reference patient,
-      Reference episodeOfCare,
-      Reference incomingReferral,
-      EncounterParticipant participant,
+      List<Reference> episodeOfCare,
+      List<Reference> incomingReferral,
+      List<EncounterParticipant> participant,
       Reference appointment,
       Period period,
       Quantity length,
-      CodeableConcept reason,
-      Reference indication,
+      List<CodeableConcept> reason,
+      List<Reference> indication,
       EncounterHospitalization hospitalization,
-      EncounterLocation location,
+      List<EncounterLocation> location,
       Reference serviceProvider,
       Reference partOf});
 
@@ -1616,21 +1554,12 @@ abstract class $EncounterCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
-  $EncounterStatusHistoryCopyWith<$Res> get statusHistory;
-  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get priority;
   $ReferenceCopyWith<$Res> get patient;
-  $ReferenceCopyWith<$Res> get episodeOfCare;
-  $ReferenceCopyWith<$Res> get incomingReferral;
-  $EncounterParticipantCopyWith<$Res> get participant;
   $ReferenceCopyWith<$Res> get appointment;
   $PeriodCopyWith<$Res> get period;
   $QuantityCopyWith<$Res> get length;
-  $CodeableConceptCopyWith<$Res> get reason;
-  $ReferenceCopyWith<$Res> get indication;
   $EncounterHospitalizationCopyWith<$Res> get hospitalization;
-  $EncounterLocationCopyWith<$Res> get location;
   $ReferenceCopyWith<$Res> get serviceProvider;
   $ReferenceCopyWith<$Res> get partOf;
 }
@@ -1644,6 +1573,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1673,6 +1603,9 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
     Object partOf = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1688,39 +1621,43 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as EncounterStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as EncounterStatusHistory,
+          : statusHistory as List<EncounterStatusHistory>,
       class_: class_ == freezed ? _value.class_ : class_ as EncounterClass,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept,
       patient: patient == freezed ? _value.patient : patient as Reference,
       episodeOfCare: episodeOfCare == freezed
           ? _value.episodeOfCare
-          : episodeOfCare as Reference,
+          : episodeOfCare as List<Reference>,
       incomingReferral: incomingReferral == freezed
           ? _value.incomingReferral
-          : incomingReferral as Reference,
+          : incomingReferral as List<Reference>,
       participant: participant == freezed
           ? _value.participant
-          : participant as EncounterParticipant,
+          : participant as List<EncounterParticipant>,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference,
       period: period == freezed ? _value.period : period as Period,
       length: length == freezed ? _value.length : length as Quantity,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
-      indication:
-          indication == freezed ? _value.indication : indication as Reference,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
+      indication: indication == freezed
+          ? _value.indication
+          : indication as List<Reference>,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
           : hospitalization as EncounterHospitalization,
-      location:
-          location == freezed ? _value.location : location as EncounterLocation,
+      location: location == freezed
+          ? _value.location
+          : location as List<EncounterLocation>,
       serviceProvider: serviceProvider == freezed
           ? _value.serviceProvider
           : serviceProvider as Reference,
@@ -1769,36 +1706,6 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $EncounterStatusHistoryCopyWith<$Res> get statusHistory {
-    if (_value.statusHistory == null) {
-      return null;
-    }
-    return $EncounterStatusHistoryCopyWith<$Res>(_value.statusHistory, (value) {
-      return _then(_value.copyWith(statusHistory: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get priority {
     if (_value.priority == null) {
       return null;
@@ -1815,36 +1722,6 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
     }
     return $ReferenceCopyWith<$Res>(_value.patient, (value) {
       return _then(_value.copyWith(patient: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get episodeOfCare {
-    if (_value.episodeOfCare == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.episodeOfCare, (value) {
-      return _then(_value.copyWith(episodeOfCare: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get incomingReferral {
-    if (_value.incomingReferral == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.incomingReferral, (value) {
-      return _then(_value.copyWith(incomingReferral: value));
-    });
-  }
-
-  @override
-  $EncounterParticipantCopyWith<$Res> get participant {
-    if (_value.participant == null) {
-      return null;
-    }
-    return $EncounterParticipantCopyWith<$Res>(_value.participant, (value) {
-      return _then(_value.copyWith(participant: value));
     });
   }
 
@@ -1879,26 +1756,6 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get reason {
-    if (_value.reason == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
-      return _then(_value.copyWith(reason: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get indication {
-    if (_value.indication == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.indication, (value) {
-      return _then(_value.copyWith(indication: value));
-    });
-  }
-
-  @override
   $EncounterHospitalizationCopyWith<$Res> get hospitalization {
     if (_value.hospitalization == null) {
       return null;
@@ -1906,16 +1763,6 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
     return $EncounterHospitalizationCopyWith<$Res>(_value.hospitalization,
         (value) {
       return _then(_value.copyWith(hospitalization: value));
-    });
-  }
-
-  @override
-  $EncounterLocationCopyWith<$Res> get location {
-    if (_value.location == null) {
-      return null;
-    }
-    return $EncounterLocationCopyWith<$Res>(_value.location, (value) {
-      return _then(_value.copyWith(location: value));
     });
   }
 
@@ -1946,7 +1793,9 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       __$EncounterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Encounter')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1955,25 +1804,25 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
-      EncounterStatusHistory statusHistory,
+      List<EncounterStatusHistory> statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass class_,
-      CodeableConcept type,
+      List<CodeableConcept> type,
       CodeableConcept priority,
       Reference patient,
-      Reference episodeOfCare,
-      Reference incomingReferral,
-      EncounterParticipant participant,
+      List<Reference> episodeOfCare,
+      List<Reference> incomingReferral,
+      List<EncounterParticipant> participant,
       Reference appointment,
       Period period,
       Quantity length,
-      CodeableConcept reason,
-      Reference indication,
+      List<CodeableConcept> reason,
+      List<Reference> indication,
       EncounterHospitalization hospitalization,
-      EncounterLocation location,
+      List<EncounterLocation> location,
       Reference serviceProvider,
       Reference partOf});
 
@@ -1986,21 +1835,9 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $EncounterStatusHistoryCopyWith<$Res> get statusHistory;
-  @override
-  $CodeableConceptCopyWith<$Res> get type;
-  @override
   $CodeableConceptCopyWith<$Res> get priority;
   @override
   $ReferenceCopyWith<$Res> get patient;
-  @override
-  $ReferenceCopyWith<$Res> get episodeOfCare;
-  @override
-  $ReferenceCopyWith<$Res> get incomingReferral;
-  @override
-  $EncounterParticipantCopyWith<$Res> get participant;
   @override
   $ReferenceCopyWith<$Res> get appointment;
   @override
@@ -2008,13 +1845,7 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   @override
   $QuantityCopyWith<$Res> get length;
   @override
-  $CodeableConceptCopyWith<$Res> get reason;
-  @override
-  $ReferenceCopyWith<$Res> get indication;
-  @override
   $EncounterHospitalizationCopyWith<$Res> get hospitalization;
-  @override
-  $EncounterLocationCopyWith<$Res> get location;
   @override
   $ReferenceCopyWith<$Res> get serviceProvider;
   @override
@@ -2031,6 +1862,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2060,6 +1892,9 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
     Object partOf = freezed,
   }) {
     return _then(_Encounter(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2075,39 +1910,43 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as EncounterStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as EncounterStatusHistory,
+          : statusHistory as List<EncounterStatusHistory>,
       class_: class_ == freezed ? _value.class_ : class_ as EncounterClass,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept,
       patient: patient == freezed ? _value.patient : patient as Reference,
       episodeOfCare: episodeOfCare == freezed
           ? _value.episodeOfCare
-          : episodeOfCare as Reference,
+          : episodeOfCare as List<Reference>,
       incomingReferral: incomingReferral == freezed
           ? _value.incomingReferral
-          : incomingReferral as Reference,
+          : incomingReferral as List<Reference>,
       participant: participant == freezed
           ? _value.participant
-          : participant as EncounterParticipant,
+          : participant as List<EncounterParticipant>,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference,
       period: period == freezed ? _value.period : period as Period,
       length: length == freezed ? _value.length : length as Quantity,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
-      indication:
-          indication == freezed ? _value.indication : indication as Reference,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
+      indication: indication == freezed
+          ? _value.indication
+          : indication as List<Reference>,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
           : hospitalization as EncounterHospitalization,
-      location:
-          location == freezed ? _value.location : location as EncounterLocation,
+      location: location == freezed
+          ? _value.location
+          : location as List<EncounterLocation>,
       serviceProvider: serviceProvider == freezed
           ? _value.serviceProvider
           : serviceProvider as Reference,
@@ -2119,7 +1958,9 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Encounter implements _Encounter {
   const _$_Encounter(
-      {this.id,
+      {@JsonKey(defaultValue: 'Encounter')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -2156,6 +1997,9 @@ class _$_Encounter implements _Encounter {
       _$_$_EncounterFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Encounter')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -2173,27 +2017,27 @@ class _$_Encounter implements _Encounter {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
   final EncounterStatus status;
   @override
-  final EncounterStatusHistory statusHistory;
+  final List<EncounterStatusHistory> statusHistory;
   @override
   @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
   final EncounterClass class_;
   @override
-  final CodeableConcept type;
+  final List<CodeableConcept> type;
   @override
   final CodeableConcept priority;
   @override
   final Reference patient;
   @override
-  final Reference episodeOfCare;
+  final List<Reference> episodeOfCare;
   @override
-  final Reference incomingReferral;
+  final List<Reference> incomingReferral;
   @override
-  final EncounterParticipant participant;
+  final List<EncounterParticipant> participant;
   @override
   final Reference appointment;
   @override
@@ -2201,13 +2045,13 @@ class _$_Encounter implements _Encounter {
   @override
   final Quantity length;
   @override
-  final CodeableConcept reason;
+  final List<CodeableConcept> reason;
   @override
-  final Reference indication;
+  final List<Reference> indication;
   @override
   final EncounterHospitalization hospitalization;
   @override
-  final EncounterLocation location;
+  final List<EncounterLocation> location;
   @override
   final Reference serviceProvider;
   @override
@@ -2215,13 +2059,16 @@ class _$_Encounter implements _Encounter {
 
   @override
   String toString() {
-    return 'Encounter(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusHistory: $statusHistory, class_: $class_, type: $type, priority: $priority, patient: $patient, episodeOfCare: $episodeOfCare, incomingReferral: $incomingReferral, participant: $participant, appointment: $appointment, period: $period, length: $length, reason: $reason, indication: $indication, hospitalization: $hospitalization, location: $location, serviceProvider: $serviceProvider, partOf: $partOf)';
+    return 'Encounter(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusHistory: $statusHistory, class_: $class_, type: $type, priority: $priority, patient: $patient, episodeOfCare: $episodeOfCare, incomingReferral: $incomingReferral, participant: $participant, appointment: $appointment, period: $period, length: $length, reason: $reason, indication: $indication, hospitalization: $hospitalization, location: $location, serviceProvider: $serviceProvider, partOf: $partOf)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Encounter &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -2288,15 +2135,14 @@ class _$_Encounter implements _Encounter {
             (identical(other.location, location) ||
                 const DeepCollectionEquality()
                     .equals(other.location, location)) &&
-            (identical(other.serviceProvider, serviceProvider) ||
-                const DeepCollectionEquality()
-                    .equals(other.serviceProvider, serviceProvider)) &&
+            (identical(other.serviceProvider, serviceProvider) || const DeepCollectionEquality().equals(other.serviceProvider, serviceProvider)) &&
             (identical(other.partOf, partOf) || const DeepCollectionEquality().equals(other.partOf, partOf)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -2337,7 +2183,9 @@ class _$_Encounter implements _Encounter {
 
 abstract class _Encounter implements Encounter {
   const factory _Encounter(
-      {Id id,
+      {@JsonKey(defaultValue: 'Encounter')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2346,32 +2194,35 @@ abstract class _Encounter implements Encounter {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required
       @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
-      EncounterStatusHistory statusHistory,
+      List<EncounterStatusHistory> statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass class_,
-      CodeableConcept type,
+      List<CodeableConcept> type,
       CodeableConcept priority,
       Reference patient,
-      Reference episodeOfCare,
-      Reference incomingReferral,
-      EncounterParticipant participant,
+      List<Reference> episodeOfCare,
+      List<Reference> incomingReferral,
+      List<EncounterParticipant> participant,
       Reference appointment,
       Period period,
       Quantity length,
-      CodeableConcept reason,
-      Reference indication,
+      List<CodeableConcept> reason,
+      List<Reference> indication,
       EncounterHospitalization hospitalization,
-      EncounterLocation location,
+      List<EncounterLocation> location,
       Reference serviceProvider,
       Reference partOf}) = _$_Encounter;
 
   factory _Encounter.fromJson(Map<String, dynamic> json) =
       _$_Encounter.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Encounter')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -2390,27 +2241,27 @@ abstract class _Encounter implements Encounter {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
   @override
-  EncounterStatusHistory get statusHistory;
+  List<EncounterStatusHistory> get statusHistory;
   @override
   @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
   EncounterClass get class_;
   @override
-  CodeableConcept get type;
+  List<CodeableConcept> get type;
   @override
   CodeableConcept get priority;
   @override
   Reference get patient;
   @override
-  Reference get episodeOfCare;
+  List<Reference> get episodeOfCare;
   @override
-  Reference get incomingReferral;
+  List<Reference> get incomingReferral;
   @override
-  EncounterParticipant get participant;
+  List<EncounterParticipant> get participant;
   @override
   Reference get appointment;
   @override
@@ -2418,13 +2269,13 @@ abstract class _Encounter implements Encounter {
   @override
   Quantity get length;
   @override
-  CodeableConcept get reason;
+  List<CodeableConcept> get reason;
   @override
-  Reference get indication;
+  List<Reference> get indication;
   @override
   EncounterHospitalization get hospitalization;
   @override
-  EncounterLocation get location;
+  List<EncounterLocation> get location;
   @override
   Reference get serviceProvider;
   @override
@@ -2441,7 +2292,9 @@ class _$FlagTearOff {
   const _$FlagTearOff();
 
   _Flag call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Flag')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2450,7 +2303,7 @@ class _$FlagTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       @required
       @JsonKey(required: true, unknownEnumValue: FlagStatus.unknown)
@@ -2465,6 +2318,7 @@ class _$FlagTearOff {
       @JsonKey(required: true)
           CodeableConcept code}) {
     return _Flag(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -2489,6 +2343,8 @@ class _$FlagTearOff {
 const $Flag = _$FlagTearOff();
 
 mixin _$Flag {
+  @JsonKey(defaultValue: 'Flag')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2498,7 +2354,7 @@ mixin _$Flag {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   CodeableConcept get category;
   @JsonKey(required: true, unknownEnumValue: FlagStatus.unknown)
   FlagStatus get status;
@@ -2518,7 +2374,9 @@ abstract class $FlagCopyWith<$Res> {
   factory $FlagCopyWith(Flag value, $Res Function(Flag) then) =
       _$FlagCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Flag')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2527,7 +2385,7 @@ abstract class $FlagCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       @JsonKey(required: true, unknownEnumValue: FlagStatus.unknown)
           FlagStatus status,
@@ -2543,7 +2401,6 @@ abstract class $FlagCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get category;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get subject;
@@ -2561,6 +2418,7 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2579,6 +2437,9 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
     Object code = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2594,8 +2455,9 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       status: status == freezed ? _value.status : status as FlagStatus,
@@ -2645,16 +2507,6 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -2724,7 +2576,9 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       __$FlagCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Flag')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2733,7 +2587,7 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       @JsonKey(required: true, unknownEnumValue: FlagStatus.unknown)
           FlagStatus status,
@@ -2753,8 +2607,6 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get category;
   @override
@@ -2779,6 +2631,7 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2797,6 +2650,9 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
     Object code = freezed,
   }) {
     return _then(_Flag(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2812,8 +2668,9 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       status: status == freezed ? _value.status : status as FlagStatus,
@@ -2830,7 +2687,9 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Flag implements _Flag {
   const _$_Flag(
-      {this.id,
+      {@JsonKey(defaultValue: 'Flag')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -2861,6 +2720,9 @@ class _$_Flag implements _Flag {
       _$_$_FlagFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Flag')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -2878,7 +2740,7 @@ class _$_Flag implements _Flag {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final CodeableConcept category;
   @override
@@ -2899,13 +2761,16 @@ class _$_Flag implements _Flag {
 
   @override
   String toString() {
-    return 'Flag(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, status: $status, period: $period, subject: $subject, encounter: $encounter, author: $author, code: $code)';
+    return 'Flag(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, status: $status, period: $period, subject: $subject, encounter: $encounter, author: $author, code: $code)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Flag &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -2952,6 +2817,7 @@ class _$_Flag implements _Flag {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -2981,7 +2847,9 @@ class _$_Flag implements _Flag {
 
 abstract class _Flag implements Flag {
   const factory _Flag(
-      {Id id,
+      {@JsonKey(defaultValue: 'Flag')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2990,7 +2858,7 @@ abstract class _Flag implements Flag {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       CodeableConcept category,
       @required
       @JsonKey(required: true, unknownEnumValue: FlagStatus.unknown)
@@ -3007,6 +2875,9 @@ abstract class _Flag implements Flag {
 
   factory _Flag.fromJson(Map<String, dynamic> json) = _$_Flag.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Flag')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -3025,7 +2896,7 @@ abstract class _Flag implements Flag {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   CodeableConcept get category;
   @override
@@ -3058,12 +2929,16 @@ class _$CommunicationPayloadTearOff {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @required @JsonKey(required: true) String contentX}) {
+      String contentString,
+      Attachment contentAttachment,
+      Reference contentReference}) {
     return _CommunicationPayload(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      contentX: contentX,
+      contentString: contentString,
+      contentAttachment: contentAttachment,
+      contentReference: contentReference,
     );
   }
 }
@@ -3076,8 +2951,9 @@ mixin _$CommunicationPayload {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  @JsonKey(required: true)
-  String get contentX;
+  String get contentString;
+  Attachment get contentAttachment;
+  Reference get contentReference;
 
   Map<String, dynamic> toJson();
   $CommunicationPayloadCopyWith<CommunicationPayload> get copyWith;
@@ -3091,10 +2967,14 @@ abstract class $CommunicationPayloadCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) String contentX});
+      String contentString,
+      Attachment contentAttachment,
+      Reference contentReference});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  $ReferenceCopyWith<$Res> get contentReference;
 }
 
 class _$CommunicationPayloadCopyWithImpl<$Res>
@@ -3110,7 +2990,9 @@ class _$CommunicationPayloadCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentString = freezed,
+    Object contentAttachment = freezed,
+    Object contentReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3120,7 +3002,15 @@ class _$CommunicationPayloadCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as String,
+      contentString: contentString == freezed
+          ? _value.contentString
+          : contentString as String,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      contentReference: contentReference == freezed
+          ? _value.contentReference
+          : contentReference as Reference,
     ));
   }
 
@@ -3143,6 +3033,26 @@ class _$CommunicationPayloadCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
+
+  @override
+  $AttachmentCopyWith<$Res> get contentAttachment {
+    if (_value.contentAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.contentAttachment, (value) {
+      return _then(_value.copyWith(contentAttachment: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get contentReference {
+    if (_value.contentReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.contentReference, (value) {
+      return _then(_value.copyWith(contentReference: value));
+    });
+  }
 }
 
 abstract class _$CommunicationPayloadCopyWith<$Res>
@@ -3155,12 +3065,18 @@ abstract class _$CommunicationPayloadCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) String contentX});
+      String contentString,
+      Attachment contentAttachment,
+      Reference contentReference});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  @override
+  $ReferenceCopyWith<$Res> get contentReference;
 }
 
 class __$CommunicationPayloadCopyWithImpl<$Res>
@@ -3178,7 +3094,9 @@ class __$CommunicationPayloadCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentString = freezed,
+    Object contentAttachment = freezed,
+    Object contentReference = freezed,
   }) {
     return _then(_CommunicationPayload(
       id: id == freezed ? _value.id : id as Id,
@@ -3188,7 +3106,15 @@ class __$CommunicationPayloadCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as String,
+      contentString: contentString == freezed
+          ? _value.contentString
+          : contentString as String,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      contentReference: contentReference == freezed
+          ? _value.contentReference
+          : contentReference as Reference,
     ));
   }
 }
@@ -3199,8 +3125,9 @@ class _$_CommunicationPayload implements _CommunicationPayload {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required @JsonKey(required: true) this.contentX})
-      : assert(contentX != null);
+      this.contentString,
+      this.contentAttachment,
+      this.contentReference});
 
   factory _$_CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationPayloadFromJson(json);
@@ -3213,12 +3140,15 @@ class _$_CommunicationPayload implements _CommunicationPayload {
   @override
   final FhirExtension modifierExtension;
   @override
-  @JsonKey(required: true)
-  final String contentX;
+  final String contentString;
+  @override
+  final Attachment contentAttachment;
+  @override
+  final Reference contentReference;
 
   @override
   String toString() {
-    return 'CommunicationPayload(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentX: $contentX)';
+    return 'CommunicationPayload(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentString: $contentString, contentAttachment: $contentAttachment, contentReference: $contentReference)';
   }
 
   @override
@@ -3233,9 +3163,15 @@ class _$_CommunicationPayload implements _CommunicationPayload {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.contentX, contentX) ||
+            (identical(other.contentString, contentString) ||
                 const DeepCollectionEquality()
-                    .equals(other.contentX, contentX)));
+                    .equals(other.contentString, contentString)) &&
+            (identical(other.contentAttachment, contentAttachment) ||
+                const DeepCollectionEquality()
+                    .equals(other.contentAttachment, contentAttachment)) &&
+            (identical(other.contentReference, contentReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.contentReference, contentReference)));
   }
 
   @override
@@ -3244,7 +3180,9 @@ class _$_CommunicationPayload implements _CommunicationPayload {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(contentX);
+      const DeepCollectionEquality().hash(contentString) ^
+      const DeepCollectionEquality().hash(contentAttachment) ^
+      const DeepCollectionEquality().hash(contentReference);
 
   @override
   _$CommunicationPayloadCopyWith<_CommunicationPayload> get copyWith =>
@@ -3259,11 +3197,12 @@ class _$_CommunicationPayload implements _CommunicationPayload {
 
 abstract class _CommunicationPayload implements CommunicationPayload {
   const factory _CommunicationPayload(
-          {Id id,
-          @JsonKey(name: 'extension') FhirExtension extension_,
-          FhirExtension modifierExtension,
-          @required @JsonKey(required: true) String contentX}) =
-      _$_CommunicationPayload;
+      {Id id,
+      @JsonKey(name: 'extension') FhirExtension extension_,
+      FhirExtension modifierExtension,
+      String contentString,
+      Attachment contentAttachment,
+      Reference contentReference}) = _$_CommunicationPayload;
 
   factory _CommunicationPayload.fromJson(Map<String, dynamic> json) =
       _$_CommunicationPayload.fromJson;
@@ -3276,8 +3215,11 @@ abstract class _CommunicationPayload implements CommunicationPayload {
   @override
   FhirExtension get modifierExtension;
   @override
-  @JsonKey(required: true)
-  String get contentX;
+  String get contentString;
+  @override
+  Attachment get contentAttachment;
+  @override
+  Reference get contentReference;
   @override
   _$CommunicationPayloadCopyWith<_CommunicationPayload> get copyWith;
 }
@@ -3592,7 +3534,7 @@ class _$EpisodeOfCareCareTeamTearOff {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept role,
+      List<CodeableConcept> role,
       Period period,
       Reference member}) {
     return _EpisodeOfCareCareTeam(
@@ -3614,7 +3556,7 @@ mixin _$EpisodeOfCareCareTeam {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  CodeableConcept get role;
+  List<CodeableConcept> get role;
   Period get period;
   Reference get member;
 
@@ -3630,13 +3572,12 @@ abstract class $EpisodeOfCareCareTeamCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept role,
+      List<CodeableConcept> role,
       Period period,
       Reference member});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get role;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get member;
 }
@@ -3666,7 +3607,7 @@ class _$EpisodeOfCareCareTeamCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
       period: period == freezed ? _value.period : period as Period,
       member: member == freezed ? _value.member : member as Reference,
     ));
@@ -3689,16 +3630,6 @@ class _$EpisodeOfCareCareTeamCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get role {
-    if (_value.role == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
-      return _then(_value.copyWith(role: value));
     });
   }
 
@@ -3733,7 +3664,7 @@ abstract class _$EpisodeOfCareCareTeamCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept role,
+      List<CodeableConcept> role,
       Period period,
       Reference member});
 
@@ -3741,8 +3672,6 @@ abstract class _$EpisodeOfCareCareTeamCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $CodeableConceptCopyWith<$Res> get role;
   @override
   $PeriodCopyWith<$Res> get period;
   @override
@@ -3776,7 +3705,7 @@ class __$EpisodeOfCareCareTeamCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
       period: period == freezed ? _value.period : period as Period,
       member: member == freezed ? _value.member : member as Reference,
     ));
@@ -3804,7 +3733,7 @@ class _$_EpisodeOfCareCareTeam implements _EpisodeOfCareCareTeam {
   @override
   final FhirExtension modifierExtension;
   @override
-  final CodeableConcept role;
+  final List<CodeableConcept> role;
   @override
   final Period period;
   @override
@@ -3861,7 +3790,7 @@ abstract class _EpisodeOfCareCareTeam implements EpisodeOfCareCareTeam {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept role,
+      List<CodeableConcept> role,
       Period period,
       Reference member}) = _$_EpisodeOfCareCareTeam;
 
@@ -3876,7 +3805,7 @@ abstract class _EpisodeOfCareCareTeam implements EpisodeOfCareCareTeam {
   @override
   FhirExtension get modifierExtension;
   @override
-  CodeableConcept get role;
+  List<CodeableConcept> get role;
   @override
   Period get period;
   @override
@@ -4188,7 +4117,7 @@ class _$EncounterParticipantTearOff {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept type,
+      List<CodeableConcept> type,
       Period period,
       Reference individual}) {
     return _EncounterParticipant(
@@ -4210,7 +4139,7 @@ mixin _$EncounterParticipant {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  CodeableConcept get type;
+  List<CodeableConcept> get type;
   Period get period;
   Reference get individual;
 
@@ -4226,13 +4155,12 @@ abstract class $EncounterParticipantCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept type,
+      List<CodeableConcept> type,
       Period period,
       Reference individual});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get type;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get individual;
 }
@@ -4262,7 +4190,7 @@ class _$EncounterParticipantCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       period: period == freezed ? _value.period : period as Period,
       individual:
           individual == freezed ? _value.individual : individual as Reference,
@@ -4286,16 +4214,6 @@ class _$EncounterParticipantCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
     });
   }
 
@@ -4330,7 +4248,7 @@ abstract class _$EncounterParticipantCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept type,
+      List<CodeableConcept> type,
       Period period,
       Reference individual});
 
@@ -4338,8 +4256,6 @@ abstract class _$EncounterParticipantCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $CodeableConceptCopyWith<$Res> get type;
   @override
   $PeriodCopyWith<$Res> get period;
   @override
@@ -4373,7 +4289,7 @@ class __$EncounterParticipantCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       period: period == freezed ? _value.period : period as Period,
       individual:
           individual == freezed ? _value.individual : individual as Reference,
@@ -4402,7 +4318,7 @@ class _$_EncounterParticipant implements _EncounterParticipant {
   @override
   final FhirExtension modifierExtension;
   @override
-  final CodeableConcept type;
+  final List<CodeableConcept> type;
   @override
   final Period period;
   @override
@@ -4460,7 +4376,7 @@ abstract class _EncounterParticipant implements EncounterParticipant {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      CodeableConcept type,
+      List<CodeableConcept> type,
       Period period,
       Reference individual}) = _$_EncounterParticipant;
 
@@ -4475,7 +4391,7 @@ abstract class _EncounterParticipant implements EncounterParticipant {
   @override
   FhirExtension get modifierExtension;
   @override
-  CodeableConcept get type;
+  List<CodeableConcept> get type;
   @override
   Period get period;
   @override
@@ -4499,14 +4415,14 @@ class _$EncounterHospitalizationTearOff {
       Identifier preAdmissionIdentifier,
       Reference origin,
       CodeableConcept admitSource,
-      Reference admittingDiagnosis,
+      List<Reference> admittingDiagnosis,
       CodeableConcept reAdmission,
-      CodeableConcept dietPreference,
-      CodeableConcept specialCourtesy,
-      CodeableConcept specialArrangement,
+      List<CodeableConcept> dietPreference,
+      List<CodeableConcept> specialCourtesy,
+      List<CodeableConcept> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition,
-      Reference dischargeDiagnosis}) {
+      List<Reference> dischargeDiagnosis}) {
     return _EncounterHospitalization(
       id: id,
       extension_: extension_,
@@ -4537,14 +4453,14 @@ mixin _$EncounterHospitalization {
   Identifier get preAdmissionIdentifier;
   Reference get origin;
   CodeableConcept get admitSource;
-  Reference get admittingDiagnosis;
+  List<Reference> get admittingDiagnosis;
   CodeableConcept get reAdmission;
-  CodeableConcept get dietPreference;
-  CodeableConcept get specialCourtesy;
-  CodeableConcept get specialArrangement;
+  List<CodeableConcept> get dietPreference;
+  List<CodeableConcept> get specialCourtesy;
+  List<CodeableConcept> get specialArrangement;
   Reference get destination;
   CodeableConcept get dischargeDisposition;
-  Reference get dischargeDiagnosis;
+  List<Reference> get dischargeDiagnosis;
 
   Map<String, dynamic> toJson();
   $EncounterHospitalizationCopyWith<EncounterHospitalization> get copyWith;
@@ -4561,28 +4477,23 @@ abstract class $EncounterHospitalizationCopyWith<$Res> {
       Identifier preAdmissionIdentifier,
       Reference origin,
       CodeableConcept admitSource,
-      Reference admittingDiagnosis,
+      List<Reference> admittingDiagnosis,
       CodeableConcept reAdmission,
-      CodeableConcept dietPreference,
-      CodeableConcept specialCourtesy,
-      CodeableConcept specialArrangement,
+      List<CodeableConcept> dietPreference,
+      List<CodeableConcept> specialCourtesy,
+      List<CodeableConcept> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition,
-      Reference dischargeDiagnosis});
+      List<Reference> dischargeDiagnosis});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get preAdmissionIdentifier;
   $ReferenceCopyWith<$Res> get origin;
   $CodeableConceptCopyWith<$Res> get admitSource;
-  $ReferenceCopyWith<$Res> get admittingDiagnosis;
   $CodeableConceptCopyWith<$Res> get reAdmission;
-  $CodeableConceptCopyWith<$Res> get dietPreference;
-  $CodeableConceptCopyWith<$Res> get specialCourtesy;
-  $CodeableConceptCopyWith<$Res> get specialArrangement;
   $ReferenceCopyWith<$Res> get destination;
   $CodeableConceptCopyWith<$Res> get dischargeDisposition;
-  $ReferenceCopyWith<$Res> get dischargeDiagnosis;
 }
 
 class _$EncounterHospitalizationCopyWithImpl<$Res>
@@ -4627,19 +4538,19 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
           : admitSource as CodeableConcept,
       admittingDiagnosis: admittingDiagnosis == freezed
           ? _value.admittingDiagnosis
-          : admittingDiagnosis as Reference,
+          : admittingDiagnosis as List<Reference>,
       reAdmission: reAdmission == freezed
           ? _value.reAdmission
           : reAdmission as CodeableConcept,
       dietPreference: dietPreference == freezed
           ? _value.dietPreference
-          : dietPreference as CodeableConcept,
+          : dietPreference as List<CodeableConcept>,
       specialCourtesy: specialCourtesy == freezed
           ? _value.specialCourtesy
-          : specialCourtesy as CodeableConcept,
+          : specialCourtesy as List<CodeableConcept>,
       specialArrangement: specialArrangement == freezed
           ? _value.specialArrangement
-          : specialArrangement as CodeableConcept,
+          : specialArrangement as List<CodeableConcept>,
       destination: destination == freezed
           ? _value.destination
           : destination as Reference,
@@ -4648,7 +4559,7 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
           : dischargeDisposition as CodeableConcept,
       dischargeDiagnosis: dischargeDiagnosis == freezed
           ? _value.dischargeDiagnosis
-          : dischargeDiagnosis as Reference,
+          : dischargeDiagnosis as List<Reference>,
     ));
   }
 
@@ -4703,52 +4614,12 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res> get admittingDiagnosis {
-    if (_value.admittingDiagnosis == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.admittingDiagnosis, (value) {
-      return _then(_value.copyWith(admittingDiagnosis: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get reAdmission {
     if (_value.reAdmission == null) {
       return null;
     }
     return $CodeableConceptCopyWith<$Res>(_value.reAdmission, (value) {
       return _then(_value.copyWith(reAdmission: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get dietPreference {
-    if (_value.dietPreference == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.dietPreference, (value) {
-      return _then(_value.copyWith(dietPreference: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get specialCourtesy {
-    if (_value.specialCourtesy == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.specialCourtesy, (value) {
-      return _then(_value.copyWith(specialCourtesy: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get specialArrangement {
-    if (_value.specialArrangement == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.specialArrangement, (value) {
-      return _then(_value.copyWith(specialArrangement: value));
     });
   }
 
@@ -4771,16 +4642,6 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
       return _then(_value.copyWith(dischargeDisposition: value));
     });
   }
-
-  @override
-  $ReferenceCopyWith<$Res> get dischargeDiagnosis {
-    if (_value.dischargeDiagnosis == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.dischargeDiagnosis, (value) {
-      return _then(_value.copyWith(dischargeDiagnosis: value));
-    });
-  }
 }
 
 abstract class _$EncounterHospitalizationCopyWith<$Res>
@@ -4796,14 +4657,14 @@ abstract class _$EncounterHospitalizationCopyWith<$Res>
       Identifier preAdmissionIdentifier,
       Reference origin,
       CodeableConcept admitSource,
-      Reference admittingDiagnosis,
+      List<Reference> admittingDiagnosis,
       CodeableConcept reAdmission,
-      CodeableConcept dietPreference,
-      CodeableConcept specialCourtesy,
-      CodeableConcept specialArrangement,
+      List<CodeableConcept> dietPreference,
+      List<CodeableConcept> specialCourtesy,
+      List<CodeableConcept> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition,
-      Reference dischargeDiagnosis});
+      List<Reference> dischargeDiagnosis});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -4816,21 +4677,11 @@ abstract class _$EncounterHospitalizationCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get admitSource;
   @override
-  $ReferenceCopyWith<$Res> get admittingDiagnosis;
-  @override
   $CodeableConceptCopyWith<$Res> get reAdmission;
-  @override
-  $CodeableConceptCopyWith<$Res> get dietPreference;
-  @override
-  $CodeableConceptCopyWith<$Res> get specialCourtesy;
-  @override
-  $CodeableConceptCopyWith<$Res> get specialArrangement;
   @override
   $ReferenceCopyWith<$Res> get destination;
   @override
   $CodeableConceptCopyWith<$Res> get dischargeDisposition;
-  @override
-  $ReferenceCopyWith<$Res> get dischargeDiagnosis;
 }
 
 class __$EncounterHospitalizationCopyWithImpl<$Res>
@@ -4878,19 +4729,19 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
           : admitSource as CodeableConcept,
       admittingDiagnosis: admittingDiagnosis == freezed
           ? _value.admittingDiagnosis
-          : admittingDiagnosis as Reference,
+          : admittingDiagnosis as List<Reference>,
       reAdmission: reAdmission == freezed
           ? _value.reAdmission
           : reAdmission as CodeableConcept,
       dietPreference: dietPreference == freezed
           ? _value.dietPreference
-          : dietPreference as CodeableConcept,
+          : dietPreference as List<CodeableConcept>,
       specialCourtesy: specialCourtesy == freezed
           ? _value.specialCourtesy
-          : specialCourtesy as CodeableConcept,
+          : specialCourtesy as List<CodeableConcept>,
       specialArrangement: specialArrangement == freezed
           ? _value.specialArrangement
-          : specialArrangement as CodeableConcept,
+          : specialArrangement as List<CodeableConcept>,
       destination: destination == freezed
           ? _value.destination
           : destination as Reference,
@@ -4899,7 +4750,7 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
           : dischargeDisposition as CodeableConcept,
       dischargeDiagnosis: dischargeDiagnosis == freezed
           ? _value.dischargeDiagnosis
-          : dischargeDiagnosis as Reference,
+          : dischargeDiagnosis as List<Reference>,
     ));
   }
 }
@@ -4939,21 +4790,21 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
   @override
   final CodeableConcept admitSource;
   @override
-  final Reference admittingDiagnosis;
+  final List<Reference> admittingDiagnosis;
   @override
   final CodeableConcept reAdmission;
   @override
-  final CodeableConcept dietPreference;
+  final List<CodeableConcept> dietPreference;
   @override
-  final CodeableConcept specialCourtesy;
+  final List<CodeableConcept> specialCourtesy;
   @override
-  final CodeableConcept specialArrangement;
+  final List<CodeableConcept> specialArrangement;
   @override
   final Reference destination;
   @override
   final CodeableConcept dischargeDisposition;
   @override
-  final Reference dischargeDiagnosis;
+  final List<Reference> dischargeDiagnosis;
 
   @override
   String toString() {
@@ -5043,14 +4894,14 @@ abstract class _EncounterHospitalization implements EncounterHospitalization {
       Identifier preAdmissionIdentifier,
       Reference origin,
       CodeableConcept admitSource,
-      Reference admittingDiagnosis,
+      List<Reference> admittingDiagnosis,
       CodeableConcept reAdmission,
-      CodeableConcept dietPreference,
-      CodeableConcept specialCourtesy,
-      CodeableConcept specialArrangement,
+      List<CodeableConcept> dietPreference,
+      List<CodeableConcept> specialCourtesy,
+      List<CodeableConcept> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition,
-      Reference dischargeDiagnosis}) = _$_EncounterHospitalization;
+      List<Reference> dischargeDiagnosis}) = _$_EncounterHospitalization;
 
   factory _EncounterHospitalization.fromJson(Map<String, dynamic> json) =
       _$_EncounterHospitalization.fromJson;
@@ -5069,21 +4920,21 @@ abstract class _EncounterHospitalization implements EncounterHospitalization {
   @override
   CodeableConcept get admitSource;
   @override
-  Reference get admittingDiagnosis;
+  List<Reference> get admittingDiagnosis;
   @override
   CodeableConcept get reAdmission;
   @override
-  CodeableConcept get dietPreference;
+  List<CodeableConcept> get dietPreference;
   @override
-  CodeableConcept get specialCourtesy;
+  List<CodeableConcept> get specialCourtesy;
   @override
-  CodeableConcept get specialArrangement;
+  List<CodeableConcept> get specialArrangement;
   @override
   Reference get destination;
   @override
   CodeableConcept get dischargeDisposition;
   @override
-  Reference get dischargeDiagnosis;
+  List<Reference> get dischargeDiagnosis;
   @override
   _$EncounterHospitalizationCopyWith<_EncounterHospitalization> get copyWith;
 }

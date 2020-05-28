@@ -19,9 +19,8 @@ _$_ActivityDefinition _$_$_ActivityDefinitionFromJson(
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(
-        _$ActivityDefinitionStatusEnumMap, json['status'],
-        unknownValue: ActivityDefinitionStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -144,7 +143,7 @@ Map<String, dynamic> _$_$_ActivityDefinitionToJson(
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$ActivityDefinitionStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -220,11 +219,11 @@ T _$enumDecodeNullable<T>(
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
-const _$ActivityDefinitionStatusEnumMap = {
-  ActivityDefinitionStatus.draft: 'draft',
-  ActivityDefinitionStatus.active: 'active',
-  ActivityDefinitionStatus.retired: 'retired',
-  ActivityDefinitionStatus.unknown: 'unknown',
+const _$StatusEnumMap = {
+  Status.draft: 'draft',
+  Status.active: 'active',
+  Status.retired: 'retired',
+  Status.unknown: 'unknown',
 };
 
 _$_ActivityDefinitionParticipant _$_$_ActivityDefinitionParticipantFromJson(
@@ -294,8 +293,8 @@ _$_PlanDefinition _$_$_PlanDefinitionFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(_$PlanDefinitionStatusEnumMap, json['status'],
-        unknownValue: PlanDefinitionStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -376,7 +375,7 @@ Map<String, dynamic> _$_$_PlanDefinitionToJson(_$_PlanDefinition instance) {
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('status', _$PlanDefinitionStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -402,13 +401,6 @@ Map<String, dynamic> _$_$_PlanDefinitionToJson(_$_PlanDefinition instance) {
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$PlanDefinitionStatusEnumMap = {
-  PlanDefinitionStatus.draft: 'draft',
-  PlanDefinitionStatus.active: 'active',
-  PlanDefinitionStatus.retired: 'retired',
-  PlanDefinitionStatus.unknown: 'unknown',
-};
 
 _$_PlanDefinitionGoal _$_$_PlanDefinitionGoalFromJson(
     Map<String, dynamic> json) {
@@ -860,8 +852,8 @@ _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$QuestionnaireStatusEnumMap, json['status'],
-        unknownValue: QuestionnaireStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -924,7 +916,7 @@ Map<String, dynamic> _$_$_QuestionnaireToJson(_$_Questionnaire instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$QuestionnaireStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -945,13 +937,6 @@ Map<String, dynamic> _$_$_QuestionnaireToJson(_$_Questionnaire instance) {
   writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$QuestionnaireStatusEnumMap = {
-  QuestionnaireStatus.draft: 'draft',
-  QuestionnaireStatus.active: 'active',
-  QuestionnaireStatus.retired: 'retired',
-  QuestionnaireStatus.unknown: 'unknown',
-};
 
 _$_QuestionnaireItem _$_$_QuestionnaireItemFromJson(Map<String, dynamic> json) {
   return _$_QuestionnaireItem(
@@ -1203,9 +1188,8 @@ _$_ServiceDefinition _$_$_ServiceDefinitionFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(
-        _$ServiceDefinitionStatusEnumMap, json['status'],
-        unknownValue: ServiceDefinitionStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -1286,7 +1270,7 @@ Map<String, dynamic> _$_$_ServiceDefinitionToJson(
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$ServiceDefinitionStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -1313,10 +1297,3 @@ Map<String, dynamic> _$_$_ServiceDefinitionToJson(
   writeNotNull('operationDefinition', instance.operationDefinition?.toJson());
   return val;
 }
-
-const _$ServiceDefinitionStatusEnumMap = {
-  ServiceDefinitionStatus.draft: 'draft',
-  ServiceDefinitionStatus.active: 'active',
-  ServiceDefinitionStatus.retired: 'retired',
-  ServiceDefinitionStatus.unknown: 'unknown',
-};

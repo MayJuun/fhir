@@ -1,22 +1,3 @@
-void main() async { 
-  var y = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$';
-  var yM = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$';
-  var yMd = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$';
-  var yMdutc = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)Z$';
-  var yMdhms = r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\+|-)(0[0-9]|1[0-3]):([0-5][0-9]|14:00)$';
-  var date = '2015-02-07T13:28:17-09:00';
-  var date2 = '2017-01-01T00:00:00.000Z';
-  // print(DateFormat. DateTime.parse(date).toIso8601String());
-  print(DateTime.parse(date));
-  // print(hasMatch(y, date));
-  // print(hasMatch(yM, date));
-  // print(hasMatch(yMd, date));
-  // print(hasMatch(yMdutc, date2));
-  // print(hasMatch(yMdhms, date));
-}
-
-bool hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);
-
 // void main() async {
 //   var file = File('./test/r4/bundle_original.json');
 //   var contents = await file.readAsString();

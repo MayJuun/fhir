@@ -1786,8 +1786,8 @@ class _$ConceptMapTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          ConceptMapStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -1839,8 +1839,8 @@ mixin _$ConceptMap {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-  ConceptMapStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -1865,15 +1865,13 @@ abstract class $ConceptMapCopyWith<$Res> {
           ConceptMap value, $Res Function(ConceptMap) then) =
       _$ConceptMapCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ConceptMap')
-          String resourceType,
+      {@JsonKey(required: true, defaultValue: 'ConceptMap') String resourceType,
       String url,
       Identifier identifier,
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          ConceptMapStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -1935,7 +1933,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as ConceptMapStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -2002,15 +2000,13 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       __$ConceptMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'ConceptMap')
-          String resourceType,
+      {@JsonKey(required: true, defaultValue: 'ConceptMap') String resourceType,
       String url,
       Identifier identifier,
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          ConceptMapStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -2077,7 +2073,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as ConceptMapStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -2119,7 +2115,7 @@ class _$_ConceptMap implements _ConceptMap {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -2154,8 +2150,8 @@ class _$_ConceptMap implements _ConceptMap {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-  final ConceptMapStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -2298,8 +2294,8 @@ abstract class _ConceptMap implements ConceptMap {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          ConceptMapStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -2332,8 +2328,8 @@ abstract class _ConceptMap implements ConceptMap {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-  ConceptMapStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -3415,8 +3411,8 @@ class _$ExpansionProfileTearOff {
       Identifier identifier,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
-          ExpansionProfileStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -3474,8 +3470,8 @@ mixin _$ExpansionProfile {
   Identifier get identifier;
   String get version;
   String get name;
-  @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
-  ExpansionProfileStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -3510,8 +3506,8 @@ abstract class $ExpansionProfileCopyWith<$Res> {
       Identifier identifier,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
-          ExpansionProfileStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -3580,8 +3576,7 @@ class _$ExpansionProfileCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status:
-          status == freezed ? _value.status : status as ExpansionProfileStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -3678,8 +3673,8 @@ abstract class _$ExpansionProfileCopyWith<$Res>
       Identifier identifier,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
-          ExpansionProfileStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -3753,8 +3748,7 @@ class __$ExpansionProfileCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status:
-          status == freezed ? _value.status : status as ExpansionProfileStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -3816,7 +3810,7 @@ class _$_ExpansionProfile implements _ExpansionProfile {
       this.identifier,
       this.version,
       this.name,
-      @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -3853,8 +3847,8 @@ class _$_ExpansionProfile implements _ExpansionProfile {
   @override
   final String name;
   @override
-  @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
-  final ExpansionProfileStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -4016,8 +4010,8 @@ abstract class _ExpansionProfile implements ExpansionProfile {
       Identifier identifier,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
-          ExpansionProfileStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4052,8 +4046,8 @@ abstract class _ExpansionProfile implements ExpansionProfile {
   @override
   String get name;
   @override
-  @JsonKey(unknownEnumValue: ExpansionProfileStatus.unknown)
-  ExpansionProfileStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -5246,8 +5240,8 @@ class _$NamingSystemTearOff {
       @JsonKey(required: true, defaultValue: 'NamingSystem')
           String resourceType,
       String name,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          NamingSystemStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
       DateTime date,
@@ -5289,8 +5283,8 @@ mixin _$NamingSystem {
   @JsonKey(required: true, defaultValue: 'NamingSystem')
   String get resourceType;
   String get name;
-  @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-  NamingSystemStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
   NamingSystemKind get kind;
   DateTime get date;
@@ -5318,8 +5312,8 @@ abstract class $NamingSystemCopyWith<$Res> {
       {@JsonKey(required: true, defaultValue: 'NamingSystem')
           String resourceType,
       String name,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          NamingSystemStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
       DateTime date,
@@ -5369,7 +5363,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
           ? _value.resourceType
           : resourceType as String,
       name: name == freezed ? _value.name : name as String,
-      status: status == freezed ? _value.status : status as NamingSystemStatus,
+      status: status == freezed ? _value.status : status as Status,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
       date: date == freezed ? _value.date : date as DateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -5426,8 +5420,8 @@ abstract class _$NamingSystemCopyWith<$Res>
       {@JsonKey(required: true, defaultValue: 'NamingSystem')
           String resourceType,
       String name,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          NamingSystemStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
       DateTime date,
@@ -5481,7 +5475,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType as String,
       name: name == freezed ? _value.name : name as String,
-      status: status == freezed ? _value.status : status as NamingSystemStatus,
+      status: status == freezed ? _value.status : status as Status,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
       date: date == freezed ? _value.date : date as DateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
@@ -5515,7 +5509,7 @@ class _$_NamingSystem implements _NamingSystem {
       @JsonKey(required: true, defaultValue: 'NamingSystem')
           this.resourceType,
       this.name,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           this.kind,
@@ -5542,8 +5536,8 @@ class _$_NamingSystem implements _NamingSystem {
   @override
   final String name;
   @override
-  @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-  final NamingSystemStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
   final NamingSystemKind kind;
@@ -5656,8 +5650,8 @@ abstract class _NamingSystem implements NamingSystem {
       @JsonKey(required: true, defaultValue: 'NamingSystem')
           String resourceType,
       String name,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          NamingSystemStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
       DateTime date,
@@ -5682,8 +5676,8 @@ abstract class _NamingSystem implements NamingSystem {
   @override
   String get name;
   @override
-  @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-  NamingSystemStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
   NamingSystemKind get kind;
@@ -5956,8 +5950,8 @@ class _$ValueSetTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-          ValueSetStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6007,8 +6001,8 @@ mixin _$ValueSet {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-  ValueSetStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -6037,7 +6031,7 @@ abstract class $ValueSetCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6097,7 +6091,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as ValueSetStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -6157,7 +6151,7 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6220,7 +6214,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as ValueSetStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -6260,7 +6254,7 @@ class _$_ValueSet implements _ValueSet {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -6294,8 +6288,8 @@ class _$_ValueSet implements _ValueSet {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-  final ValueSetStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -6433,8 +6427,8 @@ abstract class _ValueSet implements ValueSet {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-          ValueSetStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6465,8 +6459,8 @@ abstract class _ValueSet implements ValueSet {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-  ValueSetStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override

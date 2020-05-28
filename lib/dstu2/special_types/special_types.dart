@@ -8,6 +8,56 @@ part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
+abstract class FhirExtension with _$FhirExtension {
+  const factory FhirExtension({
+    Id id,
+    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(required: true) @required FhirUri url,
+    Integer valueInteger,
+    Decimal valueDecimal,
+    FhirDateTime valueDateTime,
+    Date valueDate,
+    Instant valueInstant,
+    String valueString,
+    FhirUri valueFhirUri,
+    Boolean valueBoolean,
+    Code valueCode,
+    Base64Binary valueBase64Binary,
+    Coding valueCoding,
+    CodeableConcept valueCodeableConcept,
+    Attachment valueAttachment,
+    Identifier valueIdentifier,
+    Quantity valueQuantity,
+    Range valueRange,
+    Period valuePeriod,
+    Ratio valueRatio,
+    HumanName valueHumanName,
+    Address valueAddress,
+    ContactPoint valueContactPoint,
+    Schedule valueSchedule,
+    Reference valueReference,
+  }) = _FhirExtension;
+
+  factory FhirExtension.fromJson(Map<String, dynamic> json) =>
+      _$FhirExtensionFromJson(json);
+}
+
+@freezed
+abstract class Meta with _$Meta {
+  const factory Meta({
+    Id id,
+    @JsonKey(name: 'extension') FhirExtension extension_,
+    Id versionId,
+    Instant lastUpdated,
+    FhirUri profile,
+    List<Coding> security,
+    List<Coding> tag,
+  }) = _Meta;
+
+  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+}
+
+@freezed
 abstract class Reference with _$Reference {
   const factory Reference({
     Id id,
@@ -205,68 +255,6 @@ abstract class ElementDefinition with _$ElementDefinition {
 }
 
 @freezed
-abstract class Meta with _$Meta {
-  const factory Meta({
-    Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
-    Id versionId,
-    Instant lastUpdated,
-    FhirUri profile,
-    List<Coding> security,
-    List<Coding> tag,
-  }) = _Meta;
-
-  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
-}
-
-@freezed
-abstract class FhirExtension with _$FhirExtension {
-  const factory FhirExtension({
-    Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
-    @JsonKey(required: true) @required FhirUri url,
-    Integer valueInteger,
-    Decimal valueDecimal,
-    FhirDateTime valueDateTime,
-    Date valueDate,
-    Instant valueInstant,
-    String valueString,
-    FhirUri valueFhirUri,
-    Boolean valueBoolean,
-    Code valueCode,
-    Base64Binary valueBase64Binary,
-    Coding valueCoding,
-    CodeableConcept valueCodeableConcept,
-    Attachment valueAttachment,
-    Identifier valueIdentifier,
-    Quantity valueQuantity,
-    Range valueRange,
-    Period valuePeriod,
-    Ratio valueRatio,
-    HumanName valueHumanName,
-    Address valueAddress,
-    ContactPoint valueContactPoint,
-    Schedule valueSchedule,
-    Reference valueReference,
-  }) = _FhirExtension;
-
-  factory FhirExtension.fromJson(Map<String, dynamic> json) =>
-      _$FhirExtensionFromJson(json);
-}
-
-@freezed
-abstract class BackboneElement with _$BackboneElement {
-  const factory BackboneElement({
-    Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
-    FhirExtension modifierExtension,
-  }) = _BackboneElement;
-
-  factory BackboneElement.fromJson(Map<String, dynamic> json) =>
-      _$BackboneElementFromJson(json);
-}
-
-@freezed
 abstract class Narrative with _$Narrative {
   const factory Narrative({
     Id id,
@@ -319,8 +307,7 @@ abstract class ElementDefinitionType with _$ElementDefinitionType {
     @JsonKey(name: 'extension') FhirExtension extension_,
     @JsonKey(required: true) @required Code code,
     List<FhirUri> profile,
-    @JsonKey(unknownEnumValue: TypeAggregation.unknown)
-        List<TypeAggregation> aggregation,
+    List<TypeAggregation> aggregation,
   }) = _ElementDefinitionType;
 
   factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
@@ -373,4 +360,16 @@ abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
 
   factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionMappingFromJson(json);
+}
+
+@freezed
+abstract class BackboneElement with _$BackboneElement {
+  const factory BackboneElement({
+    Id id,
+    @JsonKey(name: 'extension') FhirExtension extension_,
+    FhirExtension modifierExtension,
+  }) = _BackboneElement;
+
+  factory BackboneElement.fromJson(Map<String, dynamic> json) =>
+      _$BackboneElementFromJson(json);
 }

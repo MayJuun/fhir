@@ -16,7 +16,8 @@ class _$SubstanceTearOff {
   const _$SubstanceTearOff();
 
   _Substance call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Substance') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -24,13 +25,14 @@ class _$SubstanceTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
-      CodeableConcept category,
+      List<Identifier> identifier,
+      List<CodeableConcept> category,
       @required @JsonKey(required: true) CodeableConcept code,
       String description,
-      SubstanceInstance instance,
-      SubstanceIngredient ingredient}) {
+      List<SubstanceInstance> instance,
+      List<SubstanceIngredient> ingredient}) {
     return _Substance(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -53,6 +55,8 @@ class _$SubstanceTearOff {
 const $Substance = _$SubstanceTearOff();
 
 mixin _$Substance {
+  @JsonKey(defaultValue: 'Substance')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -62,13 +66,13 @@ mixin _$Substance {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
-  CodeableConcept get category;
+  List<Identifier> get identifier;
+  List<CodeableConcept> get category;
   @JsonKey(required: true)
   CodeableConcept get code;
   String get description;
-  SubstanceInstance get instance;
-  SubstanceIngredient get ingredient;
+  List<SubstanceInstance> get instance;
+  List<SubstanceIngredient> get ingredient;
 
   Map<String, dynamic> toJson();
   $SubstanceCopyWith<Substance> get copyWith;
@@ -78,7 +82,8 @@ abstract class $SubstanceCopyWith<$Res> {
   factory $SubstanceCopyWith(Substance value, $Res Function(Substance) then) =
       _$SubstanceCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Substance') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -86,22 +91,18 @@ abstract class $SubstanceCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
-      CodeableConcept category,
+      List<Identifier> identifier,
+      List<CodeableConcept> category,
       @JsonKey(required: true) CodeableConcept code,
       String description,
-      SubstanceInstance instance,
-      SubstanceIngredient ingredient});
+      List<SubstanceInstance> instance,
+      List<SubstanceIngredient> ingredient});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
-  $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get code;
-  $SubstanceInstanceCopyWith<$Res> get instance;
-  $SubstanceIngredientCopyWith<$Res> get ingredient;
 }
 
 class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
@@ -113,6 +114,7 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -129,6 +131,9 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
     Object ingredient = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -144,18 +149,21 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      category:
-          category == freezed ? _value.category : category as CodeableConcept,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String,
-      instance:
-          instance == freezed ? _value.instance : instance as SubstanceInstance,
+      instance: instance == freezed
+          ? _value.instance
+          : instance as List<SubstanceInstance>,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as SubstanceIngredient,
+          : ingredient as List<SubstanceIngredient>,
     ));
   }
 
@@ -200,52 +208,12 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get category {
-    if (_value.category == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
-      return _then(_value.copyWith(category: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get code {
     if (_value.code == null) {
       return null;
     }
     return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
-    });
-  }
-
-  @override
-  $SubstanceInstanceCopyWith<$Res> get instance {
-    if (_value.instance == null) {
-      return null;
-    }
-    return $SubstanceInstanceCopyWith<$Res>(_value.instance, (value) {
-      return _then(_value.copyWith(instance: value));
-    });
-  }
-
-  @override
-  $SubstanceIngredientCopyWith<$Res> get ingredient {
-    if (_value.ingredient == null) {
-      return null;
-    }
-    return $SubstanceIngredientCopyWith<$Res>(_value.ingredient, (value) {
-      return _then(_value.copyWith(ingredient: value));
     });
   }
 }
@@ -256,7 +224,8 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       __$SubstanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Substance') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -264,12 +233,12 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
-      CodeableConcept category,
+      List<Identifier> identifier,
+      List<CodeableConcept> category,
       @JsonKey(required: true) CodeableConcept code,
       String description,
-      SubstanceInstance instance,
-      SubstanceIngredient ingredient});
+      List<SubstanceInstance> instance,
+      List<SubstanceIngredient> ingredient});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -280,15 +249,7 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $CodeableConceptCopyWith<$Res> get category;
-  @override
   $CodeableConceptCopyWith<$Res> get code;
-  @override
-  $SubstanceInstanceCopyWith<$Res> get instance;
-  @override
-  $SubstanceIngredientCopyWith<$Res> get ingredient;
 }
 
 class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
@@ -301,6 +262,7 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -317,6 +279,9 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
     Object ingredient = freezed,
   }) {
     return _then(_Substance(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -332,18 +297,21 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      category:
-          category == freezed ? _value.category : category as CodeableConcept,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String,
-      instance:
-          instance == freezed ? _value.instance : instance as SubstanceInstance,
+      instance: instance == freezed
+          ? _value.instance
+          : instance as List<SubstanceInstance>,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as SubstanceIngredient,
+          : ingredient as List<SubstanceIngredient>,
     ));
   }
 }
@@ -351,7 +319,8 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Substance implements _Substance {
   const _$_Substance(
-      {this.id,
+      {@JsonKey(defaultValue: 'Substance') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -371,6 +340,9 @@ class _$_Substance implements _Substance {
       _$_$_SubstanceFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Substance')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -388,28 +360,31 @@ class _$_Substance implements _Substance {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
-  final CodeableConcept category;
+  final List<CodeableConcept> category;
   @override
   @JsonKey(required: true)
   final CodeableConcept code;
   @override
   final String description;
   @override
-  final SubstanceInstance instance;
+  final List<SubstanceInstance> instance;
   @override
-  final SubstanceIngredient ingredient;
+  final List<SubstanceIngredient> ingredient;
 
   @override
   String toString() {
-    return 'Substance(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, code: $code, description: $description, instance: $instance, ingredient: $ingredient)';
+    return 'Substance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, code: $code, description: $description, instance: $instance, ingredient: $ingredient)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Substance &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -453,6 +428,7 @@ class _$_Substance implements _Substance {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -480,7 +456,8 @@ class _$_Substance implements _Substance {
 
 abstract class _Substance implements Substance {
   const factory _Substance(
-      {Id id,
+      {@JsonKey(defaultValue: 'Substance') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -488,16 +465,19 @@ abstract class _Substance implements Substance {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
-      CodeableConcept category,
+      List<Identifier> identifier,
+      List<CodeableConcept> category,
       @required @JsonKey(required: true) CodeableConcept code,
       String description,
-      SubstanceInstance instance,
-      SubstanceIngredient ingredient}) = _$_Substance;
+      List<SubstanceInstance> instance,
+      List<SubstanceIngredient> ingredient}) = _$_Substance;
 
   factory _Substance.fromJson(Map<String, dynamic> json) =
       _$_Substance.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Substance')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -516,18 +496,18 @@ abstract class _Substance implements Substance {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
-  CodeableConcept get category;
+  List<CodeableConcept> get category;
   @override
   @JsonKey(required: true)
   CodeableConcept get code;
   @override
   String get description;
   @override
-  SubstanceInstance get instance;
+  List<SubstanceInstance> get instance;
   @override
-  SubstanceIngredient get ingredient;
+  List<SubstanceIngredient> get ingredient;
   @override
   _$SubstanceCopyWith<_Substance> get copyWith;
 }
@@ -540,7 +520,8 @@ class _$LocationTearOff {
   const _$LocationTearOff();
 
   _Location call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Location') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -548,19 +529,20 @@ class _$LocationTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
       String name,
       String description,
       @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode mode,
       CodeableConcept type,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
       Reference managingOrganization,
       Reference partOf}) {
     return _Location(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -589,6 +571,8 @@ class _$LocationTearOff {
 const $Location = _$LocationTearOff();
 
 mixin _$Location {
+  @JsonKey(defaultValue: 'Location')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -598,7 +582,7 @@ mixin _$Location {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @JsonKey(unknownEnumValue: LocationStatus.unknown)
   LocationStatus get status;
   String get name;
@@ -606,7 +590,7 @@ mixin _$Location {
   @JsonKey(unknownEnumValue: LocationMode.unknown)
   LocationMode get mode;
   CodeableConcept get type;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   Address get address;
   CodeableConcept get physicalType;
   LocationPosition get position;
@@ -621,7 +605,8 @@ abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Location') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -629,13 +614,13 @@ abstract class $LocationCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
       String name,
       String description,
       @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode mode,
       CodeableConcept type,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
@@ -646,9 +631,7 @@ abstract class $LocationCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get type;
-  $ContactPointCopyWith<$Res> get telecom;
   $AddressCopyWith<$Res> get address;
   $CodeableConceptCopyWith<$Res> get physicalType;
   $LocationPositionCopyWith<$Res> get position;
@@ -665,6 +648,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -687,6 +671,9 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
     Object partOf = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -702,15 +689,17 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as LocationStatus,
       name: name == freezed ? _value.name : name as String,
       description:
           description == freezed ? _value.description : description as String,
       mode: mode == freezed ? _value.mode : mode as LocationMode,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as Address,
       physicalType: physicalType == freezed
           ? _value.physicalType
@@ -765,32 +754,12 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get type {
     if (_value.type == null) {
       return null;
     }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
     });
   }
 
@@ -850,7 +819,8 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       __$LocationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Location') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -858,13 +828,13 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
       String name,
       String description,
       @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode mode,
       CodeableConcept type,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
@@ -880,11 +850,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
   @override
   $AddressCopyWith<$Res> get address;
   @override
@@ -907,6 +873,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -929,6 +896,9 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     Object partOf = freezed,
   }) {
     return _then(_Location(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -944,15 +914,17 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as LocationStatus,
       name: name == freezed ? _value.name : name as String,
       description:
           description == freezed ? _value.description : description as String,
       mode: mode == freezed ? _value.mode : mode as LocationMode,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as Address,
       physicalType: physicalType == freezed
           ? _value.physicalType
@@ -970,7 +942,8 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Location implements _Location {
   const _$_Location(
-      {this.id,
+      {@JsonKey(defaultValue: 'Location') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -995,6 +968,9 @@ class _$_Location implements _Location {
       _$_$_LocationFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Location')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -1012,7 +988,7 @@ class _$_Location implements _Location {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   @JsonKey(unknownEnumValue: LocationStatus.unknown)
   final LocationStatus status;
@@ -1026,7 +1002,7 @@ class _$_Location implements _Location {
   @override
   final CodeableConcept type;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
   @override
   final Address address;
   @override
@@ -1040,13 +1016,16 @@ class _$_Location implements _Location {
 
   @override
   String toString() {
-    return 'Location(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, name: $name, description: $description, mode: $mode, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf)';
+    return 'Location(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, name: $name, description: $description, mode: $mode, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Location &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1104,6 +1083,7 @@ class _$_Location implements _Location {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1137,7 +1117,8 @@ class _$_Location implements _Location {
 
 abstract class _Location implements Location {
   const factory _Location(
-      {Id id,
+      {@JsonKey(defaultValue: 'Location') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1145,13 +1126,13 @@ abstract class _Location implements Location {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
       String name,
       String description,
       @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode mode,
       CodeableConcept type,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       Address address,
       CodeableConcept physicalType,
       LocationPosition position,
@@ -1160,6 +1141,9 @@ abstract class _Location implements Location {
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Location')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1178,7 +1162,7 @@ abstract class _Location implements Location {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   @JsonKey(unknownEnumValue: LocationStatus.unknown)
   LocationStatus get status;
@@ -1192,7 +1176,7 @@ abstract class _Location implements Location {
   @override
   CodeableConcept get type;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   Address get address;
   @override
@@ -1215,7 +1199,8 @@ class _$PersonTearOff {
   const _$PersonTearOff();
 
   _Person call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Person') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1223,17 +1208,18 @@ class _$PersonTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
-      HumanName name,
-      ContactPoint telecom,
+      List<Identifier> identifier,
+      List<HumanName> name,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
-      Address address,
+      List<Address> address,
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      PersonLink link}) {
+      List<PersonLink> link}) {
     return _Person(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1260,6 +1246,8 @@ class _$PersonTearOff {
 const $Person = _$PersonTearOff();
 
 mixin _$Person {
+  @JsonKey(defaultValue: 'Person')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1269,17 +1257,17 @@ mixin _$Person {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
-  HumanName get name;
-  ContactPoint get telecom;
+  List<Identifier> get identifier;
+  List<HumanName> get name;
+  List<ContactPoint> get telecom;
   @JsonKey(unknownEnumValue: PersonGender.unknown)
   PersonGender get gender;
   Date get birthDate;
-  Address get address;
+  List<Address> get address;
   Attachment get photo;
   Reference get managingOrganization;
   Boolean get active;
-  PersonLink get link;
+  List<PersonLink> get link;
 
   Map<String, dynamic> toJson();
   $PersonCopyWith<Person> get copyWith;
@@ -1289,7 +1277,8 @@ abstract class $PersonCopyWith<$Res> {
   factory $PersonCopyWith(Person value, $Res Function(Person) then) =
       _$PersonCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Person') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1297,28 +1286,23 @@ abstract class $PersonCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
-      HumanName name,
-      ContactPoint telecom,
+      List<Identifier> identifier,
+      List<HumanName> name,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
-      Address address,
+      List<Address> address,
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      PersonLink link});
+      List<PersonLink> link});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
-  $HumanNameCopyWith<$Res> get name;
-  $ContactPointCopyWith<$Res> get telecom;
-  $AddressCopyWith<$Res> get address;
   $AttachmentCopyWith<$Res> get photo;
   $ReferenceCopyWith<$Res> get managingOrganization;
-  $PersonLinkCopyWith<$Res> get link;
 }
 
 class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
@@ -1330,6 +1314,7 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1350,6 +1335,9 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
     Object link = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1365,19 +1353,21 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      name: name == freezed ? _value.name : name as List<HumanName>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       gender: gender == freezed ? _value.gender : gender as PersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      address: address == freezed ? _value.address : address as Address,
+      address: address == freezed ? _value.address : address as List<Address>,
       photo: photo == freezed ? _value.photo : photo as Attachment,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
       active: active == freezed ? _value.active : active as Boolean,
-      link: link == freezed ? _value.link : link as PersonLink,
+      link: link == freezed ? _value.link : link as List<PersonLink>,
     ));
   }
 
@@ -1422,46 +1412,6 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $HumanNameCopyWith<$Res> get name {
-    if (_value.name == null) {
-      return null;
-    }
-    return $HumanNameCopyWith<$Res>(_value.name, (value) {
-      return _then(_value.copyWith(name: value));
-    });
-  }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
-
-  @override
-  $AddressCopyWith<$Res> get address {
-    if (_value.address == null) {
-      return null;
-    }
-    return $AddressCopyWith<$Res>(_value.address, (value) {
-      return _then(_value.copyWith(address: value));
-    });
-  }
-
-  @override
   $AttachmentCopyWith<$Res> get photo {
     if (_value.photo == null) {
       return null;
@@ -1480,16 +1430,6 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
       return _then(_value.copyWith(managingOrganization: value));
     });
   }
-
-  @override
-  $PersonLinkCopyWith<$Res> get link {
-    if (_value.link == null) {
-      return null;
-    }
-    return $PersonLinkCopyWith<$Res>(_value.link, (value) {
-      return _then(_value.copyWith(link: value));
-    });
-  }
 }
 
 abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
@@ -1497,7 +1437,8 @@ abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       __$PersonCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Person') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1505,16 +1446,16 @@ abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
-      HumanName name,
-      ContactPoint telecom,
+      List<Identifier> identifier,
+      List<HumanName> name,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
-      Address address,
+      List<Address> address,
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      PersonLink link});
+      List<PersonLink> link});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1525,19 +1466,9 @@ abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $HumanNameCopyWith<$Res> get name;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
-  @override
-  $AddressCopyWith<$Res> get address;
-  @override
   $AttachmentCopyWith<$Res> get photo;
   @override
   $ReferenceCopyWith<$Res> get managingOrganization;
-  @override
-  $PersonLinkCopyWith<$Res> get link;
 }
 
 class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
@@ -1550,6 +1481,7 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1570,6 +1502,9 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
     Object link = freezed,
   }) {
     return _then(_Person(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1585,19 +1520,21 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
+      name: name == freezed ? _value.name : name as List<HumanName>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       gender: gender == freezed ? _value.gender : gender as PersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      address: address == freezed ? _value.address : address as Address,
+      address: address == freezed ? _value.address : address as List<Address>,
       photo: photo == freezed ? _value.photo : photo as Attachment,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
       active: active == freezed ? _value.active : active as Boolean,
-      link: link == freezed ? _value.link : link as PersonLink,
+      link: link == freezed ? _value.link : link as List<PersonLink>,
     ));
   }
 }
@@ -1605,7 +1542,8 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Person implements _Person {
   const _$_Person(
-      {this.id,
+      {@JsonKey(defaultValue: 'Person') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1628,6 +1566,9 @@ class _$_Person implements _Person {
       _$_$_PersonFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Person')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -1645,18 +1586,18 @@ class _$_Person implements _Person {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
-  final HumanName name;
+  final List<HumanName> name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
   @override
   @JsonKey(unknownEnumValue: PersonGender.unknown)
   final PersonGender gender;
   @override
   final Date birthDate;
   @override
-  final Address address;
+  final List<Address> address;
   @override
   final Attachment photo;
   @override
@@ -1664,17 +1605,20 @@ class _$_Person implements _Person {
   @override
   final Boolean active;
   @override
-  final PersonLink link;
+  final List<PersonLink> link;
 
   @override
   String toString() {
-    return 'Person(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, managingOrganization: $managingOrganization, active: $active, link: $link)';
+    return 'Person(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, managingOrganization: $managingOrganization, active: $active, link: $link)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Person &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1726,6 +1670,7 @@ class _$_Person implements _Person {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1757,7 +1702,8 @@ class _$_Person implements _Person {
 
 abstract class _Person implements Person {
   const factory _Person(
-      {Id id,
+      {@JsonKey(defaultValue: 'Person') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1765,19 +1711,22 @@ abstract class _Person implements Person {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
-      HumanName name,
-      ContactPoint telecom,
+      List<Identifier> identifier,
+      List<HumanName> name,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
       Date birthDate,
-      Address address,
+      List<Address> address,
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      PersonLink link}) = _$_Person;
+      List<PersonLink> link}) = _$_Person;
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Person')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1796,18 +1745,18 @@ abstract class _Person implements Person {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
-  HumanName get name;
+  List<HumanName> get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   @JsonKey(unknownEnumValue: PersonGender.unknown)
   PersonGender get gender;
   @override
   Date get birthDate;
   @override
-  Address get address;
+  List<Address> get address;
   @override
   Attachment get photo;
   @override
@@ -1815,7 +1764,7 @@ abstract class _Person implements Person {
   @override
   Boolean get active;
   @override
-  PersonLink get link;
+  List<PersonLink> get link;
   @override
   _$PersonCopyWith<_Person> get copyWith;
 }
@@ -2963,7 +2912,7 @@ class _$TermActorTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference entity,
-      CodeableConcept role}) {
+      List<CodeableConcept> role}) {
     return _TermActor(
       id: id,
       extension_: extension_,
@@ -2984,7 +2933,7 @@ mixin _$TermActor {
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Reference get entity;
-  CodeableConcept get role;
+  List<CodeableConcept> get role;
 
   Map<String, dynamic> toJson();
   $TermActorCopyWith<TermActor> get copyWith;
@@ -2998,12 +2947,11 @@ abstract class $TermActorCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference entity,
-      CodeableConcept role});
+      List<CodeableConcept> role});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get entity;
-  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class _$TermActorCopyWithImpl<$Res> implements $TermActorCopyWith<$Res> {
@@ -3030,7 +2978,7 @@ class _$TermActorCopyWithImpl<$Res> implements $TermActorCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       entity: entity == freezed ? _value.entity : entity as Reference,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
     ));
   }
 
@@ -3063,16 +3011,6 @@ class _$TermActorCopyWithImpl<$Res> implements $TermActorCopyWith<$Res> {
       return _then(_value.copyWith(entity: value));
     });
   }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get role {
-    if (_value.role == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
-      return _then(_value.copyWith(role: value));
-    });
-  }
 }
 
 abstract class _$TermActorCopyWith<$Res> implements $TermActorCopyWith<$Res> {
@@ -3085,7 +3023,7 @@ abstract class _$TermActorCopyWith<$Res> implements $TermActorCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference entity,
-      CodeableConcept role});
+      List<CodeableConcept> role});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -3093,8 +3031,6 @@ abstract class _$TermActorCopyWith<$Res> implements $TermActorCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ReferenceCopyWith<$Res> get entity;
-  @override
-  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class __$TermActorCopyWithImpl<$Res> extends _$TermActorCopyWithImpl<$Res>
@@ -3122,7 +3058,7 @@ class __$TermActorCopyWithImpl<$Res> extends _$TermActorCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       entity: entity == freezed ? _value.entity : entity as Reference,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
     ));
   }
 }
@@ -3151,7 +3087,7 @@ class _$_TermActor implements _TermActor {
   @JsonKey(required: true)
   final Reference entity;
   @override
-  final CodeableConcept role;
+  final List<CodeableConcept> role;
 
   @override
   String toString() {
@@ -3201,7 +3137,7 @@ abstract class _TermActor implements TermActor {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference entity,
-      CodeableConcept role}) = _$_TermActor;
+      List<CodeableConcept> role}) = _$_TermActor;
 
   factory _TermActor.fromJson(Map<String, dynamic> json) =
       _$_TermActor.fromJson;
@@ -3217,7 +3153,7 @@ abstract class _TermActor implements TermActor {
   @JsonKey(required: true)
   Reference get entity;
   @override
-  CodeableConcept get role;
+  List<CodeableConcept> get role;
   @override
   _$TermActorCopyWith<_TermActor> get copyWith;
 }
@@ -3230,7 +3166,8 @@ class _$ContractTearOff {
   const _$ContractTearOff();
 
   _Contract call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Contract') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -3241,22 +3178,24 @@ class _$ContractTearOff {
       Identifier identifier,
       FhirDateTime issued,
       Period applies,
-      Reference subject,
-      Reference authority,
-      Reference domain,
+      List<Reference> subject,
+      List<Reference> authority,
+      List<Reference> domain,
       CodeableConcept type,
-      CodeableConcept subType,
-      CodeableConcept action,
-      CodeableConcept actionReason,
-      ContractActor actor,
-      ContractValuedItem valuedItem,
-      ContractSigner signer,
-      ContractTerm term,
-      Attachment bindingX,
-      ContractFriendly friendly,
-      ContractLegal legal,
-      ContractRule rule}) {
+      List<CodeableConcept> subType,
+      List<CodeableConcept> action,
+      List<CodeableConcept> actionReason,
+      List<ContractActor> actor,
+      List<ContractValuedItem> valuedItem,
+      List<ContractSigner> signer,
+      List<ContractTerm> term,
+      Attachment bindingAttachment,
+      Reference bindingReference,
+      List<ContractFriendly> friendly,
+      List<ContractLegal> legal,
+      List<ContractRule> rule}) {
     return _Contract(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -3279,7 +3218,8 @@ class _$ContractTearOff {
       valuedItem: valuedItem,
       signer: signer,
       term: term,
-      bindingX: bindingX,
+      bindingAttachment: bindingAttachment,
+      bindingReference: bindingReference,
       friendly: friendly,
       legal: legal,
       rule: rule,
@@ -3291,6 +3231,8 @@ class _$ContractTearOff {
 const $Contract = _$ContractTearOff();
 
 mixin _$Contract {
+  @JsonKey(defaultValue: 'Contract')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3303,21 +3245,22 @@ mixin _$Contract {
   Identifier get identifier;
   FhirDateTime get issued;
   Period get applies;
-  Reference get subject;
-  Reference get authority;
-  Reference get domain;
+  List<Reference> get subject;
+  List<Reference> get authority;
+  List<Reference> get domain;
   CodeableConcept get type;
-  CodeableConcept get subType;
-  CodeableConcept get action;
-  CodeableConcept get actionReason;
-  ContractActor get actor;
-  ContractValuedItem get valuedItem;
-  ContractSigner get signer;
-  ContractTerm get term;
-  Attachment get bindingX;
-  ContractFriendly get friendly;
-  ContractLegal get legal;
-  ContractRule get rule;
+  List<CodeableConcept> get subType;
+  List<CodeableConcept> get action;
+  List<CodeableConcept> get actionReason;
+  List<ContractActor> get actor;
+  List<ContractValuedItem> get valuedItem;
+  List<ContractSigner> get signer;
+  List<ContractTerm> get term;
+  Attachment get bindingAttachment;
+  Reference get bindingReference;
+  List<ContractFriendly> get friendly;
+  List<ContractLegal> get legal;
+  List<ContractRule> get rule;
 
   Map<String, dynamic> toJson();
   $ContractCopyWith<Contract> get copyWith;
@@ -3327,7 +3270,8 @@ abstract class $ContractCopyWith<$Res> {
   factory $ContractCopyWith(Contract value, $Res Function(Contract) then) =
       _$ContractCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Contract') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -3338,21 +3282,22 @@ abstract class $ContractCopyWith<$Res> {
       Identifier identifier,
       FhirDateTime issued,
       Period applies,
-      Reference subject,
-      Reference authority,
-      Reference domain,
+      List<Reference> subject,
+      List<Reference> authority,
+      List<Reference> domain,
       CodeableConcept type,
-      CodeableConcept subType,
-      CodeableConcept action,
-      CodeableConcept actionReason,
-      ContractActor actor,
-      ContractValuedItem valuedItem,
-      ContractSigner signer,
-      ContractTerm term,
-      Attachment bindingX,
-      ContractFriendly friendly,
-      ContractLegal legal,
-      ContractRule rule});
+      List<CodeableConcept> subType,
+      List<CodeableConcept> action,
+      List<CodeableConcept> actionReason,
+      List<ContractActor> actor,
+      List<ContractValuedItem> valuedItem,
+      List<ContractSigner> signer,
+      List<ContractTerm> term,
+      Attachment bindingAttachment,
+      Reference bindingReference,
+      List<ContractFriendly> friendly,
+      List<ContractLegal> legal,
+      List<ContractRule> rule});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -3360,21 +3305,9 @@ abstract class $ContractCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get identifier;
   $PeriodCopyWith<$Res> get applies;
-  $ReferenceCopyWith<$Res> get subject;
-  $ReferenceCopyWith<$Res> get authority;
-  $ReferenceCopyWith<$Res> get domain;
   $CodeableConceptCopyWith<$Res> get type;
-  $CodeableConceptCopyWith<$Res> get subType;
-  $CodeableConceptCopyWith<$Res> get action;
-  $CodeableConceptCopyWith<$Res> get actionReason;
-  $ContractActorCopyWith<$Res> get actor;
-  $ContractValuedItemCopyWith<$Res> get valuedItem;
-  $ContractSignerCopyWith<$Res> get signer;
-  $ContractTermCopyWith<$Res> get term;
-  $AttachmentCopyWith<$Res> get bindingX;
-  $ContractFriendlyCopyWith<$Res> get friendly;
-  $ContractLegalCopyWith<$Res> get legal;
-  $ContractRuleCopyWith<$Res> get rule;
+  $AttachmentCopyWith<$Res> get bindingAttachment;
+  $ReferenceCopyWith<$Res> get bindingReference;
 }
 
 class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
@@ -3386,6 +3319,7 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -3408,12 +3342,16 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
     Object valuedItem = freezed,
     Object signer = freezed,
     Object term = freezed,
-    Object bindingX = freezed,
+    Object bindingAttachment = freezed,
+    Object bindingReference = freezed,
     Object friendly = freezed,
     Object legal = freezed,
     Object rule = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3433,27 +3371,38 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
           identifier == freezed ? _value.identifier : identifier as Identifier,
       issued: issued == freezed ? _value.issued : issued as FhirDateTime,
       applies: applies == freezed ? _value.applies : applies as Period,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      authority:
-          authority == freezed ? _value.authority : authority as Reference,
-      domain: domain == freezed ? _value.domain : domain as Reference,
+      subject: subject == freezed ? _value.subject : subject as List<Reference>,
+      authority: authority == freezed
+          ? _value.authority
+          : authority as List<Reference>,
+      domain: domain == freezed ? _value.domain : domain as List<Reference>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      subType: subType == freezed ? _value.subType : subType as CodeableConcept,
-      action: action == freezed ? _value.action : action as CodeableConcept,
+      subType: subType == freezed
+          ? _value.subType
+          : subType as List<CodeableConcept>,
+      action:
+          action == freezed ? _value.action : action as List<CodeableConcept>,
       actionReason: actionReason == freezed
           ? _value.actionReason
-          : actionReason as CodeableConcept,
-      actor: actor == freezed ? _value.actor : actor as ContractActor,
+          : actionReason as List<CodeableConcept>,
+      actor: actor == freezed ? _value.actor : actor as List<ContractActor>,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
-          : valuedItem as ContractValuedItem,
-      signer: signer == freezed ? _value.signer : signer as ContractSigner,
-      term: term == freezed ? _value.term : term as ContractTerm,
-      bindingX: bindingX == freezed ? _value.bindingX : bindingX as Attachment,
-      friendly:
-          friendly == freezed ? _value.friendly : friendly as ContractFriendly,
-      legal: legal == freezed ? _value.legal : legal as ContractLegal,
-      rule: rule == freezed ? _value.rule : rule as ContractRule,
+          : valuedItem as List<ContractValuedItem>,
+      signer:
+          signer == freezed ? _value.signer : signer as List<ContractSigner>,
+      term: term == freezed ? _value.term : term as List<ContractTerm>,
+      bindingAttachment: bindingAttachment == freezed
+          ? _value.bindingAttachment
+          : bindingAttachment as Attachment,
+      bindingReference: bindingReference == freezed
+          ? _value.bindingReference
+          : bindingReference as Reference,
+      friendly: friendly == freezed
+          ? _value.friendly
+          : friendly as List<ContractFriendly>,
+      legal: legal == freezed ? _value.legal : legal as List<ContractLegal>,
+      rule: rule == freezed ? _value.rule : rule as List<ContractRule>,
     ));
   }
 
@@ -3518,36 +3467,6 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res> get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
-      return _then(_value.copyWith(subject: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get authority {
-    if (_value.authority == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.authority, (value) {
-      return _then(_value.copyWith(authority: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get domain {
-    if (_value.domain == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.domain, (value) {
-      return _then(_value.copyWith(domain: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get type {
     if (_value.type == null) {
       return null;
@@ -3558,112 +3477,22 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get subType {
-    if (_value.subType == null) {
+  $AttachmentCopyWith<$Res> get bindingAttachment {
+    if (_value.bindingAttachment == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.subType, (value) {
-      return _then(_value.copyWith(subType: value));
+    return $AttachmentCopyWith<$Res>(_value.bindingAttachment, (value) {
+      return _then(_value.copyWith(bindingAttachment: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get action {
-    if (_value.action == null) {
+  $ReferenceCopyWith<$Res> get bindingReference {
+    if (_value.bindingReference == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.action, (value) {
-      return _then(_value.copyWith(action: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get actionReason {
-    if (_value.actionReason == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.actionReason, (value) {
-      return _then(_value.copyWith(actionReason: value));
-    });
-  }
-
-  @override
-  $ContractActorCopyWith<$Res> get actor {
-    if (_value.actor == null) {
-      return null;
-    }
-    return $ContractActorCopyWith<$Res>(_value.actor, (value) {
-      return _then(_value.copyWith(actor: value));
-    });
-  }
-
-  @override
-  $ContractValuedItemCopyWith<$Res> get valuedItem {
-    if (_value.valuedItem == null) {
-      return null;
-    }
-    return $ContractValuedItemCopyWith<$Res>(_value.valuedItem, (value) {
-      return _then(_value.copyWith(valuedItem: value));
-    });
-  }
-
-  @override
-  $ContractSignerCopyWith<$Res> get signer {
-    if (_value.signer == null) {
-      return null;
-    }
-    return $ContractSignerCopyWith<$Res>(_value.signer, (value) {
-      return _then(_value.copyWith(signer: value));
-    });
-  }
-
-  @override
-  $ContractTermCopyWith<$Res> get term {
-    if (_value.term == null) {
-      return null;
-    }
-    return $ContractTermCopyWith<$Res>(_value.term, (value) {
-      return _then(_value.copyWith(term: value));
-    });
-  }
-
-  @override
-  $AttachmentCopyWith<$Res> get bindingX {
-    if (_value.bindingX == null) {
-      return null;
-    }
-    return $AttachmentCopyWith<$Res>(_value.bindingX, (value) {
-      return _then(_value.copyWith(bindingX: value));
-    });
-  }
-
-  @override
-  $ContractFriendlyCopyWith<$Res> get friendly {
-    if (_value.friendly == null) {
-      return null;
-    }
-    return $ContractFriendlyCopyWith<$Res>(_value.friendly, (value) {
-      return _then(_value.copyWith(friendly: value));
-    });
-  }
-
-  @override
-  $ContractLegalCopyWith<$Res> get legal {
-    if (_value.legal == null) {
-      return null;
-    }
-    return $ContractLegalCopyWith<$Res>(_value.legal, (value) {
-      return _then(_value.copyWith(legal: value));
-    });
-  }
-
-  @override
-  $ContractRuleCopyWith<$Res> get rule {
-    if (_value.rule == null) {
-      return null;
-    }
-    return $ContractRuleCopyWith<$Res>(_value.rule, (value) {
-      return _then(_value.copyWith(rule: value));
+    return $ReferenceCopyWith<$Res>(_value.bindingReference, (value) {
+      return _then(_value.copyWith(bindingReference: value));
     });
   }
 }
@@ -3673,7 +3502,8 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       __$ContractCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Contract') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -3684,21 +3514,22 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       Identifier identifier,
       FhirDateTime issued,
       Period applies,
-      Reference subject,
-      Reference authority,
-      Reference domain,
+      List<Reference> subject,
+      List<Reference> authority,
+      List<Reference> domain,
       CodeableConcept type,
-      CodeableConcept subType,
-      CodeableConcept action,
-      CodeableConcept actionReason,
-      ContractActor actor,
-      ContractValuedItem valuedItem,
-      ContractSigner signer,
-      ContractTerm term,
-      Attachment bindingX,
-      ContractFriendly friendly,
-      ContractLegal legal,
-      ContractRule rule});
+      List<CodeableConcept> subType,
+      List<CodeableConcept> action,
+      List<CodeableConcept> actionReason,
+      List<ContractActor> actor,
+      List<ContractValuedItem> valuedItem,
+      List<ContractSigner> signer,
+      List<ContractTerm> term,
+      Attachment bindingAttachment,
+      Reference bindingReference,
+      List<ContractFriendly> friendly,
+      List<ContractLegal> legal,
+      List<ContractRule> rule});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -3713,35 +3544,11 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
   @override
   $PeriodCopyWith<$Res> get applies;
   @override
-  $ReferenceCopyWith<$Res> get subject;
-  @override
-  $ReferenceCopyWith<$Res> get authority;
-  @override
-  $ReferenceCopyWith<$Res> get domain;
-  @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $CodeableConceptCopyWith<$Res> get subType;
+  $AttachmentCopyWith<$Res> get bindingAttachment;
   @override
-  $CodeableConceptCopyWith<$Res> get action;
-  @override
-  $CodeableConceptCopyWith<$Res> get actionReason;
-  @override
-  $ContractActorCopyWith<$Res> get actor;
-  @override
-  $ContractValuedItemCopyWith<$Res> get valuedItem;
-  @override
-  $ContractSignerCopyWith<$Res> get signer;
-  @override
-  $ContractTermCopyWith<$Res> get term;
-  @override
-  $AttachmentCopyWith<$Res> get bindingX;
-  @override
-  $ContractFriendlyCopyWith<$Res> get friendly;
-  @override
-  $ContractLegalCopyWith<$Res> get legal;
-  @override
-  $ContractRuleCopyWith<$Res> get rule;
+  $ReferenceCopyWith<$Res> get bindingReference;
 }
 
 class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
@@ -3754,6 +3561,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -3776,12 +3584,16 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
     Object valuedItem = freezed,
     Object signer = freezed,
     Object term = freezed,
-    Object bindingX = freezed,
+    Object bindingAttachment = freezed,
+    Object bindingReference = freezed,
     Object friendly = freezed,
     Object legal = freezed,
     Object rule = freezed,
   }) {
     return _then(_Contract(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3801,27 +3613,38 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       issued: issued == freezed ? _value.issued : issued as FhirDateTime,
       applies: applies == freezed ? _value.applies : applies as Period,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      authority:
-          authority == freezed ? _value.authority : authority as Reference,
-      domain: domain == freezed ? _value.domain : domain as Reference,
+      subject: subject == freezed ? _value.subject : subject as List<Reference>,
+      authority: authority == freezed
+          ? _value.authority
+          : authority as List<Reference>,
+      domain: domain == freezed ? _value.domain : domain as List<Reference>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      subType: subType == freezed ? _value.subType : subType as CodeableConcept,
-      action: action == freezed ? _value.action : action as CodeableConcept,
+      subType: subType == freezed
+          ? _value.subType
+          : subType as List<CodeableConcept>,
+      action:
+          action == freezed ? _value.action : action as List<CodeableConcept>,
       actionReason: actionReason == freezed
           ? _value.actionReason
-          : actionReason as CodeableConcept,
-      actor: actor == freezed ? _value.actor : actor as ContractActor,
+          : actionReason as List<CodeableConcept>,
+      actor: actor == freezed ? _value.actor : actor as List<ContractActor>,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
-          : valuedItem as ContractValuedItem,
-      signer: signer == freezed ? _value.signer : signer as ContractSigner,
-      term: term == freezed ? _value.term : term as ContractTerm,
-      bindingX: bindingX == freezed ? _value.bindingX : bindingX as Attachment,
-      friendly:
-          friendly == freezed ? _value.friendly : friendly as ContractFriendly,
-      legal: legal == freezed ? _value.legal : legal as ContractLegal,
-      rule: rule == freezed ? _value.rule : rule as ContractRule,
+          : valuedItem as List<ContractValuedItem>,
+      signer:
+          signer == freezed ? _value.signer : signer as List<ContractSigner>,
+      term: term == freezed ? _value.term : term as List<ContractTerm>,
+      bindingAttachment: bindingAttachment == freezed
+          ? _value.bindingAttachment
+          : bindingAttachment as Attachment,
+      bindingReference: bindingReference == freezed
+          ? _value.bindingReference
+          : bindingReference as Reference,
+      friendly: friendly == freezed
+          ? _value.friendly
+          : friendly as List<ContractFriendly>,
+      legal: legal == freezed ? _value.legal : legal as List<ContractLegal>,
+      rule: rule == freezed ? _value.rule : rule as List<ContractRule>,
     ));
   }
 }
@@ -3829,7 +3652,8 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Contract implements _Contract {
   const _$_Contract(
-      {this.id,
+      {@JsonKey(defaultValue: 'Contract') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -3851,7 +3675,8 @@ class _$_Contract implements _Contract {
       this.valuedItem,
       this.signer,
       this.term,
-      this.bindingX,
+      this.bindingAttachment,
+      this.bindingReference,
       this.friendly,
       this.legal,
       this.rule});
@@ -3859,6 +3684,9 @@ class _$_Contract implements _Contract {
   factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'Contract')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -3883,45 +3711,50 @@ class _$_Contract implements _Contract {
   @override
   final Period applies;
   @override
-  final Reference subject;
+  final List<Reference> subject;
   @override
-  final Reference authority;
+  final List<Reference> authority;
   @override
-  final Reference domain;
+  final List<Reference> domain;
   @override
   final CodeableConcept type;
   @override
-  final CodeableConcept subType;
+  final List<CodeableConcept> subType;
   @override
-  final CodeableConcept action;
+  final List<CodeableConcept> action;
   @override
-  final CodeableConcept actionReason;
+  final List<CodeableConcept> actionReason;
   @override
-  final ContractActor actor;
+  final List<ContractActor> actor;
   @override
-  final ContractValuedItem valuedItem;
+  final List<ContractValuedItem> valuedItem;
   @override
-  final ContractSigner signer;
+  final List<ContractSigner> signer;
   @override
-  final ContractTerm term;
+  final List<ContractTerm> term;
   @override
-  final Attachment bindingX;
+  final Attachment bindingAttachment;
   @override
-  final ContractFriendly friendly;
+  final Reference bindingReference;
   @override
-  final ContractLegal legal;
+  final List<ContractFriendly> friendly;
   @override
-  final ContractRule rule;
+  final List<ContractLegal> legal;
+  @override
+  final List<ContractRule> rule;
 
   @override
   String toString() {
-    return 'Contract(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, issued: $issued, applies: $applies, subject: $subject, authority: $authority, domain: $domain, type: $type, subType: $subType, action: $action, actionReason: $actionReason, actor: $actor, valuedItem: $valuedItem, signer: $signer, term: $term, bindingX: $bindingX, friendly: $friendly, legal: $legal, rule: $rule)';
+    return 'Contract(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, issued: $issued, applies: $applies, subject: $subject, authority: $authority, domain: $domain, type: $type, subType: $subType, action: $action, actionReason: $actionReason, actor: $actor, valuedItem: $valuedItem, signer: $signer, term: $term, bindingAttachment: $bindingAttachment, bindingReference: $bindingReference, friendly: $friendly, legal: $legal, rule: $rule)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Contract &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -3978,21 +3811,24 @@ class _$_Contract implements _Contract {
                 const DeepCollectionEquality().equals(other.signer, signer)) &&
             (identical(other.term, term) ||
                 const DeepCollectionEquality().equals(other.term, term)) &&
-            (identical(other.bindingX, bindingX) ||
+            (identical(other.bindingAttachment, bindingAttachment) ||
                 const DeepCollectionEquality()
-                    .equals(other.bindingX, bindingX)) &&
+                    .equals(other.bindingAttachment, bindingAttachment)) &&
+            (identical(other.bindingReference, bindingReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.bindingReference, bindingReference)) &&
             (identical(other.friendly, friendly) ||
                 const DeepCollectionEquality()
                     .equals(other.friendly, friendly)) &&
             (identical(other.legal, legal) ||
                 const DeepCollectionEquality().equals(other.legal, legal)) &&
-            (identical(other.rule, rule) ||
-                const DeepCollectionEquality().equals(other.rule, rule)));
+            (identical(other.rule, rule) || const DeepCollectionEquality().equals(other.rule, rule)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -4015,7 +3851,8 @@ class _$_Contract implements _Contract {
       const DeepCollectionEquality().hash(valuedItem) ^
       const DeepCollectionEquality().hash(signer) ^
       const DeepCollectionEquality().hash(term) ^
-      const DeepCollectionEquality().hash(bindingX) ^
+      const DeepCollectionEquality().hash(bindingAttachment) ^
+      const DeepCollectionEquality().hash(bindingReference) ^
       const DeepCollectionEquality().hash(friendly) ^
       const DeepCollectionEquality().hash(legal) ^
       const DeepCollectionEquality().hash(rule);
@@ -4032,7 +3869,8 @@ class _$_Contract implements _Contract {
 
 abstract class _Contract implements Contract {
   const factory _Contract(
-      {Id id,
+      {@JsonKey(defaultValue: 'Contract') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -4043,24 +3881,28 @@ abstract class _Contract implements Contract {
       Identifier identifier,
       FhirDateTime issued,
       Period applies,
-      Reference subject,
-      Reference authority,
-      Reference domain,
+      List<Reference> subject,
+      List<Reference> authority,
+      List<Reference> domain,
       CodeableConcept type,
-      CodeableConcept subType,
-      CodeableConcept action,
-      CodeableConcept actionReason,
-      ContractActor actor,
-      ContractValuedItem valuedItem,
-      ContractSigner signer,
-      ContractTerm term,
-      Attachment bindingX,
-      ContractFriendly friendly,
-      ContractLegal legal,
-      ContractRule rule}) = _$_Contract;
+      List<CodeableConcept> subType,
+      List<CodeableConcept> action,
+      List<CodeableConcept> actionReason,
+      List<ContractActor> actor,
+      List<ContractValuedItem> valuedItem,
+      List<ContractSigner> signer,
+      List<ContractTerm> term,
+      Attachment bindingAttachment,
+      Reference bindingReference,
+      List<ContractFriendly> friendly,
+      List<ContractLegal> legal,
+      List<ContractRule> rule}) = _$_Contract;
 
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Contract')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -4085,35 +3927,37 @@ abstract class _Contract implements Contract {
   @override
   Period get applies;
   @override
-  Reference get subject;
+  List<Reference> get subject;
   @override
-  Reference get authority;
+  List<Reference> get authority;
   @override
-  Reference get domain;
+  List<Reference> get domain;
   @override
   CodeableConcept get type;
   @override
-  CodeableConcept get subType;
+  List<CodeableConcept> get subType;
   @override
-  CodeableConcept get action;
+  List<CodeableConcept> get action;
   @override
-  CodeableConcept get actionReason;
+  List<CodeableConcept> get actionReason;
   @override
-  ContractActor get actor;
+  List<ContractActor> get actor;
   @override
-  ContractValuedItem get valuedItem;
+  List<ContractValuedItem> get valuedItem;
   @override
-  ContractSigner get signer;
+  List<ContractSigner> get signer;
   @override
-  ContractTerm get term;
+  List<ContractTerm> get term;
   @override
-  Attachment get bindingX;
+  Attachment get bindingAttachment;
   @override
-  ContractFriendly get friendly;
+  Reference get bindingReference;
   @override
-  ContractLegal get legal;
+  List<ContractFriendly> get friendly;
   @override
-  ContractRule get rule;
+  List<ContractLegal> get legal;
+  @override
+  List<ContractRule> get rule;
   @override
   _$ContractCopyWith<_Contract> get copyWith;
 }
@@ -4130,7 +3974,7 @@ class _$ContractActorTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference entity,
-      CodeableConcept role}) {
+      List<CodeableConcept> role}) {
     return _ContractActor(
       id: id,
       extension_: extension_,
@@ -4151,7 +3995,7 @@ mixin _$ContractActor {
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Reference get entity;
-  CodeableConcept get role;
+  List<CodeableConcept> get role;
 
   Map<String, dynamic> toJson();
   $ContractActorCopyWith<ContractActor> get copyWith;
@@ -4166,12 +4010,11 @@ abstract class $ContractActorCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference entity,
-      CodeableConcept role});
+      List<CodeableConcept> role});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get entity;
-  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class _$ContractActorCopyWithImpl<$Res>
@@ -4199,7 +4042,7 @@ class _$ContractActorCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       entity: entity == freezed ? _value.entity : entity as Reference,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
     ));
   }
 
@@ -4232,16 +4075,6 @@ class _$ContractActorCopyWithImpl<$Res>
       return _then(_value.copyWith(entity: value));
     });
   }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get role {
-    if (_value.role == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
-      return _then(_value.copyWith(role: value));
-    });
-  }
 }
 
 abstract class _$ContractActorCopyWith<$Res>
@@ -4255,7 +4088,7 @@ abstract class _$ContractActorCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference entity,
-      CodeableConcept role});
+      List<CodeableConcept> role});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -4263,8 +4096,6 @@ abstract class _$ContractActorCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ReferenceCopyWith<$Res> get entity;
-  @override
-  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class __$ContractActorCopyWithImpl<$Res>
@@ -4294,7 +4125,7 @@ class __$ContractActorCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       entity: entity == freezed ? _value.entity : entity as Reference,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
     ));
   }
 }
@@ -4323,7 +4154,7 @@ class _$_ContractActor implements _ContractActor {
   @JsonKey(required: true)
   final Reference entity;
   @override
-  final CodeableConcept role;
+  final List<CodeableConcept> role;
 
   @override
   String toString() {
@@ -4373,7 +4204,7 @@ abstract class _ContractActor implements ContractActor {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference entity,
-      CodeableConcept role}) = _$_ContractActor;
+      List<CodeableConcept> role}) = _$_ContractActor;
 
   factory _ContractActor.fromJson(Map<String, dynamic> json) =
       _$_ContractActor.fromJson;
@@ -4389,7 +4220,7 @@ abstract class _ContractActor implements ContractActor {
   @JsonKey(required: true)
   Reference get entity;
   @override
-  CodeableConcept get role;
+  List<CodeableConcept> get role;
   @override
   _$ContractActorCopyWith<_ContractActor> get copyWith;
 }
@@ -5146,9 +4977,9 @@ class _$ContractTermTearOff {
       CodeableConcept type,
       CodeableConcept subType,
       Reference subject,
-      CodeableConcept action,
-      CodeableConcept actionReason,
-      TermActor actor,
+      List<CodeableConcept> action,
+      List<CodeableConcept> actionReason,
+      List<TermActor> actor,
       String text,
       List<ContractValuedItem> valuedItem,
       List<ContractTerm> group}) {
@@ -5186,9 +5017,9 @@ mixin _$ContractTerm {
   CodeableConcept get type;
   CodeableConcept get subType;
   Reference get subject;
-  CodeableConcept get action;
-  CodeableConcept get actionReason;
-  TermActor get actor;
+  List<CodeableConcept> get action;
+  List<CodeableConcept> get actionReason;
+  List<TermActor> get actor;
   String get text;
   List<ContractValuedItem> get valuedItem;
   List<ContractTerm> get group;
@@ -5211,9 +5042,9 @@ abstract class $ContractTermCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept subType,
       Reference subject,
-      CodeableConcept action,
-      CodeableConcept actionReason,
-      TermActor actor,
+      List<CodeableConcept> action,
+      List<CodeableConcept> actionReason,
+      List<TermActor> actor,
       String text,
       List<ContractValuedItem> valuedItem,
       List<ContractTerm> group});
@@ -5225,9 +5056,6 @@ abstract class $ContractTermCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get subType;
   $ReferenceCopyWith<$Res> get subject;
-  $CodeableConceptCopyWith<$Res> get action;
-  $CodeableConceptCopyWith<$Res> get actionReason;
-  $TermActorCopyWith<$Res> get actor;
 }
 
 class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
@@ -5270,11 +5098,12 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      action: action == freezed ? _value.action : action as CodeableConcept,
+      action:
+          action == freezed ? _value.action : action as List<CodeableConcept>,
       actionReason: actionReason == freezed
           ? _value.actionReason
-          : actionReason as CodeableConcept,
-      actor: actor == freezed ? _value.actor : actor as TermActor,
+          : actionReason as List<CodeableConcept>,
+      actor: actor == freezed ? _value.actor : actor as List<TermActor>,
       text: text == freezed ? _value.text : text as String,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
@@ -5352,36 +5181,6 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
       return _then(_value.copyWith(subject: value));
     });
   }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get action {
-    if (_value.action == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.action, (value) {
-      return _then(_value.copyWith(action: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get actionReason {
-    if (_value.actionReason == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.actionReason, (value) {
-      return _then(_value.copyWith(actionReason: value));
-    });
-  }
-
-  @override
-  $TermActorCopyWith<$Res> get actor {
-    if (_value.actor == null) {
-      return null;
-    }
-    return $TermActorCopyWith<$Res>(_value.actor, (value) {
-      return _then(_value.copyWith(actor: value));
-    });
-  }
 }
 
 abstract class _$ContractTermCopyWith<$Res>
@@ -5400,9 +5199,9 @@ abstract class _$ContractTermCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept subType,
       Reference subject,
-      CodeableConcept action,
-      CodeableConcept actionReason,
-      TermActor actor,
+      List<CodeableConcept> action,
+      List<CodeableConcept> actionReason,
+      List<TermActor> actor,
       String text,
       List<ContractValuedItem> valuedItem,
       List<ContractTerm> group});
@@ -5421,12 +5220,6 @@ abstract class _$ContractTermCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get subType;
   @override
   $ReferenceCopyWith<$Res> get subject;
-  @override
-  $CodeableConceptCopyWith<$Res> get action;
-  @override
-  $CodeableConceptCopyWith<$Res> get actionReason;
-  @override
-  $TermActorCopyWith<$Res> get actor;
 }
 
 class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
@@ -5471,11 +5264,12 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      action: action == freezed ? _value.action : action as CodeableConcept,
+      action:
+          action == freezed ? _value.action : action as List<CodeableConcept>,
       actionReason: actionReason == freezed
           ? _value.actionReason
-          : actionReason as CodeableConcept,
-      actor: actor == freezed ? _value.actor : actor as TermActor,
+          : actionReason as List<CodeableConcept>,
+      actor: actor == freezed ? _value.actor : actor as List<TermActor>,
       text: text == freezed ? _value.text : text as String,
       valuedItem: valuedItem == freezed
           ? _value.valuedItem
@@ -5527,11 +5321,11 @@ class _$_ContractTerm implements _ContractTerm {
   @override
   final Reference subject;
   @override
-  final CodeableConcept action;
+  final List<CodeableConcept> action;
   @override
-  final CodeableConcept actionReason;
+  final List<CodeableConcept> actionReason;
   @override
-  final TermActor actor;
+  final List<TermActor> actor;
   @override
   final String text;
   @override
@@ -5628,9 +5422,9 @@ abstract class _ContractTerm implements ContractTerm {
       CodeableConcept type,
       CodeableConcept subType,
       Reference subject,
-      CodeableConcept action,
-      CodeableConcept actionReason,
-      TermActor actor,
+      List<CodeableConcept> action,
+      List<CodeableConcept> actionReason,
+      List<TermActor> actor,
       String text,
       List<ContractValuedItem> valuedItem,
       List<ContractTerm> group}) = _$_ContractTerm;
@@ -5658,11 +5452,11 @@ abstract class _ContractTerm implements ContractTerm {
   @override
   Reference get subject;
   @override
-  CodeableConcept get action;
+  List<CodeableConcept> get action;
   @override
-  CodeableConcept get actionReason;
+  List<CodeableConcept> get actionReason;
   @override
-  TermActor get actor;
+  List<TermActor> get actor;
   @override
   String get text;
   @override

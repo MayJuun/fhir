@@ -10,6 +10,7 @@ part 'documents_and_lists.g.dart';
 @freezed
 abstract class Composition with _$Composition implements Resource {
   const factory Composition({
+    @JsonKey(defaultValue: 'Composition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -28,12 +29,12 @@ abstract class Composition with _$Composition implements Resource {
         CompositionStatus status,
     Code confidentiality,
     @JsonKey(required: true) @required Reference subject,
-    @JsonKey(required: true) @required Reference author,
-    CompositionAttester attester,
+    @JsonKey(required: true) @required List<Reference> author,
+    List<CompositionAttester> attester,
     Reference custodian,
-    CompositionEvent event,
+    List<CompositionEvent> event,
     Reference encounter,
-    CompositionSection section,
+    List<CompositionSection> section,
   }) = _Composition;
 
   factory Composition.fromJson(Map<String, dynamic> json) =>
@@ -43,6 +44,7 @@ abstract class Composition with _$Composition implements Resource {
 @freezed
 abstract class DocumentReference with _$DocumentReference implements Resource {
   const factory DocumentReference({
+    @JsonKey(defaultValue: 'DocumentReference') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -52,11 +54,11 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     Identifier masterIdentifier,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference subject,
     @JsonKey(required: true) @required CodeableConcept type,
     @JsonKey(name: 'class') CodeableConcept class_,
-    Reference author,
+    List<Reference> author,
     Reference custodian,
     Reference authenticator,
     FhirDateTime created,
@@ -65,10 +67,10 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
     @required
         DocumentReferenceStatus status,
     CodeableConcept docStatus,
-    DocumentReferenceRelatesTo relatesTo,
+    List<DocumentReferenceRelatesTo> relatesTo,
     String description,
-    CodeableConcept securityLabel,
-    @JsonKey(required: true) @required DocumentReferenceContent content,
+    List<CodeableConcept> securityLabel,
+    @JsonKey(required: true) @required List<DocumentReferenceContent> content,
     DocumentReferenceContext context,
   }) = _DocumentReference;
 
@@ -79,6 +81,7 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
 @freezed
 abstract class DocumentManifest with _$DocumentManifest implements Resource {
   const factory DocumentManifest({
+    @JsonKey(defaultValue: 'DocumentManifest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -88,19 +91,19 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     Identifier masterIdentifier,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference subject,
-    Reference recipient,
+    List<Reference> recipient,
     CodeableConcept type,
-    Reference author,
+    List<Reference> author,
     FhirDateTime created,
     FhirUri source,
     @JsonKey(required: true, unknownEnumValue: DocumentManifestStatus.unknown)
     @required
         DocumentManifestStatus status,
     String description,
-    @JsonKey(required: true) @required DocumentManifestContent content,
-    DocumentManifestRelated related,
+    @JsonKey(required: true) @required List<DocumentManifestContent> content,
+    List<DocumentManifestRelated> related,
   }) = _DocumentManifest;
 
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
@@ -110,6 +113,7 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
 @freezed
 abstract class List_ with _$List_ implements Resource {
   const factory List_({
+    @JsonKey(defaultValue: 'List') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -118,7 +122,7 @@ abstract class List_ with _$List_ implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     String title,
     CodeableConcept code,
     Reference subject,
@@ -133,7 +137,7 @@ abstract class List_ with _$List_ implements Resource {
     @required
         ListMode mode,
     String note,
-    ListEntry entry,
+    List<ListEntry> entry,
     CodeableConcept emptyReason,
   }) = _List_;
 
@@ -146,9 +150,7 @@ abstract class CompositionAttester with _$CompositionAttester {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: AttesterMode.unknown)
-    @required
-        AttesterMode mode,
+    @JsonKey(required: true) @required List<AttesterMode> mode,
     FhirDateTime time,
     Reference party,
   }) = _CompositionAttester;
@@ -163,9 +165,9 @@ abstract class CompositionEvent with _$CompositionEvent {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    CodeableConcept code,
-    Period period,
-    Reference detail,
+    List<CodeableConcept> code,
+    List<Period> period,
+    List<Reference> detail,
   }) = _CompositionEvent;
 
   factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
@@ -183,7 +185,7 @@ abstract class CompositionSection with _$CompositionSection {
     Narrative text,
     @JsonKey(unknownEnumValue: SectionMode.unknown) SectionMode mode,
     CodeableConcept orderedBy,
-    Reference entry,
+    List<Reference> entry,
     CodeableConcept emptyReason,
     List<CompositionSection> section,
   }) = _CompositionSection;
@@ -215,7 +217,7 @@ abstract class DocumentReferenceContent with _$DocumentReferenceContent {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Attachment attachment,
-    Coding format,
+    List<Coding> format,
   }) = _DocumentReferenceContent;
 
   factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
@@ -229,12 +231,12 @@ abstract class DocumentReferenceContext with _$DocumentReferenceContext {
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
     Reference encounter,
-    CodeableConcept event,
+    List<CodeableConcept> event,
     Period period,
     CodeableConcept facilityType,
     CodeableConcept practiceSetting,
     Reference sourcePatientInfo,
-    DocumentReferenceRelated related,
+    List<DocumentReferenceRelated> related,
   }) = _DocumentReferenceContext;
 
   factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
@@ -247,7 +249,8 @@ abstract class DocumentManifestContent with _$DocumentManifestContent {
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required Attachment pX,
+    Attachment pAttachment,
+    Reference pReference,
   }) = _DocumentManifestContent;
 
   factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>

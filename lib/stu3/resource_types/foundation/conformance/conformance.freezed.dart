@@ -2459,7 +2459,8 @@ class _$CapabilityStatementSearchParamTearOff {
   _CapabilityStatementSearchParam call(
       {String name,
       String definition,
-      @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+          ParameterSearchType type,
       String documentation}) {
     return _CapabilityStatementSearchParam(
       name: name,
@@ -2477,8 +2478,8 @@ const $CapabilityStatementSearchParam =
 mixin _$CapabilityStatementSearchParam {
   String get name;
   String get definition;
-  @JsonKey(unknownEnumValue: SearchParamType.unknown)
-  SearchParamType get type;
+  @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+  ParameterSearchType get type;
   String get documentation;
 
   Map<String, dynamic> toJson();
@@ -2494,7 +2495,8 @@ abstract class $CapabilityStatementSearchParamCopyWith<$Res> {
   $Res call(
       {String name,
       String definition,
-      @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+          ParameterSearchType type,
       String documentation});
 }
 
@@ -2517,7 +2519,7 @@ class _$CapabilityStatementSearchParamCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       definition:
           definition == freezed ? _value.definition : definition as String,
-      type: type == freezed ? _value.type : type as SearchParamType,
+      type: type == freezed ? _value.type : type as ParameterSearchType,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
@@ -2535,7 +2537,8 @@ abstract class _$CapabilityStatementSearchParamCopyWith<$Res>
   $Res call(
       {String name,
       String definition,
-      @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+          ParameterSearchType type,
       String documentation});
 }
 
@@ -2562,7 +2565,7 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       definition:
           definition == freezed ? _value.definition : definition as String,
-      type: type == freezed ? _value.type : type as SearchParamType,
+      type: type == freezed ? _value.type : type as ParameterSearchType,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
@@ -2576,7 +2579,7 @@ class _$_CapabilityStatementSearchParam
   const _$_CapabilityStatementSearchParam(
       {this.name,
       this.definition,
-      @JsonKey(unknownEnumValue: SearchParamType.unknown) this.type,
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown) this.type,
       this.documentation});
 
   factory _$_CapabilityStatementSearchParam.fromJson(
@@ -2588,8 +2591,8 @@ class _$_CapabilityStatementSearchParam
   @override
   final String definition;
   @override
-  @JsonKey(unknownEnumValue: SearchParamType.unknown)
-  final SearchParamType type;
+  @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+  final ParameterSearchType type;
   @override
   final String documentation;
 
@@ -2638,7 +2641,8 @@ abstract class _CapabilityStatementSearchParam
   const factory _CapabilityStatementSearchParam(
       {String name,
       String definition,
-      @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+          ParameterSearchType type,
       String documentation}) = _$_CapabilityStatementSearchParam;
 
   factory _CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =
@@ -2649,8 +2653,8 @@ abstract class _CapabilityStatementSearchParam
   @override
   String get definition;
   @override
-  @JsonKey(unknownEnumValue: SearchParamType.unknown)
-  SearchParamType get type;
+  @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+  ParameterSearchType get type;
   @override
   String get documentation;
   @override
@@ -3428,10 +3432,8 @@ class _$CapabilityStatementSupportedMessageTearOff {
   const _$CapabilityStatementSupportedMessageTearOff();
 
   _CapabilityStatementSupportedMessage call(
-      {@JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
-          SupportedMessageMode mode,
-      @JsonKey(required: true)
-          Reference definition}) {
+      {@JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
+      @JsonKey(required: true) Reference definition}) {
     return _CapabilityStatementSupportedMessage(
       mode: mode,
       definition: definition,
@@ -3444,8 +3446,8 @@ const $CapabilityStatementSupportedMessage =
     _$CapabilityStatementSupportedMessageTearOff();
 
 mixin _$CapabilityStatementSupportedMessage {
-  @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
-  SupportedMessageMode get mode;
+  @JsonKey(unknownEnumValue: Mode.unknown)
+  Mode get mode;
   @JsonKey(required: true)
   Reference get definition;
 
@@ -3460,10 +3462,8 @@ abstract class $CapabilityStatementSupportedMessageCopyWith<$Res> {
           $Res Function(CapabilityStatementSupportedMessage) then) =
       _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
-          SupportedMessageMode mode,
-      @JsonKey(required: true)
-          Reference definition});
+      {@JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
+      @JsonKey(required: true) Reference definition});
 
   $ReferenceCopyWith<$Res> get definition;
 }
@@ -3482,7 +3482,7 @@ class _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
     Object definition = freezed,
   }) {
     return _then(_value.copyWith(
-      mode: mode == freezed ? _value.mode : mode as SupportedMessageMode,
+      mode: mode == freezed ? _value.mode : mode as Mode,
       definition:
           definition == freezed ? _value.definition : definition as Reference,
     ));
@@ -3507,10 +3507,8 @@ abstract class _$CapabilityStatementSupportedMessageCopyWith<$Res>
       __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
-          SupportedMessageMode mode,
-      @JsonKey(required: true)
-          Reference definition});
+      {@JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
+      @JsonKey(required: true) Reference definition});
 
   @override
   $ReferenceCopyWith<$Res> get definition;
@@ -3534,7 +3532,7 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
     Object definition = freezed,
   }) {
     return _then(_CapabilityStatementSupportedMessage(
-      mode: mode == freezed ? _value.mode : mode as SupportedMessageMode,
+      mode: mode == freezed ? _value.mode : mode as Mode,
       definition:
           definition == freezed ? _value.definition : definition as Reference,
     ));
@@ -3545,7 +3543,7 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
 class _$_CapabilityStatementSupportedMessage
     implements _CapabilityStatementSupportedMessage {
   const _$_CapabilityStatementSupportedMessage(
-      {@JsonKey(unknownEnumValue: SupportedMessageMode.unknown) this.mode,
+      {@JsonKey(unknownEnumValue: Mode.unknown) this.mode,
       @JsonKey(required: true) this.definition});
 
   factory _$_CapabilityStatementSupportedMessage.fromJson(
@@ -3553,8 +3551,8 @@ class _$_CapabilityStatementSupportedMessage
       _$_$_CapabilityStatementSupportedMessageFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
-  final SupportedMessageMode mode;
+  @JsonKey(unknownEnumValue: Mode.unknown)
+  final Mode mode;
   @override
   @JsonKey(required: true)
   final Reference definition;
@@ -3596,18 +3594,17 @@ class _$_CapabilityStatementSupportedMessage
 abstract class _CapabilityStatementSupportedMessage
     implements CapabilityStatementSupportedMessage {
   const factory _CapabilityStatementSupportedMessage(
-      {@JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
-          SupportedMessageMode mode,
-      @JsonKey(required: true)
-          Reference definition}) = _$_CapabilityStatementSupportedMessage;
+          {@JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
+          @JsonKey(required: true) Reference definition}) =
+      _$_CapabilityStatementSupportedMessage;
 
   factory _CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =
       _$_CapabilityStatementSupportedMessage.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
-  SupportedMessageMode get mode;
+  @JsonKey(unknownEnumValue: Mode.unknown)
+  Mode get mode;
   @override
   @JsonKey(required: true)
   Reference get definition;
@@ -3627,7 +3624,7 @@ class _$CapabilityStatementEventTearOff {
   _CapabilityStatementEvent call(
       {@JsonKey(required: true) Coding code,
       @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
-      @JsonKey(unknownEnumValue: EventMode.unknown) EventMode mode,
+      @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
       Code focus,
       @JsonKey(required: true) Reference request,
       @JsonKey(required: true) Reference response,
@@ -3652,8 +3649,8 @@ mixin _$CapabilityStatementEvent {
   Coding get code;
   @JsonKey(unknownEnumValue: EventCategory.unknown)
   EventCategory get category;
-  @JsonKey(unknownEnumValue: EventMode.unknown)
-  EventMode get mode;
+  @JsonKey(unknownEnumValue: Mode.unknown)
+  Mode get mode;
   Code get focus;
   @JsonKey(required: true)
   Reference get request;
@@ -3672,7 +3669,7 @@ abstract class $CapabilityStatementEventCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true) Coding code,
       @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
-      @JsonKey(unknownEnumValue: EventMode.unknown) EventMode mode,
+      @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
       Code focus,
       @JsonKey(required: true) Reference request,
       @JsonKey(required: true) Reference response,
@@ -3705,7 +3702,7 @@ class _$CapabilityStatementEventCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Coding,
       category:
           category == freezed ? _value.category : category as EventCategory,
-      mode: mode == freezed ? _value.mode : mode as EventMode,
+      mode: mode == freezed ? _value.mode : mode as Mode,
       focus: focus == freezed ? _value.focus : focus as Code,
       request: request == freezed ? _value.request : request as Reference,
       response: response == freezed ? _value.response : response as Reference,
@@ -3755,7 +3752,7 @@ abstract class _$CapabilityStatementEventCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true) Coding code,
       @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
-      @JsonKey(unknownEnumValue: EventMode.unknown) EventMode mode,
+      @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
       Code focus,
       @JsonKey(required: true) Reference request,
       @JsonKey(required: true) Reference response,
@@ -3794,7 +3791,7 @@ class __$CapabilityStatementEventCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Coding,
       category:
           category == freezed ? _value.category : category as EventCategory,
-      mode: mode == freezed ? _value.mode : mode as EventMode,
+      mode: mode == freezed ? _value.mode : mode as Mode,
       focus: focus == freezed ? _value.focus : focus as Code,
       request: request == freezed ? _value.request : request as Reference,
       response: response == freezed ? _value.response : response as Reference,
@@ -3810,7 +3807,7 @@ class _$_CapabilityStatementEvent implements _CapabilityStatementEvent {
   const _$_CapabilityStatementEvent(
       {@JsonKey(required: true) this.code,
       @JsonKey(unknownEnumValue: EventCategory.unknown) this.category,
-      @JsonKey(unknownEnumValue: EventMode.unknown) this.mode,
+      @JsonKey(unknownEnumValue: Mode.unknown) this.mode,
       this.focus,
       @JsonKey(required: true) this.request,
       @JsonKey(required: true) this.response,
@@ -3826,8 +3823,8 @@ class _$_CapabilityStatementEvent implements _CapabilityStatementEvent {
   @JsonKey(unknownEnumValue: EventCategory.unknown)
   final EventCategory category;
   @override
-  @JsonKey(unknownEnumValue: EventMode.unknown)
-  final EventMode mode;
+  @JsonKey(unknownEnumValue: Mode.unknown)
+  final Mode mode;
   @override
   final Code focus;
   @override
@@ -3894,7 +3891,7 @@ abstract class _CapabilityStatementEvent implements CapabilityStatementEvent {
   const factory _CapabilityStatementEvent(
       {@JsonKey(required: true) Coding code,
       @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
-      @JsonKey(unknownEnumValue: EventMode.unknown) EventMode mode,
+      @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
       Code focus,
       @JsonKey(required: true) Reference request,
       @JsonKey(required: true) Reference response,
@@ -3910,8 +3907,8 @@ abstract class _CapabilityStatementEvent implements CapabilityStatementEvent {
   @JsonKey(unknownEnumValue: EventCategory.unknown)
   EventCategory get category;
   @override
-  @JsonKey(unknownEnumValue: EventMode.unknown)
-  EventMode get mode;
+  @JsonKey(unknownEnumValue: Mode.unknown)
+  Mode get mode;
   @override
   Code get focus;
   @override
@@ -4146,8 +4143,8 @@ class _$CompartmentDefinitionTearOff {
       String url,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-          CompartmentDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4190,8 +4187,8 @@ mixin _$CompartmentDefinition {
   String get url;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-  CompartmentDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -4219,8 +4216,8 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       String url,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-          CompartmentDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4269,9 +4266,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed
-          ? _value.status
-          : status as CompartmentDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -4309,8 +4304,8 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
       String url,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-          CompartmentDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4361,9 +4356,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed
-          ? _value.status
-          : status as CompartmentDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -4398,7 +4391,7 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
       this.url,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -4427,8 +4420,8 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-  final CompartmentDefinitionStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -4544,8 +4537,8 @@ abstract class _CompartmentDefinition implements CompartmentDefinition {
       String url,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-          CompartmentDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4572,8 +4565,8 @@ abstract class _CompartmentDefinition implements CompartmentDefinition {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-  CompartmentDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -4790,8 +4783,8 @@ class _$DataElementTearOff {
       String url,
       List<Identifier> identifier,
       String version,
-      @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          DataElementStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4837,8 +4830,8 @@ mixin _$DataElement {
   String get url;
   List<Identifier> get identifier;
   String get version;
-  @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-  DataElementStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -4868,8 +4861,8 @@ abstract class $DataElementCopyWith<$Res> {
       String url,
       List<Identifier> identifier,
       String version,
-      @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          DataElementStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -4922,7 +4915,7 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
-      status: status == freezed ? _value.status : status as DataElementStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -4964,8 +4957,8 @@ abstract class _$DataElementCopyWith<$Res>
       String url,
       List<Identifier> identifier,
       String version,
-      @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          DataElementStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -5020,7 +5013,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
-      status: status == freezed ? _value.status : status as DataElementStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -5059,7 +5052,7 @@ class _$_DataElement implements _DataElement {
       this.url,
       this.identifier,
       this.version,
-      @JsonKey(unknownEnumValue: DataElementStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -5090,8 +5083,8 @@ class _$_DataElement implements _DataElement {
   @override
   final String version;
   @override
-  @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-  final DataElementStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -5214,8 +5207,8 @@ abstract class _DataElement implements DataElement {
       String url,
       List<Identifier> identifier,
       String version,
-      @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          DataElementStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -5244,8 +5237,8 @@ abstract class _DataElement implements DataElement {
   @override
   String get version;
   @override
-  @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-  DataElementStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -5464,8 +5457,8 @@ class _$GraphDefinitionTearOff {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-          GraphDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -5507,8 +5500,8 @@ mixin _$GraphDefinition {
   String get url;
   String get version;
   String get name;
-  @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-  GraphDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -5535,8 +5528,8 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-          GraphDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -5584,8 +5577,7 @@ class _$GraphDefinitionCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status:
-          status == freezed ? _value.status : status as GraphDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -5621,8 +5613,8 @@ abstract class _$GraphDefinitionCopyWith<$Res>
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-          GraphDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -5672,8 +5664,7 @@ class __$GraphDefinitionCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status:
-          status == freezed ? _value.status : status as GraphDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -5706,7 +5697,7 @@ class _$_GraphDefinition implements _GraphDefinition {
       this.url,
       this.version,
       this.name,
-      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -5734,8 +5725,8 @@ class _$_GraphDefinition implements _GraphDefinition {
   @override
   final String name;
   @override
-  @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-  final GraphDefinitionStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -5850,8 +5841,8 @@ abstract class _GraphDefinition implements GraphDefinition {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-          GraphDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -5877,8 +5868,8 @@ abstract class _GraphDefinition implements GraphDefinition {
   @override
   String get name;
   @override
-  @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-  GraphDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -6549,8 +6540,8 @@ class _$ImplementationGuideTearOff {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-          ImplementationGuideStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6598,8 +6589,8 @@ mixin _$ImplementationGuide {
   String get url;
   String get version;
   String get name;
-  @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-  ImplementationGuideStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -6629,8 +6620,8 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-          ImplementationGuideStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6686,9 +6677,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status: status == freezed
-          ? _value.status
-          : status as ImplementationGuideStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -6744,8 +6733,8 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-          ImplementationGuideStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -6804,9 +6793,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status: status == freezed
-          ? _value.status
-          : status as ImplementationGuideStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -6849,7 +6836,7 @@ class _$_ImplementationGuide implements _ImplementationGuide {
       this.url,
       this.version,
       this.name,
-      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -6880,8 +6867,8 @@ class _$_ImplementationGuide implements _ImplementationGuide {
   @override
   final String name;
   @override
-  @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-  final ImplementationGuideStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -7014,8 +7001,8 @@ abstract class _ImplementationGuide implements ImplementationGuide {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-          ImplementationGuideStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -7044,8 +7031,8 @@ abstract class _ImplementationGuide implements ImplementationGuide {
   @override
   String get name;
   @override
-  @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-  ImplementationGuideStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -8153,8 +8140,8 @@ class _$MessageDefinitionTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-          MessageDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -8213,8 +8200,8 @@ mixin _$MessageDefinition {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-  MessageDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -8250,8 +8237,8 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-          MessageDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -8321,8 +8308,7 @@ class _$MessageDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status:
-          status == freezed ? _value.status : status as MessageDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -8403,8 +8389,8 @@ abstract class _$MessageDefinitionCopyWith<$Res>
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-          MessageDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -8479,8 +8465,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status:
-          status == freezed ? _value.status : status as MessageDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -8528,7 +8513,7 @@ class _$_MessageDefinition implements _MessageDefinition {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -8567,8 +8552,8 @@ class _$_MessageDefinition implements _MessageDefinition {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-  final MessageDefinitionStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -8727,8 +8712,8 @@ abstract class _MessageDefinition implements MessageDefinition {
           String version,
           String name,
           String title,
-          @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-              MessageDefinitionStatus status,
+          @JsonKey(unknownEnumValue: Status.unknown)
+              Status status,
           Boolean experimental,
           DateTime date,
           String publisher,
@@ -8766,8 +8751,8 @@ abstract class _MessageDefinition implements MessageDefinition {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-  MessageDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -9189,8 +9174,8 @@ class _$OperationDefinitionTearOff {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-          OperationDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
       Boolean experimental,
@@ -9249,8 +9234,8 @@ mixin _$OperationDefinition {
   String get url;
   String get version;
   String get name;
-  @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-  OperationDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
   OperationDefinitionKind get kind;
   Boolean get experimental;
@@ -9286,8 +9271,8 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-          OperationDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
       Boolean experimental,
@@ -9354,9 +9339,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status: status == freezed
-          ? _value.status
-          : status as OperationDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       kind: kind == freezed ? _value.kind : kind as OperationDefinitionKind,
       experimental: experimental == freezed
           ? _value.experimental
@@ -9415,8 +9398,8 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-          OperationDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
       Boolean experimental,
@@ -9486,9 +9469,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status: status == freezed
-          ? _value.status
-          : status as OperationDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       kind: kind == freezed ? _value.kind : kind as OperationDefinitionKind,
       experimental: experimental == freezed
           ? _value.experimental
@@ -9534,7 +9515,7 @@ class _$_OperationDefinition implements _OperationDefinition {
       this.url,
       this.version,
       this.name,
-      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           this.kind,
@@ -9571,8 +9552,8 @@ class _$_OperationDefinition implements _OperationDefinition {
   @override
   final String name;
   @override
-  @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-  final OperationDefinitionStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
   final OperationDefinitionKind kind;
@@ -9734,8 +9715,8 @@ abstract class _OperationDefinition implements OperationDefinition {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-          OperationDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
       Boolean experimental,
@@ -9770,8 +9751,8 @@ abstract class _OperationDefinition implements OperationDefinition {
   @override
   String get name;
   @override
-  @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-  OperationDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
   OperationDefinitionKind get kind;
@@ -10562,8 +10543,8 @@ class _$SearchParameterTearOff {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          SearchParameterStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -10573,8 +10554,8 @@ class _$SearchParameterTearOff {
       String purpose,
       Code code,
       List<Code> base,
-      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          SearchParameterType type,
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+          ParameterSearchType type,
       String derivedFrom,
       String description,
       String expression,
@@ -10625,8 +10606,8 @@ mixin _$SearchParameter {
   String get url;
   String get version;
   String get name;
-  @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-  SearchParameterStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -10636,8 +10617,8 @@ mixin _$SearchParameter {
   String get purpose;
   Code get code;
   List<Code> get base;
-  @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-  SearchParameterType get type;
+  @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+  ParameterSearchType get type;
   String get derivedFrom;
   String get description;
   String get expression;
@@ -10664,8 +10645,8 @@ abstract class $SearchParameterCopyWith<$Res> {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          SearchParameterStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -10675,8 +10656,8 @@ abstract class $SearchParameterCopyWith<$Res> {
       String purpose,
       Code code,
       List<Code> base,
-      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          SearchParameterType type,
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+          ParameterSearchType type,
       String derivedFrom,
       String description,
       String expression,
@@ -10733,8 +10714,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status:
-          status == freezed ? _value.status : status as SearchParameterStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -10751,7 +10731,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       purpose: purpose == freezed ? _value.purpose : purpose as String,
       code: code == freezed ? _value.code : code as Code,
       base: base == freezed ? _value.base : base as List<Code>,
-      type: type == freezed ? _value.type : type as SearchParameterType,
+      type: type == freezed ? _value.type : type as ParameterSearchType,
       derivedFrom:
           derivedFrom == freezed ? _value.derivedFrom : derivedFrom as String,
       description:
@@ -10789,8 +10769,8 @@ abstract class _$SearchParameterCopyWith<$Res>
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          SearchParameterStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -10800,8 +10780,8 @@ abstract class _$SearchParameterCopyWith<$Res>
       String purpose,
       Code code,
       List<Code> base,
-      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          SearchParameterType type,
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+          ParameterSearchType type,
       String derivedFrom,
       String description,
       String expression,
@@ -10860,8 +10840,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
-      status:
-          status == freezed ? _value.status : status as SearchParameterStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -10878,7 +10857,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       purpose: purpose == freezed ? _value.purpose : purpose as String,
       code: code == freezed ? _value.code : code as Code,
       base: base == freezed ? _value.base : base as List<Code>,
-      type: type == freezed ? _value.type : type as SearchParameterType,
+      type: type == freezed ? _value.type : type as ParameterSearchType,
       derivedFrom:
           derivedFrom == freezed ? _value.derivedFrom : derivedFrom as String,
       description:
@@ -10913,7 +10892,7 @@ class _$_SearchParameter implements _SearchParameter {
       this.url,
       this.version,
       this.name,
-      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -10924,7 +10903,7 @@ class _$_SearchParameter implements _SearchParameter {
       this.purpose,
       this.code,
       this.base,
-      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
           this.type,
       this.derivedFrom,
       this.description,
@@ -10952,8 +10931,8 @@ class _$_SearchParameter implements _SearchParameter {
   @override
   final String name;
   @override
-  @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-  final SearchParameterStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -10973,8 +10952,8 @@ class _$_SearchParameter implements _SearchParameter {
   @override
   final List<Code> base;
   @override
-  @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-  final SearchParameterType type;
+  @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+  final ParameterSearchType type;
   @override
   final String derivedFrom;
   @override
@@ -11120,8 +11099,8 @@ abstract class _SearchParameter implements SearchParameter {
       String url,
       String version,
       String name,
-      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          SearchParameterStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -11131,8 +11110,8 @@ abstract class _SearchParameter implements SearchParameter {
       String purpose,
       Code code,
       List<Code> base,
-      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          SearchParameterType type,
+      @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+          ParameterSearchType type,
       String derivedFrom,
       String description,
       String expression,
@@ -11158,8 +11137,8 @@ abstract class _SearchParameter implements SearchParameter {
   @override
   String get name;
   @override
-  @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-  SearchParameterStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -11179,8 +11158,8 @@ abstract class _SearchParameter implements SearchParameter {
   @override
   List<Code> get base;
   @override
-  @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-  SearchParameterType get type;
+  @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+  ParameterSearchType get type;
   @override
   String get derivedFrom;
   @override
@@ -11394,8 +11373,8 @@ class _$StructureDefinitionTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-          StructureDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -11467,8 +11446,8 @@ mixin _$StructureDefinition {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-  StructureDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -11512,8 +11491,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-          StructureDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -11596,9 +11575,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed
-          ? _value.status
-          : status as StructureDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -11683,8 +11660,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-          StructureDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -11771,9 +11748,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed
-          ? _value.status
-          : status as StructureDefinitionStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -11834,7 +11809,7 @@ class _$_StructureDefinition implements _StructureDefinition {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -11881,8 +11856,8 @@ class _$_StructureDefinition implements _StructureDefinition {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-  final StructureDefinitionStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -12069,8 +12044,8 @@ abstract class _StructureDefinition implements StructureDefinition {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-          StructureDefinitionStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -12115,8 +12090,8 @@ abstract class _StructureDefinition implements StructureDefinition {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-  StructureDefinitionStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override
@@ -12661,8 +12636,8 @@ class _$StructureMapTearOff {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-          StructureMapStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -12711,8 +12686,8 @@ mixin _$StructureMap {
   String get version;
   String get name;
   String get title;
-  @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-  StructureMapStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   Boolean get experimental;
   DateTime get date;
   String get publisher;
@@ -12743,8 +12718,8 @@ abstract class $StructureMapCopyWith<$Res> {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-          StructureMapStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -12800,7 +12775,7 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as StructureMapStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -12841,8 +12816,8 @@ abstract class _$StructureMapCopyWith<$Res>
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-          StructureMapStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -12900,7 +12875,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
-      status: status == freezed ? _value.status : status as StructureMapStatus,
+      status: status == freezed ? _value.status : status as Status,
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
@@ -12938,7 +12913,7 @@ class _$_StructureMap implements _StructureMap {
       this.version,
       this.name,
       this.title,
-      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+      @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
       this.experimental,
       this.date,
@@ -12972,8 +12947,8 @@ class _$_StructureMap implements _StructureMap {
   @override
   final String title;
   @override
-  @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-  final StructureMapStatus status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  final Status status;
   @override
   final Boolean experimental;
   @override
@@ -13104,8 +13079,8 @@ abstract class _StructureMap implements StructureMap {
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-          StructureMapStatus status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       DateTime date,
       String publisher,
@@ -13137,8 +13112,8 @@ abstract class _StructureMap implements StructureMap {
   @override
   String get title;
   @override
-  @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-  StructureMapStatus get status;
+  @JsonKey(unknownEnumValue: Status.unknown)
+  Status get status;
   @override
   Boolean get experimental;
   @override

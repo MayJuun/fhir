@@ -10,6 +10,7 @@ part 'payment.g.dart';
 @freezed
 abstract class PaymentNotice with _$PaymentNotice implements Resource {
   const factory PaymentNotice({
+    @JsonKey(defaultValue: 'PaymentNotice') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -18,7 +19,7 @@ abstract class PaymentNotice with _$PaymentNotice implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Coding ruleset,
     Coding originalRuleset,
     FhirDateTime created,
@@ -39,6 +40,7 @@ abstract class PaymentReconciliation
     with _$PaymentReconciliation
     implements Resource {
   const factory PaymentReconciliation({
+    @JsonKey(defaultValue: 'PaymentReconciliation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -47,7 +49,7 @@ abstract class PaymentReconciliation
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference request,
     @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
         PaymentReconciliationOutcome outcome,
@@ -59,10 +61,10 @@ abstract class PaymentReconciliation
     Reference organization,
     Reference requestProvider,
     Reference requestOrganization,
-    PaymentReconciliationDetail detail,
+    List<PaymentReconciliationDetail> detail,
     Coding form,
     @JsonKey(required: true) @required Quantity total,
-    PaymentReconciliationNote note,
+    List<PaymentReconciliationNote> note,
   }) = _PaymentReconciliation;
 
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>

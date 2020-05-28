@@ -20,8 +20,8 @@ class _$AccountTearOff {
       @JsonKey(required: true, defaultValue: 'Account')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown)
-          AccountStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       CodeableConcept type,
       String name,
       Reference subject,
@@ -57,8 +57,8 @@ mixin _$Account {
   @JsonKey(required: true, defaultValue: 'Account')
   String get resourceType;
   List<Identifier> get identifier;
-  @JsonKey(unknownEnumValue: AccountStatus.unknown)
-  AccountStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   CodeableConcept get type;
   String get name;
   Reference get subject;
@@ -80,7 +80,7 @@ abstract class $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Account') String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       CodeableConcept type,
       String name,
       Reference subject,
@@ -130,7 +130,7 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as AccountStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       type: type == freezed ? _value.type : type as CodeableConcept,
       name: name == freezed ? _value.name : name as String,
       subject: subject == freezed ? _value.subject : subject as Reference,
@@ -217,7 +217,7 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Account') String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
       CodeableConcept type,
       String name,
       Reference subject,
@@ -274,7 +274,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as AccountStatus,
+      status: status == freezed ? _value.status : status as ActiveInactive,
       type: type == freezed ? _value.type : type as CodeableConcept,
       name: name == freezed ? _value.name : name as String,
       subject: subject == freezed ? _value.subject : subject as Reference,
@@ -301,7 +301,7 @@ class _$_Account implements _Account {
       @JsonKey(required: true, defaultValue: 'Account')
           this.resourceType,
       this.identifier,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
           this.status,
       this.type,
       this.name,
@@ -324,8 +324,8 @@ class _$_Account implements _Account {
   @override
   final List<Identifier> identifier;
   @override
-  @JsonKey(unknownEnumValue: AccountStatus.unknown)
-  final AccountStatus status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  final ActiveInactive status;
   @override
   final CodeableConcept type;
   @override
@@ -424,8 +424,8 @@ abstract class _Account implements Account {
       @JsonKey(required: true, defaultValue: 'Account')
           String resourceType,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown)
-          AccountStatus status,
+      @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+          ActiveInactive status,
       CodeableConcept type,
       String name,
       Reference subject,
@@ -445,8 +445,8 @@ abstract class _Account implements Account {
   @override
   List<Identifier> get identifier;
   @override
-  @JsonKey(unknownEnumValue: AccountStatus.unknown)
-  AccountStatus get status;
+  @JsonKey(unknownEnumValue: ActiveInactive.unknown)
+  ActiveInactive get status;
   @override
   CodeableConcept get type;
   @override

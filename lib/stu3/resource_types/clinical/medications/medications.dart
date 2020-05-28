@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
 import '../../resource_types.enums.dart';
+import 'medications.enums.dart';
 
 part 'medications.freezed.dart';
 part 'medications.g.dart';
@@ -155,8 +156,7 @@ abstract class Medication with _$Medication implements Resource {
     @required
         String resourceType,
     CodeableConcept code,
-    @JsonKey(unknownEnumValue: MedicationStatus.unknown)
-        MedicationStatus status,
+    @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     Boolean isBrand,
     Boolean isOverTheCounter,
     Reference manufacturer,
@@ -427,8 +427,7 @@ abstract class MedicationStatement
     List<Reference> basedOn,
     List<Reference> partOf,
     Reference context,
-    @JsonKey(unknownEnumValue: MedicationStatementStatus.unknown)
-        MedicationStatementStatus status,
+    @JsonKey(unknownEnumValue: StatementStatus.unknown) StatementStatus status,
     CodeableConcept category,
     CodeableConcept medicationCodeableConcept,
     Reference medicationReference,

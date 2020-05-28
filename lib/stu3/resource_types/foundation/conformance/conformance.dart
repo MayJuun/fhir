@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
 import '../../resource_types.enums.dart';
+import 'conformance.enums.dart';
 
 part 'conformance.freezed.dart';
 part 'conformance.g.dart';
@@ -153,7 +154,8 @@ abstract class CapabilityStatementSearchParam
   const factory CapabilityStatementSearchParam({
     String name,
     String definition,
-    @JsonKey(unknownEnumValue: SearchParamType.unknown) SearchParamType type,
+    @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+        ParameterSearchType type,
     String documentation,
   }) = _CapabilityStatementSearchParam;
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
@@ -210,8 +212,7 @@ abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
 abstract class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
   const factory CapabilityStatementSupportedMessage({
-    @JsonKey(unknownEnumValue: SupportedMessageMode.unknown)
-        SupportedMessageMode mode,
+    @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
     @JsonKey(required: true) Reference definition,
   }) = _CapabilityStatementSupportedMessage;
   factory CapabilityStatementSupportedMessage.fromJson(
@@ -224,7 +225,7 @@ abstract class CapabilityStatementEvent with _$CapabilityStatementEvent {
   const factory CapabilityStatementEvent({
     @JsonKey(required: true) Coding code,
     @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
-    @JsonKey(unknownEnumValue: EventMode.unknown) EventMode mode,
+    @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
     Code focus,
     @JsonKey(required: true) Reference request,
     @JsonKey(required: true) Reference response,
@@ -256,8 +257,7 @@ abstract class CompartmentDefinition
     String url,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-        CompartmentDefinitionStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -296,8 +296,7 @@ abstract class DataElement with _$DataElement implements Resource {
     String url,
     List<Identifier> identifier,
     String version,
-    @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-        DataElementStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -337,8 +336,7 @@ abstract class GraphDefinition with _$GraphDefinition implements Resource {
     String url,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-        GraphDefinitionStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -404,8 +402,7 @@ abstract class ImplementationGuide
     String url,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-        ImplementationGuideStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -498,8 +495,7 @@ abstract class MessageDefinition with _$MessageDefinition implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-        MessageDefinitionStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -557,8 +553,7 @@ abstract class OperationDefinition
     String url,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-        OperationDefinitionStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
         OperationDefinitionKind kind,
     Boolean experimental,
@@ -635,8 +630,7 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     String url,
     String version,
     String name,
-    @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-        SearchParameterStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -646,8 +640,8 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     String purpose,
     Code code,
     List<Code> base,
-    @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-        SearchParameterType type,
+    @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
+        ParameterSearchType type,
     String derivedFrom,
     String description,
     String expression,
@@ -687,8 +681,7 @@ abstract class StructureDefinition
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-        StructureDefinitionStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -761,8 +754,7 @@ abstract class StructureMap with _$StructureMap implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-        StructureMapStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,

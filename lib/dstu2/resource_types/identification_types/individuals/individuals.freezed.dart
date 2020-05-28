@@ -16,7 +16,9 @@ class _$PractitionerTearOff {
   const _$PractitionerTearOff();
 
   _Practitioner call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Practitioner')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -25,19 +27,20 @@ class _$PractitionerTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Boolean active,
       HumanName name,
-      ContactPoint telecom,
-      Address address,
+      List<ContactPoint> telecom,
+      List<Address> address,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
           PractitionerGender gender,
       Date birthDate,
-      Attachment photo,
-      PractitionerPractitionerRole practitionerRole,
-      PractitionerQualification qualification,
-      CodeableConcept communication}) {
+      List<Attachment> photo,
+      List<PractitionerPractitionerRole> practitionerRole,
+      List<PractitionerQualification> qualification,
+      List<CodeableConcept> communication}) {
     return _Practitioner(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -65,6 +68,8 @@ class _$PractitionerTearOff {
 const $Practitioner = _$PractitionerTearOff();
 
 mixin _$Practitioner {
+  @JsonKey(defaultValue: 'Practitioner')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -74,18 +79,18 @@ mixin _$Practitioner {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   Boolean get active;
   HumanName get name;
-  ContactPoint get telecom;
-  Address get address;
+  List<ContactPoint> get telecom;
+  List<Address> get address;
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
   PractitionerGender get gender;
   Date get birthDate;
-  Attachment get photo;
-  PractitionerPractitionerRole get practitionerRole;
-  PractitionerQualification get qualification;
-  CodeableConcept get communication;
+  List<Attachment> get photo;
+  List<PractitionerPractitionerRole> get practitionerRole;
+  List<PractitionerQualification> get qualification;
+  List<CodeableConcept> get communication;
 
   Map<String, dynamic> toJson();
   $PractitionerCopyWith<Practitioner> get copyWith;
@@ -96,7 +101,9 @@ abstract class $PractitionerCopyWith<$Res> {
           Practitioner value, $Res Function(Practitioner) then) =
       _$PractitionerCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Practitioner')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -105,31 +112,24 @@ abstract class $PractitionerCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Boolean active,
       HumanName name,
-      ContactPoint telecom,
-      Address address,
+      List<ContactPoint> telecom,
+      List<Address> address,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
           PractitionerGender gender,
       Date birthDate,
-      Attachment photo,
-      PractitionerPractitionerRole practitionerRole,
-      PractitionerQualification qualification,
-      CodeableConcept communication});
+      List<Attachment> photo,
+      List<PractitionerPractitionerRole> practitionerRole,
+      List<PractitionerQualification> qualification,
+      List<CodeableConcept> communication});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $HumanNameCopyWith<$Res> get name;
-  $ContactPointCopyWith<$Res> get telecom;
-  $AddressCopyWith<$Res> get address;
-  $AttachmentCopyWith<$Res> get photo;
-  $PractitionerPractitionerRoleCopyWith<$Res> get practitionerRole;
-  $PractitionerQualificationCopyWith<$Res> get qualification;
-  $CodeableConceptCopyWith<$Res> get communication;
 }
 
 class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
@@ -141,6 +141,7 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -162,6 +163,9 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
     Object communication = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -177,24 +181,26 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       active: active == freezed ? _value.active : active as Boolean,
       name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
-      address: address == freezed ? _value.address : address as Address,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      address: address == freezed ? _value.address : address as List<Address>,
       gender: gender == freezed ? _value.gender : gender as PractitionerGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      photo: photo == freezed ? _value.photo : photo as Attachment,
+      photo: photo == freezed ? _value.photo : photo as List<Attachment>,
       practitionerRole: practitionerRole == freezed
           ? _value.practitionerRole
-          : practitionerRole as PractitionerPractitionerRole,
+          : practitionerRole as List<PractitionerPractitionerRole>,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as PractitionerQualification,
+          : qualification as List<PractitionerQualification>,
       communication: communication == freezed
           ? _value.communication
-          : communication as CodeableConcept,
+          : communication as List<CodeableConcept>,
     ));
   }
 
@@ -239,84 +245,12 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $HumanNameCopyWith<$Res> get name {
     if (_value.name == null) {
       return null;
     }
     return $HumanNameCopyWith<$Res>(_value.name, (value) {
       return _then(_value.copyWith(name: value));
-    });
-  }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
-
-  @override
-  $AddressCopyWith<$Res> get address {
-    if (_value.address == null) {
-      return null;
-    }
-    return $AddressCopyWith<$Res>(_value.address, (value) {
-      return _then(_value.copyWith(address: value));
-    });
-  }
-
-  @override
-  $AttachmentCopyWith<$Res> get photo {
-    if (_value.photo == null) {
-      return null;
-    }
-    return $AttachmentCopyWith<$Res>(_value.photo, (value) {
-      return _then(_value.copyWith(photo: value));
-    });
-  }
-
-  @override
-  $PractitionerPractitionerRoleCopyWith<$Res> get practitionerRole {
-    if (_value.practitionerRole == null) {
-      return null;
-    }
-    return $PractitionerPractitionerRoleCopyWith<$Res>(_value.practitionerRole,
-        (value) {
-      return _then(_value.copyWith(practitionerRole: value));
-    });
-  }
-
-  @override
-  $PractitionerQualificationCopyWith<$Res> get qualification {
-    if (_value.qualification == null) {
-      return null;
-    }
-    return $PractitionerQualificationCopyWith<$Res>(_value.qualification,
-        (value) {
-      return _then(_value.copyWith(qualification: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get communication {
-    if (_value.communication == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.communication, (value) {
-      return _then(_value.copyWith(communication: value));
     });
   }
 }
@@ -328,7 +262,9 @@ abstract class _$PractitionerCopyWith<$Res>
       __$PractitionerCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Practitioner')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -337,18 +273,18 @@ abstract class _$PractitionerCopyWith<$Res>
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Boolean active,
       HumanName name,
-      ContactPoint telecom,
-      Address address,
+      List<ContactPoint> telecom,
+      List<Address> address,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
           PractitionerGender gender,
       Date birthDate,
-      Attachment photo,
-      PractitionerPractitionerRole practitionerRole,
-      PractitionerQualification qualification,
-      CodeableConcept communication});
+      List<Attachment> photo,
+      List<PractitionerPractitionerRole> practitionerRole,
+      List<PractitionerQualification> qualification,
+      List<CodeableConcept> communication});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -359,21 +295,7 @@ abstract class _$PractitionerCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $HumanNameCopyWith<$Res> get name;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
-  @override
-  $AddressCopyWith<$Res> get address;
-  @override
-  $AttachmentCopyWith<$Res> get photo;
-  @override
-  $PractitionerPractitionerRoleCopyWith<$Res> get practitionerRole;
-  @override
-  $PractitionerQualificationCopyWith<$Res> get qualification;
-  @override
-  $CodeableConceptCopyWith<$Res> get communication;
 }
 
 class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
@@ -387,6 +309,7 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -408,6 +331,9 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
     Object communication = freezed,
   }) {
     return _then(_Practitioner(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -423,24 +349,26 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       active: active == freezed ? _value.active : active as Boolean,
       name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
-      address: address == freezed ? _value.address : address as Address,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      address: address == freezed ? _value.address : address as List<Address>,
       gender: gender == freezed ? _value.gender : gender as PractitionerGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      photo: photo == freezed ? _value.photo : photo as Attachment,
+      photo: photo == freezed ? _value.photo : photo as List<Attachment>,
       practitionerRole: practitionerRole == freezed
           ? _value.practitionerRole
-          : practitionerRole as PractitionerPractitionerRole,
+          : practitionerRole as List<PractitionerPractitionerRole>,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as PractitionerQualification,
+          : qualification as List<PractitionerQualification>,
       communication: communication == freezed
           ? _value.communication
-          : communication as CodeableConcept,
+          : communication as List<CodeableConcept>,
     ));
   }
 }
@@ -448,7 +376,8 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Practitioner implements _Practitioner {
   const _$_Practitioner(
-      {this.id,
+      {@JsonKey(defaultValue: 'Practitioner') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -472,6 +401,9 @@ class _$_Practitioner implements _Practitioner {
       _$_$_PractitionerFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Practitioner')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -489,38 +421,41 @@ class _$_Practitioner implements _Practitioner {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final Boolean active;
   @override
   final HumanName name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
   @override
-  final Address address;
+  final List<Address> address;
   @override
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
   final PractitionerGender gender;
   @override
   final Date birthDate;
   @override
-  final Attachment photo;
+  final List<Attachment> photo;
   @override
-  final PractitionerPractitionerRole practitionerRole;
+  final List<PractitionerPractitionerRole> practitionerRole;
   @override
-  final PractitionerQualification qualification;
+  final List<PractitionerQualification> qualification;
   @override
-  final CodeableConcept communication;
+  final List<CodeableConcept> communication;
 
   @override
   String toString() {
-    return 'Practitioner(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, address: $address, gender: $gender, birthDate: $birthDate, photo: $photo, practitionerRole: $practitionerRole, qualification: $qualification, communication: $communication)';
+    return 'Practitioner(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, address: $address, gender: $gender, birthDate: $birthDate, photo: $photo, practitionerRole: $practitionerRole, qualification: $qualification, communication: $communication)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Practitioner &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -576,6 +511,7 @@ class _$_Practitioner implements _Practitioner {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -608,7 +544,9 @@ class _$_Practitioner implements _Practitioner {
 
 abstract class _Practitioner implements Practitioner {
   const factory _Practitioner(
-      {Id id,
+      {@JsonKey(defaultValue: 'Practitioner')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -617,22 +555,25 @@ abstract class _Practitioner implements Practitioner {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Boolean active,
       HumanName name,
-      ContactPoint telecom,
-      Address address,
+      List<ContactPoint> telecom,
+      List<Address> address,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
           PractitionerGender gender,
       Date birthDate,
-      Attachment photo,
-      PractitionerPractitionerRole practitionerRole,
-      PractitionerQualification qualification,
-      CodeableConcept communication}) = _$_Practitioner;
+      List<Attachment> photo,
+      List<PractitionerPractitionerRole> practitionerRole,
+      List<PractitionerQualification> qualification,
+      List<CodeableConcept> communication}) = _$_Practitioner;
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
       _$_Practitioner.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Practitioner')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -651,28 +592,28 @@ abstract class _Practitioner implements Practitioner {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   Boolean get active;
   @override
   HumanName get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
-  Address get address;
+  List<Address> get address;
   @override
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
   PractitionerGender get gender;
   @override
   Date get birthDate;
   @override
-  Attachment get photo;
+  List<Attachment> get photo;
   @override
-  PractitionerPractitionerRole get practitionerRole;
+  List<PractitionerPractitionerRole> get practitionerRole;
   @override
-  PractitionerQualification get qualification;
+  List<PractitionerQualification> get qualification;
   @override
-  CodeableConcept get communication;
+  List<CodeableConcept> get communication;
   @override
   _$PractitionerCopyWith<_Practitioner> get copyWith;
 }
@@ -685,7 +626,9 @@ class _$RelatedPersonTearOff {
   const _$RelatedPersonTearOff();
 
   _RelatedPerson call(
-      {Id id,
+      {@JsonKey(defaultValue: 'RelatedPerson')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -694,20 +637,21 @@ class _$RelatedPersonTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required
       @JsonKey(required: true)
           Reference patient,
       CodeableConcept relationship,
       HumanName name,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
           RelatedPersonGender gender,
       Date birthDate,
-      Address address,
-      Attachment photo,
+      List<Address> address,
+      List<Attachment> photo,
       Period period}) {
     return _RelatedPerson(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -734,6 +678,8 @@ class _$RelatedPersonTearOff {
 const $RelatedPerson = _$RelatedPersonTearOff();
 
 mixin _$RelatedPerson {
+  @JsonKey(defaultValue: 'RelatedPerson')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -743,17 +689,17 @@ mixin _$RelatedPerson {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @JsonKey(required: true)
   Reference get patient;
   CodeableConcept get relationship;
   HumanName get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
   RelatedPersonGender get gender;
   Date get birthDate;
-  Address get address;
-  Attachment get photo;
+  List<Address> get address;
+  List<Attachment> get photo;
   Period get period;
 
   Map<String, dynamic> toJson();
@@ -765,7 +711,9 @@ abstract class $RelatedPersonCopyWith<$Res> {
           RelatedPerson value, $Res Function(RelatedPerson) then) =
       _$RelatedPersonCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'RelatedPerson')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -774,30 +722,26 @@ abstract class $RelatedPersonCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true)
           Reference patient,
       CodeableConcept relationship,
       HumanName name,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
           RelatedPersonGender gender,
       Date birthDate,
-      Address address,
-      Attachment photo,
+      List<Address> address,
+      List<Attachment> photo,
       Period period});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get patient;
   $CodeableConceptCopyWith<$Res> get relationship;
   $HumanNameCopyWith<$Res> get name;
-  $ContactPointCopyWith<$Res> get telecom;
-  $AddressCopyWith<$Res> get address;
-  $AttachmentCopyWith<$Res> get photo;
   $PeriodCopyWith<$Res> get period;
 }
 
@@ -811,6 +755,7 @@ class _$RelatedPersonCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -831,6 +776,9 @@ class _$RelatedPersonCopyWithImpl<$Res>
     Object period = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -846,18 +794,20 @@ class _$RelatedPersonCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       relationship: relationship == freezed
           ? _value.relationship
           : relationship as CodeableConcept,
       name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       gender: gender == freezed ? _value.gender : gender as RelatedPersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      address: address == freezed ? _value.address : address as Address,
-      photo: photo == freezed ? _value.photo : photo as Attachment,
+      address: address == freezed ? _value.address : address as List<Address>,
+      photo: photo == freezed ? _value.photo : photo as List<Attachment>,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -903,16 +853,6 @@ class _$RelatedPersonCopyWithImpl<$Res>
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get patient {
     if (_value.patient == null) {
       return null;
@@ -943,36 +883,6 @@ class _$RelatedPersonCopyWithImpl<$Res>
   }
 
   @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
-
-  @override
-  $AddressCopyWith<$Res> get address {
-    if (_value.address == null) {
-      return null;
-    }
-    return $AddressCopyWith<$Res>(_value.address, (value) {
-      return _then(_value.copyWith(address: value));
-    });
-  }
-
-  @override
-  $AttachmentCopyWith<$Res> get photo {
-    if (_value.photo == null) {
-      return null;
-    }
-    return $AttachmentCopyWith<$Res>(_value.photo, (value) {
-      return _then(_value.copyWith(photo: value));
-    });
-  }
-
-  @override
   $PeriodCopyWith<$Res> get period {
     if (_value.period == null) {
       return null;
@@ -990,7 +900,9 @@ abstract class _$RelatedPersonCopyWith<$Res>
       __$RelatedPersonCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'RelatedPerson')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -999,17 +911,17 @@ abstract class _$RelatedPersonCopyWith<$Res>
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true)
           Reference patient,
       CodeableConcept relationship,
       HumanName name,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
           RelatedPersonGender gender,
       Date birthDate,
-      Address address,
-      Attachment photo,
+      List<Address> address,
+      List<Attachment> photo,
       Period period});
 
   @override
@@ -1021,19 +933,11 @@ abstract class _$RelatedPersonCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $ReferenceCopyWith<$Res> get patient;
   @override
   $CodeableConceptCopyWith<$Res> get relationship;
   @override
   $HumanNameCopyWith<$Res> get name;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
-  @override
-  $AddressCopyWith<$Res> get address;
-  @override
-  $AttachmentCopyWith<$Res> get photo;
   @override
   $PeriodCopyWith<$Res> get period;
 }
@@ -1050,6 +954,7 @@ class __$RelatedPersonCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1070,6 +975,9 @@ class __$RelatedPersonCopyWithImpl<$Res>
     Object period = freezed,
   }) {
     return _then(_RelatedPerson(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1085,18 +993,20 @@ class __$RelatedPersonCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       relationship: relationship == freezed
           ? _value.relationship
           : relationship as CodeableConcept,
       name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       gender: gender == freezed ? _value.gender : gender as RelatedPersonGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      address: address == freezed ? _value.address : address as Address,
-      photo: photo == freezed ? _value.photo : photo as Attachment,
+      address: address == freezed ? _value.address : address as List<Address>,
+      photo: photo == freezed ? _value.photo : photo as List<Attachment>,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -1105,7 +1015,8 @@ class __$RelatedPersonCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_RelatedPerson implements _RelatedPerson {
   const _$_RelatedPerson(
-      {this.id,
+      {@JsonKey(defaultValue: 'RelatedPerson') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1129,6 +1040,9 @@ class _$_RelatedPerson implements _RelatedPerson {
       _$_$_RelatedPersonFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'RelatedPerson')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -1146,7 +1060,7 @@ class _$_RelatedPerson implements _RelatedPerson {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   @JsonKey(required: true)
   final Reference patient;
@@ -1155,28 +1069,31 @@ class _$_RelatedPerson implements _RelatedPerson {
   @override
   final HumanName name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
   @override
   @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
   final RelatedPersonGender gender;
   @override
   final Date birthDate;
   @override
-  final Address address;
+  final List<Address> address;
   @override
-  final Attachment photo;
+  final List<Attachment> photo;
   @override
   final Period period;
 
   @override
   String toString() {
-    return 'RelatedPerson(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, patient: $patient, relationship: $relationship, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, period: $period)';
+    return 'RelatedPerson(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, patient: $patient, relationship: $relationship, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, period: $period)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _RelatedPerson &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1229,6 +1146,7 @@ class _$_RelatedPerson implements _RelatedPerson {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1260,7 +1178,9 @@ class _$_RelatedPerson implements _RelatedPerson {
 
 abstract class _RelatedPerson implements RelatedPerson {
   const factory _RelatedPerson(
-      {Id id,
+      {@JsonKey(defaultValue: 'RelatedPerson')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1269,23 +1189,26 @@ abstract class _RelatedPerson implements RelatedPerson {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required
       @JsonKey(required: true)
           Reference patient,
       CodeableConcept relationship,
       HumanName name,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
           RelatedPersonGender gender,
       Date birthDate,
-      Address address,
-      Attachment photo,
+      List<Address> address,
+      List<Attachment> photo,
       Period period}) = _$_RelatedPerson;
 
   factory _RelatedPerson.fromJson(Map<String, dynamic> json) =
       _$_RelatedPerson.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'RelatedPerson')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1304,7 +1227,7 @@ abstract class _RelatedPerson implements RelatedPerson {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   @JsonKey(required: true)
   Reference get patient;
@@ -1313,16 +1236,16 @@ abstract class _RelatedPerson implements RelatedPerson {
   @override
   HumanName get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
   RelatedPersonGender get gender;
   @override
   Date get birthDate;
   @override
-  Address get address;
+  List<Address> get address;
   @override
-  Attachment get photo;
+  List<Attachment> get photo;
   @override
   Period get period;
   @override
@@ -1337,7 +1260,8 @@ class _$PatientTearOff {
   const _$PatientTearOff();
 
   _Patient call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Patient') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1345,24 +1269,27 @@ class _$PatientTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Boolean active,
-      HumanName name,
-      ContactPoint telecom,
+      List<HumanName> name,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
       Date birthDate,
-      Boolean deceasedX,
-      Address address,
+      Boolean deceasedBoolean,
+      FhirDateTime deceasedDateTime,
+      List<Address> address,
       CodeableConcept maritalStatus,
-      Boolean multipleBirthX,
-      Attachment photo,
-      PatientContact contact,
+      Boolean multipleBirthBoolean,
+      Integer multipleBirthInteger,
+      List<Attachment> photo,
+      List<PatientContact> contact,
       PatientAnimal animal,
-      PatientCommunication communication,
-      Reference careProvider,
+      List<PatientCommunication> communication,
+      List<Reference> careProvider,
       Reference managingOrganization,
-      PatientLink link}) {
+      List<PatientLink> link}) {
     return _Patient(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1377,10 +1304,12 @@ class _$PatientTearOff {
       telecom: telecom,
       gender: gender,
       birthDate: birthDate,
-      deceasedX: deceasedX,
+      deceasedBoolean: deceasedBoolean,
+      deceasedDateTime: deceasedDateTime,
       address: address,
       maritalStatus: maritalStatus,
-      multipleBirthX: multipleBirthX,
+      multipleBirthBoolean: multipleBirthBoolean,
+      multipleBirthInteger: multipleBirthInteger,
       photo: photo,
       contact: contact,
       animal: animal,
@@ -1396,6 +1325,8 @@ class _$PatientTearOff {
 const $Patient = _$PatientTearOff();
 
 mixin _$Patient {
+  @JsonKey(defaultValue: 'Patient')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1405,24 +1336,26 @@ mixin _$Patient {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   Boolean get active;
-  HumanName get name;
-  ContactPoint get telecom;
+  List<HumanName> get name;
+  List<ContactPoint> get telecom;
   @JsonKey(unknownEnumValue: PatientGender.unknown)
   PatientGender get gender;
   Date get birthDate;
-  Boolean get deceasedX;
-  Address get address;
+  Boolean get deceasedBoolean;
+  FhirDateTime get deceasedDateTime;
+  List<Address> get address;
   CodeableConcept get maritalStatus;
-  Boolean get multipleBirthX;
-  Attachment get photo;
-  PatientContact get contact;
+  Boolean get multipleBirthBoolean;
+  Integer get multipleBirthInteger;
+  List<Attachment> get photo;
+  List<PatientContact> get contact;
   PatientAnimal get animal;
-  PatientCommunication get communication;
-  Reference get careProvider;
+  List<PatientCommunication> get communication;
+  List<Reference> get careProvider;
   Reference get managingOrganization;
-  PatientLink get link;
+  List<PatientLink> get link;
 
   Map<String, dynamic> toJson();
   $PatientCopyWith<Patient> get copyWith;
@@ -1432,7 +1365,8 @@ abstract class $PatientCopyWith<$Res> {
   factory $PatientCopyWith(Patient value, $Res Function(Patient) then) =
       _$PatientCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Patient') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1440,40 +1374,33 @@ abstract class $PatientCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Boolean active,
-      HumanName name,
-      ContactPoint telecom,
+      List<HumanName> name,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
       Date birthDate,
-      Boolean deceasedX,
-      Address address,
+      Boolean deceasedBoolean,
+      FhirDateTime deceasedDateTime,
+      List<Address> address,
       CodeableConcept maritalStatus,
-      Boolean multipleBirthX,
-      Attachment photo,
-      PatientContact contact,
+      Boolean multipleBirthBoolean,
+      Integer multipleBirthInteger,
+      List<Attachment> photo,
+      List<PatientContact> contact,
       PatientAnimal animal,
-      PatientCommunication communication,
-      Reference careProvider,
+      List<PatientCommunication> communication,
+      List<Reference> careProvider,
       Reference managingOrganization,
-      PatientLink link});
+      List<PatientLink> link});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
-  $HumanNameCopyWith<$Res> get name;
-  $ContactPointCopyWith<$Res> get telecom;
-  $AddressCopyWith<$Res> get address;
   $CodeableConceptCopyWith<$Res> get maritalStatus;
-  $AttachmentCopyWith<$Res> get photo;
-  $PatientContactCopyWith<$Res> get contact;
   $PatientAnimalCopyWith<$Res> get animal;
-  $PatientCommunicationCopyWith<$Res> get communication;
-  $ReferenceCopyWith<$Res> get careProvider;
   $ReferenceCopyWith<$Res> get managingOrganization;
-  $PatientLinkCopyWith<$Res> get link;
 }
 
 class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
@@ -1485,6 +1412,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1499,10 +1427,12 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
     Object telecom = freezed,
     Object gender = freezed,
     Object birthDate = freezed,
-    Object deceasedX = freezed,
+    Object deceasedBoolean = freezed,
+    Object deceasedDateTime = freezed,
     Object address = freezed,
     Object maritalStatus = freezed,
-    Object multipleBirthX = freezed,
+    Object multipleBirthBoolean = freezed,
+    Object multipleBirthInteger = freezed,
     Object photo = freezed,
     Object contact = freezed,
     Object animal = freezed,
@@ -1512,6 +1442,9 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
     Object link = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1527,34 +1460,45 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       active: active == freezed ? _value.active : active as Boolean,
-      name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      name: name == freezed ? _value.name : name as List<HumanName>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       gender: gender == freezed ? _value.gender : gender as PatientGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      deceasedX: deceasedX == freezed ? _value.deceasedX : deceasedX as Boolean,
-      address: address == freezed ? _value.address : address as Address,
+      deceasedBoolean: deceasedBoolean == freezed
+          ? _value.deceasedBoolean
+          : deceasedBoolean as Boolean,
+      deceasedDateTime: deceasedDateTime == freezed
+          ? _value.deceasedDateTime
+          : deceasedDateTime as FhirDateTime,
+      address: address == freezed ? _value.address : address as List<Address>,
       maritalStatus: maritalStatus == freezed
           ? _value.maritalStatus
           : maritalStatus as CodeableConcept,
-      multipleBirthX: multipleBirthX == freezed
-          ? _value.multipleBirthX
-          : multipleBirthX as Boolean,
-      photo: photo == freezed ? _value.photo : photo as Attachment,
-      contact: contact == freezed ? _value.contact : contact as PatientContact,
+      multipleBirthBoolean: multipleBirthBoolean == freezed
+          ? _value.multipleBirthBoolean
+          : multipleBirthBoolean as Boolean,
+      multipleBirthInteger: multipleBirthInteger == freezed
+          ? _value.multipleBirthInteger
+          : multipleBirthInteger as Integer,
+      photo: photo == freezed ? _value.photo : photo as List<Attachment>,
+      contact:
+          contact == freezed ? _value.contact : contact as List<PatientContact>,
       animal: animal == freezed ? _value.animal : animal as PatientAnimal,
       communication: communication == freezed
           ? _value.communication
-          : communication as PatientCommunication,
+          : communication as List<PatientCommunication>,
       careProvider: careProvider == freezed
           ? _value.careProvider
-          : careProvider as Reference,
+          : careProvider as List<Reference>,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
-      link: link == freezed ? _value.link : link as PatientLink,
+      link: link == freezed ? _value.link : link as List<PatientLink>,
     ));
   }
 
@@ -1599,72 +1543,12 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
-  $HumanNameCopyWith<$Res> get name {
-    if (_value.name == null) {
-      return null;
-    }
-    return $HumanNameCopyWith<$Res>(_value.name, (value) {
-      return _then(_value.copyWith(name: value));
-    });
-  }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
-
-  @override
-  $AddressCopyWith<$Res> get address {
-    if (_value.address == null) {
-      return null;
-    }
-    return $AddressCopyWith<$Res>(_value.address, (value) {
-      return _then(_value.copyWith(address: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get maritalStatus {
     if (_value.maritalStatus == null) {
       return null;
     }
     return $CodeableConceptCopyWith<$Res>(_value.maritalStatus, (value) {
       return _then(_value.copyWith(maritalStatus: value));
-    });
-  }
-
-  @override
-  $AttachmentCopyWith<$Res> get photo {
-    if (_value.photo == null) {
-      return null;
-    }
-    return $AttachmentCopyWith<$Res>(_value.photo, (value) {
-      return _then(_value.copyWith(photo: value));
-    });
-  }
-
-  @override
-  $PatientContactCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $PatientContactCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
     });
   }
 
@@ -1679,42 +1563,12 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
   }
 
   @override
-  $PatientCommunicationCopyWith<$Res> get communication {
-    if (_value.communication == null) {
-      return null;
-    }
-    return $PatientCommunicationCopyWith<$Res>(_value.communication, (value) {
-      return _then(_value.copyWith(communication: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get careProvider {
-    if (_value.careProvider == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.careProvider, (value) {
-      return _then(_value.copyWith(careProvider: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get managingOrganization {
     if (_value.managingOrganization == null) {
       return null;
     }
     return $ReferenceCopyWith<$Res>(_value.managingOrganization, (value) {
       return _then(_value.copyWith(managingOrganization: value));
-    });
-  }
-
-  @override
-  $PatientLinkCopyWith<$Res> get link {
-    if (_value.link == null) {
-      return null;
-    }
-    return $PatientLinkCopyWith<$Res>(_value.link, (value) {
-      return _then(_value.copyWith(link: value));
     });
   }
 }
@@ -1724,7 +1578,8 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       __$PatientCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Patient') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1732,23 +1587,25 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Boolean active,
-      HumanName name,
-      ContactPoint telecom,
+      List<HumanName> name,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
       Date birthDate,
-      Boolean deceasedX,
-      Address address,
+      Boolean deceasedBoolean,
+      FhirDateTime deceasedDateTime,
+      List<Address> address,
       CodeableConcept maritalStatus,
-      Boolean multipleBirthX,
-      Attachment photo,
-      PatientContact contact,
+      Boolean multipleBirthBoolean,
+      Integer multipleBirthInteger,
+      List<Attachment> photo,
+      List<PatientContact> contact,
       PatientAnimal animal,
-      PatientCommunication communication,
-      Reference careProvider,
+      List<PatientCommunication> communication,
+      List<Reference> careProvider,
       Reference managingOrganization,
-      PatientLink link});
+      List<PatientLink> link});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1759,29 +1616,11 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
-  $HumanNameCopyWith<$Res> get name;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
-  @override
-  $AddressCopyWith<$Res> get address;
-  @override
   $CodeableConceptCopyWith<$Res> get maritalStatus;
-  @override
-  $AttachmentCopyWith<$Res> get photo;
-  @override
-  $PatientContactCopyWith<$Res> get contact;
   @override
   $PatientAnimalCopyWith<$Res> get animal;
   @override
-  $PatientCommunicationCopyWith<$Res> get communication;
-  @override
-  $ReferenceCopyWith<$Res> get careProvider;
-  @override
   $ReferenceCopyWith<$Res> get managingOrganization;
-  @override
-  $PatientLinkCopyWith<$Res> get link;
 }
 
 class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
@@ -1794,6 +1633,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1808,10 +1648,12 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
     Object telecom = freezed,
     Object gender = freezed,
     Object birthDate = freezed,
-    Object deceasedX = freezed,
+    Object deceasedBoolean = freezed,
+    Object deceasedDateTime = freezed,
     Object address = freezed,
     Object maritalStatus = freezed,
-    Object multipleBirthX = freezed,
+    Object multipleBirthBoolean = freezed,
+    Object multipleBirthInteger = freezed,
     Object photo = freezed,
     Object contact = freezed,
     Object animal = freezed,
@@ -1821,6 +1663,9 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
     Object link = freezed,
   }) {
     return _then(_Patient(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1836,34 +1681,45 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       active: active == freezed ? _value.active : active as Boolean,
-      name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      name: name == freezed ? _value.name : name as List<HumanName>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       gender: gender == freezed ? _value.gender : gender as PatientGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date,
-      deceasedX: deceasedX == freezed ? _value.deceasedX : deceasedX as Boolean,
-      address: address == freezed ? _value.address : address as Address,
+      deceasedBoolean: deceasedBoolean == freezed
+          ? _value.deceasedBoolean
+          : deceasedBoolean as Boolean,
+      deceasedDateTime: deceasedDateTime == freezed
+          ? _value.deceasedDateTime
+          : deceasedDateTime as FhirDateTime,
+      address: address == freezed ? _value.address : address as List<Address>,
       maritalStatus: maritalStatus == freezed
           ? _value.maritalStatus
           : maritalStatus as CodeableConcept,
-      multipleBirthX: multipleBirthX == freezed
-          ? _value.multipleBirthX
-          : multipleBirthX as Boolean,
-      photo: photo == freezed ? _value.photo : photo as Attachment,
-      contact: contact == freezed ? _value.contact : contact as PatientContact,
+      multipleBirthBoolean: multipleBirthBoolean == freezed
+          ? _value.multipleBirthBoolean
+          : multipleBirthBoolean as Boolean,
+      multipleBirthInteger: multipleBirthInteger == freezed
+          ? _value.multipleBirthInteger
+          : multipleBirthInteger as Integer,
+      photo: photo == freezed ? _value.photo : photo as List<Attachment>,
+      contact:
+          contact == freezed ? _value.contact : contact as List<PatientContact>,
       animal: animal == freezed ? _value.animal : animal as PatientAnimal,
       communication: communication == freezed
           ? _value.communication
-          : communication as PatientCommunication,
+          : communication as List<PatientCommunication>,
       careProvider: careProvider == freezed
           ? _value.careProvider
-          : careProvider as Reference,
+          : careProvider as List<Reference>,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
-      link: link == freezed ? _value.link : link as PatientLink,
+      link: link == freezed ? _value.link : link as List<PatientLink>,
     ));
   }
 }
@@ -1871,7 +1727,8 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Patient implements _Patient {
   const _$_Patient(
-      {this.id,
+      {@JsonKey(defaultValue: 'Patient') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1885,10 +1742,12 @@ class _$_Patient implements _Patient {
       this.telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown) this.gender,
       this.birthDate,
-      this.deceasedX,
+      this.deceasedBoolean,
+      this.deceasedDateTime,
       this.address,
       this.maritalStatus,
-      this.multipleBirthX,
+      this.multipleBirthBoolean,
+      this.multipleBirthInteger,
       this.photo,
       this.contact,
       this.animal,
@@ -1900,6 +1759,9 @@ class _$_Patient implements _Patient {
   factory _$_Patient.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'Patient')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -1918,50 +1780,57 @@ class _$_Patient implements _Patient {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final Boolean active;
   @override
-  final HumanName name;
+  final List<HumanName> name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
   @override
   @JsonKey(unknownEnumValue: PatientGender.unknown)
   final PatientGender gender;
   @override
   final Date birthDate;
   @override
-  final Boolean deceasedX;
+  final Boolean deceasedBoolean;
   @override
-  final Address address;
+  final FhirDateTime deceasedDateTime;
+  @override
+  final List<Address> address;
   @override
   final CodeableConcept maritalStatus;
   @override
-  final Boolean multipleBirthX;
+  final Boolean multipleBirthBoolean;
   @override
-  final Attachment photo;
+  final Integer multipleBirthInteger;
   @override
-  final PatientContact contact;
+  final List<Attachment> photo;
+  @override
+  final List<PatientContact> contact;
   @override
   final PatientAnimal animal;
   @override
-  final PatientCommunication communication;
+  final List<PatientCommunication> communication;
   @override
-  final Reference careProvider;
+  final List<Reference> careProvider;
   @override
   final Reference managingOrganization;
   @override
-  final PatientLink link;
+  final List<PatientLink> link;
 
   @override
   String toString() {
-    return 'Patient(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, deceasedX: $deceasedX, address: $address, maritalStatus: $maritalStatus, multipleBirthX: $multipleBirthX, photo: $photo, contact: $contact, animal: $animal, communication: $communication, careProvider: $careProvider, managingOrganization: $managingOrganization, link: $link)';
+    return 'Patient(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, deceasedBoolean: $deceasedBoolean, deceasedDateTime: $deceasedDateTime, address: $address, maritalStatus: $maritalStatus, multipleBirthBoolean: $multipleBirthBoolean, multipleBirthInteger: $multipleBirthInteger, photo: $photo, contact: $contact, animal: $animal, communication: $communication, careProvider: $careProvider, managingOrganization: $managingOrganization, link: $link)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Patient &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1998,18 +1867,24 @@ class _$_Patient implements _Patient {
             (identical(other.birthDate, birthDate) ||
                 const DeepCollectionEquality()
                     .equals(other.birthDate, birthDate)) &&
-            (identical(other.deceasedX, deceasedX) ||
+            (identical(other.deceasedBoolean, deceasedBoolean) ||
                 const DeepCollectionEquality()
-                    .equals(other.deceasedX, deceasedX)) &&
+                    .equals(other.deceasedBoolean, deceasedBoolean)) &&
+            (identical(other.deceasedDateTime, deceasedDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.deceasedDateTime, deceasedDateTime)) &&
             (identical(other.address, address) ||
                 const DeepCollectionEquality()
                     .equals(other.address, address)) &&
             (identical(other.maritalStatus, maritalStatus) ||
                 const DeepCollectionEquality()
                     .equals(other.maritalStatus, maritalStatus)) &&
-            (identical(other.multipleBirthX, multipleBirthX) ||
-                const DeepCollectionEquality()
-                    .equals(other.multipleBirthX, multipleBirthX)) &&
+            (identical(other.multipleBirthBoolean, multipleBirthBoolean) ||
+                const DeepCollectionEquality().equals(
+                    other.multipleBirthBoolean, multipleBirthBoolean)) &&
+            (identical(other.multipleBirthInteger, multipleBirthInteger) ||
+                const DeepCollectionEquality().equals(
+                    other.multipleBirthInteger, multipleBirthInteger)) &&
             (identical(other.photo, photo) ||
                 const DeepCollectionEquality().equals(other.photo, photo)) &&
             (identical(other.contact, contact) ||
@@ -2020,19 +1895,15 @@ class _$_Patient implements _Patient {
             (identical(other.communication, communication) ||
                 const DeepCollectionEquality()
                     .equals(other.communication, communication)) &&
-            (identical(other.careProvider, careProvider) ||
-                const DeepCollectionEquality()
-                    .equals(other.careProvider, careProvider)) &&
-            (identical(other.managingOrganization, managingOrganization) ||
-                const DeepCollectionEquality().equals(
-                    other.managingOrganization, managingOrganization)) &&
-            (identical(other.link, link) ||
-                const DeepCollectionEquality().equals(other.link, link)));
+            (identical(other.careProvider, careProvider) || const DeepCollectionEquality().equals(other.careProvider, careProvider)) &&
+            (identical(other.managingOrganization, managingOrganization) || const DeepCollectionEquality().equals(other.managingOrganization, managingOrganization)) &&
+            (identical(other.link, link) || const DeepCollectionEquality().equals(other.link, link)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -2047,10 +1918,12 @@ class _$_Patient implements _Patient {
       const DeepCollectionEquality().hash(telecom) ^
       const DeepCollectionEquality().hash(gender) ^
       const DeepCollectionEquality().hash(birthDate) ^
-      const DeepCollectionEquality().hash(deceasedX) ^
+      const DeepCollectionEquality().hash(deceasedBoolean) ^
+      const DeepCollectionEquality().hash(deceasedDateTime) ^
       const DeepCollectionEquality().hash(address) ^
       const DeepCollectionEquality().hash(maritalStatus) ^
-      const DeepCollectionEquality().hash(multipleBirthX) ^
+      const DeepCollectionEquality().hash(multipleBirthBoolean) ^
+      const DeepCollectionEquality().hash(multipleBirthInteger) ^
       const DeepCollectionEquality().hash(photo) ^
       const DeepCollectionEquality().hash(contact) ^
       const DeepCollectionEquality().hash(animal) ^
@@ -2071,7 +1944,8 @@ class _$_Patient implements _Patient {
 
 abstract class _Patient implements Patient {
   const factory _Patient(
-      {Id id,
+      {@JsonKey(defaultValue: 'Patient') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2079,26 +1953,31 @@ abstract class _Patient implements Patient {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Boolean active,
-      HumanName name,
-      ContactPoint telecom,
+      List<HumanName> name,
+      List<ContactPoint> telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
       Date birthDate,
-      Boolean deceasedX,
-      Address address,
+      Boolean deceasedBoolean,
+      FhirDateTime deceasedDateTime,
+      List<Address> address,
       CodeableConcept maritalStatus,
-      Boolean multipleBirthX,
-      Attachment photo,
-      PatientContact contact,
+      Boolean multipleBirthBoolean,
+      Integer multipleBirthInteger,
+      List<Attachment> photo,
+      List<PatientContact> contact,
       PatientAnimal animal,
-      PatientCommunication communication,
-      Reference careProvider,
+      List<PatientCommunication> communication,
+      List<Reference> careProvider,
       Reference managingOrganization,
-      PatientLink link}) = _$_Patient;
+      List<PatientLink> link}) = _$_Patient;
 
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Patient')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -2117,40 +1996,44 @@ abstract class _Patient implements Patient {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   Boolean get active;
   @override
-  HumanName get name;
+  List<HumanName> get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   @JsonKey(unknownEnumValue: PatientGender.unknown)
   PatientGender get gender;
   @override
   Date get birthDate;
   @override
-  Boolean get deceasedX;
+  Boolean get deceasedBoolean;
   @override
-  Address get address;
+  FhirDateTime get deceasedDateTime;
+  @override
+  List<Address> get address;
   @override
   CodeableConcept get maritalStatus;
   @override
-  Boolean get multipleBirthX;
+  Boolean get multipleBirthBoolean;
   @override
-  Attachment get photo;
+  Integer get multipleBirthInteger;
   @override
-  PatientContact get contact;
+  List<Attachment> get photo;
+  @override
+  List<PatientContact> get contact;
   @override
   PatientAnimal get animal;
   @override
-  PatientCommunication get communication;
+  List<PatientCommunication> get communication;
   @override
-  Reference get careProvider;
+  List<Reference> get careProvider;
   @override
   Reference get managingOrganization;
   @override
-  PatientLink get link;
+  List<PatientLink> get link;
   @override
   _$PatientCopyWith<_Patient> get copyWith;
 }
@@ -2169,10 +2052,10 @@ class _$PractitionerPractitionerRoleTearOff {
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
-      CodeableConcept specialty,
+      List<CodeableConcept> specialty,
       Period period,
-      Reference location,
-      Reference healthcareService}) {
+      List<Reference> location,
+      List<Reference> healthcareService}) {
     return _PractitionerPractitionerRole(
       id: id,
       extension_: extension_,
@@ -2197,10 +2080,10 @@ mixin _$PractitionerPractitionerRole {
   FhirExtension get modifierExtension;
   Reference get managingOrganization;
   CodeableConcept get role;
-  CodeableConcept get specialty;
+  List<CodeableConcept> get specialty;
   Period get period;
-  Reference get location;
-  Reference get healthcareService;
+  List<Reference> get location;
+  List<Reference> get healthcareService;
 
   Map<String, dynamic> toJson();
   $PractitionerPractitionerRoleCopyWith<PractitionerPractitionerRole>
@@ -2218,19 +2101,16 @@ abstract class $PractitionerPractitionerRoleCopyWith<$Res> {
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
-      CodeableConcept specialty,
+      List<CodeableConcept> specialty,
       Period period,
-      Reference location,
-      Reference healthcareService});
+      List<Reference> location,
+      List<Reference> healthcareService});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get managingOrganization;
   $CodeableConceptCopyWith<$Res> get role;
-  $CodeableConceptCopyWith<$Res> get specialty;
   $PeriodCopyWith<$Res> get period;
-  $ReferenceCopyWith<$Res> get location;
-  $ReferenceCopyWith<$Res> get healthcareService;
 }
 
 class _$PractitionerPractitionerRoleCopyWithImpl<$Res>
@@ -2267,12 +2147,13 @@ class _$PractitionerPractitionerRoleCopyWithImpl<$Res>
       role: role == freezed ? _value.role : role as CodeableConcept,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as CodeableConcept,
+          : specialty as List<CodeableConcept>,
       period: period == freezed ? _value.period : period as Period,
-      location: location == freezed ? _value.location : location as Reference,
+      location:
+          location == freezed ? _value.location : location as List<Reference>,
       healthcareService: healthcareService == freezed
           ? _value.healthcareService
-          : healthcareService as Reference,
+          : healthcareService as List<Reference>,
     ));
   }
 
@@ -2317,42 +2198,12 @@ class _$PractitionerPractitionerRoleCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get specialty {
-    if (_value.specialty == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.specialty, (value) {
-      return _then(_value.copyWith(specialty: value));
-    });
-  }
-
-  @override
   $PeriodCopyWith<$Res> get period {
     if (_value.period == null) {
       return null;
     }
     return $PeriodCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get location {
-    if (_value.location == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.location, (value) {
-      return _then(_value.copyWith(location: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get healthcareService {
-    if (_value.healthcareService == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.healthcareService, (value) {
-      return _then(_value.copyWith(healthcareService: value));
     });
   }
 }
@@ -2370,10 +2221,10 @@ abstract class _$PractitionerPractitionerRoleCopyWith<$Res>
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
-      CodeableConcept specialty,
+      List<CodeableConcept> specialty,
       Period period,
-      Reference location,
-      Reference healthcareService});
+      List<Reference> location,
+      List<Reference> healthcareService});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -2384,13 +2235,7 @@ abstract class _$PractitionerPractitionerRoleCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get role;
   @override
-  $CodeableConceptCopyWith<$Res> get specialty;
-  @override
   $PeriodCopyWith<$Res> get period;
-  @override
-  $ReferenceCopyWith<$Res> get location;
-  @override
-  $ReferenceCopyWith<$Res> get healthcareService;
 }
 
 class __$PractitionerPractitionerRoleCopyWithImpl<$Res>
@@ -2431,12 +2276,13 @@ class __$PractitionerPractitionerRoleCopyWithImpl<$Res>
       role: role == freezed ? _value.role : role as CodeableConcept,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as CodeableConcept,
+          : specialty as List<CodeableConcept>,
       period: period == freezed ? _value.period : period as Period,
-      location: location == freezed ? _value.location : location as Reference,
+      location:
+          location == freezed ? _value.location : location as List<Reference>,
       healthcareService: healthcareService == freezed
           ? _value.healthcareService
-          : healthcareService as Reference,
+          : healthcareService as List<Reference>,
     ));
   }
 }
@@ -2469,13 +2315,13 @@ class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
   @override
   final CodeableConcept role;
   @override
-  final CodeableConcept specialty;
+  final List<CodeableConcept> specialty;
   @override
   final Period period;
   @override
-  final Reference location;
+  final List<Reference> location;
   @override
-  final Reference healthcareService;
+  final List<Reference> healthcareService;
 
   @override
   String toString() {
@@ -2544,10 +2390,10 @@ abstract class _PractitionerPractitionerRole
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
-      CodeableConcept specialty,
+      List<CodeableConcept> specialty,
       Period period,
-      Reference location,
-      Reference healthcareService}) = _$_PractitionerPractitionerRole;
+      List<Reference> location,
+      List<Reference> healthcareService}) = _$_PractitionerPractitionerRole;
 
   factory _PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =
       _$_PractitionerPractitionerRole.fromJson;
@@ -2564,13 +2410,13 @@ abstract class _PractitionerPractitionerRole
   @override
   CodeableConcept get role;
   @override
-  CodeableConcept get specialty;
+  List<CodeableConcept> get specialty;
   @override
   Period get period;
   @override
-  Reference get location;
+  List<Reference> get location;
   @override
-  Reference get healthcareService;
+  List<Reference> get healthcareService;
   @override
   _$PractitionerPractitionerRoleCopyWith<_PractitionerPractitionerRole>
       get copyWith;
@@ -2588,7 +2434,7 @@ class _$PractitionerQualificationTearOff {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required @JsonKey(required: true) CodeableConcept code,
       Period period,
       Reference issuer}) {
@@ -2612,7 +2458,7 @@ mixin _$PractitionerQualification {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @JsonKey(required: true)
   CodeableConcept get code;
   Period get period;
@@ -2630,14 +2476,13 @@ abstract class $PractitionerQualificationCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true) CodeableConcept code,
       Period period,
       Reference issuer});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get code;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get issuer;
@@ -2669,8 +2514,9 @@ class _$PractitionerQualificationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       period: period == freezed ? _value.period : period as Period,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference,
@@ -2694,16 +2540,6 @@ class _$PractitionerQualificationCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -2748,7 +2584,7 @@ abstract class _$PractitionerQualificationCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true) CodeableConcept code,
       Period period,
       Reference issuer});
@@ -2757,8 +2593,6 @@ abstract class _$PractitionerQualificationCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -2796,8 +2630,9 @@ class __$PractitionerQualificationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       period: period == freezed ? _value.period : period as Period,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference,
@@ -2828,7 +2663,7 @@ class _$_PractitionerQualification implements _PractitionerQualification {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   @JsonKey(required: true)
   final CodeableConcept code;
@@ -2893,7 +2728,7 @@ abstract class _PractitionerQualification implements PractitionerQualification {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required @JsonKey(required: true) CodeableConcept code,
       Period period,
       Reference issuer}) = _$_PractitionerQualification;
@@ -2909,7 +2744,7 @@ abstract class _PractitionerQualification implements PractitionerQualification {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   @JsonKey(required: true)
   CodeableConcept get code;
@@ -2934,7 +2769,7 @@ class _$PatientContactTearOff {
       FhirExtension modifierExtension,
       CodeableConcept relationship,
       HumanName name,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       Address address,
       @JsonKey(unknownEnumValue: ContactGender.unknown) ContactGender gender,
       Reference organization,
@@ -2964,7 +2799,7 @@ mixin _$PatientContact {
   FhirExtension get modifierExtension;
   CodeableConcept get relationship;
   HumanName get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   Address get address;
   @JsonKey(unknownEnumValue: ContactGender.unknown)
   ContactGender get gender;
@@ -2985,7 +2820,7 @@ abstract class $PatientContactCopyWith<$Res> {
       FhirExtension modifierExtension,
       CodeableConcept relationship,
       HumanName name,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       Address address,
       @JsonKey(unknownEnumValue: ContactGender.unknown) ContactGender gender,
       Reference organization,
@@ -2995,7 +2830,6 @@ abstract class $PatientContactCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get relationship;
   $HumanNameCopyWith<$Res> get name;
-  $ContactPointCopyWith<$Res> get telecom;
   $AddressCopyWith<$Res> get address;
   $ReferenceCopyWith<$Res> get organization;
   $PeriodCopyWith<$Res> get period;
@@ -3034,7 +2868,8 @@ class _$PatientContactCopyWithImpl<$Res>
           ? _value.relationship
           : relationship as CodeableConcept,
       name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as Address,
       gender: gender == freezed ? _value.gender : gender as ContactGender,
       organization: organization == freezed
@@ -3085,16 +2920,6 @@ class _$PatientContactCopyWithImpl<$Res>
   }
 
   @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
-
-  @override
   $AddressCopyWith<$Res> get address {
     if (_value.address == null) {
       return null;
@@ -3137,7 +2962,7 @@ abstract class _$PatientContactCopyWith<$Res>
       FhirExtension modifierExtension,
       CodeableConcept relationship,
       HumanName name,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       Address address,
       @JsonKey(unknownEnumValue: ContactGender.unknown) ContactGender gender,
       Reference organization,
@@ -3151,8 +2976,6 @@ abstract class _$PatientContactCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get relationship;
   @override
   $HumanNameCopyWith<$Res> get name;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
   @override
   $AddressCopyWith<$Res> get address;
   @override
@@ -3196,7 +3019,8 @@ class __$PatientContactCopyWithImpl<$Res>
           ? _value.relationship
           : relationship as CodeableConcept,
       name: name == freezed ? _value.name : name as HumanName,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       address: address == freezed ? _value.address : address as Address,
       gender: gender == freezed ? _value.gender : gender as ContactGender,
       organization: organization == freezed
@@ -3236,7 +3060,7 @@ class _$_PatientContact implements _PatientContact {
   @override
   final HumanName name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
   @override
   final Address address;
   @override
@@ -3315,7 +3139,7 @@ abstract class _PatientContact implements PatientContact {
       FhirExtension modifierExtension,
       CodeableConcept relationship,
       HumanName name,
-      ContactPoint telecom,
+      List<ContactPoint> telecom,
       Address address,
       @JsonKey(unknownEnumValue: ContactGender.unknown) ContactGender gender,
       Reference organization,
@@ -3336,7 +3160,7 @@ abstract class _PatientContact implements PatientContact {
   @override
   HumanName get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   Address get address;
   @override

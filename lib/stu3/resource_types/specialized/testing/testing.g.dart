@@ -205,8 +205,8 @@ Map<String, dynamic> _$_$_TestReportActionToJson(_$_TestReportAction instance) {
 _$_TestReportOperation _$_$_TestReportOperationFromJson(
     Map<String, dynamic> json) {
   return _$_TestReportOperation(
-    result: _$enumDecodeNullable(_$OperationResultEnumMap, json['result'],
-        unknownValue: OperationResult.unknown),
+    result: _$enumDecodeNullable(_$ResultEnumMap, json['result'],
+        unknownValue: Result.unknown),
     message: json['message'] as String,
     detail: json['detail'] as String,
   );
@@ -222,25 +222,25 @@ Map<String, dynamic> _$_$_TestReportOperationToJson(
     }
   }
 
-  writeNotNull('result', _$OperationResultEnumMap[instance.result]);
+  writeNotNull('result', _$ResultEnumMap[instance.result]);
   writeNotNull('message', instance.message);
   writeNotNull('detail', instance.detail);
   return val;
 }
 
-const _$OperationResultEnumMap = {
-  OperationResult.pass: 'pass',
-  OperationResult.skip: 'skip',
-  OperationResult.fail: 'fail',
-  OperationResult.warning: 'warning',
-  OperationResult.error: 'error',
-  OperationResult.unknown: 'unknown',
+const _$ResultEnumMap = {
+  Result.pass: 'pass',
+  Result.skip: 'skip',
+  Result.fail: 'fail',
+  Result.warning: 'warning',
+  Result.error: 'error',
+  Result.unknown: 'unknown',
 };
 
 _$_TestReportAssert _$_$_TestReportAssertFromJson(Map<String, dynamic> json) {
   return _$_TestReportAssert(
-    result: _$enumDecodeNullable(_$AssertResultEnumMap, json['result'],
-        unknownValue: AssertResult.unknown),
+    result: _$enumDecodeNullable(_$ResultEnumMap, json['result'],
+        unknownValue: Result.unknown),
     message: json['message'] as String,
     detail: json['detail'] as String,
   );
@@ -255,20 +255,11 @@ Map<String, dynamic> _$_$_TestReportAssertToJson(_$_TestReportAssert instance) {
     }
   }
 
-  writeNotNull('result', _$AssertResultEnumMap[instance.result]);
+  writeNotNull('result', _$ResultEnumMap[instance.result]);
   writeNotNull('message', instance.message);
   writeNotNull('detail', instance.detail);
   return val;
 }
-
-const _$AssertResultEnumMap = {
-  AssertResult.pass: 'pass',
-  AssertResult.skip: 'skip',
-  AssertResult.fail: 'fail',
-  AssertResult.warning: 'warning',
-  AssertResult.error: 'error',
-  AssertResult.unknown: 'unknown',
-};
 
 _$_TestReportTest _$_$_TestReportTestFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['action']);
@@ -386,8 +377,8 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$TestScriptStatusEnumMap, json['status'],
-        unknownValue: TestScriptStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -476,7 +467,7 @@ Map<String, dynamic> _$_$_TestScriptToJson(_$_TestScript instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$TestScriptStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('publisher', instance.publisher);
@@ -504,11 +495,11 @@ Map<String, dynamic> _$_$_TestScriptToJson(_$_TestScript instance) {
   return val;
 }
 
-const _$TestScriptStatusEnumMap = {
-  TestScriptStatus.draft: 'draft',
-  TestScriptStatus.active: 'active',
-  TestScriptStatus.retired: 'retired',
-  TestScriptStatus.unknown: 'unknown',
+const _$StatusEnumMap = {
+  Status.draft: 'draft',
+  Status.active: 'active',
+  Status.retired: 'retired',
+  Status.unknown: 'unknown',
 };
 
 _$_TestScriptOrigin _$_$_TestScriptOriginFromJson(Map<String, dynamic> json) {
@@ -910,11 +901,10 @@ _$_TestScriptOperation _$_$_TestScriptOperationFromJson(
         : Code.fromJson(json['resource'] as String),
     label: json['label'] as String,
     description: json['description'] as String,
-    accept: _$enumDecodeNullable(_$OperationAcceptEnumMap, json['accept'],
-        unknownValue: OperationAccept.unknown),
-    contentType: _$enumDecodeNullable(
-        _$OperationContentTypeEnumMap, json['contentType'],
-        unknownValue: OperationContentType.unknown),
+    accept: _$enumDecodeNullable(_$ContentTypeEnumMap, json['accept'],
+        unknownValue: ContentType.unknown),
+    contentType: _$enumDecodeNullable(_$ContentTypeEnumMap, json['contentType'],
+        unknownValue: ContentType.unknown),
     destination: json['destination'] == null
         ? null
         : Integer.fromJson(json['destination']),
@@ -958,9 +948,8 @@ Map<String, dynamic> _$_$_TestScriptOperationToJson(
   writeNotNull('resource', instance.resource?.toJson());
   writeNotNull('label', instance.label);
   writeNotNull('description', instance.description);
-  writeNotNull('accept', _$OperationAcceptEnumMap[instance.accept]);
-  writeNotNull(
-      'contentType', _$OperationContentTypeEnumMap[instance.contentType]);
+  writeNotNull('accept', _$ContentTypeEnumMap[instance.accept]);
+  writeNotNull('contentType', _$ContentTypeEnumMap[instance.contentType]);
   writeNotNull('destination', instance.destination?.toJson());
   writeNotNull('encodeRequestUrl', instance.encodeRequestUrl?.toJson());
   writeNotNull('origin', instance.origin?.toJson());
@@ -975,20 +964,12 @@ Map<String, dynamic> _$_$_TestScriptOperationToJson(
   return val;
 }
 
-const _$OperationAcceptEnumMap = {
-  OperationAccept.xml: 'xml',
-  OperationAccept.json: 'json',
-  OperationAccept.ttl: 'ttl',
-  OperationAccept.none: 'none',
-  OperationAccept.unknown: 'unknown',
-};
-
-const _$OperationContentTypeEnumMap = {
-  OperationContentType.xml: 'xml',
-  OperationContentType.json: 'json',
-  OperationContentType.ttl: 'ttl',
-  OperationContentType.none: 'none',
-  OperationContentType.unknown: 'unknown',
+const _$ContentTypeEnumMap = {
+  ContentType.xml: 'xml',
+  ContentType.json: 'json',
+  ContentType.ttl: 'ttl',
+  ContentType.none: 'none',
+  ContentType.unknown: 'unknown',
 };
 
 _$_TestScriptRequestHeader _$_$_TestScriptRequestHeaderFromJson(
@@ -1023,9 +1004,8 @@ _$_TestScriptAssert _$_$_TestScriptAssertFromJson(Map<String, dynamic> json) {
     compareToSourceId: json['compareToSourceId'] as String,
     compareToSourceExpression: json['compareToSourceExpression'] as String,
     compareToSourcePath: json['compareToSourcePath'] as String,
-    contentType: _$enumDecodeNullable(
-        _$AssertContentTypeEnumMap, json['contentType'],
-        unknownValue: AssertContentType.unknown),
+    contentType: _$enumDecodeNullable(_$ContentTypeEnumMap, json['contentType'],
+        unknownValue: ContentType.unknown),
     expression: json['expression'] as String,
     headerField: json['headerField'] as String,
     minimumId: json['minimumId'] as String,
@@ -1079,7 +1059,7 @@ Map<String, dynamic> _$_$_TestScriptAssertToJson(_$_TestScriptAssert instance) {
   writeNotNull('compareToSourceId', instance.compareToSourceId);
   writeNotNull('compareToSourceExpression', instance.compareToSourceExpression);
   writeNotNull('compareToSourcePath', instance.compareToSourcePath);
-  writeNotNull('contentType', _$AssertContentTypeEnumMap[instance.contentType]);
+  writeNotNull('contentType', _$ContentTypeEnumMap[instance.contentType]);
   writeNotNull('expression', instance.expression);
   writeNotNull('headerField', instance.headerField);
   writeNotNull('minimumId', instance.minimumId);
@@ -1105,14 +1085,6 @@ const _$AssertDirectionEnumMap = {
   AssertDirection.response: 'response',
   AssertDirection.request: 'request',
   AssertDirection.unknown: 'unknown',
-};
-
-const _$AssertContentTypeEnumMap = {
-  AssertContentType.xml: 'xml',
-  AssertContentType.json: 'json',
-  AssertContentType.ttl: 'ttl',
-  AssertContentType.none: 'none',
-  AssertContentType.unknown: 'unknown',
 };
 
 const _$AssertOperatorEnumMap = {

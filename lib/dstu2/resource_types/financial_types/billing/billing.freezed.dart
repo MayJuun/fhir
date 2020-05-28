@@ -16,7 +16,8 @@ class _$AccountTearOff {
   const _$AccountTearOff();
 
   _Account call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Account') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -24,7 +25,7 @@ class _$AccountTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       String name,
       CodeableConcept type,
       @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
@@ -36,6 +37,7 @@ class _$AccountTearOff {
       Reference owner,
       String description}) {
     return _Account(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -63,6 +65,8 @@ class _$AccountTearOff {
 const $Account = _$AccountTearOff();
 
 mixin _$Account {
+  @JsonKey(defaultValue: 'Account')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -72,7 +76,7 @@ mixin _$Account {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   String get name;
   CodeableConcept get type;
   @JsonKey(unknownEnumValue: AccountStatus.unknown)
@@ -93,7 +97,8 @@ abstract class $AccountCopyWith<$Res> {
   factory $AccountCopyWith(Account value, $Res Function(Account) then) =
       _$AccountCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Account') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -101,7 +106,7 @@ abstract class $AccountCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       String name,
       CodeableConcept type,
       @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
@@ -117,7 +122,6 @@ abstract class $AccountCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get type;
   $PeriodCopyWith<$Res> get activePeriod;
   $CodingCopyWith<$Res> get currency;
@@ -136,6 +140,7 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -157,6 +162,9 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
     Object description = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -172,8 +180,9 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as CodeableConcept,
       status: status == freezed ? _value.status : status as AccountStatus,
@@ -229,16 +238,6 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -318,7 +317,8 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       __$AccountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Account') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -326,7 +326,7 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       String name,
       CodeableConcept type,
       @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
@@ -346,8 +346,6 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
@@ -374,6 +372,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -395,6 +394,9 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
     Object description = freezed,
   }) {
     return _then(_Account(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -410,8 +412,9 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as CodeableConcept,
       status: status == freezed ? _value.status : status as AccountStatus,
@@ -434,7 +437,8 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Account implements _Account {
   const _$_Account(
-      {this.id,
+      {@JsonKey(defaultValue: 'Account') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -458,6 +462,9 @@ class _$_Account implements _Account {
       _$_$_AccountFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Account')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -475,7 +482,7 @@ class _$_Account implements _Account {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final String name;
   @override
@@ -500,13 +507,16 @@ class _$_Account implements _Account {
 
   @override
   String toString() {
-    return 'Account(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, type: $type, status: $status, activePeriod: $activePeriod, currency: $currency, balance: $balance, coveragePeriod: $coveragePeriod, subject: $subject, owner: $owner, description: $description)';
+    return 'Account(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, type: $type, status: $status, activePeriod: $activePeriod, currency: $currency, balance: $balance, coveragePeriod: $coveragePeriod, subject: $subject, owner: $owner, description: $description)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Account &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -562,6 +572,7 @@ class _$_Account implements _Account {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -594,7 +605,8 @@ class _$_Account implements _Account {
 
 abstract class _Account implements Account {
   const factory _Account(
-      {Id id,
+      {@JsonKey(defaultValue: 'Account') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -602,7 +614,7 @@ abstract class _Account implements Account {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       String name,
       CodeableConcept type,
       @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
@@ -616,6 +628,9 @@ abstract class _Account implements Account {
 
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Account')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -634,7 +649,7 @@ abstract class _Account implements Account {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   String get name;
   @override
@@ -668,7 +683,9 @@ class _$ClaimTearOff {
   const _$ClaimTearOff();
 
   _Claim call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Claim')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -680,7 +697,7 @@ class _$ClaimTearOff {
       @required
       @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
           ClaimType type,
-      Identifier identifier,
+      List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
@@ -698,20 +715,21 @@ class _$ClaimTearOff {
       ClaimPayee payee,
       Reference referral,
       ClaimDiagnosis diagnosis,
-      Coding condition,
+      List<Coding> condition,
       @required
       @JsonKey(required: true)
           Reference patient,
-      ClaimCoverage coverage,
-      Coding exception,
+      List<ClaimCoverage> coverage,
+      List<Coding> exception,
       String school,
       Date accident,
       Coding accidentType,
-      Coding interventionException,
-      ClaimItem item,
-      Coding additionalMaterials,
-      ClaimMissingTeeth missingTeeth}) {
+      List<Coding> interventionException,
+      List<ClaimItem> item,
+      List<Coding> additionalMaterials,
+      List<ClaimMissingTeeth> missingTeeth}) {
     return _Claim(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -757,6 +775,8 @@ class _$ClaimTearOff {
 const $Claim = _$ClaimTearOff();
 
 mixin _$Claim {
+  @JsonKey(defaultValue: 'Claim')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -768,7 +788,7 @@ mixin _$Claim {
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
   ClaimType get type;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   Coding get ruleset;
   Coding get originalRuleset;
   FhirDateTime get created;
@@ -786,18 +806,18 @@ mixin _$Claim {
   ClaimPayee get payee;
   Reference get referral;
   ClaimDiagnosis get diagnosis;
-  Coding get condition;
+  List<Coding> get condition;
   @JsonKey(required: true)
   Reference get patient;
-  ClaimCoverage get coverage;
-  Coding get exception;
+  List<ClaimCoverage> get coverage;
+  List<Coding> get exception;
   String get school;
   Date get accident;
   Coding get accidentType;
-  Coding get interventionException;
-  ClaimItem get item;
-  Coding get additionalMaterials;
-  ClaimMissingTeeth get missingTeeth;
+  List<Coding> get interventionException;
+  List<ClaimItem> get item;
+  List<Coding> get additionalMaterials;
+  List<ClaimMissingTeeth> get missingTeeth;
 
   Map<String, dynamic> toJson();
   $ClaimCopyWith<Claim> get copyWith;
@@ -807,7 +827,9 @@ abstract class $ClaimCopyWith<$Res> {
   factory $ClaimCopyWith(Claim value, $Res Function(Claim) then) =
       _$ClaimCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Claim')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -818,7 +840,7 @@ abstract class $ClaimCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
           ClaimType type,
-      Identifier identifier,
+      List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
@@ -836,24 +858,23 @@ abstract class $ClaimCopyWith<$Res> {
       ClaimPayee payee,
       Reference referral,
       ClaimDiagnosis diagnosis,
-      Coding condition,
+      List<Coding> condition,
       @JsonKey(required: true)
           Reference patient,
-      ClaimCoverage coverage,
-      Coding exception,
+      List<ClaimCoverage> coverage,
+      List<Coding> exception,
       String school,
       Date accident,
       Coding accidentType,
-      Coding interventionException,
-      ClaimItem item,
-      Coding additionalMaterials,
-      ClaimMissingTeeth missingTeeth});
+      List<Coding> interventionException,
+      List<ClaimItem> item,
+      List<Coding> additionalMaterials,
+      List<ClaimMissingTeeth> missingTeeth});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodingCopyWith<$Res> get ruleset;
   $CodingCopyWith<$Res> get originalRuleset;
   $ReferenceCopyWith<$Res> get target;
@@ -868,15 +889,8 @@ abstract class $ClaimCopyWith<$Res> {
   $ClaimPayeeCopyWith<$Res> get payee;
   $ReferenceCopyWith<$Res> get referral;
   $ClaimDiagnosisCopyWith<$Res> get diagnosis;
-  $CodingCopyWith<$Res> get condition;
   $ReferenceCopyWith<$Res> get patient;
-  $ClaimCoverageCopyWith<$Res> get coverage;
-  $CodingCopyWith<$Res> get exception;
   $CodingCopyWith<$Res> get accidentType;
-  $CodingCopyWith<$Res> get interventionException;
-  $ClaimItemCopyWith<$Res> get item;
-  $CodingCopyWith<$Res> get additionalMaterials;
-  $ClaimMissingTeethCopyWith<$Res> get missingTeeth;
 }
 
 class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
@@ -888,6 +902,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -927,6 +942,9 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
     Object missingTeeth = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -943,8 +961,9 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as ClaimType,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -972,11 +991,14 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       referral: referral == freezed ? _value.referral : referral as Reference,
       diagnosis:
           diagnosis == freezed ? _value.diagnosis : diagnosis as ClaimDiagnosis,
-      condition: condition == freezed ? _value.condition : condition as Coding,
+      condition:
+          condition == freezed ? _value.condition : condition as List<Coding>,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      coverage:
-          coverage == freezed ? _value.coverage : coverage as ClaimCoverage,
-      exception: exception == freezed ? _value.exception : exception as Coding,
+      coverage: coverage == freezed
+          ? _value.coverage
+          : coverage as List<ClaimCoverage>,
+      exception:
+          exception == freezed ? _value.exception : exception as List<Coding>,
       school: school == freezed ? _value.school : school as String,
       accident: accident == freezed ? _value.accident : accident as Date,
       accidentType: accidentType == freezed
@@ -984,14 +1006,14 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
           : accidentType as Coding,
       interventionException: interventionException == freezed
           ? _value.interventionException
-          : interventionException as Coding,
-      item: item == freezed ? _value.item : item as ClaimItem,
+          : interventionException as List<Coding>,
+      item: item == freezed ? _value.item : item as List<ClaimItem>,
       additionalMaterials: additionalMaterials == freezed
           ? _value.additionalMaterials
-          : additionalMaterials as Coding,
+          : additionalMaterials as List<Coding>,
       missingTeeth: missingTeeth == freezed
           ? _value.missingTeeth
-          : missingTeeth as ClaimMissingTeeth,
+          : missingTeeth as List<ClaimMissingTeeth>,
     ));
   }
 
@@ -1032,16 +1054,6 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -1186,42 +1198,12 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
   }
 
   @override
-  $CodingCopyWith<$Res> get condition {
-    if (_value.condition == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.condition, (value) {
-      return _then(_value.copyWith(condition: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get patient {
     if (_value.patient == null) {
       return null;
     }
     return $ReferenceCopyWith<$Res>(_value.patient, (value) {
       return _then(_value.copyWith(patient: value));
-    });
-  }
-
-  @override
-  $ClaimCoverageCopyWith<$Res> get coverage {
-    if (_value.coverage == null) {
-      return null;
-    }
-    return $ClaimCoverageCopyWith<$Res>(_value.coverage, (value) {
-      return _then(_value.copyWith(coverage: value));
-    });
-  }
-
-  @override
-  $CodingCopyWith<$Res> get exception {
-    if (_value.exception == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.exception, (value) {
-      return _then(_value.copyWith(exception: value));
     });
   }
 
@@ -1234,46 +1216,6 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       return _then(_value.copyWith(accidentType: value));
     });
   }
-
-  @override
-  $CodingCopyWith<$Res> get interventionException {
-    if (_value.interventionException == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.interventionException, (value) {
-      return _then(_value.copyWith(interventionException: value));
-    });
-  }
-
-  @override
-  $ClaimItemCopyWith<$Res> get item {
-    if (_value.item == null) {
-      return null;
-    }
-    return $ClaimItemCopyWith<$Res>(_value.item, (value) {
-      return _then(_value.copyWith(item: value));
-    });
-  }
-
-  @override
-  $CodingCopyWith<$Res> get additionalMaterials {
-    if (_value.additionalMaterials == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.additionalMaterials, (value) {
-      return _then(_value.copyWith(additionalMaterials: value));
-    });
-  }
-
-  @override
-  $ClaimMissingTeethCopyWith<$Res> get missingTeeth {
-    if (_value.missingTeeth == null) {
-      return null;
-    }
-    return $ClaimMissingTeethCopyWith<$Res>(_value.missingTeeth, (value) {
-      return _then(_value.copyWith(missingTeeth: value));
-    });
-  }
 }
 
 abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
@@ -1281,7 +1223,9 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       __$ClaimCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Claim')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1292,7 +1236,7 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
           ClaimType type,
-      Identifier identifier,
+      List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
@@ -1310,18 +1254,18 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       ClaimPayee payee,
       Reference referral,
       ClaimDiagnosis diagnosis,
-      Coding condition,
+      List<Coding> condition,
       @JsonKey(required: true)
           Reference patient,
-      ClaimCoverage coverage,
-      Coding exception,
+      List<ClaimCoverage> coverage,
+      List<Coding> exception,
       String school,
       Date accident,
       Coding accidentType,
-      Coding interventionException,
-      ClaimItem item,
-      Coding additionalMaterials,
-      ClaimMissingTeeth missingTeeth});
+      List<Coding> interventionException,
+      List<ClaimItem> item,
+      List<Coding> additionalMaterials,
+      List<ClaimMissingTeeth> missingTeeth});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1331,8 +1275,6 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodingCopyWith<$Res> get ruleset;
   @override
@@ -1362,23 +1304,9 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   @override
   $ClaimDiagnosisCopyWith<$Res> get diagnosis;
   @override
-  $CodingCopyWith<$Res> get condition;
-  @override
   $ReferenceCopyWith<$Res> get patient;
   @override
-  $ClaimCoverageCopyWith<$Res> get coverage;
-  @override
-  $CodingCopyWith<$Res> get exception;
-  @override
   $CodingCopyWith<$Res> get accidentType;
-  @override
-  $CodingCopyWith<$Res> get interventionException;
-  @override
-  $ClaimItemCopyWith<$Res> get item;
-  @override
-  $CodingCopyWith<$Res> get additionalMaterials;
-  @override
-  $ClaimMissingTeethCopyWith<$Res> get missingTeeth;
 }
 
 class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
@@ -1391,6 +1319,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1430,6 +1359,9 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
     Object missingTeeth = freezed,
   }) {
     return _then(_Claim(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1446,8 +1378,9 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as ClaimType,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -1475,11 +1408,14 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
       referral: referral == freezed ? _value.referral : referral as Reference,
       diagnosis:
           diagnosis == freezed ? _value.diagnosis : diagnosis as ClaimDiagnosis,
-      condition: condition == freezed ? _value.condition : condition as Coding,
+      condition:
+          condition == freezed ? _value.condition : condition as List<Coding>,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      coverage:
-          coverage == freezed ? _value.coverage : coverage as ClaimCoverage,
-      exception: exception == freezed ? _value.exception : exception as Coding,
+      coverage: coverage == freezed
+          ? _value.coverage
+          : coverage as List<ClaimCoverage>,
+      exception:
+          exception == freezed ? _value.exception : exception as List<Coding>,
       school: school == freezed ? _value.school : school as String,
       accident: accident == freezed ? _value.accident : accident as Date,
       accidentType: accidentType == freezed
@@ -1487,14 +1423,14 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
           : accidentType as Coding,
       interventionException: interventionException == freezed
           ? _value.interventionException
-          : interventionException as Coding,
-      item: item == freezed ? _value.item : item as ClaimItem,
+          : interventionException as List<Coding>,
+      item: item == freezed ? _value.item : item as List<ClaimItem>,
       additionalMaterials: additionalMaterials == freezed
           ? _value.additionalMaterials
-          : additionalMaterials as Coding,
+          : additionalMaterials as List<Coding>,
       missingTeeth: missingTeeth == freezed
           ? _value.missingTeeth
-          : missingTeeth as ClaimMissingTeeth,
+          : missingTeeth as List<ClaimMissingTeeth>,
     ));
   }
 }
@@ -1502,7 +1438,9 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Claim implements _Claim {
   const _$_Claim(
-      {this.id,
+      {@JsonKey(defaultValue: 'Claim')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1552,6 +1490,9 @@ class _$_Claim implements _Claim {
       _$_$_ClaimFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Claim')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -1572,7 +1513,7 @@ class _$_Claim implements _Claim {
   @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
   final ClaimType type;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final Coding ruleset;
   @override
@@ -1607,14 +1548,14 @@ class _$_Claim implements _Claim {
   @override
   final ClaimDiagnosis diagnosis;
   @override
-  final Coding condition;
+  final List<Coding> condition;
   @override
   @JsonKey(required: true)
   final Reference patient;
   @override
-  final ClaimCoverage coverage;
+  final List<ClaimCoverage> coverage;
   @override
-  final Coding exception;
+  final List<Coding> exception;
   @override
   final String school;
   @override
@@ -1622,23 +1563,26 @@ class _$_Claim implements _Claim {
   @override
   final Coding accidentType;
   @override
-  final Coding interventionException;
+  final List<Coding> interventionException;
   @override
-  final ClaimItem item;
+  final List<ClaimItem> item;
   @override
-  final Coding additionalMaterials;
+  final List<Coding> additionalMaterials;
   @override
-  final ClaimMissingTeeth missingTeeth;
+  final List<ClaimMissingTeeth> missingTeeth;
 
   @override
   String toString() {
-    return 'Claim(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, target: $target, provider: $provider, organization: $organization, use: $use, priority: $priority, fundsReserve: $fundsReserve, enterer: $enterer, facility: $facility, prescription: $prescription, originalPrescription: $originalPrescription, payee: $payee, referral: $referral, diagnosis: $diagnosis, condition: $condition, patient: $patient, coverage: $coverage, exception: $exception, school: $school, accident: $accident, accidentType: $accidentType, interventionException: $interventionException, item: $item, additionalMaterials: $additionalMaterials, missingTeeth: $missingTeeth)';
+    return 'Claim(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, target: $target, provider: $provider, organization: $organization, use: $use, priority: $priority, fundsReserve: $fundsReserve, enterer: $enterer, facility: $facility, prescription: $prescription, originalPrescription: $originalPrescription, payee: $payee, referral: $referral, diagnosis: $diagnosis, condition: $condition, patient: $patient, coverage: $coverage, exception: $exception, school: $school, accident: $accident, accidentType: $accidentType, interventionException: $interventionException, item: $item, additionalMaterials: $additionalMaterials, missingTeeth: $missingTeeth)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Claim &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1702,10 +1646,8 @@ class _$_Claim implements _Claim {
             (identical(other.originalPrescription, originalPrescription) ||
                 const DeepCollectionEquality().equals(
                     other.originalPrescription, originalPrescription)) &&
-            (identical(other.payee, payee) ||
-                const DeepCollectionEquality().equals(other.payee, payee)) &&
-            (identical(other.referral, referral) ||
-                const DeepCollectionEquality().equals(other.referral, referral)) &&
+            (identical(other.payee, payee) || const DeepCollectionEquality().equals(other.payee, payee)) &&
+            (identical(other.referral, referral) || const DeepCollectionEquality().equals(other.referral, referral)) &&
             (identical(other.diagnosis, diagnosis) || const DeepCollectionEquality().equals(other.diagnosis, diagnosis)) &&
             (identical(other.condition, condition) || const DeepCollectionEquality().equals(other.condition, condition)) &&
             (identical(other.patient, patient) || const DeepCollectionEquality().equals(other.patient, patient)) &&
@@ -1723,6 +1665,7 @@ class _$_Claim implements _Claim {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1773,7 +1716,9 @@ class _$_Claim implements _Claim {
 
 abstract class _Claim implements Claim {
   const factory _Claim(
-      {Id id,
+      {@JsonKey(defaultValue: 'Claim')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1785,7 +1730,7 @@ abstract class _Claim implements Claim {
       @required
       @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
           ClaimType type,
-      Identifier identifier,
+      List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
@@ -1803,22 +1748,25 @@ abstract class _Claim implements Claim {
       ClaimPayee payee,
       Reference referral,
       ClaimDiagnosis diagnosis,
-      Coding condition,
+      List<Coding> condition,
       @required
       @JsonKey(required: true)
           Reference patient,
-      ClaimCoverage coverage,
-      Coding exception,
+      List<ClaimCoverage> coverage,
+      List<Coding> exception,
       String school,
       Date accident,
       Coding accidentType,
-      Coding interventionException,
-      ClaimItem item,
-      Coding additionalMaterials,
-      ClaimMissingTeeth missingTeeth}) = _$_Claim;
+      List<Coding> interventionException,
+      List<ClaimItem> item,
+      List<Coding> additionalMaterials,
+      List<ClaimMissingTeeth> missingTeeth}) = _$_Claim;
 
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Claim')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1840,7 +1788,7 @@ abstract class _Claim implements Claim {
   @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
   ClaimType get type;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   Coding get ruleset;
   @override
@@ -1875,14 +1823,14 @@ abstract class _Claim implements Claim {
   @override
   ClaimDiagnosis get diagnosis;
   @override
-  Coding get condition;
+  List<Coding> get condition;
   @override
   @JsonKey(required: true)
   Reference get patient;
   @override
-  ClaimCoverage get coverage;
+  List<ClaimCoverage> get coverage;
   @override
-  Coding get exception;
+  List<Coding> get exception;
   @override
   String get school;
   @override
@@ -1890,13 +1838,13 @@ abstract class _Claim implements Claim {
   @override
   Coding get accidentType;
   @override
-  Coding get interventionException;
+  List<Coding> get interventionException;
   @override
-  ClaimItem get item;
+  List<ClaimItem> get item;
   @override
-  Coding get additionalMaterials;
+  List<Coding> get additionalMaterials;
   @override
-  ClaimMissingTeeth get missingTeeth;
+  List<ClaimMissingTeeth> get missingTeeth;
   @override
   _$ClaimCopyWith<_Claim> get copyWith;
 }
@@ -2523,7 +2471,7 @@ class _$ClaimCoverageTearOff {
       @required @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       @required @JsonKey(required: true) Coding relationship,
-      String preAuthRef,
+      List<String> preAuthRef,
       Reference claimResponse,
       Coding originalRuleset}) {
     return _ClaimCoverage(
@@ -2559,7 +2507,7 @@ mixin _$ClaimCoverage {
   String get businessArrangement;
   @JsonKey(required: true)
   Coding get relationship;
-  String get preAuthRef;
+  List<String> get preAuthRef;
   Reference get claimResponse;
   Coding get originalRuleset;
 
@@ -2580,7 +2528,7 @@ abstract class $ClaimCoverageCopyWith<$Res> {
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       @JsonKey(required: true) Coding relationship,
-      String preAuthRef,
+      List<String> preAuthRef,
       Reference claimResponse,
       Coding originalRuleset});
 
@@ -2631,8 +2579,9 @@ class _$ClaimCoverageCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship as Coding,
-      preAuthRef:
-          preAuthRef == freezed ? _value.preAuthRef : preAuthRef as String,
+      preAuthRef: preAuthRef == freezed
+          ? _value.preAuthRef
+          : preAuthRef as List<String>,
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
@@ -2718,7 +2667,7 @@ abstract class _$ClaimCoverageCopyWith<$Res>
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       @JsonKey(required: true) Coding relationship,
-      String preAuthRef,
+      List<String> preAuthRef,
       Reference claimResponse,
       Coding originalRuleset});
 
@@ -2777,8 +2726,9 @@ class __$ClaimCoverageCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship as Coding,
-      preAuthRef:
-          preAuthRef == freezed ? _value.preAuthRef : preAuthRef as String,
+      preAuthRef: preAuthRef == freezed
+          ? _value.preAuthRef
+          : preAuthRef as List<String>,
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
@@ -2833,7 +2783,7 @@ class _$_ClaimCoverage implements _ClaimCoverage {
   @JsonKey(required: true)
   final Coding relationship;
   @override
-  final String preAuthRef;
+  final List<String> preAuthRef;
   @override
   final Reference claimResponse;
   @override
@@ -2916,7 +2866,7 @@ abstract class _ClaimCoverage implements ClaimCoverage {
       @required @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       @required @JsonKey(required: true) Coding relationship,
-      String preAuthRef,
+      List<String> preAuthRef,
       Reference claimResponse,
       Coding originalRuleset}) = _$_ClaimCoverage;
 
@@ -2945,7 +2895,7 @@ abstract class _ClaimCoverage implements ClaimCoverage {
   @JsonKey(required: true)
   Coding get relationship;
   @override
-  String get preAuthRef;
+  List<String> get preAuthRef;
   @override
   Reference get claimResponse;
   @override
@@ -2968,7 +2918,7 @@ class _$ClaimItemTearOff {
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding type,
       Reference provider,
-      PositiveInt diagnosisLinkId,
+      List<PositiveInt> diagnosisLinkId,
       @required @JsonKey(required: true) Coding service,
       Date serviceDate,
       Quantity quantity,
@@ -2978,9 +2928,9 @@ class _$ClaimItemTearOff {
       Quantity net,
       Coding udi,
       Coding bodySite,
-      Coding subSite,
-      Coding modifier,
-      ClaimDetail detail,
+      List<Coding> subSite,
+      List<Coding> modifier,
+      List<ClaimDetail> detail,
       ClaimProsthesis prosthesis}) {
     return _ClaimItem(
       id: id,
@@ -3020,7 +2970,7 @@ mixin _$ClaimItem {
   @JsonKey(required: true)
   Coding get type;
   Reference get provider;
-  PositiveInt get diagnosisLinkId;
+  List<PositiveInt> get diagnosisLinkId;
   @JsonKey(required: true)
   Coding get service;
   Date get serviceDate;
@@ -3031,9 +2981,9 @@ mixin _$ClaimItem {
   Quantity get net;
   Coding get udi;
   Coding get bodySite;
-  Coding get subSite;
-  Coding get modifier;
-  ClaimDetail get detail;
+  List<Coding> get subSite;
+  List<Coding> get modifier;
+  List<ClaimDetail> get detail;
   ClaimProsthesis get prosthesis;
 
   Map<String, dynamic> toJson();
@@ -3050,7 +3000,7 @@ abstract class $ClaimItemCopyWith<$Res> {
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding type,
       Reference provider,
-      PositiveInt diagnosisLinkId,
+      List<PositiveInt> diagnosisLinkId,
       @JsonKey(required: true) Coding service,
       Date serviceDate,
       Quantity quantity,
@@ -3060,9 +3010,9 @@ abstract class $ClaimItemCopyWith<$Res> {
       Quantity net,
       Coding udi,
       Coding bodySite,
-      Coding subSite,
-      Coding modifier,
-      ClaimDetail detail,
+      List<Coding> subSite,
+      List<Coding> modifier,
+      List<ClaimDetail> detail,
       ClaimProsthesis prosthesis});
 
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -3075,9 +3025,6 @@ abstract class $ClaimItemCopyWith<$Res> {
   $QuantityCopyWith<$Res> get net;
   $CodingCopyWith<$Res> get udi;
   $CodingCopyWith<$Res> get bodySite;
-  $CodingCopyWith<$Res> get subSite;
-  $CodingCopyWith<$Res> get modifier;
-  $ClaimDetailCopyWith<$Res> get detail;
   $ClaimProsthesisCopyWith<$Res> get prosthesis;
 }
 
@@ -3124,7 +3071,7 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
       provider: provider == freezed ? _value.provider : provider as Reference,
       diagnosisLinkId: diagnosisLinkId == freezed
           ? _value.diagnosisLinkId
-          : diagnosisLinkId as PositiveInt,
+          : diagnosisLinkId as List<PositiveInt>,
       service: service == freezed ? _value.service : service as Coding,
       serviceDate:
           serviceDate == freezed ? _value.serviceDate : serviceDate as Date,
@@ -3136,9 +3083,10 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
       net: net == freezed ? _value.net : net as Quantity,
       udi: udi == freezed ? _value.udi : udi as Coding,
       bodySite: bodySite == freezed ? _value.bodySite : bodySite as Coding,
-      subSite: subSite == freezed ? _value.subSite : subSite as Coding,
-      modifier: modifier == freezed ? _value.modifier : modifier as Coding,
-      detail: detail == freezed ? _value.detail : detail as ClaimDetail,
+      subSite: subSite == freezed ? _value.subSite : subSite as List<Coding>,
+      modifier:
+          modifier == freezed ? _value.modifier : modifier as List<Coding>,
+      detail: detail == freezed ? _value.detail : detail as List<ClaimDetail>,
       prosthesis: prosthesis == freezed
           ? _value.prosthesis
           : prosthesis as ClaimProsthesis,
@@ -3246,36 +3194,6 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
   }
 
   @override
-  $CodingCopyWith<$Res> get subSite {
-    if (_value.subSite == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.subSite, (value) {
-      return _then(_value.copyWith(subSite: value));
-    });
-  }
-
-  @override
-  $CodingCopyWith<$Res> get modifier {
-    if (_value.modifier == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.modifier, (value) {
-      return _then(_value.copyWith(modifier: value));
-    });
-  }
-
-  @override
-  $ClaimDetailCopyWith<$Res> get detail {
-    if (_value.detail == null) {
-      return null;
-    }
-    return $ClaimDetailCopyWith<$Res>(_value.detail, (value) {
-      return _then(_value.copyWith(detail: value));
-    });
-  }
-
-  @override
   $ClaimProsthesisCopyWith<$Res> get prosthesis {
     if (_value.prosthesis == null) {
       return null;
@@ -3298,7 +3216,7 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding type,
       Reference provider,
-      PositiveInt diagnosisLinkId,
+      List<PositiveInt> diagnosisLinkId,
       @JsonKey(required: true) Coding service,
       Date serviceDate,
       Quantity quantity,
@@ -3308,9 +3226,9 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       Quantity net,
       Coding udi,
       Coding bodySite,
-      Coding subSite,
-      Coding modifier,
-      ClaimDetail detail,
+      List<Coding> subSite,
+      List<Coding> modifier,
+      List<ClaimDetail> detail,
       ClaimProsthesis prosthesis});
 
   @override
@@ -3333,12 +3251,6 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
   $CodingCopyWith<$Res> get udi;
   @override
   $CodingCopyWith<$Res> get bodySite;
-  @override
-  $CodingCopyWith<$Res> get subSite;
-  @override
-  $CodingCopyWith<$Res> get modifier;
-  @override
-  $ClaimDetailCopyWith<$Res> get detail;
   @override
   $ClaimProsthesisCopyWith<$Res> get prosthesis;
 }
@@ -3387,7 +3299,7 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
       provider: provider == freezed ? _value.provider : provider as Reference,
       diagnosisLinkId: diagnosisLinkId == freezed
           ? _value.diagnosisLinkId
-          : diagnosisLinkId as PositiveInt,
+          : diagnosisLinkId as List<PositiveInt>,
       service: service == freezed ? _value.service : service as Coding,
       serviceDate:
           serviceDate == freezed ? _value.serviceDate : serviceDate as Date,
@@ -3399,9 +3311,10 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
       net: net == freezed ? _value.net : net as Quantity,
       udi: udi == freezed ? _value.udi : udi as Coding,
       bodySite: bodySite == freezed ? _value.bodySite : bodySite as Coding,
-      subSite: subSite == freezed ? _value.subSite : subSite as Coding,
-      modifier: modifier == freezed ? _value.modifier : modifier as Coding,
-      detail: detail == freezed ? _value.detail : detail as ClaimDetail,
+      subSite: subSite == freezed ? _value.subSite : subSite as List<Coding>,
+      modifier:
+          modifier == freezed ? _value.modifier : modifier as List<Coding>,
+      detail: detail == freezed ? _value.detail : detail as List<ClaimDetail>,
       prosthesis: prosthesis == freezed
           ? _value.prosthesis
           : prosthesis as ClaimProsthesis,
@@ -3455,7 +3368,7 @@ class _$_ClaimItem implements _ClaimItem {
   @override
   final Reference provider;
   @override
-  final PositiveInt diagnosisLinkId;
+  final List<PositiveInt> diagnosisLinkId;
   @override
   @JsonKey(required: true)
   final Coding service;
@@ -3476,11 +3389,11 @@ class _$_ClaimItem implements _ClaimItem {
   @override
   final Coding bodySite;
   @override
-  final Coding subSite;
+  final List<Coding> subSite;
   @override
-  final Coding modifier;
+  final List<Coding> modifier;
   @override
-  final ClaimDetail detail;
+  final List<ClaimDetail> detail;
   @override
   final ClaimProsthesis prosthesis;
 
@@ -3590,7 +3503,7 @@ abstract class _ClaimItem implements ClaimItem {
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding type,
       Reference provider,
-      PositiveInt diagnosisLinkId,
+      List<PositiveInt> diagnosisLinkId,
       @required @JsonKey(required: true) Coding service,
       Date serviceDate,
       Quantity quantity,
@@ -3600,9 +3513,9 @@ abstract class _ClaimItem implements ClaimItem {
       Quantity net,
       Coding udi,
       Coding bodySite,
-      Coding subSite,
-      Coding modifier,
-      ClaimDetail detail,
+      List<Coding> subSite,
+      List<Coding> modifier,
+      List<ClaimDetail> detail,
       ClaimProsthesis prosthesis}) = _$_ClaimItem;
 
   factory _ClaimItem.fromJson(Map<String, dynamic> json) =
@@ -3624,7 +3537,7 @@ abstract class _ClaimItem implements ClaimItem {
   @override
   Reference get provider;
   @override
-  PositiveInt get diagnosisLinkId;
+  List<PositiveInt> get diagnosisLinkId;
   @override
   @JsonKey(required: true)
   Coding get service;
@@ -3645,11 +3558,11 @@ abstract class _ClaimItem implements ClaimItem {
   @override
   Coding get bodySite;
   @override
-  Coding get subSite;
+  List<Coding> get subSite;
   @override
-  Coding get modifier;
+  List<Coding> get modifier;
   @override
-  ClaimDetail get detail;
+  List<ClaimDetail> get detail;
   @override
   ClaimProsthesis get prosthesis;
   @override
@@ -3676,7 +3589,7 @@ class _$ClaimDetailTearOff {
       Decimal points,
       Quantity net,
       Coding udi,
-      ClaimSubDetail subDetail}) {
+      List<ClaimSubDetail> subDetail}) {
     return _ClaimDetail(
       id: id,
       extension_: extension_,
@@ -3715,7 +3628,7 @@ mixin _$ClaimDetail {
   Decimal get points;
   Quantity get net;
   Coding get udi;
-  ClaimSubDetail get subDetail;
+  List<ClaimSubDetail> get subDetail;
 
   Map<String, dynamic> toJson();
   $ClaimDetailCopyWith<ClaimDetail> get copyWith;
@@ -3738,7 +3651,7 @@ abstract class $ClaimDetailCopyWith<$Res> {
       Decimal points,
       Quantity net,
       Coding udi,
-      ClaimSubDetail subDetail});
+      List<ClaimSubDetail> subDetail});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -3748,7 +3661,6 @@ abstract class $ClaimDetailCopyWith<$Res> {
   $QuantityCopyWith<$Res> get unitPrice;
   $QuantityCopyWith<$Res> get net;
   $CodingCopyWith<$Res> get udi;
-  $ClaimSubDetailCopyWith<$Res> get subDetail;
 }
 
 class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
@@ -3792,8 +3704,9 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
       points: points == freezed ? _value.points : points as Decimal,
       net: net == freezed ? _value.net : net as Quantity,
       udi: udi == freezed ? _value.udi : udi as Coding,
-      subDetail:
-          subDetail == freezed ? _value.subDetail : subDetail as ClaimSubDetail,
+      subDetail: subDetail == freezed
+          ? _value.subDetail
+          : subDetail as List<ClaimSubDetail>,
     ));
   }
 
@@ -3876,16 +3789,6 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
       return _then(_value.copyWith(udi: value));
     });
   }
-
-  @override
-  $ClaimSubDetailCopyWith<$Res> get subDetail {
-    if (_value.subDetail == null) {
-      return null;
-    }
-    return $ClaimSubDetailCopyWith<$Res>(_value.subDetail, (value) {
-      return _then(_value.copyWith(subDetail: value));
-    });
-  }
 }
 
 abstract class _$ClaimDetailCopyWith<$Res>
@@ -3907,7 +3810,7 @@ abstract class _$ClaimDetailCopyWith<$Res>
       Decimal points,
       Quantity net,
       Coding udi,
-      ClaimSubDetail subDetail});
+      List<ClaimSubDetail> subDetail});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -3925,8 +3828,6 @@ abstract class _$ClaimDetailCopyWith<$Res>
   $QuantityCopyWith<$Res> get net;
   @override
   $CodingCopyWith<$Res> get udi;
-  @override
-  $ClaimSubDetailCopyWith<$Res> get subDetail;
 }
 
 class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
@@ -3972,8 +3873,9 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
       points: points == freezed ? _value.points : points as Decimal,
       net: net == freezed ? _value.net : net as Quantity,
       udi: udi == freezed ? _value.udi : udi as Coding,
-      subDetail:
-          subDetail == freezed ? _value.subDetail : subDetail as ClaimSubDetail,
+      subDetail: subDetail == freezed
+          ? _value.subDetail
+          : subDetail as List<ClaimSubDetail>,
     ));
   }
 }
@@ -4030,7 +3932,7 @@ class _$_ClaimDetail implements _ClaimDetail {
   @override
   final Coding udi;
   @override
-  final ClaimSubDetail subDetail;
+  final List<ClaimSubDetail> subDetail;
 
   @override
   String toString() {
@@ -4117,7 +4019,7 @@ abstract class _ClaimDetail implements ClaimDetail {
       Decimal points,
       Quantity net,
       Coding udi,
-      ClaimSubDetail subDetail}) = _$_ClaimDetail;
+      List<ClaimSubDetail> subDetail}) = _$_ClaimDetail;
 
   factory _ClaimDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimDetail.fromJson;
@@ -4151,7 +4053,7 @@ abstract class _ClaimDetail implements ClaimDetail {
   @override
   Coding get udi;
   @override
-  ClaimSubDetail get subDetail;
+  List<ClaimSubDetail> get subDetail;
   @override
   _$ClaimDetailCopyWith<_ClaimDetail> get copyWith;
 }
@@ -5215,7 +5117,9 @@ class _$ClaimResponseTearOff {
   const _$ClaimResponseTearOff();
 
   _ClaimResponse call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ClaimResponse')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -5224,7 +5128,7 @@ class _$ClaimResponseTearOff {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       Coding ruleset,
       Coding originalRuleset,
@@ -5236,9 +5140,9 @@ class _$ClaimResponseTearOff {
           ClaimResponseOutcome outcome,
       String disposition,
       Coding payeeType,
-      ClaimResponseItem item,
-      ClaimResponseAddItem addItem,
-      ClaimResponseError error,
+      List<ClaimResponseItem> item,
+      List<ClaimResponseAddItem> addItem,
+      List<ClaimResponseError> error,
       Quantity totalCost,
       Quantity unallocDeductable,
       Quantity totalBenefit,
@@ -5249,9 +5153,10 @@ class _$ClaimResponseTearOff {
       Identifier paymentRef,
       Coding reserved,
       Coding form,
-      ClaimResponseNote note,
-      ClaimResponseCoverage coverage}) {
+      List<ClaimResponseNote> note,
+      List<ClaimResponseCoverage> coverage}) {
     return _ClaimResponse(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -5294,6 +5199,8 @@ class _$ClaimResponseTearOff {
 const $ClaimResponse = _$ClaimResponseTearOff();
 
 mixin _$ClaimResponse {
+  @JsonKey(defaultValue: 'ClaimResponse')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5303,7 +5210,7 @@ mixin _$ClaimResponse {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   Reference get request;
   Coding get ruleset;
   Coding get originalRuleset;
@@ -5315,9 +5222,9 @@ mixin _$ClaimResponse {
   ClaimResponseOutcome get outcome;
   String get disposition;
   Coding get payeeType;
-  ClaimResponseItem get item;
-  ClaimResponseAddItem get addItem;
-  ClaimResponseError get error;
+  List<ClaimResponseItem> get item;
+  List<ClaimResponseAddItem> get addItem;
+  List<ClaimResponseError> get error;
   Quantity get totalCost;
   Quantity get unallocDeductable;
   Quantity get totalBenefit;
@@ -5328,8 +5235,8 @@ mixin _$ClaimResponse {
   Identifier get paymentRef;
   Coding get reserved;
   Coding get form;
-  ClaimResponseNote get note;
-  ClaimResponseCoverage get coverage;
+  List<ClaimResponseNote> get note;
+  List<ClaimResponseCoverage> get coverage;
 
   Map<String, dynamic> toJson();
   $ClaimResponseCopyWith<ClaimResponse> get copyWith;
@@ -5340,7 +5247,9 @@ abstract class $ClaimResponseCopyWith<$Res> {
           ClaimResponse value, $Res Function(ClaimResponse) then) =
       _$ClaimResponseCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ClaimResponse')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -5349,7 +5258,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       Coding ruleset,
       Coding originalRuleset,
@@ -5361,9 +5270,9 @@ abstract class $ClaimResponseCopyWith<$Res> {
           ClaimResponseOutcome outcome,
       String disposition,
       Coding payeeType,
-      ClaimResponseItem item,
-      ClaimResponseAddItem addItem,
-      ClaimResponseError error,
+      List<ClaimResponseItem> item,
+      List<ClaimResponseAddItem> addItem,
+      List<ClaimResponseError> error,
       Quantity totalCost,
       Quantity unallocDeductable,
       Quantity totalBenefit,
@@ -5374,14 +5283,13 @@ abstract class $ClaimResponseCopyWith<$Res> {
       Identifier paymentRef,
       Coding reserved,
       Coding form,
-      ClaimResponseNote note,
-      ClaimResponseCoverage coverage});
+      List<ClaimResponseNote> note,
+      List<ClaimResponseCoverage> coverage});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get request;
   $CodingCopyWith<$Res> get ruleset;
   $CodingCopyWith<$Res> get originalRuleset;
@@ -5389,9 +5297,6 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get requestProvider;
   $ReferenceCopyWith<$Res> get requestOrganization;
   $CodingCopyWith<$Res> get payeeType;
-  $ClaimResponseItemCopyWith<$Res> get item;
-  $ClaimResponseAddItemCopyWith<$Res> get addItem;
-  $ClaimResponseErrorCopyWith<$Res> get error;
   $QuantityCopyWith<$Res> get totalCost;
   $QuantityCopyWith<$Res> get unallocDeductable;
   $QuantityCopyWith<$Res> get totalBenefit;
@@ -5401,8 +5306,6 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get paymentRef;
   $CodingCopyWith<$Res> get reserved;
   $CodingCopyWith<$Res> get form;
-  $ClaimResponseNoteCopyWith<$Res> get note;
-  $ClaimResponseCoverageCopyWith<$Res> get coverage;
 }
 
 class _$ClaimResponseCopyWithImpl<$Res>
@@ -5415,6 +5318,7 @@ class _$ClaimResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -5451,6 +5355,9 @@ class _$ClaimResponseCopyWithImpl<$Res>
     Object coverage = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5466,8 +5373,9 @@ class _$ClaimResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       request: request == freezed ? _value.request : request as Reference,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding,
       originalRuleset: originalRuleset == freezed
@@ -5488,10 +5396,12 @@ class _$ClaimResponseCopyWithImpl<$Res>
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
       payeeType: payeeType == freezed ? _value.payeeType : payeeType as Coding,
-      item: item == freezed ? _value.item : item as ClaimResponseItem,
-      addItem:
-          addItem == freezed ? _value.addItem : addItem as ClaimResponseAddItem,
-      error: error == freezed ? _value.error : error as ClaimResponseError,
+      item: item == freezed ? _value.item : item as List<ClaimResponseItem>,
+      addItem: addItem == freezed
+          ? _value.addItem
+          : addItem as List<ClaimResponseAddItem>,
+      error:
+          error == freezed ? _value.error : error as List<ClaimResponseError>,
       totalCost:
           totalCost == freezed ? _value.totalCost : totalCost as Quantity,
       unallocDeductable: unallocDeductable == freezed
@@ -5515,10 +5425,10 @@ class _$ClaimResponseCopyWithImpl<$Res>
           paymentRef == freezed ? _value.paymentRef : paymentRef as Identifier,
       reserved: reserved == freezed ? _value.reserved : reserved as Coding,
       form: form == freezed ? _value.form : form as Coding,
-      note: note == freezed ? _value.note : note as ClaimResponseNote,
+      note: note == freezed ? _value.note : note as List<ClaimResponseNote>,
       coverage: coverage == freezed
           ? _value.coverage
-          : coverage as ClaimResponseCoverage,
+          : coverage as List<ClaimResponseCoverage>,
     ));
   }
 
@@ -5559,16 +5469,6 @@ class _$ClaimResponseCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -5639,36 +5539,6 @@ class _$ClaimResponseCopyWithImpl<$Res>
     }
     return $CodingCopyWith<$Res>(_value.payeeType, (value) {
       return _then(_value.copyWith(payeeType: value));
-    });
-  }
-
-  @override
-  $ClaimResponseItemCopyWith<$Res> get item {
-    if (_value.item == null) {
-      return null;
-    }
-    return $ClaimResponseItemCopyWith<$Res>(_value.item, (value) {
-      return _then(_value.copyWith(item: value));
-    });
-  }
-
-  @override
-  $ClaimResponseAddItemCopyWith<$Res> get addItem {
-    if (_value.addItem == null) {
-      return null;
-    }
-    return $ClaimResponseAddItemCopyWith<$Res>(_value.addItem, (value) {
-      return _then(_value.copyWith(addItem: value));
-    });
-  }
-
-  @override
-  $ClaimResponseErrorCopyWith<$Res> get error {
-    if (_value.error == null) {
-      return null;
-    }
-    return $ClaimResponseErrorCopyWith<$Res>(_value.error, (value) {
-      return _then(_value.copyWith(error: value));
     });
   }
 
@@ -5761,26 +5631,6 @@ class _$ClaimResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(form: value));
     });
   }
-
-  @override
-  $ClaimResponseNoteCopyWith<$Res> get note {
-    if (_value.note == null) {
-      return null;
-    }
-    return $ClaimResponseNoteCopyWith<$Res>(_value.note, (value) {
-      return _then(_value.copyWith(note: value));
-    });
-  }
-
-  @override
-  $ClaimResponseCoverageCopyWith<$Res> get coverage {
-    if (_value.coverage == null) {
-      return null;
-    }
-    return $ClaimResponseCoverageCopyWith<$Res>(_value.coverage, (value) {
-      return _then(_value.copyWith(coverage: value));
-    });
-  }
 }
 
 abstract class _$ClaimResponseCopyWith<$Res>
@@ -5790,7 +5640,9 @@ abstract class _$ClaimResponseCopyWith<$Res>
       __$ClaimResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ClaimResponse')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -5799,7 +5651,7 @@ abstract class _$ClaimResponseCopyWith<$Res>
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       Coding ruleset,
       Coding originalRuleset,
@@ -5811,9 +5663,9 @@ abstract class _$ClaimResponseCopyWith<$Res>
           ClaimResponseOutcome outcome,
       String disposition,
       Coding payeeType,
-      ClaimResponseItem item,
-      ClaimResponseAddItem addItem,
-      ClaimResponseError error,
+      List<ClaimResponseItem> item,
+      List<ClaimResponseAddItem> addItem,
+      List<ClaimResponseError> error,
       Quantity totalCost,
       Quantity unallocDeductable,
       Quantity totalBenefit,
@@ -5824,8 +5676,8 @@ abstract class _$ClaimResponseCopyWith<$Res>
       Identifier paymentRef,
       Coding reserved,
       Coding form,
-      ClaimResponseNote note,
-      ClaimResponseCoverage coverage});
+      List<ClaimResponseNote> note,
+      List<ClaimResponseCoverage> coverage});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -5835,8 +5687,6 @@ abstract class _$ClaimResponseCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ReferenceCopyWith<$Res> get request;
   @override
@@ -5851,12 +5701,6 @@ abstract class _$ClaimResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get requestOrganization;
   @override
   $CodingCopyWith<$Res> get payeeType;
-  @override
-  $ClaimResponseItemCopyWith<$Res> get item;
-  @override
-  $ClaimResponseAddItemCopyWith<$Res> get addItem;
-  @override
-  $ClaimResponseErrorCopyWith<$Res> get error;
   @override
   $QuantityCopyWith<$Res> get totalCost;
   @override
@@ -5875,10 +5719,6 @@ abstract class _$ClaimResponseCopyWith<$Res>
   $CodingCopyWith<$Res> get reserved;
   @override
   $CodingCopyWith<$Res> get form;
-  @override
-  $ClaimResponseNoteCopyWith<$Res> get note;
-  @override
-  $ClaimResponseCoverageCopyWith<$Res> get coverage;
 }
 
 class __$ClaimResponseCopyWithImpl<$Res>
@@ -5893,6 +5733,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -5929,6 +5770,9 @@ class __$ClaimResponseCopyWithImpl<$Res>
     Object coverage = freezed,
   }) {
     return _then(_ClaimResponse(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5944,8 +5788,9 @@ class __$ClaimResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       request: request == freezed ? _value.request : request as Reference,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding,
       originalRuleset: originalRuleset == freezed
@@ -5966,10 +5811,12 @@ class __$ClaimResponseCopyWithImpl<$Res>
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
       payeeType: payeeType == freezed ? _value.payeeType : payeeType as Coding,
-      item: item == freezed ? _value.item : item as ClaimResponseItem,
-      addItem:
-          addItem == freezed ? _value.addItem : addItem as ClaimResponseAddItem,
-      error: error == freezed ? _value.error : error as ClaimResponseError,
+      item: item == freezed ? _value.item : item as List<ClaimResponseItem>,
+      addItem: addItem == freezed
+          ? _value.addItem
+          : addItem as List<ClaimResponseAddItem>,
+      error:
+          error == freezed ? _value.error : error as List<ClaimResponseError>,
       totalCost:
           totalCost == freezed ? _value.totalCost : totalCost as Quantity,
       unallocDeductable: unallocDeductable == freezed
@@ -5993,10 +5840,10 @@ class __$ClaimResponseCopyWithImpl<$Res>
           paymentRef == freezed ? _value.paymentRef : paymentRef as Identifier,
       reserved: reserved == freezed ? _value.reserved : reserved as Coding,
       form: form == freezed ? _value.form : form as Coding,
-      note: note == freezed ? _value.note : note as ClaimResponseNote,
+      note: note == freezed ? _value.note : note as List<ClaimResponseNote>,
       coverage: coverage == freezed
           ? _value.coverage
-          : coverage as ClaimResponseCoverage,
+          : coverage as List<ClaimResponseCoverage>,
     ));
   }
 }
@@ -6004,7 +5851,8 @@ class __$ClaimResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClaimResponse implements _ClaimResponse {
   const _$_ClaimResponse(
-      {this.id,
+      {@JsonKey(defaultValue: 'ClaimResponse') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -6043,6 +5891,9 @@ class _$_ClaimResponse implements _ClaimResponse {
       _$_$_ClaimResponseFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'ClaimResponse')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -6060,7 +5911,7 @@ class _$_ClaimResponse implements _ClaimResponse {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final Reference request;
   @override
@@ -6083,11 +5934,11 @@ class _$_ClaimResponse implements _ClaimResponse {
   @override
   final Coding payeeType;
   @override
-  final ClaimResponseItem item;
+  final List<ClaimResponseItem> item;
   @override
-  final ClaimResponseAddItem addItem;
+  final List<ClaimResponseAddItem> addItem;
   @override
-  final ClaimResponseError error;
+  final List<ClaimResponseError> error;
   @override
   final Quantity totalCost;
   @override
@@ -6109,19 +5960,22 @@ class _$_ClaimResponse implements _ClaimResponse {
   @override
   final Coding form;
   @override
-  final ClaimResponseNote note;
+  final List<ClaimResponseNote> note;
   @override
-  final ClaimResponseCoverage coverage;
+  final List<ClaimResponseCoverage> coverage;
 
   @override
   String toString() {
-    return 'ClaimResponse(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, outcome: $outcome, disposition: $disposition, payeeType: $payeeType, item: $item, addItem: $addItem, error: $error, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, paymentAdjustment: $paymentAdjustment, paymentAdjustmentReason: $paymentAdjustmentReason, paymentDate: $paymentDate, paymentAmount: $paymentAmount, paymentRef: $paymentRef, reserved: $reserved, form: $form, note: $note, coverage: $coverage)';
+    return 'ClaimResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, outcome: $outcome, disposition: $disposition, payeeType: $payeeType, item: $item, addItem: $addItem, error: $error, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, paymentAdjustment: $paymentAdjustment, paymentAdjustmentReason: $paymentAdjustmentReason, paymentDate: $paymentDate, paymentAmount: $paymentAmount, paymentRef: $paymentRef, reserved: $reserved, form: $form, note: $note, coverage: $coverage)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ClaimResponse &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -6186,9 +6040,7 @@ class _$_ClaimResponse implements _ClaimResponse {
             (identical(other.totalCost, totalCost) ||
                 const DeepCollectionEquality()
                     .equals(other.totalCost, totalCost)) &&
-            (identical(other.unallocDeductable, unallocDeductable) ||
-                const DeepCollectionEquality()
-                    .equals(other.unallocDeductable, unallocDeductable)) &&
+            (identical(other.unallocDeductable, unallocDeductable) || const DeepCollectionEquality().equals(other.unallocDeductable, unallocDeductable)) &&
             (identical(other.totalBenefit, totalBenefit) || const DeepCollectionEquality().equals(other.totalBenefit, totalBenefit)) &&
             (identical(other.paymentAdjustment, paymentAdjustment) || const DeepCollectionEquality().equals(other.paymentAdjustment, paymentAdjustment)) &&
             (identical(other.paymentAdjustmentReason, paymentAdjustmentReason) || const DeepCollectionEquality().equals(other.paymentAdjustmentReason, paymentAdjustmentReason)) &&
@@ -6204,6 +6056,7 @@ class _$_ClaimResponse implements _ClaimResponse {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -6251,7 +6104,9 @@ class _$_ClaimResponse implements _ClaimResponse {
 
 abstract class _ClaimResponse implements ClaimResponse {
   const factory _ClaimResponse(
-      {Id id,
+      {@JsonKey(defaultValue: 'ClaimResponse')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -6260,7 +6115,7 @@ abstract class _ClaimResponse implements ClaimResponse {
       @JsonKey(name: 'extension')
           FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       Coding ruleset,
       Coding originalRuleset,
@@ -6272,9 +6127,9 @@ abstract class _ClaimResponse implements ClaimResponse {
           ClaimResponseOutcome outcome,
       String disposition,
       Coding payeeType,
-      ClaimResponseItem item,
-      ClaimResponseAddItem addItem,
-      ClaimResponseError error,
+      List<ClaimResponseItem> item,
+      List<ClaimResponseAddItem> addItem,
+      List<ClaimResponseError> error,
       Quantity totalCost,
       Quantity unallocDeductable,
       Quantity totalBenefit,
@@ -6285,12 +6140,15 @@ abstract class _ClaimResponse implements ClaimResponse {
       Identifier paymentRef,
       Coding reserved,
       Coding form,
-      ClaimResponseNote note,
-      ClaimResponseCoverage coverage}) = _$_ClaimResponse;
+      List<ClaimResponseNote> note,
+      List<ClaimResponseCoverage> coverage}) = _$_ClaimResponse;
 
   factory _ClaimResponse.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponse.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'ClaimResponse')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -6309,7 +6167,7 @@ abstract class _ClaimResponse implements ClaimResponse {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   Reference get request;
   @override
@@ -6332,11 +6190,11 @@ abstract class _ClaimResponse implements ClaimResponse {
   @override
   Coding get payeeType;
   @override
-  ClaimResponseItem get item;
+  List<ClaimResponseItem> get item;
   @override
-  ClaimResponseAddItem get addItem;
+  List<ClaimResponseAddItem> get addItem;
   @override
-  ClaimResponseError get error;
+  List<ClaimResponseError> get error;
   @override
   Quantity get totalCost;
   @override
@@ -6358,9 +6216,9 @@ abstract class _ClaimResponse implements ClaimResponse {
   @override
   Coding get form;
   @override
-  ClaimResponseNote get note;
+  List<ClaimResponseNote> get note;
   @override
-  ClaimResponseCoverage get coverage;
+  List<ClaimResponseCoverage> get coverage;
   @override
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith;
 }
@@ -6377,9 +6235,9 @@ class _$ClaimResponseItemTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
-      PositiveInt noteNumber,
-      ClaimResponseAdjudication adjudication,
-      ItemDetail detail}) {
+      List<PositiveInt> noteNumber,
+      List<ClaimResponseAdjudication> adjudication,
+      List<ItemDetail> detail}) {
     return _ClaimResponseItem(
       id: id,
       extension_: extension_,
@@ -6402,9 +6260,9 @@ mixin _$ClaimResponseItem {
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
-  PositiveInt get noteNumber;
-  ClaimResponseAdjudication get adjudication;
-  ItemDetail get detail;
+  List<PositiveInt> get noteNumber;
+  List<ClaimResponseAdjudication> get adjudication;
+  List<ItemDetail> get detail;
 
   Map<String, dynamic> toJson();
   $ClaimResponseItemCopyWith<ClaimResponseItem> get copyWith;
@@ -6419,14 +6277,12 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
-      PositiveInt noteNumber,
-      ClaimResponseAdjudication adjudication,
-      ItemDetail detail});
+      List<PositiveInt> noteNumber,
+      List<ClaimResponseAdjudication> adjudication,
+      List<ItemDetail> detail});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
-  $ItemDetailCopyWith<$Res> get detail;
 }
 
 class _$ClaimResponseItemCopyWithImpl<$Res>
@@ -6458,12 +6314,13 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
           : sequenceLinkId as PositiveInt,
-      noteNumber:
-          noteNumber == freezed ? _value.noteNumber : noteNumber as PositiveInt,
+      noteNumber: noteNumber == freezed
+          ? _value.noteNumber
+          : noteNumber as List<PositiveInt>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
-      detail: detail == freezed ? _value.detail : detail as ItemDetail,
+          : adjudication as List<ClaimResponseAdjudication>,
+      detail: detail == freezed ? _value.detail : detail as List<ItemDetail>,
     ));
   }
 
@@ -6486,27 +6343,6 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication {
-    if (_value.adjudication == null) {
-      return null;
-    }
-    return $ClaimResponseAdjudicationCopyWith<$Res>(_value.adjudication,
-        (value) {
-      return _then(_value.copyWith(adjudication: value));
-    });
-  }
-
-  @override
-  $ItemDetailCopyWith<$Res> get detail {
-    if (_value.detail == null) {
-      return null;
-    }
-    return $ItemDetailCopyWith<$Res>(_value.detail, (value) {
-      return _then(_value.copyWith(detail: value));
-    });
-  }
 }
 
 abstract class _$ClaimResponseItemCopyWith<$Res>
@@ -6520,18 +6356,14 @@ abstract class _$ClaimResponseItemCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
-      PositiveInt noteNumber,
-      ClaimResponseAdjudication adjudication,
-      ItemDetail detail});
+      List<PositiveInt> noteNumber,
+      List<ClaimResponseAdjudication> adjudication,
+      List<ItemDetail> detail});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
-  @override
-  $ItemDetailCopyWith<$Res> get detail;
 }
 
 class __$ClaimResponseItemCopyWithImpl<$Res>
@@ -6565,12 +6397,13 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
           : sequenceLinkId as PositiveInt,
-      noteNumber:
-          noteNumber == freezed ? _value.noteNumber : noteNumber as PositiveInt,
+      noteNumber: noteNumber == freezed
+          ? _value.noteNumber
+          : noteNumber as List<PositiveInt>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
-      detail: detail == freezed ? _value.detail : detail as ItemDetail,
+          : adjudication as List<ClaimResponseAdjudication>,
+      detail: detail == freezed ? _value.detail : detail as List<ItemDetail>,
     ));
   }
 }
@@ -6601,11 +6434,11 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
   @JsonKey(required: true)
   final PositiveInt sequenceLinkId;
   @override
-  final PositiveInt noteNumber;
+  final List<PositiveInt> noteNumber;
   @override
-  final ClaimResponseAdjudication adjudication;
+  final List<ClaimResponseAdjudication> adjudication;
   @override
-  final ItemDetail detail;
+  final List<ItemDetail> detail;
 
   @override
   String toString() {
@@ -6664,9 +6497,9 @@ abstract class _ClaimResponseItem implements ClaimResponseItem {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
-      PositiveInt noteNumber,
-      ClaimResponseAdjudication adjudication,
-      ItemDetail detail}) = _$_ClaimResponseItem;
+      List<PositiveInt> noteNumber,
+      List<ClaimResponseAdjudication> adjudication,
+      List<ItemDetail> detail}) = _$_ClaimResponseItem;
 
   factory _ClaimResponseItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseItem.fromJson;
@@ -6682,11 +6515,11 @@ abstract class _ClaimResponseItem implements ClaimResponseItem {
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
   @override
-  PositiveInt get noteNumber;
+  List<PositiveInt> get noteNumber;
   @override
-  ClaimResponseAdjudication get adjudication;
+  List<ClaimResponseAdjudication> get adjudication;
   @override
-  ItemDetail get detail;
+  List<ItemDetail> get detail;
   @override
   _$ClaimResponseItemCopyWith<_ClaimResponseItem> get copyWith;
 }
@@ -7001,8 +6834,8 @@ class _$ItemDetailTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
-      ClaimResponseAdjudication adjudication,
-      ClaimResponseSubDetail subDetail}) {
+      List<ClaimResponseAdjudication> adjudication,
+      List<ClaimResponseSubDetail> subDetail}) {
     return _ItemDetail(
       id: id,
       extension_: extension_,
@@ -7024,8 +6857,8 @@ mixin _$ItemDetail {
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
-  ClaimResponseAdjudication get adjudication;
-  ClaimResponseSubDetail get subDetail;
+  List<ClaimResponseAdjudication> get adjudication;
+  List<ClaimResponseSubDetail> get subDetail;
 
   Map<String, dynamic> toJson();
   $ItemDetailCopyWith<ItemDetail> get copyWith;
@@ -7040,13 +6873,11 @@ abstract class $ItemDetailCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
-      ClaimResponseAdjudication adjudication,
-      ClaimResponseSubDetail subDetail});
+      List<ClaimResponseAdjudication> adjudication,
+      List<ClaimResponseSubDetail> subDetail});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
-  $ClaimResponseSubDetailCopyWith<$Res> get subDetail;
 }
 
 class _$ItemDetailCopyWithImpl<$Res> implements $ItemDetailCopyWith<$Res> {
@@ -7078,10 +6909,10 @@ class _$ItemDetailCopyWithImpl<$Res> implements $ItemDetailCopyWith<$Res> {
           : sequenceLinkId as PositiveInt,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
+          : adjudication as List<ClaimResponseAdjudication>,
       subDetail: subDetail == freezed
           ? _value.subDetail
-          : subDetail as ClaimResponseSubDetail,
+          : subDetail as List<ClaimResponseSubDetail>,
     ));
   }
 
@@ -7104,27 +6935,6 @@ class _$ItemDetailCopyWithImpl<$Res> implements $ItemDetailCopyWith<$Res> {
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication {
-    if (_value.adjudication == null) {
-      return null;
-    }
-    return $ClaimResponseAdjudicationCopyWith<$Res>(_value.adjudication,
-        (value) {
-      return _then(_value.copyWith(adjudication: value));
-    });
-  }
-
-  @override
-  $ClaimResponseSubDetailCopyWith<$Res> get subDetail {
-    if (_value.subDetail == null) {
-      return null;
-    }
-    return $ClaimResponseSubDetailCopyWith<$Res>(_value.subDetail, (value) {
-      return _then(_value.copyWith(subDetail: value));
-    });
-  }
 }
 
 abstract class _$ItemDetailCopyWith<$Res> implements $ItemDetailCopyWith<$Res> {
@@ -7137,17 +6947,13 @@ abstract class _$ItemDetailCopyWith<$Res> implements $ItemDetailCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
-      ClaimResponseAdjudication adjudication,
-      ClaimResponseSubDetail subDetail});
+      List<ClaimResponseAdjudication> adjudication,
+      List<ClaimResponseSubDetail> subDetail});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
-  @override
-  $ClaimResponseSubDetailCopyWith<$Res> get subDetail;
 }
 
 class __$ItemDetailCopyWithImpl<$Res> extends _$ItemDetailCopyWithImpl<$Res>
@@ -7181,10 +6987,10 @@ class __$ItemDetailCopyWithImpl<$Res> extends _$ItemDetailCopyWithImpl<$Res>
           : sequenceLinkId as PositiveInt,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
+          : adjudication as List<ClaimResponseAdjudication>,
       subDetail: subDetail == freezed
           ? _value.subDetail
-          : subDetail as ClaimResponseSubDetail,
+          : subDetail as List<ClaimResponseSubDetail>,
     ));
   }
 }
@@ -7214,9 +7020,9 @@ class _$_ItemDetail implements _ItemDetail {
   @JsonKey(required: true)
   final PositiveInt sequenceLinkId;
   @override
-  final ClaimResponseAdjudication adjudication;
+  final List<ClaimResponseAdjudication> adjudication;
   @override
-  final ClaimResponseSubDetail subDetail;
+  final List<ClaimResponseSubDetail> subDetail;
 
   @override
   String toString() {
@@ -7272,8 +7078,8 @@ abstract class _ItemDetail implements ItemDetail {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
-      ClaimResponseAdjudication adjudication,
-      ClaimResponseSubDetail subDetail}) = _$_ItemDetail;
+      List<ClaimResponseAdjudication> adjudication,
+      List<ClaimResponseSubDetail> subDetail}) = _$_ItemDetail;
 
   factory _ItemDetail.fromJson(Map<String, dynamic> json) =
       _$_ItemDetail.fromJson;
@@ -7289,9 +7095,9 @@ abstract class _ItemDetail implements ItemDetail {
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
   @override
-  ClaimResponseAdjudication get adjudication;
+  List<ClaimResponseAdjudication> get adjudication;
   @override
-  ClaimResponseSubDetail get subDetail;
+  List<ClaimResponseSubDetail> get subDetail;
   @override
   _$ItemDetailCopyWith<_ItemDetail> get copyWith;
 }
@@ -7309,7 +7115,7 @@ class _$ClaimResponseSubDetailTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
-      ClaimResponseAdjudication adjudication}) {
+      List<ClaimResponseAdjudication> adjudication}) {
     return _ClaimResponseSubDetail(
       id: id,
       extension_: extension_,
@@ -7330,7 +7136,7 @@ mixin _$ClaimResponseSubDetail {
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
-  ClaimResponseAdjudication get adjudication;
+  List<ClaimResponseAdjudication> get adjudication;
 
   Map<String, dynamic> toJson();
   $ClaimResponseSubDetailCopyWith<ClaimResponseSubDetail> get copyWith;
@@ -7345,11 +7151,10 @@ abstract class $ClaimResponseSubDetailCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
-      ClaimResponseAdjudication adjudication});
+      List<ClaimResponseAdjudication> adjudication});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
 }
 
 class _$ClaimResponseSubDetailCopyWithImpl<$Res>
@@ -7381,7 +7186,7 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res>
           : sequenceLinkId as PositiveInt,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
+          : adjudication as List<ClaimResponseAdjudication>,
     ));
   }
 
@@ -7404,17 +7209,6 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication {
-    if (_value.adjudication == null) {
-      return null;
-    }
-    return $ClaimResponseAdjudicationCopyWith<$Res>(_value.adjudication,
-        (value) {
-      return _then(_value.copyWith(adjudication: value));
-    });
-  }
 }
 
 abstract class _$ClaimResponseSubDetailCopyWith<$Res>
@@ -7428,14 +7222,12 @@ abstract class _$ClaimResponseSubDetailCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
-      ClaimResponseAdjudication adjudication});
+      List<ClaimResponseAdjudication> adjudication});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
 }
 
 class __$ClaimResponseSubDetailCopyWithImpl<$Res>
@@ -7469,7 +7261,7 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
           : sequenceLinkId as PositiveInt,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
+          : adjudication as List<ClaimResponseAdjudication>,
     ));
   }
 }
@@ -7498,7 +7290,7 @@ class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
   @JsonKey(required: true)
   final PositiveInt sequenceLinkId;
   @override
-  final ClaimResponseAdjudication adjudication;
+  final List<ClaimResponseAdjudication> adjudication;
 
   @override
   String toString() {
@@ -7547,11 +7339,12 @@ class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
 
 abstract class _ClaimResponseSubDetail implements ClaimResponseSubDetail {
   const factory _ClaimResponseSubDetail(
-      {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) PositiveInt sequenceLinkId,
-      ClaimResponseAdjudication adjudication}) = _$_ClaimResponseSubDetail;
+          {Id id,
+          @JsonKey(name: 'extension') FhirExtension extension_,
+          FhirExtension modifierExtension,
+          @required @JsonKey(required: true) PositiveInt sequenceLinkId,
+          List<ClaimResponseAdjudication> adjudication}) =
+      _$_ClaimResponseSubDetail;
 
   factory _ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseSubDetail.fromJson;
@@ -7567,7 +7360,7 @@ abstract class _ClaimResponseSubDetail implements ClaimResponseSubDetail {
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
   @override
-  ClaimResponseAdjudication get adjudication;
+  List<ClaimResponseAdjudication> get adjudication;
   @override
   _$ClaimResponseSubDetailCopyWith<_ClaimResponseSubDetail> get copyWith;
 }
@@ -7583,11 +7376,11 @@ class _$ClaimResponseAddItemTearOff {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      PositiveInt sequenceLinkId,
+      List<PositiveInt> sequenceLinkId,
       @required @JsonKey(required: true) Coding service,
       Quantity fee,
-      PositiveInt noteNumberLinkId,
-      ClaimResponseAdjudication adjudication,
+      List<PositiveInt> noteNumberLinkId,
+      List<ClaimResponseAdjudication> adjudication,
       AddItemDetail detail}) {
     return _ClaimResponseAddItem(
       id: id,
@@ -7611,12 +7404,12 @@ mixin _$ClaimResponseAddItem {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  PositiveInt get sequenceLinkId;
+  List<PositiveInt> get sequenceLinkId;
   @JsonKey(required: true)
   Coding get service;
   Quantity get fee;
-  PositiveInt get noteNumberLinkId;
-  ClaimResponseAdjudication get adjudication;
+  List<PositiveInt> get noteNumberLinkId;
+  List<ClaimResponseAdjudication> get adjudication;
   AddItemDetail get detail;
 
   Map<String, dynamic> toJson();
@@ -7631,18 +7424,17 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      PositiveInt sequenceLinkId,
+      List<PositiveInt> sequenceLinkId,
       @JsonKey(required: true) Coding service,
       Quantity fee,
-      PositiveInt noteNumberLinkId,
-      ClaimResponseAdjudication adjudication,
+      List<PositiveInt> noteNumberLinkId,
+      List<ClaimResponseAdjudication> adjudication,
       AddItemDetail detail});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get service;
   $QuantityCopyWith<$Res> get fee;
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
   $AddItemDetailCopyWith<$Res> get detail;
 }
 
@@ -7676,15 +7468,15 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
-          : sequenceLinkId as PositiveInt,
+          : sequenceLinkId as List<PositiveInt>,
       service: service == freezed ? _value.service : service as Coding,
       fee: fee == freezed ? _value.fee : fee as Quantity,
       noteNumberLinkId: noteNumberLinkId == freezed
           ? _value.noteNumberLinkId
-          : noteNumberLinkId as PositiveInt,
+          : noteNumberLinkId as List<PositiveInt>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
+          : adjudication as List<ClaimResponseAdjudication>,
       detail: detail == freezed ? _value.detail : detail as AddItemDetail,
     ));
   }
@@ -7730,17 +7522,6 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
   }
 
   @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication {
-    if (_value.adjudication == null) {
-      return null;
-    }
-    return $ClaimResponseAdjudicationCopyWith<$Res>(_value.adjudication,
-        (value) {
-      return _then(_value.copyWith(adjudication: value));
-    });
-  }
-
-  @override
   $AddItemDetailCopyWith<$Res> get detail {
     if (_value.detail == null) {
       return null;
@@ -7761,11 +7542,11 @@ abstract class _$ClaimResponseAddItemCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      PositiveInt sequenceLinkId,
+      List<PositiveInt> sequenceLinkId,
       @JsonKey(required: true) Coding service,
       Quantity fee,
-      PositiveInt noteNumberLinkId,
-      ClaimResponseAdjudication adjudication,
+      List<PositiveInt> noteNumberLinkId,
+      List<ClaimResponseAdjudication> adjudication,
       AddItemDetail detail});
 
   @override
@@ -7776,8 +7557,6 @@ abstract class _$ClaimResponseAddItemCopyWith<$Res>
   $CodingCopyWith<$Res> get service;
   @override
   $QuantityCopyWith<$Res> get fee;
-  @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
   @override
   $AddItemDetailCopyWith<$Res> get detail;
 }
@@ -7814,15 +7593,15 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
-          : sequenceLinkId as PositiveInt,
+          : sequenceLinkId as List<PositiveInt>,
       service: service == freezed ? _value.service : service as Coding,
       fee: fee == freezed ? _value.fee : fee as Quantity,
       noteNumberLinkId: noteNumberLinkId == freezed
           ? _value.noteNumberLinkId
-          : noteNumberLinkId as PositiveInt,
+          : noteNumberLinkId as List<PositiveInt>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
+          : adjudication as List<ClaimResponseAdjudication>,
       detail: detail == freezed ? _value.detail : detail as AddItemDetail,
     ));
   }
@@ -7853,16 +7632,16 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
   @override
   final FhirExtension modifierExtension;
   @override
-  final PositiveInt sequenceLinkId;
+  final List<PositiveInt> sequenceLinkId;
   @override
   @JsonKey(required: true)
   final Coding service;
   @override
   final Quantity fee;
   @override
-  final PositiveInt noteNumberLinkId;
+  final List<PositiveInt> noteNumberLinkId;
   @override
-  final ClaimResponseAdjudication adjudication;
+  final List<ClaimResponseAdjudication> adjudication;
   @override
   final AddItemDetail detail;
 
@@ -7930,11 +7709,11 @@ abstract class _ClaimResponseAddItem implements ClaimResponseAddItem {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      PositiveInt sequenceLinkId,
+      List<PositiveInt> sequenceLinkId,
       @required @JsonKey(required: true) Coding service,
       Quantity fee,
-      PositiveInt noteNumberLinkId,
-      ClaimResponseAdjudication adjudication,
+      List<PositiveInt> noteNumberLinkId,
+      List<ClaimResponseAdjudication> adjudication,
       AddItemDetail detail}) = _$_ClaimResponseAddItem;
 
   factory _ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =
@@ -7948,16 +7727,16 @@ abstract class _ClaimResponseAddItem implements ClaimResponseAddItem {
   @override
   FhirExtension get modifierExtension;
   @override
-  PositiveInt get sequenceLinkId;
+  List<PositiveInt> get sequenceLinkId;
   @override
   @JsonKey(required: true)
   Coding get service;
   @override
   Quantity get fee;
   @override
-  PositiveInt get noteNumberLinkId;
+  List<PositiveInt> get noteNumberLinkId;
   @override
-  ClaimResponseAdjudication get adjudication;
+  List<ClaimResponseAdjudication> get adjudication;
   @override
   AddItemDetail get detail;
   @override
@@ -7977,7 +7756,7 @@ class _$AddItemDetailTearOff {
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding service,
       Quantity fee,
-      ClaimResponseAdjudication adjudication}) {
+      List<ClaimResponseAdjudication> adjudication}) {
     return _AddItemDetail(
       id: id,
       extension_: extension_,
@@ -8000,7 +7779,7 @@ mixin _$AddItemDetail {
   @JsonKey(required: true)
   Coding get service;
   Quantity get fee;
-  ClaimResponseAdjudication get adjudication;
+  List<ClaimResponseAdjudication> get adjudication;
 
   Map<String, dynamic> toJson();
   $AddItemDetailCopyWith<AddItemDetail> get copyWith;
@@ -8016,13 +7795,12 @@ abstract class $AddItemDetailCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding service,
       Quantity fee,
-      ClaimResponseAdjudication adjudication});
+      List<ClaimResponseAdjudication> adjudication});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get service;
   $QuantityCopyWith<$Res> get fee;
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
 }
 
 class _$AddItemDetailCopyWithImpl<$Res>
@@ -8054,7 +7832,7 @@ class _$AddItemDetailCopyWithImpl<$Res>
       fee: fee == freezed ? _value.fee : fee as Quantity,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
+          : adjudication as List<ClaimResponseAdjudication>,
     ));
   }
 
@@ -8097,17 +7875,6 @@ class _$AddItemDetailCopyWithImpl<$Res>
       return _then(_value.copyWith(fee: value));
     });
   }
-
-  @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication {
-    if (_value.adjudication == null) {
-      return null;
-    }
-    return $ClaimResponseAdjudicationCopyWith<$Res>(_value.adjudication,
-        (value) {
-      return _then(_value.copyWith(adjudication: value));
-    });
-  }
 }
 
 abstract class _$AddItemDetailCopyWith<$Res>
@@ -8122,7 +7889,7 @@ abstract class _$AddItemDetailCopyWith<$Res>
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding service,
       Quantity fee,
-      ClaimResponseAdjudication adjudication});
+      List<ClaimResponseAdjudication> adjudication});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
@@ -8132,8 +7899,6 @@ abstract class _$AddItemDetailCopyWith<$Res>
   $CodingCopyWith<$Res> get service;
   @override
   $QuantityCopyWith<$Res> get fee;
-  @override
-  $ClaimResponseAdjudicationCopyWith<$Res> get adjudication;
 }
 
 class __$AddItemDetailCopyWithImpl<$Res>
@@ -8167,7 +7932,7 @@ class __$AddItemDetailCopyWithImpl<$Res>
       fee: fee == freezed ? _value.fee : fee as Quantity,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as ClaimResponseAdjudication,
+          : adjudication as List<ClaimResponseAdjudication>,
     ));
   }
 }
@@ -8199,7 +7964,7 @@ class _$_AddItemDetail implements _AddItemDetail {
   @override
   final Quantity fee;
   @override
-  final ClaimResponseAdjudication adjudication;
+  final List<ClaimResponseAdjudication> adjudication;
 
   @override
   String toString() {
@@ -8255,7 +8020,7 @@ abstract class _AddItemDetail implements AddItemDetail {
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding service,
       Quantity fee,
-      ClaimResponseAdjudication adjudication}) = _$_AddItemDetail;
+      List<ClaimResponseAdjudication> adjudication}) = _$_AddItemDetail;
 
   factory _AddItemDetail.fromJson(Map<String, dynamic> json) =
       _$_AddItemDetail.fromJson;
@@ -8273,7 +8038,7 @@ abstract class _AddItemDetail implements AddItemDetail {
   @override
   Quantity get fee;
   @override
-  ClaimResponseAdjudication get adjudication;
+  List<ClaimResponseAdjudication> get adjudication;
   @override
   _$AddItemDetailCopyWith<_AddItemDetail> get copyWith;
 }
@@ -8887,7 +8652,7 @@ class _$ClaimResponseCoverageTearOff {
       @required @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       @required @JsonKey(required: true) Coding relationship,
-      String preAuthRef,
+      List<String> preAuthRef,
       Reference claimResponse,
       Coding originalRuleset}) {
     return _ClaimResponseCoverage(
@@ -8923,7 +8688,7 @@ mixin _$ClaimResponseCoverage {
   String get businessArrangement;
   @JsonKey(required: true)
   Coding get relationship;
-  String get preAuthRef;
+  List<String> get preAuthRef;
   Reference get claimResponse;
   Coding get originalRuleset;
 
@@ -8944,7 +8709,7 @@ abstract class $ClaimResponseCoverageCopyWith<$Res> {
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       @JsonKey(required: true) Coding relationship,
-      String preAuthRef,
+      List<String> preAuthRef,
       Reference claimResponse,
       Coding originalRuleset});
 
@@ -8995,8 +8760,9 @@ class _$ClaimResponseCoverageCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship as Coding,
-      preAuthRef:
-          preAuthRef == freezed ? _value.preAuthRef : preAuthRef as String,
+      preAuthRef: preAuthRef == freezed
+          ? _value.preAuthRef
+          : preAuthRef as List<String>,
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
@@ -9082,7 +8848,7 @@ abstract class _$ClaimResponseCoverageCopyWith<$Res>
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       @JsonKey(required: true) Coding relationship,
-      String preAuthRef,
+      List<String> preAuthRef,
       Reference claimResponse,
       Coding originalRuleset});
 
@@ -9141,8 +8907,9 @@ class __$ClaimResponseCoverageCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship as Coding,
-      preAuthRef:
-          preAuthRef == freezed ? _value.preAuthRef : preAuthRef as String,
+      preAuthRef: preAuthRef == freezed
+          ? _value.preAuthRef
+          : preAuthRef as List<String>,
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
@@ -9197,7 +8964,7 @@ class _$_ClaimResponseCoverage implements _ClaimResponseCoverage {
   @JsonKey(required: true)
   final Coding relationship;
   @override
-  final String preAuthRef;
+  final List<String> preAuthRef;
   @override
   final Reference claimResponse;
   @override
@@ -9281,7 +9048,7 @@ abstract class _ClaimResponseCoverage implements ClaimResponseCoverage {
       @required @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       @required @JsonKey(required: true) Coding relationship,
-      String preAuthRef,
+      List<String> preAuthRef,
       Reference claimResponse,
       Coding originalRuleset}) = _$_ClaimResponseCoverage;
 
@@ -9310,7 +9077,7 @@ abstract class _ClaimResponseCoverage implements ClaimResponseCoverage {
   @JsonKey(required: true)
   Coding get relationship;
   @override
-  String get preAuthRef;
+  List<String> get preAuthRef;
   @override
   Reference get claimResponse;
   @override

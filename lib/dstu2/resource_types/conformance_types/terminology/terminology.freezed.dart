@@ -16,7 +16,9 @@ class _$ValueSetTearOff {
   const _$ValueSetTearOff();
 
   _ValueSet call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ValueSet')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -34,11 +36,11 @@ class _$ValueSetTearOff {
           ValueSetStatus status,
       Boolean experimental,
       String publisher,
-      ValueSetContact contact,
+      List<ValueSetContact> contact,
       FhirDateTime date,
       Date lockedDate,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       Boolean immutable,
       String requirements,
       String copyright,
@@ -47,6 +49,7 @@ class _$ValueSetTearOff {
       ValueSetCompose compose,
       ValueSetExpansion expansion}) {
     return _ValueSet(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -82,6 +85,8 @@ class _$ValueSetTearOff {
 const $ValueSet = _$ValueSetTearOff();
 
 mixin _$ValueSet {
+  @JsonKey(defaultValue: 'ValueSet')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -99,11 +104,11 @@ mixin _$ValueSet {
   ValueSetStatus get status;
   Boolean get experimental;
   String get publisher;
-  ValueSetContact get contact;
+  List<ValueSetContact> get contact;
   FhirDateTime get date;
   Date get lockedDate;
   String get description;
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   Boolean get immutable;
   String get requirements;
   String get copyright;
@@ -120,7 +125,9 @@ abstract class $ValueSetCopyWith<$Res> {
   factory $ValueSetCopyWith(ValueSet value, $Res Function(ValueSet) then) =
       _$ValueSetCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ValueSet')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -137,11 +144,11 @@ abstract class $ValueSetCopyWith<$Res> {
           ValueSetStatus status,
       Boolean experimental,
       String publisher,
-      ValueSetContact contact,
+      List<ValueSetContact> contact,
       FhirDateTime date,
       Date lockedDate,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       Boolean immutable,
       String requirements,
       String copyright,
@@ -155,8 +162,6 @@ abstract class $ValueSetCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get identifier;
-  $ValueSetContactCopyWith<$Res> get contact;
-  $CodeableConceptCopyWith<$Res> get useContext;
   $ValueSetCodeSystemCopyWith<$Res> get codeSystem;
   $ValueSetComposeCopyWith<$Res> get compose;
   $ValueSetExpansionCopyWith<$Res> get expansion;
@@ -171,6 +176,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -200,6 +206,9 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     Object expansion = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -225,7 +234,9 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
           ? _value.experimental
           : experimental as Boolean,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact: contact == freezed ? _value.contact : contact as ValueSetContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ValueSetContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       lockedDate:
           lockedDate == freezed ? _value.lockedDate : lockedDate as Date,
@@ -233,7 +244,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       immutable: immutable == freezed ? _value.immutable : immutable as Boolean,
       requirements: requirements == freezed
           ? _value.requirements
@@ -302,26 +313,6 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
   }
 
   @override
-  $ValueSetContactCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $ValueSetContactCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get useContext {
-    if (_value.useContext == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.useContext, (value) {
-      return _then(_value.copyWith(useContext: value));
-    });
-  }
-
-  @override
   $ValueSetCodeSystemCopyWith<$Res> get codeSystem {
     if (_value.codeSystem == null) {
       return null;
@@ -357,7 +348,9 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       __$ValueSetCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ValueSet')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -374,11 +367,11 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
           ValueSetStatus status,
       Boolean experimental,
       String publisher,
-      ValueSetContact contact,
+      List<ValueSetContact> contact,
       FhirDateTime date,
       Date lockedDate,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       Boolean immutable,
       String requirements,
       String copyright,
@@ -398,10 +391,6 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
-  $ValueSetContactCopyWith<$Res> get contact;
-  @override
-  $CodeableConceptCopyWith<$Res> get useContext;
-  @override
   $ValueSetCodeSystemCopyWith<$Res> get codeSystem;
   @override
   $ValueSetComposeCopyWith<$Res> get compose;
@@ -419,6 +408,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -448,6 +438,9 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
     Object expansion = freezed,
   }) {
     return _then(_ValueSet(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -473,7 +466,9 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
           ? _value.experimental
           : experimental as Boolean,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact: contact == freezed ? _value.contact : contact as ValueSetContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ValueSetContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       lockedDate:
           lockedDate == freezed ? _value.lockedDate : lockedDate as Date,
@@ -481,7 +476,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       immutable: immutable == freezed ? _value.immutable : immutable as Boolean,
       requirements: requirements == freezed
           ? _value.requirements
@@ -503,7 +498,9 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ValueSet implements _ValueSet {
   const _$_ValueSet(
-      {this.id,
+      {@JsonKey(defaultValue: 'ValueSet')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -539,6 +536,9 @@ class _$_ValueSet implements _ValueSet {
       _$_$_ValueSetFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'ValueSet')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -571,7 +571,7 @@ class _$_ValueSet implements _ValueSet {
   @override
   final String publisher;
   @override
-  final ValueSetContact contact;
+  final List<ValueSetContact> contact;
   @override
   final FhirDateTime date;
   @override
@@ -579,7 +579,7 @@ class _$_ValueSet implements _ValueSet {
   @override
   final String description;
   @override
-  final CodeableConcept useContext;
+  final List<CodeableConcept> useContext;
   @override
   final Boolean immutable;
   @override
@@ -597,13 +597,16 @@ class _$_ValueSet implements _ValueSet {
 
   @override
   String toString() {
-    return 'ValueSet(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, lockedDate: $lockedDate, description: $description, useContext: $useContext, immutable: $immutable, requirements: $requirements, copyright: $copyright, extensible: $extensible, codeSystem: $codeSystem, compose: $compose, expansion: $expansion)';
+    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, lockedDate: $lockedDate, description: $description, useContext: $useContext, immutable: $immutable, requirements: $requirements, copyright: $copyright, extensible: $extensible, codeSystem: $codeSystem, compose: $compose, expansion: $expansion)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ValueSet &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -669,9 +672,7 @@ class _$_ValueSet implements _ValueSet {
             (identical(other.extensible, extensible) ||
                 const DeepCollectionEquality()
                     .equals(other.extensible, extensible)) &&
-            (identical(other.codeSystem, codeSystem) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeSystem, codeSystem)) &&
+            (identical(other.codeSystem, codeSystem) || const DeepCollectionEquality().equals(other.codeSystem, codeSystem)) &&
             (identical(other.compose, compose) || const DeepCollectionEquality().equals(other.compose, compose)) &&
             (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)));
   }
@@ -679,6 +680,7 @@ class _$_ValueSet implements _ValueSet {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -719,7 +721,9 @@ class _$_ValueSet implements _ValueSet {
 
 abstract class _ValueSet implements ValueSet {
   const factory _ValueSet(
-      {Id id,
+      {@JsonKey(defaultValue: 'ValueSet')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -737,11 +741,11 @@ abstract class _ValueSet implements ValueSet {
           ValueSetStatus status,
       Boolean experimental,
       String publisher,
-      ValueSetContact contact,
+      List<ValueSetContact> contact,
       FhirDateTime date,
       Date lockedDate,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       Boolean immutable,
       String requirements,
       String copyright,
@@ -752,6 +756,9 @@ abstract class _ValueSet implements ValueSet {
 
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'ValueSet')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -785,7 +792,7 @@ abstract class _ValueSet implements ValueSet {
   @override
   String get publisher;
   @override
-  ValueSetContact get contact;
+  List<ValueSetContact> get contact;
   @override
   FhirDateTime get date;
   @override
@@ -793,7 +800,7 @@ abstract class _ValueSet implements ValueSet {
   @override
   String get description;
   @override
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   @override
   Boolean get immutable;
   @override
@@ -824,7 +831,7 @@ class _$ValueSetContactTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) {
+      List<ContactPoint> telecom}) {
     return _ValueSetContact(
       id: id,
       extension_: extension_,
@@ -844,7 +851,7 @@ mixin _$ValueSetContact {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
   $ValueSetContactCopyWith<ValueSetContact> get copyWith;
@@ -859,11 +866,10 @@ abstract class $ValueSetContactCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class _$ValueSetContactCopyWithImpl<$Res>
@@ -891,7 +897,8 @@ class _$ValueSetContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 
@@ -914,16 +921,6 @@ class _$ValueSetContactCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
 }
 
 abstract class _$ValueSetContactCopyWith<$Res>
@@ -937,14 +934,12 @@ abstract class _$ValueSetContactCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class __$ValueSetContactCopyWithImpl<$Res>
@@ -974,7 +969,8 @@ class __$ValueSetContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -1001,7 +997,7 @@ class _$_ValueSetContact implements _ValueSetContact {
   @override
   final String name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -1051,7 +1047,7 @@ abstract class _ValueSetContact implements ValueSetContact {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) = _$_ValueSetContact;
+      List<ContactPoint> telecom}) = _$_ValueSetContact;
 
   factory _ValueSetContact.fromJson(Map<String, dynamic> json) =
       _$_ValueSetContact.fromJson;
@@ -1066,7 +1062,7 @@ abstract class _ValueSetContact implements ValueSetContact {
   @override
   String get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   _$ValueSetContactCopyWith<_ValueSetContact> get copyWith;
 }
@@ -1085,7 +1081,7 @@ class _$ValueSetCodeSystemTearOff {
       @required @JsonKey(required: true) FhirUri system,
       String version,
       Boolean caseSensitive,
-      @required @JsonKey(required: true) ValueSetConcept concept}) {
+      @required @JsonKey(required: true) List<ValueSetConcept> concept}) {
     return _ValueSetCodeSystem(
       id: id,
       extension_: extension_,
@@ -1111,7 +1107,7 @@ mixin _$ValueSetCodeSystem {
   String get version;
   Boolean get caseSensitive;
   @JsonKey(required: true)
-  ValueSetConcept get concept;
+  List<ValueSetConcept> get concept;
 
   Map<String, dynamic> toJson();
   $ValueSetCodeSystemCopyWith<ValueSetCodeSystem> get copyWith;
@@ -1128,11 +1124,10 @@ abstract class $ValueSetCodeSystemCopyWith<$Res> {
       @JsonKey(required: true) FhirUri system,
       String version,
       Boolean caseSensitive,
-      @JsonKey(required: true) ValueSetConcept concept});
+      @JsonKey(required: true) List<ValueSetConcept> concept});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ValueSetConceptCopyWith<$Res> get concept;
 }
 
 class _$ValueSetCodeSystemCopyWithImpl<$Res>
@@ -1166,7 +1161,9 @@ class _$ValueSetCodeSystemCopyWithImpl<$Res>
       caseSensitive: caseSensitive == freezed
           ? _value.caseSensitive
           : caseSensitive as Boolean,
-      concept: concept == freezed ? _value.concept : concept as ValueSetConcept,
+      concept: concept == freezed
+          ? _value.concept
+          : concept as List<ValueSetConcept>,
     ));
   }
 
@@ -1189,16 +1186,6 @@ class _$ValueSetCodeSystemCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ValueSetConceptCopyWith<$Res> get concept {
-    if (_value.concept == null) {
-      return null;
-    }
-    return $ValueSetConceptCopyWith<$Res>(_value.concept, (value) {
-      return _then(_value.copyWith(concept: value));
-    });
-  }
 }
 
 abstract class _$ValueSetCodeSystemCopyWith<$Res>
@@ -1214,14 +1201,12 @@ abstract class _$ValueSetCodeSystemCopyWith<$Res>
       @JsonKey(required: true) FhirUri system,
       String version,
       Boolean caseSensitive,
-      @JsonKey(required: true) ValueSetConcept concept});
+      @JsonKey(required: true) List<ValueSetConcept> concept});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ValueSetConceptCopyWith<$Res> get concept;
 }
 
 class __$ValueSetCodeSystemCopyWithImpl<$Res>
@@ -1257,7 +1242,9 @@ class __$ValueSetCodeSystemCopyWithImpl<$Res>
       caseSensitive: caseSensitive == freezed
           ? _value.caseSensitive
           : caseSensitive as Boolean,
-      concept: concept == freezed ? _value.concept : concept as ValueSetConcept,
+      concept: concept == freezed
+          ? _value.concept
+          : concept as List<ValueSetConcept>,
     ));
   }
 }
@@ -1294,7 +1281,7 @@ class _$_ValueSetCodeSystem implements _ValueSetCodeSystem {
   final Boolean caseSensitive;
   @override
   @JsonKey(required: true)
-  final ValueSetConcept concept;
+  final List<ValueSetConcept> concept;
 
   @override
   String toString() {
@@ -1354,7 +1341,7 @@ abstract class _ValueSetCodeSystem implements ValueSetCodeSystem {
           @required @JsonKey(required: true) FhirUri system,
           String version,
           Boolean caseSensitive,
-          @required @JsonKey(required: true) ValueSetConcept concept}) =
+          @required @JsonKey(required: true) List<ValueSetConcept> concept}) =
       _$_ValueSetCodeSystem;
 
   factory _ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =
@@ -1376,7 +1363,7 @@ abstract class _ValueSetCodeSystem implements ValueSetCodeSystem {
   Boolean get caseSensitive;
   @override
   @JsonKey(required: true)
-  ValueSetConcept get concept;
+  List<ValueSetConcept> get concept;
   @override
   _$ValueSetCodeSystemCopyWith<_ValueSetCodeSystem> get copyWith;
 }
@@ -1396,7 +1383,7 @@ class _$ValueSetConceptTearOff {
       Boolean abstract,
       String display,
       String definition,
-      ValueSetDesignation designation,
+      List<ValueSetDesignation> designation,
       List<ValueSetConcept> concept}) {
     return _ValueSetConcept(
       id: id,
@@ -1425,7 +1412,7 @@ mixin _$ValueSetConcept {
   Boolean get abstract;
   String get display;
   String get definition;
-  ValueSetDesignation get designation;
+  List<ValueSetDesignation> get designation;
   List<ValueSetConcept> get concept;
 
   Map<String, dynamic> toJson();
@@ -1444,12 +1431,11 @@ abstract class $ValueSetConceptCopyWith<$Res> {
       Boolean abstract,
       String display,
       String definition,
-      ValueSetDesignation designation,
+      List<ValueSetDesignation> designation,
       List<ValueSetConcept> concept});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ValueSetDesignationCopyWith<$Res> get designation;
 }
 
 class _$ValueSetConceptCopyWithImpl<$Res>
@@ -1487,7 +1473,7 @@ class _$ValueSetConceptCopyWithImpl<$Res>
           definition == freezed ? _value.definition : definition as String,
       designation: designation == freezed
           ? _value.designation
-          : designation as ValueSetDesignation,
+          : designation as List<ValueSetDesignation>,
       concept: concept == freezed
           ? _value.concept
           : concept as List<ValueSetConcept>,
@@ -1513,16 +1499,6 @@ class _$ValueSetConceptCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ValueSetDesignationCopyWith<$Res> get designation {
-    if (_value.designation == null) {
-      return null;
-    }
-    return $ValueSetDesignationCopyWith<$Res>(_value.designation, (value) {
-      return _then(_value.copyWith(designation: value));
-    });
-  }
 }
 
 abstract class _$ValueSetConceptCopyWith<$Res>
@@ -1539,15 +1515,13 @@ abstract class _$ValueSetConceptCopyWith<$Res>
       Boolean abstract,
       String display,
       String definition,
-      ValueSetDesignation designation,
+      List<ValueSetDesignation> designation,
       List<ValueSetConcept> concept});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ValueSetDesignationCopyWith<$Res> get designation;
 }
 
 class __$ValueSetConceptCopyWithImpl<$Res>
@@ -1587,7 +1561,7 @@ class __$ValueSetConceptCopyWithImpl<$Res>
           definition == freezed ? _value.definition : definition as String,
       designation: designation == freezed
           ? _value.designation
-          : designation as ValueSetDesignation,
+          : designation as List<ValueSetDesignation>,
       concept: concept == freezed
           ? _value.concept
           : concept as List<ValueSetConcept>,
@@ -1629,7 +1603,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
   @override
   final String definition;
   @override
-  final ValueSetDesignation designation;
+  final List<ValueSetDesignation> designation;
   @override
   final List<ValueSetConcept> concept;
 
@@ -1700,7 +1674,7 @@ abstract class _ValueSetConcept implements ValueSetConcept {
       Boolean abstract,
       String display,
       String definition,
-      ValueSetDesignation designation,
+      List<ValueSetDesignation> designation,
       List<ValueSetConcept> concept}) = _$_ValueSetConcept;
 
   factory _ValueSetConcept.fromJson(Map<String, dynamic> json) =
@@ -1723,7 +1697,7 @@ abstract class _ValueSetConcept implements ValueSetConcept {
   @override
   String get definition;
   @override
-  ValueSetDesignation get designation;
+  List<ValueSetDesignation> get designation;
   @override
   List<ValueSetConcept> get concept;
   @override
@@ -2025,9 +1999,9 @@ class _$ValueSetComposeTearOff {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      FhirUri import,
-      IncludeExclude include,
-      IncludeExclude exclude}) {
+      List<FhirUri> import,
+      List<IncludeExclude> include,
+      List<IncludeExclude> exclude}) {
     return _ValueSetCompose(
       id: id,
       extension_: extension_,
@@ -2047,9 +2021,9 @@ mixin _$ValueSetCompose {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  FhirUri get import;
-  IncludeExclude get include;
-  IncludeExclude get exclude;
+  List<FhirUri> get import;
+  List<IncludeExclude> get include;
+  List<IncludeExclude> get exclude;
 
   Map<String, dynamic> toJson();
   $ValueSetComposeCopyWith<ValueSetCompose> get copyWith;
@@ -2063,14 +2037,12 @@ abstract class $ValueSetComposeCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      FhirUri import,
-      IncludeExclude include,
-      IncludeExclude exclude});
+      List<FhirUri> import,
+      List<IncludeExclude> include,
+      List<IncludeExclude> exclude});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IncludeExcludeCopyWith<$Res> get include;
-  $IncludeExcludeCopyWith<$Res> get exclude;
 }
 
 class _$ValueSetComposeCopyWithImpl<$Res>
@@ -2098,9 +2070,11 @@ class _$ValueSetComposeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      import: import == freezed ? _value.import : import as FhirUri,
-      include: include == freezed ? _value.include : include as IncludeExclude,
-      exclude: exclude == freezed ? _value.exclude : exclude as IncludeExclude,
+      import: import == freezed ? _value.import : import as List<FhirUri>,
+      include:
+          include == freezed ? _value.include : include as List<IncludeExclude>,
+      exclude:
+          exclude == freezed ? _value.exclude : exclude as List<IncludeExclude>,
     ));
   }
 
@@ -2123,26 +2097,6 @@ class _$ValueSetComposeCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $IncludeExcludeCopyWith<$Res> get include {
-    if (_value.include == null) {
-      return null;
-    }
-    return $IncludeExcludeCopyWith<$Res>(_value.include, (value) {
-      return _then(_value.copyWith(include: value));
-    });
-  }
-
-  @override
-  $IncludeExcludeCopyWith<$Res> get exclude {
-    if (_value.exclude == null) {
-      return null;
-    }
-    return $IncludeExcludeCopyWith<$Res>(_value.exclude, (value) {
-      return _then(_value.copyWith(exclude: value));
-    });
-  }
 }
 
 abstract class _$ValueSetComposeCopyWith<$Res>
@@ -2155,18 +2109,14 @@ abstract class _$ValueSetComposeCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      FhirUri import,
-      IncludeExclude include,
-      IncludeExclude exclude});
+      List<FhirUri> import,
+      List<IncludeExclude> include,
+      List<IncludeExclude> exclude});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IncludeExcludeCopyWith<$Res> get include;
-  @override
-  $IncludeExcludeCopyWith<$Res> get exclude;
 }
 
 class __$ValueSetComposeCopyWithImpl<$Res>
@@ -2196,9 +2146,11 @@ class __$ValueSetComposeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      import: import == freezed ? _value.import : import as FhirUri,
-      include: include == freezed ? _value.include : include as IncludeExclude,
-      exclude: exclude == freezed ? _value.exclude : exclude as IncludeExclude,
+      import: import == freezed ? _value.import : import as List<FhirUri>,
+      include:
+          include == freezed ? _value.include : include as List<IncludeExclude>,
+      exclude:
+          exclude == freezed ? _value.exclude : exclude as List<IncludeExclude>,
     ));
   }
 }
@@ -2224,11 +2176,11 @@ class _$_ValueSetCompose implements _ValueSetCompose {
   @override
   final FhirExtension modifierExtension;
   @override
-  final FhirUri import;
+  final List<FhirUri> import;
   @override
-  final IncludeExclude include;
+  final List<IncludeExclude> include;
   @override
-  final IncludeExclude exclude;
+  final List<IncludeExclude> exclude;
 
   @override
   String toString() {
@@ -2281,9 +2233,9 @@ abstract class _ValueSetCompose implements ValueSetCompose {
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      FhirUri import,
-      IncludeExclude include,
-      IncludeExclude exclude}) = _$_ValueSetCompose;
+      List<FhirUri> import,
+      List<IncludeExclude> include,
+      List<IncludeExclude> exclude}) = _$_ValueSetCompose;
 
   factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCompose.fromJson;
@@ -2296,11 +2248,11 @@ abstract class _ValueSetCompose implements ValueSetCompose {
   @override
   FhirExtension get modifierExtension;
   @override
-  FhirUri get import;
+  List<FhirUri> get import;
   @override
-  IncludeExclude get include;
+  List<IncludeExclude> get include;
   @override
-  IncludeExclude get exclude;
+  List<IncludeExclude> get exclude;
   @override
   _$ValueSetComposeCopyWith<_ValueSetCompose> get copyWith;
 }
@@ -2318,8 +2270,8 @@ class _$IncludeExcludeTearOff {
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) FhirUri system,
       String version,
-      IncludeExcludeConcept concept,
-      IncludeExcludeFilter filter}) {
+      List<IncludeExcludeConcept> concept,
+      List<IncludeExcludeFilter> filter}) {
     return _IncludeExclude(
       id: id,
       extension_: extension_,
@@ -2343,8 +2295,8 @@ mixin _$IncludeExclude {
   @JsonKey(required: true)
   FhirUri get system;
   String get version;
-  IncludeExcludeConcept get concept;
-  IncludeExcludeFilter get filter;
+  List<IncludeExcludeConcept> get concept;
+  List<IncludeExcludeFilter> get filter;
 
   Map<String, dynamic> toJson();
   $IncludeExcludeCopyWith<IncludeExclude> get copyWith;
@@ -2360,13 +2312,11 @@ abstract class $IncludeExcludeCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true) FhirUri system,
       String version,
-      IncludeExcludeConcept concept,
-      IncludeExcludeFilter filter});
+      List<IncludeExcludeConcept> concept,
+      List<IncludeExcludeFilter> filter});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IncludeExcludeConceptCopyWith<$Res> get concept;
-  $IncludeExcludeFilterCopyWith<$Res> get filter;
 }
 
 class _$IncludeExcludeCopyWithImpl<$Res>
@@ -2399,9 +2349,10 @@ class _$IncludeExcludeCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       concept: concept == freezed
           ? _value.concept
-          : concept as IncludeExcludeConcept,
-      filter:
-          filter == freezed ? _value.filter : filter as IncludeExcludeFilter,
+          : concept as List<IncludeExcludeConcept>,
+      filter: filter == freezed
+          ? _value.filter
+          : filter as List<IncludeExcludeFilter>,
     ));
   }
 
@@ -2424,26 +2375,6 @@ class _$IncludeExcludeCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $IncludeExcludeConceptCopyWith<$Res> get concept {
-    if (_value.concept == null) {
-      return null;
-    }
-    return $IncludeExcludeConceptCopyWith<$Res>(_value.concept, (value) {
-      return _then(_value.copyWith(concept: value));
-    });
-  }
-
-  @override
-  $IncludeExcludeFilterCopyWith<$Res> get filter {
-    if (_value.filter == null) {
-      return null;
-    }
-    return $IncludeExcludeFilterCopyWith<$Res>(_value.filter, (value) {
-      return _then(_value.copyWith(filter: value));
-    });
-  }
 }
 
 abstract class _$IncludeExcludeCopyWith<$Res>
@@ -2458,17 +2389,13 @@ abstract class _$IncludeExcludeCopyWith<$Res>
       FhirExtension modifierExtension,
       @JsonKey(required: true) FhirUri system,
       String version,
-      IncludeExcludeConcept concept,
-      IncludeExcludeFilter filter});
+      List<IncludeExcludeConcept> concept,
+      List<IncludeExcludeFilter> filter});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IncludeExcludeConceptCopyWith<$Res> get concept;
-  @override
-  $IncludeExcludeFilterCopyWith<$Res> get filter;
 }
 
 class __$IncludeExcludeCopyWithImpl<$Res>
@@ -2503,9 +2430,10 @@ class __$IncludeExcludeCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as String,
       concept: concept == freezed
           ? _value.concept
-          : concept as IncludeExcludeConcept,
-      filter:
-          filter == freezed ? _value.filter : filter as IncludeExcludeFilter,
+          : concept as List<IncludeExcludeConcept>,
+      filter: filter == freezed
+          ? _value.filter
+          : filter as List<IncludeExcludeFilter>,
     ));
   }
 }
@@ -2538,9 +2466,9 @@ class _$_IncludeExclude implements _IncludeExclude {
   @override
   final String version;
   @override
-  final IncludeExcludeConcept concept;
+  final List<IncludeExcludeConcept> concept;
   @override
-  final IncludeExcludeFilter filter;
+  final List<IncludeExcludeFilter> filter;
 
   @override
   String toString() {
@@ -2599,8 +2527,8 @@ abstract class _IncludeExclude implements IncludeExclude {
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) FhirUri system,
       String version,
-      IncludeExcludeConcept concept,
-      IncludeExcludeFilter filter}) = _$_IncludeExclude;
+      List<IncludeExcludeConcept> concept,
+      List<IncludeExcludeFilter> filter}) = _$_IncludeExclude;
 
   factory _IncludeExclude.fromJson(Map<String, dynamic> json) =
       _$_IncludeExclude.fromJson;
@@ -2618,9 +2546,9 @@ abstract class _IncludeExclude implements IncludeExclude {
   @override
   String get version;
   @override
-  IncludeExcludeConcept get concept;
+  List<IncludeExcludeConcept> get concept;
   @override
-  IncludeExcludeFilter get filter;
+  List<IncludeExcludeFilter> get filter;
   @override
   _$IncludeExcludeCopyWith<_IncludeExclude> get copyWith;
 }
@@ -4250,7 +4178,9 @@ class _$NamingSystemTearOff {
   const _$NamingSystemTearOff();
 
   _NamingSystem call(
-      {Id id,
+      {@JsonKey(defaultValue: 'NamingSystem')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -4269,20 +4199,21 @@ class _$NamingSystemTearOff {
       @JsonKey(required: true, unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
       String publisher,
-      NamingSystemContact contact,
+      List<NamingSystemContact> contact,
       String responsible,
       @required
       @JsonKey(required: true)
           FhirDateTime date,
       CodeableConcept type,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String usage,
       @required
       @JsonKey(required: true)
-          NamingSystemUniqueId uniqueId,
+          List<NamingSystemUniqueId> uniqueId,
       Reference replacedBy}) {
     return _NamingSystem(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -4312,6 +4243,8 @@ class _$NamingSystemTearOff {
 const $NamingSystem = _$NamingSystemTearOff();
 
 mixin _$NamingSystem {
+  @JsonKey(defaultValue: 'NamingSystem')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4328,16 +4261,16 @@ mixin _$NamingSystem {
   @JsonKey(required: true, unknownEnumValue: NamingSystemKind.unknown)
   NamingSystemKind get kind;
   String get publisher;
-  NamingSystemContact get contact;
+  List<NamingSystemContact> get contact;
   String get responsible;
   @JsonKey(required: true)
   FhirDateTime get date;
   CodeableConcept get type;
   String get description;
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   String get usage;
   @JsonKey(required: true)
-  NamingSystemUniqueId get uniqueId;
+  List<NamingSystemUniqueId> get uniqueId;
   Reference get replacedBy;
 
   Map<String, dynamic> toJson();
@@ -4349,7 +4282,9 @@ abstract class $NamingSystemCopyWith<$Res> {
           NamingSystem value, $Res Function(NamingSystem) then) =
       _$NamingSystemCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'NamingSystem')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -4365,26 +4300,23 @@ abstract class $NamingSystemCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
       String publisher,
-      NamingSystemContact contact,
+      List<NamingSystemContact> contact,
       String responsible,
       @JsonKey(required: true)
           FhirDateTime date,
       CodeableConcept type,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String usage,
       @JsonKey(required: true)
-          NamingSystemUniqueId uniqueId,
+          List<NamingSystemUniqueId> uniqueId,
       Reference replacedBy});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $NamingSystemContactCopyWith<$Res> get contact;
   $CodeableConceptCopyWith<$Res> get type;
-  $CodeableConceptCopyWith<$Res> get useContext;
-  $NamingSystemUniqueIdCopyWith<$Res> get uniqueId;
   $ReferenceCopyWith<$Res> get replacedBy;
 }
 
@@ -4397,6 +4329,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -4420,6 +4353,9 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
     Object replacedBy = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4439,8 +4375,9 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       status: status == freezed ? _value.status : status as NamingSystemStatus,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact:
-          contact == freezed ? _value.contact : contact as NamingSystemContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<NamingSystemContact>,
       responsible:
           responsible == freezed ? _value.responsible : responsible as String,
       date: date == freezed ? _value.date : date as FhirDateTime,
@@ -4449,11 +4386,11 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       usage: usage == freezed ? _value.usage : usage as String,
       uniqueId: uniqueId == freezed
           ? _value.uniqueId
-          : uniqueId as NamingSystemUniqueId,
+          : uniqueId as List<NamingSystemUniqueId>,
       replacedBy:
           replacedBy == freezed ? _value.replacedBy : replacedBy as Reference,
     ));
@@ -4500,42 +4437,12 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
   }
 
   @override
-  $NamingSystemContactCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $NamingSystemContactCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get type {
     if (_value.type == null) {
       return null;
     }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get useContext {
-    if (_value.useContext == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.useContext, (value) {
-      return _then(_value.copyWith(useContext: value));
-    });
-  }
-
-  @override
-  $NamingSystemUniqueIdCopyWith<$Res> get uniqueId {
-    if (_value.uniqueId == null) {
-      return null;
-    }
-    return $NamingSystemUniqueIdCopyWith<$Res>(_value.uniqueId, (value) {
-      return _then(_value.copyWith(uniqueId: value));
     });
   }
 
@@ -4557,7 +4464,9 @@ abstract class _$NamingSystemCopyWith<$Res>
       __$NamingSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'NamingSystem')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -4573,16 +4482,16 @@ abstract class _$NamingSystemCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
       String publisher,
-      NamingSystemContact contact,
+      List<NamingSystemContact> contact,
       String responsible,
       @JsonKey(required: true)
           FhirDateTime date,
       CodeableConcept type,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String usage,
       @JsonKey(required: true)
-          NamingSystemUniqueId uniqueId,
+          List<NamingSystemUniqueId> uniqueId,
       Reference replacedBy});
 
   @override
@@ -4594,13 +4503,7 @@ abstract class _$NamingSystemCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $NamingSystemContactCopyWith<$Res> get contact;
-  @override
   $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $CodeableConceptCopyWith<$Res> get useContext;
-  @override
-  $NamingSystemUniqueIdCopyWith<$Res> get uniqueId;
   @override
   $ReferenceCopyWith<$Res> get replacedBy;
 }
@@ -4616,6 +4519,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -4639,6 +4543,9 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
     Object replacedBy = freezed,
   }) {
     return _then(_NamingSystem(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4658,8 +4565,9 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as NamingSystemStatus,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact:
-          contact == freezed ? _value.contact : contact as NamingSystemContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<NamingSystemContact>,
       responsible:
           responsible == freezed ? _value.responsible : responsible as String,
       date: date == freezed ? _value.date : date as FhirDateTime,
@@ -4668,11 +4576,11 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       usage: usage == freezed ? _value.usage : usage as String,
       uniqueId: uniqueId == freezed
           ? _value.uniqueId
-          : uniqueId as NamingSystemUniqueId,
+          : uniqueId as List<NamingSystemUniqueId>,
       replacedBy:
           replacedBy == freezed ? _value.replacedBy : replacedBy as Reference,
     ));
@@ -4682,7 +4590,9 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_NamingSystem implements _NamingSystem {
   const _$_NamingSystem(
-      {this.id,
+      {@JsonKey(defaultValue: 'NamingSystem')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -4724,6 +4634,9 @@ class _$_NamingSystem implements _NamingSystem {
       _$_$_NamingSystemFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'NamingSystem')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -4752,7 +4665,7 @@ class _$_NamingSystem implements _NamingSystem {
   @override
   final String publisher;
   @override
-  final NamingSystemContact contact;
+  final List<NamingSystemContact> contact;
   @override
   final String responsible;
   @override
@@ -4763,24 +4676,27 @@ class _$_NamingSystem implements _NamingSystem {
   @override
   final String description;
   @override
-  final CodeableConcept useContext;
+  final List<CodeableConcept> useContext;
   @override
   final String usage;
   @override
   @JsonKey(required: true)
-  final NamingSystemUniqueId uniqueId;
+  final List<NamingSystemUniqueId> uniqueId;
   @override
   final Reference replacedBy;
 
   @override
   String toString() {
-    return 'NamingSystem(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, status: $status, kind: $kind, publisher: $publisher, contact: $contact, responsible: $responsible, date: $date, type: $type, description: $description, useContext: $useContext, usage: $usage, uniqueId: $uniqueId, replacedBy: $replacedBy)';
+    return 'NamingSystem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, status: $status, kind: $kind, publisher: $publisher, contact: $contact, responsible: $responsible, date: $date, type: $type, description: $description, useContext: $useContext, usage: $usage, uniqueId: $uniqueId, replacedBy: $replacedBy)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _NamingSystem &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -4840,6 +4756,7 @@ class _$_NamingSystem implements _NamingSystem {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -4874,7 +4791,9 @@ class _$_NamingSystem implements _NamingSystem {
 
 abstract class _NamingSystem implements NamingSystem {
   const factory _NamingSystem(
-      {Id id,
+      {@JsonKey(defaultValue: 'NamingSystem')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -4893,23 +4812,26 @@ abstract class _NamingSystem implements NamingSystem {
       @JsonKey(required: true, unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
       String publisher,
-      NamingSystemContact contact,
+      List<NamingSystemContact> contact,
       String responsible,
       @required
       @JsonKey(required: true)
           FhirDateTime date,
       CodeableConcept type,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String usage,
       @required
       @JsonKey(required: true)
-          NamingSystemUniqueId uniqueId,
+          List<NamingSystemUniqueId> uniqueId,
       Reference replacedBy}) = _$_NamingSystem;
 
   factory _NamingSystem.fromJson(Map<String, dynamic> json) =
       _$_NamingSystem.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'NamingSystem')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -4939,7 +4861,7 @@ abstract class _NamingSystem implements NamingSystem {
   @override
   String get publisher;
   @override
-  NamingSystemContact get contact;
+  List<NamingSystemContact> get contact;
   @override
   String get responsible;
   @override
@@ -4950,12 +4872,12 @@ abstract class _NamingSystem implements NamingSystem {
   @override
   String get description;
   @override
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   @override
   String get usage;
   @override
   @JsonKey(required: true)
-  NamingSystemUniqueId get uniqueId;
+  List<NamingSystemUniqueId> get uniqueId;
   @override
   Reference get replacedBy;
   @override
@@ -4970,7 +4892,9 @@ class _$ConceptMapTearOff {
   const _$ConceptMapTearOff();
 
   _ConceptMap call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ConceptMap')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -4988,20 +4912,19 @@ class _$ConceptMapTearOff {
           ConceptMapStatus status,
       Boolean experimental,
       String publisher,
-      ConceptMapContact contact,
+      List<ConceptMapContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String requirements,
       String copyright,
-      @required
-      @JsonKey(required: true)
-          FhirUri sourceX,
-      @required
-      @JsonKey(required: true)
-          FhirUri targetX,
-      ConceptMapElement element}) {
+      FhirUri sourceUri,
+      Reference sourceReference,
+      FhirUri targetUri,
+      Reference targetReference,
+      List<ConceptMapElement> element}) {
     return _ConceptMap(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -5023,8 +4946,10 @@ class _$ConceptMapTearOff {
       useContext: useContext,
       requirements: requirements,
       copyright: copyright,
-      sourceX: sourceX,
-      targetX: targetX,
+      sourceUri: sourceUri,
+      sourceReference: sourceReference,
+      targetUri: targetUri,
+      targetReference: targetReference,
       element: element,
     );
   }
@@ -5034,6 +4959,8 @@ class _$ConceptMapTearOff {
 const $ConceptMap = _$ConceptMapTearOff();
 
 mixin _$ConceptMap {
+  @JsonKey(defaultValue: 'ConceptMap')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5051,17 +4978,17 @@ mixin _$ConceptMap {
   ConceptMapStatus get status;
   Boolean get experimental;
   String get publisher;
-  ConceptMapContact get contact;
+  List<ConceptMapContact> get contact;
   FhirDateTime get date;
   String get description;
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   String get requirements;
   String get copyright;
-  @JsonKey(required: true)
-  FhirUri get sourceX;
-  @JsonKey(required: true)
-  FhirUri get targetX;
-  ConceptMapElement get element;
+  FhirUri get sourceUri;
+  Reference get sourceReference;
+  FhirUri get targetUri;
+  Reference get targetReference;
+  List<ConceptMapElement> get element;
 
   Map<String, dynamic> toJson();
   $ConceptMapCopyWith<ConceptMap> get copyWith;
@@ -5072,7 +4999,9 @@ abstract class $ConceptMapCopyWith<$Res> {
           ConceptMap value, $Res Function(ConceptMap) then) =
       _$ConceptMapCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ConceptMap')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -5089,26 +5018,25 @@ abstract class $ConceptMapCopyWith<$Res> {
           ConceptMapStatus status,
       Boolean experimental,
       String publisher,
-      ConceptMapContact contact,
+      List<ConceptMapContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String requirements,
       String copyright,
-      @JsonKey(required: true)
-          FhirUri sourceX,
-      @JsonKey(required: true)
-          FhirUri targetX,
-      ConceptMapElement element});
+      FhirUri sourceUri,
+      Reference sourceReference,
+      FhirUri targetUri,
+      Reference targetReference,
+      List<ConceptMapElement> element});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get identifier;
-  $ConceptMapContactCopyWith<$Res> get contact;
-  $CodeableConceptCopyWith<$Res> get useContext;
-  $ConceptMapElementCopyWith<$Res> get element;
+  $ReferenceCopyWith<$Res> get sourceReference;
+  $ReferenceCopyWith<$Res> get targetReference;
 }
 
 class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
@@ -5120,6 +5048,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -5141,11 +5070,16 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
     Object useContext = freezed,
     Object requirements = freezed,
     Object copyright = freezed,
-    Object sourceX = freezed,
-    Object targetX = freezed,
+    Object sourceUri = freezed,
+    Object sourceReference = freezed,
+    Object targetUri = freezed,
+    Object targetReference = freezed,
     Object element = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5171,22 +5105,30 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
           ? _value.experimental
           : experimental as Boolean,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact:
-          contact == freezed ? _value.contact : contact as ConceptMapContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ConceptMapContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       requirements: requirements == freezed
           ? _value.requirements
           : requirements as String,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
-      sourceX: sourceX == freezed ? _value.sourceX : sourceX as FhirUri,
-      targetX: targetX == freezed ? _value.targetX : targetX as FhirUri,
-      element:
-          element == freezed ? _value.element : element as ConceptMapElement,
+      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
+      sourceReference: sourceReference == freezed
+          ? _value.sourceReference
+          : sourceReference as Reference,
+      targetUri: targetUri == freezed ? _value.targetUri : targetUri as FhirUri,
+      targetReference: targetReference == freezed
+          ? _value.targetReference
+          : targetReference as Reference,
+      element: element == freezed
+          ? _value.element
+          : element as List<ConceptMapElement>,
     ));
   }
 
@@ -5241,32 +5183,22 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
   }
 
   @override
-  $ConceptMapContactCopyWith<$Res> get contact {
-    if (_value.contact == null) {
+  $ReferenceCopyWith<$Res> get sourceReference {
+    if (_value.sourceReference == null) {
       return null;
     }
-    return $ConceptMapContactCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
+    return $ReferenceCopyWith<$Res>(_value.sourceReference, (value) {
+      return _then(_value.copyWith(sourceReference: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get useContext {
-    if (_value.useContext == null) {
+  $ReferenceCopyWith<$Res> get targetReference {
+    if (_value.targetReference == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.useContext, (value) {
-      return _then(_value.copyWith(useContext: value));
-    });
-  }
-
-  @override
-  $ConceptMapElementCopyWith<$Res> get element {
-    if (_value.element == null) {
-      return null;
-    }
-    return $ConceptMapElementCopyWith<$Res>(_value.element, (value) {
-      return _then(_value.copyWith(element: value));
+    return $ReferenceCopyWith<$Res>(_value.targetReference, (value) {
+      return _then(_value.copyWith(targetReference: value));
     });
   }
 }
@@ -5277,7 +5209,9 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       __$ConceptMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ConceptMap')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -5294,17 +5228,17 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
           ConceptMapStatus status,
       Boolean experimental,
       String publisher,
-      ConceptMapContact contact,
+      List<ConceptMapContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String requirements,
       String copyright,
-      @JsonKey(required: true)
-          FhirUri sourceX,
-      @JsonKey(required: true)
-          FhirUri targetX,
-      ConceptMapElement element});
+      FhirUri sourceUri,
+      Reference sourceReference,
+      FhirUri targetUri,
+      Reference targetReference,
+      List<ConceptMapElement> element});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -5317,11 +5251,9 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
-  $ConceptMapContactCopyWith<$Res> get contact;
+  $ReferenceCopyWith<$Res> get sourceReference;
   @override
-  $CodeableConceptCopyWith<$Res> get useContext;
-  @override
-  $ConceptMapElementCopyWith<$Res> get element;
+  $ReferenceCopyWith<$Res> get targetReference;
 }
 
 class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
@@ -5335,6 +5267,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -5356,11 +5289,16 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
     Object useContext = freezed,
     Object requirements = freezed,
     Object copyright = freezed,
-    Object sourceX = freezed,
-    Object targetX = freezed,
+    Object sourceUri = freezed,
+    Object sourceReference = freezed,
+    Object targetUri = freezed,
+    Object targetReference = freezed,
     Object element = freezed,
   }) {
     return _then(_ConceptMap(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5386,22 +5324,30 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
           ? _value.experimental
           : experimental as Boolean,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact:
-          contact == freezed ? _value.contact : contact as ConceptMapContact,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ConceptMapContact>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       description:
           description == freezed ? _value.description : description as String,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as CodeableConcept,
+          : useContext as List<CodeableConcept>,
       requirements: requirements == freezed
           ? _value.requirements
           : requirements as String,
       copyright: copyright == freezed ? _value.copyright : copyright as String,
-      sourceX: sourceX == freezed ? _value.sourceX : sourceX as FhirUri,
-      targetX: targetX == freezed ? _value.targetX : targetX as FhirUri,
-      element:
-          element == freezed ? _value.element : element as ConceptMapElement,
+      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
+      sourceReference: sourceReference == freezed
+          ? _value.sourceReference
+          : sourceReference as Reference,
+      targetUri: targetUri == freezed ? _value.targetUri : targetUri as FhirUri,
+      targetReference: targetReference == freezed
+          ? _value.targetReference
+          : targetReference as Reference,
+      element: element == freezed
+          ? _value.element
+          : element as List<ConceptMapElement>,
     ));
   }
 }
@@ -5409,7 +5355,9 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConceptMap implements _ConceptMap {
   const _$_ConceptMap(
-      {this.id,
+      {@JsonKey(defaultValue: 'ConceptMap')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -5433,20 +5381,19 @@ class _$_ConceptMap implements _ConceptMap {
       this.useContext,
       this.requirements,
       this.copyright,
-      @required
-      @JsonKey(required: true)
-          this.sourceX,
-      @required
-      @JsonKey(required: true)
-          this.targetX,
+      this.sourceUri,
+      this.sourceReference,
+      this.targetUri,
+      this.targetReference,
       this.element})
-      : assert(status != null),
-        assert(sourceX != null),
-        assert(targetX != null);
+      : assert(status != null);
 
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'ConceptMap')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -5480,35 +5427,40 @@ class _$_ConceptMap implements _ConceptMap {
   @override
   final String publisher;
   @override
-  final ConceptMapContact contact;
+  final List<ConceptMapContact> contact;
   @override
   final FhirDateTime date;
   @override
   final String description;
   @override
-  final CodeableConcept useContext;
+  final List<CodeableConcept> useContext;
   @override
   final String requirements;
   @override
   final String copyright;
   @override
-  @JsonKey(required: true)
-  final FhirUri sourceX;
+  final FhirUri sourceUri;
   @override
-  @JsonKey(required: true)
-  final FhirUri targetX;
+  final Reference sourceReference;
   @override
-  final ConceptMapElement element;
+  final FhirUri targetUri;
+  @override
+  final Reference targetReference;
+  @override
+  final List<ConceptMapElement> element;
 
   @override
   String toString() {
-    return 'ConceptMap(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, sourceX: $sourceX, targetX: $targetX, element: $element)';
+    return 'ConceptMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, sourceUri: $sourceUri, sourceReference: $sourceReference, targetUri: $targetUri, targetReference: $targetReference, element: $element)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ConceptMap &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -5565,19 +5517,23 @@ class _$_ConceptMap implements _ConceptMap {
             (identical(other.copyright, copyright) ||
                 const DeepCollectionEquality()
                     .equals(other.copyright, copyright)) &&
-            (identical(other.sourceX, sourceX) ||
+            (identical(other.sourceUri, sourceUri) ||
                 const DeepCollectionEquality()
-                    .equals(other.sourceX, sourceX)) &&
-            (identical(other.targetX, targetX) ||
+                    .equals(other.sourceUri, sourceUri)) &&
+            (identical(other.sourceReference, sourceReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.targetX, targetX)) &&
-            (identical(other.element, element) ||
-                const DeepCollectionEquality().equals(other.element, element)));
+                    .equals(other.sourceReference, sourceReference)) &&
+            (identical(other.targetUri, targetUri) ||
+                const DeepCollectionEquality()
+                    .equals(other.targetUri, targetUri)) &&
+            (identical(other.targetReference, targetReference) || const DeepCollectionEquality().equals(other.targetReference, targetReference)) &&
+            (identical(other.element, element) || const DeepCollectionEquality().equals(other.element, element)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -5599,8 +5555,10 @@ class _$_ConceptMap implements _ConceptMap {
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(requirements) ^
       const DeepCollectionEquality().hash(copyright) ^
-      const DeepCollectionEquality().hash(sourceX) ^
-      const DeepCollectionEquality().hash(targetX) ^
+      const DeepCollectionEquality().hash(sourceUri) ^
+      const DeepCollectionEquality().hash(sourceReference) ^
+      const DeepCollectionEquality().hash(targetUri) ^
+      const DeepCollectionEquality().hash(targetReference) ^
       const DeepCollectionEquality().hash(element);
 
   @override
@@ -5615,7 +5573,9 @@ class _$_ConceptMap implements _ConceptMap {
 
 abstract class _ConceptMap implements ConceptMap {
   const factory _ConceptMap(
-      {Id id,
+      {@JsonKey(defaultValue: 'ConceptMap')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -5633,23 +5593,24 @@ abstract class _ConceptMap implements ConceptMap {
           ConceptMapStatus status,
       Boolean experimental,
       String publisher,
-      ConceptMapContact contact,
+      List<ConceptMapContact> contact,
       FhirDateTime date,
       String description,
-      CodeableConcept useContext,
+      List<CodeableConcept> useContext,
       String requirements,
       String copyright,
-      @required
-      @JsonKey(required: true)
-          FhirUri sourceX,
-      @required
-      @JsonKey(required: true)
-          FhirUri targetX,
-      ConceptMapElement element}) = _$_ConceptMap;
+      FhirUri sourceUri,
+      Reference sourceReference,
+      FhirUri targetUri,
+      Reference targetReference,
+      List<ConceptMapElement> element}) = _$_ConceptMap;
 
   factory _ConceptMap.fromJson(Map<String, dynamic> json) =
       _$_ConceptMap.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'ConceptMap')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -5683,25 +5644,27 @@ abstract class _ConceptMap implements ConceptMap {
   @override
   String get publisher;
   @override
-  ConceptMapContact get contact;
+  List<ConceptMapContact> get contact;
   @override
   FhirDateTime get date;
   @override
   String get description;
   @override
-  CodeableConcept get useContext;
+  List<CodeableConcept> get useContext;
   @override
   String get requirements;
   @override
   String get copyright;
   @override
-  @JsonKey(required: true)
-  FhirUri get sourceX;
+  FhirUri get sourceUri;
   @override
-  @JsonKey(required: true)
-  FhirUri get targetX;
+  Reference get sourceReference;
   @override
-  ConceptMapElement get element;
+  FhirUri get targetUri;
+  @override
+  Reference get targetReference;
+  @override
+  List<ConceptMapElement> get element;
   @override
   _$ConceptMapCopyWith<_ConceptMap> get copyWith;
 }
@@ -5718,7 +5681,7 @@ class _$NamingSystemContactTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) {
+      List<ContactPoint> telecom}) {
     return _NamingSystemContact(
       id: id,
       extension_: extension_,
@@ -5738,7 +5701,7 @@ mixin _$NamingSystemContact {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
   $NamingSystemContactCopyWith<NamingSystemContact> get copyWith;
@@ -5753,11 +5716,10 @@ abstract class $NamingSystemContactCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class _$NamingSystemContactCopyWithImpl<$Res>
@@ -5785,7 +5747,8 @@ class _$NamingSystemContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 
@@ -5808,16 +5771,6 @@ class _$NamingSystemContactCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
 }
 
 abstract class _$NamingSystemContactCopyWith<$Res>
@@ -5831,14 +5784,12 @@ abstract class _$NamingSystemContactCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class __$NamingSystemContactCopyWithImpl<$Res>
@@ -5868,7 +5819,8 @@ class __$NamingSystemContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -5895,7 +5847,7 @@ class _$_NamingSystemContact implements _NamingSystemContact {
   @override
   final String name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -5946,7 +5898,7 @@ abstract class _NamingSystemContact implements NamingSystemContact {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) = _$_NamingSystemContact;
+      List<ContactPoint> telecom}) = _$_NamingSystemContact;
 
   factory _NamingSystemContact.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemContact.fromJson;
@@ -5961,7 +5913,7 @@ abstract class _NamingSystemContact implements NamingSystemContact {
   @override
   String get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   _$NamingSystemContactCopyWith<_NamingSystemContact> get copyWith;
 }
@@ -6304,7 +6256,7 @@ class _$ConceptMapContactTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) {
+      List<ContactPoint> telecom}) {
     return _ConceptMapContact(
       id: id,
       extension_: extension_,
@@ -6324,7 +6276,7 @@ mixin _$ConceptMapContact {
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
   String get name;
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
   $ConceptMapContactCopyWith<ConceptMapContact> get copyWith;
@@ -6339,11 +6291,10 @@ abstract class $ConceptMapContactCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class _$ConceptMapContactCopyWithImpl<$Res>
@@ -6371,7 +6322,8 @@ class _$ConceptMapContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 
@@ -6394,16 +6346,6 @@ class _$ConceptMapContactCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ContactPointCopyWith<$Res> get telecom {
-    if (_value.telecom == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.telecom, (value) {
-      return _then(_value.copyWith(telecom: value));
-    });
-  }
 }
 
 abstract class _$ConceptMapContactCopyWith<$Res>
@@ -6417,14 +6359,12 @@ abstract class _$ConceptMapContactCopyWith<$Res>
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom});
+      List<ContactPoint> telecom});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ContactPointCopyWith<$Res> get telecom;
 }
 
 class __$ConceptMapContactCopyWithImpl<$Res>
@@ -6454,7 +6394,8 @@ class __$ConceptMapContactCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as ContactPoint,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -6481,7 +6422,7 @@ class _$_ConceptMapContact implements _ConceptMapContact {
   @override
   final String name;
   @override
-  final ContactPoint telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -6531,7 +6472,7 @@ abstract class _ConceptMapContact implements ConceptMapContact {
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
       String name,
-      ContactPoint telecom}) = _$_ConceptMapContact;
+      List<ContactPoint> telecom}) = _$_ConceptMapContact;
 
   factory _ConceptMapContact.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapContact.fromJson;
@@ -6546,7 +6487,7 @@ abstract class _ConceptMapContact implements ConceptMapContact {
   @override
   String get name;
   @override
-  ContactPoint get telecom;
+  List<ContactPoint> get telecom;
   @override
   _$ConceptMapContactCopyWith<_ConceptMapContact> get copyWith;
 }
@@ -6564,7 +6505,7 @@ class _$ConceptMapElementTearOff {
       FhirExtension modifierExtension,
       FhirUri codeSystem,
       Code code,
-      ConceptMapTarget target}) {
+      List<ConceptMapTarget> target}) {
     return _ConceptMapElement(
       id: id,
       extension_: extension_,
@@ -6586,7 +6527,7 @@ mixin _$ConceptMapElement {
   FhirExtension get modifierExtension;
   FhirUri get codeSystem;
   Code get code;
-  ConceptMapTarget get target;
+  List<ConceptMapTarget> get target;
 
   Map<String, dynamic> toJson();
   $ConceptMapElementCopyWith<ConceptMapElement> get copyWith;
@@ -6602,11 +6543,10 @@ abstract class $ConceptMapElementCopyWith<$Res> {
       FhirExtension modifierExtension,
       FhirUri codeSystem,
       Code code,
-      ConceptMapTarget target});
+      List<ConceptMapTarget> target});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ConceptMapTargetCopyWith<$Res> get target;
 }
 
 class _$ConceptMapElementCopyWithImpl<$Res>
@@ -6637,7 +6577,8 @@ class _$ConceptMapElementCopyWithImpl<$Res>
       codeSystem:
           codeSystem == freezed ? _value.codeSystem : codeSystem as FhirUri,
       code: code == freezed ? _value.code : code as Code,
-      target: target == freezed ? _value.target : target as ConceptMapTarget,
+      target:
+          target == freezed ? _value.target : target as List<ConceptMapTarget>,
     ));
   }
 
@@ -6660,16 +6601,6 @@ class _$ConceptMapElementCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ConceptMapTargetCopyWith<$Res> get target {
-    if (_value.target == null) {
-      return null;
-    }
-    return $ConceptMapTargetCopyWith<$Res>(_value.target, (value) {
-      return _then(_value.copyWith(target: value));
-    });
-  }
 }
 
 abstract class _$ConceptMapElementCopyWith<$Res>
@@ -6684,14 +6615,12 @@ abstract class _$ConceptMapElementCopyWith<$Res>
       FhirExtension modifierExtension,
       FhirUri codeSystem,
       Code code,
-      ConceptMapTarget target});
+      List<ConceptMapTarget> target});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ConceptMapTargetCopyWith<$Res> get target;
 }
 
 class __$ConceptMapElementCopyWithImpl<$Res>
@@ -6724,7 +6653,8 @@ class __$ConceptMapElementCopyWithImpl<$Res>
       codeSystem:
           codeSystem == freezed ? _value.codeSystem : codeSystem as FhirUri,
       code: code == freezed ? _value.code : code as Code,
-      target: target == freezed ? _value.target : target as ConceptMapTarget,
+      target:
+          target == freezed ? _value.target : target as List<ConceptMapTarget>,
     ));
   }
 }
@@ -6754,7 +6684,7 @@ class _$_ConceptMapElement implements _ConceptMapElement {
   @override
   final Code code;
   @override
-  final ConceptMapTarget target;
+  final List<ConceptMapTarget> target;
 
   @override
   String toString() {
@@ -6809,7 +6739,7 @@ abstract class _ConceptMapElement implements ConceptMapElement {
       FhirExtension modifierExtension,
       FhirUri codeSystem,
       Code code,
-      ConceptMapTarget target}) = _$_ConceptMapElement;
+      List<ConceptMapTarget> target}) = _$_ConceptMapElement;
 
   factory _ConceptMapElement.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElement.fromJson;
@@ -6826,7 +6756,7 @@ abstract class _ConceptMapElement implements ConceptMapElement {
   @override
   Code get code;
   @override
-  ConceptMapTarget get target;
+  List<ConceptMapTarget> get target;
   @override
   _$ConceptMapElementCopyWith<_ConceptMapElement> get copyWith;
 }
@@ -6849,7 +6779,7 @@ class _$ConceptMapTargetTearOff {
       @JsonKey(required: true, unknownEnumValue: TargetEquivalence.unknown)
           TargetEquivalence equivalence,
       String comments,
-      ConceptMapDependsOn dependsOn,
+      List<ConceptMapDependsOn> dependsOn,
       List<ConceptMapDependsOn> product}) {
     return _ConceptMapTarget(
       id: id,
@@ -6878,7 +6808,7 @@ mixin _$ConceptMapTarget {
   @JsonKey(required: true, unknownEnumValue: TargetEquivalence.unknown)
   TargetEquivalence get equivalence;
   String get comments;
-  ConceptMapDependsOn get dependsOn;
+  List<ConceptMapDependsOn> get dependsOn;
   List<ConceptMapDependsOn> get product;
 
   Map<String, dynamic> toJson();
@@ -6899,12 +6829,11 @@ abstract class $ConceptMapTargetCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: TargetEquivalence.unknown)
           TargetEquivalence equivalence,
       String comments,
-      ConceptMapDependsOn dependsOn,
+      List<ConceptMapDependsOn> dependsOn,
       List<ConceptMapDependsOn> product});
 
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ConceptMapDependsOnCopyWith<$Res> get dependsOn;
 }
 
 class _$ConceptMapTargetCopyWithImpl<$Res>
@@ -6944,7 +6873,7 @@ class _$ConceptMapTargetCopyWithImpl<$Res>
       comments: comments == freezed ? _value.comments : comments as String,
       dependsOn: dependsOn == freezed
           ? _value.dependsOn
-          : dependsOn as ConceptMapDependsOn,
+          : dependsOn as List<ConceptMapDependsOn>,
       product: product == freezed
           ? _value.product
           : product as List<ConceptMapDependsOn>,
@@ -6970,16 +6899,6 @@ class _$ConceptMapTargetCopyWithImpl<$Res>
       return _then(_value.copyWith(modifierExtension: value));
     });
   }
-
-  @override
-  $ConceptMapDependsOnCopyWith<$Res> get dependsOn {
-    if (_value.dependsOn == null) {
-      return null;
-    }
-    return $ConceptMapDependsOnCopyWith<$Res>(_value.dependsOn, (value) {
-      return _then(_value.copyWith(dependsOn: value));
-    });
-  }
 }
 
 abstract class _$ConceptMapTargetCopyWith<$Res>
@@ -6998,15 +6917,13 @@ abstract class _$ConceptMapTargetCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: TargetEquivalence.unknown)
           TargetEquivalence equivalence,
       String comments,
-      ConceptMapDependsOn dependsOn,
+      List<ConceptMapDependsOn> dependsOn,
       List<ConceptMapDependsOn> product});
 
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ConceptMapDependsOnCopyWith<$Res> get dependsOn;
 }
 
 class __$ConceptMapTargetCopyWithImpl<$Res>
@@ -7048,7 +6965,7 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
       comments: comments == freezed ? _value.comments : comments as String,
       dependsOn: dependsOn == freezed
           ? _value.dependsOn
-          : dependsOn as ConceptMapDependsOn,
+          : dependsOn as List<ConceptMapDependsOn>,
       product: product == freezed
           ? _value.product
           : product as List<ConceptMapDependsOn>,
@@ -7093,7 +7010,7 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
   @override
   final String comments;
   @override
-  final ConceptMapDependsOn dependsOn;
+  final List<ConceptMapDependsOn> dependsOn;
   @override
   final List<ConceptMapDependsOn> product;
 
@@ -7167,7 +7084,7 @@ abstract class _ConceptMapTarget implements ConceptMapTarget {
       @JsonKey(required: true, unknownEnumValue: TargetEquivalence.unknown)
           TargetEquivalence equivalence,
       String comments,
-      ConceptMapDependsOn dependsOn,
+      List<ConceptMapDependsOn> dependsOn,
       List<ConceptMapDependsOn> product}) = _$_ConceptMapTarget;
 
   factory _ConceptMapTarget.fromJson(Map<String, dynamic> json) =
@@ -7190,7 +7107,7 @@ abstract class _ConceptMapTarget implements ConceptMapTarget {
   @override
   String get comments;
   @override
-  ConceptMapDependsOn get dependsOn;
+  List<ConceptMapDependsOn> get dependsOn;
   @override
   List<ConceptMapDependsOn> get product;
   @override

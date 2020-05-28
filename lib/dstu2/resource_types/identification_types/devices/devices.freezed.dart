@@ -16,7 +16,9 @@ class _$DeviceComponentTearOff {
   const _$DeviceComponentTearOff();
 
   _DeviceComponent call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceComponent')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -36,13 +38,14 @@ class _$DeviceComponentTearOff {
           Instant lastSystemChange,
       Reference source,
       Reference parent,
-      CodeableConcept operationalStatus,
+      List<CodeableConcept> operationalStatus,
       CodeableConcept parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
-      DeviceComponentProductionSpecification productionSpecification,
+      List<DeviceComponentProductionSpecification> productionSpecification,
       CodeableConcept languageCode}) {
     return _DeviceComponent(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -69,6 +72,8 @@ class _$DeviceComponentTearOff {
 const $DeviceComponent = _$DeviceComponentTearOff();
 
 mixin _$DeviceComponent {
+  @JsonKey(defaultValue: 'DeviceComponent')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -86,11 +91,11 @@ mixin _$DeviceComponent {
   Instant get lastSystemChange;
   Reference get source;
   Reference get parent;
-  CodeableConcept get operationalStatus;
+  List<CodeableConcept> get operationalStatus;
   CodeableConcept get parameterGroup;
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   DeviceComponentMeasurementPrinciple get measurementPrinciple;
-  DeviceComponentProductionSpecification get productionSpecification;
+  List<DeviceComponentProductionSpecification> get productionSpecification;
   CodeableConcept get languageCode;
 
   Map<String, dynamic> toJson();
@@ -102,7 +107,9 @@ abstract class $DeviceComponentCopyWith<$Res> {
           DeviceComponent value, $Res Function(DeviceComponent) then) =
       _$DeviceComponentCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceComponent')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -119,11 +126,11 @@ abstract class $DeviceComponentCopyWith<$Res> {
           Instant lastSystemChange,
       Reference source,
       Reference parent,
-      CodeableConcept operationalStatus,
+      List<CodeableConcept> operationalStatus,
       CodeableConcept parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
-      DeviceComponentProductionSpecification productionSpecification,
+      List<DeviceComponentProductionSpecification> productionSpecification,
       CodeableConcept languageCode});
 
   $MetaCopyWith<$Res> get meta;
@@ -134,10 +141,7 @@ abstract class $DeviceComponentCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get source;
   $ReferenceCopyWith<$Res> get parent;
-  $CodeableConceptCopyWith<$Res> get operationalStatus;
   $CodeableConceptCopyWith<$Res> get parameterGroup;
-  $DeviceComponentProductionSpecificationCopyWith<$Res>
-      get productionSpecification;
   $CodeableConceptCopyWith<$Res> get languageCode;
 }
 
@@ -151,6 +155,7 @@ class _$DeviceComponentCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -171,6 +176,9 @@ class _$DeviceComponentCopyWithImpl<$Res>
     Object languageCode = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -196,7 +204,7 @@ class _$DeviceComponentCopyWithImpl<$Res>
       parent: parent == freezed ? _value.parent : parent as Reference,
       operationalStatus: operationalStatus == freezed
           ? _value.operationalStatus
-          : operationalStatus as CodeableConcept,
+          : operationalStatus as List<CodeableConcept>,
       parameterGroup: parameterGroup == freezed
           ? _value.parameterGroup
           : parameterGroup as CodeableConcept,
@@ -205,7 +213,8 @@ class _$DeviceComponentCopyWithImpl<$Res>
           : measurementPrinciple as DeviceComponentMeasurementPrinciple,
       productionSpecification: productionSpecification == freezed
           ? _value.productionSpecification
-          : productionSpecification as DeviceComponentProductionSpecification,
+          : productionSpecification
+              as List<DeviceComponentProductionSpecification>,
       languageCode: languageCode == freezed
           ? _value.languageCode
           : languageCode as CodeableConcept,
@@ -293,34 +302,12 @@ class _$DeviceComponentCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get operationalStatus {
-    if (_value.operationalStatus == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.operationalStatus, (value) {
-      return _then(_value.copyWith(operationalStatus: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get parameterGroup {
     if (_value.parameterGroup == null) {
       return null;
     }
     return $CodeableConceptCopyWith<$Res>(_value.parameterGroup, (value) {
       return _then(_value.copyWith(parameterGroup: value));
-    });
-  }
-
-  @override
-  $DeviceComponentProductionSpecificationCopyWith<$Res>
-      get productionSpecification {
-    if (_value.productionSpecification == null) {
-      return null;
-    }
-    return $DeviceComponentProductionSpecificationCopyWith<$Res>(
-        _value.productionSpecification, (value) {
-      return _then(_value.copyWith(productionSpecification: value));
     });
   }
 
@@ -342,7 +329,9 @@ abstract class _$DeviceComponentCopyWith<$Res>
       __$DeviceComponentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceComponent')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -359,11 +348,11 @@ abstract class _$DeviceComponentCopyWith<$Res>
           Instant lastSystemChange,
       Reference source,
       Reference parent,
-      CodeableConcept operationalStatus,
+      List<CodeableConcept> operationalStatus,
       CodeableConcept parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
-      DeviceComponentProductionSpecification productionSpecification,
+      List<DeviceComponentProductionSpecification> productionSpecification,
       CodeableConcept languageCode});
 
   @override
@@ -383,12 +372,7 @@ abstract class _$DeviceComponentCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get parent;
   @override
-  $CodeableConceptCopyWith<$Res> get operationalStatus;
-  @override
   $CodeableConceptCopyWith<$Res> get parameterGroup;
-  @override
-  $DeviceComponentProductionSpecificationCopyWith<$Res>
-      get productionSpecification;
   @override
   $CodeableConceptCopyWith<$Res> get languageCode;
 }
@@ -405,6 +389,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -425,6 +410,9 @@ class __$DeviceComponentCopyWithImpl<$Res>
     Object languageCode = freezed,
   }) {
     return _then(_DeviceComponent(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -450,7 +438,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
       parent: parent == freezed ? _value.parent : parent as Reference,
       operationalStatus: operationalStatus == freezed
           ? _value.operationalStatus
-          : operationalStatus as CodeableConcept,
+          : operationalStatus as List<CodeableConcept>,
       parameterGroup: parameterGroup == freezed
           ? _value.parameterGroup
           : parameterGroup as CodeableConcept,
@@ -459,7 +447,8 @@ class __$DeviceComponentCopyWithImpl<$Res>
           : measurementPrinciple as DeviceComponentMeasurementPrinciple,
       productionSpecification: productionSpecification == freezed
           ? _value.productionSpecification
-          : productionSpecification as DeviceComponentProductionSpecification,
+          : productionSpecification
+              as List<DeviceComponentProductionSpecification>,
       languageCode: languageCode == freezed
           ? _value.languageCode
           : languageCode as CodeableConcept,
@@ -470,7 +459,9 @@ class __$DeviceComponentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceComponent implements _DeviceComponent {
   const _$_DeviceComponent(
-      {this.id,
+      {@JsonKey(defaultValue: 'DeviceComponent')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -504,6 +495,9 @@ class _$_DeviceComponent implements _DeviceComponent {
       _$_$_DeviceComponentFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'DeviceComponent')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -534,26 +528,29 @@ class _$_DeviceComponent implements _DeviceComponent {
   @override
   final Reference parent;
   @override
-  final CodeableConcept operationalStatus;
+  final List<CodeableConcept> operationalStatus;
   @override
   final CodeableConcept parameterGroup;
   @override
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   final DeviceComponentMeasurementPrinciple measurementPrinciple;
   @override
-  final DeviceComponentProductionSpecification productionSpecification;
+  final List<DeviceComponentProductionSpecification> productionSpecification;
   @override
   final CodeableConcept languageCode;
 
   @override
   String toString() {
-    return 'DeviceComponent(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, lastSystemChange: $lastSystemChange, source: $source, parent: $parent, operationalStatus: $operationalStatus, parameterGroup: $parameterGroup, measurementPrinciple: $measurementPrinciple, productionSpecification: $productionSpecification, languageCode: $languageCode)';
+    return 'DeviceComponent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, lastSystemChange: $lastSystemChange, source: $source, parent: $parent, operationalStatus: $operationalStatus, parameterGroup: $parameterGroup, measurementPrinciple: $measurementPrinciple, productionSpecification: $productionSpecification, languageCode: $languageCode)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _DeviceComponent &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -608,6 +605,7 @@ class _$_DeviceComponent implements _DeviceComponent {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -639,7 +637,9 @@ class _$_DeviceComponent implements _DeviceComponent {
 
 abstract class _DeviceComponent implements DeviceComponent {
   const factory _DeviceComponent(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceComponent')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -659,16 +659,19 @@ abstract class _DeviceComponent implements DeviceComponent {
           Instant lastSystemChange,
       Reference source,
       Reference parent,
-      CodeableConcept operationalStatus,
+      List<CodeableConcept> operationalStatus,
       CodeableConcept parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
-      DeviceComponentProductionSpecification productionSpecification,
+      List<DeviceComponentProductionSpecification> productionSpecification,
       CodeableConcept languageCode}) = _$_DeviceComponent;
 
   factory _DeviceComponent.fromJson(Map<String, dynamic> json) =
       _$_DeviceComponent.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'DeviceComponent')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -700,14 +703,14 @@ abstract class _DeviceComponent implements DeviceComponent {
   @override
   Reference get parent;
   @override
-  CodeableConcept get operationalStatus;
+  List<CodeableConcept> get operationalStatus;
   @override
   CodeableConcept get parameterGroup;
   @override
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   DeviceComponentMeasurementPrinciple get measurementPrinciple;
   @override
-  DeviceComponentProductionSpecification get productionSpecification;
+  List<DeviceComponentProductionSpecification> get productionSpecification;
   @override
   CodeableConcept get languageCode;
   @override
@@ -722,7 +725,9 @@ class _$DeviceMetricTearOff {
   const _$DeviceMetricTearOff();
 
   _DeviceMetric call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceMetric')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -748,8 +753,9 @@ class _$DeviceMetricTearOff {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      DeviceMetricCalibration calibration}) {
+      List<DeviceMetricCalibration> calibration}) {
     return _DeviceMetric(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -776,6 +782,8 @@ class _$DeviceMetricTearOff {
 const $DeviceMetric = _$DeviceMetricTearOff();
 
 mixin _$DeviceMetric {
+  @JsonKey(defaultValue: 'DeviceMetric')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -799,7 +807,7 @@ mixin _$DeviceMetric {
   @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
   DeviceMetricCategory get category;
   Timing get measurementPeriod;
-  DeviceMetricCalibration get calibration;
+  List<DeviceMetricCalibration> get calibration;
 
   Map<String, dynamic> toJson();
   $DeviceMetricCopyWith<DeviceMetric> get copyWith;
@@ -810,7 +818,9 @@ abstract class $DeviceMetricCopyWith<$Res> {
           DeviceMetric value, $Res Function(DeviceMetric) then) =
       _$DeviceMetricCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceMetric')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -833,7 +843,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      DeviceMetricCalibration calibration});
+      List<DeviceMetricCalibration> calibration});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -845,7 +855,6 @@ abstract class $DeviceMetricCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get source;
   $ReferenceCopyWith<$Res> get parent;
   $TimingCopyWith<$Res> get measurementPeriod;
-  $DeviceMetricCalibrationCopyWith<$Res> get calibration;
 }
 
 class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
@@ -857,6 +866,7 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -877,6 +887,9 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
     Object calibration = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -910,7 +923,7 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
           : measurementPeriod as Timing,
       calibration: calibration == freezed
           ? _value.calibration
-          : calibration as DeviceMetricCalibration,
+          : calibration as List<DeviceMetricCalibration>,
     ));
   }
 
@@ -1013,16 +1026,6 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
       return _then(_value.copyWith(measurementPeriod: value));
     });
   }
-
-  @override
-  $DeviceMetricCalibrationCopyWith<$Res> get calibration {
-    if (_value.calibration == null) {
-      return null;
-    }
-    return $DeviceMetricCalibrationCopyWith<$Res>(_value.calibration, (value) {
-      return _then(_value.copyWith(calibration: value));
-    });
-  }
 }
 
 abstract class _$DeviceMetricCopyWith<$Res>
@@ -1032,7 +1035,9 @@ abstract class _$DeviceMetricCopyWith<$Res>
       __$DeviceMetricCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceMetric')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1055,7 +1060,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      DeviceMetricCalibration calibration});
+      List<DeviceMetricCalibration> calibration});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1077,8 +1082,6 @@ abstract class _$DeviceMetricCopyWith<$Res>
   $ReferenceCopyWith<$Res> get parent;
   @override
   $TimingCopyWith<$Res> get measurementPeriod;
-  @override
-  $DeviceMetricCalibrationCopyWith<$Res> get calibration;
 }
 
 class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
@@ -1092,6 +1095,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1112,6 +1116,9 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
     Object calibration = freezed,
   }) {
     return _then(_DeviceMetric(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1145,7 +1152,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
           : measurementPeriod as Timing,
       calibration: calibration == freezed
           ? _value.calibration
-          : calibration as DeviceMetricCalibration,
+          : calibration as List<DeviceMetricCalibration>,
     ));
   }
 }
@@ -1153,7 +1160,9 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DeviceMetric implements _DeviceMetric {
   const _$_DeviceMetric(
-      {this.id,
+      {@JsonKey(defaultValue: 'DeviceMetric')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1187,6 +1196,9 @@ class _$_DeviceMetric implements _DeviceMetric {
   factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceMetricFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'DeviceMetric')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -1228,17 +1240,20 @@ class _$_DeviceMetric implements _DeviceMetric {
   @override
   final Timing measurementPeriod;
   @override
-  final DeviceMetricCalibration calibration;
+  final List<DeviceMetricCalibration> calibration;
 
   @override
   String toString() {
-    return 'DeviceMetric(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, unit: $unit, source: $source, parent: $parent, operationalStatus: $operationalStatus, color: $color, category: $category, measurementPeriod: $measurementPeriod, calibration: $calibration)';
+    return 'DeviceMetric(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, unit: $unit, source: $source, parent: $parent, operationalStatus: $operationalStatus, color: $color, category: $category, measurementPeriod: $measurementPeriod, calibration: $calibration)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _DeviceMetric &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1290,6 +1305,7 @@ class _$_DeviceMetric implements _DeviceMetric {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1321,7 +1337,9 @@ class _$_DeviceMetric implements _DeviceMetric {
 
 abstract class _DeviceMetric implements DeviceMetric {
   const factory _DeviceMetric(
-      {Id id,
+      {@JsonKey(defaultValue: 'DeviceMetric')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1347,11 +1365,14 @@ abstract class _DeviceMetric implements DeviceMetric {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      DeviceMetricCalibration calibration}) = _$_DeviceMetric;
+      List<DeviceMetricCalibration> calibration}) = _$_DeviceMetric;
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetric.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'DeviceMetric')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1393,7 +1414,7 @@ abstract class _DeviceMetric implements DeviceMetric {
   @override
   Timing get measurementPeriod;
   @override
-  DeviceMetricCalibration get calibration;
+  List<DeviceMetricCalibration> get calibration;
   @override
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith;
 }
@@ -1406,7 +1427,8 @@ class _$DeviceTearOff {
   const _$DeviceTearOff();
 
   _Device call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Device') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1414,9 +1436,9 @@ class _$DeviceTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required @JsonKey(required: true) CodeableConcept type,
-      Annotation note,
+      List<Annotation> note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       String manufacturer,
       String model,
@@ -1428,9 +1450,10 @@ class _$DeviceTearOff {
       Reference owner,
       Reference location,
       Reference patient,
-      ContactPoint contact,
+      List<ContactPoint> contact,
       FhirUri url}) {
     return _Device(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1463,6 +1486,8 @@ class _$DeviceTearOff {
 const $Device = _$DeviceTearOff();
 
 mixin _$Device {
+  @JsonKey(defaultValue: 'Device')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1472,10 +1497,10 @@ mixin _$Device {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @JsonKey(required: true)
   CodeableConcept get type;
-  Annotation get note;
+  List<Annotation> get note;
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus get status;
   String get manufacturer;
@@ -1488,7 +1513,7 @@ mixin _$Device {
   Reference get owner;
   Reference get location;
   Reference get patient;
-  ContactPoint get contact;
+  List<ContactPoint> get contact;
   FhirUri get url;
 
   Map<String, dynamic> toJson();
@@ -1499,7 +1524,8 @@ abstract class $DeviceCopyWith<$Res> {
   factory $DeviceCopyWith(Device value, $Res Function(Device) then) =
       _$DeviceCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Device') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1507,9 +1533,9 @@ abstract class $DeviceCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true) CodeableConcept type,
-      Annotation note,
+      List<Annotation> note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       String manufacturer,
       String model,
@@ -1521,20 +1547,17 @@ abstract class $DeviceCopyWith<$Res> {
       Reference owner,
       Reference location,
       Reference patient,
-      ContactPoint contact,
+      List<ContactPoint> contact,
       FhirUri url});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get type;
-  $AnnotationCopyWith<$Res> get note;
   $ReferenceCopyWith<$Res> get owner;
   $ReferenceCopyWith<$Res> get location;
   $ReferenceCopyWith<$Res> get patient;
-  $ContactPointCopyWith<$Res> get contact;
 }
 
 class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
@@ -1546,6 +1569,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1572,6 +1596,9 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
     Object url = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1587,10 +1614,11 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      note: note == freezed ? _value.note : note as Annotation,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       status: status == freezed ? _value.status : status as DeviceStatus,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
@@ -1606,7 +1634,8 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       owner: owner == freezed ? _value.owner : owner as Reference,
       location: location == freezed ? _value.location : location as Reference,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      contact: contact == freezed ? _value.contact : contact as ContactPoint,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactPoint>,
       url: url == freezed ? _value.url : url as FhirUri,
     ));
   }
@@ -1652,32 +1681,12 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $CodeableConceptCopyWith<$Res> get type {
     if (_value.type == null) {
       return null;
     }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $AnnotationCopyWith<$Res> get note {
-    if (_value.note == null) {
-      return null;
-    }
-    return $AnnotationCopyWith<$Res>(_value.note, (value) {
-      return _then(_value.copyWith(note: value));
     });
   }
 
@@ -1710,16 +1719,6 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       return _then(_value.copyWith(patient: value));
     });
   }
-
-  @override
-  $ContactPointCopyWith<$Res> get contact {
-    if (_value.contact == null) {
-      return null;
-    }
-    return $ContactPointCopyWith<$Res>(_value.contact, (value) {
-      return _then(_value.copyWith(contact: value));
-    });
-  }
 }
 
 abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
@@ -1727,7 +1726,8 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       __$DeviceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'Device') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1735,9 +1735,9 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true) CodeableConcept type,
-      Annotation note,
+      List<Annotation> note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       String manufacturer,
       String model,
@@ -1749,7 +1749,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Reference owner,
       Reference location,
       Reference patient,
-      ContactPoint contact,
+      List<ContactPoint> contact,
       FhirUri url});
 
   @override
@@ -1761,19 +1761,13 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $IdentifierCopyWith<$Res> get identifier;
-  @override
   $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $AnnotationCopyWith<$Res> get note;
   @override
   $ReferenceCopyWith<$Res> get owner;
   @override
   $ReferenceCopyWith<$Res> get location;
   @override
   $ReferenceCopyWith<$Res> get patient;
-  @override
-  $ContactPointCopyWith<$Res> get contact;
 }
 
 class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
@@ -1786,6 +1780,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1812,6 +1807,9 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
     Object url = freezed,
   }) {
     return _then(_Device(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1827,10 +1825,11 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      note: note == freezed ? _value.note : note as Annotation,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       status: status == freezed ? _value.status : status as DeviceStatus,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
@@ -1846,7 +1845,8 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       owner: owner == freezed ? _value.owner : owner as Reference,
       location: location == freezed ? _value.location : location as Reference,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      contact: contact == freezed ? _value.contact : contact as ContactPoint,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactPoint>,
       url: url == freezed ? _value.url : url as FhirUri,
     ));
   }
@@ -1855,7 +1855,8 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Device implements _Device {
   const _$_Device(
-      {this.id,
+      {@JsonKey(defaultValue: 'Device') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1885,6 +1886,9 @@ class _$_Device implements _Device {
       _$_$_DeviceFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'Device')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -1902,12 +1906,12 @@ class _$_Device implements _Device {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   @JsonKey(required: true)
   final CodeableConcept type;
   @override
-  final Annotation note;
+  final List<Annotation> note;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   final DeviceStatus status;
@@ -1932,19 +1936,22 @@ class _$_Device implements _Device {
   @override
   final Reference patient;
   @override
-  final ContactPoint contact;
+  final List<ContactPoint> contact;
   @override
   final FhirUri url;
 
   @override
   String toString() {
-    return 'Device(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, note: $note, status: $status, manufacturer: $manufacturer, model: $model, version: $version, manufactureDate: $manufactureDate, expiry: $expiry, udi: $udi, lotNumber: $lotNumber, owner: $owner, location: $location, patient: $patient, contact: $contact, url: $url)';
+    return 'Device(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, note: $note, status: $status, manufacturer: $manufacturer, model: $model, version: $version, manufactureDate: $manufactureDate, expiry: $expiry, udi: $udi, lotNumber: $lotNumber, owner: $owner, location: $location, patient: $patient, contact: $contact, url: $url)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Device &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -2011,6 +2018,7 @@ class _$_Device implements _Device {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -2048,7 +2056,8 @@ class _$_Device implements _Device {
 
 abstract class _Device implements Device {
   const factory _Device(
-      {Id id,
+      {@JsonKey(defaultValue: 'Device') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2056,9 +2065,9 @@ abstract class _Device implements Device {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required @JsonKey(required: true) CodeableConcept type,
-      Annotation note,
+      List<Annotation> note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
       String manufacturer,
       String model,
@@ -2070,11 +2079,14 @@ abstract class _Device implements Device {
       Reference owner,
       Reference location,
       Reference patient,
-      ContactPoint contact,
+      List<ContactPoint> contact,
       FhirUri url}) = _$_Device;
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'Device')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -2093,12 +2105,12 @@ abstract class _Device implements Device {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   @JsonKey(required: true)
   CodeableConcept get type;
   @override
-  Annotation get note;
+  List<Annotation> get note;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus get status;
@@ -2123,7 +2135,7 @@ abstract class _Device implements Device {
   @override
   Reference get patient;
   @override
-  ContactPoint get contact;
+  List<ContactPoint> get contact;
   @override
   FhirUri get url;
   @override

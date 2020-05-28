@@ -10,6 +10,7 @@ part 'structure.g.dart';
 @freezed
 abstract class Media with _$Media implements Resource {
   const factory Media({
+    @JsonKey(defaultValue: 'Media') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -22,7 +23,7 @@ abstract class Media with _$Media implements Resource {
     @required
         MediaType type,
     CodeableConcept subtype,
-    Identifier identifier,
+    List<Identifier> identifier,
     Reference subject,
     @JsonKey(name: 'operator') Reference operator_,
     CodeableConcept view,
@@ -40,6 +41,7 @@ abstract class Media with _$Media implements Resource {
 @freezed
 abstract class Basic with _$Basic implements Resource {
   const factory Basic({
+    @JsonKey(defaultValue: 'Basic') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -48,7 +50,7 @@ abstract class Basic with _$Basic implements Resource {
     Resource contained,
     @JsonKey(name: 'extension') FhirExtension extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true) @required CodeableConcept code,
     Reference subject,
     Reference author,
@@ -61,6 +63,7 @@ abstract class Basic with _$Basic implements Resource {
 @freezed
 abstract class Binary with _$Binary implements Resource {
   const factory Binary({
+    @JsonKey(defaultValue: 'Binary') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -75,6 +78,7 @@ abstract class Binary with _$Binary implements Resource {
 @freezed
 abstract class Bundle with _$Bundle implements Resource {
   const factory Bundle({
+    @JsonKey(defaultValue: 'Bundle') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

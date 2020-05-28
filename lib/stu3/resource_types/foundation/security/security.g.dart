@@ -620,8 +620,8 @@ Map<String, dynamic> _$_$_ConsentActor1ToJson(_$_ConsentActor1 instance) {
 _$_ConsentData1 _$_$_ConsentData1FromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['reference']);
   return _$_ConsentData1(
-    meaning: _$enumDecodeNullable(_$Data1MeaningEnumMap, json['meaning'],
-        unknownValue: Data1Meaning.unknown),
+    meaning: _$enumDecodeNullable(_$DataMeaningEnumMap, json['meaning'],
+        unknownValue: DataMeaning.unknown),
     reference: json['reference'] == null
         ? null
         : Reference.fromJson(json['reference'] as Map<String, dynamic>),
@@ -637,18 +637,10 @@ Map<String, dynamic> _$_$_ConsentData1ToJson(_$_ConsentData1 instance) {
     }
   }
 
-  writeNotNull('meaning', _$Data1MeaningEnumMap[instance.meaning]);
+  writeNotNull('meaning', _$DataMeaningEnumMap[instance.meaning]);
   writeNotNull('reference', instance.reference?.toJson());
   return val;
 }
-
-const _$Data1MeaningEnumMap = {
-  Data1Meaning.instance: 'instance',
-  Data1Meaning.related: 'related',
-  Data1Meaning.dependents: 'dependents',
-  Data1Meaning.authoredby: 'authoredby',
-  Data1Meaning.unknown: 'unknown',
-};
 
 _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['resourceType', 'target', 'agent']);

@@ -417,8 +417,8 @@ _$_ImagingStudy _$_$_ImagingStudyFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     availability: _$enumDecodeNullable(
-        _$ImagingStudyAvailabilityEnumMap, json['availability'],
-        unknownValue: ImagingStudyAvailability.unknown),
+        _$AvailabilityEnumMap, json['availability'],
+        unknownValue: Availability.unknown),
     modalityList: (json['modalityList'] as List)
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
@@ -488,8 +488,7 @@ Map<String, dynamic> _$_$_ImagingStudyToJson(_$_ImagingStudy instance) {
   writeNotNull('accession', instance.accession?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'availability', _$ImagingStudyAvailabilityEnumMap[instance.availability]);
+  writeNotNull('availability', _$AvailabilityEnumMap[instance.availability]);
   writeNotNull(
       'modalityList', instance.modalityList?.map((e) => e?.toJson())?.toList());
   writeNotNull('patient', instance.patient?.toJson());
@@ -513,12 +512,12 @@ Map<String, dynamic> _$_$_ImagingStudyToJson(_$_ImagingStudy instance) {
   return val;
 }
 
-const _$ImagingStudyAvailabilityEnumMap = {
-  ImagingStudyAvailability.online: 'ONLINE',
-  ImagingStudyAvailability.offline: 'OFFLINE',
-  ImagingStudyAvailability.nearline: 'NEARLINE',
-  ImagingStudyAvailability.unavailable: 'UNAVAILABLE',
-  ImagingStudyAvailability.unknown: 'unknown',
+const _$AvailabilityEnumMap = {
+  Availability.online: 'ONLINE',
+  Availability.offline: 'OFFLINE',
+  Availability.nearline: 'NEARLINE',
+  Availability.unavailable: 'UNAVAILABLE',
+  Availability.unknown: 'unknown',
 };
 
 _$_ImagingStudySeries _$_$_ImagingStudySeriesFromJson(
@@ -536,8 +535,8 @@ _$_ImagingStudySeries _$_$_ImagingStudySeriesFromJson(
         ? null
         : UnsignedInt.fromJson(json['numberOfInstances']),
     availability: _$enumDecodeNullable(
-        _$SeriesAvailabilityEnumMap, json['availability'],
-        unknownValue: SeriesAvailability.unknown),
+        _$AvailabilityEnumMap, json['availability'],
+        unknownValue: Availability.unknown),
     endpoint: (json['endpoint'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -578,8 +577,7 @@ Map<String, dynamic> _$_$_ImagingStudySeriesToJson(
   writeNotNull('modality', instance.modality?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('numberOfInstances', instance.numberOfInstances?.toJson());
-  writeNotNull(
-      'availability', _$SeriesAvailabilityEnumMap[instance.availability]);
+  writeNotNull('availability', _$AvailabilityEnumMap[instance.availability]);
   writeNotNull(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
   writeNotNull('bodySite', instance.bodySite?.toJson());
@@ -591,14 +589,6 @@ Map<String, dynamic> _$_$_ImagingStudySeriesToJson(
       'instance', instance.instance?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-const _$SeriesAvailabilityEnumMap = {
-  SeriesAvailability.online: 'ONLINE',
-  SeriesAvailability.offline: 'OFFLINE',
-  SeriesAvailability.nearline: 'NEARLINE',
-  SeriesAvailability.unavailable: 'UNAVAILABLE',
-  SeriesAvailability.unknown: 'unknown',
-};
 
 _$_ImagingStudyInstance _$_$_ImagingStudyInstanceFromJson(
     Map<String, dynamic> json) {

@@ -85,7 +85,7 @@ abstract class DataElement with _$DataElement implements Resource {
     String copyright,
     @JsonKey(unknownEnumValue: DataElementStringency.unknown)
         DataElementStringency stringency,
-    List<DataElementMapping mapping>,
+    List<DataElementMapping> mapping,
     @JsonKey(required: true) @required List<ElementDefinition> element,
   }) = _DataElement;
 

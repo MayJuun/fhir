@@ -184,9 +184,8 @@ _$_EncounterStatusHistory _$_$_EncounterStatusHistoryFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['period']);
   return _$_EncounterStatusHistory(
-    status: _$enumDecodeNullable(
-        _$EncounterHistoryStatusEnumMap, json['status'],
-        unknownValue: EncounterHistoryStatus.unknown),
+    status: _$enumDecodeNullable(_$EncounterStatusEnumMap, json['status'],
+        unknownValue: EncounterStatus.unknown),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -203,22 +202,10 @@ Map<String, dynamic> _$_$_EncounterStatusHistoryToJson(
     }
   }
 
-  writeNotNull('status', _$EncounterHistoryStatusEnumMap[instance.status]);
+  writeNotNull('status', _$EncounterStatusEnumMap[instance.status]);
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
-
-const _$EncounterHistoryStatusEnumMap = {
-  EncounterHistoryStatus.planned: 'planned',
-  EncounterHistoryStatus.arrived: 'arrived',
-  EncounterHistoryStatus.triaged: 'triaged',
-  EncounterHistoryStatus.in_progress: 'in-progress',
-  EncounterHistoryStatus.onleave: 'onleave',
-  EncounterHistoryStatus.finished: 'finished',
-  EncounterHistoryStatus.cancelled: 'cancelled',
-  EncounterHistoryStatus.entered_in_error: 'entered-in-error',
-  EncounterHistoryStatus.unknown: 'unknown',
-};
 
 _$_EncounterClassHistory _$_$_EncounterClassHistoryFromJson(
     Map<String, dynamic> json) {
@@ -514,9 +501,8 @@ _$_EpisodeOfCareStatusHistory _$_$_EpisodeOfCareStatusHistoryFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['period']);
   return _$_EpisodeOfCareStatusHistory(
-    status: _$enumDecodeNullable(
-        _$EpisodeOfCareHistoryStatusEnumMap, json['status'],
-        unknownValue: EpisodeOfCareHistoryStatus.unknown),
+    status: _$enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status'],
+        unknownValue: EpisodeOfCareStatus.unknown),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -533,21 +519,10 @@ Map<String, dynamic> _$_$_EpisodeOfCareStatusHistoryToJson(
     }
   }
 
-  writeNotNull('status', _$EpisodeOfCareHistoryStatusEnumMap[instance.status]);
+  writeNotNull('status', _$EpisodeOfCareStatusEnumMap[instance.status]);
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
-
-const _$EpisodeOfCareHistoryStatusEnumMap = {
-  EpisodeOfCareHistoryStatus.planned: 'planned',
-  EpisodeOfCareHistoryStatus.waitlist: 'waitlist',
-  EpisodeOfCareHistoryStatus.active: 'active',
-  EpisodeOfCareHistoryStatus.onhold: 'onhold',
-  EpisodeOfCareHistoryStatus.finished: 'finished',
-  EpisodeOfCareHistoryStatus.cancelled: 'cancelled',
-  EpisodeOfCareHistoryStatus.entered_in_error: 'entered-in-error',
-  EpisodeOfCareHistoryStatus.unknown: 'unknown',
-};
 
 _$_EpisodeOfCareDiagnosis _$_$_EpisodeOfCareDiagnosisFromJson(
     Map<String, dynamic> json) {
@@ -587,8 +562,8 @@ _$_Flag _$_$_FlagFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$FlagStatusEnumMap, json['status'],
-        unknownValue: FlagStatus.unknown),
+    status: _$enumDecodeNullable(_$ActiveInactiveEnumMap, json['status'],
+        unknownValue: ActiveInactive.unknown),
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -622,7 +597,7 @@ Map<String, dynamic> _$_$_FlagToJson(_$_Flag instance) {
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$FlagStatusEnumMap[instance.status]);
+  writeNotNull('status', _$ActiveInactiveEnumMap[instance.status]);
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -632,11 +607,11 @@ Map<String, dynamic> _$_$_FlagToJson(_$_Flag instance) {
   return val;
 }
 
-const _$FlagStatusEnumMap = {
-  FlagStatus.active: 'active',
-  FlagStatus.inactive: 'inactive',
-  FlagStatus.entered_in_error: 'entered-in-error',
-  FlagStatus.unknown: 'unknown',
+const _$ActiveInactiveEnumMap = {
+  ActiveInactive.active: 'active',
+  ActiveInactive.inactive: 'inactive',
+  ActiveInactive.entered_in_error: 'entered-in-error',
+  ActiveInactive.unknown: 'unknown',
 };
 
 _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
@@ -651,8 +626,8 @@ _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: _$enumDecodeNullable(_$LibraryStatusEnumMap, json['status'],
-        unknownValue: LibraryStatus.unknown),
+    status: _$enumDecodeNullable(_$StatusEnumMap, json['status'],
+        unknownValue: Status.unknown),
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
@@ -735,7 +710,7 @@ Map<String, dynamic> _$_$_LibraryToJson(_$_Library instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', _$LibraryStatusEnumMap[instance.status]);
+  writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('date', instance.date?.toIso8601String());
@@ -765,11 +740,11 @@ Map<String, dynamic> _$_$_LibraryToJson(_$_Library instance) {
   return val;
 }
 
-const _$LibraryStatusEnumMap = {
-  LibraryStatus.draft: 'draft',
-  LibraryStatus.active: 'active',
-  LibraryStatus.retired: 'retired',
-  LibraryStatus.unknown: 'unknown',
+const _$StatusEnumMap = {
+  Status.draft: 'draft',
+  Status.active: 'active',
+  Status.retired: 'retired',
+  Status.unknown: 'unknown',
 };
 
 _$_Lists _$_$_ListsFromJson(Map<String, dynamic> json) {

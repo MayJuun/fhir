@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_stu3.dart';
 import '../../resource_types.enums.dart';
+import 'testing.enums.dart';
 
 part 'testing.freezed.dart';
 part 'testing.g.dart';
@@ -65,7 +66,7 @@ abstract class TestReportAction with _$TestReportAction {
 @freezed
 abstract class TestReportOperation with _$TestReportOperation {
   const factory TestReportOperation({
-    @JsonKey(unknownEnumValue: OperationResult.unknown) OperationResult result,
+    @JsonKey(unknownEnumValue: Result.unknown) Result result,
     String message,
     String detail,
   }) = _TestReportOperation;
@@ -76,7 +77,7 @@ abstract class TestReportOperation with _$TestReportOperation {
 @freezed
 abstract class TestReportAssert with _$TestReportAssert {
   const factory TestReportAssert({
-    @JsonKey(unknownEnumValue: AssertResult.unknown) AssertResult result,
+    @JsonKey(unknownEnumValue: Result.unknown) Result result,
     String message,
     String detail,
   }) = _TestReportAssert;
@@ -134,8 +135,7 @@ abstract class TestScript with _$TestScript implements Resource {
     String version,
     String name,
     String title,
-    @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-        TestScriptStatus status,
+    @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     DateTime date,
     String publisher,
@@ -319,9 +319,8 @@ abstract class TestScriptOperation with _$TestScriptOperation {
     Code resource,
     String label,
     String description,
-    @JsonKey(unknownEnumValue: OperationAccept.unknown) OperationAccept accept,
-    @JsonKey(unknownEnumValue: OperationContentType.unknown)
-        OperationContentType contentType,
+    @JsonKey(unknownEnumValue: ContentType.unknown) ContentType accept,
+    @JsonKey(unknownEnumValue: ContentType.unknown) ContentType contentType,
     Integer destination,
     Boolean encodeRequestUrl,
     Integer origin,
@@ -357,8 +356,7 @@ abstract class TestScriptAssert with _$TestScriptAssert {
     String compareToSourceId,
     String compareToSourceExpression,
     String compareToSourcePath,
-    @JsonKey(unknownEnumValue: AssertContentType.unknown)
-        AssertContentType contentType,
+    @JsonKey(unknownEnumValue: ContentType.unknown) ContentType contentType,
     String expression,
     String headerField,
     String minimumId,

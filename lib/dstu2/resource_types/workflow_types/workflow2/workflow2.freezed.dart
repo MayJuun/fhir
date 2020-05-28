@@ -16,7 +16,9 @@ class _$ProcessRequestTearOff {
   const _$ProcessRequestTearOff();
 
   _ProcessRequest call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ProcessRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -28,7 +30,7 @@ class _$ProcessRequestTearOff {
       @required
       @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
-      Identifier identifier,
+      List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
@@ -39,11 +41,12 @@ class _$ProcessRequestTearOff {
       Reference response,
       Boolean nullify,
       String reference,
-      ProcessRequestItem item,
-      String include,
-      String exclude,
+      List<ProcessRequestItem> item,
+      List<String> include,
+      List<String> exclude,
       Period period}) {
     return _ProcessRequest(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -76,6 +79,8 @@ class _$ProcessRequestTearOff {
 const $ProcessRequest = _$ProcessRequestTearOff();
 
 mixin _$ProcessRequest {
+  @JsonKey(defaultValue: 'ProcessRequest')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -87,7 +92,7 @@ mixin _$ProcessRequest {
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
   ProcessRequestAction get action;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   Coding get ruleset;
   Coding get originalRuleset;
   FhirDateTime get created;
@@ -98,9 +103,9 @@ mixin _$ProcessRequest {
   Reference get response;
   Boolean get nullify;
   String get reference;
-  ProcessRequestItem get item;
-  String get include;
-  String get exclude;
+  List<ProcessRequestItem> get item;
+  List<String> get include;
+  List<String> get exclude;
   Period get period;
 
   Map<String, dynamic> toJson();
@@ -112,7 +117,9 @@ abstract class $ProcessRequestCopyWith<$Res> {
           ProcessRequest value, $Res Function(ProcessRequest) then) =
       _$ProcessRequestCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ProcessRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -123,7 +130,7 @@ abstract class $ProcessRequestCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
-      Identifier identifier,
+      List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
@@ -134,16 +141,15 @@ abstract class $ProcessRequestCopyWith<$Res> {
       Reference response,
       Boolean nullify,
       String reference,
-      ProcessRequestItem item,
-      String include,
-      String exclude,
+      List<ProcessRequestItem> item,
+      List<String> include,
+      List<String> exclude,
       Period period});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodingCopyWith<$Res> get ruleset;
   $CodingCopyWith<$Res> get originalRuleset;
   $ReferenceCopyWith<$Res> get target;
@@ -151,7 +157,6 @@ abstract class $ProcessRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get organization;
   $ReferenceCopyWith<$Res> get request;
   $ReferenceCopyWith<$Res> get response;
-  $ProcessRequestItemCopyWith<$Res> get item;
   $PeriodCopyWith<$Res> get period;
 }
 
@@ -165,6 +170,7 @@ class _$ProcessRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -191,6 +197,9 @@ class _$ProcessRequestCopyWithImpl<$Res>
     Object period = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -208,8 +217,9 @@ class _$ProcessRequestCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       action:
           action == freezed ? _value.action : action as ProcessRequestAction,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -224,9 +234,9 @@ class _$ProcessRequestCopyWithImpl<$Res>
       response: response == freezed ? _value.response : response as Reference,
       nullify: nullify == freezed ? _value.nullify : nullify as Boolean,
       reference: reference == freezed ? _value.reference : reference as String,
-      item: item == freezed ? _value.item : item as ProcessRequestItem,
-      include: include == freezed ? _value.include : include as String,
-      exclude: exclude == freezed ? _value.exclude : exclude as String,
+      item: item == freezed ? _value.item : item as List<ProcessRequestItem>,
+      include: include == freezed ? _value.include : include as List<String>,
+      exclude: exclude == freezed ? _value.exclude : exclude as List<String>,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -268,16 +278,6 @@ class _$ProcessRequestCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -352,16 +352,6 @@ class _$ProcessRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ProcessRequestItemCopyWith<$Res> get item {
-    if (_value.item == null) {
-      return null;
-    }
-    return $ProcessRequestItemCopyWith<$Res>(_value.item, (value) {
-      return _then(_value.copyWith(item: value));
-    });
-  }
-
-  @override
   $PeriodCopyWith<$Res> get period {
     if (_value.period == null) {
       return null;
@@ -379,7 +369,9 @@ abstract class _$ProcessRequestCopyWith<$Res>
       __$ProcessRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ProcessRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -390,7 +382,7 @@ abstract class _$ProcessRequestCopyWith<$Res>
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
-      Identifier identifier,
+      List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
@@ -401,9 +393,9 @@ abstract class _$ProcessRequestCopyWith<$Res>
       Reference response,
       Boolean nullify,
       String reference,
-      ProcessRequestItem item,
-      String include,
-      String exclude,
+      List<ProcessRequestItem> item,
+      List<String> include,
+      List<String> exclude,
       Period period});
 
   @override
@@ -414,8 +406,6 @@ abstract class _$ProcessRequestCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodingCopyWith<$Res> get ruleset;
   @override
@@ -430,8 +420,6 @@ abstract class _$ProcessRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get request;
   @override
   $ReferenceCopyWith<$Res> get response;
-  @override
-  $ProcessRequestItemCopyWith<$Res> get item;
   @override
   $PeriodCopyWith<$Res> get period;
 }
@@ -448,6 +436,7 @@ class __$ProcessRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -474,6 +463,9 @@ class __$ProcessRequestCopyWithImpl<$Res>
     Object period = freezed,
   }) {
     return _then(_ProcessRequest(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -491,8 +483,9 @@ class __$ProcessRequestCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       action:
           action == freezed ? _value.action : action as ProcessRequestAction,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -507,9 +500,9 @@ class __$ProcessRequestCopyWithImpl<$Res>
       response: response == freezed ? _value.response : response as Reference,
       nullify: nullify == freezed ? _value.nullify : nullify as Boolean,
       reference: reference == freezed ? _value.reference : reference as String,
-      item: item == freezed ? _value.item : item as ProcessRequestItem,
-      include: include == freezed ? _value.include : include as String,
-      exclude: exclude == freezed ? _value.exclude : exclude as String,
+      item: item == freezed ? _value.item : item as List<ProcessRequestItem>,
+      include: include == freezed ? _value.include : include as List<String>,
+      exclude: exclude == freezed ? _value.exclude : exclude as List<String>,
       period: period == freezed ? _value.period : period as Period,
     ));
   }
@@ -518,7 +511,9 @@ class __$ProcessRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ProcessRequest implements _ProcessRequest {
   const _$_ProcessRequest(
-      {this.id,
+      {@JsonKey(defaultValue: 'ProcessRequest')
+          this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -551,6 +546,9 @@ class _$_ProcessRequest implements _ProcessRequest {
       _$_$_ProcessRequestFromJson(json);
 
   @override
+  @JsonKey(defaultValue: 'ProcessRequest')
+  final String resourceType;
+  @override
   final Id id;
   @override
   final Meta meta;
@@ -571,7 +569,7 @@ class _$_ProcessRequest implements _ProcessRequest {
   @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
   final ProcessRequestAction action;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final Coding ruleset;
   @override
@@ -593,23 +591,26 @@ class _$_ProcessRequest implements _ProcessRequest {
   @override
   final String reference;
   @override
-  final ProcessRequestItem item;
+  final List<ProcessRequestItem> item;
   @override
-  final String include;
+  final List<String> include;
   @override
-  final String exclude;
+  final List<String> exclude;
   @override
   final Period period;
 
   @override
   String toString() {
-    return 'ProcessRequest(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, action: $action, identifier: $identifier, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, target: $target, provider: $provider, organization: $organization, request: $request, response: $response, nullify: $nullify, reference: $reference, item: $item, include: $include, exclude: $exclude, period: $period)';
+    return 'ProcessRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, action: $action, identifier: $identifier, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, target: $target, provider: $provider, organization: $organization, request: $request, response: $response, nullify: $nullify, reference: $reference, item: $item, include: $include, exclude: $exclude, period: $period)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ProcessRequest &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -680,6 +681,7 @@ class _$_ProcessRequest implements _ProcessRequest {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -717,7 +719,9 @@ class _$_ProcessRequest implements _ProcessRequest {
 
 abstract class _ProcessRequest implements ProcessRequest {
   const factory _ProcessRequest(
-      {Id id,
+      {@JsonKey(defaultValue: 'ProcessRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -729,7 +733,7 @@ abstract class _ProcessRequest implements ProcessRequest {
       @required
       @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
-      Identifier identifier,
+      List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
@@ -740,14 +744,17 @@ abstract class _ProcessRequest implements ProcessRequest {
       Reference response,
       Boolean nullify,
       String reference,
-      ProcessRequestItem item,
-      String include,
-      String exclude,
+      List<ProcessRequestItem> item,
+      List<String> include,
+      List<String> exclude,
       Period period}) = _$_ProcessRequest;
 
   factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequest.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'ProcessRequest')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -769,7 +776,7 @@ abstract class _ProcessRequest implements ProcessRequest {
   @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
   ProcessRequestAction get action;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   Coding get ruleset;
   @override
@@ -791,11 +798,11 @@ abstract class _ProcessRequest implements ProcessRequest {
   @override
   String get reference;
   @override
-  ProcessRequestItem get item;
+  List<ProcessRequestItem> get item;
   @override
-  String get include;
+  List<String> get include;
   @override
-  String get exclude;
+  List<String> get exclude;
   @override
   Period get period;
   @override
@@ -810,7 +817,9 @@ class _$SupplyDeliveryTearOff {
   const _$SupplyDeliveryTearOff();
 
   _SupplyDelivery call(
-      {Id id,
+      {@JsonKey(defaultValue: 'SupplyDelivery')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -830,8 +839,9 @@ class _$SupplyDeliveryTearOff {
       Period whenPrepared,
       FhirDateTime time,
       Reference destination,
-      Reference receiver}) {
+      List<Reference> receiver}) {
     return _SupplyDelivery(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -859,6 +869,8 @@ class _$SupplyDeliveryTearOff {
 const $SupplyDelivery = _$SupplyDeliveryTearOff();
 
 mixin _$SupplyDelivery {
+  @JsonKey(defaultValue: 'SupplyDelivery')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -879,7 +891,7 @@ mixin _$SupplyDelivery {
   Period get whenPrepared;
   FhirDateTime get time;
   Reference get destination;
-  Reference get receiver;
+  List<Reference> get receiver;
 
   Map<String, dynamic> toJson();
   $SupplyDeliveryCopyWith<SupplyDelivery> get copyWith;
@@ -890,7 +902,9 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
           SupplyDelivery value, $Res Function(SupplyDelivery) then) =
       _$SupplyDeliveryCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'SupplyDelivery')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -910,7 +924,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       Period whenPrepared,
       FhirDateTime time,
       Reference destination,
-      Reference receiver});
+      List<Reference> receiver});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -924,7 +938,6 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get supplier;
   $PeriodCopyWith<$Res> get whenPrepared;
   $ReferenceCopyWith<$Res> get destination;
-  $ReferenceCopyWith<$Res> get receiver;
 }
 
 class _$SupplyDeliveryCopyWithImpl<$Res>
@@ -937,6 +950,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -958,6 +972,9 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
     Object receiver = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -991,7 +1008,8 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
       destination: destination == freezed
           ? _value.destination
           : destination as Reference,
-      receiver: receiver == freezed ? _value.receiver : receiver as Reference,
+      receiver:
+          receiver == freezed ? _value.receiver : receiver as List<Reference>,
     ));
   }
 
@@ -1114,16 +1132,6 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
       return _then(_value.copyWith(destination: value));
     });
   }
-
-  @override
-  $ReferenceCopyWith<$Res> get receiver {
-    if (_value.receiver == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.receiver, (value) {
-      return _then(_value.copyWith(receiver: value));
-    });
-  }
 }
 
 abstract class _$SupplyDeliveryCopyWith<$Res>
@@ -1133,7 +1141,9 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       __$SupplyDeliveryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'SupplyDelivery')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1153,7 +1163,7 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       Period whenPrepared,
       FhirDateTime time,
       Reference destination,
-      Reference receiver});
+      List<Reference> receiver});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1179,8 +1189,6 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
   $PeriodCopyWith<$Res> get whenPrepared;
   @override
   $ReferenceCopyWith<$Res> get destination;
-  @override
-  $ReferenceCopyWith<$Res> get receiver;
 }
 
 class __$SupplyDeliveryCopyWithImpl<$Res>
@@ -1195,6 +1203,7 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1216,6 +1225,9 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
     Object receiver = freezed,
   }) {
     return _then(_SupplyDelivery(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1249,7 +1261,8 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
       destination: destination == freezed
           ? _value.destination
           : destination as Reference,
-      receiver: receiver == freezed ? _value.receiver : receiver as Reference,
+      receiver:
+          receiver == freezed ? _value.receiver : receiver as List<Reference>,
     ));
   }
 }
@@ -1257,7 +1270,8 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SupplyDelivery implements _SupplyDelivery {
   const _$_SupplyDelivery(
-      {this.id,
+      {@JsonKey(defaultValue: 'SupplyDelivery') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1280,6 +1294,9 @@ class _$_SupplyDelivery implements _SupplyDelivery {
   factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyDeliveryFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'SupplyDelivery')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -1319,17 +1336,20 @@ class _$_SupplyDelivery implements _SupplyDelivery {
   @override
   final Reference destination;
   @override
-  final Reference receiver;
+  final List<Reference> receiver;
 
   @override
   String toString() {
-    return 'SupplyDelivery(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, patient: $patient, type: $type, quantity: $quantity, suppliedItem: $suppliedItem, supplier: $supplier, whenPrepared: $whenPrepared, time: $time, destination: $destination, receiver: $receiver)';
+    return 'SupplyDelivery(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, patient: $patient, type: $type, quantity: $quantity, suppliedItem: $suppliedItem, supplier: $supplier, whenPrepared: $whenPrepared, time: $time, destination: $destination, receiver: $receiver)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _SupplyDelivery &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -1386,6 +1406,7 @@ class _$_SupplyDelivery implements _SupplyDelivery {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -1418,7 +1439,9 @@ class _$_SupplyDelivery implements _SupplyDelivery {
 
 abstract class _SupplyDelivery implements SupplyDelivery {
   const factory _SupplyDelivery(
-      {Id id,
+      {@JsonKey(defaultValue: 'SupplyDelivery')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1438,11 +1461,14 @@ abstract class _SupplyDelivery implements SupplyDelivery {
       Period whenPrepared,
       FhirDateTime time,
       Reference destination,
-      Reference receiver}) = _$_SupplyDelivery;
+      List<Reference> receiver}) = _$_SupplyDelivery;
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
       _$_SupplyDelivery.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'SupplyDelivery')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -1482,7 +1508,7 @@ abstract class _SupplyDelivery implements SupplyDelivery {
   @override
   Reference get destination;
   @override
-  Reference get receiver;
+  List<Reference> get receiver;
   @override
   _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith;
 }
@@ -1503,7 +1529,7 @@ class _$ProcessResponseTearOff {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       Coding outcome,
       String disposition,
@@ -1514,8 +1540,8 @@ class _$ProcessResponseTearOff {
       Reference requestProvider,
       Reference requestOrganization,
       Coding form,
-      ProcessResponseNotes notes,
-      Coding error}) {
+      List<ProcessResponseNotes> notes,
+      List<Coding> error}) {
     return _ProcessResponse(
       id: id,
       meta: meta,
@@ -1555,7 +1581,7 @@ mixin _$ProcessResponse {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   Reference get request;
   Coding get outcome;
   String get disposition;
@@ -1566,8 +1592,8 @@ mixin _$ProcessResponse {
   Reference get requestProvider;
   Reference get requestOrganization;
   Coding get form;
-  ProcessResponseNotes get notes;
-  Coding get error;
+  List<ProcessResponseNotes> get notes;
+  List<Coding> get error;
 
   Map<String, dynamic> toJson();
   $ProcessResponseCopyWith<ProcessResponse> get copyWith;
@@ -1586,7 +1612,7 @@ abstract class $ProcessResponseCopyWith<$Res> {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       Coding outcome,
       String disposition,
@@ -1597,14 +1623,13 @@ abstract class $ProcessResponseCopyWith<$Res> {
       Reference requestProvider,
       Reference requestOrganization,
       Coding form,
-      ProcessResponseNotes notes,
-      Coding error});
+      List<ProcessResponseNotes> notes,
+      List<Coding> error});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get request;
   $CodingCopyWith<$Res> get outcome;
   $CodingCopyWith<$Res> get ruleset;
@@ -1613,8 +1638,6 @@ abstract class $ProcessResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get requestProvider;
   $ReferenceCopyWith<$Res> get requestOrganization;
   $CodingCopyWith<$Res> get form;
-  $ProcessResponseNotesCopyWith<$Res> get notes;
-  $CodingCopyWith<$Res> get error;
 }
 
 class _$ProcessResponseCopyWithImpl<$Res>
@@ -1665,8 +1688,9 @@ class _$ProcessResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed ? _value.outcome : outcome as Coding,
       disposition:
@@ -1686,8 +1710,9 @@ class _$ProcessResponseCopyWithImpl<$Res>
           ? _value.requestOrganization
           : requestOrganization as Reference,
       form: form == freezed ? _value.form : form as Coding,
-      notes: notes == freezed ? _value.notes : notes as ProcessResponseNotes,
-      error: error == freezed ? _value.error : error as Coding,
+      notes:
+          notes == freezed ? _value.notes : notes as List<ProcessResponseNotes>,
+      error: error == freezed ? _value.error : error as List<Coding>,
     ));
   }
 
@@ -1728,16 +1753,6 @@ class _$ProcessResponseCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -1820,26 +1835,6 @@ class _$ProcessResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(form: value));
     });
   }
-
-  @override
-  $ProcessResponseNotesCopyWith<$Res> get notes {
-    if (_value.notes == null) {
-      return null;
-    }
-    return $ProcessResponseNotesCopyWith<$Res>(_value.notes, (value) {
-      return _then(_value.copyWith(notes: value));
-    });
-  }
-
-  @override
-  $CodingCopyWith<$Res> get error {
-    if (_value.error == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.error, (value) {
-      return _then(_value.copyWith(error: value));
-    });
-  }
 }
 
 abstract class _$ProcessResponseCopyWith<$Res>
@@ -1857,7 +1852,7 @@ abstract class _$ProcessResponseCopyWith<$Res>
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       Coding outcome,
       String disposition,
@@ -1868,8 +1863,8 @@ abstract class _$ProcessResponseCopyWith<$Res>
       Reference requestProvider,
       Reference requestOrganization,
       Coding form,
-      ProcessResponseNotes notes,
-      Coding error});
+      List<ProcessResponseNotes> notes,
+      List<Coding> error});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1879,8 +1874,6 @@ abstract class _$ProcessResponseCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ReferenceCopyWith<$Res> get request;
   @override
@@ -1897,10 +1890,6 @@ abstract class _$ProcessResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get requestOrganization;
   @override
   $CodingCopyWith<$Res> get form;
-  @override
-  $ProcessResponseNotesCopyWith<$Res> get notes;
-  @override
-  $CodingCopyWith<$Res> get error;
 }
 
 class __$ProcessResponseCopyWithImpl<$Res>
@@ -1953,8 +1942,9 @@ class __$ProcessResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed ? _value.outcome : outcome as Coding,
       disposition:
@@ -1974,8 +1964,9 @@ class __$ProcessResponseCopyWithImpl<$Res>
           ? _value.requestOrganization
           : requestOrganization as Reference,
       form: form == freezed ? _value.form : form as Coding,
-      notes: notes == freezed ? _value.notes : notes as ProcessResponseNotes,
-      error: error == freezed ? _value.error : error as Coding,
+      notes:
+          notes == freezed ? _value.notes : notes as List<ProcessResponseNotes>,
+      error: error == freezed ? _value.error : error as List<Coding>,
     ));
   }
 }
@@ -2026,7 +2017,7 @@ class _$_ProcessResponse implements _ProcessResponse {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final Reference request;
   @override
@@ -2048,9 +2039,9 @@ class _$_ProcessResponse implements _ProcessResponse {
   @override
   final Coding form;
   @override
-  final ProcessResponseNotes notes;
+  final List<ProcessResponseNotes> notes;
   @override
-  final Coding error;
+  final List<Coding> error;
 
   @override
   String toString() {
@@ -2165,7 +2156,7 @@ abstract class _ProcessResponse implements ProcessResponse {
       Resource contained,
       @JsonKey(name: 'extension') FhirExtension extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       Reference request,
       Coding outcome,
       String disposition,
@@ -2176,8 +2167,8 @@ abstract class _ProcessResponse implements ProcessResponse {
       Reference requestProvider,
       Reference requestOrganization,
       Coding form,
-      ProcessResponseNotes notes,
-      Coding error}) = _$_ProcessResponse;
+      List<ProcessResponseNotes> notes,
+      List<Coding> error}) = _$_ProcessResponse;
 
   factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponse.fromJson;
@@ -2200,7 +2191,7 @@ abstract class _ProcessResponse implements ProcessResponse {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   Reference get request;
   @override
@@ -2222,9 +2213,9 @@ abstract class _ProcessResponse implements ProcessResponse {
   @override
   Coding get form;
   @override
-  ProcessResponseNotes get notes;
+  List<ProcessResponseNotes> get notes;
   @override
-  Coding get error;
+  List<Coding> get error;
   @override
   _$ProcessResponseCopyWith<_ProcessResponse> get copyWith;
 }
@@ -2237,7 +2228,9 @@ class _$SupplyRequestTearOff {
   const _$SupplyRequestTearOff();
 
   _SupplyRequest call(
-      {Id id,
+      {@JsonKey(defaultValue: 'SupplyRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2254,10 +2247,12 @@ class _$SupplyRequestTearOff {
           SupplyRequestStatus status,
       CodeableConcept kind,
       Reference orderedItem,
-      Reference supplier,
-      CodeableConcept reasonX,
+      List<Reference> supplier,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       SupplyRequestWhen when}) {
     return _SupplyRequest(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -2274,7 +2269,8 @@ class _$SupplyRequestTearOff {
       kind: kind,
       orderedItem: orderedItem,
       supplier: supplier,
-      reasonX: reasonX,
+      reasonCodeableConcept: reasonCodeableConcept,
+      reasonReference: reasonReference,
       when: when,
     );
   }
@@ -2284,6 +2280,8 @@ class _$SupplyRequestTearOff {
 const $SupplyRequest = _$SupplyRequestTearOff();
 
 mixin _$SupplyRequest {
+  @JsonKey(defaultValue: 'SupplyRequest')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2301,8 +2299,9 @@ mixin _$SupplyRequest {
   SupplyRequestStatus get status;
   CodeableConcept get kind;
   Reference get orderedItem;
-  Reference get supplier;
-  CodeableConcept get reasonX;
+  List<Reference> get supplier;
+  CodeableConcept get reasonCodeableConcept;
+  Reference get reasonReference;
   SupplyRequestWhen get when;
 
   Map<String, dynamic> toJson();
@@ -2314,7 +2313,9 @@ abstract class $SupplyRequestCopyWith<$Res> {
           SupplyRequest value, $Res Function(SupplyRequest) then) =
       _$SupplyRequestCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'SupplyRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2331,8 +2332,9 @@ abstract class $SupplyRequestCopyWith<$Res> {
           SupplyRequestStatus status,
       CodeableConcept kind,
       Reference orderedItem,
-      Reference supplier,
-      CodeableConcept reasonX,
+      List<Reference> supplier,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       SupplyRequestWhen when});
 
   $MetaCopyWith<$Res> get meta;
@@ -2344,8 +2346,8 @@ abstract class $SupplyRequestCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get kind;
   $ReferenceCopyWith<$Res> get orderedItem;
-  $ReferenceCopyWith<$Res> get supplier;
-  $CodeableConceptCopyWith<$Res> get reasonX;
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
+  $ReferenceCopyWith<$Res> get reasonReference;
   $SupplyRequestWhenCopyWith<$Res> get when;
 }
 
@@ -2359,6 +2361,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2375,10 +2378,14 @@ class _$SupplyRequestCopyWithImpl<$Res>
     Object kind = freezed,
     Object orderedItem = freezed,
     Object supplier = freezed,
-    Object reasonX = freezed,
+    Object reasonCodeableConcept = freezed,
+    Object reasonReference = freezed,
     Object when = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2404,8 +2411,14 @@ class _$SupplyRequestCopyWithImpl<$Res>
       orderedItem: orderedItem == freezed
           ? _value.orderedItem
           : orderedItem as Reference,
-      supplier: supplier == freezed ? _value.supplier : supplier as Reference,
-      reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
+      supplier:
+          supplier == freezed ? _value.supplier : supplier as List<Reference>,
+      reasonCodeableConcept: reasonCodeableConcept == freezed
+          ? _value.reasonCodeableConcept
+          : reasonCodeableConcept as CodeableConcept,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference as Reference,
       when: when == freezed ? _value.when : when as SupplyRequestWhen,
     ));
   }
@@ -2501,22 +2514,23 @@ class _$SupplyRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res> get supplier {
-    if (_value.supplier == null) {
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept {
+    if (_value.reasonCodeableConcept == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.supplier, (value) {
-      return _then(_value.copyWith(supplier: value));
+    return $CodeableConceptCopyWith<$Res>(_value.reasonCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(reasonCodeableConcept: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get reasonX {
-    if (_value.reasonX == null) {
+  $ReferenceCopyWith<$Res> get reasonReference {
+    if (_value.reasonReference == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.reasonX, (value) {
-      return _then(_value.copyWith(reasonX: value));
+    return $ReferenceCopyWith<$Res>(_value.reasonReference, (value) {
+      return _then(_value.copyWith(reasonReference: value));
     });
   }
 
@@ -2538,7 +2552,9 @@ abstract class _$SupplyRequestCopyWith<$Res>
       __$SupplyRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'SupplyRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2555,8 +2571,9 @@ abstract class _$SupplyRequestCopyWith<$Res>
           SupplyRequestStatus status,
       CodeableConcept kind,
       Reference orderedItem,
-      Reference supplier,
-      CodeableConcept reasonX,
+      List<Reference> supplier,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       SupplyRequestWhen when});
 
   @override
@@ -2578,9 +2595,9 @@ abstract class _$SupplyRequestCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get orderedItem;
   @override
-  $ReferenceCopyWith<$Res> get supplier;
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
   @override
-  $CodeableConceptCopyWith<$Res> get reasonX;
+  $ReferenceCopyWith<$Res> get reasonReference;
   @override
   $SupplyRequestWhenCopyWith<$Res> get when;
 }
@@ -2597,6 +2614,7 @@ class __$SupplyRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2613,10 +2631,14 @@ class __$SupplyRequestCopyWithImpl<$Res>
     Object kind = freezed,
     Object orderedItem = freezed,
     Object supplier = freezed,
-    Object reasonX = freezed,
+    Object reasonCodeableConcept = freezed,
+    Object reasonReference = freezed,
     Object when = freezed,
   }) {
     return _then(_SupplyRequest(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2642,8 +2664,14 @@ class __$SupplyRequestCopyWithImpl<$Res>
       orderedItem: orderedItem == freezed
           ? _value.orderedItem
           : orderedItem as Reference,
-      supplier: supplier == freezed ? _value.supplier : supplier as Reference,
-      reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
+      supplier:
+          supplier == freezed ? _value.supplier : supplier as List<Reference>,
+      reasonCodeableConcept: reasonCodeableConcept == freezed
+          ? _value.reasonCodeableConcept
+          : reasonCodeableConcept as CodeableConcept,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference as Reference,
       when: when == freezed ? _value.when : when as SupplyRequestWhen,
     ));
   }
@@ -2652,7 +2680,8 @@ class __$SupplyRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SupplyRequest implements _SupplyRequest {
   const _$_SupplyRequest(
-      {this.id,
+      {@JsonKey(defaultValue: 'SupplyRequest') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -2668,12 +2697,16 @@ class _$_SupplyRequest implements _SupplyRequest {
       this.kind,
       this.orderedItem,
       this.supplier,
-      this.reasonX,
+      this.reasonCodeableConcept,
+      this.reasonReference,
       this.when});
 
   factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyRequestFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'SupplyRequest')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -2707,21 +2740,26 @@ class _$_SupplyRequest implements _SupplyRequest {
   @override
   final Reference orderedItem;
   @override
-  final Reference supplier;
+  final List<Reference> supplier;
   @override
-  final CodeableConcept reasonX;
+  final CodeableConcept reasonCodeableConcept;
+  @override
+  final Reference reasonReference;
   @override
   final SupplyRequestWhen when;
 
   @override
   String toString() {
-    return 'SupplyRequest(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, source: $source, date: $date, identifier: $identifier, status: $status, kind: $kind, orderedItem: $orderedItem, supplier: $supplier, reasonX: $reasonX, when: $when)';
+    return 'SupplyRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, source: $source, date: $date, identifier: $identifier, status: $status, kind: $kind, orderedItem: $orderedItem, supplier: $supplier, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, when: $when)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _SupplyRequest &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -2763,9 +2801,12 @@ class _$_SupplyRequest implements _SupplyRequest {
             (identical(other.supplier, supplier) ||
                 const DeepCollectionEquality()
                     .equals(other.supplier, supplier)) &&
-            (identical(other.reasonX, reasonX) ||
+            (identical(other.reasonCodeableConcept, reasonCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.reasonCodeableConcept, reasonCodeableConcept)) &&
+            (identical(other.reasonReference, reasonReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.reasonX, reasonX)) &&
+                    .equals(other.reasonReference, reasonReference)) &&
             (identical(other.when, when) ||
                 const DeepCollectionEquality().equals(other.when, when)));
   }
@@ -2773,6 +2814,7 @@ class _$_SupplyRequest implements _SupplyRequest {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -2789,7 +2831,8 @@ class _$_SupplyRequest implements _SupplyRequest {
       const DeepCollectionEquality().hash(kind) ^
       const DeepCollectionEquality().hash(orderedItem) ^
       const DeepCollectionEquality().hash(supplier) ^
-      const DeepCollectionEquality().hash(reasonX) ^
+      const DeepCollectionEquality().hash(reasonCodeableConcept) ^
+      const DeepCollectionEquality().hash(reasonReference) ^
       const DeepCollectionEquality().hash(when);
 
   @override
@@ -2804,7 +2847,9 @@ class _$_SupplyRequest implements _SupplyRequest {
 
 abstract class _SupplyRequest implements SupplyRequest {
   const factory _SupplyRequest(
-      {Id id,
+      {@JsonKey(defaultValue: 'SupplyRequest')
+          String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2821,13 +2866,17 @@ abstract class _SupplyRequest implements SupplyRequest {
           SupplyRequestStatus status,
       CodeableConcept kind,
       Reference orderedItem,
-      Reference supplier,
-      CodeableConcept reasonX,
+      List<Reference> supplier,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       SupplyRequestWhen when}) = _$_SupplyRequest;
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequest.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'SupplyRequest')
+  String get resourceType;
   @override
   Id get id;
   @override
@@ -2861,9 +2910,11 @@ abstract class _SupplyRequest implements SupplyRequest {
   @override
   Reference get orderedItem;
   @override
-  Reference get supplier;
+  List<Reference> get supplier;
   @override
-  CodeableConcept get reasonX;
+  CodeableConcept get reasonCodeableConcept;
+  @override
+  Reference get reasonReference;
   @override
   SupplyRequestWhen get when;
   @override
