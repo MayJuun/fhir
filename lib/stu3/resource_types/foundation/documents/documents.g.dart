@@ -28,7 +28,9 @@ _$_Composition _$_$_CompositionFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     author: (json['author'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -79,7 +81,7 @@ Map<String, dynamic> _$_$_CompositionToJson(_$_Composition instance) {
   writeNotNull('class', instance.class_?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('author', instance.author?.map((e) => e?.toJson())?.toList());
   writeNotNull('title', instance.title);
   writeNotNull('confidentiality', instance.confidentiality?.toJson());
@@ -139,7 +141,9 @@ _$_CompositionAttester _$_$_CompositionAttesterFromJson(
     mode: (json['mode'] as List)
         ?.map((e) => _$enumDecodeNullable(_$AttesterModeEnumMap, e))
         ?.toList(),
-    time: json['time'] == null ? null : DateTime.parse(json['time'] as String),
+    time: json['time'] == null
+        ? null
+        : FhirDateTime.fromJson(json['time'] as String),
     party: json['party'] == null
         ? null
         : Reference.fromJson(json['party'] as Map<String, dynamic>),
@@ -158,7 +162,7 @@ Map<String, dynamic> _$_$_CompositionAttesterToJson(
 
   writeNotNull(
       'mode', instance.mode?.map((e) => _$AttesterModeEnumMap[e])?.toList());
-  writeNotNull('time', instance.time?.toIso8601String());
+  writeNotNull('time', instance.time?.toJson());
   writeNotNull('party', instance.party?.toJson());
   return val;
 }
@@ -303,7 +307,7 @@ _$_DocumentManifest _$_$_DocumentManifestFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     author: (json['author'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -343,7 +347,7 @@ Map<String, dynamic> _$_$_DocumentManifestToJson(_$_DocumentManifest instance) {
   writeNotNull('status', _$DocumentStatusEnumMap[instance.status]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('author', instance.author?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'recipient', instance.recipient?.map((e) => e?.toJson())?.toList());
@@ -442,7 +446,7 @@ _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     indexed: json['indexed'] as String,
     author: (json['author'] as List)
         ?.map((e) =>
@@ -496,7 +500,7 @@ Map<String, dynamic> _$_$_DocumentReferenceToJson(
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('class', instance.class_?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('indexed', instance.indexed);
   writeNotNull('author', instance.author?.map((e) => e?.toJson())?.toList());
   writeNotNull('authenticator', instance.authenticator?.toJson());

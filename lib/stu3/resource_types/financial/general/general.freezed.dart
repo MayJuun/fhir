@@ -857,7 +857,7 @@ class _$ChargeItemTearOff {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       List<ChargeItemParticipant> participant,
@@ -869,7 +869,7 @@ class _$ChargeItemTearOff {
       Money priceOverride,
       String overrideReason,
       Reference enterer,
-      DateTime enteredDate,
+      FhirDateTime enteredDate,
       List<CodeableConcept> reason,
       List<Reference> service,
       List<Reference> account,
@@ -922,7 +922,7 @@ mixin _$ChargeItem {
   @JsonKey(required: true)
   Reference get subject;
   Reference get context;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Period get occurrencePeriod;
   Timing get occurrenceTiming;
   List<ChargeItemParticipant> get participant;
@@ -934,7 +934,7 @@ mixin _$ChargeItem {
   Money get priceOverride;
   String get overrideReason;
   Reference get enterer;
-  DateTime get enteredDate;
+  FhirDateTime get enteredDate;
   List<CodeableConcept> get reason;
   List<Reference> get service;
   List<Reference> get account;
@@ -962,7 +962,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       List<ChargeItemParticipant> participant,
@@ -974,7 +974,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       Money priceOverride,
       String overrideReason,
       Reference enterer,
-      DateTime enteredDate,
+      FhirDateTime enteredDate,
       List<CodeableConcept> reason,
       List<Reference> service,
       List<Reference> account,
@@ -1046,7 +1046,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -1076,8 +1076,9 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
           ? _value.overrideReason
           : overrideReason as String,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
-      enteredDate:
-          enteredDate == freezed ? _value.enteredDate : enteredDate as DateTime,
+      enteredDate: enteredDate == freezed
+          ? _value.enteredDate
+          : enteredDate as FhirDateTime,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableConcept>,
       service: service == freezed ? _value.service : service as List<Reference>,
@@ -1218,7 +1219,7 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       List<ChargeItemParticipant> participant,
@@ -1230,7 +1231,7 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       Money priceOverride,
       String overrideReason,
       Reference enterer,
-      DateTime enteredDate,
+      FhirDateTime enteredDate,
       List<CodeableConcept> reason,
       List<Reference> service,
       List<Reference> account,
@@ -1315,7 +1316,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -1345,8 +1346,9 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
           ? _value.overrideReason
           : overrideReason as String,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
-      enteredDate:
-          enteredDate == freezed ? _value.enteredDate : enteredDate as DateTime,
+      enteredDate: enteredDate == freezed
+          ? _value.enteredDate
+          : enteredDate as FhirDateTime,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableConcept>,
       service: service == freezed ? _value.service : service as List<Reference>,
@@ -1419,7 +1421,7 @@ class _$_ChargeItem implements _ChargeItem {
   @override
   final Reference context;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Period occurrencePeriod;
   @override
@@ -1443,7 +1445,7 @@ class _$_ChargeItem implements _ChargeItem {
   @override
   final Reference enterer;
   @override
-  final DateTime enteredDate;
+  final FhirDateTime enteredDate;
   @override
   final List<CodeableConcept> reason;
   @override
@@ -1589,7 +1591,7 @@ abstract class _ChargeItem implements ChargeItem {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       List<ChargeItemParticipant> participant,
@@ -1601,7 +1603,7 @@ abstract class _ChargeItem implements ChargeItem {
       Money priceOverride,
       String overrideReason,
       Reference enterer,
-      DateTime enteredDate,
+      FhirDateTime enteredDate,
       List<CodeableConcept> reason,
       List<Reference> service,
       List<Reference> account,
@@ -1632,7 +1634,7 @@ abstract class _ChargeItem implements ChargeItem {
   @override
   Reference get context;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Period get occurrencePeriod;
   @override
@@ -1656,7 +1658,7 @@ abstract class _ChargeItem implements ChargeItem {
   @override
   Reference get enterer;
   @override
-  DateTime get enteredDate;
+  FhirDateTime get enteredDate;
   @override
   List<CodeableConcept> get reason;
   @override
@@ -1862,7 +1864,7 @@ class _$ContractTearOff {
           String resourceType,
       Identifier identifier,
       Code status,
-      DateTime issued,
+      FhirDateTime issued,
       Period applies,
       List<Reference> subject,
       List<Reference> topic,
@@ -1922,7 +1924,7 @@ mixin _$Contract {
   String get resourceType;
   Identifier get identifier;
   Code get status;
-  DateTime get issued;
+  FhirDateTime get issued;
   Period get applies;
   List<Reference> get subject;
   List<Reference> get topic;
@@ -1956,7 +1958,7 @@ abstract class $ContractCopyWith<$Res> {
       {@JsonKey(required: true, defaultValue: 'Contract') String resourceType,
       Identifier identifier,
       Code status,
-      DateTime issued,
+      FhirDateTime issued,
       Period applies,
       List<Reference> subject,
       List<Reference> topic,
@@ -2030,7 +2032,7 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       status: status == freezed ? _value.status : status as Code,
-      issued: issued == freezed ? _value.issued : issued as DateTime,
+      issued: issued == freezed ? _value.issued : issued as FhirDateTime,
       applies: applies == freezed ? _value.applies : applies as Period,
       subject: subject == freezed ? _value.subject : subject as List<Reference>,
       topic: topic == freezed ? _value.topic : topic as List<Reference>,
@@ -2156,7 +2158,7 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       {@JsonKey(required: true, defaultValue: 'Contract') String resourceType,
       Identifier identifier,
       Code status,
-      DateTime issued,
+      FhirDateTime issued,
       Period applies,
       List<Reference> subject,
       List<Reference> topic,
@@ -2238,7 +2240,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       status: status == freezed ? _value.status : status as Code,
-      issued: issued == freezed ? _value.issued : issued as DateTime,
+      issued: issued == freezed ? _value.issued : issued as FhirDateTime,
       applies: applies == freezed ? _value.applies : applies as Period,
       subject: subject == freezed ? _value.subject : subject as List<Reference>,
       topic: topic == freezed ? _value.topic : topic as List<Reference>,
@@ -2329,7 +2331,7 @@ class _$_Contract implements _Contract {
   @override
   final Code status;
   @override
-  final DateTime issued;
+  final FhirDateTime issued;
   @override
   final Period applies;
   @override
@@ -2494,7 +2496,7 @@ abstract class _Contract implements Contract {
           String resourceType,
       Identifier identifier,
       Code status,
-      DateTime issued,
+      FhirDateTime issued,
       Period applies,
       List<Reference> subject,
       List<Reference> topic,
@@ -2527,7 +2529,7 @@ abstract class _Contract implements Contract {
   @override
   Code get status;
   @override
-  DateTime get issued;
+  FhirDateTime get issued;
   @override
   Period get applies;
   @override
@@ -2960,7 +2962,7 @@ class _$ContractValuedItemTearOff {
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
       Identifier identifier,
-      DateTime effectiveTime,
+      FhirDateTime effectiveTime,
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
@@ -2987,7 +2989,7 @@ mixin _$ContractValuedItem {
   CodeableConcept get entityCodeableConcept;
   Reference get entityReference;
   Identifier get identifier;
-  DateTime get effectiveTime;
+  FhirDateTime get effectiveTime;
   Quantity get quantity;
   Money get unitPrice;
   Decimal get factor;
@@ -3006,7 +3008,7 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
       Identifier identifier,
-      DateTime effectiveTime,
+      FhirDateTime effectiveTime,
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
@@ -3052,7 +3054,7 @@ class _$ContractValuedItemCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       effectiveTime: effectiveTime == freezed
           ? _value.effectiveTime
-          : effectiveTime as DateTime,
+          : effectiveTime as FhirDateTime,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
       factor: factor == freezed ? _value.factor : factor as Decimal,
@@ -3133,7 +3135,7 @@ abstract class _$ContractValuedItemCopyWith<$Res>
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
       Identifier identifier,
-      DateTime effectiveTime,
+      FhirDateTime effectiveTime,
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
@@ -3187,7 +3189,7 @@ class __$ContractValuedItemCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       effectiveTime: effectiveTime == freezed
           ? _value.effectiveTime
-          : effectiveTime as DateTime,
+          : effectiveTime as FhirDateTime,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
       factor: factor == freezed ? _value.factor : factor as Decimal,
@@ -3220,7 +3222,7 @@ class _$_ContractValuedItem implements _ContractValuedItem {
   @override
   final Identifier identifier;
   @override
-  final DateTime effectiveTime;
+  final FhirDateTime effectiveTime;
   @override
   final Quantity quantity;
   @override
@@ -3295,7 +3297,7 @@ abstract class _ContractValuedItem implements ContractValuedItem {
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
       Identifier identifier,
-      DateTime effectiveTime,
+      FhirDateTime effectiveTime,
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
@@ -3312,7 +3314,7 @@ abstract class _ContractValuedItem implements ContractValuedItem {
   @override
   Identifier get identifier;
   @override
-  DateTime get effectiveTime;
+  FhirDateTime get effectiveTime;
   @override
   Quantity get quantity;
   @override
@@ -3336,7 +3338,7 @@ class _$ContractTermTearOff {
 
   _ContractTerm call(
       {Identifier identifier,
-      DateTime issued,
+      FhirDateTime issued,
       Period applies,
       CodeableConcept type,
       CodeableConcept subType,
@@ -3371,7 +3373,7 @@ const $ContractTerm = _$ContractTermTearOff();
 
 mixin _$ContractTerm {
   Identifier get identifier;
-  DateTime get issued;
+  FhirDateTime get issued;
   Period get applies;
   CodeableConcept get type;
   CodeableConcept get subType;
@@ -3394,7 +3396,7 @@ abstract class $ContractTermCopyWith<$Res> {
       _$ContractTermCopyWithImpl<$Res>;
   $Res call(
       {Identifier identifier,
-      DateTime issued,
+      FhirDateTime issued,
       Period applies,
       CodeableConcept type,
       CodeableConcept subType,
@@ -3439,7 +3441,7 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
     return _then(_value.copyWith(
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
-      issued: issued == freezed ? _value.issued : issued as DateTime,
+      issued: issued == freezed ? _value.issued : issued as FhirDateTime,
       applies: applies == freezed ? _value.applies : applies as Period,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
@@ -3510,7 +3512,7 @@ abstract class _$ContractTermCopyWith<$Res>
   @override
   $Res call(
       {Identifier identifier,
-      DateTime issued,
+      FhirDateTime issued,
       Period applies,
       CodeableConcept type,
       CodeableConcept subType,
@@ -3561,7 +3563,7 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
     return _then(_ContractTerm(
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
-      issued: issued == freezed ? _value.issued : issued as DateTime,
+      issued: issued == freezed ? _value.issued : issued as FhirDateTime,
       applies: applies == freezed ? _value.applies : applies as Period,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
@@ -3607,7 +3609,7 @@ class _$_ContractTerm implements _ContractTerm {
   @override
   final Identifier identifier;
   @override
-  final DateTime issued;
+  final FhirDateTime issued;
   @override
   final Period applies;
   @override
@@ -3704,7 +3706,7 @@ class _$_ContractTerm implements _ContractTerm {
 abstract class _ContractTerm implements ContractTerm {
   const factory _ContractTerm(
       {Identifier identifier,
-      DateTime issued,
+      FhirDateTime issued,
       Period applies,
       CodeableConcept type,
       CodeableConcept subType,
@@ -3723,7 +3725,7 @@ abstract class _ContractTerm implements ContractTerm {
   @override
   Identifier get identifier;
   @override
-  DateTime get issued;
+  FhirDateTime get issued;
   @override
   Period get applies;
   @override
@@ -3925,7 +3927,7 @@ class _$ContractValuedItem1TearOff {
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
       Identifier identifier,
-      DateTime effectiveTime,
+      FhirDateTime effectiveTime,
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
@@ -3952,7 +3954,7 @@ mixin _$ContractValuedItem1 {
   CodeableConcept get entityCodeableConcept;
   Reference get entityReference;
   Identifier get identifier;
-  DateTime get effectiveTime;
+  FhirDateTime get effectiveTime;
   Quantity get quantity;
   Money get unitPrice;
   Decimal get factor;
@@ -3971,7 +3973,7 @@ abstract class $ContractValuedItem1CopyWith<$Res> {
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
       Identifier identifier,
-      DateTime effectiveTime,
+      FhirDateTime effectiveTime,
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
@@ -4017,7 +4019,7 @@ class _$ContractValuedItem1CopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       effectiveTime: effectiveTime == freezed
           ? _value.effectiveTime
-          : effectiveTime as DateTime,
+          : effectiveTime as FhirDateTime,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
       factor: factor == freezed ? _value.factor : factor as Decimal,
@@ -4098,7 +4100,7 @@ abstract class _$ContractValuedItem1CopyWith<$Res>
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
       Identifier identifier,
-      DateTime effectiveTime,
+      FhirDateTime effectiveTime,
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
@@ -4152,7 +4154,7 @@ class __$ContractValuedItem1CopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       effectiveTime: effectiveTime == freezed
           ? _value.effectiveTime
-          : effectiveTime as DateTime,
+          : effectiveTime as FhirDateTime,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
       factor: factor == freezed ? _value.factor : factor as Decimal,
@@ -4185,7 +4187,7 @@ class _$_ContractValuedItem1 implements _ContractValuedItem1 {
   @override
   final Identifier identifier;
   @override
-  final DateTime effectiveTime;
+  final FhirDateTime effectiveTime;
   @override
   final Quantity quantity;
   @override
@@ -4261,7 +4263,7 @@ abstract class _ContractValuedItem1 implements ContractValuedItem1 {
       {CodeableConcept entityCodeableConcept,
       Reference entityReference,
       Identifier identifier,
-      DateTime effectiveTime,
+      FhirDateTime effectiveTime,
       Quantity quantity,
       Money unitPrice,
       Decimal factor,
@@ -4278,7 +4280,7 @@ abstract class _ContractValuedItem1 implements ContractValuedItem1 {
   @override
   Identifier get identifier;
   @override
-  DateTime get effectiveTime;
+  FhirDateTime get effectiveTime;
   @override
   Quantity get quantity;
   @override
@@ -4855,7 +4857,7 @@ class _$ExplanationOfBenefitTearOff {
       List<CodeableConcept> subType,
       Reference patient,
       Period billablePeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -4946,7 +4948,7 @@ mixin _$ExplanationOfBenefit {
   List<CodeableConcept> get subType;
   Reference get patient;
   Period get billablePeriod;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get enterer;
   Reference get insurer;
   Reference get provider;
@@ -4998,7 +5000,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       List<CodeableConcept> subType,
       Reference patient,
       Period billablePeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -5127,7 +5129,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
       billablePeriod: billablePeriod == freezed
           ? _value.billablePeriod
           : billablePeriod as Period,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
@@ -5464,7 +5466,7 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       List<CodeableConcept> subType,
       Reference patient,
       Period billablePeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -5619,7 +5621,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
       billablePeriod: billablePeriod == freezed
           ? _value.billablePeriod
           : billablePeriod as Period,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
@@ -5766,7 +5768,7 @@ class _$_ExplanationOfBenefit implements _ExplanationOfBenefit {
   @override
   final Period billablePeriod;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference enterer;
   @override
@@ -5993,7 +5995,7 @@ abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
           List<CodeableConcept> subType,
           Reference patient,
           Period billablePeriod,
-          DateTime created,
+          FhirDateTime created,
           Reference enterer,
           Reference insurer,
           Reference provider,
@@ -6048,7 +6050,7 @@ abstract class _ExplanationOfBenefit implements ExplanationOfBenefit {
   @override
   Period get billablePeriod;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get enterer;
   @override
@@ -7541,7 +7543,7 @@ class _$ExplanationOfBenefitProcedureTearOff {
 
   _ExplanationOfBenefitProcedure call(
       {PositiveInt sequence,
-      DateTime date,
+      FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference}) {
     return _ExplanationOfBenefitProcedure(
@@ -7558,7 +7560,7 @@ const $ExplanationOfBenefitProcedure = _$ExplanationOfBenefitProcedureTearOff();
 
 mixin _$ExplanationOfBenefitProcedure {
   PositiveInt get sequence;
-  DateTime get date;
+  FhirDateTime get date;
   CodeableConcept get procedureCodeableConcept;
   Reference get procedureReference;
 
@@ -7574,7 +7576,7 @@ abstract class $ExplanationOfBenefitProcedureCopyWith<$Res> {
       _$ExplanationOfBenefitProcedureCopyWithImpl<$Res>;
   $Res call(
       {PositiveInt sequence,
-      DateTime date,
+      FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference});
 
@@ -7599,7 +7601,7 @@ class _$ExplanationOfBenefitProcedureCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       procedureCodeableConcept: procedureCodeableConcept == freezed
           ? _value.procedureCodeableConcept
           : procedureCodeableConcept as CodeableConcept,
@@ -7640,7 +7642,7 @@ abstract class _$ExplanationOfBenefitProcedureCopyWith<$Res>
   @override
   $Res call(
       {PositiveInt sequence,
-      DateTime date,
+      FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference});
 
@@ -7671,7 +7673,7 @@ class __$ExplanationOfBenefitProcedureCopyWithImpl<$Res>
   }) {
     return _then(_ExplanationOfBenefitProcedure(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       procedureCodeableConcept: procedureCodeableConcept == freezed
           ? _value.procedureCodeableConcept
           : procedureCodeableConcept as CodeableConcept,
@@ -7698,7 +7700,7 @@ class _$_ExplanationOfBenefitProcedure
   @override
   final PositiveInt sequence;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final CodeableConcept procedureCodeableConcept;
   @override
@@ -7751,7 +7753,7 @@ abstract class _ExplanationOfBenefitProcedure
     implements ExplanationOfBenefitProcedure {
   const factory _ExplanationOfBenefitProcedure(
       {PositiveInt sequence,
-      DateTime date,
+      FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference}) = _$_ExplanationOfBenefitProcedure;
 
@@ -7761,7 +7763,7 @@ abstract class _ExplanationOfBenefitProcedure
   @override
   PositiveInt get sequence;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   CodeableConcept get procedureCodeableConcept;
   @override

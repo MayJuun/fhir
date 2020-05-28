@@ -206,7 +206,7 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         : Boolean.fromJson(json['deceasedBoolean']),
     deceasedDateTime: json['deceasedDateTime'] == null
         ? null
-        : DateTime.parse(json['deceasedDateTime'] as String),
+        : FhirDateTime.fromJson(json['deceasedDateTime'] as String),
     address: (json['address'] as List)
         ?.map((e) =>
             e == null ? null : Address.fromJson(e as Map<String, dynamic>))
@@ -271,8 +271,7 @@ Map<String, dynamic> _$_$_PatientToJson(_$_Patient instance) {
   writeNotNull('gender', _$GenderEnumMap[instance.gender]);
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('deceasedBoolean', instance.deceasedBoolean?.toJson());
-  writeNotNull(
-      'deceasedDateTime', instance.deceasedDateTime?.toIso8601String());
+  writeNotNull('deceasedDateTime', instance.deceasedDateTime?.toJson());
   writeNotNull('address', instance.address?.map((e) => e?.toJson())?.toList());
   writeNotNull('maritalStatus', instance.maritalStatus?.toJson());
   writeNotNull('multipleBirthBoolean', instance.multipleBirthBoolean?.toJson());

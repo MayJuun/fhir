@@ -27,7 +27,7 @@ class _$CodeSystemTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -92,7 +92,7 @@ mixin _$CodeSystem {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -132,7 +132,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -206,7 +206,7 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -274,7 +274,7 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -351,7 +351,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -451,7 +451,7 @@ class _$_CodeSystem implements _CodeSystem {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -622,7 +622,7 @@ abstract class _CodeSystem implements CodeSystem {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -665,7 +665,7 @@ abstract class _CodeSystem implements CodeSystem {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -1505,7 +1505,7 @@ class _$CodeSystemProperty1TearOff {
       String valueString,
       Integer valueInteger,
       Boolean valueBoolean,
-      DateTime valueDateTime}) {
+      FhirDateTime valueDateTime}) {
     return _CodeSystemProperty1(
       code: code,
       valueCode: valueCode,
@@ -1528,7 +1528,7 @@ mixin _$CodeSystemProperty1 {
   String get valueString;
   Integer get valueInteger;
   Boolean get valueBoolean;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
 
   Map<String, dynamic> toJson();
   $CodeSystemProperty1CopyWith<CodeSystemProperty1> get copyWith;
@@ -1545,7 +1545,7 @@ abstract class $CodeSystemProperty1CopyWith<$Res> {
       String valueString,
       Integer valueInteger,
       Boolean valueBoolean,
-      DateTime valueDateTime});
+      FhirDateTime valueDateTime});
 
   $CodingCopyWith<$Res> get valueCoding;
 }
@@ -1583,7 +1583,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res>
           : valueBoolean as Boolean,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
     ));
   }
 
@@ -1611,7 +1611,7 @@ abstract class _$CodeSystemProperty1CopyWith<$Res>
       String valueString,
       Integer valueInteger,
       Boolean valueBoolean,
-      DateTime valueDateTime});
+      FhirDateTime valueDateTime});
 
   @override
   $CodingCopyWith<$Res> get valueCoding;
@@ -1652,7 +1652,7 @@ class __$CodeSystemProperty1CopyWithImpl<$Res>
           : valueBoolean as Boolean,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
     ));
   }
 }
@@ -1684,7 +1684,7 @@ class _$_CodeSystemProperty1 implements _CodeSystemProperty1 {
   @override
   final Boolean valueBoolean;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
 
   @override
   String toString() {
@@ -1747,7 +1747,7 @@ abstract class _CodeSystemProperty1 implements CodeSystemProperty1 {
       String valueString,
       Integer valueInteger,
       Boolean valueBoolean,
-      DateTime valueDateTime}) = _$_CodeSystemProperty1;
+      FhirDateTime valueDateTime}) = _$_CodeSystemProperty1;
 
   factory _CodeSystemProperty1.fromJson(Map<String, dynamic> json) =
       _$_CodeSystemProperty1.fromJson;
@@ -1765,7 +1765,7 @@ abstract class _CodeSystemProperty1 implements CodeSystemProperty1 {
   @override
   Boolean get valueBoolean;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   _$CodeSystemProperty1CopyWith<_CodeSystemProperty1> get copyWith;
 }
@@ -1789,7 +1789,7 @@ class _$ConceptMapTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -1842,7 +1842,7 @@ mixin _$ConceptMap {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -1873,7 +1873,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       String title,
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -1937,7 +1937,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -2008,7 +2008,7 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       String title,
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -2077,7 +2077,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -2155,7 +2155,7 @@ class _$_ConceptMap implements _ConceptMap {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -2297,7 +2297,7 @@ abstract class _ConceptMap implements ConceptMap {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -2333,7 +2333,7 @@ abstract class _ConceptMap implements ConceptMap {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -3414,7 +3414,7 @@ class _$ExpansionProfileTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -3473,7 +3473,7 @@ mixin _$ExpansionProfile {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -3509,7 +3509,7 @@ abstract class $ExpansionProfileCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -3580,7 +3580,7 @@ class _$ExpansionProfileCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -3676,7 +3676,7 @@ abstract class _$ExpansionProfileCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -3752,7 +3752,7 @@ class __$ExpansionProfileCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -3852,7 +3852,7 @@ class _$_ExpansionProfile implements _ExpansionProfile {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -4013,7 +4013,7 @@ abstract class _ExpansionProfile implements ExpansionProfile {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -4051,7 +4051,7 @@ abstract class _ExpansionProfile implements ExpansionProfile {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -5244,7 +5244,7 @@ class _$NamingSystemTearOff {
           Status status,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String responsible,
@@ -5287,7 +5287,7 @@ mixin _$NamingSystem {
   Status get status;
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
   NamingSystemKind get kind;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get responsible;
@@ -5316,7 +5316,7 @@ abstract class $NamingSystemCopyWith<$Res> {
           Status status,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String responsible,
@@ -5365,7 +5365,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       name: name == freezed ? _value.name : name as String,
       status: status == freezed ? _value.status : status as Status,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -5424,7 +5424,7 @@ abstract class _$NamingSystemCopyWith<$Res>
           Status status,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String responsible,
@@ -5477,7 +5477,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       status: status == freezed ? _value.status : status as Status,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -5542,7 +5542,7 @@ class _$_NamingSystem implements _NamingSystem {
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
   final NamingSystemKind kind;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -5654,7 +5654,7 @@ abstract class _NamingSystem implements NamingSystem {
           Status status,
       @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
           NamingSystemKind kind,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String responsible,
@@ -5682,7 +5682,7 @@ abstract class _NamingSystem implements NamingSystem {
   @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
   NamingSystemKind get kind;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -5953,7 +5953,7 @@ class _$ValueSetTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -6004,7 +6004,7 @@ mixin _$ValueSet {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -6033,7 +6033,7 @@ abstract class $ValueSetCopyWith<$Res> {
       String title,
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -6095,7 +6095,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -6153,7 +6153,7 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       String title,
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -6218,7 +6218,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -6293,7 +6293,7 @@ class _$_ValueSet implements _ValueSet {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -6430,7 +6430,7 @@ abstract class _ValueSet implements ValueSet {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -6464,7 +6464,7 @@ abstract class _ValueSet implements ValueSet {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -7424,7 +7424,7 @@ class _$ValueSetExpansionTearOff {
 
   _ValueSetExpansion call(
       {String identifier,
-      DateTime timestamp,
+      FhirDateTime timestamp,
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
@@ -7445,7 +7445,7 @@ const $ValueSetExpansion = _$ValueSetExpansionTearOff();
 
 mixin _$ValueSetExpansion {
   String get identifier;
-  DateTime get timestamp;
+  FhirDateTime get timestamp;
   Integer get total;
   Integer get offset;
   List<ValueSetParameter> get parameter;
@@ -7461,7 +7461,7 @@ abstract class $ValueSetExpansionCopyWith<$Res> {
       _$ValueSetExpansionCopyWithImpl<$Res>;
   $Res call(
       {String identifier,
-      DateTime timestamp,
+      FhirDateTime timestamp,
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
@@ -7489,7 +7489,7 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
       identifier:
           identifier == freezed ? _value.identifier : identifier as String,
       timestamp:
-          timestamp == freezed ? _value.timestamp : timestamp as DateTime,
+          timestamp == freezed ? _value.timestamp : timestamp as FhirDateTime,
       total: total == freezed ? _value.total : total as Integer,
       offset: offset == freezed ? _value.offset : offset as Integer,
       parameter: parameter == freezed
@@ -7510,7 +7510,7 @@ abstract class _$ValueSetExpansionCopyWith<$Res>
   @override
   $Res call(
       {String identifier,
-      DateTime timestamp,
+      FhirDateTime timestamp,
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
@@ -7540,7 +7540,7 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
       identifier:
           identifier == freezed ? _value.identifier : identifier as String,
       timestamp:
-          timestamp == freezed ? _value.timestamp : timestamp as DateTime,
+          timestamp == freezed ? _value.timestamp : timestamp as FhirDateTime,
       total: total == freezed ? _value.total : total as Integer,
       offset: offset == freezed ? _value.offset : offset as Integer,
       parameter: parameter == freezed
@@ -7569,7 +7569,7 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
   @override
   final String identifier;
   @override
-  final DateTime timestamp;
+  final FhirDateTime timestamp;
   @override
   final Integer total;
   @override
@@ -7629,7 +7629,7 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
 abstract class _ValueSetExpansion implements ValueSetExpansion {
   const factory _ValueSetExpansion(
       {String identifier,
-      DateTime timestamp,
+      FhirDateTime timestamp,
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
@@ -7641,7 +7641,7 @@ abstract class _ValueSetExpansion implements ValueSetExpansion {
   @override
   String get identifier;
   @override
-  DateTime get timestamp;
+  FhirDateTime get timestamp;
   @override
   Integer get total;
   @override

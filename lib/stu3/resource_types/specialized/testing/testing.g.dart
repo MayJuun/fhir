@@ -25,7 +25,7 @@ _$_TestReport _$_$_TestReportFromJson(Map<String, dynamic> json) {
     tester: json['tester'] as String,
     issued: json['issued'] == null
         ? null
-        : DateTime.parse(json['issued'] as String),
+        : FhirDateTime.fromJson(json['issued'] as String),
     participant: (json['participant'] as List)
         ?.map((e) => e == null
             ? null
@@ -62,7 +62,7 @@ Map<String, dynamic> _$_$_TestReportToJson(_$_TestReport instance) {
   writeNotNull('result', _$TestReportResultEnumMap[instance.result]);
   writeNotNull('score', instance.score?.toJson());
   writeNotNull('tester', instance.tester);
-  writeNotNull('issued', instance.issued?.toIso8601String());
+  writeNotNull('issued', instance.issued?.toJson());
   writeNotNull(
       'participant', instance.participant?.map((e) => e?.toJson())?.toList());
   writeNotNull('setup', instance.setup?.toJson());
@@ -382,7 +382,9 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -469,7 +471,7 @@ Map<String, dynamic> _$_$_TestScriptToJson(_$_TestScript instance) {
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);

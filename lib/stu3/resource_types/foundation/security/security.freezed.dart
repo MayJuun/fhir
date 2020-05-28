@@ -1694,7 +1694,7 @@ class _$ConsentTearOff {
       @JsonKey(required: true)
           Reference patient,
       Period period,
-      DateTime dateTime,
+      FhirDateTime dateTime,
       List<Reference> consentingParty,
       List<ConsentActor> actor,
       List<CodeableConcept> action,
@@ -1748,7 +1748,7 @@ mixin _$Consent {
   @JsonKey(required: true)
   Reference get patient;
   Period get period;
-  DateTime get dateTime;
+  FhirDateTime get dateTime;
   List<Reference> get consentingParty;
   List<ConsentActor> get actor;
   List<CodeableConcept> get action;
@@ -1778,7 +1778,7 @@ abstract class $ConsentCopyWith<$Res> {
       List<CodeableConcept> category,
       @JsonKey(required: true) Reference patient,
       Period period,
-      DateTime dateTime,
+      FhirDateTime dateTime,
       List<Reference> consentingParty,
       List<ConsentActor> actor,
       List<CodeableConcept> action,
@@ -1846,7 +1846,8 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
           : category as List<CodeableConcept>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       period: period == freezed ? _value.period : period as Period,
-      dateTime: dateTime == freezed ? _value.dateTime : dateTime as DateTime,
+      dateTime:
+          dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
       consentingParty: consentingParty == freezed
           ? _value.consentingParty
           : consentingParty as List<Reference>,
@@ -1961,7 +1962,7 @@ abstract class _$ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
       List<CodeableConcept> category,
       @JsonKey(required: true) Reference patient,
       Period period,
-      DateTime dateTime,
+      FhirDateTime dateTime,
       List<Reference> consentingParty,
       List<ConsentActor> actor,
       List<CodeableConcept> action,
@@ -2037,7 +2038,8 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
           : category as List<CodeableConcept>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       period: period == freezed ? _value.period : period as Period,
-      dateTime: dateTime == freezed ? _value.dateTime : dateTime as DateTime,
+      dateTime:
+          dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
       consentingParty: consentingParty == freezed
           ? _value.consentingParty
           : consentingParty as List<Reference>,
@@ -2120,7 +2122,7 @@ class _$_Consent implements _Consent {
   @override
   final Period period;
   @override
-  final DateTime dateTime;
+  final FhirDateTime dateTime;
   @override
   final List<Reference> consentingParty;
   @override
@@ -2264,7 +2266,7 @@ abstract class _Consent implements Consent {
       @JsonKey(required: true)
           Reference patient,
       Period period,
-      DateTime dateTime,
+      FhirDateTime dateTime,
       List<Reference> consentingParty,
       List<ConsentActor> actor,
       List<CodeableConcept> action,
@@ -2298,7 +2300,7 @@ abstract class _Consent implements Consent {
   @override
   Period get period;
   @override
-  DateTime get dateTime;
+  FhirDateTime get dateTime;
   @override
   List<Reference> get consentingParty;
   @override

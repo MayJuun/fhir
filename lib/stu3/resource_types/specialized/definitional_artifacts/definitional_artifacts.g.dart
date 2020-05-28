@@ -24,7 +24,9 @@ _$_ActivityDefinition _$_$_ActivityDefinitionFromJson(
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     description: json['description'] as String,
     purpose: json['purpose'] as String,
@@ -80,7 +82,7 @@ _$_ActivityDefinition _$_$_ActivityDefinitionFromJson(
         : Timing.fromJson(json['timingTiming'] as Map<String, dynamic>),
     timingDateTime: json['timingDateTime'] == null
         ? null
-        : DateTime.parse(json['timingDateTime'] as String),
+        : FhirDateTime.fromJson(json['timingDateTime'] as String),
     timingPeriod: json['timingPeriod'] == null
         ? null
         : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
@@ -145,7 +147,7 @@ Map<String, dynamic> _$_$_ActivityDefinitionToJson(
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('description', instance.description);
   writeNotNull('purpose', instance.purpose);
@@ -168,7 +170,7 @@ Map<String, dynamic> _$_$_ActivityDefinitionToJson(
   writeNotNull('kind', instance.kind?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
-  writeNotNull('timingDateTime', instance.timingDateTime?.toIso8601String());
+  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
   writeNotNull('timingRange', instance.timingRange?.toJson());
   writeNotNull('location', instance.location?.toJson());
@@ -298,7 +300,9 @@ _$_PlanDefinition _$_$_PlanDefinitionFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     description: json['description'] as String,
     purpose: json['purpose'] as String,
@@ -377,7 +381,7 @@ Map<String, dynamic> _$_$_PlanDefinitionToJson(_$_PlanDefinition instance) {
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('description', instance.description);
   writeNotNull('purpose', instance.purpose);
@@ -551,7 +555,7 @@ _$_PlanDefinitionAction _$_$_PlanDefinitionActionFromJson(
         ?.toList(),
     timingDateTime: json['timingDateTime'] == null
         ? null
-        : DateTime.parse(json['timingDateTime'] as String),
+        : FhirDateTime.fromJson(json['timingDateTime'] as String),
     timingPeriod: json['timingPeriod'] == null
         ? null
         : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
@@ -633,7 +637,7 @@ Map<String, dynamic> _$_$_PlanDefinitionActionToJson(
   writeNotNull('output', instance.output?.map((e) => e?.toJson())?.toList());
   writeNotNull('relatedAction',
       instance.relatedAction?.map((e) => e?.toJson())?.toList());
-  writeNotNull('timingDateTime', instance.timingDateTime?.toIso8601String());
+  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
   writeNotNull('timingDuration', instance.timingDuration?.toJson());
   writeNotNull('timingRange', instance.timingRange?.toJson());
@@ -857,7 +861,9 @@ _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     description: json['description'] as String,
     purpose: json['purpose'] as String,
@@ -918,7 +924,7 @@ Map<String, dynamic> _$_$_QuestionnaireToJson(_$_Questionnaire instance) {
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('description', instance.description);
   writeNotNull('purpose', instance.purpose);
@@ -984,7 +990,7 @@ _$_QuestionnaireItem _$_$_QuestionnaireItemFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['initialDate'] as String),
     initialDateTime: json['initialDateTime'] == null
         ? null
-        : DateTime.parse(json['initialDateTime'] as String),
+        : FhirDateTime.fromJson(json['initialDateTime'] as String),
     initialTime: json['initialTime'] == null
         ? null
         : Time.fromJson(json['initialTime'] as String),
@@ -1039,7 +1045,7 @@ Map<String, dynamic> _$_$_QuestionnaireItemToJson(
   writeNotNull('initialDecimal', instance.initialDecimal?.toJson());
   writeNotNull('initialInteger', instance.initialInteger?.toJson());
   writeNotNull('initialDate', instance.initialDate?.toJson());
-  writeNotNull('initialDateTime', instance.initialDateTime?.toIso8601String());
+  writeNotNull('initialDateTime', instance.initialDateTime?.toJson());
   writeNotNull('initialTime', instance.initialTime?.toJson());
   writeNotNull('initialString', instance.initialString);
   writeNotNull('initialUri', instance.initialUri);
@@ -1091,7 +1097,7 @@ _$_QuestionnaireEnableWhen _$_$_QuestionnaireEnableWhenFromJson(
         : Date.fromJson(json['answerDate'] as String),
     answerDateTime: json['answerDateTime'] == null
         ? null
-        : DateTime.parse(json['answerDateTime'] as String),
+        : FhirDateTime.fromJson(json['answerDateTime'] as String),
     answerTime: json['answerTime'] == null
         ? null
         : Time.fromJson(json['answerTime'] as String),
@@ -1128,7 +1134,7 @@ Map<String, dynamic> _$_$_QuestionnaireEnableWhenToJson(
   writeNotNull('answerDecimal', instance.answerDecimal?.toJson());
   writeNotNull('answerInteger', instance.answerInteger?.toJson());
   writeNotNull('answerDate', instance.answerDate?.toJson());
-  writeNotNull('answerDateTime', instance.answerDateTime?.toIso8601String());
+  writeNotNull('answerDateTime', instance.answerDateTime?.toJson());
   writeNotNull('answerTime', instance.answerTime?.toJson());
   writeNotNull('answerString', instance.answerString);
   writeNotNull('answerUri', instance.answerUri);
@@ -1193,7 +1199,9 @@ _$_ServiceDefinition _$_$_ServiceDefinitionFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     description: json['description'] as String,
     purpose: json['purpose'] as String,
@@ -1272,7 +1280,7 @@ Map<String, dynamic> _$_$_ServiceDefinitionToJson(
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('description', instance.description);
   writeNotNull('purpose', instance.purpose);

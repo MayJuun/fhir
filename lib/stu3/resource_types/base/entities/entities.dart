@@ -19,8 +19,8 @@ abstract class Device with _$Device implements Resource {
     CodeableConcept type,
     String lotNumber,
     String manufacturer,
-    DateTime manufactureDate,
-    DateTime expirationDate,
+    FhirDateTime manufactureDate,
+    FhirDateTime expirationDate,
     String model,
     String version,
     Reference patient,
@@ -292,7 +292,7 @@ abstract class Substance with _$Substance implements Resource {
 abstract class SubstanceInstance with _$SubstanceInstance {
   const factory SubstanceInstance({
     Identifier identifier,
-    DateTime expiry,
+    FhirDateTime expiry,
     Quantity quantity,
   }) = _SubstanceInstance;
   factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>

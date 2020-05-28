@@ -85,7 +85,7 @@ _$_DiagnosticReport _$_$_DiagnosticReportFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
     effectiveDateTime: json['effectiveDateTime'] == null
         ? null
-        : DateTime.parse(json['effectiveDateTime'] as String),
+        : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
@@ -143,8 +143,7 @@ Map<String, dynamic> _$_$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull(
-      'effectiveDateTime', instance.effectiveDateTime?.toIso8601String());
+  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
   writeNotNull('issued', instance.issued);
   writeNotNull(
@@ -274,7 +273,7 @@ _$_ImagingManifest _$_$_ImagingManifestFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
     authoringTime: json['authoringTime'] == null
         ? null
-        : DateTime.parse(json['authoringTime'] as String),
+        : FhirDateTime.fromJson(json['authoringTime'] as String),
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
@@ -299,7 +298,7 @@ Map<String, dynamic> _$_$_ImagingManifestToJson(_$_ImagingManifest instance) {
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('authoringTime', instance.authoringTime?.toIso8601String());
+  writeNotNull('authoringTime', instance.authoringTime?.toJson());
   writeNotNull('author', instance.author?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('study', instance.study?.map((e) => e?.toJson())?.toList());
@@ -431,7 +430,7 @@ _$_ImagingStudy _$_$_ImagingStudyFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
     started: json['started'] == null
         ? null
-        : DateTime.parse(json['started'] as String),
+        : FhirDateTime.fromJson(json['started'] as String),
     basedOn: (json['basedOn'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -493,7 +492,7 @@ Map<String, dynamic> _$_$_ImagingStudyToJson(_$_ImagingStudy instance) {
       'modalityList', instance.modalityList?.map((e) => e?.toJson())?.toList());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull('started', instance.started?.toIso8601String());
+  writeNotNull('started', instance.started?.toJson());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull('referrer', instance.referrer?.toJson());
   writeNotNull(
@@ -549,7 +548,7 @@ _$_ImagingStudySeries _$_$_ImagingStudySeriesFromJson(
         : Coding.fromJson(json['laterality'] as Map<String, dynamic>),
     started: json['started'] == null
         ? null
-        : DateTime.parse(json['started'] as String),
+        : FhirDateTime.fromJson(json['started'] as String),
     performer: (json['performer'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -582,7 +581,7 @@ Map<String, dynamic> _$_$_ImagingStudySeriesToJson(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
   writeNotNull('bodySite', instance.bodySite?.toJson());
   writeNotNull('laterality', instance.laterality?.toJson());
-  writeNotNull('started', instance.started?.toIso8601String());
+  writeNotNull('started', instance.started?.toJson());
   writeNotNull(
       'performer', instance.performer?.map((e) => e?.toJson())?.toList());
   writeNotNull(
@@ -650,7 +649,7 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
     effectiveDateTime: json['effectiveDateTime'] == null
         ? null
-        : DateTime.parse(json['effectiveDateTime'] as String),
+        : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
@@ -688,7 +687,7 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
         : Time.fromJson(json['valueTime'] as String),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valuePeriod: json['valuePeriod'] == null
         ? null
         : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
@@ -750,8 +749,7 @@ Map<String, dynamic> _$_$_ObservationToJson(_$_Observation instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull(
-      'effectiveDateTime', instance.effectiveDateTime?.toIso8601String());
+  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
   writeNotNull('issued', instance.issued);
   writeNotNull(
@@ -765,7 +763,7 @@ Map<String, dynamic> _$_$_ObservationToJson(_$_Observation instance) {
   writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
   writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
   writeNotNull('interpretation', instance.interpretation?.toJson());
@@ -907,7 +905,7 @@ _$_ObservationComponent _$_$_ObservationComponentFromJson(
         : Time.fromJson(json['valueTime'] as String),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valuePeriod: json['valuePeriod'] == null
         ? null
         : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
@@ -946,7 +944,7 @@ Map<String, dynamic> _$_$_ObservationComponentToJson(
   writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
   writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
   writeNotNull('interpretation', instance.interpretation?.toJson());
@@ -985,7 +983,7 @@ _$_QuestionnaireResponse _$_$_QuestionnaireResponseFromJson(
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
     authored: json['authored'] == null
         ? null
-        : DateTime.parse(json['authored'] as String),
+        : FhirDateTime.fromJson(json['authored'] as String),
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
@@ -1018,7 +1016,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseToJson(
   writeNotNull('status', _$QuestionnaireResponseStatusEnumMap[instance.status]);
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull('authored', instance.authored?.toIso8601String());
+  writeNotNull('authored', instance.authored?.toJson());
   writeNotNull('author', instance.author?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
@@ -1092,7 +1090,7 @@ _$_QuestionnaireResponseAnswer _$_$_QuestionnaireResponseAnswerFromJson(
         : Date.fromJson(json['valueDate'] as String),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
@@ -1132,7 +1130,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseAnswerToJson(
   writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('valueDate', instance.valueDate?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueUri', instance.valueUri);
@@ -1439,7 +1437,7 @@ _$_Specimen _$_$_SpecimenFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
     receivedTime: json['receivedTime'] == null
         ? null
-        : DateTime.parse(json['receivedTime'] as String),
+        : FhirDateTime.fromJson(json['receivedTime'] as String),
     parent: (json['parent'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -1485,7 +1483,7 @@ Map<String, dynamic> _$_$_SpecimenToJson(_$_Specimen instance) {
   writeNotNull('status', _$SpecimenStatusEnumMap[instance.status]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('receivedTime', instance.receivedTime?.toIso8601String());
+  writeNotNull('receivedTime', instance.receivedTime?.toJson());
   writeNotNull('parent', instance.parent?.map((e) => e?.toJson())?.toList());
   writeNotNull('request', instance.request?.map((e) => e?.toJson())?.toList());
   writeNotNull('collection', instance.collection?.toJson());
@@ -1513,7 +1511,7 @@ _$_SpecimenCollection _$_$_SpecimenCollectionFromJson(
         : Reference.fromJson(json['collector'] as Map<String, dynamic>),
     collectedDateTime: json['collectedDateTime'] == null
         ? null
-        : DateTime.parse(json['collectedDateTime'] as String),
+        : FhirDateTime.fromJson(json['collectedDateTime'] as String),
     collectedPeriod: json['collectedPeriod'] == null
         ? null
         : Period.fromJson(json['collectedPeriod'] as Map<String, dynamic>),
@@ -1540,8 +1538,7 @@ Map<String, dynamic> _$_$_SpecimenCollectionToJson(
   }
 
   writeNotNull('collector', instance.collector?.toJson());
-  writeNotNull(
-      'collectedDateTime', instance.collectedDateTime?.toIso8601String());
+  writeNotNull('collectedDateTime', instance.collectedDateTime?.toJson());
   writeNotNull('collectedPeriod', instance.collectedPeriod?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('method', instance.method?.toJson());
@@ -1562,7 +1559,7 @@ _$_SpecimenProcessing _$_$_SpecimenProcessingFromJson(
         ?.toList(),
     timeDateTime: json['timeDateTime'] == null
         ? null
-        : DateTime.parse(json['timeDateTime'] as String),
+        : FhirDateTime.fromJson(json['timeDateTime'] as String),
     timePeriod: json['timePeriod'] == null
         ? null
         : Period.fromJson(json['timePeriod'] as Map<String, dynamic>),
@@ -1583,7 +1580,7 @@ Map<String, dynamic> _$_$_SpecimenProcessingToJson(
   writeNotNull('procedure', instance.procedure?.toJson());
   writeNotNull(
       'additive', instance.additive?.map((e) => e?.toJson())?.toList());
-  writeNotNull('timeDateTime', instance.timeDateTime?.toIso8601String());
+  writeNotNull('timeDateTime', instance.timeDateTime?.toJson());
   writeNotNull('timePeriod', instance.timePeriod?.toJson());
   return val;
 }

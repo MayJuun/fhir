@@ -108,7 +108,7 @@ abstract class Consent with _$Consent implements Resource {
     List<CodeableConcept> category,
     @JsonKey(required: true) Reference patient,
     Period period,
-    DateTime dateTime,
+    FhirDateTime dateTime,
     List<Reference> consentingParty,
     List<ConsentActor> actor,
     List<CodeableConcept> action,

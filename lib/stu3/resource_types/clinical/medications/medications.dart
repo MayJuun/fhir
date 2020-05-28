@@ -19,7 +19,7 @@ abstract class Immunization with _$Immunization implements Resource {
     @JsonKey(required: true) CodeableConcept vaccineCode,
     @JsonKey(required: true) Reference patient,
     Reference encounter,
-    DateTime date,
+    FhirDateTime date,
     Boolean primarySource,
     CodeableConcept reportOrigin,
     Reference location,
@@ -62,7 +62,7 @@ abstract class ImmunizationExplanation with _$ImmunizationExplanation {
 @freezed
 abstract class ImmunizationReaction with _$ImmunizationReaction {
   const factory ImmunizationReaction({
-    DateTime date,
+    FhirDateTime date,
     Reference detail,
     Boolean reported,
   }) = _ImmunizationReaction;
@@ -108,7 +108,7 @@ abstract class ImmunizationRecommendation
 abstract class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
   const factory ImmunizationRecommendationRecommendation({
-    DateTime date,
+    FhirDateTime date,
     CodeableConcept vaccineCode,
     CodeableConcept targetDisease,
     PositiveInt doseNumber,
@@ -128,7 +128,7 @@ abstract class ImmunizationRecommendationDateCriterion
     with _$ImmunizationRecommendationDateCriterion {
   const factory ImmunizationRecommendationDateCriterion({
     @JsonKey(required: true) CodeableConcept code,
-    DateTime value,
+    FhirDateTime value,
   }) = _ImmunizationRecommendationDateCriterion;
   factory ImmunizationRecommendationDateCriterion.fromJson(
           Map<String, dynamic> json) =>
@@ -207,7 +207,7 @@ abstract class MedicationContent with _$MedicationContent {
 abstract class MedicationBatch with _$MedicationBatch {
   const factory MedicationBatch({
     String lotNumber,
-    DateTime expirationDate,
+    FhirDateTime expirationDate,
   }) = _MedicationBatch;
   factory MedicationBatch.fromJson(Map<String, dynamic> json) =>
       _$MedicationBatchFromJson(json);
@@ -232,7 +232,7 @@ abstract class MedicationAdministration
     @JsonKey(required: true) Reference subject,
     Reference context,
     List<Reference> supportingInformation,
-    DateTime effectiveDateTime,
+    FhirDateTime effectiveDateTime,
     Period effectivePeriod,
     List<MedicationAdministrationPerformer> performer,
     Boolean notGiven,
@@ -300,8 +300,8 @@ abstract class MedicationDispense
     CodeableConcept type,
     Quantity quantity,
     Quantity daysSupply,
-    DateTime whenPrepared,
-    DateTime whenHandedOver,
+    FhirDateTime whenPrepared,
+    FhirDateTime whenHandedOver,
     Reference destination,
     List<Reference> receiver,
     List<Annotation> note,
@@ -362,7 +362,7 @@ abstract class MedicationRequest with _$MedicationRequest implements Resource {
     @JsonKey(required: true) Reference subject,
     Reference context,
     List<Reference> supportingInformation,
-    DateTime authoredOn,
+    FhirDateTime authoredOn,
     MedicationRequestRequester requester,
     Reference recorder,
     List<CodeableConcept> reasonCode,
@@ -431,9 +431,9 @@ abstract class MedicationStatement
     CodeableConcept category,
     CodeableConcept medicationCodeableConcept,
     Reference medicationReference,
-    DateTime effectiveDateTime,
+    FhirDateTime effectiveDateTime,
     Period effectivePeriod,
-    DateTime dateAsserted,
+    FhirDateTime dateAsserted,
     Reference informationSource,
     @JsonKey(required: true) Reference subject,
     List<Reference> derivedFrom,

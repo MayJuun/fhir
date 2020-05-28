@@ -949,7 +949,7 @@ class _$EligibilityRequestTearOff {
       Reference patient,
       Date servicedDate,
       Period servicedPeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -993,7 +993,7 @@ mixin _$EligibilityRequest {
   Reference get patient;
   Date get servicedDate;
   Period get servicedPeriod;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get enterer;
   Reference get provider;
   Reference get organization;
@@ -1021,7 +1021,7 @@ abstract class $EligibilityRequestCopyWith<$Res> {
       Reference patient,
       Date servicedDate,
       Period servicedPeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -1089,7 +1089,7 @@ class _$EligibilityRequestCopyWithImpl<$Res>
       servicedPeriod: servicedPeriod == freezed
           ? _value.servicedPeriod
           : servicedPeriod as Period,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -1236,7 +1236,7 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       Reference patient,
       Date servicedDate,
       Period servicedPeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -1317,7 +1317,7 @@ class __$EligibilityRequestCopyWithImpl<$Res>
       servicedPeriod: servicedPeriod == freezed
           ? _value.servicedPeriod
           : servicedPeriod as Period,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -1382,7 +1382,7 @@ class _$_EligibilityRequest implements _EligibilityRequest {
   @override
   final Period servicedPeriod;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference enterer;
   @override
@@ -1505,7 +1505,7 @@ abstract class _EligibilityRequest implements EligibilityRequest {
       Reference patient,
       Date servicedDate,
       Period servicedPeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -1535,7 +1535,7 @@ abstract class _EligibilityRequest implements EligibilityRequest {
   @override
   Period get servicedPeriod;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get enterer;
   @override
@@ -1571,7 +1571,7 @@ class _$EligibilityResponseTearOff {
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
@@ -1609,7 +1609,7 @@ mixin _$EligibilityResponse {
   String get resourceType;
   List<Identifier> get identifier;
   Code get status;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get requestProvider;
   Reference get requestOrganization;
   Reference get request;
@@ -1634,7 +1634,7 @@ abstract class $EligibilityResponseCopyWith<$Res> {
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
@@ -1687,7 +1687,7 @@ class _$EligibilityResponseCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
           : requestProvider as Reference,
@@ -1782,7 +1782,7 @@ abstract class _$EligibilityResponseCopyWith<$Res>
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
@@ -1843,7 +1843,7 @@ class __$EligibilityResponseCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
           : requestProvider as Reference,
@@ -1899,7 +1899,7 @@ class _$_EligibilityResponse implements _EligibilityResponse {
   @override
   final Code status;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference requestProvider;
   @override
@@ -2007,7 +2007,7 @@ abstract class _EligibilityResponse implements EligibilityResponse {
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
@@ -2030,7 +2030,7 @@ abstract class _EligibilityResponse implements EligibilityResponse {
   @override
   Code get status;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get requestProvider;
   @override
@@ -3106,7 +3106,7 @@ class _$EnrollmentRequestTearOff {
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference insurer,
       Reference provider,
       Reference organization,
@@ -3134,7 +3134,7 @@ mixin _$EnrollmentRequest {
   String get resourceType;
   List<Identifier> get identifier;
   Code get status;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get insurer;
   Reference get provider;
   Reference get organization;
@@ -3154,7 +3154,7 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference insurer,
       Reference provider,
       Reference organization,
@@ -3196,7 +3196,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -3269,7 +3269,7 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference insurer,
       Reference provider,
       Reference organization,
@@ -3318,7 +3318,7 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -3357,7 +3357,7 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
   @override
   final Code status;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference insurer;
   @override
@@ -3436,7 +3436,7 @@ abstract class _EnrollmentRequest implements EnrollmentRequest {
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference insurer,
       Reference provider,
       Reference organization,
@@ -3454,7 +3454,7 @@ abstract class _EnrollmentRequest implements EnrollmentRequest {
   @override
   Code get status;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get insurer;
   @override
@@ -3485,7 +3485,7 @@ class _$EnrollmentResponseTearOff {
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization}) {
@@ -3515,7 +3515,7 @@ mixin _$EnrollmentResponse {
   Reference get request;
   CodeableConcept get outcome;
   String get disposition;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get organization;
   Reference get requestProvider;
   Reference get requestOrganization;
@@ -3536,7 +3536,7 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization});
@@ -3581,7 +3581,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -3659,7 +3659,7 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization});
@@ -3711,7 +3711,7 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
       disposition:
           disposition == freezed ? _value.disposition : disposition as String,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -3759,7 +3759,7 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
   @override
   final String disposition;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference organization;
   @override
@@ -3841,7 +3841,7 @@ abstract class _EnrollmentResponse implements EnrollmentResponse {
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization}) = _$_EnrollmentResponse;
@@ -3863,7 +3863,7 @@ abstract class _EnrollmentResponse implements EnrollmentResponse {
   @override
   String get disposition;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get organization;
   @override

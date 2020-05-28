@@ -19,7 +19,7 @@ abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
         GuidanceResponseStatus status,
     Reference subject,
     Reference context,
-    DateTime occurrenceDateTime,
+    FhirDateTime occurrenceDateTime,
     Reference performer,
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,

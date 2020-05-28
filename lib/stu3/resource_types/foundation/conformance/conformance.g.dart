@@ -20,7 +20,9 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -105,7 +107,7 @@ Map<String, dynamic> _$_$_CapabilityStatementToJson(
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -196,7 +198,7 @@ _$_CapabilityStatementSoftware _$_$_CapabilityStatementSoftwareFromJson(
     version: json['version'] as String,
     releaseDate: json['releaseDate'] == null
         ? null
-        : DateTime.parse(json['releaseDate'] as String),
+        : FhirDateTime.fromJson(json['releaseDate'] as String),
   );
 }
 
@@ -212,7 +214,7 @@ Map<String, dynamic> _$_$_CapabilityStatementSoftwareToJson(
 
   writeNotNull('name', instance.name);
   writeNotNull('version', instance.version);
-  writeNotNull('releaseDate', instance.releaseDate?.toIso8601String());
+  writeNotNull('releaseDate', instance.releaseDate?.toJson());
   return val;
 }
 
@@ -825,7 +827,9 @@ _$_CompartmentDefinition _$_$_CompartmentDefinitionFromJson(
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -870,7 +874,7 @@ Map<String, dynamic> _$_$_CompartmentDefinitionToJson(
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -935,7 +939,9 @@ _$_DataElement _$_$_DataElementFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -986,7 +992,7 @@ Map<String, dynamic> _$_$_DataElementToJson(_$_DataElement instance) {
   writeNotNull('version', instance.version);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
@@ -1054,7 +1060,9 @@ _$_GraphDefinition _$_$_GraphDefinitionFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -1098,7 +1106,7 @@ Map<String, dynamic> _$_$_GraphDefinitionToJson(_$_GraphDefinition instance) {
   writeNotNull('name', instance.name);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -1234,7 +1242,9 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -1294,7 +1304,7 @@ Map<String, dynamic> _$_$_ImplementationGuideToJson(
   writeNotNull('name', instance.name);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -1506,7 +1516,9 @@ _$_MessageDefinition _$_$_MessageDefinitionFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -1577,7 +1589,7 @@ Map<String, dynamic> _$_$_MessageDefinitionToJson(
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -1670,7 +1682,9 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -1733,7 +1747,7 @@ Map<String, dynamic> _$_$_OperationDefinitionToJson(
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('kind', _$OperationDefinitionKindEnumMap[instance.kind]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -1893,7 +1907,9 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -1957,7 +1973,7 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull('name', instance.name);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull(
@@ -2071,7 +2087,9 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -2147,7 +2165,7 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -2294,7 +2312,9 @@ _$_StructureMap _$_$_StructureMapFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -2345,7 +2365,7 @@ Map<String, dynamic> _$_$_StructureMapToJson(_$_StructureMap instance) {
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -2552,7 +2572,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
         : Date.fromJson(json['defaultValueDate'] as String),
     defaultValueDateTime: json['defaultValueDateTime'] == null
         ? null
-        : DateTime.parse(json['defaultValueDateTime'] as String),
+        : FhirDateTime.fromJson(json['defaultValueDateTime'] as String),
     defaultValueTime: json['defaultValueTime'] == null
         ? null
         : Time.fromJson(json['defaultValueTime'] as String),
@@ -2741,8 +2761,7 @@ Map<String, dynamic> _$_$_StructureMapSourceToJson(
   writeNotNull('defaultValueString', instance.defaultValueString);
   writeNotNull('defaultValueUri', instance.defaultValueUri);
   writeNotNull('defaultValueDate', instance.defaultValueDate?.toJson());
-  writeNotNull(
-      'defaultValueDateTime', instance.defaultValueDateTime?.toIso8601String());
+  writeNotNull('defaultValueDateTime', instance.defaultValueDateTime?.toJson());
   writeNotNull('defaultValueTime', instance.defaultValueTime?.toJson());
   writeNotNull('defaultValueCode', instance.defaultValueCode?.toJson());
   writeNotNull('defaultValueOid', instance.defaultValueOid?.toJson());

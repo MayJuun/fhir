@@ -27,7 +27,7 @@ class _$ClaimTearOff {
           ClaimUse use,
       Reference patient,
       Period billablePeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -100,7 +100,7 @@ mixin _$Claim {
   ClaimUse get use;
   Reference get patient;
   Period get billablePeriod;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get enterer;
   Reference get insurer;
   Reference get provider;
@@ -140,7 +140,7 @@ abstract class $ClaimCopyWith<$Res> {
       @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
       Reference patient,
       Period billablePeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -242,7 +242,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       billablePeriod: billablePeriod == freezed
           ? _value.billablePeriod
           : billablePeriod as Period,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
@@ -487,7 +487,7 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
       Reference patient,
       Period billablePeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -608,7 +608,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
       billablePeriod: billablePeriod == freezed
           ? _value.billablePeriod
           : billablePeriod as Period,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
@@ -721,7 +721,7 @@ class _$_Claim implements _Claim {
   @override
   final Period billablePeriod;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference enterer;
   @override
@@ -910,7 +910,7 @@ abstract class _Claim implements Claim {
           ClaimUse use,
       Reference patient,
       Period billablePeriod,
-      DateTime created,
+      FhirDateTime created,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -955,7 +955,7 @@ abstract class _Claim implements Claim {
   @override
   Period get billablePeriod;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get enterer;
   @override
@@ -2380,7 +2380,7 @@ class _$ClaimProcedureTearOff {
 
   _ClaimProcedure call(
       {PositiveInt sequence,
-      DateTime date,
+      FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference}) {
     return _ClaimProcedure(
@@ -2397,7 +2397,7 @@ const $ClaimProcedure = _$ClaimProcedureTearOff();
 
 mixin _$ClaimProcedure {
   PositiveInt get sequence;
-  DateTime get date;
+  FhirDateTime get date;
   CodeableConcept get procedureCodeableConcept;
   Reference get procedureReference;
 
@@ -2411,7 +2411,7 @@ abstract class $ClaimProcedureCopyWith<$Res> {
       _$ClaimProcedureCopyWithImpl<$Res>;
   $Res call(
       {PositiveInt sequence,
-      DateTime date,
+      FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference});
 
@@ -2436,7 +2436,7 @@ class _$ClaimProcedureCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       procedureCodeableConcept: procedureCodeableConcept == freezed
           ? _value.procedureCodeableConcept
           : procedureCodeableConcept as CodeableConcept,
@@ -2476,7 +2476,7 @@ abstract class _$ClaimProcedureCopyWith<$Res>
   @override
   $Res call(
       {PositiveInt sequence,
-      DateTime date,
+      FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference});
 
@@ -2505,7 +2505,7 @@ class __$ClaimProcedureCopyWithImpl<$Res>
   }) {
     return _then(_ClaimProcedure(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       procedureCodeableConcept: procedureCodeableConcept == freezed
           ? _value.procedureCodeableConcept
           : procedureCodeableConcept as CodeableConcept,
@@ -2530,7 +2530,7 @@ class _$_ClaimProcedure implements _ClaimProcedure {
   @override
   final PositiveInt sequence;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final CodeableConcept procedureCodeableConcept;
   @override
@@ -2581,7 +2581,7 @@ class _$_ClaimProcedure implements _ClaimProcedure {
 abstract class _ClaimProcedure implements ClaimProcedure {
   const factory _ClaimProcedure(
       {PositiveInt sequence,
-      DateTime date,
+      FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference}) = _$_ClaimProcedure;
 
@@ -2591,7 +2591,7 @@ abstract class _ClaimProcedure implements ClaimProcedure {
   @override
   PositiveInt get sequence;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   CodeableConcept get procedureCodeableConcept;
   @override
@@ -4721,7 +4721,7 @@ class _$ClaimResponseTearOff {
       List<Identifier> identifier,
       Code status,
       Reference patient,
-      DateTime created,
+      FhirDateTime created,
       Reference insurer,
       Reference requestProvider,
       Reference requestOrganization,
@@ -4779,7 +4779,7 @@ mixin _$ClaimResponse {
   List<Identifier> get identifier;
   Code get status;
   Reference get patient;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get insurer;
   Reference get requestProvider;
   Reference get requestOrganization;
@@ -4814,7 +4814,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       List<Identifier> identifier,
       Code status,
       Reference patient,
-      DateTime created,
+      FhirDateTime created,
       Reference insurer,
       Reference requestProvider,
       Reference requestOrganization,
@@ -4894,7 +4894,7 @@ class _$ClaimResponseCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
@@ -5080,7 +5080,7 @@ abstract class _$ClaimResponseCopyWith<$Res>
       List<Identifier> identifier,
       Code status,
       Reference patient,
-      DateTime created,
+      FhirDateTime created,
       Reference insurer,
       Reference requestProvider,
       Reference requestOrganization,
@@ -5175,7 +5175,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
@@ -5263,7 +5263,7 @@ class _$_ClaimResponse implements _ClaimResponse {
   @override
   final Reference patient;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference insurer;
   @override
@@ -5427,7 +5427,7 @@ abstract class _ClaimResponse implements ClaimResponse {
       List<Identifier> identifier,
       Code status,
       Reference patient,
-      DateTime created,
+      FhirDateTime created,
       Reference insurer,
       Reference requestProvider,
       Reference requestOrganization,
@@ -5461,7 +5461,7 @@ abstract class _ClaimResponse implements ClaimResponse {
   @override
   Reference get patient;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get insurer;
   @override

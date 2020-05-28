@@ -86,7 +86,7 @@ abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
   const factory DataRequirementDateFilter({
     String path,
-    DateTime valueDateTime,
+    FhirDateTime valueDateTime,
     Period valuePeriod,
     Duration valueDuration,
   }) = _DataRequirementDateFilter;
@@ -118,7 +118,7 @@ abstract class TriggerDefinition with _$TriggerDefinition {
     Timing eventTimingTiming,
     Reference eventTimingReference,
     Date eventTimingDate,
-    DateTime eventTimingDateTime,
+    FhirDateTime eventTimingDateTime,
     DataRequirement eventData,
   }) = _TriggerDefinition;
   factory TriggerDefinition.fromJson(Map<String, dynamic> json) =>

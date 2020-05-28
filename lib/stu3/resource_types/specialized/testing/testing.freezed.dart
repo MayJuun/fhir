@@ -29,7 +29,7 @@ class _$TestReportTearOff {
           TestReportResult result,
       Decimal score,
       String tester,
-      DateTime issued,
+      FhirDateTime issued,
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
@@ -68,7 +68,7 @@ mixin _$TestReport {
   TestReportResult get result;
   Decimal get score;
   String get tester;
-  DateTime get issued;
+  FhirDateTime get issued;
   List<TestReportParticipant> get participant;
   TestReportSetup get setup;
   List<TestReportTest> get test;
@@ -95,7 +95,7 @@ abstract class $TestReportCopyWith<$Res> {
           TestReportResult result,
       Decimal score,
       String tester,
-      DateTime issued,
+      FhirDateTime issued,
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
@@ -143,7 +143,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       result: result == freezed ? _value.result : result as TestReportResult,
       score: score == freezed ? _value.score : score as Decimal,
       tester: tester == freezed ? _value.tester : tester as String,
-      issued: issued == freezed ? _value.issued : issued as DateTime,
+      issued: issued == freezed ? _value.issued : issued as FhirDateTime,
       participant: participant == freezed
           ? _value.participant
           : participant as List<TestReportParticipant>,
@@ -214,7 +214,7 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
           TestReportResult result,
       Decimal score,
       String tester,
-      DateTime issued,
+      FhirDateTime issued,
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
@@ -268,7 +268,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
       result: result == freezed ? _value.result : result as TestReportResult,
       score: score == freezed ? _value.score : score as Decimal,
       tester: tester == freezed ? _value.tester : tester as String,
-      issued: issued == freezed ? _value.issued : issued as DateTime,
+      issued: issued == freezed ? _value.issued : issued as FhirDateTime,
       participant: participant == freezed
           ? _value.participant
           : participant as List<TestReportParticipant>,
@@ -328,7 +328,7 @@ class _$_TestReport implements _TestReport {
   @override
   final String tester;
   @override
-  final DateTime issued;
+  final FhirDateTime issued;
   @override
   final List<TestReportParticipant> participant;
   @override
@@ -422,7 +422,7 @@ abstract class _TestReport implements TestReport {
           TestReportResult result,
       Decimal score,
       String tester,
-      DateTime issued,
+      FhirDateTime issued,
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
@@ -452,7 +452,7 @@ abstract class _TestReport implements TestReport {
   @override
   String get tester;
   @override
-  DateTime get issued;
+  FhirDateTime get issued;
   @override
   List<TestReportParticipant> get participant;
   @override
@@ -1985,7 +1985,7 @@ class _$TestScriptTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -2050,7 +2050,7 @@ mixin _$TestScript {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -2087,7 +2087,7 @@ abstract class $TestScriptCopyWith<$Res> {
       String title,
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -2164,7 +2164,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -2260,7 +2260,7 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       String title,
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -2343,7 +2343,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -2442,7 +2442,7 @@ class _$_TestScript implements _TestScript {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -2615,7 +2615,7 @@ abstract class _TestScript implements TestScript {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -2657,7 +2657,7 @@ abstract class _TestScript implements TestScript {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override

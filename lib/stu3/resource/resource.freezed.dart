@@ -289,7 +289,7 @@ class _$FhirExtensionTearOff {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -406,7 +406,7 @@ mixin _$FhirExtension {
   String get valueString;
   String get valueUri;
   Date get valueDate;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   Time get valueTime;
   Code get valueCode;
   Oid get valueOid;
@@ -470,7 +470,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -641,7 +641,7 @@ class _$FhirExtensionCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -1125,7 +1125,7 @@ abstract class _$FhirExtensionCopyWith<$Res>
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -1333,7 +1333,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -1528,7 +1528,7 @@ class _$_FhirExtension implements _FhirExtension {
   @override
   final Date valueDate;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
   @override
   final Time valueTime;
   @override
@@ -1805,7 +1805,7 @@ abstract class _FhirExtension implements FhirExtension {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -1873,7 +1873,7 @@ abstract class _FhirExtension implements FhirExtension {
   @override
   Date get valueDate;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   Time get valueTime;
   @override

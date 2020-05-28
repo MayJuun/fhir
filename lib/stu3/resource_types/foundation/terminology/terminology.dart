@@ -20,7 +20,7 @@ abstract class CodeSystem with _$CodeSystem implements Resource {
     String title,
     @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
-    DateTime date,
+    FhirDateTime date,
     String publisher,
     List<ContactDetail> contact,
     String description,
@@ -103,7 +103,7 @@ abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
     String valueString,
     Integer valueInteger,
     Boolean valueBoolean,
-    DateTime valueDateTime,
+    FhirDateTime valueDateTime,
   }) = _CodeSystemProperty1;
   factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemProperty1FromJson(json);
@@ -122,7 +122,7 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
     String title,
     @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
-    DateTime date,
+    FhirDateTime date,
     String publisher,
     List<ContactDetail> contact,
     String description,
@@ -216,7 +216,7 @@ abstract class ExpansionProfile with _$ExpansionProfile implements Resource {
     String name,
     @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
-    DateTime date,
+    FhirDateTime date,
     String publisher,
     List<ContactDetail> contact,
     String description,
@@ -320,7 +320,7 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     String name,
     @JsonKey(unknownEnumValue: Status.unknown) Status status,
     @JsonKey(unknownEnumValue: NamingSystemKind.unknown) NamingSystemKind kind,
-    DateTime date,
+    FhirDateTime date,
     String publisher,
     List<ContactDetail> contact,
     String responsible,
@@ -362,7 +362,7 @@ abstract class ValueSet with _$ValueSet implements Resource {
     String title,
     @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
-    DateTime date,
+    FhirDateTime date,
     String publisher,
     List<ContactDetail> contact,
     String description,
@@ -441,7 +441,7 @@ abstract class ValueSetFilter with _$ValueSetFilter {
 abstract class ValueSetExpansion with _$ValueSetExpansion {
   const factory ValueSetExpansion({
     String identifier,
-    DateTime timestamp,
+    FhirDateTime timestamp,
     Integer total,
     Integer offset,
     List<ValueSetParameter> parameter,

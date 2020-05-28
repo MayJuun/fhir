@@ -12,7 +12,9 @@ _$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['authorReference'] as Map<String, dynamic>),
     authorString: json['authorString'] as String,
-    time: json['time'] == null ? null : DateTime.parse(json['time'] as String),
+    time: json['time'] == null
+        ? null
+        : FhirDateTime.fromJson(json['time'] as String),
     text: json['text'] as String,
   );
 }
@@ -28,7 +30,7 @@ Map<String, dynamic> _$_$_AnnotationToJson(_$_Annotation instance) {
 
   writeNotNull('authorReference', instance.authorReference?.toJson());
   writeNotNull('authorString', instance.authorString);
-  writeNotNull('time', instance.time?.toIso8601String());
+  writeNotNull('time', instance.time?.toJson());
   writeNotNull('text', instance.text);
   return val;
 }
@@ -48,7 +50,7 @@ _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
     title: json['title'] as String,
     creation: json['creation'] == null
         ? null
-        : DateTime.parse(json['creation'] as String),
+        : FhirDateTime.fromJson(json['creation'] as String),
   );
 }
 
@@ -68,7 +70,7 @@ Map<String, dynamic> _$_$_AttachmentToJson(_$_Attachment instance) {
   writeNotNull('size', instance.size?.toJson());
   writeNotNull('hash', instance.hash);
   writeNotNull('title', instance.title);
-  writeNotNull('creation', instance.creation?.toIso8601String());
+  writeNotNull('creation', instance.creation?.toJson());
   return val;
 }
 
@@ -404,9 +406,12 @@ Map<String, dynamic> _$_$_RangeToJson(_$_Range instance) {
 
 _$_Period _$_$_PeriodFromJson(Map<String, dynamic> json) {
   return _$_Period(
-    start:
-        json['start'] == null ? null : DateTime.parse(json['start'] as String),
-    end: json['end'] == null ? null : DateTime.parse(json['end'] as String),
+    start: json['start'] == null
+        ? null
+        : FhirDateTime.fromJson(json['start'] as String),
+    end: json['end'] == null
+        ? null
+        : FhirDateTime.fromJson(json['end'] as String),
   );
 }
 
@@ -419,8 +424,8 @@ Map<String, dynamic> _$_$_PeriodToJson(_$_Period instance) {
     }
   }
 
-  writeNotNull('start', instance.start?.toIso8601String());
-  writeNotNull('end', instance.end?.toIso8601String());
+  writeNotNull('start', instance.start?.toJson());
+  writeNotNull('end', instance.end?.toJson());
   return val;
 }
 
@@ -688,7 +693,7 @@ const _$ContactPointUseEnumMap = {
 _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
   return _$_Timing(
     event: (json['event'] as List)
-        ?.map((e) => e == null ? null : DateTime.parse(e as String))
+        ?.map((e) => e == null ? null : FhirDateTime.fromJson(e as String))
         ?.toList(),
     repeat: json['repeat'] == null
         ? null
@@ -708,8 +713,7 @@ Map<String, dynamic> _$_$_TimingToJson(_$_Timing instance) {
     }
   }
 
-  writeNotNull(
-      'event', instance.event?.map((e) => e?.toIso8601String())?.toList());
+  writeNotNull('event', instance.event?.map((e) => e?.toJson())?.toList());
   writeNotNull('repeat', instance.repeat?.toJson());
   writeNotNull('code', instance.code?.toJson());
   return val;

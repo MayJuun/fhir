@@ -27,7 +27,7 @@ class _$GuidanceResponseTearOff {
           GuidanceResponseStatus status,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -71,7 +71,7 @@ mixin _$GuidanceResponse {
   GuidanceResponseStatus get status;
   Reference get subject;
   Reference get context;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Reference get performer;
   CodeableConcept get reasonCodeableConcept;
   Reference get reasonReference;
@@ -100,7 +100,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
           GuidanceResponseStatus status,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -162,7 +162,7 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
       reasonCodeableConcept: reasonCodeableConcept == freezed
@@ -294,7 +294,7 @@ abstract class _$GuidanceResponseCopyWith<$Res>
           GuidanceResponseStatus status,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -367,7 +367,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
       reasonCodeableConcept: reasonCodeableConcept == freezed
@@ -437,7 +437,7 @@ class _$_GuidanceResponse implements _GuidanceResponse {
   @override
   final Reference context;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Reference performer;
   @override
@@ -553,7 +553,7 @@ abstract class _GuidanceResponse implements GuidanceResponse {
           GuidanceResponseStatus status,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -584,7 +584,7 @@ abstract class _GuidanceResponse implements GuidanceResponse {
   @override
   Reference get context;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Reference get performer;
   @override

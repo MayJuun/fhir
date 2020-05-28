@@ -34,7 +34,7 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
         : Period.fromJson(json['billablePeriod'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     enterer: json['enterer'] == null
         ? null
         : Reference.fromJson(json['enterer'] as Map<String, dynamic>),
@@ -136,7 +136,7 @@ Map<String, dynamic> _$_$_ClaimToJson(_$_Claim instance) {
   writeNotNull('use', _$ClaimUseEnumMap[instance.use]);
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('billablePeriod', instance.billablePeriod?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
@@ -407,7 +407,9 @@ _$_ClaimProcedure _$_$_ClaimProcedureFromJson(Map<String, dynamic> json) {
     sequence: json['sequence'] == null
         ? null
         : PositiveInt.fromJson(json['sequence']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     procedureCodeableConcept: json['procedureCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -429,7 +431,7 @@ Map<String, dynamic> _$_$_ClaimProcedureToJson(_$_ClaimProcedure instance) {
   }
 
   writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull(
       'procedureCodeableConcept', instance.procedureCodeableConcept?.toJson());
   writeNotNull('procedureReference', instance.procedureReference?.toJson());
@@ -786,7 +788,7 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     insurer: json['insurer'] == null
         ? null
         : Reference.fromJson(json['insurer'] as Map<String, dynamic>),
@@ -872,7 +874,7 @@ Map<String, dynamic> _$_$_ClaimResponseToJson(_$_ClaimResponse instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   writeNotNull('requestOrganization', instance.requestOrganization?.toJson());

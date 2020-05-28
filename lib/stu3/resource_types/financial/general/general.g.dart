@@ -195,7 +195,7 @@ _$_ChargeItem _$_$_ChargeItemFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
     occurrenceDateTime: json['occurrenceDateTime'] == null
         ? null
-        : DateTime.parse(json['occurrenceDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrencePeriod: json['occurrencePeriod'] == null
         ? null
         : Period.fromJson(json['occurrencePeriod'] as Map<String, dynamic>),
@@ -235,7 +235,7 @@ _$_ChargeItem _$_$_ChargeItemFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['enterer'] as Map<String, dynamic>),
     enteredDate: json['enteredDate'] == null
         ? null
-        : DateTime.parse(json['enteredDate'] as String),
+        : FhirDateTime.fromJson(json['enteredDate'] as String),
     reason: (json['reason'] as List)
         ?.map((e) => e == null
             ? null
@@ -277,8 +277,7 @@ Map<String, dynamic> _$_$_ChargeItemToJson(_$_ChargeItem instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull(
-      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
   writeNotNull('occurrenceTiming', instance.occurrenceTiming?.toJson());
   writeNotNull(
@@ -294,7 +293,7 @@ Map<String, dynamic> _$_$_ChargeItemToJson(_$_ChargeItem instance) {
   writeNotNull('priceOverride', instance.priceOverride?.toJson());
   writeNotNull('overrideReason', instance.overrideReason);
   writeNotNull('enterer', instance.enterer?.toJson());
-  writeNotNull('enteredDate', instance.enteredDate?.toIso8601String());
+  writeNotNull('enteredDate', instance.enteredDate?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e?.toJson())?.toList());
   writeNotNull('service', instance.service?.map((e) => e?.toJson())?.toList());
   writeNotNull('account', instance.account?.map((e) => e?.toJson())?.toList());
@@ -353,7 +352,7 @@ _$_Contract _$_$_ContractFromJson(Map<String, dynamic> json) {
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     issued: json['issued'] == null
         ? null
-        : DateTime.parse(json['issued'] as String),
+        : FhirDateTime.fromJson(json['issued'] as String),
     applies: json['applies'] == null
         ? null
         : Period.fromJson(json['applies'] as Map<String, dynamic>),
@@ -458,7 +457,7 @@ Map<String, dynamic> _$_$_ContractToJson(_$_Contract instance) {
   writeNotNull('resourceType', instance.resourceType);
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('status', instance.status?.toJson());
-  writeNotNull('issued', instance.issued?.toIso8601String());
+  writeNotNull('issued', instance.issued?.toJson());
   writeNotNull('applies', instance.applies?.toJson());
   writeNotNull('subject', instance.subject?.map((e) => e?.toJson())?.toList());
   writeNotNull('topic', instance.topic?.map((e) => e?.toJson())?.toList());
@@ -563,7 +562,7 @@ _$_ContractValuedItem _$_$_ContractValuedItemFromJson(
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     effectiveTime: json['effectiveTime'] == null
         ? null
-        : DateTime.parse(json['effectiveTime'] as String),
+        : FhirDateTime.fromJson(json['effectiveTime'] as String),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -592,7 +591,7 @@ Map<String, dynamic> _$_$_ContractValuedItemToJson(
       'entityCodeableConcept', instance.entityCodeableConcept?.toJson());
   writeNotNull('entityReference', instance.entityReference?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('effectiveTime', instance.effectiveTime?.toIso8601String());
+  writeNotNull('effectiveTime', instance.effectiveTime?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('unitPrice', instance.unitPrice?.toJson());
   writeNotNull('factor', instance.factor?.toJson());
@@ -608,7 +607,7 @@ _$_ContractTerm _$_$_ContractTermFromJson(Map<String, dynamic> json) {
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     issued: json['issued'] == null
         ? null
-        : DateTime.parse(json['issued'] as String),
+        : FhirDateTime.fromJson(json['issued'] as String),
     applies: json['applies'] == null
         ? null
         : Period.fromJson(json['applies'] as Map<String, dynamic>),
@@ -664,7 +663,7 @@ Map<String, dynamic> _$_$_ContractTermToJson(_$_ContractTerm instance) {
   }
 
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('issued', instance.issued?.toIso8601String());
+  writeNotNull('issued', instance.issued?.toJson());
   writeNotNull('applies', instance.applies?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subType', instance.subType?.toJson());
@@ -725,7 +724,7 @@ _$_ContractValuedItem1 _$_$_ContractValuedItem1FromJson(
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     effectiveTime: json['effectiveTime'] == null
         ? null
-        : DateTime.parse(json['effectiveTime'] as String),
+        : FhirDateTime.fromJson(json['effectiveTime'] as String),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -754,7 +753,7 @@ Map<String, dynamic> _$_$_ContractValuedItem1ToJson(
       'entityCodeableConcept', instance.entityCodeableConcept?.toJson());
   writeNotNull('entityReference', instance.entityReference?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('effectiveTime', instance.effectiveTime?.toIso8601String());
+  writeNotNull('effectiveTime', instance.effectiveTime?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('unitPrice', instance.unitPrice?.toJson());
   writeNotNull('factor', instance.factor?.toJson());
@@ -869,7 +868,7 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
         : Period.fromJson(json['billablePeriod'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     enterer: json['enterer'] == null
         ? null
         : Reference.fromJson(json['enterer'] as Map<String, dynamic>),
@@ -1011,7 +1010,7 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
   writeNotNull('subType', instance.subType?.map((e) => e?.toJson())?.toList());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('billablePeriod', instance.billablePeriod?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
@@ -1272,7 +1271,9 @@ _$_ExplanationOfBenefitProcedure _$_$_ExplanationOfBenefitProcedureFromJson(
     sequence: json['sequence'] == null
         ? null
         : PositiveInt.fromJson(json['sequence']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     procedureCodeableConcept: json['procedureCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -1295,7 +1296,7 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitProcedureToJson(
   }
 
   writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull(
       'procedureCodeableConcept', instance.procedureCodeableConcept?.toJson());
   writeNotNull('procedureReference', instance.procedureReference?.toJson());

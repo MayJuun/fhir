@@ -336,7 +336,7 @@ _$_Consent _$_$_ConsentFromJson(Map<String, dynamic> json) {
         : Period.fromJson(json['period'] as Map<String, dynamic>),
     dateTime: json['dateTime'] == null
         ? null
-        : DateTime.parse(json['dateTime'] as String),
+        : FhirDateTime.fromJson(json['dateTime'] as String),
     consentingParty: (json['consentingParty'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -408,7 +408,7 @@ Map<String, dynamic> _$_$_ConsentToJson(_$_Consent instance) {
       'category', instance.category?.map((e) => e?.toJson())?.toList());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('period', instance.period?.toJson());
-  writeNotNull('dateTime', instance.dateTime?.toIso8601String());
+  writeNotNull('dateTime', instance.dateTime?.toJson());
   writeNotNull('consentingParty',
       instance.consentingParty?.map((e) => e?.toJson())?.toList());
   writeNotNull('actor', instance.actor?.map((e) => e?.toJson())?.toList());

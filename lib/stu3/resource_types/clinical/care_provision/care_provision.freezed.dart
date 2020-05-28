@@ -3095,7 +3095,7 @@ class _$NutritionOrderTearOff {
       @JsonKey(required: true)
           Reference patient,
       Reference encounter,
-      DateTime dateTime,
+      FhirDateTime dateTime,
       Reference orderer,
       List<Reference> allergyIntolerance,
       List<CodeableConcept> foodPreferenceModifier,
@@ -3133,7 +3133,7 @@ mixin _$NutritionOrder {
   @JsonKey(required: true)
   Reference get patient;
   Reference get encounter;
-  DateTime get dateTime;
+  FhirDateTime get dateTime;
   Reference get orderer;
   List<Reference> get allergyIntolerance;
   List<CodeableConcept> get foodPreferenceModifier;
@@ -3159,7 +3159,7 @@ abstract class $NutritionOrderCopyWith<$Res> {
       @JsonKey(required: true)
           Reference patient,
       Reference encounter,
-      DateTime dateTime,
+      FhirDateTime dateTime,
       Reference orderer,
       List<Reference> allergyIntolerance,
       List<CodeableConcept> foodPreferenceModifier,
@@ -3211,7 +3211,8 @@ class _$NutritionOrderCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      dateTime: dateTime == freezed ? _value.dateTime : dateTime as DateTime,
+      dateTime:
+          dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
       orderer: orderer == freezed ? _value.orderer : orderer as Reference,
       allergyIntolerance: allergyIntolerance == freezed
           ? _value.allergyIntolerance
@@ -3301,7 +3302,7 @@ abstract class _$NutritionOrderCopyWith<$Res>
       @JsonKey(required: true)
           Reference patient,
       Reference encounter,
-      DateTime dateTime,
+      FhirDateTime dateTime,
       Reference orderer,
       List<Reference> allergyIntolerance,
       List<CodeableConcept> foodPreferenceModifier,
@@ -3360,7 +3361,8 @@ class __$NutritionOrderCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      dateTime: dateTime == freezed ? _value.dateTime : dateTime as DateTime,
+      dateTime:
+          dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
       orderer: orderer == freezed ? _value.orderer : orderer as Reference,
       allergyIntolerance: allergyIntolerance == freezed
           ? _value.allergyIntolerance
@@ -3423,7 +3425,7 @@ class _$_NutritionOrder implements _NutritionOrder {
   @override
   final Reference encounter;
   @override
-  final DateTime dateTime;
+  final FhirDateTime dateTime;
   @override
   final Reference orderer;
   @override
@@ -3526,7 +3528,7 @@ abstract class _NutritionOrder implements NutritionOrder {
       @JsonKey(required: true)
           Reference patient,
       Reference encounter,
-      DateTime dateTime,
+      FhirDateTime dateTime,
       Reference orderer,
       List<Reference> allergyIntolerance,
       List<CodeableConcept> foodPreferenceModifier,
@@ -3552,7 +3554,7 @@ abstract class _NutritionOrder implements NutritionOrder {
   @override
   Reference get encounter;
   @override
-  DateTime get dateTime;
+  FhirDateTime get dateTime;
   @override
   Reference get orderer;
   @override
@@ -5100,12 +5102,12 @@ class _$ProcedureRequestTearOff {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       Boolean asNeededBoolean,
       CodeableConcept asNeededCodeableConcept,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       ProcedureRequestRequester requester,
       CodeableConcept performerType,
       Reference performer,
@@ -5172,12 +5174,12 @@ mixin _$ProcedureRequest {
   @JsonKey(required: true)
   Reference get subject;
   Reference get context;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Period get occurrencePeriod;
   Timing get occurrenceTiming;
   Boolean get asNeededBoolean;
   CodeableConcept get asNeededCodeableConcept;
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   ProcedureRequestRequester get requester;
   CodeableConcept get performerType;
   Reference get performer;
@@ -5215,12 +5217,12 @@ abstract class $ProcedureRequestCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       Boolean asNeededBoolean,
       CodeableConcept asNeededCodeableConcept,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       ProcedureRequestRequester requester,
       CodeableConcept performerType,
       Reference performer,
@@ -5315,7 +5317,7 @@ class _$ProcedureRequestCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -5328,8 +5330,9 @@ class _$ProcedureRequestCopyWithImpl<$Res>
       asNeededCodeableConcept: asNeededCodeableConcept == freezed
           ? _value.asNeededCodeableConcept
           : asNeededCodeableConcept as CodeableConcept,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as ProcedureRequestRequester,
@@ -5485,12 +5488,12 @@ abstract class _$ProcedureRequestCopyWith<$Res>
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       Boolean asNeededBoolean,
       CodeableConcept asNeededCodeableConcept,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       ProcedureRequestRequester requester,
       CodeableConcept performerType,
       Reference performer,
@@ -5597,7 +5600,7 @@ class __$ProcedureRequestCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -5610,8 +5613,9 @@ class __$ProcedureRequestCopyWithImpl<$Res>
       asNeededCodeableConcept: asNeededCodeableConcept == freezed
           ? _value.asNeededCodeableConcept
           : asNeededCodeableConcept as CodeableConcept,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as ProcedureRequestRequester,
@@ -5716,7 +5720,7 @@ class _$_ProcedureRequest implements _ProcedureRequest {
   @override
   final Reference context;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Period occurrencePeriod;
   @override
@@ -5726,7 +5730,7 @@ class _$_ProcedureRequest implements _ProcedureRequest {
   @override
   final CodeableConcept asNeededCodeableConcept;
   @override
-  final DateTime authoredOn;
+  final FhirDateTime authoredOn;
   @override
   final ProcedureRequestRequester requester;
   @override
@@ -5895,12 +5899,12 @@ abstract class _ProcedureRequest implements ProcedureRequest {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       Boolean asNeededBoolean,
       CodeableConcept asNeededCodeableConcept,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       ProcedureRequestRequester requester,
       CodeableConcept performerType,
       Reference performer,
@@ -5947,7 +5951,7 @@ abstract class _ProcedureRequest implements ProcedureRequest {
   @override
   Reference get context;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Period get occurrencePeriod;
   @override
@@ -5957,7 +5961,7 @@ abstract class _ProcedureRequest implements ProcedureRequest {
   @override
   CodeableConcept get asNeededCodeableConcept;
   @override
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   @override
   ProcedureRequestRequester get requester;
   @override
@@ -6189,9 +6193,9 @@ class _$ReferralRequestTearOff {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       ReferralRequestRequester requester,
       CodeableConcept specialty,
       List<Reference> recipient,
@@ -6250,9 +6254,9 @@ mixin _$ReferralRequest {
   @JsonKey(required: true)
   Reference get subject;
   Reference get context;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Period get occurrencePeriod;
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   ReferralRequestRequester get requester;
   CodeableConcept get specialty;
   List<Reference> get recipient;
@@ -6287,9 +6291,9 @@ abstract class $ReferralRequestCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       ReferralRequestRequester requester,
       CodeableConcept specialty,
       List<Reference> recipient,
@@ -6372,12 +6376,13 @@ class _$ReferralRequestCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as ReferralRequestRequester,
@@ -6498,9 +6503,9 @@ abstract class _$ReferralRequestCopyWith<$Res>
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       ReferralRequestRequester requester,
       CodeableConcept specialty,
       List<Reference> recipient,
@@ -6592,12 +6597,13 @@ class __$ReferralRequestCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as ReferralRequestRequester,
@@ -6691,11 +6697,11 @@ class _$_ReferralRequest implements _ReferralRequest {
   @override
   final Reference context;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Period occurrencePeriod;
   @override
-  final DateTime authoredOn;
+  final FhirDateTime authoredOn;
   @override
   final ReferralRequestRequester requester;
   @override
@@ -6851,9 +6857,9 @@ abstract class _ReferralRequest implements ReferralRequest {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       ReferralRequestRequester requester,
       CodeableConcept specialty,
       List<Reference> recipient,
@@ -6896,11 +6902,11 @@ abstract class _ReferralRequest implements ReferralRequest {
   @override
   Reference get context;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Period get occurrencePeriod;
   @override
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   @override
   ReferralRequestRequester get requester;
   @override
@@ -7126,7 +7132,7 @@ class _$RequestGroupTearOff {
       Code priority,
       Reference subject,
       Reference context,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       Reference author,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -7170,7 +7176,7 @@ mixin _$RequestGroup {
   Code get priority;
   Reference get subject;
   Reference get context;
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   Reference get author;
   CodeableConcept get reasonCodeableConcept;
   Reference get reasonReference;
@@ -7198,7 +7204,7 @@ abstract class $RequestGroupCopyWith<$Res> {
       Code priority,
       Reference subject,
       Reference context,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       Reference author,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -7261,8 +7267,9 @@ class _$RequestGroupCopyWithImpl<$Res> implements $RequestGroupCopyWith<$Res> {
       priority: priority == freezed ? _value.priority : priority as Code,
       subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
       reasonCodeableConcept: reasonCodeableConcept == freezed
           ? _value.reasonCodeableConcept
@@ -7358,7 +7365,7 @@ abstract class _$RequestGroupCopyWith<$Res>
       Code priority,
       Reference subject,
       Reference context,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       Reference author,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -7429,8 +7436,9 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
       priority: priority == freezed ? _value.priority : priority as Code,
       subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
       reasonCodeableConcept: reasonCodeableConcept == freezed
           ? _value.reasonCodeableConcept
@@ -7497,7 +7505,7 @@ class _$_RequestGroup implements _RequestGroup {
   @override
   final Reference context;
   @override
-  final DateTime authoredOn;
+  final FhirDateTime authoredOn;
   @override
   final Reference author;
   @override
@@ -7612,7 +7620,7 @@ abstract class _RequestGroup implements RequestGroup {
       Code priority,
       Reference subject,
       Reference context,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       Reference author,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -7646,7 +7654,7 @@ abstract class _RequestGroup implements RequestGroup {
   @override
   Reference get context;
   @override
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   @override
   Reference get author;
   @override
@@ -7677,7 +7685,7 @@ class _$RequestGroupActionTearOff {
       List<RelatedArtifact> documentation,
       List<RequestGroupCondition> condition,
       List<RequestGroupRelatedAction> relatedAction,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
@@ -7730,7 +7738,7 @@ mixin _$RequestGroupAction {
   List<RelatedArtifact> get documentation;
   List<RequestGroupCondition> get condition;
   List<RequestGroupRelatedAction> get relatedAction;
-  DateTime get timingDateTime;
+  FhirDateTime get timingDateTime;
   Period get timingPeriod;
   Duration get timingDuration;
   Range get timingRange;
@@ -7762,7 +7770,7 @@ abstract class $RequestGroupActionCopyWith<$Res> {
       List<RelatedArtifact> documentation,
       List<RequestGroupCondition> condition,
       List<RequestGroupRelatedAction> relatedAction,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
@@ -7838,7 +7846,7 @@ class _$RequestGroupActionCopyWithImpl<$Res>
           : relatedAction as List<RequestGroupRelatedAction>,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
-          : timingDateTime as DateTime,
+          : timingDateTime as FhirDateTime,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -7952,7 +7960,7 @@ abstract class _$RequestGroupActionCopyWith<$Res>
       List<RelatedArtifact> documentation,
       List<RequestGroupCondition> condition,
       List<RequestGroupRelatedAction> relatedAction,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
@@ -8036,7 +8044,7 @@ class __$RequestGroupActionCopyWithImpl<$Res>
           : relatedAction as List<RequestGroupRelatedAction>,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
-          : timingDateTime as DateTime,
+          : timingDateTime as FhirDateTime,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -8121,7 +8129,7 @@ class _$_RequestGroupAction implements _RequestGroupAction {
   @override
   final List<RequestGroupRelatedAction> relatedAction;
   @override
-  final DateTime timingDateTime;
+  final FhirDateTime timingDateTime;
   @override
   final Period timingPeriod;
   @override
@@ -8267,7 +8275,7 @@ abstract class _RequestGroupAction implements RequestGroupAction {
       List<RelatedArtifact> documentation,
       List<RequestGroupCondition> condition,
       List<RequestGroupRelatedAction> relatedAction,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
@@ -8302,7 +8310,7 @@ abstract class _RequestGroupAction implements RequestGroupAction {
   @override
   List<RequestGroupRelatedAction> get relatedAction;
   @override
-  DateTime get timingDateTime;
+  FhirDateTime get timingDateTime;
   @override
   Period get timingPeriod;
   @override
@@ -8767,7 +8775,7 @@ class _$RiskAssessmentTearOff {
       CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Reference condition,
       Reference performer,
@@ -8815,7 +8823,7 @@ mixin _$RiskAssessment {
   CodeableConcept get code;
   Reference get subject;
   Reference get context;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Period get occurrencePeriod;
   Reference get condition;
   Reference get performer;
@@ -8845,7 +8853,7 @@ abstract class $RiskAssessmentCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Reference condition,
       Reference performer,
@@ -8915,7 +8923,7 @@ class _$RiskAssessmentCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -9078,7 +9086,7 @@ abstract class _$RiskAssessmentCopyWith<$Res>
       CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Reference condition,
       Reference performer,
@@ -9162,7 +9170,7 @@ class __$RiskAssessmentCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -9236,7 +9244,7 @@ class _$_RiskAssessment implements _RiskAssessment {
   @override
   final Reference context;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Period occurrencePeriod;
   @override
@@ -9364,7 +9372,7 @@ abstract class _RiskAssessment implements RiskAssessment {
       CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Reference condition,
       Reference performer,
@@ -9398,7 +9406,7 @@ abstract class _RiskAssessment implements RiskAssessment {
   @override
   Reference get context;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Period get occurrencePeriod;
   @override
@@ -9794,7 +9802,7 @@ class _$VisionPrescriptionTearOff {
       Code status,
       Reference patient,
       Reference encounter,
-      DateTime dateWritten,
+      FhirDateTime dateWritten,
       Reference prescriber,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -9824,7 +9832,7 @@ mixin _$VisionPrescription {
   Code get status;
   Reference get patient;
   Reference get encounter;
-  DateTime get dateWritten;
+  FhirDateTime get dateWritten;
   Reference get prescriber;
   CodeableConcept get reasonCodeableConcept;
   Reference get reasonReference;
@@ -9845,7 +9853,7 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
       Code status,
       Reference patient,
       Reference encounter,
-      DateTime dateWritten,
+      FhirDateTime dateWritten,
       Reference prescriber,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -9890,8 +9898,9 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      dateWritten:
-          dateWritten == freezed ? _value.dateWritten : dateWritten as DateTime,
+      dateWritten: dateWritten == freezed
+          ? _value.dateWritten
+          : dateWritten as FhirDateTime,
       prescriber:
           prescriber == freezed ? _value.prescriber : prescriber as Reference,
       reasonCodeableConcept: reasonCodeableConcept == freezed
@@ -9971,7 +9980,7 @@ abstract class _$VisionPrescriptionCopyWith<$Res>
       Code status,
       Reference patient,
       Reference encounter,
-      DateTime dateWritten,
+      FhirDateTime dateWritten,
       Reference prescriber,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -10023,8 +10032,9 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      dateWritten:
-          dateWritten == freezed ? _value.dateWritten : dateWritten as DateTime,
+      dateWritten: dateWritten == freezed
+          ? _value.dateWritten
+          : dateWritten as FhirDateTime,
       prescriber:
           prescriber == freezed ? _value.prescriber : prescriber as Reference,
       reasonCodeableConcept: reasonCodeableConcept == freezed
@@ -10072,7 +10082,7 @@ class _$_VisionPrescription implements _VisionPrescription {
   @override
   final Reference encounter;
   @override
-  final DateTime dateWritten;
+  final FhirDateTime dateWritten;
   @override
   final Reference prescriber;
   @override
@@ -10155,7 +10165,7 @@ abstract class _VisionPrescription implements VisionPrescription {
       Code status,
       Reference patient,
       Reference encounter,
-      DateTime dateWritten,
+      FhirDateTime dateWritten,
       Reference prescriber,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -10176,7 +10186,7 @@ abstract class _VisionPrescription implements VisionPrescription {
   @override
   Reference get encounter;
   @override
-  DateTime get dateWritten;
+  FhirDateTime get dateWritten;
   @override
   Reference get prescriber;
   @override

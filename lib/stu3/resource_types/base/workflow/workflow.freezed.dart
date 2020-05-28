@@ -35,7 +35,7 @@ class _$AppointmentTearOff {
       String end,
       PositiveInt minutesDuration,
       List<Reference> slot,
-      DateTime created,
+      FhirDateTime created,
       String comment,
       List<Reference> incomingReferral,
       @JsonKey(required: true)
@@ -89,7 +89,7 @@ mixin _$Appointment {
   String get end;
   PositiveInt get minutesDuration;
   List<Reference> get slot;
-  DateTime get created;
+  FhirDateTime get created;
   String get comment;
   List<Reference> get incomingReferral;
   @JsonKey(required: true)
@@ -123,7 +123,7 @@ abstract class $AppointmentCopyWith<$Res> {
       String end,
       PositiveInt minutesDuration,
       List<Reference> slot,
-      DateTime created,
+      FhirDateTime created,
       String comment,
       List<Reference> incomingReferral,
       @JsonKey(required: true)
@@ -202,7 +202,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
           ? _value.minutesDuration
           : minutesDuration as PositiveInt,
       slot: slot == freezed ? _value.slot : slot as List<Reference>,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       comment: comment == freezed ? _value.comment : comment as String,
       incomingReferral: incomingReferral == freezed
           ? _value.incomingReferral
@@ -262,7 +262,7 @@ abstract class _$AppointmentCopyWith<$Res>
       String end,
       PositiveInt minutesDuration,
       List<Reference> slot,
-      DateTime created,
+      FhirDateTime created,
       String comment,
       List<Reference> incomingReferral,
       @JsonKey(required: true)
@@ -345,7 +345,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           ? _value.minutesDuration
           : minutesDuration as PositiveInt,
       slot: slot == freezed ? _value.slot : slot as List<Reference>,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       comment: comment == freezed ? _value.comment : comment as String,
       incomingReferral: incomingReferral == freezed
           ? _value.incomingReferral
@@ -428,7 +428,7 @@ class _$_Appointment implements _Appointment {
   @override
   final List<Reference> slot;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final String comment;
   @override
@@ -564,7 +564,7 @@ abstract class _Appointment implements Appointment {
       String end,
       PositiveInt minutesDuration,
       List<Reference> slot,
-      DateTime created,
+      FhirDateTime created,
       String comment,
       List<Reference> incomingReferral,
       @JsonKey(required: true)
@@ -609,7 +609,7 @@ abstract class _Appointment implements Appointment {
   @override
   List<Reference> get slot;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   String get comment;
   @override
@@ -1215,7 +1215,7 @@ class _$ProcessRequestTearOff {
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
       Reference target,
-      DateTime created,
+      FhirDateTime created,
       Reference provider,
       Reference organization,
       Reference request,
@@ -1258,7 +1258,7 @@ mixin _$ProcessRequest {
   @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
   ProcessRequestAction get action;
   Reference get target;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get provider;
   Reference get organization;
   Reference get request;
@@ -1286,7 +1286,7 @@ abstract class $ProcessRequestCopyWith<$Res> {
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
       Reference target,
-      DateTime created,
+      FhirDateTime created,
       Reference provider,
       Reference organization,
       Reference request,
@@ -1344,7 +1344,7 @@ class _$ProcessRequestCopyWithImpl<$Res>
       action:
           action == freezed ? _value.action : action as ProcessRequestAction,
       target: target == freezed ? _value.target : target as Reference,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
           ? _value.organization
@@ -1435,7 +1435,7 @@ abstract class _$ProcessRequestCopyWith<$Res>
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
       Reference target,
-      DateTime created,
+      FhirDateTime created,
       Reference provider,
       Reference organization,
       Reference request,
@@ -1501,7 +1501,7 @@ class __$ProcessRequestCopyWithImpl<$Res>
       action:
           action == freezed ? _value.action : action as ProcessRequestAction,
       target: target == freezed ? _value.target : target as Reference,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
           ? _value.organization
@@ -1558,7 +1558,7 @@ class _$_ProcessRequest implements _ProcessRequest {
   @override
   final Reference target;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference provider;
   @override
@@ -1674,7 +1674,7 @@ abstract class _ProcessRequest implements ProcessRequest {
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
       Reference target,
-      DateTime created,
+      FhirDateTime created,
       Reference provider,
       Reference organization,
       Reference request,
@@ -1702,7 +1702,7 @@ abstract class _ProcessRequest implements ProcessRequest {
   @override
   Reference get target;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get provider;
   @override
@@ -1874,7 +1874,7 @@ class _$ProcessResponseTearOff {
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
@@ -1912,7 +1912,7 @@ mixin _$ProcessResponse {
   String get resourceType;
   List<Identifier> get identifier;
   Code get status;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get organization;
   Reference get request;
   CodeableConcept get outcome;
@@ -1937,7 +1937,7 @@ abstract class $ProcessResponseCopyWith<$Res> {
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
@@ -1990,7 +1990,7 @@ class _$ProcessResponseCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -2087,7 +2087,7 @@ abstract class _$ProcessResponseCopyWith<$Res>
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
@@ -2148,7 +2148,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -2206,7 +2206,7 @@ class _$_ProcessResponse implements _ProcessResponse {
   @override
   final Code status;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference organization;
   @override
@@ -2313,7 +2313,7 @@ abstract class _ProcessResponse implements ProcessResponse {
           String resourceType,
       List<Identifier> identifier,
       Code status,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
@@ -2336,7 +2336,7 @@ abstract class _ProcessResponse implements ProcessResponse {
   @override
   Code get status;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get organization;
   @override
@@ -3319,8 +3319,8 @@ class _$TaskTearOff {
           Reference for_,
       Reference context,
       Period executionPeriod,
-      DateTime authoredOn,
-      DateTime lastModified,
+      FhirDateTime authoredOn,
+      FhirDateTime lastModified,
       TaskRequester requester,
       List<CodeableConcept> performerType,
       Reference owner,
@@ -3389,8 +3389,8 @@ mixin _$Task {
   Reference get for_;
   Reference get context;
   Period get executionPeriod;
-  DateTime get authoredOn;
-  DateTime get lastModified;
+  FhirDateTime get authoredOn;
+  FhirDateTime get lastModified;
   TaskRequester get requester;
   List<CodeableConcept> get performerType;
   Reference get owner;
@@ -3427,8 +3427,8 @@ abstract class $TaskCopyWith<$Res> {
       @JsonKey(name: 'for') Reference for_,
       Reference context,
       Period executionPeriod,
-      DateTime authoredOn,
-      DateTime lastModified,
+      FhirDateTime authoredOn,
+      FhirDateTime lastModified,
       TaskRequester requester,
       List<CodeableConcept> performerType,
       Reference owner,
@@ -3529,11 +3529,12 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
       executionPeriod: executionPeriod == freezed
           ? _value.executionPeriod
           : executionPeriod as Period,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       lastModified: lastModified == freezed
           ? _value.lastModified
-          : lastModified as DateTime,
+          : lastModified as FhirDateTime,
       requester:
           requester == freezed ? _value.requester : requester as TaskRequester,
       performerType: performerType == freezed
@@ -3707,8 +3708,8 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       @JsonKey(name: 'for') Reference for_,
       Reference context,
       Period executionPeriod,
-      DateTime authoredOn,
-      DateTime lastModified,
+      FhirDateTime authoredOn,
+      FhirDateTime lastModified,
       TaskRequester requester,
       List<CodeableConcept> performerType,
       Reference owner,
@@ -3823,11 +3824,12 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
       executionPeriod: executionPeriod == freezed
           ? _value.executionPeriod
           : executionPeriod as Period,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       lastModified: lastModified == freezed
           ? _value.lastModified
-          : lastModified as DateTime,
+          : lastModified as FhirDateTime,
       requester:
           requester == freezed ? _value.requester : requester as TaskRequester,
       performerType: performerType == freezed
@@ -3929,9 +3931,9 @@ class _$_Task implements _Task {
   @override
   final Period executionPeriod;
   @override
-  final DateTime authoredOn;
+  final FhirDateTime authoredOn;
   @override
-  final DateTime lastModified;
+  final FhirDateTime lastModified;
   @override
   final TaskRequester requester;
   @override
@@ -4101,8 +4103,8 @@ abstract class _Task implements Task {
           Reference for_,
       Reference context,
       Period executionPeriod,
-      DateTime authoredOn,
-      DateTime lastModified,
+      FhirDateTime authoredOn,
+      FhirDateTime lastModified,
       TaskRequester requester,
       List<CodeableConcept> performerType,
       Reference owner,
@@ -4155,9 +4157,9 @@ abstract class _Task implements Task {
   @override
   Period get executionPeriod;
   @override
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   @override
-  DateTime get lastModified;
+  FhirDateTime get lastModified;
   @override
   TaskRequester get requester;
   @override
@@ -4561,7 +4563,7 @@ class _$TaskInputTearOff {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -4679,7 +4681,7 @@ mixin _$TaskInput {
   String get valueString;
   String get valueUri;
   Date get valueDate;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   Time get valueTime;
   Code get valueCode;
   Oid get valueOid;
@@ -4742,7 +4744,7 @@ abstract class $TaskInputCopyWith<$Res> {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -4914,7 +4916,7 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -5417,7 +5419,7 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -5627,7 +5629,7 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -5823,7 +5825,7 @@ class _$_TaskInput implements _TaskInput {
   @override
   final Date valueDate;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
   @override
   final Time valueTime;
   @override
@@ -6100,7 +6102,7 @@ abstract class _TaskInput implements TaskInput {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -6169,7 +6171,7 @@ abstract class _TaskInput implements TaskInput {
   @override
   Date get valueDate;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   Time get valueTime;
   @override
@@ -6279,7 +6281,7 @@ class _$TaskOutputTearOff {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -6397,7 +6399,7 @@ mixin _$TaskOutput {
   String get valueString;
   String get valueUri;
   Date get valueDate;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   Time get valueTime;
   Code get valueCode;
   Oid get valueOid;
@@ -6461,7 +6463,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -6633,7 +6635,7 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -7136,7 +7138,7 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -7347,7 +7349,7 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -7543,7 +7545,7 @@ class _$_TaskOutput implements _TaskOutput {
   @override
   final Date valueDate;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
   @override
   final Time valueTime;
   @override
@@ -7820,7 +7822,7 @@ abstract class _TaskOutput implements TaskOutput {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -7889,7 +7891,7 @@ abstract class _TaskOutput implements TaskOutput {
   @override
   Date get valueDate;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   Time get valueTime;
   @override

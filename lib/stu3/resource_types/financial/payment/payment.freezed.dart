@@ -24,7 +24,7 @@ class _$PaymentNoticeTearOff {
       Reference request,
       Reference response,
       Date statusDate,
-      DateTime created,
+      FhirDateTime created,
       Reference target,
       Reference provider,
       Reference organization,
@@ -56,7 +56,7 @@ mixin _$PaymentNotice {
   Reference get request;
   Reference get response;
   Date get statusDate;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get target;
   Reference get provider;
   Reference get organization;
@@ -78,7 +78,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       Reference request,
       Reference response,
       Date statusDate,
-      DateTime created,
+      FhirDateTime created,
       Reference target,
       Reference provider,
       Reference organization,
@@ -126,7 +126,7 @@ class _$PaymentNoticeCopyWithImpl<$Res>
       response: response == freezed ? _value.response : response as Reference,
       statusDate:
           statusDate == freezed ? _value.statusDate : statusDate as Date,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       target: target == freezed ? _value.target : target as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -213,7 +213,7 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       Reference request,
       Reference response,
       Date statusDate,
-      DateTime created,
+      FhirDateTime created,
       Reference target,
       Reference provider,
       Reference organization,
@@ -269,7 +269,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
       response: response == freezed ? _value.response : response as Reference,
       statusDate:
           statusDate == freezed ? _value.statusDate : statusDate as Date,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       target: target == freezed ? _value.target : target as Reference,
       provider: provider == freezed ? _value.provider : provider as Reference,
       organization: organization == freezed
@@ -317,7 +317,7 @@ class _$_PaymentNotice implements _PaymentNotice {
   @override
   final Date statusDate;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference target;
   @override
@@ -404,7 +404,7 @@ abstract class _PaymentNotice implements PaymentNotice {
       Reference request,
       Reference response,
       Date statusDate,
-      DateTime created,
+      FhirDateTime created,
       Reference target,
       Reference provider,
       Reference organization,
@@ -427,7 +427,7 @@ abstract class _PaymentNotice implements PaymentNotice {
   @override
   Date get statusDate;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get target;
   @override
@@ -455,7 +455,7 @@ class _$PaymentReconciliationTearOff {
       List<Identifier> identifier,
       Code status,
       Period period,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
@@ -495,7 +495,7 @@ mixin _$PaymentReconciliation {
   List<Identifier> get identifier;
   Code get status;
   Period get period;
-  DateTime get created;
+  FhirDateTime get created;
   Reference get organization;
   Reference get request;
   CodeableConcept get outcome;
@@ -521,7 +521,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       List<Identifier> identifier,
       Code status,
       Period period,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
@@ -578,7 +578,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       period: period == freezed ? _value.period : period as Period,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -696,7 +696,7 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       List<Identifier> identifier,
       Code status,
       Period period,
-      DateTime created,
+      FhirDateTime created,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
@@ -763,7 +763,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
           : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       period: period == freezed ? _value.period : period as Period,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
@@ -824,7 +824,7 @@ class _$_PaymentReconciliation implements _PaymentReconciliation {
   @override
   final Period period;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final Reference organization;
   @override
@@ -935,7 +935,7 @@ abstract class _PaymentReconciliation implements PaymentReconciliation {
           List<Identifier> identifier,
           Code status,
           Period period,
-          DateTime created,
+          FhirDateTime created,
           Reference organization,
           Reference request,
           CodeableConcept outcome,
@@ -961,7 +961,7 @@ abstract class _PaymentReconciliation implements PaymentReconciliation {
   @override
   Period get period;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   Reference get organization;
   @override

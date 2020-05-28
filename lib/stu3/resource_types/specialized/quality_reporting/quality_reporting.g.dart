@@ -23,7 +23,9 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     description: json['description'] as String,
     purpose: json['purpose'] as String,
@@ -122,7 +124,7 @@ Map<String, dynamic> _$_$_MeasureToJson(_$_Measure instance) {
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('description', instance.description);
   writeNotNull('purpose', instance.purpose);
@@ -348,7 +350,9 @@ _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     reportingOrganization: json['reportingOrganization'] == null
         ? null
         : Reference.fromJson(
@@ -383,7 +387,7 @@ Map<String, dynamic> _$_$_MeasureReportToJson(_$_MeasureReport instance) {
   writeNotNull('type', _$MeasureReportTypeEnumMap[instance.type]);
   writeNotNull('measure', instance.measure?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull(
       'reportingOrganization', instance.reportingOrganization?.toJson());
   writeNotNull('period', instance.period?.toJson());

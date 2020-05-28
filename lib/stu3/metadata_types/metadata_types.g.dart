@@ -268,7 +268,7 @@ _$_DataRequirementDateFilter _$_$_DataRequirementDateFilterFromJson(
     path: json['path'] as String,
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valuePeriod: json['valuePeriod'] == null
         ? null
         : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
@@ -289,7 +289,7 @@ Map<String, dynamic> _$_$_DataRequirementDateFilterToJson(
   }
 
   writeNotNull('path', instance.path);
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
   writeNotNull('valueDuration', instance.valueDuration?.toJson());
   return val;
@@ -347,7 +347,7 @@ _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['eventTimingDate'] as String),
     eventTimingDateTime: json['eventTimingDateTime'] == null
         ? null
-        : DateTime.parse(json['eventTimingDateTime'] as String),
+        : FhirDateTime.fromJson(json['eventTimingDateTime'] as String),
     eventData: json['eventData'] == null
         ? null
         : DataRequirement.fromJson(json['eventData'] as Map<String, dynamic>),
@@ -369,8 +369,7 @@ Map<String, dynamic> _$_$_TriggerDefinitionToJson(
   writeNotNull('eventTimingTiming', instance.eventTimingTiming?.toJson());
   writeNotNull('eventTimingReference', instance.eventTimingReference?.toJson());
   writeNotNull('eventTimingDate', instance.eventTimingDate?.toJson());
-  writeNotNull(
-      'eventTimingDateTime', instance.eventTimingDateTime?.toIso8601String());
+  writeNotNull('eventTimingDateTime', instance.eventTimingDateTime?.toJson());
   writeNotNull('eventData', instance.eventData?.toJson());
   return val;
 }

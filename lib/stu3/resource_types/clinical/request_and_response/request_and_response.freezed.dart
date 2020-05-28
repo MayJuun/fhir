@@ -32,8 +32,8 @@ class _$CommunicationTearOff {
       List<Reference> recipient,
       List<Reference> topic,
       Reference context,
-      DateTime sent,
-      DateTime received,
+      FhirDateTime sent,
+      FhirDateTime received,
       Reference sender,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -84,8 +84,8 @@ mixin _$Communication {
   List<Reference> get recipient;
   List<Reference> get topic;
   Reference get context;
-  DateTime get sent;
-  DateTime get received;
+  FhirDateTime get sent;
+  FhirDateTime get received;
   Reference get sender;
   List<CodeableConcept> get reasonCode;
   List<Reference> get reasonReference;
@@ -116,8 +116,8 @@ abstract class $CommunicationCopyWith<$Res> {
       List<Reference> recipient,
       List<Reference> topic,
       Reference context,
-      DateTime sent,
-      DateTime received,
+      FhirDateTime sent,
+      FhirDateTime received,
       Reference sender,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -190,8 +190,9 @@ class _$CommunicationCopyWithImpl<$Res>
           : recipient as List<Reference>,
       topic: topic == freezed ? _value.topic : topic as List<Reference>,
       context: context == freezed ? _value.context : context as Reference,
-      sent: sent == freezed ? _value.sent : sent as DateTime,
-      received: received == freezed ? _value.received : received as DateTime,
+      sent: sent == freezed ? _value.sent : sent as FhirDateTime,
+      received:
+          received == freezed ? _value.received : received as FhirDateTime,
       sender: sender == freezed ? _value.sender : sender as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
@@ -269,8 +270,8 @@ abstract class _$CommunicationCopyWith<$Res>
       List<Reference> recipient,
       List<Reference> topic,
       Reference context,
-      DateTime sent,
-      DateTime received,
+      FhirDateTime sent,
+      FhirDateTime received,
       Reference sender,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -349,8 +350,9 @@ class __$CommunicationCopyWithImpl<$Res>
           : recipient as List<Reference>,
       topic: topic == freezed ? _value.topic : topic as List<Reference>,
       context: context == freezed ? _value.context : context as Reference,
-      sent: sent == freezed ? _value.sent : sent as DateTime,
-      received: received == freezed ? _value.received : received as DateTime,
+      sent: sent == freezed ? _value.sent : sent as FhirDateTime,
+      received:
+          received == freezed ? _value.received : received as FhirDateTime,
       sender: sender == freezed ? _value.sender : sender as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
@@ -427,9 +429,9 @@ class _$_Communication implements _Communication {
   @override
   final Reference context;
   @override
-  final DateTime sent;
+  final FhirDateTime sent;
   @override
-  final DateTime received;
+  final FhirDateTime received;
   @override
   final Reference sender;
   @override
@@ -561,8 +563,8 @@ abstract class _Communication implements Communication {
       List<Reference> recipient,
       List<Reference> topic,
       Reference context,
-      DateTime sent,
-      DateTime received,
+      FhirDateTime sent,
+      FhirDateTime received,
       Reference sender,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -602,9 +604,9 @@ abstract class _Communication implements Communication {
   @override
   Reference get context;
   @override
-  DateTime get sent;
+  FhirDateTime get sent;
   @override
-  DateTime get received;
+  FhirDateTime get received;
   @override
   Reference get sender;
   @override
@@ -854,9 +856,9 @@ class _$CommunicationRequestTearOff {
       List<Reference> topic,
       Reference context,
       List<CommunicationRequestPayload> payload,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       Reference sender,
       CommunicationRequestRequester requester,
       List<CodeableConcept> reasonCode,
@@ -908,9 +910,9 @@ mixin _$CommunicationRequest {
   List<Reference> get topic;
   Reference get context;
   List<CommunicationRequestPayload> get payload;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Period get occurrencePeriod;
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   Reference get sender;
   CommunicationRequestRequester get requester;
   List<CodeableConcept> get reasonCode;
@@ -941,9 +943,9 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       List<Reference> topic,
       Reference context,
       List<CommunicationRequestPayload> payload,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       Reference sender,
       CommunicationRequestRequester requester,
       List<CodeableConcept> reasonCode,
@@ -1022,12 +1024,13 @@ class _$CommunicationRequestCopyWithImpl<$Res>
           : payload as List<CommunicationRequestPayload>,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       sender: sender == freezed ? _value.sender : sender as Reference,
       requester: requester == freezed
           ? _value.requester
@@ -1126,9 +1129,9 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       List<Reference> topic,
       Reference context,
       List<CommunicationRequestPayload> payload,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       Reference sender,
       CommunicationRequestRequester requester,
       List<CodeableConcept> reasonCode,
@@ -1215,12 +1218,13 @@ class __$CommunicationRequestCopyWithImpl<$Res>
           : payload as List<CommunicationRequestPayload>,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       sender: sender == freezed ? _value.sender : sender as Reference,
       requester: requester == freezed
           ? _value.requester
@@ -1298,11 +1302,11 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   @override
   final List<CommunicationRequestPayload> payload;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Period occurrencePeriod;
   @override
-  final DateTime authoredOn;
+  final FhirDateTime authoredOn;
   @override
   final Reference sender;
   @override
@@ -1441,9 +1445,9 @@ abstract class _CommunicationRequest implements CommunicationRequest {
       List<Reference> topic,
       Reference context,
       List<CommunicationRequestPayload> payload,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       Reference sender,
       CommunicationRequestRequester requester,
       List<CodeableConcept> reasonCode,
@@ -1483,11 +1487,11 @@ abstract class _CommunicationRequest implements CommunicationRequest {
   @override
   List<CommunicationRequestPayload> get payload;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Period get occurrencePeriod;
   @override
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   @override
   Reference get sender;
   @override
@@ -1936,10 +1940,10 @@ class _$DeviceRequestTearOff {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       DeviceRequestRequester requester,
       CodeableConcept performerType,
       Reference performer,
@@ -1998,10 +2002,10 @@ mixin _$DeviceRequest {
   @JsonKey(required: true)
   Reference get subject;
   Reference get context;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Period get occurrencePeriod;
   Timing get occurrenceTiming;
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   DeviceRequestRequester get requester;
   CodeableConcept get performerType;
   Reference get performer;
@@ -2036,10 +2040,10 @@ abstract class $DeviceRequestCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       DeviceRequestRequester requester,
       CodeableConcept performerType,
       Reference performer,
@@ -2128,15 +2132,16 @@ class _$DeviceRequestCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
       occurrenceTiming: occurrenceTiming == freezed
           ? _value.occurrenceTiming
           : occurrenceTiming as Timing,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as DeviceRequestRequester,
@@ -2295,10 +2300,10 @@ abstract class _$DeviceRequestCopyWith<$Res>
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       DeviceRequestRequester requester,
       CodeableConcept performerType,
       Reference performer,
@@ -2400,15 +2405,16 @@ class __$DeviceRequestCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
       occurrenceTiming: occurrenceTiming == freezed
           ? _value.occurrenceTiming
           : occurrenceTiming as Timing,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as DeviceRequestRequester,
@@ -2501,13 +2507,13 @@ class _$_DeviceRequest implements _DeviceRequest {
   @override
   final Reference context;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Period occurrencePeriod;
   @override
   final Timing occurrenceTiming;
   @override
-  final DateTime authoredOn;
+  final FhirDateTime authoredOn;
   @override
   final DeviceRequestRequester requester;
   @override
@@ -2662,10 +2668,10 @@ abstract class _DeviceRequest implements DeviceRequest {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       DeviceRequestRequester requester,
       CodeableConcept performerType,
       Reference performer,
@@ -2708,13 +2714,13 @@ abstract class _DeviceRequest implements DeviceRequest {
   @override
   Reference get context;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Period get occurrencePeriod;
   @override
   Timing get occurrenceTiming;
   @override
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   @override
   DeviceRequestRequester get requester;
   @override
@@ -2935,8 +2941,8 @@ class _$DeviceUseStatementTearOff {
       Period whenUsed,
       Timing timingTiming,
       Period timingPeriod,
-      DateTime timingDateTime,
-      DateTime recordedOn,
+      FhirDateTime timingDateTime,
+      FhirDateTime recordedOn,
       Reference source,
       @JsonKey(required: true)
           Reference device,
@@ -2976,8 +2982,8 @@ mixin _$DeviceUseStatement {
   Period get whenUsed;
   Timing get timingTiming;
   Period get timingPeriod;
-  DateTime get timingDateTime;
-  DateTime get recordedOn;
+  FhirDateTime get timingDateTime;
+  FhirDateTime get recordedOn;
   Reference get source;
   @JsonKey(required: true)
   Reference get device;
@@ -3004,8 +3010,8 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       Period whenUsed,
       Timing timingTiming,
       Period timingPeriod,
-      DateTime timingDateTime,
-      DateTime recordedOn,
+      FhirDateTime timingDateTime,
+      FhirDateTime recordedOn,
       Reference source,
       @JsonKey(required: true)
           Reference device,
@@ -3065,9 +3071,10 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
           : timingPeriod as Period,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
-          : timingDateTime as DateTime,
-      recordedOn:
-          recordedOn == freezed ? _value.recordedOn : recordedOn as DateTime,
+          : timingDateTime as FhirDateTime,
+      recordedOn: recordedOn == freezed
+          ? _value.recordedOn
+          : recordedOn as FhirDateTime,
       source: source == freezed ? _value.source : source as Reference,
       device: device == freezed ? _value.device : device as Reference,
       indication: indication == freezed
@@ -3167,8 +3174,8 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       Period whenUsed,
       Timing timingTiming,
       Period timingPeriod,
-      DateTime timingDateTime,
-      DateTime recordedOn,
+      FhirDateTime timingDateTime,
+      FhirDateTime recordedOn,
       Reference source,
       @JsonKey(required: true)
           Reference device,
@@ -3237,9 +3244,10 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
           : timingPeriod as Period,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
-          : timingDateTime as DateTime,
-      recordedOn:
-          recordedOn == freezed ? _value.recordedOn : recordedOn as DateTime,
+          : timingDateTime as FhirDateTime,
+      recordedOn: recordedOn == freezed
+          ? _value.recordedOn
+          : recordedOn as FhirDateTime,
       source: source == freezed ? _value.source : source as Reference,
       device: device == freezed ? _value.device : device as Reference,
       indication: indication == freezed
@@ -3297,9 +3305,9 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
   @override
   final Period timingPeriod;
   @override
-  final DateTime timingDateTime;
+  final FhirDateTime timingDateTime;
   @override
-  final DateTime recordedOn;
+  final FhirDateTime recordedOn;
   @override
   final Reference source;
   @override
@@ -3402,8 +3410,8 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
       Period whenUsed,
       Timing timingTiming,
       Period timingPeriod,
-      DateTime timingDateTime,
-      DateTime recordedOn,
+      FhirDateTime timingDateTime,
+      FhirDateTime recordedOn,
       Reference source,
       @JsonKey(required: true)
           Reference device,
@@ -3432,9 +3440,9 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
   @override
   Period get timingPeriod;
   @override
-  DateTime get timingDateTime;
+  FhirDateTime get timingDateTime;
   @override
-  DateTime get recordedOn;
+  FhirDateTime get recordedOn;
   @override
   Reference get source;
   @override
@@ -3469,7 +3477,7 @@ class _$SupplyDeliveryTearOff {
       Reference patient,
       CodeableConcept type,
       SupplyDeliverySuppliedItem suppliedItem,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       Reference supplier,
@@ -3508,7 +3516,7 @@ mixin _$SupplyDelivery {
   Reference get patient;
   CodeableConcept get type;
   SupplyDeliverySuppliedItem get suppliedItem;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Period get occurrencePeriod;
   Timing get occurrenceTiming;
   Reference get supplier;
@@ -3534,7 +3542,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       Reference patient,
       CodeableConcept type,
       SupplyDeliverySuppliedItem suppliedItem,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       Reference supplier,
@@ -3593,7 +3601,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
           : suppliedItem as SupplyDeliverySuppliedItem,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -3708,7 +3716,7 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       Reference patient,
       CodeableConcept type,
       SupplyDeliverySuppliedItem suppliedItem,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       Reference supplier,
@@ -3777,7 +3785,7 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
           : suppliedItem as SupplyDeliverySuppliedItem,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -3838,7 +3846,7 @@ class _$_SupplyDelivery implements _SupplyDelivery {
   @override
   final SupplyDeliverySuppliedItem suppliedItem;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Period occurrencePeriod;
   @override
@@ -3941,7 +3949,7 @@ abstract class _SupplyDelivery implements SupplyDelivery {
       Reference patient,
       CodeableConcept type,
       SupplyDeliverySuppliedItem suppliedItem,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       Reference supplier,
@@ -3970,7 +3978,7 @@ abstract class _SupplyDelivery implements SupplyDelivery {
   @override
   SupplyDeliverySuppliedItem get suppliedItem;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Period get occurrencePeriod;
   @override
@@ -4227,10 +4235,10 @@ class _$SupplyRequestTearOff {
       CodeableConcept category,
       Code priority,
       SupplyRequestOrderedItem orderedItem,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       SupplyRequestRequester requester,
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
@@ -4270,10 +4278,10 @@ mixin _$SupplyRequest {
   CodeableConcept get category;
   Code get priority;
   SupplyRequestOrderedItem get orderedItem;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Period get occurrencePeriod;
   Timing get occurrenceTiming;
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   SupplyRequestRequester get requester;
   List<Reference> get supplier;
   CodeableConcept get reasonCodeableConcept;
@@ -4298,10 +4306,10 @@ abstract class $SupplyRequestCopyWith<$Res> {
       CodeableConcept category,
       Code priority,
       SupplyRequestOrderedItem orderedItem,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       SupplyRequestRequester requester,
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
@@ -4363,15 +4371,16 @@ class _$SupplyRequestCopyWithImpl<$Res>
           : orderedItem as SupplyRequestOrderedItem,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
       occurrenceTiming: occurrenceTiming == freezed
           ? _value.occurrenceTiming
           : occurrenceTiming as Timing,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as SupplyRequestRequester,
@@ -4508,10 +4517,10 @@ abstract class _$SupplyRequestCopyWith<$Res>
       CodeableConcept category,
       Code priority,
       SupplyRequestOrderedItem orderedItem,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       SupplyRequestRequester requester,
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
@@ -4585,15 +4594,16 @@ class __$SupplyRequestCopyWithImpl<$Res>
           : orderedItem as SupplyRequestOrderedItem,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
       occurrenceTiming: occurrenceTiming == freezed
           ? _value.occurrenceTiming
           : occurrenceTiming as Timing,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as SupplyRequestRequester,
@@ -4656,13 +4666,13 @@ class _$_SupplyRequest implements _SupplyRequest {
   @override
   final SupplyRequestOrderedItem orderedItem;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Period occurrencePeriod;
   @override
   final Timing occurrenceTiming;
   @override
-  final DateTime authoredOn;
+  final FhirDateTime authoredOn;
   @override
   final SupplyRequestRequester requester;
   @override
@@ -4775,10 +4785,10 @@ abstract class _SupplyRequest implements SupplyRequest {
       CodeableConcept category,
       Code priority,
       SupplyRequestOrderedItem orderedItem,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Timing occurrenceTiming,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       SupplyRequestRequester requester,
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
@@ -4804,13 +4814,13 @@ abstract class _SupplyRequest implements SupplyRequest {
   @override
   SupplyRequestOrderedItem get orderedItem;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Period get occurrencePeriod;
   @override
   Timing get occurrenceTiming;
   @override
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   @override
   SupplyRequestRequester get requester;
   @override

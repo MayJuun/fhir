@@ -188,7 +188,7 @@ abstract class Library with _$Library implements Resource {
     @JsonKey(unknownEnumValue: Status.unknown) Status status,
     Boolean experimental,
     @JsonKey(required: true) CodeableConcept type,
-    DateTime date,
+    FhirDateTime date,
     String publisher,
     String description,
     String purpose,
@@ -224,7 +224,7 @@ abstract class Lists with _$Lists implements Resource {
     CodeableConcept code,
     Reference subject,
     Reference encounter,
-    DateTime date,
+    FhirDateTime date,
     Reference source,
     CodeableConcept orderedBy,
     List<Annotation> note,
@@ -239,7 +239,7 @@ abstract class ListEntry with _$ListEntry {
   const factory ListEntry({
     CodeableConcept flag,
     Boolean deleted,
-    DateTime date,
+    FhirDateTime date,
     @JsonKey(required: true) Reference item,
   }) = _ListEntry;
   factory ListEntry.fromJson(Map<String, dynamic> json) =>

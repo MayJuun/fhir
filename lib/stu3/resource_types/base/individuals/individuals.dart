@@ -65,7 +65,7 @@ abstract class Patient with _$Patient implements Resource {
     @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
     Date birthDate,
     Boolean deceasedBoolean,
-    DateTime deceasedDateTime,
+    FhirDateTime deceasedDateTime,
     List<Address> address,
     CodeableConcept maritalStatus,
     Boolean multipleBirthBoolean,

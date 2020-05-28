@@ -1338,7 +1338,7 @@ class _$DataRequirementDateFilterTearOff {
 
   _DataRequirementDateFilter call(
       {String path,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       Duration valueDuration}) {
     return _DataRequirementDateFilter(
@@ -1355,7 +1355,7 @@ const $DataRequirementDateFilter = _$DataRequirementDateFilterTearOff();
 
 mixin _$DataRequirementDateFilter {
   String get path;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   Period get valuePeriod;
   Duration get valueDuration;
 
@@ -1369,7 +1369,7 @@ abstract class $DataRequirementDateFilterCopyWith<$Res> {
       _$DataRequirementDateFilterCopyWithImpl<$Res>;
   $Res call(
       {String path,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       Duration valueDuration});
 
@@ -1396,7 +1396,7 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valuePeriod:
           valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       valueDuration: valueDuration == freezed
@@ -1434,7 +1434,7 @@ abstract class _$DataRequirementDateFilterCopyWith<$Res>
   @override
   $Res call(
       {String path,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       Duration valueDuration});
 
@@ -1466,7 +1466,7 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valuePeriod:
           valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       valueDuration: valueDuration == freezed
@@ -1487,7 +1487,7 @@ class _$_DataRequirementDateFilter implements _DataRequirementDateFilter {
   @override
   final String path;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
   @override
   final Period valuePeriod;
   @override
@@ -1538,7 +1538,7 @@ class _$_DataRequirementDateFilter implements _DataRequirementDateFilter {
 abstract class _DataRequirementDateFilter implements DataRequirementDateFilter {
   const factory _DataRequirementDateFilter(
       {String path,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       Duration valueDuration}) = _$_DataRequirementDateFilter;
 
@@ -1548,7 +1548,7 @@ abstract class _DataRequirementDateFilter implements DataRequirementDateFilter {
   @override
   String get path;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   Period get valuePeriod;
   @override
@@ -1833,7 +1833,7 @@ class _$TriggerDefinitionTearOff {
       Timing eventTimingTiming,
       Reference eventTimingReference,
       Date eventTimingDate,
-      DateTime eventTimingDateTime,
+      FhirDateTime eventTimingDateTime,
       DataRequirement eventData}) {
     return _TriggerDefinition(
       type: type,
@@ -1857,7 +1857,7 @@ mixin _$TriggerDefinition {
   Timing get eventTimingTiming;
   Reference get eventTimingReference;
   Date get eventTimingDate;
-  DateTime get eventTimingDateTime;
+  FhirDateTime get eventTimingDateTime;
   DataRequirement get eventData;
 
   Map<String, dynamic> toJson();
@@ -1875,7 +1875,7 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
       Timing eventTimingTiming,
       Reference eventTimingReference,
       Date eventTimingDate,
-      DateTime eventTimingDateTime,
+      FhirDateTime eventTimingDateTime,
       DataRequirement eventData});
 
   $TimingCopyWith<$Res> get eventTimingTiming;
@@ -1915,7 +1915,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
           : eventTimingDate as Date,
       eventTimingDateTime: eventTimingDateTime == freezed
           ? _value.eventTimingDateTime
-          : eventTimingDateTime as DateTime,
+          : eventTimingDateTime as FhirDateTime,
       eventData: eventData == freezed
           ? _value.eventData
           : eventData as DataRequirement,
@@ -1966,7 +1966,7 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
       Timing eventTimingTiming,
       Reference eventTimingReference,
       Date eventTimingDate,
-      DateTime eventTimingDateTime,
+      FhirDateTime eventTimingDateTime,
       DataRequirement eventData});
 
   @override
@@ -2011,7 +2011,7 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
           : eventTimingDate as Date,
       eventTimingDateTime: eventTimingDateTime == freezed
           ? _value.eventTimingDateTime
-          : eventTimingDateTime as DateTime,
+          : eventTimingDateTime as FhirDateTime,
       eventData: eventData == freezed
           ? _value.eventData
           : eventData as DataRequirement,
@@ -2045,7 +2045,7 @@ class _$_TriggerDefinition implements _TriggerDefinition {
   @override
   final Date eventTimingDate;
   @override
-  final DateTime eventTimingDateTime;
+  final FhirDateTime eventTimingDateTime;
   @override
   final DataRequirement eventData;
 
@@ -2109,7 +2109,7 @@ abstract class _TriggerDefinition implements TriggerDefinition {
       Timing eventTimingTiming,
       Reference eventTimingReference,
       Date eventTimingDate,
-      DateTime eventTimingDateTime,
+      FhirDateTime eventTimingDateTime,
       DataRequirement eventData}) = _$_TriggerDefinition;
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
@@ -2127,7 +2127,7 @@ abstract class _TriggerDefinition implements TriggerDefinition {
   @override
   Date get eventTimingDate;
   @override
-  DateTime get eventTimingDateTime;
+  FhirDateTime get eventTimingDateTime;
   @override
   DataRequirement get eventData;
   @override

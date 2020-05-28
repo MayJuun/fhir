@@ -26,10 +26,10 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     manufacturer: json['manufacturer'] as String,
     manufactureDate: json['manufactureDate'] == null
         ? null
-        : DateTime.parse(json['manufactureDate'] as String),
+        : FhirDateTime.fromJson(json['manufactureDate'] as String),
     expirationDate: json['expirationDate'] == null
         ? null
-        : DateTime.parse(json['expirationDate'] as String),
+        : FhirDateTime.fromJson(json['expirationDate'] as String),
     model: json['model'] as String,
     version: json['version'] as String,
     patient: json['patient'] == null
@@ -75,8 +75,8 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('lotNumber', instance.lotNumber);
   writeNotNull('manufacturer', instance.manufacturer);
-  writeNotNull('manufactureDate', instance.manufactureDate?.toIso8601String());
-  writeNotNull('expirationDate', instance.expirationDate?.toIso8601String());
+  writeNotNull('manufactureDate', instance.manufactureDate?.toJson());
+  writeNotNull('expirationDate', instance.expirationDate?.toJson());
   writeNotNull('model', instance.model);
   writeNotNull('version', instance.version);
   writeNotNull('patient', instance.patient?.toJson());
@@ -983,7 +983,7 @@ _$_SubstanceInstance _$_$_SubstanceInstanceFromJson(Map<String, dynamic> json) {
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     expiry: json['expiry'] == null
         ? null
-        : DateTime.parse(json['expiry'] as String),
+        : FhirDateTime.fromJson(json['expiry'] as String),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -1001,7 +1001,7 @@ Map<String, dynamic> _$_$_SubstanceInstanceToJson(
   }
 
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('expiry', instance.expiry?.toIso8601String());
+  writeNotNull('expiry', instance.expiry?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   return val;
 }

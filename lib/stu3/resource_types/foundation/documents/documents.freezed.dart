@@ -29,7 +29,7 @@ class _$CompositionTearOff {
       @JsonKey(required: true)
           Reference subject,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       @JsonKey(required: true)
           List<Reference> author,
       String title,
@@ -76,7 +76,7 @@ mixin _$Composition {
   @JsonKey(required: true)
   Reference get subject;
   Reference get encounter;
-  DateTime get date;
+  FhirDateTime get date;
   @JsonKey(required: true)
   List<Reference> get author;
   String get title;
@@ -108,7 +108,7 @@ abstract class $CompositionCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       @JsonKey(required: true)
           List<Reference> author,
       String title,
@@ -165,7 +165,7 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       author: author == freezed ? _value.author : author as List<Reference>,
       title: title == freezed ? _value.title : title as String,
       confidentiality: confidentiality == freezed
@@ -266,7 +266,7 @@ abstract class _$CompositionCopyWith<$Res>
       @JsonKey(required: true)
           Reference subject,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       @JsonKey(required: true)
           List<Reference> author,
       String title,
@@ -331,7 +331,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       author: author == freezed ? _value.author : author as List<Reference>,
       title: title == freezed ? _value.title : title as String,
       confidentiality: confidentiality == freezed
@@ -404,7 +404,7 @@ class _$_Composition implements _Composition {
   @override
   final Reference encounter;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   @JsonKey(required: true)
   final List<Reference> author;
@@ -519,7 +519,7 @@ abstract class _Composition implements Composition {
       @JsonKey(required: true)
           Reference subject,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       @JsonKey(required: true)
           List<Reference> author,
       String title,
@@ -553,7 +553,7 @@ abstract class _Composition implements Composition {
   @override
   Reference get encounter;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   @JsonKey(required: true)
   List<Reference> get author;
@@ -583,7 +583,7 @@ class _$CompositionAttesterTearOff {
   const _$CompositionAttesterTearOff();
 
   _CompositionAttester call(
-      {List<AttesterMode> mode, DateTime time, Reference party}) {
+      {List<AttesterMode> mode, FhirDateTime time, Reference party}) {
     return _CompositionAttester(
       mode: mode,
       time: time,
@@ -597,7 +597,7 @@ const $CompositionAttester = _$CompositionAttesterTearOff();
 
 mixin _$CompositionAttester {
   List<AttesterMode> get mode;
-  DateTime get time;
+  FhirDateTime get time;
   Reference get party;
 
   Map<String, dynamic> toJson();
@@ -608,7 +608,7 @@ abstract class $CompositionAttesterCopyWith<$Res> {
   factory $CompositionAttesterCopyWith(
           CompositionAttester value, $Res Function(CompositionAttester) then) =
       _$CompositionAttesterCopyWithImpl<$Res>;
-  $Res call({List<AttesterMode> mode, DateTime time, Reference party});
+  $Res call({List<AttesterMode> mode, FhirDateTime time, Reference party});
 
   $ReferenceCopyWith<$Res> get party;
 }
@@ -629,7 +629,7 @@ class _$CompositionAttesterCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       mode: mode == freezed ? _value.mode : mode as List<AttesterMode>,
-      time: time == freezed ? _value.time : time as DateTime,
+      time: time == freezed ? _value.time : time as FhirDateTime,
       party: party == freezed ? _value.party : party as Reference,
     ));
   }
@@ -651,7 +651,7 @@ abstract class _$CompositionAttesterCopyWith<$Res>
           $Res Function(_CompositionAttester) then) =
       __$CompositionAttesterCopyWithImpl<$Res>;
   @override
-  $Res call({List<AttesterMode> mode, DateTime time, Reference party});
+  $Res call({List<AttesterMode> mode, FhirDateTime time, Reference party});
 
   @override
   $ReferenceCopyWith<$Res> get party;
@@ -675,7 +675,7 @@ class __$CompositionAttesterCopyWithImpl<$Res>
   }) {
     return _then(_CompositionAttester(
       mode: mode == freezed ? _value.mode : mode as List<AttesterMode>,
-      time: time == freezed ? _value.time : time as DateTime,
+      time: time == freezed ? _value.time : time as FhirDateTime,
       party: party == freezed ? _value.party : party as Reference,
     ));
   }
@@ -691,7 +691,7 @@ class _$_CompositionAttester implements _CompositionAttester {
   @override
   final List<AttesterMode> mode;
   @override
-  final DateTime time;
+  final FhirDateTime time;
   @override
   final Reference party;
 
@@ -733,7 +733,7 @@ class _$_CompositionAttester implements _CompositionAttester {
 abstract class _CompositionAttester implements CompositionAttester {
   const factory _CompositionAttester(
       {List<AttesterMode> mode,
-      DateTime time,
+      FhirDateTime time,
       Reference party}) = _$_CompositionAttester;
 
   factory _CompositionAttester.fromJson(Map<String, dynamic> json) =
@@ -742,7 +742,7 @@ abstract class _CompositionAttester implements CompositionAttester {
   @override
   List<AttesterMode> get mode;
   @override
-  DateTime get time;
+  FhirDateTime get time;
   @override
   Reference get party;
   @override
@@ -1468,7 +1468,7 @@ class _$DocumentManifestTearOff {
           DocumentStatus status,
       CodeableConcept type,
       Reference subject,
-      DateTime created,
+      FhirDateTime created,
       List<Reference> author,
       List<Reference> recipient,
       String source,
@@ -1506,7 +1506,7 @@ mixin _$DocumentManifest {
   DocumentStatus get status;
   CodeableConcept get type;
   Reference get subject;
-  DateTime get created;
+  FhirDateTime get created;
   List<Reference> get author;
   List<Reference> get recipient;
   String get source;
@@ -1532,7 +1532,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
           DocumentStatus status,
       CodeableConcept type,
       Reference subject,
-      DateTime created,
+      FhirDateTime created,
       List<Reference> author,
       List<Reference> recipient,
       String source,
@@ -1583,7 +1583,7 @@ class _$DocumentManifestCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as DocumentStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       author: author == freezed ? _value.author : author as List<Reference>,
       recipient: recipient == freezed
           ? _value.recipient
@@ -1646,7 +1646,7 @@ abstract class _$DocumentManifestCopyWith<$Res>
           DocumentStatus status,
       CodeableConcept type,
       Reference subject,
-      DateTime created,
+      FhirDateTime created,
       List<Reference> author,
       List<Reference> recipient,
       String source,
@@ -1702,7 +1702,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as DocumentStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       author: author == freezed ? _value.author : author as List<Reference>,
       recipient: recipient == freezed
           ? _value.recipient
@@ -1760,7 +1760,7 @@ class _$_DocumentManifest implements _DocumentManifest {
   @override
   final Reference subject;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final List<Reference> author;
   @override
@@ -1858,7 +1858,7 @@ abstract class _DocumentManifest implements DocumentManifest {
           DocumentStatus status,
       CodeableConcept type,
       Reference subject,
-      DateTime created,
+      FhirDateTime created,
       List<Reference> author,
       List<Reference> recipient,
       String source,
@@ -1885,7 +1885,7 @@ abstract class _DocumentManifest implements DocumentManifest {
   @override
   Reference get subject;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   List<Reference> get author;
   @override
@@ -2283,7 +2283,7 @@ class _$DocumentReferenceTearOff {
       @JsonKey(name: 'class')
           CodeableConcept class_,
       Reference subject,
-      DateTime created,
+      FhirDateTime created,
       String indexed,
       List<Reference> author,
       Reference authenticator,
@@ -2333,7 +2333,7 @@ mixin _$DocumentReference {
   @JsonKey(name: 'class')
   CodeableConcept get class_;
   Reference get subject;
-  DateTime get created;
+  FhirDateTime get created;
   String get indexed;
   List<Reference> get author;
   Reference get authenticator;
@@ -2366,7 +2366,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       @JsonKey(name: 'class')
           CodeableConcept class_,
       Reference subject,
-      DateTime created,
+      FhirDateTime created,
       String indexed,
       List<Reference> author,
       Reference authenticator,
@@ -2431,7 +2431,7 @@ class _$DocumentReferenceCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       indexed: indexed == freezed ? _value.indexed : indexed as String,
       author: author == freezed ? _value.author : author as List<Reference>,
       authenticator: authenticator == freezed
@@ -2546,7 +2546,7 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       @JsonKey(name: 'class')
           CodeableConcept class_,
       Reference subject,
-      DateTime created,
+      FhirDateTime created,
       String indexed,
       List<Reference> author,
       Reference authenticator,
@@ -2620,7 +2620,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      created: created == freezed ? _value.created : created as DateTime,
+      created: created == freezed ? _value.created : created as FhirDateTime,
       indexed: indexed == freezed ? _value.indexed : indexed as String,
       author: author == freezed ? _value.author : author as List<Reference>,
       authenticator: authenticator == freezed
@@ -2699,7 +2699,7 @@ class _$_DocumentReference implements _DocumentReference {
   @override
   final Reference subject;
   @override
-  final DateTime created;
+  final FhirDateTime created;
   @override
   final String indexed;
   @override
@@ -2827,7 +2827,7 @@ abstract class _DocumentReference implements DocumentReference {
       @JsonKey(name: 'class')
           CodeableConcept class_,
       Reference subject,
-      DateTime created,
+      FhirDateTime created,
       String indexed,
       List<Reference> author,
       Reference authenticator,
@@ -2863,7 +2863,7 @@ abstract class _DocumentReference implements DocumentReference {
   @override
   Reference get subject;
   @override
-  DateTime get created;
+  FhirDateTime get created;
   @override
   String get indexed;
   @override

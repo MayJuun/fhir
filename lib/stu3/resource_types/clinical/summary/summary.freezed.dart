@@ -24,7 +24,7 @@ class _$AdverseEventTearOff {
           AdverseEventCategory category,
       CodeableConcept type,
       Reference subject,
-      DateTime date,
+      FhirDateTime date,
       List<Reference> reaction,
       Reference location,
       CodeableConcept seriousness,
@@ -69,7 +69,7 @@ mixin _$AdverseEvent {
   AdverseEventCategory get category;
   CodeableConcept get type;
   Reference get subject;
-  DateTime get date;
+  FhirDateTime get date;
   List<Reference> get reaction;
   Reference get location;
   CodeableConcept get seriousness;
@@ -98,7 +98,7 @@ abstract class $AdverseEventCopyWith<$Res> {
           AdverseEventCategory category,
       CodeableConcept type,
       Reference subject,
-      DateTime date,
+      FhirDateTime date,
       List<Reference> reaction,
       Reference location,
       CodeableConcept seriousness,
@@ -159,7 +159,7 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
           : category as AdverseEventCategory,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       reaction:
           reaction == freezed ? _value.reaction : reaction as List<Reference>,
       location: location == freezed ? _value.location : location as Reference,
@@ -281,7 +281,7 @@ abstract class _$AdverseEventCopyWith<$Res>
           AdverseEventCategory category,
       CodeableConcept type,
       Reference subject,
-      DateTime date,
+      FhirDateTime date,
       List<Reference> reaction,
       Reference location,
       CodeableConcept seriousness,
@@ -352,7 +352,7 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
           : category as AdverseEventCategory,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       reaction:
           reaction == freezed ? _value.reaction : reaction as List<Reference>,
       location: location == freezed ? _value.location : location as Reference,
@@ -421,7 +421,7 @@ class _$_AdverseEvent implements _AdverseEvent {
   @override
   final Reference subject;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final List<Reference> reaction;
   @override
@@ -545,7 +545,7 @@ abstract class _AdverseEvent implements AdverseEvent {
           AdverseEventCategory category,
       CodeableConcept type,
       Reference subject,
-      DateTime date,
+      FhirDateTime date,
       List<Reference> reaction,
       Reference location,
       CodeableConcept seriousness,
@@ -574,7 +574,7 @@ abstract class _AdverseEvent implements AdverseEvent {
   @override
   Reference get subject;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   List<Reference> get reaction;
   @override
@@ -984,15 +984,15 @@ class _$AllergyIntoleranceTearOff {
       CodeableConcept code,
       @JsonKey(required: true)
           Reference patient,
-      DateTime onsetDateTime,
+      FhirDateTime onsetDateTime,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      DateTime assertedDate,
+      FhirDateTime assertedDate,
       Reference recorder,
       Reference asserter,
-      DateTime lastOccurrence,
+      FhirDateTime lastOccurrence,
       List<Annotation> note,
       List<AllergyIntoleranceReaction> reaction}) {
     return _AllergyIntolerance(
@@ -1039,15 +1039,15 @@ mixin _$AllergyIntolerance {
   CodeableConcept get code;
   @JsonKey(required: true)
   Reference get patient;
-  DateTime get onsetDateTime;
+  FhirDateTime get onsetDateTime;
   Age get onsetAge;
   Period get onsetPeriod;
   Range get onsetRange;
   String get onsetString;
-  DateTime get assertedDate;
+  FhirDateTime get assertedDate;
   Reference get recorder;
   Reference get asserter;
-  DateTime get lastOccurrence;
+  FhirDateTime get lastOccurrence;
   List<Annotation> get note;
   List<AllergyIntoleranceReaction> get reaction;
 
@@ -1075,15 +1075,15 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       CodeableConcept code,
       @JsonKey(required: true)
           Reference patient,
-      DateTime onsetDateTime,
+      FhirDateTime onsetDateTime,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      DateTime assertedDate,
+      FhirDateTime assertedDate,
       Reference recorder,
       Reference asserter,
-      DateTime lastOccurrence,
+      FhirDateTime lastOccurrence,
       List<Annotation> note,
       List<AllergyIntoleranceReaction> reaction});
 
@@ -1151,7 +1151,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
-          : onsetDateTime as DateTime,
+          : onsetDateTime as FhirDateTime,
       onsetAge: onsetAge == freezed ? _value.onsetAge : onsetAge as Age,
       onsetPeriod:
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
@@ -1161,12 +1161,12 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
           onsetString == freezed ? _value.onsetString : onsetString as String,
       assertedDate: assertedDate == freezed
           ? _value.assertedDate
-          : assertedDate as DateTime,
+          : assertedDate as FhirDateTime,
       recorder: recorder == freezed ? _value.recorder : recorder as Reference,
       asserter: asserter == freezed ? _value.asserter : asserter as Reference,
       lastOccurrence: lastOccurrence == freezed
           ? _value.lastOccurrence
-          : lastOccurrence as DateTime,
+          : lastOccurrence as FhirDateTime,
       note: note == freezed ? _value.note : note as List<Annotation>,
       reaction: reaction == freezed
           ? _value.reaction
@@ -1267,15 +1267,15 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
       CodeableConcept code,
       @JsonKey(required: true)
           Reference patient,
-      DateTime onsetDateTime,
+      FhirDateTime onsetDateTime,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      DateTime assertedDate,
+      FhirDateTime assertedDate,
       Reference recorder,
       Reference asserter,
-      DateTime lastOccurrence,
+      FhirDateTime lastOccurrence,
       List<Annotation> note,
       List<AllergyIntoleranceReaction> reaction});
 
@@ -1352,7 +1352,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
-          : onsetDateTime as DateTime,
+          : onsetDateTime as FhirDateTime,
       onsetAge: onsetAge == freezed ? _value.onsetAge : onsetAge as Age,
       onsetPeriod:
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
@@ -1362,12 +1362,12 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
           onsetString == freezed ? _value.onsetString : onsetString as String,
       assertedDate: assertedDate == freezed
           ? _value.assertedDate
-          : assertedDate as DateTime,
+          : assertedDate as FhirDateTime,
       recorder: recorder == freezed ? _value.recorder : recorder as Reference,
       asserter: asserter == freezed ? _value.asserter : asserter as Reference,
       lastOccurrence: lastOccurrence == freezed
           ? _value.lastOccurrence
-          : lastOccurrence as DateTime,
+          : lastOccurrence as FhirDateTime,
       note: note == freezed ? _value.note : note as List<Annotation>,
       reaction: reaction == freezed
           ? _value.reaction
@@ -1436,7 +1436,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   @JsonKey(required: true)
   final Reference patient;
   @override
-  final DateTime onsetDateTime;
+  final FhirDateTime onsetDateTime;
   @override
   final Age onsetAge;
   @override
@@ -1446,13 +1446,13 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   @override
   final String onsetString;
   @override
-  final DateTime assertedDate;
+  final FhirDateTime assertedDate;
   @override
   final Reference recorder;
   @override
   final Reference asserter;
   @override
-  final DateTime lastOccurrence;
+  final FhirDateTime lastOccurrence;
   @override
   final List<Annotation> note;
   @override
@@ -1578,15 +1578,15 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
       CodeableConcept code,
       @JsonKey(required: true)
           Reference patient,
-      DateTime onsetDateTime,
+      FhirDateTime onsetDateTime,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      DateTime assertedDate,
+      FhirDateTime assertedDate,
       Reference recorder,
       Reference asserter,
-      DateTime lastOccurrence,
+      FhirDateTime lastOccurrence,
       List<Annotation> note,
       List<AllergyIntoleranceReaction> reaction}) = _$_AllergyIntolerance;
 
@@ -1618,7 +1618,7 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
   @JsonKey(required: true)
   Reference get patient;
   @override
-  DateTime get onsetDateTime;
+  FhirDateTime get onsetDateTime;
   @override
   Age get onsetAge;
   @override
@@ -1628,13 +1628,13 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
   @override
   String get onsetString;
   @override
-  DateTime get assertedDate;
+  FhirDateTime get assertedDate;
   @override
   Reference get recorder;
   @override
   Reference get asserter;
   @override
-  DateTime get lastOccurrence;
+  FhirDateTime get lastOccurrence;
   @override
   List<Annotation> get note;
   @override
@@ -1656,7 +1656,7 @@ class _$AllergyIntoleranceReactionTearOff {
       @JsonKey(required: true)
           List<CodeableConcept> manifestation,
       String description,
-      DateTime onset,
+      FhirDateTime onset,
       @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
           ReactionSeverity severity,
       CodeableConcept exposureRoute,
@@ -1681,7 +1681,7 @@ mixin _$AllergyIntoleranceReaction {
   @JsonKey(required: true)
   List<CodeableConcept> get manifestation;
   String get description;
-  DateTime get onset;
+  FhirDateTime get onset;
   @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
   ReactionSeverity get severity;
   CodeableConcept get exposureRoute;
@@ -1700,7 +1700,7 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       @JsonKey(required: true)
           List<CodeableConcept> manifestation,
       String description,
-      DateTime onset,
+      FhirDateTime onset,
       @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
           ReactionSeverity severity,
       CodeableConcept exposureRoute,
@@ -1737,7 +1737,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
           : manifestation as List<CodeableConcept>,
       description:
           description == freezed ? _value.description : description as String,
-      onset: onset == freezed ? _value.onset : onset as DateTime,
+      onset: onset == freezed ? _value.onset : onset as FhirDateTime,
       severity:
           severity == freezed ? _value.severity : severity as ReactionSeverity,
       exposureRoute: exposureRoute == freezed
@@ -1780,7 +1780,7 @@ abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
       @JsonKey(required: true)
           List<CodeableConcept> manifestation,
       String description,
-      DateTime onset,
+      FhirDateTime onset,
       @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
           ReactionSeverity severity,
       CodeableConcept exposureRoute,
@@ -1822,7 +1822,7 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
           : manifestation as List<CodeableConcept>,
       description:
           description == freezed ? _value.description : description as String,
-      onset: onset == freezed ? _value.onset : onset as DateTime,
+      onset: onset == freezed ? _value.onset : onset as FhirDateTime,
       severity:
           severity == freezed ? _value.severity : severity as ReactionSeverity,
       exposureRoute: exposureRoute == freezed
@@ -1855,7 +1855,7 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
   @override
   final String description;
   @override
-  final DateTime onset;
+  final FhirDateTime onset;
   @override
   @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
   final ReactionSeverity severity;
@@ -1923,7 +1923,7 @@ abstract class _AllergyIntoleranceReaction
       @JsonKey(required: true)
           List<CodeableConcept> manifestation,
       String description,
-      DateTime onset,
+      FhirDateTime onset,
       @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
           ReactionSeverity severity,
       CodeableConcept exposureRoute,
@@ -1940,7 +1940,7 @@ abstract class _AllergyIntoleranceReaction
   @override
   String get description;
   @override
-  DateTime get onset;
+  FhirDateTime get onset;
   @override
   @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
   ReactionSeverity get severity;
@@ -1972,9 +1972,9 @@ class _$ClinicalImpressionTearOff {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
-      DateTime date,
+      FhirDateTime date,
       Reference assessor,
       Reference previous,
       List<Reference> problem,
@@ -2026,9 +2026,9 @@ mixin _$ClinicalImpression {
   @JsonKey(required: true)
   Reference get subject;
   Reference get context;
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   Period get effectivePeriod;
-  DateTime get date;
+  FhirDateTime get date;
   Reference get assessor;
   Reference get previous;
   List<Reference> get problem;
@@ -2060,9 +2060,9 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
-      DateTime date,
+      FhirDateTime date,
       Reference assessor,
       Reference previous,
       List<Reference> problem,
@@ -2132,11 +2132,11 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       assessor: assessor == freezed ? _value.assessor : assessor as Reference,
       previous: previous == freezed ? _value.previous : previous as Reference,
       problem: problem == freezed ? _value.problem : problem as List<Reference>,
@@ -2238,9 +2238,9 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
-      DateTime date,
+      FhirDateTime date,
       Reference assessor,
       Reference previous,
       List<Reference> problem,
@@ -2318,11 +2318,11 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       assessor: assessor == freezed ? _value.assessor : assessor as Reference,
       previous: previous == freezed ? _value.previous : previous as Reference,
       problem: problem == freezed ? _value.problem : problem as List<Reference>,
@@ -2398,11 +2398,11 @@ class _$_ClinicalImpression implements _ClinicalImpression {
   @override
   final Reference context;
   @override
-  final DateTime effectiveDateTime;
+  final FhirDateTime effectiveDateTime;
   @override
   final Period effectivePeriod;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final Reference assessor;
   @override
@@ -2545,9 +2545,9 @@ abstract class _ClinicalImpression implements ClinicalImpression {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
-      DateTime date,
+      FhirDateTime date,
       Reference assessor,
       Reference previous,
       List<Reference> problem,
@@ -2581,11 +2581,11 @@ abstract class _ClinicalImpression implements ClinicalImpression {
   @override
   Reference get context;
   @override
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   @override
   Period get effectivePeriod;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   Reference get assessor;
   @override
@@ -3020,18 +3020,18 @@ class _$ConditionTearOff {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime onsetDateTime,
+      FhirDateTime onsetDateTime,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      DateTime abatementDateTime,
+      FhirDateTime abatementDateTime,
       Age abatementAge,
       Boolean abatementBoolean,
       Period abatementPeriod,
       Range abatementRange,
       String abatementString,
-      DateTime assertedDate,
+      FhirDateTime assertedDate,
       Reference asserter,
       ConditionStage stage,
       List<ConditionEvidence> evidence,
@@ -3084,18 +3084,18 @@ mixin _$Condition {
   @JsonKey(required: true)
   Reference get subject;
   Reference get context;
-  DateTime get onsetDateTime;
+  FhirDateTime get onsetDateTime;
   Age get onsetAge;
   Period get onsetPeriod;
   Range get onsetRange;
   String get onsetString;
-  DateTime get abatementDateTime;
+  FhirDateTime get abatementDateTime;
   Age get abatementAge;
   Boolean get abatementBoolean;
   Period get abatementPeriod;
   Range get abatementRange;
   String get abatementString;
-  DateTime get assertedDate;
+  FhirDateTime get assertedDate;
   Reference get asserter;
   ConditionStage get stage;
   List<ConditionEvidence> get evidence;
@@ -3122,18 +3122,18 @@ abstract class $ConditionCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime onsetDateTime,
+      FhirDateTime onsetDateTime,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      DateTime abatementDateTime,
+      FhirDateTime abatementDateTime,
       Age abatementAge,
       Boolean abatementBoolean,
       Period abatementPeriod,
       Range abatementRange,
       String abatementString,
-      DateTime assertedDate,
+      FhirDateTime assertedDate,
       Reference asserter,
       ConditionStage stage,
       List<ConditionEvidence> evidence,
@@ -3215,7 +3215,7 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       context: context == freezed ? _value.context : context as Reference,
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
-          : onsetDateTime as DateTime,
+          : onsetDateTime as FhirDateTime,
       onsetAge: onsetAge == freezed ? _value.onsetAge : onsetAge as Age,
       onsetPeriod:
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
@@ -3225,7 +3225,7 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
           onsetString == freezed ? _value.onsetString : onsetString as String,
       abatementDateTime: abatementDateTime == freezed
           ? _value.abatementDateTime
-          : abatementDateTime as DateTime,
+          : abatementDateTime as FhirDateTime,
       abatementAge:
           abatementAge == freezed ? _value.abatementAge : abatementAge as Age,
       abatementBoolean: abatementBoolean == freezed
@@ -3242,7 +3242,7 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
           : abatementString as String,
       assertedDate: assertedDate == freezed
           ? _value.assertedDate
-          : assertedDate as DateTime,
+          : assertedDate as FhirDateTime,
       asserter: asserter == freezed ? _value.asserter : asserter as Reference,
       stage: stage == freezed ? _value.stage : stage as ConditionStage,
       evidence: evidence == freezed
@@ -3392,18 +3392,18 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime onsetDateTime,
+      FhirDateTime onsetDateTime,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      DateTime abatementDateTime,
+      FhirDateTime abatementDateTime,
       Age abatementAge,
       Boolean abatementBoolean,
       Period abatementPeriod,
       Range abatementRange,
       String abatementString,
-      DateTime assertedDate,
+      FhirDateTime assertedDate,
       Reference asserter,
       ConditionStage stage,
       List<ConditionEvidence> evidence,
@@ -3498,7 +3498,7 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
-          : onsetDateTime as DateTime,
+          : onsetDateTime as FhirDateTime,
       onsetAge: onsetAge == freezed ? _value.onsetAge : onsetAge as Age,
       onsetPeriod:
           onsetPeriod == freezed ? _value.onsetPeriod : onsetPeriod as Period,
@@ -3508,7 +3508,7 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
           onsetString == freezed ? _value.onsetString : onsetString as String,
       abatementDateTime: abatementDateTime == freezed
           ? _value.abatementDateTime
-          : abatementDateTime as DateTime,
+          : abatementDateTime as FhirDateTime,
       abatementAge:
           abatementAge == freezed ? _value.abatementAge : abatementAge as Age,
       abatementBoolean: abatementBoolean == freezed
@@ -3525,7 +3525,7 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
           : abatementString as String,
       assertedDate: assertedDate == freezed
           ? _value.assertedDate
-          : assertedDate as DateTime,
+          : assertedDate as FhirDateTime,
       asserter: asserter == freezed ? _value.asserter : asserter as Reference,
       stage: stage == freezed ? _value.stage : stage as ConditionStage,
       evidence: evidence == freezed
@@ -3598,7 +3598,7 @@ class _$_Condition implements _Condition {
   @override
   final Reference context;
   @override
-  final DateTime onsetDateTime;
+  final FhirDateTime onsetDateTime;
   @override
   final Age onsetAge;
   @override
@@ -3608,7 +3608,7 @@ class _$_Condition implements _Condition {
   @override
   final String onsetString;
   @override
-  final DateTime abatementDateTime;
+  final FhirDateTime abatementDateTime;
   @override
   final Age abatementAge;
   @override
@@ -3620,7 +3620,7 @@ class _$_Condition implements _Condition {
   @override
   final String abatementString;
   @override
-  final DateTime assertedDate;
+  final FhirDateTime assertedDate;
   @override
   final Reference asserter;
   @override
@@ -3766,18 +3766,18 @@ abstract class _Condition implements Condition {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime onsetDateTime,
+      FhirDateTime onsetDateTime,
       Age onsetAge,
       Period onsetPeriod,
       Range onsetRange,
       String onsetString,
-      DateTime abatementDateTime,
+      FhirDateTime abatementDateTime,
       Age abatementAge,
       Boolean abatementBoolean,
       Period abatementPeriod,
       Range abatementRange,
       String abatementString,
-      DateTime assertedDate,
+      FhirDateTime assertedDate,
       Reference asserter,
       ConditionStage stage,
       List<ConditionEvidence> evidence,
@@ -3810,7 +3810,7 @@ abstract class _Condition implements Condition {
   @override
   Reference get context;
   @override
-  DateTime get onsetDateTime;
+  FhirDateTime get onsetDateTime;
   @override
   Age get onsetAge;
   @override
@@ -3820,7 +3820,7 @@ abstract class _Condition implements Condition {
   @override
   String get onsetString;
   @override
-  DateTime get abatementDateTime;
+  FhirDateTime get abatementDateTime;
   @override
   Age get abatementAge;
   @override
@@ -3832,7 +3832,7 @@ abstract class _Condition implements Condition {
   @override
   String get abatementString;
   @override
-  DateTime get assertedDate;
+  FhirDateTime get assertedDate;
   @override
   Reference get asserter;
   @override
@@ -4170,7 +4170,7 @@ class _$DetectedIssueTearOff {
       @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
           DetectedIssueSeverity severity,
       Reference patient,
-      DateTime date,
+      FhirDateTime date,
       Reference author,
       List<Reference> implicated,
       String detail,
@@ -4205,7 +4205,7 @@ mixin _$DetectedIssue {
   @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
   DetectedIssueSeverity get severity;
   Reference get patient;
-  DateTime get date;
+  FhirDateTime get date;
   Reference get author;
   List<Reference> get implicated;
   String get detail;
@@ -4229,7 +4229,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
       @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
           DetectedIssueSeverity severity,
       Reference patient,
-      DateTime date,
+      FhirDateTime date,
       Reference author,
       List<Reference> implicated,
       String detail,
@@ -4278,7 +4278,7 @@ class _$DetectedIssueCopyWithImpl<$Res>
           ? _value.severity
           : severity as DetectedIssueSeverity,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
       implicated: implicated == freezed
           ? _value.implicated
@@ -4347,7 +4347,7 @@ abstract class _$DetectedIssueCopyWith<$Res>
       @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
           DetectedIssueSeverity severity,
       Reference patient,
-      DateTime date,
+      FhirDateTime date,
       Reference author,
       List<Reference> implicated,
       String detail,
@@ -4402,7 +4402,7 @@ class __$DetectedIssueCopyWithImpl<$Res>
           ? _value.severity
           : severity as DetectedIssueSeverity,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
       implicated: implicated == freezed
           ? _value.implicated
@@ -4454,7 +4454,7 @@ class _$_DetectedIssue implements _DetectedIssue {
   @override
   final Reference patient;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final Reference author;
   @override
@@ -4546,7 +4546,7 @@ abstract class _DetectedIssue implements DetectedIssue {
       @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
           DetectedIssueSeverity severity,
       Reference patient,
-      DateTime date,
+      FhirDateTime date,
       Reference author,
       List<Reference> implicated,
       String detail,
@@ -4571,7 +4571,7 @@ abstract class _DetectedIssue implements DetectedIssue {
   @override
   Reference get patient;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   Reference get author;
   @override
@@ -4596,7 +4596,7 @@ class _$DetectedIssueMitigationTearOff {
 
   _DetectedIssueMitigation call(
       {@JsonKey(required: true) CodeableConcept action,
-      DateTime date,
+      FhirDateTime date,
       Reference author}) {
     return _DetectedIssueMitigation(
       action: action,
@@ -4612,7 +4612,7 @@ const $DetectedIssueMitigation = _$DetectedIssueMitigationTearOff();
 mixin _$DetectedIssueMitigation {
   @JsonKey(required: true)
   CodeableConcept get action;
-  DateTime get date;
+  FhirDateTime get date;
   Reference get author;
 
   Map<String, dynamic> toJson();
@@ -4625,7 +4625,7 @@ abstract class $DetectedIssueMitigationCopyWith<$Res> {
       _$DetectedIssueMitigationCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true) CodeableConcept action,
-      DateTime date,
+      FhirDateTime date,
       Reference author});
 
   $CodeableConceptCopyWith<$Res> get action;
@@ -4648,7 +4648,7 @@ class _$DetectedIssueMitigationCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       action: action == freezed ? _value.action : action as CodeableConcept,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
     ));
   }
@@ -4682,7 +4682,7 @@ abstract class _$DetectedIssueMitigationCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(required: true) CodeableConcept action,
-      DateTime date,
+      FhirDateTime date,
       Reference author});
 
   @override
@@ -4710,7 +4710,7 @@ class __$DetectedIssueMitigationCopyWithImpl<$Res>
   }) {
     return _then(_DetectedIssueMitigation(
       action: action == freezed ? _value.action : action as CodeableConcept,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
     ));
   }
@@ -4728,7 +4728,7 @@ class _$_DetectedIssueMitigation implements _DetectedIssueMitigation {
   @JsonKey(required: true)
   final CodeableConcept action;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final Reference author;
 
@@ -4770,7 +4770,7 @@ class _$_DetectedIssueMitigation implements _DetectedIssueMitigation {
 abstract class _DetectedIssueMitigation implements DetectedIssueMitigation {
   const factory _DetectedIssueMitigation(
       {@JsonKey(required: true) CodeableConcept action,
-      DateTime date,
+      FhirDateTime date,
       Reference author}) = _$_DetectedIssueMitigation;
 
   factory _DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =
@@ -4780,7 +4780,7 @@ abstract class _DetectedIssueMitigation implements DetectedIssueMitigation {
   @JsonKey(required: true)
   CodeableConcept get action;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   Reference get author;
   @override
@@ -4806,7 +4806,7 @@ class _$FamilyMemberHistoryTearOff {
       CodeableConcept notDoneReason,
       @JsonKey(required: true)
           Reference patient,
-      DateTime date,
+      FhirDateTime date,
       String name,
       @JsonKey(required: true)
           CodeableConcept relationship,
@@ -4874,7 +4874,7 @@ mixin _$FamilyMemberHistory {
   CodeableConcept get notDoneReason;
   @JsonKey(required: true)
   Reference get patient;
-  DateTime get date;
+  FhirDateTime get date;
   String get name;
   @JsonKey(required: true)
   CodeableConcept get relationship;
@@ -4916,7 +4916,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       CodeableConcept notDoneReason,
       @JsonKey(required: true)
           Reference patient,
-      DateTime date,
+      FhirDateTime date,
       String name,
       @JsonKey(required: true)
           CodeableConcept relationship,
@@ -5005,7 +5005,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
           ? _value.notDoneReason
           : notDoneReason as CodeableConcept,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       name: name == freezed ? _value.name : name as String,
       relationship: relationship == freezed
           ? _value.relationship
@@ -5146,7 +5146,7 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
       CodeableConcept notDoneReason,
       @JsonKey(required: true)
           Reference patient,
-      DateTime date,
+      FhirDateTime date,
       String name,
       @JsonKey(required: true)
           CodeableConcept relationship,
@@ -5245,7 +5245,7 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
           ? _value.notDoneReason
           : notDoneReason as CodeableConcept,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       name: name == freezed ? _value.name : name as String,
       relationship: relationship == freezed
           ? _value.relationship
@@ -5348,7 +5348,7 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
   @JsonKey(required: true)
   final Reference patient;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String name;
   @override
@@ -5526,7 +5526,7 @@ abstract class _FamilyMemberHistory implements FamilyMemberHistory {
       CodeableConcept notDoneReason,
       @JsonKey(required: true)
           Reference patient,
-      DateTime date,
+      FhirDateTime date,
       String name,
       @JsonKey(required: true)
           CodeableConcept relationship,
@@ -5570,7 +5570,7 @@ abstract class _FamilyMemberHistory implements FamilyMemberHistory {
   @JsonKey(required: true)
   Reference get patient;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get name;
   @override
@@ -5969,7 +5969,7 @@ class _$ProcedureTearOff {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime performedDateTime,
+      FhirDateTime performedDateTime,
       Period performedPeriod,
       List<ProcedurePerformer> performer,
       Reference location,
@@ -6036,7 +6036,7 @@ mixin _$Procedure {
   @JsonKey(required: true)
   Reference get subject;
   Reference get context;
-  DateTime get performedDateTime;
+  FhirDateTime get performedDateTime;
   Period get performedPeriod;
   List<ProcedurePerformer> get performer;
   Reference get location;
@@ -6073,7 +6073,7 @@ abstract class $ProcedureCopyWith<$Res> {
       CodeableConcept code,
       @JsonKey(required: true) Reference subject,
       Reference context,
-      DateTime performedDateTime,
+      FhirDateTime performedDateTime,
       Period performedPeriod,
       List<ProcedurePerformer> performer,
       Reference location,
@@ -6162,7 +6162,7 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
       context: context == freezed ? _value.context : context as Reference,
       performedDateTime: performedDateTime == freezed
           ? _value.performedDateTime
-          : performedDateTime as DateTime,
+          : performedDateTime as FhirDateTime,
       performedPeriod: performedPeriod == freezed
           ? _value.performedPeriod
           : performedPeriod as Period,
@@ -6302,7 +6302,7 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       CodeableConcept code,
       @JsonKey(required: true) Reference subject,
       Reference context,
-      DateTime performedDateTime,
+      FhirDateTime performedDateTime,
       Period performedPeriod,
       List<ProcedurePerformer> performer,
       Reference location,
@@ -6400,7 +6400,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       performedDateTime: performedDateTime == freezed
           ? _value.performedDateTime
-          : performedDateTime as DateTime,
+          : performedDateTime as FhirDateTime,
       performedPeriod: performedPeriod == freezed
           ? _value.performedPeriod
           : performedPeriod as Period,
@@ -6508,7 +6508,7 @@ class _$_Procedure implements _Procedure {
   @override
   final Reference context;
   @override
-  final DateTime performedDateTime;
+  final FhirDateTime performedDateTime;
   @override
   final Period performedPeriod;
   @override
@@ -6681,7 +6681,7 @@ abstract class _Procedure implements Procedure {
       @JsonKey(required: true)
           Reference subject,
       Reference context,
-      DateTime performedDateTime,
+      FhirDateTime performedDateTime,
       Period performedPeriod,
       List<ProcedurePerformer> performer,
       Reference location,
@@ -6728,7 +6728,7 @@ abstract class _Procedure implements Procedure {
   @override
   Reference get context;
   @override
-  DateTime get performedDateTime;
+  FhirDateTime get performedDateTime;
   @override
   Period get performedPeriod;
   @override

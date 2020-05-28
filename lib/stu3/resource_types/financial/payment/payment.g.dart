@@ -27,7 +27,7 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['statusDate'] as String),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
@@ -60,7 +60,7 @@ Map<String, dynamic> _$_$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());
   writeNotNull('statusDate', instance.statusDate?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('target', instance.target?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
@@ -84,7 +84,7 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
         : Period.fromJson(json['period'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
@@ -137,7 +137,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationToJson(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('period', instance.period?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('outcome', instance.outcome?.toJson());

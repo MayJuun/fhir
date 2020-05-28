@@ -26,8 +26,8 @@ class _$DeviceTearOff {
       CodeableConcept type,
       String lotNumber,
       String manufacturer,
-      DateTime manufactureDate,
-      DateTime expirationDate,
+      FhirDateTime manufactureDate,
+      FhirDateTime expirationDate,
       String model,
       String version,
       Reference patient,
@@ -73,8 +73,8 @@ mixin _$Device {
   CodeableConcept get type;
   String get lotNumber;
   String get manufacturer;
-  DateTime get manufactureDate;
-  DateTime get expirationDate;
+  FhirDateTime get manufactureDate;
+  FhirDateTime get expirationDate;
   String get model;
   String get version;
   Reference get patient;
@@ -100,8 +100,8 @@ abstract class $DeviceCopyWith<$Res> {
       CodeableConcept type,
       String lotNumber,
       String manufacturer,
-      DateTime manufactureDate,
-      DateTime expirationDate,
+      FhirDateTime manufactureDate,
+      FhirDateTime expirationDate,
       String model,
       String version,
       Reference patient,
@@ -163,10 +163,10 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
           : manufacturer as String,
       manufactureDate: manufactureDate == freezed
           ? _value.manufactureDate
-          : manufactureDate as DateTime,
+          : manufactureDate as FhirDateTime,
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
-          : expirationDate as DateTime,
+          : expirationDate as FhirDateTime,
       model: model == freezed ? _value.model : model as String,
       version: version == freezed ? _value.version : version as String,
       patient: patient == freezed ? _value.patient : patient as Reference,
@@ -244,8 +244,8 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       CodeableConcept type,
       String lotNumber,
       String manufacturer,
-      DateTime manufactureDate,
-      DateTime expirationDate,
+      FhirDateTime manufactureDate,
+      FhirDateTime expirationDate,
       String model,
       String version,
       Reference patient,
@@ -313,10 +313,10 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
           : manufacturer as String,
       manufactureDate: manufactureDate == freezed
           ? _value.manufactureDate
-          : manufactureDate as DateTime,
+          : manufactureDate as FhirDateTime,
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
-          : expirationDate as DateTime,
+          : expirationDate as FhirDateTime,
       model: model == freezed ? _value.model : model as String,
       version: version == freezed ? _value.version : version as String,
       patient: patient == freezed ? _value.patient : patient as Reference,
@@ -378,9 +378,9 @@ class _$_Device implements _Device {
   @override
   final String manufacturer;
   @override
-  final DateTime manufactureDate;
+  final FhirDateTime manufactureDate;
   @override
-  final DateTime expirationDate;
+  final FhirDateTime expirationDate;
   @override
   final String model;
   @override
@@ -501,8 +501,8 @@ abstract class _Device implements Device {
       CodeableConcept type,
       String lotNumber,
       String manufacturer,
-      DateTime manufactureDate,
-      DateTime expirationDate,
+      FhirDateTime manufactureDate,
+      FhirDateTime expirationDate,
       String model,
       String version,
       Reference patient,
@@ -532,9 +532,9 @@ abstract class _Device implements Device {
   @override
   String get manufacturer;
   @override
-  DateTime get manufactureDate;
+  FhirDateTime get manufactureDate;
   @override
-  DateTime get expirationDate;
+  FhirDateTime get expirationDate;
   @override
   String get model;
   @override
@@ -5326,7 +5326,7 @@ class _$SubstanceInstanceTearOff {
   const _$SubstanceInstanceTearOff();
 
   _SubstanceInstance call(
-      {Identifier identifier, DateTime expiry, Quantity quantity}) {
+      {Identifier identifier, FhirDateTime expiry, Quantity quantity}) {
     return _SubstanceInstance(
       identifier: identifier,
       expiry: expiry,
@@ -5340,7 +5340,7 @@ const $SubstanceInstance = _$SubstanceInstanceTearOff();
 
 mixin _$SubstanceInstance {
   Identifier get identifier;
-  DateTime get expiry;
+  FhirDateTime get expiry;
   Quantity get quantity;
 
   Map<String, dynamic> toJson();
@@ -5351,7 +5351,7 @@ abstract class $SubstanceInstanceCopyWith<$Res> {
   factory $SubstanceInstanceCopyWith(
           SubstanceInstance value, $Res Function(SubstanceInstance) then) =
       _$SubstanceInstanceCopyWithImpl<$Res>;
-  $Res call({Identifier identifier, DateTime expiry, Quantity quantity});
+  $Res call({Identifier identifier, FhirDateTime expiry, Quantity quantity});
 
   $IdentifierCopyWith<$Res> get identifier;
   $QuantityCopyWith<$Res> get quantity;
@@ -5374,7 +5374,7 @@ class _$SubstanceInstanceCopyWithImpl<$Res>
     return _then(_value.copyWith(
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
-      expiry: expiry == freezed ? _value.expiry : expiry as DateTime,
+      expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
     ));
   }
@@ -5406,7 +5406,7 @@ abstract class _$SubstanceInstanceCopyWith<$Res>
           _SubstanceInstance value, $Res Function(_SubstanceInstance) then) =
       __$SubstanceInstanceCopyWithImpl<$Res>;
   @override
-  $Res call({Identifier identifier, DateTime expiry, Quantity quantity});
+  $Res call({Identifier identifier, FhirDateTime expiry, Quantity quantity});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -5433,7 +5433,7 @@ class __$SubstanceInstanceCopyWithImpl<$Res>
     return _then(_SubstanceInstance(
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
-      expiry: expiry == freezed ? _value.expiry : expiry as DateTime,
+      expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
     ));
   }
@@ -5449,7 +5449,7 @@ class _$_SubstanceInstance implements _SubstanceInstance {
   @override
   final Identifier identifier;
   @override
-  final DateTime expiry;
+  final FhirDateTime expiry;
   @override
   final Quantity quantity;
 
@@ -5492,7 +5492,7 @@ class _$_SubstanceInstance implements _SubstanceInstance {
 abstract class _SubstanceInstance implements SubstanceInstance {
   const factory _SubstanceInstance(
       {Identifier identifier,
-      DateTime expiry,
+      FhirDateTime expiry,
       Quantity quantity}) = _$_SubstanceInstance;
 
   factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
@@ -5501,7 +5501,7 @@ abstract class _SubstanceInstance implements SubstanceInstance {
   @override
   Identifier get identifier;
   @override
-  DateTime get expiry;
+  FhirDateTime get expiry;
   @override
   Quantity get quantity;
   @override

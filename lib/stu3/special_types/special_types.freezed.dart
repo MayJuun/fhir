@@ -869,7 +869,7 @@ class _$ElementDefinitionTearOff {
       String defaultValueString,
       String defaultValueUri,
       Date defaultValueDate,
-      DateTime defaultValueDateTime,
+      FhirDateTime defaultValueDateTime,
       Time defaultValueTime,
       Code defaultValueCode,
       Oid defaultValueOid,
@@ -924,7 +924,7 @@ class _$ElementDefinitionTearOff {
       String fixedString,
       String fixedUri,
       Date fixedDate,
-      DateTime fixedDateTime,
+      FhirDateTime fixedDateTime,
       Time fixedTime,
       Code fixedCode,
       Oid fixedOid,
@@ -977,7 +977,7 @@ class _$ElementDefinitionTearOff {
       String patternString,
       String patternUri,
       Date patternDate,
-      DateTime patternDateTime,
+      FhirDateTime patternDateTime,
       Time patternTime,
       Code patternCode,
       Oid patternOid,
@@ -1024,7 +1024,7 @@ class _$ElementDefinitionTearOff {
       TriggerDefinition patternTriggerDefinition,
       List<ElementDefinitionExample> example,
       Date minValueDate,
-      DateTime minValueDateTime,
+      FhirDateTime minValueDateTime,
       String minValueInstant,
       Time minValueTime,
       Decimal minValueDecimal,
@@ -1033,7 +1033,7 @@ class _$ElementDefinitionTearOff {
       UnsignedInt minValueUnsignedInt,
       Quantity minValueQuantity,
       Date maxValueDate,
-      DateTime maxValueDateTime,
+      FhirDateTime maxValueDateTime,
       String maxValueInstant,
       Time maxValueTime,
       Decimal maxValueDecimal,
@@ -1286,7 +1286,7 @@ mixin _$ElementDefinition {
   String get defaultValueString;
   String get defaultValueUri;
   Date get defaultValueDate;
-  DateTime get defaultValueDateTime;
+  FhirDateTime get defaultValueDateTime;
   Time get defaultValueTime;
   Code get defaultValueCode;
   Oid get defaultValueOid;
@@ -1341,7 +1341,7 @@ mixin _$ElementDefinition {
   String get fixedString;
   String get fixedUri;
   Date get fixedDate;
-  DateTime get fixedDateTime;
+  FhirDateTime get fixedDateTime;
   Time get fixedTime;
   Code get fixedCode;
   Oid get fixedOid;
@@ -1394,7 +1394,7 @@ mixin _$ElementDefinition {
   String get patternString;
   String get patternUri;
   Date get patternDate;
-  DateTime get patternDateTime;
+  FhirDateTime get patternDateTime;
   Time get patternTime;
   Code get patternCode;
   Oid get patternOid;
@@ -1441,7 +1441,7 @@ mixin _$ElementDefinition {
   TriggerDefinition get patternTriggerDefinition;
   List<ElementDefinitionExample> get example;
   Date get minValueDate;
-  DateTime get minValueDateTime;
+  FhirDateTime get minValueDateTime;
   String get minValueInstant;
   Time get minValueTime;
   Decimal get minValueDecimal;
@@ -1450,7 +1450,7 @@ mixin _$ElementDefinition {
   UnsignedInt get minValueUnsignedInt;
   Quantity get minValueQuantity;
   Date get maxValueDate;
-  DateTime get maxValueDateTime;
+  FhirDateTime get maxValueDateTime;
   String get maxValueInstant;
   Time get maxValueTime;
   Decimal get maxValueDecimal;
@@ -1500,7 +1500,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String defaultValueString,
       String defaultValueUri,
       Date defaultValueDate,
-      DateTime defaultValueDateTime,
+      FhirDateTime defaultValueDateTime,
       Time defaultValueTime,
       Code defaultValueCode,
       Oid defaultValueOid,
@@ -1555,7 +1555,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String fixedString,
       String fixedUri,
       Date fixedDate,
-      DateTime fixedDateTime,
+      FhirDateTime fixedDateTime,
       Time fixedTime,
       Code fixedCode,
       Oid fixedOid,
@@ -1608,7 +1608,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String patternString,
       String patternUri,
       Date patternDate,
-      DateTime patternDateTime,
+      FhirDateTime patternDateTime,
       Time patternTime,
       Code patternCode,
       Oid patternOid,
@@ -1655,7 +1655,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition patternTriggerDefinition,
       List<ElementDefinitionExample> example,
       Date minValueDate,
-      DateTime minValueDateTime,
+      FhirDateTime minValueDateTime,
       String minValueInstant,
       Time minValueTime,
       Decimal minValueDecimal,
@@ -1664,7 +1664,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       UnsignedInt minValueUnsignedInt,
       Quantity minValueQuantity,
       Date maxValueDate,
-      DateTime maxValueDateTime,
+      FhirDateTime maxValueDateTime,
       String maxValueInstant,
       Time maxValueTime,
       Decimal maxValueDecimal,
@@ -2060,7 +2060,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueDate as Date,
       defaultValueDateTime: defaultValueDateTime == freezed
           ? _value.defaultValueDateTime
-          : defaultValueDateTime as DateTime,
+          : defaultValueDateTime as FhirDateTime,
       defaultValueTime: defaultValueTime == freezed
           ? _value.defaultValueTime
           : defaultValueTime as Time,
@@ -2221,7 +2221,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       fixedDate: fixedDate == freezed ? _value.fixedDate : fixedDate as Date,
       fixedDateTime: fixedDateTime == freezed
           ? _value.fixedDateTime
-          : fixedDateTime as DateTime,
+          : fixedDateTime as FhirDateTime,
       fixedTime: fixedTime == freezed ? _value.fixedTime : fixedTime as Time,
       fixedCode: fixedCode == freezed ? _value.fixedCode : fixedCode as Code,
       fixedOid: fixedOid == freezed ? _value.fixedOid : fixedOid as Oid,
@@ -2356,7 +2356,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           patternDate == freezed ? _value.patternDate : patternDate as Date,
       patternDateTime: patternDateTime == freezed
           ? _value.patternDateTime
-          : patternDateTime as DateTime,
+          : patternDateTime as FhirDateTime,
       patternTime:
           patternTime == freezed ? _value.patternTime : patternTime as Time,
       patternCode:
@@ -2482,7 +2482,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           minValueDate == freezed ? _value.minValueDate : minValueDate as Date,
       minValueDateTime: minValueDateTime == freezed
           ? _value.minValueDateTime
-          : minValueDateTime as DateTime,
+          : minValueDateTime as FhirDateTime,
       minValueInstant: minValueInstant == freezed
           ? _value.minValueInstant
           : minValueInstant as String,
@@ -2507,7 +2507,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           maxValueDate == freezed ? _value.maxValueDate : maxValueDate as Date,
       maxValueDateTime: maxValueDateTime == freezed
           ? _value.maxValueDateTime
-          : maxValueDateTime as DateTime,
+          : maxValueDateTime as FhirDateTime,
       maxValueInstant: maxValueInstant == freezed
           ? _value.maxValueInstant
           : maxValueInstant as String,
@@ -3697,7 +3697,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       String defaultValueString,
       String defaultValueUri,
       Date defaultValueDate,
-      DateTime defaultValueDateTime,
+      FhirDateTime defaultValueDateTime,
       Time defaultValueTime,
       Code defaultValueCode,
       Oid defaultValueOid,
@@ -3752,7 +3752,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       String fixedString,
       String fixedUri,
       Date fixedDate,
-      DateTime fixedDateTime,
+      FhirDateTime fixedDateTime,
       Time fixedTime,
       Code fixedCode,
       Oid fixedOid,
@@ -3805,7 +3805,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       String patternString,
       String patternUri,
       Date patternDate,
-      DateTime patternDateTime,
+      FhirDateTime patternDateTime,
       Time patternTime,
       Code patternCode,
       Oid patternOid,
@@ -3852,7 +3852,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       TriggerDefinition patternTriggerDefinition,
       List<ElementDefinitionExample> example,
       Date minValueDate,
-      DateTime minValueDateTime,
+      FhirDateTime minValueDateTime,
       String minValueInstant,
       Time minValueTime,
       Decimal minValueDecimal,
@@ -3861,7 +3861,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       UnsignedInt minValueUnsignedInt,
       Quantity minValueQuantity,
       Date maxValueDate,
-      DateTime maxValueDateTime,
+      FhirDateTime maxValueDateTime,
       String maxValueInstant,
       Time maxValueTime,
       Decimal maxValueDecimal,
@@ -4369,7 +4369,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : defaultValueDate as Date,
       defaultValueDateTime: defaultValueDateTime == freezed
           ? _value.defaultValueDateTime
-          : defaultValueDateTime as DateTime,
+          : defaultValueDateTime as FhirDateTime,
       defaultValueTime: defaultValueTime == freezed
           ? _value.defaultValueTime
           : defaultValueTime as Time,
@@ -4530,7 +4530,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       fixedDate: fixedDate == freezed ? _value.fixedDate : fixedDate as Date,
       fixedDateTime: fixedDateTime == freezed
           ? _value.fixedDateTime
-          : fixedDateTime as DateTime,
+          : fixedDateTime as FhirDateTime,
       fixedTime: fixedTime == freezed ? _value.fixedTime : fixedTime as Time,
       fixedCode: fixedCode == freezed ? _value.fixedCode : fixedCode as Code,
       fixedOid: fixedOid == freezed ? _value.fixedOid : fixedOid as Oid,
@@ -4665,7 +4665,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           patternDate == freezed ? _value.patternDate : patternDate as Date,
       patternDateTime: patternDateTime == freezed
           ? _value.patternDateTime
-          : patternDateTime as DateTime,
+          : patternDateTime as FhirDateTime,
       patternTime:
           patternTime == freezed ? _value.patternTime : patternTime as Time,
       patternCode:
@@ -4791,7 +4791,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           minValueDate == freezed ? _value.minValueDate : minValueDate as Date,
       minValueDateTime: minValueDateTime == freezed
           ? _value.minValueDateTime
-          : minValueDateTime as DateTime,
+          : minValueDateTime as FhirDateTime,
       minValueInstant: minValueInstant == freezed
           ? _value.minValueInstant
           : minValueInstant as String,
@@ -4816,7 +4816,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           maxValueDate == freezed ? _value.maxValueDate : maxValueDate as Date,
       maxValueDateTime: maxValueDateTime == freezed
           ? _value.maxValueDateTime
-          : maxValueDateTime as DateTime,
+          : maxValueDateTime as FhirDateTime,
       maxValueInstant: maxValueInstant == freezed
           ? _value.maxValueInstant
           : maxValueInstant as String,
@@ -5118,7 +5118,7 @@ class _$_ElementDefinition implements _ElementDefinition {
   @override
   final Date defaultValueDate;
   @override
-  final DateTime defaultValueDateTime;
+  final FhirDateTime defaultValueDateTime;
   @override
   final Time defaultValueTime;
   @override
@@ -5228,7 +5228,7 @@ class _$_ElementDefinition implements _ElementDefinition {
   @override
   final Date fixedDate;
   @override
-  final DateTime fixedDateTime;
+  final FhirDateTime fixedDateTime;
   @override
   final Time fixedTime;
   @override
@@ -5334,7 +5334,7 @@ class _$_ElementDefinition implements _ElementDefinition {
   @override
   final Date patternDate;
   @override
-  final DateTime patternDateTime;
+  final FhirDateTime patternDateTime;
   @override
   final Time patternTime;
   @override
@@ -5428,7 +5428,7 @@ class _$_ElementDefinition implements _ElementDefinition {
   @override
   final Date minValueDate;
   @override
-  final DateTime minValueDateTime;
+  final FhirDateTime minValueDateTime;
   @override
   final String minValueInstant;
   @override
@@ -5446,7 +5446,7 @@ class _$_ElementDefinition implements _ElementDefinition {
   @override
   final Date maxValueDate;
   @override
-  final DateTime maxValueDateTime;
+  final FhirDateTime maxValueDateTime;
   @override
   final String maxValueInstant;
   @override
@@ -5979,7 +5979,7 @@ abstract class _ElementDefinition implements ElementDefinition {
       String defaultValueString,
       String defaultValueUri,
       Date defaultValueDate,
-      DateTime defaultValueDateTime,
+      FhirDateTime defaultValueDateTime,
       Time defaultValueTime,
       Code defaultValueCode,
       Oid defaultValueOid,
@@ -6034,7 +6034,7 @@ abstract class _ElementDefinition implements ElementDefinition {
       String fixedString,
       String fixedUri,
       Date fixedDate,
-      DateTime fixedDateTime,
+      FhirDateTime fixedDateTime,
       Time fixedTime,
       Code fixedCode,
       Oid fixedOid,
@@ -6087,7 +6087,7 @@ abstract class _ElementDefinition implements ElementDefinition {
       String patternString,
       String patternUri,
       Date patternDate,
-      DateTime patternDateTime,
+      FhirDateTime patternDateTime,
       Time patternTime,
       Code patternCode,
       Oid patternOid,
@@ -6134,7 +6134,7 @@ abstract class _ElementDefinition implements ElementDefinition {
       TriggerDefinition patternTriggerDefinition,
       List<ElementDefinitionExample> example,
       Date minValueDate,
-      DateTime minValueDateTime,
+      FhirDateTime minValueDateTime,
       String minValueInstant,
       Time minValueTime,
       Decimal minValueDecimal,
@@ -6143,7 +6143,7 @@ abstract class _ElementDefinition implements ElementDefinition {
       UnsignedInt minValueUnsignedInt,
       Quantity minValueQuantity,
       Date maxValueDate,
-      DateTime maxValueDateTime,
+      FhirDateTime maxValueDateTime,
       String maxValueInstant,
       Time maxValueTime,
       Decimal maxValueDecimal,
@@ -6212,7 +6212,7 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   Date get defaultValueDate;
   @override
-  DateTime get defaultValueDateTime;
+  FhirDateTime get defaultValueDateTime;
   @override
   Time get defaultValueTime;
   @override
@@ -6322,7 +6322,7 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   Date get fixedDate;
   @override
-  DateTime get fixedDateTime;
+  FhirDateTime get fixedDateTime;
   @override
   Time get fixedTime;
   @override
@@ -6428,7 +6428,7 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   Date get patternDate;
   @override
-  DateTime get patternDateTime;
+  FhirDateTime get patternDateTime;
   @override
   Time get patternTime;
   @override
@@ -6522,7 +6522,7 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   Date get minValueDate;
   @override
-  DateTime get minValueDateTime;
+  FhirDateTime get minValueDateTime;
   @override
   String get minValueInstant;
   @override
@@ -6540,7 +6540,7 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   Date get maxValueDate;
   @override
-  DateTime get maxValueDateTime;
+  FhirDateTime get maxValueDateTime;
   @override
   String get maxValueInstant;
   @override
@@ -7353,7 +7353,7 @@ class _$ElementDefinitionExampleTearOff {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -7470,7 +7470,7 @@ mixin _$ElementDefinitionExample {
   String get valueString;
   String get valueUri;
   Date get valueDate;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   Time get valueTime;
   Code get valueCode;
   Oid get valueOid;
@@ -7534,7 +7534,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -7706,7 +7706,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -8200,7 +8200,7 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -8411,7 +8411,7 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -8606,7 +8606,7 @@ class _$_ElementDefinitionExample implements _ElementDefinitionExample {
   @override
   final Date valueDate;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
   @override
   final Time valueTime;
   @override
@@ -8884,7 +8884,7 @@ abstract class _ElementDefinitionExample implements ElementDefinitionExample {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -8952,7 +8952,7 @@ abstract class _ElementDefinitionExample implements ElementDefinitionExample {
   @override
   Date get valueDate;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   Time get valueTime;
   @override

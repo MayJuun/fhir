@@ -3375,7 +3375,7 @@ class _$LibraryTearOff {
       Boolean experimental,
       @JsonKey(required: true)
           CodeableConcept type,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -3441,7 +3441,7 @@ mixin _$Library {
   Boolean get experimental;
   @JsonKey(required: true)
   CodeableConcept get type;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   String get description;
   String get purpose;
@@ -3477,7 +3477,7 @@ abstract class $LibraryCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       @JsonKey(required: true) CodeableConcept type,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -3553,7 +3553,7 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
           ? _value.experimental
           : experimental as Boolean,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -3629,7 +3629,7 @@ abstract class _$LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
       @JsonKey(required: true) CodeableConcept type,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -3708,7 +3708,7 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
           ? _value.experimental
           : experimental as Boolean,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -3811,7 +3811,7 @@ class _$_Library implements _Library {
   @JsonKey(required: true)
   final CodeableConcept type;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -3984,7 +3984,7 @@ abstract class _Library implements Library {
       Boolean experimental,
       @JsonKey(required: true)
           CodeableConcept type,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -4027,7 +4027,7 @@ abstract class _Library implements Library {
   @JsonKey(required: true)
   CodeableConcept get type;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -4086,7 +4086,7 @@ class _$ListsTearOff {
       CodeableConcept code,
       Reference subject,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
       List<Annotation> note,
@@ -4126,7 +4126,7 @@ mixin _$Lists {
   CodeableConcept get code;
   Reference get subject;
   Reference get encounter;
-  DateTime get date;
+  FhirDateTime get date;
   Reference get source;
   CodeableConcept get orderedBy;
   List<Annotation> get note;
@@ -4149,7 +4149,7 @@ abstract class $ListsCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
       List<Annotation> note,
@@ -4202,7 +4202,7 @@ class _$ListsCopyWithImpl<$Res> implements $ListsCopyWith<$Res> {
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       source: source == freezed ? _value.source : source as Reference,
       orderedBy: orderedBy == freezed
           ? _value.orderedBy
@@ -4289,7 +4289,7 @@ abstract class _$ListsCopyWith<$Res> implements $ListsCopyWith<$Res> {
       CodeableConcept code,
       Reference subject,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
       List<Annotation> note,
@@ -4349,7 +4349,7 @@ class __$ListsCopyWithImpl<$Res> extends _$ListsCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       source: source == freezed ? _value.source : source as Reference,
       orderedBy: orderedBy == freezed
           ? _value.orderedBy
@@ -4409,7 +4409,7 @@ class _$_Lists implements _Lists {
   @override
   final Reference encounter;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final Reference source;
   @override
@@ -4508,7 +4508,7 @@ abstract class _Lists implements Lists {
       CodeableConcept code,
       Reference subject,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
       List<Annotation> note,
@@ -4537,7 +4537,7 @@ abstract class _Lists implements Lists {
   @override
   Reference get encounter;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   Reference get source;
   @override
@@ -4562,7 +4562,7 @@ class _$ListEntryTearOff {
   _ListEntry call(
       {CodeableConcept flag,
       Boolean deleted,
-      DateTime date,
+      FhirDateTime date,
       @JsonKey(required: true) Reference item}) {
     return _ListEntry(
       flag: flag,
@@ -4579,7 +4579,7 @@ const $ListEntry = _$ListEntryTearOff();
 mixin _$ListEntry {
   CodeableConcept get flag;
   Boolean get deleted;
-  DateTime get date;
+  FhirDateTime get date;
   @JsonKey(required: true)
   Reference get item;
 
@@ -4593,7 +4593,7 @@ abstract class $ListEntryCopyWith<$Res> {
   $Res call(
       {CodeableConcept flag,
       Boolean deleted,
-      DateTime date,
+      FhirDateTime date,
       @JsonKey(required: true) Reference item});
 
   $CodeableConceptCopyWith<$Res> get flag;
@@ -4617,7 +4617,7 @@ class _$ListEntryCopyWithImpl<$Res> implements $ListEntryCopyWith<$Res> {
     return _then(_value.copyWith(
       flag: flag == freezed ? _value.flag : flag as CodeableConcept,
       deleted: deleted == freezed ? _value.deleted : deleted as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       item: item == freezed ? _value.item : item as Reference,
     ));
   }
@@ -4651,7 +4651,7 @@ abstract class _$ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
   $Res call(
       {CodeableConcept flag,
       Boolean deleted,
-      DateTime date,
+      FhirDateTime date,
       @JsonKey(required: true) Reference item});
 
   @override
@@ -4678,7 +4678,7 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
     return _then(_ListEntry(
       flag: flag == freezed ? _value.flag : flag as CodeableConcept,
       deleted: deleted == freezed ? _value.deleted : deleted as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       item: item == freezed ? _value.item : item as Reference,
     ));
   }
@@ -4697,7 +4697,7 @@ class _$_ListEntry implements _ListEntry {
   @override
   final Boolean deleted;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   @JsonKey(required: true)
   final Reference item;
@@ -4744,7 +4744,7 @@ abstract class _ListEntry implements ListEntry {
   const factory _ListEntry(
       {CodeableConcept flag,
       Boolean deleted,
-      DateTime date,
+      FhirDateTime date,
       @JsonKey(required: true) Reference item}) = _$_ListEntry;
 
   factory _ListEntry.fromJson(Map<String, dynamic> json) =
@@ -4755,7 +4755,7 @@ abstract class _ListEntry implements ListEntry {
   @override
   Boolean get deleted;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   @JsonKey(required: true)
   Reference get item;

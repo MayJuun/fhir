@@ -27,7 +27,7 @@ class _$ImmunizationTearOff {
       @JsonKey(required: true)
           Reference patient,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       Boolean primarySource,
       CodeableConcept reportOrigin,
       Reference location,
@@ -83,7 +83,7 @@ mixin _$Immunization {
   @JsonKey(required: true)
   Reference get patient;
   Reference get encounter;
-  DateTime get date;
+  FhirDateTime get date;
   Boolean get primarySource;
   CodeableConcept get reportOrigin;
   Reference get location;
@@ -118,7 +118,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       @JsonKey(required: true)
           Reference patient,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       Boolean primarySource,
       CodeableConcept reportOrigin,
       Reference location,
@@ -193,7 +193,7 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       primarySource: primarySource == freezed
           ? _value.primarySource
           : primarySource as Boolean,
@@ -347,7 +347,7 @@ abstract class _$ImmunizationCopyWith<$Res>
       @JsonKey(required: true)
           Reference patient,
       Reference encounter,
-      DateTime date,
+      FhirDateTime date,
       Boolean primarySource,
       CodeableConcept reportOrigin,
       Reference location,
@@ -434,7 +434,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       primarySource: primarySource == freezed
           ? _value.primarySource
           : primarySource as Boolean,
@@ -523,7 +523,7 @@ class _$_Immunization implements _Immunization {
   @override
   final Reference encounter;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final Boolean primarySource;
   @override
@@ -674,7 +674,7 @@ abstract class _Immunization implements Immunization {
           @JsonKey(required: true)
               Reference patient,
           Reference encounter,
-          DateTime date,
+          FhirDateTime date,
           Boolean primarySource,
           CodeableConcept reportOrigin,
           Reference location,
@@ -712,7 +712,7 @@ abstract class _Immunization implements Immunization {
   @override
   Reference get encounter;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   Boolean get primarySource;
   @override
@@ -1088,7 +1088,7 @@ class _$ImmunizationReactionTearOff {
   const _$ImmunizationReactionTearOff();
 
   _ImmunizationReaction call(
-      {DateTime date, Reference detail, Boolean reported}) {
+      {FhirDateTime date, Reference detail, Boolean reported}) {
     return _ImmunizationReaction(
       date: date,
       detail: detail,
@@ -1101,7 +1101,7 @@ class _$ImmunizationReactionTearOff {
 const $ImmunizationReaction = _$ImmunizationReactionTearOff();
 
 mixin _$ImmunizationReaction {
-  DateTime get date;
+  FhirDateTime get date;
   Reference get detail;
   Boolean get reported;
 
@@ -1113,7 +1113,7 @@ abstract class $ImmunizationReactionCopyWith<$Res> {
   factory $ImmunizationReactionCopyWith(ImmunizationReaction value,
           $Res Function(ImmunizationReaction) then) =
       _$ImmunizationReactionCopyWithImpl<$Res>;
-  $Res call({DateTime date, Reference detail, Boolean reported});
+  $Res call({FhirDateTime date, Reference detail, Boolean reported});
 
   $ReferenceCopyWith<$Res> get detail;
 }
@@ -1133,7 +1133,7 @@ class _$ImmunizationReactionCopyWithImpl<$Res>
     Object reported = freezed,
   }) {
     return _then(_value.copyWith(
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       detail: detail == freezed ? _value.detail : detail as Reference,
       reported: reported == freezed ? _value.reported : reported as Boolean,
     ));
@@ -1156,7 +1156,7 @@ abstract class _$ImmunizationReactionCopyWith<$Res>
           $Res Function(_ImmunizationReaction) then) =
       __$ImmunizationReactionCopyWithImpl<$Res>;
   @override
-  $Res call({DateTime date, Reference detail, Boolean reported});
+  $Res call({FhirDateTime date, Reference detail, Boolean reported});
 
   @override
   $ReferenceCopyWith<$Res> get detail;
@@ -1179,7 +1179,7 @@ class __$ImmunizationReactionCopyWithImpl<$Res>
     Object reported = freezed,
   }) {
     return _then(_ImmunizationReaction(
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       detail: detail == freezed ? _value.detail : detail as Reference,
       reported: reported == freezed ? _value.reported : reported as Boolean,
     ));
@@ -1194,7 +1194,7 @@ class _$_ImmunizationReaction implements _ImmunizationReaction {
       _$_$_ImmunizationReactionFromJson(json);
 
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final Reference detail;
   @override
@@ -1238,7 +1238,7 @@ class _$_ImmunizationReaction implements _ImmunizationReaction {
 
 abstract class _ImmunizationReaction implements ImmunizationReaction {
   const factory _ImmunizationReaction(
-      {DateTime date,
+      {FhirDateTime date,
       Reference detail,
       Boolean reported}) = _$_ImmunizationReaction;
 
@@ -1246,7 +1246,7 @@ abstract class _ImmunizationReaction implements ImmunizationReaction {
       _$_ImmunizationReaction.fromJson;
 
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   Reference get detail;
   @override
@@ -1867,7 +1867,7 @@ class _$ImmunizationRecommendationRecommendationTearOff {
   const _$ImmunizationRecommendationRecommendationTearOff();
 
   _ImmunizationRecommendationRecommendation call(
-      {DateTime date,
+      {FhirDateTime date,
       CodeableConcept vaccineCode,
       CodeableConcept targetDisease,
       PositiveInt doseNumber,
@@ -1895,7 +1895,7 @@ const $ImmunizationRecommendationRecommendation =
     _$ImmunizationRecommendationRecommendationTearOff();
 
 mixin _$ImmunizationRecommendationRecommendation {
-  DateTime get date;
+  FhirDateTime get date;
   CodeableConcept get vaccineCode;
   CodeableConcept get targetDisease;
   PositiveInt get doseNumber;
@@ -1917,7 +1917,7 @@ abstract class $ImmunizationRecommendationRecommendationCopyWith<$Res> {
           $Res Function(ImmunizationRecommendationRecommendation) then) =
       _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>;
   $Res call(
-      {DateTime date,
+      {FhirDateTime date,
       CodeableConcept vaccineCode,
       CodeableConcept targetDisease,
       PositiveInt doseNumber,
@@ -1955,7 +1955,7 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     Object supportingPatientInformation = freezed,
   }) {
     return _then(_value.copyWith(
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       vaccineCode: vaccineCode == freezed
           ? _value.vaccineCode
           : vaccineCode as CodeableConcept,
@@ -2032,7 +2032,7 @@ abstract class _$ImmunizationRecommendationRecommendationCopyWith<$Res>
       __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {DateTime date,
+      {FhirDateTime date,
       CodeableConcept vaccineCode,
       CodeableConcept targetDisease,
       PositiveInt doseNumber,
@@ -2078,7 +2078,7 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
     Object supportingPatientInformation = freezed,
   }) {
     return _then(_ImmunizationRecommendationRecommendation(
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       vaccineCode: vaccineCode == freezed
           ? _value.vaccineCode
           : vaccineCode as CodeableConcept,
@@ -2125,7 +2125,7 @@ class _$_ImmunizationRecommendationRecommendation
       _$_$_ImmunizationRecommendationRecommendationFromJson(json);
 
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final CodeableConcept vaccineCode;
   @override
@@ -2211,7 +2211,7 @@ class _$_ImmunizationRecommendationRecommendation
 abstract class _ImmunizationRecommendationRecommendation
     implements ImmunizationRecommendationRecommendation {
   const factory _ImmunizationRecommendationRecommendation(
-          {DateTime date,
+          {FhirDateTime date,
           CodeableConcept vaccineCode,
           CodeableConcept targetDisease,
           PositiveInt doseNumber,
@@ -2227,7 +2227,7 @@ abstract class _ImmunizationRecommendationRecommendation
       _$_ImmunizationRecommendationRecommendation.fromJson;
 
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   CodeableConcept get vaccineCode;
   @override
@@ -2260,7 +2260,7 @@ class _$ImmunizationRecommendationDateCriterionTearOff {
   const _$ImmunizationRecommendationDateCriterionTearOff();
 
   _ImmunizationRecommendationDateCriterion call(
-      {@JsonKey(required: true) CodeableConcept code, DateTime value}) {
+      {@JsonKey(required: true) CodeableConcept code, FhirDateTime value}) {
     return _ImmunizationRecommendationDateCriterion(
       code: code,
       value: value,
@@ -2275,7 +2275,7 @@ const $ImmunizationRecommendationDateCriterion =
 mixin _$ImmunizationRecommendationDateCriterion {
   @JsonKey(required: true)
   CodeableConcept get code;
-  DateTime get value;
+  FhirDateTime get value;
 
   Map<String, dynamic> toJson();
   $ImmunizationRecommendationDateCriterionCopyWith<
@@ -2287,7 +2287,8 @@ abstract class $ImmunizationRecommendationDateCriterionCopyWith<$Res> {
           ImmunizationRecommendationDateCriterion value,
           $Res Function(ImmunizationRecommendationDateCriterion) then) =
       _$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>;
-  $Res call({@JsonKey(required: true) CodeableConcept code, DateTime value});
+  $Res call(
+      {@JsonKey(required: true) CodeableConcept code, FhirDateTime value});
 
   $CodeableConceptCopyWith<$Res> get code;
 }
@@ -2308,7 +2309,7 @@ class _$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       code: code == freezed ? _value.code : code as CodeableConcept,
-      value: value == freezed ? _value.value : value as DateTime,
+      value: value == freezed ? _value.value : value as FhirDateTime,
     ));
   }
 
@@ -2330,7 +2331,8 @@ abstract class _$ImmunizationRecommendationDateCriterionCopyWith<$Res>
           $Res Function(_ImmunizationRecommendationDateCriterion) then) =
       __$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>;
   @override
-  $Res call({@JsonKey(required: true) CodeableConcept code, DateTime value});
+  $Res call(
+      {@JsonKey(required: true) CodeableConcept code, FhirDateTime value});
 
   @override
   $CodeableConceptCopyWith<$Res> get code;
@@ -2356,7 +2358,7 @@ class __$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
   }) {
     return _then(_ImmunizationRecommendationDateCriterion(
       code: code == freezed ? _value.code : code as CodeableConcept,
-      value: value == freezed ? _value.value : value as DateTime,
+      value: value == freezed ? _value.value : value as FhirDateTime,
     ));
   }
 }
@@ -2375,7 +2377,7 @@ class _$_ImmunizationRecommendationDateCriterion
   @JsonKey(required: true)
   final CodeableConcept code;
   @override
-  final DateTime value;
+  final FhirDateTime value;
 
   @override
   String toString() {
@@ -2414,7 +2416,7 @@ abstract class _ImmunizationRecommendationDateCriterion
     implements ImmunizationRecommendationDateCriterion {
   const factory _ImmunizationRecommendationDateCriterion(
       {@JsonKey(required: true) CodeableConcept code,
-      DateTime value}) = _$_ImmunizationRecommendationDateCriterion;
+      FhirDateTime value}) = _$_ImmunizationRecommendationDateCriterion;
 
   factory _ImmunizationRecommendationDateCriterion.fromJson(
           Map<String, dynamic> json) =
@@ -2424,7 +2426,7 @@ abstract class _ImmunizationRecommendationDateCriterion
   @JsonKey(required: true)
   CodeableConcept get code;
   @override
-  DateTime get value;
+  FhirDateTime get value;
   @override
   _$ImmunizationRecommendationDateCriterionCopyWith<
       _ImmunizationRecommendationDateCriterion> get copyWith;
@@ -3696,7 +3698,7 @@ MedicationBatch _$MedicationBatchFromJson(Map<String, dynamic> json) {
 class _$MedicationBatchTearOff {
   const _$MedicationBatchTearOff();
 
-  _MedicationBatch call({String lotNumber, DateTime expirationDate}) {
+  _MedicationBatch call({String lotNumber, FhirDateTime expirationDate}) {
     return _MedicationBatch(
       lotNumber: lotNumber,
       expirationDate: expirationDate,
@@ -3709,7 +3711,7 @@ const $MedicationBatch = _$MedicationBatchTearOff();
 
 mixin _$MedicationBatch {
   String get lotNumber;
-  DateTime get expirationDate;
+  FhirDateTime get expirationDate;
 
   Map<String, dynamic> toJson();
   $MedicationBatchCopyWith<MedicationBatch> get copyWith;
@@ -3719,7 +3721,7 @@ abstract class $MedicationBatchCopyWith<$Res> {
   factory $MedicationBatchCopyWith(
           MedicationBatch value, $Res Function(MedicationBatch) then) =
       _$MedicationBatchCopyWithImpl<$Res>;
-  $Res call({String lotNumber, DateTime expirationDate});
+  $Res call({String lotNumber, FhirDateTime expirationDate});
 }
 
 class _$MedicationBatchCopyWithImpl<$Res>
@@ -3739,7 +3741,7 @@ class _$MedicationBatchCopyWithImpl<$Res>
       lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String,
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
-          : expirationDate as DateTime,
+          : expirationDate as FhirDateTime,
     ));
   }
 }
@@ -3750,7 +3752,7 @@ abstract class _$MedicationBatchCopyWith<$Res>
           _MedicationBatch value, $Res Function(_MedicationBatch) then) =
       __$MedicationBatchCopyWithImpl<$Res>;
   @override
-  $Res call({String lotNumber, DateTime expirationDate});
+  $Res call({String lotNumber, FhirDateTime expirationDate});
 }
 
 class __$MedicationBatchCopyWithImpl<$Res>
@@ -3772,7 +3774,7 @@ class __$MedicationBatchCopyWithImpl<$Res>
       lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String,
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
-          : expirationDate as DateTime,
+          : expirationDate as FhirDateTime,
     ));
   }
 }
@@ -3787,7 +3789,7 @@ class _$_MedicationBatch implements _MedicationBatch {
   @override
   final String lotNumber;
   @override
-  final DateTime expirationDate;
+  final FhirDateTime expirationDate;
 
   @override
   String toString() {
@@ -3823,8 +3825,8 @@ class _$_MedicationBatch implements _MedicationBatch {
 }
 
 abstract class _MedicationBatch implements MedicationBatch {
-  const factory _MedicationBatch({String lotNumber, DateTime expirationDate}) =
-      _$_MedicationBatch;
+  const factory _MedicationBatch(
+      {String lotNumber, FhirDateTime expirationDate}) = _$_MedicationBatch;
 
   factory _MedicationBatch.fromJson(Map<String, dynamic> json) =
       _$_MedicationBatch.fromJson;
@@ -3832,7 +3834,7 @@ abstract class _MedicationBatch implements MedicationBatch {
   @override
   String get lotNumber;
   @override
-  DateTime get expirationDate;
+  FhirDateTime get expirationDate;
   @override
   _$MedicationBatchCopyWith<_MedicationBatch> get copyWith;
 }
@@ -3861,7 +3863,7 @@ class _$MedicationAdministrationTearOff {
           Reference subject,
       Reference context,
       List<Reference> supportingInformation,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       List<MedicationAdministrationPerformer> performer,
       Boolean notGiven,
@@ -3919,7 +3921,7 @@ mixin _$MedicationAdministration {
   Reference get subject;
   Reference get context;
   List<Reference> get supportingInformation;
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   Period get effectivePeriod;
   List<MedicationAdministrationPerformer> get performer;
   Boolean get notGiven;
@@ -3955,7 +3957,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
           Reference subject,
       Reference context,
       List<Reference> supportingInformation,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       List<MedicationAdministrationPerformer> performer,
       Boolean notGiven,
@@ -4041,7 +4043,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
           : supportingInformation as List<Reference>,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -4176,7 +4178,7 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
           Reference subject,
       Reference context,
       List<Reference> supportingInformation,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       List<MedicationAdministrationPerformer> performer,
       Boolean notGiven,
@@ -4273,7 +4275,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           : supportingInformation as List<Reference>,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -4366,7 +4368,7 @@ class _$_MedicationAdministration implements _MedicationAdministration {
   @override
   final List<Reference> supportingInformation;
   @override
-  final DateTime effectiveDateTime;
+  final FhirDateTime effectiveDateTime;
   @override
   final Period effectivePeriod;
   @override
@@ -4514,7 +4516,7 @@ abstract class _MedicationAdministration implements MedicationAdministration {
           Reference subject,
       Reference context,
       List<Reference> supportingInformation,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       List<MedicationAdministrationPerformer> performer,
       Boolean notGiven,
@@ -4556,7 +4558,7 @@ abstract class _MedicationAdministration implements MedicationAdministration {
   @override
   List<Reference> get supportingInformation;
   @override
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   @override
   Period get effectivePeriod;
   @override
@@ -5141,8 +5143,8 @@ class _$MedicationDispenseTearOff {
       CodeableConcept type,
       Quantity quantity,
       Quantity daysSupply,
-      DateTime whenPrepared,
-      DateTime whenHandedOver,
+      FhirDateTime whenPrepared,
+      FhirDateTime whenHandedOver,
       Reference destination,
       List<Reference> receiver,
       List<Annotation> note,
@@ -5206,8 +5208,8 @@ mixin _$MedicationDispense {
   CodeableConcept get type;
   Quantity get quantity;
   Quantity get daysSupply;
-  DateTime get whenPrepared;
-  DateTime get whenHandedOver;
+  FhirDateTime get whenPrepared;
+  FhirDateTime get whenHandedOver;
   Reference get destination;
   List<Reference> get receiver;
   List<Annotation> get note;
@@ -5245,8 +5247,8 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       CodeableConcept type,
       Quantity quantity,
       Quantity daysSupply,
-      DateTime whenPrepared,
-      DateTime whenHandedOver,
+      FhirDateTime whenPrepared,
+      FhirDateTime whenHandedOver,
       Reference destination,
       List<Reference> receiver,
       List<Annotation> note,
@@ -5346,10 +5348,10 @@ class _$MedicationDispenseCopyWithImpl<$Res>
           daysSupply == freezed ? _value.daysSupply : daysSupply as Quantity,
       whenPrepared: whenPrepared == freezed
           ? _value.whenPrepared
-          : whenPrepared as DateTime,
+          : whenPrepared as FhirDateTime,
       whenHandedOver: whenHandedOver == freezed
           ? _value.whenHandedOver
-          : whenHandedOver as DateTime,
+          : whenHandedOver as FhirDateTime,
       destination: destination == freezed
           ? _value.destination
           : destination as Reference,
@@ -5526,8 +5528,8 @@ abstract class _$MedicationDispenseCopyWith<$Res>
       CodeableConcept type,
       Quantity quantity,
       Quantity daysSupply,
-      DateTime whenPrepared,
-      DateTime whenHandedOver,
+      FhirDateTime whenPrepared,
+      FhirDateTime whenHandedOver,
       Reference destination,
       List<Reference> receiver,
       List<Annotation> note,
@@ -5641,10 +5643,10 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           daysSupply == freezed ? _value.daysSupply : daysSupply as Quantity,
       whenPrepared: whenPrepared == freezed
           ? _value.whenPrepared
-          : whenPrepared as DateTime,
+          : whenPrepared as FhirDateTime,
       whenHandedOver: whenHandedOver == freezed
           ? _value.whenHandedOver
-          : whenHandedOver as DateTime,
+          : whenHandedOver as FhirDateTime,
       destination: destination == freezed
           ? _value.destination
           : destination as Reference,
@@ -5745,9 +5747,9 @@ class _$_MedicationDispense implements _MedicationDispense {
   @override
   final Quantity daysSupply;
   @override
-  final DateTime whenPrepared;
+  final FhirDateTime whenPrepared;
   @override
-  final DateTime whenHandedOver;
+  final FhirDateTime whenHandedOver;
   @override
   final Reference destination;
   @override
@@ -5901,8 +5903,8 @@ abstract class _MedicationDispense implements MedicationDispense {
       CodeableConcept type,
       Quantity quantity,
       Quantity daysSupply,
-      DateTime whenPrepared,
-      DateTime whenHandedOver,
+      FhirDateTime whenPrepared,
+      FhirDateTime whenHandedOver,
       Reference destination,
       List<Reference> receiver,
       List<Annotation> note,
@@ -5950,9 +5952,9 @@ abstract class _MedicationDispense implements MedicationDispense {
   @override
   Quantity get daysSupply;
   @override
-  DateTime get whenPrepared;
+  FhirDateTime get whenPrepared;
   @override
-  DateTime get whenHandedOver;
+  FhirDateTime get whenHandedOver;
   @override
   Reference get destination;
   @override
@@ -6416,7 +6418,7 @@ class _$MedicationRequestTearOff {
           Reference subject,
       Reference context,
       List<Reference> supportingInformation,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       MedicationRequestRequester requester,
       Reference recorder,
       List<CodeableConcept> reasonCode,
@@ -6482,7 +6484,7 @@ mixin _$MedicationRequest {
   Reference get subject;
   Reference get context;
   List<Reference> get supportingInformation;
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   MedicationRequestRequester get requester;
   Reference get recorder;
   List<CodeableConcept> get reasonCode;
@@ -6523,7 +6525,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
           Reference subject,
       Reference context,
       List<Reference> supportingInformation,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       MedicationRequestRequester requester,
       Reference recorder,
       List<CodeableConcept> reasonCode,
@@ -6620,8 +6622,9 @@ class _$MedicationRequestCopyWithImpl<$Res>
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
           : supportingInformation as List<Reference>,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as MedicationRequestRequester,
@@ -6794,7 +6797,7 @@ abstract class _$MedicationRequestCopyWith<$Res>
           Reference subject,
       Reference context,
       List<Reference> supportingInformation,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       MedicationRequestRequester requester,
       Reference recorder,
       List<CodeableConcept> reasonCode,
@@ -6904,8 +6907,9 @@ class __$MedicationRequestCopyWithImpl<$Res>
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
           : supportingInformation as List<Reference>,
-      authoredOn:
-          authoredOn == freezed ? _value.authoredOn : authoredOn as DateTime,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn as FhirDateTime,
       requester: requester == freezed
           ? _value.requester
           : requester as MedicationRequestRequester,
@@ -7013,7 +7017,7 @@ class _$_MedicationRequest implements _MedicationRequest {
   @override
   final List<Reference> supportingInformation;
   @override
-  final DateTime authoredOn;
+  final FhirDateTime authoredOn;
   @override
   final MedicationRequestRequester requester;
   @override
@@ -7174,7 +7178,7 @@ abstract class _MedicationRequest implements MedicationRequest {
           Reference subject,
       Reference context,
       List<Reference> supportingInformation,
-      DateTime authoredOn,
+      FhirDateTime authoredOn,
       MedicationRequestRequester requester,
       Reference recorder,
       List<CodeableConcept> reasonCode,
@@ -7224,7 +7228,7 @@ abstract class _MedicationRequest implements MedicationRequest {
   @override
   List<Reference> get supportingInformation;
   @override
-  DateTime get authoredOn;
+  FhirDateTime get authoredOn;
   @override
   MedicationRequestRequester get requester;
   @override
@@ -7917,9 +7921,9 @@ class _$MedicationStatementTearOff {
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
-      DateTime dateAsserted,
+      FhirDateTime dateAsserted,
       Reference informationSource,
       @JsonKey(required: true)
           Reference subject,
@@ -7972,9 +7976,9 @@ mixin _$MedicationStatement {
   CodeableConcept get category;
   CodeableConcept get medicationCodeableConcept;
   Reference get medicationReference;
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   Period get effectivePeriod;
-  DateTime get dateAsserted;
+  FhirDateTime get dateAsserted;
   Reference get informationSource;
   @JsonKey(required: true)
   Reference get subject;
@@ -8007,9 +8011,9 @@ abstract class $MedicationStatementCopyWith<$Res> {
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
-      DateTime dateAsserted,
+      FhirDateTime dateAsserted,
       Reference informationSource,
       @JsonKey(required: true)
           Reference subject,
@@ -8084,13 +8088,13 @@ class _$MedicationStatementCopyWithImpl<$Res>
           : medicationReference as Reference,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
       dateAsserted: dateAsserted == freezed
           ? _value.dateAsserted
-          : dateAsserted as DateTime,
+          : dateAsserted as FhirDateTime,
       informationSource: informationSource == freezed
           ? _value.informationSource
           : informationSource as Reference,
@@ -8204,9 +8208,9 @@ abstract class _$MedicationStatementCopyWith<$Res>
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
-      DateTime dateAsserted,
+      FhirDateTime dateAsserted,
       Reference informationSource,
       @JsonKey(required: true)
           Reference subject,
@@ -8290,13 +8294,13 @@ class __$MedicationStatementCopyWithImpl<$Res>
           : medicationReference as Reference,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
       dateAsserted: dateAsserted == freezed
           ? _value.dateAsserted
-          : dateAsserted as DateTime,
+          : dateAsserted as FhirDateTime,
       informationSource: informationSource == freezed
           ? _value.informationSource
           : informationSource as Reference,
@@ -8376,11 +8380,11 @@ class _$_MedicationStatement implements _MedicationStatement {
   @override
   final Reference medicationReference;
   @override
-  final DateTime effectiveDateTime;
+  final FhirDateTime effectiveDateTime;
   @override
   final Period effectivePeriod;
   @override
-  final DateTime dateAsserted;
+  final FhirDateTime dateAsserted;
   @override
   final Reference informationSource;
   @override
@@ -8521,9 +8525,9 @@ abstract class _MedicationStatement implements MedicationStatement {
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
-      DateTime dateAsserted,
+      FhirDateTime dateAsserted,
       Reference informationSource,
       @JsonKey(required: true)
           Reference subject,
@@ -8560,11 +8564,11 @@ abstract class _MedicationStatement implements MedicationStatement {
   @override
   Reference get medicationReference;
   @override
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   @override
   Period get effectivePeriod;
   @override
-  DateTime get dateAsserted;
+  FhirDateTime get dateAsserted;
   @override
   Reference get informationSource;
   @override

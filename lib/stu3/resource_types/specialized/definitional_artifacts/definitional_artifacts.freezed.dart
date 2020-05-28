@@ -27,7 +27,7 @@ class _$ActivityDefinitionTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -46,7 +46,7 @@ class _$ActivityDefinitionTearOff {
       Code kind,
       CodeableConcept code,
       Timing timingTiming,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Range timingRange,
       Reference location,
@@ -116,7 +116,7 @@ mixin _$ActivityDefinition {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   String get description;
   String get purpose;
@@ -135,7 +135,7 @@ mixin _$ActivityDefinition {
   Code get kind;
   CodeableConcept get code;
   Timing get timingTiming;
-  DateTime get timingDateTime;
+  FhirDateTime get timingDateTime;
   Period get timingPeriod;
   Range get timingRange;
   Reference get location;
@@ -167,7 +167,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -186,7 +186,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       Code kind,
       CodeableConcept code,
       Timing timingTiming,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Range timingRange,
       Reference location,
@@ -276,7 +276,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -314,7 +314,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
           : timingTiming as Timing,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
-          : timingDateTime as DateTime,
+          : timingDateTime as FhirDateTime,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -462,7 +462,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -481,7 +481,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       Code kind,
       CodeableConcept code,
       Timing timingTiming,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Range timingRange,
       Reference location,
@@ -583,7 +583,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -621,7 +621,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
           : timingTiming as Timing,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
-          : timingDateTime as DateTime,
+          : timingDateTime as FhirDateTime,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -720,7 +720,7 @@ class _$_ActivityDefinition implements _ActivityDefinition {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -758,7 +758,7 @@ class _$_ActivityDefinition implements _ActivityDefinition {
   @override
   final Timing timingTiming;
   @override
-  final DateTime timingDateTime;
+  final FhirDateTime timingDateTime;
   @override
   final Period timingPeriod;
   @override
@@ -941,7 +941,7 @@ abstract class _ActivityDefinition implements ActivityDefinition {
           @JsonKey(unknownEnumValue: Status.unknown)
               Status status,
           Boolean experimental,
-          DateTime date,
+          FhirDateTime date,
           String publisher,
           String description,
           String purpose,
@@ -960,7 +960,7 @@ abstract class _ActivityDefinition implements ActivityDefinition {
           Code kind,
           CodeableConcept code,
           Timing timingTiming,
-          DateTime timingDateTime,
+          FhirDateTime timingDateTime,
           Period timingPeriod,
           Range timingRange,
           Reference location,
@@ -996,7 +996,7 @@ abstract class _ActivityDefinition implements ActivityDefinition {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -1034,7 +1034,7 @@ abstract class _ActivityDefinition implements ActivityDefinition {
   @override
   Timing get timingTiming;
   @override
-  DateTime get timingDateTime;
+  FhirDateTime get timingDateTime;
   @override
   Period get timingPeriod;
   @override
@@ -1443,7 +1443,7 @@ class _$PlanDefinitionTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -1508,7 +1508,7 @@ mixin _$PlanDefinition {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   String get description;
   String get purpose;
@@ -1547,7 +1547,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -1624,7 +1624,7 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -1701,7 +1701,7 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -1782,7 +1782,7 @@ class __$PlanDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -1880,7 +1880,7 @@ class _$_PlanDefinition implements _PlanDefinition {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -2052,7 +2052,7 @@ abstract class _PlanDefinition implements PlanDefinition {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -2095,7 +2095,7 @@ abstract class _PlanDefinition implements PlanDefinition {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -2766,7 +2766,7 @@ class _$PlanDefinitionActionTearOff {
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
@@ -2838,7 +2838,7 @@ mixin _$PlanDefinitionAction {
   List<DataRequirement> get input;
   List<DataRequirement> get output;
   List<PlanDefinitionRelatedAction> get relatedAction;
-  DateTime get timingDateTime;
+  FhirDateTime get timingDateTime;
   Period get timingPeriod;
   Duration get timingDuration;
   Range get timingRange;
@@ -2882,7 +2882,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
@@ -2982,7 +2982,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           : relatedAction as List<PlanDefinitionRelatedAction>,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
-          : timingDateTime as DateTime,
+          : timingDateTime as FhirDateTime,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -3117,7 +3117,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
@@ -3226,7 +3226,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
           : relatedAction as List<PlanDefinitionRelatedAction>,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
-          : timingDateTime as DateTime,
+          : timingDateTime as FhirDateTime,
       timingPeriod: timingPeriod == freezed
           ? _value.timingPeriod
           : timingPeriod as Period,
@@ -3339,7 +3339,7 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
   @override
   final List<PlanDefinitionRelatedAction> relatedAction;
   @override
-  final DateTime timingDateTime;
+  final FhirDateTime timingDateTime;
   @override
   final Period timingPeriod;
   @override
@@ -3518,7 +3518,7 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
       List<DataRequirement> input,
       List<DataRequirement> output,
       List<PlanDefinitionRelatedAction> relatedAction,
-      DateTime timingDateTime,
+      FhirDateTime timingDateTime,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
@@ -3570,7 +3570,7 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
   @override
   List<PlanDefinitionRelatedAction> get relatedAction;
   @override
-  DateTime get timingDateTime;
+  FhirDateTime get timingDateTime;
   @override
   Period get timingPeriod;
   @override
@@ -4443,7 +4443,7 @@ class _$QuestionnaireTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -4498,7 +4498,7 @@ mixin _$Questionnaire {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   String get description;
   String get purpose;
@@ -4532,7 +4532,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -4598,7 +4598,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -4656,7 +4656,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -4725,7 +4725,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -4808,7 +4808,7 @@ class _$_Questionnaire implements _Questionnaire {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -4955,7 +4955,7 @@ abstract class _Questionnaire implements Questionnaire {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -4992,7 +4992,7 @@ abstract class _Questionnaire implements Questionnaire {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -5049,7 +5049,7 @@ class _$QuestionnaireItemTearOff {
       Decimal initialDecimal,
       Integer initialInteger,
       Date initialDate,
-      DateTime initialDateTime,
+      FhirDateTime initialDateTime,
       Time initialTime,
       String initialString,
       String initialUri,
@@ -5111,7 +5111,7 @@ mixin _$QuestionnaireItem {
   Decimal get initialDecimal;
   Integer get initialInteger;
   Date get initialDate;
-  DateTime get initialDateTime;
+  FhirDateTime get initialDateTime;
   Time get initialTime;
   String get initialString;
   String get initialUri;
@@ -5148,7 +5148,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       Decimal initialDecimal,
       Integer initialInteger,
       Date initialDate,
-      DateTime initialDateTime,
+      FhirDateTime initialDateTime,
       Time initialTime,
       String initialString,
       String initialUri,
@@ -5234,7 +5234,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
           initialDate == freezed ? _value.initialDate : initialDate as Date,
       initialDateTime: initialDateTime == freezed
           ? _value.initialDateTime
-          : initialDateTime as DateTime,
+          : initialDateTime as FhirDateTime,
       initialTime:
           initialTime == freezed ? _value.initialTime : initialTime as Time,
       initialString: initialString == freezed
@@ -5334,7 +5334,7 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
       Decimal initialDecimal,
       Integer initialInteger,
       Date initialDate,
-      DateTime initialDateTime,
+      FhirDateTime initialDateTime,
       Time initialTime,
       String initialString,
       String initialUri,
@@ -5427,7 +5427,7 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
           initialDate == freezed ? _value.initialDate : initialDate as Date,
       initialDateTime: initialDateTime == freezed
           ? _value.initialDateTime
-          : initialDateTime as DateTime,
+          : initialDateTime as FhirDateTime,
       initialTime:
           initialTime == freezed ? _value.initialTime : initialTime as Time,
       initialString: initialString == freezed
@@ -5521,7 +5521,7 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
   @override
   final Date initialDate;
   @override
-  final DateTime initialDateTime;
+  final FhirDateTime initialDateTime;
   @override
   final Time initialTime;
   @override
@@ -5679,7 +5679,7 @@ abstract class _QuestionnaireItem implements QuestionnaireItem {
       Decimal initialDecimal,
       Integer initialInteger,
       Date initialDate,
-      DateTime initialDateTime,
+      FhirDateTime initialDateTime,
       Time initialTime,
       String initialString,
       String initialUri,
@@ -5728,7 +5728,7 @@ abstract class _QuestionnaireItem implements QuestionnaireItem {
   @override
   Date get initialDate;
   @override
-  DateTime get initialDateTime;
+  FhirDateTime get initialDateTime;
   @override
   Time get initialTime;
   @override
@@ -5764,7 +5764,7 @@ class _$QuestionnaireEnableWhenTearOff {
       Decimal answerDecimal,
       Integer answerInteger,
       Date answerDate,
-      DateTime answerDateTime,
+      FhirDateTime answerDateTime,
       Time answerTime,
       String answerString,
       String answerUri,
@@ -5801,7 +5801,7 @@ mixin _$QuestionnaireEnableWhen {
   Decimal get answerDecimal;
   Integer get answerInteger;
   Date get answerDate;
-  DateTime get answerDateTime;
+  FhirDateTime get answerDateTime;
   Time get answerTime;
   String get answerString;
   String get answerUri;
@@ -5825,7 +5825,7 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       Decimal answerDecimal,
       Integer answerInteger,
       Date answerDate,
-      DateTime answerDateTime,
+      FhirDateTime answerDateTime,
       Time answerTime,
       String answerString,
       String answerUri,
@@ -5881,7 +5881,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
           answerDate == freezed ? _value.answerDate : answerDate as Date,
       answerDateTime: answerDateTime == freezed
           ? _value.answerDateTime
-          : answerDateTime as DateTime,
+          : answerDateTime as FhirDateTime,
       answerTime:
           answerTime == freezed ? _value.answerTime : answerTime as Time,
       answerString: answerString == freezed
@@ -5957,7 +5957,7 @@ abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
       Decimal answerDecimal,
       Integer answerInteger,
       Date answerDate,
-      DateTime answerDateTime,
+      FhirDateTime answerDateTime,
       Time answerTime,
       String answerString,
       String answerUri,
@@ -6020,7 +6020,7 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
           answerDate == freezed ? _value.answerDate : answerDate as Date,
       answerDateTime: answerDateTime == freezed
           ? _value.answerDateTime
-          : answerDateTime as DateTime,
+          : answerDateTime as FhirDateTime,
       answerTime:
           answerTime == freezed ? _value.answerTime : answerTime as Time,
       answerString: answerString == freezed
@@ -6077,7 +6077,7 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
   @override
   final Date answerDate;
   @override
-  final DateTime answerDateTime;
+  final FhirDateTime answerDateTime;
   @override
   final Time answerTime;
   @override
@@ -6183,7 +6183,7 @@ abstract class _QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
       Decimal answerDecimal,
       Integer answerInteger,
       Date answerDate,
-      DateTime answerDateTime,
+      FhirDateTime answerDateTime,
       Time answerTime,
       String answerString,
       String answerUri,
@@ -6208,7 +6208,7 @@ abstract class _QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
   @override
   Date get answerDate;
   @override
-  DateTime get answerDateTime;
+  FhirDateTime get answerDateTime;
   @override
   Time get answerTime;
   @override
@@ -6480,7 +6480,7 @@ class _$ServiceDefinitionTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -6543,7 +6543,7 @@ mixin _$ServiceDefinition {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   String get description;
   String get purpose;
@@ -6581,7 +6581,7 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -6656,7 +6656,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -6736,7 +6736,7 @@ abstract class _$ServiceDefinitionCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -6815,7 +6815,7 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -6914,7 +6914,7 @@ class _$_ServiceDefinition implements _ServiceDefinition {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -7083,7 +7083,7 @@ abstract class _ServiceDefinition implements ServiceDefinition {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -7124,7 +7124,7 @@ abstract class _ServiceDefinition implements ServiceDefinition {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override

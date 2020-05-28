@@ -2209,7 +2209,7 @@ class _$MediaTearOff {
       CodeableConcept view,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Reference operator,
       List<CodeableConcept> reasonCode,
@@ -2261,7 +2261,7 @@ mixin _$Media {
   CodeableConcept get view;
   Reference get subject;
   Reference get context;
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   Period get occurrencePeriod;
   Reference get operator;
   List<CodeableConcept> get reasonCode;
@@ -2291,7 +2291,7 @@ abstract class $MediaCopyWith<$Res> {
       CodeableConcept view,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Reference operator,
       List<CodeableConcept> reasonCode,
@@ -2360,7 +2360,7 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -2484,7 +2484,7 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       CodeableConcept view,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Reference operator,
       List<CodeableConcept> reasonCode,
@@ -2563,7 +2563,7 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as DateTime,
+          : occurrenceDateTime as FhirDateTime,
       occurrencePeriod: occurrencePeriod == freezed
           ? _value.occurrencePeriod
           : occurrencePeriod as Period,
@@ -2635,7 +2635,7 @@ class _$_Media implements _Media {
   @override
   final Reference context;
   @override
-  final DateTime occurrenceDateTime;
+  final FhirDateTime occurrenceDateTime;
   @override
   final Period occurrencePeriod;
   @override
@@ -2771,7 +2771,7 @@ abstract class _Media implements Media {
       CodeableConcept view,
       Reference subject,
       Reference context,
-      DateTime occurrenceDateTime,
+      FhirDateTime occurrenceDateTime,
       Period occurrencePeriod,
       Reference operator,
       List<CodeableConcept> reasonCode,
@@ -2806,7 +2806,7 @@ abstract class _Media implements Media {
   @override
   Reference get context;
   @override
-  DateTime get occurrenceDateTime;
+  FhirDateTime get occurrenceDateTime;
   @override
   Period get occurrencePeriod;
   @override
@@ -4623,7 +4623,7 @@ class _$ParametersParameterTearOff {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -4744,7 +4744,7 @@ mixin _$ParametersParameter {
   String get valueString;
   String get valueUri;
   Date get valueDate;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   Time get valueTime;
   Code get valueCode;
   Oid get valueOid;
@@ -4810,7 +4810,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -4986,7 +4986,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -5482,7 +5482,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -5696,7 +5696,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
       valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
@@ -5895,7 +5895,7 @@ class _$_ParametersParameter implements _ParametersParameter {
   @override
   final Date valueDate;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
   @override
   final Time valueTime;
   @override
@@ -6181,7 +6181,7 @@ abstract class _ParametersParameter implements ParametersParameter {
       String valueString,
       String valueUri,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       Code valueCode,
       Oid valueOid,
@@ -6251,7 +6251,7 @@ abstract class _ParametersParameter implements ParametersParameter {
   @override
   Date get valueDate;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   Time get valueTime;
   @override

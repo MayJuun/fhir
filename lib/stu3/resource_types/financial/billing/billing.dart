@@ -19,7 +19,7 @@ abstract class Claim with _$Claim implements Resource {
     @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
     Reference patient,
     Period billablePeriod,
-    DateTime created,
+    FhirDateTime created,
     Reference enterer,
     Reference insurer,
     Reference provider,
@@ -118,7 +118,7 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
 abstract class ClaimProcedure with _$ClaimProcedure {
   const factory ClaimProcedure({
     PositiveInt sequence,
-    DateTime date,
+    FhirDateTime date,
     CodeableConcept procedureCodeableConcept,
     Reference procedureReference,
   }) = _ClaimProcedure;
@@ -232,7 +232,7 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
     List<Identifier> identifier,
     Code status,
     Reference patient,
-    DateTime created,
+    FhirDateTime created,
     Reference insurer,
     Reference requestProvider,
     Reference requestOrganization,

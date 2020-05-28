@@ -62,7 +62,7 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
         ?.toList(),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     comment: json['comment'] as String,
     incomingReferral: (json['incomingReferral'] as List)
         ?.map((e) =>
@@ -110,7 +110,7 @@ Map<String, dynamic> _$_$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('end', instance.end);
   writeNotNull('minutesDuration', instance.minutesDuration?.toJson());
   writeNotNull('slot', instance.slot?.map((e) => e?.toJson())?.toList());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('comment', instance.comment);
   writeNotNull('incomingReferral',
       instance.incomingReferral?.map((e) => e?.toJson())?.toList());
@@ -286,7 +286,7 @@ _$_ProcessRequest _$_$_ProcessRequestFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     provider: json['provider'] == null
         ? null
         : Reference.fromJson(json['provider'] as Map<String, dynamic>),
@@ -329,7 +329,7 @@ Map<String, dynamic> _$_$_ProcessRequestToJson(_$_ProcessRequest instance) {
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('action', _$ProcessRequestActionEnumMap[instance.action]);
   writeNotNull('target', instance.target?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('request', instance.request?.toJson());
@@ -386,7 +386,7 @@ _$_ProcessResponse _$_$_ProcessResponseFromJson(Map<String, dynamic> json) {
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
@@ -437,7 +437,7 @@ Map<String, dynamic> _$_$_ProcessResponseToJson(_$_ProcessResponse instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('outcome', instance.outcome?.toJson());
@@ -669,10 +669,10 @@ _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
         : Period.fromJson(json['executionPeriod'] as Map<String, dynamic>),
     authoredOn: json['authoredOn'] == null
         ? null
-        : DateTime.parse(json['authoredOn'] as String),
+        : FhirDateTime.fromJson(json['authoredOn'] as String),
     lastModified: json['lastModified'] == null
         ? null
-        : DateTime.parse(json['lastModified'] as String),
+        : FhirDateTime.fromJson(json['lastModified'] as String),
     requester: json['requester'] == null
         ? null
         : TaskRequester.fromJson(json['requester'] as Map<String, dynamic>),
@@ -737,8 +737,8 @@ Map<String, dynamic> _$_$_TaskToJson(_$_Task instance) {
   writeNotNull('for', instance.for_?.toJson());
   writeNotNull('context', instance.context?.toJson());
   writeNotNull('executionPeriod', instance.executionPeriod?.toJson());
-  writeNotNull('authoredOn', instance.authoredOn?.toIso8601String());
-  writeNotNull('lastModified', instance.lastModified?.toIso8601String());
+  writeNotNull('authoredOn', instance.authoredOn?.toJson());
+  writeNotNull('lastModified', instance.lastModified?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull('performerType',
       instance.performerType?.map((e) => e?.toJson())?.toList());
@@ -850,7 +850,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['valueDate'] as String),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
@@ -1015,7 +1015,7 @@ Map<String, dynamic> _$_$_TaskInputToJson(_$_TaskInput instance) {
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueUri', instance.valueUri);
   writeNotNull('valueDate', instance.valueDate?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());
@@ -1090,7 +1090,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['valueDate'] as String),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
@@ -1255,7 +1255,7 @@ Map<String, dynamic> _$_$_TaskOutputToJson(_$_TaskOutput instance) {
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueUri', instance.valueUri);
   writeNotNull('valueDate', instance.valueDate?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());

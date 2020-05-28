@@ -348,7 +348,7 @@ abstract class FhirExtension with _$FhirExtension {
     String valueString,
     String valueUri,
     Date valueDate,
-    DateTime valueDateTime,
+    FhirDateTime valueDateTime,
     Time valueTime,
     Code valueCode,
     Oid valueOid,

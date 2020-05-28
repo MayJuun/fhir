@@ -27,7 +27,7 @@ class _$MeasureTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -114,7 +114,7 @@ mixin _$Measure {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   String get description;
   String get purpose;
@@ -161,7 +161,7 @@ abstract class $MeasureCopyWith<$Res> {
       String title,
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -260,7 +260,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -368,7 +368,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String title,
       @JsonKey(unknownEnumValue: Status.unknown) Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -471,7 +471,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -604,7 +604,7 @@ class _$_Measure implements _Measure {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -821,7 +821,7 @@ abstract class _Measure implements Measure {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String description,
       String purpose,
@@ -873,7 +873,7 @@ abstract class _Measure implements Measure {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -1811,7 +1811,7 @@ class _$MeasureReportTearOff {
       @JsonKey(required: true)
           Reference measure,
       Reference patient,
-      DateTime date,
+      FhirDateTime date,
       Reference reportingOrganization,
       @JsonKey(required: true)
           Period period,
@@ -1847,7 +1847,7 @@ mixin _$MeasureReport {
   @JsonKey(required: true)
   Reference get measure;
   Reference get patient;
-  DateTime get date;
+  FhirDateTime get date;
   Reference get reportingOrganization;
   @JsonKey(required: true)
   Period get period;
@@ -1873,7 +1873,7 @@ abstract class $MeasureReportCopyWith<$Res> {
       @JsonKey(required: true)
           Reference measure,
       Reference patient,
-      DateTime date,
+      FhirDateTime date,
       Reference reportingOrganization,
       @JsonKey(required: true)
           Period period,
@@ -1920,7 +1920,7 @@ class _$MeasureReportCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as MeasureReportType,
       measure: measure == freezed ? _value.measure : measure as Reference,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       reportingOrganization: reportingOrganization == freezed
           ? _value.reportingOrganization
           : reportingOrganization as Reference,
@@ -2011,7 +2011,7 @@ abstract class _$MeasureReportCopyWith<$Res>
       @JsonKey(required: true)
           Reference measure,
       Reference patient,
-      DateTime date,
+      FhirDateTime date,
       Reference reportingOrganization,
       @JsonKey(required: true)
           Period period,
@@ -2066,7 +2066,7 @@ class __$MeasureReportCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as MeasureReportType,
       measure: measure == freezed ? _value.measure : measure as Reference,
       patient: patient == freezed ? _value.patient : patient as Reference,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       reportingOrganization: reportingOrganization == freezed
           ? _value.reportingOrganization
           : reportingOrganization as Reference,
@@ -2122,7 +2122,7 @@ class _$_MeasureReport implements _MeasureReport {
   @override
   final Reference patient;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final Reference reportingOrganization;
   @override
@@ -2210,7 +2210,7 @@ abstract class _MeasureReport implements MeasureReport {
       @JsonKey(required: true)
           Reference measure,
       Reference patient,
-      DateTime date,
+      FhirDateTime date,
       Reference reportingOrganization,
       @JsonKey(required: true)
           Period period,
@@ -2237,7 +2237,7 @@ abstract class _MeasureReport implements MeasureReport {
   @override
   Reference get patient;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   Reference get reportingOrganization;
   @override

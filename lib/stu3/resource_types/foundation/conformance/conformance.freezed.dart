@@ -26,7 +26,7 @@ class _$CapabilityStatementTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -95,7 +95,7 @@ mixin _$CapabilityStatement {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -137,7 +137,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -216,7 +216,7 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -302,7 +302,7 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -385,7 +385,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -492,7 +492,7 @@ class _$_CapabilityStatement implements _CapabilityStatement {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -673,7 +673,7 @@ abstract class _CapabilityStatement implements CapabilityStatement {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -717,7 +717,7 @@ abstract class _CapabilityStatement implements CapabilityStatement {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -773,7 +773,7 @@ class _$CapabilityStatementSoftwareTearOff {
   const _$CapabilityStatementSoftwareTearOff();
 
   _CapabilityStatementSoftware call(
-      {String name, String version, DateTime releaseDate}) {
+      {String name, String version, FhirDateTime releaseDate}) {
     return _CapabilityStatementSoftware(
       name: name,
       version: version,
@@ -788,7 +788,7 @@ const $CapabilityStatementSoftware = _$CapabilityStatementSoftwareTearOff();
 mixin _$CapabilityStatementSoftware {
   String get name;
   String get version;
-  DateTime get releaseDate;
+  FhirDateTime get releaseDate;
 
   Map<String, dynamic> toJson();
   $CapabilityStatementSoftwareCopyWith<CapabilityStatementSoftware>
@@ -800,7 +800,7 @@ abstract class $CapabilityStatementSoftwareCopyWith<$Res> {
           CapabilityStatementSoftware value,
           $Res Function(CapabilityStatementSoftware) then) =
       _$CapabilityStatementSoftwareCopyWithImpl<$Res>;
-  $Res call({String name, String version, DateTime releaseDate});
+  $Res call({String name, String version, FhirDateTime releaseDate});
 }
 
 class _$CapabilityStatementSoftwareCopyWithImpl<$Res>
@@ -820,8 +820,9 @@ class _$CapabilityStatementSoftwareCopyWithImpl<$Res>
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
       version: version == freezed ? _value.version : version as String,
-      releaseDate:
-          releaseDate == freezed ? _value.releaseDate : releaseDate as DateTime,
+      releaseDate: releaseDate == freezed
+          ? _value.releaseDate
+          : releaseDate as FhirDateTime,
     ));
   }
 }
@@ -833,7 +834,7 @@ abstract class _$CapabilityStatementSoftwareCopyWith<$Res>
           $Res Function(_CapabilityStatementSoftware) then) =
       __$CapabilityStatementSoftwareCopyWithImpl<$Res>;
   @override
-  $Res call({String name, String version, DateTime releaseDate});
+  $Res call({String name, String version, FhirDateTime releaseDate});
 }
 
 class __$CapabilityStatementSoftwareCopyWithImpl<$Res>
@@ -857,8 +858,9 @@ class __$CapabilityStatementSoftwareCopyWithImpl<$Res>
     return _then(_CapabilityStatementSoftware(
       name: name == freezed ? _value.name : name as String,
       version: version == freezed ? _value.version : version as String,
-      releaseDate:
-          releaseDate == freezed ? _value.releaseDate : releaseDate as DateTime,
+      releaseDate: releaseDate == freezed
+          ? _value.releaseDate
+          : releaseDate as FhirDateTime,
     ));
   }
 }
@@ -876,7 +878,7 @@ class _$_CapabilityStatementSoftware implements _CapabilityStatementSoftware {
   @override
   final String version;
   @override
-  final DateTime releaseDate;
+  final FhirDateTime releaseDate;
 
   @override
   String toString() {
@@ -920,7 +922,7 @@ abstract class _CapabilityStatementSoftware
   const factory _CapabilityStatementSoftware(
       {String name,
       String version,
-      DateTime releaseDate}) = _$_CapabilityStatementSoftware;
+      FhirDateTime releaseDate}) = _$_CapabilityStatementSoftware;
 
   factory _CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSoftware.fromJson;
@@ -930,7 +932,7 @@ abstract class _CapabilityStatementSoftware
   @override
   String get version;
   @override
-  DateTime get releaseDate;
+  FhirDateTime get releaseDate;
   @override
   _$CapabilityStatementSoftwareCopyWith<_CapabilityStatementSoftware>
       get copyWith;
@@ -4146,7 +4148,7 @@ class _$CompartmentDefinitionTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -4190,7 +4192,7 @@ mixin _$CompartmentDefinition {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -4219,7 +4221,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -4270,7 +4272,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -4307,7 +4309,7 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -4360,7 +4362,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -4425,7 +4427,7 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -4540,7 +4542,7 @@ abstract class _CompartmentDefinition implements CompartmentDefinition {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -4570,7 +4572,7 @@ abstract class _CompartmentDefinition implements CompartmentDefinition {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -4786,7 +4788,7 @@ class _$DataElementTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String name,
       String title,
@@ -4833,7 +4835,7 @@ mixin _$DataElement {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   String get name;
   String get title;
@@ -4864,7 +4866,7 @@ abstract class $DataElementCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String name,
       String title,
@@ -4919,7 +4921,7 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -4960,7 +4962,7 @@ abstract class _$DataElementCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String name,
       String title,
@@ -5017,7 +5019,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -5088,7 +5090,7 @@ class _$_DataElement implements _DataElement {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -5210,7 +5212,7 @@ abstract class _DataElement implements DataElement {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       String name,
       String title,
@@ -5242,7 +5244,7 @@ abstract class _DataElement implements DataElement {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -5460,7 +5462,7 @@ class _$GraphDefinitionTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -5503,7 +5505,7 @@ mixin _$GraphDefinition {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -5531,7 +5533,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -5581,7 +5583,7 @@ class _$GraphDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -5616,7 +5618,7 @@ abstract class _$GraphDefinitionCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -5668,7 +5670,7 @@ class __$GraphDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -5730,7 +5732,7 @@ class _$_GraphDefinition implements _GraphDefinition {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -5844,7 +5846,7 @@ abstract class _GraphDefinition implements GraphDefinition {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -5873,7 +5875,7 @@ abstract class _GraphDefinition implements GraphDefinition {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -6543,7 +6545,7 @@ class _$ImplementationGuideTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -6592,7 +6594,7 @@ mixin _$ImplementationGuide {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -6623,7 +6625,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -6681,7 +6683,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -6736,7 +6738,7 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -6797,7 +6799,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -6872,7 +6874,7 @@ class _$_ImplementationGuide implements _ImplementationGuide {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -7004,7 +7006,7 @@ abstract class _ImplementationGuide implements ImplementationGuide {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -7036,7 +7038,7 @@ abstract class _ImplementationGuide implements ImplementationGuide {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -8143,7 +8145,7 @@ class _$MessageDefinitionTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -8203,7 +8205,7 @@ mixin _$MessageDefinition {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -8240,7 +8242,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -8312,7 +8314,7 @@ class _$MessageDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -8392,7 +8394,7 @@ abstract class _$MessageDefinitionCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -8469,7 +8471,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -8557,7 +8559,7 @@ class _$_MessageDefinition implements _MessageDefinition {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -8715,7 +8717,7 @@ abstract class _MessageDefinition implements MessageDefinition {
           @JsonKey(unknownEnumValue: Status.unknown)
               Status status,
           Boolean experimental,
-          DateTime date,
+          FhirDateTime date,
           String publisher,
           List<ContactDetail> contact,
           String description,
@@ -8756,7 +8758,7 @@ abstract class _MessageDefinition implements MessageDefinition {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -9179,7 +9181,7 @@ class _$OperationDefinitionTearOff {
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -9239,7 +9241,7 @@ mixin _$OperationDefinition {
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
   OperationDefinitionKind get kind;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -9276,7 +9278,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -9344,7 +9346,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -9403,7 +9405,7 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -9474,7 +9476,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -9560,7 +9562,7 @@ class _$_OperationDefinition implements _OperationDefinition {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -9720,7 +9722,7 @@ abstract class _OperationDefinition implements OperationDefinition {
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
           OperationDefinitionKind kind,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -9759,7 +9761,7 @@ abstract class _OperationDefinition implements OperationDefinition {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -10546,7 +10548,7 @@ class _$SearchParameterTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       List<UsageContext> useContext,
@@ -10609,7 +10611,7 @@ mixin _$SearchParameter {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   List<UsageContext> get useContext;
@@ -10648,7 +10650,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       List<UsageContext> useContext,
@@ -10718,7 +10720,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -10772,7 +10774,7 @@ abstract class _$SearchParameterCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       List<UsageContext> useContext,
@@ -10844,7 +10846,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -10936,7 +10938,7 @@ class _$_SearchParameter implements _SearchParameter {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -11102,7 +11104,7 @@ abstract class _SearchParameter implements SearchParameter {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       List<UsageContext> useContext,
@@ -11142,7 +11144,7 @@ abstract class _SearchParameter implements SearchParameter {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -11376,7 +11378,7 @@ class _$StructureDefinitionTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -11449,7 +11451,7 @@ mixin _$StructureDefinition {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -11494,7 +11496,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -11579,7 +11581,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -11663,7 +11665,7 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -11752,7 +11754,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -11861,7 +11863,7 @@ class _$_StructureDefinition implements _StructureDefinition {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -12047,7 +12049,7 @@ abstract class _StructureDefinition implements StructureDefinition {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -12095,7 +12097,7 @@ abstract class _StructureDefinition implements StructureDefinition {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -12639,7 +12641,7 @@ class _$StructureMapTearOff {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -12689,7 +12691,7 @@ mixin _$StructureMap {
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
   Boolean get experimental;
-  DateTime get date;
+  FhirDateTime get date;
   String get publisher;
   List<ContactDetail> get contact;
   String get description;
@@ -12721,7 +12723,7 @@ abstract class $StructureMapCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -12779,7 +12781,7 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -12819,7 +12821,7 @@ abstract class _$StructureMapCopyWith<$Res>
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -12879,7 +12881,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
       experimental: experimental == freezed
           ? _value.experimental
           : experimental as Boolean,
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
@@ -12952,7 +12954,7 @@ class _$_StructureMap implements _StructureMap {
   @override
   final Boolean experimental;
   @override
-  final DateTime date;
+  final FhirDateTime date;
   @override
   final String publisher;
   @override
@@ -13082,7 +13084,7 @@ abstract class _StructureMap implements StructureMap {
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
       Boolean experimental,
-      DateTime date,
+      FhirDateTime date,
       String publisher,
       List<ContactDetail> contact,
       String description,
@@ -13117,7 +13119,7 @@ abstract class _StructureMap implements StructureMap {
   @override
   Boolean get experimental;
   @override
-  DateTime get date;
+  FhirDateTime get date;
   @override
   String get publisher;
   @override
@@ -14047,7 +14049,7 @@ class _$StructureMapSourceTearOff {
       String defaultValueString,
       String defaultValueUri,
       Date defaultValueDate,
-      DateTime defaultValueDateTime,
+      FhirDateTime defaultValueDateTime,
       Time defaultValueTime,
       Code defaultValueCode,
       Oid defaultValueOid,
@@ -14181,7 +14183,7 @@ mixin _$StructureMapSource {
   String get defaultValueString;
   String get defaultValueUri;
   Date get defaultValueDate;
-  DateTime get defaultValueDateTime;
+  FhirDateTime get defaultValueDateTime;
   Time get defaultValueTime;
   Code get defaultValueCode;
   Oid get defaultValueOid;
@@ -14254,7 +14256,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       String defaultValueString,
       String defaultValueUri,
       Date defaultValueDate,
-      DateTime defaultValueDateTime,
+      FhirDateTime defaultValueDateTime,
       Time defaultValueTime,
       Code defaultValueCode,
       Oid defaultValueOid,
@@ -14448,7 +14450,7 @@ class _$StructureMapSourceCopyWithImpl<$Res>
           : defaultValueDate as Date,
       defaultValueDateTime: defaultValueDateTime == freezed
           ? _value.defaultValueDateTime
-          : defaultValueDateTime as DateTime,
+          : defaultValueDateTime as FhirDateTime,
       defaultValueTime: defaultValueTime == freezed
           ? _value.defaultValueTime
           : defaultValueTime as Time,
@@ -14981,7 +14983,7 @@ abstract class _$StructureMapSourceCopyWith<$Res>
       String defaultValueString,
       String defaultValueUri,
       Date defaultValueDate,
-      DateTime defaultValueDateTime,
+      FhirDateTime defaultValueDateTime,
       Time defaultValueTime,
       Code defaultValueCode,
       Oid defaultValueOid,
@@ -15213,7 +15215,7 @@ class __$StructureMapSourceCopyWithImpl<$Res>
           : defaultValueDate as Date,
       defaultValueDateTime: defaultValueDateTime == freezed
           ? _value.defaultValueDateTime
-          : defaultValueDateTime as DateTime,
+          : defaultValueDateTime as FhirDateTime,
       defaultValueTime: defaultValueTime == freezed
           ? _value.defaultValueTime
           : defaultValueTime as Time,
@@ -15451,7 +15453,7 @@ class _$_StructureMapSource implements _StructureMapSource {
   @override
   final Date defaultValueDate;
   @override
-  final DateTime defaultValueDateTime;
+  final FhirDateTime defaultValueDateTime;
   @override
   final Time defaultValueTime;
   @override
@@ -15750,7 +15752,7 @@ abstract class _StructureMapSource implements StructureMapSource {
       String defaultValueString,
       String defaultValueUri,
       Date defaultValueDate,
-      DateTime defaultValueDateTime,
+      FhirDateTime defaultValueDateTime,
       Time defaultValueTime,
       Code defaultValueCode,
       Oid defaultValueOid,
@@ -15830,7 +15832,7 @@ abstract class _StructureMapSource implements StructureMapSource {
   @override
   Date get defaultValueDate;
   @override
-  DateTime get defaultValueDateTime;
+  FhirDateTime get defaultValueDateTime;
   @override
   Time get defaultValueTime;
   @override

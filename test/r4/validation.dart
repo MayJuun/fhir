@@ -1,9 +1,19 @@
-// void main() async {
-//   var file = File('./test/r4/bundle_original.json');
-//   var contents = await file.readAsString();
-//   var newBundle = fhir_r4.Bundle.fromJson(json.decode(contents));
-//   await File('./test/r4/bundle_test.json').writeAsString(json.encode(newBundle.toJson()));
-// }
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:string_validator/string_validator.dart';
+
+import '../../lib/fhir_r4.dart' as fhir_r4;
+
+void main() async {
+  var dir = Directory('./test/r4/r4_examples');
+  for (var file in await dir.list().toList()) {
+    var contents = await File(file.path).readAsString();
+    var resource = fhir_r4.Resource.fromJson(json.decode(contents));
+    await File(file.path.replaceFirst('r4_examples', 'r4_tests'))
+        .writeAsString(json.encode(resource.toJson()));
+  }
+}
 
 // void main() async {
 //   var server = 'http://hapi.fhir.org/baseR4';

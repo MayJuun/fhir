@@ -634,7 +634,9 @@ _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     description: json['description'] as String,
     purpose: json['purpose'] as String,
@@ -713,7 +715,7 @@ Map<String, dynamic> _$_$_LibraryToJson(_$_Library instance) {
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('description', instance.description);
   writeNotNull('purpose', instance.purpose);
@@ -769,7 +771,9 @@ _$_Lists _$_$_ListsFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
@@ -808,7 +812,7 @@ Map<String, dynamic> _$_$_ListsToJson(_$_Lists instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('orderedBy', instance.orderedBy?.toJson());
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
@@ -838,7 +842,9 @@ _$_ListEntry _$_$_ListEntryFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(json['flag'] as Map<String, dynamic>),
     deleted: json['deleted'] == null ? null : Boolean.fromJson(json['deleted']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     item: json['item'] == null
         ? null
         : Reference.fromJson(json['item'] as Map<String, dynamic>),
@@ -856,7 +862,7 @@ Map<String, dynamic> _$_$_ListEntryToJson(_$_ListEntry instance) {
 
   writeNotNull('flag', instance.flag?.toJson());
   writeNotNull('deleted', instance.deleted?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('item', instance.item?.toJson());
   return val;
 }

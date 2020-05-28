@@ -22,7 +22,9 @@ _$_CodeSystem _$_$_CodeSystemFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -92,7 +94,7 @@ Map<String, dynamic> _$_$_CodeSystemToJson(_$_CodeSystem instance) {
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -330,7 +332,7 @@ _$_CodeSystemProperty1 _$_$_CodeSystemProperty1FromJson(
         : Boolean.fromJson(json['valueBoolean']),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
   );
 }
 
@@ -350,7 +352,7 @@ Map<String, dynamic> _$_$_CodeSystemProperty1ToJson(
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   return val;
 }
 
@@ -370,7 +372,9 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -422,7 +426,7 @@ Map<String, dynamic> _$_$_ConceptMapToJson(_$_ConceptMap instance) {
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -635,7 +639,9 @@ _$_ExpansionProfile _$_$_ExpansionProfileFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -708,7 +714,7 @@ Map<String, dynamic> _$_$_ExpansionProfileToJson(_$_ExpansionProfile instance) {
   writeNotNull('name', instance.name);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -932,7 +938,9 @@ _$_NamingSystem _$_$_NamingSystemFromJson(Map<String, dynamic> json) {
         unknownValue: Status.unknown),
     kind: _$enumDecodeNullable(_$NamingSystemKindEnumMap, json['kind'],
         unknownValue: NamingSystemKind.unknown),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -978,7 +986,7 @@ Map<String, dynamic> _$_$_NamingSystemToJson(_$_NamingSystem instance) {
   writeNotNull('name', instance.name);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('kind', _$NamingSystemKindEnumMap[instance.kind]);
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('responsible', instance.responsible);
@@ -1060,7 +1068,9 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
     experimental: json['experimental'] == null
         ? null
         : Boolean.fromJson(json['experimental']),
-    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
     contact: (json['contact'] as List)
         ?.map((e) => e == null
@@ -1111,7 +1121,7 @@ Map<String, dynamic> _$_$_ValueSetToJson(_$_ValueSet instance) {
   writeNotNull('title', instance.title);
   writeNotNull('status', _$StatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('date', instance.date?.toIso8601String());
+  writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
@@ -1302,7 +1312,7 @@ _$_ValueSetExpansion _$_$_ValueSetExpansionFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] as String,
     timestamp: json['timestamp'] == null
         ? null
-        : DateTime.parse(json['timestamp'] as String),
+        : FhirDateTime.fromJson(json['timestamp'] as String),
     total: json['total'] == null ? null : Integer.fromJson(json['total']),
     offset: json['offset'] == null ? null : Integer.fromJson(json['offset']),
     parameter: (json['parameter'] as List)
@@ -1329,7 +1339,7 @@ Map<String, dynamic> _$_$_ValueSetExpansionToJson(
   }
 
   writeNotNull('identifier', instance.identifier);
-  writeNotNull('timestamp', instance.timestamp?.toIso8601String());
+  writeNotNull('timestamp', instance.timestamp?.toJson());
   writeNotNull('total', instance.total?.toJson());
   writeNotNull('offset', instance.offset?.toJson());
   writeNotNull(

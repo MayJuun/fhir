@@ -228,7 +228,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['defaultValueDate'] as String),
     defaultValueDateTime: json['defaultValueDateTime'] == null
         ? null
-        : DateTime.parse(json['defaultValueDateTime'] as String),
+        : FhirDateTime.fromJson(json['defaultValueDateTime'] as String),
     defaultValueTime: json['defaultValueTime'] == null
         ? null
         : Time.fromJson(json['defaultValueTime'] as String),
@@ -404,7 +404,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['fixedDate'] as String),
     fixedDateTime: json['fixedDateTime'] == null
         ? null
-        : DateTime.parse(json['fixedDateTime'] as String),
+        : FhirDateTime.fromJson(json['fixedDateTime'] as String),
     fixedTime: json['fixedTime'] == null
         ? null
         : Time.fromJson(json['fixedTime'] as String),
@@ -566,7 +566,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['patternDate'] as String),
     patternDateTime: json['patternDateTime'] == null
         ? null
-        : DateTime.parse(json['patternDateTime'] as String),
+        : FhirDateTime.fromJson(json['patternDateTime'] as String),
     patternTime: json['patternTime'] == null
         ? null
         : Time.fromJson(json['patternTime'] as String),
@@ -724,7 +724,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['minValueDate'] as String),
     minValueDateTime: json['minValueDateTime'] == null
         ? null
-        : DateTime.parse(json['minValueDateTime'] as String),
+        : FhirDateTime.fromJson(json['minValueDateTime'] as String),
     minValueInstant: json['minValueInstant'] as String,
     minValueTime: json['minValueTime'] == null
         ? null
@@ -749,7 +749,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['maxValueDate'] as String),
     maxValueDateTime: json['maxValueDateTime'] == null
         ? null
-        : DateTime.parse(json['maxValueDateTime'] as String),
+        : FhirDateTime.fromJson(json['maxValueDateTime'] as String),
     maxValueInstant: json['maxValueInstant'] as String,
     maxValueTime: json['maxValueTime'] == null
         ? null
@@ -837,8 +837,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('defaultValueString', instance.defaultValueString);
   writeNotNull('defaultValueUri', instance.defaultValueUri);
   writeNotNull('defaultValueDate', instance.defaultValueDate?.toJson());
-  writeNotNull(
-      'defaultValueDateTime', instance.defaultValueDateTime?.toIso8601String());
+  writeNotNull('defaultValueDateTime', instance.defaultValueDateTime?.toJson());
   writeNotNull('defaultValueTime', instance.defaultValueTime?.toJson());
   writeNotNull('defaultValueCode', instance.defaultValueCode?.toJson());
   writeNotNull('defaultValueOid', instance.defaultValueOid?.toJson());
@@ -916,7 +915,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('fixedString', instance.fixedString);
   writeNotNull('fixedUri', instance.fixedUri);
   writeNotNull('fixedDate', instance.fixedDate?.toJson());
-  writeNotNull('fixedDateTime', instance.fixedDateTime?.toIso8601String());
+  writeNotNull('fixedDateTime', instance.fixedDateTime?.toJson());
   writeNotNull('fixedTime', instance.fixedTime?.toJson());
   writeNotNull('fixedCode', instance.fixedCode?.toJson());
   writeNotNull('fixedOid', instance.fixedOid?.toJson());
@@ -972,7 +971,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('patternString', instance.patternString);
   writeNotNull('patternUri', instance.patternUri);
   writeNotNull('patternDate', instance.patternDate?.toJson());
-  writeNotNull('patternDateTime', instance.patternDateTime?.toIso8601String());
+  writeNotNull('patternDateTime', instance.patternDateTime?.toJson());
   writeNotNull('patternTime', instance.patternTime?.toJson());
   writeNotNull('patternCode', instance.patternCode?.toJson());
   writeNotNull('patternOid', instance.patternOid?.toJson());
@@ -1027,8 +1026,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
       'patternTriggerDefinition', instance.patternTriggerDefinition?.toJson());
   writeNotNull('example', instance.example?.map((e) => e?.toJson())?.toList());
   writeNotNull('minValueDate', instance.minValueDate?.toJson());
-  writeNotNull(
-      'minValueDateTime', instance.minValueDateTime?.toIso8601String());
+  writeNotNull('minValueDateTime', instance.minValueDateTime?.toJson());
   writeNotNull('minValueInstant', instance.minValueInstant);
   writeNotNull('minValueTime', instance.minValueTime?.toJson());
   writeNotNull('minValueDecimal', instance.minValueDecimal?.toJson());
@@ -1037,8 +1035,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('minValueUnsignedInt', instance.minValueUnsignedInt?.toJson());
   writeNotNull('minValueQuantity', instance.minValueQuantity?.toJson());
   writeNotNull('maxValueDate', instance.maxValueDate?.toJson());
-  writeNotNull(
-      'maxValueDateTime', instance.maxValueDateTime?.toIso8601String());
+  writeNotNull('maxValueDateTime', instance.maxValueDateTime?.toJson());
   writeNotNull('maxValueInstant', instance.maxValueInstant);
   writeNotNull('maxValueTime', instance.maxValueTime?.toJson());
   writeNotNull('maxValueDecimal', instance.maxValueDecimal?.toJson());
@@ -1237,7 +1234,7 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
         : Date.fromJson(json['valueDate'] as String),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
@@ -1403,7 +1400,7 @@ Map<String, dynamic> _$_$_ElementDefinitionExampleToJson(
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueUri', instance.valueUri);
   writeNotNull('valueDate', instance.valueDate?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());

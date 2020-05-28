@@ -151,7 +151,7 @@ _$_EligibilityRequest _$_$_EligibilityRequestFromJson(
         : Period.fromJson(json['servicedPeriod'] as Map<String, dynamic>),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     enterer: json['enterer'] == null
         ? null
         : Reference.fromJson(json['enterer'] as Map<String, dynamic>),
@@ -200,7 +200,7 @@ Map<String, dynamic> _$_$_EligibilityRequestToJson(
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
@@ -226,7 +226,7 @@ _$_EligibilityResponse _$_$_EligibilityResponseFromJson(
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     requestProvider: json['requestProvider'] == null
         ? null
         : Reference.fromJson(json['requestProvider'] as Map<String, dynamic>),
@@ -275,7 +275,7 @@ Map<String, dynamic> _$_$_EligibilityResponseToJson(
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
   writeNotNull('request', instance.request?.toJson());
@@ -457,7 +457,7 @@ _$_EnrollmentRequest _$_$_EnrollmentRequestFromJson(Map<String, dynamic> json) {
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     insurer: json['insurer'] == null
         ? null
         : Reference.fromJson(json['insurer'] as Map<String, dynamic>),
@@ -490,7 +490,7 @@ Map<String, dynamic> _$_$_EnrollmentRequestToJson(
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
@@ -519,7 +519,7 @@ _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
     disposition: json['disposition'] as String,
     created: json['created'] == null
         ? null
-        : DateTime.parse(json['created'] as String),
+        : FhirDateTime.fromJson(json['created'] as String),
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
@@ -550,7 +550,7 @@ Map<String, dynamic> _$_$_EnrollmentResponseToJson(
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('disposition', instance.disposition);
-  writeNotNull('created', instance.created?.toIso8601String());
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   writeNotNull('requestOrganization', instance.requestOrganization?.toJson());

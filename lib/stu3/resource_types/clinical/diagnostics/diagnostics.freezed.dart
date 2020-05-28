@@ -342,7 +342,7 @@ class _$DiagnosticReportTearOff {
           CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       String issued,
       List<DiagnosticReportPerformer> performer,
@@ -392,7 +392,7 @@ mixin _$DiagnosticReport {
   CodeableConcept get code;
   Reference get subject;
   Reference get context;
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   Period get effectivePeriod;
   String get issued;
   List<DiagnosticReportPerformer> get performer;
@@ -424,7 +424,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
           CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       String issued,
       List<DiagnosticReportPerformer> performer,
@@ -490,7 +490,7 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -587,7 +587,7 @@ abstract class _$DiagnosticReportCopyWith<$Res>
           CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       String issued,
       List<DiagnosticReportPerformer> performer,
@@ -660,7 +660,7 @@ class __$DiagnosticReportCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -740,7 +740,7 @@ class _$_DiagnosticReport implements _DiagnosticReport {
   @override
   final Reference context;
   @override
-  final DateTime effectiveDateTime;
+  final FhirDateTime effectiveDateTime;
   @override
   final Period effectivePeriod;
   @override
@@ -872,7 +872,7 @@ abstract class _DiagnosticReport implements DiagnosticReport {
           CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       String issued,
       List<DiagnosticReportPerformer> performer,
@@ -907,7 +907,7 @@ abstract class _DiagnosticReport implements DiagnosticReport {
   @override
   Reference get context;
   @override
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   @override
   Period get effectivePeriod;
   @override
@@ -1292,7 +1292,7 @@ class _$ImagingManifestTearOff {
       Identifier identifier,
       @JsonKey(required: true)
           Reference patient,
-      DateTime authoringTime,
+      FhirDateTime authoringTime,
       Reference author,
       String description,
       @JsonKey(required: true)
@@ -1318,7 +1318,7 @@ mixin _$ImagingManifest {
   Identifier get identifier;
   @JsonKey(required: true)
   Reference get patient;
-  DateTime get authoringTime;
+  FhirDateTime get authoringTime;
   Reference get author;
   String get description;
   @JsonKey(required: true)
@@ -1338,7 +1338,7 @@ abstract class $ImagingManifestCopyWith<$Res> {
       Identifier identifier,
       @JsonKey(required: true)
           Reference patient,
-      DateTime authoringTime,
+      FhirDateTime authoringTime,
       Reference author,
       String description,
       @JsonKey(required: true)
@@ -1376,7 +1376,7 @@ class _$ImagingManifestCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       authoringTime: authoringTime == freezed
           ? _value.authoringTime
-          : authoringTime as DateTime,
+          : authoringTime as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
       description:
           description == freezed ? _value.description : description as String,
@@ -1428,7 +1428,7 @@ abstract class _$ImagingManifestCopyWith<$Res>
       Identifier identifier,
       @JsonKey(required: true)
           Reference patient,
-      DateTime authoringTime,
+      FhirDateTime authoringTime,
       Reference author,
       String description,
       @JsonKey(required: true)
@@ -1471,7 +1471,7 @@ class __$ImagingManifestCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       authoringTime: authoringTime == freezed
           ? _value.authoringTime
-          : authoringTime as DateTime,
+          : authoringTime as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
       description:
           description == freezed ? _value.description : description as String,
@@ -1509,7 +1509,7 @@ class _$_ImagingManifest implements _ImagingManifest {
   @JsonKey(required: true)
   final Reference patient;
   @override
-  final DateTime authoringTime;
+  final FhirDateTime authoringTime;
   @override
   final Reference author;
   @override
@@ -1577,7 +1577,7 @@ abstract class _ImagingManifest implements ImagingManifest {
       Identifier identifier,
       @JsonKey(required: true)
           Reference patient,
-      DateTime authoringTime,
+      FhirDateTime authoringTime,
       Reference author,
       String description,
       @JsonKey(required: true)
@@ -1595,7 +1595,7 @@ abstract class _ImagingManifest implements ImagingManifest {
   @JsonKey(required: true)
   Reference get patient;
   @override
-  DateTime get authoringTime;
+  FhirDateTime get authoringTime;
   @override
   Reference get author;
   @override
@@ -2173,7 +2173,7 @@ class _$ImagingStudyTearOff {
       @JsonKey(required: true)
           Reference patient,
       Reference context,
-      DateTime started,
+      FhirDateTime started,
       List<Reference> basedOn,
       Reference referrer,
       List<Reference> interpreter,
@@ -2225,7 +2225,7 @@ mixin _$ImagingStudy {
   @JsonKey(required: true)
   Reference get patient;
   Reference get context;
-  DateTime get started;
+  FhirDateTime get started;
   List<Reference> get basedOn;
   Reference get referrer;
   List<Reference> get interpreter;
@@ -2258,7 +2258,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       @JsonKey(required: true)
           Reference patient,
       Reference context,
-      DateTime started,
+      FhirDateTime started,
       List<Reference> basedOn,
       Reference referrer,
       List<Reference> interpreter,
@@ -2326,7 +2326,7 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
           : modalityList as List<Coding>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       context: context == freezed ? _value.context : context as Reference,
-      started: started == freezed ? _value.started : started as DateTime,
+      started: started == freezed ? _value.started : started as FhirDateTime,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       referrer: referrer == freezed ? _value.referrer : referrer as Reference,
       interpreter: interpreter == freezed
@@ -2424,7 +2424,7 @@ abstract class _$ImagingStudyCopyWith<$Res>
       @JsonKey(required: true)
           Reference patient,
       Reference context,
-      DateTime started,
+      FhirDateTime started,
       List<Reference> basedOn,
       Reference referrer,
       List<Reference> interpreter,
@@ -2499,7 +2499,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
           : modalityList as List<Coding>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       context: context == freezed ? _value.context : context as Reference,
-      started: started == freezed ? _value.started : started as DateTime,
+      started: started == freezed ? _value.started : started as FhirDateTime,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       referrer: referrer == freezed ? _value.referrer : referrer as Reference,
       interpreter: interpreter == freezed
@@ -2581,7 +2581,7 @@ class _$_ImagingStudy implements _ImagingStudy {
   @override
   final Reference context;
   @override
-  final DateTime started;
+  final FhirDateTime started;
   @override
   final List<Reference> basedOn;
   @override
@@ -2721,7 +2721,7 @@ abstract class _ImagingStudy implements ImagingStudy {
       @JsonKey(required: true)
           Reference patient,
       Reference context,
-      DateTime started,
+      FhirDateTime started,
       List<Reference> basedOn,
       Reference referrer,
       List<Reference> interpreter,
@@ -2757,7 +2757,7 @@ abstract class _ImagingStudy implements ImagingStudy {
   @override
   Reference get context;
   @override
-  DateTime get started;
+  FhirDateTime get started;
   @override
   List<Reference> get basedOn;
   @override
@@ -2803,7 +2803,7 @@ class _$ImagingStudySeriesTearOff {
       List<Reference> endpoint,
       Coding bodySite,
       Coding laterality,
-      DateTime started,
+      FhirDateTime started,
       List<Reference> performer,
       List<ImagingStudyInstance> instance}) {
     return _ImagingStudySeries(
@@ -2838,7 +2838,7 @@ mixin _$ImagingStudySeries {
   List<Reference> get endpoint;
   Coding get bodySite;
   Coding get laterality;
-  DateTime get started;
+  FhirDateTime get started;
   List<Reference> get performer;
   List<ImagingStudyInstance> get instance;
 
@@ -2862,7 +2862,7 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       List<Reference> endpoint,
       Coding bodySite,
       Coding laterality,
-      DateTime started,
+      FhirDateTime started,
       List<Reference> performer,
       List<ImagingStudyInstance> instance});
 
@@ -2911,7 +2911,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res>
       bodySite: bodySite == freezed ? _value.bodySite : bodySite as Coding,
       laterality:
           laterality == freezed ? _value.laterality : laterality as Coding,
-      started: started == freezed ? _value.started : started as DateTime,
+      started: started == freezed ? _value.started : started as FhirDateTime,
       performer: performer == freezed
           ? _value.performer
           : performer as List<Reference>,
@@ -2970,7 +2970,7 @@ abstract class _$ImagingStudySeriesCopyWith<$Res>
       List<Reference> endpoint,
       Coding bodySite,
       Coding laterality,
-      DateTime started,
+      FhirDateTime started,
       List<Reference> performer,
       List<ImagingStudyInstance> instance});
 
@@ -3024,7 +3024,7 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
       bodySite: bodySite == freezed ? _value.bodySite : bodySite as Coding,
       laterality:
           laterality == freezed ? _value.laterality : laterality as Coding,
-      started: started == freezed ? _value.started : started as DateTime,
+      started: started == freezed ? _value.started : started as FhirDateTime,
       performer: performer == freezed
           ? _value.performer
           : performer as List<Reference>,
@@ -3075,7 +3075,7 @@ class _$_ImagingStudySeries implements _ImagingStudySeries {
   @override
   final Coding laterality;
   @override
-  final DateTime started;
+  final FhirDateTime started;
   @override
   final List<Reference> performer;
   @override
@@ -3165,7 +3165,7 @@ abstract class _ImagingStudySeries implements ImagingStudySeries {
       List<Reference> endpoint,
       Coding bodySite,
       Coding laterality,
-      DateTime started,
+      FhirDateTime started,
       List<Reference> performer,
       List<ImagingStudyInstance> instance}) = _$_ImagingStudySeries;
 
@@ -3193,7 +3193,7 @@ abstract class _ImagingStudySeries implements ImagingStudySeries {
   @override
   Coding get laterality;
   @override
-  DateTime get started;
+  FhirDateTime get started;
   @override
   List<Reference> get performer;
   @override
@@ -3397,7 +3397,7 @@ class _$ObservationTearOff {
           CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       String issued,
       List<Reference> performer,
@@ -3410,7 +3410,7 @@ class _$ObservationTearOff {
       SampledData valueSampledData,
       Attachment valueAttachment,
       Time valueTime,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
@@ -3475,7 +3475,7 @@ mixin _$Observation {
   CodeableConcept get code;
   Reference get subject;
   Reference get context;
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   Period get effectivePeriod;
   String get issued;
   List<Reference> get performer;
@@ -3488,7 +3488,7 @@ mixin _$Observation {
   SampledData get valueSampledData;
   Attachment get valueAttachment;
   Time get valueTime;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   Period get valuePeriod;
   CodeableConcept get dataAbsentReason;
   CodeableConcept get interpretation;
@@ -3521,7 +3521,7 @@ abstract class $ObservationCopyWith<$Res> {
           CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       String issued,
       List<Reference> performer,
@@ -3534,7 +3534,7 @@ abstract class $ObservationCopyWith<$Res> {
       SampledData valueSampledData,
       Attachment valueAttachment,
       Time valueTime,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
@@ -3626,7 +3626,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       context: context == freezed ? _value.context : context as Reference,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -3658,7 +3658,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valuePeriod:
           valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       dataAbsentReason: dataAbsentReason == freezed
@@ -3874,7 +3874,7 @@ abstract class _$ObservationCopyWith<$Res>
           CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       String issued,
       List<Reference> performer,
@@ -3887,7 +3887,7 @@ abstract class _$ObservationCopyWith<$Res>
       SampledData valueSampledData,
       Attachment valueAttachment,
       Time valueTime,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
@@ -3998,7 +3998,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       context: context == freezed ? _value.context : context as Reference,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as DateTime,
+          : effectiveDateTime as FhirDateTime,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
@@ -4030,7 +4030,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valuePeriod:
           valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       dataAbsentReason: dataAbsentReason == freezed
@@ -4123,7 +4123,7 @@ class _$_Observation implements _Observation {
   @override
   final Reference context;
   @override
-  final DateTime effectiveDateTime;
+  final FhirDateTime effectiveDateTime;
   @override
   final Period effectivePeriod;
   @override
@@ -4149,7 +4149,7 @@ class _$_Observation implements _Observation {
   @override
   final Time valueTime;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
   @override
   final Period valuePeriod;
   @override
@@ -4321,7 +4321,7 @@ abstract class _Observation implements Observation {
           CodeableConcept code,
       Reference subject,
       Reference context,
-      DateTime effectiveDateTime,
+      FhirDateTime effectiveDateTime,
       Period effectivePeriod,
       String issued,
       List<Reference> performer,
@@ -4334,7 +4334,7 @@ abstract class _Observation implements Observation {
       SampledData valueSampledData,
       Attachment valueAttachment,
       Time valueTime,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
@@ -4370,7 +4370,7 @@ abstract class _Observation implements Observation {
   @override
   Reference get context;
   @override
-  DateTime get effectiveDateTime;
+  FhirDateTime get effectiveDateTime;
   @override
   Period get effectivePeriod;
   @override
@@ -4396,7 +4396,7 @@ abstract class _Observation implements Observation {
   @override
   Time get valueTime;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   Period get valuePeriod;
   @override
@@ -4893,7 +4893,7 @@ class _$ObservationComponentTearOff {
       SampledData valueSampledData,
       Attachment valueAttachment,
       Time valueTime,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
@@ -4931,7 +4931,7 @@ mixin _$ObservationComponent {
   SampledData get valueSampledData;
   Attachment get valueAttachment;
   Time get valueTime;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   Period get valuePeriod;
   CodeableConcept get dataAbsentReason;
   CodeableConcept get interpretation;
@@ -4955,7 +4955,7 @@ abstract class $ObservationComponentCopyWith<$Res> {
       SampledData valueSampledData,
       Attachment valueAttachment,
       Time valueTime,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
@@ -5021,7 +5021,7 @@ class _$ObservationComponentCopyWithImpl<$Res>
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valuePeriod:
           valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       dataAbsentReason: dataAbsentReason == freezed
@@ -5153,7 +5153,7 @@ abstract class _$ObservationComponentCopyWith<$Res>
       SampledData valueSampledData,
       Attachment valueAttachment,
       Time valueTime,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
@@ -5231,7 +5231,7 @@ class __$ObservationComponentCopyWithImpl<$Res>
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valuePeriod:
           valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       dataAbsentReason: dataAbsentReason == freezed
@@ -5288,7 +5288,7 @@ class _$_ObservationComponent implements _ObservationComponent {
   @override
   final Time valueTime;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
   @override
   final Period valuePeriod;
   @override
@@ -5390,7 +5390,7 @@ abstract class _ObservationComponent implements ObservationComponent {
           SampledData valueSampledData,
           Attachment valueAttachment,
           Time valueTime,
-          DateTime valueDateTime,
+          FhirDateTime valueDateTime,
           Period valuePeriod,
           CodeableConcept dataAbsentReason,
           CodeableConcept interpretation,
@@ -5420,7 +5420,7 @@ abstract class _ObservationComponent implements ObservationComponent {
   @override
   Time get valueTime;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   Period get valuePeriod;
   @override
@@ -5453,7 +5453,7 @@ class _$QuestionnaireResponseTearOff {
           QuestionnaireResponseStatus status,
       Reference subject,
       Reference context,
-      DateTime authored,
+      FhirDateTime authored,
       Reference author,
       Reference source,
       List<QuestionnaireResponseItem> item}) {
@@ -5488,7 +5488,7 @@ mixin _$QuestionnaireResponse {
   QuestionnaireResponseStatus get status;
   Reference get subject;
   Reference get context;
-  DateTime get authored;
+  FhirDateTime get authored;
   Reference get author;
   Reference get source;
   List<QuestionnaireResponseItem> get item;
@@ -5512,7 +5512,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
           QuestionnaireResponseStatus status,
       Reference subject,
       Reference context,
-      DateTime authored,
+      FhirDateTime authored,
       Reference author,
       Reference source,
       List<QuestionnaireResponseItem> item});
@@ -5564,7 +5564,8 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
           : status as QuestionnaireResponseStatus,
       subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference,
-      authored: authored == freezed ? _value.authored : authored as DateTime,
+      authored:
+          authored == freezed ? _value.authored : authored as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
       source: source == freezed ? _value.source : source as Reference,
       item: item == freezed
@@ -5651,7 +5652,7 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
           QuestionnaireResponseStatus status,
       Reference subject,
       Reference context,
-      DateTime authored,
+      FhirDateTime authored,
       Reference author,
       Reference source,
       List<QuestionnaireResponseItem> item});
@@ -5711,7 +5712,8 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
           : status as QuestionnaireResponseStatus,
       subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference,
-      authored: authored == freezed ? _value.authored : authored as DateTime,
+      authored:
+          authored == freezed ? _value.authored : authored as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
       source: source == freezed ? _value.source : source as Reference,
       item: item == freezed
@@ -5763,7 +5765,7 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
   @override
   final Reference context;
   @override
-  final DateTime authored;
+  final FhirDateTime authored;
   @override
   final Reference author;
   @override
@@ -5853,7 +5855,7 @@ abstract class _QuestionnaireResponse implements QuestionnaireResponse {
           QuestionnaireResponseStatus status,
       Reference subject,
       Reference context,
-      DateTime authored,
+      FhirDateTime authored,
       Reference author,
       Reference source,
       List<QuestionnaireResponseItem> item}) = _$_QuestionnaireResponse;
@@ -5880,7 +5882,7 @@ abstract class _QuestionnaireResponse implements QuestionnaireResponse {
   @override
   Reference get context;
   @override
-  DateTime get authored;
+  FhirDateTime get authored;
   @override
   Reference get author;
   @override
@@ -6158,7 +6160,7 @@ class _$QuestionnaireResponseAnswerTearOff {
       Decimal valueDecimal,
       Integer valueInteger,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       String valueString,
       String valueUri,
@@ -6193,7 +6195,7 @@ mixin _$QuestionnaireResponseAnswer {
   Decimal get valueDecimal;
   Integer get valueInteger;
   Date get valueDate;
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   Time get valueTime;
   String get valueString;
   String get valueUri;
@@ -6218,7 +6220,7 @@ abstract class $QuestionnaireResponseAnswerCopyWith<$Res> {
       Decimal valueDecimal,
       Integer valueInteger,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       String valueString,
       String valueUri,
@@ -6271,7 +6273,7 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueString:
           valueString == freezed ? _value.valueString : valueString as String,
@@ -6346,7 +6348,7 @@ abstract class _$QuestionnaireResponseAnswerCopyWith<$Res>
       Decimal valueDecimal,
       Integer valueInteger,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       String valueString,
       String valueUri,
@@ -6407,7 +6409,7 @@ class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
       valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as DateTime,
+          : valueDateTime as FhirDateTime,
       valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
       valueString:
           valueString == freezed ? _value.valueString : valueString as String,
@@ -6459,7 +6461,7 @@ class _$_QuestionnaireResponseAnswer implements _QuestionnaireResponseAnswer {
   @override
   final Date valueDate;
   @override
-  final DateTime valueDateTime;
+  final FhirDateTime valueDateTime;
   @override
   final Time valueTime;
   @override
@@ -6561,7 +6563,7 @@ abstract class _QuestionnaireResponseAnswer
       Decimal valueDecimal,
       Integer valueInteger,
       Date valueDate,
-      DateTime valueDateTime,
+      FhirDateTime valueDateTime,
       Time valueTime,
       String valueString,
       String valueUri,
@@ -6583,7 +6585,7 @@ abstract class _QuestionnaireResponseAnswer
   @override
   Date get valueDate;
   @override
-  DateTime get valueDateTime;
+  FhirDateTime get valueDateTime;
   @override
   Time get valueTime;
   @override
@@ -8399,7 +8401,7 @@ class _$SpecimenTearOff {
       CodeableConcept type,
       @JsonKey(required: true)
           Reference subject,
-      DateTime receivedTime,
+      FhirDateTime receivedTime,
       List<Reference> parent,
       List<Reference> request,
       SpecimenCollection collection,
@@ -8437,7 +8439,7 @@ mixin _$Specimen {
   CodeableConcept get type;
   @JsonKey(required: true)
   Reference get subject;
-  DateTime get receivedTime;
+  FhirDateTime get receivedTime;
   List<Reference> get parent;
   List<Reference> get request;
   SpecimenCollection get collection;
@@ -8459,7 +8461,7 @@ abstract class $SpecimenCopyWith<$Res> {
       @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
       CodeableConcept type,
       @JsonKey(required: true) Reference subject,
-      DateTime receivedTime,
+      FhirDateTime receivedTime,
       List<Reference> parent,
       List<Reference> request,
       SpecimenCollection collection,
@@ -8511,7 +8513,7 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
       subject: subject == freezed ? _value.subject : subject as Reference,
       receivedTime: receivedTime == freezed
           ? _value.receivedTime
-          : receivedTime as DateTime,
+          : receivedTime as FhirDateTime,
       parent: parent == freezed ? _value.parent : parent as List<Reference>,
       request: request == freezed ? _value.request : request as List<Reference>,
       collection: collection == freezed
@@ -8579,7 +8581,7 @@ abstract class _$SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
       CodeableConcept type,
       @JsonKey(required: true) Reference subject,
-      DateTime receivedTime,
+      FhirDateTime receivedTime,
       List<Reference> parent,
       List<Reference> request,
       SpecimenCollection collection,
@@ -8636,7 +8638,7 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       receivedTime: receivedTime == freezed
           ? _value.receivedTime
-          : receivedTime as DateTime,
+          : receivedTime as FhirDateTime,
       parent: parent == freezed ? _value.parent : parent as List<Reference>,
       request: request == freezed ? _value.request : request as List<Reference>,
       collection: collection == freezed
@@ -8694,7 +8696,7 @@ class _$_Specimen implements _Specimen {
   @JsonKey(required: true)
   final Reference subject;
   @override
-  final DateTime receivedTime;
+  final FhirDateTime receivedTime;
   @override
   final List<Reference> parent;
   @override
@@ -8793,7 +8795,7 @@ abstract class _Specimen implements Specimen {
       CodeableConcept type,
       @JsonKey(required: true)
           Reference subject,
-      DateTime receivedTime,
+      FhirDateTime receivedTime,
       List<Reference> parent,
       List<Reference> request,
       SpecimenCollection collection,
@@ -8819,7 +8821,7 @@ abstract class _Specimen implements Specimen {
   @JsonKey(required: true)
   Reference get subject;
   @override
-  DateTime get receivedTime;
+  FhirDateTime get receivedTime;
   @override
   List<Reference> get parent;
   @override
@@ -8845,7 +8847,7 @@ class _$SpecimenCollectionTearOff {
 
   _SpecimenCollection call(
       {Reference collector,
-      DateTime collectedDateTime,
+      FhirDateTime collectedDateTime,
       Period collectedPeriod,
       Quantity quantity,
       CodeableConcept method,
@@ -8866,7 +8868,7 @@ const $SpecimenCollection = _$SpecimenCollectionTearOff();
 
 mixin _$SpecimenCollection {
   Reference get collector;
-  DateTime get collectedDateTime;
+  FhirDateTime get collectedDateTime;
   Period get collectedPeriod;
   Quantity get quantity;
   CodeableConcept get method;
@@ -8882,7 +8884,7 @@ abstract class $SpecimenCollectionCopyWith<$Res> {
       _$SpecimenCollectionCopyWithImpl<$Res>;
   $Res call(
       {Reference collector,
-      DateTime collectedDateTime,
+      FhirDateTime collectedDateTime,
       Period collectedPeriod,
       Quantity quantity,
       CodeableConcept method,
@@ -8917,7 +8919,7 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
           collector == freezed ? _value.collector : collector as Reference,
       collectedDateTime: collectedDateTime == freezed
           ? _value.collectedDateTime
-          : collectedDateTime as DateTime,
+          : collectedDateTime as FhirDateTime,
       collectedPeriod: collectedPeriod == freezed
           ? _value.collectedPeriod
           : collectedPeriod as Period,
@@ -8987,7 +8989,7 @@ abstract class _$SpecimenCollectionCopyWith<$Res>
   @override
   $Res call(
       {Reference collector,
-      DateTime collectedDateTime,
+      FhirDateTime collectedDateTime,
       Period collectedPeriod,
       Quantity quantity,
       CodeableConcept method,
@@ -9029,7 +9031,7 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
           collector == freezed ? _value.collector : collector as Reference,
       collectedDateTime: collectedDateTime == freezed
           ? _value.collectedDateTime
-          : collectedDateTime as DateTime,
+          : collectedDateTime as FhirDateTime,
       collectedPeriod: collectedPeriod == freezed
           ? _value.collectedPeriod
           : collectedPeriod as Period,
@@ -9057,7 +9059,7 @@ class _$_SpecimenCollection implements _SpecimenCollection {
   @override
   final Reference collector;
   @override
-  final DateTime collectedDateTime;
+  final FhirDateTime collectedDateTime;
   @override
   final Period collectedPeriod;
   @override
@@ -9118,7 +9120,7 @@ class _$_SpecimenCollection implements _SpecimenCollection {
 abstract class _SpecimenCollection implements SpecimenCollection {
   const factory _SpecimenCollection(
       {Reference collector,
-      DateTime collectedDateTime,
+      FhirDateTime collectedDateTime,
       Period collectedPeriod,
       Quantity quantity,
       CodeableConcept method,
@@ -9130,7 +9132,7 @@ abstract class _SpecimenCollection implements SpecimenCollection {
   @override
   Reference get collector;
   @override
-  DateTime get collectedDateTime;
+  FhirDateTime get collectedDateTime;
   @override
   Period get collectedPeriod;
   @override
@@ -9154,7 +9156,7 @@ class _$SpecimenProcessingTearOff {
       {String description,
       CodeableConcept procedure,
       List<Reference> additive,
-      DateTime timeDateTime,
+      FhirDateTime timeDateTime,
       Period timePeriod}) {
     return _SpecimenProcessing(
       description: description,
@@ -9173,7 +9175,7 @@ mixin _$SpecimenProcessing {
   String get description;
   CodeableConcept get procedure;
   List<Reference> get additive;
-  DateTime get timeDateTime;
+  FhirDateTime get timeDateTime;
   Period get timePeriod;
 
   Map<String, dynamic> toJson();
@@ -9188,7 +9190,7 @@ abstract class $SpecimenProcessingCopyWith<$Res> {
       {String description,
       CodeableConcept procedure,
       List<Reference> additive,
-      DateTime timeDateTime,
+      FhirDateTime timeDateTime,
       Period timePeriod});
 
   $CodeableConceptCopyWith<$Res> get procedure;
@@ -9221,7 +9223,7 @@ class _$SpecimenProcessingCopyWithImpl<$Res>
           additive == freezed ? _value.additive : additive as List<Reference>,
       timeDateTime: timeDateTime == freezed
           ? _value.timeDateTime
-          : timeDateTime as DateTime,
+          : timeDateTime as FhirDateTime,
       timePeriod:
           timePeriod == freezed ? _value.timePeriod : timePeriod as Period,
     ));
@@ -9258,7 +9260,7 @@ abstract class _$SpecimenProcessingCopyWith<$Res>
       {String description,
       CodeableConcept procedure,
       List<Reference> additive,
-      DateTime timeDateTime,
+      FhirDateTime timeDateTime,
       Period timePeriod});
 
   @override
@@ -9295,7 +9297,7 @@ class __$SpecimenProcessingCopyWithImpl<$Res>
           additive == freezed ? _value.additive : additive as List<Reference>,
       timeDateTime: timeDateTime == freezed
           ? _value.timeDateTime
-          : timeDateTime as DateTime,
+          : timeDateTime as FhirDateTime,
       timePeriod:
           timePeriod == freezed ? _value.timePeriod : timePeriod as Period,
     ));
@@ -9321,7 +9323,7 @@ class _$_SpecimenProcessing implements _SpecimenProcessing {
   @override
   final List<Reference> additive;
   @override
-  final DateTime timeDateTime;
+  final FhirDateTime timeDateTime;
   @override
   final Period timePeriod;
 
@@ -9375,7 +9377,7 @@ abstract class _SpecimenProcessing implements SpecimenProcessing {
       {String description,
       CodeableConcept procedure,
       List<Reference> additive,
-      DateTime timeDateTime,
+      FhirDateTime timeDateTime,
       Period timePeriod}) = _$_SpecimenProcessing;
 
   factory _SpecimenProcessing.fromJson(Map<String, dynamic> json) =
@@ -9388,7 +9390,7 @@ abstract class _SpecimenProcessing implements SpecimenProcessing {
   @override
   List<Reference> get additive;
   @override
-  DateTime get timeDateTime;
+  FhirDateTime get timeDateTime;
   @override
   Period get timePeriod;
   @override

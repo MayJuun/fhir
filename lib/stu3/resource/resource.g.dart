@@ -75,7 +75,7 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
         : Date.fromJson(json['valueDate'] as String),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
@@ -240,7 +240,7 @@ Map<String, dynamic> _$_$_FhirExtensionToJson(_$_FhirExtension instance) {
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueUri', instance.valueUri);
   writeNotNull('valueDate', instance.valueDate?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());

@@ -414,7 +414,7 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
     occurrenceDateTime: json['occurrenceDateTime'] == null
         ? null
-        : DateTime.parse(json['occurrenceDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrencePeriod: json['occurrencePeriod'] == null
         ? null
         : Period.fromJson(json['occurrencePeriod'] as Map<String, dynamic>),
@@ -468,8 +468,7 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   writeNotNull('view', instance.view?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull(
-      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
   writeNotNull('operator', instance.operator?.toJson());
   writeNotNull(
@@ -819,7 +818,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
         : Date.fromJson(json['valueDate'] as String),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : DateTime.parse(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime'] as String),
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
@@ -993,7 +992,7 @@ Map<String, dynamic> _$_$_ParametersParameterToJson(
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueUri', instance.valueUri);
   writeNotNull('valueDate', instance.valueDate?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());

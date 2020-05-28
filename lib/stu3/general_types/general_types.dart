@@ -12,7 +12,7 @@ abstract class Annotation with _$Annotation {
   const factory Annotation({
     Reference authorReference,
     String authorString,
-    DateTime time,
+    FhirDateTime time,
     String text,
   }) = _Annotation;
   factory Annotation.fromJson(Map<String, dynamic> json) =>
@@ -29,7 +29,7 @@ abstract class Attachment with _$Attachment {
     UnsignedInt size,
     String hash,
     String title,
-    DateTime creation,
+    FhirDateTime creation,
   }) = _Attachment;
   factory Attachment.fromJson(Map<String, dynamic> json) =>
       _$AttachmentFromJson(json);
@@ -158,8 +158,8 @@ abstract class Range with _$Range {
 @freezed
 abstract class Period with _$Period {
   const factory Period({
-    DateTime start,
-    DateTime end,
+    FhirDateTime start,
+    FhirDateTime end,
   }) = _Period;
   factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
 }
@@ -254,7 +254,7 @@ abstract class ContactPoint with _$ContactPoint {
 @freezed
 abstract class Timing with _$Timing {
   const factory Timing({
-    List<DateTime> event,
+    List<FhirDateTime> event,
     TimingRepeat repeat,
     CodeableConcept code,
   }) = _Timing;

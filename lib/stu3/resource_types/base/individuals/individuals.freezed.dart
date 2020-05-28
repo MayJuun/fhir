@@ -890,7 +890,7 @@ class _$PatientTearOff {
           Gender gender,
       Date birthDate,
       Boolean deceasedBoolean,
-      DateTime deceasedDateTime,
+      FhirDateTime deceasedDateTime,
       List<Address> address,
       CodeableConcept maritalStatus,
       Boolean multipleBirthBoolean,
@@ -941,7 +941,7 @@ mixin _$Patient {
   Gender get gender;
   Date get birthDate;
   Boolean get deceasedBoolean;
-  DateTime get deceasedDateTime;
+  FhirDateTime get deceasedDateTime;
   List<Address> get address;
   CodeableConcept get maritalStatus;
   Boolean get multipleBirthBoolean;
@@ -970,7 +970,7 @@ abstract class $PatientCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
       Date birthDate,
       Boolean deceasedBoolean,
-      DateTime deceasedDateTime,
+      FhirDateTime deceasedDateTime,
       List<Address> address,
       CodeableConcept maritalStatus,
       Boolean multipleBirthBoolean,
@@ -1036,7 +1036,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
           : deceasedBoolean as Boolean,
       deceasedDateTime: deceasedDateTime == freezed
           ? _value.deceasedDateTime
-          : deceasedDateTime as DateTime,
+          : deceasedDateTime as FhirDateTime,
       address: address == freezed ? _value.address : address as List<Address>,
       maritalStatus: maritalStatus == freezed
           ? _value.maritalStatus
@@ -1108,7 +1108,7 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
       Date birthDate,
       Boolean deceasedBoolean,
-      DateTime deceasedDateTime,
+      FhirDateTime deceasedDateTime,
       List<Address> address,
       CodeableConcept maritalStatus,
       Boolean multipleBirthBoolean,
@@ -1178,7 +1178,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
           : deceasedBoolean as Boolean,
       deceasedDateTime: deceasedDateTime == freezed
           ? _value.deceasedDateTime
-          : deceasedDateTime as DateTime,
+          : deceasedDateTime as FhirDateTime,
       address: address == freezed ? _value.address : address as List<Address>,
       maritalStatus: maritalStatus == freezed
           ? _value.maritalStatus
@@ -1257,7 +1257,7 @@ class _$_Patient implements _Patient {
   @override
   final Boolean deceasedBoolean;
   @override
-  final DateTime deceasedDateTime;
+  final FhirDateTime deceasedDateTime;
   @override
   final List<Address> address;
   @override
@@ -1393,7 +1393,7 @@ abstract class _Patient implements Patient {
           Gender gender,
       Date birthDate,
       Boolean deceasedBoolean,
-      DateTime deceasedDateTime,
+      FhirDateTime deceasedDateTime,
       List<Address> address,
       CodeableConcept maritalStatus,
       Boolean multipleBirthBoolean,
@@ -1427,7 +1427,7 @@ abstract class _Patient implements Patient {
   @override
   Boolean get deceasedBoolean;
   @override
-  DateTime get deceasedDateTime;
+  FhirDateTime get deceasedDateTime;
   @override
   List<Address> get address;
   @override

@@ -18,7 +18,7 @@ class _$AnnotationTearOff {
   _Annotation call(
       {Reference authorReference,
       String authorString,
-      DateTime time,
+      FhirDateTime time,
       String text}) {
     return _Annotation(
       authorReference: authorReference,
@@ -35,7 +35,7 @@ const $Annotation = _$AnnotationTearOff();
 mixin _$Annotation {
   Reference get authorReference;
   String get authorString;
-  DateTime get time;
+  FhirDateTime get time;
   String get text;
 
   Map<String, dynamic> toJson();
@@ -49,7 +49,7 @@ abstract class $AnnotationCopyWith<$Res> {
   $Res call(
       {Reference authorReference,
       String authorString,
-      DateTime time,
+      FhirDateTime time,
       String text});
 
   $ReferenceCopyWith<$Res> get authorReference;
@@ -76,7 +76,7 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
       authorString: authorString == freezed
           ? _value.authorString
           : authorString as String,
-      time: time == freezed ? _value.time : time as DateTime,
+      time: time == freezed ? _value.time : time as FhirDateTime,
       text: text == freezed ? _value.text : text as String,
     ));
   }
@@ -100,7 +100,7 @@ abstract class _$AnnotationCopyWith<$Res> implements $AnnotationCopyWith<$Res> {
   $Res call(
       {Reference authorReference,
       String authorString,
-      DateTime time,
+      FhirDateTime time,
       String text});
 
   @override
@@ -130,7 +130,7 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
       authorString: authorString == freezed
           ? _value.authorString
           : authorString as String,
-      time: time == freezed ? _value.time : time as DateTime,
+      time: time == freezed ? _value.time : time as FhirDateTime,
       text: text == freezed ? _value.text : text as String,
     ));
   }
@@ -149,7 +149,7 @@ class _$_Annotation implements _Annotation {
   @override
   final String authorString;
   @override
-  final DateTime time;
+  final FhirDateTime time;
   @override
   final String text;
 
@@ -196,7 +196,7 @@ abstract class _Annotation implements Annotation {
   const factory _Annotation(
       {Reference authorReference,
       String authorString,
-      DateTime time,
+      FhirDateTime time,
       String text}) = _$_Annotation;
 
   factory _Annotation.fromJson(Map<String, dynamic> json) =
@@ -207,7 +207,7 @@ abstract class _Annotation implements Annotation {
   @override
   String get authorString;
   @override
-  DateTime get time;
+  FhirDateTime get time;
   @override
   String get text;
   @override
@@ -229,7 +229,7 @@ class _$AttachmentTearOff {
       UnsignedInt size,
       String hash,
       String title,
-      DateTime creation}) {
+      FhirDateTime creation}) {
     return _Attachment(
       contentType: contentType,
       language: language,
@@ -254,7 +254,7 @@ mixin _$Attachment {
   UnsignedInt get size;
   String get hash;
   String get title;
-  DateTime get creation;
+  FhirDateTime get creation;
 
   Map<String, dynamic> toJson();
   $AttachmentCopyWith<Attachment> get copyWith;
@@ -272,7 +272,7 @@ abstract class $AttachmentCopyWith<$Res> {
       UnsignedInt size,
       String hash,
       String title,
-      DateTime creation});
+      FhirDateTime creation});
 }
 
 class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
@@ -302,7 +302,8 @@ class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
       size: size == freezed ? _value.size : size as UnsignedInt,
       hash: hash == freezed ? _value.hash : hash as String,
       title: title == freezed ? _value.title : title as String,
-      creation: creation == freezed ? _value.creation : creation as DateTime,
+      creation:
+          creation == freezed ? _value.creation : creation as FhirDateTime,
     ));
   }
 }
@@ -320,7 +321,7 @@ abstract class _$AttachmentCopyWith<$Res> implements $AttachmentCopyWith<$Res> {
       UnsignedInt size,
       String hash,
       String title,
-      DateTime creation});
+      FhirDateTime creation});
 }
 
 class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
@@ -352,7 +353,8 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
       size: size == freezed ? _value.size : size as UnsignedInt,
       hash: hash == freezed ? _value.hash : hash as String,
       title: title == freezed ? _value.title : title as String,
-      creation: creation == freezed ? _value.creation : creation as DateTime,
+      creation:
+          creation == freezed ? _value.creation : creation as FhirDateTime,
     ));
   }
 }
@@ -387,7 +389,7 @@ class _$_Attachment implements _Attachment {
   @override
   final String title;
   @override
-  final DateTime creation;
+  final FhirDateTime creation;
 
   @override
   String toString() {
@@ -450,7 +452,7 @@ abstract class _Attachment implements Attachment {
       UnsignedInt size,
       String hash,
       String title,
-      DateTime creation}) = _$_Attachment;
+      FhirDateTime creation}) = _$_Attachment;
 
   factory _Attachment.fromJson(Map<String, dynamic> json) =
       _$_Attachment.fromJson;
@@ -470,7 +472,7 @@ abstract class _Attachment implements Attachment {
   @override
   String get title;
   @override
-  DateTime get creation;
+  FhirDateTime get creation;
   @override
   _$AttachmentCopyWith<_Attachment> get copyWith;
 }
@@ -2475,7 +2477,7 @@ Period _$PeriodFromJson(Map<String, dynamic> json) {
 class _$PeriodTearOff {
   const _$PeriodTearOff();
 
-  _Period call({DateTime start, DateTime end}) {
+  _Period call({FhirDateTime start, FhirDateTime end}) {
     return _Period(
       start: start,
       end: end,
@@ -2487,8 +2489,8 @@ class _$PeriodTearOff {
 const $Period = _$PeriodTearOff();
 
 mixin _$Period {
-  DateTime get start;
-  DateTime get end;
+  FhirDateTime get start;
+  FhirDateTime get end;
 
   Map<String, dynamic> toJson();
   $PeriodCopyWith<Period> get copyWith;
@@ -2497,7 +2499,7 @@ mixin _$Period {
 abstract class $PeriodCopyWith<$Res> {
   factory $PeriodCopyWith(Period value, $Res Function(Period) then) =
       _$PeriodCopyWithImpl<$Res>;
-  $Res call({DateTime start, DateTime end});
+  $Res call({FhirDateTime start, FhirDateTime end});
 }
 
 class _$PeriodCopyWithImpl<$Res> implements $PeriodCopyWith<$Res> {
@@ -2513,8 +2515,8 @@ class _$PeriodCopyWithImpl<$Res> implements $PeriodCopyWith<$Res> {
     Object end = freezed,
   }) {
     return _then(_value.copyWith(
-      start: start == freezed ? _value.start : start as DateTime,
-      end: end == freezed ? _value.end : end as DateTime,
+      start: start == freezed ? _value.start : start as FhirDateTime,
+      end: end == freezed ? _value.end : end as FhirDateTime,
     ));
   }
 }
@@ -2523,7 +2525,7 @@ abstract class _$PeriodCopyWith<$Res> implements $PeriodCopyWith<$Res> {
   factory _$PeriodCopyWith(_Period value, $Res Function(_Period) then) =
       __$PeriodCopyWithImpl<$Res>;
   @override
-  $Res call({DateTime start, DateTime end});
+  $Res call({FhirDateTime start, FhirDateTime end});
 }
 
 class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
@@ -2540,8 +2542,8 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
     Object end = freezed,
   }) {
     return _then(_Period(
-      start: start == freezed ? _value.start : start as DateTime,
-      end: end == freezed ? _value.end : end as DateTime,
+      start: start == freezed ? _value.start : start as FhirDateTime,
+      end: end == freezed ? _value.end : end as FhirDateTime,
     ));
   }
 }
@@ -2554,9 +2556,9 @@ class _$_Period implements _Period {
       _$_$_PeriodFromJson(json);
 
   @override
-  final DateTime start;
+  final FhirDateTime start;
   @override
-  final DateTime end;
+  final FhirDateTime end;
 
   @override
   String toString() {
@@ -2590,14 +2592,14 @@ class _$_Period implements _Period {
 }
 
 abstract class _Period implements Period {
-  const factory _Period({DateTime start, DateTime end}) = _$_Period;
+  const factory _Period({FhirDateTime start, FhirDateTime end}) = _$_Period;
 
   factory _Period.fromJson(Map<String, dynamic> json) = _$_Period.fromJson;
 
   @override
-  DateTime get start;
+  FhirDateTime get start;
   @override
-  DateTime get end;
+  FhirDateTime get end;
   @override
   _$PeriodCopyWith<_Period> get copyWith;
 }
@@ -4147,7 +4149,7 @@ class _$TimingTearOff {
   const _$TimingTearOff();
 
   _Timing call(
-      {List<DateTime> event, TimingRepeat repeat, CodeableConcept code}) {
+      {List<FhirDateTime> event, TimingRepeat repeat, CodeableConcept code}) {
     return _Timing(
       event: event,
       repeat: repeat,
@@ -4160,7 +4162,7 @@ class _$TimingTearOff {
 const $Timing = _$TimingTearOff();
 
 mixin _$Timing {
-  List<DateTime> get event;
+  List<FhirDateTime> get event;
   TimingRepeat get repeat;
   CodeableConcept get code;
 
@@ -4171,7 +4173,8 @@ mixin _$Timing {
 abstract class $TimingCopyWith<$Res> {
   factory $TimingCopyWith(Timing value, $Res Function(Timing) then) =
       _$TimingCopyWithImpl<$Res>;
-  $Res call({List<DateTime> event, TimingRepeat repeat, CodeableConcept code});
+  $Res call(
+      {List<FhirDateTime> event, TimingRepeat repeat, CodeableConcept code});
 
   $TimingRepeatCopyWith<$Res> get repeat;
   $CodeableConceptCopyWith<$Res> get code;
@@ -4191,7 +4194,7 @@ class _$TimingCopyWithImpl<$Res> implements $TimingCopyWith<$Res> {
     Object code = freezed,
   }) {
     return _then(_value.copyWith(
-      event: event == freezed ? _value.event : event as List<DateTime>,
+      event: event == freezed ? _value.event : event as List<FhirDateTime>,
       repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat,
       code: code == freezed ? _value.code : code as CodeableConcept,
     ));
@@ -4222,7 +4225,8 @@ abstract class _$TimingCopyWith<$Res> implements $TimingCopyWith<$Res> {
   factory _$TimingCopyWith(_Timing value, $Res Function(_Timing) then) =
       __$TimingCopyWithImpl<$Res>;
   @override
-  $Res call({List<DateTime> event, TimingRepeat repeat, CodeableConcept code});
+  $Res call(
+      {List<FhirDateTime> event, TimingRepeat repeat, CodeableConcept code});
 
   @override
   $TimingRepeatCopyWith<$Res> get repeat;
@@ -4245,7 +4249,7 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
     Object code = freezed,
   }) {
     return _then(_Timing(
-      event: event == freezed ? _value.event : event as List<DateTime>,
+      event: event == freezed ? _value.event : event as List<FhirDateTime>,
       repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat,
       code: code == freezed ? _value.code : code as CodeableConcept,
     ));
@@ -4260,7 +4264,7 @@ class _$_Timing implements _Timing {
       _$_$_TimingFromJson(json);
 
   @override
-  final List<DateTime> event;
+  final List<FhirDateTime> event;
   @override
   final TimingRepeat repeat;
   @override
@@ -4302,14 +4306,14 @@ class _$_Timing implements _Timing {
 
 abstract class _Timing implements Timing {
   const factory _Timing(
-      {List<DateTime> event,
+      {List<FhirDateTime> event,
       TimingRepeat repeat,
       CodeableConcept code}) = _$_Timing;
 
   factory _Timing.fromJson(Map<String, dynamic> json) = _$_Timing.fromJson;
 
   @override
-  List<DateTime> get event;
+  List<FhirDateTime> get event;
   @override
   TimingRepeat get repeat;
   @override

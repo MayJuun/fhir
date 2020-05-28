@@ -19,7 +19,7 @@ abstract class Composition with _$Composition implements Resource {
     @JsonKey(name: 'class') CodeableConcept class_,
     @JsonKey(required: true) Reference subject,
     Reference encounter,
-    DateTime date,
+    FhirDateTime date,
     @JsonKey(required: true) List<Reference> author,
     String title,
     Code confidentiality,
@@ -37,7 +37,7 @@ abstract class Composition with _$Composition implements Resource {
 abstract class CompositionAttester with _$CompositionAttester {
   const factory CompositionAttester({
     List<AttesterMode> mode,
-    DateTime time,
+    FhirDateTime time,
     Reference party,
   }) = _CompositionAttester;
   factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
@@ -93,7 +93,7 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
     @JsonKey(unknownEnumValue: DocumentStatus.unknown) DocumentStatus status,
     CodeableConcept type,
     Reference subject,
-    DateTime created,
+    FhirDateTime created,
     List<Reference> author,
     List<Reference> recipient,
     String source,
@@ -138,7 +138,7 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
     @JsonKey(required: true) CodeableConcept type,
     @JsonKey(name: 'class') CodeableConcept class_,
     Reference subject,
-    DateTime created,
+    FhirDateTime created,
     String indexed,
     List<Reference> author,
     Reference authenticator,

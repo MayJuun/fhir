@@ -74,7 +74,7 @@ class FhirDateTime extends PrimitiveObject<DateTime> {
       case DateTimeFormat.ymd:
         return '${value.year}-${value.month}-${value.day}';
       case DateTimeFormat.utc:
-        return '${value.value.toIso8601String()}';
+        return '${value.toIso8601String()}';
       case DateTimeFormat.incorrect_format:
         return 'incorrect format';
     }

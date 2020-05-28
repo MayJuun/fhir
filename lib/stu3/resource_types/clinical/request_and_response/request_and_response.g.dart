@@ -57,10 +57,12 @@ _$_Communication _$_$_CommunicationFromJson(Map<String, dynamic> json) {
     context: json['context'] == null
         ? null
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
-    sent: json['sent'] == null ? null : DateTime.parse(json['sent'] as String),
+    sent: json['sent'] == null
+        ? null
+        : FhirDateTime.fromJson(json['sent'] as String),
     received: json['received'] == null
         ? null
-        : DateTime.parse(json['received'] as String),
+        : FhirDateTime.fromJson(json['received'] as String),
     sender: json['sender'] == null
         ? null
         : Reference.fromJson(json['sender'] as Map<String, dynamic>),
@@ -112,8 +114,8 @@ Map<String, dynamic> _$_$_CommunicationToJson(_$_Communication instance) {
       'recipient', instance.recipient?.map((e) => e?.toJson())?.toList());
   writeNotNull('topic', instance.topic?.map((e) => e?.toJson())?.toList());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull('sent', instance.sent?.toIso8601String());
-  writeNotNull('received', instance.received?.toIso8601String());
+  writeNotNull('sent', instance.sent?.toJson());
+  writeNotNull('received', instance.received?.toJson());
   writeNotNull('sender', instance.sender?.toJson());
   writeNotNull(
       'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
@@ -210,13 +212,13 @@ _$_CommunicationRequest _$_$_CommunicationRequestFromJson(
         ?.toList(),
     occurrenceDateTime: json['occurrenceDateTime'] == null
         ? null
-        : DateTime.parse(json['occurrenceDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrencePeriod: json['occurrencePeriod'] == null
         ? null
         : Period.fromJson(json['occurrencePeriod'] as Map<String, dynamic>),
     authoredOn: json['authoredOn'] == null
         ? null
-        : DateTime.parse(json['authoredOn'] as String),
+        : FhirDateTime.fromJson(json['authoredOn'] as String),
     sender: json['sender'] == null
         ? null
         : Reference.fromJson(json['sender'] as Map<String, dynamic>),
@@ -268,10 +270,9 @@ Map<String, dynamic> _$_$_CommunicationRequestToJson(
   writeNotNull('topic', instance.topic?.map((e) => e?.toJson())?.toList());
   writeNotNull('context', instance.context?.toJson());
   writeNotNull('payload', instance.payload?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
-  writeNotNull('authoredOn', instance.authoredOn?.toIso8601String());
+  writeNotNull('authoredOn', instance.authoredOn?.toJson());
   writeNotNull('sender', instance.sender?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull(
@@ -386,7 +387,7 @@ _$_DeviceRequest _$_$_DeviceRequestFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
     occurrenceDateTime: json['occurrenceDateTime'] == null
         ? null
-        : DateTime.parse(json['occurrenceDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrencePeriod: json['occurrencePeriod'] == null
         ? null
         : Period.fromJson(json['occurrencePeriod'] as Map<String, dynamic>),
@@ -395,7 +396,7 @@ _$_DeviceRequest _$_$_DeviceRequestFromJson(Map<String, dynamic> json) {
         : Timing.fromJson(json['occurrenceTiming'] as Map<String, dynamic>),
     authoredOn: json['authoredOn'] == null
         ? null
-        : DateTime.parse(json['authoredOn'] as String),
+        : FhirDateTime.fromJson(json['authoredOn'] as String),
     requester: json['requester'] == null
         ? null
         : DeviceRequestRequester.fromJson(
@@ -456,11 +457,10 @@ Map<String, dynamic> _$_$_DeviceRequestToJson(_$_DeviceRequest instance) {
   writeNotNull('codeCodeableConcept', instance.codeCodeableConcept?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull(
-      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
   writeNotNull('occurrenceTiming', instance.occurrenceTiming?.toJson());
-  writeNotNull('authoredOn', instance.authoredOn?.toIso8601String());
+  writeNotNull('authoredOn', instance.authoredOn?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull('performerType', instance.performerType?.toJson());
   writeNotNull('performer', instance.performer?.toJson());
@@ -529,10 +529,10 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
         : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
     timingDateTime: json['timingDateTime'] == null
         ? null
-        : DateTime.parse(json['timingDateTime'] as String),
+        : FhirDateTime.fromJson(json['timingDateTime'] as String),
     recordedOn: json['recordedOn'] == null
         ? null
-        : DateTime.parse(json['recordedOn'] as String),
+        : FhirDateTime.fromJson(json['recordedOn'] as String),
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
@@ -572,8 +572,8 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
   writeNotNull('whenUsed', instance.whenUsed?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
-  writeNotNull('timingDateTime', instance.timingDateTime?.toIso8601String());
-  writeNotNull('recordedOn', instance.recordedOn?.toIso8601String());
+  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
+  writeNotNull('recordedOn', instance.recordedOn?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('device', instance.device?.toJson());
   writeNotNull(
@@ -651,7 +651,7 @@ _$_SupplyDelivery _$_$_SupplyDeliveryFromJson(Map<String, dynamic> json) {
             json['suppliedItem'] as Map<String, dynamic>),
     occurrenceDateTime: json['occurrenceDateTime'] == null
         ? null
-        : DateTime.parse(json['occurrenceDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrencePeriod: json['occurrencePeriod'] == null
         ? null
         : Period.fromJson(json['occurrencePeriod'] as Map<String, dynamic>),
@@ -688,8 +688,7 @@ Map<String, dynamic> _$_$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('suppliedItem', instance.suppliedItem?.toJson());
-  writeNotNull(
-      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
   writeNotNull('occurrenceTiming', instance.occurrenceTiming?.toJson());
   writeNotNull('supplier', instance.supplier?.toJson());
@@ -760,7 +759,7 @@ _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
             json['orderedItem'] as Map<String, dynamic>),
     occurrenceDateTime: json['occurrenceDateTime'] == null
         ? null
-        : DateTime.parse(json['occurrenceDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrencePeriod: json['occurrencePeriod'] == null
         ? null
         : Period.fromJson(json['occurrencePeriod'] as Map<String, dynamic>),
@@ -769,7 +768,7 @@ _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
         : Timing.fromJson(json['occurrenceTiming'] as Map<String, dynamic>),
     authoredOn: json['authoredOn'] == null
         ? null
-        : DateTime.parse(json['authoredOn'] as String),
+        : FhirDateTime.fromJson(json['authoredOn'] as String),
     requester: json['requester'] == null
         ? null
         : SupplyRequestRequester.fromJson(
@@ -809,11 +808,10 @@ Map<String, dynamic> _$_$_SupplyRequestToJson(_$_SupplyRequest instance) {
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('orderedItem', instance.orderedItem?.toJson());
-  writeNotNull(
-      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
   writeNotNull('occurrenceTiming', instance.occurrenceTiming?.toJson());
-  writeNotNull('authoredOn', instance.authoredOn?.toIso8601String());
+  writeNotNull('authoredOn', instance.authoredOn?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull(
       'supplier', instance.supplier?.map((e) => e?.toJson())?.toList());
