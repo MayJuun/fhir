@@ -23,4 +23,7 @@ class Instant extends PrimitiveObject<DateTime> {
         (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
         (value) => value.toIso8601String(),
       );
+
+  @override
+  String toJson() => toString();
 }

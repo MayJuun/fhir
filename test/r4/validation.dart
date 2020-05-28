@@ -1,52 +1,51 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:string_validator/string_validator.dart';
+
 import '../../lib/fhir_r4.dart' as fhir_r4;
 
 void main() async {
   var dir = Directory('./test/r4/r4_examples');
   var m = 0;
-  print(fhir_r4.FhirDateTime('2017-02-01T17:23:07Z'));
-  // for (var file in await dir.list().toList()) {
-  //   print('\n');
-  //   print(file);
-  //   m += 1;
-  //   if (m > 200) break;
-  //   var contents = await File(file.path).readAsString();
-  //   var resource = fhir_r4.Resource.fromJson(json.decode(contents));
-  //   // checkJsonEquality(json.decode(contents), resource.toJson());
-  //   checkJsonEquality(resource.toJson(), json.decode(contents));
-  // }
+  for (var file in await dir.list().toList()) {
+    m += 1;
+    if (m > 200) break;
+    var contents = await File(file.path).readAsString();
+    var resource = fhir_r4.Resource.fromJson(json.decode(contents));
+    // checkJsonEquality(json.decode(contents), resource.toJson());
+    checkJsonEquality(resource.toJson(), json.decode(contents), file.toString());
+  }
 }
 
 void checkJsonEquality(
-    Map<String, dynamic> input, Map<String, dynamic> output) {
+    Map<String, dynamic> input, Map<String, dynamic> output, String file) {
   for (var k in input.keys) {
     if (input[k].runtimeType.toString() ==
         '_InternalLinkedHashMap<String, dynamic>') {
-      checkJsonEquality(input[k], output[k]);
+      checkJsonEquality(input[k], output[k], file);
     } else if (input[k].runtimeType.toString() == 'List<dynamic>' ||
         input[k].runtimeType.toString() == 'List<Map<String, dynamic>>') {
       for (var j = 0; j < input[k].length; j++) {
         if (input[k][j].runtimeType.toString() ==
             '_InternalLinkedHashMap<String, dynamic>') {
-          checkJsonEquality(input[k][j], output[k][j]);
+          checkJsonEquality(input[k][j], output[k][j], file);
         } else {
-          if (input[k][j] != output[k][j]) {
-            print('$k:${input[k][j]}:${output[k][j]}');
+          if (input[k][j] != output[k][j] && !isDate(input[k][j])) {
+            print('\n$file\n$k:${input[k][j]}:${output[k][j]}');
           }
         }
       }
     } else {
       if (input[k].runtimeType.toString() == 'List<String>') {
         for (var x = 0; x < input[k].length; x++) {
-          if (input[k][x] != output[k][x]) {
-            print('$k:${input[k][x]}:${output[k][x]}');
+          if (input[k][x] != output[k][x] && !isDate(input[k][x])) {
+            print('\n$file\n$k:${input[k][x]}:${output[k][x]}');
           }
         }
       } else {
-        if (input[k] != output[k]) {
-          print('$k:${input[k]}:${output[k]}');
+        if (input[k] != output[k] && !isDate(input[k])) {
+          print('\n$file\n$k:${input[k]}:${output[k]}');
         }
       }
     }
