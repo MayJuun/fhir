@@ -5190,6 +5190,9 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    baseDefinitionElement: json['_baseDefinition'] == null
+        ? null
+        : Element.fromJson(json['_baseDefinition'] as Map<String, dynamic>),
     derivationElement: json['_derivation'] == null
         ? null
         : Element.fromJson(json['_derivation'] as Map<String, dynamic>),
@@ -5268,6 +5271,7 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('_contextInvariant',
       instance.contextInvariantElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('_baseDefinition', instance.baseDefinitionElement?.toJson());
   writeNotNull('_derivation', instance.derivationElement?.toJson());
   return val;
 }

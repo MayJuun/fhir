@@ -1337,6 +1337,7 @@ abstract class StructureDefinition
     @JsonKey(name: '_abstract') Element abstractElement,
     @JsonKey(name: '_contextInvariant') List<Element> contextInvariantElement,
     @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_baseDefinition') Element baseDefinitionElement,
     @JsonKey(name: '_derivation') Element derivationElement,
   }) = _StructureDefinition;
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>

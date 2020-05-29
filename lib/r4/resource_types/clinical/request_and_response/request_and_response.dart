@@ -44,12 +44,12 @@ abstract class Communication with _$Communication implements Resource {
     List<CommunicationPayload> payload,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_sent') Element sentElement,
-@JsonKey(name: '_received') Element receivedElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_sent') Element sentElement,
+    @JsonKey(name: '_received') Element receivedElement,
   }) = _Communication;
   factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
@@ -110,12 +110,12 @@ abstract class CommunicationRequest
     List<Reference> reasonReference,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_doNotPerform') Element doNotPerformElement,
-@JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-@JsonKey(name: '_authoredOn') Element authoredOnElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _CommunicationRequest;
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
@@ -178,13 +178,13 @@ abstract class DeviceRequest with _$DeviceRequest implements Resource {
     List<Annotation> note,
     List<Reference> relevantHistory,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_intent') Element intentElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-@JsonKey(name: '_authoredOn') Element authoredOnElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_intent') Element intentElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _DeviceRequest;
   factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestFromJson(json);
@@ -240,10 +240,10 @@ abstract class DeviceUseStatement
     CodeableConcept bodySite,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-@JsonKey(name: '_recordedOn') Element recordedOnElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    @JsonKey(name: '_recordedOn') Element recordedOnElement,
   }) = _DeviceUseStatement;
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
@@ -282,11 +282,11 @@ abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
     Reference result,
     List<DataRequirement> dataRequirement,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_moduleUri') Element moduleUriElement,
-@JsonKey(name: '_moduleCanonical') Element moduleCanonicalElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_moduleUri') Element moduleUriElement,
+    @JsonKey(name: '_moduleCanonical') Element moduleCanonicalElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
   }) = _GuidanceResponse;
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
@@ -321,9 +321,9 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
     Reference destination,
     List<Reference> receiver,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
   }) = _SupplyDelivery;
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
@@ -377,11 +377,11 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
     Reference deliverFrom,
     Reference deliverTo,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-@JsonKey(name: '_authoredOn') Element authoredOnElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _SupplyRequest;
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);

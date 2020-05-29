@@ -46,8 +46,8 @@ abstract class Encounter with _$Encounter implements Resource {
     Reference serviceProvider,
     Reference partOf,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _Encounter;
   factory Encounter.fromJson(Map<String, dynamic> json) =>
       _$EncounterFromJson(json);
@@ -174,8 +174,8 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
     List<Reference> team,
     List<Reference> account,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _EpisodeOfCare;
   factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareFromJson(json);
@@ -234,8 +234,8 @@ abstract class Flag with _$Flag implements Resource {
     Reference encounter,
     Reference author,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _Flag;
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
 }
@@ -287,22 +287,22 @@ abstract class Library with _$Library implements Resource {
     List<DataRequirement> dataRequirement,
     List<Attachment> content,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_url') Element urlElement,
-@JsonKey(name: '_version') Element versionElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_subtitle') Element subtitleElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_experimental') Element experimentalElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_publisher') Element publisherElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_purpose') Element purposeElement,
-@JsonKey(name: '_usage') Element usageElement,
-@JsonKey(name: '_copyright') Element copyrightElement,
-@JsonKey(name: '_approvalDate') Element approvalDateElement,
-@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_subtitle') Element subtitleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_usage') Element usageElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_approvalDate') Element approvalDateElement,
+    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _Library;
   factory Library.fromJson(Map<String, dynamic> json) =>
       _$LibraryFromJson(json);
@@ -336,11 +336,11 @@ abstract class Lists with _$Lists implements Resource {
     List<ListEntry> entry,
     CodeableConcept emptyReason,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_mode') Element modeElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _Lists;
   factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
 }
@@ -356,7 +356,7 @@ abstract class ListEntry with _$ListEntry {
     FhirDateTime date,
     @JsonKey(required: true) @required Reference item,
     @JsonKey(name: '_deleted') Element deletedElement,
-@JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _ListEntry;
   factory ListEntry.fromJson(Map<String, dynamic> json) =>
       _$ListEntryFromJson(json);

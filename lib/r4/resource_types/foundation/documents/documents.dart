@@ -35,11 +35,11 @@ abstract class CatalogEntry with _$CatalogEntry implements Resource {
     List<CodeableConcept> additionalClassification,
     List<CatalogEntryRelatedEntry> relatedEntry,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_orderable') Element orderableElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_validTo') Element validToElement,
-@JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_orderable') Element orderableElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_validTo') Element validToElement,
+    @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
   }) = _CatalogEntry;
   factory CatalogEntry.fromJson(Map<String, dynamic> json) =>
       _$CatalogEntryFromJson(json);
@@ -91,11 +91,11 @@ abstract class Composition with _$Composition implements Resource {
     List<CompositionEvent> event,
     List<CompositionSection> section,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_confidentiality') Element confidentialityElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_confidentiality') Element confidentialityElement,
   }) = _Composition;
   factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
@@ -111,7 +111,7 @@ abstract class CompositionAttester with _$CompositionAttester {
     FhirDateTime time,
     Reference party,
     @JsonKey(name: '_mode') Element modeElement,
-@JsonKey(name: '_time') Element timeElement,
+    @JsonKey(name: '_time') Element timeElement,
   }) = _CompositionAttester;
   factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
@@ -163,7 +163,7 @@ abstract class CompositionSection with _$CompositionSection {
     CodeableConcept emptyReason,
     List<CompositionSection> section,
     @JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _CompositionSection;
   factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
@@ -196,11 +196,11 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
     @JsonKey(required: true) @required List<Reference> content,
     List<DocumentManifestRelated> related,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_created') Element createdElement,
-@JsonKey(name: '_source') Element sourceElement,
-@JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_source') Element sourceElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _DocumentManifest;
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
@@ -250,11 +250,11 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
     @JsonKey(required: true) @required List<DocumentReferenceContent> content,
     DocumentReferenceContext context,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_docStatus') Element docStatusElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_docStatus') Element docStatusElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _DocumentReference;
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);

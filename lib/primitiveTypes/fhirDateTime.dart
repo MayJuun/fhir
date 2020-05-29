@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:string_validator/string_validator.dart';
 
 import 'primitiveFailures.dart';
 import 'primitiveObjects.dart';
@@ -25,15 +26,11 @@ class FhirDateTime extends PrimitiveObject<DateTime> {
           r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$',
           value)) {
         dateTimeFormat = DateTimeFormat.ymd;
-      } else if (hasMatch(
-          r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)?(\.[0-9]+)?Z$',
-          value)) {
-        dateTimeFormat = DateTimeFormat.utc;
-      } else if (hasMatch(
-          r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)?(\.[0-9]+)?(\+|-)(0[0-9]|1[0-3]):([0-5][0-9]|14:00)$',
-          value)) {
+      } else if (isDate(value)) {
         var exp = RegExp(r'(\+|-)(0[0-9]|1[0-3]):([0-5][0-9]|14:00)');
-        dateTimeFormat = offsetToFormat(exp.firstMatch(value).group(0));
+        var match = exp.firstMatch(value);
+        dateTimeFormat =
+            match == null ? DateTimeFormat.utc : offsetToFormat(match.group(0));
       } else {
         dateTimeFormat = DateTimeFormat.incorrect_format;
         dateTime =
@@ -82,15 +79,14 @@ class FhirDateTime extends PrimitiveObject<DateTime> {
       default:
         {
           var offsetter = formatToOffset(format);
-          var posNeg = offsetter.contains('p') ? 1 : -1;
+          var posNeg = offsetter[0] == '+' ? 1 : -1;
           var offset = offsetter.substring(1, offsetter.length);
           var hours = int.parse(offset.split(':')[0]) * posNeg;
           var min = int.parse(offset.split(':')[1]) * posNeg;
           return value
-                  .add(Duration(hours: hours, minutes: min))
-                  .toIso8601String()
-                  .substring(0, 19) +
-              offsetter;
+              .add(Duration(hours: hours, minutes: min))
+              .toIso8601String()
+              .replaceAll('Z', offsetter);
         }
     }
   }
@@ -146,33 +142,33 @@ enum DateTimeFormat {
 String formatToOffset(DateTimeFormat format) {
   switch (format) {
     case DateTimeFormat.utc_m12:
-      return '−12:00';
+      return '-12:00';
     case DateTimeFormat.utc_m11:
-      return '−11:00';
+      return '-11:00';
     case DateTimeFormat.utc_m10:
-      return '−10:00';
+      return '-10:00';
     case DateTimeFormat.utc_m9_30:
-      return '−09:30';
+      return '-09:30';
     case DateTimeFormat.utc_m9:
-      return '−09:00';
+      return '-09:00';
     case DateTimeFormat.utc_m8:
-      return '−08:00';
+      return '-08:00';
     case DateTimeFormat.utc_m7:
-      return '−07:00';
+      return '-07:00';
     case DateTimeFormat.utc_m6:
-      return '−06:00';
+      return '-06:00';
     case DateTimeFormat.utc_m5:
-      return '−05:00';
+      return '-05:00';
     case DateTimeFormat.utc_m4:
-      return '−04:00';
+      return '-04:00';
     case DateTimeFormat.utc_m3_30:
-      return '−03:30';
+      return '-03:30';
     case DateTimeFormat.utc_m3:
-      return '−03:00';
+      return '-03:00';
     case DateTimeFormat.utc_m2:
-      return '−02:00';
+      return '-02:00';
     case DateTimeFormat.utc_m1:
-      return '−01:00';
+      return '-01:00';
     case DateTimeFormat.utc_m0:
       return '-00:00';
     case DateTimeFormat.utc_p0:
@@ -230,33 +226,33 @@ String formatToOffset(DateTimeFormat format) {
 
 DateTimeFormat offsetToFormat(String offset) {
   switch (offset) {
-    case '−12:00':
+    case '-12:00':
       return DateTimeFormat.utc_m12;
-    case '−11:00':
+    case '-11:00':
       return DateTimeFormat.utc_m11;
-    case '−10:00':
+    case '-10:00':
       return DateTimeFormat.utc_m10;
-    case '−09:30':
+    case '-09:30':
       return DateTimeFormat.utc_m9_30;
-    case '−09:00':
+    case '-09:00':
       return DateTimeFormat.utc_m9;
-    case '−08:00':
+    case '-08:00':
       return DateTimeFormat.utc_m8;
-    case '−07:00':
+    case '-07:00':
       return DateTimeFormat.utc_m7;
-    case '−06:00':
+    case '-06:00':
       return DateTimeFormat.utc_m6;
-    case '−05:00':
+    case '-05:00':
       return DateTimeFormat.utc_m5;
-    case '−04:00':
+    case '-04:00':
       return DateTimeFormat.utc_m4;
-    case '−03:30':
+    case '-03:30':
       return DateTimeFormat.utc_m3_30;
-    case '−03:00':
+    case '-03:00':
       return DateTimeFormat.utc_m3;
-    case '−02:00':
+    case '-02:00':
       return DateTimeFormat.utc_m2;
-    case '−01:00':
+    case '-01:00':
       return DateTimeFormat.utc_m1;
     case '-00:00':
       return DateTimeFormat.utc_m0;

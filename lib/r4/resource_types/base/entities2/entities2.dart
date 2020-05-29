@@ -38,10 +38,10 @@ abstract class BiologicallyDerivedProduct
     BiologicallyDerivedProductManipulation manipulation,
     List<BiologicallyDerivedProductStorage> storage,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_productCategory') Element productCategoryElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_quantity') Element quantityElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_productCategory') Element productCategoryElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_quantity') Element quantityElement,
   }) = _BiologicallyDerivedProduct;
   factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductFromJson(json);
@@ -78,7 +78,7 @@ abstract class BiologicallyDerivedProductProcessing
     FhirDateTime timeDateTime,
     Period timePeriod,
     @JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
+    @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
   }) = _BiologicallyDerivedProductProcessing;
   factory BiologicallyDerivedProductProcessing.fromJson(
           Map<String, dynamic> json) =>
@@ -96,7 +96,7 @@ abstract class BiologicallyDerivedProductManipulation
     FhirDateTime timeDateTime,
     Period timePeriod,
     @JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
+    @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
   }) = _BiologicallyDerivedProductManipulation;
   factory BiologicallyDerivedProductManipulation.fromJson(
           Map<String, dynamic> json) =>
@@ -115,8 +115,8 @@ abstract class BiologicallyDerivedProductStorage
     @JsonKey(unknownEnumValue: StorageScale.unknown) StorageScale scale,
     Period duration,
     @JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_temperature') Element temperatureElement,
-@JsonKey(name: '_scale') Element scaleElement,
+    @JsonKey(name: '_temperature') Element temperatureElement,
+    @JsonKey(name: '_scale') Element scaleElement,
   }) = _BiologicallyDerivedProductStorage;
   factory BiologicallyDerivedProductStorage.fromJson(
           Map<String, dynamic> json) =>
@@ -164,17 +164,17 @@ abstract class Device with _$Device implements Resource {
     List<CodeableConcept> safety,
     Reference parent,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
-@JsonKey(name: '_manufacturer') Element manufacturerElement,
-@JsonKey(name: '_manufactureDate') Element manufactureDateElement,
-@JsonKey(name: '_expirationDate') Element expirationDateElement,
-@JsonKey(name: '_lotNumber') Element lotNumberElement,
-@JsonKey(name: '_serialNumber') Element serialNumberElement,
-@JsonKey(name: '_modelNumber') Element modelNumberElement,
-@JsonKey(name: '_partNumber') Element partNumberElement,
-@JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
+    @JsonKey(name: '_manufacturer') Element manufacturerElement,
+    @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+    @JsonKey(name: '_expirationDate') Element expirationDateElement,
+    @JsonKey(name: '_lotNumber') Element lotNumberElement,
+    @JsonKey(name: '_serialNumber') Element serialNumberElement,
+    @JsonKey(name: '_modelNumber') Element modelNumberElement,
+    @JsonKey(name: '_partNumber') Element partNumberElement,
+    @JsonKey(name: '_url') Element urlElement,
   }) = _Device;
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 }
@@ -192,12 +192,12 @@ abstract class DeviceUdiCarrier with _$DeviceUdiCarrier {
     String carrierHRF,
     @JsonKey(unknownEnumValue: UdiCarrierEntryType.unknown)
         UdiCarrierEntryType entryType,
-        @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
-@JsonKey(name: '_issuer') Element issuerElement,
-@JsonKey(name: '_jurisdiction') Element jurisdictionElement,
-@JsonKey(name: '_carrierAIDC') Element carrierAIDCElement,
-@JsonKey(name: '_carrierHRF') Element carrierHRFElement,
-@JsonKey(name: '_entryType') Element entryTypeElement,
+    @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
+    @JsonKey(name: '_issuer') Element issuerElement,
+    @JsonKey(name: '_jurisdiction') Element jurisdictionElement,
+    @JsonKey(name: '_carrierAIDC') Element carrierAIDCElement,
+    @JsonKey(name: '_carrierHRF') Element carrierHRFElement,
+    @JsonKey(name: '_entryType') Element entryTypeElement,
   }) = _DeviceUdiCarrier;
   factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiCarrierFromJson(json);
@@ -212,7 +212,7 @@ abstract class DeviceDeviceName with _$DeviceDeviceName {
     String name,
     @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type,
     @JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _DeviceDeviceName;
   factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
       _$DeviceDeviceNameFromJson(json);
@@ -289,10 +289,10 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
     Timing measurementPeriod,
     List<DeviceMetricCalibration> calibration,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_operationalStatus') Element operationalStatusElement,
-@JsonKey(name: '_color') Element colorElement,
-@JsonKey(name: '_category') Element categoryElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_operationalStatus') Element operationalStatusElement,
+    @JsonKey(name: '_color') Element colorElement,
+    @JsonKey(name: '_category') Element categoryElement,
   }) = _DeviceMetric;
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
@@ -308,8 +308,8 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
     @JsonKey(unknownEnumValue: CalibrationState.unknown) CalibrationState state,
     Instant time,
     @JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_state') Element stateElement,
-@JsonKey(name: '_time') Element timeElement,
+    @JsonKey(name: '_state') Element stateElement,
+    @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
@@ -337,9 +337,9 @@ abstract class Substance with _$Substance implements Resource {
     List<SubstanceInstance> instance,
     List<SubstanceIngredient> ingredient,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _Substance;
   factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);

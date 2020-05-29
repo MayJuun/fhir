@@ -28528,6 +28528,8 @@ class _$StructureDefinitionTearOff {
           List<Element> contextInvariantElement,
       @JsonKey(name: '_type')
           Element typeElement,
+      @JsonKey(name: '_baseDefinition')
+          Element baseDefinitionElement,
       @JsonKey(name: '_derivation')
           Element derivationElement}) {
     return _StructureDefinition(
@@ -28585,6 +28587,7 @@ class _$StructureDefinitionTearOff {
       abstractElement: abstractElement,
       contextInvariantElement: contextInvariantElement,
       typeElement: typeElement,
+      baseDefinitionElement: baseDefinitionElement,
       derivationElement: derivationElement,
     );
   }
@@ -28672,6 +28675,8 @@ mixin _$StructureDefinition {
   List<Element> get contextInvariantElement;
   @JsonKey(name: '_type')
   Element get typeElement;
+  @JsonKey(name: '_baseDefinition')
+  Element get baseDefinitionElement;
   @JsonKey(name: '_derivation')
   Element get derivationElement;
 
@@ -28762,6 +28767,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
           List<Element> contextInvariantElement,
       @JsonKey(name: '_type')
           Element typeElement,
+      @JsonKey(name: '_baseDefinition')
+          Element baseDefinitionElement,
       @JsonKey(name: '_derivation')
           Element derivationElement});
 
@@ -28786,6 +28793,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get kindElement;
   $ElementCopyWith<$Res> get abstractElement;
   $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get baseDefinitionElement;
   $ElementCopyWith<$Res> get derivationElement;
 }
 
@@ -28853,6 +28861,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
     Object abstractElement = freezed,
     Object contextInvariantElement = freezed,
     Object typeElement = freezed,
+    Object baseDefinitionElement = freezed,
     Object derivationElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -28977,6 +28986,9 @@ class _$StructureDefinitionCopyWithImpl<$Res>
           : contextInvariantElement as List<Element>,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      baseDefinitionElement: baseDefinitionElement == freezed
+          ? _value.baseDefinitionElement
+          : baseDefinitionElement as Element,
       derivationElement: derivationElement == freezed
           ? _value.derivationElement
           : derivationElement as Element,
@@ -29195,6 +29207,16 @@ class _$StructureDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get baseDefinitionElement {
+    if (_value.baseDefinitionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.baseDefinitionElement, (value) {
+      return _then(_value.copyWith(baseDefinitionElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get derivationElement {
     if (_value.derivationElement == null) {
       return null;
@@ -29290,6 +29312,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
           List<Element> contextInvariantElement,
       @JsonKey(name: '_type')
           Element typeElement,
+      @JsonKey(name: '_baseDefinition')
+          Element baseDefinitionElement,
       @JsonKey(name: '_derivation')
           Element derivationElement});
 
@@ -29335,6 +29359,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get abstractElement;
   @override
   $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get baseDefinitionElement;
   @override
   $ElementCopyWith<$Res> get derivationElement;
 }
@@ -29405,6 +29431,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
     Object abstractElement = freezed,
     Object contextInvariantElement = freezed,
     Object typeElement = freezed,
+    Object baseDefinitionElement = freezed,
     Object derivationElement = freezed,
   }) {
     return _then(_StructureDefinition(
@@ -29529,6 +29556,9 @@ class __$StructureDefinitionCopyWithImpl<$Res>
           : contextInvariantElement as List<Element>,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      baseDefinitionElement: baseDefinitionElement == freezed
+          ? _value.baseDefinitionElement
+          : baseDefinitionElement as Element,
       derivationElement: derivationElement == freezed
           ? _value.derivationElement
           : derivationElement as Element,
@@ -29618,6 +29648,8 @@ class _$_StructureDefinition implements _StructureDefinition {
           this.contextInvariantElement,
       @JsonKey(name: '_type')
           this.typeElement,
+      @JsonKey(name: '_baseDefinition')
+          this.baseDefinitionElement,
       @JsonKey(name: '_derivation')
           this.derivationElement})
       : assert(resourceType != null);
@@ -29758,12 +29790,15 @@ class _$_StructureDefinition implements _StructureDefinition {
   @JsonKey(name: '_type')
   final Element typeElement;
   @override
+  @JsonKey(name: '_baseDefinition')
+  final Element baseDefinitionElement;
+  @override
   @JsonKey(name: '_derivation')
   final Element derivationElement;
 
   @override
   String toString() {
-    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, keyword: $keyword, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, abstract: $abstract, context: $context, contextInvariant: $contextInvariant, type: $type, baseDefinition: $baseDefinition, derivation: $derivation, snapshot: $snapshot, differential: $differential, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, fhirVersionElement: $fhirVersionElement, kindElement: $kindElement, abstractElement: $abstractElement, contextInvariantElement: $contextInvariantElement, typeElement: $typeElement, derivationElement: $derivationElement)';
+    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, keyword: $keyword, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, abstract: $abstract, context: $context, contextInvariant: $contextInvariant, type: $type, baseDefinition: $baseDefinition, derivation: $derivation, snapshot: $snapshot, differential: $differential, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, fhirVersionElement: $fhirVersionElement, kindElement: $kindElement, abstractElement: $abstractElement, contextInvariantElement: $contextInvariantElement, typeElement: $typeElement, baseDefinitionElement: $baseDefinitionElement, derivationElement: $derivationElement)';
   }
 
   @override
@@ -29867,6 +29902,7 @@ class _$_StructureDefinition implements _StructureDefinition {
             (identical(other.abstractElement, abstractElement) || const DeepCollectionEquality().equals(other.abstractElement, abstractElement)) &&
             (identical(other.contextInvariantElement, contextInvariantElement) || const DeepCollectionEquality().equals(other.contextInvariantElement, contextInvariantElement)) &&
             (identical(other.typeElement, typeElement) || const DeepCollectionEquality().equals(other.typeElement, typeElement)) &&
+            (identical(other.baseDefinitionElement, baseDefinitionElement) || const DeepCollectionEquality().equals(other.baseDefinitionElement, baseDefinitionElement)) &&
             (identical(other.derivationElement, derivationElement) || const DeepCollectionEquality().equals(other.derivationElement, derivationElement)));
   }
 
@@ -29927,6 +29963,7 @@ class _$_StructureDefinition implements _StructureDefinition {
       const DeepCollectionEquality().hash(abstractElement) ^
       const DeepCollectionEquality().hash(contextInvariantElement) ^
       const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(baseDefinitionElement) ^
       const DeepCollectionEquality().hash(derivationElement);
 
   @override
@@ -30021,6 +30058,8 @@ abstract class _StructureDefinition implements StructureDefinition {
           List<Element> contextInvariantElement,
       @JsonKey(name: '_type')
           Element typeElement,
+      @JsonKey(name: '_baseDefinition')
+          Element baseDefinitionElement,
       @JsonKey(name: '_derivation')
           Element derivationElement}) = _$_StructureDefinition;
 
@@ -30159,6 +30198,9 @@ abstract class _StructureDefinition implements StructureDefinition {
   @override
   @JsonKey(name: '_type')
   Element get typeElement;
+  @override
+  @JsonKey(name: '_baseDefinition')
+  Element get baseDefinitionElement;
   @override
   @JsonKey(name: '_derivation')
   Element get derivationElement;
