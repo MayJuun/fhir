@@ -23,12 +23,15 @@ class _$NarrativeTearOff {
           NarrativeStatus status,
       @required
       @JsonKey(required: true)
-          String div}) {
+          String div,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _Narrative(
       id: id,
       extension_: extension_,
       status: status,
       div: div,
+      statusElement: statusElement,
     );
   }
 }
@@ -44,6 +47,8 @@ mixin _$Narrative {
   NarrativeStatus get status;
   @JsonKey(required: true)
   String get div;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $NarrativeCopyWith<Narrative> get copyWith;
@@ -59,7 +64,11 @@ abstract class $NarrativeCopyWith<$Res> {
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
       @JsonKey(required: true)
-          String div});
+          String div,
+      @JsonKey(name: '_status')
+          Element statusElement});
+
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
@@ -75,6 +84,7 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
     Object extension_ = freezed,
     Object status = freezed,
     Object div = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -83,7 +93,20 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
           : extension_ as List<FhirExtension>,
       status: status == freezed ? _value.status : status as NarrativeStatus,
       div: div == freezed ? _value.div : div as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
   }
 }
 
@@ -99,7 +122,12 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
       @JsonKey(required: true)
-          String div});
+          String div,
+      @JsonKey(name: '_status')
+          Element statusElement});
+
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
@@ -116,6 +144,7 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object status = freezed,
     Object div = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_Narrative(
       id: id == freezed ? _value.id : id as String,
@@ -124,6 +153,9 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       status: status == freezed ? _value.status : status as NarrativeStatus,
       div: div == freezed ? _value.div : div as String,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -134,7 +166,8 @@ class _$_Narrative implements _Narrative {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown) this.status,
-      @required @JsonKey(required: true) this.div})
+      @required @JsonKey(required: true) this.div,
+      @JsonKey(name: '_status') this.statusElement})
       : assert(div != null);
 
   factory _$_Narrative.fromJson(Map<String, dynamic> json) =>
@@ -151,10 +184,13 @@ class _$_Narrative implements _Narrative {
   @override
   @JsonKey(required: true)
   final String div;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'Narrative(id: $id, extension_: $extension_, status: $status, div: $div)';
+    return 'Narrative(id: $id, extension_: $extension_, status: $status, div: $div, statusElement: $statusElement)';
   }
 
   @override
@@ -169,7 +205,10 @@ class _$_Narrative implements _Narrative {
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.div, div) ||
-                const DeepCollectionEquality().equals(other.div, div)));
+                const DeepCollectionEquality().equals(other.div, div)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)));
   }
 
   @override
@@ -178,7 +217,8 @@ class _$_Narrative implements _Narrative {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(div);
+      const DeepCollectionEquality().hash(div) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$NarrativeCopyWith<_Narrative> get copyWith =>
@@ -199,7 +239,9 @@ abstract class _Narrative implements Narrative {
           NarrativeStatus status,
       @required
       @JsonKey(required: true)
-          String div}) = _$_Narrative;
+          String div,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_Narrative;
 
   factory _Narrative.fromJson(Map<String, dynamic> json) =
       _$_Narrative.fromJson;
@@ -215,6 +257,9 @@ abstract class _Narrative implements Narrative {
   @override
   @JsonKey(required: true)
   String get div;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   _$NarrativeCopyWith<_Narrative> get copyWith;
 }
@@ -232,7 +277,10 @@ class _$ReferenceTearOff {
       String reference,
       FhirUri type,
       Identifier identifier,
-      String display}) {
+      String display,
+      @JsonKey(name: '_reference') Element referenceElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_display') Element displayElement}) {
     return _Reference(
       id: id,
       extension_: extension_,
@@ -240,6 +288,9 @@ class _$ReferenceTearOff {
       type: type,
       identifier: identifier,
       display: display,
+      referenceElement: referenceElement,
+      typeElement: typeElement,
+      displayElement: displayElement,
     );
   }
 }
@@ -255,6 +306,12 @@ mixin _$Reference {
   FhirUri get type;
   Identifier get identifier;
   String get display;
+  @JsonKey(name: '_reference')
+  Element get referenceElement;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_display')
+  Element get displayElement;
 
   Map<String, dynamic> toJson();
   $ReferenceCopyWith<Reference> get copyWith;
@@ -269,9 +326,15 @@ abstract class $ReferenceCopyWith<$Res> {
       String reference,
       FhirUri type,
       Identifier identifier,
-      String display});
+      String display,
+      @JsonKey(name: '_reference') Element referenceElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_display') Element displayElement});
 
   $IdentifierCopyWith<$Res> get identifier;
+  $ElementCopyWith<$Res> get referenceElement;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
@@ -289,6 +352,9 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
     Object type = freezed,
     Object identifier = freezed,
     Object display = freezed,
+    Object referenceElement = freezed,
+    Object typeElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -300,6 +366,14 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       display: display == freezed ? _value.display : display as String,
+      referenceElement: referenceElement == freezed
+          ? _value.referenceElement
+          : referenceElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
   }
 
@@ -310,6 +384,36 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
     }
     return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
       return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get referenceElement {
+    if (_value.referenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.referenceElement, (value) {
+      return _then(_value.copyWith(referenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.displayElement, (value) {
+      return _then(_value.copyWith(displayElement: value));
     });
   }
 }
@@ -325,10 +429,19 @@ abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
       String reference,
       FhirUri type,
       Identifier identifier,
-      String display});
+      String display,
+      @JsonKey(name: '_reference') Element referenceElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_display') Element displayElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ElementCopyWith<$Res> get referenceElement;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
@@ -347,6 +460,9 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
     Object type = freezed,
     Object identifier = freezed,
     Object display = freezed,
+    Object referenceElement = freezed,
+    Object typeElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_Reference(
       id: id == freezed ? _value.id : id as String,
@@ -358,6 +474,14 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       display: display == freezed ? _value.display : display as String,
+      referenceElement: referenceElement == freezed
+          ? _value.referenceElement
+          : referenceElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
   }
 }
@@ -370,7 +494,10 @@ class _$_Reference implements _Reference {
       this.reference,
       this.type,
       this.identifier,
-      this.display});
+      this.display,
+      @JsonKey(name: '_reference') this.referenceElement,
+      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_display') this.displayElement});
 
   factory _$_Reference.fromJson(Map<String, dynamic> json) =>
       _$_$_ReferenceFromJson(json);
@@ -388,10 +515,19 @@ class _$_Reference implements _Reference {
   final Identifier identifier;
   @override
   final String display;
+  @override
+  @JsonKey(name: '_reference')
+  final Element referenceElement;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_display')
+  final Element displayElement;
 
   @override
   String toString() {
-    return 'Reference(id: $id, extension_: $extension_, reference: $reference, type: $type, identifier: $identifier, display: $display)';
+    return 'Reference(id: $id, extension_: $extension_, reference: $reference, type: $type, identifier: $identifier, display: $display, referenceElement: $referenceElement, typeElement: $typeElement, displayElement: $displayElement)';
   }
 
   @override
@@ -412,7 +548,17 @@ class _$_Reference implements _Reference {
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
             (identical(other.display, display) ||
-                const DeepCollectionEquality().equals(other.display, display)));
+                const DeepCollectionEquality()
+                    .equals(other.display, display)) &&
+            (identical(other.referenceElement, referenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.referenceElement, referenceElement)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.displayElement, displayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayElement, displayElement)));
   }
 
   @override
@@ -423,7 +569,10 @@ class _$_Reference implements _Reference {
       const DeepCollectionEquality().hash(reference) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(display);
+      const DeepCollectionEquality().hash(display) ^
+      const DeepCollectionEquality().hash(referenceElement) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(displayElement);
 
   @override
   _$ReferenceCopyWith<_Reference> get copyWith =>
@@ -442,7 +591,10 @@ abstract class _Reference implements Reference {
       String reference,
       FhirUri type,
       Identifier identifier,
-      String display}) = _$_Reference;
+      String display,
+      @JsonKey(name: '_reference') Element referenceElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_display') Element displayElement}) = _$_Reference;
 
   factory _Reference.fromJson(Map<String, dynamic> json) =
       _$_Reference.fromJson;
@@ -460,6 +612,15 @@ abstract class _Reference implements Reference {
   Identifier get identifier;
   @override
   String get display;
+  @override
+  @JsonKey(name: '_reference')
+  Element get referenceElement;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_display')
+  Element get displayElement;
   @override
   _$ReferenceCopyWith<_Reference> get copyWith;
 }
@@ -479,7 +640,10 @@ class _$MetaTearOff {
       FhirUri source,
       List<Canonical> profile,
       List<Coding> security,
-      List<Coding> tag}) {
+      List<Coding> tag,
+      @JsonKey(name: '_versionId') Element versionIdElement,
+      @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
+      @JsonKey(name: '_source') Element sourceElement}) {
     return _Meta(
       id: id,
       extension_: extension_,
@@ -489,6 +653,9 @@ class _$MetaTearOff {
       profile: profile,
       security: security,
       tag: tag,
+      versionIdElement: versionIdElement,
+      lastUpdatedElement: lastUpdatedElement,
+      sourceElement: sourceElement,
     );
   }
 }
@@ -506,6 +673,12 @@ mixin _$Meta {
   List<Canonical> get profile;
   List<Coding> get security;
   List<Coding> get tag;
+  @JsonKey(name: '_versionId')
+  Element get versionIdElement;
+  @JsonKey(name: '_lastUpdated')
+  Element get lastUpdatedElement;
+  @JsonKey(name: '_source')
+  Element get sourceElement;
 
   Map<String, dynamic> toJson();
   $MetaCopyWith<Meta> get copyWith;
@@ -522,7 +695,14 @@ abstract class $MetaCopyWith<$Res> {
       FhirUri source,
       List<Canonical> profile,
       List<Coding> security,
-      List<Coding> tag});
+      List<Coding> tag,
+      @JsonKey(name: '_versionId') Element versionIdElement,
+      @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
+      @JsonKey(name: '_source') Element sourceElement});
+
+  $ElementCopyWith<$Res> get versionIdElement;
+  $ElementCopyWith<$Res> get lastUpdatedElement;
+  $ElementCopyWith<$Res> get sourceElement;
 }
 
 class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
@@ -542,6 +722,9 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
     Object profile = freezed,
     Object security = freezed,
     Object tag = freezed,
+    Object versionIdElement = freezed,
+    Object lastUpdatedElement = freezed,
+    Object sourceElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -556,7 +739,46 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
       security:
           security == freezed ? _value.security : security as List<Coding>,
       tag: tag == freezed ? _value.tag : tag as List<Coding>,
+      versionIdElement: versionIdElement == freezed
+          ? _value.versionIdElement
+          : versionIdElement as Element,
+      lastUpdatedElement: lastUpdatedElement == freezed
+          ? _value.lastUpdatedElement
+          : lastUpdatedElement as Element,
+      sourceElement: sourceElement == freezed
+          ? _value.sourceElement
+          : sourceElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionIdElement {
+    if (_value.versionIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionIdElement, (value) {
+      return _then(_value.copyWith(versionIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lastUpdatedElement {
+    if (_value.lastUpdatedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lastUpdatedElement, (value) {
+      return _then(_value.copyWith(lastUpdatedElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sourceElement {
+    if (_value.sourceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sourceElement, (value) {
+      return _then(_value.copyWith(sourceElement: value));
+    });
   }
 }
 
@@ -572,7 +794,17 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
       FhirUri source,
       List<Canonical> profile,
       List<Coding> security,
-      List<Coding> tag});
+      List<Coding> tag,
+      @JsonKey(name: '_versionId') Element versionIdElement,
+      @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
+      @JsonKey(name: '_source') Element sourceElement});
+
+  @override
+  $ElementCopyWith<$Res> get versionIdElement;
+  @override
+  $ElementCopyWith<$Res> get lastUpdatedElement;
+  @override
+  $ElementCopyWith<$Res> get sourceElement;
 }
 
 class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
@@ -593,6 +825,9 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
     Object profile = freezed,
     Object security = freezed,
     Object tag = freezed,
+    Object versionIdElement = freezed,
+    Object lastUpdatedElement = freezed,
+    Object sourceElement = freezed,
   }) {
     return _then(_Meta(
       id: id == freezed ? _value.id : id as String,
@@ -607,6 +842,15 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
       security:
           security == freezed ? _value.security : security as List<Coding>,
       tag: tag == freezed ? _value.tag : tag as List<Coding>,
+      versionIdElement: versionIdElement == freezed
+          ? _value.versionIdElement
+          : versionIdElement as Element,
+      lastUpdatedElement: lastUpdatedElement == freezed
+          ? _value.lastUpdatedElement
+          : lastUpdatedElement as Element,
+      sourceElement: sourceElement == freezed
+          ? _value.sourceElement
+          : sourceElement as Element,
     ));
   }
 }
@@ -621,7 +865,10 @@ class _$_Meta implements _Meta {
       this.source,
       this.profile,
       this.security,
-      this.tag});
+      this.tag,
+      @JsonKey(name: '_versionId') this.versionIdElement,
+      @JsonKey(name: '_lastUpdated') this.lastUpdatedElement,
+      @JsonKey(name: '_source') this.sourceElement});
 
   factory _$_Meta.fromJson(Map<String, dynamic> json) =>
       _$_$_MetaFromJson(json);
@@ -643,10 +890,19 @@ class _$_Meta implements _Meta {
   final List<Coding> security;
   @override
   final List<Coding> tag;
+  @override
+  @JsonKey(name: '_versionId')
+  final Element versionIdElement;
+  @override
+  @JsonKey(name: '_lastUpdated')
+  final Element lastUpdatedElement;
+  @override
+  @JsonKey(name: '_source')
+  final Element sourceElement;
 
   @override
   String toString() {
-    return 'Meta(id: $id, extension_: $extension_, versionId: $versionId, lastUpdated: $lastUpdated, source: $source, profile: $profile, security: $security, tag: $tag)';
+    return 'Meta(id: $id, extension_: $extension_, versionId: $versionId, lastUpdated: $lastUpdated, source: $source, profile: $profile, security: $security, tag: $tag, versionIdElement: $versionIdElement, lastUpdatedElement: $lastUpdatedElement, sourceElement: $sourceElement)';
   }
 
   @override
@@ -673,7 +929,16 @@ class _$_Meta implements _Meta {
                 const DeepCollectionEquality()
                     .equals(other.security, security)) &&
             (identical(other.tag, tag) ||
-                const DeepCollectionEquality().equals(other.tag, tag)));
+                const DeepCollectionEquality().equals(other.tag, tag)) &&
+            (identical(other.versionIdElement, versionIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionIdElement, versionIdElement)) &&
+            (identical(other.lastUpdatedElement, lastUpdatedElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.lastUpdatedElement, lastUpdatedElement)) &&
+            (identical(other.sourceElement, sourceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sourceElement, sourceElement)));
   }
 
   @override
@@ -686,7 +951,10 @@ class _$_Meta implements _Meta {
       const DeepCollectionEquality().hash(source) ^
       const DeepCollectionEquality().hash(profile) ^
       const DeepCollectionEquality().hash(security) ^
-      const DeepCollectionEquality().hash(tag);
+      const DeepCollectionEquality().hash(tag) ^
+      const DeepCollectionEquality().hash(versionIdElement) ^
+      const DeepCollectionEquality().hash(lastUpdatedElement) ^
+      const DeepCollectionEquality().hash(sourceElement);
 
   @override
   _$MetaCopyWith<_Meta> get copyWith =>
@@ -707,7 +975,10 @@ abstract class _Meta implements Meta {
       FhirUri source,
       List<Canonical> profile,
       List<Coding> security,
-      List<Coding> tag}) = _$_Meta;
+      List<Coding> tag,
+      @JsonKey(name: '_versionId') Element versionIdElement,
+      @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
+      @JsonKey(name: '_source') Element sourceElement}) = _$_Meta;
 
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
@@ -728,6 +999,15 @@ abstract class _Meta implements Meta {
   List<Coding> get security;
   @override
   List<Coding> get tag;
+  @override
+  @JsonKey(name: '_versionId')
+  Element get versionIdElement;
+  @override
+  @JsonKey(name: '_lastUpdated')
+  Element get lastUpdatedElement;
+  @override
+  @JsonKey(name: '_source')
+  Element get sourceElement;
   @override
   _$MetaCopyWith<_Meta> get copyWith;
 }
@@ -756,7 +1036,11 @@ class _$DosageTearOff {
       List<DosageDoseAndRate> doseAndRate,
       Ratio maxDosePerPeriod,
       Quantity maxDosePerAdministration,
-      Quantity maxDosePerLifetime}) {
+      Quantity maxDosePerLifetime,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: '_patientInstruction') Element patientInstructionElement,
+      @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement}) {
     return _Dosage(
       id: id,
       extension_: extension_,
@@ -775,6 +1059,10 @@ class _$DosageTearOff {
       maxDosePerPeriod: maxDosePerPeriod,
       maxDosePerAdministration: maxDosePerAdministration,
       maxDosePerLifetime: maxDosePerLifetime,
+      sequenceElement: sequenceElement,
+      textElement: textElement,
+      patientInstructionElement: patientInstructionElement,
+      asNeededBooleanElement: asNeededBooleanElement,
     );
   }
 }
@@ -801,6 +1089,14 @@ mixin _$Dosage {
   Ratio get maxDosePerPeriod;
   Quantity get maxDosePerAdministration;
   Quantity get maxDosePerLifetime;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_text')
+  Element get textElement;
+  @JsonKey(name: '_patientInstruction')
+  Element get patientInstructionElement;
+  @JsonKey(name: '_asNeededBoolean')
+  Element get asNeededBooleanElement;
 
   Map<String, dynamic> toJson();
   $DosageCopyWith<Dosage> get copyWith;
@@ -826,7 +1122,11 @@ abstract class $DosageCopyWith<$Res> {
       List<DosageDoseAndRate> doseAndRate,
       Ratio maxDosePerPeriod,
       Quantity maxDosePerAdministration,
-      Quantity maxDosePerLifetime});
+      Quantity maxDosePerLifetime,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: '_patientInstruction') Element patientInstructionElement,
+      @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement});
 
   $TimingCopyWith<$Res> get timing;
   $CodeableConceptCopyWith<$Res> get asNeededCodeableConcept;
@@ -836,6 +1136,10 @@ abstract class $DosageCopyWith<$Res> {
   $RatioCopyWith<$Res> get maxDosePerPeriod;
   $QuantityCopyWith<$Res> get maxDosePerAdministration;
   $QuantityCopyWith<$Res> get maxDosePerLifetime;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get textElement;
+  $ElementCopyWith<$Res> get patientInstructionElement;
+  $ElementCopyWith<$Res> get asNeededBooleanElement;
 }
 
 class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
@@ -864,6 +1168,10 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
     Object maxDosePerPeriod = freezed,
     Object maxDosePerAdministration = freezed,
     Object maxDosePerLifetime = freezed,
+    Object sequenceElement = freezed,
+    Object textElement = freezed,
+    Object patientInstructionElement = freezed,
+    Object asNeededBooleanElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -903,6 +1211,17 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
       maxDosePerLifetime: maxDosePerLifetime == freezed
           ? _value.maxDosePerLifetime
           : maxDosePerLifetime as Quantity,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
+      patientInstructionElement: patientInstructionElement == freezed
+          ? _value.patientInstructionElement
+          : patientInstructionElement as Element,
+      asNeededBooleanElement: asNeededBooleanElement == freezed
+          ? _value.asNeededBooleanElement
+          : asNeededBooleanElement as Element,
     ));
   }
 
@@ -986,6 +1305,46 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
       return _then(_value.copyWith(maxDosePerLifetime: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get textElement {
+    if (_value.textElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.textElement, (value) {
+      return _then(_value.copyWith(textElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patientInstructionElement {
+    if (_value.patientInstructionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patientInstructionElement, (value) {
+      return _then(_value.copyWith(patientInstructionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get asNeededBooleanElement {
+    if (_value.asNeededBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.asNeededBooleanElement, (value) {
+      return _then(_value.copyWith(asNeededBooleanElement: value));
+    });
+  }
 }
 
 abstract class _$DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
@@ -1009,7 +1368,11 @@ abstract class _$DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
       List<DosageDoseAndRate> doseAndRate,
       Ratio maxDosePerPeriod,
       Quantity maxDosePerAdministration,
-      Quantity maxDosePerLifetime});
+      Quantity maxDosePerLifetime,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: '_patientInstruction') Element patientInstructionElement,
+      @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement});
 
   @override
   $TimingCopyWith<$Res> get timing;
@@ -1027,6 +1390,14 @@ abstract class _$DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
   $QuantityCopyWith<$Res> get maxDosePerAdministration;
   @override
   $QuantityCopyWith<$Res> get maxDosePerLifetime;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get textElement;
+  @override
+  $ElementCopyWith<$Res> get patientInstructionElement;
+  @override
+  $ElementCopyWith<$Res> get asNeededBooleanElement;
 }
 
 class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
@@ -1056,6 +1427,10 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
     Object maxDosePerPeriod = freezed,
     Object maxDosePerAdministration = freezed,
     Object maxDosePerLifetime = freezed,
+    Object sequenceElement = freezed,
+    Object textElement = freezed,
+    Object patientInstructionElement = freezed,
+    Object asNeededBooleanElement = freezed,
   }) {
     return _then(_Dosage(
       id: id == freezed ? _value.id : id as String,
@@ -1095,6 +1470,17 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
       maxDosePerLifetime: maxDosePerLifetime == freezed
           ? _value.maxDosePerLifetime
           : maxDosePerLifetime as Quantity,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
+      patientInstructionElement: patientInstructionElement == freezed
+          ? _value.patientInstructionElement
+          : patientInstructionElement as Element,
+      asNeededBooleanElement: asNeededBooleanElement == freezed
+          ? _value.asNeededBooleanElement
+          : asNeededBooleanElement as Element,
     ));
   }
 }
@@ -1118,7 +1504,11 @@ class _$_Dosage implements _Dosage {
       this.doseAndRate,
       this.maxDosePerPeriod,
       this.maxDosePerAdministration,
-      this.maxDosePerLifetime});
+      this.maxDosePerLifetime,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_text') this.textElement,
+      @JsonKey(name: '_patientInstruction') this.patientInstructionElement,
+      @JsonKey(name: '_asNeededBoolean') this.asNeededBooleanElement});
 
   factory _$_Dosage.fromJson(Map<String, dynamic> json) =>
       _$_$_DosageFromJson(json);
@@ -1158,10 +1548,22 @@ class _$_Dosage implements _Dosage {
   final Quantity maxDosePerAdministration;
   @override
   final Quantity maxDosePerLifetime;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_text')
+  final Element textElement;
+  @override
+  @JsonKey(name: '_patientInstruction')
+  final Element patientInstructionElement;
+  @override
+  @JsonKey(name: '_asNeededBoolean')
+  final Element asNeededBooleanElement;
 
   @override
   String toString() {
-    return 'Dosage(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, text: $text, additionalInstruction: $additionalInstruction, patientInstruction: $patientInstruction, timing: $timing, asNeededBoolean: $asNeededBoolean, asNeededCodeableConcept: $asNeededCodeableConcept, site: $site, route: $route, method: $method, doseAndRate: $doseAndRate, maxDosePerPeriod: $maxDosePerPeriod, maxDosePerAdministration: $maxDosePerAdministration, maxDosePerLifetime: $maxDosePerLifetime)';
+    return 'Dosage(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, text: $text, additionalInstruction: $additionalInstruction, patientInstruction: $patientInstruction, timing: $timing, asNeededBoolean: $asNeededBoolean, asNeededCodeableConcept: $asNeededCodeableConcept, site: $site, route: $route, method: $method, doseAndRate: $doseAndRate, maxDosePerPeriod: $maxDosePerPeriod, maxDosePerAdministration: $maxDosePerAdministration, maxDosePerLifetime: $maxDosePerLifetime, sequenceElement: $sequenceElement, textElement: $textElement, patientInstructionElement: $patientInstructionElement, asNeededBooleanElement: $asNeededBooleanElement)';
   }
 
   @override
@@ -1192,8 +1594,7 @@ class _$_Dosage implements _Dosage {
             (identical(other.asNeededBoolean, asNeededBoolean) ||
                 const DeepCollectionEquality()
                     .equals(other.asNeededBoolean, asNeededBoolean)) &&
-            (identical(
-                    other.asNeededCodeableConcept, asNeededCodeableConcept) ||
+            (identical(other.asNeededCodeableConcept, asNeededCodeableConcept) ||
                 const DeepCollectionEquality().equals(
                     other.asNeededCodeableConcept, asNeededCodeableConcept)) &&
             (identical(other.site, site) ||
@@ -1208,14 +1609,23 @@ class _$_Dosage implements _Dosage {
             (identical(other.maxDosePerPeriod, maxDosePerPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.maxDosePerPeriod, maxDosePerPeriod)) &&
-            (identical(
-                    other.maxDosePerAdministration, maxDosePerAdministration) ||
+            (identical(other.maxDosePerAdministration, maxDosePerAdministration) ||
                 const DeepCollectionEquality().equals(
                     other.maxDosePerAdministration,
                     maxDosePerAdministration)) &&
             (identical(other.maxDosePerLifetime, maxDosePerLifetime) ||
                 const DeepCollectionEquality()
-                    .equals(other.maxDosePerLifetime, maxDosePerLifetime)));
+                    .equals(other.maxDosePerLifetime, maxDosePerLifetime)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.textElement, textElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.textElement, textElement)) &&
+            (identical(other.patientInstructionElement, patientInstructionElement) ||
+                const DeepCollectionEquality().equals(
+                    other.patientInstructionElement, patientInstructionElement)) &&
+            (identical(other.asNeededBooleanElement, asNeededBooleanElement) || const DeepCollectionEquality().equals(other.asNeededBooleanElement, asNeededBooleanElement)));
   }
 
   @override
@@ -1237,7 +1647,11 @@ class _$_Dosage implements _Dosage {
       const DeepCollectionEquality().hash(doseAndRate) ^
       const DeepCollectionEquality().hash(maxDosePerPeriod) ^
       const DeepCollectionEquality().hash(maxDosePerAdministration) ^
-      const DeepCollectionEquality().hash(maxDosePerLifetime);
+      const DeepCollectionEquality().hash(maxDosePerLifetime) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(textElement) ^
+      const DeepCollectionEquality().hash(patientInstructionElement) ^
+      const DeepCollectionEquality().hash(asNeededBooleanElement);
 
   @override
   _$DosageCopyWith<_Dosage> get copyWith =>
@@ -1252,7 +1666,8 @@ class _$_Dosage implements _Dosage {
 abstract class _Dosage implements Dosage {
   const factory _Dosage(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Integer sequence,
       String text,
@@ -1267,7 +1682,15 @@ abstract class _Dosage implements Dosage {
       List<DosageDoseAndRate> doseAndRate,
       Ratio maxDosePerPeriod,
       Quantity maxDosePerAdministration,
-      Quantity maxDosePerLifetime}) = _$_Dosage;
+      Quantity maxDosePerLifetime,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
+      @JsonKey(name: '_text')
+          Element textElement,
+      @JsonKey(name: '_patientInstruction')
+          Element patientInstructionElement,
+      @JsonKey(name: '_asNeededBoolean')
+          Element asNeededBooleanElement}) = _$_Dosage;
 
   factory _Dosage.fromJson(Map<String, dynamic> json) = _$_Dosage.fromJson;
 
@@ -1306,6 +1729,18 @@ abstract class _Dosage implements Dosage {
   Quantity get maxDosePerAdministration;
   @override
   Quantity get maxDosePerLifetime;
+  @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_text')
+  Element get textElement;
+  @override
+  @JsonKey(name: '_patientInstruction')
+  Element get patientInstructionElement;
+  @override
+  @JsonKey(name: '_asNeededBoolean')
+  Element get asNeededBooleanElement;
   @override
   _$DosageCopyWith<_Dosage> get copyWith;
 }
@@ -1753,7 +2188,27 @@ class _$FhirExtensionTearOff {
       TriggerDefinition valueTriggerDefinition,
       UsageContext valueUsageContext,
       Dosage valueDosage,
-      Meta valueMeta}) {
+      Meta valueMeta,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueId') Element valueIdElement,
+      @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      @JsonKey(name: '_valueOid') Element valueOidElement,
+      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      @JsonKey(name: '_valueUuid') Element valueUuidElement}) {
     return _FhirExtension(
       id: id,
       extension_: extension_,
@@ -1808,6 +2263,26 @@ class _$FhirExtensionTearOff {
       valueUsageContext: valueUsageContext,
       valueDosage: valueDosage,
       valueMeta: valueMeta,
+      urlElement: urlElement,
+      valueBase64BinaryElement: valueBase64BinaryElement,
+      valueBooleanElement: valueBooleanElement,
+      valueCanonicalElement: valueCanonicalElement,
+      valueCodeElement: valueCodeElement,
+      valueDateElement: valueDateElement,
+      valueDateTimeElement: valueDateTimeElement,
+      valueDecimalElement: valueDecimalElement,
+      valueIdElement: valueIdElement,
+      valueInstantElement: valueInstantElement,
+      valueIntegerElement: valueIntegerElement,
+      valueMarkdownElement: valueMarkdownElement,
+      valueOidElement: valueOidElement,
+      valuePositiveIntElement: valuePositiveIntElement,
+      valueStringElement: valueStringElement,
+      valueTimeElement: valueTimeElement,
+      valueUnsignedIntElement: valueUnsignedIntElement,
+      valueUriElement: valueUriElement,
+      valueUrlElement: valueUrlElement,
+      valueUuidElement: valueUuidElement,
     );
   }
 }
@@ -1870,6 +2345,46 @@ mixin _$FhirExtension {
   UsageContext get valueUsageContext;
   Dosage get valueDosage;
   Meta get valueMeta;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_valueBase64Binary')
+  Element get valueBase64BinaryElement;
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @JsonKey(name: '_valueCanonical')
+  Element get valueCanonicalElement;
+  @JsonKey(name: '_valueCode')
+  Element get valueCodeElement;
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @JsonKey(name: '_valueId')
+  Element get valueIdElement;
+  @JsonKey(name: '_valueInstant')
+  Element get valueInstantElement;
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @JsonKey(name: '_valueMarkdown')
+  Element get valueMarkdownElement;
+  @JsonKey(name: '_valueOid')
+  Element get valueOidElement;
+  @JsonKey(name: '_valuePositiveInt')
+  Element get valuePositiveIntElement;
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @JsonKey(name: '_valueUnsignedInt')
+  Element get valueUnsignedIntElement;
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
+  @JsonKey(name: '_valueUrl')
+  Element get valueUrlElement;
+  @JsonKey(name: '_valueUuid')
+  Element get valueUuidElement;
 
   Map<String, dynamic> toJson();
   $FhirExtensionCopyWith<FhirExtension> get copyWith;
@@ -1932,7 +2447,27 @@ abstract class $FhirExtensionCopyWith<$Res> {
       TriggerDefinition valueTriggerDefinition,
       UsageContext valueUsageContext,
       Dosage valueDosage,
-      Meta valueMeta});
+      Meta valueMeta,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueId') Element valueIdElement,
+      @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      @JsonKey(name: '_valueOid') Element valueOidElement,
+      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      @JsonKey(name: '_valueUuid') Element valueUuidElement});
 
   $AddressCopyWith<$Res> get valueAddress;
   $AgeCopyWith<$Res> get valueAge;
@@ -1965,6 +2500,26 @@ abstract class $FhirExtensionCopyWith<$Res> {
   $UsageContextCopyWith<$Res> get valueUsageContext;
   $DosageCopyWith<$Res> get valueDosage;
   $MetaCopyWith<$Res> get valueMeta;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  $ElementCopyWith<$Res> get valueCanonicalElement;
+  $ElementCopyWith<$Res> get valueCodeElement;
+  $ElementCopyWith<$Res> get valueDateElement;
+  $ElementCopyWith<$Res> get valueDateTimeElement;
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  $ElementCopyWith<$Res> get valueIdElement;
+  $ElementCopyWith<$Res> get valueInstantElement;
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  $ElementCopyWith<$Res> get valueMarkdownElement;
+  $ElementCopyWith<$Res> get valueOidElement;
+  $ElementCopyWith<$Res> get valuePositiveIntElement;
+  $ElementCopyWith<$Res> get valueStringElement;
+  $ElementCopyWith<$Res> get valueTimeElement;
+  $ElementCopyWith<$Res> get valueUnsignedIntElement;
+  $ElementCopyWith<$Res> get valueUriElement;
+  $ElementCopyWith<$Res> get valueUrlElement;
+  $ElementCopyWith<$Res> get valueUuidElement;
 }
 
 class _$FhirExtensionCopyWithImpl<$Res>
@@ -2030,6 +2585,26 @@ class _$FhirExtensionCopyWithImpl<$Res>
     Object valueUsageContext = freezed,
     Object valueDosage = freezed,
     Object valueMeta = freezed,
+    Object urlElement = freezed,
+    Object valueBase64BinaryElement = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueCanonicalElement = freezed,
+    Object valueCodeElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueDateTimeElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueIdElement = freezed,
+    Object valueInstantElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueMarkdownElement = freezed,
+    Object valueOidElement = freezed,
+    Object valuePositiveIntElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueUnsignedIntElement = freezed,
+    Object valueUriElement = freezed,
+    Object valueUrlElement = freezed,
+    Object valueUuidElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -2156,6 +2731,65 @@ class _$FhirExtensionCopyWithImpl<$Res>
       valueDosage:
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement as Element,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement as Element,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement as Element,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement as Element,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement as Element,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
+      valueUrlElement: valueUrlElement == freezed
+          ? _value.valueUrlElement
+          : valueUrlElement as Element,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement as Element,
     ));
   }
 
@@ -2470,6 +3104,206 @@ class _$FhirExtensionCopyWithImpl<$Res>
       return _then(_value.copyWith(valueMeta: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBase64BinaryElement {
+    if (_value.valueBase64BinaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement, (value) {
+      return _then(_value.copyWith(valueBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueCanonicalElement {
+    if (_value.valueCanonicalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueCanonicalElement, (value) {
+      return _then(_value.copyWith(valueCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueCodeElement {
+    if (_value.valueCodeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueCodeElement, (value) {
+      return _then(_value.copyWith(valueCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateElement {
+    if (_value.valueDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateElement, (value) {
+      return _then(_value.copyWith(valueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement {
+    if (_value.valueDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement, (value) {
+      return _then(_value.copyWith(valueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement {
+    if (_value.valueDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement, (value) {
+      return _then(_value.copyWith(valueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueIdElement {
+    if (_value.valueIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueIdElement, (value) {
+      return _then(_value.copyWith(valueIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueInstantElement {
+    if (_value.valueInstantElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueInstantElement, (value) {
+      return _then(_value.copyWith(valueInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueMarkdownElement {
+    if (_value.valueMarkdownElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueMarkdownElement, (value) {
+      return _then(_value.copyWith(valueMarkdownElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueOidElement {
+    if (_value.valueOidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueOidElement, (value) {
+      return _then(_value.copyWith(valueOidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valuePositiveIntElement {
+    if (_value.valuePositiveIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valuePositiveIntElement, (value) {
+      return _then(_value.copyWith(valuePositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement {
+    if (_value.valueTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueTimeElement, (value) {
+      return _then(_value.copyWith(valueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUnsignedIntElement {
+    if (_value.valueUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUnsignedIntElement, (value) {
+      return _then(_value.copyWith(valueUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUriElement {
+    if (_value.valueUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUriElement, (value) {
+      return _then(_value.copyWith(valueUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUrlElement {
+    if (_value.valueUrlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUrlElement, (value) {
+      return _then(_value.copyWith(valueUrlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUuidElement {
+    if (_value.valueUuidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUuidElement, (value) {
+      return _then(_value.copyWith(valueUuidElement: value));
+    });
+  }
 }
 
 abstract class _$FhirExtensionCopyWith<$Res>
@@ -2531,7 +3365,27 @@ abstract class _$FhirExtensionCopyWith<$Res>
       TriggerDefinition valueTriggerDefinition,
       UsageContext valueUsageContext,
       Dosage valueDosage,
-      Meta valueMeta});
+      Meta valueMeta,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueId') Element valueIdElement,
+      @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      @JsonKey(name: '_valueOid') Element valueOidElement,
+      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      @JsonKey(name: '_valueUuid') Element valueUuidElement});
 
   @override
   $AddressCopyWith<$Res> get valueAddress;
@@ -2595,6 +3449,46 @@ abstract class _$FhirExtensionCopyWith<$Res>
   $DosageCopyWith<$Res> get valueDosage;
   @override
   $MetaCopyWith<$Res> get valueMeta;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get valueCanonicalElement;
+  @override
+  $ElementCopyWith<$Res> get valueCodeElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get valueIdElement;
+  @override
+  $ElementCopyWith<$Res> get valueInstantElement;
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get valueMarkdownElement;
+  @override
+  $ElementCopyWith<$Res> get valueOidElement;
+  @override
+  $ElementCopyWith<$Res> get valuePositiveIntElement;
+  @override
+  $ElementCopyWith<$Res> get valueStringElement;
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement;
+  @override
+  $ElementCopyWith<$Res> get valueUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res> get valueUriElement;
+  @override
+  $ElementCopyWith<$Res> get valueUrlElement;
+  @override
+  $ElementCopyWith<$Res> get valueUuidElement;
 }
 
 class __$FhirExtensionCopyWithImpl<$Res>
@@ -2662,6 +3556,26 @@ class __$FhirExtensionCopyWithImpl<$Res>
     Object valueUsageContext = freezed,
     Object valueDosage = freezed,
     Object valueMeta = freezed,
+    Object urlElement = freezed,
+    Object valueBase64BinaryElement = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueCanonicalElement = freezed,
+    Object valueCodeElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueDateTimeElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueIdElement = freezed,
+    Object valueInstantElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueMarkdownElement = freezed,
+    Object valueOidElement = freezed,
+    Object valuePositiveIntElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueUnsignedIntElement = freezed,
+    Object valueUriElement = freezed,
+    Object valueUrlElement = freezed,
+    Object valueUuidElement = freezed,
   }) {
     return _then(_FhirExtension(
       id: id == freezed ? _value.id : id as String,
@@ -2788,6 +3702,65 @@ class __$FhirExtensionCopyWithImpl<$Res>
       valueDosage:
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement as Element,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement as Element,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement as Element,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement as Element,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement as Element,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
+      valueUrlElement: valueUrlElement == freezed
+          ? _value.valueUrlElement
+          : valueUrlElement as Element,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement as Element,
     ));
   }
 }
@@ -2847,7 +3820,27 @@ class _$_FhirExtension implements _FhirExtension {
       this.valueTriggerDefinition,
       this.valueUsageContext,
       this.valueDosage,
-      this.valueMeta});
+      this.valueMeta,
+      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      @JsonKey(name: '_valueCanonical') this.valueCanonicalElement,
+      @JsonKey(name: '_valueCode') this.valueCodeElement,
+      @JsonKey(name: '_valueDate') this.valueDateElement,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      @JsonKey(name: '_valueId') this.valueIdElement,
+      @JsonKey(name: '_valueInstant') this.valueInstantElement,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      @JsonKey(name: '_valueMarkdown') this.valueMarkdownElement,
+      @JsonKey(name: '_valueOid') this.valueOidElement,
+      @JsonKey(name: '_valuePositiveInt') this.valuePositiveIntElement,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      @JsonKey(name: '_valueTime') this.valueTimeElement,
+      @JsonKey(name: '_valueUnsignedInt') this.valueUnsignedIntElement,
+      @JsonKey(name: '_valueUri') this.valueUriElement,
+      @JsonKey(name: '_valueUrl') this.valueUrlElement,
+      @JsonKey(name: '_valueUuid') this.valueUuidElement});
 
   factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$_$_FhirExtensionFromJson(json);
@@ -2959,10 +3952,70 @@ class _$_FhirExtension implements _FhirExtension {
   final Dosage valueDosage;
   @override
   final Meta valueMeta;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  final Element valueBase64BinaryElement;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  final Element valueCanonicalElement;
+  @override
+  @JsonKey(name: '_valueCode')
+  final Element valueCodeElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  final Element valueDateElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  final Element valueDateTimeElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  final Element valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueId')
+  final Element valueIdElement;
+  @override
+  @JsonKey(name: '_valueInstant')
+  final Element valueInstantElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  final Element valueMarkdownElement;
+  @override
+  @JsonKey(name: '_valueOid')
+  final Element valueOidElement;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  final Element valuePositiveIntElement;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element valueStringElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  final Element valueTimeElement;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  final Element valueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  final Element valueUriElement;
+  @override
+  @JsonKey(name: '_valueUrl')
+  final Element valueUrlElement;
+  @override
+  @JsonKey(name: '_valueUuid')
+  final Element valueUuidElement;
 
   @override
   String toString() {
-    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, valueBase64Binary: $valueBase64Binary, valueBoolean: $valueBoolean, valueCanonical: $valueCanonical, valueCode: $valueCode, valueDate: $valueDate, valueDateTime: $valueDateTime, valueDecimal: $valueDecimal, valueId: $valueId, valueInstant: $valueInstant, valueInteger: $valueInteger, valueMarkdown: $valueMarkdown, valueOid: $valueOid, valuePositiveInt: $valuePositiveInt, valueString: $valueString, valueTime: $valueTime, valueUnsignedInt: $valueUnsignedInt, valueUri: $valueUri, valueUrl: $valueUrl, valueUuid: $valueUuid, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, valueBase64Binary: $valueBase64Binary, valueBoolean: $valueBoolean, valueCanonical: $valueCanonical, valueCode: $valueCode, valueDate: $valueDate, valueDateTime: $valueDateTime, valueDecimal: $valueDecimal, valueId: $valueId, valueInstant: $valueInstant, valueInteger: $valueInteger, valueMarkdown: $valueMarkdown, valueOid: $valueOid, valuePositiveInt: $valuePositiveInt, valueString: $valueString, valueTime: $valueTime, valueUnsignedInt: $valueUnsignedInt, valueUri: $valueUri, valueUrl: $valueUrl, valueUuid: $valueUuid, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta, urlElement: $urlElement, valueBase64BinaryElement: $valueBase64BinaryElement, valueBooleanElement: $valueBooleanElement, valueCanonicalElement: $valueCanonicalElement, valueCodeElement: $valueCodeElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueDecimalElement: $valueDecimalElement, valueIdElement: $valueIdElement, valueInstantElement: $valueInstantElement, valueIntegerElement: $valueIntegerElement, valueMarkdownElement: $valueMarkdownElement, valueOidElement: $valueOidElement, valuePositiveIntElement: $valuePositiveIntElement, valueStringElement: $valueStringElement, valueTimeElement: $valueTimeElement, valueUnsignedIntElement: $valueUnsignedIntElement, valueUriElement: $valueUriElement, valueUrlElement: $valueUrlElement, valueUuidElement: $valueUuidElement)';
   }
 
   @override
@@ -3064,7 +4117,27 @@ class _$_FhirExtension implements _FhirExtension {
             (identical(other.valueTriggerDefinition, valueTriggerDefinition) || const DeepCollectionEquality().equals(other.valueTriggerDefinition, valueTriggerDefinition)) &&
             (identical(other.valueUsageContext, valueUsageContext) || const DeepCollectionEquality().equals(other.valueUsageContext, valueUsageContext)) &&
             (identical(other.valueDosage, valueDosage) || const DeepCollectionEquality().equals(other.valueDosage, valueDosage)) &&
-            (identical(other.valueMeta, valueMeta) || const DeepCollectionEquality().equals(other.valueMeta, valueMeta)));
+            (identical(other.valueMeta, valueMeta) || const DeepCollectionEquality().equals(other.valueMeta, valueMeta)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.valueBase64BinaryElement, valueBase64BinaryElement) || const DeepCollectionEquality().equals(other.valueBase64BinaryElement, valueBase64BinaryElement)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) || const DeepCollectionEquality().equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueCanonicalElement, valueCanonicalElement) || const DeepCollectionEquality().equals(other.valueCanonicalElement, valueCanonicalElement)) &&
+            (identical(other.valueCodeElement, valueCodeElement) || const DeepCollectionEquality().equals(other.valueCodeElement, valueCodeElement)) &&
+            (identical(other.valueDateElement, valueDateElement) || const DeepCollectionEquality().equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueDateTimeElement, valueDateTimeElement) || const DeepCollectionEquality().equals(other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueDecimalElement, valueDecimalElement) || const DeepCollectionEquality().equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueIdElement, valueIdElement) || const DeepCollectionEquality().equals(other.valueIdElement, valueIdElement)) &&
+            (identical(other.valueInstantElement, valueInstantElement) || const DeepCollectionEquality().equals(other.valueInstantElement, valueInstantElement)) &&
+            (identical(other.valueIntegerElement, valueIntegerElement) || const DeepCollectionEquality().equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueMarkdownElement, valueMarkdownElement) || const DeepCollectionEquality().equals(other.valueMarkdownElement, valueMarkdownElement)) &&
+            (identical(other.valueOidElement, valueOidElement) || const DeepCollectionEquality().equals(other.valueOidElement, valueOidElement)) &&
+            (identical(other.valuePositiveIntElement, valuePositiveIntElement) || const DeepCollectionEquality().equals(other.valuePositiveIntElement, valuePositiveIntElement)) &&
+            (identical(other.valueStringElement, valueStringElement) || const DeepCollectionEquality().equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueTimeElement, valueTimeElement) || const DeepCollectionEquality().equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueUnsignedIntElement, valueUnsignedIntElement) || const DeepCollectionEquality().equals(other.valueUnsignedIntElement, valueUnsignedIntElement)) &&
+            (identical(other.valueUriElement, valueUriElement) || const DeepCollectionEquality().equals(other.valueUriElement, valueUriElement)) &&
+            (identical(other.valueUrlElement, valueUrlElement) || const DeepCollectionEquality().equals(other.valueUrlElement, valueUrlElement)) &&
+            (identical(other.valueUuidElement, valueUuidElement) || const DeepCollectionEquality().equals(other.valueUuidElement, valueUuidElement)));
   }
 
   @override
@@ -3122,7 +4195,27 @@ class _$_FhirExtension implements _FhirExtension {
       const DeepCollectionEquality().hash(valueTriggerDefinition) ^
       const DeepCollectionEquality().hash(valueUsageContext) ^
       const DeepCollectionEquality().hash(valueDosage) ^
-      const DeepCollectionEquality().hash(valueMeta);
+      const DeepCollectionEquality().hash(valueMeta) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(valueBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueCanonicalElement) ^
+      const DeepCollectionEquality().hash(valueCodeElement) ^
+      const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueIdElement) ^
+      const DeepCollectionEquality().hash(valueInstantElement) ^
+      const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueMarkdownElement) ^
+      const DeepCollectionEquality().hash(valueOidElement) ^
+      const DeepCollectionEquality().hash(valuePositiveIntElement) ^
+      const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(valueUriElement) ^
+      const DeepCollectionEquality().hash(valueUrlElement) ^
+      const DeepCollectionEquality().hash(valueUuidElement);
 
   @override
   _$FhirExtensionCopyWith<_FhirExtension> get copyWith =>
@@ -3136,59 +4229,80 @@ class _$_FhirExtension implements _FhirExtension {
 
 abstract class _FhirExtension implements FhirExtension {
   const factory _FhirExtension(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirUri url,
-      Base64Binary valueBase64Binary,
-      bool valueBoolean,
-      Canonical valueCanonical,
-      Code valueCode,
-      Date valueDate,
-      FhirDateTime valueDateTime,
-      double valueDecimal,
-      Id valueId,
-      Instant valueInstant,
-      int valueInteger,
-      Markdown valueMarkdown,
-      Oid valueOid,
-      int valuePositiveInt,
-      String valueString,
-      Time valueTime,
-      int valueUnsignedInt,
-      FhirUri valueUri,
-      FhirUrl valueUrl,
-      Uuid valueUuid,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      Duration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta}) = _$_FhirExtension;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirUri url,
+          Base64Binary valueBase64Binary,
+          bool valueBoolean,
+          Canonical valueCanonical,
+          Code valueCode,
+          Date valueDate,
+          FhirDateTime valueDateTime,
+          double valueDecimal,
+          Id valueId,
+          Instant valueInstant,
+          int valueInteger,
+          Markdown valueMarkdown,
+          Oid valueOid,
+          int valuePositiveInt,
+          String valueString,
+          Time valueTime,
+          int valueUnsignedInt,
+          FhirUri valueUri,
+          FhirUrl valueUrl,
+          Uuid valueUuid,
+          Address valueAddress,
+          Age valueAge,
+          Annotation valueAnnotation,
+          Attachment valueAttachment,
+          CodeableConcept valueCodeableConcept,
+          Coding valueCoding,
+          ContactPoint valueContactPoint,
+          Count valueCount,
+          Distance valueDistance,
+          Duration valueDuration,
+          HumanName valueHumanName,
+          Identifier valueIdentifier,
+          Money valueMoney,
+          Period valuePeriod,
+          Quantity valueQuantity,
+          Range valueRange,
+          Ratio valueRatio,
+          Reference valueReference,
+          SampledData valueSampledData,
+          Signature valueSignature,
+          Timing valueTiming,
+          ContactDetail valueContactDetail,
+          Contributor valueContributor,
+          DataRequirement valueDataRequirement,
+          Expression valueExpression,
+          ParameterDefinition valueParameterDefinition,
+          RelatedArtifact valueRelatedArtifact,
+          TriggerDefinition valueTriggerDefinition,
+          UsageContext valueUsageContext,
+          Dosage valueDosage,
+          Meta valueMeta,
+          @JsonKey(name: '_url') Element urlElement,
+          @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+          @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+          @JsonKey(name: '_valueCode') Element valueCodeElement,
+          @JsonKey(name: '_valueDate') Element valueDateElement,
+          @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+          @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+          @JsonKey(name: '_valueId') Element valueIdElement,
+          @JsonKey(name: '_valueInstant') Element valueInstantElement,
+          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+          @JsonKey(name: '_valueOid') Element valueOidElement,
+          @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+          @JsonKey(name: '_valueString') Element valueStringElement,
+          @JsonKey(name: '_valueTime') Element valueTimeElement,
+          @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+          @JsonKey(name: '_valueUri') Element valueUriElement,
+          @JsonKey(name: '_valueUrl') Element valueUrlElement,
+          @JsonKey(name: '_valueUuid') Element valueUuidElement}) =
+      _$_FhirExtension;
 
   factory _FhirExtension.fromJson(Map<String, dynamic> json) =
       _$_FhirExtension.fromJson;
@@ -3300,6 +4414,66 @@ abstract class _FhirExtension implements FhirExtension {
   Dosage get valueDosage;
   @override
   Meta get valueMeta;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  Element get valueBase64BinaryElement;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  Element get valueCanonicalElement;
+  @override
+  @JsonKey(name: '_valueCode')
+  Element get valueCodeElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueId')
+  Element get valueIdElement;
+  @override
+  @JsonKey(name: '_valueInstant')
+  Element get valueInstantElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  Element get valueMarkdownElement;
+  @override
+  @JsonKey(name: '_valueOid')
+  Element get valueOidElement;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  Element get valuePositiveIntElement;
+  @override
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  Element get valueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
+  @override
+  @JsonKey(name: '_valueUrl')
+  Element get valueUrlElement;
+  @override
+  @JsonKey(name: '_valueUuid')
+  Element get valueUuidElement;
   @override
   _$FhirExtensionCopyWith<_FhirExtension> get copyWith;
 }
@@ -3473,7 +4647,8 @@ class _$ElementDefinitionTearOff {
 
   _ElementDefinition call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
       List<ElementDefinitionRepresentation> representation,
@@ -3671,7 +4846,195 @@ class _$ElementDefinitionTearOff {
       String isModifierReason,
       Boolean isSummary,
       ElementDefinitionBinding binding,
-      List<ElementDefinitionMapping> mapping}) {
+      List<ElementDefinitionMapping> mapping,
+      @JsonKey(name: '_path')
+          Element pathElement,
+      @JsonKey(name: '_representation')
+          Element representationElement,
+      @JsonKey(name: '_sliceName')
+          Element sliceNameElement,
+      @JsonKey(name: '_sliceIsConstraining')
+          Element sliceIsConstrainingElement,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_short')
+          Element shortElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement,
+      @JsonKey(name: '_min')
+          Element minElement,
+      @JsonKey(name: '_max')
+          Element maxElement,
+      @JsonKey(name: '_contentReference')
+          Element contentReferenceElement,
+      @JsonKey(name: '_defaultValueBase64Binary')
+          Element defaultValueBase64BinaryElement,
+      @JsonKey(name: '_defaultValueBoolean')
+          Element defaultValueBooleanElement,
+      @JsonKey(name: '_defaultValueCanonical')
+          Element defaultValueCanonicalElement,
+      @JsonKey(name: '_defaultValueCode')
+          Element defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueDate')
+          Element defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDateTime')
+          Element defaultValueDateTimeElement,
+      @JsonKey(name: '_defaultValueDecimal')
+          Element defaultValueDecimalElement,
+      @JsonKey(name: '_defaultValueId')
+          Element defaultValueIdElement,
+      @JsonKey(name: '_defaultValueInstant')
+          Element defaultValueInstantElement,
+      @JsonKey(name: '_defaultValueInteger')
+          Element defaultValueIntegerElement,
+      @JsonKey(name: '_defaultValueMarkdown')
+          Element defaultValueMarkdownElement,
+      @JsonKey(name: '_defaultValueOid')
+          Element defaultValueOidElement,
+      @JsonKey(name: '_defaultValuePositiveInt')
+          Element defaultValuePositiveIntElement,
+      @JsonKey(name: '_defaultValueString')
+          Element defaultValueStringElement,
+      @JsonKey(name: '_defaultValueTime')
+          Element defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueUnsignedInt')
+          Element defaultValueUnsignedIntElement,
+      @JsonKey(name: '_defaultValueUri')
+          Element defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUrl')
+          Element defaultValueUrlElement,
+      @JsonKey(name: '_defaultValueUuid')
+          Element defaultValueUuidElement,
+      @JsonKey(name: '_meaningWhenMissing')
+          Element meaningWhenMissingElement,
+      @JsonKey(name: '_orderMeaning')
+          Element orderMeaningElement,
+      @JsonKey(name: '_fixedBase64Binary')
+          Element fixedBase64BinaryElement,
+      @JsonKey(name: '_fixedBoolean')
+          Element fixedBooleanElement,
+      @JsonKey(name: '_fixedCanonical')
+          Element fixedCanonicalElement,
+      @JsonKey(name: '_fixedCode')
+          Element fixedCodeElement,
+      @JsonKey(name: '_fixedDate')
+          Element fixedDateElement,
+      @JsonKey(name: '_fixedDateTime')
+          Element fixedDateTimeElement,
+      @JsonKey(name: '_fixedDecimal')
+          Element fixedDecimalElement,
+      @JsonKey(name: '_fixedId')
+          Element fixedIdElement,
+      @JsonKey(name: '_fixedInstant')
+          Element fixedInstantElement,
+      @JsonKey(name: '_fixedInteger')
+          Element fixedIntegerElement,
+      @JsonKey(name: '_fixedMarkdown')
+          Element fixedMarkdownElement,
+      @JsonKey(name: '_fixedOid')
+          Element fixedOidElement,
+      @JsonKey(name: '_fixedPositiveInt')
+          Element fixedPositiveIntElement,
+      @JsonKey(name: '_fixedString')
+          Element fixedStringElement,
+      @JsonKey(name: '_fixedTime')
+          Element fixedTimeElement,
+      @JsonKey(name: '_fixedUnsignedInt')
+          Element fixedUnsignedIntElement,
+      @JsonKey(name: '_fixedUri')
+          Element fixedUriElement,
+      @JsonKey(name: '_fixedUrl')
+          Element fixedUrlElement,
+      @JsonKey(name: '_fixedUuid')
+          Element fixedUuidElement,
+      @JsonKey(name: '_patternBase64Binary')
+          Element patternBase64BinaryElement,
+      @JsonKey(name: '_patternBoolean')
+          Element patternBooleanElement,
+      @JsonKey(name: '_patternCanonical')
+          Element patternCanonicalElement,
+      @JsonKey(name: '_patternCode')
+          Element patternCodeElement,
+      @JsonKey(name: '_patternDate')
+          Element patternDateElement,
+      @JsonKey(name: '_patternDateTime')
+          Element patternDateTimeElement,
+      @JsonKey(name: '_patternDecimal')
+          Element patternDecimalElement,
+      @JsonKey(name: '_patternId')
+          Element patternIdElement,
+      @JsonKey(name: '_patternInstant')
+          Element patternInstantElement,
+      @JsonKey(name: '_patternInteger')
+          Element patternIntegerElement,
+      @JsonKey(name: '_patternMarkdown')
+          Element patternMarkdownElement,
+      @JsonKey(name: '_patternOid')
+          Element patternOidElement,
+      @JsonKey(name: '_patternPositiveInt')
+          Element patternPositiveIntElement,
+      @JsonKey(name: '_patternString')
+          Element patternStringElement,
+      @JsonKey(name: '_patternTime')
+          Element patternTimeElement,
+      @JsonKey(name: '_patternUnsignedInt')
+          Element patternUnsignedIntElement,
+      @JsonKey(name: '_patternUri')
+          Element patternUriElement,
+      @JsonKey(name: '_patternUrl')
+          Element patternUrlElement,
+      @JsonKey(name: '_patternUuid')
+          Element patternUuidElement,
+      @JsonKey(name: '_minValueDate')
+          Element minValueDateElement,
+      @JsonKey(name: '_minValueDateTime')
+          Element minValueDateTimeElement,
+      @JsonKey(name: '_minValueInstant')
+          Element minValueInstantElement,
+      @JsonKey(name: '_minValueTime')
+          Element minValueTimeElement,
+      @JsonKey(name: '_minValueDecimal')
+          Element minValueDecimalElement,
+      @JsonKey(name: '_minValueInteger')
+          Element minValueIntegerElement,
+      @JsonKey(name: '_minValuePositiveInt')
+          Element minValuePositiveIntElement,
+      @JsonKey(name: '_minValueUnsignedInt')
+          Element minValueUnsignedIntElement,
+      @JsonKey(name: '_maxValueDate')
+          Element maxValueDateElement,
+      @JsonKey(name: '_maxValueDateTime')
+          Element maxValueDateTimeElement,
+      @JsonKey(name: '_maxValueInstant')
+          Element maxValueInstantElement,
+      @JsonKey(name: '_maxValueTime')
+          Element maxValueTimeElement,
+      @JsonKey(name: '_maxValueDecimal')
+          Element maxValueDecimalElement,
+      @JsonKey(name: '_maxValueInteger')
+          Element maxValueIntegerElement,
+      @JsonKey(name: '_maxValuePositiveInt')
+          Element maxValuePositiveIntElement,
+      @JsonKey(name: '_maxValueUnsignedInt')
+          Element maxValueUnsignedIntElement,
+      @JsonKey(name: '_maxLength')
+          Element maxLengthElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement,
+      @JsonKey(name: '_mustSupport')
+          Element mustSupportElement,
+      @JsonKey(name: '_isModifier')
+          Element isModifierElement,
+      @JsonKey(name: '_isModifierReason')
+          Element isModifierReasonElement,
+      @JsonKey(name: '_isSummary')
+          Element isSummaryElement}) {
     return _ElementDefinition(
       id: id,
       extension_: extension_,
@@ -3873,6 +5236,100 @@ class _$ElementDefinitionTearOff {
       isSummary: isSummary,
       binding: binding,
       mapping: mapping,
+      pathElement: pathElement,
+      representationElement: representationElement,
+      sliceNameElement: sliceNameElement,
+      sliceIsConstrainingElement: sliceIsConstrainingElement,
+      labelElement: labelElement,
+      shortElement: shortElement,
+      definitionElement: definitionElement,
+      commentElement: commentElement,
+      requirementsElement: requirementsElement,
+      aliasElement: aliasElement,
+      minElement: minElement,
+      maxElement: maxElement,
+      contentReferenceElement: contentReferenceElement,
+      defaultValueBase64BinaryElement: defaultValueBase64BinaryElement,
+      defaultValueBooleanElement: defaultValueBooleanElement,
+      defaultValueCanonicalElement: defaultValueCanonicalElement,
+      defaultValueCodeElement: defaultValueCodeElement,
+      defaultValueDateElement: defaultValueDateElement,
+      defaultValueDateTimeElement: defaultValueDateTimeElement,
+      defaultValueDecimalElement: defaultValueDecimalElement,
+      defaultValueIdElement: defaultValueIdElement,
+      defaultValueInstantElement: defaultValueInstantElement,
+      defaultValueIntegerElement: defaultValueIntegerElement,
+      defaultValueMarkdownElement: defaultValueMarkdownElement,
+      defaultValueOidElement: defaultValueOidElement,
+      defaultValuePositiveIntElement: defaultValuePositiveIntElement,
+      defaultValueStringElement: defaultValueStringElement,
+      defaultValueTimeElement: defaultValueTimeElement,
+      defaultValueUnsignedIntElement: defaultValueUnsignedIntElement,
+      defaultValueUriElement: defaultValueUriElement,
+      defaultValueUrlElement: defaultValueUrlElement,
+      defaultValueUuidElement: defaultValueUuidElement,
+      meaningWhenMissingElement: meaningWhenMissingElement,
+      orderMeaningElement: orderMeaningElement,
+      fixedBase64BinaryElement: fixedBase64BinaryElement,
+      fixedBooleanElement: fixedBooleanElement,
+      fixedCanonicalElement: fixedCanonicalElement,
+      fixedCodeElement: fixedCodeElement,
+      fixedDateElement: fixedDateElement,
+      fixedDateTimeElement: fixedDateTimeElement,
+      fixedDecimalElement: fixedDecimalElement,
+      fixedIdElement: fixedIdElement,
+      fixedInstantElement: fixedInstantElement,
+      fixedIntegerElement: fixedIntegerElement,
+      fixedMarkdownElement: fixedMarkdownElement,
+      fixedOidElement: fixedOidElement,
+      fixedPositiveIntElement: fixedPositiveIntElement,
+      fixedStringElement: fixedStringElement,
+      fixedTimeElement: fixedTimeElement,
+      fixedUnsignedIntElement: fixedUnsignedIntElement,
+      fixedUriElement: fixedUriElement,
+      fixedUrlElement: fixedUrlElement,
+      fixedUuidElement: fixedUuidElement,
+      patternBase64BinaryElement: patternBase64BinaryElement,
+      patternBooleanElement: patternBooleanElement,
+      patternCanonicalElement: patternCanonicalElement,
+      patternCodeElement: patternCodeElement,
+      patternDateElement: patternDateElement,
+      patternDateTimeElement: patternDateTimeElement,
+      patternDecimalElement: patternDecimalElement,
+      patternIdElement: patternIdElement,
+      patternInstantElement: patternInstantElement,
+      patternIntegerElement: patternIntegerElement,
+      patternMarkdownElement: patternMarkdownElement,
+      patternOidElement: patternOidElement,
+      patternPositiveIntElement: patternPositiveIntElement,
+      patternStringElement: patternStringElement,
+      patternTimeElement: patternTimeElement,
+      patternUnsignedIntElement: patternUnsignedIntElement,
+      patternUriElement: patternUriElement,
+      patternUrlElement: patternUrlElement,
+      patternUuidElement: patternUuidElement,
+      minValueDateElement: minValueDateElement,
+      minValueDateTimeElement: minValueDateTimeElement,
+      minValueInstantElement: minValueInstantElement,
+      minValueTimeElement: minValueTimeElement,
+      minValueDecimalElement: minValueDecimalElement,
+      minValueIntegerElement: minValueIntegerElement,
+      minValuePositiveIntElement: minValuePositiveIntElement,
+      minValueUnsignedIntElement: minValueUnsignedIntElement,
+      maxValueDateElement: maxValueDateElement,
+      maxValueDateTimeElement: maxValueDateTimeElement,
+      maxValueInstantElement: maxValueInstantElement,
+      maxValueTimeElement: maxValueTimeElement,
+      maxValueDecimalElement: maxValueDecimalElement,
+      maxValueIntegerElement: maxValueIntegerElement,
+      maxValuePositiveIntElement: maxValuePositiveIntElement,
+      maxValueUnsignedIntElement: maxValueUnsignedIntElement,
+      maxLengthElement: maxLengthElement,
+      conditionElement: conditionElement,
+      mustSupportElement: mustSupportElement,
+      isModifierElement: isModifierElement,
+      isModifierReasonElement: isModifierReasonElement,
+      isSummaryElement: isSummaryElement,
     );
   }
 }
@@ -4082,6 +5539,194 @@ mixin _$ElementDefinition {
   Boolean get isSummary;
   ElementDefinitionBinding get binding;
   List<ElementDefinitionMapping> get mapping;
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @JsonKey(name: '_representation')
+  Element get representationElement;
+  @JsonKey(name: '_sliceName')
+  Element get sliceNameElement;
+  @JsonKey(name: '_sliceIsConstraining')
+  Element get sliceIsConstrainingElement;
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @JsonKey(name: '_short')
+  Element get shortElement;
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
+  @JsonKey(name: '_comment')
+  Element get commentElement;
+  @JsonKey(name: '_requirements')
+  Element get requirementsElement;
+  @JsonKey(name: '_alias')
+  Element get aliasElement;
+  @JsonKey(name: '_min')
+  Element get minElement;
+  @JsonKey(name: '_max')
+  Element get maxElement;
+  @JsonKey(name: '_contentReference')
+  Element get contentReferenceElement;
+  @JsonKey(name: '_defaultValueBase64Binary')
+  Element get defaultValueBase64BinaryElement;
+  @JsonKey(name: '_defaultValueBoolean')
+  Element get defaultValueBooleanElement;
+  @JsonKey(name: '_defaultValueCanonical')
+  Element get defaultValueCanonicalElement;
+  @JsonKey(name: '_defaultValueCode')
+  Element get defaultValueCodeElement;
+  @JsonKey(name: '_defaultValueDate')
+  Element get defaultValueDateElement;
+  @JsonKey(name: '_defaultValueDateTime')
+  Element get defaultValueDateTimeElement;
+  @JsonKey(name: '_defaultValueDecimal')
+  Element get defaultValueDecimalElement;
+  @JsonKey(name: '_defaultValueId')
+  Element get defaultValueIdElement;
+  @JsonKey(name: '_defaultValueInstant')
+  Element get defaultValueInstantElement;
+  @JsonKey(name: '_defaultValueInteger')
+  Element get defaultValueIntegerElement;
+  @JsonKey(name: '_defaultValueMarkdown')
+  Element get defaultValueMarkdownElement;
+  @JsonKey(name: '_defaultValueOid')
+  Element get defaultValueOidElement;
+  @JsonKey(name: '_defaultValuePositiveInt')
+  Element get defaultValuePositiveIntElement;
+  @JsonKey(name: '_defaultValueString')
+  Element get defaultValueStringElement;
+  @JsonKey(name: '_defaultValueTime')
+  Element get defaultValueTimeElement;
+  @JsonKey(name: '_defaultValueUnsignedInt')
+  Element get defaultValueUnsignedIntElement;
+  @JsonKey(name: '_defaultValueUri')
+  Element get defaultValueUriElement;
+  @JsonKey(name: '_defaultValueUrl')
+  Element get defaultValueUrlElement;
+  @JsonKey(name: '_defaultValueUuid')
+  Element get defaultValueUuidElement;
+  @JsonKey(name: '_meaningWhenMissing')
+  Element get meaningWhenMissingElement;
+  @JsonKey(name: '_orderMeaning')
+  Element get orderMeaningElement;
+  @JsonKey(name: '_fixedBase64Binary')
+  Element get fixedBase64BinaryElement;
+  @JsonKey(name: '_fixedBoolean')
+  Element get fixedBooleanElement;
+  @JsonKey(name: '_fixedCanonical')
+  Element get fixedCanonicalElement;
+  @JsonKey(name: '_fixedCode')
+  Element get fixedCodeElement;
+  @JsonKey(name: '_fixedDate')
+  Element get fixedDateElement;
+  @JsonKey(name: '_fixedDateTime')
+  Element get fixedDateTimeElement;
+  @JsonKey(name: '_fixedDecimal')
+  Element get fixedDecimalElement;
+  @JsonKey(name: '_fixedId')
+  Element get fixedIdElement;
+  @JsonKey(name: '_fixedInstant')
+  Element get fixedInstantElement;
+  @JsonKey(name: '_fixedInteger')
+  Element get fixedIntegerElement;
+  @JsonKey(name: '_fixedMarkdown')
+  Element get fixedMarkdownElement;
+  @JsonKey(name: '_fixedOid')
+  Element get fixedOidElement;
+  @JsonKey(name: '_fixedPositiveInt')
+  Element get fixedPositiveIntElement;
+  @JsonKey(name: '_fixedString')
+  Element get fixedStringElement;
+  @JsonKey(name: '_fixedTime')
+  Element get fixedTimeElement;
+  @JsonKey(name: '_fixedUnsignedInt')
+  Element get fixedUnsignedIntElement;
+  @JsonKey(name: '_fixedUri')
+  Element get fixedUriElement;
+  @JsonKey(name: '_fixedUrl')
+  Element get fixedUrlElement;
+  @JsonKey(name: '_fixedUuid')
+  Element get fixedUuidElement;
+  @JsonKey(name: '_patternBase64Binary')
+  Element get patternBase64BinaryElement;
+  @JsonKey(name: '_patternBoolean')
+  Element get patternBooleanElement;
+  @JsonKey(name: '_patternCanonical')
+  Element get patternCanonicalElement;
+  @JsonKey(name: '_patternCode')
+  Element get patternCodeElement;
+  @JsonKey(name: '_patternDate')
+  Element get patternDateElement;
+  @JsonKey(name: '_patternDateTime')
+  Element get patternDateTimeElement;
+  @JsonKey(name: '_patternDecimal')
+  Element get patternDecimalElement;
+  @JsonKey(name: '_patternId')
+  Element get patternIdElement;
+  @JsonKey(name: '_patternInstant')
+  Element get patternInstantElement;
+  @JsonKey(name: '_patternInteger')
+  Element get patternIntegerElement;
+  @JsonKey(name: '_patternMarkdown')
+  Element get patternMarkdownElement;
+  @JsonKey(name: '_patternOid')
+  Element get patternOidElement;
+  @JsonKey(name: '_patternPositiveInt')
+  Element get patternPositiveIntElement;
+  @JsonKey(name: '_patternString')
+  Element get patternStringElement;
+  @JsonKey(name: '_patternTime')
+  Element get patternTimeElement;
+  @JsonKey(name: '_patternUnsignedInt')
+  Element get patternUnsignedIntElement;
+  @JsonKey(name: '_patternUri')
+  Element get patternUriElement;
+  @JsonKey(name: '_patternUrl')
+  Element get patternUrlElement;
+  @JsonKey(name: '_patternUuid')
+  Element get patternUuidElement;
+  @JsonKey(name: '_minValueDate')
+  Element get minValueDateElement;
+  @JsonKey(name: '_minValueDateTime')
+  Element get minValueDateTimeElement;
+  @JsonKey(name: '_minValueInstant')
+  Element get minValueInstantElement;
+  @JsonKey(name: '_minValueTime')
+  Element get minValueTimeElement;
+  @JsonKey(name: '_minValueDecimal')
+  Element get minValueDecimalElement;
+  @JsonKey(name: '_minValueInteger')
+  Element get minValueIntegerElement;
+  @JsonKey(name: '_minValuePositiveInt')
+  Element get minValuePositiveIntElement;
+  @JsonKey(name: '_minValueUnsignedInt')
+  Element get minValueUnsignedIntElement;
+  @JsonKey(name: '_maxValueDate')
+  Element get maxValueDateElement;
+  @JsonKey(name: '_maxValueDateTime')
+  Element get maxValueDateTimeElement;
+  @JsonKey(name: '_maxValueInstant')
+  Element get maxValueInstantElement;
+  @JsonKey(name: '_maxValueTime')
+  Element get maxValueTimeElement;
+  @JsonKey(name: '_maxValueDecimal')
+  Element get maxValueDecimalElement;
+  @JsonKey(name: '_maxValueInteger')
+  Element get maxValueIntegerElement;
+  @JsonKey(name: '_maxValuePositiveInt')
+  Element get maxValuePositiveIntElement;
+  @JsonKey(name: '_maxValueUnsignedInt')
+  Element get maxValueUnsignedIntElement;
+  @JsonKey(name: '_maxLength')
+  Element get maxLengthElement;
+  @JsonKey(name: '_condition')
+  Element get conditionElement;
+  @JsonKey(name: '_mustSupport')
+  Element get mustSupportElement;
+  @JsonKey(name: '_isModifier')
+  Element get isModifierElement;
+  @JsonKey(name: '_isModifierReason')
+  Element get isModifierReasonElement;
+  @JsonKey(name: '_isSummary')
+  Element get isSummaryElement;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionCopyWith<ElementDefinition> get copyWith;
@@ -4093,7 +5738,8 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       _$ElementDefinitionCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
       List<ElementDefinitionRepresentation> representation,
@@ -4291,7 +5937,195 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String isModifierReason,
       Boolean isSummary,
       ElementDefinitionBinding binding,
-      List<ElementDefinitionMapping> mapping});
+      List<ElementDefinitionMapping> mapping,
+      @JsonKey(name: '_path')
+          Element pathElement,
+      @JsonKey(name: '_representation')
+          Element representationElement,
+      @JsonKey(name: '_sliceName')
+          Element sliceNameElement,
+      @JsonKey(name: '_sliceIsConstraining')
+          Element sliceIsConstrainingElement,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_short')
+          Element shortElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement,
+      @JsonKey(name: '_min')
+          Element minElement,
+      @JsonKey(name: '_max')
+          Element maxElement,
+      @JsonKey(name: '_contentReference')
+          Element contentReferenceElement,
+      @JsonKey(name: '_defaultValueBase64Binary')
+          Element defaultValueBase64BinaryElement,
+      @JsonKey(name: '_defaultValueBoolean')
+          Element defaultValueBooleanElement,
+      @JsonKey(name: '_defaultValueCanonical')
+          Element defaultValueCanonicalElement,
+      @JsonKey(name: '_defaultValueCode')
+          Element defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueDate')
+          Element defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDateTime')
+          Element defaultValueDateTimeElement,
+      @JsonKey(name: '_defaultValueDecimal')
+          Element defaultValueDecimalElement,
+      @JsonKey(name: '_defaultValueId')
+          Element defaultValueIdElement,
+      @JsonKey(name: '_defaultValueInstant')
+          Element defaultValueInstantElement,
+      @JsonKey(name: '_defaultValueInteger')
+          Element defaultValueIntegerElement,
+      @JsonKey(name: '_defaultValueMarkdown')
+          Element defaultValueMarkdownElement,
+      @JsonKey(name: '_defaultValueOid')
+          Element defaultValueOidElement,
+      @JsonKey(name: '_defaultValuePositiveInt')
+          Element defaultValuePositiveIntElement,
+      @JsonKey(name: '_defaultValueString')
+          Element defaultValueStringElement,
+      @JsonKey(name: '_defaultValueTime')
+          Element defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueUnsignedInt')
+          Element defaultValueUnsignedIntElement,
+      @JsonKey(name: '_defaultValueUri')
+          Element defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUrl')
+          Element defaultValueUrlElement,
+      @JsonKey(name: '_defaultValueUuid')
+          Element defaultValueUuidElement,
+      @JsonKey(name: '_meaningWhenMissing')
+          Element meaningWhenMissingElement,
+      @JsonKey(name: '_orderMeaning')
+          Element orderMeaningElement,
+      @JsonKey(name: '_fixedBase64Binary')
+          Element fixedBase64BinaryElement,
+      @JsonKey(name: '_fixedBoolean')
+          Element fixedBooleanElement,
+      @JsonKey(name: '_fixedCanonical')
+          Element fixedCanonicalElement,
+      @JsonKey(name: '_fixedCode')
+          Element fixedCodeElement,
+      @JsonKey(name: '_fixedDate')
+          Element fixedDateElement,
+      @JsonKey(name: '_fixedDateTime')
+          Element fixedDateTimeElement,
+      @JsonKey(name: '_fixedDecimal')
+          Element fixedDecimalElement,
+      @JsonKey(name: '_fixedId')
+          Element fixedIdElement,
+      @JsonKey(name: '_fixedInstant')
+          Element fixedInstantElement,
+      @JsonKey(name: '_fixedInteger')
+          Element fixedIntegerElement,
+      @JsonKey(name: '_fixedMarkdown')
+          Element fixedMarkdownElement,
+      @JsonKey(name: '_fixedOid')
+          Element fixedOidElement,
+      @JsonKey(name: '_fixedPositiveInt')
+          Element fixedPositiveIntElement,
+      @JsonKey(name: '_fixedString')
+          Element fixedStringElement,
+      @JsonKey(name: '_fixedTime')
+          Element fixedTimeElement,
+      @JsonKey(name: '_fixedUnsignedInt')
+          Element fixedUnsignedIntElement,
+      @JsonKey(name: '_fixedUri')
+          Element fixedUriElement,
+      @JsonKey(name: '_fixedUrl')
+          Element fixedUrlElement,
+      @JsonKey(name: '_fixedUuid')
+          Element fixedUuidElement,
+      @JsonKey(name: '_patternBase64Binary')
+          Element patternBase64BinaryElement,
+      @JsonKey(name: '_patternBoolean')
+          Element patternBooleanElement,
+      @JsonKey(name: '_patternCanonical')
+          Element patternCanonicalElement,
+      @JsonKey(name: '_patternCode')
+          Element patternCodeElement,
+      @JsonKey(name: '_patternDate')
+          Element patternDateElement,
+      @JsonKey(name: '_patternDateTime')
+          Element patternDateTimeElement,
+      @JsonKey(name: '_patternDecimal')
+          Element patternDecimalElement,
+      @JsonKey(name: '_patternId')
+          Element patternIdElement,
+      @JsonKey(name: '_patternInstant')
+          Element patternInstantElement,
+      @JsonKey(name: '_patternInteger')
+          Element patternIntegerElement,
+      @JsonKey(name: '_patternMarkdown')
+          Element patternMarkdownElement,
+      @JsonKey(name: '_patternOid')
+          Element patternOidElement,
+      @JsonKey(name: '_patternPositiveInt')
+          Element patternPositiveIntElement,
+      @JsonKey(name: '_patternString')
+          Element patternStringElement,
+      @JsonKey(name: '_patternTime')
+          Element patternTimeElement,
+      @JsonKey(name: '_patternUnsignedInt')
+          Element patternUnsignedIntElement,
+      @JsonKey(name: '_patternUri')
+          Element patternUriElement,
+      @JsonKey(name: '_patternUrl')
+          Element patternUrlElement,
+      @JsonKey(name: '_patternUuid')
+          Element patternUuidElement,
+      @JsonKey(name: '_minValueDate')
+          Element minValueDateElement,
+      @JsonKey(name: '_minValueDateTime')
+          Element minValueDateTimeElement,
+      @JsonKey(name: '_minValueInstant')
+          Element minValueInstantElement,
+      @JsonKey(name: '_minValueTime')
+          Element minValueTimeElement,
+      @JsonKey(name: '_minValueDecimal')
+          Element minValueDecimalElement,
+      @JsonKey(name: '_minValueInteger')
+          Element minValueIntegerElement,
+      @JsonKey(name: '_minValuePositiveInt')
+          Element minValuePositiveIntElement,
+      @JsonKey(name: '_minValueUnsignedInt')
+          Element minValueUnsignedIntElement,
+      @JsonKey(name: '_maxValueDate')
+          Element maxValueDateElement,
+      @JsonKey(name: '_maxValueDateTime')
+          Element maxValueDateTimeElement,
+      @JsonKey(name: '_maxValueInstant')
+          Element maxValueInstantElement,
+      @JsonKey(name: '_maxValueTime')
+          Element maxValueTimeElement,
+      @JsonKey(name: '_maxValueDecimal')
+          Element maxValueDecimalElement,
+      @JsonKey(name: '_maxValueInteger')
+          Element maxValueIntegerElement,
+      @JsonKey(name: '_maxValuePositiveInt')
+          Element maxValuePositiveIntElement,
+      @JsonKey(name: '_maxValueUnsignedInt')
+          Element maxValueUnsignedIntElement,
+      @JsonKey(name: '_maxLength')
+          Element maxLengthElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement,
+      @JsonKey(name: '_mustSupport')
+          Element mustSupportElement,
+      @JsonKey(name: '_isModifier')
+          Element isModifierElement,
+      @JsonKey(name: '_isModifierReason')
+          Element isModifierReasonElement,
+      @JsonKey(name: '_isSummary')
+          Element isSummaryElement});
 
   $ElementDefinitionSlicingCopyWith<$Res> get slicing;
   $ElementDefinitionBaseCopyWith<$Res> get base;
@@ -4391,6 +6225,100 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $QuantityCopyWith<$Res> get minValueQuantity;
   $QuantityCopyWith<$Res> get maxValueQuantity;
   $ElementDefinitionBindingCopyWith<$Res> get binding;
+  $ElementCopyWith<$Res> get pathElement;
+  $ElementCopyWith<$Res> get representationElement;
+  $ElementCopyWith<$Res> get sliceNameElement;
+  $ElementCopyWith<$Res> get sliceIsConstrainingElement;
+  $ElementCopyWith<$Res> get labelElement;
+  $ElementCopyWith<$Res> get shortElement;
+  $ElementCopyWith<$Res> get definitionElement;
+  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res> get requirementsElement;
+  $ElementCopyWith<$Res> get aliasElement;
+  $ElementCopyWith<$Res> get minElement;
+  $ElementCopyWith<$Res> get maxElement;
+  $ElementCopyWith<$Res> get contentReferenceElement;
+  $ElementCopyWith<$Res> get defaultValueBase64BinaryElement;
+  $ElementCopyWith<$Res> get defaultValueBooleanElement;
+  $ElementCopyWith<$Res> get defaultValueCanonicalElement;
+  $ElementCopyWith<$Res> get defaultValueCodeElement;
+  $ElementCopyWith<$Res> get defaultValueDateElement;
+  $ElementCopyWith<$Res> get defaultValueDateTimeElement;
+  $ElementCopyWith<$Res> get defaultValueDecimalElement;
+  $ElementCopyWith<$Res> get defaultValueIdElement;
+  $ElementCopyWith<$Res> get defaultValueInstantElement;
+  $ElementCopyWith<$Res> get defaultValueIntegerElement;
+  $ElementCopyWith<$Res> get defaultValueMarkdownElement;
+  $ElementCopyWith<$Res> get defaultValueOidElement;
+  $ElementCopyWith<$Res> get defaultValuePositiveIntElement;
+  $ElementCopyWith<$Res> get defaultValueStringElement;
+  $ElementCopyWith<$Res> get defaultValueTimeElement;
+  $ElementCopyWith<$Res> get defaultValueUnsignedIntElement;
+  $ElementCopyWith<$Res> get defaultValueUriElement;
+  $ElementCopyWith<$Res> get defaultValueUrlElement;
+  $ElementCopyWith<$Res> get defaultValueUuidElement;
+  $ElementCopyWith<$Res> get meaningWhenMissingElement;
+  $ElementCopyWith<$Res> get orderMeaningElement;
+  $ElementCopyWith<$Res> get fixedBase64BinaryElement;
+  $ElementCopyWith<$Res> get fixedBooleanElement;
+  $ElementCopyWith<$Res> get fixedCanonicalElement;
+  $ElementCopyWith<$Res> get fixedCodeElement;
+  $ElementCopyWith<$Res> get fixedDateElement;
+  $ElementCopyWith<$Res> get fixedDateTimeElement;
+  $ElementCopyWith<$Res> get fixedDecimalElement;
+  $ElementCopyWith<$Res> get fixedIdElement;
+  $ElementCopyWith<$Res> get fixedInstantElement;
+  $ElementCopyWith<$Res> get fixedIntegerElement;
+  $ElementCopyWith<$Res> get fixedMarkdownElement;
+  $ElementCopyWith<$Res> get fixedOidElement;
+  $ElementCopyWith<$Res> get fixedPositiveIntElement;
+  $ElementCopyWith<$Res> get fixedStringElement;
+  $ElementCopyWith<$Res> get fixedTimeElement;
+  $ElementCopyWith<$Res> get fixedUnsignedIntElement;
+  $ElementCopyWith<$Res> get fixedUriElement;
+  $ElementCopyWith<$Res> get fixedUrlElement;
+  $ElementCopyWith<$Res> get fixedUuidElement;
+  $ElementCopyWith<$Res> get patternBase64BinaryElement;
+  $ElementCopyWith<$Res> get patternBooleanElement;
+  $ElementCopyWith<$Res> get patternCanonicalElement;
+  $ElementCopyWith<$Res> get patternCodeElement;
+  $ElementCopyWith<$Res> get patternDateElement;
+  $ElementCopyWith<$Res> get patternDateTimeElement;
+  $ElementCopyWith<$Res> get patternDecimalElement;
+  $ElementCopyWith<$Res> get patternIdElement;
+  $ElementCopyWith<$Res> get patternInstantElement;
+  $ElementCopyWith<$Res> get patternIntegerElement;
+  $ElementCopyWith<$Res> get patternMarkdownElement;
+  $ElementCopyWith<$Res> get patternOidElement;
+  $ElementCopyWith<$Res> get patternPositiveIntElement;
+  $ElementCopyWith<$Res> get patternStringElement;
+  $ElementCopyWith<$Res> get patternTimeElement;
+  $ElementCopyWith<$Res> get patternUnsignedIntElement;
+  $ElementCopyWith<$Res> get patternUriElement;
+  $ElementCopyWith<$Res> get patternUrlElement;
+  $ElementCopyWith<$Res> get patternUuidElement;
+  $ElementCopyWith<$Res> get minValueDateElement;
+  $ElementCopyWith<$Res> get minValueDateTimeElement;
+  $ElementCopyWith<$Res> get minValueInstantElement;
+  $ElementCopyWith<$Res> get minValueTimeElement;
+  $ElementCopyWith<$Res> get minValueDecimalElement;
+  $ElementCopyWith<$Res> get minValueIntegerElement;
+  $ElementCopyWith<$Res> get minValuePositiveIntElement;
+  $ElementCopyWith<$Res> get minValueUnsignedIntElement;
+  $ElementCopyWith<$Res> get maxValueDateElement;
+  $ElementCopyWith<$Res> get maxValueDateTimeElement;
+  $ElementCopyWith<$Res> get maxValueInstantElement;
+  $ElementCopyWith<$Res> get maxValueTimeElement;
+  $ElementCopyWith<$Res> get maxValueDecimalElement;
+  $ElementCopyWith<$Res> get maxValueIntegerElement;
+  $ElementCopyWith<$Res> get maxValuePositiveIntElement;
+  $ElementCopyWith<$Res> get maxValueUnsignedIntElement;
+  $ElementCopyWith<$Res> get maxLengthElement;
+  $ElementCopyWith<$Res> get conditionElement;
+  $ElementCopyWith<$Res> get mustSupportElement;
+  $ElementCopyWith<$Res> get isModifierElement;
+  $ElementCopyWith<$Res> get isModifierReasonElement;
+  $ElementCopyWith<$Res> get isSummaryElement;
 }
 
 class _$ElementDefinitionCopyWithImpl<$Res>
@@ -4603,6 +6531,100 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object isSummary = freezed,
     Object binding = freezed,
     Object mapping = freezed,
+    Object pathElement = freezed,
+    Object representationElement = freezed,
+    Object sliceNameElement = freezed,
+    Object sliceIsConstrainingElement = freezed,
+    Object labelElement = freezed,
+    Object shortElement = freezed,
+    Object definitionElement = freezed,
+    Object commentElement = freezed,
+    Object requirementsElement = freezed,
+    Object aliasElement = freezed,
+    Object minElement = freezed,
+    Object maxElement = freezed,
+    Object contentReferenceElement = freezed,
+    Object defaultValueBase64BinaryElement = freezed,
+    Object defaultValueBooleanElement = freezed,
+    Object defaultValueCanonicalElement = freezed,
+    Object defaultValueCodeElement = freezed,
+    Object defaultValueDateElement = freezed,
+    Object defaultValueDateTimeElement = freezed,
+    Object defaultValueDecimalElement = freezed,
+    Object defaultValueIdElement = freezed,
+    Object defaultValueInstantElement = freezed,
+    Object defaultValueIntegerElement = freezed,
+    Object defaultValueMarkdownElement = freezed,
+    Object defaultValueOidElement = freezed,
+    Object defaultValuePositiveIntElement = freezed,
+    Object defaultValueStringElement = freezed,
+    Object defaultValueTimeElement = freezed,
+    Object defaultValueUnsignedIntElement = freezed,
+    Object defaultValueUriElement = freezed,
+    Object defaultValueUrlElement = freezed,
+    Object defaultValueUuidElement = freezed,
+    Object meaningWhenMissingElement = freezed,
+    Object orderMeaningElement = freezed,
+    Object fixedBase64BinaryElement = freezed,
+    Object fixedBooleanElement = freezed,
+    Object fixedCanonicalElement = freezed,
+    Object fixedCodeElement = freezed,
+    Object fixedDateElement = freezed,
+    Object fixedDateTimeElement = freezed,
+    Object fixedDecimalElement = freezed,
+    Object fixedIdElement = freezed,
+    Object fixedInstantElement = freezed,
+    Object fixedIntegerElement = freezed,
+    Object fixedMarkdownElement = freezed,
+    Object fixedOidElement = freezed,
+    Object fixedPositiveIntElement = freezed,
+    Object fixedStringElement = freezed,
+    Object fixedTimeElement = freezed,
+    Object fixedUnsignedIntElement = freezed,
+    Object fixedUriElement = freezed,
+    Object fixedUrlElement = freezed,
+    Object fixedUuidElement = freezed,
+    Object patternBase64BinaryElement = freezed,
+    Object patternBooleanElement = freezed,
+    Object patternCanonicalElement = freezed,
+    Object patternCodeElement = freezed,
+    Object patternDateElement = freezed,
+    Object patternDateTimeElement = freezed,
+    Object patternDecimalElement = freezed,
+    Object patternIdElement = freezed,
+    Object patternInstantElement = freezed,
+    Object patternIntegerElement = freezed,
+    Object patternMarkdownElement = freezed,
+    Object patternOidElement = freezed,
+    Object patternPositiveIntElement = freezed,
+    Object patternStringElement = freezed,
+    Object patternTimeElement = freezed,
+    Object patternUnsignedIntElement = freezed,
+    Object patternUriElement = freezed,
+    Object patternUrlElement = freezed,
+    Object patternUuidElement = freezed,
+    Object minValueDateElement = freezed,
+    Object minValueDateTimeElement = freezed,
+    Object minValueInstantElement = freezed,
+    Object minValueTimeElement = freezed,
+    Object minValueDecimalElement = freezed,
+    Object minValueIntegerElement = freezed,
+    Object minValuePositiveIntElement = freezed,
+    Object minValueUnsignedIntElement = freezed,
+    Object maxValueDateElement = freezed,
+    Object maxValueDateTimeElement = freezed,
+    Object maxValueInstantElement = freezed,
+    Object maxValueTimeElement = freezed,
+    Object maxValueDecimalElement = freezed,
+    Object maxValueIntegerElement = freezed,
+    Object maxValuePositiveIntElement = freezed,
+    Object maxValueUnsignedIntElement = freezed,
+    Object maxLengthElement = freezed,
+    Object conditionElement = freezed,
+    Object mustSupportElement = freezed,
+    Object isModifierElement = freezed,
+    Object isModifierReasonElement = freezed,
+    Object isSummaryElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -5124,6 +7146,286 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       mapping: mapping == freezed
           ? _value.mapping
           : mapping as List<ElementDefinitionMapping>,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      representationElement: representationElement == freezed
+          ? _value.representationElement
+          : representationElement as Element,
+      sliceNameElement: sliceNameElement == freezed
+          ? _value.sliceNameElement
+          : sliceNameElement as Element,
+      sliceIsConstrainingElement: sliceIsConstrainingElement == freezed
+          ? _value.sliceIsConstrainingElement
+          : sliceIsConstrainingElement as Element,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      shortElement: shortElement == freezed
+          ? _value.shortElement
+          : shortElement as Element,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
+      requirementsElement: requirementsElement == freezed
+          ? _value.requirementsElement
+          : requirementsElement as Element,
+      aliasElement: aliasElement == freezed
+          ? _value.aliasElement
+          : aliasElement as Element,
+      minElement:
+          minElement == freezed ? _value.minElement : minElement as Element,
+      maxElement:
+          maxElement == freezed ? _value.maxElement : maxElement as Element,
+      contentReferenceElement: contentReferenceElement == freezed
+          ? _value.contentReferenceElement
+          : contentReferenceElement as Element,
+      defaultValueBase64BinaryElement:
+          defaultValueBase64BinaryElement == freezed
+              ? _value.defaultValueBase64BinaryElement
+              : defaultValueBase64BinaryElement as Element,
+      defaultValueBooleanElement: defaultValueBooleanElement == freezed
+          ? _value.defaultValueBooleanElement
+          : defaultValueBooleanElement as Element,
+      defaultValueCanonicalElement: defaultValueCanonicalElement == freezed
+          ? _value.defaultValueCanonicalElement
+          : defaultValueCanonicalElement as Element,
+      defaultValueCodeElement: defaultValueCodeElement == freezed
+          ? _value.defaultValueCodeElement
+          : defaultValueCodeElement as Element,
+      defaultValueDateElement: defaultValueDateElement == freezed
+          ? _value.defaultValueDateElement
+          : defaultValueDateElement as Element,
+      defaultValueDateTimeElement: defaultValueDateTimeElement == freezed
+          ? _value.defaultValueDateTimeElement
+          : defaultValueDateTimeElement as Element,
+      defaultValueDecimalElement: defaultValueDecimalElement == freezed
+          ? _value.defaultValueDecimalElement
+          : defaultValueDecimalElement as Element,
+      defaultValueIdElement: defaultValueIdElement == freezed
+          ? _value.defaultValueIdElement
+          : defaultValueIdElement as Element,
+      defaultValueInstantElement: defaultValueInstantElement == freezed
+          ? _value.defaultValueInstantElement
+          : defaultValueInstantElement as Element,
+      defaultValueIntegerElement: defaultValueIntegerElement == freezed
+          ? _value.defaultValueIntegerElement
+          : defaultValueIntegerElement as Element,
+      defaultValueMarkdownElement: defaultValueMarkdownElement == freezed
+          ? _value.defaultValueMarkdownElement
+          : defaultValueMarkdownElement as Element,
+      defaultValueOidElement: defaultValueOidElement == freezed
+          ? _value.defaultValueOidElement
+          : defaultValueOidElement as Element,
+      defaultValuePositiveIntElement: defaultValuePositiveIntElement == freezed
+          ? _value.defaultValuePositiveIntElement
+          : defaultValuePositiveIntElement as Element,
+      defaultValueStringElement: defaultValueStringElement == freezed
+          ? _value.defaultValueStringElement
+          : defaultValueStringElement as Element,
+      defaultValueTimeElement: defaultValueTimeElement == freezed
+          ? _value.defaultValueTimeElement
+          : defaultValueTimeElement as Element,
+      defaultValueUnsignedIntElement: defaultValueUnsignedIntElement == freezed
+          ? _value.defaultValueUnsignedIntElement
+          : defaultValueUnsignedIntElement as Element,
+      defaultValueUriElement: defaultValueUriElement == freezed
+          ? _value.defaultValueUriElement
+          : defaultValueUriElement as Element,
+      defaultValueUrlElement: defaultValueUrlElement == freezed
+          ? _value.defaultValueUrlElement
+          : defaultValueUrlElement as Element,
+      defaultValueUuidElement: defaultValueUuidElement == freezed
+          ? _value.defaultValueUuidElement
+          : defaultValueUuidElement as Element,
+      meaningWhenMissingElement: meaningWhenMissingElement == freezed
+          ? _value.meaningWhenMissingElement
+          : meaningWhenMissingElement as Element,
+      orderMeaningElement: orderMeaningElement == freezed
+          ? _value.orderMeaningElement
+          : orderMeaningElement as Element,
+      fixedBase64BinaryElement: fixedBase64BinaryElement == freezed
+          ? _value.fixedBase64BinaryElement
+          : fixedBase64BinaryElement as Element,
+      fixedBooleanElement: fixedBooleanElement == freezed
+          ? _value.fixedBooleanElement
+          : fixedBooleanElement as Element,
+      fixedCanonicalElement: fixedCanonicalElement == freezed
+          ? _value.fixedCanonicalElement
+          : fixedCanonicalElement as Element,
+      fixedCodeElement: fixedCodeElement == freezed
+          ? _value.fixedCodeElement
+          : fixedCodeElement as Element,
+      fixedDateElement: fixedDateElement == freezed
+          ? _value.fixedDateElement
+          : fixedDateElement as Element,
+      fixedDateTimeElement: fixedDateTimeElement == freezed
+          ? _value.fixedDateTimeElement
+          : fixedDateTimeElement as Element,
+      fixedDecimalElement: fixedDecimalElement == freezed
+          ? _value.fixedDecimalElement
+          : fixedDecimalElement as Element,
+      fixedIdElement: fixedIdElement == freezed
+          ? _value.fixedIdElement
+          : fixedIdElement as Element,
+      fixedInstantElement: fixedInstantElement == freezed
+          ? _value.fixedInstantElement
+          : fixedInstantElement as Element,
+      fixedIntegerElement: fixedIntegerElement == freezed
+          ? _value.fixedIntegerElement
+          : fixedIntegerElement as Element,
+      fixedMarkdownElement: fixedMarkdownElement == freezed
+          ? _value.fixedMarkdownElement
+          : fixedMarkdownElement as Element,
+      fixedOidElement: fixedOidElement == freezed
+          ? _value.fixedOidElement
+          : fixedOidElement as Element,
+      fixedPositiveIntElement: fixedPositiveIntElement == freezed
+          ? _value.fixedPositiveIntElement
+          : fixedPositiveIntElement as Element,
+      fixedStringElement: fixedStringElement == freezed
+          ? _value.fixedStringElement
+          : fixedStringElement as Element,
+      fixedTimeElement: fixedTimeElement == freezed
+          ? _value.fixedTimeElement
+          : fixedTimeElement as Element,
+      fixedUnsignedIntElement: fixedUnsignedIntElement == freezed
+          ? _value.fixedUnsignedIntElement
+          : fixedUnsignedIntElement as Element,
+      fixedUriElement: fixedUriElement == freezed
+          ? _value.fixedUriElement
+          : fixedUriElement as Element,
+      fixedUrlElement: fixedUrlElement == freezed
+          ? _value.fixedUrlElement
+          : fixedUrlElement as Element,
+      fixedUuidElement: fixedUuidElement == freezed
+          ? _value.fixedUuidElement
+          : fixedUuidElement as Element,
+      patternBase64BinaryElement: patternBase64BinaryElement == freezed
+          ? _value.patternBase64BinaryElement
+          : patternBase64BinaryElement as Element,
+      patternBooleanElement: patternBooleanElement == freezed
+          ? _value.patternBooleanElement
+          : patternBooleanElement as Element,
+      patternCanonicalElement: patternCanonicalElement == freezed
+          ? _value.patternCanonicalElement
+          : patternCanonicalElement as Element,
+      patternCodeElement: patternCodeElement == freezed
+          ? _value.patternCodeElement
+          : patternCodeElement as Element,
+      patternDateElement: patternDateElement == freezed
+          ? _value.patternDateElement
+          : patternDateElement as Element,
+      patternDateTimeElement: patternDateTimeElement == freezed
+          ? _value.patternDateTimeElement
+          : patternDateTimeElement as Element,
+      patternDecimalElement: patternDecimalElement == freezed
+          ? _value.patternDecimalElement
+          : patternDecimalElement as Element,
+      patternIdElement: patternIdElement == freezed
+          ? _value.patternIdElement
+          : patternIdElement as Element,
+      patternInstantElement: patternInstantElement == freezed
+          ? _value.patternInstantElement
+          : patternInstantElement as Element,
+      patternIntegerElement: patternIntegerElement == freezed
+          ? _value.patternIntegerElement
+          : patternIntegerElement as Element,
+      patternMarkdownElement: patternMarkdownElement == freezed
+          ? _value.patternMarkdownElement
+          : patternMarkdownElement as Element,
+      patternOidElement: patternOidElement == freezed
+          ? _value.patternOidElement
+          : patternOidElement as Element,
+      patternPositiveIntElement: patternPositiveIntElement == freezed
+          ? _value.patternPositiveIntElement
+          : patternPositiveIntElement as Element,
+      patternStringElement: patternStringElement == freezed
+          ? _value.patternStringElement
+          : patternStringElement as Element,
+      patternTimeElement: patternTimeElement == freezed
+          ? _value.patternTimeElement
+          : patternTimeElement as Element,
+      patternUnsignedIntElement: patternUnsignedIntElement == freezed
+          ? _value.patternUnsignedIntElement
+          : patternUnsignedIntElement as Element,
+      patternUriElement: patternUriElement == freezed
+          ? _value.patternUriElement
+          : patternUriElement as Element,
+      patternUrlElement: patternUrlElement == freezed
+          ? _value.patternUrlElement
+          : patternUrlElement as Element,
+      patternUuidElement: patternUuidElement == freezed
+          ? _value.patternUuidElement
+          : patternUuidElement as Element,
+      minValueDateElement: minValueDateElement == freezed
+          ? _value.minValueDateElement
+          : minValueDateElement as Element,
+      minValueDateTimeElement: minValueDateTimeElement == freezed
+          ? _value.minValueDateTimeElement
+          : minValueDateTimeElement as Element,
+      minValueInstantElement: minValueInstantElement == freezed
+          ? _value.minValueInstantElement
+          : minValueInstantElement as Element,
+      minValueTimeElement: minValueTimeElement == freezed
+          ? _value.minValueTimeElement
+          : minValueTimeElement as Element,
+      minValueDecimalElement: minValueDecimalElement == freezed
+          ? _value.minValueDecimalElement
+          : minValueDecimalElement as Element,
+      minValueIntegerElement: minValueIntegerElement == freezed
+          ? _value.minValueIntegerElement
+          : minValueIntegerElement as Element,
+      minValuePositiveIntElement: minValuePositiveIntElement == freezed
+          ? _value.minValuePositiveIntElement
+          : minValuePositiveIntElement as Element,
+      minValueUnsignedIntElement: minValueUnsignedIntElement == freezed
+          ? _value.minValueUnsignedIntElement
+          : minValueUnsignedIntElement as Element,
+      maxValueDateElement: maxValueDateElement == freezed
+          ? _value.maxValueDateElement
+          : maxValueDateElement as Element,
+      maxValueDateTimeElement: maxValueDateTimeElement == freezed
+          ? _value.maxValueDateTimeElement
+          : maxValueDateTimeElement as Element,
+      maxValueInstantElement: maxValueInstantElement == freezed
+          ? _value.maxValueInstantElement
+          : maxValueInstantElement as Element,
+      maxValueTimeElement: maxValueTimeElement == freezed
+          ? _value.maxValueTimeElement
+          : maxValueTimeElement as Element,
+      maxValueDecimalElement: maxValueDecimalElement == freezed
+          ? _value.maxValueDecimalElement
+          : maxValueDecimalElement as Element,
+      maxValueIntegerElement: maxValueIntegerElement == freezed
+          ? _value.maxValueIntegerElement
+          : maxValueIntegerElement as Element,
+      maxValuePositiveIntElement: maxValuePositiveIntElement == freezed
+          ? _value.maxValuePositiveIntElement
+          : maxValuePositiveIntElement as Element,
+      maxValueUnsignedIntElement: maxValueUnsignedIntElement == freezed
+          ? _value.maxValueUnsignedIntElement
+          : maxValueUnsignedIntElement as Element,
+      maxLengthElement: maxLengthElement == freezed
+          ? _value.maxLengthElement
+          : maxLengthElement as Element,
+      conditionElement: conditionElement == freezed
+          ? _value.conditionElement
+          : conditionElement as Element,
+      mustSupportElement: mustSupportElement == freezed
+          ? _value.mustSupportElement
+          : mustSupportElement as Element,
+      isModifierElement: isModifierElement == freezed
+          ? _value.isModifierElement
+          : isModifierElement as Element,
+      isModifierReasonElement: isModifierReasonElement == freezed
+          ? _value.isModifierReasonElement
+          : isModifierReasonElement as Element,
+      isSummaryElement: isSummaryElement == freezed
+          ? _value.isSummaryElement
+          : isSummaryElement as Element,
     ));
   }
 
@@ -6121,6 +8423,949 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(binding: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get representationElement {
+    if (_value.representationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.representationElement, (value) {
+      return _then(_value.copyWith(representationElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sliceNameElement {
+    if (_value.sliceNameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sliceNameElement, (value) {
+      return _then(_value.copyWith(sliceNameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sliceIsConstrainingElement {
+    if (_value.sliceIsConstrainingElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sliceIsConstrainingElement, (value) {
+      return _then(_value.copyWith(sliceIsConstrainingElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get labelElement {
+    if (_value.labelElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.labelElement, (value) {
+      return _then(_value.copyWith(labelElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get shortElement {
+    if (_value.shortElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.shortElement, (value) {
+      return _then(_value.copyWith(shortElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get definitionElement {
+    if (_value.definitionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.definitionElement, (value) {
+      return _then(_value.copyWith(definitionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get commentElement {
+    if (_value.commentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+      return _then(_value.copyWith(commentElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requirementsElement {
+    if (_value.requirementsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requirementsElement, (value) {
+      return _then(_value.copyWith(requirementsElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get aliasElement {
+    if (_value.aliasElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.aliasElement, (value) {
+      return _then(_value.copyWith(aliasElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minElement {
+    if (_value.minElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minElement, (value) {
+      return _then(_value.copyWith(minElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxElement {
+    if (_value.maxElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxElement, (value) {
+      return _then(_value.copyWith(maxElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get contentReferenceElement {
+    if (_value.contentReferenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.contentReferenceElement, (value) {
+      return _then(_value.copyWith(contentReferenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueBase64BinaryElement {
+    if (_value.defaultValueBase64BinaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueBase64BinaryElement,
+        (value) {
+      return _then(_value.copyWith(defaultValueBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueBooleanElement {
+    if (_value.defaultValueBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueBooleanElement, (value) {
+      return _then(_value.copyWith(defaultValueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueCanonicalElement {
+    if (_value.defaultValueCanonicalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueCanonicalElement, (value) {
+      return _then(_value.copyWith(defaultValueCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueCodeElement {
+    if (_value.defaultValueCodeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueCodeElement, (value) {
+      return _then(_value.copyWith(defaultValueCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueDateElement {
+    if (_value.defaultValueDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueDateElement, (value) {
+      return _then(_value.copyWith(defaultValueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueDateTimeElement {
+    if (_value.defaultValueDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueDateTimeElement, (value) {
+      return _then(_value.copyWith(defaultValueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueDecimalElement {
+    if (_value.defaultValueDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueDecimalElement, (value) {
+      return _then(_value.copyWith(defaultValueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueIdElement {
+    if (_value.defaultValueIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueIdElement, (value) {
+      return _then(_value.copyWith(defaultValueIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueInstantElement {
+    if (_value.defaultValueInstantElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueInstantElement, (value) {
+      return _then(_value.copyWith(defaultValueInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueIntegerElement {
+    if (_value.defaultValueIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueIntegerElement, (value) {
+      return _then(_value.copyWith(defaultValueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueMarkdownElement {
+    if (_value.defaultValueMarkdownElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueMarkdownElement, (value) {
+      return _then(_value.copyWith(defaultValueMarkdownElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueOidElement {
+    if (_value.defaultValueOidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueOidElement, (value) {
+      return _then(_value.copyWith(defaultValueOidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValuePositiveIntElement {
+    if (_value.defaultValuePositiveIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValuePositiveIntElement,
+        (value) {
+      return _then(_value.copyWith(defaultValuePositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueStringElement {
+    if (_value.defaultValueStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueStringElement, (value) {
+      return _then(_value.copyWith(defaultValueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueTimeElement {
+    if (_value.defaultValueTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueTimeElement, (value) {
+      return _then(_value.copyWith(defaultValueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueUnsignedIntElement {
+    if (_value.defaultValueUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueUnsignedIntElement,
+        (value) {
+      return _then(_value.copyWith(defaultValueUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueUriElement {
+    if (_value.defaultValueUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueUriElement, (value) {
+      return _then(_value.copyWith(defaultValueUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueUrlElement {
+    if (_value.defaultValueUrlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueUrlElement, (value) {
+      return _then(_value.copyWith(defaultValueUrlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueUuidElement {
+    if (_value.defaultValueUuidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueUuidElement, (value) {
+      return _then(_value.copyWith(defaultValueUuidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get meaningWhenMissingElement {
+    if (_value.meaningWhenMissingElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.meaningWhenMissingElement, (value) {
+      return _then(_value.copyWith(meaningWhenMissingElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get orderMeaningElement {
+    if (_value.orderMeaningElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.orderMeaningElement, (value) {
+      return _then(_value.copyWith(orderMeaningElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedBase64BinaryElement {
+    if (_value.fixedBase64BinaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedBase64BinaryElement, (value) {
+      return _then(_value.copyWith(fixedBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedBooleanElement {
+    if (_value.fixedBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedBooleanElement, (value) {
+      return _then(_value.copyWith(fixedBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedCanonicalElement {
+    if (_value.fixedCanonicalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedCanonicalElement, (value) {
+      return _then(_value.copyWith(fixedCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedCodeElement {
+    if (_value.fixedCodeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedCodeElement, (value) {
+      return _then(_value.copyWith(fixedCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedDateElement {
+    if (_value.fixedDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedDateElement, (value) {
+      return _then(_value.copyWith(fixedDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedDateTimeElement {
+    if (_value.fixedDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedDateTimeElement, (value) {
+      return _then(_value.copyWith(fixedDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedDecimalElement {
+    if (_value.fixedDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedDecimalElement, (value) {
+      return _then(_value.copyWith(fixedDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedIdElement {
+    if (_value.fixedIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedIdElement, (value) {
+      return _then(_value.copyWith(fixedIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedInstantElement {
+    if (_value.fixedInstantElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedInstantElement, (value) {
+      return _then(_value.copyWith(fixedInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedIntegerElement {
+    if (_value.fixedIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedIntegerElement, (value) {
+      return _then(_value.copyWith(fixedIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedMarkdownElement {
+    if (_value.fixedMarkdownElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedMarkdownElement, (value) {
+      return _then(_value.copyWith(fixedMarkdownElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedOidElement {
+    if (_value.fixedOidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedOidElement, (value) {
+      return _then(_value.copyWith(fixedOidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedPositiveIntElement {
+    if (_value.fixedPositiveIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedPositiveIntElement, (value) {
+      return _then(_value.copyWith(fixedPositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedStringElement {
+    if (_value.fixedStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedStringElement, (value) {
+      return _then(_value.copyWith(fixedStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedTimeElement {
+    if (_value.fixedTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedTimeElement, (value) {
+      return _then(_value.copyWith(fixedTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedUnsignedIntElement {
+    if (_value.fixedUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedUnsignedIntElement, (value) {
+      return _then(_value.copyWith(fixedUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedUriElement {
+    if (_value.fixedUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedUriElement, (value) {
+      return _then(_value.copyWith(fixedUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedUrlElement {
+    if (_value.fixedUrlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedUrlElement, (value) {
+      return _then(_value.copyWith(fixedUrlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fixedUuidElement {
+    if (_value.fixedUuidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fixedUuidElement, (value) {
+      return _then(_value.copyWith(fixedUuidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternBase64BinaryElement {
+    if (_value.patternBase64BinaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternBase64BinaryElement, (value) {
+      return _then(_value.copyWith(patternBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternBooleanElement {
+    if (_value.patternBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternBooleanElement, (value) {
+      return _then(_value.copyWith(patternBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternCanonicalElement {
+    if (_value.patternCanonicalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternCanonicalElement, (value) {
+      return _then(_value.copyWith(patternCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternCodeElement {
+    if (_value.patternCodeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternCodeElement, (value) {
+      return _then(_value.copyWith(patternCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternDateElement {
+    if (_value.patternDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternDateElement, (value) {
+      return _then(_value.copyWith(patternDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternDateTimeElement {
+    if (_value.patternDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternDateTimeElement, (value) {
+      return _then(_value.copyWith(patternDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternDecimalElement {
+    if (_value.patternDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternDecimalElement, (value) {
+      return _then(_value.copyWith(patternDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternIdElement {
+    if (_value.patternIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternIdElement, (value) {
+      return _then(_value.copyWith(patternIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternInstantElement {
+    if (_value.patternInstantElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternInstantElement, (value) {
+      return _then(_value.copyWith(patternInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternIntegerElement {
+    if (_value.patternIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternIntegerElement, (value) {
+      return _then(_value.copyWith(patternIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternMarkdownElement {
+    if (_value.patternMarkdownElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternMarkdownElement, (value) {
+      return _then(_value.copyWith(patternMarkdownElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternOidElement {
+    if (_value.patternOidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternOidElement, (value) {
+      return _then(_value.copyWith(patternOidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternPositiveIntElement {
+    if (_value.patternPositiveIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternPositiveIntElement, (value) {
+      return _then(_value.copyWith(patternPositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternStringElement {
+    if (_value.patternStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternStringElement, (value) {
+      return _then(_value.copyWith(patternStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternTimeElement {
+    if (_value.patternTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternTimeElement, (value) {
+      return _then(_value.copyWith(patternTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternUnsignedIntElement {
+    if (_value.patternUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternUnsignedIntElement, (value) {
+      return _then(_value.copyWith(patternUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternUriElement {
+    if (_value.patternUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternUriElement, (value) {
+      return _then(_value.copyWith(patternUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternUrlElement {
+    if (_value.patternUrlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternUrlElement, (value) {
+      return _then(_value.copyWith(patternUrlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get patternUuidElement {
+    if (_value.patternUuidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.patternUuidElement, (value) {
+      return _then(_value.copyWith(patternUuidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minValueDateElement {
+    if (_value.minValueDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minValueDateElement, (value) {
+      return _then(_value.copyWith(minValueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minValueDateTimeElement {
+    if (_value.minValueDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minValueDateTimeElement, (value) {
+      return _then(_value.copyWith(minValueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minValueInstantElement {
+    if (_value.minValueInstantElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minValueInstantElement, (value) {
+      return _then(_value.copyWith(minValueInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minValueTimeElement {
+    if (_value.minValueTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minValueTimeElement, (value) {
+      return _then(_value.copyWith(minValueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minValueDecimalElement {
+    if (_value.minValueDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minValueDecimalElement, (value) {
+      return _then(_value.copyWith(minValueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minValueIntegerElement {
+    if (_value.minValueIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minValueIntegerElement, (value) {
+      return _then(_value.copyWith(minValueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minValuePositiveIntElement {
+    if (_value.minValuePositiveIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minValuePositiveIntElement, (value) {
+      return _then(_value.copyWith(minValuePositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minValueUnsignedIntElement {
+    if (_value.minValueUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minValueUnsignedIntElement, (value) {
+      return _then(_value.copyWith(minValueUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxValueDateElement {
+    if (_value.maxValueDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxValueDateElement, (value) {
+      return _then(_value.copyWith(maxValueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxValueDateTimeElement {
+    if (_value.maxValueDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxValueDateTimeElement, (value) {
+      return _then(_value.copyWith(maxValueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxValueInstantElement {
+    if (_value.maxValueInstantElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxValueInstantElement, (value) {
+      return _then(_value.copyWith(maxValueInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxValueTimeElement {
+    if (_value.maxValueTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxValueTimeElement, (value) {
+      return _then(_value.copyWith(maxValueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxValueDecimalElement {
+    if (_value.maxValueDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxValueDecimalElement, (value) {
+      return _then(_value.copyWith(maxValueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxValueIntegerElement {
+    if (_value.maxValueIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxValueIntegerElement, (value) {
+      return _then(_value.copyWith(maxValueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxValuePositiveIntElement {
+    if (_value.maxValuePositiveIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxValuePositiveIntElement, (value) {
+      return _then(_value.copyWith(maxValuePositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxValueUnsignedIntElement {
+    if (_value.maxValueUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxValueUnsignedIntElement, (value) {
+      return _then(_value.copyWith(maxValueUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxLengthElement {
+    if (_value.maxLengthElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxLengthElement, (value) {
+      return _then(_value.copyWith(maxLengthElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get conditionElement {
+    if (_value.conditionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.conditionElement, (value) {
+      return _then(_value.copyWith(conditionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get mustSupportElement {
+    if (_value.mustSupportElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.mustSupportElement, (value) {
+      return _then(_value.copyWith(mustSupportElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get isModifierElement {
+    if (_value.isModifierElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.isModifierElement, (value) {
+      return _then(_value.copyWith(isModifierElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get isModifierReasonElement {
+    if (_value.isModifierReasonElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.isModifierReasonElement, (value) {
+      return _then(_value.copyWith(isModifierReasonElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get isSummaryElement {
+    if (_value.isSummaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.isSummaryElement, (value) {
+      return _then(_value.copyWith(isSummaryElement: value));
+    });
+  }
 }
 
 abstract class _$ElementDefinitionCopyWith<$Res>
@@ -6131,7 +9376,8 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
       List<ElementDefinitionRepresentation> representation,
@@ -6329,7 +9575,195 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       String isModifierReason,
       Boolean isSummary,
       ElementDefinitionBinding binding,
-      List<ElementDefinitionMapping> mapping});
+      List<ElementDefinitionMapping> mapping,
+      @JsonKey(name: '_path')
+          Element pathElement,
+      @JsonKey(name: '_representation')
+          Element representationElement,
+      @JsonKey(name: '_sliceName')
+          Element sliceNameElement,
+      @JsonKey(name: '_sliceIsConstraining')
+          Element sliceIsConstrainingElement,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_short')
+          Element shortElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement,
+      @JsonKey(name: '_min')
+          Element minElement,
+      @JsonKey(name: '_max')
+          Element maxElement,
+      @JsonKey(name: '_contentReference')
+          Element contentReferenceElement,
+      @JsonKey(name: '_defaultValueBase64Binary')
+          Element defaultValueBase64BinaryElement,
+      @JsonKey(name: '_defaultValueBoolean')
+          Element defaultValueBooleanElement,
+      @JsonKey(name: '_defaultValueCanonical')
+          Element defaultValueCanonicalElement,
+      @JsonKey(name: '_defaultValueCode')
+          Element defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueDate')
+          Element defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDateTime')
+          Element defaultValueDateTimeElement,
+      @JsonKey(name: '_defaultValueDecimal')
+          Element defaultValueDecimalElement,
+      @JsonKey(name: '_defaultValueId')
+          Element defaultValueIdElement,
+      @JsonKey(name: '_defaultValueInstant')
+          Element defaultValueInstantElement,
+      @JsonKey(name: '_defaultValueInteger')
+          Element defaultValueIntegerElement,
+      @JsonKey(name: '_defaultValueMarkdown')
+          Element defaultValueMarkdownElement,
+      @JsonKey(name: '_defaultValueOid')
+          Element defaultValueOidElement,
+      @JsonKey(name: '_defaultValuePositiveInt')
+          Element defaultValuePositiveIntElement,
+      @JsonKey(name: '_defaultValueString')
+          Element defaultValueStringElement,
+      @JsonKey(name: '_defaultValueTime')
+          Element defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueUnsignedInt')
+          Element defaultValueUnsignedIntElement,
+      @JsonKey(name: '_defaultValueUri')
+          Element defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUrl')
+          Element defaultValueUrlElement,
+      @JsonKey(name: '_defaultValueUuid')
+          Element defaultValueUuidElement,
+      @JsonKey(name: '_meaningWhenMissing')
+          Element meaningWhenMissingElement,
+      @JsonKey(name: '_orderMeaning')
+          Element orderMeaningElement,
+      @JsonKey(name: '_fixedBase64Binary')
+          Element fixedBase64BinaryElement,
+      @JsonKey(name: '_fixedBoolean')
+          Element fixedBooleanElement,
+      @JsonKey(name: '_fixedCanonical')
+          Element fixedCanonicalElement,
+      @JsonKey(name: '_fixedCode')
+          Element fixedCodeElement,
+      @JsonKey(name: '_fixedDate')
+          Element fixedDateElement,
+      @JsonKey(name: '_fixedDateTime')
+          Element fixedDateTimeElement,
+      @JsonKey(name: '_fixedDecimal')
+          Element fixedDecimalElement,
+      @JsonKey(name: '_fixedId')
+          Element fixedIdElement,
+      @JsonKey(name: '_fixedInstant')
+          Element fixedInstantElement,
+      @JsonKey(name: '_fixedInteger')
+          Element fixedIntegerElement,
+      @JsonKey(name: '_fixedMarkdown')
+          Element fixedMarkdownElement,
+      @JsonKey(name: '_fixedOid')
+          Element fixedOidElement,
+      @JsonKey(name: '_fixedPositiveInt')
+          Element fixedPositiveIntElement,
+      @JsonKey(name: '_fixedString')
+          Element fixedStringElement,
+      @JsonKey(name: '_fixedTime')
+          Element fixedTimeElement,
+      @JsonKey(name: '_fixedUnsignedInt')
+          Element fixedUnsignedIntElement,
+      @JsonKey(name: '_fixedUri')
+          Element fixedUriElement,
+      @JsonKey(name: '_fixedUrl')
+          Element fixedUrlElement,
+      @JsonKey(name: '_fixedUuid')
+          Element fixedUuidElement,
+      @JsonKey(name: '_patternBase64Binary')
+          Element patternBase64BinaryElement,
+      @JsonKey(name: '_patternBoolean')
+          Element patternBooleanElement,
+      @JsonKey(name: '_patternCanonical')
+          Element patternCanonicalElement,
+      @JsonKey(name: '_patternCode')
+          Element patternCodeElement,
+      @JsonKey(name: '_patternDate')
+          Element patternDateElement,
+      @JsonKey(name: '_patternDateTime')
+          Element patternDateTimeElement,
+      @JsonKey(name: '_patternDecimal')
+          Element patternDecimalElement,
+      @JsonKey(name: '_patternId')
+          Element patternIdElement,
+      @JsonKey(name: '_patternInstant')
+          Element patternInstantElement,
+      @JsonKey(name: '_patternInteger')
+          Element patternIntegerElement,
+      @JsonKey(name: '_patternMarkdown')
+          Element patternMarkdownElement,
+      @JsonKey(name: '_patternOid')
+          Element patternOidElement,
+      @JsonKey(name: '_patternPositiveInt')
+          Element patternPositiveIntElement,
+      @JsonKey(name: '_patternString')
+          Element patternStringElement,
+      @JsonKey(name: '_patternTime')
+          Element patternTimeElement,
+      @JsonKey(name: '_patternUnsignedInt')
+          Element patternUnsignedIntElement,
+      @JsonKey(name: '_patternUri')
+          Element patternUriElement,
+      @JsonKey(name: '_patternUrl')
+          Element patternUrlElement,
+      @JsonKey(name: '_patternUuid')
+          Element patternUuidElement,
+      @JsonKey(name: '_minValueDate')
+          Element minValueDateElement,
+      @JsonKey(name: '_minValueDateTime')
+          Element minValueDateTimeElement,
+      @JsonKey(name: '_minValueInstant')
+          Element minValueInstantElement,
+      @JsonKey(name: '_minValueTime')
+          Element minValueTimeElement,
+      @JsonKey(name: '_minValueDecimal')
+          Element minValueDecimalElement,
+      @JsonKey(name: '_minValueInteger')
+          Element minValueIntegerElement,
+      @JsonKey(name: '_minValuePositiveInt')
+          Element minValuePositiveIntElement,
+      @JsonKey(name: '_minValueUnsignedInt')
+          Element minValueUnsignedIntElement,
+      @JsonKey(name: '_maxValueDate')
+          Element maxValueDateElement,
+      @JsonKey(name: '_maxValueDateTime')
+          Element maxValueDateTimeElement,
+      @JsonKey(name: '_maxValueInstant')
+          Element maxValueInstantElement,
+      @JsonKey(name: '_maxValueTime')
+          Element maxValueTimeElement,
+      @JsonKey(name: '_maxValueDecimal')
+          Element maxValueDecimalElement,
+      @JsonKey(name: '_maxValueInteger')
+          Element maxValueIntegerElement,
+      @JsonKey(name: '_maxValuePositiveInt')
+          Element maxValuePositiveIntElement,
+      @JsonKey(name: '_maxValueUnsignedInt')
+          Element maxValueUnsignedIntElement,
+      @JsonKey(name: '_maxLength')
+          Element maxLengthElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement,
+      @JsonKey(name: '_mustSupport')
+          Element mustSupportElement,
+      @JsonKey(name: '_isModifier')
+          Element isModifierElement,
+      @JsonKey(name: '_isModifierReason')
+          Element isModifierReasonElement,
+      @JsonKey(name: '_isSummary')
+          Element isSummaryElement});
 
   @override
   $ElementDefinitionSlicingCopyWith<$Res> get slicing;
@@ -6527,6 +9961,194 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $QuantityCopyWith<$Res> get maxValueQuantity;
   @override
   $ElementDefinitionBindingCopyWith<$Res> get binding;
+  @override
+  $ElementCopyWith<$Res> get pathElement;
+  @override
+  $ElementCopyWith<$Res> get representationElement;
+  @override
+  $ElementCopyWith<$Res> get sliceNameElement;
+  @override
+  $ElementCopyWith<$Res> get sliceIsConstrainingElement;
+  @override
+  $ElementCopyWith<$Res> get labelElement;
+  @override
+  $ElementCopyWith<$Res> get shortElement;
+  @override
+  $ElementCopyWith<$Res> get definitionElement;
+  @override
+  $ElementCopyWith<$Res> get commentElement;
+  @override
+  $ElementCopyWith<$Res> get requirementsElement;
+  @override
+  $ElementCopyWith<$Res> get aliasElement;
+  @override
+  $ElementCopyWith<$Res> get minElement;
+  @override
+  $ElementCopyWith<$Res> get maxElement;
+  @override
+  $ElementCopyWith<$Res> get contentReferenceElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueBase64BinaryElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueCanonicalElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueCodeElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueDateElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueIdElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueInstantElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueMarkdownElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueOidElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValuePositiveIntElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueStringElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueTimeElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueUriElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueUrlElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueUuidElement;
+  @override
+  $ElementCopyWith<$Res> get meaningWhenMissingElement;
+  @override
+  $ElementCopyWith<$Res> get orderMeaningElement;
+  @override
+  $ElementCopyWith<$Res> get fixedBase64BinaryElement;
+  @override
+  $ElementCopyWith<$Res> get fixedBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get fixedCanonicalElement;
+  @override
+  $ElementCopyWith<$Res> get fixedCodeElement;
+  @override
+  $ElementCopyWith<$Res> get fixedDateElement;
+  @override
+  $ElementCopyWith<$Res> get fixedDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get fixedDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get fixedIdElement;
+  @override
+  $ElementCopyWith<$Res> get fixedInstantElement;
+  @override
+  $ElementCopyWith<$Res> get fixedIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get fixedMarkdownElement;
+  @override
+  $ElementCopyWith<$Res> get fixedOidElement;
+  @override
+  $ElementCopyWith<$Res> get fixedPositiveIntElement;
+  @override
+  $ElementCopyWith<$Res> get fixedStringElement;
+  @override
+  $ElementCopyWith<$Res> get fixedTimeElement;
+  @override
+  $ElementCopyWith<$Res> get fixedUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res> get fixedUriElement;
+  @override
+  $ElementCopyWith<$Res> get fixedUrlElement;
+  @override
+  $ElementCopyWith<$Res> get fixedUuidElement;
+  @override
+  $ElementCopyWith<$Res> get patternBase64BinaryElement;
+  @override
+  $ElementCopyWith<$Res> get patternBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get patternCanonicalElement;
+  @override
+  $ElementCopyWith<$Res> get patternCodeElement;
+  @override
+  $ElementCopyWith<$Res> get patternDateElement;
+  @override
+  $ElementCopyWith<$Res> get patternDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get patternDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get patternIdElement;
+  @override
+  $ElementCopyWith<$Res> get patternInstantElement;
+  @override
+  $ElementCopyWith<$Res> get patternIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get patternMarkdownElement;
+  @override
+  $ElementCopyWith<$Res> get patternOidElement;
+  @override
+  $ElementCopyWith<$Res> get patternPositiveIntElement;
+  @override
+  $ElementCopyWith<$Res> get patternStringElement;
+  @override
+  $ElementCopyWith<$Res> get patternTimeElement;
+  @override
+  $ElementCopyWith<$Res> get patternUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res> get patternUriElement;
+  @override
+  $ElementCopyWith<$Res> get patternUrlElement;
+  @override
+  $ElementCopyWith<$Res> get patternUuidElement;
+  @override
+  $ElementCopyWith<$Res> get minValueDateElement;
+  @override
+  $ElementCopyWith<$Res> get minValueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get minValueInstantElement;
+  @override
+  $ElementCopyWith<$Res> get minValueTimeElement;
+  @override
+  $ElementCopyWith<$Res> get minValueDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get minValueIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get minValuePositiveIntElement;
+  @override
+  $ElementCopyWith<$Res> get minValueUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res> get maxValueDateElement;
+  @override
+  $ElementCopyWith<$Res> get maxValueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get maxValueInstantElement;
+  @override
+  $ElementCopyWith<$Res> get maxValueTimeElement;
+  @override
+  $ElementCopyWith<$Res> get maxValueDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get maxValueIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get maxValuePositiveIntElement;
+  @override
+  $ElementCopyWith<$Res> get maxValueUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res> get maxLengthElement;
+  @override
+  $ElementCopyWith<$Res> get conditionElement;
+  @override
+  $ElementCopyWith<$Res> get mustSupportElement;
+  @override
+  $ElementCopyWith<$Res> get isModifierElement;
+  @override
+  $ElementCopyWith<$Res> get isModifierReasonElement;
+  @override
+  $ElementCopyWith<$Res> get isSummaryElement;
 }
 
 class __$ElementDefinitionCopyWithImpl<$Res>
@@ -6741,6 +10363,100 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object isSummary = freezed,
     Object binding = freezed,
     Object mapping = freezed,
+    Object pathElement = freezed,
+    Object representationElement = freezed,
+    Object sliceNameElement = freezed,
+    Object sliceIsConstrainingElement = freezed,
+    Object labelElement = freezed,
+    Object shortElement = freezed,
+    Object definitionElement = freezed,
+    Object commentElement = freezed,
+    Object requirementsElement = freezed,
+    Object aliasElement = freezed,
+    Object minElement = freezed,
+    Object maxElement = freezed,
+    Object contentReferenceElement = freezed,
+    Object defaultValueBase64BinaryElement = freezed,
+    Object defaultValueBooleanElement = freezed,
+    Object defaultValueCanonicalElement = freezed,
+    Object defaultValueCodeElement = freezed,
+    Object defaultValueDateElement = freezed,
+    Object defaultValueDateTimeElement = freezed,
+    Object defaultValueDecimalElement = freezed,
+    Object defaultValueIdElement = freezed,
+    Object defaultValueInstantElement = freezed,
+    Object defaultValueIntegerElement = freezed,
+    Object defaultValueMarkdownElement = freezed,
+    Object defaultValueOidElement = freezed,
+    Object defaultValuePositiveIntElement = freezed,
+    Object defaultValueStringElement = freezed,
+    Object defaultValueTimeElement = freezed,
+    Object defaultValueUnsignedIntElement = freezed,
+    Object defaultValueUriElement = freezed,
+    Object defaultValueUrlElement = freezed,
+    Object defaultValueUuidElement = freezed,
+    Object meaningWhenMissingElement = freezed,
+    Object orderMeaningElement = freezed,
+    Object fixedBase64BinaryElement = freezed,
+    Object fixedBooleanElement = freezed,
+    Object fixedCanonicalElement = freezed,
+    Object fixedCodeElement = freezed,
+    Object fixedDateElement = freezed,
+    Object fixedDateTimeElement = freezed,
+    Object fixedDecimalElement = freezed,
+    Object fixedIdElement = freezed,
+    Object fixedInstantElement = freezed,
+    Object fixedIntegerElement = freezed,
+    Object fixedMarkdownElement = freezed,
+    Object fixedOidElement = freezed,
+    Object fixedPositiveIntElement = freezed,
+    Object fixedStringElement = freezed,
+    Object fixedTimeElement = freezed,
+    Object fixedUnsignedIntElement = freezed,
+    Object fixedUriElement = freezed,
+    Object fixedUrlElement = freezed,
+    Object fixedUuidElement = freezed,
+    Object patternBase64BinaryElement = freezed,
+    Object patternBooleanElement = freezed,
+    Object patternCanonicalElement = freezed,
+    Object patternCodeElement = freezed,
+    Object patternDateElement = freezed,
+    Object patternDateTimeElement = freezed,
+    Object patternDecimalElement = freezed,
+    Object patternIdElement = freezed,
+    Object patternInstantElement = freezed,
+    Object patternIntegerElement = freezed,
+    Object patternMarkdownElement = freezed,
+    Object patternOidElement = freezed,
+    Object patternPositiveIntElement = freezed,
+    Object patternStringElement = freezed,
+    Object patternTimeElement = freezed,
+    Object patternUnsignedIntElement = freezed,
+    Object patternUriElement = freezed,
+    Object patternUrlElement = freezed,
+    Object patternUuidElement = freezed,
+    Object minValueDateElement = freezed,
+    Object minValueDateTimeElement = freezed,
+    Object minValueInstantElement = freezed,
+    Object minValueTimeElement = freezed,
+    Object minValueDecimalElement = freezed,
+    Object minValueIntegerElement = freezed,
+    Object minValuePositiveIntElement = freezed,
+    Object minValueUnsignedIntElement = freezed,
+    Object maxValueDateElement = freezed,
+    Object maxValueDateTimeElement = freezed,
+    Object maxValueInstantElement = freezed,
+    Object maxValueTimeElement = freezed,
+    Object maxValueDecimalElement = freezed,
+    Object maxValueIntegerElement = freezed,
+    Object maxValuePositiveIntElement = freezed,
+    Object maxValueUnsignedIntElement = freezed,
+    Object maxLengthElement = freezed,
+    Object conditionElement = freezed,
+    Object mustSupportElement = freezed,
+    Object isModifierElement = freezed,
+    Object isModifierReasonElement = freezed,
+    Object isSummaryElement = freezed,
   }) {
     return _then(_ElementDefinition(
       id: id == freezed ? _value.id : id as String,
@@ -7262,6 +10978,286 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       mapping: mapping == freezed
           ? _value.mapping
           : mapping as List<ElementDefinitionMapping>,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      representationElement: representationElement == freezed
+          ? _value.representationElement
+          : representationElement as Element,
+      sliceNameElement: sliceNameElement == freezed
+          ? _value.sliceNameElement
+          : sliceNameElement as Element,
+      sliceIsConstrainingElement: sliceIsConstrainingElement == freezed
+          ? _value.sliceIsConstrainingElement
+          : sliceIsConstrainingElement as Element,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      shortElement: shortElement == freezed
+          ? _value.shortElement
+          : shortElement as Element,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
+      requirementsElement: requirementsElement == freezed
+          ? _value.requirementsElement
+          : requirementsElement as Element,
+      aliasElement: aliasElement == freezed
+          ? _value.aliasElement
+          : aliasElement as Element,
+      minElement:
+          minElement == freezed ? _value.minElement : minElement as Element,
+      maxElement:
+          maxElement == freezed ? _value.maxElement : maxElement as Element,
+      contentReferenceElement: contentReferenceElement == freezed
+          ? _value.contentReferenceElement
+          : contentReferenceElement as Element,
+      defaultValueBase64BinaryElement:
+          defaultValueBase64BinaryElement == freezed
+              ? _value.defaultValueBase64BinaryElement
+              : defaultValueBase64BinaryElement as Element,
+      defaultValueBooleanElement: defaultValueBooleanElement == freezed
+          ? _value.defaultValueBooleanElement
+          : defaultValueBooleanElement as Element,
+      defaultValueCanonicalElement: defaultValueCanonicalElement == freezed
+          ? _value.defaultValueCanonicalElement
+          : defaultValueCanonicalElement as Element,
+      defaultValueCodeElement: defaultValueCodeElement == freezed
+          ? _value.defaultValueCodeElement
+          : defaultValueCodeElement as Element,
+      defaultValueDateElement: defaultValueDateElement == freezed
+          ? _value.defaultValueDateElement
+          : defaultValueDateElement as Element,
+      defaultValueDateTimeElement: defaultValueDateTimeElement == freezed
+          ? _value.defaultValueDateTimeElement
+          : defaultValueDateTimeElement as Element,
+      defaultValueDecimalElement: defaultValueDecimalElement == freezed
+          ? _value.defaultValueDecimalElement
+          : defaultValueDecimalElement as Element,
+      defaultValueIdElement: defaultValueIdElement == freezed
+          ? _value.defaultValueIdElement
+          : defaultValueIdElement as Element,
+      defaultValueInstantElement: defaultValueInstantElement == freezed
+          ? _value.defaultValueInstantElement
+          : defaultValueInstantElement as Element,
+      defaultValueIntegerElement: defaultValueIntegerElement == freezed
+          ? _value.defaultValueIntegerElement
+          : defaultValueIntegerElement as Element,
+      defaultValueMarkdownElement: defaultValueMarkdownElement == freezed
+          ? _value.defaultValueMarkdownElement
+          : defaultValueMarkdownElement as Element,
+      defaultValueOidElement: defaultValueOidElement == freezed
+          ? _value.defaultValueOidElement
+          : defaultValueOidElement as Element,
+      defaultValuePositiveIntElement: defaultValuePositiveIntElement == freezed
+          ? _value.defaultValuePositiveIntElement
+          : defaultValuePositiveIntElement as Element,
+      defaultValueStringElement: defaultValueStringElement == freezed
+          ? _value.defaultValueStringElement
+          : defaultValueStringElement as Element,
+      defaultValueTimeElement: defaultValueTimeElement == freezed
+          ? _value.defaultValueTimeElement
+          : defaultValueTimeElement as Element,
+      defaultValueUnsignedIntElement: defaultValueUnsignedIntElement == freezed
+          ? _value.defaultValueUnsignedIntElement
+          : defaultValueUnsignedIntElement as Element,
+      defaultValueUriElement: defaultValueUriElement == freezed
+          ? _value.defaultValueUriElement
+          : defaultValueUriElement as Element,
+      defaultValueUrlElement: defaultValueUrlElement == freezed
+          ? _value.defaultValueUrlElement
+          : defaultValueUrlElement as Element,
+      defaultValueUuidElement: defaultValueUuidElement == freezed
+          ? _value.defaultValueUuidElement
+          : defaultValueUuidElement as Element,
+      meaningWhenMissingElement: meaningWhenMissingElement == freezed
+          ? _value.meaningWhenMissingElement
+          : meaningWhenMissingElement as Element,
+      orderMeaningElement: orderMeaningElement == freezed
+          ? _value.orderMeaningElement
+          : orderMeaningElement as Element,
+      fixedBase64BinaryElement: fixedBase64BinaryElement == freezed
+          ? _value.fixedBase64BinaryElement
+          : fixedBase64BinaryElement as Element,
+      fixedBooleanElement: fixedBooleanElement == freezed
+          ? _value.fixedBooleanElement
+          : fixedBooleanElement as Element,
+      fixedCanonicalElement: fixedCanonicalElement == freezed
+          ? _value.fixedCanonicalElement
+          : fixedCanonicalElement as Element,
+      fixedCodeElement: fixedCodeElement == freezed
+          ? _value.fixedCodeElement
+          : fixedCodeElement as Element,
+      fixedDateElement: fixedDateElement == freezed
+          ? _value.fixedDateElement
+          : fixedDateElement as Element,
+      fixedDateTimeElement: fixedDateTimeElement == freezed
+          ? _value.fixedDateTimeElement
+          : fixedDateTimeElement as Element,
+      fixedDecimalElement: fixedDecimalElement == freezed
+          ? _value.fixedDecimalElement
+          : fixedDecimalElement as Element,
+      fixedIdElement: fixedIdElement == freezed
+          ? _value.fixedIdElement
+          : fixedIdElement as Element,
+      fixedInstantElement: fixedInstantElement == freezed
+          ? _value.fixedInstantElement
+          : fixedInstantElement as Element,
+      fixedIntegerElement: fixedIntegerElement == freezed
+          ? _value.fixedIntegerElement
+          : fixedIntegerElement as Element,
+      fixedMarkdownElement: fixedMarkdownElement == freezed
+          ? _value.fixedMarkdownElement
+          : fixedMarkdownElement as Element,
+      fixedOidElement: fixedOidElement == freezed
+          ? _value.fixedOidElement
+          : fixedOidElement as Element,
+      fixedPositiveIntElement: fixedPositiveIntElement == freezed
+          ? _value.fixedPositiveIntElement
+          : fixedPositiveIntElement as Element,
+      fixedStringElement: fixedStringElement == freezed
+          ? _value.fixedStringElement
+          : fixedStringElement as Element,
+      fixedTimeElement: fixedTimeElement == freezed
+          ? _value.fixedTimeElement
+          : fixedTimeElement as Element,
+      fixedUnsignedIntElement: fixedUnsignedIntElement == freezed
+          ? _value.fixedUnsignedIntElement
+          : fixedUnsignedIntElement as Element,
+      fixedUriElement: fixedUriElement == freezed
+          ? _value.fixedUriElement
+          : fixedUriElement as Element,
+      fixedUrlElement: fixedUrlElement == freezed
+          ? _value.fixedUrlElement
+          : fixedUrlElement as Element,
+      fixedUuidElement: fixedUuidElement == freezed
+          ? _value.fixedUuidElement
+          : fixedUuidElement as Element,
+      patternBase64BinaryElement: patternBase64BinaryElement == freezed
+          ? _value.patternBase64BinaryElement
+          : patternBase64BinaryElement as Element,
+      patternBooleanElement: patternBooleanElement == freezed
+          ? _value.patternBooleanElement
+          : patternBooleanElement as Element,
+      patternCanonicalElement: patternCanonicalElement == freezed
+          ? _value.patternCanonicalElement
+          : patternCanonicalElement as Element,
+      patternCodeElement: patternCodeElement == freezed
+          ? _value.patternCodeElement
+          : patternCodeElement as Element,
+      patternDateElement: patternDateElement == freezed
+          ? _value.patternDateElement
+          : patternDateElement as Element,
+      patternDateTimeElement: patternDateTimeElement == freezed
+          ? _value.patternDateTimeElement
+          : patternDateTimeElement as Element,
+      patternDecimalElement: patternDecimalElement == freezed
+          ? _value.patternDecimalElement
+          : patternDecimalElement as Element,
+      patternIdElement: patternIdElement == freezed
+          ? _value.patternIdElement
+          : patternIdElement as Element,
+      patternInstantElement: patternInstantElement == freezed
+          ? _value.patternInstantElement
+          : patternInstantElement as Element,
+      patternIntegerElement: patternIntegerElement == freezed
+          ? _value.patternIntegerElement
+          : patternIntegerElement as Element,
+      patternMarkdownElement: patternMarkdownElement == freezed
+          ? _value.patternMarkdownElement
+          : patternMarkdownElement as Element,
+      patternOidElement: patternOidElement == freezed
+          ? _value.patternOidElement
+          : patternOidElement as Element,
+      patternPositiveIntElement: patternPositiveIntElement == freezed
+          ? _value.patternPositiveIntElement
+          : patternPositiveIntElement as Element,
+      patternStringElement: patternStringElement == freezed
+          ? _value.patternStringElement
+          : patternStringElement as Element,
+      patternTimeElement: patternTimeElement == freezed
+          ? _value.patternTimeElement
+          : patternTimeElement as Element,
+      patternUnsignedIntElement: patternUnsignedIntElement == freezed
+          ? _value.patternUnsignedIntElement
+          : patternUnsignedIntElement as Element,
+      patternUriElement: patternUriElement == freezed
+          ? _value.patternUriElement
+          : patternUriElement as Element,
+      patternUrlElement: patternUrlElement == freezed
+          ? _value.patternUrlElement
+          : patternUrlElement as Element,
+      patternUuidElement: patternUuidElement == freezed
+          ? _value.patternUuidElement
+          : patternUuidElement as Element,
+      minValueDateElement: minValueDateElement == freezed
+          ? _value.minValueDateElement
+          : minValueDateElement as Element,
+      minValueDateTimeElement: minValueDateTimeElement == freezed
+          ? _value.minValueDateTimeElement
+          : minValueDateTimeElement as Element,
+      minValueInstantElement: minValueInstantElement == freezed
+          ? _value.minValueInstantElement
+          : minValueInstantElement as Element,
+      minValueTimeElement: minValueTimeElement == freezed
+          ? _value.minValueTimeElement
+          : minValueTimeElement as Element,
+      minValueDecimalElement: minValueDecimalElement == freezed
+          ? _value.minValueDecimalElement
+          : minValueDecimalElement as Element,
+      minValueIntegerElement: minValueIntegerElement == freezed
+          ? _value.minValueIntegerElement
+          : minValueIntegerElement as Element,
+      minValuePositiveIntElement: minValuePositiveIntElement == freezed
+          ? _value.minValuePositiveIntElement
+          : minValuePositiveIntElement as Element,
+      minValueUnsignedIntElement: minValueUnsignedIntElement == freezed
+          ? _value.minValueUnsignedIntElement
+          : minValueUnsignedIntElement as Element,
+      maxValueDateElement: maxValueDateElement == freezed
+          ? _value.maxValueDateElement
+          : maxValueDateElement as Element,
+      maxValueDateTimeElement: maxValueDateTimeElement == freezed
+          ? _value.maxValueDateTimeElement
+          : maxValueDateTimeElement as Element,
+      maxValueInstantElement: maxValueInstantElement == freezed
+          ? _value.maxValueInstantElement
+          : maxValueInstantElement as Element,
+      maxValueTimeElement: maxValueTimeElement == freezed
+          ? _value.maxValueTimeElement
+          : maxValueTimeElement as Element,
+      maxValueDecimalElement: maxValueDecimalElement == freezed
+          ? _value.maxValueDecimalElement
+          : maxValueDecimalElement as Element,
+      maxValueIntegerElement: maxValueIntegerElement == freezed
+          ? _value.maxValueIntegerElement
+          : maxValueIntegerElement as Element,
+      maxValuePositiveIntElement: maxValuePositiveIntElement == freezed
+          ? _value.maxValuePositiveIntElement
+          : maxValuePositiveIntElement as Element,
+      maxValueUnsignedIntElement: maxValueUnsignedIntElement == freezed
+          ? _value.maxValueUnsignedIntElement
+          : maxValueUnsignedIntElement as Element,
+      maxLengthElement: maxLengthElement == freezed
+          ? _value.maxLengthElement
+          : maxLengthElement as Element,
+      conditionElement: conditionElement == freezed
+          ? _value.conditionElement
+          : conditionElement as Element,
+      mustSupportElement: mustSupportElement == freezed
+          ? _value.mustSupportElement
+          : mustSupportElement as Element,
+      isModifierElement: isModifierElement == freezed
+          ? _value.isModifierElement
+          : isModifierElement as Element,
+      isModifierReasonElement: isModifierReasonElement == freezed
+          ? _value.isModifierReasonElement
+          : isModifierReasonElement as Element,
+      isSummaryElement: isSummaryElement == freezed
+          ? _value.isSummaryElement
+          : isSummaryElement as Element,
     ));
   }
 }
@@ -7270,7 +11266,8 @@ class __$ElementDefinitionCopyWithImpl<$Res>
 class _$_ElementDefinition implements _ElementDefinition {
   const _$_ElementDefinition(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.path,
       this.representation,
@@ -7468,7 +11465,195 @@ class _$_ElementDefinition implements _ElementDefinition {
       this.isModifierReason,
       this.isSummary,
       this.binding,
-      this.mapping});
+      this.mapping,
+      @JsonKey(name: '_path')
+          this.pathElement,
+      @JsonKey(name: '_representation')
+          this.representationElement,
+      @JsonKey(name: '_sliceName')
+          this.sliceNameElement,
+      @JsonKey(name: '_sliceIsConstraining')
+          this.sliceIsConstrainingElement,
+      @JsonKey(name: '_label')
+          this.labelElement,
+      @JsonKey(name: '_short')
+          this.shortElement,
+      @JsonKey(name: '_definition')
+          this.definitionElement,
+      @JsonKey(name: '_comment')
+          this.commentElement,
+      @JsonKey(name: '_requirements')
+          this.requirementsElement,
+      @JsonKey(name: '_alias')
+          this.aliasElement,
+      @JsonKey(name: '_min')
+          this.minElement,
+      @JsonKey(name: '_max')
+          this.maxElement,
+      @JsonKey(name: '_contentReference')
+          this.contentReferenceElement,
+      @JsonKey(name: '_defaultValueBase64Binary')
+          this.defaultValueBase64BinaryElement,
+      @JsonKey(name: '_defaultValueBoolean')
+          this.defaultValueBooleanElement,
+      @JsonKey(name: '_defaultValueCanonical')
+          this.defaultValueCanonicalElement,
+      @JsonKey(name: '_defaultValueCode')
+          this.defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueDate')
+          this.defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDateTime')
+          this.defaultValueDateTimeElement,
+      @JsonKey(name: '_defaultValueDecimal')
+          this.defaultValueDecimalElement,
+      @JsonKey(name: '_defaultValueId')
+          this.defaultValueIdElement,
+      @JsonKey(name: '_defaultValueInstant')
+          this.defaultValueInstantElement,
+      @JsonKey(name: '_defaultValueInteger')
+          this.defaultValueIntegerElement,
+      @JsonKey(name: '_defaultValueMarkdown')
+          this.defaultValueMarkdownElement,
+      @JsonKey(name: '_defaultValueOid')
+          this.defaultValueOidElement,
+      @JsonKey(name: '_defaultValuePositiveInt')
+          this.defaultValuePositiveIntElement,
+      @JsonKey(name: '_defaultValueString')
+          this.defaultValueStringElement,
+      @JsonKey(name: '_defaultValueTime')
+          this.defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueUnsignedInt')
+          this.defaultValueUnsignedIntElement,
+      @JsonKey(name: '_defaultValueUri')
+          this.defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUrl')
+          this.defaultValueUrlElement,
+      @JsonKey(name: '_defaultValueUuid')
+          this.defaultValueUuidElement,
+      @JsonKey(name: '_meaningWhenMissing')
+          this.meaningWhenMissingElement,
+      @JsonKey(name: '_orderMeaning')
+          this.orderMeaningElement,
+      @JsonKey(name: '_fixedBase64Binary')
+          this.fixedBase64BinaryElement,
+      @JsonKey(name: '_fixedBoolean')
+          this.fixedBooleanElement,
+      @JsonKey(name: '_fixedCanonical')
+          this.fixedCanonicalElement,
+      @JsonKey(name: '_fixedCode')
+          this.fixedCodeElement,
+      @JsonKey(name: '_fixedDate')
+          this.fixedDateElement,
+      @JsonKey(name: '_fixedDateTime')
+          this.fixedDateTimeElement,
+      @JsonKey(name: '_fixedDecimal')
+          this.fixedDecimalElement,
+      @JsonKey(name: '_fixedId')
+          this.fixedIdElement,
+      @JsonKey(name: '_fixedInstant')
+          this.fixedInstantElement,
+      @JsonKey(name: '_fixedInteger')
+          this.fixedIntegerElement,
+      @JsonKey(name: '_fixedMarkdown')
+          this.fixedMarkdownElement,
+      @JsonKey(name: '_fixedOid')
+          this.fixedOidElement,
+      @JsonKey(name: '_fixedPositiveInt')
+          this.fixedPositiveIntElement,
+      @JsonKey(name: '_fixedString')
+          this.fixedStringElement,
+      @JsonKey(name: '_fixedTime')
+          this.fixedTimeElement,
+      @JsonKey(name: '_fixedUnsignedInt')
+          this.fixedUnsignedIntElement,
+      @JsonKey(name: '_fixedUri')
+          this.fixedUriElement,
+      @JsonKey(name: '_fixedUrl')
+          this.fixedUrlElement,
+      @JsonKey(name: '_fixedUuid')
+          this.fixedUuidElement,
+      @JsonKey(name: '_patternBase64Binary')
+          this.patternBase64BinaryElement,
+      @JsonKey(name: '_patternBoolean')
+          this.patternBooleanElement,
+      @JsonKey(name: '_patternCanonical')
+          this.patternCanonicalElement,
+      @JsonKey(name: '_patternCode')
+          this.patternCodeElement,
+      @JsonKey(name: '_patternDate')
+          this.patternDateElement,
+      @JsonKey(name: '_patternDateTime')
+          this.patternDateTimeElement,
+      @JsonKey(name: '_patternDecimal')
+          this.patternDecimalElement,
+      @JsonKey(name: '_patternId')
+          this.patternIdElement,
+      @JsonKey(name: '_patternInstant')
+          this.patternInstantElement,
+      @JsonKey(name: '_patternInteger')
+          this.patternIntegerElement,
+      @JsonKey(name: '_patternMarkdown')
+          this.patternMarkdownElement,
+      @JsonKey(name: '_patternOid')
+          this.patternOidElement,
+      @JsonKey(name: '_patternPositiveInt')
+          this.patternPositiveIntElement,
+      @JsonKey(name: '_patternString')
+          this.patternStringElement,
+      @JsonKey(name: '_patternTime')
+          this.patternTimeElement,
+      @JsonKey(name: '_patternUnsignedInt')
+          this.patternUnsignedIntElement,
+      @JsonKey(name: '_patternUri')
+          this.patternUriElement,
+      @JsonKey(name: '_patternUrl')
+          this.patternUrlElement,
+      @JsonKey(name: '_patternUuid')
+          this.patternUuidElement,
+      @JsonKey(name: '_minValueDate')
+          this.minValueDateElement,
+      @JsonKey(name: '_minValueDateTime')
+          this.minValueDateTimeElement,
+      @JsonKey(name: '_minValueInstant')
+          this.minValueInstantElement,
+      @JsonKey(name: '_minValueTime')
+          this.minValueTimeElement,
+      @JsonKey(name: '_minValueDecimal')
+          this.minValueDecimalElement,
+      @JsonKey(name: '_minValueInteger')
+          this.minValueIntegerElement,
+      @JsonKey(name: '_minValuePositiveInt')
+          this.minValuePositiveIntElement,
+      @JsonKey(name: '_minValueUnsignedInt')
+          this.minValueUnsignedIntElement,
+      @JsonKey(name: '_maxValueDate')
+          this.maxValueDateElement,
+      @JsonKey(name: '_maxValueDateTime')
+          this.maxValueDateTimeElement,
+      @JsonKey(name: '_maxValueInstant')
+          this.maxValueInstantElement,
+      @JsonKey(name: '_maxValueTime')
+          this.maxValueTimeElement,
+      @JsonKey(name: '_maxValueDecimal')
+          this.maxValueDecimalElement,
+      @JsonKey(name: '_maxValueInteger')
+          this.maxValueIntegerElement,
+      @JsonKey(name: '_maxValuePositiveInt')
+          this.maxValuePositiveIntElement,
+      @JsonKey(name: '_maxValueUnsignedInt')
+          this.maxValueUnsignedIntElement,
+      @JsonKey(name: '_maxLength')
+          this.maxLengthElement,
+      @JsonKey(name: '_condition')
+          this.conditionElement,
+      @JsonKey(name: '_mustSupport')
+          this.mustSupportElement,
+      @JsonKey(name: '_isModifier')
+          this.isModifierElement,
+      @JsonKey(name: '_isModifierReason')
+          this.isModifierReasonElement,
+      @JsonKey(name: '_isSummary')
+          this.isSummaryElement});
 
   factory _$_ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionFromJson(json);
@@ -7874,10 +12059,292 @@ class _$_ElementDefinition implements _ElementDefinition {
   final ElementDefinitionBinding binding;
   @override
   final List<ElementDefinitionMapping> mapping;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
+  @override
+  @JsonKey(name: '_representation')
+  final Element representationElement;
+  @override
+  @JsonKey(name: '_sliceName')
+  final Element sliceNameElement;
+  @override
+  @JsonKey(name: '_sliceIsConstraining')
+  final Element sliceIsConstrainingElement;
+  @override
+  @JsonKey(name: '_label')
+  final Element labelElement;
+  @override
+  @JsonKey(name: '_short')
+  final Element shortElement;
+  @override
+  @JsonKey(name: '_definition')
+  final Element definitionElement;
+  @override
+  @JsonKey(name: '_comment')
+  final Element commentElement;
+  @override
+  @JsonKey(name: '_requirements')
+  final Element requirementsElement;
+  @override
+  @JsonKey(name: '_alias')
+  final Element aliasElement;
+  @override
+  @JsonKey(name: '_min')
+  final Element minElement;
+  @override
+  @JsonKey(name: '_max')
+  final Element maxElement;
+  @override
+  @JsonKey(name: '_contentReference')
+  final Element contentReferenceElement;
+  @override
+  @JsonKey(name: '_defaultValueBase64Binary')
+  final Element defaultValueBase64BinaryElement;
+  @override
+  @JsonKey(name: '_defaultValueBoolean')
+  final Element defaultValueBooleanElement;
+  @override
+  @JsonKey(name: '_defaultValueCanonical')
+  final Element defaultValueCanonicalElement;
+  @override
+  @JsonKey(name: '_defaultValueCode')
+  final Element defaultValueCodeElement;
+  @override
+  @JsonKey(name: '_defaultValueDate')
+  final Element defaultValueDateElement;
+  @override
+  @JsonKey(name: '_defaultValueDateTime')
+  final Element defaultValueDateTimeElement;
+  @override
+  @JsonKey(name: '_defaultValueDecimal')
+  final Element defaultValueDecimalElement;
+  @override
+  @JsonKey(name: '_defaultValueId')
+  final Element defaultValueIdElement;
+  @override
+  @JsonKey(name: '_defaultValueInstant')
+  final Element defaultValueInstantElement;
+  @override
+  @JsonKey(name: '_defaultValueInteger')
+  final Element defaultValueIntegerElement;
+  @override
+  @JsonKey(name: '_defaultValueMarkdown')
+  final Element defaultValueMarkdownElement;
+  @override
+  @JsonKey(name: '_defaultValueOid')
+  final Element defaultValueOidElement;
+  @override
+  @JsonKey(name: '_defaultValuePositiveInt')
+  final Element defaultValuePositiveIntElement;
+  @override
+  @JsonKey(name: '_defaultValueString')
+  final Element defaultValueStringElement;
+  @override
+  @JsonKey(name: '_defaultValueTime')
+  final Element defaultValueTimeElement;
+  @override
+  @JsonKey(name: '_defaultValueUnsignedInt')
+  final Element defaultValueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_defaultValueUri')
+  final Element defaultValueUriElement;
+  @override
+  @JsonKey(name: '_defaultValueUrl')
+  final Element defaultValueUrlElement;
+  @override
+  @JsonKey(name: '_defaultValueUuid')
+  final Element defaultValueUuidElement;
+  @override
+  @JsonKey(name: '_meaningWhenMissing')
+  final Element meaningWhenMissingElement;
+  @override
+  @JsonKey(name: '_orderMeaning')
+  final Element orderMeaningElement;
+  @override
+  @JsonKey(name: '_fixedBase64Binary')
+  final Element fixedBase64BinaryElement;
+  @override
+  @JsonKey(name: '_fixedBoolean')
+  final Element fixedBooleanElement;
+  @override
+  @JsonKey(name: '_fixedCanonical')
+  final Element fixedCanonicalElement;
+  @override
+  @JsonKey(name: '_fixedCode')
+  final Element fixedCodeElement;
+  @override
+  @JsonKey(name: '_fixedDate')
+  final Element fixedDateElement;
+  @override
+  @JsonKey(name: '_fixedDateTime')
+  final Element fixedDateTimeElement;
+  @override
+  @JsonKey(name: '_fixedDecimal')
+  final Element fixedDecimalElement;
+  @override
+  @JsonKey(name: '_fixedId')
+  final Element fixedIdElement;
+  @override
+  @JsonKey(name: '_fixedInstant')
+  final Element fixedInstantElement;
+  @override
+  @JsonKey(name: '_fixedInteger')
+  final Element fixedIntegerElement;
+  @override
+  @JsonKey(name: '_fixedMarkdown')
+  final Element fixedMarkdownElement;
+  @override
+  @JsonKey(name: '_fixedOid')
+  final Element fixedOidElement;
+  @override
+  @JsonKey(name: '_fixedPositiveInt')
+  final Element fixedPositiveIntElement;
+  @override
+  @JsonKey(name: '_fixedString')
+  final Element fixedStringElement;
+  @override
+  @JsonKey(name: '_fixedTime')
+  final Element fixedTimeElement;
+  @override
+  @JsonKey(name: '_fixedUnsignedInt')
+  final Element fixedUnsignedIntElement;
+  @override
+  @JsonKey(name: '_fixedUri')
+  final Element fixedUriElement;
+  @override
+  @JsonKey(name: '_fixedUrl')
+  final Element fixedUrlElement;
+  @override
+  @JsonKey(name: '_fixedUuid')
+  final Element fixedUuidElement;
+  @override
+  @JsonKey(name: '_patternBase64Binary')
+  final Element patternBase64BinaryElement;
+  @override
+  @JsonKey(name: '_patternBoolean')
+  final Element patternBooleanElement;
+  @override
+  @JsonKey(name: '_patternCanonical')
+  final Element patternCanonicalElement;
+  @override
+  @JsonKey(name: '_patternCode')
+  final Element patternCodeElement;
+  @override
+  @JsonKey(name: '_patternDate')
+  final Element patternDateElement;
+  @override
+  @JsonKey(name: '_patternDateTime')
+  final Element patternDateTimeElement;
+  @override
+  @JsonKey(name: '_patternDecimal')
+  final Element patternDecimalElement;
+  @override
+  @JsonKey(name: '_patternId')
+  final Element patternIdElement;
+  @override
+  @JsonKey(name: '_patternInstant')
+  final Element patternInstantElement;
+  @override
+  @JsonKey(name: '_patternInteger')
+  final Element patternIntegerElement;
+  @override
+  @JsonKey(name: '_patternMarkdown')
+  final Element patternMarkdownElement;
+  @override
+  @JsonKey(name: '_patternOid')
+  final Element patternOidElement;
+  @override
+  @JsonKey(name: '_patternPositiveInt')
+  final Element patternPositiveIntElement;
+  @override
+  @JsonKey(name: '_patternString')
+  final Element patternStringElement;
+  @override
+  @JsonKey(name: '_patternTime')
+  final Element patternTimeElement;
+  @override
+  @JsonKey(name: '_patternUnsignedInt')
+  final Element patternUnsignedIntElement;
+  @override
+  @JsonKey(name: '_patternUri')
+  final Element patternUriElement;
+  @override
+  @JsonKey(name: '_patternUrl')
+  final Element patternUrlElement;
+  @override
+  @JsonKey(name: '_patternUuid')
+  final Element patternUuidElement;
+  @override
+  @JsonKey(name: '_minValueDate')
+  final Element minValueDateElement;
+  @override
+  @JsonKey(name: '_minValueDateTime')
+  final Element minValueDateTimeElement;
+  @override
+  @JsonKey(name: '_minValueInstant')
+  final Element minValueInstantElement;
+  @override
+  @JsonKey(name: '_minValueTime')
+  final Element minValueTimeElement;
+  @override
+  @JsonKey(name: '_minValueDecimal')
+  final Element minValueDecimalElement;
+  @override
+  @JsonKey(name: '_minValueInteger')
+  final Element minValueIntegerElement;
+  @override
+  @JsonKey(name: '_minValuePositiveInt')
+  final Element minValuePositiveIntElement;
+  @override
+  @JsonKey(name: '_minValueUnsignedInt')
+  final Element minValueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_maxValueDate')
+  final Element maxValueDateElement;
+  @override
+  @JsonKey(name: '_maxValueDateTime')
+  final Element maxValueDateTimeElement;
+  @override
+  @JsonKey(name: '_maxValueInstant')
+  final Element maxValueInstantElement;
+  @override
+  @JsonKey(name: '_maxValueTime')
+  final Element maxValueTimeElement;
+  @override
+  @JsonKey(name: '_maxValueDecimal')
+  final Element maxValueDecimalElement;
+  @override
+  @JsonKey(name: '_maxValueInteger')
+  final Element maxValueIntegerElement;
+  @override
+  @JsonKey(name: '_maxValuePositiveInt')
+  final Element maxValuePositiveIntElement;
+  @override
+  @JsonKey(name: '_maxValueUnsignedInt')
+  final Element maxValueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_maxLength')
+  final Element maxLengthElement;
+  @override
+  @JsonKey(name: '_condition')
+  final Element conditionElement;
+  @override
+  @JsonKey(name: '_mustSupport')
+  final Element mustSupportElement;
+  @override
+  @JsonKey(name: '_isModifier')
+  final Element isModifierElement;
+  @override
+  @JsonKey(name: '_isModifierReason')
+  final Element isModifierReasonElement;
+  @override
+  @JsonKey(name: '_isSummary')
+  final Element isSummaryElement;
 
   @override
   String toString() {
-    return 'ElementDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, representation: $representation, sliceName: $sliceName, sliceIsConstraining: $sliceIsConstraining, label: $label, code: $code, slicing: $slicing, short: $short, definition: $definition, comment: $comment, requirements: $requirements, alias: $alias, min: $min, max: $max, base: $base, contentReference: $contentReference, type: $type, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBoolean: $defaultValueBoolean, defaultValueCanonical: $defaultValueCanonical, defaultValueCode: $defaultValueCode, defaultValueDate: $defaultValueDate, defaultValueDateTime: $defaultValueDateTime, defaultValueDecimal: $defaultValueDecimal, defaultValueId: $defaultValueId, defaultValueInstant: $defaultValueInstant, defaultValueInteger: $defaultValueInteger, defaultValueMarkdown: $defaultValueMarkdown, defaultValueOid: $defaultValueOid, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValueString: $defaultValueString, defaultValueTime: $defaultValueTime, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUri: $defaultValueUri, defaultValueUrl: $defaultValueUrl, defaultValueUuid: $defaultValueUuid, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, defaultValueMeta: $defaultValueMeta, meaningWhenMissing: $meaningWhenMissing, orderMeaning: $orderMeaning, fixedBase64Binary: $fixedBase64Binary, fixedBoolean: $fixedBoolean, fixedCanonical: $fixedCanonical, fixedCode: $fixedCode, fixedDate: $fixedDate, fixedDateTime: $fixedDateTime, fixedDecimal: $fixedDecimal, fixedId: $fixedId, fixedInstant: $fixedInstant, fixedInteger: $fixedInteger, fixedMarkdown: $fixedMarkdown, fixedOid: $fixedOid, fixedPositiveInt: $fixedPositiveInt, fixedString: $fixedString, fixedTime: $fixedTime, fixedUnsignedInt: $fixedUnsignedInt, fixedUri: $fixedUri, fixedUrl: $fixedUrl, fixedUuid: $fixedUuid, fixedAddress: $fixedAddress, fixedAge: $fixedAge, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedCodeableConcept: $fixedCodeableConcept, fixedCoding: $fixedCoding, fixedContactPoint: $fixedContactPoint, fixedCount: $fixedCount, fixedDistance: $fixedDistance, fixedDuration: $fixedDuration, fixedHumanName: $fixedHumanName, fixedIdentifier: $fixedIdentifier, fixedMoney: $fixedMoney, fixedPeriod: $fixedPeriod, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedRatio: $fixedRatio, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedTiming: $fixedTiming, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDataRequirement: $fixedDataRequirement, fixedExpression: $fixedExpression, fixedParameterDefinition: $fixedParameterDefinition, fixedRelatedArtifact: $fixedRelatedArtifact, fixedTriggerDefinition: $fixedTriggerDefinition, fixedUsageContext: $fixedUsageContext, fixedDosage: $fixedDosage, fixedMeta: $fixedMeta, patternBase64Binary: $patternBase64Binary, patternBoolean: $patternBoolean, patternCanonical: $patternCanonical, patternCode: $patternCode, patternDate: $patternDate, patternDateTime: $patternDateTime, patternDecimal: $patternDecimal, patternId: $patternId, patternInstant: $patternInstant, patternInteger: $patternInteger, patternMarkdown: $patternMarkdown, patternOid: $patternOid, patternPositiveInt: $patternPositiveInt, patternString: $patternString, patternTime: $patternTime, patternUnsignedInt: $patternUnsignedInt, patternUri: $patternUri, patternUrl: $patternUrl, patternUuid: $patternUuid, patternAddress: $patternAddress, patternAge: $patternAge, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternCodeableConcept: $patternCodeableConcept, patternCoding: $patternCoding, patternContactPoint: $patternContactPoint, patternCount: $patternCount, patternDistance: $patternDistance, patternDuration: $patternDuration, patternHumanName: $patternHumanName, patternIdentifier: $patternIdentifier, patternMoney: $patternMoney, patternPeriod: $patternPeriod, patternQuantity: $patternQuantity, patternRange: $patternRange, patternRatio: $patternRatio, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternTiming: $patternTiming, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDataRequirement: $patternDataRequirement, patternExpression: $patternExpression, patternParameterDefinition: $patternParameterDefinition, patternRelatedArtifact: $patternRelatedArtifact, patternTriggerDefinition: $patternTriggerDefinition, patternUsageContext: $patternUsageContext, patternDosage: $patternDosage, patternMeta: $patternMeta, example: $example, minValueDate: $minValueDate, minValueDateTime: $minValueDateTime, minValueInstant: $minValueInstant, minValueTime: $minValueTime, minValueDecimal: $minValueDecimal, minValueInteger: $minValueInteger, minValuePositiveInt: $minValuePositiveInt, minValueUnsignedInt: $minValueUnsignedInt, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateTime: $maxValueDateTime, maxValueInstant: $maxValueInstant, maxValueTime: $maxValueTime, maxValueDecimal: $maxValueDecimal, maxValueInteger: $maxValueInteger, maxValuePositiveInt: $maxValuePositiveInt, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, condition: $condition, constraint: $constraint, mustSupport: $mustSupport, isModifier: $isModifier, isModifierReason: $isModifierReason, isSummary: $isSummary, binding: $binding, mapping: $mapping)';
+    return 'ElementDefinition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, representation: $representation, sliceName: $sliceName, sliceIsConstraining: $sliceIsConstraining, label: $label, code: $code, slicing: $slicing, short: $short, definition: $definition, comment: $comment, requirements: $requirements, alias: $alias, min: $min, max: $max, base: $base, contentReference: $contentReference, type: $type, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBoolean: $defaultValueBoolean, defaultValueCanonical: $defaultValueCanonical, defaultValueCode: $defaultValueCode, defaultValueDate: $defaultValueDate, defaultValueDateTime: $defaultValueDateTime, defaultValueDecimal: $defaultValueDecimal, defaultValueId: $defaultValueId, defaultValueInstant: $defaultValueInstant, defaultValueInteger: $defaultValueInteger, defaultValueMarkdown: $defaultValueMarkdown, defaultValueOid: $defaultValueOid, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValueString: $defaultValueString, defaultValueTime: $defaultValueTime, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUri: $defaultValueUri, defaultValueUrl: $defaultValueUrl, defaultValueUuid: $defaultValueUuid, defaultValueAddress: $defaultValueAddress, defaultValueAge: $defaultValueAge, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueContactPoint: $defaultValueContactPoint, defaultValueCount: $defaultValueCount, defaultValueDistance: $defaultValueDistance, defaultValueDuration: $defaultValueDuration, defaultValueHumanName: $defaultValueHumanName, defaultValueIdentifier: $defaultValueIdentifier, defaultValueMoney: $defaultValueMoney, defaultValuePeriod: $defaultValuePeriod, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValueRatio: $defaultValueRatio, defaultValueReference: $defaultValueReference, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueTiming: $defaultValueTiming, defaultValueContactDetail: $defaultValueContactDetail, defaultValueContributor: $defaultValueContributor, defaultValueDataRequirement: $defaultValueDataRequirement, defaultValueExpression: $defaultValueExpression, defaultValueParameterDefinition: $defaultValueParameterDefinition, defaultValueRelatedArtifact: $defaultValueRelatedArtifact, defaultValueTriggerDefinition: $defaultValueTriggerDefinition, defaultValueUsageContext: $defaultValueUsageContext, defaultValueDosage: $defaultValueDosage, defaultValueMeta: $defaultValueMeta, meaningWhenMissing: $meaningWhenMissing, orderMeaning: $orderMeaning, fixedBase64Binary: $fixedBase64Binary, fixedBoolean: $fixedBoolean, fixedCanonical: $fixedCanonical, fixedCode: $fixedCode, fixedDate: $fixedDate, fixedDateTime: $fixedDateTime, fixedDecimal: $fixedDecimal, fixedId: $fixedId, fixedInstant: $fixedInstant, fixedInteger: $fixedInteger, fixedMarkdown: $fixedMarkdown, fixedOid: $fixedOid, fixedPositiveInt: $fixedPositiveInt, fixedString: $fixedString, fixedTime: $fixedTime, fixedUnsignedInt: $fixedUnsignedInt, fixedUri: $fixedUri, fixedUrl: $fixedUrl, fixedUuid: $fixedUuid, fixedAddress: $fixedAddress, fixedAge: $fixedAge, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedCodeableConcept: $fixedCodeableConcept, fixedCoding: $fixedCoding, fixedContactPoint: $fixedContactPoint, fixedCount: $fixedCount, fixedDistance: $fixedDistance, fixedDuration: $fixedDuration, fixedHumanName: $fixedHumanName, fixedIdentifier: $fixedIdentifier, fixedMoney: $fixedMoney, fixedPeriod: $fixedPeriod, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedRatio: $fixedRatio, fixedReference: $fixedReference, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedTiming: $fixedTiming, fixedContactDetail: $fixedContactDetail, fixedContributor: $fixedContributor, fixedDataRequirement: $fixedDataRequirement, fixedExpression: $fixedExpression, fixedParameterDefinition: $fixedParameterDefinition, fixedRelatedArtifact: $fixedRelatedArtifact, fixedTriggerDefinition: $fixedTriggerDefinition, fixedUsageContext: $fixedUsageContext, fixedDosage: $fixedDosage, fixedMeta: $fixedMeta, patternBase64Binary: $patternBase64Binary, patternBoolean: $patternBoolean, patternCanonical: $patternCanonical, patternCode: $patternCode, patternDate: $patternDate, patternDateTime: $patternDateTime, patternDecimal: $patternDecimal, patternId: $patternId, patternInstant: $patternInstant, patternInteger: $patternInteger, patternMarkdown: $patternMarkdown, patternOid: $patternOid, patternPositiveInt: $patternPositiveInt, patternString: $patternString, patternTime: $patternTime, patternUnsignedInt: $patternUnsignedInt, patternUri: $patternUri, patternUrl: $patternUrl, patternUuid: $patternUuid, patternAddress: $patternAddress, patternAge: $patternAge, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternCodeableConcept: $patternCodeableConcept, patternCoding: $patternCoding, patternContactPoint: $patternContactPoint, patternCount: $patternCount, patternDistance: $patternDistance, patternDuration: $patternDuration, patternHumanName: $patternHumanName, patternIdentifier: $patternIdentifier, patternMoney: $patternMoney, patternPeriod: $patternPeriod, patternQuantity: $patternQuantity, patternRange: $patternRange, patternRatio: $patternRatio, patternReference: $patternReference, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternTiming: $patternTiming, patternContactDetail: $patternContactDetail, patternContributor: $patternContributor, patternDataRequirement: $patternDataRequirement, patternExpression: $patternExpression, patternParameterDefinition: $patternParameterDefinition, patternRelatedArtifact: $patternRelatedArtifact, patternTriggerDefinition: $patternTriggerDefinition, patternUsageContext: $patternUsageContext, patternDosage: $patternDosage, patternMeta: $patternMeta, example: $example, minValueDate: $minValueDate, minValueDateTime: $minValueDateTime, minValueInstant: $minValueInstant, minValueTime: $minValueTime, minValueDecimal: $minValueDecimal, minValueInteger: $minValueInteger, minValuePositiveInt: $minValuePositiveInt, minValueUnsignedInt: $minValueUnsignedInt, minValueQuantity: $minValueQuantity, maxValueDate: $maxValueDate, maxValueDateTime: $maxValueDateTime, maxValueInstant: $maxValueInstant, maxValueTime: $maxValueTime, maxValueDecimal: $maxValueDecimal, maxValueInteger: $maxValueInteger, maxValuePositiveInt: $maxValuePositiveInt, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueQuantity: $maxValueQuantity, maxLength: $maxLength, condition: $condition, constraint: $constraint, mustSupport: $mustSupport, isModifier: $isModifier, isModifierReason: $isModifierReason, isSummary: $isSummary, binding: $binding, mapping: $mapping, pathElement: $pathElement, representationElement: $representationElement, sliceNameElement: $sliceNameElement, sliceIsConstrainingElement: $sliceIsConstrainingElement, labelElement: $labelElement, shortElement: $shortElement, definitionElement: $definitionElement, commentElement: $commentElement, requirementsElement: $requirementsElement, aliasElement: $aliasElement, minElement: $minElement, maxElement: $maxElement, contentReferenceElement: $contentReferenceElement, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCanonicalElement: $defaultValueCanonicalElement, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueIdElement: $defaultValueIdElement, defaultValueInstantElement: $defaultValueInstantElement, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueMarkdownElement: $defaultValueMarkdownElement, defaultValueOidElement: $defaultValueOidElement, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueStringElement: $defaultValueStringElement, defaultValueTimeElement: $defaultValueTimeElement, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValueUriElement: $defaultValueUriElement, defaultValueUrlElement: $defaultValueUrlElement, defaultValueUuidElement: $defaultValueUuidElement, meaningWhenMissingElement: $meaningWhenMissingElement, orderMeaningElement: $orderMeaningElement, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBooleanElement: $fixedBooleanElement, fixedCanonicalElement: $fixedCanonicalElement, fixedCodeElement: $fixedCodeElement, fixedDateElement: $fixedDateElement, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimalElement: $fixedDecimalElement, fixedIdElement: $fixedIdElement, fixedInstantElement: $fixedInstantElement, fixedIntegerElement: $fixedIntegerElement, fixedMarkdownElement: $fixedMarkdownElement, fixedOidElement: $fixedOidElement, fixedPositiveIntElement: $fixedPositiveIntElement, fixedStringElement: $fixedStringElement, fixedTimeElement: $fixedTimeElement, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedUriElement: $fixedUriElement, fixedUrlElement: $fixedUrlElement, fixedUuidElement: $fixedUuidElement, patternBase64BinaryElement: $patternBase64BinaryElement, patternBooleanElement: $patternBooleanElement, patternCanonicalElement: $patternCanonicalElement, patternCodeElement: $patternCodeElement, patternDateElement: $patternDateElement, patternDateTimeElement: $patternDateTimeElement, patternDecimalElement: $patternDecimalElement, patternIdElement: $patternIdElement, patternInstantElement: $patternInstantElement, patternIntegerElement: $patternIntegerElement, patternMarkdownElement: $patternMarkdownElement, patternOidElement: $patternOidElement, patternPositiveIntElement: $patternPositiveIntElement, patternStringElement: $patternStringElement, patternTimeElement: $patternTimeElement, patternUnsignedIntElement: $patternUnsignedIntElement, patternUriElement: $patternUriElement, patternUrlElement: $patternUrlElement, patternUuidElement: $patternUuidElement, minValueDateElement: $minValueDateElement, minValueDateTimeElement: $minValueDateTimeElement, minValueInstantElement: $minValueInstantElement, minValueTimeElement: $minValueTimeElement, minValueDecimalElement: $minValueDecimalElement, minValueIntegerElement: $minValueIntegerElement, minValuePositiveIntElement: $minValuePositiveIntElement, minValueUnsignedIntElement: $minValueUnsignedIntElement, maxValueDateElement: $maxValueDateElement, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstantElement: $maxValueInstantElement, maxValueTimeElement: $maxValueTimeElement, maxValueDecimalElement: $maxValueDecimalElement, maxValueIntegerElement: $maxValueIntegerElement, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxLengthElement: $maxLengthElement, conditionElement: $conditionElement, mustSupportElement: $mustSupportElement, isModifierElement: $isModifierElement, isModifierReasonElement: $isModifierReasonElement, isSummaryElement: $isSummaryElement)';
   }
 
   @override
@@ -8124,7 +12591,101 @@ class _$_ElementDefinition implements _ElementDefinition {
             (identical(other.isModifierReason, isModifierReason) || const DeepCollectionEquality().equals(other.isModifierReason, isModifierReason)) &&
             (identical(other.isSummary, isSummary) || const DeepCollectionEquality().equals(other.isSummary, isSummary)) &&
             (identical(other.binding, binding) || const DeepCollectionEquality().equals(other.binding, binding)) &&
-            (identical(other.mapping, mapping) || const DeepCollectionEquality().equals(other.mapping, mapping)));
+            (identical(other.mapping, mapping) || const DeepCollectionEquality().equals(other.mapping, mapping)) &&
+            (identical(other.pathElement, pathElement) || const DeepCollectionEquality().equals(other.pathElement, pathElement)) &&
+            (identical(other.representationElement, representationElement) || const DeepCollectionEquality().equals(other.representationElement, representationElement)) &&
+            (identical(other.sliceNameElement, sliceNameElement) || const DeepCollectionEquality().equals(other.sliceNameElement, sliceNameElement)) &&
+            (identical(other.sliceIsConstrainingElement, sliceIsConstrainingElement) || const DeepCollectionEquality().equals(other.sliceIsConstrainingElement, sliceIsConstrainingElement)) &&
+            (identical(other.labelElement, labelElement) || const DeepCollectionEquality().equals(other.labelElement, labelElement)) &&
+            (identical(other.shortElement, shortElement) || const DeepCollectionEquality().equals(other.shortElement, shortElement)) &&
+            (identical(other.definitionElement, definitionElement) || const DeepCollectionEquality().equals(other.definitionElement, definitionElement)) &&
+            (identical(other.commentElement, commentElement) || const DeepCollectionEquality().equals(other.commentElement, commentElement)) &&
+            (identical(other.requirementsElement, requirementsElement) || const DeepCollectionEquality().equals(other.requirementsElement, requirementsElement)) &&
+            (identical(other.aliasElement, aliasElement) || const DeepCollectionEquality().equals(other.aliasElement, aliasElement)) &&
+            (identical(other.minElement, minElement) || const DeepCollectionEquality().equals(other.minElement, minElement)) &&
+            (identical(other.maxElement, maxElement) || const DeepCollectionEquality().equals(other.maxElement, maxElement)) &&
+            (identical(other.contentReferenceElement, contentReferenceElement) || const DeepCollectionEquality().equals(other.contentReferenceElement, contentReferenceElement)) &&
+            (identical(other.defaultValueBase64BinaryElement, defaultValueBase64BinaryElement) || const DeepCollectionEquality().equals(other.defaultValueBase64BinaryElement, defaultValueBase64BinaryElement)) &&
+            (identical(other.defaultValueBooleanElement, defaultValueBooleanElement) || const DeepCollectionEquality().equals(other.defaultValueBooleanElement, defaultValueBooleanElement)) &&
+            (identical(other.defaultValueCanonicalElement, defaultValueCanonicalElement) || const DeepCollectionEquality().equals(other.defaultValueCanonicalElement, defaultValueCanonicalElement)) &&
+            (identical(other.defaultValueCodeElement, defaultValueCodeElement) || const DeepCollectionEquality().equals(other.defaultValueCodeElement, defaultValueCodeElement)) &&
+            (identical(other.defaultValueDateElement, defaultValueDateElement) || const DeepCollectionEquality().equals(other.defaultValueDateElement, defaultValueDateElement)) &&
+            (identical(other.defaultValueDateTimeElement, defaultValueDateTimeElement) || const DeepCollectionEquality().equals(other.defaultValueDateTimeElement, defaultValueDateTimeElement)) &&
+            (identical(other.defaultValueDecimalElement, defaultValueDecimalElement) || const DeepCollectionEquality().equals(other.defaultValueDecimalElement, defaultValueDecimalElement)) &&
+            (identical(other.defaultValueIdElement, defaultValueIdElement) || const DeepCollectionEquality().equals(other.defaultValueIdElement, defaultValueIdElement)) &&
+            (identical(other.defaultValueInstantElement, defaultValueInstantElement) || const DeepCollectionEquality().equals(other.defaultValueInstantElement, defaultValueInstantElement)) &&
+            (identical(other.defaultValueIntegerElement, defaultValueIntegerElement) || const DeepCollectionEquality().equals(other.defaultValueIntegerElement, defaultValueIntegerElement)) &&
+            (identical(other.defaultValueMarkdownElement, defaultValueMarkdownElement) || const DeepCollectionEquality().equals(other.defaultValueMarkdownElement, defaultValueMarkdownElement)) &&
+            (identical(other.defaultValueOidElement, defaultValueOidElement) || const DeepCollectionEquality().equals(other.defaultValueOidElement, defaultValueOidElement)) &&
+            (identical(other.defaultValuePositiveIntElement, defaultValuePositiveIntElement) || const DeepCollectionEquality().equals(other.defaultValuePositiveIntElement, defaultValuePositiveIntElement)) &&
+            (identical(other.defaultValueStringElement, defaultValueStringElement) || const DeepCollectionEquality().equals(other.defaultValueStringElement, defaultValueStringElement)) &&
+            (identical(other.defaultValueTimeElement, defaultValueTimeElement) || const DeepCollectionEquality().equals(other.defaultValueTimeElement, defaultValueTimeElement)) &&
+            (identical(other.defaultValueUnsignedIntElement, defaultValueUnsignedIntElement) || const DeepCollectionEquality().equals(other.defaultValueUnsignedIntElement, defaultValueUnsignedIntElement)) &&
+            (identical(other.defaultValueUriElement, defaultValueUriElement) || const DeepCollectionEquality().equals(other.defaultValueUriElement, defaultValueUriElement)) &&
+            (identical(other.defaultValueUrlElement, defaultValueUrlElement) || const DeepCollectionEquality().equals(other.defaultValueUrlElement, defaultValueUrlElement)) &&
+            (identical(other.defaultValueUuidElement, defaultValueUuidElement) || const DeepCollectionEquality().equals(other.defaultValueUuidElement, defaultValueUuidElement)) &&
+            (identical(other.meaningWhenMissingElement, meaningWhenMissingElement) || const DeepCollectionEquality().equals(other.meaningWhenMissingElement, meaningWhenMissingElement)) &&
+            (identical(other.orderMeaningElement, orderMeaningElement) || const DeepCollectionEquality().equals(other.orderMeaningElement, orderMeaningElement)) &&
+            (identical(other.fixedBase64BinaryElement, fixedBase64BinaryElement) || const DeepCollectionEquality().equals(other.fixedBase64BinaryElement, fixedBase64BinaryElement)) &&
+            (identical(other.fixedBooleanElement, fixedBooleanElement) || const DeepCollectionEquality().equals(other.fixedBooleanElement, fixedBooleanElement)) &&
+            (identical(other.fixedCanonicalElement, fixedCanonicalElement) || const DeepCollectionEquality().equals(other.fixedCanonicalElement, fixedCanonicalElement)) &&
+            (identical(other.fixedCodeElement, fixedCodeElement) || const DeepCollectionEquality().equals(other.fixedCodeElement, fixedCodeElement)) &&
+            (identical(other.fixedDateElement, fixedDateElement) || const DeepCollectionEquality().equals(other.fixedDateElement, fixedDateElement)) &&
+            (identical(other.fixedDateTimeElement, fixedDateTimeElement) || const DeepCollectionEquality().equals(other.fixedDateTimeElement, fixedDateTimeElement)) &&
+            (identical(other.fixedDecimalElement, fixedDecimalElement) || const DeepCollectionEquality().equals(other.fixedDecimalElement, fixedDecimalElement)) &&
+            (identical(other.fixedIdElement, fixedIdElement) || const DeepCollectionEquality().equals(other.fixedIdElement, fixedIdElement)) &&
+            (identical(other.fixedInstantElement, fixedInstantElement) || const DeepCollectionEquality().equals(other.fixedInstantElement, fixedInstantElement)) &&
+            (identical(other.fixedIntegerElement, fixedIntegerElement) || const DeepCollectionEquality().equals(other.fixedIntegerElement, fixedIntegerElement)) &&
+            (identical(other.fixedMarkdownElement, fixedMarkdownElement) || const DeepCollectionEquality().equals(other.fixedMarkdownElement, fixedMarkdownElement)) &&
+            (identical(other.fixedOidElement, fixedOidElement) || const DeepCollectionEquality().equals(other.fixedOidElement, fixedOidElement)) &&
+            (identical(other.fixedPositiveIntElement, fixedPositiveIntElement) || const DeepCollectionEquality().equals(other.fixedPositiveIntElement, fixedPositiveIntElement)) &&
+            (identical(other.fixedStringElement, fixedStringElement) || const DeepCollectionEquality().equals(other.fixedStringElement, fixedStringElement)) &&
+            (identical(other.fixedTimeElement, fixedTimeElement) || const DeepCollectionEquality().equals(other.fixedTimeElement, fixedTimeElement)) &&
+            (identical(other.fixedUnsignedIntElement, fixedUnsignedIntElement) || const DeepCollectionEquality().equals(other.fixedUnsignedIntElement, fixedUnsignedIntElement)) &&
+            (identical(other.fixedUriElement, fixedUriElement) || const DeepCollectionEquality().equals(other.fixedUriElement, fixedUriElement)) &&
+            (identical(other.fixedUrlElement, fixedUrlElement) || const DeepCollectionEquality().equals(other.fixedUrlElement, fixedUrlElement)) &&
+            (identical(other.fixedUuidElement, fixedUuidElement) || const DeepCollectionEquality().equals(other.fixedUuidElement, fixedUuidElement)) &&
+            (identical(other.patternBase64BinaryElement, patternBase64BinaryElement) || const DeepCollectionEquality().equals(other.patternBase64BinaryElement, patternBase64BinaryElement)) &&
+            (identical(other.patternBooleanElement, patternBooleanElement) || const DeepCollectionEquality().equals(other.patternBooleanElement, patternBooleanElement)) &&
+            (identical(other.patternCanonicalElement, patternCanonicalElement) || const DeepCollectionEquality().equals(other.patternCanonicalElement, patternCanonicalElement)) &&
+            (identical(other.patternCodeElement, patternCodeElement) || const DeepCollectionEquality().equals(other.patternCodeElement, patternCodeElement)) &&
+            (identical(other.patternDateElement, patternDateElement) || const DeepCollectionEquality().equals(other.patternDateElement, patternDateElement)) &&
+            (identical(other.patternDateTimeElement, patternDateTimeElement) || const DeepCollectionEquality().equals(other.patternDateTimeElement, patternDateTimeElement)) &&
+            (identical(other.patternDecimalElement, patternDecimalElement) || const DeepCollectionEquality().equals(other.patternDecimalElement, patternDecimalElement)) &&
+            (identical(other.patternIdElement, patternIdElement) || const DeepCollectionEquality().equals(other.patternIdElement, patternIdElement)) &&
+            (identical(other.patternInstantElement, patternInstantElement) || const DeepCollectionEquality().equals(other.patternInstantElement, patternInstantElement)) &&
+            (identical(other.patternIntegerElement, patternIntegerElement) || const DeepCollectionEquality().equals(other.patternIntegerElement, patternIntegerElement)) &&
+            (identical(other.patternMarkdownElement, patternMarkdownElement) || const DeepCollectionEquality().equals(other.patternMarkdownElement, patternMarkdownElement)) &&
+            (identical(other.patternOidElement, patternOidElement) || const DeepCollectionEquality().equals(other.patternOidElement, patternOidElement)) &&
+            (identical(other.patternPositiveIntElement, patternPositiveIntElement) || const DeepCollectionEquality().equals(other.patternPositiveIntElement, patternPositiveIntElement)) &&
+            (identical(other.patternStringElement, patternStringElement) || const DeepCollectionEquality().equals(other.patternStringElement, patternStringElement)) &&
+            (identical(other.patternTimeElement, patternTimeElement) || const DeepCollectionEquality().equals(other.patternTimeElement, patternTimeElement)) &&
+            (identical(other.patternUnsignedIntElement, patternUnsignedIntElement) || const DeepCollectionEquality().equals(other.patternUnsignedIntElement, patternUnsignedIntElement)) &&
+            (identical(other.patternUriElement, patternUriElement) || const DeepCollectionEquality().equals(other.patternUriElement, patternUriElement)) &&
+            (identical(other.patternUrlElement, patternUrlElement) || const DeepCollectionEquality().equals(other.patternUrlElement, patternUrlElement)) &&
+            (identical(other.patternUuidElement, patternUuidElement) || const DeepCollectionEquality().equals(other.patternUuidElement, patternUuidElement)) &&
+            (identical(other.minValueDateElement, minValueDateElement) || const DeepCollectionEquality().equals(other.minValueDateElement, minValueDateElement)) &&
+            (identical(other.minValueDateTimeElement, minValueDateTimeElement) || const DeepCollectionEquality().equals(other.minValueDateTimeElement, minValueDateTimeElement)) &&
+            (identical(other.minValueInstantElement, minValueInstantElement) || const DeepCollectionEquality().equals(other.minValueInstantElement, minValueInstantElement)) &&
+            (identical(other.minValueTimeElement, minValueTimeElement) || const DeepCollectionEquality().equals(other.minValueTimeElement, minValueTimeElement)) &&
+            (identical(other.minValueDecimalElement, minValueDecimalElement) || const DeepCollectionEquality().equals(other.minValueDecimalElement, minValueDecimalElement)) &&
+            (identical(other.minValueIntegerElement, minValueIntegerElement) || const DeepCollectionEquality().equals(other.minValueIntegerElement, minValueIntegerElement)) &&
+            (identical(other.minValuePositiveIntElement, minValuePositiveIntElement) || const DeepCollectionEquality().equals(other.minValuePositiveIntElement, minValuePositiveIntElement)) &&
+            (identical(other.minValueUnsignedIntElement, minValueUnsignedIntElement) || const DeepCollectionEquality().equals(other.minValueUnsignedIntElement, minValueUnsignedIntElement)) &&
+            (identical(other.maxValueDateElement, maxValueDateElement) || const DeepCollectionEquality().equals(other.maxValueDateElement, maxValueDateElement)) &&
+            (identical(other.maxValueDateTimeElement, maxValueDateTimeElement) || const DeepCollectionEquality().equals(other.maxValueDateTimeElement, maxValueDateTimeElement)) &&
+            (identical(other.maxValueInstantElement, maxValueInstantElement) || const DeepCollectionEquality().equals(other.maxValueInstantElement, maxValueInstantElement)) &&
+            (identical(other.maxValueTimeElement, maxValueTimeElement) || const DeepCollectionEquality().equals(other.maxValueTimeElement, maxValueTimeElement)) &&
+            (identical(other.maxValueDecimalElement, maxValueDecimalElement) || const DeepCollectionEquality().equals(other.maxValueDecimalElement, maxValueDecimalElement)) &&
+            (identical(other.maxValueIntegerElement, maxValueIntegerElement) || const DeepCollectionEquality().equals(other.maxValueIntegerElement, maxValueIntegerElement)) &&
+            (identical(other.maxValuePositiveIntElement, maxValuePositiveIntElement) || const DeepCollectionEquality().equals(other.maxValuePositiveIntElement, maxValuePositiveIntElement)) &&
+            (identical(other.maxValueUnsignedIntElement, maxValueUnsignedIntElement) || const DeepCollectionEquality().equals(other.maxValueUnsignedIntElement, maxValueUnsignedIntElement)) &&
+            (identical(other.maxLengthElement, maxLengthElement) || const DeepCollectionEquality().equals(other.maxLengthElement, maxLengthElement)) &&
+            (identical(other.conditionElement, conditionElement) || const DeepCollectionEquality().equals(other.conditionElement, conditionElement)) &&
+            (identical(other.mustSupportElement, mustSupportElement) || const DeepCollectionEquality().equals(other.mustSupportElement, mustSupportElement)) &&
+            (identical(other.isModifierElement, isModifierElement) || const DeepCollectionEquality().equals(other.isModifierElement, isModifierElement)) &&
+            (identical(other.isModifierReasonElement, isModifierReasonElement) || const DeepCollectionEquality().equals(other.isModifierReasonElement, isModifierReasonElement)) &&
+            (identical(other.isSummaryElement, isSummaryElement) || const DeepCollectionEquality().equals(other.isSummaryElement, isSummaryElement)));
   }
 
   @override
@@ -8329,7 +12890,101 @@ class _$_ElementDefinition implements _ElementDefinition {
       const DeepCollectionEquality().hash(isModifierReason) ^
       const DeepCollectionEquality().hash(isSummary) ^
       const DeepCollectionEquality().hash(binding) ^
-      const DeepCollectionEquality().hash(mapping);
+      const DeepCollectionEquality().hash(mapping) ^
+      const DeepCollectionEquality().hash(pathElement) ^
+      const DeepCollectionEquality().hash(representationElement) ^
+      const DeepCollectionEquality().hash(sliceNameElement) ^
+      const DeepCollectionEquality().hash(sliceIsConstrainingElement) ^
+      const DeepCollectionEquality().hash(labelElement) ^
+      const DeepCollectionEquality().hash(shortElement) ^
+      const DeepCollectionEquality().hash(definitionElement) ^
+      const DeepCollectionEquality().hash(commentElement) ^
+      const DeepCollectionEquality().hash(requirementsElement) ^
+      const DeepCollectionEquality().hash(aliasElement) ^
+      const DeepCollectionEquality().hash(minElement) ^
+      const DeepCollectionEquality().hash(maxElement) ^
+      const DeepCollectionEquality().hash(contentReferenceElement) ^
+      const DeepCollectionEquality().hash(defaultValueBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(defaultValueBooleanElement) ^
+      const DeepCollectionEquality().hash(defaultValueCanonicalElement) ^
+      const DeepCollectionEquality().hash(defaultValueCodeElement) ^
+      const DeepCollectionEquality().hash(defaultValueDateElement) ^
+      const DeepCollectionEquality().hash(defaultValueDateTimeElement) ^
+      const DeepCollectionEquality().hash(defaultValueDecimalElement) ^
+      const DeepCollectionEquality().hash(defaultValueIdElement) ^
+      const DeepCollectionEquality().hash(defaultValueInstantElement) ^
+      const DeepCollectionEquality().hash(defaultValueIntegerElement) ^
+      const DeepCollectionEquality().hash(defaultValueMarkdownElement) ^
+      const DeepCollectionEquality().hash(defaultValueOidElement) ^
+      const DeepCollectionEquality().hash(defaultValuePositiveIntElement) ^
+      const DeepCollectionEquality().hash(defaultValueStringElement) ^
+      const DeepCollectionEquality().hash(defaultValueTimeElement) ^
+      const DeepCollectionEquality().hash(defaultValueUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(defaultValueUriElement) ^
+      const DeepCollectionEquality().hash(defaultValueUrlElement) ^
+      const DeepCollectionEquality().hash(defaultValueUuidElement) ^
+      const DeepCollectionEquality().hash(meaningWhenMissingElement) ^
+      const DeepCollectionEquality().hash(orderMeaningElement) ^
+      const DeepCollectionEquality().hash(fixedBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(fixedBooleanElement) ^
+      const DeepCollectionEquality().hash(fixedCanonicalElement) ^
+      const DeepCollectionEquality().hash(fixedCodeElement) ^
+      const DeepCollectionEquality().hash(fixedDateElement) ^
+      const DeepCollectionEquality().hash(fixedDateTimeElement) ^
+      const DeepCollectionEquality().hash(fixedDecimalElement) ^
+      const DeepCollectionEquality().hash(fixedIdElement) ^
+      const DeepCollectionEquality().hash(fixedInstantElement) ^
+      const DeepCollectionEquality().hash(fixedIntegerElement) ^
+      const DeepCollectionEquality().hash(fixedMarkdownElement) ^
+      const DeepCollectionEquality().hash(fixedOidElement) ^
+      const DeepCollectionEquality().hash(fixedPositiveIntElement) ^
+      const DeepCollectionEquality().hash(fixedStringElement) ^
+      const DeepCollectionEquality().hash(fixedTimeElement) ^
+      const DeepCollectionEquality().hash(fixedUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(fixedUriElement) ^
+      const DeepCollectionEquality().hash(fixedUrlElement) ^
+      const DeepCollectionEquality().hash(fixedUuidElement) ^
+      const DeepCollectionEquality().hash(patternBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(patternBooleanElement) ^
+      const DeepCollectionEquality().hash(patternCanonicalElement) ^
+      const DeepCollectionEquality().hash(patternCodeElement) ^
+      const DeepCollectionEquality().hash(patternDateElement) ^
+      const DeepCollectionEquality().hash(patternDateTimeElement) ^
+      const DeepCollectionEquality().hash(patternDecimalElement) ^
+      const DeepCollectionEquality().hash(patternIdElement) ^
+      const DeepCollectionEquality().hash(patternInstantElement) ^
+      const DeepCollectionEquality().hash(patternIntegerElement) ^
+      const DeepCollectionEquality().hash(patternMarkdownElement) ^
+      const DeepCollectionEquality().hash(patternOidElement) ^
+      const DeepCollectionEquality().hash(patternPositiveIntElement) ^
+      const DeepCollectionEquality().hash(patternStringElement) ^
+      const DeepCollectionEquality().hash(patternTimeElement) ^
+      const DeepCollectionEquality().hash(patternUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(patternUriElement) ^
+      const DeepCollectionEquality().hash(patternUrlElement) ^
+      const DeepCollectionEquality().hash(patternUuidElement) ^
+      const DeepCollectionEquality().hash(minValueDateElement) ^
+      const DeepCollectionEquality().hash(minValueDateTimeElement) ^
+      const DeepCollectionEquality().hash(minValueInstantElement) ^
+      const DeepCollectionEquality().hash(minValueTimeElement) ^
+      const DeepCollectionEquality().hash(minValueDecimalElement) ^
+      const DeepCollectionEquality().hash(minValueIntegerElement) ^
+      const DeepCollectionEquality().hash(minValuePositiveIntElement) ^
+      const DeepCollectionEquality().hash(minValueUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(maxValueDateElement) ^
+      const DeepCollectionEquality().hash(maxValueDateTimeElement) ^
+      const DeepCollectionEquality().hash(maxValueInstantElement) ^
+      const DeepCollectionEquality().hash(maxValueTimeElement) ^
+      const DeepCollectionEquality().hash(maxValueDecimalElement) ^
+      const DeepCollectionEquality().hash(maxValueIntegerElement) ^
+      const DeepCollectionEquality().hash(maxValuePositiveIntElement) ^
+      const DeepCollectionEquality().hash(maxValueUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(maxLengthElement) ^
+      const DeepCollectionEquality().hash(conditionElement) ^
+      const DeepCollectionEquality().hash(mustSupportElement) ^
+      const DeepCollectionEquality().hash(isModifierElement) ^
+      const DeepCollectionEquality().hash(isModifierReasonElement) ^
+      const DeepCollectionEquality().hash(isSummaryElement);
 
   @override
   _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith =>
@@ -8344,7 +12999,8 @@ class _$_ElementDefinition implements _ElementDefinition {
 abstract class _ElementDefinition implements ElementDefinition {
   const factory _ElementDefinition(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
       List<ElementDefinitionRepresentation> representation,
@@ -8542,7 +13198,195 @@ abstract class _ElementDefinition implements ElementDefinition {
       String isModifierReason,
       Boolean isSummary,
       ElementDefinitionBinding binding,
-      List<ElementDefinitionMapping> mapping}) = _$_ElementDefinition;
+      List<ElementDefinitionMapping> mapping,
+      @JsonKey(name: '_path')
+          Element pathElement,
+      @JsonKey(name: '_representation')
+          Element representationElement,
+      @JsonKey(name: '_sliceName')
+          Element sliceNameElement,
+      @JsonKey(name: '_sliceIsConstraining')
+          Element sliceIsConstrainingElement,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_short')
+          Element shortElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement,
+      @JsonKey(name: '_min')
+          Element minElement,
+      @JsonKey(name: '_max')
+          Element maxElement,
+      @JsonKey(name: '_contentReference')
+          Element contentReferenceElement,
+      @JsonKey(name: '_defaultValueBase64Binary')
+          Element defaultValueBase64BinaryElement,
+      @JsonKey(name: '_defaultValueBoolean')
+          Element defaultValueBooleanElement,
+      @JsonKey(name: '_defaultValueCanonical')
+          Element defaultValueCanonicalElement,
+      @JsonKey(name: '_defaultValueCode')
+          Element defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueDate')
+          Element defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDateTime')
+          Element defaultValueDateTimeElement,
+      @JsonKey(name: '_defaultValueDecimal')
+          Element defaultValueDecimalElement,
+      @JsonKey(name: '_defaultValueId')
+          Element defaultValueIdElement,
+      @JsonKey(name: '_defaultValueInstant')
+          Element defaultValueInstantElement,
+      @JsonKey(name: '_defaultValueInteger')
+          Element defaultValueIntegerElement,
+      @JsonKey(name: '_defaultValueMarkdown')
+          Element defaultValueMarkdownElement,
+      @JsonKey(name: '_defaultValueOid')
+          Element defaultValueOidElement,
+      @JsonKey(name: '_defaultValuePositiveInt')
+          Element defaultValuePositiveIntElement,
+      @JsonKey(name: '_defaultValueString')
+          Element defaultValueStringElement,
+      @JsonKey(name: '_defaultValueTime')
+          Element defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueUnsignedInt')
+          Element defaultValueUnsignedIntElement,
+      @JsonKey(name: '_defaultValueUri')
+          Element defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUrl')
+          Element defaultValueUrlElement,
+      @JsonKey(name: '_defaultValueUuid')
+          Element defaultValueUuidElement,
+      @JsonKey(name: '_meaningWhenMissing')
+          Element meaningWhenMissingElement,
+      @JsonKey(name: '_orderMeaning')
+          Element orderMeaningElement,
+      @JsonKey(name: '_fixedBase64Binary')
+          Element fixedBase64BinaryElement,
+      @JsonKey(name: '_fixedBoolean')
+          Element fixedBooleanElement,
+      @JsonKey(name: '_fixedCanonical')
+          Element fixedCanonicalElement,
+      @JsonKey(name: '_fixedCode')
+          Element fixedCodeElement,
+      @JsonKey(name: '_fixedDate')
+          Element fixedDateElement,
+      @JsonKey(name: '_fixedDateTime')
+          Element fixedDateTimeElement,
+      @JsonKey(name: '_fixedDecimal')
+          Element fixedDecimalElement,
+      @JsonKey(name: '_fixedId')
+          Element fixedIdElement,
+      @JsonKey(name: '_fixedInstant')
+          Element fixedInstantElement,
+      @JsonKey(name: '_fixedInteger')
+          Element fixedIntegerElement,
+      @JsonKey(name: '_fixedMarkdown')
+          Element fixedMarkdownElement,
+      @JsonKey(name: '_fixedOid')
+          Element fixedOidElement,
+      @JsonKey(name: '_fixedPositiveInt')
+          Element fixedPositiveIntElement,
+      @JsonKey(name: '_fixedString')
+          Element fixedStringElement,
+      @JsonKey(name: '_fixedTime')
+          Element fixedTimeElement,
+      @JsonKey(name: '_fixedUnsignedInt')
+          Element fixedUnsignedIntElement,
+      @JsonKey(name: '_fixedUri')
+          Element fixedUriElement,
+      @JsonKey(name: '_fixedUrl')
+          Element fixedUrlElement,
+      @JsonKey(name: '_fixedUuid')
+          Element fixedUuidElement,
+      @JsonKey(name: '_patternBase64Binary')
+          Element patternBase64BinaryElement,
+      @JsonKey(name: '_patternBoolean')
+          Element patternBooleanElement,
+      @JsonKey(name: '_patternCanonical')
+          Element patternCanonicalElement,
+      @JsonKey(name: '_patternCode')
+          Element patternCodeElement,
+      @JsonKey(name: '_patternDate')
+          Element patternDateElement,
+      @JsonKey(name: '_patternDateTime')
+          Element patternDateTimeElement,
+      @JsonKey(name: '_patternDecimal')
+          Element patternDecimalElement,
+      @JsonKey(name: '_patternId')
+          Element patternIdElement,
+      @JsonKey(name: '_patternInstant')
+          Element patternInstantElement,
+      @JsonKey(name: '_patternInteger')
+          Element patternIntegerElement,
+      @JsonKey(name: '_patternMarkdown')
+          Element patternMarkdownElement,
+      @JsonKey(name: '_patternOid')
+          Element patternOidElement,
+      @JsonKey(name: '_patternPositiveInt')
+          Element patternPositiveIntElement,
+      @JsonKey(name: '_patternString')
+          Element patternStringElement,
+      @JsonKey(name: '_patternTime')
+          Element patternTimeElement,
+      @JsonKey(name: '_patternUnsignedInt')
+          Element patternUnsignedIntElement,
+      @JsonKey(name: '_patternUri')
+          Element patternUriElement,
+      @JsonKey(name: '_patternUrl')
+          Element patternUrlElement,
+      @JsonKey(name: '_patternUuid')
+          Element patternUuidElement,
+      @JsonKey(name: '_minValueDate')
+          Element minValueDateElement,
+      @JsonKey(name: '_minValueDateTime')
+          Element minValueDateTimeElement,
+      @JsonKey(name: '_minValueInstant')
+          Element minValueInstantElement,
+      @JsonKey(name: '_minValueTime')
+          Element minValueTimeElement,
+      @JsonKey(name: '_minValueDecimal')
+          Element minValueDecimalElement,
+      @JsonKey(name: '_minValueInteger')
+          Element minValueIntegerElement,
+      @JsonKey(name: '_minValuePositiveInt')
+          Element minValuePositiveIntElement,
+      @JsonKey(name: '_minValueUnsignedInt')
+          Element minValueUnsignedIntElement,
+      @JsonKey(name: '_maxValueDate')
+          Element maxValueDateElement,
+      @JsonKey(name: '_maxValueDateTime')
+          Element maxValueDateTimeElement,
+      @JsonKey(name: '_maxValueInstant')
+          Element maxValueInstantElement,
+      @JsonKey(name: '_maxValueTime')
+          Element maxValueTimeElement,
+      @JsonKey(name: '_maxValueDecimal')
+          Element maxValueDecimalElement,
+      @JsonKey(name: '_maxValueInteger')
+          Element maxValueIntegerElement,
+      @JsonKey(name: '_maxValuePositiveInt')
+          Element maxValuePositiveIntElement,
+      @JsonKey(name: '_maxValueUnsignedInt')
+          Element maxValueUnsignedIntElement,
+      @JsonKey(name: '_maxLength')
+          Element maxLengthElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement,
+      @JsonKey(name: '_mustSupport')
+          Element mustSupportElement,
+      @JsonKey(name: '_isModifier')
+          Element isModifierElement,
+      @JsonKey(name: '_isModifierReason')
+          Element isModifierReasonElement,
+      @JsonKey(name: '_isSummary')
+          Element isSummaryElement}) = _$_ElementDefinition;
 
   factory _ElementDefinition.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinition.fromJson;
@@ -8949,6 +13793,288 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   List<ElementDefinitionMapping> get mapping;
   @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @override
+  @JsonKey(name: '_representation')
+  Element get representationElement;
+  @override
+  @JsonKey(name: '_sliceName')
+  Element get sliceNameElement;
+  @override
+  @JsonKey(name: '_sliceIsConstraining')
+  Element get sliceIsConstrainingElement;
+  @override
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @override
+  @JsonKey(name: '_short')
+  Element get shortElement;
+  @override
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
+  @override
+  @JsonKey(name: '_comment')
+  Element get commentElement;
+  @override
+  @JsonKey(name: '_requirements')
+  Element get requirementsElement;
+  @override
+  @JsonKey(name: '_alias')
+  Element get aliasElement;
+  @override
+  @JsonKey(name: '_min')
+  Element get minElement;
+  @override
+  @JsonKey(name: '_max')
+  Element get maxElement;
+  @override
+  @JsonKey(name: '_contentReference')
+  Element get contentReferenceElement;
+  @override
+  @JsonKey(name: '_defaultValueBase64Binary')
+  Element get defaultValueBase64BinaryElement;
+  @override
+  @JsonKey(name: '_defaultValueBoolean')
+  Element get defaultValueBooleanElement;
+  @override
+  @JsonKey(name: '_defaultValueCanonical')
+  Element get defaultValueCanonicalElement;
+  @override
+  @JsonKey(name: '_defaultValueCode')
+  Element get defaultValueCodeElement;
+  @override
+  @JsonKey(name: '_defaultValueDate')
+  Element get defaultValueDateElement;
+  @override
+  @JsonKey(name: '_defaultValueDateTime')
+  Element get defaultValueDateTimeElement;
+  @override
+  @JsonKey(name: '_defaultValueDecimal')
+  Element get defaultValueDecimalElement;
+  @override
+  @JsonKey(name: '_defaultValueId')
+  Element get defaultValueIdElement;
+  @override
+  @JsonKey(name: '_defaultValueInstant')
+  Element get defaultValueInstantElement;
+  @override
+  @JsonKey(name: '_defaultValueInteger')
+  Element get defaultValueIntegerElement;
+  @override
+  @JsonKey(name: '_defaultValueMarkdown')
+  Element get defaultValueMarkdownElement;
+  @override
+  @JsonKey(name: '_defaultValueOid')
+  Element get defaultValueOidElement;
+  @override
+  @JsonKey(name: '_defaultValuePositiveInt')
+  Element get defaultValuePositiveIntElement;
+  @override
+  @JsonKey(name: '_defaultValueString')
+  Element get defaultValueStringElement;
+  @override
+  @JsonKey(name: '_defaultValueTime')
+  Element get defaultValueTimeElement;
+  @override
+  @JsonKey(name: '_defaultValueUnsignedInt')
+  Element get defaultValueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_defaultValueUri')
+  Element get defaultValueUriElement;
+  @override
+  @JsonKey(name: '_defaultValueUrl')
+  Element get defaultValueUrlElement;
+  @override
+  @JsonKey(name: '_defaultValueUuid')
+  Element get defaultValueUuidElement;
+  @override
+  @JsonKey(name: '_meaningWhenMissing')
+  Element get meaningWhenMissingElement;
+  @override
+  @JsonKey(name: '_orderMeaning')
+  Element get orderMeaningElement;
+  @override
+  @JsonKey(name: '_fixedBase64Binary')
+  Element get fixedBase64BinaryElement;
+  @override
+  @JsonKey(name: '_fixedBoolean')
+  Element get fixedBooleanElement;
+  @override
+  @JsonKey(name: '_fixedCanonical')
+  Element get fixedCanonicalElement;
+  @override
+  @JsonKey(name: '_fixedCode')
+  Element get fixedCodeElement;
+  @override
+  @JsonKey(name: '_fixedDate')
+  Element get fixedDateElement;
+  @override
+  @JsonKey(name: '_fixedDateTime')
+  Element get fixedDateTimeElement;
+  @override
+  @JsonKey(name: '_fixedDecimal')
+  Element get fixedDecimalElement;
+  @override
+  @JsonKey(name: '_fixedId')
+  Element get fixedIdElement;
+  @override
+  @JsonKey(name: '_fixedInstant')
+  Element get fixedInstantElement;
+  @override
+  @JsonKey(name: '_fixedInteger')
+  Element get fixedIntegerElement;
+  @override
+  @JsonKey(name: '_fixedMarkdown')
+  Element get fixedMarkdownElement;
+  @override
+  @JsonKey(name: '_fixedOid')
+  Element get fixedOidElement;
+  @override
+  @JsonKey(name: '_fixedPositiveInt')
+  Element get fixedPositiveIntElement;
+  @override
+  @JsonKey(name: '_fixedString')
+  Element get fixedStringElement;
+  @override
+  @JsonKey(name: '_fixedTime')
+  Element get fixedTimeElement;
+  @override
+  @JsonKey(name: '_fixedUnsignedInt')
+  Element get fixedUnsignedIntElement;
+  @override
+  @JsonKey(name: '_fixedUri')
+  Element get fixedUriElement;
+  @override
+  @JsonKey(name: '_fixedUrl')
+  Element get fixedUrlElement;
+  @override
+  @JsonKey(name: '_fixedUuid')
+  Element get fixedUuidElement;
+  @override
+  @JsonKey(name: '_patternBase64Binary')
+  Element get patternBase64BinaryElement;
+  @override
+  @JsonKey(name: '_patternBoolean')
+  Element get patternBooleanElement;
+  @override
+  @JsonKey(name: '_patternCanonical')
+  Element get patternCanonicalElement;
+  @override
+  @JsonKey(name: '_patternCode')
+  Element get patternCodeElement;
+  @override
+  @JsonKey(name: '_patternDate')
+  Element get patternDateElement;
+  @override
+  @JsonKey(name: '_patternDateTime')
+  Element get patternDateTimeElement;
+  @override
+  @JsonKey(name: '_patternDecimal')
+  Element get patternDecimalElement;
+  @override
+  @JsonKey(name: '_patternId')
+  Element get patternIdElement;
+  @override
+  @JsonKey(name: '_patternInstant')
+  Element get patternInstantElement;
+  @override
+  @JsonKey(name: '_patternInteger')
+  Element get patternIntegerElement;
+  @override
+  @JsonKey(name: '_patternMarkdown')
+  Element get patternMarkdownElement;
+  @override
+  @JsonKey(name: '_patternOid')
+  Element get patternOidElement;
+  @override
+  @JsonKey(name: '_patternPositiveInt')
+  Element get patternPositiveIntElement;
+  @override
+  @JsonKey(name: '_patternString')
+  Element get patternStringElement;
+  @override
+  @JsonKey(name: '_patternTime')
+  Element get patternTimeElement;
+  @override
+  @JsonKey(name: '_patternUnsignedInt')
+  Element get patternUnsignedIntElement;
+  @override
+  @JsonKey(name: '_patternUri')
+  Element get patternUriElement;
+  @override
+  @JsonKey(name: '_patternUrl')
+  Element get patternUrlElement;
+  @override
+  @JsonKey(name: '_patternUuid')
+  Element get patternUuidElement;
+  @override
+  @JsonKey(name: '_minValueDate')
+  Element get minValueDateElement;
+  @override
+  @JsonKey(name: '_minValueDateTime')
+  Element get minValueDateTimeElement;
+  @override
+  @JsonKey(name: '_minValueInstant')
+  Element get minValueInstantElement;
+  @override
+  @JsonKey(name: '_minValueTime')
+  Element get minValueTimeElement;
+  @override
+  @JsonKey(name: '_minValueDecimal')
+  Element get minValueDecimalElement;
+  @override
+  @JsonKey(name: '_minValueInteger')
+  Element get minValueIntegerElement;
+  @override
+  @JsonKey(name: '_minValuePositiveInt')
+  Element get minValuePositiveIntElement;
+  @override
+  @JsonKey(name: '_minValueUnsignedInt')
+  Element get minValueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_maxValueDate')
+  Element get maxValueDateElement;
+  @override
+  @JsonKey(name: '_maxValueDateTime')
+  Element get maxValueDateTimeElement;
+  @override
+  @JsonKey(name: '_maxValueInstant')
+  Element get maxValueInstantElement;
+  @override
+  @JsonKey(name: '_maxValueTime')
+  Element get maxValueTimeElement;
+  @override
+  @JsonKey(name: '_maxValueDecimal')
+  Element get maxValueDecimalElement;
+  @override
+  @JsonKey(name: '_maxValueInteger')
+  Element get maxValueIntegerElement;
+  @override
+  @JsonKey(name: '_maxValuePositiveInt')
+  Element get maxValuePositiveIntElement;
+  @override
+  @JsonKey(name: '_maxValueUnsignedInt')
+  Element get maxValueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_maxLength')
+  Element get maxLengthElement;
+  @override
+  @JsonKey(name: '_condition')
+  Element get conditionElement;
+  @override
+  @JsonKey(name: '_mustSupport')
+  Element get mustSupportElement;
+  @override
+  @JsonKey(name: '_isModifier')
+  Element get isModifierElement;
+  @override
+  @JsonKey(name: '_isModifierReason')
+  Element get isModifierReasonElement;
+  @override
+  @JsonKey(name: '_isSummary')
+  Element get isSummaryElement;
+  @override
   _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith;
 }
 
@@ -8967,7 +14093,10 @@ class _$ElementDefinitionSlicingTearOff {
       List<ElementDefinitionDiscriminator> discriminator,
       String description,
       Boolean ordered,
-      @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules}) {
+      @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_ordered') Element orderedElement,
+      @JsonKey(name: '_rules') Element rulesElement}) {
     return _ElementDefinitionSlicing(
       id: id,
       extension_: extension_,
@@ -8976,6 +14105,9 @@ class _$ElementDefinitionSlicingTearOff {
       description: description,
       ordered: ordered,
       rules: rules,
+      descriptionElement: descriptionElement,
+      orderedElement: orderedElement,
+      rulesElement: rulesElement,
     );
   }
 }
@@ -8993,6 +14125,12 @@ mixin _$ElementDefinitionSlicing {
   Boolean get ordered;
   @JsonKey(unknownEnumValue: SlicingRules.unknown)
   SlicingRules get rules;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_ordered')
+  Element get orderedElement;
+  @JsonKey(name: '_rules')
+  Element get rulesElement;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionSlicingCopyWith<ElementDefinitionSlicing> get copyWith;
@@ -9009,7 +14147,14 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       List<ElementDefinitionDiscriminator> discriminator,
       String description,
       Boolean ordered,
-      @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules});
+      @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_ordered') Element orderedElement,
+      @JsonKey(name: '_rules') Element rulesElement});
+
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get orderedElement;
+  $ElementCopyWith<$Res> get rulesElement;
 }
 
 class _$ElementDefinitionSlicingCopyWithImpl<$Res>
@@ -9029,6 +14174,9 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
     Object description = freezed,
     Object ordered = freezed,
     Object rules = freezed,
+    Object descriptionElement = freezed,
+    Object orderedElement = freezed,
+    Object rulesElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -9045,7 +14193,46 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       ordered: ordered == freezed ? _value.ordered : ordered as Boolean,
       rules: rules == freezed ? _value.rules : rules as SlicingRules,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      orderedElement: orderedElement == freezed
+          ? _value.orderedElement
+          : orderedElement as Element,
+      rulesElement: rulesElement == freezed
+          ? _value.rulesElement
+          : rulesElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get orderedElement {
+    if (_value.orderedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.orderedElement, (value) {
+      return _then(_value.copyWith(orderedElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get rulesElement {
+    if (_value.rulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.rulesElement, (value) {
+      return _then(_value.copyWith(rulesElement: value));
+    });
   }
 }
 
@@ -9062,7 +14249,17 @@ abstract class _$ElementDefinitionSlicingCopyWith<$Res>
       List<ElementDefinitionDiscriminator> discriminator,
       String description,
       Boolean ordered,
-      @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules});
+      @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_ordered') Element orderedElement,
+      @JsonKey(name: '_rules') Element rulesElement});
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get orderedElement;
+  @override
+  $ElementCopyWith<$Res> get rulesElement;
 }
 
 class __$ElementDefinitionSlicingCopyWithImpl<$Res>
@@ -9085,6 +14282,9 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
     Object description = freezed,
     Object ordered = freezed,
     Object rules = freezed,
+    Object descriptionElement = freezed,
+    Object orderedElement = freezed,
+    Object rulesElement = freezed,
   }) {
     return _then(_ElementDefinitionSlicing(
       id: id == freezed ? _value.id : id as String,
@@ -9101,6 +14301,15 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       ordered: ordered == freezed ? _value.ordered : ordered as Boolean,
       rules: rules == freezed ? _value.rules : rules as SlicingRules,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      orderedElement: orderedElement == freezed
+          ? _value.orderedElement
+          : orderedElement as Element,
+      rulesElement: rulesElement == freezed
+          ? _value.rulesElement
+          : rulesElement as Element,
     ));
   }
 }
@@ -9114,7 +14323,10 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
       this.discriminator,
       this.description,
       this.ordered,
-      @JsonKey(unknownEnumValue: SlicingRules.unknown) this.rules});
+      @JsonKey(unknownEnumValue: SlicingRules.unknown) this.rules,
+      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_ordered') this.orderedElement,
+      @JsonKey(name: '_rules') this.rulesElement});
 
   factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionSlicingFromJson(json);
@@ -9135,10 +14347,19 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
   @override
   @JsonKey(unknownEnumValue: SlicingRules.unknown)
   final SlicingRules rules;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_ordered')
+  final Element orderedElement;
+  @override
+  @JsonKey(name: '_rules')
+  final Element rulesElement;
 
   @override
   String toString() {
-    return 'ElementDefinitionSlicing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, discriminator: $discriminator, description: $description, ordered: $ordered, rules: $rules)';
+    return 'ElementDefinitionSlicing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, discriminator: $discriminator, description: $description, ordered: $ordered, rules: $rules, descriptionElement: $descriptionElement, orderedElement: $orderedElement, rulesElement: $rulesElement)';
   }
 
   @override
@@ -9163,7 +14384,16 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
                 const DeepCollectionEquality()
                     .equals(other.ordered, ordered)) &&
             (identical(other.rules, rules) ||
-                const DeepCollectionEquality().equals(other.rules, rules)));
+                const DeepCollectionEquality().equals(other.rules, rules)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.orderedElement, orderedElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.orderedElement, orderedElement)) &&
+            (identical(other.rulesElement, rulesElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.rulesElement, rulesElement)));
   }
 
   @override
@@ -9175,7 +14405,10 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
       const DeepCollectionEquality().hash(discriminator) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(ordered) ^
-      const DeepCollectionEquality().hash(rules);
+      const DeepCollectionEquality().hash(rules) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(orderedElement) ^
+      const DeepCollectionEquality().hash(rulesElement);
 
   @override
   _$ElementDefinitionSlicingCopyWith<_ElementDefinitionSlicing> get copyWith =>
@@ -9190,15 +14423,17 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
 
 abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
   const factory _ElementDefinitionSlicing(
-      {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<ElementDefinitionDiscriminator> discriminator,
-      String description,
-      Boolean ordered,
-      @JsonKey(unknownEnumValue: SlicingRules.unknown)
-          SlicingRules rules}) = _$_ElementDefinitionSlicing;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          List<ElementDefinitionDiscriminator> discriminator,
+          String description,
+          Boolean ordered,
+          @JsonKey(unknownEnumValue: SlicingRules.unknown) SlicingRules rules,
+          @JsonKey(name: '_description') Element descriptionElement,
+          @JsonKey(name: '_ordered') Element orderedElement,
+          @JsonKey(name: '_rules') Element rulesElement}) =
+      _$_ElementDefinitionSlicing;
 
   factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionSlicing.fromJson;
@@ -9220,6 +14455,15 @@ abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
   @JsonKey(unknownEnumValue: SlicingRules.unknown)
   SlicingRules get rules;
   @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_ordered')
+  Element get orderedElement;
+  @override
+  @JsonKey(name: '_rules')
+  Element get rulesElement;
+  @override
   _$ElementDefinitionSlicingCopyWith<_ElementDefinitionSlicing> get copyWith;
 }
 
@@ -9238,13 +14482,19 @@ class _$ElementDefinitionDiscriminatorTearOff {
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: DiscriminatorType.unknown)
           DiscriminatorType type,
-      String path}) {
+      String path,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_path')
+          Element pathElement}) {
     return _ElementDefinitionDiscriminator(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
       path: path,
+      typeElement: typeElement,
+      pathElement: pathElement,
     );
   }
 }
@@ -9261,6 +14511,10 @@ mixin _$ElementDefinitionDiscriminator {
   @JsonKey(unknownEnumValue: DiscriminatorType.unknown)
   DiscriminatorType get type;
   String get path;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_path')
+  Element get pathElement;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionDiscriminatorCopyWith<ElementDefinitionDiscriminator>
@@ -9279,7 +14533,14 @@ abstract class $ElementDefinitionDiscriminatorCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: DiscriminatorType.unknown)
           DiscriminatorType type,
-      String path});
+      String path,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_path')
+          Element pathElement});
+
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
@@ -9297,6 +14558,8 @@ class _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object path = freezed,
+    Object typeElement = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -9308,7 +14571,31 @@ class _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as DiscriminatorType,
       path: path == freezed ? _value.path : path as String,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
+    });
   }
 }
 
@@ -9326,7 +14613,16 @@ abstract class _$ElementDefinitionDiscriminatorCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: DiscriminatorType.unknown)
           DiscriminatorType type,
-      String path});
+      String path,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_path')
+          Element pathElement});
+
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
@@ -9348,6 +14644,8 @@ class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object path = freezed,
+    Object typeElement = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_ElementDefinitionDiscriminator(
       id: id == freezed ? _value.id : id as String,
@@ -9359,6 +14657,10 @@ class __$ElementDefinitionDiscriminatorCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as DiscriminatorType,
       path: path == freezed ? _value.path : path as String,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
   }
 }
@@ -9371,7 +14673,9 @@ class _$_ElementDefinitionDiscriminator
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @JsonKey(unknownEnumValue: DiscriminatorType.unknown) this.type,
-      this.path});
+      this.path,
+      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_path') this.pathElement});
 
   factory _$_ElementDefinitionDiscriminator.fromJson(
           Map<String, dynamic> json) =>
@@ -9389,10 +14693,16 @@ class _$_ElementDefinitionDiscriminator
   final DiscriminatorType type;
   @override
   final String path;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
 
   @override
   String toString() {
-    return 'ElementDefinitionDiscriminator(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, path: $path)';
+    return 'ElementDefinitionDiscriminator(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, path: $path, typeElement: $typeElement, pathElement: $pathElement)';
   }
 
   @override
@@ -9410,7 +14720,13 @@ class _$_ElementDefinitionDiscriminator
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.path, path) ||
-                const DeepCollectionEquality().equals(other.path, path)));
+                const DeepCollectionEquality().equals(other.path, path)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)));
   }
 
   @override
@@ -9420,7 +14736,9 @@ class _$_ElementDefinitionDiscriminator
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(path);
+      const DeepCollectionEquality().hash(path) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(pathElement);
 
   @override
   _$ElementDefinitionDiscriminatorCopyWith<_ElementDefinitionDiscriminator>
@@ -9442,7 +14760,11 @@ abstract class _ElementDefinitionDiscriminator
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: DiscriminatorType.unknown)
           DiscriminatorType type,
-      String path}) = _$_ElementDefinitionDiscriminator;
+      String path,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_path')
+          Element pathElement}) = _$_ElementDefinitionDiscriminator;
 
   factory _ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionDiscriminator.fromJson;
@@ -9459,6 +14781,12 @@ abstract class _ElementDefinitionDiscriminator
   DiscriminatorType get type;
   @override
   String get path;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
   @override
   _$ElementDefinitionDiscriminatorCopyWith<_ElementDefinitionDiscriminator>
       get copyWith;
@@ -9478,7 +14806,10 @@ class _$ElementDefinitionBaseTearOff {
       List<FhirExtension> modifierExtension,
       String path,
       UnsignedInt min,
-      String max}) {
+      String max,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_min') Element minElement,
+      @JsonKey(name: '_max') Element maxElement}) {
     return _ElementDefinitionBase(
       id: id,
       extension_: extension_,
@@ -9486,6 +14817,9 @@ class _$ElementDefinitionBaseTearOff {
       path: path,
       min: min,
       max: max,
+      pathElement: pathElement,
+      minElement: minElement,
+      maxElement: maxElement,
     );
   }
 }
@@ -9501,6 +14835,12 @@ mixin _$ElementDefinitionBase {
   String get path;
   UnsignedInt get min;
   String get max;
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @JsonKey(name: '_min')
+  Element get minElement;
+  @JsonKey(name: '_max')
+  Element get maxElement;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionBaseCopyWith<ElementDefinitionBase> get copyWith;
@@ -9516,7 +14856,14 @@ abstract class $ElementDefinitionBaseCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       String path,
       UnsignedInt min,
-      String max});
+      String max,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_min') Element minElement,
+      @JsonKey(name: '_max') Element maxElement});
+
+  $ElementCopyWith<$Res> get pathElement;
+  $ElementCopyWith<$Res> get minElement;
+  $ElementCopyWith<$Res> get maxElement;
 }
 
 class _$ElementDefinitionBaseCopyWithImpl<$Res>
@@ -9535,6 +14882,9 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res>
     Object path = freezed,
     Object min = freezed,
     Object max = freezed,
+    Object pathElement = freezed,
+    Object minElement = freezed,
+    Object maxElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -9547,7 +14897,43 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       min: min == freezed ? _value.min : min as UnsignedInt,
       max: max == freezed ? _value.max : max as String,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      minElement:
+          minElement == freezed ? _value.minElement : minElement as Element,
+      maxElement:
+          maxElement == freezed ? _value.maxElement : maxElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minElement {
+    if (_value.minElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minElement, (value) {
+      return _then(_value.copyWith(minElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxElement {
+    if (_value.maxElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxElement, (value) {
+      return _then(_value.copyWith(maxElement: value));
+    });
   }
 }
 
@@ -9563,7 +14949,17 @@ abstract class _$ElementDefinitionBaseCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       String path,
       UnsignedInt min,
-      String max});
+      String max,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_min') Element minElement,
+      @JsonKey(name: '_max') Element maxElement});
+
+  @override
+  $ElementCopyWith<$Res> get pathElement;
+  @override
+  $ElementCopyWith<$Res> get minElement;
+  @override
+  $ElementCopyWith<$Res> get maxElement;
 }
 
 class __$ElementDefinitionBaseCopyWithImpl<$Res>
@@ -9584,6 +14980,9 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
     Object path = freezed,
     Object min = freezed,
     Object max = freezed,
+    Object pathElement = freezed,
+    Object minElement = freezed,
+    Object maxElement = freezed,
   }) {
     return _then(_ElementDefinitionBase(
       id: id == freezed ? _value.id : id as String,
@@ -9596,6 +14995,12 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       min: min == freezed ? _value.min : min as UnsignedInt,
       max: max == freezed ? _value.max : max as String,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      minElement:
+          minElement == freezed ? _value.minElement : minElement as Element,
+      maxElement:
+          maxElement == freezed ? _value.maxElement : maxElement as Element,
     ));
   }
 }
@@ -9608,7 +15013,10 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
       this.modifierExtension,
       this.path,
       this.min,
-      this.max});
+      this.max,
+      @JsonKey(name: '_path') this.pathElement,
+      @JsonKey(name: '_min') this.minElement,
+      @JsonKey(name: '_max') this.maxElement});
 
   factory _$_ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionBaseFromJson(json);
@@ -9626,10 +15034,19 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
   final UnsignedInt min;
   @override
   final String max;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
+  @override
+  @JsonKey(name: '_min')
+  final Element minElement;
+  @override
+  @JsonKey(name: '_max')
+  final Element maxElement;
 
   @override
   String toString() {
-    return 'ElementDefinitionBase(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, min: $min, max: $max)';
+    return 'ElementDefinitionBase(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, min: $min, max: $max, pathElement: $pathElement, minElement: $minElement, maxElement: $maxElement)';
   }
 
   @override
@@ -9649,7 +15066,16 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
             (identical(other.min, min) ||
                 const DeepCollectionEquality().equals(other.min, min)) &&
             (identical(other.max, max) ||
-                const DeepCollectionEquality().equals(other.max, max)));
+                const DeepCollectionEquality().equals(other.max, max)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)) &&
+            (identical(other.minElement, minElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.minElement, minElement)) &&
+            (identical(other.maxElement, maxElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.maxElement, maxElement)));
   }
 
   @override
@@ -9660,7 +15086,10 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(min) ^
-      const DeepCollectionEquality().hash(max);
+      const DeepCollectionEquality().hash(max) ^
+      const DeepCollectionEquality().hash(pathElement) ^
+      const DeepCollectionEquality().hash(minElement) ^
+      const DeepCollectionEquality().hash(maxElement);
 
   @override
   _$ElementDefinitionBaseCopyWith<_ElementDefinitionBase> get copyWith =>
@@ -9680,7 +15109,10 @@ abstract class _ElementDefinitionBase implements ElementDefinitionBase {
       List<FhirExtension> modifierExtension,
       String path,
       UnsignedInt min,
-      String max}) = _$_ElementDefinitionBase;
+      String max,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_min') Element minElement,
+      @JsonKey(name: '_max') Element maxElement}) = _$_ElementDefinitionBase;
 
   factory _ElementDefinitionBase.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBase.fromJson;
@@ -9698,6 +15130,15 @@ abstract class _ElementDefinitionBase implements ElementDefinitionBase {
   UnsignedInt get min;
   @override
   String get max;
+  @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @override
+  @JsonKey(name: '_min')
+  Element get minElement;
+  @override
+  @JsonKey(name: '_max')
+  Element get maxElement;
   @override
   _$ElementDefinitionBaseCopyWith<_ElementDefinitionBase> get copyWith;
 }
@@ -9720,7 +15161,13 @@ class _$ElementDefinitionTypeTearOff {
       List<Canonical> targetProfile,
       List<TypeAggregation> aggregation,
       @JsonKey(unknownEnumValue: TypeVersioning.unknown)
-          TypeVersioning versioning}) {
+          TypeVersioning versioning,
+      @JsonKey(name: '_code')
+          Element codeElement,
+      @JsonKey(name: '_aggregation')
+          Element aggregationElement,
+      @JsonKey(name: '_versioning')
+          Element versioningElement}) {
     return _ElementDefinitionType(
       id: id,
       extension_: extension_,
@@ -9730,6 +15177,9 @@ class _$ElementDefinitionTypeTearOff {
       targetProfile: targetProfile,
       aggregation: aggregation,
       versioning: versioning,
+      codeElement: codeElement,
+      aggregationElement: aggregationElement,
+      versioningElement: versioningElement,
     );
   }
 }
@@ -9748,6 +15198,12 @@ mixin _$ElementDefinitionType {
   List<TypeAggregation> get aggregation;
   @JsonKey(unknownEnumValue: TypeVersioning.unknown)
   TypeVersioning get versioning;
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @JsonKey(name: '_aggregation')
+  Element get aggregationElement;
+  @JsonKey(name: '_versioning')
+  Element get versioningElement;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionTypeCopyWith<ElementDefinitionType> get copyWith;
@@ -9767,7 +15223,17 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       List<Canonical> targetProfile,
       List<TypeAggregation> aggregation,
       @JsonKey(unknownEnumValue: TypeVersioning.unknown)
-          TypeVersioning versioning});
+          TypeVersioning versioning,
+      @JsonKey(name: '_code')
+          Element codeElement,
+      @JsonKey(name: '_aggregation')
+          Element aggregationElement,
+      @JsonKey(name: '_versioning')
+          Element versioningElement});
+
+  $ElementCopyWith<$Res> get codeElement;
+  $ElementCopyWith<$Res> get aggregationElement;
+  $ElementCopyWith<$Res> get versioningElement;
 }
 
 class _$ElementDefinitionTypeCopyWithImpl<$Res>
@@ -9788,6 +15254,9 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
     Object targetProfile = freezed,
     Object aggregation = freezed,
     Object versioning = freezed,
+    Object codeElement = freezed,
+    Object aggregationElement = freezed,
+    Object versioningElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -9808,7 +15277,45 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as TypeVersioning,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      aggregationElement: aggregationElement == freezed
+          ? _value.aggregationElement
+          : aggregationElement as Element,
+      versioningElement: versioningElement == freezed
+          ? _value.versioningElement
+          : versioningElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.codeElement, (value) {
+      return _then(_value.copyWith(codeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get aggregationElement {
+    if (_value.aggregationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.aggregationElement, (value) {
+      return _then(_value.copyWith(aggregationElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versioningElement {
+    if (_value.versioningElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versioningElement, (value) {
+      return _then(_value.copyWith(versioningElement: value));
+    });
   }
 }
 
@@ -9828,7 +15335,20 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
       List<Canonical> targetProfile,
       List<TypeAggregation> aggregation,
       @JsonKey(unknownEnumValue: TypeVersioning.unknown)
-          TypeVersioning versioning});
+          TypeVersioning versioning,
+      @JsonKey(name: '_code')
+          Element codeElement,
+      @JsonKey(name: '_aggregation')
+          Element aggregationElement,
+      @JsonKey(name: '_versioning')
+          Element versioningElement});
+
+  @override
+  $ElementCopyWith<$Res> get codeElement;
+  @override
+  $ElementCopyWith<$Res> get aggregationElement;
+  @override
+  $ElementCopyWith<$Res> get versioningElement;
 }
 
 class __$ElementDefinitionTypeCopyWithImpl<$Res>
@@ -9851,6 +15371,9 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
     Object targetProfile = freezed,
     Object aggregation = freezed,
     Object versioning = freezed,
+    Object codeElement = freezed,
+    Object aggregationElement = freezed,
+    Object versioningElement = freezed,
   }) {
     return _then(_ElementDefinitionType(
       id: id == freezed ? _value.id : id as String,
@@ -9871,6 +15394,14 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as TypeVersioning,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      aggregationElement: aggregationElement == freezed
+          ? _value.aggregationElement
+          : aggregationElement as Element,
+      versioningElement: versioningElement == freezed
+          ? _value.versioningElement
+          : versioningElement as Element,
     ));
   }
 }
@@ -9885,7 +15416,10 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
       this.profile,
       this.targetProfile,
       this.aggregation,
-      @JsonKey(unknownEnumValue: TypeVersioning.unknown) this.versioning});
+      @JsonKey(unknownEnumValue: TypeVersioning.unknown) this.versioning,
+      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(name: '_aggregation') this.aggregationElement,
+      @JsonKey(name: '_versioning') this.versioningElement});
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionTypeFromJson(json);
@@ -9908,10 +15442,19 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
   @override
   @JsonKey(unknownEnumValue: TypeVersioning.unknown)
   final TypeVersioning versioning;
+  @override
+  @JsonKey(name: '_code')
+  final Element codeElement;
+  @override
+  @JsonKey(name: '_aggregation')
+  final Element aggregationElement;
+  @override
+  @JsonKey(name: '_versioning')
+  final Element versioningElement;
 
   @override
   String toString() {
-    return 'ElementDefinitionType(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, profile: $profile, targetProfile: $targetProfile, aggregation: $aggregation, versioning: $versioning)';
+    return 'ElementDefinitionType(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, profile: $profile, targetProfile: $targetProfile, aggregation: $aggregation, versioning: $versioning, codeElement: $codeElement, aggregationElement: $aggregationElement, versioningElement: $versioningElement)';
   }
 
   @override
@@ -9939,7 +15482,16 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
                     .equals(other.aggregation, aggregation)) &&
             (identical(other.versioning, versioning) ||
                 const DeepCollectionEquality()
-                    .equals(other.versioning, versioning)));
+                    .equals(other.versioning, versioning)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
+            (identical(other.aggregationElement, aggregationElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.aggregationElement, aggregationElement)) &&
+            (identical(other.versioningElement, versioningElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versioningElement, versioningElement)));
   }
 
   @override
@@ -9952,7 +15504,10 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
       const DeepCollectionEquality().hash(profile) ^
       const DeepCollectionEquality().hash(targetProfile) ^
       const DeepCollectionEquality().hash(aggregation) ^
-      const DeepCollectionEquality().hash(versioning);
+      const DeepCollectionEquality().hash(versioning) ^
+      const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(aggregationElement) ^
+      const DeepCollectionEquality().hash(versioningElement);
 
   @override
   _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith =>
@@ -9976,7 +15531,13 @@ abstract class _ElementDefinitionType implements ElementDefinitionType {
       List<Canonical> targetProfile,
       List<TypeAggregation> aggregation,
       @JsonKey(unknownEnumValue: TypeVersioning.unknown)
-          TypeVersioning versioning}) = _$_ElementDefinitionType;
+          TypeVersioning versioning,
+      @JsonKey(name: '_code')
+          Element codeElement,
+      @JsonKey(name: '_aggregation')
+          Element aggregationElement,
+      @JsonKey(name: '_versioning')
+          Element versioningElement}) = _$_ElementDefinitionType;
 
   factory _ElementDefinitionType.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionType.fromJson;
@@ -9999,6 +15560,15 @@ abstract class _ElementDefinitionType implements ElementDefinitionType {
   @override
   @JsonKey(unknownEnumValue: TypeVersioning.unknown)
   TypeVersioning get versioning;
+  @override
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @override
+  @JsonKey(name: '_aggregation')
+  Element get aggregationElement;
+  @override
+  @JsonKey(name: '_versioning')
+  Element get versioningElement;
   @override
   _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith;
 }
@@ -10065,7 +15635,27 @@ class _$ElementDefinitionExampleTearOff {
       TriggerDefinition valueTriggerDefinition,
       UsageContext valueUsageContext,
       Dosage valueDosage,
-      Meta valueMeta}) {
+      Meta valueMeta,
+      @JsonKey(name: '_label') Element labelElement,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueId') Element valueIdElement,
+      @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      @JsonKey(name: '_valueOid') Element valueOidElement,
+      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      @JsonKey(name: '_valueUuid') Element valueUuidElement}) {
     return _ElementDefinitionExample(
       id: id,
       extension_: extension_,
@@ -10121,6 +15711,26 @@ class _$ElementDefinitionExampleTearOff {
       valueUsageContext: valueUsageContext,
       valueDosage: valueDosage,
       valueMeta: valueMeta,
+      labelElement: labelElement,
+      valueBase64BinaryElement: valueBase64BinaryElement,
+      valueBooleanElement: valueBooleanElement,
+      valueCanonicalElement: valueCanonicalElement,
+      valueCodeElement: valueCodeElement,
+      valueDateElement: valueDateElement,
+      valueDateTimeElement: valueDateTimeElement,
+      valueDecimalElement: valueDecimalElement,
+      valueIdElement: valueIdElement,
+      valueInstantElement: valueInstantElement,
+      valueIntegerElement: valueIntegerElement,
+      valueMarkdownElement: valueMarkdownElement,
+      valueOidElement: valueOidElement,
+      valuePositiveIntElement: valuePositiveIntElement,
+      valueStringElement: valueStringElement,
+      valueTimeElement: valueTimeElement,
+      valueUnsignedIntElement: valueUnsignedIntElement,
+      valueUriElement: valueUriElement,
+      valueUrlElement: valueUrlElement,
+      valueUuidElement: valueUuidElement,
     );
   }
 }
@@ -10184,6 +15794,46 @@ mixin _$ElementDefinitionExample {
   UsageContext get valueUsageContext;
   Dosage get valueDosage;
   Meta get valueMeta;
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @JsonKey(name: '_valueBase64Binary')
+  Element get valueBase64BinaryElement;
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @JsonKey(name: '_valueCanonical')
+  Element get valueCanonicalElement;
+  @JsonKey(name: '_valueCode')
+  Element get valueCodeElement;
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @JsonKey(name: '_valueId')
+  Element get valueIdElement;
+  @JsonKey(name: '_valueInstant')
+  Element get valueInstantElement;
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @JsonKey(name: '_valueMarkdown')
+  Element get valueMarkdownElement;
+  @JsonKey(name: '_valueOid')
+  Element get valueOidElement;
+  @JsonKey(name: '_valuePositiveInt')
+  Element get valuePositiveIntElement;
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @JsonKey(name: '_valueUnsignedInt')
+  Element get valueUnsignedIntElement;
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
+  @JsonKey(name: '_valueUrl')
+  Element get valueUrlElement;
+  @JsonKey(name: '_valueUuid')
+  Element get valueUuidElement;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionExampleCopyWith<ElementDefinitionExample> get copyWith;
@@ -10247,7 +15897,27 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       TriggerDefinition valueTriggerDefinition,
       UsageContext valueUsageContext,
       Dosage valueDosage,
-      Meta valueMeta});
+      Meta valueMeta,
+      @JsonKey(name: '_label') Element labelElement,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueId') Element valueIdElement,
+      @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      @JsonKey(name: '_valueOid') Element valueOidElement,
+      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      @JsonKey(name: '_valueUuid') Element valueUuidElement});
 
   $AddressCopyWith<$Res> get valueAddress;
   $AgeCopyWith<$Res> get valueAge;
@@ -10280,6 +15950,26 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $UsageContextCopyWith<$Res> get valueUsageContext;
   $DosageCopyWith<$Res> get valueDosage;
   $MetaCopyWith<$Res> get valueMeta;
+  $ElementCopyWith<$Res> get labelElement;
+  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  $ElementCopyWith<$Res> get valueCanonicalElement;
+  $ElementCopyWith<$Res> get valueCodeElement;
+  $ElementCopyWith<$Res> get valueDateElement;
+  $ElementCopyWith<$Res> get valueDateTimeElement;
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  $ElementCopyWith<$Res> get valueIdElement;
+  $ElementCopyWith<$Res> get valueInstantElement;
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  $ElementCopyWith<$Res> get valueMarkdownElement;
+  $ElementCopyWith<$Res> get valueOidElement;
+  $ElementCopyWith<$Res> get valuePositiveIntElement;
+  $ElementCopyWith<$Res> get valueStringElement;
+  $ElementCopyWith<$Res> get valueTimeElement;
+  $ElementCopyWith<$Res> get valueUnsignedIntElement;
+  $ElementCopyWith<$Res> get valueUriElement;
+  $ElementCopyWith<$Res> get valueUrlElement;
+  $ElementCopyWith<$Res> get valueUuidElement;
 }
 
 class _$ElementDefinitionExampleCopyWithImpl<$Res>
@@ -10346,6 +16036,26 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
     Object valueUsageContext = freezed,
     Object valueDosage = freezed,
     Object valueMeta = freezed,
+    Object labelElement = freezed,
+    Object valueBase64BinaryElement = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueCanonicalElement = freezed,
+    Object valueCodeElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueDateTimeElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueIdElement = freezed,
+    Object valueInstantElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueMarkdownElement = freezed,
+    Object valueOidElement = freezed,
+    Object valuePositiveIntElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueUnsignedIntElement = freezed,
+    Object valueUriElement = freezed,
+    Object valueUrlElement = freezed,
+    Object valueUuidElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -10477,6 +16187,66 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
       valueDosage:
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement as Element,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement as Element,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement as Element,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement as Element,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement as Element,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
+      valueUrlElement: valueUrlElement == freezed
+          ? _value.valueUrlElement
+          : valueUrlElement as Element,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement as Element,
     ));
   }
 
@@ -10791,6 +16561,206 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
       return _then(_value.copyWith(valueMeta: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get labelElement {
+    if (_value.labelElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.labelElement, (value) {
+      return _then(_value.copyWith(labelElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBase64BinaryElement {
+    if (_value.valueBase64BinaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement, (value) {
+      return _then(_value.copyWith(valueBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueCanonicalElement {
+    if (_value.valueCanonicalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueCanonicalElement, (value) {
+      return _then(_value.copyWith(valueCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueCodeElement {
+    if (_value.valueCodeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueCodeElement, (value) {
+      return _then(_value.copyWith(valueCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateElement {
+    if (_value.valueDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateElement, (value) {
+      return _then(_value.copyWith(valueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement {
+    if (_value.valueDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement, (value) {
+      return _then(_value.copyWith(valueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement {
+    if (_value.valueDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement, (value) {
+      return _then(_value.copyWith(valueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueIdElement {
+    if (_value.valueIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueIdElement, (value) {
+      return _then(_value.copyWith(valueIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueInstantElement {
+    if (_value.valueInstantElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueInstantElement, (value) {
+      return _then(_value.copyWith(valueInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueMarkdownElement {
+    if (_value.valueMarkdownElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueMarkdownElement, (value) {
+      return _then(_value.copyWith(valueMarkdownElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueOidElement {
+    if (_value.valueOidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueOidElement, (value) {
+      return _then(_value.copyWith(valueOidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valuePositiveIntElement {
+    if (_value.valuePositiveIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valuePositiveIntElement, (value) {
+      return _then(_value.copyWith(valuePositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement {
+    if (_value.valueTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueTimeElement, (value) {
+      return _then(_value.copyWith(valueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUnsignedIntElement {
+    if (_value.valueUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUnsignedIntElement, (value) {
+      return _then(_value.copyWith(valueUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUriElement {
+    if (_value.valueUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUriElement, (value) {
+      return _then(_value.copyWith(valueUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUrlElement {
+    if (_value.valueUrlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUrlElement, (value) {
+      return _then(_value.copyWith(valueUrlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUuidElement {
+    if (_value.valueUuidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUuidElement, (value) {
+      return _then(_value.copyWith(valueUuidElement: value));
+    });
+  }
 }
 
 abstract class _$ElementDefinitionExampleCopyWith<$Res>
@@ -10853,7 +16823,27 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
       TriggerDefinition valueTriggerDefinition,
       UsageContext valueUsageContext,
       Dosage valueDosage,
-      Meta valueMeta});
+      Meta valueMeta,
+      @JsonKey(name: '_label') Element labelElement,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueId') Element valueIdElement,
+      @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+      @JsonKey(name: '_valueOid') Element valueOidElement,
+      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueUrl') Element valueUrlElement,
+      @JsonKey(name: '_valueUuid') Element valueUuidElement});
 
   @override
   $AddressCopyWith<$Res> get valueAddress;
@@ -10917,6 +16907,46 @@ abstract class _$ElementDefinitionExampleCopyWith<$Res>
   $DosageCopyWith<$Res> get valueDosage;
   @override
   $MetaCopyWith<$Res> get valueMeta;
+  @override
+  $ElementCopyWith<$Res> get labelElement;
+  @override
+  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get valueCanonicalElement;
+  @override
+  $ElementCopyWith<$Res> get valueCodeElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get valueIdElement;
+  @override
+  $ElementCopyWith<$Res> get valueInstantElement;
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get valueMarkdownElement;
+  @override
+  $ElementCopyWith<$Res> get valueOidElement;
+  @override
+  $ElementCopyWith<$Res> get valuePositiveIntElement;
+  @override
+  $ElementCopyWith<$Res> get valueStringElement;
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement;
+  @override
+  $ElementCopyWith<$Res> get valueUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res> get valueUriElement;
+  @override
+  $ElementCopyWith<$Res> get valueUrlElement;
+  @override
+  $ElementCopyWith<$Res> get valueUuidElement;
 }
 
 class __$ElementDefinitionExampleCopyWithImpl<$Res>
@@ -10986,6 +17016,26 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
     Object valueUsageContext = freezed,
     Object valueDosage = freezed,
     Object valueMeta = freezed,
+    Object labelElement = freezed,
+    Object valueBase64BinaryElement = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueCanonicalElement = freezed,
+    Object valueCodeElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueDateTimeElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueIdElement = freezed,
+    Object valueInstantElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueMarkdownElement = freezed,
+    Object valueOidElement = freezed,
+    Object valuePositiveIntElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueUnsignedIntElement = freezed,
+    Object valueUriElement = freezed,
+    Object valueUrlElement = freezed,
+    Object valueUuidElement = freezed,
   }) {
     return _then(_ElementDefinitionExample(
       id: id == freezed ? _value.id : id as String,
@@ -11117,6 +17167,66 @@ class __$ElementDefinitionExampleCopyWithImpl<$Res>
       valueDosage:
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement as Element,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement as Element,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement as Element,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement as Element,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement as Element,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
+      valueUrlElement: valueUrlElement == freezed
+          ? _value.valueUrlElement
+          : valueUrlElement as Element,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement as Element,
     ));
   }
 }
@@ -11177,7 +17287,27 @@ class _$_ElementDefinitionExample implements _ElementDefinitionExample {
       this.valueTriggerDefinition,
       this.valueUsageContext,
       this.valueDosage,
-      this.valueMeta});
+      this.valueMeta,
+      @JsonKey(name: '_label') this.labelElement,
+      @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      @JsonKey(name: '_valueCanonical') this.valueCanonicalElement,
+      @JsonKey(name: '_valueCode') this.valueCodeElement,
+      @JsonKey(name: '_valueDate') this.valueDateElement,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      @JsonKey(name: '_valueId') this.valueIdElement,
+      @JsonKey(name: '_valueInstant') this.valueInstantElement,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      @JsonKey(name: '_valueMarkdown') this.valueMarkdownElement,
+      @JsonKey(name: '_valueOid') this.valueOidElement,
+      @JsonKey(name: '_valuePositiveInt') this.valuePositiveIntElement,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      @JsonKey(name: '_valueTime') this.valueTimeElement,
+      @JsonKey(name: '_valueUnsignedInt') this.valueUnsignedIntElement,
+      @JsonKey(name: '_valueUri') this.valueUriElement,
+      @JsonKey(name: '_valueUrl') this.valueUrlElement,
+      @JsonKey(name: '_valueUuid') this.valueUuidElement});
 
   factory _$_ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionExampleFromJson(json);
@@ -11291,10 +17421,70 @@ class _$_ElementDefinitionExample implements _ElementDefinitionExample {
   final Dosage valueDosage;
   @override
   final Meta valueMeta;
+  @override
+  @JsonKey(name: '_label')
+  final Element labelElement;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  final Element valueBase64BinaryElement;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  final Element valueCanonicalElement;
+  @override
+  @JsonKey(name: '_valueCode')
+  final Element valueCodeElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  final Element valueDateElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  final Element valueDateTimeElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  final Element valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueId')
+  final Element valueIdElement;
+  @override
+  @JsonKey(name: '_valueInstant')
+  final Element valueInstantElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  final Element valueMarkdownElement;
+  @override
+  @JsonKey(name: '_valueOid')
+  final Element valueOidElement;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  final Element valuePositiveIntElement;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element valueStringElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  final Element valueTimeElement;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  final Element valueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  final Element valueUriElement;
+  @override
+  @JsonKey(name: '_valueUrl')
+  final Element valueUrlElement;
+  @override
+  @JsonKey(name: '_valueUuid')
+  final Element valueUuidElement;
 
   @override
   String toString() {
-    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, valueBase64Binary: $valueBase64Binary, valueBoolean: $valueBoolean, valueCanonical: $valueCanonical, valueCode: $valueCode, valueDate: $valueDate, valueDateTime: $valueDateTime, valueDecimal: $valueDecimal, valueId: $valueId, valueInstant: $valueInstant, valueInteger: $valueInteger, valueMarkdown: $valueMarkdown, valueOid: $valueOid, valuePositiveInt: $valuePositiveInt, valueString: $valueString, valueTime: $valueTime, valueUnsignedInt: $valueUnsignedInt, valueUri: $valueUri, valueUrl: $valueUrl, valueUuid: $valueUuid, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, valueBase64Binary: $valueBase64Binary, valueBoolean: $valueBoolean, valueCanonical: $valueCanonical, valueCode: $valueCode, valueDate: $valueDate, valueDateTime: $valueDateTime, valueDecimal: $valueDecimal, valueId: $valueId, valueInstant: $valueInstant, valueInteger: $valueInteger, valueMarkdown: $valueMarkdown, valueOid: $valueOid, valuePositiveInt: $valuePositiveInt, valueString: $valueString, valueTime: $valueTime, valueUnsignedInt: $valueUnsignedInt, valueUri: $valueUri, valueUrl: $valueUrl, valueUuid: $valueUuid, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta, labelElement: $labelElement, valueBase64BinaryElement: $valueBase64BinaryElement, valueBooleanElement: $valueBooleanElement, valueCanonicalElement: $valueCanonicalElement, valueCodeElement: $valueCodeElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueDecimalElement: $valueDecimalElement, valueIdElement: $valueIdElement, valueInstantElement: $valueInstantElement, valueIntegerElement: $valueIntegerElement, valueMarkdownElement: $valueMarkdownElement, valueOidElement: $valueOidElement, valuePositiveIntElement: $valuePositiveIntElement, valueStringElement: $valueStringElement, valueTimeElement: $valueTimeElement, valueUnsignedIntElement: $valueUnsignedIntElement, valueUriElement: $valueUriElement, valueUrlElement: $valueUrlElement, valueUuidElement: $valueUuidElement)';
   }
 
   @override
@@ -11397,7 +17587,27 @@ class _$_ElementDefinitionExample implements _ElementDefinitionExample {
             (identical(other.valueTriggerDefinition, valueTriggerDefinition) || const DeepCollectionEquality().equals(other.valueTriggerDefinition, valueTriggerDefinition)) &&
             (identical(other.valueUsageContext, valueUsageContext) || const DeepCollectionEquality().equals(other.valueUsageContext, valueUsageContext)) &&
             (identical(other.valueDosage, valueDosage) || const DeepCollectionEquality().equals(other.valueDosage, valueDosage)) &&
-            (identical(other.valueMeta, valueMeta) || const DeepCollectionEquality().equals(other.valueMeta, valueMeta)));
+            (identical(other.valueMeta, valueMeta) || const DeepCollectionEquality().equals(other.valueMeta, valueMeta)) &&
+            (identical(other.labelElement, labelElement) || const DeepCollectionEquality().equals(other.labelElement, labelElement)) &&
+            (identical(other.valueBase64BinaryElement, valueBase64BinaryElement) || const DeepCollectionEquality().equals(other.valueBase64BinaryElement, valueBase64BinaryElement)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) || const DeepCollectionEquality().equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueCanonicalElement, valueCanonicalElement) || const DeepCollectionEquality().equals(other.valueCanonicalElement, valueCanonicalElement)) &&
+            (identical(other.valueCodeElement, valueCodeElement) || const DeepCollectionEquality().equals(other.valueCodeElement, valueCodeElement)) &&
+            (identical(other.valueDateElement, valueDateElement) || const DeepCollectionEquality().equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueDateTimeElement, valueDateTimeElement) || const DeepCollectionEquality().equals(other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueDecimalElement, valueDecimalElement) || const DeepCollectionEquality().equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueIdElement, valueIdElement) || const DeepCollectionEquality().equals(other.valueIdElement, valueIdElement)) &&
+            (identical(other.valueInstantElement, valueInstantElement) || const DeepCollectionEquality().equals(other.valueInstantElement, valueInstantElement)) &&
+            (identical(other.valueIntegerElement, valueIntegerElement) || const DeepCollectionEquality().equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueMarkdownElement, valueMarkdownElement) || const DeepCollectionEquality().equals(other.valueMarkdownElement, valueMarkdownElement)) &&
+            (identical(other.valueOidElement, valueOidElement) || const DeepCollectionEquality().equals(other.valueOidElement, valueOidElement)) &&
+            (identical(other.valuePositiveIntElement, valuePositiveIntElement) || const DeepCollectionEquality().equals(other.valuePositiveIntElement, valuePositiveIntElement)) &&
+            (identical(other.valueStringElement, valueStringElement) || const DeepCollectionEquality().equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueTimeElement, valueTimeElement) || const DeepCollectionEquality().equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueUnsignedIntElement, valueUnsignedIntElement) || const DeepCollectionEquality().equals(other.valueUnsignedIntElement, valueUnsignedIntElement)) &&
+            (identical(other.valueUriElement, valueUriElement) || const DeepCollectionEquality().equals(other.valueUriElement, valueUriElement)) &&
+            (identical(other.valueUrlElement, valueUrlElement) || const DeepCollectionEquality().equals(other.valueUrlElement, valueUrlElement)) &&
+            (identical(other.valueUuidElement, valueUuidElement) || const DeepCollectionEquality().equals(other.valueUuidElement, valueUuidElement)));
   }
 
   @override
@@ -11456,7 +17666,27 @@ class _$_ElementDefinitionExample implements _ElementDefinitionExample {
       const DeepCollectionEquality().hash(valueTriggerDefinition) ^
       const DeepCollectionEquality().hash(valueUsageContext) ^
       const DeepCollectionEquality().hash(valueDosage) ^
-      const DeepCollectionEquality().hash(valueMeta);
+      const DeepCollectionEquality().hash(valueMeta) ^
+      const DeepCollectionEquality().hash(labelElement) ^
+      const DeepCollectionEquality().hash(valueBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueCanonicalElement) ^
+      const DeepCollectionEquality().hash(valueCodeElement) ^
+      const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueIdElement) ^
+      const DeepCollectionEquality().hash(valueInstantElement) ^
+      const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueMarkdownElement) ^
+      const DeepCollectionEquality().hash(valueOidElement) ^
+      const DeepCollectionEquality().hash(valuePositiveIntElement) ^
+      const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(valueUriElement) ^
+      const DeepCollectionEquality().hash(valueUrlElement) ^
+      const DeepCollectionEquality().hash(valueUuidElement);
 
   @override
   _$ElementDefinitionExampleCopyWith<_ElementDefinitionExample> get copyWith =>
@@ -11471,60 +17701,81 @@ class _$_ElementDefinitionExample implements _ElementDefinitionExample {
 
 abstract class _ElementDefinitionExample implements ElementDefinitionExample {
   const factory _ElementDefinitionExample(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String label,
-      Base64Binary valueBase64Binary,
-      Boolean valueBoolean,
-      Canonical valueCanonical,
-      Code valueCode,
-      Date valueDate,
-      FhirDateTime valueDateTime,
-      Decimal valueDecimal,
-      Id valueId,
-      Instant valueInstant,
-      Integer valueInteger,
-      Markdown valueMarkdown,
-      Oid valueOid,
-      PositiveInt valuePositiveInt,
-      String valueString,
-      Time valueTime,
-      UnsignedInt valueUnsignedInt,
-      FhirUri valueUri,
-      FhirUrl valueUrl,
-      Uuid valueUuid,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      Duration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta}) = _$_ElementDefinitionExample;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String label,
+          Base64Binary valueBase64Binary,
+          Boolean valueBoolean,
+          Canonical valueCanonical,
+          Code valueCode,
+          Date valueDate,
+          FhirDateTime valueDateTime,
+          Decimal valueDecimal,
+          Id valueId,
+          Instant valueInstant,
+          Integer valueInteger,
+          Markdown valueMarkdown,
+          Oid valueOid,
+          PositiveInt valuePositiveInt,
+          String valueString,
+          Time valueTime,
+          UnsignedInt valueUnsignedInt,
+          FhirUri valueUri,
+          FhirUrl valueUrl,
+          Uuid valueUuid,
+          Address valueAddress,
+          Age valueAge,
+          Annotation valueAnnotation,
+          Attachment valueAttachment,
+          CodeableConcept valueCodeableConcept,
+          Coding valueCoding,
+          ContactPoint valueContactPoint,
+          Count valueCount,
+          Distance valueDistance,
+          Duration valueDuration,
+          HumanName valueHumanName,
+          Identifier valueIdentifier,
+          Money valueMoney,
+          Period valuePeriod,
+          Quantity valueQuantity,
+          Range valueRange,
+          Ratio valueRatio,
+          Reference valueReference,
+          SampledData valueSampledData,
+          Signature valueSignature,
+          Timing valueTiming,
+          ContactDetail valueContactDetail,
+          Contributor valueContributor,
+          DataRequirement valueDataRequirement,
+          Expression valueExpression,
+          ParameterDefinition valueParameterDefinition,
+          RelatedArtifact valueRelatedArtifact,
+          TriggerDefinition valueTriggerDefinition,
+          UsageContext valueUsageContext,
+          Dosage valueDosage,
+          Meta valueMeta,
+          @JsonKey(name: '_label') Element labelElement,
+          @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+          @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+          @JsonKey(name: '_valueCode') Element valueCodeElement,
+          @JsonKey(name: '_valueDate') Element valueDateElement,
+          @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+          @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+          @JsonKey(name: '_valueId') Element valueIdElement,
+          @JsonKey(name: '_valueInstant') Element valueInstantElement,
+          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+          @JsonKey(name: '_valueOid') Element valueOidElement,
+          @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+          @JsonKey(name: '_valueString') Element valueStringElement,
+          @JsonKey(name: '_valueTime') Element valueTimeElement,
+          @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+          @JsonKey(name: '_valueUri') Element valueUriElement,
+          @JsonKey(name: '_valueUrl') Element valueUrlElement,
+          @JsonKey(name: '_valueUuid') Element valueUuidElement}) =
+      _$_ElementDefinitionExample;
 
   factory _ElementDefinitionExample.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionExample.fromJson;
@@ -11639,6 +17890,66 @@ abstract class _ElementDefinitionExample implements ElementDefinitionExample {
   @override
   Meta get valueMeta;
   @override
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  Element get valueBase64BinaryElement;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  Element get valueCanonicalElement;
+  @override
+  @JsonKey(name: '_valueCode')
+  Element get valueCodeElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueId')
+  Element get valueIdElement;
+  @override
+  @JsonKey(name: '_valueInstant')
+  Element get valueInstantElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  Element get valueMarkdownElement;
+  @override
+  @JsonKey(name: '_valueOid')
+  Element get valueOidElement;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  Element get valuePositiveIntElement;
+  @override
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  Element get valueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
+  @override
+  @JsonKey(name: '_valueUrl')
+  Element get valueUrlElement;
+  @override
+  @JsonKey(name: '_valueUuid')
+  Element get valueUuidElement;
+  @override
   _$ElementDefinitionExampleCopyWith<_ElementDefinitionExample> get copyWith;
 }
 
@@ -11662,7 +17973,19 @@ class _$ElementDefinitionConstraintTearOff {
       String human,
       String expression,
       String xpath,
-      Canonical source}) {
+      Canonical source,
+      @JsonKey(name: '_key')
+          Element keyElement,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement,
+      @JsonKey(name: '_severity')
+          Element severityElement,
+      @JsonKey(name: '_human')
+          Element humanElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_xpath')
+          Element xpathElement}) {
     return _ElementDefinitionConstraint(
       id: id,
       extension_: extension_,
@@ -11674,6 +17997,12 @@ class _$ElementDefinitionConstraintTearOff {
       expression: expression,
       xpath: xpath,
       source: source,
+      keyElement: keyElement,
+      requirementsElement: requirementsElement,
+      severityElement: severityElement,
+      humanElement: humanElement,
+      expressionElement: expressionElement,
+      xpathElement: xpathElement,
     );
   }
 }
@@ -11694,6 +18023,18 @@ mixin _$ElementDefinitionConstraint {
   String get expression;
   String get xpath;
   Canonical get source;
+  @JsonKey(name: '_key')
+  Element get keyElement;
+  @JsonKey(name: '_requirements')
+  Element get requirementsElement;
+  @JsonKey(name: '_severity')
+  Element get severityElement;
+  @JsonKey(name: '_human')
+  Element get humanElement;
+  @JsonKey(name: '_expression')
+  Element get expressionElement;
+  @JsonKey(name: '_xpath')
+  Element get xpathElement;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionConstraintCopyWith<ElementDefinitionConstraint>
@@ -11717,7 +18058,26 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
       String human,
       String expression,
       String xpath,
-      Canonical source});
+      Canonical source,
+      @JsonKey(name: '_key')
+          Element keyElement,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement,
+      @JsonKey(name: '_severity')
+          Element severityElement,
+      @JsonKey(name: '_human')
+          Element humanElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_xpath')
+          Element xpathElement});
+
+  $ElementCopyWith<$Res> get keyElement;
+  $ElementCopyWith<$Res> get requirementsElement;
+  $ElementCopyWith<$Res> get severityElement;
+  $ElementCopyWith<$Res> get humanElement;
+  $ElementCopyWith<$Res> get expressionElement;
+  $ElementCopyWith<$Res> get xpathElement;
 }
 
 class _$ElementDefinitionConstraintCopyWithImpl<$Res>
@@ -11740,6 +18100,12 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
     Object expression = freezed,
     Object xpath = freezed,
     Object source = freezed,
+    Object keyElement = freezed,
+    Object requirementsElement = freezed,
+    Object severityElement = freezed,
+    Object humanElement = freezed,
+    Object expressionElement = freezed,
+    Object xpathElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -11761,7 +18127,84 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
           expression == freezed ? _value.expression : expression as String,
       xpath: xpath == freezed ? _value.xpath : xpath as String,
       source: source == freezed ? _value.source : source as Canonical,
+      keyElement:
+          keyElement == freezed ? _value.keyElement : keyElement as Element,
+      requirementsElement: requirementsElement == freezed
+          ? _value.requirementsElement
+          : requirementsElement as Element,
+      severityElement: severityElement == freezed
+          ? _value.severityElement
+          : severityElement as Element,
+      humanElement: humanElement == freezed
+          ? _value.humanElement
+          : humanElement as Element,
+      expressionElement: expressionElement == freezed
+          ? _value.expressionElement
+          : expressionElement as Element,
+      xpathElement: xpathElement == freezed
+          ? _value.xpathElement
+          : xpathElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get keyElement {
+    if (_value.keyElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.keyElement, (value) {
+      return _then(_value.copyWith(keyElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requirementsElement {
+    if (_value.requirementsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requirementsElement, (value) {
+      return _then(_value.copyWith(requirementsElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get severityElement {
+    if (_value.severityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.severityElement, (value) {
+      return _then(_value.copyWith(severityElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get humanElement {
+    if (_value.humanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.humanElement, (value) {
+      return _then(_value.copyWith(humanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get expressionElement {
+    if (_value.expressionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.expressionElement, (value) {
+      return _then(_value.copyWith(expressionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get xpathElement {
+    if (_value.xpathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.xpathElement, (value) {
+      return _then(_value.copyWith(xpathElement: value));
+    });
   }
 }
 
@@ -11784,7 +18227,32 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
       String human,
       String expression,
       String xpath,
-      Canonical source});
+      Canonical source,
+      @JsonKey(name: '_key')
+          Element keyElement,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement,
+      @JsonKey(name: '_severity')
+          Element severityElement,
+      @JsonKey(name: '_human')
+          Element humanElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_xpath')
+          Element xpathElement});
+
+  @override
+  $ElementCopyWith<$Res> get keyElement;
+  @override
+  $ElementCopyWith<$Res> get requirementsElement;
+  @override
+  $ElementCopyWith<$Res> get severityElement;
+  @override
+  $ElementCopyWith<$Res> get humanElement;
+  @override
+  $ElementCopyWith<$Res> get expressionElement;
+  @override
+  $ElementCopyWith<$Res> get xpathElement;
 }
 
 class __$ElementDefinitionConstraintCopyWithImpl<$Res>
@@ -11811,6 +18279,12 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
     Object expression = freezed,
     Object xpath = freezed,
     Object source = freezed,
+    Object keyElement = freezed,
+    Object requirementsElement = freezed,
+    Object severityElement = freezed,
+    Object humanElement = freezed,
+    Object expressionElement = freezed,
+    Object xpathElement = freezed,
   }) {
     return _then(_ElementDefinitionConstraint(
       id: id == freezed ? _value.id : id as String,
@@ -11832,6 +18306,23 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
           expression == freezed ? _value.expression : expression as String,
       xpath: xpath == freezed ? _value.xpath : xpath as String,
       source: source == freezed ? _value.source : source as Canonical,
+      keyElement:
+          keyElement == freezed ? _value.keyElement : keyElement as Element,
+      requirementsElement: requirementsElement == freezed
+          ? _value.requirementsElement
+          : requirementsElement as Element,
+      severityElement: severityElement == freezed
+          ? _value.severityElement
+          : severityElement as Element,
+      humanElement: humanElement == freezed
+          ? _value.humanElement
+          : humanElement as Element,
+      expressionElement: expressionElement == freezed
+          ? _value.expressionElement
+          : expressionElement as Element,
+      xpathElement: xpathElement == freezed
+          ? _value.xpathElement
+          : xpathElement as Element,
     ));
   }
 }
@@ -11848,7 +18339,13 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
       this.human,
       this.expression,
       this.xpath,
-      this.source});
+      this.source,
+      @JsonKey(name: '_key') this.keyElement,
+      @JsonKey(name: '_requirements') this.requirementsElement,
+      @JsonKey(name: '_severity') this.severityElement,
+      @JsonKey(name: '_human') this.humanElement,
+      @JsonKey(name: '_expression') this.expressionElement,
+      @JsonKey(name: '_xpath') this.xpathElement});
 
   factory _$_ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionConstraintFromJson(json);
@@ -11875,10 +18372,28 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
   final String xpath;
   @override
   final Canonical source;
+  @override
+  @JsonKey(name: '_key')
+  final Element keyElement;
+  @override
+  @JsonKey(name: '_requirements')
+  final Element requirementsElement;
+  @override
+  @JsonKey(name: '_severity')
+  final Element severityElement;
+  @override
+  @JsonKey(name: '_human')
+  final Element humanElement;
+  @override
+  @JsonKey(name: '_expression')
+  final Element expressionElement;
+  @override
+  @JsonKey(name: '_xpath')
+  final Element xpathElement;
 
   @override
   String toString() {
-    return 'ElementDefinitionConstraint(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, key: $key, requirements: $requirements, severity: $severity, human: $human, expression: $expression, xpath: $xpath, source: $source)';
+    return 'ElementDefinitionConstraint(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, key: $key, requirements: $requirements, severity: $severity, human: $human, expression: $expression, xpath: $xpath, source: $source, keyElement: $keyElement, requirementsElement: $requirementsElement, severityElement: $severityElement, humanElement: $humanElement, expressionElement: $expressionElement, xpathElement: $xpathElement)';
   }
 
   @override
@@ -11909,7 +18424,25 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
             (identical(other.xpath, xpath) ||
                 const DeepCollectionEquality().equals(other.xpath, xpath)) &&
             (identical(other.source, source) ||
-                const DeepCollectionEquality().equals(other.source, source)));
+                const DeepCollectionEquality().equals(other.source, source)) &&
+            (identical(other.keyElement, keyElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.keyElement, keyElement)) &&
+            (identical(other.requirementsElement, requirementsElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.requirementsElement, requirementsElement)) &&
+            (identical(other.severityElement, severityElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.severityElement, severityElement)) &&
+            (identical(other.humanElement, humanElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.humanElement, humanElement)) &&
+            (identical(other.expressionElement, expressionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.expressionElement, expressionElement)) &&
+            (identical(other.xpathElement, xpathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.xpathElement, xpathElement)));
   }
 
   @override
@@ -11924,7 +18457,13 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
       const DeepCollectionEquality().hash(human) ^
       const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(xpath) ^
-      const DeepCollectionEquality().hash(source);
+      const DeepCollectionEquality().hash(source) ^
+      const DeepCollectionEquality().hash(keyElement) ^
+      const DeepCollectionEquality().hash(requirementsElement) ^
+      const DeepCollectionEquality().hash(severityElement) ^
+      const DeepCollectionEquality().hash(humanElement) ^
+      const DeepCollectionEquality().hash(expressionElement) ^
+      const DeepCollectionEquality().hash(xpathElement);
 
   @override
   _$ElementDefinitionConstraintCopyWith<_ElementDefinitionConstraint>
@@ -11951,7 +18490,19 @@ abstract class _ElementDefinitionConstraint
       String human,
       String expression,
       String xpath,
-      Canonical source}) = _$_ElementDefinitionConstraint;
+      Canonical source,
+      @JsonKey(name: '_key')
+          Element keyElement,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement,
+      @JsonKey(name: '_severity')
+          Element severityElement,
+      @JsonKey(name: '_human')
+          Element humanElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_xpath')
+          Element xpathElement}) = _$_ElementDefinitionConstraint;
 
   factory _ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionConstraint.fromJson;
@@ -11979,6 +18530,24 @@ abstract class _ElementDefinitionConstraint
   @override
   Canonical get source;
   @override
+  @JsonKey(name: '_key')
+  Element get keyElement;
+  @override
+  @JsonKey(name: '_requirements')
+  Element get requirementsElement;
+  @override
+  @JsonKey(name: '_severity')
+  Element get severityElement;
+  @override
+  @JsonKey(name: '_human')
+  Element get humanElement;
+  @override
+  @JsonKey(name: '_expression')
+  Element get expressionElement;
+  @override
+  @JsonKey(name: '_xpath')
+  Element get xpathElement;
+  @override
   _$ElementDefinitionConstraintCopyWith<_ElementDefinitionConstraint>
       get copyWith;
 }
@@ -11999,7 +18568,11 @@ class _$ElementDefinitionBindingTearOff {
       @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
           ElementBindingStrength strength,
       String description,
-      Canonical valueSet}) {
+      Canonical valueSet,
+      @JsonKey(name: '_strength')
+          Element strengthElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement}) {
     return _ElementDefinitionBinding(
       id: id,
       extension_: extension_,
@@ -12007,6 +18580,8 @@ class _$ElementDefinitionBindingTearOff {
       strength: strength,
       description: description,
       valueSet: valueSet,
+      strengthElement: strengthElement,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -12023,6 +18598,10 @@ mixin _$ElementDefinitionBinding {
   ElementBindingStrength get strength;
   String get description;
   Canonical get valueSet;
+  @JsonKey(name: '_strength')
+  Element get strengthElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionBindingCopyWith<ElementDefinitionBinding> get copyWith;
@@ -12040,7 +18619,14 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
           ElementBindingStrength strength,
       String description,
-      Canonical valueSet});
+      Canonical valueSet,
+      @JsonKey(name: '_strength')
+          Element strengthElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement});
+
+  $ElementCopyWith<$Res> get strengthElement;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$ElementDefinitionBindingCopyWithImpl<$Res>
@@ -12059,6 +18645,8 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
     Object strength = freezed,
     Object description = freezed,
     Object valueSet = freezed,
+    Object strengthElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -12074,7 +18662,33 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
+      strengthElement: strengthElement == freezed
+          ? _value.strengthElement
+          : strengthElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get strengthElement {
+    if (_value.strengthElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.strengthElement, (value) {
+      return _then(_value.copyWith(strengthElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
   }
 }
 
@@ -12092,7 +18706,16 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
       @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
           ElementBindingStrength strength,
       String description,
-      Canonical valueSet});
+      Canonical valueSet,
+      @JsonKey(name: '_strength')
+          Element strengthElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement});
+
+  @override
+  $ElementCopyWith<$Res> get strengthElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$ElementDefinitionBindingCopyWithImpl<$Res>
@@ -12114,6 +18737,8 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
     Object strength = freezed,
     Object description = freezed,
     Object valueSet = freezed,
+    Object strengthElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_ElementDefinitionBinding(
       id: id == freezed ? _value.id : id as String,
@@ -12129,6 +18754,12 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
+      strengthElement: strengthElement == freezed
+          ? _value.strengthElement
+          : strengthElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
@@ -12141,7 +18772,9 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
       this.modifierExtension,
       @JsonKey(unknownEnumValue: ElementBindingStrength.unknown) this.strength,
       this.description,
-      this.valueSet});
+      this.valueSet,
+      @JsonKey(name: '_strength') this.strengthElement,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionBindingFromJson(json);
@@ -12160,10 +18793,16 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
   final String description;
   @override
   final Canonical valueSet;
+  @override
+  @JsonKey(name: '_strength')
+  final Element strengthElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'ElementDefinitionBinding(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, strength: $strength, description: $description, valueSet: $valueSet)';
+    return 'ElementDefinitionBinding(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, strength: $strength, description: $description, valueSet: $valueSet, strengthElement: $strengthElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -12186,7 +18825,13 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
                     .equals(other.description, description)) &&
             (identical(other.valueSet, valueSet) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueSet, valueSet)));
+                    .equals(other.valueSet, valueSet)) &&
+            (identical(other.strengthElement, strengthElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.strengthElement, strengthElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
@@ -12197,7 +18842,9 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(strength) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(valueSet);
+      const DeepCollectionEquality().hash(valueSet) ^
+      const DeepCollectionEquality().hash(strengthElement) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith =>
@@ -12219,7 +18866,11 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
       @JsonKey(unknownEnumValue: ElementBindingStrength.unknown)
           ElementBindingStrength strength,
       String description,
-      Canonical valueSet}) = _$_ElementDefinitionBinding;
+      Canonical valueSet,
+      @JsonKey(name: '_strength')
+          Element strengthElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement}) = _$_ElementDefinitionBinding;
 
   factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBinding.fromJson;
@@ -12239,6 +18890,12 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
   @override
   Canonical get valueSet;
   @override
+  @JsonKey(name: '_strength')
+  Element get strengthElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
   _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith;
 }
 
@@ -12257,7 +18914,11 @@ class _$ElementDefinitionMappingTearOff {
       Id identity,
       Code language,
       String map,
-      String comment}) {
+      String comment,
+      @JsonKey(name: '_identity') Element identityElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_map') Element mapElement,
+      @JsonKey(name: '_comment') Element commentElement}) {
     return _ElementDefinitionMapping(
       id: id,
       extension_: extension_,
@@ -12266,6 +18927,10 @@ class _$ElementDefinitionMappingTearOff {
       language: language,
       map: map,
       comment: comment,
+      identityElement: identityElement,
+      languageElement: languageElement,
+      mapElement: mapElement,
+      commentElement: commentElement,
     );
   }
 }
@@ -12282,6 +18947,14 @@ mixin _$ElementDefinitionMapping {
   Code get language;
   String get map;
   String get comment;
+  @JsonKey(name: '_identity')
+  Element get identityElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_map')
+  Element get mapElement;
+  @JsonKey(name: '_comment')
+  Element get commentElement;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionMappingCopyWith<ElementDefinitionMapping> get copyWith;
@@ -12298,7 +18971,16 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       Id identity,
       Code language,
       String map,
-      String comment});
+      String comment,
+      @JsonKey(name: '_identity') Element identityElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_map') Element mapElement,
+      @JsonKey(name: '_comment') Element commentElement});
+
+  $ElementCopyWith<$Res> get identityElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get mapElement;
+  $ElementCopyWith<$Res> get commentElement;
 }
 
 class _$ElementDefinitionMappingCopyWithImpl<$Res>
@@ -12318,6 +19000,10 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
     Object language = freezed,
     Object map = freezed,
     Object comment = freezed,
+    Object identityElement = freezed,
+    Object languageElement = freezed,
+    Object mapElement = freezed,
+    Object commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -12331,7 +19017,58 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       map: map == freezed ? _value.map : map as String,
       comment: comment == freezed ? _value.comment : comment as String,
+      identityElement: identityElement == freezed
+          ? _value.identityElement
+          : identityElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      mapElement:
+          mapElement == freezed ? _value.mapElement : mapElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get identityElement {
+    if (_value.identityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.identityElement, (value) {
+      return _then(_value.copyWith(identityElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get mapElement {
+    if (_value.mapElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.mapElement, (value) {
+      return _then(_value.copyWith(mapElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get commentElement {
+    if (_value.commentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+      return _then(_value.copyWith(commentElement: value));
+    });
   }
 }
 
@@ -12348,7 +19085,20 @@ abstract class _$ElementDefinitionMappingCopyWith<$Res>
       Id identity,
       Code language,
       String map,
-      String comment});
+      String comment,
+      @JsonKey(name: '_identity') Element identityElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_map') Element mapElement,
+      @JsonKey(name: '_comment') Element commentElement});
+
+  @override
+  $ElementCopyWith<$Res> get identityElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get mapElement;
+  @override
+  $ElementCopyWith<$Res> get commentElement;
 }
 
 class __$ElementDefinitionMappingCopyWithImpl<$Res>
@@ -12371,6 +19121,10 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
     Object language = freezed,
     Object map = freezed,
     Object comment = freezed,
+    Object identityElement = freezed,
+    Object languageElement = freezed,
+    Object mapElement = freezed,
+    Object commentElement = freezed,
   }) {
     return _then(_ElementDefinitionMapping(
       id: id == freezed ? _value.id : id as String,
@@ -12384,6 +19138,17 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       map: map == freezed ? _value.map : map as String,
       comment: comment == freezed ? _value.comment : comment as String,
+      identityElement: identityElement == freezed
+          ? _value.identityElement
+          : identityElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      mapElement:
+          mapElement == freezed ? _value.mapElement : mapElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
     ));
   }
 }
@@ -12397,7 +19162,11 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
       this.identity,
       this.language,
       this.map,
-      this.comment});
+      this.comment,
+      @JsonKey(name: '_identity') this.identityElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_map') this.mapElement,
+      @JsonKey(name: '_comment') this.commentElement});
 
   factory _$_ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionMappingFromJson(json);
@@ -12417,10 +19186,22 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
   final String map;
   @override
   final String comment;
+  @override
+  @JsonKey(name: '_identity')
+  final Element identityElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_map')
+  final Element mapElement;
+  @override
+  @JsonKey(name: '_comment')
+  final Element commentElement;
 
   @override
   String toString() {
-    return 'ElementDefinitionMapping(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identity: $identity, language: $language, map: $map, comment: $comment)';
+    return 'ElementDefinitionMapping(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identity: $identity, language: $language, map: $map, comment: $comment, identityElement: $identityElement, languageElement: $languageElement, mapElement: $mapElement, commentElement: $commentElement)';
   }
 
   @override
@@ -12444,7 +19225,20 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
             (identical(other.map, map) ||
                 const DeepCollectionEquality().equals(other.map, map)) &&
             (identical(other.comment, comment) ||
-                const DeepCollectionEquality().equals(other.comment, comment)));
+                const DeepCollectionEquality()
+                    .equals(other.comment, comment)) &&
+            (identical(other.identityElement, identityElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.identityElement, identityElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.mapElement, mapElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.mapElement, mapElement)) &&
+            (identical(other.commentElement, commentElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.commentElement, commentElement)));
   }
 
   @override
@@ -12456,7 +19250,11 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
       const DeepCollectionEquality().hash(identity) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(map) ^
-      const DeepCollectionEquality().hash(comment);
+      const DeepCollectionEquality().hash(comment) ^
+      const DeepCollectionEquality().hash(identityElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(mapElement) ^
+      const DeepCollectionEquality().hash(commentElement);
 
   @override
   _$ElementDefinitionMappingCopyWith<_ElementDefinitionMapping> get copyWith =>
@@ -12471,13 +19269,18 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
 
 abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
   const factory _ElementDefinitionMapping(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Id identity,
-      Code language,
-      String map,
-      String comment}) = _$_ElementDefinitionMapping;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Id identity,
+          Code language,
+          String map,
+          String comment,
+          @JsonKey(name: '_identity') Element identityElement,
+          @JsonKey(name: '_language') Element languageElement,
+          @JsonKey(name: '_map') Element mapElement,
+          @JsonKey(name: '_comment') Element commentElement}) =
+      _$_ElementDefinitionMapping;
 
   factory _ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionMapping.fromJson;
@@ -12497,6 +19300,18 @@ abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
   String get map;
   @override
   String get comment;
+  @override
+  @JsonKey(name: '_identity')
+  Element get identityElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_map')
+  Element get mapElement;
+  @override
+  @JsonKey(name: '_comment')
+  Element get commentElement;
   @override
   _$ElementDefinitionMappingCopyWith<_ElementDefinitionMapping> get copyWith;
 }

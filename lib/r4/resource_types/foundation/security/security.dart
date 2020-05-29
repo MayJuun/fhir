@@ -33,6 +33,12 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
     @JsonKey(required: true) @required List<AuditEventAgent> agent,
     @JsonKey(required: true) @required AuditEventSource source,
     List<AuditEventEntity> entity,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_action') Element actionElement,
+@JsonKey(name: '_recorded') Element recordedElement,
+@JsonKey(name: '_outcome') Element outcomeElement,
+@JsonKey(name: '_outcomeDesc') Element outcomeDescElement,
   }) = _AuditEvent;
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
@@ -55,6 +61,10 @@ abstract class AuditEventAgent with _$AuditEventAgent {
     Coding media,
     AuditEventNetwork network,
     List<CodeableConcept> purposeOfUse,
+    @JsonKey(name: '_altId') Element altIdElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_requestor') Element requestorElement,
+@JsonKey(name: '_policy') Element policyElement,
   }) = _AuditEventAgent;
   factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventAgentFromJson(json);
@@ -68,6 +78,8 @@ abstract class AuditEventNetwork with _$AuditEventNetwork {
     List<FhirExtension> modifierExtension,
     String address,
     @JsonKey(unknownEnumValue: NetworkType.unknown) NetworkType type,
+    @JsonKey(name: '_address') Element addressElement,
+@JsonKey(name: '_type') Element typeElement,
   }) = _AuditEventNetwork;
   factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
       _$AuditEventNetworkFromJson(json);
@@ -82,6 +94,7 @@ abstract class AuditEventSource with _$AuditEventSource {
     String site,
     @JsonKey(required: true) @required Reference observer,
     List<Coding> type,
+    @JsonKey(name: '_site') Element siteElement,
   }) = _AuditEventSource;
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$AuditEventSourceFromJson(json);
@@ -102,6 +115,9 @@ abstract class AuditEventEntity with _$AuditEventEntity {
     String description,
     Base64Binary query,
     List<AuditEventDetail> detail,
+    @JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_query') Element queryElement,
   }) = _AuditEventEntity;
   factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEntityFromJson(json);
@@ -116,6 +132,9 @@ abstract class AuditEventDetail with _$AuditEventDetail {
     String type,
     String valueString,
     Base64Binary valueBase64Binary,
+    @JsonKey(name: '_type') Element typeElement,
+@JsonKey(name: '_valueString') Element valueStringElement,
+@JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
   }) = _AuditEventDetail;
   factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
       _$AuditEventDetailFromJson(json);
@@ -149,6 +168,10 @@ abstract class Consent with _$Consent implements Resource {
     CodeableConcept policyRule,
     List<ConsentVerification> verification,
     ConsentProvision provision,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_dateTime') Element dateTimeElement,
   }) = _Consent;
   factory Consent.fromJson(Map<String, dynamic> json) =>
       _$ConsentFromJson(json);
@@ -162,6 +185,8 @@ abstract class ConsentPolicy with _$ConsentPolicy {
     List<FhirExtension> modifierExtension,
     FhirUri authority,
     FhirUri uri,
+    @JsonKey(name: '_authority') Element authorityElement,
+@JsonKey(name: '_uri') Element uriElement,
   }) = _ConsentPolicy;
   factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
       _$ConsentPolicyFromJson(json);
@@ -176,6 +201,8 @@ abstract class ConsentVerification with _$ConsentVerification {
     Boolean verified,
     Reference verifiedWith,
     FhirDateTime verificationDate,
+    @JsonKey(name: '_verified') Element verifiedElement,
+@JsonKey(name: '_verificationDate') Element verificationDateElement,
   }) = _ConsentVerification;
   factory ConsentVerification.fromJson(Map<String, dynamic> json) =>
       _$ConsentVerificationFromJson(json);
@@ -198,6 +225,7 @@ abstract class ConsentProvision with _$ConsentProvision {
     Period dataPeriod,
     List<ConsentData> data,
     List<ConsentProvision> provision,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _ConsentProvision;
   factory ConsentProvision.fromJson(Map<String, dynamic> json) =>
       _$ConsentProvisionFromJson(json);
@@ -224,6 +252,7 @@ abstract class ConsentData with _$ConsentData {
     List<FhirExtension> modifierExtension,
     @JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
     @JsonKey(required: true) @required Reference reference,
+    @JsonKey(name: '_meaning') Element meaningElement,
   }) = _ConsentData;
   factory ConsentData.fromJson(Map<String, dynamic> json) =>
       _$ConsentDataFromJson(json);
@@ -254,6 +283,11 @@ abstract class Provenance with _$Provenance implements Resource {
     @JsonKey(required: true) @required List<ProvenanceAgent> agent,
     List<ProvenanceEntity> entity,
     List<Signature> signature,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
+@JsonKey(name: '_recorded') Element recordedElement,
+@JsonKey(name: '_policy') Element policyElement,
   }) = _Provenance;
   factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
@@ -283,6 +317,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     @JsonKey(unknownEnumValue: EntityRole.unknown) EntityRole role,
     @JsonKey(required: true) @required Reference what,
     List<ProvenanceAgent> agent,
+    @JsonKey(name: '_role') Element roleElement,
   }) = _ProvenanceEntity;
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);

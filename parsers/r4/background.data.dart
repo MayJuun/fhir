@@ -1,21 +1,52 @@
-String GetDataType(String obj) {
-  var newObj = obj.split('_')[0].toLowerCase();
-  var type;
-  PrimitiveTypes().contains(newObj)
-      ? type = 'primitive'
-      : GenDataTypes().contains(newObj)
-          ? type = 'general'
-          : MetaDataTypes().contains(newObj)
-              ? type = 'metadata'
-              : SpecialPurposeTypes().contains(newObj)
-                  ? type = 'special'
-                  : DraftDataTypes().contains(newObj)
-                      ? type = 'draft'
-                      : ResourceTypes().contains(newObj)
-                          ? type = 'resource'
-                          : print('***unknown data type $newObj');
-  return type;
-}
+// String GetDataType(String obj) {
+//   var newObj = obj.split('_')[0].toLowerCase();
+//   var type;
+//   PrimitiveTypes().contains(newObj)
+//       ? type = 'primitive'
+//       : GenDataTypes().contains(newObj)
+//           ? type = 'general'
+//           : MetaDataTypes().contains(newObj)
+//               ? type = 'metadata'
+//               : SpecialPurposeTypes().contains(newObj)
+//                   ? type = 'special'
+//                   : DraftDataTypes().contains(newObj)
+//                       ? type = 'draft'
+//                       : ResourceTypes().contains(newObj)
+//                           ? type = 'resource'
+//                           : print('***unknown data type $newObj');
+//   return type;
+// }
+
+var classList = [
+  gen,
+  meta,
+  special,
+  draft,
+  conformance,
+  terminology,
+  security,
+  documents,
+  other,
+  individuals,
+  entities1,
+  entities2,
+  workflow,
+  management,
+  summary,
+  diagnostics,
+  medications,
+  careprovision,
+  requestresponse,
+  support,
+  billing,
+  payment,
+  general,
+  publichealth,
+  definitional,
+  ebm,
+  quality,
+  medicationdefinition,
+];
 
 List<String> PrimitiveTypes() => [
       'instant',
@@ -41,51 +72,51 @@ List<String> PrimitiveTypes() => [
       'resourcelist'
     ];
 
-List<String> GenDataTypes() => [
-      'ratio',
-      'period',
-      'range',
-      'attachment',
-      'identifier',
-      'annotation',
-      'humanname',
-      'codeableconcept',
-      'contactpoint',
-      'coding',
-      'money',
-      'address',
-      'timing',
-      'backboneelement',
-      'quantity',
-      'sampleddata',
-      'signature',
-      'age',
-      'distance',
-      'duration',
-      'count',
-      'moneyquantity',
-      'simplequantity'
-    ];
+var gen = [
+  'ratio',
+  'period',
+  'range',
+  'attachment',
+  'identifier',
+  'annotation',
+  'humanname',
+  'codeableconcept',
+  'contactpoint',
+  'coding',
+  'money',
+  'address',
+  'timing',
+  'backboneelement',
+  'quantity',
+  'sampleddata',
+  'signature',
+  'age',
+  'distance',
+  'duration',
+  'count',
+  'moneyquantity',
+  'simplequantity'
+];
 
-List<String> MetaDataTypes() => [
-      'contactdetail',
-      'contributor',
-      'datarequirement',
-      'relatedartifact',
-      'usagecontext',
-      'parameterdefinition',
-      'expression',
-      'triggerdefinition'
-    ];
+var meta = [
+  'contactdetail',
+  'contributor',
+  'datarequirement',
+  'relatedartifact',
+  'usagecontext',
+  'parameterdefinition',
+  'expression',
+  'triggerdefinition'
+];
 
-List<String> SpecialPurposeTypes() => [
-      'reference',
-      'meta',
-      'dosage',
-      'elementdefinition',
-      'extension',
-      'narrative'
-    ];
+var special = [
+  'reference',
+  'meta',
+  'dosage',
+  'elementdefinition',
+  'extension',
+  'narrative'
+];
 
 List<String> ResourceTypes() => [
       'account',
@@ -236,13 +267,13 @@ List<String> ResourceTypes() => [
       'visionprescription'
     ];
 
-List<String> DraftDataTypes() => [
-      'population',
-      'productshelflife',
-      'prodcharacteristic',
-      'marketingstatus',
-      'substanceamount'
-    ];
+var draft = [
+  'population',
+  'productshelflife',
+  'prodcharacteristic',
+  'marketingstatus',
+  'substanceamount'
+];
 
 var group_foundation = [
   'Conformance',
@@ -1024,4 +1055,222 @@ var class_base = [
   'VerificationResultPrimarySource',
   'VerificationResultAttestation',
   'VerificationResultValidator',
+];
+
+var conformance = [
+  'capabilitystatement',
+  'structuredefinition',
+  'implementationguide',
+  'searchparameter',
+  'messagedefinition',
+  'operationdefinition',
+  'compartmentdefinition',
+  'structuremap',
+  'graphdefinition',
+  'examplescenario',
+];
+
+var terminology = [
+  'codesystem',
+  'valueset',
+  'conceptmap',
+  'namingsystem',
+  'terminologycapabilities',
+];
+
+var security = [
+  'provenance',
+  'auditevent',
+  'consent',
+];
+
+var documents = [
+  'composition',
+  'documentmanifest',
+  'documentreference',
+  'catalogentry',
+];
+
+var other = [
+  'basic',
+  'binary',
+  'bundle',
+  'linkage',
+  'messageheader',
+  'operationoutcome',
+  'parameters',
+  'subscription',
+];
+
+var individuals = [
+  'patient',
+  'practitioner',
+  'practitionerrole',
+  'relatedperson',
+  'person',
+  'group',
+];
+
+var entities1 = [
+  'organization',
+  'organizationaffiliation',
+  'healthcareservice',
+  'endpoint',
+  'location',
+];
+
+var entities2 = [
+  'substance',
+  'biologicallyderivedproduct',
+  'device',
+  'devicemetric',
+];
+
+var workflow = [
+  'task',
+  'appointment',
+  'appointmentresponse',
+  'schedule',
+  'slot',
+  'verificationresult',
+];
+
+var management = [
+  'encounter',
+  'episodeofcare',
+  'flag',
+  'list',
+  'library',
+];
+
+var summary = [
+  'allergyintolerance',
+  'adverseevent',
+  'condition',
+  'procedure',
+  'familymemberhistory',
+  'clinicalimpression',
+  'detectedissue',
+];
+
+var diagnostics = [
+  'observation',
+  'media',
+  'diagnosticreport',
+  'specimen',
+  'bodystructure',
+  'imagingstudy',
+  'questionnaireresponse',
+  'molecularsequence',
+];
+
+var medications = [
+  'medicationrequest',
+  'medicationadministration',
+  'medicationdispense',
+  'medicationstatement',
+  'medication',
+  'medicationknowledge',
+  'immunization',
+  'immunizationevaluation',
+  'immunizationrecommendation',
+];
+
+var careprovision = [
+  'careplan',
+  'careteam',
+  'goal',
+  'servicerequest',
+  'nutritionorder',
+  'visionprescription',
+  'riskassessment',
+  'requestgroup',
+];
+
+var requestresponse = [
+  'communication',
+  'communicationrequest',
+  'devicerequest',
+  'deviceusestatement',
+  'guidanceresponse',
+  'supplyrequest',
+  'supplydelivery',
+];
+
+var support = [
+  'coverage',
+  'coverageeligibilityrequest',
+  'coverageeligibilityresponse',
+  'enrollmentrequest',
+  'enrollmentresponse',
+];
+
+var billing = [
+  'claim',
+  'claimresponse',
+  'invoice',
+];
+
+var payment = [
+  'paymentnotice',
+  'paymentreconciliation',
+];
+
+var general = [
+  'account',
+  'chargeitem',
+  'chargeitemdefinition',
+  'contract',
+  'explanationofbenefit',
+  'insuranceplan',
+];
+
+var publichealth = [
+  'researchstudy',
+  'researchsubject',
+];
+
+var definitional = [
+  'activitydefinition',
+  'devicedefinition',
+  'eventdefinition',
+  'observationdefinition',
+  'plandefinition',
+  'questionnaire',
+  'specimendefinition',
+];
+
+var ebm = [
+  'researchdefinition',
+  'researchelementdefinition',
+  'evidence',
+  'evidencevariable',
+  'effectevidencesynthesis',
+  'riskevidencesynthesis',
+];
+
+var quality = [
+  'measure',
+  'measurereport',
+  'testscript',
+  'testreport',
+];
+
+var medicationdefinition = [
+  'medicinalproduct',
+  'medicinalproductauthorization',
+  'medicinalproductcontraindication',
+  'medicinalproductindication',
+  'medicinalproductingredient',
+  'medicinalproductinteraction',
+  'medicinalproductmanufactured',
+  'medicinalproductpackaged',
+  'medicinalproductpharmaceutical',
+  'medicinalproductundesirableeffect',
+  'substancenucleicacid',
+  'substancepolymer',
+  'substanceprotein',
+  'substancereferenceinformation',
+  'substancespecification',
+  'substancesourcematerial'
 ];

@@ -32,6 +32,11 @@ abstract class PaymentNotice with _$PaymentNotice implements Resource {
     @JsonKey(required: true) @required Reference recipient,
     @JsonKey(required: true) @required Money amount,
     CodeableConcept paymentStatus,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_created') Element createdElement,
+@JsonKey(name: '_paymentDate') Element paymentDateElement,
   }) = _PaymentNotice;
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
@@ -68,6 +73,13 @@ abstract class PaymentReconciliation
     List<PaymentReconciliationDetail> detail,
     CodeableConcept formCode,
     List<PaymentReconciliationProcessNote> processNote,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_created') Element createdElement,
+@JsonKey(name: '_outcome') Element outcomeElement,
+@JsonKey(name: '_disposition') Element dispositionElement,
+@JsonKey(name: '_paymentDate') Element paymentDateElement,
   }) = _PaymentReconciliation;
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
@@ -89,6 +101,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     Reference responsible,
     Reference payee,
     Money amount,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _PaymentReconciliationDetail;
   factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
@@ -103,6 +116,8 @@ abstract class PaymentReconciliationProcessNote
     List<FhirExtension> modifierExtension,
     @JsonKey(unknownEnumValue: ProcessNoteType.unknown) ProcessNoteType type,
     String text,
+    @JsonKey(name: '_type') Element typeElement,
+@JsonKey(name: '_text') Element textElement,
   }) = _PaymentReconciliationProcessNote;
   factory PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>

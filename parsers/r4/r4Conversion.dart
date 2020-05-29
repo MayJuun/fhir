@@ -1,46 +1,130 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'background.data.dart';
 
 void main() async {
-  var fil = File('./lib/r4/resource_types/resource_types.dart');
-  var contents = (await fil.readAsString()).split('@freezed\nabstract class ');
-  var file = '';
-  for (var i = 1; i < contents.length; i++) {
-    var newClass = contents[i].substring(0, contents[i].indexOf(' '));
-    if (class_base.contains(newClass)) {
-      file = '/home/grey/dev/fhir/lib/r4/resource_types/base/base.dart';
-    } else if (class_clinical.contains(newClass)) {
-      file = '/home/grey/dev/fhir/lib/r4/resource_types/clinical/clinical.dart';
-    } else if (class_financial.contains(newClass)) {
-      file =
-          '/home/grey/dev/fhir/lib/r4/resource_types/financial/financial.dart';
-    } else if (class_foundation.contains(newClass)) {
-      file =
-          '/home/grey/dev/fhir/lib/r4/resource_types/foundation/foundation.dart';
-    } else if (class_specialized.contains(newClass)) {
-      file =
-          '/home/grey/dev/fhir/lib/r4/resource_types/specialized/specialized.dart';
+  //location of fhir schema
+  var file = File('./parsers/r4/fhir.schema.r4.json');
+  var contents = await file.readAsString();
+
+  var index;
+
+  var cgen = <String>[];
+  var cmeta = <String>[];
+  var cspecial = <String>[];
+  var cdraft = <String>[];
+  var cconformance = <String>[];
+  var cterminology = <String>[];
+  var csecurity = <String>[];
+  var cdocuments = <String>[];
+  var cother = <String>[];
+  var cindividuals = <String>[];
+  var centities1 = <String>[];
+  var centities2 = <String>[];
+  var cworkflow = <String>[];
+  var cmanagement = <String>[];
+  var csummary = <String>[];
+  var cdiagnostics = <String>[];
+  var cmedications = <String>[];
+  var ccareprovision = <String>[];
+  var crequestresponse = <String>[];
+  var csupport = <String>[];
+  var cbilling = <String>[];
+  var cpayment = <String>[];
+  var cgeneral = <String>[];
+  var cpublichealth = <String>[];
+  var cdefinitional = <String>[];
+  var cebm = <String>[];
+  var cquality = <String>[];
+  var cmedicationdefinition = <String>[];
+
+  var stringList = [
+    cgen,
+    cmeta,
+    cspecial,
+    cdraft,
+    cconformance,
+    cterminology,
+    csecurity,
+    cdocuments,
+    cother,
+    cindividuals,
+    centities1,
+    centities2,
+    cworkflow,
+    cmanagement,
+    csummary,
+    cdiagnostics,
+    cmedications,
+    ccareprovision,
+    crequestresponse,
+    csupport,
+    cbilling,
+    cpayment,
+    cgeneral,
+    cpublichealth,
+    cdefinitional,
+    cebm,
+    cquality,
+    cmedicationdefinition,
+  ];
+
+  Map schema = json.decode(contents);
+  for (var obj in schema['definitions'].keys) {
+    if (schema['definitions'][obj].keys.contains('properties')) {
+      index = classList.indexWhere(
+          (element) => element.contains(obj.split('_')[0].toLowerCase()));
+      if (index != -1) {
+        stringList[index].add(obj);
+        for (var field in schema['definitions'][obj]['properties'].keys) {
+          if (field[0] == '_') {
+            stringList[index].add(field);
+          }
+        }
+      }
     }
-    var newFile = await File(file).readAsString();
-    newFile += '@freezed\nabstract class ' + contents[i];
-    await File(file).writeAsString(newFile);
   }
+  var fileString = '';
+  for (var i = 0; i < stringList.length; i++) {
+    stringList[i].forEach((element) async {
+      if (element[0] != '_') {
+        fileString += element + '\n';
+      } else {
+        fileString +=
+            "@JsonKey(name: '$element') Element ${element.replaceAll('_', '')}Element,\n";
+      }
+    });
+  }
+  await File('./parsers/r4/privateFields.dart').writeAsString(fileString);
 }
 
 // void main() async {
-//   //location of fhir schema
-//   var file = File('./parsers/r4/fhir.schema.r4.json');
-//   var contents = await file.readAsString();
-//   var enums = <List<String>>[];
-//   var text = '';
-//   var foundation = <String>[];
-//   var base = <String>[];
-//   var clinical = <String>[];
-//   var financial = <String>[];
-//   var specialized = <String>[];
-//   Map schema = json.decode(contents);
-//   for (var obj in schema['definitions'].keys) {
+// var fil = File('./lib/r4/resource_types/resource_types.dart');
+// var contents = (await fil.readAsString()).split('@freezed\nabstract class ');
+// var file = '';
+//   for (var i = 1; i < contents.length; i++) {
+//     var newClass = contents[i].substring(0, contents[i].indexOf(' '));
+//     if (class_base.contains(newClass)) {
+//       file = '/home/grey/dev/fhir/lib/r4/resource_types/base/base.dart';
+//     } else if (class_clinical.contains(newClass)) {
+//       file = '/home/grey/dev/fhir/lib/r4/resource_types/clinical/clinical.dart';
+//     } else if (class_financial.contains(newClass)) {
+//       file =
+//           '/home/grey/dev/fhir/lib/r4/resource_types/financial/financial.dart';
+//     } else if (class_foundation.contains(newClass)) {
+//       file =
+//           '/home/grey/dev/fhir/lib/r4/resource_types/foundation/foundation.dart';
+//     } else if (class_specialized.contains(newClass)) {
+//       file =
+//           '/home/grey/dev/fhir/lib/r4/resource_types/specialized/specialized.dart';
+//     }
+//     var newFile = await File(file).readAsString();
+//     newFile += '@freezed\nabstract class ' + contents[i];
+//     await File(file).writeAsString(newFile);
+//   }
+// }
+
 //     var newObj = obj.split('_')[0];
 //     if (group_specialized.contains(newObj)) {
 //       specialized.add(obj.replaceAll('_', ''));

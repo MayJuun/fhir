@@ -81,7 +81,51 @@ class _$ActivityDefinitionTearOff {
       List<Reference> observationRequirement,
       List<Reference> observationResultRequirement,
       Canonical transform,
-      List<ActivityDefinitionDynamicValue> dynamicValue}) {
+      List<ActivityDefinitionDynamicValue> dynamicValue,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
+      @JsonKey(name: '_doNotPerform')
+          Element doNotPerformElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement}) {
     return _ActivityDefinition(
       resourceType: resourceType,
       id: id,
@@ -145,6 +189,28 @@ class _$ActivityDefinitionTearOff {
       observationResultRequirement: observationResultRequirement,
       transform: transform,
       dynamicValue: dynamicValue,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      titleElement: titleElement,
+      subtitleElement: subtitleElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      purposeElement: purposeElement,
+      usageElement: usageElement,
+      copyrightElement: copyrightElement,
+      approvalDateElement: approvalDateElement,
+      lastReviewDateElement: lastReviewDateElement,
+      kindElement: kindElement,
+      intentElement: intentElement,
+      priorityElement: priorityElement,
+      doNotPerformElement: doNotPerformElement,
+      timingDateTimeElement: timingDateTimeElement,
     );
   }
 }
@@ -218,6 +284,50 @@ mixin _$ActivityDefinition {
   List<Reference> get observationResultRequirement;
   Canonical get transform;
   List<ActivityDefinitionDynamicValue> get dynamicValue;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_subtitle')
+  Element get subtitleElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
+  @JsonKey(name: '_kind')
+  Element get kindElement;
+  @JsonKey(name: '_intent')
+  Element get intentElement;
+  @JsonKey(name: '_priority')
+  Element get priorityElement;
+  @JsonKey(name: '_doNotPerform')
+  Element get doNotPerformElement;
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
 
   Map<String, dynamic> toJson();
   $ActivityDefinitionCopyWith<ActivityDefinition> get copyWith;
@@ -292,7 +402,51 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       List<Reference> observationRequirement,
       List<Reference> observationResultRequirement,
       Canonical transform,
-      List<ActivityDefinitionDynamicValue> dynamicValue});
+      List<ActivityDefinitionDynamicValue> dynamicValue,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
+      @JsonKey(name: '_doNotPerform')
+          Element doNotPerformElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -309,6 +463,28 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get productReference;
   $CodeableConceptCopyWith<$Res> get productCodeableConcept;
   $QuantityCopyWith<$Res> get quantity;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get subtitleElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get purposeElement;
+  $ElementCopyWith<$Res> get usageElement;
+  $ElementCopyWith<$Res> get copyrightElement;
+  $ElementCopyWith<$Res> get approvalDateElement;
+  $ElementCopyWith<$Res> get lastReviewDateElement;
+  $ElementCopyWith<$Res> get kindElement;
+  $ElementCopyWith<$Res> get intentElement;
+  $ElementCopyWith<$Res> get priorityElement;
+  $ElementCopyWith<$Res> get doNotPerformElement;
+  $ElementCopyWith<$Res> get timingDateTimeElement;
 }
 
 class _$ActivityDefinitionCopyWithImpl<$Res>
@@ -383,6 +559,28 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
     Object observationResultRequirement = freezed,
     Object transform = freezed,
     Object dynamicValue = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object subtitleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object copyrightElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
+    Object kindElement = freezed,
+    Object intentElement = freezed,
+    Object priorityElement = freezed,
+    Object doNotPerformElement = freezed,
+    Object timingDateTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -510,6 +708,68 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
           : dynamicValue as List<ActivityDefinitionDynamicValue>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
+      intentElement: intentElement == freezed
+          ? _value.intentElement
+          : intentElement as Element,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement as Element,
+      doNotPerformElement: doNotPerformElement == freezed
+          ? _value.doNotPerformElement
+          : doNotPerformElement as Element,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
     ));
   }
 
@@ -664,6 +924,226 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(quantity: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subtitleElement {
+    if (_value.subtitleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subtitleElement, (value) {
+      return _then(_value.copyWith(subtitleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get usageElement {
+    if (_value.usageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.usageElement, (value) {
+      return _then(_value.copyWith(usageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.approvalDateElement, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get kindElement {
+    if (_value.kindElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.kindElement, (value) {
+      return _then(_value.copyWith(kindElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get intentElement {
+    if (_value.intentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.intentElement, (value) {
+      return _then(_value.copyWith(intentElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get priorityElement {
+    if (_value.priorityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.priorityElement, (value) {
+      return _then(_value.copyWith(priorityElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get doNotPerformElement {
+    if (_value.doNotPerformElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.doNotPerformElement, (value) {
+      return _then(_value.copyWith(doNotPerformElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement {
+    if (_value.timingDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timingDateTimeElement, (value) {
+      return _then(_value.copyWith(timingDateTimeElement: value));
+    });
+  }
 }
 
 abstract class _$ActivityDefinitionCopyWith<$Res>
@@ -737,7 +1217,51 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       List<Reference> observationRequirement,
       List<Reference> observationResultRequirement,
       Canonical transform,
-      List<ActivityDefinitionDynamicValue> dynamicValue});
+      List<ActivityDefinitionDynamicValue> dynamicValue,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
+      @JsonKey(name: '_doNotPerform')
+          Element doNotPerformElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -769,6 +1293,50 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get productCodeableConcept;
   @override
   $QuantityCopyWith<$Res> get quantity;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get subtitleElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get purposeElement;
+  @override
+  $ElementCopyWith<$Res> get usageElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement;
+  @override
+  $ElementCopyWith<$Res> get kindElement;
+  @override
+  $ElementCopyWith<$Res> get intentElement;
+  @override
+  $ElementCopyWith<$Res> get priorityElement;
+  @override
+  $ElementCopyWith<$Res> get doNotPerformElement;
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement;
 }
 
 class __$ActivityDefinitionCopyWithImpl<$Res>
@@ -845,6 +1413,28 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
     Object observationResultRequirement = freezed,
     Object transform = freezed,
     Object dynamicValue = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object subtitleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object copyrightElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
+    Object kindElement = freezed,
+    Object intentElement = freezed,
+    Object priorityElement = freezed,
+    Object doNotPerformElement = freezed,
+    Object timingDateTimeElement = freezed,
   }) {
     return _then(_ActivityDefinition(
       resourceType: resourceType == freezed
@@ -972,6 +1562,68 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
           : dynamicValue as List<ActivityDefinitionDynamicValue>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
+      intentElement: intentElement == freezed
+          ? _value.intentElement
+          : intentElement as Element,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement as Element,
+      doNotPerformElement: doNotPerformElement == freezed
+          ? _value.doNotPerformElement
+          : doNotPerformElement as Element,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
     ));
   }
 }
@@ -1044,7 +1696,51 @@ class _$_ActivityDefinition implements _ActivityDefinition {
       this.observationRequirement,
       this.observationResultRequirement,
       this.transform,
-      this.dynamicValue})
+      this.dynamicValue,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_subtitle')
+          this.subtitleElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      @JsonKey(name: '_usage')
+          this.usageElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
+      @JsonKey(name: '_kind')
+          this.kindElement,
+      @JsonKey(name: '_intent')
+          this.intentElement,
+      @JsonKey(name: '_priority')
+          this.priorityElement,
+      @JsonKey(name: '_doNotPerform')
+          this.doNotPerformElement,
+      @JsonKey(name: '_timingDateTime')
+          this.timingDateTimeElement})
       : assert(resourceType != null);
 
   factory _$_ActivityDefinition.fromJson(Map<String, dynamic> json) =>
@@ -1177,10 +1873,76 @@ class _$_ActivityDefinition implements _ActivityDefinition {
   final Canonical transform;
   @override
   final List<ActivityDefinitionDynamicValue> dynamicValue;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_subtitle')
+  final Element subtitleElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  final Element usageElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
+  @override
+  @JsonKey(name: '_kind')
+  final Element kindElement;
+  @override
+  @JsonKey(name: '_intent')
+  final Element intentElement;
+  @override
+  @JsonKey(name: '_priority')
+  final Element priorityElement;
+  @override
+  @JsonKey(name: '_doNotPerform')
+  final Element doNotPerformElement;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  final Element timingDateTimeElement;
 
   @override
   String toString() {
-    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, subtitle: $subtitle, status: $status, experimental: $experimental, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, usage: $usage, copyright: $copyright, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library: $library, kind: $kind, profile: $profile, code: $code, intent: $intent, priority: $priority, doNotPerform: $doNotPerform, timingTiming: $timingTiming, timingDateTime: $timingDateTime, timingAge: $timingAge, timingPeriod: $timingPeriod, timingRange: $timingRange, timingDuration: $timingDuration, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, specimenRequirement: $specimenRequirement, observationRequirement: $observationRequirement, observationResultRequirement: $observationResultRequirement, transform: $transform, dynamicValue: $dynamicValue)';
+    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, subtitle: $subtitle, status: $status, experimental: $experimental, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, usage: $usage, copyright: $copyright, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library: $library, kind: $kind, profile: $profile, code: $code, intent: $intent, priority: $priority, doNotPerform: $doNotPerform, timingTiming: $timingTiming, timingDateTime: $timingDateTime, timingAge: $timingAge, timingPeriod: $timingPeriod, timingRange: $timingRange, timingDuration: $timingDuration, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, specimenRequirement: $specimenRequirement, observationRequirement: $observationRequirement, observationResultRequirement: $observationResultRequirement, transform: $transform, dynamicValue: $dynamicValue, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, subtitleElement: $subtitleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, copyrightElement: $copyrightElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement, kindElement: $kindElement, intentElement: $intentElement, priorityElement: $priorityElement, doNotPerformElement: $doNotPerformElement, timingDateTimeElement: $timingDateTimeElement)';
   }
 
   @override
@@ -1290,7 +2052,29 @@ class _$_ActivityDefinition implements _ActivityDefinition {
             (identical(other.observationRequirement, observationRequirement) || const DeepCollectionEquality().equals(other.observationRequirement, observationRequirement)) &&
             (identical(other.observationResultRequirement, observationResultRequirement) || const DeepCollectionEquality().equals(other.observationResultRequirement, observationResultRequirement)) &&
             (identical(other.transform, transform) || const DeepCollectionEquality().equals(other.transform, transform)) &&
-            (identical(other.dynamicValue, dynamicValue) || const DeepCollectionEquality().equals(other.dynamicValue, dynamicValue)));
+            (identical(other.dynamicValue, dynamicValue) || const DeepCollectionEquality().equals(other.dynamicValue, dynamicValue)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.subtitleElement, subtitleElement) || const DeepCollectionEquality().equals(other.subtitleElement, subtitleElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
+            (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
+            (identical(other.intentElement, intentElement) || const DeepCollectionEquality().equals(other.intentElement, intentElement)) &&
+            (identical(other.priorityElement, priorityElement) || const DeepCollectionEquality().equals(other.priorityElement, priorityElement)) &&
+            (identical(other.doNotPerformElement, doNotPerformElement) || const DeepCollectionEquality().equals(other.doNotPerformElement, doNotPerformElement)) &&
+            (identical(other.timingDateTimeElement, timingDateTimeElement) || const DeepCollectionEquality().equals(other.timingDateTimeElement, timingDateTimeElement)));
   }
 
   @override
@@ -1357,7 +2141,29 @@ class _$_ActivityDefinition implements _ActivityDefinition {
       const DeepCollectionEquality().hash(observationRequirement) ^
       const DeepCollectionEquality().hash(observationResultRequirement) ^
       const DeepCollectionEquality().hash(transform) ^
-      const DeepCollectionEquality().hash(dynamicValue);
+      const DeepCollectionEquality().hash(dynamicValue) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(subtitleElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
+      const DeepCollectionEquality().hash(usageElement) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement) ^
+      const DeepCollectionEquality().hash(kindElement) ^
+      const DeepCollectionEquality().hash(intentElement) ^
+      const DeepCollectionEquality().hash(priorityElement) ^
+      const DeepCollectionEquality().hash(doNotPerformElement) ^
+      const DeepCollectionEquality().hash(timingDateTimeElement);
 
   @override
   _$ActivityDefinitionCopyWith<_ActivityDefinition> get copyWith =>
@@ -1371,73 +2177,116 @@ class _$_ActivityDefinition implements _ActivityDefinition {
 
 abstract class _ActivityDefinition implements ActivityDefinition {
   const factory _ActivityDefinition(
-          {@required
-          @JsonKey(required: true, defaultValue: 'ActivityDefinition')
-              String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          FhirUri url,
-          List<Identifier> identifier,
-          String version,
-          String name,
-          String title,
-          String subtitle,
-          @JsonKey(unknownEnumValue: Status.unknown)
-              Status status,
-          Boolean experimental,
-          CodeableConcept subjectCodeableConcept,
-          Reference subjectReference,
-          FhirDateTime date,
-          String publisher,
-          List<ContactDetail> contact,
-          Markdown description,
-          List<UsageContext> useContext,
-          List<CodeableConcept> jurisdiction,
-          Markdown purpose,
-          String usage,
-          Markdown copyright,
-          Date approvalDate,
-          Date lastReviewDate,
-          Period effectivePeriod,
-          List<CodeableConcept> topic,
-          List<ContactDetail> author,
-          List<ContactDetail> editor,
-          List<ContactDetail> reviewer,
-          List<ContactDetail> endorser,
-          List<RelatedArtifact> relatedArtifact,
-          List<Canonical> library,
-          Code kind,
-          Canonical profile,
-          CodeableConcept code,
-          Code intent,
-          Code priority,
-          Boolean doNotPerform,
-          Timing timingTiming,
-          FhirDateTime timingDateTime,
-          Age timingAge,
-          Period timingPeriod,
-          Range timingRange,
-          Duration timingDuration,
-          Reference location,
-          List<ActivityDefinitionParticipant> participant,
-          Reference productReference,
-          CodeableConcept productCodeableConcept,
-          Quantity quantity,
-          List<Dosage> dosage,
-          List<CodeableConcept> bodySite,
-          List<Reference> specimenRequirement,
-          List<Reference> observationRequirement,
-          List<Reference> observationResultRequirement,
-          Canonical transform,
-          List<ActivityDefinitionDynamicValue> dynamicValue}) =
-      _$_ActivityDefinition;
+      {@required
+      @JsonKey(required: true, defaultValue: 'ActivityDefinition')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      FhirUri url,
+      List<Identifier> identifier,
+      String version,
+      String name,
+      String title,
+      String subtitle,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
+      Boolean experimental,
+      CodeableConcept subjectCodeableConcept,
+      Reference subjectReference,
+      FhirDateTime date,
+      String publisher,
+      List<ContactDetail> contact,
+      Markdown description,
+      List<UsageContext> useContext,
+      List<CodeableConcept> jurisdiction,
+      Markdown purpose,
+      String usage,
+      Markdown copyright,
+      Date approvalDate,
+      Date lastReviewDate,
+      Period effectivePeriod,
+      List<CodeableConcept> topic,
+      List<ContactDetail> author,
+      List<ContactDetail> editor,
+      List<ContactDetail> reviewer,
+      List<ContactDetail> endorser,
+      List<RelatedArtifact> relatedArtifact,
+      List<Canonical> library,
+      Code kind,
+      Canonical profile,
+      CodeableConcept code,
+      Code intent,
+      Code priority,
+      Boolean doNotPerform,
+      Timing timingTiming,
+      FhirDateTime timingDateTime,
+      Age timingAge,
+      Period timingPeriod,
+      Range timingRange,
+      Duration timingDuration,
+      Reference location,
+      List<ActivityDefinitionParticipant> participant,
+      Reference productReference,
+      CodeableConcept productCodeableConcept,
+      Quantity quantity,
+      List<Dosage> dosage,
+      List<CodeableConcept> bodySite,
+      List<Reference> specimenRequirement,
+      List<Reference> observationRequirement,
+      List<Reference> observationResultRequirement,
+      Canonical transform,
+      List<ActivityDefinitionDynamicValue> dynamicValue,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
+      @JsonKey(name: '_doNotPerform')
+          Element doNotPerformElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement}) = _$_ActivityDefinition;
 
   factory _ActivityDefinition.fromJson(Map<String, dynamic> json) =
       _$_ActivityDefinition.fromJson;
@@ -1570,6 +2419,72 @@ abstract class _ActivityDefinition implements ActivityDefinition {
   @override
   List<ActivityDefinitionDynamicValue> get dynamicValue;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_subtitle')
+  Element get subtitleElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
+  @override
+  @JsonKey(name: '_kind')
+  Element get kindElement;
+  @override
+  @JsonKey(name: '_intent')
+  Element get intentElement;
+  @override
+  @JsonKey(name: '_priority')
+  Element get priorityElement;
+  @override
+  @JsonKey(name: '_doNotPerform')
+  Element get doNotPerformElement;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
+  @override
   _$ActivityDefinitionCopyWith<_ActivityDefinition> get copyWith;
 }
 
@@ -1586,13 +2501,15 @@ class _$ActivityDefinitionParticipantTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code type,
-      CodeableConcept role}) {
+      CodeableConcept role,
+      @JsonKey(name: '_type') Element typeElement}) {
     return _ActivityDefinitionParticipant(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
       role: role,
+      typeElement: typeElement,
     );
   }
 }
@@ -1607,6 +2524,8 @@ mixin _$ActivityDefinitionParticipant {
   List<FhirExtension> get modifierExtension;
   Code get type;
   CodeableConcept get role;
+  @JsonKey(name: '_type')
+  Element get typeElement;
 
   Map<String, dynamic> toJson();
   $ActivityDefinitionParticipantCopyWith<ActivityDefinitionParticipant>
@@ -1623,9 +2542,11 @@ abstract class $ActivityDefinitionParticipantCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code type,
-      CodeableConcept role});
+      CodeableConcept role,
+      @JsonKey(name: '_type') Element typeElement});
 
   $CodeableConceptCopyWith<$Res> get role;
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class _$ActivityDefinitionParticipantCopyWithImpl<$Res>
@@ -1643,6 +2564,7 @@ class _$ActivityDefinitionParticipantCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object role = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1654,6 +2576,8 @@ class _$ActivityDefinitionParticipantCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as Code,
       role: role == freezed ? _value.role : role as CodeableConcept,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
   }
 
@@ -1664,6 +2588,16 @@ class _$ActivityDefinitionParticipantCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
       return _then(_value.copyWith(role: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
     });
   }
 }
@@ -1680,10 +2614,13 @@ abstract class _$ActivityDefinitionParticipantCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Code type,
-      CodeableConcept role});
+      CodeableConcept role,
+      @JsonKey(name: '_type') Element typeElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get role;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
@@ -1705,6 +2642,7 @@ class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object role = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_ActivityDefinitionParticipant(
       id: id == freezed ? _value.id : id as String,
@@ -1716,6 +2654,8 @@ class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       type: type == freezed ? _value.type : type as Code,
       role: role == freezed ? _value.role : role as CodeableConcept,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
   }
 }
@@ -1728,7 +2668,8 @@ class _$_ActivityDefinitionParticipant
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.type,
-      this.role});
+      this.role,
+      @JsonKey(name: '_type') this.typeElement});
 
   factory _$_ActivityDefinitionParticipant.fromJson(
           Map<String, dynamic> json) =>
@@ -1745,10 +2686,13 @@ class _$_ActivityDefinitionParticipant
   final Code type;
   @override
   final CodeableConcept role;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
 
   @override
   String toString() {
-    return 'ActivityDefinitionParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, role: $role)';
+    return 'ActivityDefinitionParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, role: $role, typeElement: $typeElement)';
   }
 
   @override
@@ -1766,7 +2710,10 @@ class _$_ActivityDefinitionParticipant
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.role, role) ||
-                const DeepCollectionEquality().equals(other.role, role)));
+                const DeepCollectionEquality().equals(other.role, role)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)));
   }
 
   @override
@@ -1776,7 +2723,8 @@ class _$_ActivityDefinitionParticipant
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(role);
+      const DeepCollectionEquality().hash(role) ^
+      const DeepCollectionEquality().hash(typeElement);
 
   @override
   _$ActivityDefinitionParticipantCopyWith<_ActivityDefinitionParticipant>
@@ -1792,11 +2740,13 @@ class _$_ActivityDefinitionParticipant
 abstract class _ActivityDefinitionParticipant
     implements ActivityDefinitionParticipant {
   const factory _ActivityDefinitionParticipant(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Code type,
-      CodeableConcept role}) = _$_ActivityDefinitionParticipant;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Code type,
+          CodeableConcept role,
+          @JsonKey(name: '_type') Element typeElement}) =
+      _$_ActivityDefinitionParticipant;
 
   factory _ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =
       _$_ActivityDefinitionParticipant.fromJson;
@@ -1812,6 +2762,9 @@ abstract class _ActivityDefinitionParticipant
   Code get type;
   @override
   CodeableConcept get role;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
   @override
   _$ActivityDefinitionParticipantCopyWith<_ActivityDefinitionParticipant>
       get copyWith;
@@ -1830,13 +2783,15 @@ class _$ActivityDefinitionDynamicValueTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
-      @required @JsonKey(required: true) Expression expression}) {
+      @required @JsonKey(required: true) Expression expression,
+      @JsonKey(name: '_path') Element pathElement}) {
     return _ActivityDefinitionDynamicValue(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       path: path,
       expression: expression,
+      pathElement: pathElement,
     );
   }
 }
@@ -1853,6 +2808,8 @@ mixin _$ActivityDefinitionDynamicValue {
   String get path;
   @JsonKey(required: true)
   Expression get expression;
+  @JsonKey(name: '_path')
+  Element get pathElement;
 
   Map<String, dynamic> toJson();
   $ActivityDefinitionDynamicValueCopyWith<ActivityDefinitionDynamicValue>
@@ -1869,9 +2826,11 @@ abstract class $ActivityDefinitionDynamicValueCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
-      @JsonKey(required: true) Expression expression});
+      @JsonKey(required: true) Expression expression,
+      @JsonKey(name: '_path') Element pathElement});
 
   $ExpressionCopyWith<$Res> get expression;
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class _$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
@@ -1889,6 +2848,7 @@ class _$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object path = freezed,
     Object expression = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1901,6 +2861,8 @@ class _$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       expression:
           expression == freezed ? _value.expression : expression as Expression,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
   }
 
@@ -1911,6 +2873,16 @@ class _$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
     }
     return $ExpressionCopyWith<$Res>(_value.expression, (value) {
       return _then(_value.copyWith(expression: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
     });
   }
 }
@@ -1927,10 +2899,13 @@ abstract class _$ActivityDefinitionDynamicValueCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
-      @JsonKey(required: true) Expression expression});
+      @JsonKey(required: true) Expression expression,
+      @JsonKey(name: '_path') Element pathElement});
 
   @override
   $ExpressionCopyWith<$Res> get expression;
+  @override
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
@@ -1952,6 +2927,7 @@ class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object path = freezed,
     Object expression = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_ActivityDefinitionDynamicValue(
       id: id == freezed ? _value.id : id as String,
@@ -1964,6 +2940,8 @@ class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       expression:
           expression == freezed ? _value.expression : expression as Expression,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
   }
 }
@@ -1976,7 +2954,8 @@ class _$_ActivityDefinitionDynamicValue
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.path,
-      @required @JsonKey(required: true) this.expression})
+      @required @JsonKey(required: true) this.expression,
+      @JsonKey(name: '_path') this.pathElement})
       : assert(expression != null);
 
   factory _$_ActivityDefinitionDynamicValue.fromJson(
@@ -1995,10 +2974,13 @@ class _$_ActivityDefinitionDynamicValue
   @override
   @JsonKey(required: true)
   final Expression expression;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
 
   @override
   String toString() {
-    return 'ActivityDefinitionDynamicValue(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, expression: $expression)';
+    return 'ActivityDefinitionDynamicValue(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, expression: $expression, pathElement: $pathElement)';
   }
 
   @override
@@ -2017,7 +2999,10 @@ class _$_ActivityDefinitionDynamicValue
                 const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.expression, expression) ||
                 const DeepCollectionEquality()
-                    .equals(other.expression, expression)));
+                    .equals(other.expression, expression)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)));
   }
 
   @override
@@ -2027,7 +3012,8 @@ class _$_ActivityDefinitionDynamicValue
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(path) ^
-      const DeepCollectionEquality().hash(expression);
+      const DeepCollectionEquality().hash(expression) ^
+      const DeepCollectionEquality().hash(pathElement);
 
   @override
   _$ActivityDefinitionDynamicValueCopyWith<_ActivityDefinitionDynamicValue>
@@ -2047,7 +3033,8 @@ abstract class _ActivityDefinitionDynamicValue
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           String path,
-          @required @JsonKey(required: true) Expression expression}) =
+          @required @JsonKey(required: true) Expression expression,
+          @JsonKey(name: '_path') Element pathElement}) =
       _$_ActivityDefinitionDynamicValue;
 
   factory _ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =
@@ -2065,6 +3052,9 @@ abstract class _ActivityDefinitionDynamicValue
   @override
   @JsonKey(required: true)
   Expression get expression;
+  @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
   @override
   _$ActivityDefinitionDynamicValueCopyWith<_ActivityDefinitionDynamicValue>
       get copyWith;
@@ -2112,7 +3102,21 @@ class _$DeviceDefinitionTearOff {
       List<Annotation> note,
       Quantity quantity,
       Reference parentDevice,
-      List<DeviceDefinitionMaterial> material}) {
+      List<DeviceDefinitionMaterial> material,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_manufacturerString')
+          Element manufacturerStringElement,
+      @JsonKey(name: '_modelNumber')
+          Element modelNumberElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_onlineInformation')
+          Element onlineInformationElement}) {
     return _DeviceDefinition(
       resourceType: resourceType,
       id: id,
@@ -2146,6 +3150,13 @@ class _$DeviceDefinitionTearOff {
       quantity: quantity,
       parentDevice: parentDevice,
       material: material,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      manufacturerStringElement: manufacturerStringElement,
+      modelNumberElement: modelNumberElement,
+      versionElement: versionElement,
+      urlElement: urlElement,
+      onlineInformationElement: onlineInformationElement,
     );
   }
 }
@@ -2188,6 +3199,20 @@ mixin _$DeviceDefinition {
   Quantity get quantity;
   Reference get parentDevice;
   List<DeviceDefinitionMaterial> get material;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_manufacturerString')
+  Element get manufacturerStringElement;
+  @JsonKey(name: '_modelNumber')
+  Element get modelNumberElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_onlineInformation')
+  Element get onlineInformationElement;
 
   Map<String, dynamic> toJson();
   $DeviceDefinitionCopyWith<DeviceDefinition> get copyWith;
@@ -2231,7 +3256,21 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       List<Annotation> note,
       Quantity quantity,
       Reference parentDevice,
-      List<DeviceDefinitionMaterial> material});
+      List<DeviceDefinitionMaterial> material,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_manufacturerString')
+          Element manufacturerStringElement,
+      @JsonKey(name: '_modelNumber')
+          Element modelNumberElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_onlineInformation')
+          Element onlineInformationElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -2241,6 +3280,13 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get owner;
   $QuantityCopyWith<$Res> get quantity;
   $ReferenceCopyWith<$Res> get parentDevice;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get manufacturerStringElement;
+  $ElementCopyWith<$Res> get modelNumberElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get onlineInformationElement;
 }
 
 class _$DeviceDefinitionCopyWithImpl<$Res>
@@ -2285,6 +3331,13 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
     Object quantity = freezed,
     Object parentDevice = freezed,
     Object material = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object manufacturerStringElement = freezed,
+    Object modelNumberElement = freezed,
+    Object versionElement = freezed,
+    Object urlElement = freezed,
+    Object onlineInformationElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2359,6 +3412,26 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       material: material == freezed
           ? _value.material
           : material as List<DeviceDefinitionMaterial>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      manufacturerStringElement: manufacturerStringElement == freezed
+          ? _value.manufacturerStringElement
+          : manufacturerStringElement as Element,
+      modelNumberElement: modelNumberElement == freezed
+          ? _value.modelNumberElement
+          : modelNumberElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      onlineInformationElement: onlineInformationElement == freezed
+          ? _value.onlineInformationElement
+          : onlineInformationElement as Element,
     ));
   }
 
@@ -2442,6 +3515,76 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(parentDevice: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get manufacturerStringElement {
+    if (_value.manufacturerStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.manufacturerStringElement, (value) {
+      return _then(_value.copyWith(manufacturerStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get modelNumberElement {
+    if (_value.modelNumberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.modelNumberElement, (value) {
+      return _then(_value.copyWith(modelNumberElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get onlineInformationElement {
+    if (_value.onlineInformationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.onlineInformationElement, (value) {
+      return _then(_value.copyWith(onlineInformationElement: value));
+    });
+  }
 }
 
 abstract class _$DeviceDefinitionCopyWith<$Res>
@@ -2484,7 +3627,21 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
       List<Annotation> note,
       Quantity quantity,
       Reference parentDevice,
-      List<DeviceDefinitionMaterial> material});
+      List<DeviceDefinitionMaterial> material,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_manufacturerString')
+          Element manufacturerStringElement,
+      @JsonKey(name: '_modelNumber')
+          Element modelNumberElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_onlineInformation')
+          Element onlineInformationElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2502,6 +3659,20 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
   $QuantityCopyWith<$Res> get quantity;
   @override
   $ReferenceCopyWith<$Res> get parentDevice;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get manufacturerStringElement;
+  @override
+  $ElementCopyWith<$Res> get modelNumberElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get onlineInformationElement;
 }
 
 class __$DeviceDefinitionCopyWithImpl<$Res>
@@ -2548,6 +3719,13 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
     Object quantity = freezed,
     Object parentDevice = freezed,
     Object material = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object manufacturerStringElement = freezed,
+    Object modelNumberElement = freezed,
+    Object versionElement = freezed,
+    Object urlElement = freezed,
+    Object onlineInformationElement = freezed,
   }) {
     return _then(_DeviceDefinition(
       resourceType: resourceType == freezed
@@ -2622,6 +3800,26 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
       material: material == freezed
           ? _value.material
           : material as List<DeviceDefinitionMaterial>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      manufacturerStringElement: manufacturerStringElement == freezed
+          ? _value.manufacturerStringElement
+          : manufacturerStringElement as Element,
+      modelNumberElement: modelNumberElement == freezed
+          ? _value.modelNumberElement
+          : modelNumberElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      onlineInformationElement: onlineInformationElement == freezed
+          ? _value.onlineInformationElement
+          : onlineInformationElement as Element,
     ));
   }
 }
@@ -2663,7 +3861,21 @@ class _$_DeviceDefinition implements _DeviceDefinition {
       this.note,
       this.quantity,
       this.parentDevice,
-      this.material})
+      this.material,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_manufacturerString')
+          this.manufacturerStringElement,
+      @JsonKey(name: '_modelNumber')
+          this.modelNumberElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_onlineInformation')
+          this.onlineInformationElement})
       : assert(resourceType != null);
 
   factory _$_DeviceDefinition.fromJson(Map<String, dynamic> json) =>
@@ -2735,10 +3947,31 @@ class _$_DeviceDefinition implements _DeviceDefinition {
   final Reference parentDevice;
   @override
   final List<DeviceDefinitionMaterial> material;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_manufacturerString')
+  final Element manufacturerStringElement;
+  @override
+  @JsonKey(name: '_modelNumber')
+  final Element modelNumberElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_onlineInformation')
+  final Element onlineInformationElement;
 
   @override
   String toString() {
-    return 'DeviceDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, udiDeviceIdentifier: $udiDeviceIdentifier, manufacturerString: $manufacturerString, manufacturerReference: $manufacturerReference, deviceName: $deviceName, modelNumber: $modelNumber, type: $type, specialization: $specialization, version: $version, safety: $safety, shelfLifeStorage: $shelfLifeStorage, physicalCharacteristics: $physicalCharacteristics, languageCode: $languageCode, capability: $capability, property: $property, owner: $owner, contact: $contact, url: $url, onlineInformation: $onlineInformation, note: $note, quantity: $quantity, parentDevice: $parentDevice, material: $material)';
+    return 'DeviceDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, udiDeviceIdentifier: $udiDeviceIdentifier, manufacturerString: $manufacturerString, manufacturerReference: $manufacturerReference, deviceName: $deviceName, modelNumber: $modelNumber, type: $type, specialization: $specialization, version: $version, safety: $safety, shelfLifeStorage: $shelfLifeStorage, physicalCharacteristics: $physicalCharacteristics, languageCode: $languageCode, capability: $capability, property: $property, owner: $owner, contact: $contact, url: $url, onlineInformation: $onlineInformation, note: $note, quantity: $quantity, parentDevice: $parentDevice, material: $material, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, manufacturerStringElement: $manufacturerStringElement, modelNumberElement: $modelNumberElement, versionElement: $versionElement, urlElement: $urlElement, onlineInformationElement: $onlineInformationElement)';
   }
 
   @override
@@ -2818,7 +4051,14 @@ class _$_DeviceDefinition implements _DeviceDefinition {
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
             (identical(other.quantity, quantity) || const DeepCollectionEquality().equals(other.quantity, quantity)) &&
             (identical(other.parentDevice, parentDevice) || const DeepCollectionEquality().equals(other.parentDevice, parentDevice)) &&
-            (identical(other.material, material) || const DeepCollectionEquality().equals(other.material, material)));
+            (identical(other.material, material) || const DeepCollectionEquality().equals(other.material, material)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.manufacturerStringElement, manufacturerStringElement) || const DeepCollectionEquality().equals(other.manufacturerStringElement, manufacturerStringElement)) &&
+            (identical(other.modelNumberElement, modelNumberElement) || const DeepCollectionEquality().equals(other.modelNumberElement, modelNumberElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.onlineInformationElement, onlineInformationElement) || const DeepCollectionEquality().equals(other.onlineInformationElement, onlineInformationElement)));
   }
 
   @override
@@ -2855,7 +4095,14 @@ class _$_DeviceDefinition implements _DeviceDefinition {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(quantity) ^
       const DeepCollectionEquality().hash(parentDevice) ^
-      const DeepCollectionEquality().hash(material);
+      const DeepCollectionEquality().hash(material) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(manufacturerStringElement) ^
+      const DeepCollectionEquality().hash(modelNumberElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(onlineInformationElement);
 
   @override
   _$DeviceDefinitionCopyWith<_DeviceDefinition> get copyWith =>
@@ -2903,7 +4150,21 @@ abstract class _DeviceDefinition implements DeviceDefinition {
       List<Annotation> note,
       Quantity quantity,
       Reference parentDevice,
-      List<DeviceDefinitionMaterial> material}) = _$_DeviceDefinition;
+      List<DeviceDefinitionMaterial> material,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_manufacturerString')
+          Element manufacturerStringElement,
+      @JsonKey(name: '_modelNumber')
+          Element modelNumberElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_onlineInformation')
+          Element onlineInformationElement}) = _$_DeviceDefinition;
 
   factory _DeviceDefinition.fromJson(Map<String, dynamic> json) =
       _$_DeviceDefinition.fromJson;
@@ -2975,6 +4236,27 @@ abstract class _DeviceDefinition implements DeviceDefinition {
   @override
   List<DeviceDefinitionMaterial> get material;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_manufacturerString')
+  Element get manufacturerStringElement;
+  @override
+  @JsonKey(name: '_modelNumber')
+  Element get modelNumberElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_onlineInformation')
+  Element get onlineInformationElement;
+  @override
   _$DeviceDefinitionCopyWith<_DeviceDefinition> get copyWith;
 }
 
@@ -2992,7 +4274,10 @@ class _$DeviceDefinitionUdiDeviceIdentifierTearOff {
       List<FhirExtension> modifierExtension,
       String deviceIdentifier,
       FhirUri issuer,
-      FhirUri jurisdiction}) {
+      FhirUri jurisdiction,
+      @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
+      @JsonKey(name: '_issuer') Element issuerElement,
+      @JsonKey(name: '_jurisdiction') Element jurisdictionElement}) {
     return _DeviceDefinitionUdiDeviceIdentifier(
       id: id,
       extension_: extension_,
@@ -3000,6 +4285,9 @@ class _$DeviceDefinitionUdiDeviceIdentifierTearOff {
       deviceIdentifier: deviceIdentifier,
       issuer: issuer,
       jurisdiction: jurisdiction,
+      deviceIdentifierElement: deviceIdentifierElement,
+      issuerElement: issuerElement,
+      jurisdictionElement: jurisdictionElement,
     );
   }
 }
@@ -3016,6 +4304,12 @@ mixin _$DeviceDefinitionUdiDeviceIdentifier {
   String get deviceIdentifier;
   FhirUri get issuer;
   FhirUri get jurisdiction;
+  @JsonKey(name: '_deviceIdentifier')
+  Element get deviceIdentifierElement;
+  @JsonKey(name: '_issuer')
+  Element get issuerElement;
+  @JsonKey(name: '_jurisdiction')
+  Element get jurisdictionElement;
 
   Map<String, dynamic> toJson();
   $DeviceDefinitionUdiDeviceIdentifierCopyWith<
@@ -3033,7 +4327,14 @@ abstract class $DeviceDefinitionUdiDeviceIdentifierCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       String deviceIdentifier,
       FhirUri issuer,
-      FhirUri jurisdiction});
+      FhirUri jurisdiction,
+      @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
+      @JsonKey(name: '_issuer') Element issuerElement,
+      @JsonKey(name: '_jurisdiction') Element jurisdictionElement});
+
+  $ElementCopyWith<$Res> get deviceIdentifierElement;
+  $ElementCopyWith<$Res> get issuerElement;
+  $ElementCopyWith<$Res> get jurisdictionElement;
 }
 
 class _$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
@@ -3052,6 +4353,9 @@ class _$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
     Object deviceIdentifier = freezed,
     Object issuer = freezed,
     Object jurisdiction = freezed,
+    Object deviceIdentifierElement = freezed,
+    Object issuerElement = freezed,
+    Object jurisdictionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -3068,7 +4372,46 @@ class _$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as FhirUri,
+      deviceIdentifierElement: deviceIdentifierElement == freezed
+          ? _value.deviceIdentifierElement
+          : deviceIdentifierElement as Element,
+      issuerElement: issuerElement == freezed
+          ? _value.issuerElement
+          : issuerElement as Element,
+      jurisdictionElement: jurisdictionElement == freezed
+          ? _value.jurisdictionElement
+          : jurisdictionElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get deviceIdentifierElement {
+    if (_value.deviceIdentifierElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.deviceIdentifierElement, (value) {
+      return _then(_value.copyWith(deviceIdentifierElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get issuerElement {
+    if (_value.issuerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.issuerElement, (value) {
+      return _then(_value.copyWith(issuerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get jurisdictionElement {
+    if (_value.jurisdictionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.jurisdictionElement, (value) {
+      return _then(_value.copyWith(jurisdictionElement: value));
+    });
   }
 }
 
@@ -3085,7 +4428,17 @@ abstract class _$DeviceDefinitionUdiDeviceIdentifierCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       String deviceIdentifier,
       FhirUri issuer,
-      FhirUri jurisdiction});
+      FhirUri jurisdiction,
+      @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
+      @JsonKey(name: '_issuer') Element issuerElement,
+      @JsonKey(name: '_jurisdiction') Element jurisdictionElement});
+
+  @override
+  $ElementCopyWith<$Res> get deviceIdentifierElement;
+  @override
+  $ElementCopyWith<$Res> get issuerElement;
+  @override
+  $ElementCopyWith<$Res> get jurisdictionElement;
 }
 
 class __$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
@@ -3108,6 +4461,9 @@ class __$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
     Object deviceIdentifier = freezed,
     Object issuer = freezed,
     Object jurisdiction = freezed,
+    Object deviceIdentifierElement = freezed,
+    Object issuerElement = freezed,
+    Object jurisdictionElement = freezed,
   }) {
     return _then(_DeviceDefinitionUdiDeviceIdentifier(
       id: id == freezed ? _value.id : id as String,
@@ -3124,6 +4480,15 @@ class __$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as FhirUri,
+      deviceIdentifierElement: deviceIdentifierElement == freezed
+          ? _value.deviceIdentifierElement
+          : deviceIdentifierElement as Element,
+      issuerElement: issuerElement == freezed
+          ? _value.issuerElement
+          : issuerElement as Element,
+      jurisdictionElement: jurisdictionElement == freezed
+          ? _value.jurisdictionElement
+          : jurisdictionElement as Element,
     ));
   }
 }
@@ -3137,7 +4502,10 @@ class _$_DeviceDefinitionUdiDeviceIdentifier
       this.modifierExtension,
       this.deviceIdentifier,
       this.issuer,
-      this.jurisdiction});
+      this.jurisdiction,
+      @JsonKey(name: '_deviceIdentifier') this.deviceIdentifierElement,
+      @JsonKey(name: '_issuer') this.issuerElement,
+      @JsonKey(name: '_jurisdiction') this.jurisdictionElement});
 
   factory _$_DeviceDefinitionUdiDeviceIdentifier.fromJson(
           Map<String, dynamic> json) =>
@@ -3156,10 +4524,19 @@ class _$_DeviceDefinitionUdiDeviceIdentifier
   final FhirUri issuer;
   @override
   final FhirUri jurisdiction;
+  @override
+  @JsonKey(name: '_deviceIdentifier')
+  final Element deviceIdentifierElement;
+  @override
+  @JsonKey(name: '_issuer')
+  final Element issuerElement;
+  @override
+  @JsonKey(name: '_jurisdiction')
+  final Element jurisdictionElement;
 
   @override
   String toString() {
-    return 'DeviceDefinitionUdiDeviceIdentifier(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, deviceIdentifier: $deviceIdentifier, issuer: $issuer, jurisdiction: $jurisdiction)';
+    return 'DeviceDefinitionUdiDeviceIdentifier(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, deviceIdentifier: $deviceIdentifier, issuer: $issuer, jurisdiction: $jurisdiction, deviceIdentifierElement: $deviceIdentifierElement, issuerElement: $issuerElement, jurisdictionElement: $jurisdictionElement)';
   }
 
   @override
@@ -3181,7 +4558,17 @@ class _$_DeviceDefinitionUdiDeviceIdentifier
                 const DeepCollectionEquality().equals(other.issuer, issuer)) &&
             (identical(other.jurisdiction, jurisdiction) ||
                 const DeepCollectionEquality()
-                    .equals(other.jurisdiction, jurisdiction)));
+                    .equals(other.jurisdiction, jurisdiction)) &&
+            (identical(
+                    other.deviceIdentifierElement, deviceIdentifierElement) ||
+                const DeepCollectionEquality().equals(
+                    other.deviceIdentifierElement, deviceIdentifierElement)) &&
+            (identical(other.issuerElement, issuerElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.issuerElement, issuerElement)) &&
+            (identical(other.jurisdictionElement, jurisdictionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.jurisdictionElement, jurisdictionElement)));
   }
 
   @override
@@ -3192,7 +4579,10 @@ class _$_DeviceDefinitionUdiDeviceIdentifier
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(deviceIdentifier) ^
       const DeepCollectionEquality().hash(issuer) ^
-      const DeepCollectionEquality().hash(jurisdiction);
+      const DeepCollectionEquality().hash(jurisdiction) ^
+      const DeepCollectionEquality().hash(deviceIdentifierElement) ^
+      const DeepCollectionEquality().hash(issuerElement) ^
+      const DeepCollectionEquality().hash(jurisdictionElement);
 
   @override
   _$DeviceDefinitionUdiDeviceIdentifierCopyWith<
@@ -3209,12 +4599,16 @@ class _$_DeviceDefinitionUdiDeviceIdentifier
 abstract class _DeviceDefinitionUdiDeviceIdentifier
     implements DeviceDefinitionUdiDeviceIdentifier {
   const factory _DeviceDefinitionUdiDeviceIdentifier(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String deviceIdentifier,
-      FhirUri issuer,
-      FhirUri jurisdiction}) = _$_DeviceDefinitionUdiDeviceIdentifier;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String deviceIdentifier,
+          FhirUri issuer,
+          FhirUri jurisdiction,
+          @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
+          @JsonKey(name: '_issuer') Element issuerElement,
+          @JsonKey(name: '_jurisdiction') Element jurisdictionElement}) =
+      _$_DeviceDefinitionUdiDeviceIdentifier;
 
   factory _DeviceDefinitionUdiDeviceIdentifier.fromJson(
           Map<String, dynamic> json) =
@@ -3234,6 +4628,15 @@ abstract class _DeviceDefinitionUdiDeviceIdentifier
   @override
   FhirUri get jurisdiction;
   @override
+  @JsonKey(name: '_deviceIdentifier')
+  Element get deviceIdentifierElement;
+  @override
+  @JsonKey(name: '_issuer')
+  Element get issuerElement;
+  @override
+  @JsonKey(name: '_jurisdiction')
+  Element get jurisdictionElement;
+  @override
   _$DeviceDefinitionUdiDeviceIdentifierCopyWith<
       _DeviceDefinitionUdiDeviceIdentifier> get copyWith;
 }
@@ -3251,13 +4654,17 @@ class _$DeviceDefinitionDeviceNameTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type}) {
+      @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_type') Element typeElement}) {
     return _DeviceDefinitionDeviceName(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       name: name,
       type: type,
+      nameElement: nameElement,
+      typeElement: typeElement,
     );
   }
 }
@@ -3273,6 +4680,10 @@ mixin _$DeviceDefinitionDeviceName {
   String get name;
   @JsonKey(unknownEnumValue: DeviceNameType.unknown)
   DeviceNameType get type;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_type')
+  Element get typeElement;
 
   Map<String, dynamic> toJson();
   $DeviceDefinitionDeviceNameCopyWith<DeviceDefinitionDeviceName> get copyWith;
@@ -3287,7 +4698,12 @@ abstract class $DeviceDefinitionDeviceNameCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type});
+      @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_type') Element typeElement});
+
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class _$DeviceDefinitionDeviceNameCopyWithImpl<$Res>
@@ -3305,6 +4721,8 @@ class _$DeviceDefinitionDeviceNameCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object name = freezed,
     Object type = freezed,
+    Object nameElement = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -3316,7 +4734,31 @@ class _$DeviceDefinitionDeviceNameCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as DeviceNameType,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
   }
 }
 
@@ -3332,7 +4774,14 @@ abstract class _$DeviceDefinitionDeviceNameCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String name,
-      @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type});
+      @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_type') Element typeElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class __$DeviceDefinitionDeviceNameCopyWithImpl<$Res>
@@ -3353,6 +4802,8 @@ class __$DeviceDefinitionDeviceNameCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object name = freezed,
     Object type = freezed,
+    Object nameElement = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_DeviceDefinitionDeviceName(
       id: id == freezed ? _value.id : id as String,
@@ -3364,6 +4815,10 @@ class __$DeviceDefinitionDeviceNameCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as DeviceNameType,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
   }
 }
@@ -3375,7 +4830,9 @@ class _$_DeviceDefinitionDeviceName implements _DeviceDefinitionDeviceName {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.name,
-      @JsonKey(unknownEnumValue: DeviceNameType.unknown) this.type});
+      @JsonKey(unknownEnumValue: DeviceNameType.unknown) this.type,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_type') this.typeElement});
 
   factory _$_DeviceDefinitionDeviceName.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceDefinitionDeviceNameFromJson(json);
@@ -3392,10 +4849,16 @@ class _$_DeviceDefinitionDeviceName implements _DeviceDefinitionDeviceName {
   @override
   @JsonKey(unknownEnumValue: DeviceNameType.unknown)
   final DeviceNameType type;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
 
   @override
   String toString() {
-    return 'DeviceDefinitionDeviceName(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, type: $type)';
+    return 'DeviceDefinitionDeviceName(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, type: $type, nameElement: $nameElement, typeElement: $typeElement)';
   }
 
   @override
@@ -3413,7 +4876,13 @@ class _$_DeviceDefinitionDeviceName implements _DeviceDefinitionDeviceName {
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)));
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)));
   }
 
   @override
@@ -3423,7 +4892,9 @@ class _$_DeviceDefinitionDeviceName implements _DeviceDefinitionDeviceName {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(type);
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(typeElement);
 
   @override
   _$DeviceDefinitionDeviceNameCopyWith<_DeviceDefinitionDeviceName>
@@ -3445,7 +4916,11 @@ abstract class _DeviceDefinitionDeviceName
       List<FhirExtension> modifierExtension,
       String name,
       @JsonKey(unknownEnumValue: DeviceNameType.unknown)
-          DeviceNameType type}) = _$_DeviceDefinitionDeviceName;
+          DeviceNameType type,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_type')
+          Element typeElement}) = _$_DeviceDefinitionDeviceName;
 
   factory _DeviceDefinitionDeviceName.fromJson(Map<String, dynamic> json) =
       _$_DeviceDefinitionDeviceName.fromJson;
@@ -3462,6 +4937,12 @@ abstract class _DeviceDefinitionDeviceName
   @override
   @JsonKey(unknownEnumValue: DeviceNameType.unknown)
   DeviceNameType get type;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
   @override
   _$DeviceDefinitionDeviceNameCopyWith<_DeviceDefinitionDeviceName>
       get copyWith;
@@ -3480,13 +4961,17 @@ class _$DeviceDefinitionSpecializationTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String systemType,
-      String version}) {
+      String version,
+      @JsonKey(name: '_systemType') Element systemTypeElement,
+      @JsonKey(name: '_version') Element versionElement}) {
     return _DeviceDefinitionSpecialization(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       systemType: systemType,
       version: version,
+      systemTypeElement: systemTypeElement,
+      versionElement: versionElement,
     );
   }
 }
@@ -3502,6 +4987,10 @@ mixin _$DeviceDefinitionSpecialization {
   List<FhirExtension> get modifierExtension;
   String get systemType;
   String get version;
+  @JsonKey(name: '_systemType')
+  Element get systemTypeElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
 
   Map<String, dynamic> toJson();
   $DeviceDefinitionSpecializationCopyWith<DeviceDefinitionSpecialization>
@@ -3518,7 +5007,12 @@ abstract class $DeviceDefinitionSpecializationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String systemType,
-      String version});
+      String version,
+      @JsonKey(name: '_systemType') Element systemTypeElement,
+      @JsonKey(name: '_version') Element versionElement});
+
+  $ElementCopyWith<$Res> get systemTypeElement;
+  $ElementCopyWith<$Res> get versionElement;
 }
 
 class _$DeviceDefinitionSpecializationCopyWithImpl<$Res>
@@ -3536,6 +5030,8 @@ class _$DeviceDefinitionSpecializationCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object systemType = freezed,
     Object version = freezed,
+    Object systemTypeElement = freezed,
+    Object versionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -3548,7 +5044,33 @@ class _$DeviceDefinitionSpecializationCopyWithImpl<$Res>
       systemType:
           systemType == freezed ? _value.systemType : systemType as String,
       version: version == freezed ? _value.version : version as String,
+      systemTypeElement: systemTypeElement == freezed
+          ? _value.systemTypeElement
+          : systemTypeElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get systemTypeElement {
+    if (_value.systemTypeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.systemTypeElement, (value) {
+      return _then(_value.copyWith(systemTypeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
   }
 }
 
@@ -3564,7 +5086,14 @@ abstract class _$DeviceDefinitionSpecializationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String systemType,
-      String version});
+      String version,
+      @JsonKey(name: '_systemType') Element systemTypeElement,
+      @JsonKey(name: '_version') Element versionElement});
+
+  @override
+  $ElementCopyWith<$Res> get systemTypeElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
 }
 
 class __$DeviceDefinitionSpecializationCopyWithImpl<$Res>
@@ -3586,6 +5115,8 @@ class __$DeviceDefinitionSpecializationCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object systemType = freezed,
     Object version = freezed,
+    Object systemTypeElement = freezed,
+    Object versionElement = freezed,
   }) {
     return _then(_DeviceDefinitionSpecialization(
       id: id == freezed ? _value.id : id as String,
@@ -3598,6 +5129,12 @@ class __$DeviceDefinitionSpecializationCopyWithImpl<$Res>
       systemType:
           systemType == freezed ? _value.systemType : systemType as String,
       version: version == freezed ? _value.version : version as String,
+      systemTypeElement: systemTypeElement == freezed
+          ? _value.systemTypeElement
+          : systemTypeElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
     ));
   }
 }
@@ -3610,7 +5147,9 @@ class _$_DeviceDefinitionSpecialization
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.systemType,
-      this.version});
+      this.version,
+      @JsonKey(name: '_systemType') this.systemTypeElement,
+      @JsonKey(name: '_version') this.versionElement});
 
   factory _$_DeviceDefinitionSpecialization.fromJson(
           Map<String, dynamic> json) =>
@@ -3627,10 +5166,16 @@ class _$_DeviceDefinitionSpecialization
   final String systemType;
   @override
   final String version;
+  @override
+  @JsonKey(name: '_systemType')
+  final Element systemTypeElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
 
   @override
   String toString() {
-    return 'DeviceDefinitionSpecialization(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, systemType: $systemType, version: $version)';
+    return 'DeviceDefinitionSpecialization(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, systemType: $systemType, version: $version, systemTypeElement: $systemTypeElement, versionElement: $versionElement)';
   }
 
   @override
@@ -3649,7 +5194,14 @@ class _$_DeviceDefinitionSpecialization
                 const DeepCollectionEquality()
                     .equals(other.systemType, systemType)) &&
             (identical(other.version, version) ||
-                const DeepCollectionEquality().equals(other.version, version)));
+                const DeepCollectionEquality()
+                    .equals(other.version, version)) &&
+            (identical(other.systemTypeElement, systemTypeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.systemTypeElement, systemTypeElement)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)));
   }
 
   @override
@@ -3659,7 +5211,9 @@ class _$_DeviceDefinitionSpecialization
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(systemType) ^
-      const DeepCollectionEquality().hash(version);
+      const DeepCollectionEquality().hash(version) ^
+      const DeepCollectionEquality().hash(systemTypeElement) ^
+      const DeepCollectionEquality().hash(versionElement);
 
   @override
   _$DeviceDefinitionSpecializationCopyWith<_DeviceDefinitionSpecialization>
@@ -3675,11 +5229,14 @@ class _$_DeviceDefinitionSpecialization
 abstract class _DeviceDefinitionSpecialization
     implements DeviceDefinitionSpecialization {
   const factory _DeviceDefinitionSpecialization(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String systemType,
-      String version}) = _$_DeviceDefinitionSpecialization;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String systemType,
+          String version,
+          @JsonKey(name: '_systemType') Element systemTypeElement,
+          @JsonKey(name: '_version') Element versionElement}) =
+      _$_DeviceDefinitionSpecialization;
 
   factory _DeviceDefinitionSpecialization.fromJson(Map<String, dynamic> json) =
       _$_DeviceDefinitionSpecialization.fromJson;
@@ -3695,6 +5252,12 @@ abstract class _DeviceDefinitionSpecialization
   String get systemType;
   @override
   String get version;
+  @override
+  @JsonKey(name: '_systemType')
+  Element get systemTypeElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
   @override
   _$DeviceDefinitionSpecializationCopyWith<_DeviceDefinitionSpecialization>
       get copyWith;
@@ -4226,11 +5789,18 @@ class _$DeviceDefinitionMaterialTearOff {
 
   _DeviceDefinitionMaterial call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required @JsonKey(required: true) CodeableConcept substance,
+      @required
+      @JsonKey(required: true)
+          CodeableConcept substance,
       Boolean alternate,
-      Boolean allergenicIndicator}) {
+      Boolean allergenicIndicator,
+      @JsonKey(name: '_alternate')
+          Element alternateElement,
+      @JsonKey(name: '_allergenicIndicator')
+          Element allergenicIndicatorElement}) {
     return _DeviceDefinitionMaterial(
       id: id,
       extension_: extension_,
@@ -4238,6 +5808,8 @@ class _$DeviceDefinitionMaterialTearOff {
       substance: substance,
       alternate: alternate,
       allergenicIndicator: allergenicIndicator,
+      alternateElement: alternateElement,
+      allergenicIndicatorElement: allergenicIndicatorElement,
     );
   }
 }
@@ -4254,6 +5826,10 @@ mixin _$DeviceDefinitionMaterial {
   CodeableConcept get substance;
   Boolean get alternate;
   Boolean get allergenicIndicator;
+  @JsonKey(name: '_alternate')
+  Element get alternateElement;
+  @JsonKey(name: '_allergenicIndicator')
+  Element get allergenicIndicatorElement;
 
   Map<String, dynamic> toJson();
   $DeviceDefinitionMaterialCopyWith<DeviceDefinitionMaterial> get copyWith;
@@ -4265,13 +5841,21 @@ abstract class $DeviceDefinitionMaterialCopyWith<$Res> {
       _$DeviceDefinitionMaterialCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true) CodeableConcept substance,
+      @JsonKey(required: true)
+          CodeableConcept substance,
       Boolean alternate,
-      Boolean allergenicIndicator});
+      Boolean allergenicIndicator,
+      @JsonKey(name: '_alternate')
+          Element alternateElement,
+      @JsonKey(name: '_allergenicIndicator')
+          Element allergenicIndicatorElement});
 
   $CodeableConceptCopyWith<$Res> get substance;
+  $ElementCopyWith<$Res> get alternateElement;
+  $ElementCopyWith<$Res> get allergenicIndicatorElement;
 }
 
 class _$DeviceDefinitionMaterialCopyWithImpl<$Res>
@@ -4290,6 +5874,8 @@ class _$DeviceDefinitionMaterialCopyWithImpl<$Res>
     Object substance = freezed,
     Object alternate = freezed,
     Object allergenicIndicator = freezed,
+    Object alternateElement = freezed,
+    Object allergenicIndicatorElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -4306,6 +5892,12 @@ class _$DeviceDefinitionMaterialCopyWithImpl<$Res>
       allergenicIndicator: allergenicIndicator == freezed
           ? _value.allergenicIndicator
           : allergenicIndicator as Boolean,
+      alternateElement: alternateElement == freezed
+          ? _value.alternateElement
+          : alternateElement as Element,
+      allergenicIndicatorElement: allergenicIndicatorElement == freezed
+          ? _value.allergenicIndicatorElement
+          : allergenicIndicatorElement as Element,
     ));
   }
 
@@ -4318,6 +5910,26 @@ class _$DeviceDefinitionMaterialCopyWithImpl<$Res>
       return _then(_value.copyWith(substance: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get alternateElement {
+    if (_value.alternateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.alternateElement, (value) {
+      return _then(_value.copyWith(alternateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get allergenicIndicatorElement {
+    if (_value.allergenicIndicatorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.allergenicIndicatorElement, (value) {
+      return _then(_value.copyWith(allergenicIndicatorElement: value));
+    });
+  }
 }
 
 abstract class _$DeviceDefinitionMaterialCopyWith<$Res>
@@ -4328,14 +5940,24 @@ abstract class _$DeviceDefinitionMaterialCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(required: true) CodeableConcept substance,
+      @JsonKey(required: true)
+          CodeableConcept substance,
       Boolean alternate,
-      Boolean allergenicIndicator});
+      Boolean allergenicIndicator,
+      @JsonKey(name: '_alternate')
+          Element alternateElement,
+      @JsonKey(name: '_allergenicIndicator')
+          Element allergenicIndicatorElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get substance;
+  @override
+  $ElementCopyWith<$Res> get alternateElement;
+  @override
+  $ElementCopyWith<$Res> get allergenicIndicatorElement;
 }
 
 class __$DeviceDefinitionMaterialCopyWithImpl<$Res>
@@ -4357,6 +5979,8 @@ class __$DeviceDefinitionMaterialCopyWithImpl<$Res>
     Object substance = freezed,
     Object alternate = freezed,
     Object allergenicIndicator = freezed,
+    Object alternateElement = freezed,
+    Object allergenicIndicatorElement = freezed,
   }) {
     return _then(_DeviceDefinitionMaterial(
       id: id == freezed ? _value.id : id as String,
@@ -4373,6 +5997,12 @@ class __$DeviceDefinitionMaterialCopyWithImpl<$Res>
       allergenicIndicator: allergenicIndicator == freezed
           ? _value.allergenicIndicator
           : allergenicIndicator as Boolean,
+      alternateElement: alternateElement == freezed
+          ? _value.alternateElement
+          : alternateElement as Element,
+      allergenicIndicatorElement: allergenicIndicatorElement == freezed
+          ? _value.allergenicIndicatorElement
+          : allergenicIndicatorElement as Element,
     ));
   }
 }
@@ -4385,7 +6015,9 @@ class _$_DeviceDefinitionMaterial implements _DeviceDefinitionMaterial {
       this.modifierExtension,
       @required @JsonKey(required: true) this.substance,
       this.alternate,
-      this.allergenicIndicator})
+      this.allergenicIndicator,
+      @JsonKey(name: '_alternate') this.alternateElement,
+      @JsonKey(name: '_allergenicIndicator') this.allergenicIndicatorElement})
       : assert(substance != null);
 
   factory _$_DeviceDefinitionMaterial.fromJson(Map<String, dynamic> json) =>
@@ -4405,10 +6037,16 @@ class _$_DeviceDefinitionMaterial implements _DeviceDefinitionMaterial {
   final Boolean alternate;
   @override
   final Boolean allergenicIndicator;
+  @override
+  @JsonKey(name: '_alternate')
+  final Element alternateElement;
+  @override
+  @JsonKey(name: '_allergenicIndicator')
+  final Element allergenicIndicatorElement;
 
   @override
   String toString() {
-    return 'DeviceDefinitionMaterial(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, substance: $substance, alternate: $alternate, allergenicIndicator: $allergenicIndicator)';
+    return 'DeviceDefinitionMaterial(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, substance: $substance, alternate: $alternate, allergenicIndicator: $allergenicIndicator, alternateElement: $alternateElement, allergenicIndicatorElement: $allergenicIndicatorElement)';
   }
 
   @override
@@ -4431,7 +6069,15 @@ class _$_DeviceDefinitionMaterial implements _DeviceDefinitionMaterial {
                     .equals(other.alternate, alternate)) &&
             (identical(other.allergenicIndicator, allergenicIndicator) ||
                 const DeepCollectionEquality()
-                    .equals(other.allergenicIndicator, allergenicIndicator)));
+                    .equals(other.allergenicIndicator, allergenicIndicator)) &&
+            (identical(other.alternateElement, alternateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.alternateElement, alternateElement)) &&
+            (identical(other.allergenicIndicatorElement,
+                    allergenicIndicatorElement) ||
+                const DeepCollectionEquality().equals(
+                    other.allergenicIndicatorElement,
+                    allergenicIndicatorElement)));
   }
 
   @override
@@ -4442,7 +6088,9 @@ class _$_DeviceDefinitionMaterial implements _DeviceDefinitionMaterial {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(substance) ^
       const DeepCollectionEquality().hash(alternate) ^
-      const DeepCollectionEquality().hash(allergenicIndicator);
+      const DeepCollectionEquality().hash(allergenicIndicator) ^
+      const DeepCollectionEquality().hash(alternateElement) ^
+      const DeepCollectionEquality().hash(allergenicIndicatorElement);
 
   @override
   _$DeviceDefinitionMaterialCopyWith<_DeviceDefinitionMaterial> get copyWith =>
@@ -4458,11 +6106,18 @@ class _$_DeviceDefinitionMaterial implements _DeviceDefinitionMaterial {
 abstract class _DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
   const factory _DeviceDefinitionMaterial(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required @JsonKey(required: true) CodeableConcept substance,
+      @required
+      @JsonKey(required: true)
+          CodeableConcept substance,
       Boolean alternate,
-      Boolean allergenicIndicator}) = _$_DeviceDefinitionMaterial;
+      Boolean allergenicIndicator,
+      @JsonKey(name: '_alternate')
+          Element alternateElement,
+      @JsonKey(name: '_allergenicIndicator')
+          Element allergenicIndicatorElement}) = _$_DeviceDefinitionMaterial;
 
   factory _DeviceDefinitionMaterial.fromJson(Map<String, dynamic> json) =
       _$_DeviceDefinitionMaterial.fromJson;
@@ -4481,6 +6136,12 @@ abstract class _DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
   Boolean get alternate;
   @override
   Boolean get allergenicIndicator;
+  @override
+  @JsonKey(name: '_alternate')
+  Element get alternateElement;
+  @override
+  @JsonKey(name: '_allergenicIndicator')
+  Element get allergenicIndicatorElement;
   @override
   _$DeviceDefinitionMaterialCopyWith<_DeviceDefinitionMaterial> get copyWith;
 }
@@ -4536,7 +6197,41 @@ class _$EventDefinitionTearOff {
       List<RelatedArtifact> relatedArtifact,
       @required
       @JsonKey(required: true)
-          List<TriggerDefinition> trigger}) {
+          List<TriggerDefinition> trigger,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement}) {
     return _EventDefinition(
       resourceType: resourceType,
       id: id,
@@ -4576,6 +6271,23 @@ class _$EventDefinitionTearOff {
       endorser: endorser,
       relatedArtifact: relatedArtifact,
       trigger: trigger,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      titleElement: titleElement,
+      subtitleElement: subtitleElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      purposeElement: purposeElement,
+      usageElement: usageElement,
+      copyrightElement: copyrightElement,
+      approvalDateElement: approvalDateElement,
+      lastReviewDateElement: lastReviewDateElement,
     );
   }
 }
@@ -4626,6 +6338,40 @@ mixin _$EventDefinition {
   List<RelatedArtifact> get relatedArtifact;
   @JsonKey(required: true)
   List<TriggerDefinition> get trigger;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_subtitle')
+  Element get subtitleElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
 
   Map<String, dynamic> toJson();
   $EventDefinitionCopyWith<EventDefinition> get copyWith;
@@ -4677,13 +6423,64 @@ abstract class $EventDefinitionCopyWith<$Res> {
       List<ContactDetail> endorser,
       List<RelatedArtifact> relatedArtifact,
       @JsonKey(required: true)
-          List<TriggerDefinition> trigger});
+          List<TriggerDefinition> trigger,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   $ReferenceCopyWith<$Res> get subjectReference;
   $PeriodCopyWith<$Res> get effectivePeriod;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get subtitleElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get purposeElement;
+  $ElementCopyWith<$Res> get usageElement;
+  $ElementCopyWith<$Res> get copyrightElement;
+  $ElementCopyWith<$Res> get approvalDateElement;
+  $ElementCopyWith<$Res> get lastReviewDateElement;
 }
 
 class _$EventDefinitionCopyWithImpl<$Res>
@@ -4734,6 +6531,23 @@ class _$EventDefinitionCopyWithImpl<$Res>
     Object endorser = freezed,
     Object relatedArtifact = freezed,
     Object trigger = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object subtitleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object copyrightElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -4811,6 +6625,54 @@ class _$EventDefinitionCopyWithImpl<$Res>
       trigger: trigger == freezed
           ? _value.trigger
           : trigger as List<TriggerDefinition>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
     ));
   }
 
@@ -4864,6 +6726,176 @@ class _$EventDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(effectivePeriod: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subtitleElement {
+    if (_value.subtitleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subtitleElement, (value) {
+      return _then(_value.copyWith(subtitleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get usageElement {
+    if (_value.usageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.usageElement, (value) {
+      return _then(_value.copyWith(usageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.approvalDateElement, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
+    });
+  }
 }
 
 abstract class _$EventDefinitionCopyWith<$Res>
@@ -4914,7 +6946,41 @@ abstract class _$EventDefinitionCopyWith<$Res>
       List<ContactDetail> endorser,
       List<RelatedArtifact> relatedArtifact,
       @JsonKey(required: true)
-          List<TriggerDefinition> trigger});
+          List<TriggerDefinition> trigger,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -4926,6 +6992,40 @@ abstract class _$EventDefinitionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get subjectReference;
   @override
   $PeriodCopyWith<$Res> get effectivePeriod;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get subtitleElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get purposeElement;
+  @override
+  $ElementCopyWith<$Res> get usageElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement;
 }
 
 class __$EventDefinitionCopyWithImpl<$Res>
@@ -4978,6 +7078,23 @@ class __$EventDefinitionCopyWithImpl<$Res>
     Object endorser = freezed,
     Object relatedArtifact = freezed,
     Object trigger = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object subtitleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object copyrightElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
   }) {
     return _then(_EventDefinition(
       resourceType: resourceType == freezed
@@ -5055,6 +7172,54 @@ class __$EventDefinitionCopyWithImpl<$Res>
       trigger: trigger == freezed
           ? _value.trigger
           : trigger as List<TriggerDefinition>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
     ));
   }
 }
@@ -5105,7 +7270,41 @@ class _$_EventDefinition implements _EventDefinition {
       this.relatedArtifact,
       @required
       @JsonKey(required: true)
-          this.trigger})
+          this.trigger,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_subtitle')
+          this.subtitleElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      @JsonKey(name: '_usage')
+          this.usageElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement})
       : assert(resourceType != null),
         assert(trigger != null);
 
@@ -5192,10 +7391,61 @@ class _$_EventDefinition implements _EventDefinition {
   @override
   @JsonKey(required: true)
   final List<TriggerDefinition> trigger;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_subtitle')
+  final Element subtitleElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  final Element usageElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
 
   @override
   String toString() {
-    return 'EventDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, subtitle: $subtitle, status: $status, experimental: $experimental, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, usage: $usage, copyright: $copyright, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, trigger: $trigger)';
+    return 'EventDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, subtitle: $subtitle, status: $status, experimental: $experimental, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, usage: $usage, copyright: $copyright, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, trigger: $trigger, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, subtitleElement: $subtitleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, copyrightElement: $copyrightElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement)';
   }
 
   @override
@@ -5281,7 +7531,24 @@ class _$_EventDefinition implements _EventDefinition {
             (identical(other.reviewer, reviewer) || const DeepCollectionEquality().equals(other.reviewer, reviewer)) &&
             (identical(other.endorser, endorser) || const DeepCollectionEquality().equals(other.endorser, endorser)) &&
             (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
-            (identical(other.trigger, trigger) || const DeepCollectionEquality().equals(other.trigger, trigger)));
+            (identical(other.trigger, trigger) || const DeepCollectionEquality().equals(other.trigger, trigger)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.subtitleElement, subtitleElement) || const DeepCollectionEquality().equals(other.subtitleElement, subtitleElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)));
   }
 
   @override
@@ -5324,7 +7591,24 @@ class _$_EventDefinition implements _EventDefinition {
       const DeepCollectionEquality().hash(reviewer) ^
       const DeepCollectionEquality().hash(endorser) ^
       const DeepCollectionEquality().hash(relatedArtifact) ^
-      const DeepCollectionEquality().hash(trigger);
+      const DeepCollectionEquality().hash(trigger) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(subtitleElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
+      const DeepCollectionEquality().hash(usageElement) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement);
 
   @override
   _$EventDefinitionCopyWith<_EventDefinition> get copyWith =>
@@ -5381,7 +7665,41 @@ abstract class _EventDefinition implements EventDefinition {
       List<RelatedArtifact> relatedArtifact,
       @required
       @JsonKey(required: true)
-          List<TriggerDefinition> trigger}) = _$_EventDefinition;
+          List<TriggerDefinition> trigger,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement}) = _$_EventDefinition;
 
   factory _EventDefinition.fromJson(Map<String, dynamic> json) =
       _$_EventDefinition.fromJson;
@@ -5467,6 +7785,57 @@ abstract class _EventDefinition implements EventDefinition {
   @JsonKey(required: true)
   List<TriggerDefinition> get trigger;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_subtitle')
+  Element get subtitleElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
+  @override
   _$EventDefinitionCopyWith<_EventDefinition> get copyWith;
 }
 
@@ -5505,7 +7874,17 @@ class _$ObservationDefinitionTearOff {
       Reference validCodedValueSet,
       Reference normalCodedValueSet,
       Reference abnormalCodedValueSet,
-      Reference criticalCodedValueSet}) {
+      Reference criticalCodedValueSet,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_permittedDataType')
+          Element permittedDataTypeElement,
+      @JsonKey(name: '_multipleResultsAllowed')
+          Element multipleResultsAllowedElement,
+      @JsonKey(name: '_preferredReportName')
+          Element preferredReportNameElement}) {
     return _ObservationDefinition(
       resourceType: resourceType,
       id: id,
@@ -5529,6 +7908,11 @@ class _$ObservationDefinitionTearOff {
       normalCodedValueSet: normalCodedValueSet,
       abnormalCodedValueSet: abnormalCodedValueSet,
       criticalCodedValueSet: criticalCodedValueSet,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      permittedDataTypeElement: permittedDataTypeElement,
+      multipleResultsAllowedElement: multipleResultsAllowedElement,
+      preferredReportNameElement: preferredReportNameElement,
     );
   }
 }
@@ -5562,6 +7946,16 @@ mixin _$ObservationDefinition {
   Reference get normalCodedValueSet;
   Reference get abnormalCodedValueSet;
   Reference get criticalCodedValueSet;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_permittedDataType')
+  Element get permittedDataTypeElement;
+  @JsonKey(name: '_multipleResultsAllowed')
+  Element get multipleResultsAllowedElement;
+  @JsonKey(name: '_preferredReportName')
+  Element get preferredReportNameElement;
 
   Map<String, dynamic> toJson();
   $ObservationDefinitionCopyWith<ObservationDefinition> get copyWith;
@@ -5596,7 +7990,17 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       Reference validCodedValueSet,
       Reference normalCodedValueSet,
       Reference abnormalCodedValueSet,
-      Reference criticalCodedValueSet});
+      Reference criticalCodedValueSet,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_permittedDataType')
+          Element permittedDataTypeElement,
+      @JsonKey(name: '_multipleResultsAllowed')
+          Element multipleResultsAllowedElement,
+      @JsonKey(name: '_preferredReportName')
+          Element preferredReportNameElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -5608,6 +8012,11 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get normalCodedValueSet;
   $ReferenceCopyWith<$Res> get abnormalCodedValueSet;
   $ReferenceCopyWith<$Res> get criticalCodedValueSet;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get permittedDataTypeElement;
+  $ElementCopyWith<$Res> get multipleResultsAllowedElement;
+  $ElementCopyWith<$Res> get preferredReportNameElement;
 }
 
 class _$ObservationDefinitionCopyWithImpl<$Res>
@@ -5642,6 +8051,11 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
     Object normalCodedValueSet = freezed,
     Object abnormalCodedValueSet = freezed,
     Object criticalCodedValueSet = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object permittedDataTypeElement = freezed,
+    Object multipleResultsAllowedElement = freezed,
+    Object preferredReportNameElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -5697,6 +8111,21 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
       criticalCodedValueSet: criticalCodedValueSet == freezed
           ? _value.criticalCodedValueSet
           : criticalCodedValueSet as Reference,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      permittedDataTypeElement: permittedDataTypeElement == freezed
+          ? _value.permittedDataTypeElement
+          : permittedDataTypeElement as Element,
+      multipleResultsAllowedElement: multipleResultsAllowedElement == freezed
+          ? _value.multipleResultsAllowedElement
+          : multipleResultsAllowedElement as Element,
+      preferredReportNameElement: preferredReportNameElement == freezed
+          ? _value.preferredReportNameElement
+          : preferredReportNameElement as Element,
     ));
   }
 
@@ -5791,6 +8220,57 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(criticalCodedValueSet: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get permittedDataTypeElement {
+    if (_value.permittedDataTypeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.permittedDataTypeElement, (value) {
+      return _then(_value.copyWith(permittedDataTypeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get multipleResultsAllowedElement {
+    if (_value.multipleResultsAllowedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.multipleResultsAllowedElement,
+        (value) {
+      return _then(_value.copyWith(multipleResultsAllowedElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get preferredReportNameElement {
+    if (_value.preferredReportNameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.preferredReportNameElement, (value) {
+      return _then(_value.copyWith(preferredReportNameElement: value));
+    });
+  }
 }
 
 abstract class _$ObservationDefinitionCopyWith<$Res>
@@ -5824,7 +8304,17 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
       Reference validCodedValueSet,
       Reference normalCodedValueSet,
       Reference abnormalCodedValueSet,
-      Reference criticalCodedValueSet});
+      Reference criticalCodedValueSet,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_permittedDataType')
+          Element permittedDataTypeElement,
+      @JsonKey(name: '_multipleResultsAllowed')
+          Element multipleResultsAllowedElement,
+      @JsonKey(name: '_preferredReportName')
+          Element preferredReportNameElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -5845,6 +8335,16 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get abnormalCodedValueSet;
   @override
   $ReferenceCopyWith<$Res> get criticalCodedValueSet;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get permittedDataTypeElement;
+  @override
+  $ElementCopyWith<$Res> get multipleResultsAllowedElement;
+  @override
+  $ElementCopyWith<$Res> get preferredReportNameElement;
 }
 
 class __$ObservationDefinitionCopyWithImpl<$Res>
@@ -5881,6 +8381,11 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
     Object normalCodedValueSet = freezed,
     Object abnormalCodedValueSet = freezed,
     Object criticalCodedValueSet = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object permittedDataTypeElement = freezed,
+    Object multipleResultsAllowedElement = freezed,
+    Object preferredReportNameElement = freezed,
   }) {
     return _then(_ObservationDefinition(
       resourceType: resourceType == freezed
@@ -5936,6 +8441,21 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
       criticalCodedValueSet: criticalCodedValueSet == freezed
           ? _value.criticalCodedValueSet
           : criticalCodedValueSet as Reference,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      permittedDataTypeElement: permittedDataTypeElement == freezed
+          ? _value.permittedDataTypeElement
+          : permittedDataTypeElement as Element,
+      multipleResultsAllowedElement: multipleResultsAllowedElement == freezed
+          ? _value.multipleResultsAllowedElement
+          : multipleResultsAllowedElement as Element,
+      preferredReportNameElement: preferredReportNameElement == freezed
+          ? _value.preferredReportNameElement
+          : preferredReportNameElement as Element,
     ));
   }
 }
@@ -5969,7 +8489,17 @@ class _$_ObservationDefinition implements _ObservationDefinition {
       this.validCodedValueSet,
       this.normalCodedValueSet,
       this.abnormalCodedValueSet,
-      this.criticalCodedValueSet})
+      this.criticalCodedValueSet,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_permittedDataType')
+          this.permittedDataTypeElement,
+      @JsonKey(name: '_multipleResultsAllowed')
+          this.multipleResultsAllowedElement,
+      @JsonKey(name: '_preferredReportName')
+          this.preferredReportNameElement})
       : assert(resourceType != null),
         assert(code != null);
 
@@ -6023,10 +8553,25 @@ class _$_ObservationDefinition implements _ObservationDefinition {
   final Reference abnormalCodedValueSet;
   @override
   final Reference criticalCodedValueSet;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_permittedDataType')
+  final Element permittedDataTypeElement;
+  @override
+  @JsonKey(name: '_multipleResultsAllowed')
+  final Element multipleResultsAllowedElement;
+  @override
+  @JsonKey(name: '_preferredReportName')
+  final Element preferredReportNameElement;
 
   @override
   String toString() {
-    return 'ObservationDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, code: $code, identifier: $identifier, permittedDataType: $permittedDataType, multipleResultsAllowed: $multipleResultsAllowed, method: $method, preferredReportName: $preferredReportName, quantitativeDetails: $quantitativeDetails, qualifiedInterval: $qualifiedInterval, validCodedValueSet: $validCodedValueSet, normalCodedValueSet: $normalCodedValueSet, abnormalCodedValueSet: $abnormalCodedValueSet, criticalCodedValueSet: $criticalCodedValueSet)';
+    return 'ObservationDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, code: $code, identifier: $identifier, permittedDataType: $permittedDataType, multipleResultsAllowed: $multipleResultsAllowed, method: $method, preferredReportName: $preferredReportName, quantitativeDetails: $quantitativeDetails, qualifiedInterval: $qualifiedInterval, validCodedValueSet: $validCodedValueSet, normalCodedValueSet: $normalCodedValueSet, abnormalCodedValueSet: $abnormalCodedValueSet, criticalCodedValueSet: $criticalCodedValueSet, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, permittedDataTypeElement: $permittedDataTypeElement, multipleResultsAllowedElement: $multipleResultsAllowedElement, preferredReportNameElement: $preferredReportNameElement)';
   }
 
   @override
@@ -6093,7 +8638,14 @@ class _$_ObservationDefinition implements _ObservationDefinition {
                     other.abnormalCodedValueSet, abnormalCodedValueSet)) &&
             (identical(other.criticalCodedValueSet, criticalCodedValueSet) ||
                 const DeepCollectionEquality().equals(
-                    other.criticalCodedValueSet, criticalCodedValueSet)));
+                    other.criticalCodedValueSet, criticalCodedValueSet)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.permittedDataTypeElement, permittedDataTypeElement) || const DeepCollectionEquality().equals(other.permittedDataTypeElement, permittedDataTypeElement)) &&
+            (identical(other.multipleResultsAllowedElement, multipleResultsAllowedElement) || const DeepCollectionEquality().equals(other.multipleResultsAllowedElement, multipleResultsAllowedElement)) &&
+            (identical(other.preferredReportNameElement, preferredReportNameElement) || const DeepCollectionEquality().equals(other.preferredReportNameElement, preferredReportNameElement)));
   }
 
   @override
@@ -6120,7 +8672,12 @@ class _$_ObservationDefinition implements _ObservationDefinition {
       const DeepCollectionEquality().hash(validCodedValueSet) ^
       const DeepCollectionEquality().hash(normalCodedValueSet) ^
       const DeepCollectionEquality().hash(abnormalCodedValueSet) ^
-      const DeepCollectionEquality().hash(criticalCodedValueSet);
+      const DeepCollectionEquality().hash(criticalCodedValueSet) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(permittedDataTypeElement) ^
+      const DeepCollectionEquality().hash(multipleResultsAllowedElement) ^
+      const DeepCollectionEquality().hash(preferredReportNameElement);
 
   @override
   _$ObservationDefinitionCopyWith<_ObservationDefinition> get copyWith =>
@@ -6161,7 +8718,17 @@ abstract class _ObservationDefinition implements ObservationDefinition {
       Reference validCodedValueSet,
       Reference normalCodedValueSet,
       Reference abnormalCodedValueSet,
-      Reference criticalCodedValueSet}) = _$_ObservationDefinition;
+      Reference criticalCodedValueSet,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_permittedDataType')
+          Element permittedDataTypeElement,
+      @JsonKey(name: '_multipleResultsAllowed')
+          Element multipleResultsAllowedElement,
+      @JsonKey(name: '_preferredReportName')
+          Element preferredReportNameElement}) = _$_ObservationDefinition;
 
   factory _ObservationDefinition.fromJson(Map<String, dynamic> json) =
       _$_ObservationDefinition.fromJson;
@@ -6214,6 +8781,21 @@ abstract class _ObservationDefinition implements ObservationDefinition {
   @override
   Reference get criticalCodedValueSet;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_permittedDataType')
+  Element get permittedDataTypeElement;
+  @override
+  @JsonKey(name: '_multipleResultsAllowed')
+  Element get multipleResultsAllowedElement;
+  @override
+  @JsonKey(name: '_preferredReportName')
+  Element get preferredReportNameElement;
+  @override
   _$ObservationDefinitionCopyWith<_ObservationDefinition> get copyWith;
 }
 
@@ -6233,7 +8815,9 @@ class _$ObservationDefinitionQuantitativeDetailsTearOff {
       CodeableConcept customaryUnit,
       CodeableConcept unit,
       Decimal conversionFactor,
-      Integer decimalPrecision}) {
+      Integer decimalPrecision,
+      @JsonKey(name: '_conversionFactor') Element conversionFactorElement,
+      @JsonKey(name: '_decimalPrecision') Element decimalPrecisionElement}) {
     return _ObservationDefinitionQuantitativeDetails(
       id: id,
       extension_: extension_,
@@ -6242,6 +8826,8 @@ class _$ObservationDefinitionQuantitativeDetailsTearOff {
       unit: unit,
       conversionFactor: conversionFactor,
       decimalPrecision: decimalPrecision,
+      conversionFactorElement: conversionFactorElement,
+      decimalPrecisionElement: decimalPrecisionElement,
     );
   }
 }
@@ -6259,6 +8845,10 @@ mixin _$ObservationDefinitionQuantitativeDetails {
   CodeableConcept get unit;
   Decimal get conversionFactor;
   Integer get decimalPrecision;
+  @JsonKey(name: '_conversionFactor')
+  Element get conversionFactorElement;
+  @JsonKey(name: '_decimalPrecision')
+  Element get decimalPrecisionElement;
 
   Map<String, dynamic> toJson();
   $ObservationDefinitionQuantitativeDetailsCopyWith<
@@ -6277,10 +8867,14 @@ abstract class $ObservationDefinitionQuantitativeDetailsCopyWith<$Res> {
       CodeableConcept customaryUnit,
       CodeableConcept unit,
       Decimal conversionFactor,
-      Integer decimalPrecision});
+      Integer decimalPrecision,
+      @JsonKey(name: '_conversionFactor') Element conversionFactorElement,
+      @JsonKey(name: '_decimalPrecision') Element decimalPrecisionElement});
 
   $CodeableConceptCopyWith<$Res> get customaryUnit;
   $CodeableConceptCopyWith<$Res> get unit;
+  $ElementCopyWith<$Res> get conversionFactorElement;
+  $ElementCopyWith<$Res> get decimalPrecisionElement;
 }
 
 class _$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
@@ -6301,6 +8895,8 @@ class _$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
     Object unit = freezed,
     Object conversionFactor = freezed,
     Object decimalPrecision = freezed,
+    Object conversionFactorElement = freezed,
+    Object decimalPrecisionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -6320,6 +8916,12 @@ class _$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
       decimalPrecision: decimalPrecision == freezed
           ? _value.decimalPrecision
           : decimalPrecision as Integer,
+      conversionFactorElement: conversionFactorElement == freezed
+          ? _value.conversionFactorElement
+          : conversionFactorElement as Element,
+      decimalPrecisionElement: decimalPrecisionElement == freezed
+          ? _value.decimalPrecisionElement
+          : decimalPrecisionElement as Element,
     ));
   }
 
@@ -6342,6 +8944,26 @@ class _$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
       return _then(_value.copyWith(unit: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get conversionFactorElement {
+    if (_value.conversionFactorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.conversionFactorElement, (value) {
+      return _then(_value.copyWith(conversionFactorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get decimalPrecisionElement {
+    if (_value.decimalPrecisionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.decimalPrecisionElement, (value) {
+      return _then(_value.copyWith(decimalPrecisionElement: value));
+    });
+  }
 }
 
 abstract class _$ObservationDefinitionQuantitativeDetailsCopyWith<$Res>
@@ -6358,12 +8980,18 @@ abstract class _$ObservationDefinitionQuantitativeDetailsCopyWith<$Res>
       CodeableConcept customaryUnit,
       CodeableConcept unit,
       Decimal conversionFactor,
-      Integer decimalPrecision});
+      Integer decimalPrecision,
+      @JsonKey(name: '_conversionFactor') Element conversionFactorElement,
+      @JsonKey(name: '_decimalPrecision') Element decimalPrecisionElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get customaryUnit;
   @override
   $CodeableConceptCopyWith<$Res> get unit;
+  @override
+  $ElementCopyWith<$Res> get conversionFactorElement;
+  @override
+  $ElementCopyWith<$Res> get decimalPrecisionElement;
 }
 
 class __$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
@@ -6388,6 +9016,8 @@ class __$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
     Object unit = freezed,
     Object conversionFactor = freezed,
     Object decimalPrecision = freezed,
+    Object conversionFactorElement = freezed,
+    Object decimalPrecisionElement = freezed,
   }) {
     return _then(_ObservationDefinitionQuantitativeDetails(
       id: id == freezed ? _value.id : id as String,
@@ -6407,6 +9037,12 @@ class __$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
       decimalPrecision: decimalPrecision == freezed
           ? _value.decimalPrecision
           : decimalPrecision as Integer,
+      conversionFactorElement: conversionFactorElement == freezed
+          ? _value.conversionFactorElement
+          : conversionFactorElement as Element,
+      decimalPrecisionElement: decimalPrecisionElement == freezed
+          ? _value.decimalPrecisionElement
+          : decimalPrecisionElement as Element,
     ));
   }
 }
@@ -6421,7 +9057,9 @@ class _$_ObservationDefinitionQuantitativeDetails
       this.customaryUnit,
       this.unit,
       this.conversionFactor,
-      this.decimalPrecision});
+      this.decimalPrecision,
+      @JsonKey(name: '_conversionFactor') this.conversionFactorElement,
+      @JsonKey(name: '_decimalPrecision') this.decimalPrecisionElement});
 
   factory _$_ObservationDefinitionQuantitativeDetails.fromJson(
           Map<String, dynamic> json) =>
@@ -6442,10 +9080,16 @@ class _$_ObservationDefinitionQuantitativeDetails
   final Decimal conversionFactor;
   @override
   final Integer decimalPrecision;
+  @override
+  @JsonKey(name: '_conversionFactor')
+  final Element conversionFactorElement;
+  @override
+  @JsonKey(name: '_decimalPrecision')
+  final Element decimalPrecisionElement;
 
   @override
   String toString() {
-    return 'ObservationDefinitionQuantitativeDetails(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, customaryUnit: $customaryUnit, unit: $unit, conversionFactor: $conversionFactor, decimalPrecision: $decimalPrecision)';
+    return 'ObservationDefinitionQuantitativeDetails(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, customaryUnit: $customaryUnit, unit: $unit, conversionFactor: $conversionFactor, decimalPrecision: $decimalPrecision, conversionFactorElement: $conversionFactorElement, decimalPrecisionElement: $decimalPrecisionElement)';
   }
 
   @override
@@ -6470,7 +9114,15 @@ class _$_ObservationDefinitionQuantitativeDetails
                     .equals(other.conversionFactor, conversionFactor)) &&
             (identical(other.decimalPrecision, decimalPrecision) ||
                 const DeepCollectionEquality()
-                    .equals(other.decimalPrecision, decimalPrecision)));
+                    .equals(other.decimalPrecision, decimalPrecision)) &&
+            (identical(
+                    other.conversionFactorElement, conversionFactorElement) ||
+                const DeepCollectionEquality().equals(
+                    other.conversionFactorElement, conversionFactorElement)) &&
+            (identical(
+                    other.decimalPrecisionElement, decimalPrecisionElement) ||
+                const DeepCollectionEquality().equals(
+                    other.decimalPrecisionElement, decimalPrecisionElement)));
   }
 
   @override
@@ -6482,7 +9134,9 @@ class _$_ObservationDefinitionQuantitativeDetails
       const DeepCollectionEquality().hash(customaryUnit) ^
       const DeepCollectionEquality().hash(unit) ^
       const DeepCollectionEquality().hash(conversionFactor) ^
-      const DeepCollectionEquality().hash(decimalPrecision);
+      const DeepCollectionEquality().hash(decimalPrecision) ^
+      const DeepCollectionEquality().hash(conversionFactorElement) ^
+      const DeepCollectionEquality().hash(decimalPrecisionElement);
 
   @override
   _$ObservationDefinitionQuantitativeDetailsCopyWith<
@@ -6499,13 +9153,19 @@ class _$_ObservationDefinitionQuantitativeDetails
 abstract class _ObservationDefinitionQuantitativeDetails
     implements ObservationDefinitionQuantitativeDetails {
   const factory _ObservationDefinitionQuantitativeDetails(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept customaryUnit,
-      CodeableConcept unit,
-      Decimal conversionFactor,
-      Integer decimalPrecision}) = _$_ObservationDefinitionQuantitativeDetails;
+          {String id,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          CodeableConcept customaryUnit,
+          CodeableConcept unit,
+          Decimal conversionFactor,
+          Integer decimalPrecision,
+          @JsonKey(name: '_conversionFactor')
+              Element conversionFactorElement,
+          @JsonKey(name: '_decimalPrecision')
+              Element decimalPrecisionElement}) =
+      _$_ObservationDefinitionQuantitativeDetails;
 
   factory _ObservationDefinitionQuantitativeDetails.fromJson(
           Map<String, dynamic> json) =
@@ -6526,6 +9186,12 @@ abstract class _ObservationDefinitionQuantitativeDetails
   Decimal get conversionFactor;
   @override
   Integer get decimalPrecision;
+  @override
+  @JsonKey(name: '_conversionFactor')
+  Element get conversionFactorElement;
+  @override
+  @JsonKey(name: '_decimalPrecision')
+  Element get decimalPrecisionElement;
   @override
   _$ObservationDefinitionQuantitativeDetailsCopyWith<
       _ObservationDefinitionQuantitativeDetails> get copyWith;
@@ -6554,7 +9220,13 @@ class _$ObservationDefinitionQualifiedIntervalTearOff {
           Gender gender,
       Range age,
       Range gestationalAge,
-      String condition}) {
+      String condition,
+      @JsonKey(name: '_category')
+          Element categoryElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement}) {
     return _ObservationDefinitionQualifiedInterval(
       id: id,
       extension_: extension_,
@@ -6567,6 +9239,9 @@ class _$ObservationDefinitionQualifiedIntervalTearOff {
       age: age,
       gestationalAge: gestationalAge,
       condition: condition,
+      categoryElement: categoryElement,
+      genderElement: genderElement,
+      conditionElement: conditionElement,
     );
   }
 }
@@ -6590,6 +9265,12 @@ mixin _$ObservationDefinitionQualifiedInterval {
   Range get age;
   Range get gestationalAge;
   String get condition;
+  @JsonKey(name: '_category')
+  Element get categoryElement;
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @JsonKey(name: '_condition')
+  Element get conditionElement;
 
   Map<String, dynamic> toJson();
   $ObservationDefinitionQualifiedIntervalCopyWith<
@@ -6615,12 +9296,21 @@ abstract class $ObservationDefinitionQualifiedIntervalCopyWith<$Res> {
           Gender gender,
       Range age,
       Range gestationalAge,
-      String condition});
+      String condition,
+      @JsonKey(name: '_category')
+          Element categoryElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement});
 
   $RangeCopyWith<$Res> get range;
   $CodeableConceptCopyWith<$Res> get context;
   $RangeCopyWith<$Res> get age;
   $RangeCopyWith<$Res> get gestationalAge;
+  $ElementCopyWith<$Res> get categoryElement;
+  $ElementCopyWith<$Res> get genderElement;
+  $ElementCopyWith<$Res> get conditionElement;
 }
 
 class _$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
@@ -6644,6 +9334,9 @@ class _$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
     Object age = freezed,
     Object gestationalAge = freezed,
     Object condition = freezed,
+    Object categoryElement = freezed,
+    Object genderElement = freezed,
+    Object conditionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -6667,6 +9360,15 @@ class _$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
           ? _value.gestationalAge
           : gestationalAge as Range,
       condition: condition == freezed ? _value.condition : condition as String,
+      categoryElement: categoryElement == freezed
+          ? _value.categoryElement
+          : categoryElement as Element,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      conditionElement: conditionElement == freezed
+          ? _value.conditionElement
+          : conditionElement as Element,
     ));
   }
 
@@ -6709,6 +9411,36 @@ class _$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
       return _then(_value.copyWith(gestationalAge: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get categoryElement {
+    if (_value.categoryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.categoryElement, (value) {
+      return _then(_value.copyWith(categoryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get genderElement {
+    if (_value.genderElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.genderElement, (value) {
+      return _then(_value.copyWith(genderElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get conditionElement {
+    if (_value.conditionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.conditionElement, (value) {
+      return _then(_value.copyWith(conditionElement: value));
+    });
+  }
 }
 
 abstract class _$ObservationDefinitionQualifiedIntervalCopyWith<$Res>
@@ -6732,7 +9464,13 @@ abstract class _$ObservationDefinitionQualifiedIntervalCopyWith<$Res>
           Gender gender,
       Range age,
       Range gestationalAge,
-      String condition});
+      String condition,
+      @JsonKey(name: '_category')
+          Element categoryElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_condition')
+          Element conditionElement});
 
   @override
   $RangeCopyWith<$Res> get range;
@@ -6742,6 +9480,12 @@ abstract class _$ObservationDefinitionQualifiedIntervalCopyWith<$Res>
   $RangeCopyWith<$Res> get age;
   @override
   $RangeCopyWith<$Res> get gestationalAge;
+  @override
+  $ElementCopyWith<$Res> get categoryElement;
+  @override
+  $ElementCopyWith<$Res> get genderElement;
+  @override
+  $ElementCopyWith<$Res> get conditionElement;
 }
 
 class __$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
@@ -6770,6 +9514,9 @@ class __$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
     Object age = freezed,
     Object gestationalAge = freezed,
     Object condition = freezed,
+    Object categoryElement = freezed,
+    Object genderElement = freezed,
+    Object conditionElement = freezed,
   }) {
     return _then(_ObservationDefinitionQualifiedInterval(
       id: id == freezed ? _value.id : id as String,
@@ -6793,6 +9540,15 @@ class __$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
           ? _value.gestationalAge
           : gestationalAge as Range,
       condition: condition == freezed ? _value.condition : condition as String,
+      categoryElement: categoryElement == freezed
+          ? _value.categoryElement
+          : categoryElement as Element,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      conditionElement: conditionElement == freezed
+          ? _value.conditionElement
+          : conditionElement as Element,
     ));
   }
 }
@@ -6814,7 +9570,13 @@ class _$_ObservationDefinitionQualifiedInterval
           this.gender,
       this.age,
       this.gestationalAge,
-      this.condition});
+      this.condition,
+      @JsonKey(name: '_category')
+          this.categoryElement,
+      @JsonKey(name: '_gender')
+          this.genderElement,
+      @JsonKey(name: '_condition')
+          this.conditionElement});
 
   factory _$_ObservationDefinitionQualifiedInterval.fromJson(
           Map<String, dynamic> json) =>
@@ -6845,10 +9607,19 @@ class _$_ObservationDefinitionQualifiedInterval
   final Range gestationalAge;
   @override
   final String condition;
+  @override
+  @JsonKey(name: '_category')
+  final Element categoryElement;
+  @override
+  @JsonKey(name: '_gender')
+  final Element genderElement;
+  @override
+  @JsonKey(name: '_condition')
+  final Element conditionElement;
 
   @override
   String toString() {
-    return 'ObservationDefinitionQualifiedInterval(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, range: $range, context: $context, appliesTo: $appliesTo, gender: $gender, age: $age, gestationalAge: $gestationalAge, condition: $condition)';
+    return 'ObservationDefinitionQualifiedInterval(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, range: $range, context: $context, appliesTo: $appliesTo, gender: $gender, age: $age, gestationalAge: $gestationalAge, condition: $condition, categoryElement: $categoryElement, genderElement: $genderElement, conditionElement: $conditionElement)';
   }
 
   @override
@@ -6883,7 +9654,16 @@ class _$_ObservationDefinitionQualifiedInterval
                     .equals(other.gestationalAge, gestationalAge)) &&
             (identical(other.condition, condition) ||
                 const DeepCollectionEquality()
-                    .equals(other.condition, condition)));
+                    .equals(other.condition, condition)) &&
+            (identical(other.categoryElement, categoryElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.categoryElement, categoryElement)) &&
+            (identical(other.genderElement, genderElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.genderElement, genderElement)) &&
+            (identical(other.conditionElement, conditionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.conditionElement, conditionElement)));
   }
 
   @override
@@ -6899,7 +9679,10 @@ class _$_ObservationDefinitionQualifiedInterval
       const DeepCollectionEquality().hash(gender) ^
       const DeepCollectionEquality().hash(age) ^
       const DeepCollectionEquality().hash(gestationalAge) ^
-      const DeepCollectionEquality().hash(condition);
+      const DeepCollectionEquality().hash(condition) ^
+      const DeepCollectionEquality().hash(categoryElement) ^
+      const DeepCollectionEquality().hash(genderElement) ^
+      const DeepCollectionEquality().hash(conditionElement);
 
   @override
   _$ObservationDefinitionQualifiedIntervalCopyWith<
@@ -6916,20 +9699,27 @@ class _$_ObservationDefinitionQualifiedInterval
 abstract class _ObservationDefinitionQualifiedInterval
     implements ObservationDefinitionQualifiedInterval {
   const factory _ObservationDefinitionQualifiedInterval(
-      {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: QualifiedIntervalCategory.unknown)
-          QualifiedIntervalCategory category,
-      Range range,
-      CodeableConcept context,
-      List<CodeableConcept> appliesTo,
-      @JsonKey(unknownEnumValue: Gender.unknown)
-          Gender gender,
-      Range age,
-      Range gestationalAge,
-      String condition}) = _$_ObservationDefinitionQualifiedInterval;
+          {String id,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          @JsonKey(unknownEnumValue: QualifiedIntervalCategory.unknown)
+              QualifiedIntervalCategory category,
+          Range range,
+          CodeableConcept context,
+          List<CodeableConcept> appliesTo,
+          @JsonKey(unknownEnumValue: Gender.unknown)
+              Gender gender,
+          Range age,
+          Range gestationalAge,
+          String condition,
+          @JsonKey(name: '_category')
+              Element categoryElement,
+          @JsonKey(name: '_gender')
+              Element genderElement,
+          @JsonKey(name: '_condition')
+              Element conditionElement}) =
+      _$_ObservationDefinitionQualifiedInterval;
 
   factory _ObservationDefinitionQualifiedInterval.fromJson(
           Map<String, dynamic> json) =
@@ -6960,6 +9750,15 @@ abstract class _ObservationDefinitionQualifiedInterval
   Range get gestationalAge;
   @override
   String get condition;
+  @override
+  @JsonKey(name: '_category')
+  Element get categoryElement;
+  @override
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @override
+  @JsonKey(name: '_condition')
+  Element get conditionElement;
   @override
   _$ObservationDefinitionQualifiedIntervalCopyWith<
       _ObservationDefinitionQualifiedInterval> get copyWith;
@@ -7017,7 +9816,41 @@ class _$PlanDefinitionTearOff {
       List<RelatedArtifact> relatedArtifact,
       List<Canonical> library,
       List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action}) {
+      List<PlanDefinitionAction> action,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement}) {
     return _PlanDefinition(
       resourceType: resourceType,
       id: id,
@@ -7060,6 +9893,23 @@ class _$PlanDefinitionTearOff {
       library: library,
       goal: goal,
       action: action,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      titleElement: titleElement,
+      subtitleElement: subtitleElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      purposeElement: purposeElement,
+      usageElement: usageElement,
+      copyrightElement: copyrightElement,
+      approvalDateElement: approvalDateElement,
+      lastReviewDateElement: lastReviewDateElement,
     );
   }
 }
@@ -7112,6 +9962,40 @@ mixin _$PlanDefinition {
   List<Canonical> get library;
   List<PlanDefinitionGoal> get goal;
   List<PlanDefinitionAction> get action;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_subtitle')
+  Element get subtitleElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionCopyWith<PlanDefinition> get copyWith;
@@ -7165,7 +10049,41 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       List<RelatedArtifact> relatedArtifact,
       List<Canonical> library,
       List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action});
+      List<PlanDefinitionAction> action,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -7173,6 +10091,23 @@ abstract class $PlanDefinitionCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   $ReferenceCopyWith<$Res> get subjectReference;
   $PeriodCopyWith<$Res> get effectivePeriod;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get subtitleElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get purposeElement;
+  $ElementCopyWith<$Res> get usageElement;
+  $ElementCopyWith<$Res> get copyrightElement;
+  $ElementCopyWith<$Res> get approvalDateElement;
+  $ElementCopyWith<$Res> get lastReviewDateElement;
 }
 
 class _$PlanDefinitionCopyWithImpl<$Res>
@@ -7226,6 +10161,23 @@ class _$PlanDefinitionCopyWithImpl<$Res>
     Object library = freezed,
     Object goal = freezed,
     Object action = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object subtitleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object copyrightElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -7306,6 +10258,54 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       action: action == freezed
           ? _value.action
           : action as List<PlanDefinitionAction>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
     ));
   }
 
@@ -7369,6 +10369,176 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(effectivePeriod: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subtitleElement {
+    if (_value.subtitleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subtitleElement, (value) {
+      return _then(_value.copyWith(subtitleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get usageElement {
+    if (_value.usageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.usageElement, (value) {
+      return _then(_value.copyWith(usageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.approvalDateElement, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
+    });
+  }
 }
 
 abstract class _$PlanDefinitionCopyWith<$Res>
@@ -7421,7 +10591,41 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       List<RelatedArtifact> relatedArtifact,
       List<Canonical> library,
       List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action});
+      List<PlanDefinitionAction> action,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -7435,6 +10639,40 @@ abstract class _$PlanDefinitionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get subjectReference;
   @override
   $PeriodCopyWith<$Res> get effectivePeriod;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get subtitleElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get purposeElement;
+  @override
+  $ElementCopyWith<$Res> get usageElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement;
 }
 
 class __$PlanDefinitionCopyWithImpl<$Res>
@@ -7490,6 +10728,23 @@ class __$PlanDefinitionCopyWithImpl<$Res>
     Object library = freezed,
     Object goal = freezed,
     Object action = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object subtitleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object copyrightElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
   }) {
     return _then(_PlanDefinition(
       resourceType: resourceType == freezed
@@ -7570,6 +10825,54 @@ class __$PlanDefinitionCopyWithImpl<$Res>
       action: action == freezed
           ? _value.action
           : action as List<PlanDefinitionAction>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
     ));
   }
 }
@@ -7621,7 +10924,41 @@ class _$_PlanDefinition implements _PlanDefinition {
       this.relatedArtifact,
       this.library,
       this.goal,
-      this.action})
+      this.action,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_subtitle')
+          this.subtitleElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      @JsonKey(name: '_usage')
+          this.usageElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement})
       : assert(resourceType != null);
 
   factory _$_PlanDefinition.fromJson(Map<String, dynamic> json) =>
@@ -7712,10 +11049,61 @@ class _$_PlanDefinition implements _PlanDefinition {
   final List<PlanDefinitionGoal> goal;
   @override
   final List<PlanDefinitionAction> action;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_subtitle')
+  final Element subtitleElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  final Element usageElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
 
   @override
   String toString() {
-    return 'PlanDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, subtitle: $subtitle, type: $type, status: $status, experimental: $experimental, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, usage: $usage, copyright: $copyright, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library: $library, goal: $goal, action: $action)';
+    return 'PlanDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, subtitle: $subtitle, type: $type, status: $status, experimental: $experimental, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, usage: $usage, copyright: $copyright, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library: $library, goal: $goal, action: $action, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, subtitleElement: $subtitleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, copyrightElement: $copyrightElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement)';
   }
 
   @override
@@ -7804,7 +11192,24 @@ class _$_PlanDefinition implements _PlanDefinition {
             (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
             (identical(other.library, library) || const DeepCollectionEquality().equals(other.library, library)) &&
             (identical(other.goal, goal) || const DeepCollectionEquality().equals(other.goal, goal)) &&
-            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)));
+            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.subtitleElement, subtitleElement) || const DeepCollectionEquality().equals(other.subtitleElement, subtitleElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)));
   }
 
   @override
@@ -7850,7 +11255,24 @@ class _$_PlanDefinition implements _PlanDefinition {
       const DeepCollectionEquality().hash(relatedArtifact) ^
       const DeepCollectionEquality().hash(library) ^
       const DeepCollectionEquality().hash(goal) ^
-      const DeepCollectionEquality().hash(action);
+      const DeepCollectionEquality().hash(action) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(subtitleElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
+      const DeepCollectionEquality().hash(usageElement) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement);
 
   @override
   _$PlanDefinitionCopyWith<_PlanDefinition> get copyWith =>
@@ -7908,7 +11330,41 @@ abstract class _PlanDefinition implements PlanDefinition {
       List<RelatedArtifact> relatedArtifact,
       List<Canonical> library,
       List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action}) = _$_PlanDefinition;
+      List<PlanDefinitionAction> action,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement}) = _$_PlanDefinition;
 
   factory _PlanDefinition.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinition.fromJson;
@@ -7998,6 +11454,57 @@ abstract class _PlanDefinition implements PlanDefinition {
   List<PlanDefinitionGoal> get goal;
   @override
   List<PlanDefinitionAction> get action;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_subtitle')
+  Element get subtitleElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
   @override
   _$PlanDefinitionCopyWith<_PlanDefinition> get copyWith;
 }
@@ -8798,7 +12305,35 @@ class _$PlanDefinitionActionTearOff {
       FhirUri definitionUri,
       Canonical transform,
       List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action}) {
+      List<PlanDefinitionAction> action,
+      @JsonKey(name: '_prefix')
+          Element prefixElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_textEquivalent')
+          Element textEquivalentElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
+      @JsonKey(name: '_goalId')
+          Element goalIdElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement,
+      @JsonKey(name: '_groupingBehavior')
+          Element groupingBehaviorElement,
+      @JsonKey(name: '_selectionBehavior')
+          Element selectionBehaviorElement,
+      @JsonKey(name: '_requiredBehavior')
+          Element requiredBehaviorElement,
+      @JsonKey(name: '_precheckBehavior')
+          Element precheckBehaviorElement,
+      @JsonKey(name: '_cardinalityBehavior')
+          Element cardinalityBehaviorElement,
+      @JsonKey(name: '_definitionCanonical')
+          Element definitionCanonicalElement,
+      @JsonKey(name: '_definitionUri')
+          Element definitionUriElement}) {
     return _PlanDefinitionAction(
       id: id,
       extension_: extension_,
@@ -8837,6 +12372,20 @@ class _$PlanDefinitionActionTearOff {
       transform: transform,
       dynamicValue: dynamicValue,
       action: action,
+      prefixElement: prefixElement,
+      titleElement: titleElement,
+      descriptionElement: descriptionElement,
+      textEquivalentElement: textEquivalentElement,
+      priorityElement: priorityElement,
+      goalIdElement: goalIdElement,
+      timingDateTimeElement: timingDateTimeElement,
+      groupingBehaviorElement: groupingBehaviorElement,
+      selectionBehaviorElement: selectionBehaviorElement,
+      requiredBehaviorElement: requiredBehaviorElement,
+      precheckBehaviorElement: precheckBehaviorElement,
+      cardinalityBehaviorElement: cardinalityBehaviorElement,
+      definitionCanonicalElement: definitionCanonicalElement,
+      definitionUriElement: definitionUriElement,
     );
   }
 }
@@ -8888,6 +12437,34 @@ mixin _$PlanDefinitionAction {
   Canonical get transform;
   List<PlanDefinitionDynamicValue> get dynamicValue;
   List<PlanDefinitionAction> get action;
+  @JsonKey(name: '_prefix')
+  Element get prefixElement;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_textEquivalent')
+  Element get textEquivalentElement;
+  @JsonKey(name: '_priority')
+  Element get priorityElement;
+  @JsonKey(name: '_goalId')
+  Element get goalIdElement;
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
+  @JsonKey(name: '_groupingBehavior')
+  Element get groupingBehaviorElement;
+  @JsonKey(name: '_selectionBehavior')
+  Element get selectionBehaviorElement;
+  @JsonKey(name: '_requiredBehavior')
+  Element get requiredBehaviorElement;
+  @JsonKey(name: '_precheckBehavior')
+  Element get precheckBehaviorElement;
+  @JsonKey(name: '_cardinalityBehavior')
+  Element get cardinalityBehaviorElement;
+  @JsonKey(name: '_definitionCanonical')
+  Element get definitionCanonicalElement;
+  @JsonKey(name: '_definitionUri')
+  Element get definitionUriElement;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionActionCopyWith<PlanDefinitionAction> get copyWith;
@@ -8940,7 +12517,35 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       FhirUri definitionUri,
       Canonical transform,
       List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action});
+      List<PlanDefinitionAction> action,
+      @JsonKey(name: '_prefix')
+          Element prefixElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_textEquivalent')
+          Element textEquivalentElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
+      @JsonKey(name: '_goalId')
+          Element goalIdElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement,
+      @JsonKey(name: '_groupingBehavior')
+          Element groupingBehaviorElement,
+      @JsonKey(name: '_selectionBehavior')
+          Element selectionBehaviorElement,
+      @JsonKey(name: '_requiredBehavior')
+          Element requiredBehaviorElement,
+      @JsonKey(name: '_precheckBehavior')
+          Element precheckBehaviorElement,
+      @JsonKey(name: '_cardinalityBehavior')
+          Element cardinalityBehaviorElement,
+      @JsonKey(name: '_definitionCanonical')
+          Element definitionCanonicalElement,
+      @JsonKey(name: '_definitionUri')
+          Element definitionUriElement});
 
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   $ReferenceCopyWith<$Res> get subjectReference;
@@ -8950,6 +12555,20 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
   $RangeCopyWith<$Res> get timingRange;
   $TimingCopyWith<$Res> get timingTiming;
   $CodeableConceptCopyWith<$Res> get type;
+  $ElementCopyWith<$Res> get prefixElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get textEquivalentElement;
+  $ElementCopyWith<$Res> get priorityElement;
+  $ElementCopyWith<$Res> get goalIdElement;
+  $ElementCopyWith<$Res> get timingDateTimeElement;
+  $ElementCopyWith<$Res> get groupingBehaviorElement;
+  $ElementCopyWith<$Res> get selectionBehaviorElement;
+  $ElementCopyWith<$Res> get requiredBehaviorElement;
+  $ElementCopyWith<$Res> get precheckBehaviorElement;
+  $ElementCopyWith<$Res> get cardinalityBehaviorElement;
+  $ElementCopyWith<$Res> get definitionCanonicalElement;
+  $ElementCopyWith<$Res> get definitionUriElement;
 }
 
 class _$PlanDefinitionActionCopyWithImpl<$Res>
@@ -8999,6 +12618,20 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
     Object transform = freezed,
     Object dynamicValue = freezed,
     Object action = freezed,
+    Object prefixElement = freezed,
+    Object titleElement = freezed,
+    Object descriptionElement = freezed,
+    Object textEquivalentElement = freezed,
+    Object priorityElement = freezed,
+    Object goalIdElement = freezed,
+    Object timingDateTimeElement = freezed,
+    Object groupingBehaviorElement = freezed,
+    Object selectionBehaviorElement = freezed,
+    Object requiredBehaviorElement = freezed,
+    Object precheckBehaviorElement = freezed,
+    Object cardinalityBehaviorElement = freezed,
+    Object definitionCanonicalElement = freezed,
+    Object definitionUriElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -9089,6 +12722,48 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       action: action == freezed
           ? _value.action
           : action as List<PlanDefinitionAction>,
+      prefixElement: prefixElement == freezed
+          ? _value.prefixElement
+          : prefixElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      textEquivalentElement: textEquivalentElement == freezed
+          ? _value.textEquivalentElement
+          : textEquivalentElement as Element,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement as Element,
+      goalIdElement: goalIdElement == freezed
+          ? _value.goalIdElement
+          : goalIdElement as Element,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
+      groupingBehaviorElement: groupingBehaviorElement == freezed
+          ? _value.groupingBehaviorElement
+          : groupingBehaviorElement as Element,
+      selectionBehaviorElement: selectionBehaviorElement == freezed
+          ? _value.selectionBehaviorElement
+          : selectionBehaviorElement as Element,
+      requiredBehaviorElement: requiredBehaviorElement == freezed
+          ? _value.requiredBehaviorElement
+          : requiredBehaviorElement as Element,
+      precheckBehaviorElement: precheckBehaviorElement == freezed
+          ? _value.precheckBehaviorElement
+          : precheckBehaviorElement as Element,
+      cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
+          ? _value.cardinalityBehaviorElement
+          : cardinalityBehaviorElement as Element,
+      definitionCanonicalElement: definitionCanonicalElement == freezed
+          ? _value.definitionCanonicalElement
+          : definitionCanonicalElement as Element,
+      definitionUriElement: definitionUriElement == freezed
+          ? _value.definitionUriElement
+          : definitionUriElement as Element,
     ));
   }
 
@@ -9172,6 +12847,146 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       return _then(_value.copyWith(type: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get prefixElement {
+    if (_value.prefixElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.prefixElement, (value) {
+      return _then(_value.copyWith(prefixElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get textEquivalentElement {
+    if (_value.textEquivalentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.textEquivalentElement, (value) {
+      return _then(_value.copyWith(textEquivalentElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get priorityElement {
+    if (_value.priorityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.priorityElement, (value) {
+      return _then(_value.copyWith(priorityElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get goalIdElement {
+    if (_value.goalIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.goalIdElement, (value) {
+      return _then(_value.copyWith(goalIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement {
+    if (_value.timingDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timingDateTimeElement, (value) {
+      return _then(_value.copyWith(timingDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get groupingBehaviorElement {
+    if (_value.groupingBehaviorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.groupingBehaviorElement, (value) {
+      return _then(_value.copyWith(groupingBehaviorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get selectionBehaviorElement {
+    if (_value.selectionBehaviorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.selectionBehaviorElement, (value) {
+      return _then(_value.copyWith(selectionBehaviorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requiredBehaviorElement {
+    if (_value.requiredBehaviorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requiredBehaviorElement, (value) {
+      return _then(_value.copyWith(requiredBehaviorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get precheckBehaviorElement {
+    if (_value.precheckBehaviorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.precheckBehaviorElement, (value) {
+      return _then(_value.copyWith(precheckBehaviorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get cardinalityBehaviorElement {
+    if (_value.cardinalityBehaviorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.cardinalityBehaviorElement, (value) {
+      return _then(_value.copyWith(cardinalityBehaviorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get definitionCanonicalElement {
+    if (_value.definitionCanonicalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.definitionCanonicalElement, (value) {
+      return _then(_value.copyWith(definitionCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get definitionUriElement {
+    if (_value.definitionUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.definitionUriElement, (value) {
+      return _then(_value.copyWith(definitionUriElement: value));
+    });
+  }
 }
 
 abstract class _$PlanDefinitionActionCopyWith<$Res>
@@ -9223,7 +13038,35 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       FhirUri definitionUri,
       Canonical transform,
       List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action});
+      List<PlanDefinitionAction> action,
+      @JsonKey(name: '_prefix')
+          Element prefixElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_textEquivalent')
+          Element textEquivalentElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
+      @JsonKey(name: '_goalId')
+          Element goalIdElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement,
+      @JsonKey(name: '_groupingBehavior')
+          Element groupingBehaviorElement,
+      @JsonKey(name: '_selectionBehavior')
+          Element selectionBehaviorElement,
+      @JsonKey(name: '_requiredBehavior')
+          Element requiredBehaviorElement,
+      @JsonKey(name: '_precheckBehavior')
+          Element precheckBehaviorElement,
+      @JsonKey(name: '_cardinalityBehavior')
+          Element cardinalityBehaviorElement,
+      @JsonKey(name: '_definitionCanonical')
+          Element definitionCanonicalElement,
+      @JsonKey(name: '_definitionUri')
+          Element definitionUriElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
@@ -9241,6 +13084,34 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
   $TimingCopyWith<$Res> get timingTiming;
   @override
   $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ElementCopyWith<$Res> get prefixElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get textEquivalentElement;
+  @override
+  $ElementCopyWith<$Res> get priorityElement;
+  @override
+  $ElementCopyWith<$Res> get goalIdElement;
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get groupingBehaviorElement;
+  @override
+  $ElementCopyWith<$Res> get selectionBehaviorElement;
+  @override
+  $ElementCopyWith<$Res> get requiredBehaviorElement;
+  @override
+  $ElementCopyWith<$Res> get precheckBehaviorElement;
+  @override
+  $ElementCopyWith<$Res> get cardinalityBehaviorElement;
+  @override
+  $ElementCopyWith<$Res> get definitionCanonicalElement;
+  @override
+  $ElementCopyWith<$Res> get definitionUriElement;
 }
 
 class __$PlanDefinitionActionCopyWithImpl<$Res>
@@ -9292,6 +13163,20 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
     Object transform = freezed,
     Object dynamicValue = freezed,
     Object action = freezed,
+    Object prefixElement = freezed,
+    Object titleElement = freezed,
+    Object descriptionElement = freezed,
+    Object textEquivalentElement = freezed,
+    Object priorityElement = freezed,
+    Object goalIdElement = freezed,
+    Object timingDateTimeElement = freezed,
+    Object groupingBehaviorElement = freezed,
+    Object selectionBehaviorElement = freezed,
+    Object requiredBehaviorElement = freezed,
+    Object precheckBehaviorElement = freezed,
+    Object cardinalityBehaviorElement = freezed,
+    Object definitionCanonicalElement = freezed,
+    Object definitionUriElement = freezed,
   }) {
     return _then(_PlanDefinitionAction(
       id: id == freezed ? _value.id : id as String,
@@ -9382,6 +13267,48 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       action: action == freezed
           ? _value.action
           : action as List<PlanDefinitionAction>,
+      prefixElement: prefixElement == freezed
+          ? _value.prefixElement
+          : prefixElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      textEquivalentElement: textEquivalentElement == freezed
+          ? _value.textEquivalentElement
+          : textEquivalentElement as Element,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement as Element,
+      goalIdElement: goalIdElement == freezed
+          ? _value.goalIdElement
+          : goalIdElement as Element,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
+      groupingBehaviorElement: groupingBehaviorElement == freezed
+          ? _value.groupingBehaviorElement
+          : groupingBehaviorElement as Element,
+      selectionBehaviorElement: selectionBehaviorElement == freezed
+          ? _value.selectionBehaviorElement
+          : selectionBehaviorElement as Element,
+      requiredBehaviorElement: requiredBehaviorElement == freezed
+          ? _value.requiredBehaviorElement
+          : requiredBehaviorElement as Element,
+      precheckBehaviorElement: precheckBehaviorElement == freezed
+          ? _value.precheckBehaviorElement
+          : precheckBehaviorElement as Element,
+      cardinalityBehaviorElement: cardinalityBehaviorElement == freezed
+          ? _value.cardinalityBehaviorElement
+          : cardinalityBehaviorElement as Element,
+      definitionCanonicalElement: definitionCanonicalElement == freezed
+          ? _value.definitionCanonicalElement
+          : definitionCanonicalElement as Element,
+      definitionUriElement: definitionUriElement == freezed
+          ? _value.definitionUriElement
+          : definitionUriElement as Element,
     ));
   }
 }
@@ -9431,7 +13358,35 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
       this.definitionUri,
       this.transform,
       this.dynamicValue,
-      this.action});
+      this.action,
+      @JsonKey(name: '_prefix')
+          this.prefixElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_textEquivalent')
+          this.textEquivalentElement,
+      @JsonKey(name: '_priority')
+          this.priorityElement,
+      @JsonKey(name: '_goalId')
+          this.goalIdElement,
+      @JsonKey(name: '_timingDateTime')
+          this.timingDateTimeElement,
+      @JsonKey(name: '_groupingBehavior')
+          this.groupingBehaviorElement,
+      @JsonKey(name: '_selectionBehavior')
+          this.selectionBehaviorElement,
+      @JsonKey(name: '_requiredBehavior')
+          this.requiredBehaviorElement,
+      @JsonKey(name: '_precheckBehavior')
+          this.precheckBehaviorElement,
+      @JsonKey(name: '_cardinalityBehavior')
+          this.cardinalityBehaviorElement,
+      @JsonKey(name: '_definitionCanonical')
+          this.definitionCanonicalElement,
+      @JsonKey(name: '_definitionUri')
+          this.definitionUriElement});
 
   factory _$_PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionActionFromJson(json);
@@ -9516,10 +13471,52 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
   final List<PlanDefinitionDynamicValue> dynamicValue;
   @override
   final List<PlanDefinitionAction> action;
+  @override
+  @JsonKey(name: '_prefix')
+  final Element prefixElement;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_textEquivalent')
+  final Element textEquivalentElement;
+  @override
+  @JsonKey(name: '_priority')
+  final Element priorityElement;
+  @override
+  @JsonKey(name: '_goalId')
+  final Element goalIdElement;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  final Element timingDateTimeElement;
+  @override
+  @JsonKey(name: '_groupingBehavior')
+  final Element groupingBehaviorElement;
+  @override
+  @JsonKey(name: '_selectionBehavior')
+  final Element selectionBehaviorElement;
+  @override
+  @JsonKey(name: '_requiredBehavior')
+  final Element requiredBehaviorElement;
+  @override
+  @JsonKey(name: '_precheckBehavior')
+  final Element precheckBehaviorElement;
+  @override
+  @JsonKey(name: '_cardinalityBehavior')
+  final Element cardinalityBehaviorElement;
+  @override
+  @JsonKey(name: '_definitionCanonical')
+  final Element definitionCanonicalElement;
+  @override
+  @JsonKey(name: '_definitionUri')
+  final Element definitionUriElement;
 
   @override
   String toString() {
-    return 'PlanDefinitionAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, title: $title, description: $description, textEquivalent: $textEquivalent, priority: $priority, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, trigger: $trigger, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingDateTime: $timingDateTime, timingAge: $timingAge, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, selectionBehavior: $selectionBehavior, requiredBehavior: $requiredBehavior, precheckBehavior: $precheckBehavior, cardinalityBehavior: $cardinalityBehavior, definitionCanonical: $definitionCanonical, definitionUri: $definitionUri, transform: $transform, dynamicValue: $dynamicValue, action: $action)';
+    return 'PlanDefinitionAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, title: $title, description: $description, textEquivalent: $textEquivalent, priority: $priority, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, trigger: $trigger, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingDateTime: $timingDateTime, timingAge: $timingAge, timingPeriod: $timingPeriod, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, selectionBehavior: $selectionBehavior, requiredBehavior: $requiredBehavior, precheckBehavior: $precheckBehavior, cardinalityBehavior: $cardinalityBehavior, definitionCanonical: $definitionCanonical, definitionUri: $definitionUri, transform: $transform, dynamicValue: $dynamicValue, action: $action, prefixElement: $prefixElement, titleElement: $titleElement, descriptionElement: $descriptionElement, textEquivalentElement: $textEquivalentElement, priorityElement: $priorityElement, goalIdElement: $goalIdElement, timingDateTimeElement: $timingDateTimeElement, groupingBehaviorElement: $groupingBehaviorElement, selectionBehaviorElement: $selectionBehaviorElement, requiredBehaviorElement: $requiredBehaviorElement, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehaviorElement: $cardinalityBehaviorElement, definitionCanonicalElement: $definitionCanonicalElement, definitionUriElement: $definitionUriElement)';
   }
 
   @override
@@ -9604,7 +13601,21 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
             (identical(other.definitionUri, definitionUri) || const DeepCollectionEquality().equals(other.definitionUri, definitionUri)) &&
             (identical(other.transform, transform) || const DeepCollectionEquality().equals(other.transform, transform)) &&
             (identical(other.dynamicValue, dynamicValue) || const DeepCollectionEquality().equals(other.dynamicValue, dynamicValue)) &&
-            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)));
+            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)) &&
+            (identical(other.prefixElement, prefixElement) || const DeepCollectionEquality().equals(other.prefixElement, prefixElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.textEquivalentElement, textEquivalentElement) || const DeepCollectionEquality().equals(other.textEquivalentElement, textEquivalentElement)) &&
+            (identical(other.priorityElement, priorityElement) || const DeepCollectionEquality().equals(other.priorityElement, priorityElement)) &&
+            (identical(other.goalIdElement, goalIdElement) || const DeepCollectionEquality().equals(other.goalIdElement, goalIdElement)) &&
+            (identical(other.timingDateTimeElement, timingDateTimeElement) || const DeepCollectionEquality().equals(other.timingDateTimeElement, timingDateTimeElement)) &&
+            (identical(other.groupingBehaviorElement, groupingBehaviorElement) || const DeepCollectionEquality().equals(other.groupingBehaviorElement, groupingBehaviorElement)) &&
+            (identical(other.selectionBehaviorElement, selectionBehaviorElement) || const DeepCollectionEquality().equals(other.selectionBehaviorElement, selectionBehaviorElement)) &&
+            (identical(other.requiredBehaviorElement, requiredBehaviorElement) || const DeepCollectionEquality().equals(other.requiredBehaviorElement, requiredBehaviorElement)) &&
+            (identical(other.precheckBehaviorElement, precheckBehaviorElement) || const DeepCollectionEquality().equals(other.precheckBehaviorElement, precheckBehaviorElement)) &&
+            (identical(other.cardinalityBehaviorElement, cardinalityBehaviorElement) || const DeepCollectionEquality().equals(other.cardinalityBehaviorElement, cardinalityBehaviorElement)) &&
+            (identical(other.definitionCanonicalElement, definitionCanonicalElement) || const DeepCollectionEquality().equals(other.definitionCanonicalElement, definitionCanonicalElement)) &&
+            (identical(other.definitionUriElement, definitionUriElement) || const DeepCollectionEquality().equals(other.definitionUriElement, definitionUriElement)));
   }
 
   @override
@@ -9646,7 +13657,21 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
       const DeepCollectionEquality().hash(definitionUri) ^
       const DeepCollectionEquality().hash(transform) ^
       const DeepCollectionEquality().hash(dynamicValue) ^
-      const DeepCollectionEquality().hash(action);
+      const DeepCollectionEquality().hash(action) ^
+      const DeepCollectionEquality().hash(prefixElement) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(textEquivalentElement) ^
+      const DeepCollectionEquality().hash(priorityElement) ^
+      const DeepCollectionEquality().hash(goalIdElement) ^
+      const DeepCollectionEquality().hash(timingDateTimeElement) ^
+      const DeepCollectionEquality().hash(groupingBehaviorElement) ^
+      const DeepCollectionEquality().hash(selectionBehaviorElement) ^
+      const DeepCollectionEquality().hash(requiredBehaviorElement) ^
+      const DeepCollectionEquality().hash(precheckBehaviorElement) ^
+      const DeepCollectionEquality().hash(cardinalityBehaviorElement) ^
+      const DeepCollectionEquality().hash(definitionCanonicalElement) ^
+      const DeepCollectionEquality().hash(definitionUriElement);
 
   @override
   _$PlanDefinitionActionCopyWith<_PlanDefinitionAction> get copyWith =>
@@ -9703,7 +13728,35 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
       FhirUri definitionUri,
       Canonical transform,
       List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action}) = _$_PlanDefinitionAction;
+      List<PlanDefinitionAction> action,
+      @JsonKey(name: '_prefix')
+          Element prefixElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_textEquivalent')
+          Element textEquivalentElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
+      @JsonKey(name: '_goalId')
+          Element goalIdElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement,
+      @JsonKey(name: '_groupingBehavior')
+          Element groupingBehaviorElement,
+      @JsonKey(name: '_selectionBehavior')
+          Element selectionBehaviorElement,
+      @JsonKey(name: '_requiredBehavior')
+          Element requiredBehaviorElement,
+      @JsonKey(name: '_precheckBehavior')
+          Element precheckBehaviorElement,
+      @JsonKey(name: '_cardinalityBehavior')
+          Element cardinalityBehaviorElement,
+      @JsonKey(name: '_definitionCanonical')
+          Element definitionCanonicalElement,
+      @JsonKey(name: '_definitionUri')
+          Element definitionUriElement}) = _$_PlanDefinitionAction;
 
   factory _PlanDefinitionAction.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionAction.fromJson;
@@ -9789,6 +13842,48 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
   @override
   List<PlanDefinitionAction> get action;
   @override
+  @JsonKey(name: '_prefix')
+  Element get prefixElement;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_textEquivalent')
+  Element get textEquivalentElement;
+  @override
+  @JsonKey(name: '_priority')
+  Element get priorityElement;
+  @override
+  @JsonKey(name: '_goalId')
+  Element get goalIdElement;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
+  @override
+  @JsonKey(name: '_groupingBehavior')
+  Element get groupingBehaviorElement;
+  @override
+  @JsonKey(name: '_selectionBehavior')
+  Element get selectionBehaviorElement;
+  @override
+  @JsonKey(name: '_requiredBehavior')
+  Element get requiredBehaviorElement;
+  @override
+  @JsonKey(name: '_precheckBehavior')
+  Element get precheckBehaviorElement;
+  @override
+  @JsonKey(name: '_cardinalityBehavior')
+  Element get cardinalityBehaviorElement;
+  @override
+  @JsonKey(name: '_definitionCanonical')
+  Element get definitionCanonicalElement;
+  @override
+  @JsonKey(name: '_definitionUri')
+  Element get definitionUriElement;
+  @override
   _$PlanDefinitionActionCopyWith<_PlanDefinitionAction> get copyWith;
 }
 
@@ -9805,13 +13900,15 @@ class _$PlanDefinitionConditionTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
-      Expression expression}) {
+      Expression expression,
+      @JsonKey(name: '_kind') Element kindElement}) {
     return _PlanDefinitionCondition(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       kind: kind,
       expression: expression,
+      kindElement: kindElement,
     );
   }
 }
@@ -9827,6 +13924,8 @@ mixin _$PlanDefinitionCondition {
   @JsonKey(unknownEnumValue: ConditionKind.unknown)
   ConditionKind get kind;
   Expression get expression;
+  @JsonKey(name: '_kind')
+  Element get kindElement;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionConditionCopyWith<PlanDefinitionCondition> get copyWith;
@@ -9841,9 +13940,11 @@ abstract class $PlanDefinitionConditionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
-      Expression expression});
+      Expression expression,
+      @JsonKey(name: '_kind') Element kindElement});
 
   $ExpressionCopyWith<$Res> get expression;
+  $ElementCopyWith<$Res> get kindElement;
 }
 
 class _$PlanDefinitionConditionCopyWithImpl<$Res>
@@ -9861,6 +13962,7 @@ class _$PlanDefinitionConditionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object kind = freezed,
     Object expression = freezed,
+    Object kindElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -9873,6 +13975,8 @@ class _$PlanDefinitionConditionCopyWithImpl<$Res>
       kind: kind == freezed ? _value.kind : kind as ConditionKind,
       expression:
           expression == freezed ? _value.expression : expression as Expression,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
     ));
   }
 
@@ -9883,6 +13987,16 @@ class _$PlanDefinitionConditionCopyWithImpl<$Res>
     }
     return $ExpressionCopyWith<$Res>(_value.expression, (value) {
       return _then(_value.copyWith(expression: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get kindElement {
+    if (_value.kindElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.kindElement, (value) {
+      return _then(_value.copyWith(kindElement: value));
     });
   }
 }
@@ -9898,10 +14012,13 @@ abstract class _$PlanDefinitionConditionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
-      Expression expression});
+      Expression expression,
+      @JsonKey(name: '_kind') Element kindElement});
 
   @override
   $ExpressionCopyWith<$Res> get expression;
+  @override
+  $ElementCopyWith<$Res> get kindElement;
 }
 
 class __$PlanDefinitionConditionCopyWithImpl<$Res>
@@ -9922,6 +14039,7 @@ class __$PlanDefinitionConditionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object kind = freezed,
     Object expression = freezed,
+    Object kindElement = freezed,
   }) {
     return _then(_PlanDefinitionCondition(
       id: id == freezed ? _value.id : id as String,
@@ -9934,6 +14052,8 @@ class __$PlanDefinitionConditionCopyWithImpl<$Res>
       kind: kind == freezed ? _value.kind : kind as ConditionKind,
       expression:
           expression == freezed ? _value.expression : expression as Expression,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
     ));
   }
 }
@@ -9945,7 +14065,8 @@ class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @JsonKey(unknownEnumValue: ConditionKind.unknown) this.kind,
-      this.expression});
+      this.expression,
+      @JsonKey(name: '_kind') this.kindElement});
 
   factory _$_PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionConditionFromJson(json);
@@ -9962,10 +14083,13 @@ class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
   final ConditionKind kind;
   @override
   final Expression expression;
+  @override
+  @JsonKey(name: '_kind')
+  final Element kindElement;
 
   @override
   String toString() {
-    return 'PlanDefinitionCondition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, kind: $kind, expression: $expression)';
+    return 'PlanDefinitionCondition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, kind: $kind, expression: $expression, kindElement: $kindElement)';
   }
 
   @override
@@ -9984,7 +14108,10 @@ class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
                 const DeepCollectionEquality().equals(other.kind, kind)) &&
             (identical(other.expression, expression) ||
                 const DeepCollectionEquality()
-                    .equals(other.expression, expression)));
+                    .equals(other.expression, expression)) &&
+            (identical(other.kindElement, kindElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.kindElement, kindElement)));
   }
 
   @override
@@ -9994,7 +14121,8 @@ class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(kind) ^
-      const DeepCollectionEquality().hash(expression);
+      const DeepCollectionEquality().hash(expression) ^
+      const DeepCollectionEquality().hash(kindElement);
 
   @override
   _$PlanDefinitionConditionCopyWith<_PlanDefinitionCondition> get copyWith =>
@@ -10009,11 +14137,13 @@ class _$_PlanDefinitionCondition implements _PlanDefinitionCondition {
 
 abstract class _PlanDefinitionCondition implements PlanDefinitionCondition {
   const factory _PlanDefinitionCondition(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
-      Expression expression}) = _$_PlanDefinitionCondition;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          @JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
+          Expression expression,
+          @JsonKey(name: '_kind') Element kindElement}) =
+      _$_PlanDefinitionCondition;
 
   factory _PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionCondition.fromJson;
@@ -10030,6 +14160,9 @@ abstract class _PlanDefinitionCondition implements PlanDefinitionCondition {
   ConditionKind get kind;
   @override
   Expression get expression;
+  @override
+  @JsonKey(name: '_kind')
+  Element get kindElement;
   @override
   _$PlanDefinitionConditionCopyWith<_PlanDefinitionCondition> get copyWith;
 }
@@ -10051,7 +14184,11 @@ class _$PlanDefinitionRelatedActionTearOff {
       @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
           RelatedActionRelationship relationship,
       Duration offsetDuration,
-      Range offsetRange}) {
+      Range offsetRange,
+      @JsonKey(name: '_actionId')
+          Element actionIdElement,
+      @JsonKey(name: '_relationship')
+          Element relationshipElement}) {
     return _PlanDefinitionRelatedAction(
       id: id,
       extension_: extension_,
@@ -10060,6 +14197,8 @@ class _$PlanDefinitionRelatedActionTearOff {
       relationship: relationship,
       offsetDuration: offsetDuration,
       offsetRange: offsetRange,
+      actionIdElement: actionIdElement,
+      relationshipElement: relationshipElement,
     );
   }
 }
@@ -10077,6 +14216,10 @@ mixin _$PlanDefinitionRelatedAction {
   RelatedActionRelationship get relationship;
   Duration get offsetDuration;
   Range get offsetRange;
+  @JsonKey(name: '_actionId')
+  Element get actionIdElement;
+  @JsonKey(name: '_relationship')
+  Element get relationshipElement;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionRelatedActionCopyWith<PlanDefinitionRelatedAction>
@@ -10097,10 +14240,16 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
           RelatedActionRelationship relationship,
       Duration offsetDuration,
-      Range offsetRange});
+      Range offsetRange,
+      @JsonKey(name: '_actionId')
+          Element actionIdElement,
+      @JsonKey(name: '_relationship')
+          Element relationshipElement});
 
   $DurationCopyWith<$Res> get offsetDuration;
   $RangeCopyWith<$Res> get offsetRange;
+  $ElementCopyWith<$Res> get actionIdElement;
+  $ElementCopyWith<$Res> get relationshipElement;
 }
 
 class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
@@ -10120,6 +14269,8 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
     Object relationship = freezed,
     Object offsetDuration = freezed,
     Object offsetRange = freezed,
+    Object actionIdElement = freezed,
+    Object relationshipElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -10138,6 +14289,12 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
           : offsetDuration as Duration,
       offsetRange:
           offsetRange == freezed ? _value.offsetRange : offsetRange as Range,
+      actionIdElement: actionIdElement == freezed
+          ? _value.actionIdElement
+          : actionIdElement as Element,
+      relationshipElement: relationshipElement == freezed
+          ? _value.relationshipElement
+          : relationshipElement as Element,
     ));
   }
 
@@ -10160,6 +14317,26 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
       return _then(_value.copyWith(offsetRange: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get actionIdElement {
+    if (_value.actionIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.actionIdElement, (value) {
+      return _then(_value.copyWith(actionIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get relationshipElement {
+    if (_value.relationshipElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.relationshipElement, (value) {
+      return _then(_value.copyWith(relationshipElement: value));
+    });
+  }
 }
 
 abstract class _$PlanDefinitionRelatedActionCopyWith<$Res>
@@ -10178,12 +14355,20 @@ abstract class _$PlanDefinitionRelatedActionCopyWith<$Res>
       @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
           RelatedActionRelationship relationship,
       Duration offsetDuration,
-      Range offsetRange});
+      Range offsetRange,
+      @JsonKey(name: '_actionId')
+          Element actionIdElement,
+      @JsonKey(name: '_relationship')
+          Element relationshipElement});
 
   @override
   $DurationCopyWith<$Res> get offsetDuration;
   @override
   $RangeCopyWith<$Res> get offsetRange;
+  @override
+  $ElementCopyWith<$Res> get actionIdElement;
+  @override
+  $ElementCopyWith<$Res> get relationshipElement;
 }
 
 class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
@@ -10207,6 +14392,8 @@ class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
     Object relationship = freezed,
     Object offsetDuration = freezed,
     Object offsetRange = freezed,
+    Object actionIdElement = freezed,
+    Object relationshipElement = freezed,
   }) {
     return _then(_PlanDefinitionRelatedAction(
       id: id == freezed ? _value.id : id as String,
@@ -10225,6 +14412,12 @@ class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
           : offsetDuration as Duration,
       offsetRange:
           offsetRange == freezed ? _value.offsetRange : offsetRange as Range,
+      actionIdElement: actionIdElement == freezed
+          ? _value.actionIdElement
+          : actionIdElement as Element,
+      relationshipElement: relationshipElement == freezed
+          ? _value.relationshipElement
+          : relationshipElement as Element,
     ));
   }
 }
@@ -10240,7 +14433,11 @@ class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
       @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
           this.relationship,
       this.offsetDuration,
-      this.offsetRange});
+      this.offsetRange,
+      @JsonKey(name: '_actionId')
+          this.actionIdElement,
+      @JsonKey(name: '_relationship')
+          this.relationshipElement});
 
   factory _$_PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionRelatedActionFromJson(json);
@@ -10261,10 +14458,16 @@ class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
   final Duration offsetDuration;
   @override
   final Range offsetRange;
+  @override
+  @JsonKey(name: '_actionId')
+  final Element actionIdElement;
+  @override
+  @JsonKey(name: '_relationship')
+  final Element relationshipElement;
 
   @override
   String toString() {
-    return 'PlanDefinitionRelatedAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, actionId: $actionId, relationship: $relationship, offsetDuration: $offsetDuration, offsetRange: $offsetRange)';
+    return 'PlanDefinitionRelatedAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, actionId: $actionId, relationship: $relationship, offsetDuration: $offsetDuration, offsetRange: $offsetRange, actionIdElement: $actionIdElement, relationshipElement: $relationshipElement)';
   }
 
   @override
@@ -10290,7 +14493,13 @@ class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
                     .equals(other.offsetDuration, offsetDuration)) &&
             (identical(other.offsetRange, offsetRange) ||
                 const DeepCollectionEquality()
-                    .equals(other.offsetRange, offsetRange)));
+                    .equals(other.offsetRange, offsetRange)) &&
+            (identical(other.actionIdElement, actionIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.actionIdElement, actionIdElement)) &&
+            (identical(other.relationshipElement, relationshipElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.relationshipElement, relationshipElement)));
   }
 
   @override
@@ -10302,7 +14511,9 @@ class _$_PlanDefinitionRelatedAction implements _PlanDefinitionRelatedAction {
       const DeepCollectionEquality().hash(actionId) ^
       const DeepCollectionEquality().hash(relationship) ^
       const DeepCollectionEquality().hash(offsetDuration) ^
-      const DeepCollectionEquality().hash(offsetRange);
+      const DeepCollectionEquality().hash(offsetRange) ^
+      const DeepCollectionEquality().hash(actionIdElement) ^
+      const DeepCollectionEquality().hash(relationshipElement);
 
   @override
   _$PlanDefinitionRelatedActionCopyWith<_PlanDefinitionRelatedAction>
@@ -10326,7 +14537,11 @@ abstract class _PlanDefinitionRelatedAction
       @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
           RelatedActionRelationship relationship,
       Duration offsetDuration,
-      Range offsetRange}) = _$_PlanDefinitionRelatedAction;
+      Range offsetRange,
+      @JsonKey(name: '_actionId')
+          Element actionIdElement,
+      @JsonKey(name: '_relationship')
+          Element relationshipElement}) = _$_PlanDefinitionRelatedAction;
 
   factory _PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionRelatedAction.fromJson;
@@ -10348,6 +14563,12 @@ abstract class _PlanDefinitionRelatedAction
   @override
   Range get offsetRange;
   @override
+  @JsonKey(name: '_actionId')
+  Element get actionIdElement;
+  @override
+  @JsonKey(name: '_relationship')
+  Element get relationshipElement;
+  @override
   _$PlanDefinitionRelatedActionCopyWith<_PlanDefinitionRelatedAction>
       get copyWith;
 }
@@ -10367,13 +14588,16 @@ class _$PlanDefinitionParticipantTearOff {
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
           PlanDefinitionParticipantType type,
-      CodeableConcept role}) {
+      CodeableConcept role,
+      @JsonKey(name: '_type')
+          Element typeElement}) {
     return _PlanDefinitionParticipant(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
       role: role,
+      typeElement: typeElement,
     );
   }
 }
@@ -10389,6 +14613,8 @@ mixin _$PlanDefinitionParticipant {
   @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
   PlanDefinitionParticipantType get type;
   CodeableConcept get role;
+  @JsonKey(name: '_type')
+  Element get typeElement;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionParticipantCopyWith<PlanDefinitionParticipant> get copyWith;
@@ -10405,9 +14631,12 @@ abstract class $PlanDefinitionParticipantCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
           PlanDefinitionParticipantType type,
-      CodeableConcept role});
+      CodeableConcept role,
+      @JsonKey(name: '_type')
+          Element typeElement});
 
   $CodeableConceptCopyWith<$Res> get role;
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class _$PlanDefinitionParticipantCopyWithImpl<$Res>
@@ -10425,6 +14654,7 @@ class _$PlanDefinitionParticipantCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object role = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -10437,6 +14667,8 @@ class _$PlanDefinitionParticipantCopyWithImpl<$Res>
       type:
           type == freezed ? _value.type : type as PlanDefinitionParticipantType,
       role: role == freezed ? _value.role : role as CodeableConcept,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
   }
 
@@ -10447,6 +14679,16 @@ class _$PlanDefinitionParticipantCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
       return _then(_value.copyWith(role: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
     });
   }
 }
@@ -10464,10 +14706,14 @@ abstract class _$PlanDefinitionParticipantCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
           PlanDefinitionParticipantType type,
-      CodeableConcept role});
+      CodeableConcept role,
+      @JsonKey(name: '_type')
+          Element typeElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get role;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class __$PlanDefinitionParticipantCopyWithImpl<$Res>
@@ -10488,6 +14734,7 @@ class __$PlanDefinitionParticipantCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object role = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_PlanDefinitionParticipant(
       id: id == freezed ? _value.id : id as String,
@@ -10500,6 +14747,8 @@ class __$PlanDefinitionParticipantCopyWithImpl<$Res>
       type:
           type == freezed ? _value.type : type as PlanDefinitionParticipantType,
       role: role == freezed ? _value.role : role as CodeableConcept,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
   }
 }
@@ -10513,7 +14762,9 @@ class _$_PlanDefinitionParticipant implements _PlanDefinitionParticipant {
       this.modifierExtension,
       @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
           this.type,
-      this.role});
+      this.role,
+      @JsonKey(name: '_type')
+          this.typeElement});
 
   factory _$_PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionParticipantFromJson(json);
@@ -10530,10 +14781,13 @@ class _$_PlanDefinitionParticipant implements _PlanDefinitionParticipant {
   final PlanDefinitionParticipantType type;
   @override
   final CodeableConcept role;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
 
   @override
   String toString() {
-    return 'PlanDefinitionParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, role: $role)';
+    return 'PlanDefinitionParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, role: $role, typeElement: $typeElement)';
   }
 
   @override
@@ -10551,7 +14805,10 @@ class _$_PlanDefinitionParticipant implements _PlanDefinitionParticipant {
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.role, role) ||
-                const DeepCollectionEquality().equals(other.role, role)));
+                const DeepCollectionEquality().equals(other.role, role)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)));
   }
 
   @override
@@ -10561,7 +14818,8 @@ class _$_PlanDefinitionParticipant implements _PlanDefinitionParticipant {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(role);
+      const DeepCollectionEquality().hash(role) ^
+      const DeepCollectionEquality().hash(typeElement);
 
   @override
   _$PlanDefinitionParticipantCopyWith<_PlanDefinitionParticipant>
@@ -10583,7 +14841,9 @@ abstract class _PlanDefinitionParticipant implements PlanDefinitionParticipant {
       List<FhirExtension> modifierExtension,
       @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
           PlanDefinitionParticipantType type,
-      CodeableConcept role}) = _$_PlanDefinitionParticipant;
+      CodeableConcept role,
+      @JsonKey(name: '_type')
+          Element typeElement}) = _$_PlanDefinitionParticipant;
 
   factory _PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionParticipant.fromJson;
@@ -10601,6 +14861,9 @@ abstract class _PlanDefinitionParticipant implements PlanDefinitionParticipant {
   @override
   CodeableConcept get role;
   @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
   _$PlanDefinitionParticipantCopyWith<_PlanDefinitionParticipant> get copyWith;
 }
 
@@ -10617,13 +14880,15 @@ class _$PlanDefinitionDynamicValueTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
-      Expression expression}) {
+      Expression expression,
+      @JsonKey(name: '_path') Element pathElement}) {
     return _PlanDefinitionDynamicValue(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       path: path,
       expression: expression,
+      pathElement: pathElement,
     );
   }
 }
@@ -10638,6 +14903,8 @@ mixin _$PlanDefinitionDynamicValue {
   List<FhirExtension> get modifierExtension;
   String get path;
   Expression get expression;
+  @JsonKey(name: '_path')
+  Element get pathElement;
 
   Map<String, dynamic> toJson();
   $PlanDefinitionDynamicValueCopyWith<PlanDefinitionDynamicValue> get copyWith;
@@ -10652,9 +14919,11 @@ abstract class $PlanDefinitionDynamicValueCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
-      Expression expression});
+      Expression expression,
+      @JsonKey(name: '_path') Element pathElement});
 
   $ExpressionCopyWith<$Res> get expression;
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class _$PlanDefinitionDynamicValueCopyWithImpl<$Res>
@@ -10672,6 +14941,7 @@ class _$PlanDefinitionDynamicValueCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object path = freezed,
     Object expression = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -10684,6 +14954,8 @@ class _$PlanDefinitionDynamicValueCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       expression:
           expression == freezed ? _value.expression : expression as Expression,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
   }
 
@@ -10694,6 +14966,16 @@ class _$PlanDefinitionDynamicValueCopyWithImpl<$Res>
     }
     return $ExpressionCopyWith<$Res>(_value.expression, (value) {
       return _then(_value.copyWith(expression: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
     });
   }
 }
@@ -10710,10 +14992,13 @@ abstract class _$PlanDefinitionDynamicValueCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
-      Expression expression});
+      Expression expression,
+      @JsonKey(name: '_path') Element pathElement});
 
   @override
   $ExpressionCopyWith<$Res> get expression;
+  @override
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
@@ -10734,6 +15019,7 @@ class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object path = freezed,
     Object expression = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_PlanDefinitionDynamicValue(
       id: id == freezed ? _value.id : id as String,
@@ -10746,6 +15032,8 @@ class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       expression:
           expression == freezed ? _value.expression : expression as Expression,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
   }
 }
@@ -10757,7 +15045,8 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.path,
-      this.expression});
+      this.expression,
+      @JsonKey(name: '_path') this.pathElement});
 
   factory _$_PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
       _$_$_PlanDefinitionDynamicValueFromJson(json);
@@ -10773,10 +15062,13 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
   final String path;
   @override
   final Expression expression;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
 
   @override
   String toString() {
-    return 'PlanDefinitionDynamicValue(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, expression: $expression)';
+    return 'PlanDefinitionDynamicValue(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, expression: $expression, pathElement: $pathElement)';
   }
 
   @override
@@ -10795,7 +15087,10 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
                 const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.expression, expression) ||
                 const DeepCollectionEquality()
-                    .equals(other.expression, expression)));
+                    .equals(other.expression, expression)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)));
   }
 
   @override
@@ -10805,7 +15100,8 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(path) ^
-      const DeepCollectionEquality().hash(expression);
+      const DeepCollectionEquality().hash(expression) ^
+      const DeepCollectionEquality().hash(pathElement);
 
   @override
   _$PlanDefinitionDynamicValueCopyWith<_PlanDefinitionDynamicValue>
@@ -10821,11 +15117,13 @@ class _$_PlanDefinitionDynamicValue implements _PlanDefinitionDynamicValue {
 abstract class _PlanDefinitionDynamicValue
     implements PlanDefinitionDynamicValue {
   const factory _PlanDefinitionDynamicValue(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String path,
-      Expression expression}) = _$_PlanDefinitionDynamicValue;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String path,
+          Expression expression,
+          @JsonKey(name: '_path') Element pathElement}) =
+      _$_PlanDefinitionDynamicValue;
 
   factory _PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionDynamicValue.fromJson;
@@ -10841,6 +15139,9 @@ abstract class _PlanDefinitionDynamicValue
   String get path;
   @override
   Expression get expression;
+  @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
   @override
   _$PlanDefinitionDynamicValueCopyWith<_PlanDefinitionDynamicValue>
       get copyWith;
@@ -10888,7 +15189,39 @@ class _$QuestionnaireTearOff {
       Date lastReviewDate,
       Period effectivePeriod,
       List<Coding> code,
-      List<QuestionnaireItem> item}) {
+      List<QuestionnaireItem> item,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_subjectType')
+          Element subjectTypeElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement}) {
     return _Questionnaire(
       resourceType: resourceType,
       id: id,
@@ -10921,6 +15254,22 @@ class _$QuestionnaireTearOff {
       effectivePeriod: effectivePeriod,
       code: code,
       item: item,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      titleElement: titleElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      subjectTypeElement: subjectTypeElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      purposeElement: purposeElement,
+      copyrightElement: copyrightElement,
+      approvalDateElement: approvalDateElement,
+      lastReviewDateElement: lastReviewDateElement,
     );
   }
 }
@@ -10963,6 +15312,38 @@ mixin _$Questionnaire {
   Period get effectivePeriod;
   List<Coding> get code;
   List<QuestionnaireItem> get item;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_subjectType')
+  Element get subjectTypeElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
 
   Map<String, dynamic> toJson();
   $QuestionnaireCopyWith<Questionnaire> get copyWith;
@@ -11006,11 +15387,59 @@ abstract class $QuestionnaireCopyWith<$Res> {
       Date lastReviewDate,
       Period effectivePeriod,
       List<Coding> code,
-      List<QuestionnaireItem> item});
+      List<QuestionnaireItem> item,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_subjectType')
+          Element subjectTypeElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $PeriodCopyWith<$Res> get effectivePeriod;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get subjectTypeElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get purposeElement;
+  $ElementCopyWith<$Res> get copyrightElement;
+  $ElementCopyWith<$Res> get approvalDateElement;
+  $ElementCopyWith<$Res> get lastReviewDateElement;
 }
 
 class _$QuestionnaireCopyWithImpl<$Res>
@@ -11054,6 +15483,22 @@ class _$QuestionnaireCopyWithImpl<$Res>
     Object effectivePeriod = freezed,
     Object code = freezed,
     Object item = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object subjectTypeElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object copyrightElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -11116,6 +15561,51 @@ class _$QuestionnaireCopyWithImpl<$Res>
           : effectivePeriod as Period,
       code: code == freezed ? _value.code : code as List<Coding>,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      subjectTypeElement: subjectTypeElement == freezed
+          ? _value.subjectTypeElement
+          : subjectTypeElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
     ));
   }
 
@@ -11146,6 +15636,166 @@ class _$QuestionnaireCopyWithImpl<$Res>
     }
     return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
       return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subjectTypeElement {
+    if (_value.subjectTypeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subjectTypeElement, (value) {
+      return _then(_value.copyWith(subjectTypeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.approvalDateElement, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
     });
   }
 }
@@ -11190,7 +15840,39 @@ abstract class _$QuestionnaireCopyWith<$Res>
       Date lastReviewDate,
       Period effectivePeriod,
       List<Coding> code,
-      List<QuestionnaireItem> item});
+      List<QuestionnaireItem> item,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_subjectType')
+          Element subjectTypeElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -11198,6 +15880,38 @@ abstract class _$QuestionnaireCopyWith<$Res>
   $NarrativeCopyWith<$Res> get text;
   @override
   $PeriodCopyWith<$Res> get effectivePeriod;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get subjectTypeElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get purposeElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement;
 }
 
 class __$QuestionnaireCopyWithImpl<$Res>
@@ -11243,6 +15957,22 @@ class __$QuestionnaireCopyWithImpl<$Res>
     Object effectivePeriod = freezed,
     Object code = freezed,
     Object item = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object subjectTypeElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object copyrightElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
   }) {
     return _then(_Questionnaire(
       resourceType: resourceType == freezed
@@ -11305,6 +16035,51 @@ class __$QuestionnaireCopyWithImpl<$Res>
           : effectivePeriod as Period,
       code: code == freezed ? _value.code : code as List<Coding>,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      subjectTypeElement: subjectTypeElement == freezed
+          ? _value.subjectTypeElement
+          : subjectTypeElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
     ));
   }
 }
@@ -11346,7 +16121,39 @@ class _$_Questionnaire implements _Questionnaire {
       this.lastReviewDate,
       this.effectivePeriod,
       this.code,
-      this.item})
+      this.item,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_subjectType')
+          this.subjectTypeElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement})
       : assert(resourceType != null);
 
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
@@ -11417,10 +16224,58 @@ class _$_Questionnaire implements _Questionnaire {
   final List<Coding> code;
   @override
   final List<QuestionnaireItem> item;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_subjectType')
+  final Element subjectTypeElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
 
   @override
   String toString() {
-    return 'Questionnaire(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, derivedFrom: $derivedFrom, status: $status, experimental: $experimental, subjectType: $subjectType, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, code: $code, item: $item)';
+    return 'Questionnaire(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, derivedFrom: $derivedFrom, status: $status, experimental: $experimental, subjectType: $subjectType, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, code: $code, item: $item, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, subjectTypeElement: $subjectTypeElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement)';
   }
 
   @override
@@ -11500,7 +16355,23 @@ class _$_Questionnaire implements _Questionnaire {
             (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
             (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
             (identical(other.code, code) || const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.item, item) || const DeepCollectionEquality().equals(other.item, item)));
+            (identical(other.item, item) || const DeepCollectionEquality().equals(other.item, item)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.subjectTypeElement, subjectTypeElement) || const DeepCollectionEquality().equals(other.subjectTypeElement, subjectTypeElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)));
   }
 
   @override
@@ -11536,7 +16407,23 @@ class _$_Questionnaire implements _Questionnaire {
       const DeepCollectionEquality().hash(lastReviewDate) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(item);
+      const DeepCollectionEquality().hash(item) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(subjectTypeElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement);
 
   @override
   _$QuestionnaireCopyWith<_Questionnaire> get copyWith =>
@@ -11584,7 +16471,39 @@ abstract class _Questionnaire implements Questionnaire {
       Date lastReviewDate,
       Period effectivePeriod,
       List<Coding> code,
-      List<QuestionnaireItem> item}) = _$_Questionnaire;
+      List<QuestionnaireItem> item,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_subjectType')
+          Element subjectTypeElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement}) = _$_Questionnaire;
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
       _$_Questionnaire.fromJson;
@@ -11655,6 +16574,54 @@ abstract class _Questionnaire implements Questionnaire {
   @override
   List<QuestionnaireItem> get item;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_subjectType')
+  Element get subjectTypeElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
+  @override
   _$QuestionnaireCopyWith<_Questionnaire> get copyWith;
 }
 
@@ -11687,7 +16654,27 @@ class _$QuestionnaireItemTearOff {
       Canonical answerValueSet,
       List<QuestionnaireAnswerOption> answerOption,
       List<QuestionnaireInitial> initial,
-      List<QuestionnaireItem> item}) {
+      List<QuestionnaireItem> item,
+      @JsonKey(name: '_linkId')
+          Element linkIdElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_prefix')
+          Element prefixElement,
+      @JsonKey(name: '_text')
+          Element textElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_enableBehavior')
+          Element enableBehaviorElement,
+      @JsonKey(name: '_required')
+          Element requiredElement,
+      @JsonKey(name: '_repeats')
+          Element repeatsElement,
+      @JsonKey(name: '_readOnly')
+          Element readOnlyElement,
+      @JsonKey(name: '_maxLength')
+          Element maxLengthElement}) {
     return _QuestionnaireItem(
       id: id,
       extension_: extension_,
@@ -11708,6 +16695,16 @@ class _$QuestionnaireItemTearOff {
       answerOption: answerOption,
       initial: initial,
       item: item,
+      linkIdElement: linkIdElement,
+      definitionElement: definitionElement,
+      prefixElement: prefixElement,
+      textElement: textElement,
+      typeElement: typeElement,
+      enableBehaviorElement: enableBehaviorElement,
+      requiredElement: requiredElement,
+      repeatsElement: repeatsElement,
+      readOnlyElement: readOnlyElement,
+      maxLengthElement: maxLengthElement,
     );
   }
 }
@@ -11738,6 +16735,26 @@ mixin _$QuestionnaireItem {
   List<QuestionnaireAnswerOption> get answerOption;
   List<QuestionnaireInitial> get initial;
   List<QuestionnaireItem> get item;
+  @JsonKey(name: '_linkId')
+  Element get linkIdElement;
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
+  @JsonKey(name: '_prefix')
+  Element get prefixElement;
+  @JsonKey(name: '_text')
+  Element get textElement;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_enableBehavior')
+  Element get enableBehaviorElement;
+  @JsonKey(name: '_required')
+  Element get requiredElement;
+  @JsonKey(name: '_repeats')
+  Element get repeatsElement;
+  @JsonKey(name: '_readOnly')
+  Element get readOnlyElement;
+  @JsonKey(name: '_maxLength')
+  Element get maxLengthElement;
 
   Map<String, dynamic> toJson();
   $QuestionnaireItemCopyWith<QuestionnaireItem> get copyWith;
@@ -11769,7 +16786,38 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       Canonical answerValueSet,
       List<QuestionnaireAnswerOption> answerOption,
       List<QuestionnaireInitial> initial,
-      List<QuestionnaireItem> item});
+      List<QuestionnaireItem> item,
+      @JsonKey(name: '_linkId')
+          Element linkIdElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_prefix')
+          Element prefixElement,
+      @JsonKey(name: '_text')
+          Element textElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_enableBehavior')
+          Element enableBehaviorElement,
+      @JsonKey(name: '_required')
+          Element requiredElement,
+      @JsonKey(name: '_repeats')
+          Element repeatsElement,
+      @JsonKey(name: '_readOnly')
+          Element readOnlyElement,
+      @JsonKey(name: '_maxLength')
+          Element maxLengthElement});
+
+  $ElementCopyWith<$Res> get linkIdElement;
+  $ElementCopyWith<$Res> get definitionElement;
+  $ElementCopyWith<$Res> get prefixElement;
+  $ElementCopyWith<$Res> get textElement;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get enableBehaviorElement;
+  $ElementCopyWith<$Res> get requiredElement;
+  $ElementCopyWith<$Res> get repeatsElement;
+  $ElementCopyWith<$Res> get readOnlyElement;
+  $ElementCopyWith<$Res> get maxLengthElement;
 }
 
 class _$QuestionnaireItemCopyWithImpl<$Res>
@@ -11801,6 +16849,16 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
     Object answerOption = freezed,
     Object initial = freezed,
     Object item = freezed,
+    Object linkIdElement = freezed,
+    Object definitionElement = freezed,
+    Object prefixElement = freezed,
+    Object textElement = freezed,
+    Object typeElement = freezed,
+    Object enableBehaviorElement = freezed,
+    Object requiredElement = freezed,
+    Object repeatsElement = freezed,
+    Object readOnlyElement = freezed,
+    Object maxLengthElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -11837,7 +16895,135 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
           ? _value.initial
           : initial as List<QuestionnaireInitial>,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
+      linkIdElement: linkIdElement == freezed
+          ? _value.linkIdElement
+          : linkIdElement as Element,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
+      prefixElement: prefixElement == freezed
+          ? _value.prefixElement
+          : prefixElement as Element,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      enableBehaviorElement: enableBehaviorElement == freezed
+          ? _value.enableBehaviorElement
+          : enableBehaviorElement as Element,
+      requiredElement: requiredElement == freezed
+          ? _value.requiredElement
+          : requiredElement as Element,
+      repeatsElement: repeatsElement == freezed
+          ? _value.repeatsElement
+          : repeatsElement as Element,
+      readOnlyElement: readOnlyElement == freezed
+          ? _value.readOnlyElement
+          : readOnlyElement as Element,
+      maxLengthElement: maxLengthElement == freezed
+          ? _value.maxLengthElement
+          : maxLengthElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get linkIdElement {
+    if (_value.linkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.linkIdElement, (value) {
+      return _then(_value.copyWith(linkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get definitionElement {
+    if (_value.definitionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.definitionElement, (value) {
+      return _then(_value.copyWith(definitionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get prefixElement {
+    if (_value.prefixElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.prefixElement, (value) {
+      return _then(_value.copyWith(prefixElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get textElement {
+    if (_value.textElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.textElement, (value) {
+      return _then(_value.copyWith(textElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get enableBehaviorElement {
+    if (_value.enableBehaviorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.enableBehaviorElement, (value) {
+      return _then(_value.copyWith(enableBehaviorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requiredElement {
+    if (_value.requiredElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requiredElement, (value) {
+      return _then(_value.copyWith(requiredElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get repeatsElement {
+    if (_value.repeatsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.repeatsElement, (value) {
+      return _then(_value.copyWith(repeatsElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get readOnlyElement {
+    if (_value.readOnlyElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.readOnlyElement, (value) {
+      return _then(_value.copyWith(readOnlyElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxLengthElement {
+    if (_value.maxLengthElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxLengthElement, (value) {
+      return _then(_value.copyWith(maxLengthElement: value));
+    });
   }
 }
 
@@ -11869,7 +17055,48 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
       Canonical answerValueSet,
       List<QuestionnaireAnswerOption> answerOption,
       List<QuestionnaireInitial> initial,
-      List<QuestionnaireItem> item});
+      List<QuestionnaireItem> item,
+      @JsonKey(name: '_linkId')
+          Element linkIdElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_prefix')
+          Element prefixElement,
+      @JsonKey(name: '_text')
+          Element textElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_enableBehavior')
+          Element enableBehaviorElement,
+      @JsonKey(name: '_required')
+          Element requiredElement,
+      @JsonKey(name: '_repeats')
+          Element repeatsElement,
+      @JsonKey(name: '_readOnly')
+          Element readOnlyElement,
+      @JsonKey(name: '_maxLength')
+          Element maxLengthElement});
+
+  @override
+  $ElementCopyWith<$Res> get linkIdElement;
+  @override
+  $ElementCopyWith<$Res> get definitionElement;
+  @override
+  $ElementCopyWith<$Res> get prefixElement;
+  @override
+  $ElementCopyWith<$Res> get textElement;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get enableBehaviorElement;
+  @override
+  $ElementCopyWith<$Res> get requiredElement;
+  @override
+  $ElementCopyWith<$Res> get repeatsElement;
+  @override
+  $ElementCopyWith<$Res> get readOnlyElement;
+  @override
+  $ElementCopyWith<$Res> get maxLengthElement;
 }
 
 class __$QuestionnaireItemCopyWithImpl<$Res>
@@ -11903,6 +17130,16 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
     Object answerOption = freezed,
     Object initial = freezed,
     Object item = freezed,
+    Object linkIdElement = freezed,
+    Object definitionElement = freezed,
+    Object prefixElement = freezed,
+    Object textElement = freezed,
+    Object typeElement = freezed,
+    Object enableBehaviorElement = freezed,
+    Object requiredElement = freezed,
+    Object repeatsElement = freezed,
+    Object readOnlyElement = freezed,
+    Object maxLengthElement = freezed,
   }) {
     return _then(_QuestionnaireItem(
       id: id == freezed ? _value.id : id as String,
@@ -11939,6 +17176,34 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
           ? _value.initial
           : initial as List<QuestionnaireInitial>,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
+      linkIdElement: linkIdElement == freezed
+          ? _value.linkIdElement
+          : linkIdElement as Element,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
+      prefixElement: prefixElement == freezed
+          ? _value.prefixElement
+          : prefixElement as Element,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      enableBehaviorElement: enableBehaviorElement == freezed
+          ? _value.enableBehaviorElement
+          : enableBehaviorElement as Element,
+      requiredElement: requiredElement == freezed
+          ? _value.requiredElement
+          : requiredElement as Element,
+      repeatsElement: repeatsElement == freezed
+          ? _value.repeatsElement
+          : repeatsElement as Element,
+      readOnlyElement: readOnlyElement == freezed
+          ? _value.readOnlyElement
+          : readOnlyElement as Element,
+      maxLengthElement: maxLengthElement == freezed
+          ? _value.maxLengthElement
+          : maxLengthElement as Element,
     ));
   }
 }
@@ -11967,7 +17232,27 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
       this.answerValueSet,
       this.answerOption,
       this.initial,
-      this.item});
+      this.item,
+      @JsonKey(name: '_linkId')
+          this.linkIdElement,
+      @JsonKey(name: '_definition')
+          this.definitionElement,
+      @JsonKey(name: '_prefix')
+          this.prefixElement,
+      @JsonKey(name: '_text')
+          this.textElement,
+      @JsonKey(name: '_type')
+          this.typeElement,
+      @JsonKey(name: '_enableBehavior')
+          this.enableBehaviorElement,
+      @JsonKey(name: '_required')
+          this.requiredElement,
+      @JsonKey(name: '_repeats')
+          this.repeatsElement,
+      @JsonKey(name: '_readOnly')
+          this.readOnlyElement,
+      @JsonKey(name: '_maxLength')
+          this.maxLengthElement});
 
   factory _$_QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireItemFromJson(json);
@@ -12013,10 +17298,40 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
   final List<QuestionnaireInitial> initial;
   @override
   final List<QuestionnaireItem> item;
+  @override
+  @JsonKey(name: '_linkId')
+  final Element linkIdElement;
+  @override
+  @JsonKey(name: '_definition')
+  final Element definitionElement;
+  @override
+  @JsonKey(name: '_prefix')
+  final Element prefixElement;
+  @override
+  @JsonKey(name: '_text')
+  final Element textElement;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_enableBehavior')
+  final Element enableBehaviorElement;
+  @override
+  @JsonKey(name: '_required')
+  final Element requiredElement;
+  @override
+  @JsonKey(name: '_repeats')
+  final Element repeatsElement;
+  @override
+  @JsonKey(name: '_readOnly')
+  final Element readOnlyElement;
+  @override
+  @JsonKey(name: '_maxLength')
+  final Element maxLengthElement;
 
   @override
   String toString() {
-    return 'QuestionnaireItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, definition: $definition, code: $code, prefix: $prefix, text: $text, type: $type, enableWhen: $enableWhen, enableBehavior: $enableBehavior, required: $required, repeats: $repeats, readOnly: $readOnly, maxLength: $maxLength, answerValueSet: $answerValueSet, answerOption: $answerOption, initial: $initial, item: $item)';
+    return 'QuestionnaireItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, definition: $definition, code: $code, prefix: $prefix, text: $text, type: $type, enableWhen: $enableWhen, enableBehavior: $enableBehavior, required: $required, repeats: $repeats, readOnly: $readOnly, maxLength: $maxLength, answerValueSet: $answerValueSet, answerOption: $answerOption, initial: $initial, item: $item, linkIdElement: $linkIdElement, definitionElement: $definitionElement, prefixElement: $prefixElement, textElement: $textElement, typeElement: $typeElement, enableBehaviorElement: $enableBehaviorElement, requiredElement: $requiredElement, repeatsElement: $repeatsElement, readOnlyElement: $readOnlyElement, maxLengthElement: $maxLengthElement)';
   }
 
   @override
@@ -12072,7 +17387,29 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
                 const DeepCollectionEquality()
                     .equals(other.initial, initial)) &&
             (identical(other.item, item) ||
-                const DeepCollectionEquality().equals(other.item, item)));
+                const DeepCollectionEquality().equals(other.item, item)) &&
+            (identical(other.linkIdElement, linkIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.linkIdElement, linkIdElement)) &&
+            (identical(other.definitionElement, definitionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.definitionElement, definitionElement)) &&
+            (identical(other.prefixElement, prefixElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.prefixElement, prefixElement)) &&
+            (identical(other.textElement, textElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.textElement, textElement)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.enableBehaviorElement, enableBehaviorElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.enableBehaviorElement, enableBehaviorElement)) &&
+            (identical(other.requiredElement, requiredElement) || const DeepCollectionEquality().equals(other.requiredElement, requiredElement)) &&
+            (identical(other.repeatsElement, repeatsElement) || const DeepCollectionEquality().equals(other.repeatsElement, repeatsElement)) &&
+            (identical(other.readOnlyElement, readOnlyElement) || const DeepCollectionEquality().equals(other.readOnlyElement, readOnlyElement)) &&
+            (identical(other.maxLengthElement, maxLengthElement) || const DeepCollectionEquality().equals(other.maxLengthElement, maxLengthElement)));
   }
 
   @override
@@ -12096,7 +17433,17 @@ class _$_QuestionnaireItem implements _QuestionnaireItem {
       const DeepCollectionEquality().hash(answerValueSet) ^
       const DeepCollectionEquality().hash(answerOption) ^
       const DeepCollectionEquality().hash(initial) ^
-      const DeepCollectionEquality().hash(item);
+      const DeepCollectionEquality().hash(item) ^
+      const DeepCollectionEquality().hash(linkIdElement) ^
+      const DeepCollectionEquality().hash(definitionElement) ^
+      const DeepCollectionEquality().hash(prefixElement) ^
+      const DeepCollectionEquality().hash(textElement) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(enableBehaviorElement) ^
+      const DeepCollectionEquality().hash(requiredElement) ^
+      const DeepCollectionEquality().hash(repeatsElement) ^
+      const DeepCollectionEquality().hash(readOnlyElement) ^
+      const DeepCollectionEquality().hash(maxLengthElement);
 
   @override
   _$QuestionnaireItemCopyWith<_QuestionnaireItem> get copyWith =>
@@ -12131,7 +17478,27 @@ abstract class _QuestionnaireItem implements QuestionnaireItem {
       Canonical answerValueSet,
       List<QuestionnaireAnswerOption> answerOption,
       List<QuestionnaireInitial> initial,
-      List<QuestionnaireItem> item}) = _$_QuestionnaireItem;
+      List<QuestionnaireItem> item,
+      @JsonKey(name: '_linkId')
+          Element linkIdElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_prefix')
+          Element prefixElement,
+      @JsonKey(name: '_text')
+          Element textElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_enableBehavior')
+          Element enableBehaviorElement,
+      @JsonKey(name: '_required')
+          Element requiredElement,
+      @JsonKey(name: '_repeats')
+          Element repeatsElement,
+      @JsonKey(name: '_readOnly')
+          Element readOnlyElement,
+      @JsonKey(name: '_maxLength')
+          Element maxLengthElement}) = _$_QuestionnaireItem;
 
   factory _QuestionnaireItem.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireItem.fromJson;
@@ -12178,6 +17545,36 @@ abstract class _QuestionnaireItem implements QuestionnaireItem {
   @override
   List<QuestionnaireItem> get item;
   @override
+  @JsonKey(name: '_linkId')
+  Element get linkIdElement;
+  @override
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
+  @override
+  @JsonKey(name: '_prefix')
+  Element get prefixElement;
+  @override
+  @JsonKey(name: '_text')
+  Element get textElement;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_enableBehavior')
+  Element get enableBehaviorElement;
+  @override
+  @JsonKey(name: '_required')
+  Element get requiredElement;
+  @override
+  @JsonKey(name: '_repeats')
+  Element get repeatsElement;
+  @override
+  @JsonKey(name: '_readOnly')
+  Element get readOnlyElement;
+  @override
+  @JsonKey(name: '_maxLength')
+  Element get maxLengthElement;
+  @override
   _$QuestionnaireItemCopyWith<_QuestionnaireItem> get copyWith;
 }
 
@@ -12206,7 +17603,25 @@ class _$QuestionnaireEnableWhenTearOff {
       String answerString,
       Coding answerCoding,
       Quantity answerQuantity,
-      Reference answerReference}) {
+      Reference answerReference,
+      @JsonKey(name: '_question')
+          Element questionElement,
+      @JsonKey(name: '_operator')
+          Element operatorElement,
+      @JsonKey(name: '_answerBoolean')
+          Element answerBooleanElement,
+      @JsonKey(name: '_answerDecimal')
+          Element answerDecimalElement,
+      @JsonKey(name: '_answerInteger')
+          Element answerIntegerElement,
+      @JsonKey(name: '_answerDate')
+          Element answerDateElement,
+      @JsonKey(name: '_answerDateTime')
+          Element answerDateTimeElement,
+      @JsonKey(name: '_answerTime')
+          Element answerTimeElement,
+      @JsonKey(name: '_answerString')
+          Element answerStringElement}) {
     return _QuestionnaireEnableWhen(
       id: id,
       extension_: extension_,
@@ -12223,6 +17638,15 @@ class _$QuestionnaireEnableWhenTearOff {
       answerCoding: answerCoding,
       answerQuantity: answerQuantity,
       answerReference: answerReference,
+      questionElement: questionElement,
+      operatorElement: operatorElement,
+      answerBooleanElement: answerBooleanElement,
+      answerDecimalElement: answerDecimalElement,
+      answerIntegerElement: answerIntegerElement,
+      answerDateElement: answerDateElement,
+      answerDateTimeElement: answerDateTimeElement,
+      answerTimeElement: answerTimeElement,
+      answerStringElement: answerStringElement,
     );
   }
 }
@@ -12248,6 +17672,24 @@ mixin _$QuestionnaireEnableWhen {
   Coding get answerCoding;
   Quantity get answerQuantity;
   Reference get answerReference;
+  @JsonKey(name: '_question')
+  Element get questionElement;
+  @JsonKey(name: '_operator')
+  Element get operatorElement;
+  @JsonKey(name: '_answerBoolean')
+  Element get answerBooleanElement;
+  @JsonKey(name: '_answerDecimal')
+  Element get answerDecimalElement;
+  @JsonKey(name: '_answerInteger')
+  Element get answerIntegerElement;
+  @JsonKey(name: '_answerDate')
+  Element get answerDateElement;
+  @JsonKey(name: '_answerDateTime')
+  Element get answerDateTimeElement;
+  @JsonKey(name: '_answerTime')
+  Element get answerTimeElement;
+  @JsonKey(name: '_answerString')
+  Element get answerStringElement;
 
   Map<String, dynamic> toJson();
   $QuestionnaireEnableWhenCopyWith<QuestionnaireEnableWhen> get copyWith;
@@ -12274,11 +17716,38 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       String answerString,
       Coding answerCoding,
       Quantity answerQuantity,
-      Reference answerReference});
+      Reference answerReference,
+      @JsonKey(name: '_question')
+          Element questionElement,
+      @JsonKey(name: '_operator')
+          Element operatorElement,
+      @JsonKey(name: '_answerBoolean')
+          Element answerBooleanElement,
+      @JsonKey(name: '_answerDecimal')
+          Element answerDecimalElement,
+      @JsonKey(name: '_answerInteger')
+          Element answerIntegerElement,
+      @JsonKey(name: '_answerDate')
+          Element answerDateElement,
+      @JsonKey(name: '_answerDateTime')
+          Element answerDateTimeElement,
+      @JsonKey(name: '_answerTime')
+          Element answerTimeElement,
+      @JsonKey(name: '_answerString')
+          Element answerStringElement});
 
   $CodingCopyWith<$Res> get answerCoding;
   $QuantityCopyWith<$Res> get answerQuantity;
   $ReferenceCopyWith<$Res> get answerReference;
+  $ElementCopyWith<$Res> get questionElement;
+  $ElementCopyWith<$Res> get operatorElement;
+  $ElementCopyWith<$Res> get answerBooleanElement;
+  $ElementCopyWith<$Res> get answerDecimalElement;
+  $ElementCopyWith<$Res> get answerIntegerElement;
+  $ElementCopyWith<$Res> get answerDateElement;
+  $ElementCopyWith<$Res> get answerDateTimeElement;
+  $ElementCopyWith<$Res> get answerTimeElement;
+  $ElementCopyWith<$Res> get answerStringElement;
 }
 
 class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
@@ -12306,6 +17775,15 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
     Object answerCoding = freezed,
     Object answerQuantity = freezed,
     Object answerReference = freezed,
+    Object questionElement = freezed,
+    Object operatorElement = freezed,
+    Object answerBooleanElement = freezed,
+    Object answerDecimalElement = freezed,
+    Object answerIntegerElement = freezed,
+    Object answerDateElement = freezed,
+    Object answerDateTimeElement = freezed,
+    Object answerTimeElement = freezed,
+    Object answerStringElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -12347,6 +17825,33 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerReference: answerReference == freezed
           ? _value.answerReference
           : answerReference as Reference,
+      questionElement: questionElement == freezed
+          ? _value.questionElement
+          : questionElement as Element,
+      operatorElement: operatorElement == freezed
+          ? _value.operatorElement
+          : operatorElement as Element,
+      answerBooleanElement: answerBooleanElement == freezed
+          ? _value.answerBooleanElement
+          : answerBooleanElement as Element,
+      answerDecimalElement: answerDecimalElement == freezed
+          ? _value.answerDecimalElement
+          : answerDecimalElement as Element,
+      answerIntegerElement: answerIntegerElement == freezed
+          ? _value.answerIntegerElement
+          : answerIntegerElement as Element,
+      answerDateElement: answerDateElement == freezed
+          ? _value.answerDateElement
+          : answerDateElement as Element,
+      answerDateTimeElement: answerDateTimeElement == freezed
+          ? _value.answerDateTimeElement
+          : answerDateTimeElement as Element,
+      answerTimeElement: answerTimeElement == freezed
+          ? _value.answerTimeElement
+          : answerTimeElement as Element,
+      answerStringElement: answerStringElement == freezed
+          ? _value.answerStringElement
+          : answerStringElement as Element,
     ));
   }
 
@@ -12379,6 +17884,96 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res>
       return _then(_value.copyWith(answerReference: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get questionElement {
+    if (_value.questionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.questionElement, (value) {
+      return _then(_value.copyWith(questionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get operatorElement {
+    if (_value.operatorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.operatorElement, (value) {
+      return _then(_value.copyWith(operatorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get answerBooleanElement {
+    if (_value.answerBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.answerBooleanElement, (value) {
+      return _then(_value.copyWith(answerBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get answerDecimalElement {
+    if (_value.answerDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.answerDecimalElement, (value) {
+      return _then(_value.copyWith(answerDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get answerIntegerElement {
+    if (_value.answerIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.answerIntegerElement, (value) {
+      return _then(_value.copyWith(answerIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get answerDateElement {
+    if (_value.answerDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.answerDateElement, (value) {
+      return _then(_value.copyWith(answerDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get answerDateTimeElement {
+    if (_value.answerDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.answerDateTimeElement, (value) {
+      return _then(_value.copyWith(answerDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get answerTimeElement {
+    if (_value.answerTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.answerTimeElement, (value) {
+      return _then(_value.copyWith(answerTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get answerStringElement {
+    if (_value.answerStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.answerStringElement, (value) {
+      return _then(_value.copyWith(answerStringElement: value));
+    });
+  }
 }
 
 abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
@@ -12404,7 +17999,25 @@ abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
       String answerString,
       Coding answerCoding,
       Quantity answerQuantity,
-      Reference answerReference});
+      Reference answerReference,
+      @JsonKey(name: '_question')
+          Element questionElement,
+      @JsonKey(name: '_operator')
+          Element operatorElement,
+      @JsonKey(name: '_answerBoolean')
+          Element answerBooleanElement,
+      @JsonKey(name: '_answerDecimal')
+          Element answerDecimalElement,
+      @JsonKey(name: '_answerInteger')
+          Element answerIntegerElement,
+      @JsonKey(name: '_answerDate')
+          Element answerDateElement,
+      @JsonKey(name: '_answerDateTime')
+          Element answerDateTimeElement,
+      @JsonKey(name: '_answerTime')
+          Element answerTimeElement,
+      @JsonKey(name: '_answerString')
+          Element answerStringElement});
 
   @override
   $CodingCopyWith<$Res> get answerCoding;
@@ -12412,6 +18025,24 @@ abstract class _$QuestionnaireEnableWhenCopyWith<$Res>
   $QuantityCopyWith<$Res> get answerQuantity;
   @override
   $ReferenceCopyWith<$Res> get answerReference;
+  @override
+  $ElementCopyWith<$Res> get questionElement;
+  @override
+  $ElementCopyWith<$Res> get operatorElement;
+  @override
+  $ElementCopyWith<$Res> get answerBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get answerDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get answerIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get answerDateElement;
+  @override
+  $ElementCopyWith<$Res> get answerDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get answerTimeElement;
+  @override
+  $ElementCopyWith<$Res> get answerStringElement;
 }
 
 class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
@@ -12442,6 +18073,15 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
     Object answerCoding = freezed,
     Object answerQuantity = freezed,
     Object answerReference = freezed,
+    Object questionElement = freezed,
+    Object operatorElement = freezed,
+    Object answerBooleanElement = freezed,
+    Object answerDecimalElement = freezed,
+    Object answerIntegerElement = freezed,
+    Object answerDateElement = freezed,
+    Object answerDateTimeElement = freezed,
+    Object answerTimeElement = freezed,
+    Object answerStringElement = freezed,
   }) {
     return _then(_QuestionnaireEnableWhen(
       id: id == freezed ? _value.id : id as String,
@@ -12483,6 +18123,33 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerReference: answerReference == freezed
           ? _value.answerReference
           : answerReference as Reference,
+      questionElement: questionElement == freezed
+          ? _value.questionElement
+          : questionElement as Element,
+      operatorElement: operatorElement == freezed
+          ? _value.operatorElement
+          : operatorElement as Element,
+      answerBooleanElement: answerBooleanElement == freezed
+          ? _value.answerBooleanElement
+          : answerBooleanElement as Element,
+      answerDecimalElement: answerDecimalElement == freezed
+          ? _value.answerDecimalElement
+          : answerDecimalElement as Element,
+      answerIntegerElement: answerIntegerElement == freezed
+          ? _value.answerIntegerElement
+          : answerIntegerElement as Element,
+      answerDateElement: answerDateElement == freezed
+          ? _value.answerDateElement
+          : answerDateElement as Element,
+      answerDateTimeElement: answerDateTimeElement == freezed
+          ? _value.answerDateTimeElement
+          : answerDateTimeElement as Element,
+      answerTimeElement: answerTimeElement == freezed
+          ? _value.answerTimeElement
+          : answerTimeElement as Element,
+      answerStringElement: answerStringElement == freezed
+          ? _value.answerStringElement
+          : answerStringElement as Element,
     ));
   }
 }
@@ -12504,7 +18171,16 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
       this.answerString,
       this.answerCoding,
       this.answerQuantity,
-      this.answerReference});
+      this.answerReference,
+      @JsonKey(name: '_question') this.questionElement,
+      @JsonKey(name: '_operator') this.operatorElement,
+      @JsonKey(name: '_answerBoolean') this.answerBooleanElement,
+      @JsonKey(name: '_answerDecimal') this.answerDecimalElement,
+      @JsonKey(name: '_answerInteger') this.answerIntegerElement,
+      @JsonKey(name: '_answerDate') this.answerDateElement,
+      @JsonKey(name: '_answerDateTime') this.answerDateTimeElement,
+      @JsonKey(name: '_answerTime') this.answerTimeElement,
+      @JsonKey(name: '_answerString') this.answerStringElement});
 
   factory _$_QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireEnableWhenFromJson(json);
@@ -12541,10 +18217,37 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
   final Quantity answerQuantity;
   @override
   final Reference answerReference;
+  @override
+  @JsonKey(name: '_question')
+  final Element questionElement;
+  @override
+  @JsonKey(name: '_operator')
+  final Element operatorElement;
+  @override
+  @JsonKey(name: '_answerBoolean')
+  final Element answerBooleanElement;
+  @override
+  @JsonKey(name: '_answerDecimal')
+  final Element answerDecimalElement;
+  @override
+  @JsonKey(name: '_answerInteger')
+  final Element answerIntegerElement;
+  @override
+  @JsonKey(name: '_answerDate')
+  final Element answerDateElement;
+  @override
+  @JsonKey(name: '_answerDateTime')
+  final Element answerDateTimeElement;
+  @override
+  @JsonKey(name: '_answerTime')
+  final Element answerTimeElement;
+  @override
+  @JsonKey(name: '_answerString')
+  final Element answerStringElement;
 
   @override
   String toString() {
-    return 'QuestionnaireEnableWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, question: $question, operator: $operator, answerBoolean: $answerBoolean, answerDecimal: $answerDecimal, answerInteger: $answerInteger, answerDate: $answerDate, answerDateTime: $answerDateTime, answerTime: $answerTime, answerString: $answerString, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference)';
+    return 'QuestionnaireEnableWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, question: $question, operator: $operator, answerBoolean: $answerBoolean, answerDecimal: $answerDecimal, answerInteger: $answerInteger, answerDate: $answerDate, answerDateTime: $answerDateTime, answerTime: $answerTime, answerString: $answerString, answerCoding: $answerCoding, answerQuantity: $answerQuantity, answerReference: $answerReference, questionElement: $questionElement, operatorElement: $operatorElement, answerBooleanElement: $answerBooleanElement, answerDecimalElement: $answerDecimalElement, answerIntegerElement: $answerIntegerElement, answerDateElement: $answerDateElement, answerDateTimeElement: $answerDateTimeElement, answerTimeElement: $answerTimeElement, answerStringElement: $answerStringElement)';
   }
 
   @override
@@ -12594,7 +18297,29 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
                     .equals(other.answerQuantity, answerQuantity)) &&
             (identical(other.answerReference, answerReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.answerReference, answerReference)));
+                    .equals(other.answerReference, answerReference)) &&
+            (identical(other.questionElement, questionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.questionElement, questionElement)) &&
+            (identical(other.operatorElement, operatorElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.operatorElement, operatorElement)) &&
+            (identical(other.answerBooleanElement, answerBooleanElement) ||
+                const DeepCollectionEquality().equals(
+                    other.answerBooleanElement, answerBooleanElement)) &&
+            (identical(other.answerDecimalElement, answerDecimalElement) ||
+                const DeepCollectionEquality().equals(
+                    other.answerDecimalElement, answerDecimalElement)) &&
+            (identical(other.answerIntegerElement, answerIntegerElement) ||
+                const DeepCollectionEquality().equals(
+                    other.answerIntegerElement, answerIntegerElement)) &&
+            (identical(other.answerDateElement, answerDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.answerDateElement, answerDateElement)) &&
+            (identical(other.answerDateTimeElement, answerDateTimeElement) ||
+                const DeepCollectionEquality().equals(other.answerDateTimeElement, answerDateTimeElement)) &&
+            (identical(other.answerTimeElement, answerTimeElement) || const DeepCollectionEquality().equals(other.answerTimeElement, answerTimeElement)) &&
+            (identical(other.answerStringElement, answerStringElement) || const DeepCollectionEquality().equals(other.answerStringElement, answerStringElement)));
   }
 
   @override
@@ -12614,7 +18339,16 @@ class _$_QuestionnaireEnableWhen implements _QuestionnaireEnableWhen {
       const DeepCollectionEquality().hash(answerString) ^
       const DeepCollectionEquality().hash(answerCoding) ^
       const DeepCollectionEquality().hash(answerQuantity) ^
-      const DeepCollectionEquality().hash(answerReference);
+      const DeepCollectionEquality().hash(answerReference) ^
+      const DeepCollectionEquality().hash(questionElement) ^
+      const DeepCollectionEquality().hash(operatorElement) ^
+      const DeepCollectionEquality().hash(answerBooleanElement) ^
+      const DeepCollectionEquality().hash(answerDecimalElement) ^
+      const DeepCollectionEquality().hash(answerIntegerElement) ^
+      const DeepCollectionEquality().hash(answerDateElement) ^
+      const DeepCollectionEquality().hash(answerDateTimeElement) ^
+      const DeepCollectionEquality().hash(answerTimeElement) ^
+      const DeepCollectionEquality().hash(answerStringElement);
 
   @override
   _$QuestionnaireEnableWhenCopyWith<_QuestionnaireEnableWhen> get copyWith =>
@@ -12645,7 +18379,25 @@ abstract class _QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
       String answerString,
       Coding answerCoding,
       Quantity answerQuantity,
-      Reference answerReference}) = _$_QuestionnaireEnableWhen;
+      Reference answerReference,
+      @JsonKey(name: '_question')
+          Element questionElement,
+      @JsonKey(name: '_operator')
+          Element operatorElement,
+      @JsonKey(name: '_answerBoolean')
+          Element answerBooleanElement,
+      @JsonKey(name: '_answerDecimal')
+          Element answerDecimalElement,
+      @JsonKey(name: '_answerInteger')
+          Element answerIntegerElement,
+      @JsonKey(name: '_answerDate')
+          Element answerDateElement,
+      @JsonKey(name: '_answerDateTime')
+          Element answerDateTimeElement,
+      @JsonKey(name: '_answerTime')
+          Element answerTimeElement,
+      @JsonKey(name: '_answerString')
+          Element answerStringElement}) = _$_QuestionnaireEnableWhen;
 
   factory _QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireEnableWhen.fromJson;
@@ -12683,6 +18435,33 @@ abstract class _QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
   @override
   Reference get answerReference;
   @override
+  @JsonKey(name: '_question')
+  Element get questionElement;
+  @override
+  @JsonKey(name: '_operator')
+  Element get operatorElement;
+  @override
+  @JsonKey(name: '_answerBoolean')
+  Element get answerBooleanElement;
+  @override
+  @JsonKey(name: '_answerDecimal')
+  Element get answerDecimalElement;
+  @override
+  @JsonKey(name: '_answerInteger')
+  Element get answerIntegerElement;
+  @override
+  @JsonKey(name: '_answerDate')
+  Element get answerDateElement;
+  @override
+  @JsonKey(name: '_answerDateTime')
+  Element get answerDateTimeElement;
+  @override
+  @JsonKey(name: '_answerTime')
+  Element get answerTimeElement;
+  @override
+  @JsonKey(name: '_answerString')
+  Element get answerStringElement;
+  @override
   _$QuestionnaireEnableWhenCopyWith<_QuestionnaireEnableWhen> get copyWith;
 }
 
@@ -12704,7 +18483,12 @@ class _$QuestionnaireAnswerOptionTearOff {
       String valueString,
       Coding valueCoding,
       Reference valueReference,
-      Boolean initialSelected}) {
+      Boolean initialSelected,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_initialSelected') Element initialSelectedElement}) {
     return _QuestionnaireAnswerOption(
       id: id,
       extension_: extension_,
@@ -12716,6 +18500,11 @@ class _$QuestionnaireAnswerOptionTearOff {
       valueCoding: valueCoding,
       valueReference: valueReference,
       initialSelected: initialSelected,
+      valueIntegerElement: valueIntegerElement,
+      valueDateElement: valueDateElement,
+      valueTimeElement: valueTimeElement,
+      valueStringElement: valueStringElement,
+      initialSelectedElement: initialSelectedElement,
     );
   }
 }
@@ -12735,6 +18524,16 @@ mixin _$QuestionnaireAnswerOption {
   Coding get valueCoding;
   Reference get valueReference;
   Boolean get initialSelected;
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @JsonKey(name: '_initialSelected')
+  Element get initialSelectedElement;
 
   Map<String, dynamic> toJson();
   $QuestionnaireAnswerOptionCopyWith<QuestionnaireAnswerOption> get copyWith;
@@ -12754,10 +18553,20 @@ abstract class $QuestionnaireAnswerOptionCopyWith<$Res> {
       String valueString,
       Coding valueCoding,
       Reference valueReference,
-      Boolean initialSelected});
+      Boolean initialSelected,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_initialSelected') Element initialSelectedElement});
 
   $CodingCopyWith<$Res> get valueCoding;
   $ReferenceCopyWith<$Res> get valueReference;
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  $ElementCopyWith<$Res> get valueDateElement;
+  $ElementCopyWith<$Res> get valueTimeElement;
+  $ElementCopyWith<$Res> get valueStringElement;
+  $ElementCopyWith<$Res> get initialSelectedElement;
 }
 
 class _$QuestionnaireAnswerOptionCopyWithImpl<$Res>
@@ -12780,6 +18589,11 @@ class _$QuestionnaireAnswerOptionCopyWithImpl<$Res>
     Object valueCoding = freezed,
     Object valueReference = freezed,
     Object initialSelected = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueStringElement = freezed,
+    Object initialSelectedElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -12804,6 +18618,21 @@ class _$QuestionnaireAnswerOptionCopyWithImpl<$Res>
       initialSelected: initialSelected == freezed
           ? _value.initialSelected
           : initialSelected as Boolean,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      initialSelectedElement: initialSelectedElement == freezed
+          ? _value.initialSelectedElement
+          : initialSelectedElement as Element,
     ));
   }
 
@@ -12826,6 +18655,56 @@ class _$QuestionnaireAnswerOptionCopyWithImpl<$Res>
       return _then(_value.copyWith(valueReference: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateElement {
+    if (_value.valueDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateElement, (value) {
+      return _then(_value.copyWith(valueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement {
+    if (_value.valueTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueTimeElement, (value) {
+      return _then(_value.copyWith(valueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get initialSelectedElement {
+    if (_value.initialSelectedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.initialSelectedElement, (value) {
+      return _then(_value.copyWith(initialSelectedElement: value));
+    });
+  }
 }
 
 abstract class _$QuestionnaireAnswerOptionCopyWith<$Res>
@@ -12844,12 +18723,27 @@ abstract class _$QuestionnaireAnswerOptionCopyWith<$Res>
       String valueString,
       Coding valueCoding,
       Reference valueReference,
-      Boolean initialSelected});
+      Boolean initialSelected,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_initialSelected') Element initialSelectedElement});
 
   @override
   $CodingCopyWith<$Res> get valueCoding;
   @override
   $ReferenceCopyWith<$Res> get valueReference;
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateElement;
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement;
+  @override
+  $ElementCopyWith<$Res> get valueStringElement;
+  @override
+  $ElementCopyWith<$Res> get initialSelectedElement;
 }
 
 class __$QuestionnaireAnswerOptionCopyWithImpl<$Res>
@@ -12875,6 +18769,11 @@ class __$QuestionnaireAnswerOptionCopyWithImpl<$Res>
     Object valueCoding = freezed,
     Object valueReference = freezed,
     Object initialSelected = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueStringElement = freezed,
+    Object initialSelectedElement = freezed,
   }) {
     return _then(_QuestionnaireAnswerOption(
       id: id == freezed ? _value.id : id as String,
@@ -12899,6 +18798,21 @@ class __$QuestionnaireAnswerOptionCopyWithImpl<$Res>
       initialSelected: initialSelected == freezed
           ? _value.initialSelected
           : initialSelected as Boolean,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      initialSelectedElement: initialSelectedElement == freezed
+          ? _value.initialSelectedElement
+          : initialSelectedElement as Element,
     ));
   }
 }
@@ -12915,7 +18829,12 @@ class _$_QuestionnaireAnswerOption implements _QuestionnaireAnswerOption {
       this.valueString,
       this.valueCoding,
       this.valueReference,
-      this.initialSelected});
+      this.initialSelected,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      @JsonKey(name: '_valueDate') this.valueDateElement,
+      @JsonKey(name: '_valueTime') this.valueTimeElement,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      @JsonKey(name: '_initialSelected') this.initialSelectedElement});
 
   factory _$_QuestionnaireAnswerOption.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireAnswerOptionFromJson(json);
@@ -12941,10 +18860,25 @@ class _$_QuestionnaireAnswerOption implements _QuestionnaireAnswerOption {
   final Reference valueReference;
   @override
   final Boolean initialSelected;
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  final Element valueDateElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  final Element valueTimeElement;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element valueStringElement;
+  @override
+  @JsonKey(name: '_initialSelected')
+  final Element initialSelectedElement;
 
   @override
   String toString() {
-    return 'QuestionnaireAnswerOption(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueInteger: $valueInteger, valueDate: $valueDate, valueTime: $valueTime, valueString: $valueString, valueCoding: $valueCoding, valueReference: $valueReference, initialSelected: $initialSelected)';
+    return 'QuestionnaireAnswerOption(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueInteger: $valueInteger, valueDate: $valueDate, valueTime: $valueTime, valueString: $valueString, valueCoding: $valueCoding, valueReference: $valueReference, initialSelected: $initialSelected, valueIntegerElement: $valueIntegerElement, valueDateElement: $valueDateElement, valueTimeElement: $valueTimeElement, valueStringElement: $valueStringElement, initialSelectedElement: $initialSelectedElement)';
   }
 
   @override
@@ -12979,7 +18913,22 @@ class _$_QuestionnaireAnswerOption implements _QuestionnaireAnswerOption {
                     .equals(other.valueReference, valueReference)) &&
             (identical(other.initialSelected, initialSelected) ||
                 const DeepCollectionEquality()
-                    .equals(other.initialSelected, initialSelected)));
+                    .equals(other.initialSelected, initialSelected)) &&
+            (identical(other.valueIntegerElement, valueIntegerElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDateElement, valueDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueTimeElement, valueTimeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueStringElement, valueStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.initialSelectedElement, initialSelectedElement) ||
+                const DeepCollectionEquality().equals(
+                    other.initialSelectedElement, initialSelectedElement)));
   }
 
   @override
@@ -12994,7 +18943,12 @@ class _$_QuestionnaireAnswerOption implements _QuestionnaireAnswerOption {
       const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueCoding) ^
       const DeepCollectionEquality().hash(valueReference) ^
-      const DeepCollectionEquality().hash(initialSelected);
+      const DeepCollectionEquality().hash(initialSelected) ^
+      const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(initialSelectedElement);
 
   @override
   _$QuestionnaireAnswerOptionCopyWith<_QuestionnaireAnswerOption>
@@ -13010,16 +18964,22 @@ class _$_QuestionnaireAnswerOption implements _QuestionnaireAnswerOption {
 
 abstract class _QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
   const factory _QuestionnaireAnswerOption(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Integer valueInteger,
-      Date valueDate,
-      Time valueTime,
-      String valueString,
-      Coding valueCoding,
-      Reference valueReference,
-      Boolean initialSelected}) = _$_QuestionnaireAnswerOption;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Integer valueInteger,
+          Date valueDate,
+          Time valueTime,
+          String valueString,
+          Coding valueCoding,
+          Reference valueReference,
+          Boolean initialSelected,
+          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          @JsonKey(name: '_valueDate') Element valueDateElement,
+          @JsonKey(name: '_valueTime') Element valueTimeElement,
+          @JsonKey(name: '_valueString') Element valueStringElement,
+          @JsonKey(name: '_initialSelected') Element initialSelectedElement}) =
+      _$_QuestionnaireAnswerOption;
 
   factory _QuestionnaireAnswerOption.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireAnswerOption.fromJson;
@@ -13046,6 +19006,21 @@ abstract class _QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
   @override
   Boolean get initialSelected;
   @override
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @override
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @override
+  @JsonKey(name: '_initialSelected')
+  Element get initialSelectedElement;
+  @override
   _$QuestionnaireAnswerOptionCopyWith<_QuestionnaireAnswerOption> get copyWith;
 }
 
@@ -13071,7 +19046,15 @@ class _$QuestionnaireInitialTearOff {
       Attachment valueAttachment,
       Coding valueCoding,
       Quantity valueQuantity,
-      Reference valueReference}) {
+      Reference valueReference,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement}) {
     return _QuestionnaireInitial(
       id: id,
       extension_: extension_,
@@ -13088,6 +19071,14 @@ class _$QuestionnaireInitialTearOff {
       valueCoding: valueCoding,
       valueQuantity: valueQuantity,
       valueReference: valueReference,
+      valueBooleanElement: valueBooleanElement,
+      valueDecimalElement: valueDecimalElement,
+      valueIntegerElement: valueIntegerElement,
+      valueDateElement: valueDateElement,
+      valueDateTimeElement: valueDateTimeElement,
+      valueTimeElement: valueTimeElement,
+      valueStringElement: valueStringElement,
+      valueUriElement: valueUriElement,
     );
   }
 }
@@ -13112,6 +19103,22 @@ mixin _$QuestionnaireInitial {
   Coding get valueCoding;
   Quantity get valueQuantity;
   Reference get valueReference;
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
 
   Map<String, dynamic> toJson();
   $QuestionnaireInitialCopyWith<QuestionnaireInitial> get copyWith;
@@ -13136,12 +19143,28 @@ abstract class $QuestionnaireInitialCopyWith<$Res> {
       Attachment valueAttachment,
       Coding valueCoding,
       Quantity valueQuantity,
-      Reference valueReference});
+      Reference valueReference,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement});
 
   $AttachmentCopyWith<$Res> get valueAttachment;
   $CodingCopyWith<$Res> get valueCoding;
   $QuantityCopyWith<$Res> get valueQuantity;
   $ReferenceCopyWith<$Res> get valueReference;
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  $ElementCopyWith<$Res> get valueDateElement;
+  $ElementCopyWith<$Res> get valueDateTimeElement;
+  $ElementCopyWith<$Res> get valueTimeElement;
+  $ElementCopyWith<$Res> get valueStringElement;
+  $ElementCopyWith<$Res> get valueUriElement;
 }
 
 class _$QuestionnaireInitialCopyWithImpl<$Res>
@@ -13169,6 +19192,14 @@ class _$QuestionnaireInitialCopyWithImpl<$Res>
     Object valueCoding = freezed,
     Object valueQuantity = freezed,
     Object valueReference = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueDateTimeElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueUriElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -13206,6 +19237,30 @@ class _$QuestionnaireInitialCopyWithImpl<$Res>
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference as Reference,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
     ));
   }
 
@@ -13248,6 +19303,86 @@ class _$QuestionnaireInitialCopyWithImpl<$Res>
       return _then(_value.copyWith(valueReference: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement {
+    if (_value.valueDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement, (value) {
+      return _then(_value.copyWith(valueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateElement {
+    if (_value.valueDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateElement, (value) {
+      return _then(_value.copyWith(valueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement {
+    if (_value.valueDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement, (value) {
+      return _then(_value.copyWith(valueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement {
+    if (_value.valueTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueTimeElement, (value) {
+      return _then(_value.copyWith(valueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUriElement {
+    if (_value.valueUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUriElement, (value) {
+      return _then(_value.copyWith(valueUriElement: value));
+    });
+  }
 }
 
 abstract class _$QuestionnaireInitialCopyWith<$Res>
@@ -13271,7 +19406,15 @@ abstract class _$QuestionnaireInitialCopyWith<$Res>
       Attachment valueAttachment,
       Coding valueCoding,
       Quantity valueQuantity,
-      Reference valueReference});
+      Reference valueReference,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement});
 
   @override
   $AttachmentCopyWith<$Res> get valueAttachment;
@@ -13281,6 +19424,22 @@ abstract class _$QuestionnaireInitialCopyWith<$Res>
   $QuantityCopyWith<$Res> get valueQuantity;
   @override
   $ReferenceCopyWith<$Res> get valueReference;
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement;
+  @override
+  $ElementCopyWith<$Res> get valueStringElement;
+  @override
+  $ElementCopyWith<$Res> get valueUriElement;
 }
 
 class __$QuestionnaireInitialCopyWithImpl<$Res>
@@ -13310,6 +19469,14 @@ class __$QuestionnaireInitialCopyWithImpl<$Res>
     Object valueCoding = freezed,
     Object valueQuantity = freezed,
     Object valueReference = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueDateTimeElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueUriElement = freezed,
   }) {
     return _then(_QuestionnaireInitial(
       id: id == freezed ? _value.id : id as String,
@@ -13347,6 +19514,30 @@ class __$QuestionnaireInitialCopyWithImpl<$Res>
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference as Reference,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
     ));
   }
 }
@@ -13368,7 +19559,15 @@ class _$_QuestionnaireInitial implements _QuestionnaireInitial {
       this.valueAttachment,
       this.valueCoding,
       this.valueQuantity,
-      this.valueReference});
+      this.valueReference,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      @JsonKey(name: '_valueDate') this.valueDateElement,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      @JsonKey(name: '_valueTime') this.valueTimeElement,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      @JsonKey(name: '_valueUri') this.valueUriElement});
 
   factory _$_QuestionnaireInitial.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireInitialFromJson(json);
@@ -13404,10 +19603,34 @@ class _$_QuestionnaireInitial implements _QuestionnaireInitial {
   final Quantity valueQuantity;
   @override
   final Reference valueReference;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  final Element valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  final Element valueDateElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  final Element valueDateTimeElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  final Element valueTimeElement;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element valueStringElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  final Element valueUriElement;
 
   @override
   String toString() {
-    return 'QuestionnaireInitial(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueBoolean: $valueBoolean, valueDecimal: $valueDecimal, valueInteger: $valueInteger, valueDate: $valueDate, valueDateTime: $valueDateTime, valueTime: $valueTime, valueString: $valueString, valueUri: $valueUri, valueAttachment: $valueAttachment, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueReference: $valueReference)';
+    return 'QuestionnaireInitial(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueBoolean: $valueBoolean, valueDecimal: $valueDecimal, valueInteger: $valueInteger, valueDate: $valueDate, valueDateTime: $valueDateTime, valueTime: $valueTime, valueString: $valueString, valueUri: $valueUri, valueAttachment: $valueAttachment, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueReference: $valueReference, valueBooleanElement: $valueBooleanElement, valueDecimalElement: $valueDecimalElement, valueIntegerElement: $valueIntegerElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueTimeElement: $valueTimeElement, valueStringElement: $valueStringElement, valueUriElement: $valueUriElement)';
   }
 
   @override
@@ -13457,7 +19680,29 @@ class _$_QuestionnaireInitial implements _QuestionnaireInitial {
                     .equals(other.valueQuantity, valueQuantity)) &&
             (identical(other.valueReference, valueReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueReference, valueReference)));
+                    .equals(other.valueReference, valueReference)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueDecimalElement, valueDecimalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueIntegerElement, valueIntegerElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDateElement, valueDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueDateTimeElement, valueDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueTimeElement, valueTimeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueStringElement, valueStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueUriElement, valueUriElement) || const DeepCollectionEquality().equals(other.valueUriElement, valueUriElement)));
   }
 
   @override
@@ -13477,7 +19722,15 @@ class _$_QuestionnaireInitial implements _QuestionnaireInitial {
       const DeepCollectionEquality().hash(valueAttachment) ^
       const DeepCollectionEquality().hash(valueCoding) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
-      const DeepCollectionEquality().hash(valueReference);
+      const DeepCollectionEquality().hash(valueReference) ^
+      const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueUriElement);
 
   @override
   _$QuestionnaireInitialCopyWith<_QuestionnaireInitial> get copyWith =>
@@ -13492,21 +19745,30 @@ class _$_QuestionnaireInitial implements _QuestionnaireInitial {
 
 abstract class _QuestionnaireInitial implements QuestionnaireInitial {
   const factory _QuestionnaireInitial(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Boolean valueBoolean,
-      Decimal valueDecimal,
-      Integer valueInteger,
-      Date valueDate,
-      FhirDateTime valueDateTime,
-      Time valueTime,
-      String valueString,
-      FhirUri valueUri,
-      Attachment valueAttachment,
-      Coding valueCoding,
-      Quantity valueQuantity,
-      Reference valueReference}) = _$_QuestionnaireInitial;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Boolean valueBoolean,
+          Decimal valueDecimal,
+          Integer valueInteger,
+          Date valueDate,
+          FhirDateTime valueDateTime,
+          Time valueTime,
+          String valueString,
+          FhirUri valueUri,
+          Attachment valueAttachment,
+          Coding valueCoding,
+          Quantity valueQuantity,
+          Reference valueReference,
+          @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          @JsonKey(name: '_valueDate') Element valueDateElement,
+          @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+          @JsonKey(name: '_valueTime') Element valueTimeElement,
+          @JsonKey(name: '_valueString') Element valueStringElement,
+          @JsonKey(name: '_valueUri') Element valueUriElement}) =
+      _$_QuestionnaireInitial;
 
   factory _QuestionnaireInitial.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireInitial.fromJson;
@@ -13543,6 +19805,30 @@ abstract class _QuestionnaireInitial implements QuestionnaireInitial {
   @override
   Reference get valueReference;
   @override
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @override
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
+  @override
   _$QuestionnaireInitialCopyWith<_QuestionnaireInitial> get copyWith;
 }
 
@@ -13571,7 +19857,13 @@ class _$SpecimenDefinitionTearOff {
       List<CodeableConcept> patientPreparation,
       String timeAspect,
       List<CodeableConcept> collection,
-      List<SpecimenDefinitionTypeTested> typeTested}) {
+      List<SpecimenDefinitionTypeTested> typeTested,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_timeAspect')
+          Element timeAspectElement}) {
     return _SpecimenDefinition(
       resourceType: resourceType,
       id: id,
@@ -13588,6 +19880,9 @@ class _$SpecimenDefinitionTearOff {
       timeAspect: timeAspect,
       collection: collection,
       typeTested: typeTested,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      timeAspectElement: timeAspectElement,
     );
   }
 }
@@ -13613,6 +19908,12 @@ mixin _$SpecimenDefinition {
   String get timeAspect;
   List<CodeableConcept> get collection;
   List<SpecimenDefinitionTypeTested> get typeTested;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_timeAspect')
+  Element get timeAspectElement;
 
   Map<String, dynamic> toJson();
   $SpecimenDefinitionCopyWith<SpecimenDefinition> get copyWith;
@@ -13639,12 +19940,21 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       List<CodeableConcept> patientPreparation,
       String timeAspect,
       List<CodeableConcept> collection,
-      List<SpecimenDefinitionTypeTested> typeTested});
+      List<SpecimenDefinitionTypeTested> typeTested,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_timeAspect')
+          Element timeAspectElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get typeCollected;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get timeAspectElement;
 }
 
 class _$SpecimenDefinitionCopyWithImpl<$Res>
@@ -13672,6 +19982,9 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
     Object timeAspect = freezed,
     Object collection = freezed,
     Object typeTested = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object timeAspectElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -13708,6 +20021,15 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
       typeTested: typeTested == freezed
           ? _value.typeTested
           : typeTested as List<SpecimenDefinitionTypeTested>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      timeAspectElement: timeAspectElement == freezed
+          ? _value.timeAspectElement
+          : timeAspectElement as Element,
     ));
   }
 
@@ -13750,6 +20072,36 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(typeCollected: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timeAspectElement {
+    if (_value.timeAspectElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timeAspectElement, (value) {
+      return _then(_value.copyWith(timeAspectElement: value));
+    });
+  }
 }
 
 abstract class _$SpecimenDefinitionCopyWith<$Res>
@@ -13775,7 +20127,13 @@ abstract class _$SpecimenDefinitionCopyWith<$Res>
       List<CodeableConcept> patientPreparation,
       String timeAspect,
       List<CodeableConcept> collection,
-      List<SpecimenDefinitionTypeTested> typeTested});
+      List<SpecimenDefinitionTypeTested> typeTested,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_timeAspect')
+          Element timeAspectElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -13785,6 +20143,12 @@ abstract class _$SpecimenDefinitionCopyWith<$Res>
   $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get typeCollected;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get timeAspectElement;
 }
 
 class __$SpecimenDefinitionCopyWithImpl<$Res>
@@ -13814,6 +20178,9 @@ class __$SpecimenDefinitionCopyWithImpl<$Res>
     Object timeAspect = freezed,
     Object collection = freezed,
     Object typeTested = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object timeAspectElement = freezed,
   }) {
     return _then(_SpecimenDefinition(
       resourceType: resourceType == freezed
@@ -13850,6 +20217,15 @@ class __$SpecimenDefinitionCopyWithImpl<$Res>
       typeTested: typeTested == freezed
           ? _value.typeTested
           : typeTested as List<SpecimenDefinitionTypeTested>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      timeAspectElement: timeAspectElement == freezed
+          ? _value.timeAspectElement
+          : timeAspectElement as Element,
     ));
   }
 }
@@ -13874,7 +20250,13 @@ class _$_SpecimenDefinition implements _SpecimenDefinition {
       this.patientPreparation,
       this.timeAspect,
       this.collection,
-      this.typeTested})
+      this.typeTested,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_timeAspect')
+          this.timeAspectElement})
       : assert(resourceType != null);
 
   factory _$_SpecimenDefinition.fromJson(Map<String, dynamic> json) =>
@@ -13912,10 +20294,19 @@ class _$_SpecimenDefinition implements _SpecimenDefinition {
   final List<CodeableConcept> collection;
   @override
   final List<SpecimenDefinitionTypeTested> typeTested;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_timeAspect')
+  final Element timeAspectElement;
 
   @override
   String toString() {
-    return 'SpecimenDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, typeCollected: $typeCollected, patientPreparation: $patientPreparation, timeAspect: $timeAspect, collection: $collection, typeTested: $typeTested)';
+    return 'SpecimenDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, typeCollected: $typeCollected, patientPreparation: $patientPreparation, timeAspect: $timeAspect, collection: $collection, typeTested: $typeTested, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, timeAspectElement: $timeAspectElement)';
   }
 
   @override
@@ -13963,7 +20354,16 @@ class _$_SpecimenDefinition implements _SpecimenDefinition {
                     .equals(other.collection, collection)) &&
             (identical(other.typeTested, typeTested) ||
                 const DeepCollectionEquality()
-                    .equals(other.typeTested, typeTested)));
+                    .equals(other.typeTested, typeTested)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.timeAspectElement, timeAspectElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.timeAspectElement, timeAspectElement)));
   }
 
   @override
@@ -13983,7 +20383,10 @@ class _$_SpecimenDefinition implements _SpecimenDefinition {
       const DeepCollectionEquality().hash(patientPreparation) ^
       const DeepCollectionEquality().hash(timeAspect) ^
       const DeepCollectionEquality().hash(collection) ^
-      const DeepCollectionEquality().hash(typeTested);
+      const DeepCollectionEquality().hash(typeTested) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(timeAspectElement);
 
   @override
   _$SpecimenDefinitionCopyWith<_SpecimenDefinition> get copyWith =>
@@ -14014,7 +20417,13 @@ abstract class _SpecimenDefinition implements SpecimenDefinition {
       List<CodeableConcept> patientPreparation,
       String timeAspect,
       List<CodeableConcept> collection,
-      List<SpecimenDefinitionTypeTested> typeTested}) = _$_SpecimenDefinition;
+      List<SpecimenDefinitionTypeTested> typeTested,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_timeAspect')
+          Element timeAspectElement}) = _$_SpecimenDefinition;
 
   factory _SpecimenDefinition.fromJson(Map<String, dynamic> json) =
       _$_SpecimenDefinition.fromJson;
@@ -14052,6 +20461,15 @@ abstract class _SpecimenDefinition implements SpecimenDefinition {
   @override
   List<SpecimenDefinitionTypeTested> get typeTested;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_timeAspect')
+  Element get timeAspectElement;
+  @override
   _$SpecimenDefinitionCopyWith<_SpecimenDefinition> get copyWith;
 }
 
@@ -14076,7 +20494,13 @@ class _$SpecimenDefinitionTypeTestedTearOff {
       String requirement,
       Duration retentionTime,
       List<CodeableConcept> rejectionCriterion,
-      List<SpecimenDefinitionHandling> handling}) {
+      List<SpecimenDefinitionHandling> handling,
+      @JsonKey(name: '_isDerived')
+          Element isDerivedElement,
+      @JsonKey(name: '_preference')
+          Element preferenceElement,
+      @JsonKey(name: '_requirement')
+          Element requirementElement}) {
     return _SpecimenDefinitionTypeTested(
       id: id,
       extension_: extension_,
@@ -14089,6 +20513,9 @@ class _$SpecimenDefinitionTypeTestedTearOff {
       retentionTime: retentionTime,
       rejectionCriterion: rejectionCriterion,
       handling: handling,
+      isDerivedElement: isDerivedElement,
+      preferenceElement: preferenceElement,
+      requirementElement: requirementElement,
     );
   }
 }
@@ -14110,6 +20537,12 @@ mixin _$SpecimenDefinitionTypeTested {
   Duration get retentionTime;
   List<CodeableConcept> get rejectionCriterion;
   List<SpecimenDefinitionHandling> get handling;
+  @JsonKey(name: '_isDerived')
+  Element get isDerivedElement;
+  @JsonKey(name: '_preference')
+  Element get preferenceElement;
+  @JsonKey(name: '_requirement')
+  Element get requirementElement;
 
   Map<String, dynamic> toJson();
   $SpecimenDefinitionTypeTestedCopyWith<SpecimenDefinitionTypeTested>
@@ -14134,11 +20567,20 @@ abstract class $SpecimenDefinitionTypeTestedCopyWith<$Res> {
       String requirement,
       Duration retentionTime,
       List<CodeableConcept> rejectionCriterion,
-      List<SpecimenDefinitionHandling> handling});
+      List<SpecimenDefinitionHandling> handling,
+      @JsonKey(name: '_isDerived')
+          Element isDerivedElement,
+      @JsonKey(name: '_preference')
+          Element preferenceElement,
+      @JsonKey(name: '_requirement')
+          Element requirementElement});
 
   $CodeableConceptCopyWith<$Res> get type;
   $SpecimenDefinitionContainerCopyWith<$Res> get container;
   $DurationCopyWith<$Res> get retentionTime;
+  $ElementCopyWith<$Res> get isDerivedElement;
+  $ElementCopyWith<$Res> get preferenceElement;
+  $ElementCopyWith<$Res> get requirementElement;
 }
 
 class _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
@@ -14162,6 +20604,9 @@ class _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
     Object retentionTime = freezed,
     Object rejectionCriterion = freezed,
     Object handling = freezed,
+    Object isDerivedElement = freezed,
+    Object preferenceElement = freezed,
+    Object requirementElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -14190,6 +20635,15 @@ class _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
       handling: handling == freezed
           ? _value.handling
           : handling as List<SpecimenDefinitionHandling>,
+      isDerivedElement: isDerivedElement == freezed
+          ? _value.isDerivedElement
+          : isDerivedElement as Element,
+      preferenceElement: preferenceElement == freezed
+          ? _value.preferenceElement
+          : preferenceElement as Element,
+      requirementElement: requirementElement == freezed
+          ? _value.requirementElement
+          : requirementElement as Element,
     ));
   }
 
@@ -14223,6 +20677,36 @@ class _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
       return _then(_value.copyWith(retentionTime: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get isDerivedElement {
+    if (_value.isDerivedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.isDerivedElement, (value) {
+      return _then(_value.copyWith(isDerivedElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get preferenceElement {
+    if (_value.preferenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.preferenceElement, (value) {
+      return _then(_value.copyWith(preferenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requirementElement {
+    if (_value.requirementElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requirementElement, (value) {
+      return _then(_value.copyWith(requirementElement: value));
+    });
+  }
 }
 
 abstract class _$SpecimenDefinitionTypeTestedCopyWith<$Res>
@@ -14245,7 +20729,13 @@ abstract class _$SpecimenDefinitionTypeTestedCopyWith<$Res>
       String requirement,
       Duration retentionTime,
       List<CodeableConcept> rejectionCriterion,
-      List<SpecimenDefinitionHandling> handling});
+      List<SpecimenDefinitionHandling> handling,
+      @JsonKey(name: '_isDerived')
+          Element isDerivedElement,
+      @JsonKey(name: '_preference')
+          Element preferenceElement,
+      @JsonKey(name: '_requirement')
+          Element requirementElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -14253,6 +20743,12 @@ abstract class _$SpecimenDefinitionTypeTestedCopyWith<$Res>
   $SpecimenDefinitionContainerCopyWith<$Res> get container;
   @override
   $DurationCopyWith<$Res> get retentionTime;
+  @override
+  $ElementCopyWith<$Res> get isDerivedElement;
+  @override
+  $ElementCopyWith<$Res> get preferenceElement;
+  @override
+  $ElementCopyWith<$Res> get requirementElement;
 }
 
 class __$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
@@ -14280,6 +20776,9 @@ class __$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
     Object retentionTime = freezed,
     Object rejectionCriterion = freezed,
     Object handling = freezed,
+    Object isDerivedElement = freezed,
+    Object preferenceElement = freezed,
+    Object requirementElement = freezed,
   }) {
     return _then(_SpecimenDefinitionTypeTested(
       id: id == freezed ? _value.id : id as String,
@@ -14308,6 +20807,15 @@ class __$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
       handling: handling == freezed
           ? _value.handling
           : handling as List<SpecimenDefinitionHandling>,
+      isDerivedElement: isDerivedElement == freezed
+          ? _value.isDerivedElement
+          : isDerivedElement as Element,
+      preferenceElement: preferenceElement == freezed
+          ? _value.preferenceElement
+          : preferenceElement as Element,
+      requirementElement: requirementElement == freezed
+          ? _value.requirementElement
+          : requirementElement as Element,
     ));
   }
 }
@@ -14325,7 +20833,10 @@ class _$_SpecimenDefinitionTypeTested implements _SpecimenDefinitionTypeTested {
       this.requirement,
       this.retentionTime,
       this.rejectionCriterion,
-      this.handling});
+      this.handling,
+      @JsonKey(name: '_isDerived') this.isDerivedElement,
+      @JsonKey(name: '_preference') this.preferenceElement,
+      @JsonKey(name: '_requirement') this.requirementElement});
 
   factory _$_SpecimenDefinitionTypeTested.fromJson(Map<String, dynamic> json) =>
       _$_$_SpecimenDefinitionTypeTestedFromJson(json);
@@ -14354,10 +20865,19 @@ class _$_SpecimenDefinitionTypeTested implements _SpecimenDefinitionTypeTested {
   final List<CodeableConcept> rejectionCriterion;
   @override
   final List<SpecimenDefinitionHandling> handling;
+  @override
+  @JsonKey(name: '_isDerived')
+  final Element isDerivedElement;
+  @override
+  @JsonKey(name: '_preference')
+  final Element preferenceElement;
+  @override
+  @JsonKey(name: '_requirement')
+  final Element requirementElement;
 
   @override
   String toString() {
-    return 'SpecimenDefinitionTypeTested(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, isDerived: $isDerived, type: $type, preference: $preference, container: $container, requirement: $requirement, retentionTime: $retentionTime, rejectionCriterion: $rejectionCriterion, handling: $handling)';
+    return 'SpecimenDefinitionTypeTested(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, isDerived: $isDerived, type: $type, preference: $preference, container: $container, requirement: $requirement, retentionTime: $retentionTime, rejectionCriterion: $rejectionCriterion, handling: $handling, isDerivedElement: $isDerivedElement, preferenceElement: $preferenceElement, requirementElement: $requirementElement)';
   }
 
   @override
@@ -14394,7 +20914,16 @@ class _$_SpecimenDefinitionTypeTested implements _SpecimenDefinitionTypeTested {
                     .equals(other.rejectionCriterion, rejectionCriterion)) &&
             (identical(other.handling, handling) ||
                 const DeepCollectionEquality()
-                    .equals(other.handling, handling)));
+                    .equals(other.handling, handling)) &&
+            (identical(other.isDerivedElement, isDerivedElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.isDerivedElement, isDerivedElement)) &&
+            (identical(other.preferenceElement, preferenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.preferenceElement, preferenceElement)) &&
+            (identical(other.requirementElement, requirementElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.requirementElement, requirementElement)));
   }
 
   @override
@@ -14410,7 +20939,10 @@ class _$_SpecimenDefinitionTypeTested implements _SpecimenDefinitionTypeTested {
       const DeepCollectionEquality().hash(requirement) ^
       const DeepCollectionEquality().hash(retentionTime) ^
       const DeepCollectionEquality().hash(rejectionCriterion) ^
-      const DeepCollectionEquality().hash(handling);
+      const DeepCollectionEquality().hash(handling) ^
+      const DeepCollectionEquality().hash(isDerivedElement) ^
+      const DeepCollectionEquality().hash(preferenceElement) ^
+      const DeepCollectionEquality().hash(requirementElement);
 
   @override
   _$SpecimenDefinitionTypeTestedCopyWith<_SpecimenDefinitionTypeTested>
@@ -14426,20 +20958,25 @@ class _$_SpecimenDefinitionTypeTested implements _SpecimenDefinitionTypeTested {
 abstract class _SpecimenDefinitionTypeTested
     implements SpecimenDefinitionTypeTested {
   const factory _SpecimenDefinitionTypeTested(
-          {String id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          Boolean isDerived,
-          CodeableConcept type,
-          @JsonKey(unknownEnumValue: TypeTestedPreference.unknown)
-              TypeTestedPreference preference,
-          SpecimenDefinitionContainer container,
-          String requirement,
-          Duration retentionTime,
-          List<CodeableConcept> rejectionCriterion,
-          List<SpecimenDefinitionHandling> handling}) =
-      _$_SpecimenDefinitionTypeTested;
+      {String id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Boolean isDerived,
+      CodeableConcept type,
+      @JsonKey(unknownEnumValue: TypeTestedPreference.unknown)
+          TypeTestedPreference preference,
+      SpecimenDefinitionContainer container,
+      String requirement,
+      Duration retentionTime,
+      List<CodeableConcept> rejectionCriterion,
+      List<SpecimenDefinitionHandling> handling,
+      @JsonKey(name: '_isDerived')
+          Element isDerivedElement,
+      @JsonKey(name: '_preference')
+          Element preferenceElement,
+      @JsonKey(name: '_requirement')
+          Element requirementElement}) = _$_SpecimenDefinitionTypeTested;
 
   factory _SpecimenDefinitionTypeTested.fromJson(Map<String, dynamic> json) =
       _$_SpecimenDefinitionTypeTested.fromJson;
@@ -14469,6 +21006,15 @@ abstract class _SpecimenDefinitionTypeTested
   @override
   List<SpecimenDefinitionHandling> get handling;
   @override
+  @JsonKey(name: '_isDerived')
+  Element get isDerivedElement;
+  @override
+  @JsonKey(name: '_preference')
+  Element get preferenceElement;
+  @override
+  @JsonKey(name: '_requirement')
+  Element get requirementElement;
+  @override
   _$SpecimenDefinitionTypeTestedCopyWith<_SpecimenDefinitionTypeTested>
       get copyWith;
 }
@@ -14493,7 +21039,10 @@ class _$SpecimenDefinitionContainerTearOff {
       Quantity minimumVolumeQuantity,
       String minimumVolumeString,
       List<SpecimenDefinitionAdditive> additive,
-      String preparation}) {
+      String preparation,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_minimumVolumeString') Element minimumVolumeStringElement,
+      @JsonKey(name: '_preparation') Element preparationElement}) {
     return _SpecimenDefinitionContainer(
       id: id,
       extension_: extension_,
@@ -14507,6 +21056,9 @@ class _$SpecimenDefinitionContainerTearOff {
       minimumVolumeString: minimumVolumeString,
       additive: additive,
       preparation: preparation,
+      descriptionElement: descriptionElement,
+      minimumVolumeStringElement: minimumVolumeStringElement,
+      preparationElement: preparationElement,
     );
   }
 }
@@ -14528,6 +21080,12 @@ mixin _$SpecimenDefinitionContainer {
   String get minimumVolumeString;
   List<SpecimenDefinitionAdditive> get additive;
   String get preparation;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_minimumVolumeString')
+  Element get minimumVolumeStringElement;
+  @JsonKey(name: '_preparation')
+  Element get preparationElement;
 
   Map<String, dynamic> toJson();
   $SpecimenDefinitionContainerCopyWith<SpecimenDefinitionContainer>
@@ -14551,13 +21109,19 @@ abstract class $SpecimenDefinitionContainerCopyWith<$Res> {
       Quantity minimumVolumeQuantity,
       String minimumVolumeString,
       List<SpecimenDefinitionAdditive> additive,
-      String preparation});
+      String preparation,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_minimumVolumeString') Element minimumVolumeStringElement,
+      @JsonKey(name: '_preparation') Element preparationElement});
 
   $CodeableConceptCopyWith<$Res> get material;
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get cap;
   $QuantityCopyWith<$Res> get capacity;
   $QuantityCopyWith<$Res> get minimumVolumeQuantity;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get minimumVolumeStringElement;
+  $ElementCopyWith<$Res> get preparationElement;
 }
 
 class _$SpecimenDefinitionContainerCopyWithImpl<$Res>
@@ -14582,6 +21146,9 @@ class _$SpecimenDefinitionContainerCopyWithImpl<$Res>
     Object minimumVolumeString = freezed,
     Object additive = freezed,
     Object preparation = freezed,
+    Object descriptionElement = freezed,
+    Object minimumVolumeStringElement = freezed,
+    Object preparationElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -14609,6 +21176,15 @@ class _$SpecimenDefinitionContainerCopyWithImpl<$Res>
           : additive as List<SpecimenDefinitionAdditive>,
       preparation:
           preparation == freezed ? _value.preparation : preparation as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      minimumVolumeStringElement: minimumVolumeStringElement == freezed
+          ? _value.minimumVolumeStringElement
+          : minimumVolumeStringElement as Element,
+      preparationElement: preparationElement == freezed
+          ? _value.preparationElement
+          : preparationElement as Element,
     ));
   }
 
@@ -14661,6 +21237,36 @@ class _$SpecimenDefinitionContainerCopyWithImpl<$Res>
       return _then(_value.copyWith(minimumVolumeQuantity: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minimumVolumeStringElement {
+    if (_value.minimumVolumeStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minimumVolumeStringElement, (value) {
+      return _then(_value.copyWith(minimumVolumeStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get preparationElement {
+    if (_value.preparationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.preparationElement, (value) {
+      return _then(_value.copyWith(preparationElement: value));
+    });
+  }
 }
 
 abstract class _$SpecimenDefinitionContainerCopyWith<$Res>
@@ -14682,7 +21288,10 @@ abstract class _$SpecimenDefinitionContainerCopyWith<$Res>
       Quantity minimumVolumeQuantity,
       String minimumVolumeString,
       List<SpecimenDefinitionAdditive> additive,
-      String preparation});
+      String preparation,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_minimumVolumeString') Element minimumVolumeStringElement,
+      @JsonKey(name: '_preparation') Element preparationElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get material;
@@ -14694,6 +21303,12 @@ abstract class _$SpecimenDefinitionContainerCopyWith<$Res>
   $QuantityCopyWith<$Res> get capacity;
   @override
   $QuantityCopyWith<$Res> get minimumVolumeQuantity;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get minimumVolumeStringElement;
+  @override
+  $ElementCopyWith<$Res> get preparationElement;
 }
 
 class __$SpecimenDefinitionContainerCopyWithImpl<$Res>
@@ -14722,6 +21337,9 @@ class __$SpecimenDefinitionContainerCopyWithImpl<$Res>
     Object minimumVolumeString = freezed,
     Object additive = freezed,
     Object preparation = freezed,
+    Object descriptionElement = freezed,
+    Object minimumVolumeStringElement = freezed,
+    Object preparationElement = freezed,
   }) {
     return _then(_SpecimenDefinitionContainer(
       id: id == freezed ? _value.id : id as String,
@@ -14749,6 +21367,15 @@ class __$SpecimenDefinitionContainerCopyWithImpl<$Res>
           : additive as List<SpecimenDefinitionAdditive>,
       preparation:
           preparation == freezed ? _value.preparation : preparation as String,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      minimumVolumeStringElement: minimumVolumeStringElement == freezed
+          ? _value.minimumVolumeStringElement
+          : minimumVolumeStringElement as Element,
+      preparationElement: preparationElement == freezed
+          ? _value.preparationElement
+          : preparationElement as Element,
     ));
   }
 }
@@ -14767,7 +21394,10 @@ class _$_SpecimenDefinitionContainer implements _SpecimenDefinitionContainer {
       this.minimumVolumeQuantity,
       this.minimumVolumeString,
       this.additive,
-      this.preparation});
+      this.preparation,
+      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_minimumVolumeString') this.minimumVolumeStringElement,
+      @JsonKey(name: '_preparation') this.preparationElement});
 
   factory _$_SpecimenDefinitionContainer.fromJson(Map<String, dynamic> json) =>
       _$_$_SpecimenDefinitionContainerFromJson(json);
@@ -14797,10 +21427,19 @@ class _$_SpecimenDefinitionContainer implements _SpecimenDefinitionContainer {
   final List<SpecimenDefinitionAdditive> additive;
   @override
   final String preparation;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_minimumVolumeString')
+  final Element minimumVolumeStringElement;
+  @override
+  @JsonKey(name: '_preparation')
+  final Element preparationElement;
 
   @override
   String toString() {
-    return 'SpecimenDefinitionContainer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, material: $material, type: $type, cap: $cap, description: $description, capacity: $capacity, minimumVolumeQuantity: $minimumVolumeQuantity, minimumVolumeString: $minimumVolumeString, additive: $additive, preparation: $preparation)';
+    return 'SpecimenDefinitionContainer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, material: $material, type: $type, cap: $cap, description: $description, capacity: $capacity, minimumVolumeQuantity: $minimumVolumeQuantity, minimumVolumeString: $minimumVolumeString, additive: $additive, preparation: $preparation, descriptionElement: $descriptionElement, minimumVolumeStringElement: $minimumVolumeStringElement, preparationElement: $preparationElement)';
   }
 
   @override
@@ -14839,7 +21478,18 @@ class _$_SpecimenDefinitionContainer implements _SpecimenDefinitionContainer {
                     .equals(other.additive, additive)) &&
             (identical(other.preparation, preparation) ||
                 const DeepCollectionEquality()
-                    .equals(other.preparation, preparation)));
+                    .equals(other.preparation, preparation)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.minimumVolumeStringElement,
+                    minimumVolumeStringElement) ||
+                const DeepCollectionEquality().equals(
+                    other.minimumVolumeStringElement,
+                    minimumVolumeStringElement)) &&
+            (identical(other.preparationElement, preparationElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.preparationElement, preparationElement)));
   }
 
   @override
@@ -14856,7 +21506,10 @@ class _$_SpecimenDefinitionContainer implements _SpecimenDefinitionContainer {
       const DeepCollectionEquality().hash(minimumVolumeQuantity) ^
       const DeepCollectionEquality().hash(minimumVolumeString) ^
       const DeepCollectionEquality().hash(additive) ^
-      const DeepCollectionEquality().hash(preparation);
+      const DeepCollectionEquality().hash(preparation) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(minimumVolumeStringElement) ^
+      const DeepCollectionEquality().hash(preparationElement);
 
   @override
   _$SpecimenDefinitionContainerCopyWith<_SpecimenDefinitionContainer>
@@ -14873,7 +21526,8 @@ abstract class _SpecimenDefinitionContainer
     implements SpecimenDefinitionContainer {
   const factory _SpecimenDefinitionContainer(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept material,
       CodeableConcept type,
@@ -14883,7 +21537,13 @@ abstract class _SpecimenDefinitionContainer
       Quantity minimumVolumeQuantity,
       String minimumVolumeString,
       List<SpecimenDefinitionAdditive> additive,
-      String preparation}) = _$_SpecimenDefinitionContainer;
+      String preparation,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_minimumVolumeString')
+          Element minimumVolumeStringElement,
+      @JsonKey(name: '_preparation')
+          Element preparationElement}) = _$_SpecimenDefinitionContainer;
 
   factory _SpecimenDefinitionContainer.fromJson(Map<String, dynamic> json) =
       _$_SpecimenDefinitionContainer.fromJson;
@@ -14913,6 +21573,15 @@ abstract class _SpecimenDefinitionContainer
   List<SpecimenDefinitionAdditive> get additive;
   @override
   String get preparation;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_minimumVolumeString')
+  Element get minimumVolumeStringElement;
+  @override
+  @JsonKey(name: '_preparation')
+  Element get preparationElement;
   @override
   _$SpecimenDefinitionContainerCopyWith<_SpecimenDefinitionContainer>
       get copyWith;
@@ -15197,7 +21866,8 @@ class _$SpecimenDefinitionHandlingTearOff {
       CodeableConcept temperatureQualifier,
       Range temperatureRange,
       Duration maxDuration,
-      String instruction}) {
+      String instruction,
+      @JsonKey(name: '_instruction') Element instructionElement}) {
     return _SpecimenDefinitionHandling(
       id: id,
       extension_: extension_,
@@ -15206,6 +21876,7 @@ class _$SpecimenDefinitionHandlingTearOff {
       temperatureRange: temperatureRange,
       maxDuration: maxDuration,
       instruction: instruction,
+      instructionElement: instructionElement,
     );
   }
 }
@@ -15222,6 +21893,8 @@ mixin _$SpecimenDefinitionHandling {
   Range get temperatureRange;
   Duration get maxDuration;
   String get instruction;
+  @JsonKey(name: '_instruction')
+  Element get instructionElement;
 
   Map<String, dynamic> toJson();
   $SpecimenDefinitionHandlingCopyWith<SpecimenDefinitionHandling> get copyWith;
@@ -15238,11 +21911,13 @@ abstract class $SpecimenDefinitionHandlingCopyWith<$Res> {
       CodeableConcept temperatureQualifier,
       Range temperatureRange,
       Duration maxDuration,
-      String instruction});
+      String instruction,
+      @JsonKey(name: '_instruction') Element instructionElement});
 
   $CodeableConceptCopyWith<$Res> get temperatureQualifier;
   $RangeCopyWith<$Res> get temperatureRange;
   $DurationCopyWith<$Res> get maxDuration;
+  $ElementCopyWith<$Res> get instructionElement;
 }
 
 class _$SpecimenDefinitionHandlingCopyWithImpl<$Res>
@@ -15262,6 +21937,7 @@ class _$SpecimenDefinitionHandlingCopyWithImpl<$Res>
     Object temperatureRange = freezed,
     Object maxDuration = freezed,
     Object instruction = freezed,
+    Object instructionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -15281,6 +21957,9 @@ class _$SpecimenDefinitionHandlingCopyWithImpl<$Res>
           maxDuration == freezed ? _value.maxDuration : maxDuration as Duration,
       instruction:
           instruction == freezed ? _value.instruction : instruction as String,
+      instructionElement: instructionElement == freezed
+          ? _value.instructionElement
+          : instructionElement as Element,
     ));
   }
 
@@ -15313,6 +21992,16 @@ class _$SpecimenDefinitionHandlingCopyWithImpl<$Res>
       return _then(_value.copyWith(maxDuration: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get instructionElement {
+    if (_value.instructionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.instructionElement, (value) {
+      return _then(_value.copyWith(instructionElement: value));
+    });
+  }
 }
 
 abstract class _$SpecimenDefinitionHandlingCopyWith<$Res>
@@ -15329,7 +22018,8 @@ abstract class _$SpecimenDefinitionHandlingCopyWith<$Res>
       CodeableConcept temperatureQualifier,
       Range temperatureRange,
       Duration maxDuration,
-      String instruction});
+      String instruction,
+      @JsonKey(name: '_instruction') Element instructionElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get temperatureQualifier;
@@ -15337,6 +22027,8 @@ abstract class _$SpecimenDefinitionHandlingCopyWith<$Res>
   $RangeCopyWith<$Res> get temperatureRange;
   @override
   $DurationCopyWith<$Res> get maxDuration;
+  @override
+  $ElementCopyWith<$Res> get instructionElement;
 }
 
 class __$SpecimenDefinitionHandlingCopyWithImpl<$Res>
@@ -15359,6 +22051,7 @@ class __$SpecimenDefinitionHandlingCopyWithImpl<$Res>
     Object temperatureRange = freezed,
     Object maxDuration = freezed,
     Object instruction = freezed,
+    Object instructionElement = freezed,
   }) {
     return _then(_SpecimenDefinitionHandling(
       id: id == freezed ? _value.id : id as String,
@@ -15378,6 +22071,9 @@ class __$SpecimenDefinitionHandlingCopyWithImpl<$Res>
           maxDuration == freezed ? _value.maxDuration : maxDuration as Duration,
       instruction:
           instruction == freezed ? _value.instruction : instruction as String,
+      instructionElement: instructionElement == freezed
+          ? _value.instructionElement
+          : instructionElement as Element,
     ));
   }
 }
@@ -15391,7 +22087,8 @@ class _$_SpecimenDefinitionHandling implements _SpecimenDefinitionHandling {
       this.temperatureQualifier,
       this.temperatureRange,
       this.maxDuration,
-      this.instruction});
+      this.instruction,
+      @JsonKey(name: '_instruction') this.instructionElement});
 
   factory _$_SpecimenDefinitionHandling.fromJson(Map<String, dynamic> json) =>
       _$_$_SpecimenDefinitionHandlingFromJson(json);
@@ -15411,10 +22108,13 @@ class _$_SpecimenDefinitionHandling implements _SpecimenDefinitionHandling {
   final Duration maxDuration;
   @override
   final String instruction;
+  @override
+  @JsonKey(name: '_instruction')
+  final Element instructionElement;
 
   @override
   String toString() {
-    return 'SpecimenDefinitionHandling(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, temperatureQualifier: $temperatureQualifier, temperatureRange: $temperatureRange, maxDuration: $maxDuration, instruction: $instruction)';
+    return 'SpecimenDefinitionHandling(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, temperatureQualifier: $temperatureQualifier, temperatureRange: $temperatureRange, maxDuration: $maxDuration, instruction: $instruction, instructionElement: $instructionElement)';
   }
 
   @override
@@ -15440,7 +22140,10 @@ class _$_SpecimenDefinitionHandling implements _SpecimenDefinitionHandling {
                     .equals(other.maxDuration, maxDuration)) &&
             (identical(other.instruction, instruction) ||
                 const DeepCollectionEquality()
-                    .equals(other.instruction, instruction)));
+                    .equals(other.instruction, instruction)) &&
+            (identical(other.instructionElement, instructionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.instructionElement, instructionElement)));
   }
 
   @override
@@ -15452,7 +22155,8 @@ class _$_SpecimenDefinitionHandling implements _SpecimenDefinitionHandling {
       const DeepCollectionEquality().hash(temperatureQualifier) ^
       const DeepCollectionEquality().hash(temperatureRange) ^
       const DeepCollectionEquality().hash(maxDuration) ^
-      const DeepCollectionEquality().hash(instruction);
+      const DeepCollectionEquality().hash(instruction) ^
+      const DeepCollectionEquality().hash(instructionElement);
 
   @override
   _$SpecimenDefinitionHandlingCopyWith<_SpecimenDefinitionHandling>
@@ -15468,13 +22172,15 @@ class _$_SpecimenDefinitionHandling implements _SpecimenDefinitionHandling {
 abstract class _SpecimenDefinitionHandling
     implements SpecimenDefinitionHandling {
   const factory _SpecimenDefinitionHandling(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept temperatureQualifier,
-      Range temperatureRange,
-      Duration maxDuration,
-      String instruction}) = _$_SpecimenDefinitionHandling;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          CodeableConcept temperatureQualifier,
+          Range temperatureRange,
+          Duration maxDuration,
+          String instruction,
+          @JsonKey(name: '_instruction') Element instructionElement}) =
+      _$_SpecimenDefinitionHandling;
 
   factory _SpecimenDefinitionHandling.fromJson(Map<String, dynamic> json) =
       _$_SpecimenDefinitionHandling.fromJson;
@@ -15494,6 +22200,9 @@ abstract class _SpecimenDefinitionHandling
   Duration get maxDuration;
   @override
   String get instruction;
+  @override
+  @JsonKey(name: '_instruction')
+  Element get instructionElement;
   @override
   _$SpecimenDefinitionHandlingCopyWith<_SpecimenDefinitionHandling>
       get copyWith;

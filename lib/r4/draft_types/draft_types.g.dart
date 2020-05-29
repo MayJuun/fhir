@@ -157,6 +157,15 @@ _$_ProdCharacteristic _$_$_ProdCharacteristicFromJson(
     scoring: json['scoring'] == null
         ? null
         : CodeableConcept.fromJson(json['scoring'] as Map<String, dynamic>),
+    shapeElement: json['_shape'] == null
+        ? null
+        : Element.fromJson(json['_shape'] as Map<String, dynamic>),
+    colorElement: json['_color'] == null
+        ? null
+        : Element.fromJson(json['_color'] as Map<String, dynamic>),
+    imprintElement: json['_imprint'] == null
+        ? null
+        : Element.fromJson(json['_imprint'] as Map<String, dynamic>),
   );
 }
 
@@ -186,6 +195,9 @@ Map<String, dynamic> _$_$_ProdCharacteristicToJson(
   writeNotNull('imprint', instance.imprint);
   writeNotNull('image', instance.image?.map((e) => e?.toJson())?.toList());
   writeNotNull('scoring', instance.scoring?.toJson());
+  writeNotNull('_shape', instance.shapeElement?.toJson());
+  writeNotNull('_color', instance.colorElement?.toJson());
+  writeNotNull('_imprint', instance.imprintElement?.toJson());
   return val;
 }
 
@@ -219,6 +231,9 @@ _$_MarketingStatus _$_$_MarketingStatusFromJson(Map<String, dynamic> json) {
     restoreDate: json['restoreDate'] == null
         ? null
         : FhirDateTime.fromJson(json['restoreDate'] as String),
+    restoreDateElement: json['_restoreDate'] == null
+        ? null
+        : Element.fromJson(json['_restoreDate'] as Map<String, dynamic>),
   );
 }
 
@@ -241,6 +256,7 @@ Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) {
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('dateRange', instance.dateRange?.toJson());
   writeNotNull('restoreDate', instance.restoreDate?.toJson());
+  writeNotNull('_restoreDate', instance.restoreDateElement?.toJson());
   return val;
 }
 
@@ -272,6 +288,12 @@ _$_SubstanceAmount _$_$_SubstanceAmountFromJson(Map<String, dynamic> json) {
         ? null
         : SubstanceAmountReferenceRange.fromJson(
             json['referenceRange'] as Map<String, dynamic>),
+    amountStringElement: json['_amountString'] == null
+        ? null
+        : Element.fromJson(json['_amountString'] as Map<String, dynamic>),
+    amountTextElement: json['_amountText'] == null
+        ? null
+        : Element.fromJson(json['_amountText'] as Map<String, dynamic>),
   );
 }
 
@@ -295,6 +317,8 @@ Map<String, dynamic> _$_$_SubstanceAmountToJson(_$_SubstanceAmount instance) {
   writeNotNull('amountType', instance.amountType?.toJson());
   writeNotNull('amountText', instance.amountText);
   writeNotNull('referenceRange', instance.referenceRange?.toJson());
+  writeNotNull('_amountString', instance.amountStringElement?.toJson());
+  writeNotNull('_amountText', instance.amountTextElement?.toJson());
   return val;
 }
 

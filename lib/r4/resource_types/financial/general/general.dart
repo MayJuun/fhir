@@ -33,6 +33,11 @@ abstract class Account with _$Account implements Resource {
     String description,
     List<AccountGuarantor> guarantor,
     Reference partOf,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_description') Element descriptionElement,
   }) = _Account;
   factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
@@ -46,6 +51,7 @@ abstract class AccountCoverage with _$AccountCoverage {
     List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required Reference coverage,
     PositiveInt priority,
+    @JsonKey(name: '_priority') Element priorityElement,
   }) = _AccountCoverage;
   factory AccountCoverage.fromJson(Map<String, dynamic> json) =>
       _$AccountCoverageFromJson(json);
@@ -60,6 +66,7 @@ abstract class AccountGuarantor with _$AccountGuarantor {
     @JsonKey(required: true) @required Reference party,
     Boolean onHold,
     Period period,
+    @JsonKey(name: '_onHold') Element onHoldElement,
   }) = _AccountGuarantor;
   factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>
       _$AccountGuarantorFromJson(json);
@@ -109,6 +116,14 @@ abstract class ChargeItem with _$ChargeItem implements Resource {
     List<Reference> account,
     List<Annotation> note,
     List<Reference> supportingInformation,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_definitionUri') Element definitionUriElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+@JsonKey(name: '_factorOverride') Element factorOverrideElement,
+@JsonKey(name: '_overrideReason') Element overrideReasonElement,
+@JsonKey(name: '_enteredDate') Element enteredDateElement,
   }) = _ChargeItem;
   factory ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemFromJson(json);
@@ -166,6 +181,20 @@ abstract class ChargeItemDefinition
     List<Reference> instance,
     List<ChargeItemDefinitionApplicability> applicability,
     List<ChargeItemDefinitionPropertyGroup> propertyGroup,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_url') Element urlElement,
+@JsonKey(name: '_version') Element versionElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_derivedFromUri') Element derivedFromUriElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_experimental') Element experimentalElement,
+@JsonKey(name: '_date') Element dateElement,
+@JsonKey(name: '_publisher') Element publisherElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_copyright') Element copyrightElement,
+@JsonKey(name: '_approvalDate') Element approvalDateElement,
+@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _ChargeItemDefinition;
   factory ChargeItemDefinition.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemDefinitionFromJson(json);
@@ -181,6 +210,9 @@ abstract class ChargeItemDefinitionApplicability
     String description,
     String language,
     String expression,
+    @JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_expression') Element expressionElement,
   }) = _ChargeItemDefinitionApplicability;
   factory ChargeItemDefinitionApplicability.fromJson(
           Map<String, dynamic> json) =>
@@ -213,6 +245,8 @@ abstract class ChargeItemDefinitionPriceComponent
     CodeableConcept code,
     Decimal factor,
     Money amount,
+    @JsonKey(name: '_type') Element typeElement,
+@JsonKey(name: '_factor') Element factorElement,
   }) = _ChargeItemDefinitionPriceComponent;
   factory ChargeItemDefinitionPriceComponent.fromJson(
           Map<String, dynamic> json) =>
@@ -268,6 +302,17 @@ abstract class Contract with _$Contract implements Resource {
     List<ContractRule> rule,
     Attachment legallyBindingAttachment,
     Reference legallyBindingReference,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_url') Element urlElement,
+@JsonKey(name: '_version') Element versionElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+@JsonKey(name: '_issued') Element issuedElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_subtitle') Element subtitleElement,
+@JsonKey(name: '_alias') Element aliasElement,
   }) = _Contract;
   factory Contract.fromJson(Map<String, dynamic> json) =>
       _$ContractFromJson(json);
@@ -285,6 +330,9 @@ abstract class ContractContentDefinition with _$ContractContentDefinition {
     FhirDateTime publicationDate,
     Code publicationStatus,
     Markdown copyright,
+    @JsonKey(name: '_publicationDate') Element publicationDateElement,
+@JsonKey(name: '_publicationStatus') Element publicationStatusElement,
+@JsonKey(name: '_copyright') Element copyrightElement,
   }) = _ContractContentDefinition;
   factory ContractContentDefinition.fromJson(Map<String, dynamic> json) =>
       _$ContractContentDefinitionFromJson(json);
@@ -309,6 +357,8 @@ abstract class ContractTerm with _$ContractTerm {
     List<ContractAsset> asset,
     List<ContractAction> action,
     List<ContractTerm> group,
+    @JsonKey(name: '_issued') Element issuedElement,
+@JsonKey(name: '_text') Element textElement,
   }) = _ContractTerm;
   factory ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$ContractTermFromJson(json);
@@ -324,6 +374,7 @@ abstract class ContractSecurityLabel with _$ContractSecurityLabel {
     @JsonKey(required: true) @required Coding classification,
     List<Coding> category,
     List<Coding> control,
+    @JsonKey(name: '_number') Element numberElement,
   }) = _ContractSecurityLabel;
   factory ContractSecurityLabel.fromJson(Map<String, dynamic> json) =>
       _$ContractSecurityLabelFromJson(json);
@@ -345,6 +396,9 @@ abstract class ContractOffer with _$ContractOffer {
     String text,
     List<String> linkId,
     List<UnsignedInt> securityLabelNumber,
+    @JsonKey(name: '_text') Element textElement,
+@JsonKey(name: '_linkId') Element linkIdElement,
+@JsonKey(name: '_securityLabelNumber') Element securityLabelNumberElement,
   }) = _ContractOffer;
   factory ContractOffer.fromJson(Map<String, dynamic> json) =>
       _$ContractOfferFromJson(json);
@@ -381,6 +435,14 @@ abstract class ContractAnswer with _$ContractAnswer {
     Coding valueCoding,
     Quantity valueQuantity,
     Reference valueReference,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+@JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+@JsonKey(name: '_valueInteger') Element valueIntegerElement,
+@JsonKey(name: '_valueDate') Element valueDateElement,
+@JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+@JsonKey(name: '_valueTime') Element valueTimeElement,
+@JsonKey(name: '_valueString') Element valueStringElement,
+@JsonKey(name: '_valueUri') Element valueUriElement,
   }) = _ContractAnswer;
   factory ContractAnswer.fromJson(Map<String, dynamic> json) =>
       _$ContractAnswerFromJson(json);
@@ -407,6 +469,10 @@ abstract class ContractAsset with _$ContractAsset {
     List<ContractAnswer> answer,
     List<UnsignedInt> securityLabelNumber,
     List<ContractValuedItem> valuedItem,
+    @JsonKey(name: '_condition') Element conditionElement,
+@JsonKey(name: '_text') Element textElement,
+@JsonKey(name: '_linkId') Element linkIdElement,
+@JsonKey(name: '_securityLabelNumber') Element securityLabelNumberElement,
   }) = _ContractAsset;
   factory ContractAsset.fromJson(Map<String, dynamic> json) =>
       _$ContractAssetFromJson(json);
@@ -421,6 +487,7 @@ abstract class ContractContext with _$ContractContext {
     Reference reference,
     List<CodeableConcept> code,
     String text,
+    @JsonKey(name: '_text') Element textElement,
   }) = _ContractContext;
   factory ContractContext.fromJson(Map<String, dynamic> json) =>
       _$ContractContextFromJson(json);
@@ -447,6 +514,13 @@ abstract class ContractValuedItem with _$ContractValuedItem {
     Reference recipient,
     List<String> linkId,
     List<UnsignedInt> securityLabelNumber,
+    @JsonKey(name: '_effectiveTime') Element effectiveTimeElement,
+@JsonKey(name: '_factor') Element factorElement,
+@JsonKey(name: '_points') Element pointsElement,
+@JsonKey(name: '_payment') Element paymentElement,
+@JsonKey(name: '_paymentDate') Element paymentDateElement,
+@JsonKey(name: '_linkId') Element linkIdElement,
+@JsonKey(name: '_securityLabelNumber') Element securityLabelNumberElement,
   }) = _ContractValuedItem;
   factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItemFromJson(json);
@@ -481,6 +555,15 @@ abstract class ContractAction with _$ContractAction {
     List<String> reasonLinkId,
     List<Annotation> note,
     List<UnsignedInt> securityLabelNumber,
+    @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
+@JsonKey(name: '_linkId') Element linkIdElement,
+@JsonKey(name: '_contextLinkId') Element contextLinkIdElement,
+@JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+@JsonKey(name: '_requesterLinkId') Element requesterLinkIdElement,
+@JsonKey(name: '_performerLinkId') Element performerLinkIdElement,
+@JsonKey(name: '_reason') Element reasonElement,
+@JsonKey(name: '_reasonLinkId') Element reasonLinkIdElement,
+@JsonKey(name: '_securityLabelNumber') Element securityLabelNumberElement,
   }) = _ContractAction;
   factory ContractAction.fromJson(Map<String, dynamic> json) =>
       _$ContractActionFromJson(json);
@@ -614,6 +697,15 @@ abstract class ExplanationOfBenefit
     List<ExplanationOfBenefitProcessNote> processNote,
     Period benefitPeriod,
     List<ExplanationOfBenefitBenefitBalance> benefitBalance,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_use') Element useElement,
+@JsonKey(name: '_created') Element createdElement,
+@JsonKey(name: '_outcome') Element outcomeElement,
+@JsonKey(name: '_disposition') Element dispositionElement,
+@JsonKey(name: '_preAuthRef') Element preAuthRefElement,
+@JsonKey(name: '_precedence') Element precedenceElement,
   }) = _ExplanationOfBenefit;
   factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFromJson(json);
@@ -658,6 +750,8 @@ abstract class ExplanationOfBenefitCareTeam
     Boolean responsible,
     CodeableConcept role,
     CodeableConcept qualification,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+@JsonKey(name: '_responsible') Element responsibleElement,
   }) = _ExplanationOfBenefitCareTeam;
   factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitCareTeamFromJson(json);
@@ -681,6 +775,10 @@ abstract class ExplanationOfBenefitSupportingInfo
     Attachment valueAttachment,
     Reference valueReference,
     Coding reason,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+@JsonKey(name: '_timingDate') Element timingDateElement,
+@JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+@JsonKey(name: '_valueString') Element valueStringElement,
   }) = _ExplanationOfBenefitSupportingInfo;
   factory ExplanationOfBenefitSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
@@ -700,6 +798,7 @@ abstract class ExplanationOfBenefitDiagnosis
     List<CodeableConcept> type,
     CodeableConcept onAdmission,
     CodeableConcept packageCode,
+    @JsonKey(name: '_sequence') Element sequenceElement,
   }) = _ExplanationOfBenefitDiagnosis;
   factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDiagnosisFromJson(json);
@@ -718,6 +817,8 @@ abstract class ExplanationOfBenefitProcedure
     CodeableConcept procedureCodeableConcept,
     Reference procedureReference,
     List<Reference> udi,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+@JsonKey(name: '_date') Element dateElement,
   }) = _ExplanationOfBenefitProcedure;
   factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcedureFromJson(json);
@@ -733,6 +834,8 @@ abstract class ExplanationOfBenefitInsurance
     Boolean focal,
     @JsonKey(required: true) @required Reference coverage,
     List<String> preAuthRef,
+    @JsonKey(name: '_focal') Element focalElement,
+@JsonKey(name: '_preAuthRef') Element preAuthRefElement,
   }) = _ExplanationOfBenefitInsurance;
   factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInsuranceFromJson(json);
@@ -749,6 +852,7 @@ abstract class ExplanationOfBenefitAccident
     CodeableConcept type,
     Address locationAddress,
     Reference locationReference,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _ExplanationOfBenefitAccident;
   factory ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAccidentFromJson(json);
@@ -786,6 +890,14 @@ abstract class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     List<PositiveInt> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitDetail> detail,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+@JsonKey(name: '_careTeamSequence') Element careTeamSequenceElement,
+@JsonKey(name: '_diagnosisSequence') Element diagnosisSequenceElement,
+@JsonKey(name: '_procedureSequence') Element procedureSequenceElement,
+@JsonKey(name: '_informationSequence') Element informationSequenceElement,
+@JsonKey(name: '_servicedDate') Element servicedDateElement,
+@JsonKey(name: '_factor') Element factorElement,
+@JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitItem;
   factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitItemFromJson(json);
@@ -802,6 +914,7 @@ abstract class ExplanationOfBenefitAdjudication
     CodeableConcept reason,
     Money amount,
     Decimal value,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _ExplanationOfBenefitAdjudication;
   factory ExplanationOfBenefitAdjudication.fromJson(
           Map<String, dynamic> json) =>
@@ -828,6 +941,9 @@ abstract class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
     List<PositiveInt> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitSubDetail> subDetail,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+@JsonKey(name: '_factor') Element factorElement,
+@JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitDetail;
   factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetailFromJson(json);
@@ -853,6 +969,9 @@ abstract class ExplanationOfBenefitSubDetail
     List<Reference> udi,
     List<PositiveInt> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+@JsonKey(name: '_factor') Element factorElement,
+@JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitSubDetail;
   factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitSubDetailFromJson(json);
@@ -885,6 +1004,12 @@ abstract class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     List<PositiveInt> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitDetail1> detail,
+    @JsonKey(name: '_itemSequence') Element itemSequenceElement,
+@JsonKey(name: '_detailSequence') Element detailSequenceElement,
+@JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
+@JsonKey(name: '_servicedDate') Element servicedDateElement,
+@JsonKey(name: '_factor') Element factorElement,
+@JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitAddItem;
   factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAddItemFromJson(json);
@@ -905,6 +1030,8 @@ abstract class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
     List<PositiveInt> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitSubDetail1> subDetail,
+    @JsonKey(name: '_factor') Element factorElement,
+@JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitDetail1;
   factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetail1FromJson(json);
@@ -925,6 +1052,8 @@ abstract class ExplanationOfBenefitSubDetail1
     Money net,
     List<PositiveInt> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
+    @JsonKey(name: '_factor') Element factorElement,
+@JsonKey(name: '_noteNumber') Element noteNumberElement,
   }) = _ExplanationOfBenefitSubDetail1;
   factory ExplanationOfBenefitSubDetail1.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitSubDetail1FromJson(json);
@@ -955,6 +1084,7 @@ abstract class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
     Date date,
     Money amount,
     Identifier identifier,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _ExplanationOfBenefitPayment;
   factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitPaymentFromJson(json);
@@ -971,6 +1101,9 @@ abstract class ExplanationOfBenefitProcessNote
     @JsonKey(unknownEnumValue: ProcessNoteType.unknown) ProcessNoteType type,
     String text,
     CodeableConcept language,
+    @JsonKey(name: '_number') Element numberElement,
+@JsonKey(name: '_type') Element typeElement,
+@JsonKey(name: '_text') Element textElement,
   }) = _ExplanationOfBenefitProcessNote;
   factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcessNoteFromJson(json);
@@ -991,6 +1124,9 @@ abstract class ExplanationOfBenefitBenefitBalance
     CodeableConcept unit,
     CodeableConcept term,
     List<ExplanationOfBenefitFinancial> financial,
+    @JsonKey(name: '_excluded') Element excludedElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_description') Element descriptionElement,
   }) = _ExplanationOfBenefitBenefitBalance;
   factory ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
@@ -1010,6 +1146,9 @@ abstract class ExplanationOfBenefitFinancial
     Money allowedMoney,
     UnsignedInt usedUnsignedInt,
     Money usedMoney,
+    @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+@JsonKey(name: '_allowedString') Element allowedStringElement,
+@JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
   }) = _ExplanationOfBenefitFinancial;
   factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFinancialFromJson(json);
@@ -1043,6 +1182,11 @@ abstract class InsurancePlan with _$InsurancePlan implements Resource {
     List<Reference> network,
     List<InsurancePlanCoverage> coverage,
     List<InsurancePlanPlan> plan,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_alias') Element aliasElement,
   }) = _InsurancePlan;
   factory InsurancePlan.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanFromJson(json);
@@ -1086,6 +1230,7 @@ abstract class InsurancePlanBenefit with _$InsurancePlanBenefit {
     @JsonKey(required: true) @required CodeableConcept type,
     String requirement,
     List<InsurancePlanLimit> limit,
+    @JsonKey(name: '_requirement') Element requirementElement,
   }) = _InsurancePlanBenefit;
   factory InsurancePlanBenefit.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanBenefitFromJson(json);
@@ -1131,6 +1276,8 @@ abstract class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
     PositiveInt groupSize,
     Money cost,
     String comment,
+    @JsonKey(name: '_groupSize') Element groupSizeElement,
+@JsonKey(name: '_comment') Element commentElement,
   }) = _InsurancePlanGeneralCost;
   factory InsurancePlanGeneralCost.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanGeneralCostFromJson(json);

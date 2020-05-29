@@ -43,7 +43,21 @@ class _$EndpointTearOff {
           List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
-      List<String> header}) {
+      List<String> header,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_payloadMimeType')
+          Element payloadMimeTypeElement,
+      @JsonKey(name: '_address')
+          Element addressElement,
+      @JsonKey(name: '_header')
+          Element headerElement}) {
     return _Endpoint(
       resourceType: resourceType,
       id: id,
@@ -65,6 +79,13 @@ class _$EndpointTearOff {
       payloadMimeType: payloadMimeType,
       address: address,
       header: header,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
+      nameElement: nameElement,
+      payloadMimeTypeElement: payloadMimeTypeElement,
+      addressElement: addressElement,
+      headerElement: headerElement,
     );
   }
 }
@@ -98,6 +119,20 @@ mixin _$Endpoint {
   List<Code> get payloadMimeType;
   FhirUrl get address;
   List<String> get header;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_payloadMimeType')
+  Element get payloadMimeTypeElement;
+  @JsonKey(name: '_address')
+  Element get addressElement;
+  @JsonKey(name: '_header')
+  Element get headerElement;
 
   Map<String, dynamic> toJson();
   $EndpointCopyWith<Endpoint> get copyWith;
@@ -126,13 +161,27 @@ abstract class $EndpointCopyWith<$Res> {
       @JsonKey(required: true) List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
-      List<String> header});
+      List<String> header,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_payloadMimeType') Element payloadMimeTypeElement,
+      @JsonKey(name: '_address') Element addressElement,
+      @JsonKey(name: '_header') Element headerElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $CodingCopyWith<$Res> get connectionType;
   $ReferenceCopyWith<$Res> get managingOrganization;
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get payloadMimeTypeElement;
+  $ElementCopyWith<$Res> get addressElement;
+  $ElementCopyWith<$Res> get headerElement;
 }
 
 class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
@@ -164,6 +213,13 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
     Object payloadMimeType = freezed,
     Object address = freezed,
     Object header = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object nameElement = freezed,
+    Object payloadMimeTypeElement = freezed,
+    Object addressElement = freezed,
+    Object headerElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -206,6 +262,26 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
           : payloadMimeType as List<Code>,
       address: address == freezed ? _value.address : address as FhirUrl,
       header: header == freezed ? _value.header : header as List<String>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      payloadMimeTypeElement: payloadMimeTypeElement == freezed
+          ? _value.payloadMimeTypeElement
+          : payloadMimeTypeElement as Element,
+      addressElement: addressElement == freezed
+          ? _value.addressElement
+          : addressElement as Element,
+      headerElement: headerElement == freezed
+          ? _value.headerElement
+          : headerElement as Element,
     ));
   }
 
@@ -258,6 +334,76 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       return _then(_value.copyWith(period: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get payloadMimeTypeElement {
+    if (_value.payloadMimeTypeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.payloadMimeTypeElement, (value) {
+      return _then(_value.copyWith(payloadMimeTypeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get addressElement {
+    if (_value.addressElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.addressElement, (value) {
+      return _then(_value.copyWith(addressElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get headerElement {
+    if (_value.headerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.headerElement, (value) {
+      return _then(_value.copyWith(headerElement: value));
+    });
+  }
 }
 
 abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
@@ -284,7 +430,14 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       @JsonKey(required: true) List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
-      List<String> header});
+      List<String> header,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_payloadMimeType') Element payloadMimeTypeElement,
+      @JsonKey(name: '_address') Element addressElement,
+      @JsonKey(name: '_header') Element headerElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -296,6 +449,20 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get managingOrganization;
   @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get payloadMimeTypeElement;
+  @override
+  $ElementCopyWith<$Res> get addressElement;
+  @override
+  $ElementCopyWith<$Res> get headerElement;
 }
 
 class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
@@ -328,6 +495,13 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
     Object payloadMimeType = freezed,
     Object address = freezed,
     Object header = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object nameElement = freezed,
+    Object payloadMimeTypeElement = freezed,
+    Object addressElement = freezed,
+    Object headerElement = freezed,
   }) {
     return _then(_Endpoint(
       resourceType: resourceType == freezed
@@ -370,6 +544,26 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
           : payloadMimeType as List<Code>,
       address: address == freezed ? _value.address : address as FhirUrl,
       header: header == freezed ? _value.header : header as List<String>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      payloadMimeTypeElement: payloadMimeTypeElement == freezed
+          ? _value.payloadMimeTypeElement
+          : payloadMimeTypeElement as Element,
+      addressElement: addressElement == freezed
+          ? _value.addressElement
+          : addressElement as Element,
+      headerElement: headerElement == freezed
+          ? _value.headerElement
+          : headerElement as Element,
     ));
   }
 }
@@ -404,7 +598,21 @@ class _$_Endpoint implements _Endpoint {
           this.payloadType,
       this.payloadMimeType,
       this.address,
-      this.header})
+      this.header,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_payloadMimeType')
+          this.payloadMimeTypeElement,
+      @JsonKey(name: '_address')
+          this.addressElement,
+      @JsonKey(name: '_header')
+          this.headerElement})
       : assert(resourceType != null),
         assert(connectionType != null),
         assert(payloadType != null);
@@ -457,10 +665,31 @@ class _$_Endpoint implements _Endpoint {
   final FhirUrl address;
   @override
   final List<String> header;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_payloadMimeType')
+  final Element payloadMimeTypeElement;
+  @override
+  @JsonKey(name: '_address')
+  final Element addressElement;
+  @override
+  @JsonKey(name: '_header')
+  final Element headerElement;
 
   @override
   String toString() {
-    return 'Endpoint(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, connectionType: $connectionType, name: $name, managingOrganization: $managingOrganization, contact: $contact, period: $period, payloadType: $payloadType, payloadMimeType: $payloadMimeType, address: $address, header: $header)';
+    return 'Endpoint(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, connectionType: $connectionType, name: $name, managingOrganization: $managingOrganization, contact: $contact, period: $period, payloadType: $payloadType, payloadMimeType: $payloadMimeType, address: $address, header: $header, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, nameElement: $nameElement, payloadMimeTypeElement: $payloadMimeTypeElement, addressElement: $addressElement, headerElement: $headerElement)';
   }
 
   @override
@@ -519,7 +748,23 @@ class _$_Endpoint implements _Endpoint {
                 const DeepCollectionEquality()
                     .equals(other.address, address)) &&
             (identical(other.header, header) ||
-                const DeepCollectionEquality().equals(other.header, header)));
+                const DeepCollectionEquality().equals(other.header, header)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.payloadMimeTypeElement, payloadMimeTypeElement) ||
+                const DeepCollectionEquality().equals(other.payloadMimeTypeElement, payloadMimeTypeElement)) &&
+            (identical(other.addressElement, addressElement) || const DeepCollectionEquality().equals(other.addressElement, addressElement)) &&
+            (identical(other.headerElement, headerElement) || const DeepCollectionEquality().equals(other.headerElement, headerElement)));
   }
 
   @override
@@ -544,7 +789,14 @@ class _$_Endpoint implements _Endpoint {
       const DeepCollectionEquality().hash(payloadType) ^
       const DeepCollectionEquality().hash(payloadMimeType) ^
       const DeepCollectionEquality().hash(address) ^
-      const DeepCollectionEquality().hash(header);
+      const DeepCollectionEquality().hash(header) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(payloadMimeTypeElement) ^
+      const DeepCollectionEquality().hash(addressElement) ^
+      const DeepCollectionEquality().hash(headerElement);
 
   @override
   _$EndpointCopyWith<_Endpoint> get copyWith =>
@@ -585,7 +837,21 @@ abstract class _Endpoint implements Endpoint {
           List<CodeableConcept> payloadType,
       List<Code> payloadMimeType,
       FhirUrl address,
-      List<String> header}) = _$_Endpoint;
+      List<String> header,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_payloadMimeType')
+          Element payloadMimeTypeElement,
+      @JsonKey(name: '_address')
+          Element addressElement,
+      @JsonKey(name: '_header')
+          Element headerElement}) = _$_Endpoint;
 
   factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
 
@@ -635,6 +901,27 @@ abstract class _Endpoint implements Endpoint {
   @override
   List<String> get header;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_payloadMimeType')
+  Element get payloadMimeTypeElement;
+  @override
+  @JsonKey(name: '_address')
+  Element get addressElement;
+  @override
+  @JsonKey(name: '_header')
+  Element get headerElement;
+  @override
   _$EndpointCopyWith<_Endpoint> get copyWith;
 }
 
@@ -681,7 +968,23 @@ class _$HealthcareServiceTearOff {
       List<HealthcareServiceAvailableTime> availableTime,
       List<HealthcareServiceNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint}) {
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      @JsonKey(name: '_extraDetails')
+          Element extraDetailsElement,
+      @JsonKey(name: '_appointmentRequired')
+          Element appointmentRequiredElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement}) {
     return _HealthcareService(
       resourceType: resourceType,
       id: id,
@@ -716,6 +1019,14 @@ class _$HealthcareServiceTearOff {
       notAvailable: notAvailable,
       availabilityExceptions: availabilityExceptions,
       endpoint: endpoint,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      activeElement: activeElement,
+      nameElement: nameElement,
+      commentElement: commentElement,
+      extraDetailsElement: extraDetailsElement,
+      appointmentRequiredElement: appointmentRequiredElement,
+      availabilityExceptionsElement: availabilityExceptionsElement,
     );
   }
 }
@@ -759,6 +1070,22 @@ mixin _$HealthcareService {
   List<HealthcareServiceNotAvailable> get notAvailable;
   String get availabilityExceptions;
   List<Reference> get endpoint;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_comment')
+  Element get commentElement;
+  @JsonKey(name: '_extraDetails')
+  Element get extraDetailsElement;
+  @JsonKey(name: '_appointmentRequired')
+  Element get appointmentRequiredElement;
+  @JsonKey(name: '_availabilityExceptions')
+  Element get availabilityExceptionsElement;
 
   Map<String, dynamic> toJson();
   $HealthcareServiceCopyWith<HealthcareService> get copyWith;
@@ -803,12 +1130,36 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       List<HealthcareServiceAvailableTime> availableTime,
       List<HealthcareServiceNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      @JsonKey(name: '_extraDetails')
+          Element extraDetailsElement,
+      @JsonKey(name: '_appointmentRequired')
+          Element appointmentRequiredElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $ReferenceCopyWith<$Res> get providedBy;
   $AttachmentCopyWith<$Res> get photo;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get activeElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res> get extraDetailsElement;
+  $ElementCopyWith<$Res> get appointmentRequiredElement;
+  $ElementCopyWith<$Res> get availabilityExceptionsElement;
 }
 
 class _$HealthcareServiceCopyWithImpl<$Res>
@@ -854,6 +1205,14 @@ class _$HealthcareServiceCopyWithImpl<$Res>
     Object notAvailable = freezed,
     Object availabilityExceptions = freezed,
     Object endpoint = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object activeElement = freezed,
+    Object nameElement = freezed,
+    Object commentElement = freezed,
+    Object extraDetailsElement = freezed,
+    Object appointmentRequiredElement = freezed,
+    Object availabilityExceptionsElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -932,6 +1291,29 @@ class _$HealthcareServiceCopyWithImpl<$Res>
           : availabilityExceptions as String,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
+      extraDetailsElement: extraDetailsElement == freezed
+          ? _value.extraDetailsElement
+          : extraDetailsElement as Element,
+      appointmentRequiredElement: appointmentRequiredElement == freezed
+          ? _value.appointmentRequiredElement
+          : appointmentRequiredElement as Element,
+      availabilityExceptionsElement: availabilityExceptionsElement == freezed
+          ? _value.availabilityExceptionsElement
+          : availabilityExceptionsElement as Element,
     ));
   }
 
@@ -972,6 +1354,87 @@ class _$HealthcareServiceCopyWithImpl<$Res>
     }
     return $AttachmentCopyWith<$Res>(_value.photo, (value) {
       return _then(_value.copyWith(photo: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get activeElement {
+    if (_value.activeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+      return _then(_value.copyWith(activeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get commentElement {
+    if (_value.commentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+      return _then(_value.copyWith(commentElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get extraDetailsElement {
+    if (_value.extraDetailsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.extraDetailsElement, (value) {
+      return _then(_value.copyWith(extraDetailsElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get appointmentRequiredElement {
+    if (_value.appointmentRequiredElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.appointmentRequiredElement, (value) {
+      return _then(_value.copyWith(appointmentRequiredElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get availabilityExceptionsElement {
+    if (_value.availabilityExceptionsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.availabilityExceptionsElement,
+        (value) {
+      return _then(_value.copyWith(availabilityExceptionsElement: value));
     });
   }
 }
@@ -1017,7 +1480,23 @@ abstract class _$HealthcareServiceCopyWith<$Res>
       List<HealthcareServiceAvailableTime> availableTime,
       List<HealthcareServiceNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      @JsonKey(name: '_extraDetails')
+          Element extraDetailsElement,
+      @JsonKey(name: '_appointmentRequired')
+          Element appointmentRequiredElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1027,6 +1506,22 @@ abstract class _$HealthcareServiceCopyWith<$Res>
   $ReferenceCopyWith<$Res> get providedBy;
   @override
   $AttachmentCopyWith<$Res> get photo;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get activeElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get commentElement;
+  @override
+  $ElementCopyWith<$Res> get extraDetailsElement;
+  @override
+  $ElementCopyWith<$Res> get appointmentRequiredElement;
+  @override
+  $ElementCopyWith<$Res> get availabilityExceptionsElement;
 }
 
 class __$HealthcareServiceCopyWithImpl<$Res>
@@ -1074,6 +1569,14 @@ class __$HealthcareServiceCopyWithImpl<$Res>
     Object notAvailable = freezed,
     Object availabilityExceptions = freezed,
     Object endpoint = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object activeElement = freezed,
+    Object nameElement = freezed,
+    Object commentElement = freezed,
+    Object extraDetailsElement = freezed,
+    Object appointmentRequiredElement = freezed,
+    Object availabilityExceptionsElement = freezed,
   }) {
     return _then(_HealthcareService(
       resourceType: resourceType == freezed
@@ -1152,6 +1655,29 @@ class __$HealthcareServiceCopyWithImpl<$Res>
           : availabilityExceptions as String,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
+      extraDetailsElement: extraDetailsElement == freezed
+          ? _value.extraDetailsElement
+          : extraDetailsElement as Element,
+      appointmentRequiredElement: appointmentRequiredElement == freezed
+          ? _value.appointmentRequiredElement
+          : appointmentRequiredElement as Element,
+      availabilityExceptionsElement: availabilityExceptionsElement == freezed
+          ? _value.availabilityExceptionsElement
+          : availabilityExceptionsElement as Element,
     ));
   }
 }
@@ -1194,7 +1720,23 @@ class _$_HealthcareService implements _HealthcareService {
       this.availableTime,
       this.notAvailable,
       this.availabilityExceptions,
-      this.endpoint})
+      this.endpoint,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_active')
+          this.activeElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_comment')
+          this.commentElement,
+      @JsonKey(name: '_extraDetails')
+          this.extraDetailsElement,
+      @JsonKey(name: '_appointmentRequired')
+          this.appointmentRequiredElement,
+      @JsonKey(name: '_availabilityExceptions')
+          this.availabilityExceptionsElement})
       : assert(resourceType != null);
 
   factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
@@ -1268,10 +1810,34 @@ class _$_HealthcareService implements _HealthcareService {
   final String availabilityExceptions;
   @override
   final List<Reference> endpoint;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_active')
+  final Element activeElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_comment')
+  final Element commentElement;
+  @override
+  @JsonKey(name: '_extraDetails')
+  final Element extraDetailsElement;
+  @override
+  @JsonKey(name: '_appointmentRequired')
+  final Element appointmentRequiredElement;
+  @override
+  @JsonKey(name: '_availabilityExceptions')
+  final Element availabilityExceptionsElement;
 
   @override
   String toString() {
-    return 'HealthcareService(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, providedBy: $providedBy, category: $category, type: $type, specialty: $specialty, location: $location, name: $name, comment: $comment, extraDetails: $extraDetails, photo: $photo, telecom: $telecom, coverageArea: $coverageArea, serviceProvisionCode: $serviceProvisionCode, eligibility: $eligibility, program: $program, characteristic: $characteristic, communication: $communication, referralMethod: $referralMethod, appointmentRequired: $appointmentRequired, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint)';
+    return 'HealthcareService(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, providedBy: $providedBy, category: $category, type: $type, specialty: $specialty, location: $location, name: $name, comment: $comment, extraDetails: $extraDetails, photo: $photo, telecom: $telecom, coverageArea: $coverageArea, serviceProvisionCode: $serviceProvisionCode, eligibility: $eligibility, program: $program, characteristic: $characteristic, communication: $communication, referralMethod: $referralMethod, appointmentRequired: $appointmentRequired, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, activeElement: $activeElement, nameElement: $nameElement, commentElement: $commentElement, extraDetailsElement: $extraDetailsElement, appointmentRequiredElement: $appointmentRequiredElement, availabilityExceptionsElement: $availabilityExceptionsElement)';
   }
 
   @override
@@ -1352,7 +1918,15 @@ class _$_HealthcareService implements _HealthcareService {
             (identical(other.availableTime, availableTime) || const DeepCollectionEquality().equals(other.availableTime, availableTime)) &&
             (identical(other.notAvailable, notAvailable) || const DeepCollectionEquality().equals(other.notAvailable, notAvailable)) &&
             (identical(other.availabilityExceptions, availabilityExceptions) || const DeepCollectionEquality().equals(other.availabilityExceptions, availabilityExceptions)) &&
-            (identical(other.endpoint, endpoint) || const DeepCollectionEquality().equals(other.endpoint, endpoint)));
+            (identical(other.endpoint, endpoint) || const DeepCollectionEquality().equals(other.endpoint, endpoint)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.activeElement, activeElement) || const DeepCollectionEquality().equals(other.activeElement, activeElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.commentElement, commentElement) || const DeepCollectionEquality().equals(other.commentElement, commentElement)) &&
+            (identical(other.extraDetailsElement, extraDetailsElement) || const DeepCollectionEquality().equals(other.extraDetailsElement, extraDetailsElement)) &&
+            (identical(other.appointmentRequiredElement, appointmentRequiredElement) || const DeepCollectionEquality().equals(other.appointmentRequiredElement, appointmentRequiredElement)) &&
+            (identical(other.availabilityExceptionsElement, availabilityExceptionsElement) || const DeepCollectionEquality().equals(other.availabilityExceptionsElement, availabilityExceptionsElement)));
   }
 
   @override
@@ -1390,7 +1964,15 @@ class _$_HealthcareService implements _HealthcareService {
       const DeepCollectionEquality().hash(availableTime) ^
       const DeepCollectionEquality().hash(notAvailable) ^
       const DeepCollectionEquality().hash(availabilityExceptions) ^
-      const DeepCollectionEquality().hash(endpoint);
+      const DeepCollectionEquality().hash(endpoint) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(activeElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(commentElement) ^
+      const DeepCollectionEquality().hash(extraDetailsElement) ^
+      const DeepCollectionEquality().hash(appointmentRequiredElement) ^
+      const DeepCollectionEquality().hash(availabilityExceptionsElement);
 
   @override
   _$HealthcareServiceCopyWith<_HealthcareService> get copyWith =>
@@ -1439,7 +2021,23 @@ abstract class _HealthcareService implements HealthcareService {
       List<HealthcareServiceAvailableTime> availableTime,
       List<HealthcareServiceNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint}) = _$_HealthcareService;
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      @JsonKey(name: '_extraDetails')
+          Element extraDetailsElement,
+      @JsonKey(name: '_appointmentRequired')
+          Element appointmentRequiredElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement}) = _$_HealthcareService;
 
   factory _HealthcareService.fromJson(Map<String, dynamic> json) =
       _$_HealthcareService.fromJson;
@@ -1513,6 +2111,30 @@ abstract class _HealthcareService implements HealthcareService {
   @override
   List<Reference> get endpoint;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_comment')
+  Element get commentElement;
+  @override
+  @JsonKey(name: '_extraDetails')
+  Element get extraDetailsElement;
+  @override
+  @JsonKey(name: '_appointmentRequired')
+  Element get appointmentRequiredElement;
+  @override
+  @JsonKey(name: '_availabilityExceptions')
+  Element get availabilityExceptionsElement;
+  @override
   _$HealthcareServiceCopyWith<_HealthcareService> get copyWith;
 }
 
@@ -1529,13 +2151,15 @@ class _$HealthcareServiceEligibilityTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
-      Markdown comment}) {
+      Markdown comment,
+      @JsonKey(name: '_comment') Element commentElement}) {
     return _HealthcareServiceEligibility(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
       comment: comment,
+      commentElement: commentElement,
     );
   }
 }
@@ -1550,6 +2174,8 @@ mixin _$HealthcareServiceEligibility {
   List<FhirExtension> get modifierExtension;
   CodeableConcept get code;
   Markdown get comment;
+  @JsonKey(name: '_comment')
+  Element get commentElement;
 
   Map<String, dynamic> toJson();
   $HealthcareServiceEligibilityCopyWith<HealthcareServiceEligibility>
@@ -1566,9 +2192,11 @@ abstract class $HealthcareServiceEligibilityCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
-      Markdown comment});
+      Markdown comment,
+      @JsonKey(name: '_comment') Element commentElement});
 
   $CodeableConceptCopyWith<$Res> get code;
+  $ElementCopyWith<$Res> get commentElement;
 }
 
 class _$HealthcareServiceEligibilityCopyWithImpl<$Res>
@@ -1586,6 +2214,7 @@ class _$HealthcareServiceEligibilityCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object code = freezed,
     Object comment = freezed,
+    Object commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1597,6 +2226,9 @@ class _$HealthcareServiceEligibilityCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       comment: comment == freezed ? _value.comment : comment as Markdown,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
     ));
   }
 
@@ -1607,6 +2239,16 @@ class _$HealthcareServiceEligibilityCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get commentElement {
+    if (_value.commentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+      return _then(_value.copyWith(commentElement: value));
     });
   }
 }
@@ -1623,10 +2265,13 @@ abstract class _$HealthcareServiceEligibilityCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
-      Markdown comment});
+      Markdown comment,
+      @JsonKey(name: '_comment') Element commentElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $ElementCopyWith<$Res> get commentElement;
 }
 
 class __$HealthcareServiceEligibilityCopyWithImpl<$Res>
@@ -1648,6 +2293,7 @@ class __$HealthcareServiceEligibilityCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object code = freezed,
     Object comment = freezed,
+    Object commentElement = freezed,
   }) {
     return _then(_HealthcareServiceEligibility(
       id: id == freezed ? _value.id : id as String,
@@ -1659,6 +2305,9 @@ class __$HealthcareServiceEligibilityCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       comment: comment == freezed ? _value.comment : comment as Markdown,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
     ));
   }
 }
@@ -1670,7 +2319,8 @@ class _$_HealthcareServiceEligibility implements _HealthcareServiceEligibility {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
-      this.comment});
+      this.comment,
+      @JsonKey(name: '_comment') this.commentElement});
 
   factory _$_HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
       _$_$_HealthcareServiceEligibilityFromJson(json);
@@ -1686,10 +2336,13 @@ class _$_HealthcareServiceEligibility implements _HealthcareServiceEligibility {
   final CodeableConcept code;
   @override
   final Markdown comment;
+  @override
+  @JsonKey(name: '_comment')
+  final Element commentElement;
 
   @override
   String toString() {
-    return 'HealthcareServiceEligibility(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, comment: $comment)';
+    return 'HealthcareServiceEligibility(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, comment: $comment, commentElement: $commentElement)';
   }
 
   @override
@@ -1707,7 +2360,11 @@ class _$_HealthcareServiceEligibility implements _HealthcareServiceEligibility {
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.comment, comment) ||
-                const DeepCollectionEquality().equals(other.comment, comment)));
+                const DeepCollectionEquality()
+                    .equals(other.comment, comment)) &&
+            (identical(other.commentElement, commentElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.commentElement, commentElement)));
   }
 
   @override
@@ -1717,7 +2374,8 @@ class _$_HealthcareServiceEligibility implements _HealthcareServiceEligibility {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(comment);
+      const DeepCollectionEquality().hash(comment) ^
+      const DeepCollectionEquality().hash(commentElement);
 
   @override
   _$HealthcareServiceEligibilityCopyWith<_HealthcareServiceEligibility>
@@ -1733,11 +2391,13 @@ class _$_HealthcareServiceEligibility implements _HealthcareServiceEligibility {
 abstract class _HealthcareServiceEligibility
     implements HealthcareServiceEligibility {
   const factory _HealthcareServiceEligibility(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept code,
-      Markdown comment}) = _$_HealthcareServiceEligibility;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          CodeableConcept code,
+          Markdown comment,
+          @JsonKey(name: '_comment') Element commentElement}) =
+      _$_HealthcareServiceEligibility;
 
   factory _HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceEligibility.fromJson;
@@ -1753,6 +2413,9 @@ abstract class _HealthcareServiceEligibility
   CodeableConcept get code;
   @override
   Markdown get comment;
+  @override
+  @JsonKey(name: '_comment')
+  Element get commentElement;
   @override
   _$HealthcareServiceEligibilityCopyWith<_HealthcareServiceEligibility>
       get copyWith;
@@ -1773,7 +2436,11 @@ class _$HealthcareServiceAvailableTimeTearOff {
       List<AvailableTimeDaysOfWeek> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
-      Time availableEndTime}) {
+      Time availableEndTime,
+      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_allDay') Element allDayElement,
+      @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime') Element availableEndTimeElement}) {
     return _HealthcareServiceAvailableTime(
       id: id,
       extension_: extension_,
@@ -1782,6 +2449,10 @@ class _$HealthcareServiceAvailableTimeTearOff {
       allDay: allDay,
       availableStartTime: availableStartTime,
       availableEndTime: availableEndTime,
+      daysOfWeekElement: daysOfWeekElement,
+      allDayElement: allDayElement,
+      availableStartTimeElement: availableStartTimeElement,
+      availableEndTimeElement: availableEndTimeElement,
     );
   }
 }
@@ -1799,6 +2470,14 @@ mixin _$HealthcareServiceAvailableTime {
   Boolean get allDay;
   Time get availableStartTime;
   Time get availableEndTime;
+  @JsonKey(name: '_daysOfWeek')
+  Element get daysOfWeekElement;
+  @JsonKey(name: '_allDay')
+  Element get allDayElement;
+  @JsonKey(name: '_availableStartTime')
+  Element get availableStartTimeElement;
+  @JsonKey(name: '_availableEndTime')
+  Element get availableEndTimeElement;
 
   Map<String, dynamic> toJson();
   $HealthcareServiceAvailableTimeCopyWith<HealthcareServiceAvailableTime>
@@ -1817,7 +2496,16 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       List<AvailableTimeDaysOfWeek> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
-      Time availableEndTime});
+      Time availableEndTime,
+      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_allDay') Element allDayElement,
+      @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
+
+  $ElementCopyWith<$Res> get daysOfWeekElement;
+  $ElementCopyWith<$Res> get allDayElement;
+  $ElementCopyWith<$Res> get availableStartTimeElement;
+  $ElementCopyWith<$Res> get availableEndTimeElement;
 }
 
 class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
@@ -1837,6 +2525,10 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
     Object allDay = freezed,
     Object availableStartTime = freezed,
     Object availableEndTime = freezed,
+    Object daysOfWeekElement = freezed,
+    Object allDayElement = freezed,
+    Object availableStartTimeElement = freezed,
+    Object availableEndTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1856,7 +2548,59 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       availableEndTime: availableEndTime == freezed
           ? _value.availableEndTime
           : availableEndTime as Time,
+      daysOfWeekElement: daysOfWeekElement == freezed
+          ? _value.daysOfWeekElement
+          : daysOfWeekElement as Element,
+      allDayElement: allDayElement == freezed
+          ? _value.allDayElement
+          : allDayElement as Element,
+      availableStartTimeElement: availableStartTimeElement == freezed
+          ? _value.availableStartTimeElement
+          : availableStartTimeElement as Element,
+      availableEndTimeElement: availableEndTimeElement == freezed
+          ? _value.availableEndTimeElement
+          : availableEndTimeElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get daysOfWeekElement {
+    if (_value.daysOfWeekElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.daysOfWeekElement, (value) {
+      return _then(_value.copyWith(daysOfWeekElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get allDayElement {
+    if (_value.allDayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.allDayElement, (value) {
+      return _then(_value.copyWith(allDayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get availableStartTimeElement {
+    if (_value.availableStartTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.availableStartTimeElement, (value) {
+      return _then(_value.copyWith(availableStartTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get availableEndTimeElement {
+    if (_value.availableEndTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.availableEndTimeElement, (value) {
+      return _then(_value.copyWith(availableEndTimeElement: value));
+    });
   }
 }
 
@@ -1874,7 +2618,20 @@ abstract class _$HealthcareServiceAvailableTimeCopyWith<$Res>
       List<AvailableTimeDaysOfWeek> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
-      Time availableEndTime});
+      Time availableEndTime,
+      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_allDay') Element allDayElement,
+      @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
+
+  @override
+  $ElementCopyWith<$Res> get daysOfWeekElement;
+  @override
+  $ElementCopyWith<$Res> get allDayElement;
+  @override
+  $ElementCopyWith<$Res> get availableStartTimeElement;
+  @override
+  $ElementCopyWith<$Res> get availableEndTimeElement;
 }
 
 class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
@@ -1898,6 +2655,10 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
     Object allDay = freezed,
     Object availableStartTime = freezed,
     Object availableEndTime = freezed,
+    Object daysOfWeekElement = freezed,
+    Object allDayElement = freezed,
+    Object availableStartTimeElement = freezed,
+    Object availableEndTimeElement = freezed,
   }) {
     return _then(_HealthcareServiceAvailableTime(
       id: id == freezed ? _value.id : id as String,
@@ -1917,6 +2678,18 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       availableEndTime: availableEndTime == freezed
           ? _value.availableEndTime
           : availableEndTime as Time,
+      daysOfWeekElement: daysOfWeekElement == freezed
+          ? _value.daysOfWeekElement
+          : daysOfWeekElement as Element,
+      allDayElement: allDayElement == freezed
+          ? _value.allDayElement
+          : allDayElement as Element,
+      availableStartTimeElement: availableStartTimeElement == freezed
+          ? _value.availableStartTimeElement
+          : availableStartTimeElement as Element,
+      availableEndTimeElement: availableEndTimeElement == freezed
+          ? _value.availableEndTimeElement
+          : availableEndTimeElement as Element,
     ));
   }
 }
@@ -1931,7 +2704,11 @@ class _$_HealthcareServiceAvailableTime
       this.daysOfWeek,
       this.allDay,
       this.availableStartTime,
-      this.availableEndTime});
+      this.availableEndTime,
+      @JsonKey(name: '_daysOfWeek') this.daysOfWeekElement,
+      @JsonKey(name: '_allDay') this.allDayElement,
+      @JsonKey(name: '_availableStartTime') this.availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime') this.availableEndTimeElement});
 
   factory _$_HealthcareServiceAvailableTime.fromJson(
           Map<String, dynamic> json) =>
@@ -1952,10 +2729,22 @@ class _$_HealthcareServiceAvailableTime
   final Time availableStartTime;
   @override
   final Time availableEndTime;
+  @override
+  @JsonKey(name: '_daysOfWeek')
+  final Element daysOfWeekElement;
+  @override
+  @JsonKey(name: '_allDay')
+  final Element allDayElement;
+  @override
+  @JsonKey(name: '_availableStartTime')
+  final Element availableStartTimeElement;
+  @override
+  @JsonKey(name: '_availableEndTime')
+  final Element availableEndTimeElement;
 
   @override
   String toString() {
-    return 'HealthcareServiceAvailableTime(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, availableStartTime: $availableStartTime, availableEndTime: $availableEndTime)';
+    return 'HealthcareServiceAvailableTime(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, availableStartTime: $availableStartTime, availableEndTime: $availableEndTime, daysOfWeekElement: $daysOfWeekElement, allDayElement: $allDayElement, availableStartTimeElement: $availableStartTimeElement, availableEndTimeElement: $availableEndTimeElement)';
   }
 
   @override
@@ -1980,7 +2769,22 @@ class _$_HealthcareServiceAvailableTime
                     .equals(other.availableStartTime, availableStartTime)) &&
             (identical(other.availableEndTime, availableEndTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.availableEndTime, availableEndTime)));
+                    .equals(other.availableEndTime, availableEndTime)) &&
+            (identical(other.daysOfWeekElement, daysOfWeekElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.daysOfWeekElement, daysOfWeekElement)) &&
+            (identical(other.allDayElement, allDayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.allDayElement, allDayElement)) &&
+            (identical(other.availableStartTimeElement,
+                    availableStartTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.availableStartTimeElement,
+                    availableStartTimeElement)) &&
+            (identical(
+                    other.availableEndTimeElement, availableEndTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.availableEndTimeElement, availableEndTimeElement)));
   }
 
   @override
@@ -1992,7 +2796,11 @@ class _$_HealthcareServiceAvailableTime
       const DeepCollectionEquality().hash(daysOfWeek) ^
       const DeepCollectionEquality().hash(allDay) ^
       const DeepCollectionEquality().hash(availableStartTime) ^
-      const DeepCollectionEquality().hash(availableEndTime);
+      const DeepCollectionEquality().hash(availableEndTime) ^
+      const DeepCollectionEquality().hash(daysOfWeekElement) ^
+      const DeepCollectionEquality().hash(allDayElement) ^
+      const DeepCollectionEquality().hash(availableStartTimeElement) ^
+      const DeepCollectionEquality().hash(availableEndTimeElement);
 
   @override
   _$HealthcareServiceAvailableTimeCopyWith<_HealthcareServiceAvailableTime>
@@ -2009,12 +2817,21 @@ abstract class _HealthcareServiceAvailableTime
     implements HealthcareServiceAvailableTime {
   const factory _HealthcareServiceAvailableTime(
       {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<AvailableTimeDaysOfWeek> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
-      Time availableEndTime}) = _$_HealthcareServiceAvailableTime;
+      Time availableEndTime,
+      @JsonKey(name: '_daysOfWeek')
+          Element daysOfWeekElement,
+      @JsonKey(name: '_allDay')
+          Element allDayElement,
+      @JsonKey(name: '_availableStartTime')
+          Element availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime')
+          Element availableEndTimeElement}) = _$_HealthcareServiceAvailableTime;
 
   factory _HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceAvailableTime.fromJson;
@@ -2035,6 +2852,18 @@ abstract class _HealthcareServiceAvailableTime
   @override
   Time get availableEndTime;
   @override
+  @JsonKey(name: '_daysOfWeek')
+  Element get daysOfWeekElement;
+  @override
+  @JsonKey(name: '_allDay')
+  Element get allDayElement;
+  @override
+  @JsonKey(name: '_availableStartTime')
+  Element get availableStartTimeElement;
+  @override
+  @JsonKey(name: '_availableEndTime')
+  Element get availableEndTimeElement;
+  @override
   _$HealthcareServiceAvailableTimeCopyWith<_HealthcareServiceAvailableTime>
       get copyWith;
 }
@@ -2052,13 +2881,15 @@ class _$HealthcareServiceNotAvailableTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String description,
-      Period during}) {
+      Period during,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _HealthcareServiceNotAvailable(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       description: description,
       during: during,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -2073,6 +2904,8 @@ mixin _$HealthcareServiceNotAvailable {
   List<FhirExtension> get modifierExtension;
   String get description;
   Period get during;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $HealthcareServiceNotAvailableCopyWith<HealthcareServiceNotAvailable>
@@ -2089,9 +2922,11 @@ abstract class $HealthcareServiceNotAvailableCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String description,
-      Period during});
+      Period during,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   $PeriodCopyWith<$Res> get during;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$HealthcareServiceNotAvailableCopyWithImpl<$Res>
@@ -2109,6 +2944,7 @@ class _$HealthcareServiceNotAvailableCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object description = freezed,
     Object during = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -2121,6 +2957,9 @@ class _$HealthcareServiceNotAvailableCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       during: during == freezed ? _value.during : during as Period,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 
@@ -2131,6 +2970,16 @@ class _$HealthcareServiceNotAvailableCopyWithImpl<$Res>
     }
     return $PeriodCopyWith<$Res>(_value.during, (value) {
       return _then(_value.copyWith(during: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
     });
   }
 }
@@ -2147,10 +2996,13 @@ abstract class _$HealthcareServiceNotAvailableCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String description,
-      Period during});
+      Period during,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   @override
   $PeriodCopyWith<$Res> get during;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$HealthcareServiceNotAvailableCopyWithImpl<$Res>
@@ -2172,6 +3024,7 @@ class __$HealthcareServiceNotAvailableCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object description = freezed,
     Object during = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_HealthcareServiceNotAvailable(
       id: id == freezed ? _value.id : id as String,
@@ -2184,6 +3037,9 @@ class __$HealthcareServiceNotAvailableCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       during: during == freezed ? _value.during : during as Period,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
@@ -2196,7 +3052,8 @@ class _$_HealthcareServiceNotAvailable
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.description,
-      this.during});
+      this.during,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_HealthcareServiceNotAvailable.fromJson(
           Map<String, dynamic> json) =>
@@ -2213,10 +3070,13 @@ class _$_HealthcareServiceNotAvailable
   final String description;
   @override
   final Period during;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'HealthcareServiceNotAvailable(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, during: $during)';
+    return 'HealthcareServiceNotAvailable(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, during: $during, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -2235,7 +3095,10 @@ class _$_HealthcareServiceNotAvailable
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
             (identical(other.during, during) ||
-                const DeepCollectionEquality().equals(other.during, during)));
+                const DeepCollectionEquality().equals(other.during, during)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
@@ -2245,7 +3108,8 @@ class _$_HealthcareServiceNotAvailable
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(during);
+      const DeepCollectionEquality().hash(during) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$HealthcareServiceNotAvailableCopyWith<_HealthcareServiceNotAvailable>
@@ -2261,11 +3125,13 @@ class _$_HealthcareServiceNotAvailable
 abstract class _HealthcareServiceNotAvailable
     implements HealthcareServiceNotAvailable {
   const factory _HealthcareServiceNotAvailable(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String description,
-      Period during}) = _$_HealthcareServiceNotAvailable;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String description,
+          Period during,
+          @JsonKey(name: '_description') Element descriptionElement}) =
+      _$_HealthcareServiceNotAvailable;
 
   factory _HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =
       _$_HealthcareServiceNotAvailable.fromJson;
@@ -2281,6 +3147,9 @@ abstract class _HealthcareServiceNotAvailable
   String get description;
   @override
   Period get during;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   _$HealthcareServiceNotAvailableCopyWith<_HealthcareServiceNotAvailable>
       get copyWith;
@@ -2324,7 +3193,23 @@ class _$LocationTearOff {
       Reference partOf,
       List<LocationHoursOfOperation> hoursOfOperation,
       String availabilityExceptions,
-      List<Reference> endpoint}) {
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_mode')
+          Element modeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement}) {
     return _Location(
       resourceType: resourceType,
       id: id,
@@ -2352,6 +3237,14 @@ class _$LocationTearOff {
       hoursOfOperation: hoursOfOperation,
       availabilityExceptions: availabilityExceptions,
       endpoint: endpoint,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
+      nameElement: nameElement,
+      aliasElement: aliasElement,
+      descriptionElement: descriptionElement,
+      modeElement: modeElement,
+      availabilityExceptionsElement: availabilityExceptionsElement,
     );
   }
 }
@@ -2390,6 +3283,22 @@ mixin _$Location {
   List<LocationHoursOfOperation> get hoursOfOperation;
   String get availabilityExceptions;
   List<Reference> get endpoint;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_alias')
+  Element get aliasElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_mode')
+  Element get modeElement;
+  @JsonKey(name: '_availabilityExceptions')
+  Element get availabilityExceptionsElement;
 
   Map<String, dynamic> toJson();
   $LocationCopyWith<Location> get copyWith;
@@ -2399,22 +3308,26 @@ abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Location') String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Location')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
+      @JsonKey(unknownEnumValue: LocationStatus.unknown)
+          LocationStatus status,
       Coding operationalStatus,
       String name,
       List<String> alias,
       String description,
-      @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode mode,
+      @JsonKey(unknownEnumValue: LocationMode.unknown)
+          LocationMode mode,
       List<CodeableConcept> type,
       List<ContactPoint> telecom,
       Address address,
@@ -2424,7 +3337,23 @@ abstract class $LocationCopyWith<$Res> {
       Reference partOf,
       List<LocationHoursOfOperation> hoursOfOperation,
       String availabilityExceptions,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_mode')
+          Element modeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -2434,6 +3363,14 @@ abstract class $LocationCopyWith<$Res> {
   $LocationPositionCopyWith<$Res> get position;
   $ReferenceCopyWith<$Res> get managingOrganization;
   $ReferenceCopyWith<$Res> get partOf;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get aliasElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get modeElement;
+  $ElementCopyWith<$Res> get availabilityExceptionsElement;
 }
 
 class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
@@ -2471,6 +3408,14 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
     Object hoursOfOperation = freezed,
     Object availabilityExceptions = freezed,
     Object endpoint = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object nameElement = freezed,
+    Object aliasElement = freezed,
+    Object descriptionElement = freezed,
+    Object modeElement = freezed,
+    Object availabilityExceptionsElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2524,6 +3469,28 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
           : availabilityExceptions as String,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      aliasElement: aliasElement == freezed
+          ? _value.aliasElement
+          : aliasElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      modeElement:
+          modeElement == freezed ? _value.modeElement : modeElement as Element,
+      availabilityExceptionsElement: availabilityExceptionsElement == freezed
+          ? _value.availabilityExceptionsElement
+          : availabilityExceptionsElement as Element,
     ));
   }
 
@@ -2606,6 +3573,87 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       return _then(_value.copyWith(partOf: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get aliasElement {
+    if (_value.aliasElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.aliasElement, (value) {
+      return _then(_value.copyWith(aliasElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get modeElement {
+    if (_value.modeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.modeElement, (value) {
+      return _then(_value.copyWith(modeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get availabilityExceptionsElement {
+    if (_value.availabilityExceptionsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.availabilityExceptionsElement,
+        (value) {
+      return _then(_value.copyWith(availabilityExceptionsElement: value));
+    });
+  }
 }
 
 abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
@@ -2613,22 +3661,26 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       __$LocationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Location') String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Location')
+          String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
+      @JsonKey(unknownEnumValue: LocationStatus.unknown)
+          LocationStatus status,
       Coding operationalStatus,
       String name,
       List<String> alias,
       String description,
-      @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode mode,
+      @JsonKey(unknownEnumValue: LocationMode.unknown)
+          LocationMode mode,
       List<CodeableConcept> type,
       List<ContactPoint> telecom,
       Address address,
@@ -2638,7 +3690,23 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       Reference partOf,
       List<LocationHoursOfOperation> hoursOfOperation,
       String availabilityExceptions,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_mode')
+          Element modeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2656,6 +3724,22 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get managingOrganization;
   @override
   $ReferenceCopyWith<$Res> get partOf;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get aliasElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get modeElement;
+  @override
+  $ElementCopyWith<$Res> get availabilityExceptionsElement;
 }
 
 class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
@@ -2694,6 +3778,14 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     Object hoursOfOperation = freezed,
     Object availabilityExceptions = freezed,
     Object endpoint = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object nameElement = freezed,
+    Object aliasElement = freezed,
+    Object descriptionElement = freezed,
+    Object modeElement = freezed,
+    Object availabilityExceptionsElement = freezed,
   }) {
     return _then(_Location(
       resourceType: resourceType == freezed
@@ -2747,6 +3839,28 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
           : availabilityExceptions as String,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      aliasElement: aliasElement == freezed
+          ? _value.aliasElement
+          : aliasElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      modeElement:
+          modeElement == freezed ? _value.modeElement : modeElement as Element,
+      availabilityExceptionsElement: availabilityExceptionsElement == freezed
+          ? _value.availabilityExceptionsElement
+          : availabilityExceptionsElement as Element,
     ));
   }
 }
@@ -2784,7 +3898,23 @@ class _$_Location implements _Location {
       this.partOf,
       this.hoursOfOperation,
       this.availabilityExceptions,
-      this.endpoint})
+      this.endpoint,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_alias')
+          this.aliasElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_mode')
+          this.modeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          this.availabilityExceptionsElement})
       : assert(resourceType != null);
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
@@ -2846,10 +3976,34 @@ class _$_Location implements _Location {
   final String availabilityExceptions;
   @override
   final List<Reference> endpoint;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_alias')
+  final Element aliasElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_mode')
+  final Element modeElement;
+  @override
+  @JsonKey(name: '_availabilityExceptions')
+  final Element availabilityExceptionsElement;
 
   @override
   String toString() {
-    return 'Location(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, operationalStatus: $operationalStatus, name: $name, alias: $alias, description: $description, mode: $mode, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, hoursOfOperation: $hoursOfOperation, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint)';
+    return 'Location(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, operationalStatus: $operationalStatus, name: $name, alias: $alias, description: $description, mode: $mode, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, hoursOfOperation: $hoursOfOperation, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, nameElement: $nameElement, aliasElement: $aliasElement, descriptionElement: $descriptionElement, modeElement: $modeElement, availabilityExceptionsElement: $availabilityExceptionsElement)';
   }
 
   @override
@@ -2923,7 +4077,15 @@ class _$_Location implements _Location {
                 const DeepCollectionEquality().equals(
                     other.availabilityExceptions, availabilityExceptions)) &&
             (identical(other.endpoint, endpoint) ||
-                const DeepCollectionEquality().equals(other.endpoint, endpoint)));
+                const DeepCollectionEquality().equals(other.endpoint, endpoint)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.aliasElement, aliasElement) || const DeepCollectionEquality().equals(other.aliasElement, aliasElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.modeElement, modeElement) || const DeepCollectionEquality().equals(other.modeElement, modeElement)) &&
+            (identical(other.availabilityExceptionsElement, availabilityExceptionsElement) || const DeepCollectionEquality().equals(other.availabilityExceptionsElement, availabilityExceptionsElement)));
   }
 
   @override
@@ -2954,7 +4116,15 @@ class _$_Location implements _Location {
       const DeepCollectionEquality().hash(partOf) ^
       const DeepCollectionEquality().hash(hoursOfOperation) ^
       const DeepCollectionEquality().hash(availabilityExceptions) ^
-      const DeepCollectionEquality().hash(endpoint);
+      const DeepCollectionEquality().hash(endpoint) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(aliasElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(modeElement) ^
+      const DeepCollectionEquality().hash(availabilityExceptionsElement);
 
   @override
   _$LocationCopyWith<_Location> get copyWith =>
@@ -2998,7 +4168,23 @@ abstract class _Location implements Location {
       Reference partOf,
       List<LocationHoursOfOperation> hoursOfOperation,
       String availabilityExceptions,
-      List<Reference> endpoint}) = _$_Location;
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_mode')
+          Element modeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement}) = _$_Location;
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
@@ -3059,6 +4245,30 @@ abstract class _Location implements Location {
   @override
   List<Reference> get endpoint;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_alias')
+  Element get aliasElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_mode')
+  Element get modeElement;
+  @override
+  @JsonKey(name: '_availabilityExceptions')
+  Element get availabilityExceptionsElement;
+  @override
   _$LocationCopyWith<_Location> get copyWith;
 }
 
@@ -3075,7 +4285,10 @@ class _$LocationPositionTearOff {
       List<FhirExtension> modifierExtension,
       Decimal longitude,
       Decimal latitude,
-      Decimal altitude}) {
+      Decimal altitude,
+      @JsonKey(name: '_longitude') Element longitudeElement,
+      @JsonKey(name: '_latitude') Element latitudeElement,
+      @JsonKey(name: '_altitude') Element altitudeElement}) {
     return _LocationPosition(
       id: id,
       extension_: extension_,
@@ -3083,6 +4296,9 @@ class _$LocationPositionTearOff {
       longitude: longitude,
       latitude: latitude,
       altitude: altitude,
+      longitudeElement: longitudeElement,
+      latitudeElement: latitudeElement,
+      altitudeElement: altitudeElement,
     );
   }
 }
@@ -3098,6 +4314,12 @@ mixin _$LocationPosition {
   Decimal get longitude;
   Decimal get latitude;
   Decimal get altitude;
+  @JsonKey(name: '_longitude')
+  Element get longitudeElement;
+  @JsonKey(name: '_latitude')
+  Element get latitudeElement;
+  @JsonKey(name: '_altitude')
+  Element get altitudeElement;
 
   Map<String, dynamic> toJson();
   $LocationPositionCopyWith<LocationPosition> get copyWith;
@@ -3113,7 +4335,14 @@ abstract class $LocationPositionCopyWith<$Res> {
       List<FhirExtension> modifierExtension,
       Decimal longitude,
       Decimal latitude,
-      Decimal altitude});
+      Decimal altitude,
+      @JsonKey(name: '_longitude') Element longitudeElement,
+      @JsonKey(name: '_latitude') Element latitudeElement,
+      @JsonKey(name: '_altitude') Element altitudeElement});
+
+  $ElementCopyWith<$Res> get longitudeElement;
+  $ElementCopyWith<$Res> get latitudeElement;
+  $ElementCopyWith<$Res> get altitudeElement;
 }
 
 class _$LocationPositionCopyWithImpl<$Res>
@@ -3132,6 +4361,9 @@ class _$LocationPositionCopyWithImpl<$Res>
     Object longitude = freezed,
     Object latitude = freezed,
     Object altitude = freezed,
+    Object longitudeElement = freezed,
+    Object latitudeElement = freezed,
+    Object altitudeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -3144,7 +4376,46 @@ class _$LocationPositionCopyWithImpl<$Res>
       longitude: longitude == freezed ? _value.longitude : longitude as Decimal,
       latitude: latitude == freezed ? _value.latitude : latitude as Decimal,
       altitude: altitude == freezed ? _value.altitude : altitude as Decimal,
+      longitudeElement: longitudeElement == freezed
+          ? _value.longitudeElement
+          : longitudeElement as Element,
+      latitudeElement: latitudeElement == freezed
+          ? _value.latitudeElement
+          : latitudeElement as Element,
+      altitudeElement: altitudeElement == freezed
+          ? _value.altitudeElement
+          : altitudeElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get longitudeElement {
+    if (_value.longitudeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.longitudeElement, (value) {
+      return _then(_value.copyWith(longitudeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get latitudeElement {
+    if (_value.latitudeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.latitudeElement, (value) {
+      return _then(_value.copyWith(latitudeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get altitudeElement {
+    if (_value.altitudeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.altitudeElement, (value) {
+      return _then(_value.copyWith(altitudeElement: value));
+    });
   }
 }
 
@@ -3160,7 +4431,17 @@ abstract class _$LocationPositionCopyWith<$Res>
       List<FhirExtension> modifierExtension,
       Decimal longitude,
       Decimal latitude,
-      Decimal altitude});
+      Decimal altitude,
+      @JsonKey(name: '_longitude') Element longitudeElement,
+      @JsonKey(name: '_latitude') Element latitudeElement,
+      @JsonKey(name: '_altitude') Element altitudeElement});
+
+  @override
+  $ElementCopyWith<$Res> get longitudeElement;
+  @override
+  $ElementCopyWith<$Res> get latitudeElement;
+  @override
+  $ElementCopyWith<$Res> get altitudeElement;
 }
 
 class __$LocationPositionCopyWithImpl<$Res>
@@ -3181,6 +4462,9 @@ class __$LocationPositionCopyWithImpl<$Res>
     Object longitude = freezed,
     Object latitude = freezed,
     Object altitude = freezed,
+    Object longitudeElement = freezed,
+    Object latitudeElement = freezed,
+    Object altitudeElement = freezed,
   }) {
     return _then(_LocationPosition(
       id: id == freezed ? _value.id : id as String,
@@ -3193,6 +4477,15 @@ class __$LocationPositionCopyWithImpl<$Res>
       longitude: longitude == freezed ? _value.longitude : longitude as Decimal,
       latitude: latitude == freezed ? _value.latitude : latitude as Decimal,
       altitude: altitude == freezed ? _value.altitude : altitude as Decimal,
+      longitudeElement: longitudeElement == freezed
+          ? _value.longitudeElement
+          : longitudeElement as Element,
+      latitudeElement: latitudeElement == freezed
+          ? _value.latitudeElement
+          : latitudeElement as Element,
+      altitudeElement: altitudeElement == freezed
+          ? _value.altitudeElement
+          : altitudeElement as Element,
     ));
   }
 }
@@ -3205,7 +4498,10 @@ class _$_LocationPosition implements _LocationPosition {
       this.modifierExtension,
       this.longitude,
       this.latitude,
-      this.altitude});
+      this.altitude,
+      @JsonKey(name: '_longitude') this.longitudeElement,
+      @JsonKey(name: '_latitude') this.latitudeElement,
+      @JsonKey(name: '_altitude') this.altitudeElement});
 
   factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$_$_LocationPositionFromJson(json);
@@ -3223,10 +4519,19 @@ class _$_LocationPosition implements _LocationPosition {
   final Decimal latitude;
   @override
   final Decimal altitude;
+  @override
+  @JsonKey(name: '_longitude')
+  final Element longitudeElement;
+  @override
+  @JsonKey(name: '_latitude')
+  final Element latitudeElement;
+  @override
+  @JsonKey(name: '_altitude')
+  final Element altitudeElement;
 
   @override
   String toString() {
-    return 'LocationPosition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, longitude: $longitude, latitude: $latitude, altitude: $altitude)';
+    return 'LocationPosition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, longitude: $longitude, latitude: $latitude, altitude: $altitude, longitudeElement: $longitudeElement, latitudeElement: $latitudeElement, altitudeElement: $altitudeElement)';
   }
 
   @override
@@ -3249,7 +4554,16 @@ class _$_LocationPosition implements _LocationPosition {
                     .equals(other.latitude, latitude)) &&
             (identical(other.altitude, altitude) ||
                 const DeepCollectionEquality()
-                    .equals(other.altitude, altitude)));
+                    .equals(other.altitude, altitude)) &&
+            (identical(other.longitudeElement, longitudeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.longitudeElement, longitudeElement)) &&
+            (identical(other.latitudeElement, latitudeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.latitudeElement, latitudeElement)) &&
+            (identical(other.altitudeElement, altitudeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.altitudeElement, altitudeElement)));
   }
 
   @override
@@ -3260,7 +4574,10 @@ class _$_LocationPosition implements _LocationPosition {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(longitude) ^
       const DeepCollectionEquality().hash(latitude) ^
-      const DeepCollectionEquality().hash(altitude);
+      const DeepCollectionEquality().hash(altitude) ^
+      const DeepCollectionEquality().hash(longitudeElement) ^
+      const DeepCollectionEquality().hash(latitudeElement) ^
+      const DeepCollectionEquality().hash(altitudeElement);
 
   @override
   _$LocationPositionCopyWith<_LocationPosition> get copyWith =>
@@ -3274,12 +4591,16 @@ class _$_LocationPosition implements _LocationPosition {
 
 abstract class _LocationPosition implements LocationPosition {
   const factory _LocationPosition(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Decimal longitude,
-      Decimal latitude,
-      Decimal altitude}) = _$_LocationPosition;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Decimal longitude,
+          Decimal latitude,
+          Decimal altitude,
+          @JsonKey(name: '_longitude') Element longitudeElement,
+          @JsonKey(name: '_latitude') Element latitudeElement,
+          @JsonKey(name: '_altitude') Element altitudeElement}) =
+      _$_LocationPosition;
 
   factory _LocationPosition.fromJson(Map<String, dynamic> json) =
       _$_LocationPosition.fromJson;
@@ -3297,6 +4618,15 @@ abstract class _LocationPosition implements LocationPosition {
   Decimal get latitude;
   @override
   Decimal get altitude;
+  @override
+  @JsonKey(name: '_longitude')
+  Element get longitudeElement;
+  @override
+  @JsonKey(name: '_latitude')
+  Element get latitudeElement;
+  @override
+  @JsonKey(name: '_altitude')
+  Element get altitudeElement;
   @override
   _$LocationPositionCopyWith<_LocationPosition> get copyWith;
 }
@@ -3316,7 +4646,11 @@ class _$LocationHoursOfOperationTearOff {
       List<Code> daysOfWeek,
       Boolean allDay,
       Time openingTime,
-      Time closingTime}) {
+      Time closingTime,
+      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_allDay') Element allDayElement,
+      @JsonKey(name: '_openingTime') Element openingTimeElement,
+      @JsonKey(name: '_closingTime') Element closingTimeElement}) {
     return _LocationHoursOfOperation(
       id: id,
       extension_: extension_,
@@ -3325,6 +4659,10 @@ class _$LocationHoursOfOperationTearOff {
       allDay: allDay,
       openingTime: openingTime,
       closingTime: closingTime,
+      daysOfWeekElement: daysOfWeekElement,
+      allDayElement: allDayElement,
+      openingTimeElement: openingTimeElement,
+      closingTimeElement: closingTimeElement,
     );
   }
 }
@@ -3341,6 +4679,14 @@ mixin _$LocationHoursOfOperation {
   Boolean get allDay;
   Time get openingTime;
   Time get closingTime;
+  @JsonKey(name: '_daysOfWeek')
+  Element get daysOfWeekElement;
+  @JsonKey(name: '_allDay')
+  Element get allDayElement;
+  @JsonKey(name: '_openingTime')
+  Element get openingTimeElement;
+  @JsonKey(name: '_closingTime')
+  Element get closingTimeElement;
 
   Map<String, dynamic> toJson();
   $LocationHoursOfOperationCopyWith<LocationHoursOfOperation> get copyWith;
@@ -3357,7 +4703,16 @@ abstract class $LocationHoursOfOperationCopyWith<$Res> {
       List<Code> daysOfWeek,
       Boolean allDay,
       Time openingTime,
-      Time closingTime});
+      Time closingTime,
+      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_allDay') Element allDayElement,
+      @JsonKey(name: '_openingTime') Element openingTimeElement,
+      @JsonKey(name: '_closingTime') Element closingTimeElement});
+
+  $ElementCopyWith<$Res> get daysOfWeekElement;
+  $ElementCopyWith<$Res> get allDayElement;
+  $ElementCopyWith<$Res> get openingTimeElement;
+  $ElementCopyWith<$Res> get closingTimeElement;
 }
 
 class _$LocationHoursOfOperationCopyWithImpl<$Res>
@@ -3377,6 +4732,10 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
     Object allDay = freezed,
     Object openingTime = freezed,
     Object closingTime = freezed,
+    Object daysOfWeekElement = freezed,
+    Object allDayElement = freezed,
+    Object openingTimeElement = freezed,
+    Object closingTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -3393,7 +4752,59 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
           openingTime == freezed ? _value.openingTime : openingTime as Time,
       closingTime:
           closingTime == freezed ? _value.closingTime : closingTime as Time,
+      daysOfWeekElement: daysOfWeekElement == freezed
+          ? _value.daysOfWeekElement
+          : daysOfWeekElement as Element,
+      allDayElement: allDayElement == freezed
+          ? _value.allDayElement
+          : allDayElement as Element,
+      openingTimeElement: openingTimeElement == freezed
+          ? _value.openingTimeElement
+          : openingTimeElement as Element,
+      closingTimeElement: closingTimeElement == freezed
+          ? _value.closingTimeElement
+          : closingTimeElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get daysOfWeekElement {
+    if (_value.daysOfWeekElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.daysOfWeekElement, (value) {
+      return _then(_value.copyWith(daysOfWeekElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get allDayElement {
+    if (_value.allDayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.allDayElement, (value) {
+      return _then(_value.copyWith(allDayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get openingTimeElement {
+    if (_value.openingTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.openingTimeElement, (value) {
+      return _then(_value.copyWith(openingTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get closingTimeElement {
+    if (_value.closingTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.closingTimeElement, (value) {
+      return _then(_value.copyWith(closingTimeElement: value));
+    });
   }
 }
 
@@ -3410,7 +4821,20 @@ abstract class _$LocationHoursOfOperationCopyWith<$Res>
       List<Code> daysOfWeek,
       Boolean allDay,
       Time openingTime,
-      Time closingTime});
+      Time closingTime,
+      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_allDay') Element allDayElement,
+      @JsonKey(name: '_openingTime') Element openingTimeElement,
+      @JsonKey(name: '_closingTime') Element closingTimeElement});
+
+  @override
+  $ElementCopyWith<$Res> get daysOfWeekElement;
+  @override
+  $ElementCopyWith<$Res> get allDayElement;
+  @override
+  $ElementCopyWith<$Res> get openingTimeElement;
+  @override
+  $ElementCopyWith<$Res> get closingTimeElement;
 }
 
 class __$LocationHoursOfOperationCopyWithImpl<$Res>
@@ -3433,6 +4857,10 @@ class __$LocationHoursOfOperationCopyWithImpl<$Res>
     Object allDay = freezed,
     Object openingTime = freezed,
     Object closingTime = freezed,
+    Object daysOfWeekElement = freezed,
+    Object allDayElement = freezed,
+    Object openingTimeElement = freezed,
+    Object closingTimeElement = freezed,
   }) {
     return _then(_LocationHoursOfOperation(
       id: id == freezed ? _value.id : id as String,
@@ -3449,6 +4877,18 @@ class __$LocationHoursOfOperationCopyWithImpl<$Res>
           openingTime == freezed ? _value.openingTime : openingTime as Time,
       closingTime:
           closingTime == freezed ? _value.closingTime : closingTime as Time,
+      daysOfWeekElement: daysOfWeekElement == freezed
+          ? _value.daysOfWeekElement
+          : daysOfWeekElement as Element,
+      allDayElement: allDayElement == freezed
+          ? _value.allDayElement
+          : allDayElement as Element,
+      openingTimeElement: openingTimeElement == freezed
+          ? _value.openingTimeElement
+          : openingTimeElement as Element,
+      closingTimeElement: closingTimeElement == freezed
+          ? _value.closingTimeElement
+          : closingTimeElement as Element,
     ));
   }
 }
@@ -3462,7 +4902,11 @@ class _$_LocationHoursOfOperation implements _LocationHoursOfOperation {
       this.daysOfWeek,
       this.allDay,
       this.openingTime,
-      this.closingTime});
+      this.closingTime,
+      @JsonKey(name: '_daysOfWeek') this.daysOfWeekElement,
+      @JsonKey(name: '_allDay') this.allDayElement,
+      @JsonKey(name: '_openingTime') this.openingTimeElement,
+      @JsonKey(name: '_closingTime') this.closingTimeElement});
 
   factory _$_LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =>
       _$_$_LocationHoursOfOperationFromJson(json);
@@ -3482,10 +4926,22 @@ class _$_LocationHoursOfOperation implements _LocationHoursOfOperation {
   final Time openingTime;
   @override
   final Time closingTime;
+  @override
+  @JsonKey(name: '_daysOfWeek')
+  final Element daysOfWeekElement;
+  @override
+  @JsonKey(name: '_allDay')
+  final Element allDayElement;
+  @override
+  @JsonKey(name: '_openingTime')
+  final Element openingTimeElement;
+  @override
+  @JsonKey(name: '_closingTime')
+  final Element closingTimeElement;
 
   @override
   String toString() {
-    return 'LocationHoursOfOperation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, openingTime: $openingTime, closingTime: $closingTime)';
+    return 'LocationHoursOfOperation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, daysOfWeek: $daysOfWeek, allDay: $allDay, openingTime: $openingTime, closingTime: $closingTime, daysOfWeekElement: $daysOfWeekElement, allDayElement: $allDayElement, openingTimeElement: $openingTimeElement, closingTimeElement: $closingTimeElement)';
   }
 
   @override
@@ -3510,7 +4966,19 @@ class _$_LocationHoursOfOperation implements _LocationHoursOfOperation {
                     .equals(other.openingTime, openingTime)) &&
             (identical(other.closingTime, closingTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.closingTime, closingTime)));
+                    .equals(other.closingTime, closingTime)) &&
+            (identical(other.daysOfWeekElement, daysOfWeekElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.daysOfWeekElement, daysOfWeekElement)) &&
+            (identical(other.allDayElement, allDayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.allDayElement, allDayElement)) &&
+            (identical(other.openingTimeElement, openingTimeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.openingTimeElement, openingTimeElement)) &&
+            (identical(other.closingTimeElement, closingTimeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.closingTimeElement, closingTimeElement)));
   }
 
   @override
@@ -3522,7 +4990,11 @@ class _$_LocationHoursOfOperation implements _LocationHoursOfOperation {
       const DeepCollectionEquality().hash(daysOfWeek) ^
       const DeepCollectionEquality().hash(allDay) ^
       const DeepCollectionEquality().hash(openingTime) ^
-      const DeepCollectionEquality().hash(closingTime);
+      const DeepCollectionEquality().hash(closingTime) ^
+      const DeepCollectionEquality().hash(daysOfWeekElement) ^
+      const DeepCollectionEquality().hash(allDayElement) ^
+      const DeepCollectionEquality().hash(openingTimeElement) ^
+      const DeepCollectionEquality().hash(closingTimeElement);
 
   @override
   _$LocationHoursOfOperationCopyWith<_LocationHoursOfOperation> get copyWith =>
@@ -3537,13 +5009,18 @@ class _$_LocationHoursOfOperation implements _LocationHoursOfOperation {
 
 abstract class _LocationHoursOfOperation implements LocationHoursOfOperation {
   const factory _LocationHoursOfOperation(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Code> daysOfWeek,
-      Boolean allDay,
-      Time openingTime,
-      Time closingTime}) = _$_LocationHoursOfOperation;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          List<Code> daysOfWeek,
+          Boolean allDay,
+          Time openingTime,
+          Time closingTime,
+          @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+          @JsonKey(name: '_allDay') Element allDayElement,
+          @JsonKey(name: '_openingTime') Element openingTimeElement,
+          @JsonKey(name: '_closingTime') Element closingTimeElement}) =
+      _$_LocationHoursOfOperation;
 
   factory _LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =
       _$_LocationHoursOfOperation.fromJson;
@@ -3563,6 +5040,18 @@ abstract class _LocationHoursOfOperation implements LocationHoursOfOperation {
   Time get openingTime;
   @override
   Time get closingTime;
+  @override
+  @JsonKey(name: '_daysOfWeek')
+  Element get daysOfWeekElement;
+  @override
+  @JsonKey(name: '_allDay')
+  Element get allDayElement;
+  @override
+  @JsonKey(name: '_openingTime')
+  Element get openingTimeElement;
+  @override
+  @JsonKey(name: '_closingTime')
+  Element get closingTimeElement;
   @override
   _$LocationHoursOfOperationCopyWith<_LocationHoursOfOperation> get copyWith;
 }
@@ -3596,7 +5085,17 @@ class _$OrganizationTearOff {
       List<Address> address,
       Reference partOf,
       List<OrganizationContact> contact,
-      List<Reference> endpoint}) {
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement}) {
     return _Organization(
       resourceType: resourceType,
       id: id,
@@ -3617,6 +5116,11 @@ class _$OrganizationTearOff {
       partOf: partOf,
       contact: contact,
       endpoint: endpoint,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      activeElement: activeElement,
+      nameElement: nameElement,
+      aliasElement: aliasElement,
     );
   }
 }
@@ -3646,6 +5150,16 @@ mixin _$Organization {
   Reference get partOf;
   List<OrganizationContact> get contact;
   List<Reference> get endpoint;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_alias')
+  Element get aliasElement;
 
   Map<String, dynamic> toJson();
   $OrganizationCopyWith<Organization> get copyWith;
@@ -3676,11 +5190,26 @@ abstract class $OrganizationCopyWith<$Res> {
       List<Address> address,
       Reference partOf,
       List<OrganizationContact> contact,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $ReferenceCopyWith<$Res> get partOf;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get activeElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get aliasElement;
 }
 
 class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
@@ -3711,6 +5240,11 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
     Object partOf = freezed,
     Object contact = freezed,
     Object endpoint = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object activeElement = freezed,
+    Object nameElement = freezed,
+    Object aliasElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -3747,6 +5281,20 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
           : contact as List<OrganizationContact>,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      aliasElement: aliasElement == freezed
+          ? _value.aliasElement
+          : aliasElement as Element,
     ));
   }
 
@@ -3779,6 +5327,56 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
       return _then(_value.copyWith(partOf: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get activeElement {
+    if (_value.activeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+      return _then(_value.copyWith(activeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get aliasElement {
+    if (_value.aliasElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.aliasElement, (value) {
+      return _then(_value.copyWith(aliasElement: value));
+    });
+  }
 }
 
 abstract class _$OrganizationCopyWith<$Res>
@@ -3808,7 +5406,17 @@ abstract class _$OrganizationCopyWith<$Res>
       List<Address> address,
       Reference partOf,
       List<OrganizationContact> contact,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -3816,6 +5424,16 @@ abstract class _$OrganizationCopyWith<$Res>
   $NarrativeCopyWith<$Res> get text;
   @override
   $ReferenceCopyWith<$Res> get partOf;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get activeElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get aliasElement;
 }
 
 class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
@@ -3848,6 +5466,11 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
     Object partOf = freezed,
     Object contact = freezed,
     Object endpoint = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object activeElement = freezed,
+    Object nameElement = freezed,
+    Object aliasElement = freezed,
   }) {
     return _then(_Organization(
       resourceType: resourceType == freezed
@@ -3884,6 +5507,20 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
           : contact as List<OrganizationContact>,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      aliasElement: aliasElement == freezed
+          ? _value.aliasElement
+          : aliasElement as Element,
     ));
   }
 }
@@ -3912,7 +5549,17 @@ class _$_Organization implements _Organization {
       this.address,
       this.partOf,
       this.contact,
-      this.endpoint})
+      this.endpoint,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_active')
+          this.activeElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_alias')
+          this.aliasElement})
       : assert(resourceType != null);
 
   factory _$_Organization.fromJson(Map<String, dynamic> json) =>
@@ -3958,10 +5605,25 @@ class _$_Organization implements _Organization {
   final List<OrganizationContact> contact;
   @override
   final List<Reference> endpoint;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_active')
+  final Element activeElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_alias')
+  final Element aliasElement;
 
   @override
   String toString() {
-    return 'Organization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, type: $type, name: $name, alias: $alias, telecom: $telecom, address: $address, partOf: $partOf, contact: $contact, endpoint: $endpoint)';
+    return 'Organization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, type: $type, name: $name, alias: $alias, telecom: $telecom, address: $address, partOf: $partOf, contact: $contact, endpoint: $endpoint, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, activeElement: $activeElement, nameElement: $nameElement, aliasElement: $aliasElement)';
   }
 
   @override
@@ -4016,7 +5678,22 @@ class _$_Organization implements _Organization {
                     .equals(other.contact, contact)) &&
             (identical(other.endpoint, endpoint) ||
                 const DeepCollectionEquality()
-                    .equals(other.endpoint, endpoint)));
+                    .equals(other.endpoint, endpoint)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.activeElement, activeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.activeElement, activeElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.aliasElement, aliasElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.aliasElement, aliasElement)));
   }
 
   @override
@@ -4040,7 +5717,12 @@ class _$_Organization implements _Organization {
       const DeepCollectionEquality().hash(address) ^
       const DeepCollectionEquality().hash(partOf) ^
       const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(endpoint);
+      const DeepCollectionEquality().hash(endpoint) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(activeElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(aliasElement);
 
   @override
   _$OrganizationCopyWith<_Organization> get copyWith =>
@@ -4075,7 +5757,17 @@ abstract class _Organization implements Organization {
       List<Address> address,
       Reference partOf,
       List<OrganizationContact> contact,
-      List<Reference> endpoint}) = _$_Organization;
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_alias')
+          Element aliasElement}) = _$_Organization;
 
   factory _Organization.fromJson(Map<String, dynamic> json) =
       _$_Organization.fromJson;
@@ -4120,6 +5812,21 @@ abstract class _Organization implements Organization {
   List<OrganizationContact> get contact;
   @override
   List<Reference> get endpoint;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_alias')
+  Element get aliasElement;
   @override
   _$OrganizationCopyWith<_Organization> get copyWith;
 }
@@ -4456,7 +6163,13 @@ class _$OrganizationAffiliationTearOff {
       List<Reference> location,
       List<Reference> healthcareService,
       List<ContactPoint> telecom,
-      List<Reference> endpoint}) {
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement}) {
     return _OrganizationAffiliation(
       resourceType: resourceType,
       id: id,
@@ -4479,6 +6192,9 @@ class _$OrganizationAffiliationTearOff {
       healthcareService: healthcareService,
       telecom: telecom,
       endpoint: endpoint,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      activeElement: activeElement,
     );
   }
 }
@@ -4510,6 +6226,12 @@ mixin _$OrganizationAffiliation {
   List<Reference> get healthcareService;
   List<ContactPoint> get telecom;
   List<Reference> get endpoint;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_active')
+  Element get activeElement;
 
   Map<String, dynamic> toJson();
   $OrganizationAffiliationCopyWith<OrganizationAffiliation> get copyWith;
@@ -4542,13 +6264,22 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
       List<Reference> location,
       List<Reference> healthcareService,
       List<ContactPoint> telecom,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get organization;
   $ReferenceCopyWith<$Res> get participatingOrganization;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get activeElement;
 }
 
 class _$OrganizationAffiliationCopyWithImpl<$Res>
@@ -4582,6 +6313,9 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
     Object healthcareService = freezed,
     Object telecom = freezed,
     Object endpoint = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object activeElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -4627,6 +6361,15 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
     ));
   }
 
@@ -4679,6 +6422,36 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
       return _then(_value.copyWith(participatingOrganization: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get activeElement {
+    if (_value.activeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+      return _then(_value.copyWith(activeElement: value));
+    });
+  }
 }
 
 abstract class _$OrganizationAffiliationCopyWith<$Res>
@@ -4710,7 +6483,13 @@ abstract class _$OrganizationAffiliationCopyWith<$Res>
       List<Reference> location,
       List<Reference> healthcareService,
       List<ContactPoint> telecom,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -4722,6 +6501,12 @@ abstract class _$OrganizationAffiliationCopyWith<$Res>
   $ReferenceCopyWith<$Res> get organization;
   @override
   $ReferenceCopyWith<$Res> get participatingOrganization;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get activeElement;
 }
 
 class __$OrganizationAffiliationCopyWithImpl<$Res>
@@ -4758,6 +6543,9 @@ class __$OrganizationAffiliationCopyWithImpl<$Res>
     Object healthcareService = freezed,
     Object telecom = freezed,
     Object endpoint = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object activeElement = freezed,
   }) {
     return _then(_OrganizationAffiliation(
       resourceType: resourceType == freezed
@@ -4803,6 +6591,15 @@ class __$OrganizationAffiliationCopyWithImpl<$Res>
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
     ));
   }
 }
@@ -4833,7 +6630,13 @@ class _$_OrganizationAffiliation implements _OrganizationAffiliation {
       this.location,
       this.healthcareService,
       this.telecom,
-      this.endpoint})
+      this.endpoint,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_active')
+          this.activeElement})
       : assert(resourceType != null);
 
   factory _$_OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
@@ -4883,10 +6686,19 @@ class _$_OrganizationAffiliation implements _OrganizationAffiliation {
   final List<ContactPoint> telecom;
   @override
   final List<Reference> endpoint;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_active')
+  final Element activeElement;
 
   @override
   String toString() {
-    return 'OrganizationAffiliation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, period: $period, organization: $organization, participatingOrganization: $participatingOrganization, network: $network, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, endpoint: $endpoint)';
+    return 'OrganizationAffiliation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, period: $period, organization: $organization, participatingOrganization: $participatingOrganization, network: $network, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, endpoint: $endpoint, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, activeElement: $activeElement)';
   }
 
   @override
@@ -4927,8 +6739,7 @@ class _$_OrganizationAffiliation implements _OrganizationAffiliation {
             (identical(other.organization, organization) ||
                 const DeepCollectionEquality()
                     .equals(other.organization, organization)) &&
-            (identical(other.participatingOrganization,
-                    participatingOrganization) ||
+            (identical(other.participatingOrganization, participatingOrganization) ||
                 const DeepCollectionEquality().equals(
                     other.participatingOrganization,
                     participatingOrganization)) &&
@@ -4951,7 +6762,12 @@ class _$_OrganizationAffiliation implements _OrganizationAffiliation {
                     .equals(other.telecom, telecom)) &&
             (identical(other.endpoint, endpoint) ||
                 const DeepCollectionEquality()
-                    .equals(other.endpoint, endpoint)));
+                    .equals(other.endpoint, endpoint)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.activeElement, activeElement) || const DeepCollectionEquality().equals(other.activeElement, activeElement)));
   }
 
   @override
@@ -4977,7 +6793,10 @@ class _$_OrganizationAffiliation implements _OrganizationAffiliation {
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(healthcareService) ^
       const DeepCollectionEquality().hash(telecom) ^
-      const DeepCollectionEquality().hash(endpoint);
+      const DeepCollectionEquality().hash(endpoint) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(activeElement);
 
   @override
   _$OrganizationAffiliationCopyWith<_OrganizationAffiliation> get copyWith =>
@@ -5015,7 +6834,13 @@ abstract class _OrganizationAffiliation implements OrganizationAffiliation {
       List<Reference> location,
       List<Reference> healthcareService,
       List<ContactPoint> telecom,
-      List<Reference> endpoint}) = _$_OrganizationAffiliation;
+      List<Reference> endpoint,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_active')
+          Element activeElement}) = _$_OrganizationAffiliation;
 
   factory _OrganizationAffiliation.fromJson(Map<String, dynamic> json) =
       _$_OrganizationAffiliation.fromJson;
@@ -5064,6 +6889,15 @@ abstract class _OrganizationAffiliation implements OrganizationAffiliation {
   List<ContactPoint> get telecom;
   @override
   List<Reference> get endpoint;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_active')
+  Element get activeElement;
   @override
   _$OrganizationAffiliationCopyWith<_OrganizationAffiliation> get copyWith;
 }

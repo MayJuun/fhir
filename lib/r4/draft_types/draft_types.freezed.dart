@@ -691,7 +691,10 @@ class _$ProdCharacteristicTearOff {
       List<String> color,
       List<String> imprint,
       List<Attachment> image,
-      CodeableConcept scoring}) {
+      CodeableConcept scoring,
+      @JsonKey(name: '_shape') Element shapeElement,
+      @JsonKey(name: '_color') Element colorElement,
+      @JsonKey(name: '_imprint') Element imprintElement}) {
     return _ProdCharacteristic(
       id: id,
       extension_: extension_,
@@ -707,6 +710,9 @@ class _$ProdCharacteristicTearOff {
       imprint: imprint,
       image: image,
       scoring: scoring,
+      shapeElement: shapeElement,
+      colorElement: colorElement,
+      imprintElement: imprintElement,
     );
   }
 }
@@ -730,6 +736,12 @@ mixin _$ProdCharacteristic {
   List<String> get imprint;
   List<Attachment> get image;
   CodeableConcept get scoring;
+  @JsonKey(name: '_shape')
+  Element get shapeElement;
+  @JsonKey(name: '_color')
+  Element get colorElement;
+  @JsonKey(name: '_imprint')
+  Element get imprintElement;
 
   Map<String, dynamic> toJson();
   $ProdCharacteristicCopyWith<ProdCharacteristic> get copyWith;
@@ -753,7 +765,10 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
       List<String> color,
       List<String> imprint,
       List<Attachment> image,
-      CodeableConcept scoring});
+      CodeableConcept scoring,
+      @JsonKey(name: '_shape') Element shapeElement,
+      @JsonKey(name: '_color') Element colorElement,
+      @JsonKey(name: '_imprint') Element imprintElement});
 
   $QuantityCopyWith<$Res> get height;
   $QuantityCopyWith<$Res> get width;
@@ -762,6 +777,9 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
   $QuantityCopyWith<$Res> get nominalVolume;
   $QuantityCopyWith<$Res> get externalDiameter;
   $CodeableConceptCopyWith<$Res> get scoring;
+  $ElementCopyWith<$Res> get shapeElement;
+  $ElementCopyWith<$Res> get colorElement;
+  $ElementCopyWith<$Res> get imprintElement;
 }
 
 class _$ProdCharacteristicCopyWithImpl<$Res>
@@ -788,6 +806,9 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
     Object imprint = freezed,
     Object image = freezed,
     Object scoring = freezed,
+    Object shapeElement = freezed,
+    Object colorElement = freezed,
+    Object imprintElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -812,6 +833,15 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       imprint: imprint == freezed ? _value.imprint : imprint as List<String>,
       image: image == freezed ? _value.image : image as List<Attachment>,
       scoring: scoring == freezed ? _value.scoring : scoring as CodeableConcept,
+      shapeElement: shapeElement == freezed
+          ? _value.shapeElement
+          : shapeElement as Element,
+      colorElement: colorElement == freezed
+          ? _value.colorElement
+          : colorElement as Element,
+      imprintElement: imprintElement == freezed
+          ? _value.imprintElement
+          : imprintElement as Element,
     ));
   }
 
@@ -884,6 +914,36 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       return _then(_value.copyWith(scoring: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get shapeElement {
+    if (_value.shapeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.shapeElement, (value) {
+      return _then(_value.copyWith(shapeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get colorElement {
+    if (_value.colorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.colorElement, (value) {
+      return _then(_value.copyWith(colorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get imprintElement {
+    if (_value.imprintElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.imprintElement, (value) {
+      return _then(_value.copyWith(imprintElement: value));
+    });
+  }
 }
 
 abstract class _$ProdCharacteristicCopyWith<$Res>
@@ -906,7 +966,10 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
       List<String> color,
       List<String> imprint,
       List<Attachment> image,
-      CodeableConcept scoring});
+      CodeableConcept scoring,
+      @JsonKey(name: '_shape') Element shapeElement,
+      @JsonKey(name: '_color') Element colorElement,
+      @JsonKey(name: '_imprint') Element imprintElement});
 
   @override
   $QuantityCopyWith<$Res> get height;
@@ -922,6 +985,12 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
   $QuantityCopyWith<$Res> get externalDiameter;
   @override
   $CodeableConceptCopyWith<$Res> get scoring;
+  @override
+  $ElementCopyWith<$Res> get shapeElement;
+  @override
+  $ElementCopyWith<$Res> get colorElement;
+  @override
+  $ElementCopyWith<$Res> get imprintElement;
 }
 
 class __$ProdCharacteristicCopyWithImpl<$Res>
@@ -950,6 +1019,9 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
     Object imprint = freezed,
     Object image = freezed,
     Object scoring = freezed,
+    Object shapeElement = freezed,
+    Object colorElement = freezed,
+    Object imprintElement = freezed,
   }) {
     return _then(_ProdCharacteristic(
       id: id == freezed ? _value.id : id as String,
@@ -974,6 +1046,15 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
       imprint: imprint == freezed ? _value.imprint : imprint as List<String>,
       image: image == freezed ? _value.image : image as List<Attachment>,
       scoring: scoring == freezed ? _value.scoring : scoring as CodeableConcept,
+      shapeElement: shapeElement == freezed
+          ? _value.shapeElement
+          : shapeElement as Element,
+      colorElement: colorElement == freezed
+          ? _value.colorElement
+          : colorElement as Element,
+      imprintElement: imprintElement == freezed
+          ? _value.imprintElement
+          : imprintElement as Element,
     ));
   }
 }
@@ -994,7 +1075,10 @@ class _$_ProdCharacteristic implements _ProdCharacteristic {
       this.color,
       this.imprint,
       this.image,
-      this.scoring});
+      this.scoring,
+      @JsonKey(name: '_shape') this.shapeElement,
+      @JsonKey(name: '_color') this.colorElement,
+      @JsonKey(name: '_imprint') this.imprintElement});
 
   factory _$_ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$_$_ProdCharacteristicFromJson(json);
@@ -1028,10 +1112,19 @@ class _$_ProdCharacteristic implements _ProdCharacteristic {
   final List<Attachment> image;
   @override
   final CodeableConcept scoring;
+  @override
+  @JsonKey(name: '_shape')
+  final Element shapeElement;
+  @override
+  @JsonKey(name: '_color')
+  final Element colorElement;
+  @override
+  @JsonKey(name: '_imprint')
+  final Element imprintElement;
 
   @override
   String toString() {
-    return 'ProdCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, height: $height, width: $width, depth: $depth, weight: $weight, nominalVolume: $nominalVolume, externalDiameter: $externalDiameter, shape: $shape, color: $color, imprint: $imprint, image: $image, scoring: $scoring)';
+    return 'ProdCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, height: $height, width: $width, depth: $depth, weight: $weight, nominalVolume: $nominalVolume, externalDiameter: $externalDiameter, shape: $shape, color: $color, imprint: $imprint, image: $image, scoring: $scoring, shapeElement: $shapeElement, colorElement: $colorElement, imprintElement: $imprintElement)';
   }
 
   @override
@@ -1070,7 +1163,17 @@ class _$_ProdCharacteristic implements _ProdCharacteristic {
             (identical(other.image, image) ||
                 const DeepCollectionEquality().equals(other.image, image)) &&
             (identical(other.scoring, scoring) ||
-                const DeepCollectionEquality().equals(other.scoring, scoring)));
+                const DeepCollectionEquality()
+                    .equals(other.scoring, scoring)) &&
+            (identical(other.shapeElement, shapeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.shapeElement, shapeElement)) &&
+            (identical(other.colorElement, colorElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.colorElement, colorElement)) &&
+            (identical(other.imprintElement, imprintElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.imprintElement, imprintElement)));
   }
 
   @override
@@ -1089,7 +1192,10 @@ class _$_ProdCharacteristic implements _ProdCharacteristic {
       const DeepCollectionEquality().hash(color) ^
       const DeepCollectionEquality().hash(imprint) ^
       const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(scoring);
+      const DeepCollectionEquality().hash(scoring) ^
+      const DeepCollectionEquality().hash(shapeElement) ^
+      const DeepCollectionEquality().hash(colorElement) ^
+      const DeepCollectionEquality().hash(imprintElement);
 
   @override
   _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith =>
@@ -1103,20 +1209,24 @@ class _$_ProdCharacteristic implements _ProdCharacteristic {
 
 abstract class _ProdCharacteristic implements ProdCharacteristic {
   const factory _ProdCharacteristic(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity height,
-      Quantity width,
-      Quantity depth,
-      Quantity weight,
-      Quantity nominalVolume,
-      Quantity externalDiameter,
-      String shape,
-      List<String> color,
-      List<String> imprint,
-      List<Attachment> image,
-      CodeableConcept scoring}) = _$_ProdCharacteristic;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Quantity height,
+          Quantity width,
+          Quantity depth,
+          Quantity weight,
+          Quantity nominalVolume,
+          Quantity externalDiameter,
+          String shape,
+          List<String> color,
+          List<String> imprint,
+          List<Attachment> image,
+          CodeableConcept scoring,
+          @JsonKey(name: '_shape') Element shapeElement,
+          @JsonKey(name: '_color') Element colorElement,
+          @JsonKey(name: '_imprint') Element imprintElement}) =
+      _$_ProdCharacteristic;
 
   factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_ProdCharacteristic.fromJson;
@@ -1151,6 +1261,15 @@ abstract class _ProdCharacteristic implements ProdCharacteristic {
   @override
   CodeableConcept get scoring;
   @override
+  @JsonKey(name: '_shape')
+  Element get shapeElement;
+  @override
+  @JsonKey(name: '_color')
+  Element get colorElement;
+  @override
+  @JsonKey(name: '_imprint')
+  Element get imprintElement;
+  @override
   _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith;
 }
 
@@ -1169,7 +1288,8 @@ class _$MarketingStatusTearOff {
       CodeableConcept jurisdiction,
       @required @JsonKey(required: true) CodeableConcept status,
       @required @JsonKey(required: true) Period dateRange,
-      FhirDateTime restoreDate}) {
+      FhirDateTime restoreDate,
+      @JsonKey(name: '_restoreDate') Element restoreDateElement}) {
     return _MarketingStatus(
       id: id,
       extension_: extension_,
@@ -1179,6 +1299,7 @@ class _$MarketingStatusTearOff {
       status: status,
       dateRange: dateRange,
       restoreDate: restoreDate,
+      restoreDateElement: restoreDateElement,
     );
   }
 }
@@ -1199,6 +1320,8 @@ mixin _$MarketingStatus {
   @JsonKey(required: true)
   Period get dateRange;
   FhirDateTime get restoreDate;
+  @JsonKey(name: '_restoreDate')
+  Element get restoreDateElement;
 
   Map<String, dynamic> toJson();
   $MarketingStatusCopyWith<MarketingStatus> get copyWith;
@@ -1216,12 +1339,14 @@ abstract class $MarketingStatusCopyWith<$Res> {
       CodeableConcept jurisdiction,
       @JsonKey(required: true) CodeableConcept status,
       @JsonKey(required: true) Period dateRange,
-      FhirDateTime restoreDate});
+      FhirDateTime restoreDate,
+      @JsonKey(name: '_restoreDate') Element restoreDateElement});
 
   $CodeableConceptCopyWith<$Res> get country;
   $CodeableConceptCopyWith<$Res> get jurisdiction;
   $CodeableConceptCopyWith<$Res> get status;
   $PeriodCopyWith<$Res> get dateRange;
+  $ElementCopyWith<$Res> get restoreDateElement;
 }
 
 class _$MarketingStatusCopyWithImpl<$Res>
@@ -1242,6 +1367,7 @@ class _$MarketingStatusCopyWithImpl<$Res>
     Object status = freezed,
     Object dateRange = freezed,
     Object restoreDate = freezed,
+    Object restoreDateElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1260,6 +1386,9 @@ class _$MarketingStatusCopyWithImpl<$Res>
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
           : restoreDate as FhirDateTime,
+      restoreDateElement: restoreDateElement == freezed
+          ? _value.restoreDateElement
+          : restoreDateElement as Element,
     ));
   }
 
@@ -1302,6 +1431,16 @@ class _$MarketingStatusCopyWithImpl<$Res>
       return _then(_value.copyWith(dateRange: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get restoreDateElement {
+    if (_value.restoreDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.restoreDateElement, (value) {
+      return _then(_value.copyWith(restoreDateElement: value));
+    });
+  }
 }
 
 abstract class _$MarketingStatusCopyWith<$Res>
@@ -1318,7 +1457,8 @@ abstract class _$MarketingStatusCopyWith<$Res>
       CodeableConcept jurisdiction,
       @JsonKey(required: true) CodeableConcept status,
       @JsonKey(required: true) Period dateRange,
-      FhirDateTime restoreDate});
+      FhirDateTime restoreDate,
+      @JsonKey(name: '_restoreDate') Element restoreDateElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get country;
@@ -1328,6 +1468,8 @@ abstract class _$MarketingStatusCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get status;
   @override
   $PeriodCopyWith<$Res> get dateRange;
+  @override
+  $ElementCopyWith<$Res> get restoreDateElement;
 }
 
 class __$MarketingStatusCopyWithImpl<$Res>
@@ -1350,6 +1492,7 @@ class __$MarketingStatusCopyWithImpl<$Res>
     Object status = freezed,
     Object dateRange = freezed,
     Object restoreDate = freezed,
+    Object restoreDateElement = freezed,
   }) {
     return _then(_MarketingStatus(
       id: id == freezed ? _value.id : id as String,
@@ -1368,6 +1511,9 @@ class __$MarketingStatusCopyWithImpl<$Res>
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
           : restoreDate as FhirDateTime,
+      restoreDateElement: restoreDateElement == freezed
+          ? _value.restoreDateElement
+          : restoreDateElement as Element,
     ));
   }
 }
@@ -1382,7 +1528,8 @@ class _$_MarketingStatus implements _MarketingStatus {
       this.jurisdiction,
       @required @JsonKey(required: true) this.status,
       @required @JsonKey(required: true) this.dateRange,
-      this.restoreDate})
+      this.restoreDate,
+      @JsonKey(name: '_restoreDate') this.restoreDateElement})
       : assert(country != null),
         assert(status != null),
         assert(dateRange != null);
@@ -1410,10 +1557,13 @@ class _$_MarketingStatus implements _MarketingStatus {
   final Period dateRange;
   @override
   final FhirDateTime restoreDate;
+  @override
+  @JsonKey(name: '_restoreDate')
+  final Element restoreDateElement;
 
   @override
   String toString() {
-    return 'MarketingStatus(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, country: $country, jurisdiction: $jurisdiction, status: $status, dateRange: $dateRange, restoreDate: $restoreDate)';
+    return 'MarketingStatus(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, country: $country, jurisdiction: $jurisdiction, status: $status, dateRange: $dateRange, restoreDate: $restoreDate, restoreDateElement: $restoreDateElement)';
   }
 
   @override
@@ -1441,7 +1591,10 @@ class _$_MarketingStatus implements _MarketingStatus {
                     .equals(other.dateRange, dateRange)) &&
             (identical(other.restoreDate, restoreDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.restoreDate, restoreDate)));
+                    .equals(other.restoreDate, restoreDate)) &&
+            (identical(other.restoreDateElement, restoreDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.restoreDateElement, restoreDateElement)));
   }
 
   @override
@@ -1454,7 +1607,8 @@ class _$_MarketingStatus implements _MarketingStatus {
       const DeepCollectionEquality().hash(jurisdiction) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(dateRange) ^
-      const DeepCollectionEquality().hash(restoreDate);
+      const DeepCollectionEquality().hash(restoreDate) ^
+      const DeepCollectionEquality().hash(restoreDateElement);
 
   @override
   _$MarketingStatusCopyWith<_MarketingStatus> get copyWith =>
@@ -1468,14 +1622,16 @@ class _$_MarketingStatus implements _MarketingStatus {
 
 abstract class _MarketingStatus implements MarketingStatus {
   const factory _MarketingStatus(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required @JsonKey(required: true) CodeableConcept country,
-      CodeableConcept jurisdiction,
-      @required @JsonKey(required: true) CodeableConcept status,
-      @required @JsonKey(required: true) Period dateRange,
-      FhirDateTime restoreDate}) = _$_MarketingStatus;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          @required @JsonKey(required: true) CodeableConcept country,
+          CodeableConcept jurisdiction,
+          @required @JsonKey(required: true) CodeableConcept status,
+          @required @JsonKey(required: true) Period dateRange,
+          FhirDateTime restoreDate,
+          @JsonKey(name: '_restoreDate') Element restoreDateElement}) =
+      _$_MarketingStatus;
 
   factory _MarketingStatus.fromJson(Map<String, dynamic> json) =
       _$_MarketingStatus.fromJson;
@@ -1501,6 +1657,9 @@ abstract class _MarketingStatus implements MarketingStatus {
   @override
   FhirDateTime get restoreDate;
   @override
+  @JsonKey(name: '_restoreDate')
+  Element get restoreDateElement;
+  @override
   _$MarketingStatusCopyWith<_MarketingStatus> get copyWith;
 }
 
@@ -1520,7 +1679,9 @@ class _$SubstanceAmountTearOff {
       String amountString,
       CodeableConcept amountType,
       String amountText,
-      SubstanceAmountReferenceRange referenceRange}) {
+      SubstanceAmountReferenceRange referenceRange,
+      @JsonKey(name: '_amountString') Element amountStringElement,
+      @JsonKey(name: '_amountText') Element amountTextElement}) {
     return _SubstanceAmount(
       id: id,
       extension_: extension_,
@@ -1531,6 +1692,8 @@ class _$SubstanceAmountTearOff {
       amountType: amountType,
       amountText: amountText,
       referenceRange: referenceRange,
+      amountStringElement: amountStringElement,
+      amountTextElement: amountTextElement,
     );
   }
 }
@@ -1549,6 +1712,10 @@ mixin _$SubstanceAmount {
   CodeableConcept get amountType;
   String get amountText;
   SubstanceAmountReferenceRange get referenceRange;
+  @JsonKey(name: '_amountString')
+  Element get amountStringElement;
+  @JsonKey(name: '_amountText')
+  Element get amountTextElement;
 
   Map<String, dynamic> toJson();
   $SubstanceAmountCopyWith<SubstanceAmount> get copyWith;
@@ -1567,12 +1734,16 @@ abstract class $SubstanceAmountCopyWith<$Res> {
       String amountString,
       CodeableConcept amountType,
       String amountText,
-      SubstanceAmountReferenceRange referenceRange});
+      SubstanceAmountReferenceRange referenceRange,
+      @JsonKey(name: '_amountString') Element amountStringElement,
+      @JsonKey(name: '_amountText') Element amountTextElement});
 
   $QuantityCopyWith<$Res> get amountQuantity;
   $RangeCopyWith<$Res> get amountRange;
   $CodeableConceptCopyWith<$Res> get amountType;
   $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
+  $ElementCopyWith<$Res> get amountStringElement;
+  $ElementCopyWith<$Res> get amountTextElement;
 }
 
 class _$SubstanceAmountCopyWithImpl<$Res>
@@ -1594,6 +1765,8 @@ class _$SubstanceAmountCopyWithImpl<$Res>
     Object amountType = freezed,
     Object amountText = freezed,
     Object referenceRange = freezed,
+    Object amountStringElement = freezed,
+    Object amountTextElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1619,6 +1792,12 @@ class _$SubstanceAmountCopyWithImpl<$Res>
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
           : referenceRange as SubstanceAmountReferenceRange,
+      amountStringElement: amountStringElement == freezed
+          ? _value.amountStringElement
+          : amountStringElement as Element,
+      amountTextElement: amountTextElement == freezed
+          ? _value.amountTextElement
+          : amountTextElement as Element,
     ));
   }
 
@@ -1662,6 +1841,26 @@ class _$SubstanceAmountCopyWithImpl<$Res>
       return _then(_value.copyWith(referenceRange: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get amountStringElement {
+    if (_value.amountStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.amountStringElement, (value) {
+      return _then(_value.copyWith(amountStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get amountTextElement {
+    if (_value.amountTextElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.amountTextElement, (value) {
+      return _then(_value.copyWith(amountTextElement: value));
+    });
+  }
 }
 
 abstract class _$SubstanceAmountCopyWith<$Res>
@@ -1679,7 +1878,9 @@ abstract class _$SubstanceAmountCopyWith<$Res>
       String amountString,
       CodeableConcept amountType,
       String amountText,
-      SubstanceAmountReferenceRange referenceRange});
+      SubstanceAmountReferenceRange referenceRange,
+      @JsonKey(name: '_amountString') Element amountStringElement,
+      @JsonKey(name: '_amountText') Element amountTextElement});
 
   @override
   $QuantityCopyWith<$Res> get amountQuantity;
@@ -1689,6 +1890,10 @@ abstract class _$SubstanceAmountCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get amountType;
   @override
   $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
+  @override
+  $ElementCopyWith<$Res> get amountStringElement;
+  @override
+  $ElementCopyWith<$Res> get amountTextElement;
 }
 
 class __$SubstanceAmountCopyWithImpl<$Res>
@@ -1712,6 +1917,8 @@ class __$SubstanceAmountCopyWithImpl<$Res>
     Object amountType = freezed,
     Object amountText = freezed,
     Object referenceRange = freezed,
+    Object amountStringElement = freezed,
+    Object amountTextElement = freezed,
   }) {
     return _then(_SubstanceAmount(
       id: id == freezed ? _value.id : id as String,
@@ -1737,6 +1944,12 @@ class __$SubstanceAmountCopyWithImpl<$Res>
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
           : referenceRange as SubstanceAmountReferenceRange,
+      amountStringElement: amountStringElement == freezed
+          ? _value.amountStringElement
+          : amountStringElement as Element,
+      amountTextElement: amountTextElement == freezed
+          ? _value.amountTextElement
+          : amountTextElement as Element,
     ));
   }
 }
@@ -1752,7 +1965,9 @@ class _$_SubstanceAmount implements _SubstanceAmount {
       this.amountString,
       this.amountType,
       this.amountText,
-      this.referenceRange});
+      this.referenceRange,
+      @JsonKey(name: '_amountString') this.amountStringElement,
+      @JsonKey(name: '_amountText') this.amountTextElement});
 
   factory _$_SubstanceAmount.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceAmountFromJson(json);
@@ -1776,10 +1991,16 @@ class _$_SubstanceAmount implements _SubstanceAmount {
   final String amountText;
   @override
   final SubstanceAmountReferenceRange referenceRange;
+  @override
+  @JsonKey(name: '_amountString')
+  final Element amountStringElement;
+  @override
+  @JsonKey(name: '_amountText')
+  final Element amountTextElement;
 
   @override
   String toString() {
-    return 'SubstanceAmount(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, amountQuantity: $amountQuantity, amountRange: $amountRange, amountString: $amountString, amountType: $amountType, amountText: $amountText, referenceRange: $referenceRange)';
+    return 'SubstanceAmount(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, amountQuantity: $amountQuantity, amountRange: $amountRange, amountString: $amountString, amountType: $amountType, amountText: $amountText, referenceRange: $referenceRange, amountStringElement: $amountStringElement, amountTextElement: $amountTextElement)';
   }
 
   @override
@@ -1811,7 +2032,13 @@ class _$_SubstanceAmount implements _SubstanceAmount {
                     .equals(other.amountText, amountText)) &&
             (identical(other.referenceRange, referenceRange) ||
                 const DeepCollectionEquality()
-                    .equals(other.referenceRange, referenceRange)));
+                    .equals(other.referenceRange, referenceRange)) &&
+            (identical(other.amountStringElement, amountStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.amountStringElement, amountStringElement)) &&
+            (identical(other.amountTextElement, amountTextElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.amountTextElement, amountTextElement)));
   }
 
   @override
@@ -1825,7 +2052,9 @@ class _$_SubstanceAmount implements _SubstanceAmount {
       const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountType) ^
       const DeepCollectionEquality().hash(amountText) ^
-      const DeepCollectionEquality().hash(referenceRange);
+      const DeepCollectionEquality().hash(referenceRange) ^
+      const DeepCollectionEquality().hash(amountStringElement) ^
+      const DeepCollectionEquality().hash(amountTextElement);
 
   @override
   _$SubstanceAmountCopyWith<_SubstanceAmount> get copyWith =>
@@ -1839,15 +2068,18 @@ class _$_SubstanceAmount implements _SubstanceAmount {
 
 abstract class _SubstanceAmount implements SubstanceAmount {
   const factory _SubstanceAmount(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity amountQuantity,
-      Range amountRange,
-      String amountString,
-      CodeableConcept amountType,
-      String amountText,
-      SubstanceAmountReferenceRange referenceRange}) = _$_SubstanceAmount;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Quantity amountQuantity,
+          Range amountRange,
+          String amountString,
+          CodeableConcept amountType,
+          String amountText,
+          SubstanceAmountReferenceRange referenceRange,
+          @JsonKey(name: '_amountString') Element amountStringElement,
+          @JsonKey(name: '_amountText') Element amountTextElement}) =
+      _$_SubstanceAmount;
 
   factory _SubstanceAmount.fromJson(Map<String, dynamic> json) =
       _$_SubstanceAmount.fromJson;
@@ -1871,6 +2103,12 @@ abstract class _SubstanceAmount implements SubstanceAmount {
   String get amountText;
   @override
   SubstanceAmountReferenceRange get referenceRange;
+  @override
+  @JsonKey(name: '_amountString')
+  Element get amountStringElement;
+  @override
+  @JsonKey(name: '_amountText')
+  Element get amountTextElement;
   @override
   _$SubstanceAmountCopyWith<_SubstanceAmount> get copyWith;
 }

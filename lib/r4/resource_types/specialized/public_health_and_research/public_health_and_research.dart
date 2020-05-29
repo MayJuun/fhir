@@ -45,6 +45,11 @@ abstract class ResearchStudy with _$ResearchStudy implements Resource {
     List<Annotation> note,
     List<ResearchStudyArm> arm,
     List<ResearchStudyObjective> objective,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_description') Element descriptionElement,
   }) = _ResearchStudy;
   factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyFromJson(json);
@@ -59,6 +64,8 @@ abstract class ResearchStudyArm with _$ResearchStudyArm {
     String name,
     CodeableConcept type,
     String description,
+    @JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_description') Element descriptionElement,
   }) = _ResearchStudyArm;
   factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyArmFromJson(json);
@@ -72,6 +79,7 @@ abstract class ResearchStudyObjective with _$ResearchStudyObjective {
     List<FhirExtension> modifierExtension,
     String name,
     CodeableConcept type,
+    @JsonKey(name: '_name') Element nameElement,
   }) = _ResearchStudyObjective;
   factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyObjectiveFromJson(json);
@@ -100,6 +108,11 @@ abstract class ResearchSubject with _$ResearchSubject implements Resource {
     String assignedArm,
     String actualArm,
     Reference consent,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_assignedArm') Element assignedArmElement,
+@JsonKey(name: '_actualArm') Element actualArmElement,
   }) = _ResearchSubject;
   factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectFromJson(json);

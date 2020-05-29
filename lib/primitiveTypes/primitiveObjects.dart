@@ -51,15 +51,35 @@ Either<PrimitiveFailure<String>, String> validateCode(String value) =>
         ? right(value)
         : left(PrimitiveFailure.invalidCode(failedValue: value));
 
-Either<PrimitiveFailure<String>, DateTime> validateDate(String value) =>
-    isDate(value)
-        ? right(DateTime.parse(value))
+Either<PrimitiveFailure<String>, DateTime> validateDate(String value) {
+  if (isDate(value.toString())) {
+    return right(DateTime.parse(value.toString()));
+  } else {
+    var date = int.tryParse(value.toString());
+    return date != null
+//checks if a date listing only the year is after 1900 and before 100 years from present
+        ? date > 1900 && date < DateTime.now().year + 100
+            ? right(DateTime(date))
+            : left(PrimitiveFailure.invalidDate(failedValue: value))
         : left(PrimitiveFailure.invalidDate(failedValue: value));
+  }
+}
 
-Either<PrimitiveFailure<String>, DateTime> validateFhirDateTime(String value) =>
-    isDate(value.toString())
-        ? right(DateTime.parse(value.toString()))
-        : left(PrimitiveFailure.invalidFhirDateTime(failedValue: value.toString()));
+Either<PrimitiveFailure<String>, DateTime> validateFhirDateTime(String value) {
+  if (isDate(value.toString())) {
+    return right(DateTime.parse(value.toString()));
+  } else {
+    var date = int.tryParse(value.toString());
+    return date != null
+//checks if a date listing only the year is after 1900 and before 100 years from present
+        ? date > 1900 && date < DateTime.now().year + 100
+            ? right(DateTime(date))
+            : left(PrimitiveFailure.invalidFhirDateTime(
+                failedValue: value.toString()))
+        : left(PrimitiveFailure.invalidFhirDateTime(
+            failedValue: value.toString()));
+  }
+}
 
 Either<PrimitiveFailure<String>, double> validateDecimal(dynamic value) =>
     double.tryParse(value.toString()) != null

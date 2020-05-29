@@ -8,15 +8,17 @@ import '../../lib/fhir_r4.dart' as fhir_r4;
 void main() async {
   var dir = Directory('./test/r4/r4_examples');
   await File('./test/r4/errors.txt').writeAsString('');
-  var m = 0;
   for (var file in await dir.list().toList()) {
-    m += 1;
-    if (m > 200) break;
     var contents = await File(file.path).readAsString();
     var resource = fhir_r4.Resource.fromJson(json.decode(contents));
-    checkJsonEquality(
-        json.decode(contents), resource.toJson(), file.toString());
-    // checkJsonEquality(resource.toJson(), json.decode(contents), file.toString());
+    if (resource == null) {
+      print(file);
+    } else {
+      checkJsonEquality(
+          json.decode(contents), resource.toJson(), file.toString());
+      checkJsonEquality(
+          resource.toJson(), json.decode(contents), file.toString());
+    }
   }
 }
 

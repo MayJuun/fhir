@@ -19,12 +19,14 @@ class _$ContactDetailTearOff {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String name,
-      List<ContactPoint> telecom}) {
+      List<ContactPoint> telecom,
+      @JsonKey(name: '_name') Element nameElement}) {
     return _ContactDetail(
       id: id,
       extension_: extension_,
       name: name,
       telecom: telecom,
+      nameElement: nameElement,
     );
   }
 }
@@ -38,6 +40,8 @@ mixin _$ContactDetail {
   List<FhirExtension> get extension_;
   String get name;
   List<ContactPoint> get telecom;
+  @JsonKey(name: '_name')
+  Element get nameElement;
 
   Map<String, dynamic> toJson();
   $ContactDetailCopyWith<ContactDetail> get copyWith;
@@ -51,7 +55,10 @@ abstract class $ContactDetailCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String name,
-      List<ContactPoint> telecom});
+      List<ContactPoint> telecom,
+      @JsonKey(name: '_name') Element nameElement});
+
+  $ElementCopyWith<$Res> get nameElement;
 }
 
 class _$ContactDetailCopyWithImpl<$Res>
@@ -68,6 +75,7 @@ class _$ContactDetailCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object name = freezed,
     Object telecom = freezed,
+    Object nameElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -77,7 +85,19 @@ class _$ContactDetailCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
   }
 }
 
@@ -91,7 +111,11 @@ abstract class _$ContactDetailCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String name,
-      List<ContactPoint> telecom});
+      List<ContactPoint> telecom,
+      @JsonKey(name: '_name') Element nameElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
 }
 
 class __$ContactDetailCopyWithImpl<$Res>
@@ -110,6 +134,7 @@ class __$ContactDetailCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object name = freezed,
     Object telecom = freezed,
+    Object nameElement = freezed,
   }) {
     return _then(_ContactDetail(
       id: id == freezed ? _value.id : id as String,
@@ -119,6 +144,8 @@ class __$ContactDetailCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
     ));
   }
 }
@@ -129,7 +156,8 @@ class _$_ContactDetail implements _ContactDetail {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.name,
-      this.telecom});
+      this.telecom,
+      @JsonKey(name: '_name') this.nameElement});
 
   factory _$_ContactDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_ContactDetailFromJson(json);
@@ -143,10 +171,13 @@ class _$_ContactDetail implements _ContactDetail {
   final String name;
   @override
   final List<ContactPoint> telecom;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
 
   @override
   String toString() {
-    return 'ContactDetail(id: $id, extension_: $extension_, name: $name, telecom: $telecom)';
+    return 'ContactDetail(id: $id, extension_: $extension_, name: $name, telecom: $telecom, nameElement: $nameElement)';
   }
 
   @override
@@ -161,7 +192,11 @@ class _$_ContactDetail implements _ContactDetail {
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.telecom, telecom) ||
-                const DeepCollectionEquality().equals(other.telecom, telecom)));
+                const DeepCollectionEquality()
+                    .equals(other.telecom, telecom)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)));
   }
 
   @override
@@ -170,7 +205,8 @@ class _$_ContactDetail implements _ContactDetail {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(telecom);
+      const DeepCollectionEquality().hash(telecom) ^
+      const DeepCollectionEquality().hash(nameElement);
 
   @override
   _$ContactDetailCopyWith<_ContactDetail> get copyWith =>
@@ -187,7 +223,8 @@ abstract class _ContactDetail implements ContactDetail {
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String name,
-      List<ContactPoint> telecom}) = _$_ContactDetail;
+      List<ContactPoint> telecom,
+      @JsonKey(name: '_name') Element nameElement}) = _$_ContactDetail;
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
@@ -201,6 +238,9 @@ abstract class _ContactDetail implements ContactDetail {
   String get name;
   @override
   List<ContactPoint> get telecom;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   _$ContactDetailCopyWith<_ContactDetail> get copyWith;
 }
@@ -217,13 +257,17 @@ class _$ContributorTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
       String name,
-      List<ContactDetail> contact}) {
+      List<ContactDetail> contact,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_name') Element nameElement}) {
     return _Contributor(
       id: id,
       extension_: extension_,
       type: type,
       name: name,
       contact: contact,
+      typeElement: typeElement,
+      nameElement: nameElement,
     );
   }
 }
@@ -239,6 +283,10 @@ mixin _$Contributor {
   ContributorType get type;
   String get name;
   List<ContactDetail> get contact;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
 
   Map<String, dynamic> toJson();
   $ContributorCopyWith<Contributor> get copyWith;
@@ -253,7 +301,12 @@ abstract class $ContributorCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
       String name,
-      List<ContactDetail> contact});
+      List<ContactDetail> contact,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_name') Element nameElement});
+
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get nameElement;
 }
 
 class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
@@ -270,6 +323,8 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
     Object type = freezed,
     Object name = freezed,
     Object contact = freezed,
+    Object typeElement = freezed,
+    Object nameElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -280,7 +335,31 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
       name: name == freezed ? _value.name : name as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
   }
 }
 
@@ -295,7 +374,14 @@ abstract class _$ContributorCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
       String name,
-      List<ContactDetail> contact});
+      List<ContactDetail> contact,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_name') Element nameElement});
+
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
 }
 
 class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
@@ -314,6 +400,8 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
     Object type = freezed,
     Object name = freezed,
     Object contact = freezed,
+    Object typeElement = freezed,
+    Object nameElement = freezed,
   }) {
     return _then(_Contributor(
       id: id == freezed ? _value.id : id as String,
@@ -324,6 +412,10 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
     ));
   }
 }
@@ -335,7 +427,9 @@ class _$_Contributor implements _Contributor {
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) this.type,
       this.name,
-      this.contact});
+      this.contact,
+      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_name') this.nameElement});
 
   factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
       _$_$_ContributorFromJson(json);
@@ -352,10 +446,16 @@ class _$_Contributor implements _Contributor {
   final String name;
   @override
   final List<ContactDetail> contact;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
 
   @override
   String toString() {
-    return 'Contributor(id: $id, extension_: $extension_, type: $type, name: $name, contact: $contact)';
+    return 'Contributor(id: $id, extension_: $extension_, type: $type, name: $name, contact: $contact, typeElement: $typeElement, nameElement: $nameElement)';
   }
 
   @override
@@ -372,7 +472,14 @@ class _$_Contributor implements _Contributor {
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.contact, contact) ||
-                const DeepCollectionEquality().equals(other.contact, contact)));
+                const DeepCollectionEquality()
+                    .equals(other.contact, contact)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)));
   }
 
   @override
@@ -382,7 +489,9 @@ class _$_Contributor implements _Contributor {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(contact);
+      const DeepCollectionEquality().hash(contact) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(nameElement);
 
   @override
   _$ContributorCopyWith<_Contributor> get copyWith =>
@@ -400,7 +509,9 @@ abstract class _Contributor implements Contributor {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
       String name,
-      List<ContactDetail> contact}) = _$_Contributor;
+      List<ContactDetail> contact,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_name') Element nameElement}) = _$_Contributor;
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
       _$_Contributor.fromJson;
@@ -417,6 +528,12 @@ abstract class _Contributor implements Contributor {
   String get name;
   @override
   List<ContactDetail> get contact;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   _$ContributorCopyWith<_Contributor> get copyWith;
 }
@@ -439,7 +556,10 @@ class _$DataRequirementTearOff {
       List<DataRequirementCodeFilter> codeFilter,
       List<DataRequirementDateFilter> dateFilter,
       PositiveInt limit,
-      List<DataRequirementSort> sort}) {
+      List<DataRequirementSort> sort,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_limit') Element limitElement}) {
     return _DataRequirement(
       id: id,
       extension_: extension_,
@@ -452,6 +572,9 @@ class _$DataRequirementTearOff {
       dateFilter: dateFilter,
       limit: limit,
       sort: sort,
+      typeElement: typeElement,
+      mustSupportElement: mustSupportElement,
+      limitElement: limitElement,
     );
   }
 }
@@ -472,6 +595,12 @@ mixin _$DataRequirement {
   List<DataRequirementDateFilter> get dateFilter;
   PositiveInt get limit;
   List<DataRequirementSort> get sort;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_mustSupport')
+  Element get mustSupportElement;
+  @JsonKey(name: '_limit')
+  Element get limitElement;
 
   Map<String, dynamic> toJson();
   $DataRequirementCopyWith<DataRequirement> get copyWith;
@@ -492,10 +621,16 @@ abstract class $DataRequirementCopyWith<$Res> {
       List<DataRequirementCodeFilter> codeFilter,
       List<DataRequirementDateFilter> dateFilter,
       PositiveInt limit,
-      List<DataRequirementSort> sort});
+      List<DataRequirementSort> sort,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_limit') Element limitElement});
 
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   $ReferenceCopyWith<$Res> get subjectReference;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get mustSupportElement;
+  $ElementCopyWith<$Res> get limitElement;
 }
 
 class _$DataRequirementCopyWithImpl<$Res>
@@ -519,6 +654,9 @@ class _$DataRequirementCopyWithImpl<$Res>
     Object dateFilter = freezed,
     Object limit = freezed,
     Object sort = freezed,
+    Object typeElement = freezed,
+    Object mustSupportElement = freezed,
+    Object limitElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -544,6 +682,14 @@ class _$DataRequirementCopyWithImpl<$Res>
           : dateFilter as List<DataRequirementDateFilter>,
       limit: limit == freezed ? _value.limit : limit as PositiveInt,
       sort: sort == freezed ? _value.sort : sort as List<DataRequirementSort>,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      mustSupportElement: mustSupportElement == freezed
+          ? _value.mustSupportElement
+          : mustSupportElement as Element,
+      limitElement: limitElement == freezed
+          ? _value.limitElement
+          : limitElement as Element,
     ));
   }
 
@@ -567,6 +713,36 @@ class _$DataRequirementCopyWithImpl<$Res>
       return _then(_value.copyWith(subjectReference: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get mustSupportElement {
+    if (_value.mustSupportElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.mustSupportElement, (value) {
+      return _then(_value.copyWith(mustSupportElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get limitElement {
+    if (_value.limitElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.limitElement, (value) {
+      return _then(_value.copyWith(limitElement: value));
+    });
+  }
 }
 
 abstract class _$DataRequirementCopyWith<$Res>
@@ -586,12 +762,21 @@ abstract class _$DataRequirementCopyWith<$Res>
       List<DataRequirementCodeFilter> codeFilter,
       List<DataRequirementDateFilter> dateFilter,
       PositiveInt limit,
-      List<DataRequirementSort> sort});
+      List<DataRequirementSort> sort,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_limit') Element limitElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   @override
   $ReferenceCopyWith<$Res> get subjectReference;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get mustSupportElement;
+  @override
+  $ElementCopyWith<$Res> get limitElement;
 }
 
 class __$DataRequirementCopyWithImpl<$Res>
@@ -617,6 +802,9 @@ class __$DataRequirementCopyWithImpl<$Res>
     Object dateFilter = freezed,
     Object limit = freezed,
     Object sort = freezed,
+    Object typeElement = freezed,
+    Object mustSupportElement = freezed,
+    Object limitElement = freezed,
   }) {
     return _then(_DataRequirement(
       id: id == freezed ? _value.id : id as String,
@@ -642,6 +830,14 @@ class __$DataRequirementCopyWithImpl<$Res>
           : dateFilter as List<DataRequirementDateFilter>,
       limit: limit == freezed ? _value.limit : limit as PositiveInt,
       sort: sort == freezed ? _value.sort : sort as List<DataRequirementSort>,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      mustSupportElement: mustSupportElement == freezed
+          ? _value.mustSupportElement
+          : mustSupportElement as Element,
+      limitElement: limitElement == freezed
+          ? _value.limitElement
+          : limitElement as Element,
     ));
   }
 }
@@ -659,7 +855,10 @@ class _$_DataRequirement implements _DataRequirement {
       this.codeFilter,
       this.dateFilter,
       this.limit,
-      this.sort});
+      this.sort,
+      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_mustSupport') this.mustSupportElement,
+      @JsonKey(name: '_limit') this.limitElement});
 
   factory _$_DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$_$_DataRequirementFromJson(json);
@@ -687,10 +886,19 @@ class _$_DataRequirement implements _DataRequirement {
   final PositiveInt limit;
   @override
   final List<DataRequirementSort> sort;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_mustSupport')
+  final Element mustSupportElement;
+  @override
+  @JsonKey(name: '_limit')
+  final Element limitElement;
 
   @override
   String toString() {
-    return 'DataRequirement(id: $id, extension_: $extension_, type: $type, profile: $profile, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, mustSupport: $mustSupport, codeFilter: $codeFilter, dateFilter: $dateFilter, limit: $limit, sort: $sort)';
+    return 'DataRequirement(id: $id, extension_: $extension_, type: $type, profile: $profile, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, mustSupport: $mustSupport, codeFilter: $codeFilter, dateFilter: $dateFilter, limit: $limit, sort: $sort, typeElement: $typeElement, mustSupportElement: $mustSupportElement, limitElement: $limitElement)';
   }
 
   @override
@@ -725,7 +933,16 @@ class _$_DataRequirement implements _DataRequirement {
             (identical(other.limit, limit) ||
                 const DeepCollectionEquality().equals(other.limit, limit)) &&
             (identical(other.sort, sort) ||
-                const DeepCollectionEquality().equals(other.sort, sort)));
+                const DeepCollectionEquality().equals(other.sort, sort)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.mustSupportElement, mustSupportElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.mustSupportElement, mustSupportElement)) &&
+            (identical(other.limitElement, limitElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.limitElement, limitElement)));
   }
 
   @override
@@ -741,7 +958,10 @@ class _$_DataRequirement implements _DataRequirement {
       const DeepCollectionEquality().hash(codeFilter) ^
       const DeepCollectionEquality().hash(dateFilter) ^
       const DeepCollectionEquality().hash(limit) ^
-      const DeepCollectionEquality().hash(sort);
+      const DeepCollectionEquality().hash(sort) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(mustSupportElement) ^
+      const DeepCollectionEquality().hash(limitElement);
 
   @override
   _$DataRequirementCopyWith<_DataRequirement> get copyWith =>
@@ -765,7 +985,10 @@ abstract class _DataRequirement implements DataRequirement {
       List<DataRequirementCodeFilter> codeFilter,
       List<DataRequirementDateFilter> dateFilter,
       PositiveInt limit,
-      List<DataRequirementSort> sort}) = _$_DataRequirement;
+      List<DataRequirementSort> sort,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_limit') Element limitElement}) = _$_DataRequirement;
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
       _$_DataRequirement.fromJson;
@@ -794,6 +1017,15 @@ abstract class _DataRequirement implements DataRequirement {
   @override
   List<DataRequirementSort> get sort;
   @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_mustSupport')
+  Element get mustSupportElement;
+  @override
+  @JsonKey(name: '_limit')
+  Element get limitElement;
+  @override
   _$DataRequirementCopyWith<_DataRequirement> get copyWith;
 }
 
@@ -812,7 +1044,9 @@ class _$DataRequirementCodeFilterTearOff {
       String path,
       String searchParam,
       Canonical valueSet,
-      List<Coding> code}) {
+      List<Coding> code,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_searchParam') Element searchParamElement}) {
     return _DataRequirementCodeFilter(
       id: id,
       extension_: extension_,
@@ -821,6 +1055,8 @@ class _$DataRequirementCodeFilterTearOff {
       searchParam: searchParam,
       valueSet: valueSet,
       code: code,
+      pathElement: pathElement,
+      searchParamElement: searchParamElement,
     );
   }
 }
@@ -837,6 +1073,10 @@ mixin _$DataRequirementCodeFilter {
   String get searchParam;
   Canonical get valueSet;
   List<Coding> get code;
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @JsonKey(name: '_searchParam')
+  Element get searchParamElement;
 
   Map<String, dynamic> toJson();
   $DataRequirementCodeFilterCopyWith<DataRequirementCodeFilter> get copyWith;
@@ -853,7 +1093,12 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
       String path,
       String searchParam,
       Canonical valueSet,
-      List<Coding> code});
+      List<Coding> code,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_searchParam') Element searchParamElement});
+
+  $ElementCopyWith<$Res> get pathElement;
+  $ElementCopyWith<$Res> get searchParamElement;
 }
 
 class _$DataRequirementCodeFilterCopyWithImpl<$Res>
@@ -873,6 +1118,8 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
     Object searchParam = freezed,
     Object valueSet = freezed,
     Object code = freezed,
+    Object pathElement = freezed,
+    Object searchParamElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -887,7 +1134,32 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
           searchParam == freezed ? _value.searchParam : searchParam as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
       code: code == freezed ? _value.code : code as List<Coding>,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      searchParamElement: searchParamElement == freezed
+          ? _value.searchParamElement
+          : searchParamElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get searchParamElement {
+    if (_value.searchParamElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.searchParamElement, (value) {
+      return _then(_value.copyWith(searchParamElement: value));
+    });
   }
 }
 
@@ -904,7 +1176,14 @@ abstract class _$DataRequirementCodeFilterCopyWith<$Res>
       String path,
       String searchParam,
       Canonical valueSet,
-      List<Coding> code});
+      List<Coding> code,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_searchParam') Element searchParamElement});
+
+  @override
+  $ElementCopyWith<$Res> get pathElement;
+  @override
+  $ElementCopyWith<$Res> get searchParamElement;
 }
 
 class __$DataRequirementCodeFilterCopyWithImpl<$Res>
@@ -927,6 +1206,8 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
     Object searchParam = freezed,
     Object valueSet = freezed,
     Object code = freezed,
+    Object pathElement = freezed,
+    Object searchParamElement = freezed,
   }) {
     return _then(_DataRequirementCodeFilter(
       id: id == freezed ? _value.id : id as String,
@@ -941,6 +1222,11 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
           searchParam == freezed ? _value.searchParam : searchParam as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
       code: code == freezed ? _value.code : code as List<Coding>,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      searchParamElement: searchParamElement == freezed
+          ? _value.searchParamElement
+          : searchParamElement as Element,
     ));
   }
 }
@@ -954,7 +1240,9 @@ class _$_DataRequirementCodeFilter implements _DataRequirementCodeFilter {
       this.path,
       this.searchParam,
       this.valueSet,
-      this.code});
+      this.code,
+      @JsonKey(name: '_path') this.pathElement,
+      @JsonKey(name: '_searchParam') this.searchParamElement});
 
   factory _$_DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
       _$_$_DataRequirementCodeFilterFromJson(json);
@@ -974,10 +1262,16 @@ class _$_DataRequirementCodeFilter implements _DataRequirementCodeFilter {
   final Canonical valueSet;
   @override
   final List<Coding> code;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
+  @override
+  @JsonKey(name: '_searchParam')
+  final Element searchParamElement;
 
   @override
   String toString() {
-    return 'DataRequirementCodeFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, searchParam: $searchParam, valueSet: $valueSet, code: $code)';
+    return 'DataRequirementCodeFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, searchParam: $searchParam, valueSet: $valueSet, code: $code, pathElement: $pathElement, searchParamElement: $searchParamElement)';
   }
 
   @override
@@ -1001,7 +1295,13 @@ class _$_DataRequirementCodeFilter implements _DataRequirementCodeFilter {
                 const DeepCollectionEquality()
                     .equals(other.valueSet, valueSet)) &&
             (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)));
+                const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)) &&
+            (identical(other.searchParamElement, searchParamElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.searchParamElement, searchParamElement)));
   }
 
   @override
@@ -1013,7 +1313,9 @@ class _$_DataRequirementCodeFilter implements _DataRequirementCodeFilter {
       const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(searchParam) ^
       const DeepCollectionEquality().hash(valueSet) ^
-      const DeepCollectionEquality().hash(code);
+      const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(pathElement) ^
+      const DeepCollectionEquality().hash(searchParamElement);
 
   @override
   _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter>
@@ -1029,13 +1331,16 @@ class _$_DataRequirementCodeFilter implements _DataRequirementCodeFilter {
 
 abstract class _DataRequirementCodeFilter implements DataRequirementCodeFilter {
   const factory _DataRequirementCodeFilter(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String path,
-      String searchParam,
-      Canonical valueSet,
-      List<Coding> code}) = _$_DataRequirementCodeFilter;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String path,
+          String searchParam,
+          Canonical valueSet,
+          List<Coding> code,
+          @JsonKey(name: '_path') Element pathElement,
+          @JsonKey(name: '_searchParam') Element searchParamElement}) =
+      _$_DataRequirementCodeFilter;
 
   factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementCodeFilter.fromJson;
@@ -1056,6 +1361,12 @@ abstract class _DataRequirementCodeFilter implements DataRequirementCodeFilter {
   @override
   List<Coding> get code;
   @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @override
+  @JsonKey(name: '_searchParam')
+  Element get searchParamElement;
+  @override
   _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter> get copyWith;
 }
 
@@ -1075,7 +1386,10 @@ class _$DataRequirementDateFilterTearOff {
       String searchParam,
       FhirDateTime valueDateTime,
       Period valuePeriod,
-      Duration valueDuration}) {
+      Duration valueDuration,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_searchParam') Element searchParamElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement}) {
     return _DataRequirementDateFilter(
       id: id,
       extension_: extension_,
@@ -1085,6 +1399,9 @@ class _$DataRequirementDateFilterTearOff {
       valueDateTime: valueDateTime,
       valuePeriod: valuePeriod,
       valueDuration: valueDuration,
+      pathElement: pathElement,
+      searchParamElement: searchParamElement,
+      valueDateTimeElement: valueDateTimeElement,
     );
   }
 }
@@ -1102,6 +1419,12 @@ mixin _$DataRequirementDateFilter {
   FhirDateTime get valueDateTime;
   Period get valuePeriod;
   Duration get valueDuration;
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @JsonKey(name: '_searchParam')
+  Element get searchParamElement;
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
 
   Map<String, dynamic> toJson();
   $DataRequirementDateFilterCopyWith<DataRequirementDateFilter> get copyWith;
@@ -1119,10 +1442,16 @@ abstract class $DataRequirementDateFilterCopyWith<$Res> {
       String searchParam,
       FhirDateTime valueDateTime,
       Period valuePeriod,
-      Duration valueDuration});
+      Duration valueDuration,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_searchParam') Element searchParamElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement});
 
   $PeriodCopyWith<$Res> get valuePeriod;
   $DurationCopyWith<$Res> get valueDuration;
+  $ElementCopyWith<$Res> get pathElement;
+  $ElementCopyWith<$Res> get searchParamElement;
+  $ElementCopyWith<$Res> get valueDateTimeElement;
 }
 
 class _$DataRequirementDateFilterCopyWithImpl<$Res>
@@ -1143,6 +1472,9 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
     Object valueDateTime = freezed,
     Object valuePeriod = freezed,
     Object valueDuration = freezed,
+    Object pathElement = freezed,
+    Object searchParamElement = freezed,
+    Object valueDateTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1163,6 +1495,14 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration as Duration,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      searchParamElement: searchParamElement == freezed
+          ? _value.searchParamElement
+          : searchParamElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
     ));
   }
 
@@ -1185,6 +1525,36 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
       return _then(_value.copyWith(valueDuration: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get searchParamElement {
+    if (_value.searchParamElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.searchParamElement, (value) {
+      return _then(_value.copyWith(searchParamElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement {
+    if (_value.valueDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement, (value) {
+      return _then(_value.copyWith(valueDateTimeElement: value));
+    });
+  }
 }
 
 abstract class _$DataRequirementDateFilterCopyWith<$Res>
@@ -1201,12 +1571,21 @@ abstract class _$DataRequirementDateFilterCopyWith<$Res>
       String searchParam,
       FhirDateTime valueDateTime,
       Period valuePeriod,
-      Duration valueDuration});
+      Duration valueDuration,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_searchParam') Element searchParamElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement});
 
   @override
   $PeriodCopyWith<$Res> get valuePeriod;
   @override
   $DurationCopyWith<$Res> get valueDuration;
+  @override
+  $ElementCopyWith<$Res> get pathElement;
+  @override
+  $ElementCopyWith<$Res> get searchParamElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement;
 }
 
 class __$DataRequirementDateFilterCopyWithImpl<$Res>
@@ -1230,6 +1609,9 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
     Object valueDateTime = freezed,
     Object valuePeriod = freezed,
     Object valueDuration = freezed,
+    Object pathElement = freezed,
+    Object searchParamElement = freezed,
+    Object valueDateTimeElement = freezed,
   }) {
     return _then(_DataRequirementDateFilter(
       id: id == freezed ? _value.id : id as String,
@@ -1250,6 +1632,14 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration as Duration,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      searchParamElement: searchParamElement == freezed
+          ? _value.searchParamElement
+          : searchParamElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
     ));
   }
 }
@@ -1264,7 +1654,10 @@ class _$_DataRequirementDateFilter implements _DataRequirementDateFilter {
       this.searchParam,
       this.valueDateTime,
       this.valuePeriod,
-      this.valueDuration});
+      this.valueDuration,
+      @JsonKey(name: '_path') this.pathElement,
+      @JsonKey(name: '_searchParam') this.searchParamElement,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement});
 
   factory _$_DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
       _$_$_DataRequirementDateFilterFromJson(json);
@@ -1286,10 +1679,19 @@ class _$_DataRequirementDateFilter implements _DataRequirementDateFilter {
   final Period valuePeriod;
   @override
   final Duration valueDuration;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
+  @override
+  @JsonKey(name: '_searchParam')
+  final Element searchParamElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  final Element valueDateTimeElement;
 
   @override
   String toString() {
-    return 'DataRequirementDateFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, searchParam: $searchParam, valueDateTime: $valueDateTime, valuePeriod: $valuePeriod, valueDuration: $valueDuration)';
+    return 'DataRequirementDateFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, searchParam: $searchParam, valueDateTime: $valueDateTime, valuePeriod: $valuePeriod, valueDuration: $valueDuration, pathElement: $pathElement, searchParamElement: $searchParamElement, valueDateTimeElement: $valueDateTimeElement)';
   }
 
   @override
@@ -1317,7 +1719,16 @@ class _$_DataRequirementDateFilter implements _DataRequirementDateFilter {
                     .equals(other.valuePeriod, valuePeriod)) &&
             (identical(other.valueDuration, valueDuration) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueDuration, valueDuration)));
+                    .equals(other.valueDuration, valueDuration)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)) &&
+            (identical(other.searchParamElement, searchParamElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.searchParamElement, searchParamElement)) &&
+            (identical(other.valueDateTimeElement, valueDateTimeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDateTimeElement, valueDateTimeElement)));
   }
 
   @override
@@ -1330,7 +1741,10 @@ class _$_DataRequirementDateFilter implements _DataRequirementDateFilter {
       const DeepCollectionEquality().hash(searchParam) ^
       const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valuePeriod) ^
-      const DeepCollectionEquality().hash(valueDuration);
+      const DeepCollectionEquality().hash(valueDuration) ^
+      const DeepCollectionEquality().hash(pathElement) ^
+      const DeepCollectionEquality().hash(searchParamElement) ^
+      const DeepCollectionEquality().hash(valueDateTimeElement);
 
   @override
   _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter>
@@ -1346,14 +1760,18 @@ class _$_DataRequirementDateFilter implements _DataRequirementDateFilter {
 
 abstract class _DataRequirementDateFilter implements DataRequirementDateFilter {
   const factory _DataRequirementDateFilter(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String path,
-      String searchParam,
-      FhirDateTime valueDateTime,
-      Period valuePeriod,
-      Duration valueDuration}) = _$_DataRequirementDateFilter;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          String path,
+          String searchParam,
+          FhirDateTime valueDateTime,
+          Period valuePeriod,
+          Duration valueDuration,
+          @JsonKey(name: '_path') Element pathElement,
+          @JsonKey(name: '_searchParam') Element searchParamElement,
+          @JsonKey(name: '_valueDateTime') Element valueDateTimeElement}) =
+      _$_DataRequirementDateFilter;
 
   factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementDateFilter.fromJson;
@@ -1376,6 +1794,15 @@ abstract class _DataRequirementDateFilter implements DataRequirementDateFilter {
   @override
   Duration get valueDuration;
   @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @override
+  @JsonKey(name: '_searchParam')
+  Element get searchParamElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
+  @override
   _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter> get copyWith;
 }
 
@@ -1388,18 +1815,20 @@ class _$DataRequirementSortTearOff {
 
   _DataRequirementSort call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
-      @JsonKey(unknownEnumValue: SortDirection.unknown)
-          SortDirection direction}) {
+      @JsonKey(unknownEnumValue: SortDirection.unknown) SortDirection direction,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_direction') Element directionElement}) {
     return _DataRequirementSort(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       path: path,
       direction: direction,
+      pathElement: pathElement,
+      directionElement: directionElement,
     );
   }
 }
@@ -1415,6 +1844,10 @@ mixin _$DataRequirementSort {
   String get path;
   @JsonKey(unknownEnumValue: SortDirection.unknown)
   SortDirection get direction;
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @JsonKey(name: '_direction')
+  Element get directionElement;
 
   Map<String, dynamic> toJson();
   $DataRequirementSortCopyWith<DataRequirementSort> get copyWith;
@@ -1426,12 +1859,15 @@ abstract class $DataRequirementSortCopyWith<$Res> {
       _$DataRequirementSortCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
-      @JsonKey(unknownEnumValue: SortDirection.unknown)
-          SortDirection direction});
+      @JsonKey(unknownEnumValue: SortDirection.unknown) SortDirection direction,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_direction') Element directionElement});
+
+  $ElementCopyWith<$Res> get pathElement;
+  $ElementCopyWith<$Res> get directionElement;
 }
 
 class _$DataRequirementSortCopyWithImpl<$Res>
@@ -1449,6 +1885,8 @@ class _$DataRequirementSortCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object path = freezed,
     Object direction = freezed,
+    Object pathElement = freezed,
+    Object directionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1461,7 +1899,32 @@ class _$DataRequirementSortCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       direction:
           direction == freezed ? _value.direction : direction as SortDirection,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      directionElement: directionElement == freezed
+          ? _value.directionElement
+          : directionElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get directionElement {
+    if (_value.directionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.directionElement, (value) {
+      return _then(_value.copyWith(directionElement: value));
+    });
   }
 }
 
@@ -1473,12 +1936,17 @@ abstract class _$DataRequirementSortCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String path,
-      @JsonKey(unknownEnumValue: SortDirection.unknown)
-          SortDirection direction});
+      @JsonKey(unknownEnumValue: SortDirection.unknown) SortDirection direction,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_direction') Element directionElement});
+
+  @override
+  $ElementCopyWith<$Res> get pathElement;
+  @override
+  $ElementCopyWith<$Res> get directionElement;
 }
 
 class __$DataRequirementSortCopyWithImpl<$Res>
@@ -1498,6 +1966,8 @@ class __$DataRequirementSortCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object path = freezed,
     Object direction = freezed,
+    Object pathElement = freezed,
+    Object directionElement = freezed,
   }) {
     return _then(_DataRequirementSort(
       id: id == freezed ? _value.id : id as String,
@@ -1510,6 +1980,11 @@ class __$DataRequirementSortCopyWithImpl<$Res>
       path: path == freezed ? _value.path : path as String,
       direction:
           direction == freezed ? _value.direction : direction as SortDirection,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      directionElement: directionElement == freezed
+          ? _value.directionElement
+          : directionElement as Element,
     ));
   }
 }
@@ -1521,7 +1996,9 @@ class _$_DataRequirementSort implements _DataRequirementSort {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.path,
-      @JsonKey(unknownEnumValue: SortDirection.unknown) this.direction});
+      @JsonKey(unknownEnumValue: SortDirection.unknown) this.direction,
+      @JsonKey(name: '_path') this.pathElement,
+      @JsonKey(name: '_direction') this.directionElement});
 
   factory _$_DataRequirementSort.fromJson(Map<String, dynamic> json) =>
       _$_$_DataRequirementSortFromJson(json);
@@ -1538,10 +2015,16 @@ class _$_DataRequirementSort implements _DataRequirementSort {
   @override
   @JsonKey(unknownEnumValue: SortDirection.unknown)
   final SortDirection direction;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
+  @override
+  @JsonKey(name: '_direction')
+  final Element directionElement;
 
   @override
   String toString() {
-    return 'DataRequirementSort(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, direction: $direction)';
+    return 'DataRequirementSort(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, path: $path, direction: $direction, pathElement: $pathElement, directionElement: $directionElement)';
   }
 
   @override
@@ -1560,7 +2043,13 @@ class _$_DataRequirementSort implements _DataRequirementSort {
                 const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.direction, direction) ||
                 const DeepCollectionEquality()
-                    .equals(other.direction, direction)));
+                    .equals(other.direction, direction)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)) &&
+            (identical(other.directionElement, directionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.directionElement, directionElement)));
   }
 
   @override
@@ -1570,7 +2059,9 @@ class _$_DataRequirementSort implements _DataRequirementSort {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(path) ^
-      const DeepCollectionEquality().hash(direction);
+      const DeepCollectionEquality().hash(direction) ^
+      const DeepCollectionEquality().hash(pathElement) ^
+      const DeepCollectionEquality().hash(directionElement);
 
   @override
   _$DataRequirementSortCopyWith<_DataRequirementSort> get copyWith =>
@@ -1591,7 +2082,11 @@ abstract class _DataRequirementSort implements DataRequirementSort {
       List<FhirExtension> modifierExtension,
       String path,
       @JsonKey(unknownEnumValue: SortDirection.unknown)
-          SortDirection direction}) = _$_DataRequirementSort;
+          SortDirection direction,
+      @JsonKey(name: '_path')
+          Element pathElement,
+      @JsonKey(name: '_direction')
+          Element directionElement}) = _$_DataRequirementSort;
 
   factory _DataRequirementSort.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementSort.fromJson;
@@ -1608,6 +2103,12 @@ abstract class _DataRequirementSort implements DataRequirementSort {
   @override
   @JsonKey(unknownEnumValue: SortDirection.unknown)
   SortDirection get direction;
+  @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @override
+  @JsonKey(name: '_direction')
+  Element get directionElement;
   @override
   _$DataRequirementSortCopyWith<_DataRequirementSort> get copyWith;
 }
@@ -1628,7 +2129,13 @@ class _$ParameterDefinitionTearOff {
       String max,
       String documentation,
       Code type,
-      Canonical profile}) {
+      Canonical profile,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_min') Element minElement,
+      @JsonKey(name: '_max') Element maxElement,
+      @JsonKey(name: '_documentation') Element documentationElement,
+      @JsonKey(name: '_type') Element typeElement}) {
     return _ParameterDefinition(
       id: id,
       extension_: extension_,
@@ -1639,6 +2146,12 @@ class _$ParameterDefinitionTearOff {
       documentation: documentation,
       type: type,
       profile: profile,
+      nameElement: nameElement,
+      useElement: useElement,
+      minElement: minElement,
+      maxElement: maxElement,
+      documentationElement: documentationElement,
+      typeElement: typeElement,
     );
   }
 }
@@ -1657,6 +2170,18 @@ mixin _$ParameterDefinition {
   String get documentation;
   Code get type;
   Canonical get profile;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_use')
+  Element get useElement;
+  @JsonKey(name: '_min')
+  Element get minElement;
+  @JsonKey(name: '_max')
+  Element get maxElement;
+  @JsonKey(name: '_documentation')
+  Element get documentationElement;
+  @JsonKey(name: '_type')
+  Element get typeElement;
 
   Map<String, dynamic> toJson();
   $ParameterDefinitionCopyWith<ParameterDefinition> get copyWith;
@@ -1675,7 +2200,20 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
       String max,
       String documentation,
       Code type,
-      Canonical profile});
+      Canonical profile,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_min') Element minElement,
+      @JsonKey(name: '_max') Element maxElement,
+      @JsonKey(name: '_documentation') Element documentationElement,
+      @JsonKey(name: '_type') Element typeElement});
+
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get useElement;
+  $ElementCopyWith<$Res> get minElement;
+  $ElementCopyWith<$Res> get maxElement;
+  $ElementCopyWith<$Res> get documentationElement;
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class _$ParameterDefinitionCopyWithImpl<$Res>
@@ -1697,6 +2235,12 @@ class _$ParameterDefinitionCopyWithImpl<$Res>
     Object documentation = freezed,
     Object type = freezed,
     Object profile = freezed,
+    Object nameElement = freezed,
+    Object useElement = freezed,
+    Object minElement = freezed,
+    Object maxElement = freezed,
+    Object documentationElement = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1712,7 +2256,80 @@ class _$ParameterDefinitionCopyWithImpl<$Res>
           : documentation as String,
       type: type == freezed ? _value.type : type as Code,
       profile: profile == freezed ? _value.profile : profile as Canonical,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      useElement:
+          useElement == freezed ? _value.useElement : useElement as Element,
+      minElement:
+          minElement == freezed ? _value.minElement : minElement as Element,
+      maxElement:
+          maxElement == freezed ? _value.maxElement : maxElement as Element,
+      documentationElement: documentationElement == freezed
+          ? _value.documentationElement
+          : documentationElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get useElement {
+    if (_value.useElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.useElement, (value) {
+      return _then(_value.copyWith(useElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minElement {
+    if (_value.minElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minElement, (value) {
+      return _then(_value.copyWith(minElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get maxElement {
+    if (_value.maxElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.maxElement, (value) {
+      return _then(_value.copyWith(maxElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get documentationElement {
+    if (_value.documentationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.documentationElement, (value) {
+      return _then(_value.copyWith(documentationElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
   }
 }
 
@@ -1731,7 +2348,26 @@ abstract class _$ParameterDefinitionCopyWith<$Res>
       String max,
       String documentation,
       Code type,
-      Canonical profile});
+      Canonical profile,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_min') Element minElement,
+      @JsonKey(name: '_max') Element maxElement,
+      @JsonKey(name: '_documentation') Element documentationElement,
+      @JsonKey(name: '_type') Element typeElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get useElement;
+  @override
+  $ElementCopyWith<$Res> get minElement;
+  @override
+  $ElementCopyWith<$Res> get maxElement;
+  @override
+  $ElementCopyWith<$Res> get documentationElement;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class __$ParameterDefinitionCopyWithImpl<$Res>
@@ -1755,6 +2391,12 @@ class __$ParameterDefinitionCopyWithImpl<$Res>
     Object documentation = freezed,
     Object type = freezed,
     Object profile = freezed,
+    Object nameElement = freezed,
+    Object useElement = freezed,
+    Object minElement = freezed,
+    Object maxElement = freezed,
+    Object documentationElement = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_ParameterDefinition(
       id: id == freezed ? _value.id : id as String,
@@ -1770,6 +2412,19 @@ class __$ParameterDefinitionCopyWithImpl<$Res>
           : documentation as String,
       type: type == freezed ? _value.type : type as Code,
       profile: profile == freezed ? _value.profile : profile as Canonical,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      useElement:
+          useElement == freezed ? _value.useElement : useElement as Element,
+      minElement:
+          minElement == freezed ? _value.minElement : minElement as Element,
+      maxElement:
+          maxElement == freezed ? _value.maxElement : maxElement as Element,
+      documentationElement: documentationElement == freezed
+          ? _value.documentationElement
+          : documentationElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
   }
 }
@@ -1785,7 +2440,13 @@ class _$_ParameterDefinition implements _ParameterDefinition {
       this.max,
       this.documentation,
       this.type,
-      this.profile});
+      this.profile,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_use') this.useElement,
+      @JsonKey(name: '_min') this.minElement,
+      @JsonKey(name: '_max') this.maxElement,
+      @JsonKey(name: '_documentation') this.documentationElement,
+      @JsonKey(name: '_type') this.typeElement});
 
   factory _$_ParameterDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ParameterDefinitionFromJson(json);
@@ -1809,10 +2470,28 @@ class _$_ParameterDefinition implements _ParameterDefinition {
   final Code type;
   @override
   final Canonical profile;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_use')
+  final Element useElement;
+  @override
+  @JsonKey(name: '_min')
+  final Element minElement;
+  @override
+  @JsonKey(name: '_max')
+  final Element maxElement;
+  @override
+  @JsonKey(name: '_documentation')
+  final Element documentationElement;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
 
   @override
   String toString() {
-    return 'ParameterDefinition(id: $id, extension_: $extension_, name: $name, use: $use, min: $min, max: $max, documentation: $documentation, type: $type, profile: $profile)';
+    return 'ParameterDefinition(id: $id, extension_: $extension_, name: $name, use: $use, min: $min, max: $max, documentation: $documentation, type: $type, profile: $profile, nameElement: $nameElement, useElement: $useElement, minElement: $minElement, maxElement: $maxElement, documentationElement: $documentationElement, typeElement: $typeElement)';
   }
 
   @override
@@ -1838,7 +2517,26 @@ class _$_ParameterDefinition implements _ParameterDefinition {
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.profile, profile) ||
-                const DeepCollectionEquality().equals(other.profile, profile)));
+                const DeepCollectionEquality()
+                    .equals(other.profile, profile)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.useElement, useElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.useElement, useElement)) &&
+            (identical(other.minElement, minElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.minElement, minElement)) &&
+            (identical(other.maxElement, maxElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.maxElement, maxElement)) &&
+            (identical(other.documentationElement, documentationElement) ||
+                const DeepCollectionEquality().equals(
+                    other.documentationElement, documentationElement)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)));
   }
 
   @override
@@ -1852,7 +2550,13 @@ class _$_ParameterDefinition implements _ParameterDefinition {
       const DeepCollectionEquality().hash(max) ^
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(profile);
+      const DeepCollectionEquality().hash(profile) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(useElement) ^
+      const DeepCollectionEquality().hash(minElement) ^
+      const DeepCollectionEquality().hash(maxElement) ^
+      const DeepCollectionEquality().hash(documentationElement) ^
+      const DeepCollectionEquality().hash(typeElement);
 
   @override
   _$ParameterDefinitionCopyWith<_ParameterDefinition> get copyWith =>
@@ -1875,7 +2579,13 @@ abstract class _ParameterDefinition implements ParameterDefinition {
       String max,
       String documentation,
       Code type,
-      Canonical profile}) = _$_ParameterDefinition;
+      Canonical profile,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_min') Element minElement,
+      @JsonKey(name: '_max') Element maxElement,
+      @JsonKey(name: '_documentation') Element documentationElement,
+      @JsonKey(name: '_type') Element typeElement}) = _$_ParameterDefinition;
 
   factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
       _$_ParameterDefinition.fromJson;
@@ -1900,6 +2610,24 @@ abstract class _ParameterDefinition implements ParameterDefinition {
   @override
   Canonical get profile;
   @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_use')
+  Element get useElement;
+  @override
+  @JsonKey(name: '_min')
+  Element get minElement;
+  @override
+  @JsonKey(name: '_max')
+  Element get maxElement;
+  @override
+  @JsonKey(name: '_documentation')
+  Element get documentationElement;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
   _$ParameterDefinitionCopyWith<_ParameterDefinition> get copyWith;
 }
 
@@ -1921,7 +2649,17 @@ class _$RelatedArtifactTearOff {
       Markdown citation,
       FhirUrl url,
       Attachment document,
-      Canonical resource}) {
+      Canonical resource,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_display')
+          Element displayElement,
+      @JsonKey(name: '_citation')
+          Element citationElement,
+      @JsonKey(name: '_url')
+          Element urlElement}) {
     return _RelatedArtifact(
       id: id,
       extension_: extension_,
@@ -1932,6 +2670,11 @@ class _$RelatedArtifactTearOff {
       url: url,
       document: document,
       resource: resource,
+      typeElement: typeElement,
+      labelElement: labelElement,
+      displayElement: displayElement,
+      citationElement: citationElement,
+      urlElement: urlElement,
     );
   }
 }
@@ -1951,6 +2694,16 @@ mixin _$RelatedArtifact {
   FhirUrl get url;
   Attachment get document;
   Canonical get resource;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @JsonKey(name: '_display')
+  Element get displayElement;
+  @JsonKey(name: '_citation')
+  Element get citationElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
 
   Map<String, dynamic> toJson();
   $RelatedArtifactCopyWith<RelatedArtifact> get copyWith;
@@ -1971,9 +2724,24 @@ abstract class $RelatedArtifactCopyWith<$Res> {
       Markdown citation,
       FhirUrl url,
       Attachment document,
-      Canonical resource});
+      Canonical resource,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_display')
+          Element displayElement,
+      @JsonKey(name: '_citation')
+          Element citationElement,
+      @JsonKey(name: '_url')
+          Element urlElement});
 
   $AttachmentCopyWith<$Res> get document;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get labelElement;
+  $ElementCopyWith<$Res> get displayElement;
+  $ElementCopyWith<$Res> get citationElement;
+  $ElementCopyWith<$Res> get urlElement;
 }
 
 class _$RelatedArtifactCopyWithImpl<$Res>
@@ -1995,6 +2763,11 @@ class _$RelatedArtifactCopyWithImpl<$Res>
     Object url = freezed,
     Object document = freezed,
     Object resource = freezed,
+    Object typeElement = freezed,
+    Object labelElement = freezed,
+    Object displayElement = freezed,
+    Object citationElement = freezed,
+    Object urlElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -2008,6 +2781,19 @@ class _$RelatedArtifactCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUrl,
       document: document == freezed ? _value.document : document as Attachment,
       resource: resource == freezed ? _value.resource : resource as Canonical,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
+      citationElement: citationElement == freezed
+          ? _value.citationElement
+          : citationElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
     ));
   }
 
@@ -2018,6 +2804,56 @@ class _$RelatedArtifactCopyWithImpl<$Res>
     }
     return $AttachmentCopyWith<$Res>(_value.document, (value) {
       return _then(_value.copyWith(document: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get labelElement {
+    if (_value.labelElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.labelElement, (value) {
+      return _then(_value.copyWith(labelElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.displayElement, (value) {
+      return _then(_value.copyWith(displayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get citationElement {
+    if (_value.citationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.citationElement, (value) {
+      return _then(_value.copyWith(citationElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
     });
   }
 }
@@ -2039,10 +2875,30 @@ abstract class _$RelatedArtifactCopyWith<$Res>
       Markdown citation,
       FhirUrl url,
       Attachment document,
-      Canonical resource});
+      Canonical resource,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_display')
+          Element displayElement,
+      @JsonKey(name: '_citation')
+          Element citationElement,
+      @JsonKey(name: '_url')
+          Element urlElement});
 
   @override
   $AttachmentCopyWith<$Res> get document;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get labelElement;
+  @override
+  $ElementCopyWith<$Res> get displayElement;
+  @override
+  $ElementCopyWith<$Res> get citationElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
 }
 
 class __$RelatedArtifactCopyWithImpl<$Res>
@@ -2066,6 +2922,11 @@ class __$RelatedArtifactCopyWithImpl<$Res>
     Object url = freezed,
     Object document = freezed,
     Object resource = freezed,
+    Object typeElement = freezed,
+    Object labelElement = freezed,
+    Object displayElement = freezed,
+    Object citationElement = freezed,
+    Object urlElement = freezed,
   }) {
     return _then(_RelatedArtifact(
       id: id == freezed ? _value.id : id as String,
@@ -2079,6 +2940,19 @@ class __$RelatedArtifactCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUrl,
       document: document == freezed ? _value.document : document as Attachment,
       resource: resource == freezed ? _value.resource : resource as Canonical,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
+      citationElement: citationElement == freezed
+          ? _value.citationElement
+          : citationElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
     ));
   }
 }
@@ -2094,7 +2968,12 @@ class _$_RelatedArtifact implements _RelatedArtifact {
       this.citation,
       this.url,
       this.document,
-      this.resource});
+      this.resource,
+      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_label') this.labelElement,
+      @JsonKey(name: '_display') this.displayElement,
+      @JsonKey(name: '_citation') this.citationElement,
+      @JsonKey(name: '_url') this.urlElement});
 
   factory _$_RelatedArtifact.fromJson(Map<String, dynamic> json) =>
       _$_$_RelatedArtifactFromJson(json);
@@ -2119,10 +2998,25 @@ class _$_RelatedArtifact implements _RelatedArtifact {
   final Attachment document;
   @override
   final Canonical resource;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_label')
+  final Element labelElement;
+  @override
+  @JsonKey(name: '_display')
+  final Element displayElement;
+  @override
+  @JsonKey(name: '_citation')
+  final Element citationElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
 
   @override
   String toString() {
-    return 'RelatedArtifact(id: $id, extension_: $extension_, type: $type, label: $label, display: $display, citation: $citation, url: $url, document: $document, resource: $resource)';
+    return 'RelatedArtifact(id: $id, extension_: $extension_, type: $type, label: $label, display: $display, citation: $citation, url: $url, document: $document, resource: $resource, typeElement: $typeElement, labelElement: $labelElement, displayElement: $displayElement, citationElement: $citationElement, urlElement: $urlElement)';
   }
 
   @override
@@ -2151,7 +3045,22 @@ class _$_RelatedArtifact implements _RelatedArtifact {
                     .equals(other.document, document)) &&
             (identical(other.resource, resource) ||
                 const DeepCollectionEquality()
-                    .equals(other.resource, resource)));
+                    .equals(other.resource, resource)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.labelElement, labelElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.labelElement, labelElement)) &&
+            (identical(other.displayElement, displayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayElement, displayElement)) &&
+            (identical(other.citationElement, citationElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.citationElement, citationElement)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)));
   }
 
   @override
@@ -2165,7 +3074,12 @@ class _$_RelatedArtifact implements _RelatedArtifact {
       const DeepCollectionEquality().hash(citation) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(document) ^
-      const DeepCollectionEquality().hash(resource);
+      const DeepCollectionEquality().hash(resource) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(labelElement) ^
+      const DeepCollectionEquality().hash(displayElement) ^
+      const DeepCollectionEquality().hash(citationElement) ^
+      const DeepCollectionEquality().hash(urlElement);
 
   @override
   _$RelatedArtifactCopyWith<_RelatedArtifact> get copyWith =>
@@ -2189,7 +3103,17 @@ abstract class _RelatedArtifact implements RelatedArtifact {
       Markdown citation,
       FhirUrl url,
       Attachment document,
-      Canonical resource}) = _$_RelatedArtifact;
+      Canonical resource,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_display')
+          Element displayElement,
+      @JsonKey(name: '_citation')
+          Element citationElement,
+      @JsonKey(name: '_url')
+          Element urlElement}) = _$_RelatedArtifact;
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
       _$_RelatedArtifact.fromJson;
@@ -2215,6 +3139,21 @@ abstract class _RelatedArtifact implements RelatedArtifact {
   @override
   Canonical get resource;
   @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @override
+  @JsonKey(name: '_display')
+  Element get displayElement;
+  @override
+  @JsonKey(name: '_citation')
+  Element get citationElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   _$RelatedArtifactCopyWith<_RelatedArtifact> get copyWith;
 }
 
@@ -2237,7 +3176,15 @@ class _$TriggerDefinitionTearOff {
       Date timingDate,
       FhirDateTime timingDateTime,
       List<DataRequirement> data,
-      Expression condition}) {
+      Expression condition,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_timingDate')
+          Element timingDateElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement}) {
     return _TriggerDefinition(
       id: id,
       extension_: extension_,
@@ -2249,6 +3196,10 @@ class _$TriggerDefinitionTearOff {
       timingDateTime: timingDateTime,
       data: data,
       condition: condition,
+      typeElement: typeElement,
+      nameElement: nameElement,
+      timingDateElement: timingDateElement,
+      timingDateTimeElement: timingDateTimeElement,
     );
   }
 }
@@ -2269,6 +3220,14 @@ mixin _$TriggerDefinition {
   FhirDateTime get timingDateTime;
   List<DataRequirement> get data;
   Expression get condition;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_timingDate')
+  Element get timingDateElement;
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
 
   Map<String, dynamic> toJson();
   $TriggerDefinitionCopyWith<TriggerDefinition> get copyWith;
@@ -2290,11 +3249,23 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
       Date timingDate,
       FhirDateTime timingDateTime,
       List<DataRequirement> data,
-      Expression condition});
+      Expression condition,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_timingDate')
+          Element timingDateElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement});
 
   $TimingCopyWith<$Res> get timingTiming;
   $ReferenceCopyWith<$Res> get timingReference;
   $ExpressionCopyWith<$Res> get condition;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get timingDateElement;
+  $ElementCopyWith<$Res> get timingDateTimeElement;
 }
 
 class _$TriggerDefinitionCopyWithImpl<$Res>
@@ -2317,6 +3288,10 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
     Object timingDateTime = freezed,
     Object data = freezed,
     Object condition = freezed,
+    Object typeElement = freezed,
+    Object nameElement = freezed,
+    Object timingDateElement = freezed,
+    Object timingDateTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -2339,6 +3314,16 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
       data: data == freezed ? _value.data : data as List<DataRequirement>,
       condition:
           condition == freezed ? _value.condition : condition as Expression,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      timingDateElement: timingDateElement == freezed
+          ? _value.timingDateElement
+          : timingDateElement as Element,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
     ));
   }
 
@@ -2371,6 +3356,46 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(condition: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timingDateElement {
+    if (_value.timingDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timingDateElement, (value) {
+      return _then(_value.copyWith(timingDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement {
+    if (_value.timingDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timingDateTimeElement, (value) {
+      return _then(_value.copyWith(timingDateTimeElement: value));
+    });
+  }
 }
 
 abstract class _$TriggerDefinitionCopyWith<$Res>
@@ -2391,7 +3416,15 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
       Date timingDate,
       FhirDateTime timingDateTime,
       List<DataRequirement> data,
-      Expression condition});
+      Expression condition,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_timingDate')
+          Element timingDateElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement});
 
   @override
   $TimingCopyWith<$Res> get timingTiming;
@@ -2399,6 +3432,14 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
   $ReferenceCopyWith<$Res> get timingReference;
   @override
   $ExpressionCopyWith<$Res> get condition;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get timingDateElement;
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement;
 }
 
 class __$TriggerDefinitionCopyWithImpl<$Res>
@@ -2423,6 +3464,10 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
     Object timingDateTime = freezed,
     Object data = freezed,
     Object condition = freezed,
+    Object typeElement = freezed,
+    Object nameElement = freezed,
+    Object timingDateElement = freezed,
+    Object timingDateTimeElement = freezed,
   }) {
     return _then(_TriggerDefinition(
       id: id == freezed ? _value.id : id as String,
@@ -2445,6 +3490,16 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
       data: data == freezed ? _value.data : data as List<DataRequirement>,
       condition:
           condition == freezed ? _value.condition : condition as Expression,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      timingDateElement: timingDateElement == freezed
+          ? _value.timingDateElement
+          : timingDateElement as Element,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
     ));
   }
 }
@@ -2461,7 +3516,11 @@ class _$_TriggerDefinition implements _TriggerDefinition {
       this.timingDate,
       this.timingDateTime,
       this.data,
-      this.condition});
+      this.condition,
+      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_timingDate') this.timingDateElement,
+      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement});
 
   factory _$_TriggerDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_TriggerDefinitionFromJson(json);
@@ -2488,10 +3547,22 @@ class _$_TriggerDefinition implements _TriggerDefinition {
   final List<DataRequirement> data;
   @override
   final Expression condition;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_timingDate')
+  final Element timingDateElement;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  final Element timingDateTimeElement;
 
   @override
   String toString() {
-    return 'TriggerDefinition(id: $id, extension_: $extension_, type: $type, name: $name, timingTiming: $timingTiming, timingReference: $timingReference, timingDate: $timingDate, timingDateTime: $timingDateTime, data: $data, condition: $condition)';
+    return 'TriggerDefinition(id: $id, extension_: $extension_, type: $type, name: $name, timingTiming: $timingTiming, timingReference: $timingReference, timingDate: $timingDate, timingDateTime: $timingDateTime, data: $data, condition: $condition, typeElement: $typeElement, nameElement: $nameElement, timingDateElement: $timingDateElement, timingDateTimeElement: $timingDateTimeElement)';
   }
 
   @override
@@ -2523,7 +3594,19 @@ class _$_TriggerDefinition implements _TriggerDefinition {
                 const DeepCollectionEquality().equals(other.data, data)) &&
             (identical(other.condition, condition) ||
                 const DeepCollectionEquality()
-                    .equals(other.condition, condition)));
+                    .equals(other.condition, condition)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.timingDateElement, timingDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingDateElement, timingDateElement)) &&
+            (identical(other.timingDateTimeElement, timingDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.timingDateTimeElement, timingDateTimeElement)));
   }
 
   @override
@@ -2538,7 +3621,11 @@ class _$_TriggerDefinition implements _TriggerDefinition {
       const DeepCollectionEquality().hash(timingDate) ^
       const DeepCollectionEquality().hash(timingDateTime) ^
       const DeepCollectionEquality().hash(data) ^
-      const DeepCollectionEquality().hash(condition);
+      const DeepCollectionEquality().hash(condition) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(timingDateElement) ^
+      const DeepCollectionEquality().hash(timingDateTimeElement);
 
   @override
   _$TriggerDefinitionCopyWith<_TriggerDefinition> get copyWith =>
@@ -2563,7 +3650,15 @@ abstract class _TriggerDefinition implements TriggerDefinition {
       Date timingDate,
       FhirDateTime timingDateTime,
       List<DataRequirement> data,
-      Expression condition}) = _$_TriggerDefinition;
+      Expression condition,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_timingDate')
+          Element timingDateElement,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement}) = _$_TriggerDefinition;
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
       _$_TriggerDefinition.fromJson;
@@ -2590,6 +3685,18 @@ abstract class _TriggerDefinition implements TriggerDefinition {
   List<DataRequirement> get data;
   @override
   Expression get condition;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_timingDate')
+  Element get timingDateElement;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
   @override
   _$TriggerDefinitionCopyWith<_TriggerDefinition> get copyWith;
 }
@@ -2946,7 +4053,17 @@ class _$ExpressionTearOff {
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
           ExpressionLanguage language,
       String expression,
-      FhirUri reference}) {
+      FhirUri reference,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement}) {
     return _Expression(
       id: id,
       extension_: extension_,
@@ -2955,6 +4072,11 @@ class _$ExpressionTearOff {
       language: language,
       expression: expression,
       reference: reference,
+      descriptionElement: descriptionElement,
+      nameElement: nameElement,
+      languageElement: languageElement,
+      expressionElement: expressionElement,
+      referenceElement: referenceElement,
     );
   }
 }
@@ -2972,6 +4094,16 @@ mixin _$Expression {
   ExpressionLanguage get language;
   String get expression;
   FhirUri get reference;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_expression')
+  Element get expressionElement;
+  @JsonKey(name: '_reference')
+  Element get referenceElement;
 
   Map<String, dynamic> toJson();
   $ExpressionCopyWith<Expression> get copyWith;
@@ -2990,7 +4122,23 @@ abstract class $ExpressionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
           ExpressionLanguage language,
       String expression,
-      FhirUri reference});
+      FhirUri reference,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement});
+
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get expressionElement;
+  $ElementCopyWith<$Res> get referenceElement;
 }
 
 class _$ExpressionCopyWithImpl<$Res> implements $ExpressionCopyWith<$Res> {
@@ -3009,6 +4157,11 @@ class _$ExpressionCopyWithImpl<$Res> implements $ExpressionCopyWith<$Res> {
     Object language = freezed,
     Object expression = freezed,
     Object reference = freezed,
+    Object descriptionElement = freezed,
+    Object nameElement = freezed,
+    Object languageElement = freezed,
+    Object expressionElement = freezed,
+    Object referenceElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -3024,7 +4177,71 @@ class _$ExpressionCopyWithImpl<$Res> implements $ExpressionCopyWith<$Res> {
       expression:
           expression == freezed ? _value.expression : expression as String,
       reference: reference == freezed ? _value.reference : reference as FhirUri,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      expressionElement: expressionElement == freezed
+          ? _value.expressionElement
+          : expressionElement as Element,
+      referenceElement: referenceElement == freezed
+          ? _value.referenceElement
+          : referenceElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get expressionElement {
+    if (_value.expressionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.expressionElement, (value) {
+      return _then(_value.copyWith(expressionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get referenceElement {
+    if (_value.referenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.referenceElement, (value) {
+      return _then(_value.copyWith(referenceElement: value));
+    });
   }
 }
 
@@ -3042,7 +4259,28 @@ abstract class _$ExpressionCopyWith<$Res> implements $ExpressionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
           ExpressionLanguage language,
       String expression,
-      FhirUri reference});
+      FhirUri reference,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement});
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get expressionElement;
+  @override
+  $ElementCopyWith<$Res> get referenceElement;
 }
 
 class __$ExpressionCopyWithImpl<$Res> extends _$ExpressionCopyWithImpl<$Res>
@@ -3063,6 +4301,11 @@ class __$ExpressionCopyWithImpl<$Res> extends _$ExpressionCopyWithImpl<$Res>
     Object language = freezed,
     Object expression = freezed,
     Object reference = freezed,
+    Object descriptionElement = freezed,
+    Object nameElement = freezed,
+    Object languageElement = freezed,
+    Object expressionElement = freezed,
+    Object referenceElement = freezed,
   }) {
     return _then(_Expression(
       id: id == freezed ? _value.id : id as String,
@@ -3078,6 +4321,20 @@ class __$ExpressionCopyWithImpl<$Res> extends _$ExpressionCopyWithImpl<$Res>
       expression:
           expression == freezed ? _value.expression : expression as String,
       reference: reference == freezed ? _value.reference : reference as FhirUri,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      expressionElement: expressionElement == freezed
+          ? _value.expressionElement
+          : expressionElement as Element,
+      referenceElement: referenceElement == freezed
+          ? _value.referenceElement
+          : referenceElement as Element,
     ));
   }
 }
@@ -3091,7 +4348,12 @@ class _$_Expression implements _Expression {
       this.name,
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown) this.language,
       this.expression,
-      this.reference});
+      this.reference,
+      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_expression') this.expressionElement,
+      @JsonKey(name: '_reference') this.referenceElement});
 
   factory _$_Expression.fromJson(Map<String, dynamic> json) =>
       _$_$_ExpressionFromJson(json);
@@ -3112,10 +4374,25 @@ class _$_Expression implements _Expression {
   final String expression;
   @override
   final FhirUri reference;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_expression')
+  final Element expressionElement;
+  @override
+  @JsonKey(name: '_reference')
+  final Element referenceElement;
 
   @override
   String toString() {
-    return 'Expression(id: $id, extension_: $extension_, description: $description, name: $name, language: $language, expression: $expression, reference: $reference)';
+    return 'Expression(id: $id, extension_: $extension_, description: $description, name: $name, language: $language, expression: $expression, reference: $reference, descriptionElement: $descriptionElement, nameElement: $nameElement, languageElement: $languageElement, expressionElement: $expressionElement, referenceElement: $referenceElement)';
   }
 
   @override
@@ -3140,7 +4417,22 @@ class _$_Expression implements _Expression {
                     .equals(other.expression, expression)) &&
             (identical(other.reference, reference) ||
                 const DeepCollectionEquality()
-                    .equals(other.reference, reference)));
+                    .equals(other.reference, reference)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.expressionElement, expressionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.expressionElement, expressionElement)) &&
+            (identical(other.referenceElement, referenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.referenceElement, referenceElement)));
   }
 
   @override
@@ -3152,7 +4444,12 @@ class _$_Expression implements _Expression {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(expression) ^
-      const DeepCollectionEquality().hash(reference);
+      const DeepCollectionEquality().hash(reference) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(expressionElement) ^
+      const DeepCollectionEquality().hash(referenceElement);
 
   @override
   _$ExpressionCopyWith<_Expression> get copyWith =>
@@ -3174,7 +4471,17 @@ abstract class _Expression implements Expression {
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
           ExpressionLanguage language,
       String expression,
-      FhirUri reference}) = _$_Expression;
+      FhirUri reference,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement}) = _$_Expression;
 
   factory _Expression.fromJson(Map<String, dynamic> json) =
       _$_Expression.fromJson;
@@ -3195,6 +4502,21 @@ abstract class _Expression implements Expression {
   String get expression;
   @override
   FhirUri get reference;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_expression')
+  Element get expressionElement;
+  @override
+  @JsonKey(name: '_reference')
+  Element get referenceElement;
   @override
   _$ExpressionCopyWith<_Expression> get copyWith;
 }

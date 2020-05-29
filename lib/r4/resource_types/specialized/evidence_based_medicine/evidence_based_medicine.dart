@@ -56,6 +56,19 @@ abstract class EffectEvidenceSynthesis
     List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
     List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
     List<EffectEvidenceSynthesisCertainty> certainty,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_url') Element urlElement,
+@JsonKey(name: '_version') Element versionElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_date') Element dateElement,
+@JsonKey(name: '_publisher') Element publisherElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_copyright') Element copyrightElement,
+@JsonKey(name: '_approvalDate') Element approvalDateElement,
+@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _EffectEvidenceSynthesis;
   factory EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$EffectEvidenceSynthesisFromJson(json);
@@ -71,6 +84,9 @@ abstract class EffectEvidenceSynthesisSampleSize
     String description,
     Integer numberOfStudies,
     Integer numberOfParticipants,
+    @JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_numberOfStudies') Element numberOfStudiesElement,
+@JsonKey(name: '_numberOfParticipants') Element numberOfParticipantsElement,
   }) = _EffectEvidenceSynthesisSampleSize;
   factory EffectEvidenceSynthesisSampleSize.fromJson(
           Map<String, dynamic> json) =>
@@ -89,6 +105,8 @@ abstract class EffectEvidenceSynthesisResultsByExposure
         ResultsByExposureExposureState exposureState,
     CodeableConcept variantState,
     @JsonKey(required: true) @required Reference riskEvidenceSynthesis,
+    @JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_exposureState') Element exposureStateElement,
   }) = _EffectEvidenceSynthesisResultsByExposure;
   factory EffectEvidenceSynthesisResultsByExposure.fromJson(
           Map<String, dynamic> json) =>
@@ -108,6 +126,8 @@ abstract class EffectEvidenceSynthesisEffectEstimate
     Decimal value,
     CodeableConcept unitOfMeasure,
     List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate,
+    @JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_value') Element valueElement,
   }) = _EffectEvidenceSynthesisEffectEstimate;
   factory EffectEvidenceSynthesisEffectEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -125,6 +145,9 @@ abstract class EffectEvidenceSynthesisPrecisionEstimate
     Decimal level,
     Decimal from,
     Decimal to,
+    @JsonKey(name: '_level') Element levelElement,
+@JsonKey(name: '_from') Element fromElement,
+@JsonKey(name: '_to') Element toElement,
   }) = _EffectEvidenceSynthesisPrecisionEstimate;
   factory EffectEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -205,6 +228,21 @@ abstract class Evidence with _$Evidence implements Resource {
     @JsonKey(required: true) @required Reference exposureBackground,
     List<Reference> exposureVariant,
     List<Reference> outcome,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_url') Element urlElement,
+@JsonKey(name: '_version') Element versionElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_shortTitle') Element shortTitleElement,
+@JsonKey(name: '_subtitle') Element subtitleElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_date') Element dateElement,
+@JsonKey(name: '_publisher') Element publisherElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_copyright') Element copyrightElement,
+@JsonKey(name: '_approvalDate') Element approvalDateElement,
+@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _Evidence;
   factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
@@ -253,6 +291,22 @@ abstract class EvidenceVariable with _$EvidenceVariable implements Resource {
     @JsonKey(required: true)
     @required
         List<EvidenceVariableCharacteristic> characteristic,
+       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_url') Element urlElement,
+@JsonKey(name: '_version') Element versionElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_shortTitle') Element shortTitleElement,
+@JsonKey(name: '_subtitle') Element subtitleElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_date') Element dateElement,
+@JsonKey(name: '_publisher') Element publisherElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_copyright') Element copyrightElement,
+@JsonKey(name: '_approvalDate') Element approvalDateElement,
+@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+@JsonKey(name: '_type') Element typeElement, 
   }) = _EvidenceVariable;
   factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableFromJson(json);
@@ -280,6 +334,11 @@ abstract class EvidenceVariableCharacteristic
     Timing participantEffectiveTiming,
     Duration timeFromStart,
     @JsonKey(unknownEnumValue: GroupMeasure.unknown) GroupMeasure groupMeasure,
+  @JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_definitionCanonical') Element definitionCanonicalElement,
+@JsonKey(name: '_exclude') Element excludeElement,
+@JsonKey(name: '_participantEffectiveDateTime') Element participantEffectiveDateTimeElement,
+@JsonKey(name: '_groupMeasure') Element groupMeasureElement,
   }) = _EvidenceVariableCharacteristic;
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
@@ -336,6 +395,25 @@ abstract class ResearchDefinition
     Reference exposure,
     Reference exposureAlternative,
     Reference outcome,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_url') Element urlElement,
+@JsonKey(name: '_version') Element versionElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_shortTitle') Element shortTitleElement,
+@JsonKey(name: '_subtitle') Element subtitleElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_experimental') Element experimentalElement,
+@JsonKey(name: '_date') Element dateElement,
+@JsonKey(name: '_publisher') Element publisherElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_comment') Element commentElement,
+@JsonKey(name: '_purpose') Element purposeElement,
+@JsonKey(name: '_usage') Element usageElement,
+@JsonKey(name: '_copyright') Element copyrightElement,
+@JsonKey(name: '_approvalDate') Element approvalDateElement,
+@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _ResearchDefinition;
   factory ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchDefinitionFromJson(json);
@@ -394,6 +472,27 @@ abstract class ResearchElementDefinition
     @JsonKey(required: true)
     @required
         List<ResearchElementDefinitionCharacteristic> characteristic,
+        @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_url') Element urlElement,
+@JsonKey(name: '_version') Element versionElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_shortTitle') Element shortTitleElement,
+@JsonKey(name: '_subtitle') Element subtitleElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_experimental') Element experimentalElement,
+@JsonKey(name: '_date') Element dateElement,
+@JsonKey(name: '_publisher') Element publisherElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_comment') Element commentElement,
+@JsonKey(name: '_purpose') Element purposeElement,
+@JsonKey(name: '_usage') Element usageElement,
+@JsonKey(name: '_copyright') Element copyrightElement,
+@JsonKey(name: '_approvalDate') Element approvalDateElement,
+@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+@JsonKey(name: '_type') Element typeElement,
+@JsonKey(name: '_variableType') Element variableTypeElement,
   }) = _ResearchElementDefinition;
   factory ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchElementDefinitionFromJson(json);
@@ -429,6 +528,15 @@ abstract class ResearchElementDefinitionCharacteristic
     Duration participantEffectiveTimeFromStart,
     @JsonKey(unknownEnumValue: GroupMeasure.unknown)
         GroupMeasure participantEffectiveGroupMeasure,
+        @JsonKey(name: '_definitionCanonical') Element definitionCanonicalElement,
+@JsonKey(name: '_exclude') Element excludeElement,
+@JsonKey(name: '_studyEffectiveDescription') Element studyEffectiveDescriptionElement,
+@JsonKey(name: '_studyEffectiveDateTime') Element studyEffectiveDateTimeElement,
+@JsonKey(name: '_studyEffectiveGroupMeasure') Element studyEffectiveGroupMeasureElement,
+@JsonKey(name: '_participantEffectiveDescription') Element participantEffectiveDescriptionElement,
+@JsonKey(name: '_participantEffectiveDateTime') Element participantEffectiveDateTimeElement,
+@JsonKey(name: '_participantEffectiveGroupMeasure') Element participantEffectiveGroupMeasureElement,
+
   }) = _ResearchElementDefinitionCharacteristic;
   factory ResearchElementDefinitionCharacteristic.fromJson(
           Map<String, dynamic> json) =>
@@ -482,6 +590,19 @@ abstract class RiskEvidenceSynthesis
     RiskEvidenceSynthesisSampleSize sampleSize,
     RiskEvidenceSynthesisRiskEstimate riskEstimate,
     List<RiskEvidenceSynthesisCertainty> certainty,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_url') Element urlElement,
+@JsonKey(name: '_version') Element versionElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_date') Element dateElement,
+@JsonKey(name: '_publisher') Element publisherElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_copyright') Element copyrightElement,
+@JsonKey(name: '_approvalDate') Element approvalDateElement,
+@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _RiskEvidenceSynthesis;
   factory RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisFromJson(json);
@@ -497,6 +618,9 @@ abstract class RiskEvidenceSynthesisSampleSize
     String description,
     Integer numberOfStudies,
     Integer numberOfParticipants,
+    @JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_numberOfStudies') Element numberOfStudiesElement,
+@JsonKey(name: '_numberOfParticipants') Element numberOfParticipantsElement,
   }) = _RiskEvidenceSynthesisSampleSize;
   factory RiskEvidenceSynthesisSampleSize.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisSampleSizeFromJson(json);
@@ -516,6 +640,10 @@ abstract class RiskEvidenceSynthesisRiskEstimate
     Integer denominatorCount,
     Integer numeratorCount,
     List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate,
+    @JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_value') Element valueElement,
+@JsonKey(name: '_denominatorCount') Element denominatorCountElement,
+@JsonKey(name: '_numeratorCount') Element numeratorCountElement,
   }) = _RiskEvidenceSynthesisRiskEstimate;
   factory RiskEvidenceSynthesisRiskEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -533,6 +661,9 @@ abstract class RiskEvidenceSynthesisPrecisionEstimate
     Decimal level,
     Decimal from,
     Decimal to,
+    @JsonKey(name: '_level') Element levelElement,
+@JsonKey(name: '_from') Element fromElement,
+@JsonKey(name: '_to') Element toElement,
   }) = _RiskEvidenceSynthesisPrecisionEstimate;
   factory RiskEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>

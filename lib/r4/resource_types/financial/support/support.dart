@@ -38,6 +38,14 @@ abstract class Coverage with _$Coverage implements Resource {
     List<CoverageCostToBeneficiary> costToBeneficiary,
     Boolean subrogation,
     List<Reference> contract,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_subscriberId') Element subscriberIdElement,
+@JsonKey(name: '_dependent') Element dependentElement,
+@JsonKey(name: '_order') Element orderElement,
+@JsonKey(name: '_network') Element networkElement,
+@JsonKey(name: '_subrogation') Element subrogationElement,
   }) = _Coverage;
   factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
@@ -52,6 +60,8 @@ abstract class CoverageClass with _$CoverageClass {
     @JsonKey(required: true) @required CodeableConcept type,
     String value,
     String name,
+    @JsonKey(name: '_value') Element valueElement,
+@JsonKey(name: '_name') Element nameElement,
   }) = _CoverageClass;
   factory CoverageClass.fromJson(Map<String, dynamic> json) =>
       _$CoverageClassFromJson(json);
@@ -116,6 +126,12 @@ abstract class CoverageEligibilityRequest
     List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
     List<CoverageEligibilityRequestInsurance> insurance,
     List<CoverageEligibilityRequestItem> item,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_purpose') Element purposeElement,
+@JsonKey(name: '_servicedDate') Element servicedDateElement,
+@JsonKey(name: '_created') Element createdElement,
   }) = _CoverageEligibilityRequest;
   factory CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestFromJson(json);
@@ -131,6 +147,8 @@ abstract class CoverageEligibilityRequestSupportingInfo
     PositiveInt sequence,
     @JsonKey(required: true) @required Reference information,
     Boolean appliesToAll,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+@JsonKey(name: '_appliesToAll') Element appliesToAllElement,
   }) = _CoverageEligibilityRequestSupportingInfo;
   factory CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
@@ -147,6 +165,8 @@ abstract class CoverageEligibilityRequestInsurance
     Boolean focal,
     @JsonKey(required: true) @required Reference coverage,
     String businessArrangement,
+    @JsonKey(name: '_focal') Element focalElement,
+@JsonKey(name: '_businessArrangement') Element businessArrangementElement,
   }) = _CoverageEligibilityRequestInsurance;
   factory CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =>
@@ -170,6 +190,8 @@ abstract class CoverageEligibilityRequestItem
     Reference facility,
     List<CoverageEligibilityRequestDiagnosis> diagnosis,
     List<Reference> detail,
+    @JsonKey(name: '_supportingInfoSequence') Element supportingInfoSequenceElement,
+
   }) = _CoverageEligibilityRequestItem;
   factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestItemFromJson(json);
@@ -222,6 +244,15 @@ abstract class CoverageEligibilityResponse
     String preAuthRef,
     CodeableConcept form,
     List<CoverageEligibilityResponseError> error,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_purpose') Element purposeElement,
+@JsonKey(name: '_servicedDate') Element servicedDateElement,
+@JsonKey(name: '_created') Element createdElement,
+@JsonKey(name: '_outcome') Element outcomeElement,
+@JsonKey(name: '_disposition') Element dispositionElement,
+@JsonKey(name: '_preAuthRef') Element preAuthRefElement,
   }) = _CoverageEligibilityResponse;
   factory CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseFromJson(json);
@@ -238,6 +269,7 @@ abstract class CoverageEligibilityResponseInsurance
     Boolean inforce,
     Period benefitPeriod,
     List<CoverageEligibilityResponseItem> item,
+    @JsonKey(name: '_inforce') Element inforceElement,
   }) = _CoverageEligibilityResponseInsurance;
   factory CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =>
@@ -265,6 +297,11 @@ abstract class CoverageEligibilityResponseItem
     Boolean authorizationRequired,
     List<CodeableConcept> authorizationSupporting,
     FhirUri authorizationUrl,
+    @JsonKey(name: '_excluded') Element excludedElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_authorizationRequired') Element authorizationRequiredElement,
+@JsonKey(name: '_authorizationUrl') Element authorizationUrlElement,
   }) = _CoverageEligibilityResponseItem;
   factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseItemFromJson(json);
@@ -284,6 +321,10 @@ abstract class CoverageEligibilityResponseBenefit
     UnsignedInt usedUnsignedInt,
     String usedString,
     Money usedMoney,
+    @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+@JsonKey(name: '_allowedString') Element allowedStringElement,
+@JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
+@JsonKey(name: '_usedString') Element usedStringElement,
   }) = _CoverageEligibilityResponseBenefit;
   factory CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =>
@@ -325,6 +366,10 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
     Reference provider,
     Reference candidate,
     Reference coverage,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_created') Element createdElement,
   }) = _EnrollmentRequest;
   factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentRequestFromJson(json);
@@ -354,6 +399,12 @@ abstract class EnrollmentResponse
     FhirDateTime created,
     Reference organization,
     Reference requestProvider,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_outcome') Element outcomeElement,
+@JsonKey(name: '_disposition') Element dispositionElement,
+@JsonKey(name: '_created') Element createdElement,
   }) = _EnrollmentResponse;
   factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentResponseFromJson(json);

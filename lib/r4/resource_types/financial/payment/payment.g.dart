@@ -75,6 +75,21 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['paymentStatus'] as Map<String, dynamic>),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
+    paymentDateElement: json['_paymentDate'] == null
+        ? null
+        : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
   );
 }
 
@@ -112,6 +127,11 @@ Map<String, dynamic> _$_$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   writeNotNull('recipient', instance.recipient?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
   writeNotNull('paymentStatus', instance.paymentStatus?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
+  writeNotNull('_paymentDate', instance.paymentDateElement?.toJson());
   return val;
 }
 
@@ -195,6 +215,27 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
             : PaymentReconciliationProcessNote.fromJson(
                 e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
+    outcomeElement: json['_outcome'] == null
+        ? null
+        : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
+    dispositionElement: json['_disposition'] == null
+        ? null
+        : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
+    paymentDateElement: json['_paymentDate'] == null
+        ? null
+        : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
   );
 }
 
@@ -237,6 +278,13 @@ Map<String, dynamic> _$_$_PaymentReconciliationToJson(
   writeNotNull('formCode', instance.formCode?.toJson());
   writeNotNull(
       'processNote', instance.processNote?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
+  writeNotNull('_outcome', instance.outcomeElement?.toJson());
+  writeNotNull('_disposition', instance.dispositionElement?.toJson());
+  writeNotNull('_paymentDate', instance.paymentDateElement?.toJson());
   return val;
 }
 
@@ -323,6 +371,9 @@ _$_PaymentReconciliationDetail _$_$_PaymentReconciliationDetailFromJson(
     amount: json['amount'] == null
         ? null
         : Money.fromJson(json['amount'] as Map<String, dynamic>),
+    dateElement: json['_date'] == null
+        ? null
+        : Element.fromJson(json['_date'] as Map<String, dynamic>),
   );
 }
 
@@ -351,6 +402,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationDetailToJson(
   writeNotNull('responsible', instance.responsible?.toJson());
   writeNotNull('payee', instance.payee?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
   return val;
 }
 
@@ -371,6 +423,12 @@ _$_PaymentReconciliationProcessNote
     type: _$enumDecodeNullable(_$ProcessNoteTypeEnumMap, json['type'],
         unknownValue: ProcessNoteType.unknown),
     text: json['text'] as String,
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    textElement: json['_text'] == null
+        ? null
+        : Element.fromJson(json['_text'] as Map<String, dynamic>),
   );
 }
 
@@ -391,6 +449,8 @@ Map<String, dynamic> _$_$_PaymentReconciliationProcessNoteToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', _$ProcessNoteTypeEnumMap[instance.type]);
   writeNotNull('text', instance.text);
+  writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('_text', instance.textElement?.toJson());
   return val;
 }
 

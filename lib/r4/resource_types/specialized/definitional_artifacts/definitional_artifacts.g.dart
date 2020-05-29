@@ -210,6 +210,72 @@ _$_ActivityDefinition _$_$_ActivityDefinitionFromJson(
             : ActivityDefinitionDynamicValue.fromJson(
                 e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    titleElement: json['_title'] == null
+        ? null
+        : Element.fromJson(json['_title'] as Map<String, dynamic>),
+    subtitleElement: json['_subtitle'] == null
+        ? null
+        : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    experimentalElement: json['_experimental'] == null
+        ? null
+        : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
+    dateElement: json['_date'] == null
+        ? null
+        : Element.fromJson(json['_date'] as Map<String, dynamic>),
+    publisherElement: json['_publisher'] == null
+        ? null
+        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    purposeElement: json['_purpose'] == null
+        ? null
+        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+    usageElement: json['_usage'] == null
+        ? null
+        : Element.fromJson(json['_usage'] as Map<String, dynamic>),
+    copyrightElement: json['_copyright'] == null
+        ? null
+        : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+    approvalDateElement: json['_approvalDate'] == null
+        ? null
+        : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
+    lastReviewDateElement: json['_lastReviewDate'] == null
+        ? null
+        : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
+    kindElement: json['_kind'] == null
+        ? null
+        : Element.fromJson(json['_kind'] as Map<String, dynamic>),
+    intentElement: json['_intent'] == null
+        ? null
+        : Element.fromJson(json['_intent'] as Map<String, dynamic>),
+    priorityElement: json['_priority'] == null
+        ? null
+        : Element.fromJson(json['_priority'] as Map<String, dynamic>),
+    doNotPerformElement: json['_doNotPerform'] == null
+        ? null
+        : Element.fromJson(json['_doNotPerform'] as Map<String, dynamic>),
+    timingDateTimeElement: json['_timingDateTime'] == null
+        ? null
+        : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
   );
 }
 
@@ -302,6 +368,28 @@ Map<String, dynamic> _$_$_ActivityDefinitionToJson(
   writeNotNull('transform', instance.transform?.toJson());
   writeNotNull(
       'dynamicValue', instance.dynamicValue?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_version', instance.versionElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_title', instance.titleElement?.toJson());
+  writeNotNull('_subtitle', instance.subtitleElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_experimental', instance.experimentalElement?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
+  writeNotNull('_publisher', instance.publisherElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_purpose', instance.purposeElement?.toJson());
+  writeNotNull('_usage', instance.usageElement?.toJson());
+  writeNotNull('_copyright', instance.copyrightElement?.toJson());
+  writeNotNull('_approvalDate', instance.approvalDateElement?.toJson());
+  writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
+  writeNotNull('_kind', instance.kindElement?.toJson());
+  writeNotNull('_intent', instance.intentElement?.toJson());
+  writeNotNull('_priority', instance.priorityElement?.toJson());
+  writeNotNull('_doNotPerform', instance.doNotPerformElement?.toJson());
+  writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
   return val;
 }
 
@@ -362,6 +450,9 @@ _$_ActivityDefinitionParticipant _$_$_ActivityDefinitionParticipantFromJson(
     role: json['role'] == null
         ? null
         : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
   );
 }
 
@@ -382,6 +473,7 @@ Map<String, dynamic> _$_$_ActivityDefinitionParticipantToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('role', instance.role?.toJson());
+  writeNotNull('_type', instance.typeElement?.toJson());
   return val;
 }
 
@@ -404,6 +496,9 @@ _$_ActivityDefinitionDynamicValue _$_$_ActivityDefinitionDynamicValueFromJson(
     expression: json['expression'] == null
         ? null
         : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+    pathElement: json['_path'] == null
+        ? null
+        : Element.fromJson(json['_path'] as Map<String, dynamic>),
   );
 }
 
@@ -424,6 +519,7 @@ Map<String, dynamic> _$_$_ActivityDefinitionDynamicValueToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('path', instance.path);
   writeNotNull('expression', instance.expression?.toJson());
+  writeNotNull('_path', instance.pathElement?.toJson());
   return val;
 }
 
@@ -544,6 +640,27 @@ _$_DeviceDefinition _$_$_DeviceDefinitionFromJson(Map<String, dynamic> json) {
             ? null
             : DeviceDefinitionMaterial.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    manufacturerStringElement: json['_manufacturerString'] == null
+        ? null
+        : Element.fromJson(json['_manufacturerString'] as Map<String, dynamic>),
+    modelNumberElement: json['_modelNumber'] == null
+        ? null
+        : Element.fromJson(json['_modelNumber'] as Map<String, dynamic>),
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    onlineInformationElement: json['_onlineInformation'] == null
+        ? null
+        : Element.fromJson(json['_onlineInformation'] as Map<String, dynamic>),
   );
 }
 
@@ -602,6 +719,15 @@ Map<String, dynamic> _$_$_DeviceDefinitionToJson(_$_DeviceDefinition instance) {
   writeNotNull('parentDevice', instance.parentDevice?.toJson());
   writeNotNull(
       'material', instance.material?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull(
+      '_manufacturerString', instance.manufacturerStringElement?.toJson());
+  writeNotNull('_modelNumber', instance.modelNumberElement?.toJson());
+  writeNotNull('_version', instance.versionElement?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull(
+      '_onlineInformation', instance.onlineInformationElement?.toJson());
   return val;
 }
 
@@ -627,6 +753,15 @@ _$_DeviceDefinitionUdiDeviceIdentifier
     jurisdiction: json['jurisdiction'] == null
         ? null
         : FhirUri.fromJson(json['jurisdiction'] as String),
+    deviceIdentifierElement: json['_deviceIdentifier'] == null
+        ? null
+        : Element.fromJson(json['_deviceIdentifier'] as Map<String, dynamic>),
+    issuerElement: json['_issuer'] == null
+        ? null
+        : Element.fromJson(json['_issuer'] as Map<String, dynamic>),
+    jurisdictionElement: json['_jurisdiction'] == null
+        ? null
+        : Element.fromJson(json['_jurisdiction'] as Map<String, dynamic>),
   );
 }
 
@@ -648,6 +783,9 @@ Map<String, dynamic> _$_$_DeviceDefinitionUdiDeviceIdentifierToJson(
   writeNotNull('deviceIdentifier', instance.deviceIdentifier);
   writeNotNull('issuer', instance.issuer?.toJson());
   writeNotNull('jurisdiction', instance.jurisdiction?.toJson());
+  writeNotNull('_deviceIdentifier', instance.deviceIdentifierElement?.toJson());
+  writeNotNull('_issuer', instance.issuerElement?.toJson());
+  writeNotNull('_jurisdiction', instance.jurisdictionElement?.toJson());
   return val;
 }
 
@@ -668,6 +806,12 @@ _$_DeviceDefinitionDeviceName _$_$_DeviceDefinitionDeviceNameFromJson(
     name: json['name'] as String,
     type: _$enumDecodeNullable(_$DeviceNameTypeEnumMap, json['type'],
         unknownValue: DeviceNameType.unknown),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
   );
 }
 
@@ -688,6 +832,8 @@ Map<String, dynamic> _$_$_DeviceDefinitionDeviceNameToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name);
   writeNotNull('type', _$DeviceNameTypeEnumMap[instance.type]);
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_type', instance.typeElement?.toJson());
   return val;
 }
 
@@ -717,6 +863,12 @@ _$_DeviceDefinitionSpecialization _$_$_DeviceDefinitionSpecializationFromJson(
         ?.toList(),
     systemType: json['systemType'] as String,
     version: json['version'] as String,
+    systemTypeElement: json['_systemType'] == null
+        ? null
+        : Element.fromJson(json['_systemType'] as Map<String, dynamic>),
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
   );
 }
 
@@ -737,6 +889,8 @@ Map<String, dynamic> _$_$_DeviceDefinitionSpecializationToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('systemType', instance.systemType);
   writeNotNull('version', instance.version);
+  writeNotNull('_systemType', instance.systemTypeElement?.toJson());
+  writeNotNull('_version', instance.versionElement?.toJson());
   return val;
 }
 
@@ -863,6 +1017,13 @@ _$_DeviceDefinitionMaterial _$_$_DeviceDefinitionMaterialFromJson(
     allergenicIndicator: json['allergenicIndicator'] == null
         ? null
         : Boolean.fromJson(json['allergenicIndicator']),
+    alternateElement: json['_alternate'] == null
+        ? null
+        : Element.fromJson(json['_alternate'] as Map<String, dynamic>),
+    allergenicIndicatorElement: json['_allergenicIndicator'] == null
+        ? null
+        : Element.fromJson(
+            json['_allergenicIndicator'] as Map<String, dynamic>),
   );
 }
 
@@ -884,6 +1045,9 @@ Map<String, dynamic> _$_$_DeviceDefinitionMaterialToJson(
   writeNotNull('substance', instance.substance?.toJson());
   writeNotNull('alternate', instance.alternate?.toJson());
   writeNotNull('allergenicIndicator', instance.allergenicIndicator?.toJson());
+  writeNotNull('_alternate', instance.alternateElement?.toJson());
+  writeNotNull(
+      '_allergenicIndicator', instance.allergenicIndicatorElement?.toJson());
   return val;
 }
 
@@ -1011,6 +1175,57 @@ _$_EventDefinition _$_$_EventDefinitionFromJson(Map<String, dynamic> json) {
             ? null
             : TriggerDefinition.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    titleElement: json['_title'] == null
+        ? null
+        : Element.fromJson(json['_title'] as Map<String, dynamic>),
+    subtitleElement: json['_subtitle'] == null
+        ? null
+        : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    experimentalElement: json['_experimental'] == null
+        ? null
+        : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
+    dateElement: json['_date'] == null
+        ? null
+        : Element.fromJson(json['_date'] as Map<String, dynamic>),
+    publisherElement: json['_publisher'] == null
+        ? null
+        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    purposeElement: json['_purpose'] == null
+        ? null
+        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+    usageElement: json['_usage'] == null
+        ? null
+        : Element.fromJson(json['_usage'] as Map<String, dynamic>),
+    copyrightElement: json['_copyright'] == null
+        ? null
+        : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+    approvalDateElement: json['_approvalDate'] == null
+        ? null
+        : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
+    lastReviewDateElement: json['_lastReviewDate'] == null
+        ? null
+        : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
   );
 }
 
@@ -1071,6 +1286,23 @@ Map<String, dynamic> _$_$_EventDefinitionToJson(_$_EventDefinition instance) {
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e?.toJson())?.toList());
   writeNotNull('trigger', instance.trigger?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_version', instance.versionElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_title', instance.titleElement?.toJson());
+  writeNotNull('_subtitle', instance.subtitleElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_experimental', instance.experimentalElement?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
+  writeNotNull('_publisher', instance.publisherElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_purpose', instance.purposeElement?.toJson());
+  writeNotNull('_usage', instance.usageElement?.toJson());
+  writeNotNull('_copyright', instance.copyrightElement?.toJson());
+  writeNotNull('_approvalDate', instance.approvalDateElement?.toJson());
+  writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
   return val;
 }
 
@@ -1155,6 +1387,23 @@ _$_ObservationDefinition _$_$_ObservationDefinitionFromJson(
         ? null
         : Reference.fromJson(
             json['criticalCodedValueSet'] as Map<String, dynamic>),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    permittedDataTypeElement: json['_permittedDataType'] == null
+        ? null
+        : Element.fromJson(json['_permittedDataType'] as Map<String, dynamic>),
+    multipleResultsAllowedElement: json['_multipleResultsAllowed'] == null
+        ? null
+        : Element.fromJson(
+            json['_multipleResultsAllowed'] as Map<String, dynamic>),
+    preferredReportNameElement: json['_preferredReportName'] == null
+        ? null
+        : Element.fromJson(
+            json['_preferredReportName'] as Map<String, dynamic>),
   );
 }
 
@@ -1203,6 +1452,14 @@ Map<String, dynamic> _$_$_ObservationDefinitionToJson(
       'abnormalCodedValueSet', instance.abnormalCodedValueSet?.toJson());
   writeNotNull(
       'criticalCodedValueSet', instance.criticalCodedValueSet?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull(
+      '_permittedDataType', instance.permittedDataTypeElement?.toJson());
+  writeNotNull('_multipleResultsAllowed',
+      instance.multipleResultsAllowedElement?.toJson());
+  writeNotNull(
+      '_preferredReportName', instance.preferredReportNameElement?.toJson());
   return val;
 }
 
@@ -1249,6 +1506,12 @@ _$_ObservationDefinitionQuantitativeDetails
     decimalPrecision: json['decimalPrecision'] == null
         ? null
         : Integer.fromJson(json['decimalPrecision']),
+    conversionFactorElement: json['_conversionFactor'] == null
+        ? null
+        : Element.fromJson(json['_conversionFactor'] as Map<String, dynamic>),
+    decimalPrecisionElement: json['_decimalPrecision'] == null
+        ? null
+        : Element.fromJson(json['_decimalPrecision'] as Map<String, dynamic>),
   );
 }
 
@@ -1271,6 +1534,8 @@ Map<String, dynamic> _$_$_ObservationDefinitionQuantitativeDetailsToJson(
   writeNotNull('unit', instance.unit?.toJson());
   writeNotNull('conversionFactor', instance.conversionFactor?.toJson());
   writeNotNull('decimalPrecision', instance.decimalPrecision?.toJson());
+  writeNotNull('_conversionFactor', instance.conversionFactorElement?.toJson());
+  writeNotNull('_decimalPrecision', instance.decimalPrecisionElement?.toJson());
   return val;
 }
 
@@ -1312,6 +1577,15 @@ _$_ObservationDefinitionQualifiedInterval
         ? null
         : Range.fromJson(json['gestationalAge'] as Map<String, dynamic>),
     condition: json['condition'] as String,
+    categoryElement: json['_category'] == null
+        ? null
+        : Element.fromJson(json['_category'] as Map<String, dynamic>),
+    genderElement: json['_gender'] == null
+        ? null
+        : Element.fromJson(json['_gender'] as Map<String, dynamic>),
+    conditionElement: json['_condition'] == null
+        ? null
+        : Element.fromJson(json['_condition'] as Map<String, dynamic>),
   );
 }
 
@@ -1340,6 +1614,9 @@ Map<String, dynamic> _$_$_ObservationDefinitionQualifiedIntervalToJson(
   writeNotNull('age', instance.age?.toJson());
   writeNotNull('gestationalAge', instance.gestationalAge?.toJson());
   writeNotNull('condition', instance.condition);
+  writeNotNull('_category', instance.categoryElement?.toJson());
+  writeNotNull('_gender', instance.genderElement?.toJson());
+  writeNotNull('_condition', instance.conditionElement?.toJson());
   return val;
 }
 
@@ -1492,6 +1769,57 @@ _$_PlanDefinition _$_$_PlanDefinitionFromJson(Map<String, dynamic> json) {
             ? null
             : PlanDefinitionAction.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    titleElement: json['_title'] == null
+        ? null
+        : Element.fromJson(json['_title'] as Map<String, dynamic>),
+    subtitleElement: json['_subtitle'] == null
+        ? null
+        : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    experimentalElement: json['_experimental'] == null
+        ? null
+        : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
+    dateElement: json['_date'] == null
+        ? null
+        : Element.fromJson(json['_date'] as Map<String, dynamic>),
+    publisherElement: json['_publisher'] == null
+        ? null
+        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    purposeElement: json['_purpose'] == null
+        ? null
+        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+    usageElement: json['_usage'] == null
+        ? null
+        : Element.fromJson(json['_usage'] as Map<String, dynamic>),
+    copyrightElement: json['_copyright'] == null
+        ? null
+        : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+    approvalDateElement: json['_approvalDate'] == null
+        ? null
+        : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
+    lastReviewDateElement: json['_lastReviewDate'] == null
+        ? null
+        : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
   );
 }
 
@@ -1555,6 +1883,23 @@ Map<String, dynamic> _$_$_PlanDefinitionToJson(_$_PlanDefinition instance) {
   writeNotNull('library', instance.library?.map((e) => e?.toJson())?.toList());
   writeNotNull('goal', instance.goal?.map((e) => e?.toJson())?.toList());
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_version', instance.versionElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_title', instance.titleElement?.toJson());
+  writeNotNull('_subtitle', instance.subtitleElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_experimental', instance.experimentalElement?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
+  writeNotNull('_publisher', instance.publisherElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_purpose', instance.purposeElement?.toJson());
+  writeNotNull('_usage', instance.usageElement?.toJson());
+  writeNotNull('_copyright', instance.copyrightElement?.toJson());
+  writeNotNull('_approvalDate', instance.approvalDateElement?.toJson());
+  writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
   return val;
 }
 
@@ -1818,6 +2163,50 @@ _$_PlanDefinitionAction _$_$_PlanDefinitionActionFromJson(
             ? null
             : PlanDefinitionAction.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    prefixElement: json['_prefix'] == null
+        ? null
+        : Element.fromJson(json['_prefix'] as Map<String, dynamic>),
+    titleElement: json['_title'] == null
+        ? null
+        : Element.fromJson(json['_title'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    textEquivalentElement: json['_textEquivalent'] == null
+        ? null
+        : Element.fromJson(json['_textEquivalent'] as Map<String, dynamic>),
+    priorityElement: json['_priority'] == null
+        ? null
+        : Element.fromJson(json['_priority'] as Map<String, dynamic>),
+    goalIdElement: json['_goalId'] == null
+        ? null
+        : Element.fromJson(json['_goalId'] as Map<String, dynamic>),
+    timingDateTimeElement: json['_timingDateTime'] == null
+        ? null
+        : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
+    groupingBehaviorElement: json['_groupingBehavior'] == null
+        ? null
+        : Element.fromJson(json['_groupingBehavior'] as Map<String, dynamic>),
+    selectionBehaviorElement: json['_selectionBehavior'] == null
+        ? null
+        : Element.fromJson(json['_selectionBehavior'] as Map<String, dynamic>),
+    requiredBehaviorElement: json['_requiredBehavior'] == null
+        ? null
+        : Element.fromJson(json['_requiredBehavior'] as Map<String, dynamic>),
+    precheckBehaviorElement: json['_precheckBehavior'] == null
+        ? null
+        : Element.fromJson(json['_precheckBehavior'] as Map<String, dynamic>),
+    cardinalityBehaviorElement: json['_cardinalityBehavior'] == null
+        ? null
+        : Element.fromJson(
+            json['_cardinalityBehavior'] as Map<String, dynamic>),
+    definitionCanonicalElement: json['_definitionCanonical'] == null
+        ? null
+        : Element.fromJson(
+            json['_definitionCanonical'] as Map<String, dynamic>),
+    definitionUriElement: json['_definitionUri'] == null
+        ? null
+        : Element.fromJson(json['_definitionUri'] as Map<String, dynamic>),
   );
 }
 
@@ -1881,6 +2270,23 @@ Map<String, dynamic> _$_$_PlanDefinitionActionToJson(
   writeNotNull(
       'dynamicValue', instance.dynamicValue?.map((e) => e?.toJson())?.toList());
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_prefix', instance.prefixElement?.toJson());
+  writeNotNull('_title', instance.titleElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_textEquivalent', instance.textEquivalentElement?.toJson());
+  writeNotNull('_priority', instance.priorityElement?.toJson());
+  writeNotNull('_goalId', instance.goalIdElement?.toJson());
+  writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
+  writeNotNull('_groupingBehavior', instance.groupingBehaviorElement?.toJson());
+  writeNotNull(
+      '_selectionBehavior', instance.selectionBehaviorElement?.toJson());
+  writeNotNull('_requiredBehavior', instance.requiredBehaviorElement?.toJson());
+  writeNotNull('_precheckBehavior', instance.precheckBehaviorElement?.toJson());
+  writeNotNull(
+      '_cardinalityBehavior', instance.cardinalityBehaviorElement?.toJson());
+  writeNotNull(
+      '_definitionCanonical', instance.definitionCanonicalElement?.toJson());
+  writeNotNull('_definitionUri', instance.definitionUriElement?.toJson());
   return val;
 }
 
@@ -1939,6 +2345,9 @@ _$_PlanDefinitionCondition _$_$_PlanDefinitionConditionFromJson(
     expression: json['expression'] == null
         ? null
         : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+    kindElement: json['_kind'] == null
+        ? null
+        : Element.fromJson(json['_kind'] as Map<String, dynamic>),
   );
 }
 
@@ -1959,6 +2368,7 @@ Map<String, dynamic> _$_$_PlanDefinitionConditionToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('kind', _$ConditionKindEnumMap[instance.kind]);
   writeNotNull('expression', instance.expression?.toJson());
+  writeNotNull('_kind', instance.kindElement?.toJson());
   return val;
 }
 
@@ -1995,6 +2405,12 @@ _$_PlanDefinitionRelatedAction _$_$_PlanDefinitionRelatedActionFromJson(
     offsetRange: json['offsetRange'] == null
         ? null
         : Range.fromJson(json['offsetRange'] as Map<String, dynamic>),
+    actionIdElement: json['_actionId'] == null
+        ? null
+        : Element.fromJson(json['_actionId'] as Map<String, dynamic>),
+    relationshipElement: json['_relationship'] == null
+        ? null
+        : Element.fromJson(json['_relationship'] as Map<String, dynamic>),
   );
 }
 
@@ -2018,6 +2434,8 @@ Map<String, dynamic> _$_$_PlanDefinitionRelatedActionToJson(
       _$RelatedActionRelationshipEnumMap[instance.relationship]);
   writeNotNull('offsetDuration', instance.offsetDuration?.toJson());
   writeNotNull('offsetRange', instance.offsetRange?.toJson());
+  writeNotNull('_actionId', instance.actionIdElement?.toJson());
+  writeNotNull('_relationship', instance.relationshipElement?.toJson());
   return val;
 }
 
@@ -2054,6 +2472,9 @@ _$_PlanDefinitionParticipant _$_$_PlanDefinitionParticipantFromJson(
     role: json['role'] == null
         ? null
         : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
   );
 }
 
@@ -2074,6 +2495,7 @@ Map<String, dynamic> _$_$_PlanDefinitionParticipantToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', _$PlanDefinitionParticipantTypeEnumMap[instance.type]);
   writeNotNull('role', instance.role?.toJson());
+  writeNotNull('_type', instance.typeElement?.toJson());
   return val;
 }
 
@@ -2103,6 +2525,9 @@ _$_PlanDefinitionDynamicValue _$_$_PlanDefinitionDynamicValueFromJson(
     expression: json['expression'] == null
         ? null
         : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+    pathElement: json['_path'] == null
+        ? null
+        : Element.fromJson(json['_path'] as Map<String, dynamic>),
   );
 }
 
@@ -2123,6 +2548,7 @@ Map<String, dynamic> _$_$_PlanDefinitionDynamicValueToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('path', instance.path);
   writeNotNull('expression', instance.expression?.toJson());
+  writeNotNull('_path', instance.pathElement?.toJson());
   return val;
 }
 
@@ -2221,6 +2647,54 @@ _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
             ? null
             : QuestionnaireItem.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    titleElement: json['_title'] == null
+        ? null
+        : Element.fromJson(json['_title'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    experimentalElement: json['_experimental'] == null
+        ? null
+        : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
+    subjectTypeElement: json['_subjectType'] == null
+        ? null
+        : Element.fromJson(json['_subjectType'] as Map<String, dynamic>),
+    dateElement: json['_date'] == null
+        ? null
+        : Element.fromJson(json['_date'] as Map<String, dynamic>),
+    publisherElement: json['_publisher'] == null
+        ? null
+        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    purposeElement: json['_purpose'] == null
+        ? null
+        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+    copyrightElement: json['_copyright'] == null
+        ? null
+        : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+    approvalDateElement: json['_approvalDate'] == null
+        ? null
+        : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
+    lastReviewDateElement: json['_lastReviewDate'] == null
+        ? null
+        : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
   );
 }
 
@@ -2272,6 +2746,22 @@ Map<String, dynamic> _$_$_QuestionnaireToJson(_$_Questionnaire instance) {
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
   writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
   writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_version', instance.versionElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_title', instance.titleElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_experimental', instance.experimentalElement?.toJson());
+  writeNotNull('_subjectType', instance.subjectTypeElement?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
+  writeNotNull('_publisher', instance.publisherElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_purpose', instance.purposeElement?.toJson());
+  writeNotNull('_copyright', instance.copyrightElement?.toJson());
+  writeNotNull('_approvalDate', instance.approvalDateElement?.toJson());
+  writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
   return val;
 }
 
@@ -2333,6 +2823,36 @@ _$_QuestionnaireItem _$_$_QuestionnaireItemFromJson(Map<String, dynamic> json) {
             ? null
             : QuestionnaireItem.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    linkIdElement: json['_linkId'] == null
+        ? null
+        : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
+    definitionElement: json['_definition'] == null
+        ? null
+        : Element.fromJson(json['_definition'] as Map<String, dynamic>),
+    prefixElement: json['_prefix'] == null
+        ? null
+        : Element.fromJson(json['_prefix'] as Map<String, dynamic>),
+    textElement: json['_text'] == null
+        ? null
+        : Element.fromJson(json['_text'] as Map<String, dynamic>),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    enableBehaviorElement: json['_enableBehavior'] == null
+        ? null
+        : Element.fromJson(json['_enableBehavior'] as Map<String, dynamic>),
+    requiredElement: json['_required'] == null
+        ? null
+        : Element.fromJson(json['_required'] as Map<String, dynamic>),
+    repeatsElement: json['_repeats'] == null
+        ? null
+        : Element.fromJson(json['_repeats'] as Map<String, dynamic>),
+    readOnlyElement: json['_readOnly'] == null
+        ? null
+        : Element.fromJson(json['_readOnly'] as Map<String, dynamic>),
+    maxLengthElement: json['_maxLength'] == null
+        ? null
+        : Element.fromJson(json['_maxLength'] as Map<String, dynamic>),
   );
 }
 
@@ -2370,6 +2890,16 @@ Map<String, dynamic> _$_$_QuestionnaireItemToJson(
       'answerOption', instance.answerOption?.map((e) => e?.toJson())?.toList());
   writeNotNull('initial', instance.initial?.map((e) => e?.toJson())?.toList());
   writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
+  writeNotNull('_definition', instance.definitionElement?.toJson());
+  writeNotNull('_prefix', instance.prefixElement?.toJson());
+  writeNotNull('_text', instance.textElement?.toJson());
+  writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('_enableBehavior', instance.enableBehaviorElement?.toJson());
+  writeNotNull('_required', instance.requiredElement?.toJson());
+  writeNotNull('_repeats', instance.repeatsElement?.toJson());
+  writeNotNull('_readOnly', instance.readOnlyElement?.toJson());
+  writeNotNull('_maxLength', instance.maxLengthElement?.toJson());
   return val;
 }
 
@@ -2445,6 +2975,33 @@ _$_QuestionnaireEnableWhen _$_$_QuestionnaireEnableWhenFromJson(
     answerReference: json['answerReference'] == null
         ? null
         : Reference.fromJson(json['answerReference'] as Map<String, dynamic>),
+    questionElement: json['_question'] == null
+        ? null
+        : Element.fromJson(json['_question'] as Map<String, dynamic>),
+    operatorElement: json['_operator'] == null
+        ? null
+        : Element.fromJson(json['_operator'] as Map<String, dynamic>),
+    answerBooleanElement: json['_answerBoolean'] == null
+        ? null
+        : Element.fromJson(json['_answerBoolean'] as Map<String, dynamic>),
+    answerDecimalElement: json['_answerDecimal'] == null
+        ? null
+        : Element.fromJson(json['_answerDecimal'] as Map<String, dynamic>),
+    answerIntegerElement: json['_answerInteger'] == null
+        ? null
+        : Element.fromJson(json['_answerInteger'] as Map<String, dynamic>),
+    answerDateElement: json['_answerDate'] == null
+        ? null
+        : Element.fromJson(json['_answerDate'] as Map<String, dynamic>),
+    answerDateTimeElement: json['_answerDateTime'] == null
+        ? null
+        : Element.fromJson(json['_answerDateTime'] as Map<String, dynamic>),
+    answerTimeElement: json['_answerTime'] == null
+        ? null
+        : Element.fromJson(json['_answerTime'] as Map<String, dynamic>),
+    answerStringElement: json['_answerString'] == null
+        ? null
+        : Element.fromJson(json['_answerString'] as Map<String, dynamic>),
   );
 }
 
@@ -2475,6 +3032,15 @@ Map<String, dynamic> _$_$_QuestionnaireEnableWhenToJson(
   writeNotNull('answerCoding', instance.answerCoding?.toJson());
   writeNotNull('answerQuantity', instance.answerQuantity?.toJson());
   writeNotNull('answerReference', instance.answerReference?.toJson());
+  writeNotNull('_question', instance.questionElement?.toJson());
+  writeNotNull('_operator', instance.operatorElement?.toJson());
+  writeNotNull('_answerBoolean', instance.answerBooleanElement?.toJson());
+  writeNotNull('_answerDecimal', instance.answerDecimalElement?.toJson());
+  writeNotNull('_answerInteger', instance.answerIntegerElement?.toJson());
+  writeNotNull('_answerDate', instance.answerDateElement?.toJson());
+  writeNotNull('_answerDateTime', instance.answerDateTimeElement?.toJson());
+  writeNotNull('_answerTime', instance.answerTimeElement?.toJson());
+  writeNotNull('_answerString', instance.answerStringElement?.toJson());
   return val;
 }
 
@@ -2522,6 +3088,21 @@ _$_QuestionnaireAnswerOption _$_$_QuestionnaireAnswerOptionFromJson(
     initialSelected: json['initialSelected'] == null
         ? null
         : Boolean.fromJson(json['initialSelected']),
+    valueIntegerElement: json['_valueInteger'] == null
+        ? null
+        : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueDateElement: json['_valueDate'] == null
+        ? null
+        : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueTimeElement: json['_valueTime'] == null
+        ? null
+        : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+    valueStringElement: json['_valueString'] == null
+        ? null
+        : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    initialSelectedElement: json['_initialSelected'] == null
+        ? null
+        : Element.fromJson(json['_initialSelected'] as Map<String, dynamic>),
   );
 }
 
@@ -2547,6 +3128,11 @@ Map<String, dynamic> _$_$_QuestionnaireAnswerOptionToJson(
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
   writeNotNull('valueReference', instance.valueReference?.toJson());
   writeNotNull('initialSelected', instance.initialSelected?.toJson());
+  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
+  writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('_initialSelected', instance.initialSelectedElement?.toJson());
   return val;
 }
 
@@ -2598,6 +3184,30 @@ _$_QuestionnaireInitial _$_$_QuestionnaireInitialFromJson(
     valueReference: json['valueReference'] == null
         ? null
         : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
+    valueBooleanElement: json['_valueBoolean'] == null
+        ? null
+        : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    valueDecimalElement: json['_valueDecimal'] == null
+        ? null
+        : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
+    valueIntegerElement: json['_valueInteger'] == null
+        ? null
+        : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueDateElement: json['_valueDate'] == null
+        ? null
+        : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueDateTimeElement: json['_valueDateTime'] == null
+        ? null
+        : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+    valueTimeElement: json['_valueTime'] == null
+        ? null
+        : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+    valueStringElement: json['_valueString'] == null
+        ? null
+        : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueUriElement: json['_valueUri'] == null
+        ? null
+        : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
   );
 }
 
@@ -2628,6 +3238,14 @@ Map<String, dynamic> _$_$_QuestionnaireInitialToJson(
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueReference', instance.valueReference?.toJson());
+  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
+  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
+  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
+  writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('_valueUri', instance.valueUriElement?.toJson());
   return val;
 }
 
@@ -2686,6 +3304,15 @@ _$_SpecimenDefinition _$_$_SpecimenDefinitionFromJson(
             ? null
             : SpecimenDefinitionTypeTested.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    timeAspectElement: json['_timeAspect'] == null
+        ? null
+        : Element.fromJson(json['_timeAspect'] as Map<String, dynamic>),
   );
 }
 
@@ -2720,6 +3347,9 @@ Map<String, dynamic> _$_$_SpecimenDefinitionToJson(
       'collection', instance.collection?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'typeTested', instance.typeTested?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_timeAspect', instance.timeAspectElement?.toJson());
   return val;
 }
 
@@ -2763,6 +3393,15 @@ _$_SpecimenDefinitionTypeTested _$_$_SpecimenDefinitionTypeTestedFromJson(
             ? null
             : SpecimenDefinitionHandling.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    isDerivedElement: json['_isDerived'] == null
+        ? null
+        : Element.fromJson(json['_isDerived'] as Map<String, dynamic>),
+    preferenceElement: json['_preference'] == null
+        ? null
+        : Element.fromJson(json['_preference'] as Map<String, dynamic>),
+    requirementElement: json['_requirement'] == null
+        ? null
+        : Element.fromJson(json['_requirement'] as Map<String, dynamic>),
   );
 }
 
@@ -2792,6 +3431,9 @@ Map<String, dynamic> _$_$_SpecimenDefinitionTypeTestedToJson(
       instance.rejectionCriterion?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'handling', instance.handling?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_isDerived', instance.isDerivedElement?.toJson());
+  writeNotNull('_preference', instance.preferenceElement?.toJson());
+  writeNotNull('_requirement', instance.requirementElement?.toJson());
   return val;
 }
 
@@ -2839,6 +3481,16 @@ _$_SpecimenDefinitionContainer _$_$_SpecimenDefinitionContainerFromJson(
             : SpecimenDefinitionAdditive.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     preparation: json['preparation'] as String,
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    minimumVolumeStringElement: json['_minimumVolumeString'] == null
+        ? null
+        : Element.fromJson(
+            json['_minimumVolumeString'] as Map<String, dynamic>),
+    preparationElement: json['_preparation'] == null
+        ? null
+        : Element.fromJson(json['_preparation'] as Map<String, dynamic>),
   );
 }
 
@@ -2868,6 +3520,10 @@ Map<String, dynamic> _$_$_SpecimenDefinitionContainerToJson(
   writeNotNull(
       'additive', instance.additive?.map((e) => e?.toJson())?.toList());
   writeNotNull('preparation', instance.preparation);
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull(
+      '_minimumVolumeString', instance.minimumVolumeStringElement?.toJson());
+  writeNotNull('_preparation', instance.preparationElement?.toJson());
   return val;
 }
 
@@ -2941,6 +3597,9 @@ _$_SpecimenDefinitionHandling _$_$_SpecimenDefinitionHandlingFromJson(
         ? null
         : Duration.fromJson(json['maxDuration'] as Map<String, dynamic>),
     instruction: json['instruction'] as String,
+    instructionElement: json['_instruction'] == null
+        ? null
+        : Element.fromJson(json['_instruction'] as Map<String, dynamic>),
   );
 }
 
@@ -2963,5 +3622,6 @@ Map<String, dynamic> _$_$_SpecimenDefinitionHandlingToJson(
   writeNotNull('temperatureRange', instance.temperatureRange?.toJson());
   writeNotNull('maxDuration', instance.maxDuration?.toJson());
   writeNotNull('instruction', instance.instruction);
+  writeNotNull('_instruction', instance.instructionElement?.toJson());
   return val;
 }

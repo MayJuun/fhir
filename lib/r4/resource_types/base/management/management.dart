@@ -45,6 +45,9 @@ abstract class Encounter with _$Encounter implements Resource {
     List<EncounterLocation> location,
     Reference serviceProvider,
     Reference partOf,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
   }) = _Encounter;
   factory Encounter.fromJson(Map<String, dynamic> json) =>
       _$EncounterFromJson(json);
@@ -58,6 +61,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
     List<FhirExtension> modifierExtension,
     @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus status,
     @JsonKey(required: true) @required Period period,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _EncounterStatusHistory;
   factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$EncounterStatusHistoryFromJson(json);
@@ -99,6 +103,7 @@ abstract class EncounterDiagnosis with _$EncounterDiagnosis {
     @JsonKey(required: true) @required Reference condition,
     CodeableConcept use,
     PositiveInt rank,
+    @JsonKey(name: '_rank') Element rankElement,
   }) = _EncounterDiagnosis;
   factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$EncounterDiagnosisFromJson(json);
@@ -135,6 +140,7 @@ abstract class EncounterLocation with _$EncounterLocation {
         EncounterLocationStatus status,
     CodeableConcept physicalType,
     Period period,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _EncounterLocation;
   factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
       _$EncounterLocationFromJson(json);
@@ -167,6 +173,9 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
     Reference careManager,
     List<Reference> team,
     List<Reference> account,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
   }) = _EpisodeOfCare;
   factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareFromJson(json);
@@ -181,6 +190,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
         EpisodeOfCareStatus status,
     @JsonKey(required: true) @required Period period,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _EpisodeOfCareStatusHistory;
   factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareStatusHistoryFromJson(json);
@@ -195,6 +205,7 @@ abstract class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
     @JsonKey(required: true) @required Reference condition,
     CodeableConcept role,
     PositiveInt rank,
+    @JsonKey(name: '_rank') Element rankElement,
   }) = _EpisodeOfCareDiagnosis;
   factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareDiagnosisFromJson(json);
@@ -222,6 +233,9 @@ abstract class Flag with _$Flag implements Resource {
     Period period,
     Reference encounter,
     Reference author,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
   }) = _Flag;
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
 }
@@ -272,6 +286,23 @@ abstract class Library with _$Library implements Resource {
     List<ParameterDefinition> parameter,
     List<DataRequirement> dataRequirement,
     List<Attachment> content,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_url') Element urlElement,
+@JsonKey(name: '_version') Element versionElement,
+@JsonKey(name: '_name') Element nameElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_subtitle') Element subtitleElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_experimental') Element experimentalElement,
+@JsonKey(name: '_date') Element dateElement,
+@JsonKey(name: '_publisher') Element publisherElement,
+@JsonKey(name: '_description') Element descriptionElement,
+@JsonKey(name: '_purpose') Element purposeElement,
+@JsonKey(name: '_usage') Element usageElement,
+@JsonKey(name: '_copyright') Element copyrightElement,
+@JsonKey(name: '_approvalDate') Element approvalDateElement,
+@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _Library;
   factory Library.fromJson(Map<String, dynamic> json) =>
       _$LibraryFromJson(json);
@@ -304,6 +335,12 @@ abstract class Lists with _$Lists implements Resource {
     List<Annotation> note,
     List<ListEntry> entry,
     CodeableConcept emptyReason,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+@JsonKey(name: '_language') Element languageElement,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_mode') Element modeElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_date') Element dateElement,
   }) = _Lists;
   factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
 }
@@ -318,194 +355,9 @@ abstract class ListEntry with _$ListEntry {
     Boolean deleted,
     FhirDateTime date,
     @JsonKey(required: true) @required Reference item,
+    @JsonKey(name: '_deleted') Element deletedElement,
+@JsonKey(name: '_date') Element dateElement,
   }) = _ListEntry;
   factory ListEntry.fromJson(Map<String, dynamic> json) =>
       _$ListEntryFromJson(json);
-}
-
-@freezed
-abstract class Task with _$Task implements Resource {
-  const factory Task({
-    @JsonKey(required: true, defaultValue: 'Task')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Canonical instantiatesCanonical,
-    FhirUri instantiatesUri,
-    List<Reference> basedOn,
-    Identifier groupIdentifier,
-    List<Reference> partOf,
-    @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus status,
-    CodeableConcept statusReason,
-    CodeableConcept businessStatus,
-    @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent intent,
-    Code priority,
-    CodeableConcept code,
-    String description,
-    Reference focus,
-    @JsonKey(name: 'for') Reference for_,
-    Reference encounter,
-    Period executionPeriod,
-    FhirDateTime authoredOn,
-    FhirDateTime lastModified,
-    Reference requester,
-    List<CodeableConcept> performerType,
-    Reference owner,
-    Reference location,
-    CodeableConcept reasonCode,
-    Reference reasonReference,
-    List<Reference> insurance,
-    List<Annotation> note,
-    List<Reference> relevantHistory,
-    TaskRestriction restriction,
-    List<TaskInput> input,
-    List<TaskOutput> output,
-  }) = _Task;
-  factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
-}
-
-@freezed
-abstract class TaskRestriction with _$TaskRestriction {
-  const factory TaskRestriction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt repetitions,
-    Period period,
-    List<Reference> recipient,
-  }) = _TaskRestriction;
-  factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
-      _$TaskRestrictionFromJson(json);
-}
-
-@freezed
-abstract class TaskInput with _$TaskInput {
-  const factory TaskInput({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept type,
-    Base64Binary valueBase64Binary,
-    Boolean valueBoolean,
-    Canonical valueCanonical,
-    Code valueCode,
-    Date valueDate,
-    FhirDateTime valueDateTime,
-    Decimal valueDecimal,
-    Id valueId,
-    Instant valueInstant,
-    Integer valueInteger,
-    Markdown valueMarkdown,
-    Oid valueOid,
-    PositiveInt valuePositiveInt,
-    String valueString,
-    Time valueTime,
-    UnsignedInt valueUnsignedInt,
-    FhirUri valueUri,
-    FhirUrl valueUrl,
-    Uuid valueUuid,
-    Address valueAddress,
-    Age valueAge,
-    Annotation valueAnnotation,
-    Attachment valueAttachment,
-    CodeableConcept valueCodeableConcept,
-    Coding valueCoding,
-    ContactPoint valueContactPoint,
-    Count valueCount,
-    Distance valueDistance,
-    Duration valueDuration,
-    HumanName valueHumanName,
-    Identifier valueIdentifier,
-    Money valueMoney,
-    Period valuePeriod,
-    Quantity valueQuantity,
-    Range valueRange,
-    Ratio valueRatio,
-    Reference valueReference,
-    SampledData valueSampledData,
-    Signature valueSignature,
-    Timing valueTiming,
-    ContactDetail valueContactDetail,
-    Contributor valueContributor,
-    DataRequirement valueDataRequirement,
-    Expression valueExpression,
-    ParameterDefinition valueParameterDefinition,
-    RelatedArtifact valueRelatedArtifact,
-    TriggerDefinition valueTriggerDefinition,
-    UsageContext valueUsageContext,
-    Dosage valueDosage,
-    Meta valueMeta,
-  }) = _TaskInput;
-  factory TaskInput.fromJson(Map<String, dynamic> json) =>
-      _$TaskInputFromJson(json);
-}
-
-@freezed
-abstract class TaskOutput with _$TaskOutput {
-  const factory TaskOutput({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept type,
-    Base64Binary valueBase64Binary,
-    Boolean valueBoolean,
-    Canonical valueCanonical,
-    Code valueCode,
-    Date valueDate,
-    FhirDateTime valueDateTime,
-    Decimal valueDecimal,
-    Id valueId,
-    Instant valueInstant,
-    Integer valueInteger,
-    Markdown valueMarkdown,
-    Oid valueOid,
-    PositiveInt valuePositiveInt,
-    String valueString,
-    Time valueTime,
-    UnsignedInt valueUnsignedInt,
-    FhirUri valueUri,
-    FhirUrl valueUrl,
-    Uuid valueUuid,
-    Address valueAddress,
-    Age valueAge,
-    Annotation valueAnnotation,
-    Attachment valueAttachment,
-    CodeableConcept valueCodeableConcept,
-    Coding valueCoding,
-    ContactPoint valueContactPoint,
-    Count valueCount,
-    Distance valueDistance,
-    Duration valueDuration,
-    HumanName valueHumanName,
-    Identifier valueIdentifier,
-    Money valueMoney,
-    Period valuePeriod,
-    Quantity valueQuantity,
-    Range valueRange,
-    Ratio valueRatio,
-    Reference valueReference,
-    SampledData valueSampledData,
-    Signature valueSignature,
-    Timing valueTiming,
-    ContactDetail valueContactDetail,
-    Contributor valueContributor,
-    DataRequirement valueDataRequirement,
-    Expression valueExpression,
-    ParameterDefinition valueParameterDefinition,
-    RelatedArtifact valueRelatedArtifact,
-    TriggerDefinition valueTriggerDefinition,
-    UsageContext valueUsageContext,
-    Dosage valueDosage,
-    Meta valueMeta,
-  }) = _TaskOutput;
-  factory TaskOutput.fromJson(Map<String, dynamic> json) =>
-      _$TaskOutputFromJson(json);
 }
