@@ -410,9 +410,10 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    purposeElement: json['_purpose'] == null
-        ? null
-        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+    purposeElement: (json['_purpose'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -469,7 +470,8 @@ Map<String, dynamic> _$_$_CoverageEligibilityRequestToJson(
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('_purpose', instance.purposeElement?.toJson());
+  writeNotNull(
+      '_purpose', instance.purposeElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   return val;
@@ -678,10 +680,10 @@ _$_CoverageEligibilityRequestItem _$_$_CoverageEligibilityRequestItemFromJson(
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    supportingInfoSequenceElement: json['_supportingInfoSequence'] == null
-        ? null
-        : Element.fromJson(
-            json['_supportingInfoSequence'] as Map<String, dynamic>),
+    supportingInfoSequenceElement: (json['_supportingInfoSequence'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -713,8 +715,11 @@ Map<String, dynamic> _$_$_CoverageEligibilityRequestItemToJson(
   writeNotNull(
       'diagnosis', instance.diagnosis?.map((e) => e?.toJson())?.toList());
   writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
-  writeNotNull('_supportingInfoSequence',
-      instance.supportingInfoSequenceElement?.toJson());
+  writeNotNull(
+      '_supportingInfoSequence',
+      instance.supportingInfoSequenceElement
+          ?.map((e) => e?.toJson())
+          ?.toList());
   return val;
 }
 
@@ -857,9 +862,10 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    purposeElement: json['_purpose'] == null
-        ? null
-        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+    purposeElement: (json['_purpose'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -925,7 +931,8 @@ Map<String, dynamic> _$_$_CoverageEligibilityResponseToJson(
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('_purpose', instance.purposeElement?.toJson());
+  writeNotNull(
+      '_purpose', instance.purposeElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('_outcome', instance.outcomeElement?.toJson());

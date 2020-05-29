@@ -240,9 +240,10 @@ _$_AuditEventAgent _$_$_AuditEventAgentFromJson(Map<String, dynamic> json) {
     requestorElement: json['_requestor'] == null
         ? null
         : Element.fromJson(json['_requestor'] as Map<String, dynamic>),
-    policyElement: json['_policy'] == null
-        ? null
-        : Element.fromJson(json['_policy'] as Map<String, dynamic>),
+    policyElement: (json['_policy'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -275,7 +276,8 @@ Map<String, dynamic> _$_$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
   writeNotNull('_altId', instance.altIdElement?.toJson());
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('_requestor', instance.requestorElement?.toJson());
-  writeNotNull('_policy', instance.policyElement?.toJson());
+  writeNotNull(
+      '_policy', instance.policyElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -1051,9 +1053,10 @@ _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
     recordedElement: json['_recorded'] == null
         ? null
         : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
-    policyElement: json['_policy'] == null
-        ? null
-        : Element.fromJson(json['_policy'] as Map<String, dynamic>),
+    policyElement: (json['_policy'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1094,7 +1097,8 @@ Map<String, dynamic> _$_$_ProvenanceToJson(_$_Provenance instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_occurredDateTime', instance.occurredDateTimeElement?.toJson());
   writeNotNull('_recorded', instance.recordedElement?.toJson());
-  writeNotNull('_policy', instance.policyElement?.toJson());
+  writeNotNull(
+      '_policy', instance.policyElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

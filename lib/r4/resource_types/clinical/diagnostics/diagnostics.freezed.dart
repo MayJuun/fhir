@@ -9089,13 +9089,13 @@ class _$MolecularSequenceRocTearOff {
       List<Decimal> precision,
       List<Decimal> sensitivity,
       List<Decimal> fMeasure,
-      @JsonKey(name: '_score') Element scoreElement,
-      @JsonKey(name: '_numTP') Element numTPElement,
-      @JsonKey(name: '_numFP') Element numFPElement,
-      @JsonKey(name: '_numFN') Element numFNElement,
-      @JsonKey(name: '_precision') Element precisionElement,
-      @JsonKey(name: '_sensitivity') Element sensitivityElement,
-      @JsonKey(name: '_fMeasure') Element fMeasureElement}) {
+      @JsonKey(name: '_score') List<Element> scoreElement,
+      @JsonKey(name: '_numTP') List<Element> numTPElement,
+      @JsonKey(name: '_numFP') List<Element> numFPElement,
+      @JsonKey(name: '_numFN') List<Element> numFNElement,
+      @JsonKey(name: '_precision') List<Element> precisionElement,
+      @JsonKey(name: '_sensitivity') List<Element> sensitivityElement,
+      @JsonKey(name: '_fMeasure') List<Element> fMeasureElement}) {
     return _MolecularSequenceRoc(
       id: id,
       extension_: extension_,
@@ -9134,19 +9134,19 @@ mixin _$MolecularSequenceRoc {
   List<Decimal> get sensitivity;
   List<Decimal> get fMeasure;
   @JsonKey(name: '_score')
-  Element get scoreElement;
+  List<Element> get scoreElement;
   @JsonKey(name: '_numTP')
-  Element get numTPElement;
+  List<Element> get numTPElement;
   @JsonKey(name: '_numFP')
-  Element get numFPElement;
+  List<Element> get numFPElement;
   @JsonKey(name: '_numFN')
-  Element get numFNElement;
+  List<Element> get numFNElement;
   @JsonKey(name: '_precision')
-  Element get precisionElement;
+  List<Element> get precisionElement;
   @JsonKey(name: '_sensitivity')
-  Element get sensitivityElement;
+  List<Element> get sensitivityElement;
   @JsonKey(name: '_fMeasure')
-  Element get fMeasureElement;
+  List<Element> get fMeasureElement;
 
   Map<String, dynamic> toJson();
   $MolecularSequenceRocCopyWith<MolecularSequenceRoc> get copyWith;
@@ -9167,21 +9167,13 @@ abstract class $MolecularSequenceRocCopyWith<$Res> {
       List<Decimal> precision,
       List<Decimal> sensitivity,
       List<Decimal> fMeasure,
-      @JsonKey(name: '_score') Element scoreElement,
-      @JsonKey(name: '_numTP') Element numTPElement,
-      @JsonKey(name: '_numFP') Element numFPElement,
-      @JsonKey(name: '_numFN') Element numFNElement,
-      @JsonKey(name: '_precision') Element precisionElement,
-      @JsonKey(name: '_sensitivity') Element sensitivityElement,
-      @JsonKey(name: '_fMeasure') Element fMeasureElement});
-
-  $ElementCopyWith<$Res> get scoreElement;
-  $ElementCopyWith<$Res> get numTPElement;
-  $ElementCopyWith<$Res> get numFPElement;
-  $ElementCopyWith<$Res> get numFNElement;
-  $ElementCopyWith<$Res> get precisionElement;
-  $ElementCopyWith<$Res> get sensitivityElement;
-  $ElementCopyWith<$Res> get fMeasureElement;
+      @JsonKey(name: '_score') List<Element> scoreElement,
+      @JsonKey(name: '_numTP') List<Element> numTPElement,
+      @JsonKey(name: '_numFP') List<Element> numFPElement,
+      @JsonKey(name: '_numFN') List<Element> numFNElement,
+      @JsonKey(name: '_precision') List<Element> precisionElement,
+      @JsonKey(name: '_sensitivity') List<Element> sensitivityElement,
+      @JsonKey(name: '_fMeasure') List<Element> fMeasureElement});
 }
 
 class _$MolecularSequenceRocCopyWithImpl<$Res>
@@ -9233,96 +9225,26 @@ class _$MolecularSequenceRocCopyWithImpl<$Res>
           fMeasure == freezed ? _value.fMeasure : fMeasure as List<Decimal>,
       scoreElement: scoreElement == freezed
           ? _value.scoreElement
-          : scoreElement as Element,
+          : scoreElement as List<Element>,
       numTPElement: numTPElement == freezed
           ? _value.numTPElement
-          : numTPElement as Element,
+          : numTPElement as List<Element>,
       numFPElement: numFPElement == freezed
           ? _value.numFPElement
-          : numFPElement as Element,
+          : numFPElement as List<Element>,
       numFNElement: numFNElement == freezed
           ? _value.numFNElement
-          : numFNElement as Element,
+          : numFNElement as List<Element>,
       precisionElement: precisionElement == freezed
           ? _value.precisionElement
-          : precisionElement as Element,
+          : precisionElement as List<Element>,
       sensitivityElement: sensitivityElement == freezed
           ? _value.sensitivityElement
-          : sensitivityElement as Element,
+          : sensitivityElement as List<Element>,
       fMeasureElement: fMeasureElement == freezed
           ? _value.fMeasureElement
-          : fMeasureElement as Element,
+          : fMeasureElement as List<Element>,
     ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get scoreElement {
-    if (_value.scoreElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.scoreElement, (value) {
-      return _then(_value.copyWith(scoreElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get numTPElement {
-    if (_value.numTPElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.numTPElement, (value) {
-      return _then(_value.copyWith(numTPElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get numFPElement {
-    if (_value.numFPElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.numFPElement, (value) {
-      return _then(_value.copyWith(numFPElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get numFNElement {
-    if (_value.numFNElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.numFNElement, (value) {
-      return _then(_value.copyWith(numFNElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get precisionElement {
-    if (_value.precisionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.precisionElement, (value) {
-      return _then(_value.copyWith(precisionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get sensitivityElement {
-    if (_value.sensitivityElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.sensitivityElement, (value) {
-      return _then(_value.copyWith(sensitivityElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get fMeasureElement {
-    if (_value.fMeasureElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.fMeasureElement, (value) {
-      return _then(_value.copyWith(fMeasureElement: value));
-    });
   }
 }
 
@@ -9343,28 +9265,13 @@ abstract class _$MolecularSequenceRocCopyWith<$Res>
       List<Decimal> precision,
       List<Decimal> sensitivity,
       List<Decimal> fMeasure,
-      @JsonKey(name: '_score') Element scoreElement,
-      @JsonKey(name: '_numTP') Element numTPElement,
-      @JsonKey(name: '_numFP') Element numFPElement,
-      @JsonKey(name: '_numFN') Element numFNElement,
-      @JsonKey(name: '_precision') Element precisionElement,
-      @JsonKey(name: '_sensitivity') Element sensitivityElement,
-      @JsonKey(name: '_fMeasure') Element fMeasureElement});
-
-  @override
-  $ElementCopyWith<$Res> get scoreElement;
-  @override
-  $ElementCopyWith<$Res> get numTPElement;
-  @override
-  $ElementCopyWith<$Res> get numFPElement;
-  @override
-  $ElementCopyWith<$Res> get numFNElement;
-  @override
-  $ElementCopyWith<$Res> get precisionElement;
-  @override
-  $ElementCopyWith<$Res> get sensitivityElement;
-  @override
-  $ElementCopyWith<$Res> get fMeasureElement;
+      @JsonKey(name: '_score') List<Element> scoreElement,
+      @JsonKey(name: '_numTP') List<Element> numTPElement,
+      @JsonKey(name: '_numFP') List<Element> numFPElement,
+      @JsonKey(name: '_numFN') List<Element> numFNElement,
+      @JsonKey(name: '_precision') List<Element> precisionElement,
+      @JsonKey(name: '_sensitivity') List<Element> sensitivityElement,
+      @JsonKey(name: '_fMeasure') List<Element> fMeasureElement});
 }
 
 class __$MolecularSequenceRocCopyWithImpl<$Res>
@@ -9418,25 +9325,25 @@ class __$MolecularSequenceRocCopyWithImpl<$Res>
           fMeasure == freezed ? _value.fMeasure : fMeasure as List<Decimal>,
       scoreElement: scoreElement == freezed
           ? _value.scoreElement
-          : scoreElement as Element,
+          : scoreElement as List<Element>,
       numTPElement: numTPElement == freezed
           ? _value.numTPElement
-          : numTPElement as Element,
+          : numTPElement as List<Element>,
       numFPElement: numFPElement == freezed
           ? _value.numFPElement
-          : numFPElement as Element,
+          : numFPElement as List<Element>,
       numFNElement: numFNElement == freezed
           ? _value.numFNElement
-          : numFNElement as Element,
+          : numFNElement as List<Element>,
       precisionElement: precisionElement == freezed
           ? _value.precisionElement
-          : precisionElement as Element,
+          : precisionElement as List<Element>,
       sensitivityElement: sensitivityElement == freezed
           ? _value.sensitivityElement
-          : sensitivityElement as Element,
+          : sensitivityElement as List<Element>,
       fMeasureElement: fMeasureElement == freezed
           ? _value.fMeasureElement
-          : fMeasureElement as Element,
+          : fMeasureElement as List<Element>,
     ));
   }
 }
@@ -9488,25 +9395,25 @@ class _$_MolecularSequenceRoc implements _MolecularSequenceRoc {
   final List<Decimal> fMeasure;
   @override
   @JsonKey(name: '_score')
-  final Element scoreElement;
+  final List<Element> scoreElement;
   @override
   @JsonKey(name: '_numTP')
-  final Element numTPElement;
+  final List<Element> numTPElement;
   @override
   @JsonKey(name: '_numFP')
-  final Element numFPElement;
+  final List<Element> numFPElement;
   @override
   @JsonKey(name: '_numFN')
-  final Element numFNElement;
+  final List<Element> numFNElement;
   @override
   @JsonKey(name: '_precision')
-  final Element precisionElement;
+  final List<Element> precisionElement;
   @override
   @JsonKey(name: '_sensitivity')
-  final Element sensitivityElement;
+  final List<Element> sensitivityElement;
   @override
   @JsonKey(name: '_fMeasure')
-  final Element fMeasureElement;
+  final List<Element> fMeasureElement;
 
   @override
   String toString() {
@@ -9609,13 +9516,13 @@ abstract class _MolecularSequenceRoc implements MolecularSequenceRoc {
           List<Decimal> precision,
           List<Decimal> sensitivity,
           List<Decimal> fMeasure,
-          @JsonKey(name: '_score') Element scoreElement,
-          @JsonKey(name: '_numTP') Element numTPElement,
-          @JsonKey(name: '_numFP') Element numFPElement,
-          @JsonKey(name: '_numFN') Element numFNElement,
-          @JsonKey(name: '_precision') Element precisionElement,
-          @JsonKey(name: '_sensitivity') Element sensitivityElement,
-          @JsonKey(name: '_fMeasure') Element fMeasureElement}) =
+          @JsonKey(name: '_score') List<Element> scoreElement,
+          @JsonKey(name: '_numTP') List<Element> numTPElement,
+          @JsonKey(name: '_numFP') List<Element> numFPElement,
+          @JsonKey(name: '_numFN') List<Element> numFNElement,
+          @JsonKey(name: '_precision') List<Element> precisionElement,
+          @JsonKey(name: '_sensitivity') List<Element> sensitivityElement,
+          @JsonKey(name: '_fMeasure') List<Element> fMeasureElement}) =
       _$_MolecularSequenceRoc;
 
   factory _MolecularSequenceRoc.fromJson(Map<String, dynamic> json) =
@@ -9644,25 +9551,25 @@ abstract class _MolecularSequenceRoc implements MolecularSequenceRoc {
   List<Decimal> get fMeasure;
   @override
   @JsonKey(name: '_score')
-  Element get scoreElement;
+  List<Element> get scoreElement;
   @override
   @JsonKey(name: '_numTP')
-  Element get numTPElement;
+  List<Element> get numTPElement;
   @override
   @JsonKey(name: '_numFP')
-  Element get numFPElement;
+  List<Element> get numFPElement;
   @override
   @JsonKey(name: '_numFN')
-  Element get numFNElement;
+  List<Element> get numFNElement;
   @override
   @JsonKey(name: '_precision')
-  Element get precisionElement;
+  List<Element> get precisionElement;
   @override
   @JsonKey(name: '_sensitivity')
-  Element get sensitivityElement;
+  List<Element> get sensitivityElement;
   @override
   @JsonKey(name: '_fMeasure')
-  Element get fMeasureElement;
+  List<Element> get fMeasureElement;
   @override
   _$MolecularSequenceRocCopyWith<_MolecularSequenceRoc> get copyWith;
 }

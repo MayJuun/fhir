@@ -7503,7 +7503,7 @@ class _$MedicationAdministrationTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiates')
-          Element instantiatesElement,
+          List<Element> instantiatesElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_effectiveDateTime')
@@ -7590,7 +7590,7 @@ mixin _$MedicationAdministration {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_instantiates')
-  Element get instantiatesElement;
+  List<Element> get instantiatesElement;
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_effectiveDateTime')
@@ -7643,7 +7643,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiates')
-          Element instantiatesElement,
+          List<Element> instantiatesElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_effectiveDateTime')
@@ -7661,7 +7661,6 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
   $MedicationAdministrationDosageCopyWith<$Res> get dosage;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get instantiatesElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get effectiveDateTimeElement;
 }
@@ -7787,7 +7786,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesElement: instantiatesElement == freezed
           ? _value.instantiatesElement
-          : instantiatesElement as Element,
+          : instantiatesElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -7920,16 +7919,6 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get instantiatesElement {
-    if (_value.instantiatesElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesElement, (value) {
-      return _then(_value.copyWith(instantiatesElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -7995,7 +7984,7 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiates')
-          Element instantiatesElement,
+          List<Element> instantiatesElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_effectiveDateTime')
@@ -8025,8 +8014,6 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -8157,7 +8144,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesElement: instantiatesElement == freezed
           ? _value.instantiatesElement
-          : instantiatesElement as Element,
+          : instantiatesElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -8293,7 +8280,7 @@ class _$_MedicationAdministration implements _MedicationAdministration {
   final Element languageElement;
   @override
   @JsonKey(name: '_instantiates')
-  final Element instantiatesElement;
+  final List<Element> instantiatesElement;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -8479,7 +8466,7 @@ abstract class _MedicationAdministration implements MedicationAdministration {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiates')
-          Element instantiatesElement,
+          List<Element> instantiatesElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_effectiveDateTime')
@@ -8559,7 +8546,7 @@ abstract class _MedicationAdministration implements MedicationAdministration {
   Element get languageElement;
   @override
   @JsonKey(name: '_instantiates')
-  Element get instantiatesElement;
+  List<Element> get instantiatesElement;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;
@@ -11190,7 +11177,7 @@ class _$MedicationKnowledgeTearOff {
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_synonym')
-          Element synonymElement,
+          List<Element> synonymElement,
       @JsonKey(name: '_preparationInstruction')
           Element preparationInstructionElement}) {
     return _MedicationKnowledge(
@@ -11280,7 +11267,7 @@ mixin _$MedicationKnowledge {
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_synonym')
-  Element get synonymElement;
+  List<Element> get synonymElement;
   @JsonKey(name: '_preparationInstruction')
   Element get preparationInstructionElement;
 
@@ -11335,7 +11322,7 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_synonym')
-          Element synonymElement,
+          List<Element> synonymElement,
       @JsonKey(name: '_preparationInstruction')
           Element preparationInstructionElement});
 
@@ -11349,7 +11336,6 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get synonymElement;
   $ElementCopyWith<$Res> get preparationInstructionElement;
 }
 
@@ -11489,7 +11475,7 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
           : statusElement as Element,
       synonymElement: synonymElement == freezed
           ? _value.synonymElement
-          : synonymElement as Element,
+          : synonymElement as List<Element>,
       preparationInstructionElement: preparationInstructionElement == freezed
           ? _value.preparationInstructionElement
           : preparationInstructionElement as Element,
@@ -11598,16 +11584,6 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get synonymElement {
-    if (_value.synonymElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.synonymElement, (value) {
-      return _then(_value.copyWith(synonymElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get preparationInstructionElement {
     if (_value.preparationInstructionElement == null) {
       return null;
@@ -11668,7 +11644,7 @@ abstract class _$MedicationKnowledgeCopyWith<$Res>
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_synonym')
-          Element synonymElement,
+          List<Element> synonymElement,
       @JsonKey(name: '_preparationInstruction')
           Element preparationInstructionElement});
 
@@ -11692,8 +11668,6 @@ abstract class _$MedicationKnowledgeCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get synonymElement;
   @override
   $ElementCopyWith<$Res> get preparationInstructionElement;
 }
@@ -11836,7 +11810,7 @@ class __$MedicationKnowledgeCopyWithImpl<$Res>
           : statusElement as Element,
       synonymElement: synonymElement == freezed
           ? _value.synonymElement
-          : synonymElement as Element,
+          : synonymElement as List<Element>,
       preparationInstructionElement: preparationInstructionElement == freezed
           ? _value.preparationInstructionElement
           : preparationInstructionElement as Element,
@@ -11973,7 +11947,7 @@ class _$_MedicationKnowledge implements _MedicationKnowledge {
   final Element statusElement;
   @override
   @JsonKey(name: '_synonym')
-  final Element synonymElement;
+  final List<Element> synonymElement;
   @override
   @JsonKey(name: '_preparationInstruction')
   final Element preparationInstructionElement;
@@ -12161,7 +12135,7 @@ abstract class _MedicationKnowledge implements MedicationKnowledge {
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_synonym')
-          Element synonymElement,
+          List<Element> synonymElement,
       @JsonKey(name: '_preparationInstruction')
           Element preparationInstructionElement}) = _$_MedicationKnowledge;
 
@@ -12245,7 +12219,7 @@ abstract class _MedicationKnowledge implements MedicationKnowledge {
   Element get statusElement;
   @override
   @JsonKey(name: '_synonym')
-  Element get synonymElement;
+  List<Element> get synonymElement;
   @override
   @JsonKey(name: '_preparationInstruction')
   Element get preparationInstructionElement;
@@ -14319,7 +14293,7 @@ class _$MedicationKnowledgePatientCharacteristicsTearOff {
       CodeableConcept characteristicCodeableConcept,
       Quantity characteristicQuantity,
       List<String> value,
-      @JsonKey(name: '_value') Element valueElement}) {
+      @JsonKey(name: '_value') List<Element> valueElement}) {
     return _MedicationKnowledgePatientCharacteristics(
       id: id,
       extension_: extension_,
@@ -14345,7 +14319,7 @@ mixin _$MedicationKnowledgePatientCharacteristics {
   Quantity get characteristicQuantity;
   List<String> get value;
   @JsonKey(name: '_value')
-  Element get valueElement;
+  List<Element> get valueElement;
 
   Map<String, dynamic> toJson();
   $MedicationKnowledgePatientCharacteristicsCopyWith<
@@ -14364,11 +14338,10 @@ abstract class $MedicationKnowledgePatientCharacteristicsCopyWith<$Res> {
       CodeableConcept characteristicCodeableConcept,
       Quantity characteristicQuantity,
       List<String> value,
-      @JsonKey(name: '_value') Element valueElement});
+      @JsonKey(name: '_value') List<Element> valueElement});
 
   $CodeableConceptCopyWith<$Res> get characteristicCodeableConcept;
   $QuantityCopyWith<$Res> get characteristicQuantity;
-  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$MedicationKnowledgePatientCharacteristicsCopyWithImpl<$Res>
@@ -14407,7 +14380,7 @@ class _$MedicationKnowledgePatientCharacteristicsCopyWithImpl<$Res>
       value: value == freezed ? _value.value : value as List<String>,
       valueElement: valueElement == freezed
           ? _value.valueElement
-          : valueElement as Element,
+          : valueElement as List<Element>,
     ));
   }
 
@@ -14431,16 +14404,6 @@ class _$MedicationKnowledgePatientCharacteristicsCopyWithImpl<$Res>
       return _then(_value.copyWith(characteristicQuantity: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get valueElement {
-    if (_value.valueElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
-      return _then(_value.copyWith(valueElement: value));
-    });
-  }
 }
 
 abstract class _$MedicationKnowledgePatientCharacteristicsCopyWith<$Res>
@@ -14457,14 +14420,12 @@ abstract class _$MedicationKnowledgePatientCharacteristicsCopyWith<$Res>
       CodeableConcept characteristicCodeableConcept,
       Quantity characteristicQuantity,
       List<String> value,
-      @JsonKey(name: '_value') Element valueElement});
+      @JsonKey(name: '_value') List<Element> valueElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get characteristicCodeableConcept;
   @override
   $QuantityCopyWith<$Res> get characteristicQuantity;
-  @override
-  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$MedicationKnowledgePatientCharacteristicsCopyWithImpl<$Res>
@@ -14507,7 +14468,7 @@ class __$MedicationKnowledgePatientCharacteristicsCopyWithImpl<$Res>
       value: value == freezed ? _value.value : value as List<String>,
       valueElement: valueElement == freezed
           ? _value.valueElement
-          : valueElement as Element,
+          : valueElement as List<Element>,
     ));
   }
 }
@@ -14543,7 +14504,7 @@ class _$_MedicationKnowledgePatientCharacteristics
   final List<String> value;
   @override
   @JsonKey(name: '_value')
-  final Element valueElement;
+  final List<Element> valueElement;
 
   @override
   String toString() {
@@ -14609,7 +14570,7 @@ abstract class _MedicationKnowledgePatientCharacteristics
           CodeableConcept characteristicCodeableConcept,
           Quantity characteristicQuantity,
           List<String> value,
-          @JsonKey(name: '_value') Element valueElement}) =
+          @JsonKey(name: '_value') List<Element> valueElement}) =
       _$_MedicationKnowledgePatientCharacteristics;
 
   factory _MedicationKnowledgePatientCharacteristics.fromJson(
@@ -14631,7 +14592,7 @@ abstract class _MedicationKnowledgePatientCharacteristics
   List<String> get value;
   @override
   @JsonKey(name: '_value')
-  Element get valueElement;
+  List<Element> get valueElement;
   @override
   _$MedicationKnowledgePatientCharacteristicsCopyWith<
       _MedicationKnowledgePatientCharacteristics> get copyWith;
@@ -17034,9 +16995,9 @@ class _$MedicationRequestTearOff {
       @JsonKey(name: '_authoredOn')
           Element authoredOnElement,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement}) {
+          List<Element> instantiatesUriElement}) {
     return _MedicationRequest(
       resourceType: resourceType,
       id: id,
@@ -17162,9 +17123,9 @@ mixin _$MedicationRequest {
   @JsonKey(name: '_authoredOn')
   Element get authoredOnElement;
   @JsonKey(name: '_instantiatesCanonical')
-  Element get instantiatesCanonicalElement;
+  List<Element> get instantiatesCanonicalElement;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
 
   Map<String, dynamic> toJson();
   $MedicationRequestCopyWith<MedicationRequest> get copyWith;
@@ -17238,9 +17199,9 @@ abstract class $MedicationRequestCopyWith<$Res> {
       @JsonKey(name: '_authoredOn')
           Element authoredOnElement,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement});
+          List<Element> instantiatesUriElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -17267,8 +17228,6 @@ abstract class $MedicationRequestCopyWith<$Res> {
   $ElementCopyWith<$Res> get doNotPerformElement;
   $ElementCopyWith<$Res> get reportedBooleanElement;
   $ElementCopyWith<$Res> get authoredOnElement;
-  $ElementCopyWith<$Res> get instantiatesCanonicalElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
 }
 
 class _$MedicationRequestCopyWithImpl<$Res>
@@ -17465,10 +17424,10 @@ class _$MedicationRequestCopyWithImpl<$Res>
           : authoredOnElement as Element,
       instantiatesCanonicalElement: instantiatesCanonicalElement == freezed
           ? _value.instantiatesCanonicalElement
-          : instantiatesCanonicalElement as Element,
+          : instantiatesCanonicalElement as List<Element>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
     ));
   }
 
@@ -17724,26 +17683,6 @@ class _$MedicationRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(authoredOnElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesCanonicalElement {
-    if (_value.instantiatesCanonicalElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesCanonicalElement, (value) {
-      return _then(_value.copyWith(instantiatesCanonicalElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
-    });
-  }
 }
 
 abstract class _$MedicationRequestCopyWith<$Res>
@@ -17816,9 +17755,9 @@ abstract class _$MedicationRequestCopyWith<$Res>
       @JsonKey(name: '_authoredOn')
           Element authoredOnElement,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement});
+          List<Element> instantiatesUriElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -17870,10 +17809,6 @@ abstract class _$MedicationRequestCopyWith<$Res>
   $ElementCopyWith<$Res> get reportedBooleanElement;
   @override
   $ElementCopyWith<$Res> get authoredOnElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesCanonicalElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
 }
 
 class __$MedicationRequestCopyWithImpl<$Res>
@@ -18072,10 +18007,10 @@ class __$MedicationRequestCopyWithImpl<$Res>
           : authoredOnElement as Element,
       instantiatesCanonicalElement: instantiatesCanonicalElement == freezed
           ? _value.instantiatesCanonicalElement
-          : instantiatesCanonicalElement as Element,
+          : instantiatesCanonicalElement as List<Element>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
     ));
   }
 }
@@ -18272,10 +18207,10 @@ class _$_MedicationRequest implements _MedicationRequest {
   final Element authoredOnElement;
   @override
   @JsonKey(name: '_instantiatesCanonical')
-  final Element instantiatesCanonicalElement;
+  final List<Element> instantiatesCanonicalElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
 
   @override
   String toString() {
@@ -18517,9 +18452,9 @@ abstract class _MedicationRequest implements MedicationRequest {
       @JsonKey(name: '_authoredOn')
           Element authoredOnElement,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement}) = _$_MedicationRequest;
+          List<Element> instantiatesUriElement}) = _$_MedicationRequest;
 
   factory _MedicationRequest.fromJson(Map<String, dynamic> json) =
       _$_MedicationRequest.fromJson;
@@ -18639,10 +18574,10 @@ abstract class _MedicationRequest implements MedicationRequest {
   Element get authoredOnElement;
   @override
   @JsonKey(name: '_instantiatesCanonical')
-  Element get instantiatesCanonicalElement;
+  List<Element> get instantiatesCanonicalElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   _$MedicationRequestCopyWith<_MedicationRequest> get copyWith;
 }

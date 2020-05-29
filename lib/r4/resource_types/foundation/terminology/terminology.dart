@@ -85,7 +85,7 @@ abstract class CodeSystemFilter with _$CodeSystemFilter {
     String value,
     @JsonKey(name: '_code') Element codeElement,
 @JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_operator') Element operatorElement,
+@JsonKey(name: '_operator') List<Element> operatorElement,
 @JsonKey(name: '_value') Element valueElement,
   }) = _CodeSystemFilter;
   factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
@@ -514,8 +514,8 @@ abstract class TerminologyCapabilitiesVersion
     @JsonKey(name: '_code') Element codeElement,
 @JsonKey(name: '_isDefault') Element isDefaultElement,
 @JsonKey(name: '_compositional') Element compositionalElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_property') Element propertyElement,
+@JsonKey(name: '_language') List<Element> languageElement,
+@JsonKey(name: '_property') List<Element> propertyElement,
   }) = _TerminologyCapabilitiesVersion;
   factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesVersionFromJson(json);
@@ -531,7 +531,7 @@ abstract class TerminologyCapabilitiesFilter
     Code code,
     List<Code> op,
     @JsonKey(name: '_code') Element codeElement,
-@JsonKey(name: '_op') Element opElement,
+@JsonKey(name: '_op') List<Element> opElement,
   }) = _TerminologyCapabilitiesFilter;
   factory TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesFilterFromJson(json);

@@ -8009,7 +8009,7 @@ class _$ResearchDefinitionTearOff {
       @JsonKey(name: '_description')
           Element descriptionElement,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
       @JsonKey(name: '_usage')
@@ -8167,7 +8167,7 @@ mixin _$ResearchDefinition {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  List<Element> get commentElement;
   @JsonKey(name: '_purpose')
   Element get purposeElement;
   @JsonKey(name: '_usage')
@@ -8263,7 +8263,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element descriptionElement,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
       @JsonKey(name: '_usage')
@@ -8297,7 +8297,6 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get dateElement;
   $ElementCopyWith<$Res> get publisherElement;
   $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get commentElement;
   $ElementCopyWith<$Res> get purposeElement;
   $ElementCopyWith<$Res> get usageElement;
   $ElementCopyWith<$Res> get copyrightElement;
@@ -8501,7 +8500,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
           : descriptionElement as Element,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as List<Element>,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement as Element,
@@ -8742,16 +8741,6 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
-    if (_value.commentElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
-      return _then(_value.copyWith(commentElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get purposeElement {
     if (_value.purposeElement == null) {
       return null;
@@ -8884,7 +8873,7 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
       @JsonKey(name: '_description')
           Element descriptionElement,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
       @JsonKey(name: '_usage')
@@ -8940,8 +8929,6 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get publisherElement;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
-  @override
-  $ElementCopyWith<$Res> get commentElement;
   @override
   $ElementCopyWith<$Res> get purposeElement;
   @override
@@ -9152,7 +9139,7 @@ class __$ResearchDefinitionCopyWithImpl<$Res>
           : descriptionElement as Element,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as List<Element>,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement as Element,
@@ -9402,7 +9389,7 @@ class _$_ResearchDefinition implements _ResearchDefinition {
   final Element descriptionElement;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final List<Element> commentElement;
   @override
   @JsonKey(name: '_purpose')
   final Element purposeElement;
@@ -9691,7 +9678,7 @@ abstract class _ResearchDefinition implements ResearchDefinition {
       @JsonKey(name: '_description')
           Element descriptionElement,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
       @JsonKey(name: '_usage')
@@ -9839,7 +9826,7 @@ abstract class _ResearchDefinition implements ResearchDefinition {
   Element get descriptionElement;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  List<Element> get commentElement;
   @override
   @JsonKey(name: '_purpose')
   Element get purposeElement;
@@ -9946,7 +9933,7 @@ class _$ResearchElementDefinitionTearOff {
       @JsonKey(name: '_description')
           Element descriptionElement,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
       @JsonKey(name: '_usage')
@@ -10110,7 +10097,7 @@ mixin _$ResearchElementDefinition {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  List<Element> get commentElement;
   @JsonKey(name: '_purpose')
   Element get purposeElement;
   @JsonKey(name: '_usage')
@@ -10211,7 +10198,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element descriptionElement,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
       @JsonKey(name: '_usage')
@@ -10245,7 +10232,6 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get dateElement;
   $ElementCopyWith<$Res> get publisherElement;
   $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get commentElement;
   $ElementCopyWith<$Res> get purposeElement;
   $ElementCopyWith<$Res> get usageElement;
   $ElementCopyWith<$Res> get copyrightElement;
@@ -10453,7 +10439,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
           : descriptionElement as Element,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as List<Element>,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement as Element,
@@ -10659,16 +10645,6 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
-    if (_value.commentElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
-      return _then(_value.copyWith(commentElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get purposeElement {
     if (_value.purposeElement == null) {
       return null;
@@ -10822,7 +10798,7 @@ abstract class _$ResearchElementDefinitionCopyWith<$Res>
       @JsonKey(name: '_description')
           Element descriptionElement,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
       @JsonKey(name: '_usage')
@@ -10874,8 +10850,6 @@ abstract class _$ResearchElementDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get publisherElement;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
-  @override
-  $ElementCopyWith<$Res> get commentElement;
   @override
   $ElementCopyWith<$Res> get purposeElement;
   @override
@@ -11093,7 +11067,7 @@ class __$ResearchElementDefinitionCopyWithImpl<$Res>
           : descriptionElement as Element,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as List<Element>,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement as Element,
@@ -11353,7 +11327,7 @@ class _$_ResearchElementDefinition implements _ResearchElementDefinition {
   final Element descriptionElement;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final List<Element> commentElement;
   @override
   @JsonKey(name: '_purpose')
   final Element purposeElement;
@@ -11653,7 +11627,7 @@ abstract class _ResearchElementDefinition implements ResearchElementDefinition {
       @JsonKey(name: '_description')
           Element descriptionElement,
       @JsonKey(name: '_comment')
-          Element commentElement,
+          List<Element> commentElement,
       @JsonKey(name: '_purpose')
           Element purposeElement,
       @JsonKey(name: '_usage')
@@ -11805,7 +11779,7 @@ abstract class _ResearchElementDefinition implements ResearchElementDefinition {
   Element get descriptionElement;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  List<Element> get commentElement;
   @override
   @JsonKey(name: '_purpose')
   Element get purposeElement;

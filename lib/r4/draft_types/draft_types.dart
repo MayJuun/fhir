@@ -55,8 +55,8 @@ abstract class ProdCharacteristic with _$ProdCharacteristic {
     List<Attachment> image,
     CodeableConcept scoring,
     @JsonKey(name: '_shape') Element shapeElement,
-@JsonKey(name: '_color') Element colorElement,
-@JsonKey(name: '_imprint') Element imprintElement,
+    @JsonKey(name: '_color') List<Element> colorElement,
+    @JsonKey(name: '_imprint') List<Element> imprintElement,
   }) = _ProdCharacteristic;
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$ProdCharacteristicFromJson(json);
@@ -92,7 +92,7 @@ abstract class SubstanceAmount with _$SubstanceAmount {
     String amountText,
     SubstanceAmountReferenceRange referenceRange,
     @JsonKey(name: '_amountString') Element amountStringElement,
-@JsonKey(name: '_amountText') Element amountTextElement,
+    @JsonKey(name: '_amountText') Element amountTextElement,
   }) = _SubstanceAmount;
   factory SubstanceAmount.fromJson(Map<String, dynamic> json) =>
       _$SubstanceAmountFromJson(json);

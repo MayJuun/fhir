@@ -49,10 +49,10 @@ abstract class Claim with _$Claim implements Resource {
     List<ClaimItem> item,
     Money total,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_use') Element useElement,
-@JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_use') Element useElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _Claim;
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
 }
@@ -96,7 +96,7 @@ abstract class ClaimCareTeam with _$ClaimCareTeam {
     CodeableConcept role,
     CodeableConcept qualification,
     @JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_responsible') Element responsibleElement,
+    @JsonKey(name: '_responsible') Element responsibleElement,
   }) = _ClaimCareTeam;
   factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ClaimCareTeamFromJson(json);
@@ -120,9 +120,9 @@ abstract class ClaimSupportingInfo with _$ClaimSupportingInfo {
     Reference valueReference,
     CodeableConcept reason,
     @JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_timingDate') Element timingDateElement,
-@JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-@JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_timingDate') Element timingDateElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
   }) = _ClaimSupportingInfo;
   factory ClaimSupportingInfo.fromJson(Map<String, dynamic> json) =>
       _$ClaimSupportingInfoFromJson(json);
@@ -159,7 +159,7 @@ abstract class ClaimProcedure with _$ClaimProcedure {
     Reference procedureReference,
     List<Reference> udi,
     @JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _ClaimProcedure;
   factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
       _$ClaimProcedureFromJson(json);
@@ -179,9 +179,9 @@ abstract class ClaimInsurance with _$ClaimInsurance {
     List<String> preAuthRef,
     Reference claimResponse,
     @JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_focal') Element focalElement,
-@JsonKey(name: '_businessArrangement') Element businessArrangementElement,
-@JsonKey(name: '_preAuthRef') Element preAuthRefElement,
+    @JsonKey(name: '_focal') Element focalElement,
+    @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+    @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement,
   }) = _ClaimInsurance;
   factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimInsuranceFromJson(json);
@@ -234,12 +234,13 @@ abstract class ClaimItem with _$ClaimItem {
     List<Reference> encounter,
     List<ClaimDetail> detail,
     @JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_careTeamSequence') Element careTeamSequenceElement,
-@JsonKey(name: '_diagnosisSequence') Element diagnosisSequenceElement,
-@JsonKey(name: '_procedureSequence') Element procedureSequenceElement,
-@JsonKey(name: '_informationSequence') Element informationSequenceElement,
-@JsonKey(name: '_servicedDate') Element servicedDateElement,
-@JsonKey(name: '_factor') Element factorElement,
+    @JsonKey(name: '_careTeamSequence') List<Element> careTeamSequenceElement,
+    @JsonKey(name: '_diagnosisSequence') List<Element> diagnosisSequenceElement,
+    @JsonKey(name: '_procedureSequence') List<Element> procedureSequenceElement,
+    @JsonKey(name: '_informationSequence')
+        List<Element> informationSequenceElement,
+    @JsonKey(name: '_servicedDate') Element servicedDateElement,
+    @JsonKey(name: '_factor') Element factorElement,
   }) = _ClaimItem;
   factory ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemFromJson(json);
@@ -264,7 +265,7 @@ abstract class ClaimDetail with _$ClaimDetail {
     List<Reference> udi,
     List<ClaimSubDetail> subDetail,
     @JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_factor') Element factorElement,
+    @JsonKey(name: '_factor') Element factorElement,
   }) = _ClaimDetail;
   factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimDetailFromJson(json);
@@ -288,7 +289,7 @@ abstract class ClaimSubDetail with _$ClaimSubDetail {
     Money net,
     List<Reference> udi,
     @JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_factor') Element factorElement,
+    @JsonKey(name: '_factor') Element factorElement,
   }) = _ClaimSubDetail;
   factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimSubDetailFromJson(json);
@@ -336,13 +337,13 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
     List<ClaimResponseInsurance> insurance,
     List<ClaimResponseError> error,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_use') Element useElement,
-@JsonKey(name: '_created') Element createdElement,
-@JsonKey(name: '_outcome') Element outcomeElement,
-@JsonKey(name: '_disposition') Element dispositionElement,
-@JsonKey(name: '_preAuthRef') Element preAuthRefElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_use') Element useElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_outcome') Element outcomeElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
+    @JsonKey(name: '_preAuthRef') Element preAuthRefElement,
   }) = _ClaimResponse;
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseFromJson(json);
@@ -361,7 +362,7 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
         List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseDetail> detail,
     @JsonKey(name: '_itemSequence') Element itemSequenceElement,
-@JsonKey(name: '_noteNumber') Element noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
   }) = _ClaimResponseItem;
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemFromJson(json);
@@ -396,7 +397,7 @@ abstract class ClaimResponseDetail with _$ClaimResponseDetail {
         List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseSubDetail> subDetail,
     @JsonKey(name: '_detailSequence') Element detailSequenceElement,
-@JsonKey(name: '_noteNumber') Element noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
   }) = _ClaimResponseDetail;
   factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetailFromJson(json);
@@ -412,7 +413,7 @@ abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
     List<PositiveInt> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
     @JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
-@JsonKey(name: '_noteNumber') Element noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
   }) = _ClaimResponseSubDetail;
   factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseSubDetailFromJson(json);
@@ -447,12 +448,12 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
     @required
         List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseDetail1> detail,
-    @JsonKey(name: '_itemSequence') Element itemSequenceElement,
-@JsonKey(name: '_detailSequence') Element detailSequenceElement,
-@JsonKey(name: '_subdetailSequence') Element subdetailSequenceElement,
-@JsonKey(name: '_servicedDate') Element servicedDateElement,
-@JsonKey(name: '_factor') Element factorElement,
-@JsonKey(name: '_noteNumber') Element noteNumberElement,
+    @JsonKey(name: '_itemSequence') List<Element> itemSequenceElement,
+    @JsonKey(name: '_detailSequence') List<Element> detailSequenceElement,
+    @JsonKey(name: '_subdetailSequence') List<Element> subdetailSequenceElement,
+    @JsonKey(name: '_servicedDate') Element servicedDateElement,
+    @JsonKey(name: '_factor') Element factorElement,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
   }) = _ClaimResponseAddItem;
   factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemFromJson(json);
@@ -476,7 +477,7 @@ abstract class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
         List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseSubDetail1> subDetail,
     @JsonKey(name: '_factor') Element factorElement,
-@JsonKey(name: '_noteNumber') Element noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
   }) = _ClaimResponseDetail1;
   factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetail1FromJson(json);
@@ -498,8 +499,8 @@ abstract class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
     @JsonKey(required: true)
     @required
         List<ClaimResponseAdjudication> adjudication,
-        @JsonKey(name: '_factor') Element factorElement,
-@JsonKey(name: '_noteNumber') Element noteNumberElement,
+    @JsonKey(name: '_factor') Element factorElement,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
   }) = _ClaimResponseSubDetail1;
   factory ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseSubDetail1FromJson(json);
@@ -547,8 +548,8 @@ abstract class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
     String text,
     CodeableConcept language,
     @JsonKey(name: '_number') Element numberElement,
-@JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_text') Element textElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_text') Element textElement,
   }) = _ClaimResponseProcessNote;
   factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseProcessNoteFromJson(json);
@@ -566,8 +567,8 @@ abstract class ClaimResponseInsurance with _$ClaimResponseInsurance {
     String businessArrangement,
     Reference claimResponse,
     @JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_focal') Element focalElement,
-@JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+    @JsonKey(name: '_focal') Element focalElement,
+    @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
   }) = _ClaimResponseInsurance;
   factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseInsuranceFromJson(json);
@@ -584,8 +585,8 @@ abstract class ClaimResponseError with _$ClaimResponseError {
     PositiveInt subDetailSequence,
     @JsonKey(required: true) @required CodeableConcept code,
     @JsonKey(name: '_itemSequence') Element itemSequenceElement,
-@JsonKey(name: '_detailSequence') Element detailSequenceElement,
-@JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
+    @JsonKey(name: '_detailSequence') Element detailSequenceElement,
+    @JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
   }) = _ClaimResponseError;
   factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseErrorFromJson(json);
@@ -622,11 +623,11 @@ abstract class Invoice with _$Invoice implements Resource {
     Markdown paymentTerms,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_cancelledReason') Element cancelledReasonElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_paymentTerms') Element paymentTermsElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_cancelledReason') Element cancelledReasonElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_paymentTerms') Element paymentTermsElement,
   }) = _Invoice;
   factory Invoice.fromJson(Map<String, dynamic> json) =>
       _$InvoiceFromJson(json);
@@ -673,7 +674,7 @@ abstract class InvoicePriceComponent with _$InvoicePriceComponent {
     Decimal factor,
     Money amount,
     @JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_factor') Element factorElement,
+    @JsonKey(name: '_factor') Element factorElement,
   }) = _InvoicePriceComponent;
   factory InvoicePriceComponent.fromJson(Map<String, dynamic> json) =>
       _$InvoicePriceComponentFromJson(json);

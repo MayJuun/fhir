@@ -6800,7 +6800,7 @@ class _$PractitionerRoleAvailableTimeTearOff {
       Boolean allDay,
       Time availableStartTime,
       Time availableEndTime,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       @JsonKey(name: '_allDay') Element allDayElement,
       @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
       @JsonKey(name: '_availableEndTime') Element availableEndTimeElement}) {
@@ -6833,7 +6833,7 @@ mixin _$PractitionerRoleAvailableTime {
   Time get availableStartTime;
   Time get availableEndTime;
   @JsonKey(name: '_daysOfWeek')
-  Element get daysOfWeekElement;
+  List<Element> get daysOfWeekElement;
   @JsonKey(name: '_allDay')
   Element get allDayElement;
   @JsonKey(name: '_availableStartTime')
@@ -6859,12 +6859,11 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       Boolean allDay,
       Time availableStartTime,
       Time availableEndTime,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       @JsonKey(name: '_allDay') Element allDayElement,
       @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
       @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
 
-  $ElementCopyWith<$Res> get daysOfWeekElement;
   $ElementCopyWith<$Res> get allDayElement;
   $ElementCopyWith<$Res> get availableStartTimeElement;
   $ElementCopyWith<$Res> get availableEndTimeElement;
@@ -6911,7 +6910,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
           : availableEndTime as Time,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
-          : daysOfWeekElement as Element,
+          : daysOfWeekElement as List<Element>,
       allDayElement: allDayElement == freezed
           ? _value.allDayElement
           : allDayElement as Element,
@@ -6922,16 +6921,6 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
           ? _value.availableEndTimeElement
           : availableEndTimeElement as Element,
     ));
-  }
-
-  @override
-  $ElementCopyWith<$Res> get daysOfWeekElement {
-    if (_value.daysOfWeekElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.daysOfWeekElement, (value) {
-      return _then(_value.copyWith(daysOfWeekElement: value));
-    });
   }
 
   @override
@@ -6980,13 +6969,11 @@ abstract class _$PractitionerRoleAvailableTimeCopyWith<$Res>
       Boolean allDay,
       Time availableStartTime,
       Time availableEndTime,
-      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
       @JsonKey(name: '_allDay') Element allDayElement,
       @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
       @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
 
-  @override
-  $ElementCopyWith<$Res> get daysOfWeekElement;
   @override
   $ElementCopyWith<$Res> get allDayElement;
   @override
@@ -7040,7 +7027,7 @@ class __$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
           : availableEndTime as Time,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
-          : daysOfWeekElement as Element,
+          : daysOfWeekElement as List<Element>,
       allDayElement: allDayElement == freezed
           ? _value.allDayElement
           : allDayElement as Element,
@@ -7091,7 +7078,7 @@ class _$_PractitionerRoleAvailableTime
   final Time availableEndTime;
   @override
   @JsonKey(name: '_daysOfWeek')
-  final Element daysOfWeekElement;
+  final List<Element> daysOfWeekElement;
   @override
   @JsonKey(name: '_allDay')
   final Element allDayElement;
@@ -7185,7 +7172,7 @@ abstract class _PractitionerRoleAvailableTime
       Time availableStartTime,
       Time availableEndTime,
       @JsonKey(name: '_daysOfWeek')
-          Element daysOfWeekElement,
+          List<Element> daysOfWeekElement,
       @JsonKey(name: '_allDay')
           Element allDayElement,
       @JsonKey(name: '_availableStartTime')
@@ -7213,7 +7200,7 @@ abstract class _PractitionerRoleAvailableTime
   Time get availableEndTime;
   @override
   @JsonKey(name: '_daysOfWeek')
-  Element get daysOfWeekElement;
+  List<Element> get daysOfWeekElement;
   @override
   @JsonKey(name: '_allDay')
   Element get allDayElement;

@@ -168,9 +168,10 @@ _$_DataRequirement _$_$_DataRequirementFromJson(Map<String, dynamic> json) {
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    mustSupportElement: json['_mustSupport'] == null
-        ? null
-        : Element.fromJson(json['_mustSupport'] as Map<String, dynamic>),
+    mustSupportElement: (json['_mustSupport'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     limitElement: json['_limit'] == null
         ? null
         : Element.fromJson(json['_limit'] as Map<String, dynamic>),
@@ -202,7 +203,8 @@ Map<String, dynamic> _$_$_DataRequirementToJson(_$_DataRequirement instance) {
   writeNotNull('limit', instance.limit?.toJson());
   writeNotNull('sort', instance.sort?.map((e) => e?.toJson())?.toList());
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('_mustSupport', instance.mustSupportElement?.toJson());
+  writeNotNull('_mustSupport',
+      instance.mustSupportElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_limit', instance.limitElement?.toJson());
   return val;
 }

@@ -239,9 +239,10 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
             ? null
             : Element.fromJson(json['_clinicalRecommendationStatement']
                 as Map<String, dynamic>),
-    definitionElement: json['_definition'] == null
-        ? null
-        : Element.fromJson(json['_definition'] as Map<String, dynamic>),
+    definitionElement: (json['_definition'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     guidanceElement: json['_guidance'] == null
         ? null
         : Element.fromJson(json['_guidance'] as Map<String, dynamic>),
@@ -344,7 +345,8 @@ Map<String, dynamic> _$_$_MeasureToJson(_$_Measure instance) {
   writeNotNull('_rationale', instance.rationaleElement?.toJson());
   writeNotNull('_clinicalRecommendationStatement',
       instance.clinicalRecommendationStatementElement?.toJson());
-  writeNotNull('_definition', instance.definitionElement?.toJson());
+  writeNotNull('_definition',
+      instance.definitionElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_guidance', instance.guidanceElement?.toJson());
   return val;
 }
@@ -2130,15 +2132,17 @@ _$_TestScriptCapability _$_$_TestScriptCapabilityFromJson(
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    originElement: json['_origin'] == null
-        ? null
-        : Element.fromJson(json['_origin'] as Map<String, dynamic>),
+    originElement: (json['_origin'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     destinationElement: json['_destination'] == null
         ? null
         : Element.fromJson(json['_destination'] as Map<String, dynamic>),
-    linkElement: json['_link'] == null
-        ? null
-        : Element.fromJson(json['_link'] as Map<String, dynamic>),
+    linkElement: (json['_link'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -2167,9 +2171,11 @@ Map<String, dynamic> _$_$_TestScriptCapabilityToJson(
   writeNotNull('_required', instance.requiredElement?.toJson());
   writeNotNull('_validated', instance.validatedElement?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('_origin', instance.originElement?.toJson());
+  writeNotNull(
+      '_origin', instance.originElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_destination', instance.destinationElement?.toJson());
-  writeNotNull('_link', instance.linkElement?.toJson());
+  writeNotNull(
+      '_link', instance.linkElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

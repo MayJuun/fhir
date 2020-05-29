@@ -1499,9 +1499,10 @@ _$_ResearchDefinition _$_$_ResearchDefinitionFromJson(
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    commentElement: json['_comment'] == null
-        ? null
-        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
+    commentElement: (json['_comment'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purposeElement: json['_purpose'] == null
         ? null
         : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
@@ -1597,7 +1598,8 @@ Map<String, dynamic> _$_$_ResearchDefinitionToJson(
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('_publisher', instance.publisherElement?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('_comment', instance.commentElement?.toJson());
+  writeNotNull(
+      '_comment', instance.commentElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_purpose', instance.purposeElement?.toJson());
   writeNotNull('_usage', instance.usageElement?.toJson());
   writeNotNull('_copyright', instance.copyrightElement?.toJson());
@@ -1782,9 +1784,10 @@ _$_ResearchElementDefinition _$_$_ResearchElementDefinitionFromJson(
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    commentElement: json['_comment'] == null
-        ? null
-        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
+    commentElement: (json['_comment'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purposeElement: json['_purpose'] == null
         ? null
         : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
@@ -1886,7 +1889,8 @@ Map<String, dynamic> _$_$_ResearchElementDefinitionToJson(
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('_publisher', instance.publisherElement?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('_comment', instance.commentElement?.toJson());
+  writeNotNull(
+      '_comment', instance.commentElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_purpose', instance.purposeElement?.toJson());
   writeNotNull('_usage', instance.usageElement?.toJson());
   writeNotNull('_copyright', instance.copyrightElement?.toJson());

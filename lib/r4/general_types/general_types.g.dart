@@ -962,15 +962,18 @@ _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
     familyElement: json['_family'] == null
         ? null
         : Element.fromJson(json['_family'] as Map<String, dynamic>),
-    givenElement: json['_given'] == null
-        ? null
-        : Element.fromJson(json['_given'] as Map<String, dynamic>),
-    prefixElement: json['_prefix'] == null
-        ? null
-        : Element.fromJson(json['_prefix'] as Map<String, dynamic>),
-    suffixElement: json['_suffix'] == null
-        ? null
-        : Element.fromJson(json['_suffix'] as Map<String, dynamic>),
+    givenElement: (json['_given'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    prefixElement: (json['_prefix'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    suffixElement: (json['_suffix'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -996,9 +999,12 @@ Map<String, dynamic> _$_$_HumanNameToJson(_$_HumanName instance) {
   writeNotNull('_use', instance.useElement?.toJson());
   writeNotNull('_text', instance.textElement?.toJson());
   writeNotNull('_family', instance.familyElement?.toJson());
-  writeNotNull('_given', instance.givenElement?.toJson());
-  writeNotNull('_prefix', instance.prefixElement?.toJson());
-  writeNotNull('_suffix', instance.suffixElement?.toJson());
+  writeNotNull(
+      '_given', instance.givenElement?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      '_prefix', instance.prefixElement?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      '_suffix', instance.suffixElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -1044,9 +1050,10 @@ _$_Address _$_$_AddressFromJson(Map<String, dynamic> json) {
     textElement: json['_text'] == null
         ? null
         : Element.fromJson(json['_text'] as Map<String, dynamic>),
-    lineElement: json['_line'] == null
-        ? null
-        : Element.fromJson(json['_line'] as Map<String, dynamic>),
+    lineElement: (json['_line'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     cityElement: json['_city'] == null
         ? null
         : Element.fromJson(json['_city'] as Map<String, dynamic>),
@@ -1090,7 +1097,8 @@ Map<String, dynamic> _$_$_AddressToJson(_$_Address instance) {
   writeNotNull('_use', instance.useElement?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('_text', instance.textElement?.toJson());
-  writeNotNull('_line', instance.lineElement?.toJson());
+  writeNotNull(
+      '_line', instance.lineElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_city', instance.cityElement?.toJson());
   writeNotNull('_district', instance.districtElement?.toJson());
   writeNotNull('_state', instance.stateElement?.toJson());
@@ -1213,9 +1221,10 @@ _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    eventElement: json['_event'] == null
-        ? null
-        : Element.fromJson(json['_event'] as Map<String, dynamic>),
+    eventElement: (json['_event'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1236,7 +1245,8 @@ Map<String, dynamic> _$_$_TimingToJson(_$_Timing instance) {
   writeNotNull('event', instance.event?.map((e) => e?.toJson())?.toList());
   writeNotNull('repeat', instance.repeat?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_event', instance.eventElement?.toJson());
+  writeNotNull(
+      '_event', instance.eventElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -1327,15 +1337,18 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
     periodUnitElement: json['_periodUnit'] == null
         ? null
         : Element.fromJson(json['_periodUnit'] as Map<String, dynamic>),
-    dayOfWeekElement: json['_dayOfWeek'] == null
-        ? null
-        : Element.fromJson(json['_dayOfWeek'] as Map<String, dynamic>),
-    timeOfDayElement: json['_timeOfDay'] == null
-        ? null
-        : Element.fromJson(json['_timeOfDay'] as Map<String, dynamic>),
-    whenElement: json['_when'] == null
-        ? null
-        : Element.fromJson(json['_when'] as Map<String, dynamic>),
+    dayOfWeekElement: (json['_dayOfWeek'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    timeOfDayElement: (json['_timeOfDay'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    whenElement: (json['_when'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     offsetElement: json['_offset'] == null
         ? null
         : Element.fromJson(json['_offset'] as Map<String, dynamic>),
@@ -1387,9 +1400,12 @@ Map<String, dynamic> _$_$_TimingRepeatToJson(_$_TimingRepeat instance) {
   writeNotNull('_period', instance.periodElement?.toJson());
   writeNotNull('_periodMax', instance.periodMaxElement?.toJson());
   writeNotNull('_periodUnit', instance.periodUnitElement?.toJson());
-  writeNotNull('_dayOfWeek', instance.dayOfWeekElement?.toJson());
-  writeNotNull('_timeOfDay', instance.timeOfDayElement?.toJson());
-  writeNotNull('_when', instance.whenElement?.toJson());
+  writeNotNull('_dayOfWeek',
+      instance.dayOfWeekElement?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_timeOfDay',
+      instance.timeOfDayElement?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      '_when', instance.whenElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_offset', instance.offsetElement?.toJson());
   return val;
 }

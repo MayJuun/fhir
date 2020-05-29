@@ -44,16 +44,16 @@ abstract class Appointment with _$Appointment implements Resource {
     @JsonKey(required: true) @required List<AppointmentParticipant> participant,
     List<Period> requestedPeriod,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_start') Element startElement,
-@JsonKey(name: '_end') Element endElement,
-@JsonKey(name: '_minutesDuration') Element minutesDurationElement,
-@JsonKey(name: '_created') Element createdElement,
-@JsonKey(name: '_comment') Element commentElement,
-@JsonKey(name: '_patientInstruction') Element patientInstructionElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_minutesDuration') Element minutesDurationElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_patientInstruction') Element patientInstructionElement,
   }) = _Appointment;
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
@@ -73,7 +73,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
         ParticipantStatus status,
     Period period,
     @JsonKey(name: '_required') Element requiredElement,
-@JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _AppointmentParticipant;
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
@@ -104,11 +104,11 @@ abstract class AppointmentResponse
     Code participantStatus,
     String comment,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_start') Element startElement,
-@JsonKey(name: '_end') Element endElement,
-@JsonKey(name: '_participantStatus') Element participantStatusElement,
-@JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_participantStatus') Element participantStatusElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
@@ -137,9 +137,9 @@ abstract class Schedule with _$Schedule implements Resource {
     Period planningHorizon,
     String comment,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
-@JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
@@ -171,16 +171,15 @@ abstract class Slot with _$Slot implements Resource {
     Boolean overbooked,
     String comment,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_start') Element startElement,
-@JsonKey(name: '_end') Element endElement,
-@JsonKey(name: '_overbooked') Element overbookedElement,
-@JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_overbooked') Element overbookedElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }
-
 
 @freezed
 abstract class Task with _$Task implements Resource {
@@ -228,14 +227,14 @@ abstract class Task with _$Task implements Resource {
     List<TaskInput> input,
     List<TaskOutput> output,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_intent') Element intentElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_authoredOn') Element authoredOnElement,
-@JsonKey(name: '_lastModified') Element lastModifiedElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_intent') Element intentElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
+    @JsonKey(name: '_lastModified') Element lastModifiedElement,
   }) = _Task;
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }
@@ -313,24 +312,24 @@ abstract class TaskInput with _$TaskInput {
     Dosage valueDosage,
     Meta valueMeta,
     @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-@JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-@JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-@JsonKey(name: '_valueCode') Element valueCodeElement,
-@JsonKey(name: '_valueDate') Element valueDateElement,
-@JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-@JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-@JsonKey(name: '_valueId') Element valueIdElement,
-@JsonKey(name: '_valueInstant') Element valueInstantElement,
-@JsonKey(name: '_valueInteger') Element valueIntegerElement,
-@JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-@JsonKey(name: '_valueOid') Element valueOidElement,
-@JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-@JsonKey(name: '_valueString') Element valueStringElement,
-@JsonKey(name: '_valueTime') Element valueTimeElement,
-@JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-@JsonKey(name: '_valueUri') Element valueUriElement,
-@JsonKey(name: '_valueUrl') Element valueUrlElement,
-@JsonKey(name: '_valueUuid') Element valueUuidElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+    @JsonKey(name: '_valueOid') Element valueOidElement,
+    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
+    @JsonKey(name: '_valueUrl') Element valueUrlElement,
+    @JsonKey(name: '_valueUuid') Element valueUuidElement,
   }) = _TaskInput;
   factory TaskInput.fromJson(Map<String, dynamic> json) =>
       _$TaskInputFromJson(json);
@@ -394,29 +393,28 @@ abstract class TaskOutput with _$TaskOutput {
     Dosage valueDosage,
     Meta valueMeta,
     @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-@JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-@JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-@JsonKey(name: '_valueCode') Element valueCodeElement,
-@JsonKey(name: '_valueDate') Element valueDateElement,
-@JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-@JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-@JsonKey(name: '_valueId') Element valueIdElement,
-@JsonKey(name: '_valueInstant') Element valueInstantElement,
-@JsonKey(name: '_valueInteger') Element valueIntegerElement,
-@JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-@JsonKey(name: '_valueOid') Element valueOidElement,
-@JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-@JsonKey(name: '_valueString') Element valueStringElement,
-@JsonKey(name: '_valueTime') Element valueTimeElement,
-@JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-@JsonKey(name: '_valueUri') Element valueUriElement,
-@JsonKey(name: '_valueUrl') Element valueUrlElement,
-@JsonKey(name: '_valueUuid') Element valueUuidElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
+    @JsonKey(name: '_valueOid') Element valueOidElement,
+    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
+    @JsonKey(name: '_valueUrl') Element valueUrlElement,
+    @JsonKey(name: '_valueUuid') Element valueUuidElement,
   }) = _TaskOutput;
   factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);
 }
-
 
 @freezed
 abstract class VerificationResult
@@ -449,12 +447,12 @@ abstract class VerificationResult
     VerificationResultAttestation attestation,
     List<VerificationResultValidator> validator,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_targetLocation') Element targetLocationElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_statusDate') Element statusDateElement,
-@JsonKey(name: '_lastPerformed') Element lastPerformedElement,
-@JsonKey(name: '_nextScheduled') Element nextScheduledElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_statusDate') Element statusDateElement,
+    @JsonKey(name: '_lastPerformed') Element lastPerformedElement,
+    @JsonKey(name: '_nextScheduled') Element nextScheduledElement,
   }) = _VerificationResult;
   factory VerificationResult.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultFromJson(json);
@@ -496,9 +494,10 @@ abstract class VerificationResultAttestation
     Signature proxySignature,
     Signature sourceSignature,
     @JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_sourceIdentityCertificate') Element sourceIdentityCertificateElement,
-@JsonKey(name: '_proxyIdentityCertificate') Element proxyIdentityCertificateElement,
-
+    @JsonKey(name: '_sourceIdentityCertificate')
+        Element sourceIdentityCertificateElement,
+    @JsonKey(name: '_proxyIdentityCertificate')
+        Element proxyIdentityCertificateElement,
   }) = _VerificationResultAttestation;
   factory VerificationResultAttestation.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultAttestationFromJson(json);
@@ -514,7 +513,6 @@ abstract class VerificationResultValidator with _$VerificationResultValidator {
     String identityCertificate,
     Signature attestationSignature,
     @JsonKey(name: '_identityCertificate') Element identityCertificateElement,
-
   }) = _VerificationResultValidator;
   factory VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultValidatorFromJson(json);

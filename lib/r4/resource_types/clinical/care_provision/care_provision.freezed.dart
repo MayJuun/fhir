@@ -58,7 +58,7 @@ class _$CarePlanTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -158,7 +158,7 @@ mixin _$CarePlan {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_intent')
@@ -212,7 +212,7 @@ abstract class $CarePlanCopyWith<$Res> {
       List<Annotation> note,
       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       @JsonKey(name: '_status') Element statusElement,
       @JsonKey(name: '_intent') Element intentElement,
       @JsonKey(name: '_title') Element titleElement,
@@ -227,7 +227,6 @@ abstract class $CarePlanCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get author;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get intentElement;
   $ElementCopyWith<$Res> get titleElement;
@@ -355,7 +354,7 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -455,16 +454,6 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -554,7 +543,7 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
       List<Annotation> note,
       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       @JsonKey(name: '_language') Element languageElement,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       @JsonKey(name: '_status') Element statusElement,
       @JsonKey(name: '_intent') Element intentElement,
       @JsonKey(name: '_title') Element titleElement,
@@ -577,8 +566,6 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -712,7 +699,7 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -869,7 +856,7 @@ class _$_CarePlan implements _CarePlan {
   final Element languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -1078,7 +1065,7 @@ abstract class _CarePlan implements CarePlan {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -1167,7 +1154,7 @@ abstract class _CarePlan implements CarePlan {
   Element get languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;
@@ -1535,7 +1522,7 @@ class _$CarePlanDetailTearOff {
       Quantity quantity,
       String description,
       @JsonKey(name: '_kind') Element kindElement,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       @JsonKey(name: '_status') Element statusElement,
       @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
       @JsonKey(name: '_scheduledString') Element scheduledStringElement,
@@ -1606,7 +1593,7 @@ mixin _$CarePlanDetail {
   @JsonKey(name: '_kind')
   Element get kindElement;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_doNotPerform')
@@ -1649,7 +1636,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       Quantity quantity,
       String description,
       @JsonKey(name: '_kind') Element kindElement,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       @JsonKey(name: '_status') Element statusElement,
       @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
       @JsonKey(name: '_scheduledString') Element scheduledStringElement,
@@ -1665,7 +1652,6 @@ abstract class $CarePlanDetailCopyWith<$Res> {
   $QuantityCopyWith<$Res> get dailyAmount;
   $QuantityCopyWith<$Res> get quantity;
   $ElementCopyWith<$Res> get kindElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get doNotPerformElement;
   $ElementCopyWith<$Res> get scheduledStringElement;
@@ -1770,7 +1756,7 @@ class _$CarePlanDetailCopyWithImpl<$Res>
           kindElement == freezed ? _value.kindElement : kindElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -1888,16 +1874,6 @@ class _$CarePlanDetailCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -1969,7 +1945,7 @@ abstract class _$CarePlanDetailCopyWith<$Res>
       Quantity quantity,
       String description,
       @JsonKey(name: '_kind') Element kindElement,
-      @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
+      @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
       @JsonKey(name: '_status') Element statusElement,
       @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
       @JsonKey(name: '_scheduledString') Element scheduledStringElement,
@@ -1995,8 +1971,6 @@ abstract class _$CarePlanDetailCopyWith<$Res>
   $QuantityCopyWith<$Res> get quantity;
   @override
   $ElementCopyWith<$Res> get kindElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -2107,7 +2081,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
           kindElement == freezed ? _value.kindElement : kindElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -2213,7 +2187,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
   final Element kindElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -2354,36 +2328,43 @@ class _$_CarePlanDetail implements _CarePlanDetail {
 
 abstract class _CarePlanDetail implements CarePlanDetail {
   const factory _CarePlanDetail(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          Code kind,
-          List<Canonical> instantiatesCanonical,
-          List<FhirUri> instantiatesUri,
-          CodeableConcept code,
-          List<CodeableConcept> reasonCode,
-          List<Reference> reasonReference,
-          List<Reference> goal,
-          @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
-          CodeableConcept statusReason,
-          Boolean doNotPerform,
-          Timing scheduledTiming,
-          Period scheduledPeriod,
-          String scheduledString,
-          Reference location,
-          List<Reference> performer,
-          CodeableConcept productCodeableConcept,
-          Reference productReference,
-          Quantity dailyAmount,
-          Quantity quantity,
-          String description,
-          @JsonKey(name: '_kind') Element kindElement,
-          @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
-          @JsonKey(name: '_status') Element statusElement,
-          @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
-          @JsonKey(name: '_scheduledString') Element scheduledStringElement,
-          @JsonKey(name: '_description') Element descriptionElement}) =
-      _$_CarePlanDetail;
+      {String id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      Code kind,
+      List<Canonical> instantiatesCanonical,
+      List<FhirUri> instantiatesUri,
+      CodeableConcept code,
+      List<CodeableConcept> reasonCode,
+      List<Reference> reasonReference,
+      List<Reference> goal,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown)
+          DetailStatus status,
+      CodeableConcept statusReason,
+      Boolean doNotPerform,
+      Timing scheduledTiming,
+      Period scheduledPeriod,
+      String scheduledString,
+      Reference location,
+      List<Reference> performer,
+      CodeableConcept productCodeableConcept,
+      Reference productReference,
+      Quantity dailyAmount,
+      Quantity quantity,
+      String description,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_instantiatesUri')
+          List<Element> instantiatesUriElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_doNotPerform')
+          Element doNotPerformElement,
+      @JsonKey(name: '_scheduledString')
+          Element scheduledStringElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement}) = _$_CarePlanDetail;
 
   factory _CarePlanDetail.fromJson(Map<String, dynamic> json) =
       _$_CarePlanDetail.fromJson;
@@ -2441,7 +2422,7 @@ abstract class _CarePlanDetail implements CarePlanDetail {
   Element get kindElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;
@@ -5319,9 +5300,9 @@ class _$NutritionOrderTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_instantiates')
-          Element instantiatesElement,
+          List<Element> instantiatesElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -5404,9 +5385,9 @@ mixin _$NutritionOrder {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @JsonKey(name: '_instantiates')
-  Element get instantiatesElement;
+  List<Element> get instantiatesElement;
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_intent')
@@ -5457,9 +5438,9 @@ abstract class $NutritionOrderCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_instantiates')
-          Element instantiatesElement,
+          List<Element> instantiatesElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -5476,8 +5457,6 @@ abstract class $NutritionOrderCopyWith<$Res> {
   $NutritionOrderEnteralFormulaCopyWith<$Res> get enteralFormula;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
-  $ElementCopyWith<$Res> get instantiatesElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get intentElement;
   $ElementCopyWith<$Res> get dateTimeElement;
@@ -5593,10 +5572,10 @@ class _$NutritionOrderCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       instantiatesElement: instantiatesElement == freezed
           ? _value.instantiatesElement
-          : instantiatesElement as Element,
+          : instantiatesElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -5701,26 +5680,6 @@ class _$NutritionOrderCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesElement {
-    if (_value.instantiatesElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesElement, (value) {
-      return _then(_value.copyWith(instantiatesElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -5792,9 +5751,9 @@ abstract class _$NutritionOrderCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_instantiates')
-          Element instantiatesElement,
+          List<Element> instantiatesElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -5820,10 +5779,6 @@ abstract class _$NutritionOrderCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -5944,10 +5899,10 @@ class __$NutritionOrderCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       instantiatesElement: instantiatesElement == freezed
           ? _value.instantiatesElement
-          : instantiatesElement as Element,
+          : instantiatesElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -6078,10 +6033,10 @@ class _$_NutritionOrder implements _NutritionOrder {
   final Element languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   @JsonKey(name: '_instantiates')
-  final Element instantiatesElement;
+  final List<Element> instantiatesElement;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -6263,9 +6218,9 @@ abstract class _NutritionOrder implements NutritionOrder {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_instantiates')
-          Element instantiatesElement,
+          List<Element> instantiatesElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -6339,10 +6294,10 @@ abstract class _NutritionOrder implements NutritionOrder {
   Element get languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   @JsonKey(name: '_instantiates')
-  Element get instantiatesElement;
+  List<Element> get instantiatesElement;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;
@@ -8589,9 +8544,9 @@ class _$RequestGroupTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -8678,9 +8633,9 @@ mixin _$RequestGroup {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_instantiatesCanonical')
-  Element get instantiatesCanonicalElement;
+  List<Element> get instantiatesCanonicalElement;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_intent')
@@ -8733,9 +8688,9 @@ abstract class $RequestGroupCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -8754,8 +8709,6 @@ abstract class $RequestGroupCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get author;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get instantiatesCanonicalElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get intentElement;
   $ElementCopyWith<$Res> get priorityElement;
@@ -8870,10 +8823,10 @@ class _$RequestGroupCopyWithImpl<$Res> implements $RequestGroupCopyWith<$Res> {
           : languageElement as Element,
       instantiatesCanonicalElement: instantiatesCanonicalElement == freezed
           ? _value.instantiatesCanonicalElement
-          : instantiatesCanonicalElement as Element,
+          : instantiatesCanonicalElement as List<Element>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -8980,26 +8933,6 @@ class _$RequestGroupCopyWithImpl<$Res> implements $RequestGroupCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get instantiatesCanonicalElement {
-    if (_value.instantiatesCanonicalElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesCanonicalElement, (value) {
-      return _then(_value.copyWith(instantiatesCanonicalElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -9081,9 +9014,9 @@ abstract class _$RequestGroupCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -9111,10 +9044,6 @@ abstract class _$RequestGroupCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesCanonicalElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -9235,10 +9164,10 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesCanonicalElement: instantiatesCanonicalElement == freezed
           ? _value.instantiatesCanonicalElement
-          : instantiatesCanonicalElement as Element,
+          : instantiatesCanonicalElement as List<Element>,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -9373,10 +9302,10 @@ class _$_RequestGroup implements _RequestGroup {
   final Element languageElement;
   @override
   @JsonKey(name: '_instantiatesCanonical')
-  final Element instantiatesCanonicalElement;
+  final List<Element> instantiatesCanonicalElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -9565,9 +9494,9 @@ abstract class _RequestGroup implements RequestGroup {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesCanonical')
-          Element instantiatesCanonicalElement,
+          List<Element> instantiatesCanonicalElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -9644,10 +9573,10 @@ abstract class _RequestGroup implements RequestGroup {
   Element get languageElement;
   @override
   @JsonKey(name: '_instantiatesCanonical')
-  Element get instantiatesCanonicalElement;
+  List<Element> get instantiatesCanonicalElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;
@@ -13220,7 +13149,7 @@ class _$ServiceRequestTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -13359,7 +13288,7 @@ mixin _$ServiceRequest {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_intent')
@@ -13441,7 +13370,7 @@ abstract class $ServiceRequestCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -13475,7 +13404,6 @@ abstract class $ServiceRequestCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get performerType;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get intentElement;
   $ElementCopyWith<$Res> get priorityElement;
@@ -13678,7 +13606,7 @@ class _$ServiceRequestCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -13868,16 +13796,6 @@ class _$ServiceRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -14020,7 +13938,7 @@ abstract class _$ServiceRequestCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -14070,8 +13988,6 @@ abstract class _$ServiceRequestCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -14284,7 +14200,7 @@ class __$ServiceRequestCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -14501,7 +14417,7 @@ class _$_ServiceRequest implements _ServiceRequest {
   final Element languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -14770,7 +14686,7 @@ abstract class _ServiceRequest implements ServiceRequest {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -14896,7 +14812,7 @@ abstract class _ServiceRequest implements ServiceRequest {
   Element get languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;

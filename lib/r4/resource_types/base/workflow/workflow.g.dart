@@ -1765,9 +1765,10 @@ _$_VerificationResult _$_$_VerificationResultFromJson(
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    targetLocationElement: json['_targetLocation'] == null
-        ? null
-        : Element.fromJson(json['_targetLocation'] as Map<String, dynamic>),
+    targetLocationElement: (json['_targetLocation'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1824,7 +1825,8 @@ Map<String, dynamic> _$_$_VerificationResultToJson(
       'validator', instance.validator?.map((e) => e?.toJson())?.toList());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('_targetLocation', instance.targetLocationElement?.toJson());
+  writeNotNull('_targetLocation',
+      instance.targetLocationElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('_statusDate', instance.statusDateElement?.toJson());
   writeNotNull('_lastPerformed', instance.lastPerformedElement?.toJson());

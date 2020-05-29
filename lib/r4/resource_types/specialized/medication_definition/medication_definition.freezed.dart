@@ -56,7 +56,7 @@ class _$MedicinalProductTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_specialMeasures')
-          Element specialMeasuresElement}) {
+          List<Element> specialMeasuresElement}) {
     return _MedicinalProduct(
       resourceType: resourceType,
       id: id,
@@ -136,7 +136,7 @@ mixin _$MedicinalProduct {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_specialMeasures')
-  Element get specialMeasuresElement;
+  List<Element> get specialMeasuresElement;
 
   Map<String, dynamic> toJson();
   $MedicinalProductCopyWith<MedicinalProduct> get copyWith;
@@ -185,7 +185,7 @@ abstract class $MedicinalProductCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_specialMeasures')
-          Element specialMeasuresElement});
+          List<Element> specialMeasuresElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -197,7 +197,6 @@ abstract class $MedicinalProductCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get paediatricUseIndicator;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get specialMeasuresElement;
 }
 
 class _$MedicinalProductCopyWithImpl<$Res>
@@ -323,7 +322,7 @@ class _$MedicinalProductCopyWithImpl<$Res>
           : languageElement as Element,
       specialMeasuresElement: specialMeasuresElement == freezed
           ? _value.specialMeasuresElement
-          : specialMeasuresElement as Element,
+          : specialMeasuresElement as List<Element>,
     ));
   }
 
@@ -429,16 +428,6 @@ class _$MedicinalProductCopyWithImpl<$Res>
       return _then(_value.copyWith(languageElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get specialMeasuresElement {
-    if (_value.specialMeasuresElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.specialMeasuresElement, (value) {
-      return _then(_value.copyWith(specialMeasuresElement: value));
-    });
-  }
 }
 
 abstract class _$MedicinalProductCopyWith<$Res>
@@ -486,7 +475,7 @@ abstract class _$MedicinalProductCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_specialMeasures')
-          Element specialMeasuresElement});
+          List<Element> specialMeasuresElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -508,8 +497,6 @@ abstract class _$MedicinalProductCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get specialMeasuresElement;
 }
 
 class __$MedicinalProductCopyWithImpl<$Res>
@@ -637,7 +624,7 @@ class __$MedicinalProductCopyWithImpl<$Res>
           : languageElement as Element,
       specialMeasuresElement: specialMeasuresElement == freezed
           ? _value.specialMeasuresElement
-          : specialMeasuresElement as Element,
+          : specialMeasuresElement as List<Element>,
     ));
   }
 }
@@ -761,7 +748,7 @@ class _$_MedicinalProduct implements _MedicinalProduct {
   final Element languageElement;
   @override
   @JsonKey(name: '_specialMeasures')
-  final Element specialMeasuresElement;
+  final List<Element> specialMeasuresElement;
 
   @override
   String toString() {
@@ -931,7 +918,7 @@ abstract class _MedicinalProduct implements MedicinalProduct {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_specialMeasures')
-          Element specialMeasuresElement}) = _$_MedicinalProduct;
+          List<Element> specialMeasuresElement}) = _$_MedicinalProduct;
 
   factory _MedicinalProduct.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProduct.fromJson;
@@ -1006,7 +993,7 @@ abstract class _MedicinalProduct implements MedicinalProduct {
   Element get languageElement;
   @override
   @JsonKey(name: '_specialMeasures')
-  Element get specialMeasuresElement;
+  List<Element> get specialMeasuresElement;
   @override
   _$MedicinalProductCopyWith<_MedicinalProduct> get copyWith;
 }
@@ -16485,7 +16472,7 @@ class _$SubstancePolymerTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_modification')
-          Element modificationElement}) {
+          List<Element> modificationElement}) {
     return _SubstancePolymer(
       resourceType: resourceType,
       id: id,
@@ -16536,7 +16523,7 @@ mixin _$SubstancePolymer {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_modification')
-  Element get modificationElement;
+  List<Element> get modificationElement;
 
   Map<String, dynamic> toJson();
   $SubstancePolymerCopyWith<SubstancePolymer> get copyWith;
@@ -16570,7 +16557,7 @@ abstract class $SubstancePolymerCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_modification')
-          Element modificationElement});
+          List<Element> modificationElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -16578,7 +16565,6 @@ abstract class $SubstancePolymerCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get geometry;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get modificationElement;
 }
 
 class _$SubstancePolymerCopyWithImpl<$Res>
@@ -16652,7 +16638,7 @@ class _$SubstancePolymerCopyWithImpl<$Res>
           : languageElement as Element,
       modificationElement: modificationElement == freezed
           ? _value.modificationElement
-          : modificationElement as Element,
+          : modificationElement as List<Element>,
     ));
   }
 
@@ -16715,16 +16701,6 @@ class _$SubstancePolymerCopyWithImpl<$Res>
       return _then(_value.copyWith(languageElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get modificationElement {
-    if (_value.modificationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.modificationElement, (value) {
-      return _then(_value.copyWith(modificationElement: value));
-    });
-  }
 }
 
 abstract class _$SubstancePolymerCopyWith<$Res>
@@ -16757,7 +16733,7 @@ abstract class _$SubstancePolymerCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_modification')
-          Element modificationElement});
+          List<Element> modificationElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -16771,8 +16747,6 @@ abstract class _$SubstancePolymerCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get modificationElement;
 }
 
 class __$SubstancePolymerCopyWithImpl<$Res>
@@ -16848,7 +16822,7 @@ class __$SubstancePolymerCopyWithImpl<$Res>
           : languageElement as Element,
       modificationElement: modificationElement == freezed
           ? _value.modificationElement
-          : modificationElement as Element,
+          : modificationElement as List<Element>,
     ));
   }
 }
@@ -16927,7 +16901,7 @@ class _$_SubstancePolymer implements _SubstancePolymer {
   final Element languageElement;
   @override
   @JsonKey(name: '_modification')
-  final Element modificationElement;
+  final List<Element> modificationElement;
 
   @override
   String toString() {
@@ -17047,7 +17021,7 @@ abstract class _SubstancePolymer implements SubstancePolymer {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_modification')
-          Element modificationElement}) = _$_SubstancePolymer;
+          List<Element> modificationElement}) = _$_SubstancePolymer;
 
   factory _SubstancePolymer.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymer.fromJson;
@@ -17093,7 +17067,7 @@ abstract class _SubstancePolymer implements SubstancePolymer {
   Element get languageElement;
   @override
   @JsonKey(name: '_modification')
-  Element get modificationElement;
+  List<Element> get modificationElement;
   @override
   _$SubstancePolymerCopyWith<_SubstancePolymer> get copyWith;
 }
@@ -19085,7 +19059,7 @@ class _$SubstanceProteinTearOff {
       @JsonKey(name: '_numberOfSubunits')
           Element numberOfSubunitsElement,
       @JsonKey(name: '_disulfideLinkage')
-          Element disulfideLinkageElement}) {
+          List<Element> disulfideLinkageElement}) {
     return _SubstanceProtein(
       resourceType: resourceType,
       id: id,
@@ -19134,7 +19108,7 @@ mixin _$SubstanceProtein {
   @JsonKey(name: '_numberOfSubunits')
   Element get numberOfSubunitsElement;
   @JsonKey(name: '_disulfideLinkage')
-  Element get disulfideLinkageElement;
+  List<Element> get disulfideLinkageElement;
 
   Map<String, dynamic> toJson();
   $SubstanceProteinCopyWith<SubstanceProtein> get copyWith;
@@ -19167,7 +19141,7 @@ abstract class $SubstanceProteinCopyWith<$Res> {
       @JsonKey(name: '_numberOfSubunits')
           Element numberOfSubunitsElement,
       @JsonKey(name: '_disulfideLinkage')
-          Element disulfideLinkageElement});
+          List<Element> disulfideLinkageElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -19175,7 +19149,6 @@ abstract class $SubstanceProteinCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get numberOfSubunitsElement;
-  $ElementCopyWith<$Res> get disulfideLinkageElement;
 }
 
 class _$SubstanceProteinCopyWithImpl<$Res>
@@ -19248,7 +19221,7 @@ class _$SubstanceProteinCopyWithImpl<$Res>
           : numberOfSubunitsElement as Element,
       disulfideLinkageElement: disulfideLinkageElement == freezed
           ? _value.disulfideLinkageElement
-          : disulfideLinkageElement as Element,
+          : disulfideLinkageElement as List<Element>,
     ));
   }
 
@@ -19311,16 +19284,6 @@ class _$SubstanceProteinCopyWithImpl<$Res>
       return _then(_value.copyWith(numberOfSubunitsElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get disulfideLinkageElement {
-    if (_value.disulfideLinkageElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.disulfideLinkageElement, (value) {
-      return _then(_value.copyWith(disulfideLinkageElement: value));
-    });
-  }
 }
 
 abstract class _$SubstanceProteinCopyWith<$Res>
@@ -19352,7 +19315,7 @@ abstract class _$SubstanceProteinCopyWith<$Res>
       @JsonKey(name: '_numberOfSubunits')
           Element numberOfSubunitsElement,
       @JsonKey(name: '_disulfideLinkage')
-          Element disulfideLinkageElement});
+          List<Element> disulfideLinkageElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -19366,8 +19329,6 @@ abstract class _$SubstanceProteinCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $ElementCopyWith<$Res> get numberOfSubunitsElement;
-  @override
-  $ElementCopyWith<$Res> get disulfideLinkageElement;
 }
 
 class __$SubstanceProteinCopyWithImpl<$Res>
@@ -19442,7 +19403,7 @@ class __$SubstanceProteinCopyWithImpl<$Res>
           : numberOfSubunitsElement as Element,
       disulfideLinkageElement: disulfideLinkageElement == freezed
           ? _value.disulfideLinkageElement
-          : disulfideLinkageElement as Element,
+          : disulfideLinkageElement as List<Element>,
     ));
   }
 }
@@ -19518,7 +19479,7 @@ class _$_SubstanceProtein implements _SubstanceProtein {
   final Element numberOfSubunitsElement;
   @override
   @JsonKey(name: '_disulfideLinkage')
-  final Element disulfideLinkageElement;
+  final List<Element> disulfideLinkageElement;
 
   @override
   String toString() {
@@ -19637,7 +19598,7 @@ abstract class _SubstanceProtein implements SubstanceProtein {
       @JsonKey(name: '_numberOfSubunits')
           Element numberOfSubunitsElement,
       @JsonKey(name: '_disulfideLinkage')
-          Element disulfideLinkageElement}) = _$_SubstanceProtein;
+          List<Element> disulfideLinkageElement}) = _$_SubstanceProtein;
 
   factory _SubstanceProtein.fromJson(Map<String, dynamic> json) =
       _$_SubstanceProtein.fromJson;
@@ -19681,7 +19642,7 @@ abstract class _SubstanceProtein implements SubstanceProtein {
   Element get numberOfSubunitsElement;
   @override
   @JsonKey(name: '_disulfideLinkage')
-  Element get disulfideLinkageElement;
+  List<Element> get disulfideLinkageElement;
   @override
   _$SubstanceProteinCopyWith<_SubstanceProtein> get copyWith;
 }
@@ -22379,9 +22340,9 @@ class _$SubstanceSourceMaterialTearOff {
       @JsonKey(name: '_organismName')
           Element organismNameElement,
       @JsonKey(name: '_parentSubstanceName')
-          Element parentSubstanceNameElement,
+          List<Element> parentSubstanceNameElement,
       @JsonKey(name: '_geographicalLocation')
-          Element geographicalLocationElement}) {
+          List<Element> geographicalLocationElement}) {
     return _SubstanceSourceMaterial(
       resourceType: resourceType,
       id: id,
@@ -22449,9 +22410,9 @@ mixin _$SubstanceSourceMaterial {
   @JsonKey(name: '_organismName')
   Element get organismNameElement;
   @JsonKey(name: '_parentSubstanceName')
-  Element get parentSubstanceNameElement;
+  List<Element> get parentSubstanceNameElement;
   @JsonKey(name: '_geographicalLocation')
-  Element get geographicalLocationElement;
+  List<Element> get geographicalLocationElement;
 
   Map<String, dynamic> toJson();
   $SubstanceSourceMaterialCopyWith<SubstanceSourceMaterial> get copyWith;
@@ -22493,9 +22454,9 @@ abstract class $SubstanceSourceMaterialCopyWith<$Res> {
       @JsonKey(name: '_organismName')
           Element organismNameElement,
       @JsonKey(name: '_parentSubstanceName')
-          Element parentSubstanceNameElement,
+          List<Element> parentSubstanceNameElement,
       @JsonKey(name: '_geographicalLocation')
-          Element geographicalLocationElement});
+          List<Element> geographicalLocationElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -22508,8 +22469,6 @@ abstract class $SubstanceSourceMaterialCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get organismNameElement;
-  $ElementCopyWith<$Res> get parentSubstanceNameElement;
-  $ElementCopyWith<$Res> get geographicalLocationElement;
 }
 
 class _$SubstanceSourceMaterialCopyWithImpl<$Res>
@@ -22619,10 +22578,10 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res>
           : organismNameElement as Element,
       parentSubstanceNameElement: parentSubstanceNameElement == freezed
           ? _value.parentSubstanceNameElement
-          : parentSubstanceNameElement as Element,
+          : parentSubstanceNameElement as List<Element>,
       geographicalLocationElement: geographicalLocationElement == freezed
           ? _value.geographicalLocationElement
-          : geographicalLocationElement as Element,
+          : geographicalLocationElement as List<Element>,
     ));
   }
 
@@ -22736,26 +22695,6 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res>
       return _then(_value.copyWith(organismNameElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get parentSubstanceNameElement {
-    if (_value.parentSubstanceNameElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.parentSubstanceNameElement, (value) {
-      return _then(_value.copyWith(parentSubstanceNameElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get geographicalLocationElement {
-    if (_value.geographicalLocationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.geographicalLocationElement, (value) {
-      return _then(_value.copyWith(geographicalLocationElement: value));
-    });
-  }
 }
 
 abstract class _$SubstanceSourceMaterialCopyWith<$Res>
@@ -22796,9 +22735,9 @@ abstract class _$SubstanceSourceMaterialCopyWith<$Res>
       @JsonKey(name: '_organismName')
           Element organismNameElement,
       @JsonKey(name: '_parentSubstanceName')
-          Element parentSubstanceNameElement,
+          List<Element> parentSubstanceNameElement,
       @JsonKey(name: '_geographicalLocation')
-          Element geographicalLocationElement});
+          List<Element> geographicalLocationElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -22822,10 +22761,6 @@ abstract class _$SubstanceSourceMaterialCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $ElementCopyWith<$Res> get organismNameElement;
-  @override
-  $ElementCopyWith<$Res> get parentSubstanceNameElement;
-  @override
-  $ElementCopyWith<$Res> get geographicalLocationElement;
 }
 
 class __$SubstanceSourceMaterialCopyWithImpl<$Res>
@@ -22938,10 +22873,10 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
           : organismNameElement as Element,
       parentSubstanceNameElement: parentSubstanceNameElement == freezed
           ? _value.parentSubstanceNameElement
-          : parentSubstanceNameElement as Element,
+          : parentSubstanceNameElement as List<Element>,
       geographicalLocationElement: geographicalLocationElement == freezed
           ? _value.geographicalLocationElement
-          : geographicalLocationElement as Element,
+          : geographicalLocationElement as List<Element>,
     ));
   }
 }
@@ -23046,10 +22981,10 @@ class _$_SubstanceSourceMaterial implements _SubstanceSourceMaterial {
   final Element organismNameElement;
   @override
   @JsonKey(name: '_parentSubstanceName')
-  final Element parentSubstanceNameElement;
+  final List<Element> parentSubstanceNameElement;
   @override
   @JsonKey(name: '_geographicalLocation')
-  final Element geographicalLocationElement;
+  final List<Element> geographicalLocationElement;
 
   @override
   String toString() {
@@ -23175,41 +23110,42 @@ class _$_SubstanceSourceMaterial implements _SubstanceSourceMaterial {
 
 abstract class _SubstanceSourceMaterial implements SubstanceSourceMaterial {
   const factory _SubstanceSourceMaterial(
-      {@required
-      @JsonKey(required: true, defaultValue: 'SubstanceSourceMaterial')
-          String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept sourceMaterialClass,
-      CodeableConcept sourceMaterialType,
-      CodeableConcept sourceMaterialState,
-      Identifier organismId,
-      String organismName,
-      List<Identifier> parentSubstanceId,
-      List<String> parentSubstanceName,
-      List<CodeableConcept> countryOfOrigin,
-      List<String> geographicalLocation,
-      CodeableConcept developmentStage,
-      List<SubstanceSourceMaterialFractionDescription> fractionDescription,
-      SubstanceSourceMaterialOrganism organism,
-      List<SubstanceSourceMaterialPartDescription> partDescription,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      @JsonKey(name: '_language')
-          Element languageElement,
-      @JsonKey(name: '_organismName')
-          Element organismNameElement,
-      @JsonKey(name: '_parentSubstanceName')
-          Element parentSubstanceNameElement,
-      @JsonKey(name: '_geographicalLocation')
-          Element geographicalLocationElement}) = _$_SubstanceSourceMaterial;
+          {@required
+          @JsonKey(required: true, defaultValue: 'SubstanceSourceMaterial')
+              String resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          Code language,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          CodeableConcept sourceMaterialClass,
+          CodeableConcept sourceMaterialType,
+          CodeableConcept sourceMaterialState,
+          Identifier organismId,
+          String organismName,
+          List<Identifier> parentSubstanceId,
+          List<String> parentSubstanceName,
+          List<CodeableConcept> countryOfOrigin,
+          List<String> geographicalLocation,
+          CodeableConcept developmentStage,
+          List<SubstanceSourceMaterialFractionDescription> fractionDescription,
+          SubstanceSourceMaterialOrganism organism,
+          List<SubstanceSourceMaterialPartDescription> partDescription,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
+          @JsonKey(name: '_language')
+              Element languageElement,
+          @JsonKey(name: '_organismName')
+              Element organismNameElement,
+          @JsonKey(name: '_parentSubstanceName')
+              List<Element> parentSubstanceNameElement,
+          @JsonKey(name: '_geographicalLocation')
+              List<Element> geographicalLocationElement}) =
+      _$_SubstanceSourceMaterial;
 
   factory _SubstanceSourceMaterial.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterial.fromJson;
@@ -23271,10 +23207,10 @@ abstract class _SubstanceSourceMaterial implements SubstanceSourceMaterial {
   Element get organismNameElement;
   @override
   @JsonKey(name: '_parentSubstanceName')
-  Element get parentSubstanceNameElement;
+  List<Element> get parentSubstanceNameElement;
   @override
   @JsonKey(name: '_geographicalLocation')
-  Element get geographicalLocationElement;
+  List<Element> get geographicalLocationElement;
   @override
   _$SubstanceSourceMaterialCopyWith<_SubstanceSourceMaterial> get copyWith;
 }

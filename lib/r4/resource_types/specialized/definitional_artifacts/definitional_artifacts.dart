@@ -77,27 +77,27 @@ abstract class ActivityDefinition
     Canonical transform,
     List<ActivityDefinitionDynamicValue> dynamicValue,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_url') Element urlElement,
-@JsonKey(name: '_version') Element versionElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_subtitle') Element subtitleElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_experimental') Element experimentalElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_publisher') Element publisherElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_purpose') Element purposeElement,
-@JsonKey(name: '_usage') Element usageElement,
-@JsonKey(name: '_copyright') Element copyrightElement,
-@JsonKey(name: '_approvalDate') Element approvalDateElement,
-@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-@JsonKey(name: '_kind') Element kindElement,
-@JsonKey(name: '_intent') Element intentElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_doNotPerform') Element doNotPerformElement,
-@JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_subtitle') Element subtitleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_usage') Element usageElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_approvalDate') Element approvalDateElement,
+    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+    @JsonKey(name: '_kind') Element kindElement,
+    @JsonKey(name: '_intent') Element intentElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
   }) = _ActivityDefinition;
   factory ActivityDefinition.fromJson(Map<String, dynamic> json) =>
       _$ActivityDefinitionFromJson(json);
@@ -171,12 +171,12 @@ abstract class DeviceDefinition with _$DeviceDefinition implements Resource {
     Reference parentDevice,
     List<DeviceDefinitionMaterial> material,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_manufacturerString') Element manufacturerStringElement,
-@JsonKey(name: '_modelNumber') Element modelNumberElement,
-@JsonKey(name: '_version') Element versionElement,
-@JsonKey(name: '_url') Element urlElement,
-@JsonKey(name: '_onlineInformation') Element onlineInformationElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_manufacturerString') Element manufacturerStringElement,
+    @JsonKey(name: '_modelNumber') Element modelNumberElement,
+    @JsonKey(name: '_version') List<Element> versionElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_onlineInformation') Element onlineInformationElement,
   }) = _DeviceDefinition;
   factory DeviceDefinition.fromJson(Map<String, dynamic> json) =>
       _$DeviceDefinitionFromJson(json);
@@ -193,8 +193,8 @@ abstract class DeviceDefinitionUdiDeviceIdentifier
     FhirUri issuer,
     FhirUri jurisdiction,
     @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
-@JsonKey(name: '_issuer') Element issuerElement,
-@JsonKey(name: '_jurisdiction') Element jurisdictionElement,
+    @JsonKey(name: '_issuer') Element issuerElement,
+    @JsonKey(name: '_jurisdiction') Element jurisdictionElement,
   }) = _DeviceDefinitionUdiDeviceIdentifier;
   factory DeviceDefinitionUdiDeviceIdentifier.fromJson(
           Map<String, dynamic> json) =>
@@ -210,7 +210,7 @@ abstract class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
     String name,
     @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type,
     @JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _DeviceDefinitionDeviceName;
   factory DeviceDefinitionDeviceName.fromJson(Map<String, dynamic> json) =>
       _$DeviceDefinitionDeviceNameFromJson(json);
@@ -226,7 +226,7 @@ abstract class DeviceDefinitionSpecialization
     String systemType,
     String version,
     @JsonKey(name: '_systemType') Element systemTypeElement,
-@JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_version') Element versionElement,
   }) = _DeviceDefinitionSpecialization;
   factory DeviceDefinitionSpecialization.fromJson(Map<String, dynamic> json) =>
       _$DeviceDefinitionSpecializationFromJson(json);
@@ -269,7 +269,7 @@ abstract class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
     Boolean alternate,
     Boolean allergenicIndicator,
     @JsonKey(name: '_alternate') Element alternateElement,
-@JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
+    @JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
   }) = _DeviceDefinitionMaterial;
   factory DeviceDefinitionMaterial.fromJson(Map<String, dynamic> json) =>
       _$DeviceDefinitionMaterialFromJson(json);
@@ -319,22 +319,22 @@ abstract class EventDefinition with _$EventDefinition implements Resource {
     List<RelatedArtifact> relatedArtifact,
     @JsonKey(required: true) @required List<TriggerDefinition> trigger,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_url') Element urlElement,
-@JsonKey(name: '_version') Element versionElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_subtitle') Element subtitleElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_experimental') Element experimentalElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_publisher') Element publisherElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_purpose') Element purposeElement,
-@JsonKey(name: '_usage') Element usageElement,
-@JsonKey(name: '_copyright') Element copyrightElement,
-@JsonKey(name: '_approvalDate') Element approvalDateElement,
-@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_subtitle') Element subtitleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_usage') Element usageElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_approvalDate') Element approvalDateElement,
+    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _EventDefinition;
   factory EventDefinition.fromJson(Map<String, dynamic> json) =>
       _$EventDefinitionFromJson(json);
@@ -370,10 +370,11 @@ abstract class ObservationDefinition
     Reference abnormalCodedValueSet,
     Reference criticalCodedValueSet,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_permittedDataType') Element permittedDataTypeElement,
-@JsonKey(name: '_multipleResultsAllowed') Element multipleResultsAllowedElement,
-@JsonKey(name: '_preferredReportName') Element preferredReportNameElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_permittedDataType') List<Element> permittedDataTypeElement,
+    @JsonKey(name: '_multipleResultsAllowed')
+        Element multipleResultsAllowedElement,
+    @JsonKey(name: '_preferredReportName') Element preferredReportNameElement,
   }) = _ObservationDefinition;
   factory ObservationDefinition.fromJson(Map<String, dynamic> json) =>
       _$ObservationDefinitionFromJson(json);
@@ -391,7 +392,7 @@ abstract class ObservationDefinitionQuantitativeDetails
     Decimal conversionFactor,
     Integer decimalPrecision,
     @JsonKey(name: '_conversionFactor') Element conversionFactorElement,
-@JsonKey(name: '_decimalPrecision') Element decimalPrecisionElement,
+    @JsonKey(name: '_decimalPrecision') Element decimalPrecisionElement,
   }) = _ObservationDefinitionQuantitativeDetails;
   factory ObservationDefinitionQuantitativeDetails.fromJson(
           Map<String, dynamic> json) =>
@@ -415,8 +416,8 @@ abstract class ObservationDefinitionQualifiedInterval
     Range gestationalAge,
     String condition,
     @JsonKey(name: '_category') Element categoryElement,
-@JsonKey(name: '_gender') Element genderElement,
-@JsonKey(name: '_condition') Element conditionElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_condition') Element conditionElement,
   }) = _ObservationDefinitionQualifiedInterval;
   factory ObservationDefinitionQualifiedInterval.fromJson(
           Map<String, dynamic> json) =>
@@ -470,22 +471,22 @@ abstract class PlanDefinition with _$PlanDefinition implements Resource {
     List<PlanDefinitionGoal> goal,
     List<PlanDefinitionAction> action,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_url') Element urlElement,
-@JsonKey(name: '_version') Element versionElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_subtitle') Element subtitleElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_experimental') Element experimentalElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_publisher') Element publisherElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_purpose') Element purposeElement,
-@JsonKey(name: '_usage') Element usageElement,
-@JsonKey(name: '_copyright') Element copyrightElement,
-@JsonKey(name: '_approvalDate') Element approvalDateElement,
-@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_subtitle') Element subtitleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_usage') Element usageElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_approvalDate') Element approvalDateElement,
+    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _PlanDefinition;
   factory PlanDefinition.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionFromJson(json);
@@ -571,19 +572,19 @@ abstract class PlanDefinitionAction with _$PlanDefinitionAction {
     List<PlanDefinitionDynamicValue> dynamicValue,
     List<PlanDefinitionAction> action,
     @JsonKey(name: '_prefix') Element prefixElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_textEquivalent') Element textEquivalentElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_goalId') Element goalIdElement,
-@JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-@JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
-@JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
-@JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
-@JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
-@JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
-@JsonKey(name: '_definitionCanonical') Element definitionCanonicalElement,
-@JsonKey(name: '_definitionUri') Element definitionUriElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_textEquivalent') Element textEquivalentElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_goalId') List<Element> goalIdElement,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    @JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
+    @JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
+    @JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
+    @JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
+    @JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
+    @JsonKey(name: '_definitionCanonical') Element definitionCanonicalElement,
+    @JsonKey(name: '_definitionUri') Element definitionUriElement,
   }) = _PlanDefinitionAction;
   factory PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionActionFromJson(json);
@@ -615,7 +616,7 @@ abstract class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
     Duration offsetDuration,
     Range offsetRange,
     @JsonKey(name: '_actionId') Element actionIdElement,
-@JsonKey(name: '_relationship') Element relationshipElement,
+    @JsonKey(name: '_relationship') Element relationshipElement,
   }) = _PlanDefinitionRelatedAction;
   factory PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionRelatedActionFromJson(json);
@@ -687,21 +688,21 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
     List<Coding> code,
     List<QuestionnaireItem> item,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_url') Element urlElement,
-@JsonKey(name: '_version') Element versionElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_experimental') Element experimentalElement,
-@JsonKey(name: '_subjectType') Element subjectTypeElement,
-@JsonKey(name: '_date') Element dateElement,
-@JsonKey(name: '_publisher') Element publisherElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_purpose') Element purposeElement,
-@JsonKey(name: '_copyright') Element copyrightElement,
-@JsonKey(name: '_approvalDate') Element approvalDateElement,
-@JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_subjectType') List<Element> subjectTypeElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_approvalDate') Element approvalDateElement,
+    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
   }) = _Questionnaire;
   factory Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireFromJson(json);
@@ -732,15 +733,15 @@ abstract class QuestionnaireItem with _$QuestionnaireItem {
     List<QuestionnaireInitial> initial,
     List<QuestionnaireItem> item,
     @JsonKey(name: '_linkId') Element linkIdElement,
-@JsonKey(name: '_definition') Element definitionElement,
-@JsonKey(name: '_prefix') Element prefixElement,
-@JsonKey(name: '_text') Element textElement,
-@JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_enableBehavior') Element enableBehaviorElement,
-@JsonKey(name: '_required') Element requiredElement,
-@JsonKey(name: '_repeats') Element repeatsElement,
-@JsonKey(name: '_readOnly') Element readOnlyElement,
-@JsonKey(name: '_maxLength') Element maxLengthElement,
+    @JsonKey(name: '_definition') Element definitionElement,
+    @JsonKey(name: '_prefix') Element prefixElement,
+    @JsonKey(name: '_text') Element textElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_enableBehavior') Element enableBehaviorElement,
+    @JsonKey(name: '_required') Element requiredElement,
+    @JsonKey(name: '_repeats') Element repeatsElement,
+    @JsonKey(name: '_readOnly') Element readOnlyElement,
+    @JsonKey(name: '_maxLength') Element maxLengthElement,
   }) = _QuestionnaireItem;
   factory QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireItemFromJson(json);
@@ -766,14 +767,14 @@ abstract class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
     Quantity answerQuantity,
     Reference answerReference,
     @JsonKey(name: '_question') Element questionElement,
-@JsonKey(name: '_operator') Element operatorElement,
-@JsonKey(name: '_answerBoolean') Element answerBooleanElement,
-@JsonKey(name: '_answerDecimal') Element answerDecimalElement,
-@JsonKey(name: '_answerInteger') Element answerIntegerElement,
-@JsonKey(name: '_answerDate') Element answerDateElement,
-@JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
-@JsonKey(name: '_answerTime') Element answerTimeElement,
-@JsonKey(name: '_answerString') Element answerStringElement,
+    @JsonKey(name: '_operator') Element operatorElement,
+    @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
+    @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
+    @JsonKey(name: '_answerInteger') Element answerIntegerElement,
+    @JsonKey(name: '_answerDate') Element answerDateElement,
+    @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
+    @JsonKey(name: '_answerTime') Element answerTimeElement,
+    @JsonKey(name: '_answerString') Element answerStringElement,
   }) = _QuestionnaireEnableWhen;
   factory QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireEnableWhenFromJson(json);
@@ -793,10 +794,10 @@ abstract class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
     Reference valueReference,
     Boolean initialSelected,
     @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-@JsonKey(name: '_valueDate') Element valueDateElement,
-@JsonKey(name: '_valueTime') Element valueTimeElement,
-@JsonKey(name: '_valueString') Element valueStringElement,
-@JsonKey(name: '_initialSelected') Element initialSelectedElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_initialSelected') Element initialSelectedElement,
   }) = _QuestionnaireAnswerOption;
   factory QuestionnaireAnswerOption.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireAnswerOptionFromJson(json);
@@ -821,13 +822,13 @@ abstract class QuestionnaireInitial with _$QuestionnaireInitial {
     Quantity valueQuantity,
     Reference valueReference,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-@JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-@JsonKey(name: '_valueInteger') Element valueIntegerElement,
-@JsonKey(name: '_valueDate') Element valueDateElement,
-@JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-@JsonKey(name: '_valueTime') Element valueTimeElement,
-@JsonKey(name: '_valueString') Element valueStringElement,
-@JsonKey(name: '_valueUri') Element valueUriElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
   }) = _QuestionnaireInitial;
   factory QuestionnaireInitial.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireInitialFromJson(json);
@@ -856,8 +857,8 @@ abstract class SpecimenDefinition
     List<CodeableConcept> collection,
     List<SpecimenDefinitionTypeTested> typeTested,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_timeAspect') Element timeAspectElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_timeAspect') Element timeAspectElement,
   }) = _SpecimenDefinition;
   factory SpecimenDefinition.fromJson(Map<String, dynamic> json) =>
       _$SpecimenDefinitionFromJson(json);
@@ -880,8 +881,8 @@ abstract class SpecimenDefinitionTypeTested
     List<CodeableConcept> rejectionCriterion,
     List<SpecimenDefinitionHandling> handling,
     @JsonKey(name: '_isDerived') Element isDerivedElement,
-@JsonKey(name: '_preference') Element preferenceElement,
-@JsonKey(name: '_requirement') Element requirementElement,
+    @JsonKey(name: '_preference') Element preferenceElement,
+    @JsonKey(name: '_requirement') Element requirementElement,
   }) = _SpecimenDefinitionTypeTested;
   factory SpecimenDefinitionTypeTested.fromJson(Map<String, dynamic> json) =>
       _$SpecimenDefinitionTypeTestedFromJson(json);
@@ -903,8 +904,8 @@ abstract class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
     List<SpecimenDefinitionAdditive> additive,
     String preparation,
     @JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_minimumVolumeString') Element minimumVolumeStringElement,
-@JsonKey(name: '_preparation') Element preparationElement,
+    @JsonKey(name: '_minimumVolumeString') Element minimumVolumeStringElement,
+    @JsonKey(name: '_preparation') Element preparationElement,
   }) = _SpecimenDefinitionContainer;
   factory SpecimenDefinitionContainer.fromJson(Map<String, dynamic> json) =>
       _$SpecimenDefinitionContainerFromJson(json);

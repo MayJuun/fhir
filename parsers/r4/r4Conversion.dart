@@ -78,7 +78,10 @@ void main() async {
       if (index != -1) {
         stringList[index].add(obj);
         for (var field in schema['definitions'][obj]['properties'].keys) {
-          if (field[0] == '_') {
+          if (field[0] == '_' &&
+              schema['definitions'][obj]['properties'][field]
+                  .keys
+                  .contains('type')) {
             stringList[index].add(field);
           }
         }
@@ -92,7 +95,7 @@ void main() async {
         fileString += element + '\n';
       } else {
         fileString +=
-            "@JsonKey(name: '$element') Element ${element.replaceAll('_', '')}Element,\n";
+            "@JsonKey(name: '$element') List<Element> ${element.replaceAll('_', '')}Element,\n";
       }
     });
   }

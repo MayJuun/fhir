@@ -116,7 +116,7 @@ class _$MeasureTearOff {
       @JsonKey(name: '_clinicalRecommendationStatement')
           Element clinicalRecommendationStatementElement,
       @JsonKey(name: '_definition')
-          Element definitionElement,
+          List<Element> definitionElement,
       @JsonKey(name: '_guidance')
           Element guidanceElement}) {
     return _Measure(
@@ -303,7 +303,7 @@ mixin _$Measure {
   @JsonKey(name: '_clinicalRecommendationStatement')
   Element get clinicalRecommendationStatementElement;
   @JsonKey(name: '_definition')
-  Element get definitionElement;
+  List<Element> get definitionElement;
   @JsonKey(name: '_guidance')
   Element get guidanceElement;
 
@@ -414,7 +414,7 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: '_clinicalRecommendationStatement')
           Element clinicalRecommendationStatementElement,
       @JsonKey(name: '_definition')
-          Element definitionElement,
+          List<Element> definitionElement,
       @JsonKey(name: '_guidance')
           Element guidanceElement});
 
@@ -448,7 +448,6 @@ abstract class $MeasureCopyWith<$Res> {
   $ElementCopyWith<$Res> get rateAggregationElement;
   $ElementCopyWith<$Res> get rationaleElement;
   $ElementCopyWith<$Res> get clinicalRecommendationStatementElement;
-  $ElementCopyWith<$Res> get definitionElement;
   $ElementCopyWith<$Res> get guidanceElement;
 }
 
@@ -707,7 +706,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
               : clinicalRecommendationStatementElement as Element,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as Element,
+          : definitionElement as List<Element>,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
           : guidanceElement as Element,
@@ -1018,16 +1017,6 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get definitionElement {
-    if (_value.definitionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.definitionElement, (value) {
-      return _then(_value.copyWith(definitionElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get guidanceElement {
     if (_value.guidanceElement == null) {
       return null;
@@ -1142,7 +1131,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @JsonKey(name: '_clinicalRecommendationStatement')
           Element clinicalRecommendationStatementElement,
       @JsonKey(name: '_definition')
-          Element definitionElement,
+          List<Element> definitionElement,
       @JsonKey(name: '_guidance')
           Element guidanceElement});
 
@@ -1206,8 +1195,6 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   $ElementCopyWith<$Res> get rationaleElement;
   @override
   $ElementCopyWith<$Res> get clinicalRecommendationStatementElement;
-  @override
-  $ElementCopyWith<$Res> get definitionElement;
   @override
   $ElementCopyWith<$Res> get guidanceElement;
 }
@@ -1468,7 +1455,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
               : clinicalRecommendationStatementElement as Element,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as Element,
+          : definitionElement as List<Element>,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
           : guidanceElement as Element,
@@ -1760,7 +1747,7 @@ class _$_Measure implements _Measure {
   final Element clinicalRecommendationStatementElement;
   @override
   @JsonKey(name: '_definition')
-  final Element definitionElement;
+  final List<Element> definitionElement;
   @override
   @JsonKey(name: '_guidance')
   final Element guidanceElement;
@@ -2085,7 +2072,7 @@ abstract class _Measure implements Measure {
       @JsonKey(name: '_clinicalRecommendationStatement')
           Element clinicalRecommendationStatementElement,
       @JsonKey(name: '_definition')
-          Element definitionElement,
+          List<Element> definitionElement,
       @JsonKey(name: '_guidance')
           Element guidanceElement}) = _$_Measure;
 
@@ -2264,7 +2251,7 @@ abstract class _Measure implements Measure {
   Element get clinicalRecommendationStatementElement;
   @override
   @JsonKey(name: '_definition')
-  Element get definitionElement;
+  List<Element> get definitionElement;
   @override
   @JsonKey(name: '_guidance')
   Element get guidanceElement;
@@ -12575,9 +12562,9 @@ class _$TestScriptCapabilityTearOff {
       @JsonKey(name: '_required') Element requiredElement,
       @JsonKey(name: '_validated') Element validatedElement,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_origin') List<Element> originElement,
       @JsonKey(name: '_destination') Element destinationElement,
-      @JsonKey(name: '_link') Element linkElement}) {
+      @JsonKey(name: '_link') List<Element> linkElement}) {
     return _TestScriptCapability(
       id: id,
       extension_: extension_,
@@ -12623,11 +12610,11 @@ mixin _$TestScriptCapability {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @JsonKey(name: '_origin')
-  Element get originElement;
+  List<Element> get originElement;
   @JsonKey(name: '_destination')
   Element get destinationElement;
   @JsonKey(name: '_link')
-  Element get linkElement;
+  List<Element> get linkElement;
 
   Map<String, dynamic> toJson();
   $TestScriptCapabilityCopyWith<TestScriptCapability> get copyWith;
@@ -12651,16 +12638,14 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       @JsonKey(name: '_required') Element requiredElement,
       @JsonKey(name: '_validated') Element validatedElement,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_origin') List<Element> originElement,
       @JsonKey(name: '_destination') Element destinationElement,
-      @JsonKey(name: '_link') Element linkElement});
+      @JsonKey(name: '_link') List<Element> linkElement});
 
   $ElementCopyWith<$Res> get requiredElement;
   $ElementCopyWith<$Res> get validatedElement;
   $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get originElement;
   $ElementCopyWith<$Res> get destinationElement;
-  $ElementCopyWith<$Res> get linkElement;
 }
 
 class _$TestScriptCapabilityCopyWithImpl<$Res>
@@ -12720,12 +12705,13 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
           : descriptionElement as Element,
       originElement: originElement == freezed
           ? _value.originElement
-          : originElement as Element,
+          : originElement as List<Element>,
       destinationElement: destinationElement == freezed
           ? _value.destinationElement
           : destinationElement as Element,
-      linkElement:
-          linkElement == freezed ? _value.linkElement : linkElement as Element,
+      linkElement: linkElement == freezed
+          ? _value.linkElement
+          : linkElement as List<Element>,
     ));
   }
 
@@ -12760,32 +12746,12 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get originElement {
-    if (_value.originElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.originElement, (value) {
-      return _then(_value.copyWith(originElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get destinationElement {
     if (_value.destinationElement == null) {
       return null;
     }
     return $ElementCopyWith<$Res>(_value.destinationElement, (value) {
       return _then(_value.copyWith(destinationElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get linkElement {
-    if (_value.linkElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.linkElement, (value) {
-      return _then(_value.copyWith(linkElement: value));
     });
   }
 }
@@ -12810,9 +12776,9 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
       @JsonKey(name: '_required') Element requiredElement,
       @JsonKey(name: '_validated') Element validatedElement,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_origin') List<Element> originElement,
       @JsonKey(name: '_destination') Element destinationElement,
-      @JsonKey(name: '_link') Element linkElement});
+      @JsonKey(name: '_link') List<Element> linkElement});
 
   @override
   $ElementCopyWith<$Res> get requiredElement;
@@ -12821,11 +12787,7 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get descriptionElement;
   @override
-  $ElementCopyWith<$Res> get originElement;
-  @override
   $ElementCopyWith<$Res> get destinationElement;
-  @override
-  $ElementCopyWith<$Res> get linkElement;
 }
 
 class __$TestScriptCapabilityCopyWithImpl<$Res>
@@ -12887,12 +12849,13 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
           : descriptionElement as Element,
       originElement: originElement == freezed
           ? _value.originElement
-          : originElement as Element,
+          : originElement as List<Element>,
       destinationElement: destinationElement == freezed
           ? _value.destinationElement
           : destinationElement as Element,
-      linkElement:
-          linkElement == freezed ? _value.linkElement : linkElement as Element,
+      linkElement: linkElement == freezed
+          ? _value.linkElement
+          : linkElement as List<Element>,
     ));
   }
 }
@@ -12955,13 +12918,13 @@ class _$_TestScriptCapability implements _TestScriptCapability {
   final Element descriptionElement;
   @override
   @JsonKey(name: '_origin')
-  final Element originElement;
+  final List<Element> originElement;
   @override
   @JsonKey(name: '_destination')
   final Element destinationElement;
   @override
   @JsonKey(name: '_link')
-  final Element linkElement;
+  final List<Element> linkElement;
 
   @override
   String toString() {
@@ -13052,22 +13015,23 @@ class _$_TestScriptCapability implements _TestScriptCapability {
 
 abstract class _TestScriptCapability implements TestScriptCapability {
   const factory _TestScriptCapability(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(name: 'required') Boolean required_,
-      Boolean validated,
-      String description,
-      List<Integer> origin,
-      Integer destination,
-      List<FhirUri> link,
-      @required @JsonKey(required: true) Canonical capabilities,
-      @JsonKey(name: '_required') Element requiredElement,
-      @JsonKey(name: '_validated') Element validatedElement,
-      @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_origin') Element originElement,
-      @JsonKey(name: '_destination') Element destinationElement,
-      @JsonKey(name: '_link') Element linkElement}) = _$_TestScriptCapability;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          @JsonKey(name: 'required') Boolean required_,
+          Boolean validated,
+          String description,
+          List<Integer> origin,
+          Integer destination,
+          List<FhirUri> link,
+          @required @JsonKey(required: true) Canonical capabilities,
+          @JsonKey(name: '_required') Element requiredElement,
+          @JsonKey(name: '_validated') Element validatedElement,
+          @JsonKey(name: '_description') Element descriptionElement,
+          @JsonKey(name: '_origin') List<Element> originElement,
+          @JsonKey(name: '_destination') Element destinationElement,
+          @JsonKey(name: '_link') List<Element> linkElement}) =
+      _$_TestScriptCapability;
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
       _$_TestScriptCapability.fromJson;
@@ -13106,13 +13070,13 @@ abstract class _TestScriptCapability implements TestScriptCapability {
   Element get descriptionElement;
   @override
   @JsonKey(name: '_origin')
-  Element get originElement;
+  List<Element> get originElement;
   @override
   @JsonKey(name: '_destination')
   Element get destinationElement;
   @override
   @JsonKey(name: '_link')
-  Element get linkElement;
+  List<Element> get linkElement;
   @override
   _$TestScriptCapabilityCopyWith<_TestScriptCapability> get copyWith;
 }

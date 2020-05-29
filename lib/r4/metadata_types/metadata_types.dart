@@ -29,7 +29,7 @@ abstract class Contributor with _$Contributor {
     String name,
     List<ContactDetail> contact,
     @JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_name') Element nameElement,
   }) = _Contributor;
   factory Contributor.fromJson(Map<String, dynamic> json) =>
       _$ContributorFromJson(json);
@@ -50,8 +50,8 @@ abstract class DataRequirement with _$DataRequirement {
     PositiveInt limit,
     List<DataRequirementSort> sort,
     @JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_mustSupport') Element mustSupportElement,
-@JsonKey(name: '_limit') Element limitElement,
+    @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
+    @JsonKey(name: '_limit') Element limitElement,
   }) = _DataRequirement;
   factory DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementFromJson(json);
@@ -68,7 +68,7 @@ abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
     Canonical valueSet,
     List<Coding> code,
     @JsonKey(name: '_path') Element pathElement,
-@JsonKey(name: '_searchParam') Element searchParamElement,
+    @JsonKey(name: '_searchParam') Element searchParamElement,
   }) = _DataRequirementCodeFilter;
   factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementCodeFilterFromJson(json);
@@ -86,8 +86,8 @@ abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
     Period valuePeriod,
     Duration valueDuration,
     @JsonKey(name: '_path') Element pathElement,
-@JsonKey(name: '_searchParam') Element searchParamElement,
-@JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_searchParam') Element searchParamElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _DataRequirementDateFilter;
   factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementDateFilterFromJson(json);
@@ -101,8 +101,8 @@ abstract class DataRequirementSort with _$DataRequirementSort {
     List<FhirExtension> modifierExtension,
     String path,
     @JsonKey(unknownEnumValue: SortDirection.unknown) SortDirection direction,
-  @JsonKey(name: '_path') Element pathElement,
-@JsonKey(name: '_direction') Element directionElement,
+    @JsonKey(name: '_path') Element pathElement,
+    @JsonKey(name: '_direction') Element directionElement,
   }) = _DataRequirementSort;
   factory DataRequirementSort.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementSortFromJson(json);
@@ -121,11 +121,11 @@ abstract class ParameterDefinition with _$ParameterDefinition {
     Code type,
     Canonical profile,
     @JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_use') Element useElement,
-@JsonKey(name: '_min') Element minElement,
-@JsonKey(name: '_max') Element maxElement,
-@JsonKey(name: '_documentation') Element documentationElement,
-@JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_use') Element useElement,
+    @JsonKey(name: '_min') Element minElement,
+    @JsonKey(name: '_max') Element maxElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _ParameterDefinition;
   factory ParameterDefinition.fromJson(Map<String, dynamic> json) =>
       _$ParameterDefinitionFromJson(json);
@@ -145,10 +145,10 @@ abstract class RelatedArtifact with _$RelatedArtifact {
     Attachment document,
     Canonical resource,
     @JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_label') Element labelElement,
-@JsonKey(name: '_display') Element displayElement,
-@JsonKey(name: '_citation') Element citationElement,
-@JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_label') Element labelElement,
+    @JsonKey(name: '_display') Element displayElement,
+    @JsonKey(name: '_citation') Element citationElement,
+    @JsonKey(name: '_url') Element urlElement,
   }) = _RelatedArtifact;
   factory RelatedArtifact.fromJson(Map<String, dynamic> json) =>
       _$RelatedArtifactFromJson(json);
@@ -169,9 +169,9 @@ abstract class TriggerDefinition with _$TriggerDefinition {
     List<DataRequirement> data,
     Expression condition,
     @JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_timingDate') Element timingDateElement,
-@JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_timingDate') Element timingDateElement,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
   }) = _TriggerDefinition;
   factory TriggerDefinition.fromJson(Map<String, dynamic> json) =>
       _$TriggerDefinitionFromJson(json);
@@ -204,10 +204,10 @@ abstract class Expression with _$Expression {
     String expression,
     FhirUri reference,
     @JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_expression') Element expressionElement,
-@JsonKey(name: '_reference') Element referenceElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_expression') Element expressionElement,
+    @JsonKey(name: '_reference') Element referenceElement,
   }) = _Expression;
   factory Expression.fromJson(Map<String, dynamic> json) =>
       _$ExpressionFromJson(json);

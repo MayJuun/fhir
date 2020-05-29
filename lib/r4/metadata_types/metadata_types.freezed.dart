@@ -558,7 +558,7 @@ class _$DataRequirementTearOff {
       PositiveInt limit,
       List<DataRequirementSort> sort,
       @JsonKey(name: '_type') Element typeElement,
-      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
       @JsonKey(name: '_limit') Element limitElement}) {
     return _DataRequirement(
       id: id,
@@ -598,7 +598,7 @@ mixin _$DataRequirement {
   @JsonKey(name: '_type')
   Element get typeElement;
   @JsonKey(name: '_mustSupport')
-  Element get mustSupportElement;
+  List<Element> get mustSupportElement;
   @JsonKey(name: '_limit')
   Element get limitElement;
 
@@ -623,13 +623,12 @@ abstract class $DataRequirementCopyWith<$Res> {
       PositiveInt limit,
       List<DataRequirementSort> sort,
       @JsonKey(name: '_type') Element typeElement,
-      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
       @JsonKey(name: '_limit') Element limitElement});
 
   $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
   $ReferenceCopyWith<$Res> get subjectReference;
   $ElementCopyWith<$Res> get typeElement;
-  $ElementCopyWith<$Res> get mustSupportElement;
   $ElementCopyWith<$Res> get limitElement;
 }
 
@@ -686,7 +685,7 @@ class _$DataRequirementCopyWithImpl<$Res>
           typeElement == freezed ? _value.typeElement : typeElement as Element,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as Element,
+          : mustSupportElement as List<Element>,
       limitElement: limitElement == freezed
           ? _value.limitElement
           : limitElement as Element,
@@ -725,16 +724,6 @@ class _$DataRequirementCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get mustSupportElement {
-    if (_value.mustSupportElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.mustSupportElement, (value) {
-      return _then(_value.copyWith(mustSupportElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get limitElement {
     if (_value.limitElement == null) {
       return null;
@@ -764,7 +753,7 @@ abstract class _$DataRequirementCopyWith<$Res>
       PositiveInt limit,
       List<DataRequirementSort> sort,
       @JsonKey(name: '_type') Element typeElement,
-      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
       @JsonKey(name: '_limit') Element limitElement});
 
   @override
@@ -773,8 +762,6 @@ abstract class _$DataRequirementCopyWith<$Res>
   $ReferenceCopyWith<$Res> get subjectReference;
   @override
   $ElementCopyWith<$Res> get typeElement;
-  @override
-  $ElementCopyWith<$Res> get mustSupportElement;
   @override
   $ElementCopyWith<$Res> get limitElement;
 }
@@ -834,7 +821,7 @@ class __$DataRequirementCopyWithImpl<$Res>
           typeElement == freezed ? _value.typeElement : typeElement as Element,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as Element,
+          : mustSupportElement as List<Element>,
       limitElement: limitElement == freezed
           ? _value.limitElement
           : limitElement as Element,
@@ -891,7 +878,7 @@ class _$_DataRequirement implements _DataRequirement {
   final Element typeElement;
   @override
   @JsonKey(name: '_mustSupport')
-  final Element mustSupportElement;
+  final List<Element> mustSupportElement;
   @override
   @JsonKey(name: '_limit')
   final Element limitElement;
@@ -987,7 +974,7 @@ abstract class _DataRequirement implements DataRequirement {
       PositiveInt limit,
       List<DataRequirementSort> sort,
       @JsonKey(name: '_type') Element typeElement,
-      @JsonKey(name: '_mustSupport') Element mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
       @JsonKey(name: '_limit') Element limitElement}) = _$_DataRequirement;
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
@@ -1021,7 +1008,7 @@ abstract class _DataRequirement implements DataRequirement {
   Element get typeElement;
   @override
   @JsonKey(name: '_mustSupport')
-  Element get mustSupportElement;
+  List<Element> get mustSupportElement;
   @override
   @JsonKey(name: '_limit')
   Element get limitElement;

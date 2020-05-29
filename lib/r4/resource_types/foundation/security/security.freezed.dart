@@ -947,7 +947,7 @@ class _$AuditEventAgentTearOff {
       @JsonKey(name: '_altId') Element altIdElement,
       @JsonKey(name: '_name') Element nameElement,
       @JsonKey(name: '_requestor') Element requestorElement,
-      @JsonKey(name: '_policy') Element policyElement}) {
+      @JsonKey(name: '_policy') List<Element> policyElement}) {
     return _AuditEventAgent(
       id: id,
       extension_: extension_,
@@ -997,7 +997,7 @@ mixin _$AuditEventAgent {
   @JsonKey(name: '_requestor')
   Element get requestorElement;
   @JsonKey(name: '_policy')
-  Element get policyElement;
+  List<Element> get policyElement;
 
   Map<String, dynamic> toJson();
   $AuditEventAgentCopyWith<AuditEventAgent> get copyWith;
@@ -1025,7 +1025,7 @@ abstract class $AuditEventAgentCopyWith<$Res> {
       @JsonKey(name: '_altId') Element altIdElement,
       @JsonKey(name: '_name') Element nameElement,
       @JsonKey(name: '_requestor') Element requestorElement,
-      @JsonKey(name: '_policy') Element policyElement});
+      @JsonKey(name: '_policy') List<Element> policyElement});
 
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get who;
@@ -1035,7 +1035,6 @@ abstract class $AuditEventAgentCopyWith<$Res> {
   $ElementCopyWith<$Res> get altIdElement;
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get requestorElement;
-  $ElementCopyWith<$Res> get policyElement;
 }
 
 class _$AuditEventAgentCopyWithImpl<$Res>
@@ -1099,7 +1098,7 @@ class _$AuditEventAgentCopyWithImpl<$Res>
           : requestorElement as Element,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as Element,
+          : policyElement as List<Element>,
     ));
   }
 
@@ -1182,16 +1181,6 @@ class _$AuditEventAgentCopyWithImpl<$Res>
       return _then(_value.copyWith(requestorElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get policyElement {
-    if (_value.policyElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.policyElement, (value) {
-      return _then(_value.copyWith(policyElement: value));
-    });
-  }
 }
 
 abstract class _$AuditEventAgentCopyWith<$Res>
@@ -1218,7 +1207,7 @@ abstract class _$AuditEventAgentCopyWith<$Res>
       @JsonKey(name: '_altId') Element altIdElement,
       @JsonKey(name: '_name') Element nameElement,
       @JsonKey(name: '_requestor') Element requestorElement,
-      @JsonKey(name: '_policy') Element policyElement});
+      @JsonKey(name: '_policy') List<Element> policyElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -1236,8 +1225,6 @@ abstract class _$AuditEventAgentCopyWith<$Res>
   $ElementCopyWith<$Res> get nameElement;
   @override
   $ElementCopyWith<$Res> get requestorElement;
-  @override
-  $ElementCopyWith<$Res> get policyElement;
 }
 
 class __$AuditEventAgentCopyWithImpl<$Res>
@@ -1303,7 +1290,7 @@ class __$AuditEventAgentCopyWithImpl<$Res>
           : requestorElement as Element,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as Element,
+          : policyElement as List<Element>,
     ));
   }
 }
@@ -1373,7 +1360,7 @@ class _$_AuditEventAgent implements _AuditEventAgent {
   final Element requestorElement;
   @override
   @JsonKey(name: '_policy')
-  final Element policyElement;
+  final List<Element> policyElement;
 
   @override
   String toString() {
@@ -1466,24 +1453,25 @@ class _$_AuditEventAgent implements _AuditEventAgent {
 
 abstract class _AuditEventAgent implements AuditEventAgent {
   const factory _AuditEventAgent(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept type,
-      List<CodeableConcept> role,
-      Reference who,
-      String altId,
-      String name,
-      Boolean requestor,
-      Reference location,
-      List<FhirUri> policy,
-      Coding media,
-      AuditEventNetwork network,
-      List<CodeableConcept> purposeOfUse,
-      @JsonKey(name: '_altId') Element altIdElement,
-      @JsonKey(name: '_name') Element nameElement,
-      @JsonKey(name: '_requestor') Element requestorElement,
-      @JsonKey(name: '_policy') Element policyElement}) = _$_AuditEventAgent;
+          {String id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          CodeableConcept type,
+          List<CodeableConcept> role,
+          Reference who,
+          String altId,
+          String name,
+          Boolean requestor,
+          Reference location,
+          List<FhirUri> policy,
+          Coding media,
+          AuditEventNetwork network,
+          List<CodeableConcept> purposeOfUse,
+          @JsonKey(name: '_altId') Element altIdElement,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_requestor') Element requestorElement,
+          @JsonKey(name: '_policy') List<Element> policyElement}) =
+      _$_AuditEventAgent;
 
   factory _AuditEventAgent.fromJson(Map<String, dynamic> json) =
       _$_AuditEventAgent.fromJson;
@@ -1528,7 +1516,7 @@ abstract class _AuditEventAgent implements AuditEventAgent {
   Element get requestorElement;
   @override
   @JsonKey(name: '_policy')
-  Element get policyElement;
+  List<Element> get policyElement;
   @override
   _$AuditEventAgentCopyWith<_AuditEventAgent> get copyWith;
 }
@@ -5611,7 +5599,7 @@ class _$ProvenanceTearOff {
       @JsonKey(name: '_recorded')
           Element recordedElement,
       @JsonKey(name: '_policy')
-          Element policyElement}) {
+          List<Element> policyElement}) {
     return _Provenance(
       resourceType: resourceType,
       id: id,
@@ -5679,7 +5667,7 @@ mixin _$Provenance {
   @JsonKey(name: '_recorded')
   Element get recordedElement;
   @JsonKey(name: '_policy')
-  Element get policyElement;
+  List<Element> get policyElement;
 
   Map<String, dynamic> toJson();
   $ProvenanceCopyWith<Provenance> get copyWith;
@@ -5714,7 +5702,7 @@ abstract class $ProvenanceCopyWith<$Res> {
       @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
       @JsonKey(name: '_recorded') Element recordedElement,
-      @JsonKey(name: '_policy') Element policyElement});
+      @JsonKey(name: '_policy') List<Element> policyElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -5725,7 +5713,6 @@ abstract class $ProvenanceCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get occurredDateTimeElement;
   $ElementCopyWith<$Res> get recordedElement;
-  $ElementCopyWith<$Res> get policyElement;
 }
 
 class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
@@ -5816,7 +5803,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
           : recordedElement as Element,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as Element,
+          : policyElement as List<Element>,
     ));
   }
 
@@ -5909,16 +5896,6 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
       return _then(_value.copyWith(recordedElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get policyElement {
-    if (_value.policyElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.policyElement, (value) {
-      return _then(_value.copyWith(policyElement: value));
-    });
-  }
 }
 
 abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
@@ -5951,7 +5928,7 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
       @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
       @JsonKey(name: '_recorded') Element recordedElement,
-      @JsonKey(name: '_policy') Element policyElement});
+      @JsonKey(name: '_policy') List<Element> policyElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -5971,8 +5948,6 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
   $ElementCopyWith<$Res> get occurredDateTimeElement;
   @override
   $ElementCopyWith<$Res> get recordedElement;
-  @override
-  $ElementCopyWith<$Res> get policyElement;
 }
 
 class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
@@ -6065,7 +6040,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
           : recordedElement as Element,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as Element,
+          : policyElement as List<Element>,
     ));
   }
 }
@@ -6175,7 +6150,7 @@ class _$_Provenance implements _Provenance {
   final Element recordedElement;
   @override
   @JsonKey(name: '_policy')
-  final Element policyElement;
+  final List<Element> policyElement;
 
   @override
   String toString() {
@@ -6332,7 +6307,7 @@ abstract class _Provenance implements Provenance {
       @JsonKey(name: '_recorded')
           Element recordedElement,
       @JsonKey(name: '_policy')
-          Element policyElement}) = _$_Provenance;
+          List<Element> policyElement}) = _$_Provenance;
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
       _$_Provenance.fromJson;
@@ -6395,7 +6370,7 @@ abstract class _Provenance implements Provenance {
   Element get recordedElement;
   @override
   @JsonKey(name: '_policy')
-  Element get policyElement;
+  List<Element> get policyElement;
   @override
   _$ProvenanceCopyWith<_Provenance> get copyWith;
 }

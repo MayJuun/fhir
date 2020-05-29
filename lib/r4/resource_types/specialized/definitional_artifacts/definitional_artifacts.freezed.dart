@@ -3112,7 +3112,7 @@ class _$DeviceDefinitionTearOff {
       @JsonKey(name: '_modelNumber')
           Element modelNumberElement,
       @JsonKey(name: '_version')
-          Element versionElement,
+          List<Element> versionElement,
       @JsonKey(name: '_url')
           Element urlElement,
       @JsonKey(name: '_onlineInformation')
@@ -3208,7 +3208,7 @@ mixin _$DeviceDefinition {
   @JsonKey(name: '_modelNumber')
   Element get modelNumberElement;
   @JsonKey(name: '_version')
-  Element get versionElement;
+  List<Element> get versionElement;
   @JsonKey(name: '_url')
   Element get urlElement;
   @JsonKey(name: '_onlineInformation')
@@ -3266,7 +3266,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       @JsonKey(name: '_modelNumber')
           Element modelNumberElement,
       @JsonKey(name: '_version')
-          Element versionElement,
+          List<Element> versionElement,
       @JsonKey(name: '_url')
           Element urlElement,
       @JsonKey(name: '_onlineInformation')
@@ -3284,7 +3284,6 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get manufacturerStringElement;
   $ElementCopyWith<$Res> get modelNumberElement;
-  $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get onlineInformationElement;
 }
@@ -3426,7 +3425,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
           : modelNumberElement as Element,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element,
+          : versionElement as List<Element>,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
       onlineInformationElement: onlineInformationElement == freezed
@@ -3557,16 +3556,6 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get versionElement {
-    if (_value.versionElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
-      return _then(_value.copyWith(versionElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get urlElement {
     if (_value.urlElement == null) {
       return null;
@@ -3637,7 +3626,7 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
       @JsonKey(name: '_modelNumber')
           Element modelNumberElement,
       @JsonKey(name: '_version')
-          Element versionElement,
+          List<Element> versionElement,
       @JsonKey(name: '_url')
           Element urlElement,
       @JsonKey(name: '_onlineInformation')
@@ -3667,8 +3656,6 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get manufacturerStringElement;
   @override
   $ElementCopyWith<$Res> get modelNumberElement;
-  @override
-  $ElementCopyWith<$Res> get versionElement;
   @override
   $ElementCopyWith<$Res> get urlElement;
   @override
@@ -3814,7 +3801,7 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
           : modelNumberElement as Element,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element,
+          : versionElement as List<Element>,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
       onlineInformationElement: onlineInformationElement == freezed
@@ -3961,7 +3948,7 @@ class _$_DeviceDefinition implements _DeviceDefinition {
   final Element modelNumberElement;
   @override
   @JsonKey(name: '_version')
-  final Element versionElement;
+  final List<Element> versionElement;
   @override
   @JsonKey(name: '_url')
   final Element urlElement;
@@ -4160,7 +4147,7 @@ abstract class _DeviceDefinition implements DeviceDefinition {
       @JsonKey(name: '_modelNumber')
           Element modelNumberElement,
       @JsonKey(name: '_version')
-          Element versionElement,
+          List<Element> versionElement,
       @JsonKey(name: '_url')
           Element urlElement,
       @JsonKey(name: '_onlineInformation')
@@ -4249,7 +4236,7 @@ abstract class _DeviceDefinition implements DeviceDefinition {
   Element get modelNumberElement;
   @override
   @JsonKey(name: '_version')
-  Element get versionElement;
+  List<Element> get versionElement;
   @override
   @JsonKey(name: '_url')
   Element get urlElement;
@@ -7880,7 +7867,7 @@ class _$ObservationDefinitionTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_permittedDataType')
-          Element permittedDataTypeElement,
+          List<Element> permittedDataTypeElement,
       @JsonKey(name: '_multipleResultsAllowed')
           Element multipleResultsAllowedElement,
       @JsonKey(name: '_preferredReportName')
@@ -7951,7 +7938,7 @@ mixin _$ObservationDefinition {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_permittedDataType')
-  Element get permittedDataTypeElement;
+  List<Element> get permittedDataTypeElement;
   @JsonKey(name: '_multipleResultsAllowed')
   Element get multipleResultsAllowedElement;
   @JsonKey(name: '_preferredReportName')
@@ -7996,7 +7983,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_permittedDataType')
-          Element permittedDataTypeElement,
+          List<Element> permittedDataTypeElement,
       @JsonKey(name: '_multipleResultsAllowed')
           Element multipleResultsAllowedElement,
       @JsonKey(name: '_preferredReportName')
@@ -8014,7 +8001,6 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get criticalCodedValueSet;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get permittedDataTypeElement;
   $ElementCopyWith<$Res> get multipleResultsAllowedElement;
   $ElementCopyWith<$Res> get preferredReportNameElement;
 }
@@ -8119,7 +8105,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
           : languageElement as Element,
       permittedDataTypeElement: permittedDataTypeElement == freezed
           ? _value.permittedDataTypeElement
-          : permittedDataTypeElement as Element,
+          : permittedDataTypeElement as List<Element>,
       multipleResultsAllowedElement: multipleResultsAllowedElement == freezed
           ? _value.multipleResultsAllowedElement
           : multipleResultsAllowedElement as Element,
@@ -8242,16 +8228,6 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get permittedDataTypeElement {
-    if (_value.permittedDataTypeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.permittedDataTypeElement, (value) {
-      return _then(_value.copyWith(permittedDataTypeElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get multipleResultsAllowedElement {
     if (_value.multipleResultsAllowedElement == null) {
       return null;
@@ -8310,7 +8286,7 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_permittedDataType')
-          Element permittedDataTypeElement,
+          List<Element> permittedDataTypeElement,
       @JsonKey(name: '_multipleResultsAllowed')
           Element multipleResultsAllowedElement,
       @JsonKey(name: '_preferredReportName')
@@ -8339,8 +8315,6 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get permittedDataTypeElement;
   @override
   $ElementCopyWith<$Res> get multipleResultsAllowedElement;
   @override
@@ -8449,7 +8423,7 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
           : languageElement as Element,
       permittedDataTypeElement: permittedDataTypeElement == freezed
           ? _value.permittedDataTypeElement
-          : permittedDataTypeElement as Element,
+          : permittedDataTypeElement as List<Element>,
       multipleResultsAllowedElement: multipleResultsAllowedElement == freezed
           ? _value.multipleResultsAllowedElement
           : multipleResultsAllowedElement as Element,
@@ -8561,7 +8535,7 @@ class _$_ObservationDefinition implements _ObservationDefinition {
   final Element languageElement;
   @override
   @JsonKey(name: '_permittedDataType')
-  final Element permittedDataTypeElement;
+  final List<Element> permittedDataTypeElement;
   @override
   @JsonKey(name: '_multipleResultsAllowed')
   final Element multipleResultsAllowedElement;
@@ -8724,7 +8698,7 @@ abstract class _ObservationDefinition implements ObservationDefinition {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_permittedDataType')
-          Element permittedDataTypeElement,
+          List<Element> permittedDataTypeElement,
       @JsonKey(name: '_multipleResultsAllowed')
           Element multipleResultsAllowedElement,
       @JsonKey(name: '_preferredReportName')
@@ -8788,7 +8762,7 @@ abstract class _ObservationDefinition implements ObservationDefinition {
   Element get languageElement;
   @override
   @JsonKey(name: '_permittedDataType')
-  Element get permittedDataTypeElement;
+  List<Element> get permittedDataTypeElement;
   @override
   @JsonKey(name: '_multipleResultsAllowed')
   Element get multipleResultsAllowedElement;
@@ -12317,7 +12291,7 @@ class _$PlanDefinitionActionTearOff {
       @JsonKey(name: '_priority')
           Element priorityElement,
       @JsonKey(name: '_goalId')
-          Element goalIdElement,
+          List<Element> goalIdElement,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       @JsonKey(name: '_groupingBehavior')
@@ -12448,7 +12422,7 @@ mixin _$PlanDefinitionAction {
   @JsonKey(name: '_priority')
   Element get priorityElement;
   @JsonKey(name: '_goalId')
-  Element get goalIdElement;
+  List<Element> get goalIdElement;
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
   @JsonKey(name: '_groupingBehavior')
@@ -12529,7 +12503,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       @JsonKey(name: '_priority')
           Element priorityElement,
       @JsonKey(name: '_goalId')
-          Element goalIdElement,
+          List<Element> goalIdElement,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       @JsonKey(name: '_groupingBehavior')
@@ -12560,7 +12534,6 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get textEquivalentElement;
   $ElementCopyWith<$Res> get priorityElement;
-  $ElementCopyWith<$Res> get goalIdElement;
   $ElementCopyWith<$Res> get timingDateTimeElement;
   $ElementCopyWith<$Res> get groupingBehaviorElement;
   $ElementCopyWith<$Res> get selectionBehaviorElement;
@@ -12739,7 +12712,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           : priorityElement as Element,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as Element,
+          : goalIdElement as List<Element>,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -12899,16 +12872,6 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get goalIdElement {
-    if (_value.goalIdElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.goalIdElement, (value) {
-      return _then(_value.copyWith(goalIdElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get timingDateTimeElement {
     if (_value.timingDateTimeElement == null) {
       return null;
@@ -13050,7 +13013,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       @JsonKey(name: '_priority')
           Element priorityElement,
       @JsonKey(name: '_goalId')
-          Element goalIdElement,
+          List<Element> goalIdElement,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       @JsonKey(name: '_groupingBehavior')
@@ -13094,8 +13057,6 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
   $ElementCopyWith<$Res> get textEquivalentElement;
   @override
   $ElementCopyWith<$Res> get priorityElement;
-  @override
-  $ElementCopyWith<$Res> get goalIdElement;
   @override
   $ElementCopyWith<$Res> get timingDateTimeElement;
   @override
@@ -13284,7 +13245,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
           : priorityElement as Element,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as Element,
+          : goalIdElement as List<Element>,
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element,
@@ -13488,7 +13449,7 @@ class _$_PlanDefinitionAction implements _PlanDefinitionAction {
   final Element priorityElement;
   @override
   @JsonKey(name: '_goalId')
-  final Element goalIdElement;
+  final List<Element> goalIdElement;
   @override
   @JsonKey(name: '_timingDateTime')
   final Element timingDateTimeElement;
@@ -13740,7 +13701,7 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
       @JsonKey(name: '_priority')
           Element priorityElement,
       @JsonKey(name: '_goalId')
-          Element goalIdElement,
+          List<Element> goalIdElement,
       @JsonKey(name: '_timingDateTime')
           Element timingDateTimeElement,
       @JsonKey(name: '_groupingBehavior')
@@ -13858,7 +13819,7 @@ abstract class _PlanDefinitionAction implements PlanDefinitionAction {
   Element get priorityElement;
   @override
   @JsonKey(name: '_goalId')
-  Element get goalIdElement;
+  List<Element> get goalIdElement;
   @override
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
@@ -15207,7 +15168,7 @@ class _$QuestionnaireTearOff {
       @JsonKey(name: '_experimental')
           Element experimentalElement,
       @JsonKey(name: '_subjectType')
-          Element subjectTypeElement,
+          List<Element> subjectTypeElement,
       @JsonKey(name: '_date')
           Element dateElement,
       @JsonKey(name: '_publisher')
@@ -15329,7 +15290,7 @@ mixin _$Questionnaire {
   @JsonKey(name: '_experimental')
   Element get experimentalElement;
   @JsonKey(name: '_subjectType')
-  Element get subjectTypeElement;
+  List<Element> get subjectTypeElement;
   @JsonKey(name: '_date')
   Element get dateElement;
   @JsonKey(name: '_publisher')
@@ -15405,7 +15366,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: '_experimental')
           Element experimentalElement,
       @JsonKey(name: '_subjectType')
-          Element subjectTypeElement,
+          List<Element> subjectTypeElement,
       @JsonKey(name: '_date')
           Element dateElement,
       @JsonKey(name: '_publisher')
@@ -15432,7 +15393,6 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $ElementCopyWith<$Res> get titleElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get experimentalElement;
-  $ElementCopyWith<$Res> get subjectTypeElement;
   $ElementCopyWith<$Res> get dateElement;
   $ElementCopyWith<$Res> get publisherElement;
   $ElementCopyWith<$Res> get descriptionElement;
@@ -15585,7 +15545,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
           : experimentalElement as Element,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as Element,
+          : subjectTypeElement as List<Element>,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisherElement: publisherElement == freezed
@@ -15720,16 +15680,6 @@ class _$QuestionnaireCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get subjectTypeElement {
-    if (_value.subjectTypeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.subjectTypeElement, (value) {
-      return _then(_value.copyWith(subjectTypeElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get dateElement {
     if (_value.dateElement == null) {
       return null;
@@ -15858,7 +15808,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       @JsonKey(name: '_experimental')
           Element experimentalElement,
       @JsonKey(name: '_subjectType')
-          Element subjectTypeElement,
+          List<Element> subjectTypeElement,
       @JsonKey(name: '_date')
           Element dateElement,
       @JsonKey(name: '_publisher')
@@ -15896,8 +15846,6 @@ abstract class _$QuestionnaireCopyWith<$Res>
   $ElementCopyWith<$Res> get statusElement;
   @override
   $ElementCopyWith<$Res> get experimentalElement;
-  @override
-  $ElementCopyWith<$Res> get subjectTypeElement;
   @override
   $ElementCopyWith<$Res> get dateElement;
   @override
@@ -16059,7 +16007,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
           : experimentalElement as Element,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as Element,
+          : subjectTypeElement as List<Element>,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
       publisherElement: publisherElement == freezed
@@ -16250,7 +16198,7 @@ class _$_Questionnaire implements _Questionnaire {
   final Element experimentalElement;
   @override
   @JsonKey(name: '_subjectType')
-  final Element subjectTypeElement;
+  final List<Element> subjectTypeElement;
   @override
   @JsonKey(name: '_date')
   final Element dateElement;
@@ -16489,7 +16437,7 @@ abstract class _Questionnaire implements Questionnaire {
       @JsonKey(name: '_experimental')
           Element experimentalElement,
       @JsonKey(name: '_subjectType')
-          Element subjectTypeElement,
+          List<Element> subjectTypeElement,
       @JsonKey(name: '_date')
           Element dateElement,
       @JsonKey(name: '_publisher')
@@ -16599,7 +16547,7 @@ abstract class _Questionnaire implements Questionnaire {
   Element get experimentalElement;
   @override
   @JsonKey(name: '_subjectType')
-  Element get subjectTypeElement;
+  List<Element> get subjectTypeElement;
   @override
   @JsonKey(name: '_date')
   Element get dateElement;

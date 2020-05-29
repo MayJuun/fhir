@@ -32,12 +32,12 @@ abstract class Group with _$Group implements Resource {
     List<GroupCharacteristic> characteristic,
     List<GroupMember> member,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
-@JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_actual') Element actualElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_quantity') Element quantityElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_actual') Element actualElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_quantity') Element quantityElement,
   }) = _Group;
   factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
 }
@@ -57,7 +57,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
     Boolean exclude,
     Period period,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-@JsonKey(name: '_exclude') Element excludeElement,
+    @JsonKey(name: '_exclude') Element excludeElement,
   }) = _GroupCharacteristic;
   factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$GroupCharacteristicFromJson(json);
@@ -111,15 +111,14 @@ abstract class Patient with _$Patient implements Resource {
     Reference managingOrganization,
     List<PatientLink> link,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
-@JsonKey(name: '_gender') Element genderElement,
-@JsonKey(name: '_birthDate') Element birthDateElement,
-@JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
-@JsonKey(name: '_deceasedDateTime') Element deceasedDateTimeElement,
-@JsonKey(name: '_multipleBirthBoolean') Element multipleBirthBooleanElement,
-@JsonKey(name: '_multipleBirthInteger') Element multipleBirthIntegerElement,
-
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
+    @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
+    @JsonKey(name: '_deceasedDateTime') Element deceasedDateTimeElement,
+    @JsonKey(name: '_multipleBirthBoolean') Element multipleBirthBooleanElement,
+    @JsonKey(name: '_multipleBirthInteger') Element multipleBirthIntegerElement,
   }) = _Patient;
   factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
@@ -197,10 +196,10 @@ abstract class Person with _$Person implements Resource {
     Boolean active,
     List<PersonLink> link,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_gender') Element genderElement,
-@JsonKey(name: '_birthDate') Element birthDateElement,
-@JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
+    @JsonKey(name: '_active') Element activeElement,
   }) = _Person;
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
 }
@@ -213,7 +212,7 @@ abstract class PersonLink with _$PersonLink {
     List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required Reference target,
     @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance assurance,
-  @JsonKey(name: '_assurance') Element assuranceElement,
+    @JsonKey(name: '_assurance') Element assuranceElement,
   }) = _PersonLink;
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
@@ -244,10 +243,10 @@ abstract class Practitioner with _$Practitioner implements Resource {
     List<PractitionerQualification> qualification,
     List<CodeableConcept> communication,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
-@JsonKey(name: '_gender') Element genderElement,
-@JsonKey(name: '_birthDate') Element birthDateElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
   }) = _Practitioner;
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
       _$PractitionerFromJson(json);
@@ -297,10 +296,10 @@ abstract class PractitionerRole with _$PractitionerRole implements Resource {
     String availabilityExceptions,
     List<Reference> endpoint,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
-@JsonKey(name: '_availabilityExceptions') Element availabilityExceptionsElement,
-
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_availabilityExceptions')
+        Element availabilityExceptionsElement,
   }) = _PractitionerRole;
   factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleFromJson(json);
@@ -317,10 +316,10 @@ abstract class PractitionerRoleAvailableTime
     Boolean allDay,
     Time availableStartTime,
     Time availableEndTime,
-    @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
-@JsonKey(name: '_allDay') Element allDayElement,
-@JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
-@JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
+    @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
+    @JsonKey(name: '_allDay') Element allDayElement,
+    @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+    @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _PractitionerRoleAvailableTime;
   factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleAvailableTimeFromJson(json);
@@ -368,10 +367,10 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
     Period period,
     List<RelatedPersonCommunication> communication,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
-@JsonKey(name: '_gender') Element genderElement,
-@JsonKey(name: '_birthDate') Element birthDateElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
   }) = _RelatedPerson;
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonFromJson(json);

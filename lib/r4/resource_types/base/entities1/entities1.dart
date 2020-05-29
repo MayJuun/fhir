@@ -32,12 +32,12 @@ abstract class Endpoint with _$Endpoint implements Resource {
     FhirUrl address,
     List<String> header,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_payloadMimeType') Element payloadMimeTypeElement,
-@JsonKey(name: '_address') Element addressElement,
-@JsonKey(name: '_header') Element headerElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_payloadMimeType') List<Element> payloadMimeTypeElement,
+    @JsonKey(name: '_address') Element addressElement,
+    @JsonKey(name: '_header') List<Element> headerElement,
   }) = _Endpoint;
   factory Endpoint.fromJson(Map<String, dynamic> json) =>
       _$EndpointFromJson(json);
@@ -82,14 +82,14 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
     String availabilityExceptions,
     List<Reference> endpoint,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_comment') Element commentElement,
-@JsonKey(name: '_extraDetails') Element extraDetailsElement,
-@JsonKey(name: '_appointmentRequired') Element appointmentRequiredElement,
-@JsonKey(name: '_availabilityExceptions') Element availabilityExceptionsElement,
-
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_extraDetails') Element extraDetailsElement,
+    @JsonKey(name: '_appointmentRequired') Element appointmentRequiredElement,
+    @JsonKey(name: '_availabilityExceptions')
+        Element availabilityExceptionsElement,
   }) = _HealthcareService;
   factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
@@ -121,10 +121,10 @@ abstract class HealthcareServiceAvailableTime
     Boolean allDay,
     Time availableStartTime,
     Time availableEndTime,
-    @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
-@JsonKey(name: '_allDay') Element allDayElement,
-@JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
-@JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
+    @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
+    @JsonKey(name: '_allDay') Element allDayElement,
+    @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+    @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
@@ -177,14 +177,14 @@ abstract class Location with _$Location implements Resource {
     String availabilityExceptions,
     List<Reference> endpoint,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_alias') Element aliasElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_mode') Element modeElement,
-@JsonKey(name: '_availabilityExceptions') Element availabilityExceptionsElement,
-
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_alias') List<Element> aliasElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_availabilityExceptions')
+        Element availabilityExceptionsElement,
   }) = _Location;
   factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
@@ -200,8 +200,8 @@ abstract class LocationPosition with _$LocationPosition {
     Decimal latitude,
     Decimal altitude,
     @JsonKey(name: '_longitude') Element longitudeElement,
-@JsonKey(name: '_latitude') Element latitudeElement,
-@JsonKey(name: '_altitude') Element altitudeElement,
+    @JsonKey(name: '_latitude') Element latitudeElement,
+    @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
   factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
@@ -217,10 +217,10 @@ abstract class LocationHoursOfOperation with _$LocationHoursOfOperation {
     Boolean allDay,
     Time openingTime,
     Time closingTime,
-    @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
-@JsonKey(name: '_allDay') Element allDayElement,
-@JsonKey(name: '_openingTime') Element openingTimeElement,
-@JsonKey(name: '_closingTime') Element closingTimeElement,
+    @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
+    @JsonKey(name: '_allDay') Element allDayElement,
+    @JsonKey(name: '_openingTime') Element openingTimeElement,
+    @JsonKey(name: '_closingTime') Element closingTimeElement,
   }) = _LocationHoursOfOperation;
   factory LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =>
       _$LocationHoursOfOperationFromJson(json);
@@ -251,10 +251,10 @@ abstract class Organization with _$Organization implements Resource {
     List<OrganizationContact> contact,
     List<Reference> endpoint,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_alias') Element aliasElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_alias') List<Element> aliasElement,
   }) = _Organization;
   factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
@@ -304,8 +304,8 @@ abstract class OrganizationAffiliation
     List<ContactPoint> telecom,
     List<Reference> endpoint,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
   }) = _OrganizationAffiliation;
   factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
       _$OrganizationAffiliationFromJson(json);

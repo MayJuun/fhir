@@ -328,9 +328,10 @@ _$_CodeSystemFilter _$_$_CodeSystemFilterFromJson(Map<String, dynamic> json) {
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    operatorElement: json['_operator'] == null
-        ? null
-        : Element.fromJson(json['_operator'] as Map<String, dynamic>),
+    operatorElement: (json['_operator'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     valueElement: json['_value'] == null
         ? null
         : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -358,7 +359,8 @@ Map<String, dynamic> _$_$_CodeSystemFilterToJson(_$_CodeSystemFilter instance) {
   writeNotNull('value', instance.value);
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('_operator', instance.operatorElement?.toJson());
+  writeNotNull(
+      '_operator', instance.operatorElement?.map((e) => e?.toJson())?.toList());
   writeNotNull('_value', instance.valueElement?.toJson());
   return val;
 }
@@ -1834,12 +1836,14 @@ _$_TerminologyCapabilitiesVersion _$_$_TerminologyCapabilitiesVersionFromJson(
     compositionalElement: json['_compositional'] == null
         ? null
         : Element.fromJson(json['_compositional'] as Map<String, dynamic>),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    propertyElement: json['_property'] == null
-        ? null
-        : Element.fromJson(json['_property'] as Map<String, dynamic>),
+    languageElement: (json['_language'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    propertyElement: (json['_property'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1869,8 +1873,10 @@ Map<String, dynamic> _$_$_TerminologyCapabilitiesVersionToJson(
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('_isDefault', instance.isDefaultElement?.toJson());
   writeNotNull('_compositional', instance.compositionalElement?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('_property', instance.propertyElement?.toJson());
+  writeNotNull(
+      '_language', instance.languageElement?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      '_property', instance.propertyElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -1895,9 +1901,10 @@ _$_TerminologyCapabilitiesFilter _$_$_TerminologyCapabilitiesFilterFromJson(
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
-    opElement: json['_op'] == null
-        ? null
-        : Element.fromJson(json['_op'] as Map<String, dynamic>),
+    opElement: (json['_op'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1919,7 +1926,7 @@ Map<String, dynamic> _$_$_TerminologyCapabilitiesFilterToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('op', instance.op?.map((e) => e?.toJson())?.toList());
   writeNotNull('_code', instance.codeElement?.toJson());
-  writeNotNull('_op', instance.opElement?.toJson());
+  writeNotNull('_op', instance.opElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

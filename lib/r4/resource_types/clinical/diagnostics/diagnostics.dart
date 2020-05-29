@@ -29,9 +29,9 @@ abstract class BodyStructure with _$BodyStructure implements Resource {
     List<Attachment> image,
     @JsonKey(required: true) @required Reference patient,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_active') Element activeElement,
-@JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _BodyStructure;
   factory BodyStructure.fromJson(Map<String, dynamic> json) =>
       _$BodyStructureFromJson(json);
@@ -72,11 +72,11 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     List<CodeableConcept> conclusionCode,
     List<Attachment> presentedForm,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
-@JsonKey(name: '_issued') Element issuedElement,
-@JsonKey(name: '_conclusion') Element conclusionElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_conclusion') Element conclusionElement,
   }) = _DiagnosticReport;
   factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportFromJson(json);
@@ -132,12 +132,12 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     String description,
     List<ImagingStudySeries> series,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_started') Element startedElement,
-@JsonKey(name: '_numberOfSeries') Element numberOfSeriesElement,
-@JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
-@JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_started') Element startedElement,
+    @JsonKey(name: '_numberOfSeries') Element numberOfSeriesElement,
+    @JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _ImagingStudy;
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyFromJson(json);
@@ -162,10 +162,10 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     List<ImagingStudyPerformer> performer,
     List<ImagingStudyInstance> instance,
     @JsonKey(name: '_uid') Element uidElement,
-@JsonKey(name: '_number') Element numberElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
-@JsonKey(name: '_started') Element startedElement,
+    @JsonKey(name: '_number') Element numberElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
+    @JsonKey(name: '_started') Element startedElement,
   }) = _ImagingStudySeries;
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesFromJson(json);
@@ -195,8 +195,8 @@ abstract class ImagingStudyInstance with _$ImagingStudyInstance {
     UnsignedInt number,
     String title,
     @JsonKey(name: '_uid') Element uidElement,
-@JsonKey(name: '_number') Element numberElement,
-@JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_number') Element numberElement,
+    @JsonKey(name: '_title') Element titleElement,
   }) = _ImagingStudyInstance;
   factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyInstanceFromJson(json);
@@ -240,15 +240,15 @@ abstract class Media with _$Media implements Resource {
     @JsonKey(required: true) @required Attachment content,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_createdDateTime') Element createdDateTimeElement,
-@JsonKey(name: '_issued') Element issuedElement,
-@JsonKey(name: '_deviceName') Element deviceNameElement,
-@JsonKey(name: '_height') Element heightElement,
-@JsonKey(name: '_width') Element widthElement,
-@JsonKey(name: '_frames') Element framesElement,
-@JsonKey(name: '_duration') Element durationElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_createdDateTime') Element createdDateTimeElement,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_deviceName') Element deviceNameElement,
+    @JsonKey(name: '_height') Element heightElement,
+    @JsonKey(name: '_width') Element widthElement,
+    @JsonKey(name: '_frames') Element framesElement,
+    @JsonKey(name: '_duration') Element durationElement,
   }) = _Media;
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
 }
@@ -285,11 +285,11 @@ abstract class MolecularSequence with _$MolecularSequence implements Resource {
     List<Reference> pointer,
     List<MolecularSequenceStructureVariant> structureVariant,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_coordinateSystem') Element coordinateSystemElement,
-@JsonKey(name: '_observedSeq') Element observedSeqElement,
-@JsonKey(name: '_readCoverage') Element readCoverageElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_coordinateSystem') Element coordinateSystemElement,
+    @JsonKey(name: '_observedSeq') Element observedSeqElement,
+    @JsonKey(name: '_readCoverage') Element readCoverageElement,
   }) = _MolecularSequence;
   factory MolecularSequence.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceFromJson(json);
@@ -314,11 +314,11 @@ abstract class MolecularSequenceReferenceSeq
     Integer windowStart,
     Integer windowEnd,
     @JsonKey(name: '_genomeBuild') Element genomeBuildElement,
-@JsonKey(name: '_orientation') Element orientationElement,
-@JsonKey(name: '_referenceSeqString') Element referenceSeqStringElement,
-@JsonKey(name: '_strand') Element strandElement,
-@JsonKey(name: '_windowStart') Element windowStartElement,
-@JsonKey(name: '_windowEnd') Element windowEndElement,
+    @JsonKey(name: '_orientation') Element orientationElement,
+    @JsonKey(name: '_referenceSeqString') Element referenceSeqStringElement,
+    @JsonKey(name: '_strand') Element strandElement,
+    @JsonKey(name: '_windowStart') Element windowStartElement,
+    @JsonKey(name: '_windowEnd') Element windowEndElement,
   }) = _MolecularSequenceReferenceSeq;
   factory MolecularSequenceReferenceSeq.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceReferenceSeqFromJson(json);
@@ -337,10 +337,10 @@ abstract class MolecularSequenceVariant with _$MolecularSequenceVariant {
     String cigar,
     Reference variantPointer,
     @JsonKey(name: '_start') Element startElement,
-@JsonKey(name: '_end') Element endElement,
-@JsonKey(name: '_observedAllele') Element observedAlleleElement,
-@JsonKey(name: '_referenceAllele') Element referenceAlleleElement,
-@JsonKey(name: '_cigar') Element cigarElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_observedAllele') Element observedAlleleElement,
+    @JsonKey(name: '_referenceAllele') Element referenceAlleleElement,
+    @JsonKey(name: '_cigar') Element cigarElement,
   }) = _MolecularSequenceVariant;
   factory MolecularSequenceVariant.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceVariantFromJson(json);
@@ -368,16 +368,16 @@ abstract class MolecularSequenceQuality with _$MolecularSequenceQuality {
     Decimal fScore,
     MolecularSequenceRoc roc,
     @JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_start') Element startElement,
-@JsonKey(name: '_end') Element endElement,
-@JsonKey(name: '_truthTP') Element truthTPElement,
-@JsonKey(name: '_queryTP') Element queryTPElement,
-@JsonKey(name: '_truthFN') Element truthFNElement,
-@JsonKey(name: '_queryFP') Element queryFPElement,
-@JsonKey(name: '_gtFP') Element gtFPElement,
-@JsonKey(name: '_precision') Element precisionElement,
-@JsonKey(name: '_recall') Element recallElement,
-@JsonKey(name: '_fScore') Element fScoreElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_truthTP') Element truthTPElement,
+    @JsonKey(name: '_queryTP') Element queryTPElement,
+    @JsonKey(name: '_truthFN') Element truthFNElement,
+    @JsonKey(name: '_queryFP') Element queryFPElement,
+    @JsonKey(name: '_gtFP') Element gtFPElement,
+    @JsonKey(name: '_precision') Element precisionElement,
+    @JsonKey(name: '_recall') Element recallElement,
+    @JsonKey(name: '_fScore') Element fScoreElement,
   }) = _MolecularSequenceQuality;
   factory MolecularSequenceQuality.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceQualityFromJson(json);
@@ -396,13 +396,13 @@ abstract class MolecularSequenceRoc with _$MolecularSequenceRoc {
     List<Decimal> precision,
     List<Decimal> sensitivity,
     List<Decimal> fMeasure,
-    @JsonKey(name: '_score') Element scoreElement,
-@JsonKey(name: '_numTP') Element numTPElement,
-@JsonKey(name: '_numFP') Element numFPElement,
-@JsonKey(name: '_numFN') Element numFNElement,
-@JsonKey(name: '_precision') Element precisionElement,
-@JsonKey(name: '_sensitivity') Element sensitivityElement,
-@JsonKey(name: '_fMeasure') Element fMeasureElement,
+    @JsonKey(name: '_score') List<Element> scoreElement,
+    @JsonKey(name: '_numTP') List<Element> numTPElement,
+    @JsonKey(name: '_numFP') List<Element> numFPElement,
+    @JsonKey(name: '_numFN') List<Element> numFNElement,
+    @JsonKey(name: '_precision') List<Element> precisionElement,
+    @JsonKey(name: '_sensitivity') List<Element> sensitivityElement,
+    @JsonKey(name: '_fMeasure') List<Element> fMeasureElement,
   }) = _MolecularSequenceRoc;
   factory MolecularSequenceRoc.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceRocFromJson(json);
@@ -421,11 +421,11 @@ abstract class MolecularSequenceRepository with _$MolecularSequenceRepository {
     String variantsetId,
     String readsetId,
     @JsonKey(name: '_type') Element typeElement,
-@JsonKey(name: '_url') Element urlElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_datasetId') Element datasetIdElement,
-@JsonKey(name: '_variantsetId') Element variantsetIdElement,
-@JsonKey(name: '_readsetId') Element readsetIdElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_datasetId') Element datasetIdElement,
+    @JsonKey(name: '_variantsetId') Element variantsetIdElement,
+    @JsonKey(name: '_readsetId') Element readsetIdElement,
   }) = _MolecularSequenceRepository;
   factory MolecularSequenceRepository.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceRepositoryFromJson(json);
@@ -444,7 +444,7 @@ abstract class MolecularSequenceStructureVariant
     MolecularSequenceOuter outer,
     MolecularSequenceInner inner,
     @JsonKey(name: '_exact') Element exactElement,
-@JsonKey(name: '_length') Element lengthElement,
+    @JsonKey(name: '_length') Element lengthElement,
   }) = _MolecularSequenceStructureVariant;
   factory MolecularSequenceStructureVariant.fromJson(
           Map<String, dynamic> json) =>
@@ -460,7 +460,7 @@ abstract class MolecularSequenceOuter with _$MolecularSequenceOuter {
     Integer start,
     Integer end,
     @JsonKey(name: '_start') Element startElement,
-@JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_end') Element endElement,
   }) = _MolecularSequenceOuter;
   factory MolecularSequenceOuter.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceOuterFromJson(json);
@@ -475,7 +475,7 @@ abstract class MolecularSequenceInner with _$MolecularSequenceInner {
     Integer start,
     Integer end,
     @JsonKey(name: '_start') Element startElement,
-@JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_end') Element endElement,
   }) = _MolecularSequenceInner;
   factory MolecularSequenceInner.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceInnerFromJson(json);
@@ -534,16 +534,16 @@ abstract class Observation with _$Observation implements Resource {
     List<Reference> derivedFrom,
     List<ObservationComponent> component,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
-@JsonKey(name: '_effectiveInstant') Element effectiveInstantElement,
-@JsonKey(name: '_issued') Element issuedElement,
-@JsonKey(name: '_valueString') Element valueStringElement,
-@JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-@JsonKey(name: '_valueInteger') Element valueIntegerElement,
-@JsonKey(name: '_valueTime') Element valueTimeElement,
-@JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_effectiveInstant') Element effectiveInstantElement,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _Observation;
   factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
@@ -589,10 +589,10 @@ abstract class ObservationComponent with _$ObservationComponent {
     List<CodeableConcept> interpretation,
     List<ObservationReferenceRange> referenceRange,
     @JsonKey(name: '_valueString') Element valueStringElement,
-@JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-@JsonKey(name: '_valueInteger') Element valueIntegerElement,
-@JsonKey(name: '_valueTime') Element valueTimeElement,
-@JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _ObservationComponent;
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
@@ -627,9 +627,9 @@ abstract class QuestionnaireResponse
     Reference source,
     List<QuestionnaireResponseItem> item,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_authored') Element authoredElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_authored') Element authoredElement,
   }) = _QuestionnaireResponse;
   factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseFromJson(json);
@@ -647,8 +647,8 @@ abstract class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
     List<QuestionnaireResponseAnswer> answer,
     List<QuestionnaireResponseItem> item,
     @JsonKey(name: '_linkId') Element linkIdElement,
-@JsonKey(name: '_definition') Element definitionElement,
-@JsonKey(name: '_text') Element textElement,
+    @JsonKey(name: '_definition') Element definitionElement,
+    @JsonKey(name: '_text') Element textElement,
   }) = _QuestionnaireResponseItem;
   factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseItemFromJson(json);
@@ -674,13 +674,13 @@ abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
     Reference valueReference,
     List<QuestionnaireResponseItem> item,
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-@JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-@JsonKey(name: '_valueInteger') Element valueIntegerElement,
-@JsonKey(name: '_valueDate') Element valueDateElement,
-@JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-@JsonKey(name: '_valueTime') Element valueTimeElement,
-@JsonKey(name: '_valueString') Element valueStringElement,
-@JsonKey(name: '_valueUri') Element valueUriElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
   }) = _QuestionnaireResponseAnswer;
   factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseAnswerFromJson(json);
@@ -714,9 +714,9 @@ abstract class Specimen with _$Specimen implements Resource {
     List<CodeableConcept> condition,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_receivedTime') Element receivedTimeElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_receivedTime') Element receivedTimeElement,
   }) = _Specimen;
   factory Specimen.fromJson(Map<String, dynamic> json) =>
       _$SpecimenFromJson(json);
@@ -755,7 +755,7 @@ abstract class SpecimenProcessing with _$SpecimenProcessing {
     FhirDateTime timeDateTime,
     Period timePeriod,
     @JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
+    @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
   }) = _SpecimenProcessing;
   factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
       _$SpecimenProcessingFromJson(json);

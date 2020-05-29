@@ -2057,7 +2057,7 @@ class _$CoverageEligibilityRequestTearOff {
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_purpose')
-          Element purposeElement,
+          List<Element> purposeElement,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       @JsonKey(name: '_created')
@@ -2136,7 +2136,7 @@ mixin _$CoverageEligibilityRequest {
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_purpose')
-  Element get purposeElement;
+  List<Element> get purposeElement;
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
   @JsonKey(name: '_created')
@@ -2186,7 +2186,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_purpose')
-          Element purposeElement,
+          List<Element> purposeElement,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       @JsonKey(name: '_created')
@@ -2204,7 +2204,6 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get purposeElement;
   $ElementCopyWith<$Res> get servicedDateElement;
   $ElementCopyWith<$Res> get createdElement;
 }
@@ -2309,7 +2308,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
           : statusElement as Element,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element,
+          : purposeElement as List<Element>,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -2440,16 +2439,6 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get purposeElement {
-    if (_value.purposeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
-      return _then(_value.copyWith(purposeElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get servicedDateElement {
     if (_value.servicedDateElement == null) {
       return null;
@@ -2513,7 +2502,7 @@ abstract class _$CoverageEligibilityRequestCopyWith<$Res>
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_purpose')
-          Element purposeElement,
+          List<Element> purposeElement,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       @JsonKey(name: '_created')
@@ -2543,8 +2532,6 @@ abstract class _$CoverageEligibilityRequestCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get purposeElement;
   @override
   $ElementCopyWith<$Res> get servicedDateElement;
   @override
@@ -2654,7 +2641,7 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
           : statusElement as Element,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element,
+          : purposeElement as List<Element>,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -2781,7 +2768,7 @@ class _$_CoverageEligibilityRequest implements _CoverageEligibilityRequest {
   final Element statusElement;
   @override
   @JsonKey(name: '_purpose')
-  final Element purposeElement;
+  final List<Element> purposeElement;
   @override
   @JsonKey(name: '_servicedDate')
   final Element servicedDateElement;
@@ -2959,7 +2946,7 @@ abstract class _CoverageEligibilityRequest
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_purpose')
-          Element purposeElement,
+          List<Element> purposeElement,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       @JsonKey(name: '_created')
@@ -3031,7 +3018,7 @@ abstract class _CoverageEligibilityRequest
   Element get statusElement;
   @override
   @JsonKey(name: '_purpose')
-  Element get purposeElement;
+  List<Element> get purposeElement;
   @override
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
@@ -3803,7 +3790,7 @@ class _$CoverageEligibilityRequestItemTearOff {
       List<CoverageEligibilityRequestDiagnosis> diagnosis,
       List<Reference> detail,
       @JsonKey(name: '_supportingInfoSequence')
-          Element supportingInfoSequenceElement}) {
+          List<Element> supportingInfoSequenceElement}) {
     return _CoverageEligibilityRequestItem(
       id: id,
       extension_: extension_,
@@ -3843,7 +3830,7 @@ mixin _$CoverageEligibilityRequestItem {
   List<CoverageEligibilityRequestDiagnosis> get diagnosis;
   List<Reference> get detail;
   @JsonKey(name: '_supportingInfoSequence')
-  Element get supportingInfoSequenceElement;
+  List<Element> get supportingInfoSequenceElement;
 
   Map<String, dynamic> toJson();
   $CoverageEligibilityRequestItemCopyWith<CoverageEligibilityRequestItem>
@@ -3871,7 +3858,7 @@ abstract class $CoverageEligibilityRequestItemCopyWith<$Res> {
       List<CoverageEligibilityRequestDiagnosis> diagnosis,
       List<Reference> detail,
       @JsonKey(name: '_supportingInfoSequence')
-          Element supportingInfoSequenceElement});
+          List<Element> supportingInfoSequenceElement});
 
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get productOrService;
@@ -3879,7 +3866,6 @@ abstract class $CoverageEligibilityRequestItemCopyWith<$Res> {
   $QuantityCopyWith<$Res> get quantity;
   $MoneyCopyWith<$Res> get unitPrice;
   $ReferenceCopyWith<$Res> get facility;
-  $ElementCopyWith<$Res> get supportingInfoSequenceElement;
 }
 
 class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
@@ -3936,7 +3922,7 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
       detail: detail == freezed ? _value.detail : detail as List<Reference>,
       supportingInfoSequenceElement: supportingInfoSequenceElement == freezed
           ? _value.supportingInfoSequenceElement
-          : supportingInfoSequenceElement as Element,
+          : supportingInfoSequenceElement as List<Element>,
     ));
   }
 
@@ -3999,17 +3985,6 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
       return _then(_value.copyWith(facility: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get supportingInfoSequenceElement {
-    if (_value.supportingInfoSequenceElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.supportingInfoSequenceElement,
-        (value) {
-      return _then(_value.copyWith(supportingInfoSequenceElement: value));
-    });
-  }
 }
 
 abstract class _$CoverageEligibilityRequestItemCopyWith<$Res>
@@ -4035,7 +4010,7 @@ abstract class _$CoverageEligibilityRequestItemCopyWith<$Res>
       List<CoverageEligibilityRequestDiagnosis> diagnosis,
       List<Reference> detail,
       @JsonKey(name: '_supportingInfoSequence')
-          Element supportingInfoSequenceElement});
+          List<Element> supportingInfoSequenceElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get category;
@@ -4049,8 +4024,6 @@ abstract class _$CoverageEligibilityRequestItemCopyWith<$Res>
   $MoneyCopyWith<$Res> get unitPrice;
   @override
   $ReferenceCopyWith<$Res> get facility;
-  @override
-  $ElementCopyWith<$Res> get supportingInfoSequenceElement;
 }
 
 class __$CoverageEligibilityRequestItemCopyWithImpl<$Res>
@@ -4111,7 +4084,7 @@ class __$CoverageEligibilityRequestItemCopyWithImpl<$Res>
       detail: detail == freezed ? _value.detail : detail as List<Reference>,
       supportingInfoSequenceElement: supportingInfoSequenceElement == freezed
           ? _value.supportingInfoSequenceElement
-          : supportingInfoSequenceElement as Element,
+          : supportingInfoSequenceElement as List<Element>,
     ));
   }
 }
@@ -4170,7 +4143,7 @@ class _$_CoverageEligibilityRequestItem
   final List<Reference> detail;
   @override
   @JsonKey(name: '_supportingInfoSequence')
-  final Element supportingInfoSequenceElement;
+  final List<Element> supportingInfoSequenceElement;
 
   @override
   String toString() {
@@ -4272,7 +4245,7 @@ abstract class _CoverageEligibilityRequestItem
           List<CoverageEligibilityRequestDiagnosis> diagnosis,
           List<Reference> detail,
           @JsonKey(name: '_supportingInfoSequence')
-              Element supportingInfoSequenceElement}) =
+              List<Element> supportingInfoSequenceElement}) =
       _$_CoverageEligibilityRequestItem;
 
   factory _CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =
@@ -4307,7 +4280,7 @@ abstract class _CoverageEligibilityRequestItem
   List<Reference> get detail;
   @override
   @JsonKey(name: '_supportingInfoSequence')
-  Element get supportingInfoSequenceElement;
+  List<Element> get supportingInfoSequenceElement;
   @override
   _$CoverageEligibilityRequestItemCopyWith<_CoverageEligibilityRequestItem>
       get copyWith;
@@ -4637,7 +4610,7 @@ class _$CoverageEligibilityResponseTearOff {
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_purpose')
-          Element purposeElement,
+          List<Element> purposeElement,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       @JsonKey(name: '_created')
@@ -4729,7 +4702,7 @@ mixin _$CoverageEligibilityResponse {
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_purpose')
-  Element get purposeElement;
+  List<Element> get purposeElement;
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;
   @JsonKey(name: '_created')
@@ -4790,7 +4763,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_purpose')
-          Element purposeElement,
+          List<Element> purposeElement,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       @JsonKey(name: '_created')
@@ -4813,7 +4786,6 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get purposeElement;
   $ElementCopyWith<$Res> get servicedDateElement;
   $ElementCopyWith<$Res> get createdElement;
   $ElementCopyWith<$Res> get outcomeElement;
@@ -4926,7 +4898,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
           : statusElement as Element,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element,
+          : purposeElement as List<Element>,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -5056,16 +5028,6 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get purposeElement {
-    if (_value.purposeElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
-      return _then(_value.copyWith(purposeElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get servicedDateElement {
     if (_value.servicedDateElement == null) {
       return null;
@@ -5162,7 +5124,7 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_purpose')
-          Element purposeElement,
+          List<Element> purposeElement,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       @JsonKey(name: '_created')
@@ -5196,8 +5158,6 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
-  @override
-  $ElementCopyWith<$Res> get purposeElement;
   @override
   $ElementCopyWith<$Res> get servicedDateElement;
   @override
@@ -5319,7 +5279,7 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
           : statusElement as Element,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element,
+          : purposeElement as List<Element>,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
           : servicedDateElement as Element,
@@ -5470,7 +5430,7 @@ class _$_CoverageEligibilityResponse implements _CoverageEligibilityResponse {
   final Element statusElement;
   @override
   @JsonKey(name: '_purpose')
-  final Element purposeElement;
+  final List<Element> purposeElement;
   @override
   @JsonKey(name: '_servicedDate')
   final Element servicedDateElement;
@@ -5669,7 +5629,7 @@ abstract class _CoverageEligibilityResponse
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_purpose')
-          Element purposeElement,
+          List<Element> purposeElement,
       @JsonKey(name: '_servicedDate')
           Element servicedDateElement,
       @JsonKey(name: '_created')
@@ -5751,7 +5711,7 @@ abstract class _CoverageEligibilityResponse
   Element get statusElement;
   @override
   @JsonKey(name: '_purpose')
-  Element get purposeElement;
+  List<Element> get purposeElement;
   @override
   @JsonKey(name: '_servicedDate')
   Element get servicedDateElement;

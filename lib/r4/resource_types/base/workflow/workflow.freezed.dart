@@ -10701,7 +10701,7 @@ class _$VerificationResultTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_targetLocation')
-          Element targetLocationElement,
+          List<Element> targetLocationElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_statusDate')
@@ -10779,7 +10779,7 @@ mixin _$VerificationResult {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_targetLocation')
-  Element get targetLocationElement;
+  List<Element> get targetLocationElement;
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_statusDate')
@@ -10828,7 +10828,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_targetLocation')
-          Element targetLocationElement,
+          List<Element> targetLocationElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_statusDate')
@@ -10847,7 +10847,6 @@ abstract class $VerificationResultCopyWith<$Res> {
   $VerificationResultAttestationCopyWith<$Res> get attestation;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get targetLocationElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get statusDateElement;
   $ElementCopyWith<$Res> get lastPerformedElement;
@@ -10956,7 +10955,7 @@ class _$VerificationResultCopyWithImpl<$Res>
           : languageElement as Element,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as Element,
+          : targetLocationElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -11064,16 +11063,6 @@ class _$VerificationResultCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get targetLocationElement {
-    if (_value.targetLocationElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.targetLocationElement, (value) {
-      return _then(_value.copyWith(targetLocationElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -11151,7 +11140,7 @@ abstract class _$VerificationResultCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_targetLocation')
-          Element targetLocationElement,
+          List<Element> targetLocationElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_statusDate')
@@ -11179,8 +11168,6 @@ abstract class _$VerificationResultCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get targetLocationElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -11295,7 +11282,7 @@ class __$VerificationResultCopyWithImpl<$Res>
           : languageElement as Element,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as Element,
+          : targetLocationElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -11416,7 +11403,7 @@ class _$_VerificationResult implements _VerificationResult {
   final Element languageElement;
   @override
   @JsonKey(name: '_targetLocation')
-  final Element targetLocationElement;
+  final List<Element> targetLocationElement;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -11590,7 +11577,7 @@ abstract class _VerificationResult implements VerificationResult {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_targetLocation')
-          Element targetLocationElement,
+          List<Element> targetLocationElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_statusDate')
@@ -11659,7 +11646,7 @@ abstract class _VerificationResult implements VerificationResult {
   Element get languageElement;
   @override
   @JsonKey(name: '_targetLocation')
-  Element get targetLocationElement;
+  List<Element> get targetLocationElement;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;

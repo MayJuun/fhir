@@ -693,8 +693,8 @@ class _$ProdCharacteristicTearOff {
       List<Attachment> image,
       CodeableConcept scoring,
       @JsonKey(name: '_shape') Element shapeElement,
-      @JsonKey(name: '_color') Element colorElement,
-      @JsonKey(name: '_imprint') Element imprintElement}) {
+      @JsonKey(name: '_color') List<Element> colorElement,
+      @JsonKey(name: '_imprint') List<Element> imprintElement}) {
     return _ProdCharacteristic(
       id: id,
       extension_: extension_,
@@ -739,9 +739,9 @@ mixin _$ProdCharacteristic {
   @JsonKey(name: '_shape')
   Element get shapeElement;
   @JsonKey(name: '_color')
-  Element get colorElement;
+  List<Element> get colorElement;
   @JsonKey(name: '_imprint')
-  Element get imprintElement;
+  List<Element> get imprintElement;
 
   Map<String, dynamic> toJson();
   $ProdCharacteristicCopyWith<ProdCharacteristic> get copyWith;
@@ -767,8 +767,8 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
       List<Attachment> image,
       CodeableConcept scoring,
       @JsonKey(name: '_shape') Element shapeElement,
-      @JsonKey(name: '_color') Element colorElement,
-      @JsonKey(name: '_imprint') Element imprintElement});
+      @JsonKey(name: '_color') List<Element> colorElement,
+      @JsonKey(name: '_imprint') List<Element> imprintElement});
 
   $QuantityCopyWith<$Res> get height;
   $QuantityCopyWith<$Res> get width;
@@ -778,8 +778,6 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
   $QuantityCopyWith<$Res> get externalDiameter;
   $CodeableConceptCopyWith<$Res> get scoring;
   $ElementCopyWith<$Res> get shapeElement;
-  $ElementCopyWith<$Res> get colorElement;
-  $ElementCopyWith<$Res> get imprintElement;
 }
 
 class _$ProdCharacteristicCopyWithImpl<$Res>
@@ -838,10 +836,10 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
           : shapeElement as Element,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as Element,
+          : colorElement as List<Element>,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as Element,
+          : imprintElement as List<Element>,
     ));
   }
 
@@ -924,26 +922,6 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       return _then(_value.copyWith(shapeElement: value));
     });
   }
-
-  @override
-  $ElementCopyWith<$Res> get colorElement {
-    if (_value.colorElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.colorElement, (value) {
-      return _then(_value.copyWith(colorElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get imprintElement {
-    if (_value.imprintElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.imprintElement, (value) {
-      return _then(_value.copyWith(imprintElement: value));
-    });
-  }
 }
 
 abstract class _$ProdCharacteristicCopyWith<$Res>
@@ -968,8 +946,8 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
       List<Attachment> image,
       CodeableConcept scoring,
       @JsonKey(name: '_shape') Element shapeElement,
-      @JsonKey(name: '_color') Element colorElement,
-      @JsonKey(name: '_imprint') Element imprintElement});
+      @JsonKey(name: '_color') List<Element> colorElement,
+      @JsonKey(name: '_imprint') List<Element> imprintElement});
 
   @override
   $QuantityCopyWith<$Res> get height;
@@ -987,10 +965,6 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get scoring;
   @override
   $ElementCopyWith<$Res> get shapeElement;
-  @override
-  $ElementCopyWith<$Res> get colorElement;
-  @override
-  $ElementCopyWith<$Res> get imprintElement;
 }
 
 class __$ProdCharacteristicCopyWithImpl<$Res>
@@ -1051,10 +1025,10 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
           : shapeElement as Element,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as Element,
+          : colorElement as List<Element>,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as Element,
+          : imprintElement as List<Element>,
     ));
   }
 }
@@ -1117,10 +1091,10 @@ class _$_ProdCharacteristic implements _ProdCharacteristic {
   final Element shapeElement;
   @override
   @JsonKey(name: '_color')
-  final Element colorElement;
+  final List<Element> colorElement;
   @override
   @JsonKey(name: '_imprint')
-  final Element imprintElement;
+  final List<Element> imprintElement;
 
   @override
   String toString() {
@@ -1224,8 +1198,8 @@ abstract class _ProdCharacteristic implements ProdCharacteristic {
           List<Attachment> image,
           CodeableConcept scoring,
           @JsonKey(name: '_shape') Element shapeElement,
-          @JsonKey(name: '_color') Element colorElement,
-          @JsonKey(name: '_imprint') Element imprintElement}) =
+          @JsonKey(name: '_color') List<Element> colorElement,
+          @JsonKey(name: '_imprint') List<Element> imprintElement}) =
       _$_ProdCharacteristic;
 
   factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
@@ -1265,10 +1239,10 @@ abstract class _ProdCharacteristic implements ProdCharacteristic {
   Element get shapeElement;
   @override
   @JsonKey(name: '_color')
-  Element get colorElement;
+  List<Element> get colorElement;
   @override
   @JsonKey(name: '_imprint')
-  Element get imprintElement;
+  List<Element> get imprintElement;
   @override
   _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith;
 }

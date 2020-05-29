@@ -41,8 +41,8 @@ abstract class MedicinalProduct with _$MedicinalProduct implements Resource {
         manufacturingBusinessOperation,
     List<MedicinalProductSpecialDesignation> specialDesignation,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_specialMeasures') Element specialMeasuresElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_specialMeasures') List<Element> specialMeasuresElement,
   }) = _MedicinalProduct;
   factory MedicinalProduct.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductFromJson(json);
@@ -168,12 +168,13 @@ abstract class MedicinalProductAuthorization
     Reference regulator,
     MedicinalProductAuthorizationProcedure procedure,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_statusDate') Element statusDateElement,
-@JsonKey(name: '_restoreDate') Element restoreDateElement,
-@JsonKey(name: '_dateOfFirstAuthorization') Element dateOfFirstAuthorizationElement,
-@JsonKey(name: '_internationalBirthDate') Element internationalBirthDateElement,
-
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_statusDate') Element statusDateElement,
+    @JsonKey(name: '_restoreDate') Element restoreDateElement,
+    @JsonKey(name: '_dateOfFirstAuthorization')
+        Element dateOfFirstAuthorizationElement,
+    @JsonKey(name: '_internationalBirthDate')
+        Element internationalBirthDateElement,
   }) = _MedicinalProductAuthorization;
   factory MedicinalProductAuthorization.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductAuthorizationFromJson(json);
@@ -240,7 +241,7 @@ abstract class MedicinalProductContraindication
     List<MedicinalProductContraindicationOtherTherapy> otherTherapy,
     List<Population> population,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _MedicinalProductContraindication;
   factory MedicinalProductContraindication.fromJson(
           Map<String, dynamic> json) =>
@@ -289,7 +290,7 @@ abstract class MedicinalProductIndication
     List<Reference> undesirableEffect,
     List<Population> population,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _MedicinalProductIndication;
   factory MedicinalProductIndication.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductIndicationFromJson(json);
@@ -334,8 +335,8 @@ abstract class MedicinalProductIngredient
     List<MedicinalProductIngredientSpecifiedSubstance> specifiedSubstance,
     MedicinalProductIngredientSubstance substance,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
   }) = _MedicinalProductIngredient;
   factory MedicinalProductIngredient.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductIngredientFromJson(json);
@@ -437,8 +438,8 @@ abstract class MedicinalProductInteraction
     CodeableConcept incidence,
     CodeableConcept management,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _MedicinalProductInteraction;
   factory MedicinalProductInteraction.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductInteractionFromJson(json);
@@ -483,7 +484,7 @@ abstract class MedicinalProductManufactured
     ProdCharacteristic physicalCharacteristics,
     List<CodeableConcept> otherCharacteristics,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _MedicinalProductManufactured;
   factory MedicinalProductManufactured.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductManufacturedFromJson(json);
@@ -516,9 +517,9 @@ abstract class MedicinalProductPackaged
     @JsonKey(required: true)
     @required
         List<MedicinalProductPackagedPackageItem> packageItem,
-        @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _MedicinalProductPackaged;
   factory MedicinalProductPackaged.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductPackagedFromJson(json);
@@ -590,8 +591,8 @@ abstract class MedicinalProductPharmaceutical
     @required
         List<MedicinalProductPharmaceuticalRouteOfAdministration>
             routeOfAdministration,
-         @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,   
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _MedicinalProductPharmaceutical;
   factory MedicinalProductPharmaceutical.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductPharmaceuticalFromJson(json);
@@ -657,8 +658,8 @@ abstract class MedicinalProductPharmaceuticalWithdrawalPeriod
     @JsonKey(required: true) @required CodeableConcept tissue,
     @JsonKey(required: true) @required Quantity value,
     String supportingInformation,
-    @JsonKey(name: '_supportingInformation') Element supportingInformationElement,
-
+    @JsonKey(name: '_supportingInformation')
+        Element supportingInformationElement,
   }) = _MedicinalProductPharmaceuticalWithdrawalPeriod;
   factory MedicinalProductPharmaceuticalWithdrawalPeriod.fromJson(
           Map<String, dynamic> json) =>
@@ -687,7 +688,7 @@ abstract class MedicinalProductUndesirableEffect
     CodeableConcept frequencyOfOccurrence,
     List<Population> population,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _MedicinalProductUndesirableEffect;
   factory MedicinalProductUndesirableEffect.fromJson(
           Map<String, dynamic> json) =>
@@ -716,9 +717,9 @@ abstract class SubstanceNucleicAcid
     CodeableConcept oligoNucleotideType,
     List<SubstanceNucleicAcidSubunit> subunit,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
-@JsonKey(name: '_areaOfHybridisation') Element areaOfHybridisationElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+    @JsonKey(name: '_areaOfHybridisation') Element areaOfHybridisationElement,
   }) = _SubstanceNucleicAcid;
   factory SubstanceNucleicAcid.fromJson(Map<String, dynamic> json) =>
       _$SubstanceNucleicAcidFromJson(json);
@@ -739,8 +740,8 @@ abstract class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
     List<SubstanceNucleicAcidLinkage> linkage,
     List<SubstanceNucleicAcidSugar> sugar,
     @JsonKey(name: '_subunit') Element subunitElement,
-@JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_length') Element lengthElement,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @JsonKey(name: '_length') Element lengthElement,
   }) = _SubstanceNucleicAcidSubunit;
   factory SubstanceNucleicAcidSubunit.fromJson(Map<String, dynamic> json) =>
       _$SubstanceNucleicAcidSubunitFromJson(json);
@@ -757,8 +758,8 @@ abstract class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
     String name,
     String residueSite,
     @JsonKey(name: '_connectivity') Element connectivityElement,
-@JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_residueSite') Element residueSiteElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_residueSite') Element residueSiteElement,
   }) = _SubstanceNucleicAcidLinkage;
   factory SubstanceNucleicAcidLinkage.fromJson(Map<String, dynamic> json) =>
       _$SubstanceNucleicAcidLinkageFromJson(json);
@@ -774,7 +775,7 @@ abstract class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
     String name,
     String residueSite,
     @JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_residueSite') Element residueSiteElement,
+    @JsonKey(name: '_residueSite') Element residueSiteElement,
   }) = _SubstanceNucleicAcidSugar;
   factory SubstanceNucleicAcidSugar.fromJson(Map<String, dynamic> json) =>
       _$SubstanceNucleicAcidSugarFromJson(json);
@@ -801,8 +802,8 @@ abstract class SubstancePolymer with _$SubstancePolymer implements Resource {
     List<SubstancePolymerMonomerSet> monomerSet,
     List<SubstancePolymerRepeat> repeat,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_modification') Element modificationElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_modification') List<Element> modificationElement,
   }) = _SubstancePolymer;
   factory SubstancePolymer.fromJson(Map<String, dynamic> json) =>
       _$SubstancePolymerFromJson(json);
@@ -850,8 +851,8 @@ abstract class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
     CodeableConcept repeatUnitAmountType,
     List<SubstancePolymerRepeatUnit> repeatUnit,
     @JsonKey(name: '_numberOfUnits') Element numberOfUnitsElement,
-@JsonKey(name: '_averageMolecularFormula') Element averageMolecularFormulaElement,
-
+    @JsonKey(name: '_averageMolecularFormula')
+        Element averageMolecularFormulaElement,
   }) = _SubstancePolymerRepeat;
   factory SubstancePolymerRepeat.fromJson(Map<String, dynamic> json) =>
       _$SubstancePolymerRepeatFromJson(json);
@@ -925,9 +926,9 @@ abstract class SubstanceProtein with _$SubstanceProtein implements Resource {
     List<String> disulfideLinkage,
     List<SubstanceProteinSubunit> subunit,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
-@JsonKey(name: '_disulfideLinkage') Element disulfideLinkageElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+    @JsonKey(name: '_disulfideLinkage') List<Element> disulfideLinkageElement,
   }) = _SubstanceProtein;
   factory SubstanceProtein.fromJson(Map<String, dynamic> json) =>
       _$SubstanceProteinFromJson(json);
@@ -948,11 +949,12 @@ abstract class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
     Identifier cTerminalModificationId,
     String cTerminalModification,
     @JsonKey(name: '_subunit') Element subunitElement,
-@JsonKey(name: '_sequence') Element sequenceElement,
-@JsonKey(name: '_length') Element lengthElement,
-@JsonKey(name: '_nTerminalModification') Element nTerminalModificationElement,
-@JsonKey(name: '_cTerminalModification') Element cTerminalModificationElement,
-
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @JsonKey(name: '_length') Element lengthElement,
+    @JsonKey(name: '_nTerminalModification')
+        Element nTerminalModificationElement,
+    @JsonKey(name: '_cTerminalModification')
+        Element cTerminalModificationElement,
   }) = _SubstanceProteinSubunit;
   factory SubstanceProteinSubunit.fromJson(Map<String, dynamic> json) =>
       _$SubstanceProteinSubunitFromJson(json);
@@ -980,8 +982,8 @@ abstract class SubstanceReferenceInformation
     List<SubstanceReferenceInformationClassification> classification,
     List<SubstanceReferenceInformationTarget> target,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _SubstanceReferenceInformation;
   factory SubstanceReferenceInformation.fromJson(Map<String, dynamic> json) =>
       _$SubstanceReferenceInformationFromJson(json);
@@ -1090,10 +1092,12 @@ abstract class SubstanceSourceMaterial
     SubstanceSourceMaterialOrganism organism,
     List<SubstanceSourceMaterialPartDescription> partDescription,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_organismName') Element organismNameElement,
-@JsonKey(name: '_parentSubstanceName') Element parentSubstanceNameElement,
-@JsonKey(name: '_geographicalLocation') Element geographicalLocationElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_organismName') Element organismNameElement,
+    @JsonKey(name: '_parentSubstanceName')
+        List<Element> parentSubstanceNameElement,
+    @JsonKey(name: '_geographicalLocation')
+        List<Element> geographicalLocationElement,
   }) = _SubstanceSourceMaterial;
   factory SubstanceSourceMaterial.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialFromJson(json);
@@ -1130,8 +1134,8 @@ abstract class SubstanceSourceMaterialOrganism
     List<SubstanceSourceMaterialAuthor> author,
     SubstanceSourceMaterialHybrid hybrid,
     SubstanceSourceMaterialOrganismGeneral organismGeneral,
-    @JsonKey(name: '_intraspecificDescription') Element intraspecificDescriptionElement,
-
+    @JsonKey(name: '_intraspecificDescription')
+        Element intraspecificDescriptionElement,
   }) = _SubstanceSourceMaterialOrganism;
   factory SubstanceSourceMaterialOrganism.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialOrganismFromJson(json);
@@ -1165,9 +1169,9 @@ abstract class SubstanceSourceMaterialHybrid
     String paternalOrganismName,
     CodeableConcept hybridType,
     @JsonKey(name: '_maternalOrganismId') Element maternalOrganismIdElement,
-@JsonKey(name: '_maternalOrganismName') Element maternalOrganismNameElement,
-@JsonKey(name: '_paternalOrganismId') Element paternalOrganismIdElement,
-@JsonKey(name: '_paternalOrganismName') Element paternalOrganismNameElement,
+    @JsonKey(name: '_maternalOrganismName') Element maternalOrganismNameElement,
+    @JsonKey(name: '_paternalOrganismId') Element paternalOrganismIdElement,
+    @JsonKey(name: '_paternalOrganismName') Element paternalOrganismNameElement,
   }) = _SubstanceSourceMaterialHybrid;
   factory SubstanceSourceMaterialHybrid.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialHybridFromJson(json);
@@ -1241,9 +1245,9 @@ abstract class SubstanceSpecification
     Reference protein,
     Reference sourceMaterial,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _SubstanceSpecification;
   factory SubstanceSpecification.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationFromJson(json);
@@ -1265,8 +1269,8 @@ abstract class SubstanceSpecificationMoiety
     Quantity amountQuantity,
     String amountString,
     @JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_molecularFormula') Element molecularFormulaElement,
-@JsonKey(name: '_amountString') Element amountStringElement,
+    @JsonKey(name: '_molecularFormula') Element molecularFormulaElement,
+    @JsonKey(name: '_amountString') Element amountStringElement,
   }) = _SubstanceSpecificationMoiety;
   factory SubstanceSpecificationMoiety.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationMoietyFromJson(json);
@@ -1287,7 +1291,7 @@ abstract class SubstanceSpecificationProperty
     Quantity amountQuantity,
     String amountString,
     @JsonKey(name: '_parameters') Element parametersElement,
-@JsonKey(name: '_amountString') Element amountStringElement,
+    @JsonKey(name: '_amountString') Element amountStringElement,
   }) = _SubstanceSpecificationProperty;
   factory SubstanceSpecificationProperty.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationPropertyFromJson(json);
@@ -1309,8 +1313,8 @@ abstract class SubstanceSpecificationStructure
     List<Reference> source,
     List<SubstanceSpecificationRepresentation> representation,
     @JsonKey(name: '_molecularFormula') Element molecularFormulaElement,
-@JsonKey(name: '_molecularFormulaByMoiety') Element molecularFormulaByMoietyElement,
-
+    @JsonKey(name: '_molecularFormulaByMoiety')
+        Element molecularFormulaByMoietyElement,
   }) = _SubstanceSpecificationStructure;
   factory SubstanceSpecificationStructure.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationStructureFromJson(json);
@@ -1378,7 +1382,7 @@ abstract class SubstanceSpecificationCode with _$SubstanceSpecificationCode {
     String comment,
     List<Reference> source,
     @JsonKey(name: '_statusDate') Element statusDateElement,
-@JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _SubstanceSpecificationCode;
   factory SubstanceSpecificationCode.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationCodeFromJson(json);
@@ -1402,7 +1406,7 @@ abstract class SubstanceSpecificationName with _$SubstanceSpecificationName {
     List<SubstanceSpecificationOfficial> official,
     List<Reference> source,
     @JsonKey(name: '_name') Element nameElement,
-@JsonKey(name: '_preferred') Element preferredElement,
+    @JsonKey(name: '_preferred') Element preferredElement,
   }) = _SubstanceSpecificationName;
   factory SubstanceSpecificationName.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationNameFromJson(json);
@@ -1443,7 +1447,7 @@ abstract class SubstanceSpecificationRelationship
     CodeableConcept amountType,
     List<Reference> source,
     @JsonKey(name: '_isDefining') Element isDefiningElement,
-@JsonKey(name: '_amountString') Element amountStringElement,
+    @JsonKey(name: '_amountString') Element amountStringElement,
   }) = _SubstanceSpecificationRelationship;
   factory SubstanceSpecificationRelationship.fromJson(
           Map<String, dynamic> json) =>

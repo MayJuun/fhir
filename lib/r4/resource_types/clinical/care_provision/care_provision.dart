@@ -44,13 +44,13 @@ abstract class CarePlan with _$CarePlan implements Resource {
     List<CarePlanActivity> activity,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_intent') Element intentElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_intent') Element intentElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _CarePlan;
   factory CarePlan.fromJson(Map<String, dynamic> json) =>
       _$CarePlanFromJson(json);
@@ -99,11 +99,11 @@ abstract class CarePlanDetail with _$CarePlanDetail {
     Quantity quantity,
     String description,
     @JsonKey(name: '_kind') Element kindElement,
-@JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_doNotPerform') Element doNotPerformElement,
-@JsonKey(name: '_scheduledString') Element scheduledStringElement,
-@JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
+    @JsonKey(name: '_scheduledString') Element scheduledStringElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _CarePlanDetail;
   factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>
       _$CarePlanDetailFromJson(json);
@@ -137,9 +137,9 @@ abstract class CareTeam with _$CareTeam implements Resource {
     List<ContactPoint> telecom,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_name') Element nameElement,
   }) = _CareTeam;
   factory CareTeam.fromJson(Map<String, dynamic> json) =>
       _$CareTeamFromJson(json);
@@ -193,11 +193,11 @@ abstract class Goal with _$Goal implements Resource {
     List<CodeableConcept> outcomeCode,
     List<Reference> outcomeReference,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_lifecycleStatus') Element lifecycleStatusElement,
-@JsonKey(name: '_startDate') Element startDateElement,
-@JsonKey(name: '_statusDate') Element statusDateElement,
-@JsonKey(name: '_statusReason') Element statusReasonElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_lifecycleStatus') Element lifecycleStatusElement,
+    @JsonKey(name: '_startDate') Element startDateElement,
+    @JsonKey(name: '_statusDate') Element statusDateElement,
+    @JsonKey(name: '_statusReason') Element statusReasonElement,
   }) = _Goal;
   factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
 }
@@ -219,9 +219,9 @@ abstract class GoalTarget with _$GoalTarget {
     Date dueDate,
     Duration dueDuration,
     @JsonKey(name: '_detailString') Element detailStringElement,
-@JsonKey(name: '_detailBoolean') Element detailBooleanElement,
-@JsonKey(name: '_detailInteger') Element detailIntegerElement,
-@JsonKey(name: '_dueDate') Element dueDateElement,
+    @JsonKey(name: '_detailBoolean') Element detailBooleanElement,
+    @JsonKey(name: '_detailInteger') Element detailIntegerElement,
+    @JsonKey(name: '_dueDate') Element dueDateElement,
   }) = _GoalTarget;
   factory GoalTarget.fromJson(Map<String, dynamic> json) =>
       _$GoalTargetFromJson(json);
@@ -259,12 +259,12 @@ abstract class NutritionOrder with _$NutritionOrder implements Resource {
     NutritionOrderEnteralFormula enteralFormula,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
-@JsonKey(name: '_instantiates') Element instantiatesElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_intent') Element intentElement,
-@JsonKey(name: '_dateTime') Element dateTimeElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    @JsonKey(name: '_instantiates') List<Element> instantiatesElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_intent') Element intentElement,
+    @JsonKey(name: '_dateTime') Element dateTimeElement,
   }) = _NutritionOrder;
   factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderFromJson(json);
@@ -326,7 +326,7 @@ abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
     Quantity quantity,
     String instruction,
     @JsonKey(name: '_productName') Element productNameElement,
-@JsonKey(name: '_instruction') Element instructionElement,
+    @JsonKey(name: '_instruction') Element instructionElement,
   }) = _NutritionOrderSupplement;
   factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderSupplementFromJson(json);
@@ -348,10 +348,11 @@ abstract class NutritionOrderEnteralFormula
     List<NutritionOrderAdministration> administration,
     Quantity maxVolumeToDeliver,
     String administrationInstruction,
-    @JsonKey(name: '_baseFormulaProductName') Element baseFormulaProductNameElement,
-@JsonKey(name: '_additiveProductName') Element additiveProductNameElement,
-@JsonKey(name: '_administrationInstruction') Element administrationInstructionElement,
-
+    @JsonKey(name: '_baseFormulaProductName')
+        Element baseFormulaProductNameElement,
+    @JsonKey(name: '_additiveProductName') Element additiveProductNameElement,
+    @JsonKey(name: '_administrationInstruction')
+        Element administrationInstructionElement,
   }) = _NutritionOrderEnteralFormula;
   factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderEnteralFormulaFromJson(json);
@@ -406,13 +407,14 @@ abstract class RequestGroup with _$RequestGroup implements Resource {
     List<Annotation> note,
     List<RequestGroupAction> action,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_instantiatesCanonical') Element instantiatesCanonicalElement,
-@JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_intent') Element intentElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_authoredOn') Element authoredOnElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_instantiatesCanonical')
+        List<Element> instantiatesCanonicalElement,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_intent') Element intentElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _RequestGroup;
   factory RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupFromJson(json);
@@ -449,16 +451,16 @@ abstract class RequestGroupAction with _$RequestGroupAction {
     Reference resource,
     List<RequestGroupAction> action,
     @JsonKey(name: '_prefix') Element prefixElement,
-@JsonKey(name: '_title') Element titleElement,
-@JsonKey(name: '_description') Element descriptionElement,
-@JsonKey(name: '_textEquivalent') Element textEquivalentElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-@JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
-@JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
-@JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
-@JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
-@JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_textEquivalent') Element textEquivalentElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    @JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
+    @JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
+    @JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
+    @JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
+    @JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
   }) = _RequestGroupAction;
   factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupActionFromJson(json);
@@ -489,7 +491,7 @@ abstract class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
     Duration offsetDuration,
     Range offsetRange,
     @JsonKey(name: '_actionId') Element actionIdElement,
-@JsonKey(name: '_relationship') Element relationshipElement,
+    @JsonKey(name: '_relationship') Element relationshipElement,
   }) = _RequestGroupRelatedAction;
   factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupRelatedActionFromJson(json);
@@ -528,10 +530,10 @@ abstract class RiskAssessment with _$RiskAssessment implements Resource {
     String mitigation,
     List<Annotation> note,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-@JsonKey(name: '_mitigation') Element mitigationElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_mitigation') Element mitigationElement,
   }) = _RiskAssessment;
   factory RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentFromJson(json);
@@ -552,8 +554,8 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
     Range whenRange,
     String rationale,
     @JsonKey(name: '_probabilityDecimal') Element probabilityDecimalElement,
-@JsonKey(name: '_relativeRisk') Element relativeRiskElement,
-@JsonKey(name: '_rationale') Element rationaleElement,
+    @JsonKey(name: '_relativeRisk') Element relativeRiskElement,
+    @JsonKey(name: '_rationale') Element rationaleElement,
   }) = _RiskAssessmentPrediction;
   factory RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentPredictionFromJson(json);
@@ -612,16 +614,16 @@ abstract class ServiceRequest with _$ServiceRequest implements Resource {
     String patientInstruction,
     List<Reference> relevantHistory,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_intent') Element intentElement,
-@JsonKey(name: '_priority') Element priorityElement,
-@JsonKey(name: '_doNotPerform') Element doNotPerformElement,
-@JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-@JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement,
-@JsonKey(name: '_authoredOn') Element authoredOnElement,
-@JsonKey(name: '_patientInstruction') Element patientInstructionElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_intent') Element intentElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_asNeededBoolean') Element asNeededBooleanElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
+    @JsonKey(name: '_patientInstruction') Element patientInstructionElement,
   }) = _ServiceRequest;
   factory ServiceRequest.fromJson(Map<String, dynamic> json) =>
       _$ServiceRequestFromJson(json);
@@ -653,11 +655,11 @@ abstract class VisionPrescription
     @JsonKey(required: true)
     @required
         List<VisionPrescriptionLensSpecification> lensSpecification,
-        @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-@JsonKey(name: '_language') Element languageElement,
-@JsonKey(name: '_status') Element statusElement,
-@JsonKey(name: '_created') Element createdElement,
-@JsonKey(name: '_dateWritten') Element dateWrittenElement,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_dateWritten') Element dateWrittenElement,
   }) = _VisionPrescription;
   factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionFromJson(json);
@@ -686,15 +688,15 @@ abstract class VisionPrescriptionLensSpecification
     String brand,
     List<Annotation> note,
     @JsonKey(name: '_eye') Element eyeElement,
-@JsonKey(name: '_sphere') Element sphereElement,
-@JsonKey(name: '_cylinder') Element cylinderElement,
-@JsonKey(name: '_axis') Element axisElement,
-@JsonKey(name: '_add') Element addElement,
-@JsonKey(name: '_power') Element powerElement,
-@JsonKey(name: '_backCurve') Element backCurveElement,
-@JsonKey(name: '_diameter') Element diameterElement,
-@JsonKey(name: '_color') Element colorElement,
-@JsonKey(name: '_brand') Element brandElement,
+    @JsonKey(name: '_sphere') Element sphereElement,
+    @JsonKey(name: '_cylinder') Element cylinderElement,
+    @JsonKey(name: '_axis') Element axisElement,
+    @JsonKey(name: '_add') Element addElement,
+    @JsonKey(name: '_power') Element powerElement,
+    @JsonKey(name: '_backCurve') Element backCurveElement,
+    @JsonKey(name: '_diameter') Element diameterElement,
+    @JsonKey(name: '_color') Element colorElement,
+    @JsonKey(name: '_brand') Element brandElement,
   }) = _VisionPrescriptionLensSpecification;
   factory VisionPrescriptionLensSpecification.fromJson(
           Map<String, dynamic> json) =>
@@ -710,7 +712,7 @@ abstract class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
     Decimal amount,
     @JsonKey(unknownEnumValue: PrismBase.unknown) PrismBase base,
     @JsonKey(name: '_amount') Element amountElement,
-@JsonKey(name: '_base') Element baseElement,
+    @JsonKey(name: '_base') Element baseElement,
   }) = _VisionPrescriptionPrism;
   factory VisionPrescriptionPrism.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionPrismFromJson(json);

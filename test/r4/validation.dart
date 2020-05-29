@@ -44,7 +44,7 @@ Future<void> checkJsonEquality(Map<String, dynamic> input,
             checkJsonEquality(input[k][j], output[k][j], file);
           }
         } else {
-          if (input[k][j] != output[k][j] && !isDate(input[k][j])) {
+          if (input[k][j] != output[k][j]) {
             writeErrorFile('\n\n$file\n$k:${input[k][j]}:${output[k][j]}');
           }
         }
@@ -52,12 +52,12 @@ Future<void> checkJsonEquality(Map<String, dynamic> input,
     } else {
       if (input[k].runtimeType.toString() == 'List<String>') {
         for (var x = 0; x < input[k].length; x++) {
-          if (input[k][x] != output[k][x] && !isDate(input[k][x])) {
+          if (input[k][x] != output[k][x]) {
             writeErrorFile('\n\n$file\n$k:${input[k][x]}:${output[k][x]}');
           }
         }
       } else {
-        if (input[k] != output[k] && !isDate(input[k])) {
+        if (input[k] != output[k]) {
           writeErrorFile('\n\n$file\n$k:${input[k]}:${output[k]}');
         }
       }

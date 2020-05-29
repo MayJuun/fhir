@@ -56,7 +56,7 @@ class _$CommunicationTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_priority')
@@ -152,7 +152,7 @@ mixin _$Communication {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_priority')
@@ -210,7 +210,7 @@ abstract class $CommunicationCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_priority')
@@ -229,7 +229,6 @@ abstract class $CommunicationCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get sender;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get priorityElement;
   $ElementCopyWith<$Res> get sentElement;
@@ -359,7 +358,7 @@ class _$CommunicationCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -465,16 +464,6 @@ class _$CommunicationCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -561,7 +550,7 @@ abstract class _$CommunicationCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_priority')
@@ -589,8 +578,6 @@ abstract class _$CommunicationCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -726,7 +713,7 @@ class __$CommunicationCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -873,7 +860,7 @@ class _$_Communication implements _Communication {
   final Element languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -1075,7 +1062,7 @@ abstract class _Communication implements Communication {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_priority')
@@ -1162,7 +1149,7 @@ abstract class _Communication implements Communication {
   Element get languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;
@@ -3091,7 +3078,7 @@ class _$DeviceRequestTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -3199,7 +3186,7 @@ mixin _$DeviceRequest {
   @JsonKey(name: '_language')
   Element get languageElement;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @JsonKey(name: '_status')
   Element get statusElement;
   @JsonKey(name: '_intent')
@@ -3264,7 +3251,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -3290,7 +3277,6 @@ abstract class $DeviceRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get performer;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get intentElement;
   $ElementCopyWith<$Res> get priorityElement;
@@ -3446,7 +3432,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -3606,16 +3592,6 @@ class _$DeviceRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
-    if (_value.instantiatesUriElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
-      return _then(_value.copyWith(instantiatesUriElement: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res> get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -3717,7 +3693,7 @@ abstract class _$DeviceRequestCopyWith<$Res>
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -3757,8 +3733,6 @@ abstract class _$DeviceRequestCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
-  @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -3921,7 +3895,7 @@ class __$DeviceRequestCopyWithImpl<$Res>
           : languageElement as Element,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
+          : instantiatesUriElement as List<Element>,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
@@ -4090,7 +4064,7 @@ class _$_DeviceRequest implements _DeviceRequest {
   final Element languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final List<Element> instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
@@ -4311,7 +4285,7 @@ abstract class _DeviceRequest implements DeviceRequest {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
+          List<Element> instantiatesUriElement,
       @JsonKey(name: '_status')
           Element statusElement,
       @JsonKey(name: '_intent')
@@ -4409,7 +4383,7 @@ abstract class _DeviceRequest implements DeviceRequest {
   Element get languageElement;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  List<Element> get instantiatesUriElement;
   @override
   @JsonKey(name: '_status')
   Element get statusElement;
