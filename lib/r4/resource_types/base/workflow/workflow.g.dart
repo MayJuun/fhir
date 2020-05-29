@@ -770,7 +770,8 @@ _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'],
+    status: _$enumDecodeNullable(_$TaskStatusEnumMap, json['status'],
+        unknownValue: TaskStatus.unknown),
     statusReason: json['statusReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -779,7 +780,8 @@ _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['businessStatus'] as Map<String, dynamic>),
-    intent: json['intent'],
+    intent: _$enumDecodeNullable(_$TaskIntentEnumMap, json['intent'],
+        unknownValue: TaskIntent.unknown),
     priority: json['priority'] == null
         ? null
         : Code.fromJson(json['priority'] as String),
@@ -907,10 +909,10 @@ Map<String, dynamic> _$_$_TaskToJson(_$_Task instance) {
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull('groupIdentifier', instance.groupIdentifier?.toJson());
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', _$TaskStatusEnumMap[instance.status]);
   writeNotNull('statusReason', instance.statusReason?.toJson());
   writeNotNull('businessStatus', instance.businessStatus?.toJson());
-  writeNotNull('intent', instance.intent);
+  writeNotNull('intent', _$TaskIntentEnumMap[instance.intent]);
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('description', instance.description);
@@ -946,6 +948,34 @@ Map<String, dynamic> _$_$_TaskToJson(_$_Task instance) {
   writeNotNull('_lastModified', instance.lastModifiedElement?.toJson());
   return val;
 }
+
+const _$TaskStatusEnumMap = {
+  TaskStatus.draft: 'draft',
+  TaskStatus.requested: 'requested',
+  TaskStatus.received: 'received',
+  TaskStatus.accepted: 'accepted',
+  TaskStatus.rejected: 'rejected',
+  TaskStatus.ready: 'ready',
+  TaskStatus.cancelled: 'cancelled',
+  TaskStatus.in_progress: 'in-progress',
+  TaskStatus.on_hold: 'on-hold',
+  TaskStatus.failed: 'failed',
+  TaskStatus.completed: 'completed',
+  TaskStatus.entered_in_error: 'entered-in-error',
+  TaskStatus.unknown: 'unknown',
+};
+
+const _$TaskIntentEnumMap = {
+  TaskIntent.unknown: 'unknown',
+  TaskIntent.proposal: 'proposal',
+  TaskIntent.plan: 'plan',
+  TaskIntent.order: 'order',
+  TaskIntent.original_order: 'original-order',
+  TaskIntent.reflex_order: 'reflex-order',
+  TaskIntent.filler_order: 'filler-order',
+  TaskIntent.instance_order: 'instance-order',
+  TaskIntent.option: 'option',
+};
 
 _$_TaskRestriction _$_$_TaskRestrictionFromJson(Map<String, dynamic> json) {
   return _$_TaskRestriction(
