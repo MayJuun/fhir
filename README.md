@@ -12,12 +12,12 @@ It contains packages for the 3 released FHIR versions:
 
 ## Validation
 ### R4
-  * All of the downloadable [HL7 Examples](https://www.hl7.org/fhir/examples-json.zip) have been run through the classes via [this script](https://github.com/Dokotela/fhir/blob/dev/test/r4/validation.dart).
+  * All of the downloadable [HL7 Examples](https://www.hl7.org/fhir/examples-json.zip) have been run through the classes via [this script](https://github.com/Dokotela/fhir/blob/master/test/r4/validation.dart).
   * I've compared each field from the input to the output and output to input as Maps. This should have revealed if any fields were created or deleted. It also avoids issues with fields in a different order from input to output.
   * Known problems:
-  1. There is an [Id field](https://github.com/Dokotela/fhir/blob/dev/test/r4/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) in the examples seems to be too long
-  2. There is a [Base64Binary](https://github.com/Dokotela/fhir/blob/dev/test/r4/r4_examples/binary-example.json) field that has padding which renders it invalid
-  3. There's also [this file](https://github.com/Dokotela/fhir/blob/dev/test/r4/r4_examples/package-min-ver.json) I have no idea what to do with.
+  1. There is an [Id field](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) in the examples seems to be too long
+  2. There is a [Base64Binary](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/binary-example.json) field that has padding which renders it invalid
+  3. There's also [this file](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/package-min-ver.json) I have no idea what to do with.
 ### Stu3
   * No formal validation done yet.
 ### Dstu2
