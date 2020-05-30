@@ -1,21 +1,32 @@
 # ToDos
 1. Order of classes in files
-2. Structure of folders (enums?)
-3. How to name subclasses (mostly for dstu2 & stu3)
-4. Ensure lists in dstu2
+2. How to name subclasses (mostly for dstu2 & stu3)
 
 # FHIR
+A Dart/Flutter package for working with FHIR resources.
 
-A Dart/Flutter package for working with FHIR R4 resources.
+It contains packages for the 3 released FHIR versions:
+* [R4 v4.0.1](https://hl7.org/fhir/R4/)
+* [Stu3 v3.0.2](https://www.hl7.org/fhir/stu3/)
+* [Dstu2 v1.0.2](https://www.hl7.org/fhir/DSTU2/)
 
-This is all based on the [R4 version of FHIR](https://hl7.org/fhir/R4/).
+## Validation
+### R4
+  * All of the downloadable [HL7 Examples](https://www.hl7.org/fhir/examples-json.zip) have been run through the classes via [this script](https://github.com/Dokotela/fhir/blob/dev/test/r4/validation.dart).
+  * I've compared each field from the input to the output and output to input as Maps. This should have revealed if any fields were created or deleted. It also avoids issues with fields in a different order from input to output.
+  * Known problems:
+  1. There is an [Id field](https://github.com/Dokotela/fhir/blob/dev/test/r4/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) in the examples seems to be too long
+  2. There is a [Base64Binary](https://github.com/Dokotela/fhir/blob/dev/test/r4/r4_examples/binary-example.json) field that has padding which renders it invalid
+  3. There's also [this file](https://github.com/Dokotela/fhir/blob/dev/test/r4/r4_examples/package-min-ver.json) I have no idea what to do with.
+### Stu3
+  * No formal validation done yet.
+### Dstu2
+  * No formal validation done yet.
 
 ## First Package
-
 This is the first time I've ever created a package, feedback and pull requests are welcome. I've also been started to implement type checking using [Freezed](https://pub.dev/packages/freezed). But if you run into any issues with this, either incorrect validation, or frustrating to work with returned failures, please let me know.
 
 ## Things I'm working on
-
 Currently working on refactoring and abstracting some classes with the help of [Dr. John Manning](https://github.com/FireJuun).
 
 Nevermind about the previous thing about [Aidbox](https://www.health-samurai.io/aidbox), my favorite FHIR server. They have changed some of the endpoints for their server as they feel it works better, however, if you append fhir before the rest, then it returns the normal FHIR json (i.e. GET /fhir/Patient)
