@@ -13,7 +13,8 @@ class Oid extends PrimitiveObject<String> {
       validateOid(value),
     );
   }
+
   const Oid._(this.value);
+
   factory Oid.fromJson(String json) => Oid(json);
-  String toJson() => result();
 }

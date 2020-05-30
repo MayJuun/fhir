@@ -15,6 +15,6 @@ class Id extends PrimitiveObject<String> {
   }
 
   const Id._(this.value);
+
   factory Id.fromJson(String json) => Id(json);
-  String toJson() => result();
 }

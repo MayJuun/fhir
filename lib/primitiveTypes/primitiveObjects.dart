@@ -21,12 +21,12 @@ abstract class PrimitiveObject<T> {
   @override
   String toString() => result();
 
-  String result() => value.fold(
+  dynamic toJson() => result();
+
+  dynamic result() => value.fold(
         (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
         (value) => value.toString(),
       );
-
-  String toJson() => result();
 }
 
 bool hasMatch(String pattern, String input) => RegExp(pattern).hasMatch(input);
@@ -36,9 +36,9 @@ Either<PrimitiveFailure<String>, String> validateBase64Binary(String value) =>
         ? right(value)
         : left(PrimitiveFailure.invalidBase64Binary(failedValue: value));
 
-Either<PrimitiveFailure<String>, bool> validateBoolean(String value) =>
-    ['true', 'false'].contains(value.toLowerCase())
-        ? right(value.toLowerCase() == 'true')
+Either<PrimitiveFailure<String>, bool> validateBoolean(dynamic value) =>
+    ['true', 'false'].contains(value.toString().toLowerCase())
+        ? right(value.toString().toLowerCase() == 'true')
         : left(PrimitiveFailure.invalidBoolean(failedValue: value));
 
 Either<PrimitiveFailure<String>, String> validateCanonical(String value) =>
@@ -51,35 +51,20 @@ Either<PrimitiveFailure<String>, String> validateCode(String value) =>
         ? right(value)
         : left(PrimitiveFailure.invalidCode(failedValue: value));
 
-Either<PrimitiveFailure<String>, String> validateDate(String value) =>
-    isDate(value)
-        ? right(value)
-        : left(PrimitiveFailure.invalidDate(failedValue: value));
-
-Either<PrimitiveFailure<String>, DateTime> validateFhirDateTime(String value) =>
-    isDate(value)
-        ? right(DateTime.parse(value))
-        : left(PrimitiveFailure.invalidFhirDateTime(failedValue: value));
-
-Either<PrimitiveFailure<String>, double> validateDecimal(String value) =>
-    double.tryParse(value) != null
-        ? right(double.parse(value))
-        : left(PrimitiveFailure.invalidDecimal(failedValue: value));
+Either<PrimitiveFailure<String>, double> validateDecimal(dynamic value) =>
+    double.tryParse(value.toString()) != null
+        ? right(double.parse(value.toString()))
+        : left(PrimitiveFailure.invalidDecimal(failedValue: value.toString()));
 
 Either<PrimitiveFailure<String>, String> validateId(String value) =>
     hasMatch(r"""^[A-Za-z0-9\-\.]{1,64}$""", value)
         ? right(value)
         : left(PrimitiveFailure.invalidId(failedValue: value));
 
-Either<PrimitiveFailure<String>, DateTime> validateInstant(String value) =>
-    isDate(value)
-        ? right(DateTime.parse(value))
-        : left(PrimitiveFailure.invalidInstant(failedValue: value));
-
-Either<PrimitiveFailure<String>, int> validateInteger(String value) =>
-    int.tryParse(value) != null
-        ? right(int.parse(value))
-        : left(PrimitiveFailure.invalidInteger(failedValue: value));
+Either<PrimitiveFailure<String>, int> validateInteger(dynamic value) =>
+    int.tryParse(value.toString()) != null
+        ? right(int.parse(value.toString()))
+        : left(PrimitiveFailure.invalidInteger(failedValue: value.toString()));
 
 Either<PrimitiveFailure<String>, String> validateMarkdown(String value) =>
     hasMatch(r"""^[ \r\n\t\S]+$""", value)
@@ -91,13 +76,15 @@ Either<PrimitiveFailure<String>, String> validateOid(String value) =>
         ? right(value)
         : left(PrimitiveFailure.invalidOid(failedValue: value));
 
-Either<PrimitiveFailure<String>, int> validatePositiveInt(String value) {
-  var val = int.tryParse(value);
+Either<PrimitiveFailure<String>, int> validatePositiveInt(dynamic value) {
+  var val = int.tryParse(value.toString());
   return val != null
-      ? val < 0
+      ? val > 0
           ? right(val)
-          : left(PrimitiveFailure.invalidPositiveInt(failedValue: value))
-      : left(PrimitiveFailure.invalidPositiveInt(failedValue: value));
+          : left(PrimitiveFailure.invalidPositiveInt(
+              failedValue: value.toString()))
+      : left(
+          PrimitiveFailure.invalidPositiveInt(failedValue: value.toString()));
 }
 
 Either<PrimitiveFailure<String>, Duration> validateTime(String value) =>
@@ -108,13 +95,15 @@ Either<PrimitiveFailure<String>, Duration> validateTime(String value) =>
             minutes: int.parse(value.split(':')[1])))
         : left(PrimitiveFailure.invalidTime(failedValue: value));
 
-Either<PrimitiveFailure<String>, int> validateUnsignedInt(String value) {
-  var val = int.tryParse(value);
+Either<PrimitiveFailure<String>, int> validateUnsignedInt(dynamic value) {
+  var val = int.tryParse(value.toString());
   return val != null
-      ? val < 0
+      ? val >= 0
           ? right(val)
-          : left(PrimitiveFailure.invalidUnsignedInt(failedValue: value))
-      : left(PrimitiveFailure.invalidUnsignedInt(failedValue: value));
+          : left(PrimitiveFailure.invalidUnsignedInt(
+              failedValue: value.toString()))
+      : left(
+          PrimitiveFailure.invalidUnsignedInt(failedValue: value.toString()));
 }
 
 Either<PrimitiveFailure<String>, Uri> validateFhirUri(String value) =>

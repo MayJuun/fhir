@@ -13,7 +13,8 @@ class Markdown extends PrimitiveObject<String> {
       validateMarkdown(value),
     );
   }
+
   const Markdown._(this.value);
+  
   factory Markdown.fromJson(String json) => Markdown(json);
-  String toJson() => result();
 }

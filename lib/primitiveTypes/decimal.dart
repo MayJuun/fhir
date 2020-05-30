@@ -7,14 +7,20 @@ class Decimal extends PrimitiveObject<double> {
   @override
   final Either<PrimitiveFailure<String>, double> value;
 
-  factory Decimal(String value) {
+  factory Decimal(dynamic value) {
     assert(value != null);
     return Decimal._(
       validateDecimal(value),
     );
   }
+
   const Decimal._(this.value);
 
-  factory Decimal.fromJson(String json) => Decimal(json);
-  String toJson() => result();
+  factory Decimal.fromJson(dynamic json) => Decimal(json);
+
+  @override
+  dynamic toJson() => value.fold(
+        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
+        (value) => value,
+      );
 }

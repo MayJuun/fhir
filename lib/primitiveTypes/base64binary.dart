@@ -16,5 +16,4 @@ class Base64Binary extends PrimitiveObject<String> {
   const Base64Binary._(this.value);
 
   factory Base64Binary.fromJson(String json) => Base64Binary(json);
-  String toJson() => result();
 }
