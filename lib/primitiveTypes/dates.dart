@@ -9,89 +9,84 @@ class FhirDateTime extends Dates {
   final Either<PrimitiveFailure<String>, DateTime> value;
   final _DateTimeFormat format;
 
-  factory FhirDateTime(String value) {
+  factory FhirDateTime(value) {
     assert(value != null);
-
-    var dateTime;
-    var dateTimeFormat;
-
-    if (dateTime is! PrimitiveFailure<String>) {
-      if (hasMatch(
-          r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$', value)) {
-        dateTimeFormat = _DateTimeFormat.yyyy;
-      } else if (hasMatch(
-          r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$',
-          value)) {
-        dateTimeFormat = _DateTimeFormat.ym;
-      } else if (hasMatch(
-          r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$',
-          value)) {
-        dateTimeFormat = _DateTimeFormat.ymd;
-      } else if (isDate(value)) {
-        var exp = RegExp(r'(\+|-)(0[0-9]|1[0-3]):([0-5][0-9]|14:00)');
-        var match = exp.firstMatch(value);
-        dateTimeFormat = match == null
-            ? _DateTimeFormat.utc
-            : _offsetToFormat(match.group(0));
-      } else {
-        dateTimeFormat = _DateTimeFormat.incorrect_format;
-        dateTime =
-            left(PrimitiveFailure.invalidFhirDateTime(failedValue: value));
-      }
-    } else {
-      dateTimeFormat = _DateTimeFormat.incorrect_format;
+    var dateFormat = _validateDate(value.toString());
+    if (dateFormat[0] is PrimitiveFailure) {
+      return FhirDateTime._(
+          Left(
+            PrimitiveFailure.invalidFhirDateTime(
+              failedValue: value.toString(),
+            ),
+          ),
+          _DateTimeFormat.incorrect_format);
     }
-
-    return FhirDateTime._(
-      dateTime,
-      dateTimeFormat,
-    );
+    return FhirDateTime._(Right(dateFormat[0]), dateFormat[1]);
   }
 
-  const FhirDateTime._(this.value, this.format);
-
-  factory FhirDateTime.fromDateTime(DateTime value) =>
-      FhirDateTime(value.toIso8601String());
-
+  FhirDateTime._(this.value, this.format);
   factory FhirDateTime.fromJson(String json) => FhirDateTime(json);
+}
 
+class Date extends Dates {
   @override
-  String toJson() => toString();
+  final Either<PrimitiveFailure<String>, DateTime> value;
+  final _DateTimeFormat format;
 
+  factory Date(value) {
+    assert(value != null);
+    var dateFormat = _validateDate(value.toString());
+    if (dateFormat[1] != _DateTimeFormat.y &&
+        dateFormat[1] != _DateTimeFormat.ym &&
+        dateFormat[1] != _DateTimeFormat.ymd) {
+      return Date._(
+          Left(
+            PrimitiveFailure.invalidDate(
+              failedValue: value.toString(),
+            ),
+          ),
+          _DateTimeFormat.incorrect_format);
+    } else if (dateFormat[0] is PrimitiveFailure) {
+      Date._(
+          Left(
+            PrimitiveFailure.invalidDate(
+              failedValue: value.toString(),
+            ),
+          ),
+          _DateTimeFormat.incorrect_format);
+    }
+    return Date._(Right(dateFormat[0]), dateFormat[1]);
+  }
+
+  Date._(this.value, this.format);
+  factory Date.fromJson(String json) => Date(json);
+}
+
+class Instant extends Dates {
   @override
-  String toString() => value.fold(
-        (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
-        (value) => formattedDate(value),
-      );
+  final Either<PrimitiveFailure<String>, DateTime> value;
+  final _DateTimeFormat format;
 
-  String formattedDate(value) {
-    switch (format) {
-      case _DateTimeFormat.yyyy:
-        return '${value.year}';
-      case _DateTimeFormat.ym:
-        return '${value.year}-${value.month.toString().padLeft(2, '0')}';
-      case _DateTimeFormat.ymd:
-        return '${value.year}-'
-            '${value.month.toString().padLeft(2, '0')}-'
-            '${value.day.toString().padLeft(2, '0')}';
-      case _DateTimeFormat.utc:
-        return '${value.toIso8601String()}';
-      case _DateTimeFormat.incorrect_format:
-        return 'incorrect format';
-      default:
-        {
-          var offsetter = formatToOffset(format);
-          var posNeg = offsetter[0] == '+' ? 1 : -1;
-          var offset = offsetter.substring(1, offsetter.length);
-          var hours = int.parse(offset.split(':')[0]) * posNeg;
-          var min = int.parse(offset.split(':')[1]) * posNeg;
-          return value
-              .add(Duration(hours: hours, minutes: min))
-              .toIso8601String()
-              .replaceAll('Z', offsetter);
-        }
+  factory Instant(value) {
+    assert(value != null);
+    var instantFormat = _validateDate(value.toString());
+    if (instantFormat[1] == _DateTimeFormat.y ||
+        instantFormat[1] == _DateTimeFormat.ym ||
+        instantFormat[1] == _DateTimeFormat.ymd) {
+      return Instant._(
+          Left(
+            PrimitiveFailure.invalidInstant(
+              failedValue: value.toString(),
+            ),
+          ),
+          _DateTimeFormat.incorrect_format);
+    } else {
+      return Instant._(Right(instantFormat[0]), instantFormat[1]);
     }
   }
+
+  Instant._(this.value, this.format);
+  factory Instant.fromJson(String json) => Instant(json);
 }
 
 abstract class Dates extends PrimitiveObject<DateTime> {
@@ -110,7 +105,7 @@ abstract class Dates extends PrimitiveObject<DateTime> {
 
   String _formattedDate(value) {
     switch (format) {
-      case _DateTimeFormat.yyyy:
+      case _DateTimeFormat.y:
         return '${value.year}';
       case _DateTimeFormat.ym:
         return '${value.year}-${value.month.toString().padLeft(2, '0')}';
@@ -138,8 +133,44 @@ abstract class Dates extends PrimitiveObject<DateTime> {
   }
 }
 
+List<dynamic> _validateDate(String value) {
+  assert(value != null);
+  var dateTime;
+  var dateTimeFormat;
+
+  if (hasMatch(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$', value)) {
+    dateTimeFormat = _DateTimeFormat.y;
+    dateTime = DateTime(int.parse(value));
+  } else if (hasMatch(
+      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$',
+      value)) {
+    dateTimeFormat = _DateTimeFormat.ym;
+    var year = int.parse(value.split('-')[0]);
+    var month = int.parse(value.split('-')[1]);
+    dateTime = DateTime(year, month);
+  } else if (hasMatch(
+      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$',
+      value)) {
+    dateTimeFormat = _DateTimeFormat.ymd;
+    dateTime = DateTime.parse(value);
+  } else if (isDate(value)) {
+    dateTime = DateTime.parse(value);
+    var exp = RegExp(r'(\+|-)(0[0-9]|1[0-3]):([0-5][0-9]|14:00)');
+    var match = exp.firstMatch(value);
+    dateTimeFormat =
+        match == null ? _DateTimeFormat.utc : _offsetToFormat(match.group(0));
+  } else {
+    dateTimeFormat = _DateTimeFormat.incorrect_format;
+    dateTime = left(PrimitiveFailure.invalidFhirDateTime(failedValue: value));
+  }
+  return [
+    dateTime,
+    dateTimeFormat,
+  ];
+}
+
 enum _DateTimeFormat {
-  yyyy,
+  y,
   ym,
   ymd,
   utc,
