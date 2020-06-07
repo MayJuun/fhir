@@ -677,10 +677,11 @@ _$_TestScriptMetadata _$_$_TestScriptMetadataFromJson(
             ? null
             : TestScriptLink.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    capability: json['capability'] == null
-        ? null
-        : TestScriptCapability.fromJson(
-            json['capability'] as Map<String, dynamic>),
+    capability: (json['capability'] as List)
+        ?.map((e) => e == null
+            ? null
+            : TestScriptCapability.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -699,7 +700,8 @@ Map<String, dynamic> _$_$_TestScriptMetadataToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
-  writeNotNull('capability', instance.capability?.toJson());
+  writeNotNull(
+      'capability', instance.capability?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

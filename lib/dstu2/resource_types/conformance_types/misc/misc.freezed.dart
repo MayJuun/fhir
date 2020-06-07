@@ -3690,10 +3690,13 @@ class _$TestScriptMetadataTearOff {
 
   _TestScriptMetadata call(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<TestScriptLink> link,
-      @required @JsonKey(required: true) TestScriptCapability capability}) {
+      @required
+      @JsonKey(required: true)
+          List<TestScriptCapability> capability}) {
     return _TestScriptMetadata(
       id: id,
       extension_: extension_,
@@ -3714,7 +3717,7 @@ mixin _$TestScriptMetadata {
   FhirExtension get modifierExtension;
   List<TestScriptLink> get link;
   @JsonKey(required: true)
-  TestScriptCapability get capability;
+  List<TestScriptCapability> get capability;
 
   Map<String, dynamic> toJson();
   $TestScriptMetadataCopyWith<TestScriptMetadata> get copyWith;
@@ -3729,10 +3732,9 @@ abstract class $TestScriptMetadataCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<TestScriptLink> link,
-      @JsonKey(required: true) TestScriptCapability capability});
+      @JsonKey(required: true) List<TestScriptCapability> capability});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $TestScriptCapabilityCopyWith<$Res> get capability;
 }
 
 class _$TestScriptMetadataCopyWithImpl<$Res>
@@ -3762,7 +3764,7 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<TestScriptLink>,
       capability: capability == freezed
           ? _value.capability
-          : capability as TestScriptCapability,
+          : capability as List<TestScriptCapability>,
     ));
   }
 
@@ -3773,16 +3775,6 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $TestScriptCapabilityCopyWith<$Res> get capability {
-    if (_value.capability == null) {
-      return null;
-    }
-    return $TestScriptCapabilityCopyWith<$Res>(_value.capability, (value) {
-      return _then(_value.copyWith(capability: value));
     });
   }
 }
@@ -3798,12 +3790,10 @@ abstract class _$TestScriptMetadataCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<TestScriptLink> link,
-      @JsonKey(required: true) TestScriptCapability capability});
+      @JsonKey(required: true) List<TestScriptCapability> capability});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $TestScriptCapabilityCopyWith<$Res> get capability;
 }
 
 class __$TestScriptMetadataCopyWithImpl<$Res>
@@ -3835,7 +3825,7 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<TestScriptLink>,
       capability: capability == freezed
           ? _value.capability
-          : capability as TestScriptCapability,
+          : capability as List<TestScriptCapability>,
     ));
   }
 }
@@ -3864,7 +3854,7 @@ class _$_TestScriptMetadata implements _TestScriptMetadata {
   final List<TestScriptLink> link;
   @override
   @JsonKey(required: true)
-  final TestScriptCapability capability;
+  final List<TestScriptCapability> capability;
 
   @override
   String toString() {
@@ -3911,12 +3901,14 @@ class _$_TestScriptMetadata implements _TestScriptMetadata {
 
 abstract class _TestScriptMetadata implements TestScriptMetadata {
   const factory _TestScriptMetadata(
-          {Id id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          List<TestScriptLink> link,
-          @required @JsonKey(required: true) TestScriptCapability capability}) =
-      _$_TestScriptMetadata;
+      {Id id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      List<TestScriptLink> link,
+      @required
+      @JsonKey(required: true)
+          List<TestScriptCapability> capability}) = _$_TestScriptMetadata;
 
   factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
       _$_TestScriptMetadata.fromJson;
@@ -3932,7 +3924,7 @@ abstract class _TestScriptMetadata implements TestScriptMetadata {
   List<TestScriptLink> get link;
   @override
   @JsonKey(required: true)
-  TestScriptCapability get capability;
+  List<TestScriptCapability> get capability;
   @override
   _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith;
 }

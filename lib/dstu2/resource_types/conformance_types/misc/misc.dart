@@ -210,7 +210,7 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<TestScriptLink> link,
-    @JsonKey(required: true) @required TestScriptCapability capability,
+    @JsonKey(required: true) @required List<TestScriptCapability> capability,
   }) = _TestScriptMetadata;
 
   factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
