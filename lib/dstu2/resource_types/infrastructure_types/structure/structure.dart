@@ -17,7 +17,7 @@ abstract class Media with _$Media implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
     @required
@@ -48,7 +48,7 @@ abstract class Basic with _$Basic implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) @required CodeableConcept code,

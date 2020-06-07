@@ -25,7 +25,7 @@ class _$ConformanceTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       String version,
@@ -107,7 +107,7 @@ mixin _$Conformance {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   FhirUri get url;
   String get version;
@@ -155,7 +155,7 @@ abstract class $ConformanceCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       String version,
@@ -187,7 +187,6 @@ abstract class $ConformanceCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ConformanceSoftwareCopyWith<$Res> get software;
   $ConformanceImplementationCopyWith<$Res> get implementation;
@@ -248,7 +247,7 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -316,16 +315,6 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
   }
 
   @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
   $FhirExtensionCopyWith<$Res> get modifierExtension {
     if (_value.modifierExtension == null) {
       return null;
@@ -373,7 +362,7 @@ abstract class _$ConformanceCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       String version,
@@ -407,8 +396,6 @@ abstract class _$ConformanceCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -474,7 +461,7 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -594,7 +581,7 @@ class _$_Conformance implements _Conformance {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -785,7 +772,7 @@ abstract class _Conformance implements Conformance {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       String version,
@@ -840,7 +827,7 @@ abstract class _Conformance implements Conformance {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -912,7 +899,7 @@ class _$OperationDefinitionTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       String version,
@@ -991,7 +978,7 @@ mixin _$OperationDefinition {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   FhirUri get url;
   String get version;
@@ -1037,7 +1024,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       String version,
@@ -1067,7 +1054,6 @@ abstract class $OperationDefinitionCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get base;
 }
@@ -1126,7 +1112,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1185,16 +1171,6 @@ class _$OperationDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
   $FhirExtensionCopyWith<$Res> get modifierExtension {
     if (_value.modifierExtension == null) {
       return null;
@@ -1231,7 +1207,7 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       String version,
@@ -1263,8 +1239,6 @@ abstract class _$OperationDefinitionCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -1327,7 +1301,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1438,7 +1412,7 @@ class _$_OperationDefinition implements _OperationDefinition {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -1622,7 +1596,7 @@ abstract class _OperationDefinition implements OperationDefinition {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       String version,
@@ -1676,7 +1650,7 @@ abstract class _OperationDefinition implements OperationDefinition {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -1744,7 +1718,7 @@ class _$SearchParameterTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -1817,7 +1791,7 @@ mixin _$SearchParameter {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   FhirUri get url;
@@ -1861,7 +1835,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           FhirUri url,
@@ -1889,7 +1863,6 @@ abstract class $SearchParameterCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -1943,7 +1916,7 @@ class _$SearchParameterCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1996,16 +1969,6 @@ class _$SearchParameterCopyWithImpl<$Res>
   }
 
   @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
   $FhirExtensionCopyWith<$Res> get modifierExtension {
     if (_value.modifierExtension == null) {
       return null;
@@ -2032,7 +1995,7 @@ abstract class _$SearchParameterCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           FhirUri url,
@@ -2062,8 +2025,6 @@ abstract class _$SearchParameterCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -2120,7 +2081,7 @@ class __$SearchParameterCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2223,7 +2184,7 @@ class _$_SearchParameter implements _SearchParameter {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2385,7 +2346,7 @@ abstract class _SearchParameter implements SearchParameter {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -2437,7 +2398,7 @@ abstract class _SearchParameter implements SearchParameter {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

@@ -25,7 +25,7 @@ class _$StructureDefinitionTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -115,7 +115,7 @@ mixin _$StructureDefinition {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   FhirUri get url;
@@ -167,7 +167,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           FhirUri url,
@@ -203,7 +203,6 @@ abstract class $StructureDefinitionCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $StructureDefinitionSnapshotCopyWith<$Res> get snapshot;
   $StructureDefinitionDifferentialCopyWith<$Res> get differential;
@@ -269,7 +268,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -346,16 +345,6 @@ class _$StructureDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
   $FhirExtensionCopyWith<$Res> get modifierExtension {
     if (_value.modifierExtension == null) {
       return null;
@@ -403,7 +392,7 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           FhirUri url,
@@ -441,8 +430,6 @@ abstract class _$StructureDefinitionCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -513,7 +500,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -646,7 +633,7 @@ class _$_StructureDefinition implements _StructureDefinition {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -854,7 +841,7 @@ abstract class _StructureDefinition implements StructureDefinition {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -913,7 +900,7 @@ abstract class _StructureDefinition implements StructureDefinition {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -993,7 +980,7 @@ class _$DataElementTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       List<Identifier> identifier,
@@ -1055,7 +1042,7 @@ mixin _$DataElement {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   FhirUri get url;
   List<Identifier> get identifier;
@@ -1093,7 +1080,7 @@ abstract class $DataElementCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       List<Identifier> identifier,
@@ -1115,7 +1102,6 @@ abstract class $DataElementCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -1167,7 +1153,7 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1223,16 +1209,6 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
   }
 
   @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
-
-  @override
   $FhirExtensionCopyWith<$Res> get modifierExtension {
     if (_value.modifierExtension == null) {
       return null;
@@ -1259,7 +1235,7 @@ abstract class _$DataElementCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       List<Identifier> identifier,
@@ -1283,8 +1259,6 @@ abstract class _$DataElementCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -1339,7 +1313,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1431,7 +1405,7 @@ class _$_DataElement implements _DataElement {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -1586,7 +1560,7 @@ abstract class _DataElement implements DataElement {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       FhirUri url,
       List<Identifier> identifier,
@@ -1628,7 +1602,7 @@ abstract class _DataElement implements DataElement {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

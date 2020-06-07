@@ -19,7 +19,7 @@ abstract class ExplanationOfBenefit
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference request,

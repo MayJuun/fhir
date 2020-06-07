@@ -26,7 +26,7 @@ class _$ImmunizationRecommendationTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @required
@@ -65,7 +65,7 @@ mixin _$ImmunizationRecommendation {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   List<Identifier> get identifier;
   @JsonKey(required: true)
@@ -91,7 +91,7 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true)
@@ -101,7 +101,6 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get patient;
 }
@@ -144,7 +143,7 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -175,16 +174,6 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
     });
   }
 
@@ -226,7 +215,7 @@ abstract class _$ImmunizationRecommendationCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true)
@@ -238,8 +227,6 @@ abstract class _$ImmunizationRecommendationCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -287,7 +274,7 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -340,7 +327,7 @@ class _$_ImmunizationRecommendation implements _ImmunizationRecommendation {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -435,7 +422,7 @@ abstract class _ImmunizationRecommendation
           Narrative text,
           Resource contained,
           @JsonKey(name: 'extension')
-              FhirExtension extension_,
+              List<FhirExtension> extension_,
           FhirExtension modifierExtension,
           List<Identifier> identifier,
           @required
@@ -466,7 +453,7 @@ abstract class _ImmunizationRecommendation
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -499,7 +486,7 @@ class _$MedicationDispenseTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
@@ -563,7 +550,7 @@ mixin _$MedicationDispense {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
   @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
@@ -602,7 +589,7 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
@@ -625,7 +612,6 @@ abstract class $MedicationDispenseCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get patient;
@@ -691,7 +677,7 @@ class _$MedicationDispenseCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -754,16 +740,6 @@ class _$MedicationDispenseCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
     });
   }
 
@@ -896,7 +872,7 @@ abstract class _$MedicationDispenseCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
@@ -921,8 +897,6 @@ abstract class _$MedicationDispenseCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -1001,7 +975,7 @@ class __$MedicationDispenseCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1098,7 +1072,7 @@ class _$_MedicationDispense implements _MedicationDispense {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -1263,7 +1237,7 @@ abstract class _MedicationDispense implements MedicationDispense {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
@@ -1304,7 +1278,7 @@ abstract class _MedicationDispense implements MedicationDispense {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -1363,7 +1337,7 @@ class _$MedicationStatementTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @required
@@ -1428,7 +1402,7 @@ mixin _$MedicationStatement {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   List<Identifier> get identifier;
   @JsonKey(required: true)
@@ -1467,7 +1441,7 @@ abstract class $MedicationStatementCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true)
@@ -1490,7 +1464,6 @@ abstract class $MedicationStatementCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res> get informationSource;
@@ -1552,7 +1525,7 @@ class _$MedicationStatementCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1619,16 +1592,6 @@ class _$MedicationStatementCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
     });
   }
 
@@ -1731,7 +1694,7 @@ abstract class _$MedicationStatementCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true)
@@ -1756,8 +1719,6 @@ abstract class _$MedicationStatementCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -1829,7 +1790,7 @@ class __$MedicationStatementCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1937,7 +1898,7 @@ class _$_MedicationStatement implements _MedicationStatement {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2103,7 +2064,7 @@ abstract class _MedicationStatement implements MedicationStatement {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @required
@@ -2146,7 +2107,7 @@ abstract class _MedicationStatement implements MedicationStatement {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2204,7 +2165,7 @@ class _$ImmunizationTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @required
@@ -2285,7 +2246,7 @@ mixin _$Immunization {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   Identifier get identifier;
   @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
@@ -2332,7 +2293,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
@@ -2363,7 +2324,6 @@ abstract class $ImmunizationCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get vaccineCode;
@@ -2434,7 +2394,7 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2498,16 +2458,6 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
     });
   }
 
@@ -2658,7 +2608,7 @@ abstract class _$ImmunizationCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Identifier identifier,
       @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
@@ -2691,8 +2641,6 @@ abstract class _$ImmunizationCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -2778,7 +2726,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2897,7 +2845,7 @@ class _$_Immunization implements _Immunization {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3087,7 +3035,7 @@ abstract class _Immunization implements Immunization {
           Narrative text,
           Resource contained,
           @JsonKey(name: 'extension')
-              FhirExtension extension_,
+              List<FhirExtension> extension_,
           FhirExtension modifierExtension,
           Identifier identifier,
           @required
@@ -3142,7 +3090,7 @@ abstract class _Immunization implements Immunization {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3211,7 +3159,7 @@ class _$MedicationTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Boolean isBrand,
@@ -3250,7 +3198,7 @@ mixin _$Medication {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get code;
   Boolean get isBrand;
@@ -3274,7 +3222,7 @@ abstract class $MedicationCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Boolean isBrand,
@@ -3284,7 +3232,6 @@ abstract class $MedicationCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get manufacturer;
@@ -3331,7 +3278,7 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3364,16 +3311,6 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
     });
   }
 
@@ -3441,7 +3378,7 @@ abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Boolean isBrand,
@@ -3453,8 +3390,6 @@ abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3508,7 +3443,7 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3563,7 +3498,7 @@ class _$_Medication implements _Medication {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3662,7 +3597,7 @@ abstract class _Medication implements Medication {
       Code language,
       Narrative text,
       Resource contained,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Boolean isBrand,
@@ -3690,7 +3625,7 @@ abstract class _Medication implements Medication {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3725,7 +3660,7 @@ class _$MedicationAdministrationTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @required
@@ -3790,7 +3725,7 @@ mixin _$MedicationAdministration {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   List<Identifier> get identifier;
   @JsonKey(
@@ -3830,7 +3765,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true, unknownEnumValue: MedicationAdministrationStatus.unknown)
@@ -3853,7 +3788,6 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res> get practitioner;
@@ -3916,7 +3850,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3980,16 +3914,6 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
     });
   }
 
@@ -4102,7 +4026,7 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true, unknownEnumValue: MedicationAdministrationStatus.unknown)
@@ -4127,8 +4051,6 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -4203,7 +4125,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4308,7 +4230,7 @@ class _$_MedicationAdministration implements _MedicationAdministration {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -4476,7 +4398,7 @@ abstract class _MedicationAdministration implements MedicationAdministration {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       @required
@@ -4519,7 +4441,7 @@ abstract class _MedicationAdministration implements MedicationAdministration {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -4578,7 +4500,7 @@ class _$MedicationOrderTearOff {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       FhirDateTime dateWritten,
@@ -4642,7 +4564,7 @@ mixin _$MedicationOrder {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   List<Identifier> get identifier;
   FhirDateTime get dateWritten;
@@ -4681,7 +4603,7 @@ abstract class $MedicationOrderCopyWith<$Res> {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       FhirDateTime dateWritten,
@@ -4704,7 +4626,6 @@ abstract class $MedicationOrderCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get reasonEnded;
   $ReferenceCopyWith<$Res> get patient;
@@ -4771,7 +4692,7 @@ class _$MedicationOrderCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4838,16 +4759,6 @@ class _$MedicationOrderCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
     });
   }
 
@@ -4992,7 +4903,7 @@ abstract class _$MedicationOrderCopyWith<$Res>
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       FhirDateTime dateWritten,
@@ -5017,8 +4928,6 @@ abstract class _$MedicationOrderCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -5099,7 +5008,7 @@ class __$MedicationOrderCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -5200,7 +5109,7 @@ class _$_MedicationOrder implements _MedicationOrder {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -5369,7 +5278,7 @@ abstract class _MedicationOrder implements MedicationOrder {
       Narrative text,
       Resource contained,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       FhirDateTime dateWritten,
@@ -5410,7 +5319,7 @@ abstract class _MedicationOrder implements MedicationOrder {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

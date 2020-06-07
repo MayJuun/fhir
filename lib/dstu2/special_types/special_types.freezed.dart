@@ -876,7 +876,7 @@ class _$MetaTearOff {
       @JsonKey(name: 'extension') FhirExtension extension_,
       Id versionId,
       Instant lastUpdated,
-      FhirUri profile,
+      List<FhirUri> profile,
       List<Coding> security,
       List<Coding> tag}) {
     return _Meta(
@@ -900,7 +900,7 @@ mixin _$Meta {
   FhirExtension get extension_;
   Id get versionId;
   Instant get lastUpdated;
-  FhirUri get profile;
+  List<FhirUri> get profile;
   List<Coding> get security;
   List<Coding> get tag;
 
@@ -916,7 +916,7 @@ abstract class $MetaCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       Id versionId,
       Instant lastUpdated,
-      FhirUri profile,
+      List<FhirUri> profile,
       List<Coding> security,
       List<Coding> tag});
 
@@ -948,7 +948,7 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
       versionId: versionId == freezed ? _value.versionId : versionId as Id,
       lastUpdated:
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
-      profile: profile == freezed ? _value.profile : profile as FhirUri,
+      profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       security:
           security == freezed ? _value.security : security as List<Coding>,
       tag: tag == freezed ? _value.tag : tag as List<Coding>,
@@ -975,7 +975,7 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
       @JsonKey(name: 'extension') FhirExtension extension_,
       Id versionId,
       Instant lastUpdated,
-      FhirUri profile,
+      List<FhirUri> profile,
       List<Coding> security,
       List<Coding> tag});
 
@@ -1009,7 +1009,7 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
       versionId: versionId == freezed ? _value.versionId : versionId as Id,
       lastUpdated:
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
-      profile: profile == freezed ? _value.profile : profile as FhirUri,
+      profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       security:
           security == freezed ? _value.security : security as List<Coding>,
       tag: tag == freezed ? _value.tag : tag as List<Coding>,
@@ -1041,7 +1041,7 @@ class _$_Meta implements _Meta {
   @override
   final Instant lastUpdated;
   @override
-  final FhirUri profile;
+  final List<FhirUri> profile;
   @override
   final List<Coding> security;
   @override
@@ -1104,7 +1104,7 @@ abstract class _Meta implements Meta {
       @JsonKey(name: 'extension') FhirExtension extension_,
       Id versionId,
       Instant lastUpdated,
-      FhirUri profile,
+      List<FhirUri> profile,
       List<Coding> security,
       List<Coding> tag}) = _$_Meta;
 
@@ -1120,7 +1120,7 @@ abstract class _Meta implements Meta {
   @override
   Instant get lastUpdated;
   @override
-  FhirUri get profile;
+  List<FhirUri> get profile;
   @override
   List<Coding> get security;
   @override

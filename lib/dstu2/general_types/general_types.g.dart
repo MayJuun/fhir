@@ -679,9 +679,15 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
     extension_: json['extension'] == null
         ? null
         : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
-    boundsX: json['boundsX'] == null
+    boundsQuantity: json['boundsQuantity'] == null
         ? null
-        : Quantity.fromJson(json['boundsX'] as Map<String, dynamic>),
+        : Quantity.fromJson(json['boundsQuantity'] as Map<String, dynamic>),
+    boundsRange: json['boundsRange'] == null
+        ? null
+        : Range.fromJson(json['boundsRange'] as Map<String, dynamic>),
+    boundsPeriod: json['boundsPeriod'] == null
+        ? null
+        : Period.fromJson(json['boundsPeriod'] as Map<String, dynamic>),
     count: json['count'] == null ? null : Integer.fromJson(json['count']),
     duration:
         json['duration'] == null ? null : Decimal.fromJson(json['duration']),
@@ -716,7 +722,9 @@ Map<String, dynamic> _$_$_TimingRepeatToJson(_$_TimingRepeat instance) {
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension_?.toJson());
-  writeNotNull('boundsX', instance.boundsX?.toJson());
+  writeNotNull('boundsQuantity', instance.boundsQuantity?.toJson());
+  writeNotNull('boundsRange', instance.boundsRange?.toJson());
+  writeNotNull('boundsPeriod', instance.boundsPeriod?.toJson());
   writeNotNull('count', instance.count?.toJson());
   writeNotNull('duration', instance.duration?.toJson());
   writeNotNull('durationMax', instance.durationMax?.toJson());

@@ -136,9 +136,9 @@ _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
     lastUpdated: json['lastUpdated'] == null
         ? null
         : Instant.fromJson(json['lastUpdated'] as String),
-    profile: json['profile'] == null
-        ? null
-        : FhirUri.fromJson(json['profile'] as String),
+    profile: (json['profile'] as List)
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.toList(),
     security: (json['security'] as List)
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
@@ -163,7 +163,7 @@ Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
   writeNotNull('extension', instance.extension_?.toJson());
   writeNotNull('versionId', instance.versionId?.toJson());
   writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
-  writeNotNull('profile', instance.profile?.toJson());
+  writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'security', instance.security?.map((e) => e?.toJson())?.toList());
   writeNotNull('tag', instance.tag?.map((e) => e?.toJson())?.toList());

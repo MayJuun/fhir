@@ -4159,7 +4159,9 @@ class _$TimingRepeatTearOff {
   _TimingRepeat call(
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
-      Quantity boundsX,
+      Quantity boundsQuantity,
+      Range boundsRange,
+      Period boundsPeriod,
       Integer count,
       Decimal duration,
       Decimal durationMax,
@@ -4173,7 +4175,9 @@ class _$TimingRepeatTearOff {
     return _TimingRepeat(
       id: id,
       extension_: extension_,
-      boundsX: boundsX,
+      boundsQuantity: boundsQuantity,
+      boundsRange: boundsRange,
+      boundsPeriod: boundsPeriod,
       count: count,
       duration: duration,
       durationMax: durationMax,
@@ -4195,7 +4199,9 @@ mixin _$TimingRepeat {
   Id get id;
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
-  Quantity get boundsX;
+  Quantity get boundsQuantity;
+  Range get boundsRange;
+  Period get boundsPeriod;
   Integer get count;
   Decimal get duration;
   Decimal get durationMax;
@@ -4220,7 +4226,9 @@ abstract class $TimingRepeatCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
-      Quantity boundsX,
+      Quantity boundsQuantity,
+      Range boundsRange,
+      Period boundsPeriod,
       Integer count,
       Decimal duration,
       Decimal durationMax,
@@ -4233,7 +4241,9 @@ abstract class $TimingRepeatCopyWith<$Res> {
       Code when});
 
   $FhirExtensionCopyWith<$Res> get extension_;
-  $QuantityCopyWith<$Res> get boundsX;
+  $QuantityCopyWith<$Res> get boundsQuantity;
+  $RangeCopyWith<$Res> get boundsRange;
+  $PeriodCopyWith<$Res> get boundsPeriod;
 }
 
 class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
@@ -4247,7 +4257,9 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
-    Object boundsX = freezed,
+    Object boundsQuantity = freezed,
+    Object boundsRange = freezed,
+    Object boundsPeriod = freezed,
     Object count = freezed,
     Object duration = freezed,
     Object durationMax = freezed,
@@ -4264,7 +4276,14 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as FhirExtension,
-      boundsX: boundsX == freezed ? _value.boundsX : boundsX as Quantity,
+      boundsQuantity: boundsQuantity == freezed
+          ? _value.boundsQuantity
+          : boundsQuantity as Quantity,
+      boundsRange:
+          boundsRange == freezed ? _value.boundsRange : boundsRange as Range,
+      boundsPeriod: boundsPeriod == freezed
+          ? _value.boundsPeriod
+          : boundsPeriod as Period,
       count: count == freezed ? _value.count : count as Integer,
       duration: duration == freezed ? _value.duration : duration as Decimal,
       durationMax:
@@ -4296,12 +4315,32 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
   }
 
   @override
-  $QuantityCopyWith<$Res> get boundsX {
-    if (_value.boundsX == null) {
+  $QuantityCopyWith<$Res> get boundsQuantity {
+    if (_value.boundsQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.boundsX, (value) {
-      return _then(_value.copyWith(boundsX: value));
+    return $QuantityCopyWith<$Res>(_value.boundsQuantity, (value) {
+      return _then(_value.copyWith(boundsQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get boundsRange {
+    if (_value.boundsRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.boundsRange, (value) {
+      return _then(_value.copyWith(boundsRange: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get boundsPeriod {
+    if (_value.boundsPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.boundsPeriod, (value) {
+      return _then(_value.copyWith(boundsPeriod: value));
     });
   }
 }
@@ -4315,7 +4354,9 @@ abstract class _$TimingRepeatCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
-      Quantity boundsX,
+      Quantity boundsQuantity,
+      Range boundsRange,
+      Period boundsPeriod,
       Integer count,
       Decimal duration,
       Decimal durationMax,
@@ -4330,7 +4371,11 @@ abstract class _$TimingRepeatCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get extension_;
   @override
-  $QuantityCopyWith<$Res> get boundsX;
+  $QuantityCopyWith<$Res> get boundsQuantity;
+  @override
+  $RangeCopyWith<$Res> get boundsRange;
+  @override
+  $PeriodCopyWith<$Res> get boundsPeriod;
 }
 
 class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
@@ -4346,7 +4391,9 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
-    Object boundsX = freezed,
+    Object boundsQuantity = freezed,
+    Object boundsRange = freezed,
+    Object boundsPeriod = freezed,
     Object count = freezed,
     Object duration = freezed,
     Object durationMax = freezed,
@@ -4363,7 +4410,14 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as FhirExtension,
-      boundsX: boundsX == freezed ? _value.boundsX : boundsX as Quantity,
+      boundsQuantity: boundsQuantity == freezed
+          ? _value.boundsQuantity
+          : boundsQuantity as Quantity,
+      boundsRange:
+          boundsRange == freezed ? _value.boundsRange : boundsRange as Range,
+      boundsPeriod: boundsPeriod == freezed
+          ? _value.boundsPeriod
+          : boundsPeriod as Period,
       count: count == freezed ? _value.count : count as Integer,
       duration: duration == freezed ? _value.duration : duration as Decimal,
       durationMax:
@@ -4390,7 +4444,9 @@ class _$_TimingRepeat implements _TimingRepeat {
   const _$_TimingRepeat(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      this.boundsX,
+      this.boundsQuantity,
+      this.boundsRange,
+      this.boundsPeriod,
       this.count,
       this.duration,
       this.durationMax,
@@ -4411,7 +4467,11 @@ class _$_TimingRepeat implements _TimingRepeat {
   @JsonKey(name: 'extension')
   final FhirExtension extension_;
   @override
-  final Quantity boundsX;
+  final Quantity boundsQuantity;
+  @override
+  final Range boundsRange;
+  @override
+  final Period boundsPeriod;
   @override
   final Integer count;
   @override
@@ -4437,7 +4497,7 @@ class _$_TimingRepeat implements _TimingRepeat {
 
   @override
   String toString() {
-    return 'TimingRepeat(id: $id, extension_: $extension_, boundsX: $boundsX, count: $count, duration: $duration, durationMax: $durationMax, durationUnits: $durationUnits, frequency: $frequency, frequencyMax: $frequencyMax, period: $period, periodMax: $periodMax, periodUnits: $periodUnits, when: $when)';
+    return 'TimingRepeat(id: $id, extension_: $extension_, boundsQuantity: $boundsQuantity, boundsRange: $boundsRange, boundsPeriod: $boundsPeriod, count: $count, duration: $duration, durationMax: $durationMax, durationUnits: $durationUnits, frequency: $frequency, frequencyMax: $frequencyMax, period: $period, periodMax: $periodMax, periodUnits: $periodUnits, when: $when)';
   }
 
   @override
@@ -4449,9 +4509,15 @@ class _$_TimingRepeat implements _TimingRepeat {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
-            (identical(other.boundsX, boundsX) ||
+            (identical(other.boundsQuantity, boundsQuantity) ||
                 const DeepCollectionEquality()
-                    .equals(other.boundsX, boundsX)) &&
+                    .equals(other.boundsQuantity, boundsQuantity)) &&
+            (identical(other.boundsRange, boundsRange) ||
+                const DeepCollectionEquality()
+                    .equals(other.boundsRange, boundsRange)) &&
+            (identical(other.boundsPeriod, boundsPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.boundsPeriod, boundsPeriod)) &&
             (identical(other.count, count) ||
                 const DeepCollectionEquality().equals(other.count, count)) &&
             (identical(other.duration, duration) ||
@@ -4486,7 +4552,9 @@ class _$_TimingRepeat implements _TimingRepeat {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(boundsX) ^
+      const DeepCollectionEquality().hash(boundsQuantity) ^
+      const DeepCollectionEquality().hash(boundsRange) ^
+      const DeepCollectionEquality().hash(boundsPeriod) ^
       const DeepCollectionEquality().hash(count) ^
       const DeepCollectionEquality().hash(duration) ^
       const DeepCollectionEquality().hash(durationMax) ^
@@ -4512,7 +4580,9 @@ abstract class _TimingRepeat implements TimingRepeat {
   const factory _TimingRepeat(
       {Id id,
       @JsonKey(name: 'extension') FhirExtension extension_,
-      Quantity boundsX,
+      Quantity boundsQuantity,
+      Range boundsRange,
+      Period boundsPeriod,
       Integer count,
       Decimal duration,
       Decimal durationMax,
@@ -4533,7 +4603,11 @@ abstract class _TimingRepeat implements TimingRepeat {
   @JsonKey(name: 'extension')
   FhirExtension get extension_;
   @override
-  Quantity get boundsX;
+  Quantity get boundsQuantity;
+  @override
+  Range get boundsRange;
+  @override
+  Period get boundsPeriod;
   @override
   Integer get count;
   @override

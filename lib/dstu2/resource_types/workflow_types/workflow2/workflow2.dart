@@ -17,7 +17,7 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
     @required
@@ -53,7 +53,7 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
@@ -113,7 +113,7 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Reference patient,
     Reference source,

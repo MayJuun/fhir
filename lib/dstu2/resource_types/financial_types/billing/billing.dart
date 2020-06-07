@@ -17,7 +17,7 @@ abstract class Account with _$Account implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     String name,
@@ -46,7 +46,7 @@ abstract class Claim with _$Claim implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
     @required
@@ -246,7 +246,7 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference request,

@@ -10,13 +10,14 @@ part 'care_provision.g.dart';
 @freezed
 abstract class ProcedureRequest with _$ProcedureRequest implements Resource {
   const factory ProcedureRequest({
+    @JsonKey(defaultValue: 'ProcedureRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) @required Reference subject,
@@ -45,13 +46,14 @@ abstract class VisionPrescription
     with _$VisionPrescription
     implements Resource {
   const factory VisionPrescription({
+    @JsonKey(defaultValue: 'VisionPrescription') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     FhirDateTime dateWritten,
@@ -69,13 +71,14 @@ abstract class VisionPrescription
 @freezed
 abstract class CarePlan with _$CarePlan implements Resource {
   const factory CarePlan({
+    @JsonKey(defaultValue: 'CarePlan') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference subject,
@@ -104,13 +107,14 @@ abstract class CarePlan with _$CarePlan implements Resource {
 @freezed
 abstract class Goal with _$Goal implements Resource {
   const factory Goal({
+    @JsonKey(defaultValue: 'Goal') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference subject,
@@ -136,13 +140,14 @@ abstract class Goal with _$Goal implements Resource {
 @freezed
 abstract class NutritionOrder with _$NutritionOrder implements Resource {
   const factory NutritionOrder({
+    @JsonKey(defaultValue: 'NutritionOrder') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference patient,
     Reference orderer,
@@ -166,13 +171,14 @@ abstract class NutritionOrder with _$NutritionOrder implements Resource {
 @freezed
 abstract class ReferralRequest with _$ReferralRequest implements Resource {
   const factory ReferralRequest({
+    @JsonKey(defaultValue: 'ReferralRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ReferralRequestStatus.unknown)
     @required

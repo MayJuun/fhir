@@ -49,7 +49,7 @@ abstract class Meta with _$Meta {
     @JsonKey(name: 'extension') FhirExtension extension_,
     Id versionId,
     Instant lastUpdated,
-    FhirUri profile,
+    List<FhirUri> profile,
     List<Coding> security,
     List<Coding> tag,
   }) = _Meta;

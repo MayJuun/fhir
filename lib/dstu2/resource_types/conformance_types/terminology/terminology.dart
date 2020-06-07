@@ -17,7 +17,7 @@ abstract class ValueSet with _$ValueSet implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri url,
     Identifier identifier,
@@ -64,7 +64,7 @@ abstract class ValueSetContact with _$ValueSetContact {
 abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
   const factory ValueSetCodeSystem({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri system,
     String version,
@@ -237,7 +237,7 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     @JsonKey(required: true, unknownEnumValue: NamingSystemStatus.unknown)
@@ -272,7 +272,7 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri url,
     Identifier identifier,

@@ -246,7 +246,9 @@ abstract class TimingRepeat with _$TimingRepeat {
   const factory TimingRepeat({
     Id id,
     @JsonKey(name: 'extension') FhirExtension extension_,
-    Quantity boundsX,
+    Quantity boundsQuantity,
+    Range boundsRange,
+    Period boundsPeriod,
     Integer count,
     Decimal duration,
     Decimal durationMax,
