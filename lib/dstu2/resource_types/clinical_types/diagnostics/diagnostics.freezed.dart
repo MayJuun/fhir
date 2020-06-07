@@ -23,7 +23,7 @@ class _$ImagingStudyTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -93,7 +93,7 @@ mixin _$ImagingStudy {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -135,7 +135,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -218,7 +218,7 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -355,7 +355,7 @@ abstract class _$ImagingStudyCopyWith<$Res>
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -448,7 +448,7 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -552,7 +552,7 @@ class _$_ImagingStudy implements _ImagingStudy {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -723,7 +723,7 @@ abstract class _ImagingStudy implements ImagingStudy {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -770,7 +770,7 @@ abstract class _ImagingStudy implements ImagingStudy {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -832,7 +832,7 @@ class _$DiagnosticReportTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -907,7 +907,7 @@ mixin _$DiagnosticReport {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -951,7 +951,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -1038,7 +1038,7 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -1178,7 +1178,7 @@ abstract class _$DiagnosticReportCopyWith<$Res>
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -1275,7 +1275,7 @@ class __$DiagnosticReportCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -1388,7 +1388,7 @@ class _$_DiagnosticReport implements _DiagnosticReport {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -1564,7 +1564,7 @@ abstract class _DiagnosticReport implements DiagnosticReport {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -1615,7 +1615,7 @@ abstract class _DiagnosticReport implements DiagnosticReport {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -1681,7 +1681,7 @@ class _$ImagingObjectSelectionTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -1732,7 +1732,7 @@ mixin _$ImagingObjectSelection {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -1763,7 +1763,7 @@ abstract class $ImagingObjectSelectionCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Oid uid,
@@ -1821,7 +1821,7 @@ class _$ImagingObjectSelectionCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -1917,7 +1917,7 @@ abstract class _$ImagingObjectSelectionCopyWith<$Res>
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Oid uid,
@@ -1983,7 +1983,7 @@ class __$ImagingObjectSelectionCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -2047,7 +2047,7 @@ class _$_ImagingObjectSelection implements _ImagingObjectSelection {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -2164,7 +2164,7 @@ abstract class _ImagingObjectSelection implements ImagingObjectSelection {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -2201,7 +2201,7 @@ abstract class _ImagingObjectSelection implements ImagingObjectSelection {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -2243,7 +2243,7 @@ class _$BodySiteTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference patient,
@@ -2283,7 +2283,7 @@ mixin _$BodySite {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -2309,7 +2309,7 @@ abstract class $BodySiteCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference patient,
@@ -2363,7 +2363,7 @@ class _$BodySiteCopyWithImpl<$Res> implements $BodySiteCopyWith<$Res> {
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -2446,7 +2446,7 @@ abstract class _$BodySiteCopyWith<$Res> implements $BodySiteCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Reference patient,
@@ -2506,7 +2506,7 @@ class __$BodySiteCopyWithImpl<$Res> extends _$BodySiteCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -2565,7 +2565,7 @@ class _$_BodySite implements _BodySite {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -2673,7 +2673,7 @@ abstract class _BodySite implements BodySite {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Reference patient,
@@ -2699,7 +2699,7 @@ abstract class _BodySite implements BodySite {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -2737,7 +2737,7 @@ class _$ObservationTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -2751,10 +2751,20 @@ class _$ObservationTearOff {
           CodeableConcept code,
       Reference subject,
       Reference encounter,
-      FhirDateTime effectiveX,
+      FhirDateTime effectiveDateTime,
+      Period effectivePeriod,
       Instant issued,
-      Reference performer,
-      Quantity valueX,
+      List<Reference> performer,
+      Quantity valueQuantity,
+      CodeableConcept valueCodeableConcept,
+      String valueString,
+      Range valueRange,
+      Ratio valueRatio,
+      SampledData valueSampledData,
+      Attachment valueAttachment,
+      Time valueTime,
+      FhirDateTime valueDateTime,
+      Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
       String comments,
@@ -2781,10 +2791,20 @@ class _$ObservationTearOff {
       code: code,
       subject: subject,
       encounter: encounter,
-      effectiveX: effectiveX,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
       issued: issued,
       performer: performer,
-      valueX: valueX,
+      valueQuantity: valueQuantity,
+      valueCodeableConcept: valueCodeableConcept,
+      valueString: valueString,
+      valueRange: valueRange,
+      valueRatio: valueRatio,
+      valueSampledData: valueSampledData,
+      valueAttachment: valueAttachment,
+      valueTime: valueTime,
+      valueDateTime: valueDateTime,
+      valuePeriod: valuePeriod,
       dataAbsentReason: dataAbsentReason,
       interpretation: interpretation,
       comments: comments,
@@ -2810,7 +2830,7 @@ mixin _$Observation {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -2822,10 +2842,20 @@ mixin _$Observation {
   CodeableConcept get code;
   Reference get subject;
   Reference get encounter;
-  FhirDateTime get effectiveX;
+  FhirDateTime get effectiveDateTime;
+  Period get effectivePeriod;
   Instant get issued;
-  Reference get performer;
-  Quantity get valueX;
+  List<Reference> get performer;
+  Quantity get valueQuantity;
+  CodeableConcept get valueCodeableConcept;
+  String get valueString;
+  Range get valueRange;
+  Ratio get valueRatio;
+  SampledData get valueSampledData;
+  Attachment get valueAttachment;
+  Time get valueTime;
+  FhirDateTime get valueDateTime;
+  Period get valuePeriod;
   CodeableConcept get dataAbsentReason;
   CodeableConcept get interpretation;
   String get comments;
@@ -2853,7 +2883,7 @@ abstract class $ObservationCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -2865,10 +2895,20 @@ abstract class $ObservationCopyWith<$Res> {
           CodeableConcept code,
       Reference subject,
       Reference encounter,
-      FhirDateTime effectiveX,
+      FhirDateTime effectiveDateTime,
+      Period effectivePeriod,
       Instant issued,
-      Reference performer,
-      Quantity valueX,
+      List<Reference> performer,
+      Quantity valueQuantity,
+      CodeableConcept valueCodeableConcept,
+      String valueString,
+      Range valueRange,
+      Ratio valueRatio,
+      SampledData valueSampledData,
+      Attachment valueAttachment,
+      Time valueTime,
+      FhirDateTime valueDateTime,
+      Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
       String comments,
@@ -2887,8 +2927,14 @@ abstract class $ObservationCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get encounter;
-  $ReferenceCopyWith<$Res> get performer;
-  $QuantityCopyWith<$Res> get valueX;
+  $PeriodCopyWith<$Res> get effectivePeriod;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $RangeCopyWith<$Res> get valueRange;
+  $RatioCopyWith<$Res> get valueRatio;
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $PeriodCopyWith<$Res> get valuePeriod;
   $CodeableConceptCopyWith<$Res> get dataAbsentReason;
   $CodeableConceptCopyWith<$Res> get interpretation;
   $CodeableConceptCopyWith<$Res> get bodySite;
@@ -2921,10 +2967,20 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
-    Object effectiveX = freezed,
+    Object effectiveDateTime = freezed,
+    Object effectivePeriod = freezed,
     Object issued = freezed,
     Object performer = freezed,
-    Object valueX = freezed,
+    Object valueQuantity = freezed,
+    Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
+    Object valueRange = freezed,
+    Object valueRatio = freezed,
+    Object valueSampledData = freezed,
+    Object valueAttachment = freezed,
+    Object valueTime = freezed,
+    Object valueDateTime = freezed,
+    Object valuePeriod = freezed,
     Object dataAbsentReason = freezed,
     Object interpretation = freezed,
     Object comments = freezed,
@@ -2948,7 +3004,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -2965,13 +3021,40 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      effectiveX: effectiveX == freezed
-          ? _value.effectiveX
-          : effectiveX as FhirDateTime,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod as Period,
       issued: issued == freezed ? _value.issued : issued as Instant,
-      performer:
-          performer == freezed ? _value.performer : performer as Reference,
-      valueX: valueX == freezed ? _value.valueX : valueX as Quantity,
+      performer: performer == freezed
+          ? _value.performer
+          : performer as List<Reference>,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity as Quantity,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
+      valueRange:
+          valueRange == freezed ? _value.valueRange : valueRange as Range,
+      valueRatio:
+          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio,
+      valueSampledData: valueSampledData == freezed
+          ? _value.valueSampledData
+          : valueSampledData as SampledData,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment as Attachment,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
+      valuePeriod:
+          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       dataAbsentReason: dataAbsentReason == freezed
           ? _value.dataAbsentReason
           : dataAbsentReason as CodeableConcept,
@@ -3067,22 +3150,82 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res> get performer {
-    if (_value.performer == null) {
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.performer, (value) {
-      return _then(_value.copyWith(performer: value));
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get valueX {
-    if (_value.valueX == null) {
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.valueX, (value) {
-      return _then(_value.copyWith(valueX: value));
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
     });
   }
 
@@ -3161,7 +3304,7 @@ abstract class _$ObservationCopyWith<$Res>
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3173,10 +3316,20 @@ abstract class _$ObservationCopyWith<$Res>
           CodeableConcept code,
       Reference subject,
       Reference encounter,
-      FhirDateTime effectiveX,
+      FhirDateTime effectiveDateTime,
+      Period effectivePeriod,
       Instant issued,
-      Reference performer,
-      Quantity valueX,
+      List<Reference> performer,
+      Quantity valueQuantity,
+      CodeableConcept valueCodeableConcept,
+      String valueString,
+      Range valueRange,
+      Ratio valueRatio,
+      SampledData valueSampledData,
+      Attachment valueAttachment,
+      Time valueTime,
+      FhirDateTime valueDateTime,
+      Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
       String comments,
@@ -3203,9 +3356,21 @@ abstract class _$ObservationCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get encounter;
   @override
-  $ReferenceCopyWith<$Res> get performer;
+  $PeriodCopyWith<$Res> get effectivePeriod;
   @override
-  $QuantityCopyWith<$Res> get valueX;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  @override
+  $RangeCopyWith<$Res> get valueRange;
+  @override
+  $RatioCopyWith<$Res> get valueRatio;
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod;
   @override
   $CodeableConceptCopyWith<$Res> get dataAbsentReason;
   @override
@@ -3246,10 +3411,20 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
-    Object effectiveX = freezed,
+    Object effectiveDateTime = freezed,
+    Object effectivePeriod = freezed,
     Object issued = freezed,
     Object performer = freezed,
-    Object valueX = freezed,
+    Object valueQuantity = freezed,
+    Object valueCodeableConcept = freezed,
+    Object valueString = freezed,
+    Object valueRange = freezed,
+    Object valueRatio = freezed,
+    Object valueSampledData = freezed,
+    Object valueAttachment = freezed,
+    Object valueTime = freezed,
+    Object valueDateTime = freezed,
+    Object valuePeriod = freezed,
     Object dataAbsentReason = freezed,
     Object interpretation = freezed,
     Object comments = freezed,
@@ -3273,7 +3448,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -3290,13 +3465,40 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      effectiveX: effectiveX == freezed
-          ? _value.effectiveX
-          : effectiveX as FhirDateTime,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod as Period,
       issued: issued == freezed ? _value.issued : issued as Instant,
-      performer:
-          performer == freezed ? _value.performer : performer as Reference,
-      valueX: valueX == freezed ? _value.valueX : valueX as Quantity,
+      performer: performer == freezed
+          ? _value.performer
+          : performer as List<Reference>,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity as Quantity,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept as CodeableConcept,
+      valueString:
+          valueString == freezed ? _value.valueString : valueString as String,
+      valueRange:
+          valueRange == freezed ? _value.valueRange : valueRange as Range,
+      valueRatio:
+          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio,
+      valueSampledData: valueSampledData == freezed
+          ? _value.valueSampledData
+          : valueSampledData as SampledData,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment as Attachment,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime as FhirDateTime,
+      valuePeriod:
+          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
       dataAbsentReason: dataAbsentReason == freezed
           ? _value.dataAbsentReason
           : dataAbsentReason as CodeableConcept,
@@ -3346,10 +3548,20 @@ class _$_Observation implements _Observation {
           this.code,
       this.subject,
       this.encounter,
-      this.effectiveX,
+      this.effectiveDateTime,
+      this.effectivePeriod,
       this.issued,
       this.performer,
-      this.valueX,
+      this.valueQuantity,
+      this.valueCodeableConcept,
+      this.valueString,
+      this.valueRange,
+      this.valueRatio,
+      this.valueSampledData,
+      this.valueAttachment,
+      this.valueTime,
+      this.valueDateTime,
+      this.valuePeriod,
       this.dataAbsentReason,
       this.interpretation,
       this.comments,
@@ -3380,7 +3592,7 @@ class _$_Observation implements _Observation {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -3401,13 +3613,33 @@ class _$_Observation implements _Observation {
   @override
   final Reference encounter;
   @override
-  final FhirDateTime effectiveX;
+  final FhirDateTime effectiveDateTime;
+  @override
+  final Period effectivePeriod;
   @override
   final Instant issued;
   @override
-  final Reference performer;
+  final List<Reference> performer;
   @override
-  final Quantity valueX;
+  final Quantity valueQuantity;
+  @override
+  final CodeableConcept valueCodeableConcept;
+  @override
+  final String valueString;
+  @override
+  final Range valueRange;
+  @override
+  final Ratio valueRatio;
+  @override
+  final SampledData valueSampledData;
+  @override
+  final Attachment valueAttachment;
+  @override
+  final Time valueTime;
+  @override
+  final FhirDateTime valueDateTime;
+  @override
+  final Period valuePeriod;
   @override
   final CodeableConcept dataAbsentReason;
   @override
@@ -3431,7 +3663,7 @@ class _$_Observation implements _Observation {
 
   @override
   String toString() {
-    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveX: $effectiveX, issued: $issued, performer: $performer, valueX: $valueX, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, comments: $comments, bodySite: $bodySite, method: $method, specimen: $specimen, device: $device, referenceRange: $referenceRange, related: $related, component: $component)';
+    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, issued: $issued, performer: $performer, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueAttachment: $valueAttachment, valueTime: $valueTime, valueDateTime: $valueDateTime, valuePeriod: $valuePeriod, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, comments: $comments, bodySite: $bodySite, method: $method, specimen: $specimen, device: $device, referenceRange: $referenceRange, related: $related, component: $component)';
   }
 
   @override
@@ -3478,35 +3710,45 @@ class _$_Observation implements _Observation {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
-            (identical(other.effectiveX, effectiveX) ||
+            (identical(other.effectiveDateTime, effectiveDateTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.effectiveX, effectiveX)) &&
+                    .equals(other.effectiveDateTime, effectiveDateTime)) &&
+            (identical(other.effectivePeriod, effectivePeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.effectivePeriod, effectivePeriod)) &&
             (identical(other.issued, issued) ||
                 const DeepCollectionEquality().equals(other.issued, issued)) &&
             (identical(other.performer, performer) ||
                 const DeepCollectionEquality()
                     .equals(other.performer, performer)) &&
-            (identical(other.valueX, valueX) ||
-                const DeepCollectionEquality().equals(other.valueX, valueX)) &&
-            (identical(other.dataAbsentReason, dataAbsentReason) ||
+            (identical(other.valueQuantity, valueQuantity) ||
                 const DeepCollectionEquality()
-                    .equals(other.dataAbsentReason, dataAbsentReason)) &&
-            (identical(other.interpretation, interpretation) ||
+                    .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.valueCodeableConcept, valueCodeableConcept)) &&
+            (identical(other.valueString, valueString) ||
                 const DeepCollectionEquality()
-                    .equals(other.interpretation, interpretation)) &&
-            (identical(other.comments, comments) ||
+                    .equals(other.valueString, valueString)) &&
+            (identical(other.valueRange, valueRange) ||
                 const DeepCollectionEquality()
-                    .equals(other.comments, comments)) &&
-            (identical(other.bodySite, bodySite) ||
+                    .equals(other.valueRange, valueRange)) &&
+            (identical(other.valueRatio, valueRatio) ||
                 const DeepCollectionEquality()
-                    .equals(other.bodySite, bodySite)) &&
-            (identical(other.method, method) ||
-                const DeepCollectionEquality().equals(other.method, method)) &&
-            (identical(other.specimen, specimen) ||
-                const DeepCollectionEquality()
-                    .equals(other.specimen, specimen)) &&
-            (identical(other.device, device) ||
-                const DeepCollectionEquality().equals(other.device, device)) &&
+                    .equals(other.valueRatio, valueRatio)) &&
+            (identical(other.valueSampledData, valueSampledData) ||
+                const DeepCollectionEquality().equals(other.valueSampledData, valueSampledData)) &&
+            (identical(other.valueAttachment, valueAttachment) || const DeepCollectionEquality().equals(other.valueAttachment, valueAttachment)) &&
+            (identical(other.valueTime, valueTime) || const DeepCollectionEquality().equals(other.valueTime, valueTime)) &&
+            (identical(other.valueDateTime, valueDateTime) || const DeepCollectionEquality().equals(other.valueDateTime, valueDateTime)) &&
+            (identical(other.valuePeriod, valuePeriod) || const DeepCollectionEquality().equals(other.valuePeriod, valuePeriod)) &&
+            (identical(other.dataAbsentReason, dataAbsentReason) || const DeepCollectionEquality().equals(other.dataAbsentReason, dataAbsentReason)) &&
+            (identical(other.interpretation, interpretation) || const DeepCollectionEquality().equals(other.interpretation, interpretation)) &&
+            (identical(other.comments, comments) || const DeepCollectionEquality().equals(other.comments, comments)) &&
+            (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
+            (identical(other.method, method) || const DeepCollectionEquality().equals(other.method, method)) &&
+            (identical(other.specimen, specimen) || const DeepCollectionEquality().equals(other.specimen, specimen)) &&
+            (identical(other.device, device) || const DeepCollectionEquality().equals(other.device, device)) &&
             (identical(other.referenceRange, referenceRange) || const DeepCollectionEquality().equals(other.referenceRange, referenceRange)) &&
             (identical(other.related, related) || const DeepCollectionEquality().equals(other.related, related)) &&
             (identical(other.component, component) || const DeepCollectionEquality().equals(other.component, component)));
@@ -3530,10 +3772,20 @@ class _$_Observation implements _Observation {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(effectiveX) ^
+      const DeepCollectionEquality().hash(effectiveDateTime) ^
+      const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(issued) ^
       const DeepCollectionEquality().hash(performer) ^
-      const DeepCollectionEquality().hash(valueX) ^
+      const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueCodeableConcept) ^
+      const DeepCollectionEquality().hash(valueString) ^
+      const DeepCollectionEquality().hash(valueRange) ^
+      const DeepCollectionEquality().hash(valueRatio) ^
+      const DeepCollectionEquality().hash(valueSampledData) ^
+      const DeepCollectionEquality().hash(valueAttachment) ^
+      const DeepCollectionEquality().hash(valueTime) ^
+      const DeepCollectionEquality().hash(valueDateTime) ^
+      const DeepCollectionEquality().hash(valuePeriod) ^
       const DeepCollectionEquality().hash(dataAbsentReason) ^
       const DeepCollectionEquality().hash(interpretation) ^
       const DeepCollectionEquality().hash(comments) ^
@@ -3564,7 +3816,7 @@ abstract class _Observation implements Observation {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -3578,10 +3830,20 @@ abstract class _Observation implements Observation {
           CodeableConcept code,
       Reference subject,
       Reference encounter,
-      FhirDateTime effectiveX,
+      FhirDateTime effectiveDateTime,
+      Period effectivePeriod,
       Instant issued,
-      Reference performer,
-      Quantity valueX,
+      List<Reference> performer,
+      Quantity valueQuantity,
+      CodeableConcept valueCodeableConcept,
+      String valueString,
+      Range valueRange,
+      Ratio valueRatio,
+      SampledData valueSampledData,
+      Attachment valueAttachment,
+      Time valueTime,
+      FhirDateTime valueDateTime,
+      Period valuePeriod,
       CodeableConcept dataAbsentReason,
       CodeableConcept interpretation,
       String comments,
@@ -3610,7 +3872,7 @@ abstract class _Observation implements Observation {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -3631,13 +3893,33 @@ abstract class _Observation implements Observation {
   @override
   Reference get encounter;
   @override
-  FhirDateTime get effectiveX;
+  FhirDateTime get effectiveDateTime;
+  @override
+  Period get effectivePeriod;
   @override
   Instant get issued;
   @override
-  Reference get performer;
+  List<Reference> get performer;
   @override
-  Quantity get valueX;
+  Quantity get valueQuantity;
+  @override
+  CodeableConcept get valueCodeableConcept;
+  @override
+  String get valueString;
+  @override
+  Range get valueRange;
+  @override
+  Ratio get valueRatio;
+  @override
+  SampledData get valueSampledData;
+  @override
+  Attachment get valueAttachment;
+  @override
+  Time get valueTime;
+  @override
+  FhirDateTime get valueDateTime;
+  @override
+  Period get valuePeriod;
   @override
   CodeableConcept get dataAbsentReason;
   @override
@@ -3676,7 +3958,7 @@ class _$SpecimenTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
@@ -3724,7 +4006,7 @@ mixin _$Specimen {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -3755,7 +4037,7 @@ abstract class $SpecimenCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
@@ -3819,7 +4101,7 @@ class _$SpecimenCopyWithImpl<$Res> implements $SpecimenCopyWith<$Res> {
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -3933,7 +4215,7 @@ abstract class _$SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
@@ -4005,7 +4287,7 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -4079,7 +4361,7 @@ class _$_Specimen implements _Specimen {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -4211,7 +4493,7 @@ abstract class _Specimen implements Specimen {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
@@ -4241,7 +4523,7 @@ abstract class _Specimen implements Specimen {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -4288,7 +4570,7 @@ class _$DiagnosticOrderTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4345,7 +4627,7 @@ mixin _$DiagnosticOrder {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -4381,7 +4663,7 @@ abstract class $DiagnosticOrderCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4453,7 +4735,7 @@ class _$DiagnosticOrderCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -4561,7 +4843,7 @@ abstract class _$DiagnosticOrderCopyWith<$Res>
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4641,7 +4923,7 @@ class __$DiagnosticOrderCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -4718,7 +5000,7 @@ class _$_DiagnosticOrder implements _DiagnosticOrder {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -4862,7 +5144,7 @@ abstract class _DiagnosticOrder implements DiagnosticOrder {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4900,7 +5182,7 @@ abstract class _DiagnosticOrder implements DiagnosticOrder {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;

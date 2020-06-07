@@ -23,7 +23,7 @@ class _$ValueSetTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -92,7 +92,7 @@ mixin _$ValueSet {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -132,7 +132,7 @@ abstract class $ValueSetCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -216,7 +216,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -344,7 +344,7 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -436,7 +436,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -536,7 +536,7 @@ class _$_ValueSet implements _ValueSet {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -715,7 +715,7 @@ abstract class _ValueSet implements ValueSet {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -757,7 +757,7 @@ abstract class _ValueSet implements ValueSet {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -3027,7 +3027,7 @@ class _$ValueSetExpansionTearOff {
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
-      ValueSetContains contains}) {
+      List<ValueSetContains> contains}) {
     return _ValueSetExpansion(
       id: id,
       extension_: extension_,
@@ -3057,7 +3057,7 @@ mixin _$ValueSetExpansion {
   Integer get total;
   Integer get offset;
   List<ValueSetParameter> get parameter;
-  ValueSetContains get contains;
+  List<ValueSetContains> get contains;
 
   Map<String, dynamic> toJson();
   $ValueSetExpansionCopyWith<ValueSetExpansion> get copyWith;
@@ -3076,10 +3076,9 @@ abstract class $ValueSetExpansionCopyWith<$Res> {
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
-      ValueSetContains contains});
+      List<ValueSetContains> contains});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ValueSetContainsCopyWith<$Res> get contains;
 }
 
 class _$ValueSetExpansionCopyWithImpl<$Res>
@@ -3119,8 +3118,9 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
       parameter: parameter == freezed
           ? _value.parameter
           : parameter as List<ValueSetParameter>,
-      contains:
-          contains == freezed ? _value.contains : contains as ValueSetContains,
+      contains: contains == freezed
+          ? _value.contains
+          : contains as List<ValueSetContains>,
     ));
   }
 
@@ -3131,16 +3131,6 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $ValueSetContainsCopyWith<$Res> get contains {
-    if (_value.contains == null) {
-      return null;
-    }
-    return $ValueSetContainsCopyWith<$Res>(_value.contains, (value) {
-      return _then(_value.copyWith(contains: value));
     });
   }
 }
@@ -3160,12 +3150,10 @@ abstract class _$ValueSetExpansionCopyWith<$Res>
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
-      ValueSetContains contains});
+      List<ValueSetContains> contains});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ValueSetContainsCopyWith<$Res> get contains;
 }
 
 class __$ValueSetExpansionCopyWithImpl<$Res>
@@ -3207,8 +3195,9 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
       parameter: parameter == freezed
           ? _value.parameter
           : parameter as List<ValueSetParameter>,
-      contains:
-          contains == freezed ? _value.contains : contains as ValueSetContains,
+      contains: contains == freezed
+          ? _value.contains
+          : contains as List<ValueSetContains>,
     ));
   }
 }
@@ -3251,7 +3240,7 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
   @override
   final List<ValueSetParameter> parameter;
   @override
-  final ValueSetContains contains;
+  final List<ValueSetContains> contains;
 
   @override
   String toString() {
@@ -3321,7 +3310,7 @@ abstract class _ValueSetExpansion implements ValueSetExpansion {
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
-      ValueSetContains contains}) = _$_ValueSetExpansion;
+      List<ValueSetContains> contains}) = _$_ValueSetExpansion;
 
   factory _ValueSetExpansion.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansion.fromJson;
@@ -3346,7 +3335,7 @@ abstract class _ValueSetExpansion implements ValueSetExpansion {
   @override
   List<ValueSetParameter> get parameter;
   @override
-  ValueSetContains get contains;
+  List<ValueSetContains> get contains;
   @override
   _$ValueSetExpansionCopyWith<_ValueSetExpansion> get copyWith;
 }
@@ -4029,7 +4018,7 @@ class _$NamingSystemTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4094,7 +4083,7 @@ mixin _$NamingSystem {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -4133,7 +4122,7 @@ abstract class $NamingSystemCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4207,7 +4196,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -4304,7 +4293,7 @@ abstract class _$NamingSystemCopyWith<$Res>
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4385,7 +4374,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -4478,7 +4467,7 @@ class _$_NamingSystem implements _NamingSystem {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -4629,7 +4618,7 @@ abstract class _NamingSystem implements NamingSystem {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4674,7 +4663,7 @@ abstract class _NamingSystem implements NamingSystem {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
@@ -4730,7 +4719,7 @@ class _$ConceptMapTearOff {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4797,7 +4786,7 @@ mixin _$ConceptMap {
   FhirUri get implicitRules;
   Code get language;
   Narrative get text;
-  Resource get contained;
+  List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
@@ -4837,7 +4826,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -4918,7 +4907,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -5036,7 +5025,7 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5125,7 +5114,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       text: text == freezed ? _value.text : text as Narrative,
       contained:
-          contained == freezed ? _value.contained : contained as Resource,
+          contained == freezed ? _value.contained : contained as List<Resource>,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
@@ -5223,7 +5212,7 @@ class _$_ConceptMap implements _ConceptMap {
   @override
   final Narrative text;
   @override
-  final Resource contained;
+  final List<Resource> contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
@@ -5398,7 +5387,7 @@ abstract class _ConceptMap implements ConceptMap {
       FhirUri implicitRules,
       Code language,
       Narrative text,
-      Resource contained,
+      List<Resource> contained,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
@@ -5440,7 +5429,7 @@ abstract class _ConceptMap implements ConceptMap {
   @override
   Narrative get text;
   @override
-  Resource get contained;
+  List<Resource> get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;

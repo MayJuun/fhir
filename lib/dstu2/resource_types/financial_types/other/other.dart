@@ -18,7 +18,7 @@ abstract class ExplanationOfBenefit
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
+    List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,

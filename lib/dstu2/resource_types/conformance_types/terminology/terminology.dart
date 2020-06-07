@@ -16,7 +16,7 @@ abstract class ValueSet with _$ValueSet implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
+    List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri url,
@@ -183,7 +183,7 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
     Integer total,
     Integer offset,
     List<ValueSetParameter> parameter,
-    ValueSetContains contains,
+    List<ValueSetContains> contains,
   }) = _ValueSetExpansion;
 
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
@@ -236,7 +236,7 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
+    List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
@@ -271,7 +271,7 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
+    List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri url,

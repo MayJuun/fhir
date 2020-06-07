@@ -16,7 +16,7 @@ abstract class Media with _$Media implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
+    List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: MediaType.unknown)
@@ -47,7 +47,7 @@ abstract class Basic with _$Basic implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
+    List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
