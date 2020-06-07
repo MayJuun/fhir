@@ -106,7 +106,7 @@ abstract class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
   const factory DeviceComponentProductionSpecification({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept specType,
     Identifier componentId,
@@ -122,7 +122,7 @@ abstract class DeviceComponentProductionSpecification
 abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
   const factory DeviceMetricCalibration({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType type,
     @JsonKey(unknownEnumValue: CalibrationState.unknown) CalibrationState state,

@@ -234,7 +234,7 @@ abstract class DiagnosticOrder with _$DiagnosticOrder implements Resource {
 abstract class ImagingStudySeries with _$ImagingStudySeries {
   const factory ImagingStudySeries({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     UnsignedInt number,
     @JsonKey(required: true) @required Coding modality,
@@ -258,7 +258,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
 abstract class DiagnosticReportImage with _$DiagnosticReportImage {
   const factory DiagnosticReportImage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String comment,
     @JsonKey(required: true) @required Reference link,
@@ -272,7 +272,7 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
   const factory ImagingObjectSelectionStudy({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Oid uid,
     FhirUri url,
@@ -290,7 +290,7 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
 abstract class ObservationReferenceRange with _$ObservationReferenceRange {
   const factory ObservationReferenceRange({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Quantity low,
     Quantity high,
@@ -307,7 +307,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
 abstract class ObservationRelated with _$ObservationRelated {
   const factory ObservationRelated({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
     @JsonKey(required: true) @required Reference target,
@@ -321,7 +321,7 @@ abstract class ObservationRelated with _$ObservationRelated {
 abstract class ObservationComponent with _$ObservationComponent {
   const factory ObservationComponent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
     Quantity valueQuantity,
@@ -346,7 +346,7 @@ abstract class ObservationComponent with _$ObservationComponent {
 abstract class SpecimenCollection with _$SpecimenCollection {
   const factory SpecimenCollection({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Reference collector,
     List<String> comment,
@@ -364,7 +364,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
 abstract class SpecimenTreatment with _$SpecimenTreatment {
   const factory SpecimenTreatment({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String description,
     CodeableConcept procedure,
@@ -379,7 +379,7 @@ abstract class SpecimenTreatment with _$SpecimenTreatment {
 abstract class SpecimenContainer with _$SpecimenContainer {
   const factory SpecimenContainer({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     String description,
@@ -397,7 +397,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
 abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
   const factory DiagnosticOrderEvent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: EventStatus.unknown)
     @required
@@ -415,7 +415,7 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
 abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
   const factory DiagnosticOrderItem({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
     List<Reference> specimen,
@@ -432,7 +432,7 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
 abstract class ImagingStudyInstance with _$ImagingStudyInstance {
   const factory ImagingStudyInstance({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     UnsignedInt number,
     @JsonKey(required: true) @required Oid uid,
@@ -451,7 +451,7 @@ abstract class ImagingObjectSelectionSeries
     with _$ImagingObjectSelectionSeries {
   const factory ImagingObjectSelectionSeries({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Oid uid,
     FhirUri url,
@@ -469,7 +469,7 @@ abstract class ImagingObjectSelectionInstance
     with _$ImagingObjectSelectionInstance {
   const factory ImagingObjectSelectionInstance({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Oid sopClass,
     @JsonKey(required: true) @required Oid uid,
@@ -486,7 +486,7 @@ abstract class ImagingObjectSelectionFrames
     with _$ImagingObjectSelectionFrames {
   const factory ImagingObjectSelectionFrames({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExte,
     @JsonKey(required: true) @required List<UnsignedInt> frameNumbers,
     @JsonKey(required: true) @required FhirUri url,

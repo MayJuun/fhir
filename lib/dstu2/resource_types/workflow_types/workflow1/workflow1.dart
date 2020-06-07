@@ -167,7 +167,7 @@ abstract class CommunicationRequest
 abstract class OrderWhen with _$OrderWhen {
   const factory OrderWhen({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept code,
     Timing schedule,
@@ -181,7 +181,7 @@ abstract class OrderWhen with _$OrderWhen {
 abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
   const factory CommunicationRequestPayload({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String contentString,
     Attachment contentAttachment,

@@ -208,7 +208,7 @@ abstract class ReferralRequest with _$ReferralRequest implements Resource {
 abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
   const factory VisionPrescriptionDispense({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding product,
     @JsonKey(unknownEnumValue: DispenseEye.unknown) DispenseEye eye,
@@ -235,7 +235,7 @@ abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
 abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
   const factory CarePlanRelatedPlan({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(unknownEnumValue: RelatedPlanCode.unknown) RelatedPlanCode code,
     @JsonKey(required: true) @required Reference plan,
@@ -249,7 +249,7 @@ abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
 abstract class CarePlanParticipant with _$CarePlanParticipant {
   const factory CarePlanParticipant({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept role,
     Reference member,
@@ -263,7 +263,7 @@ abstract class CarePlanParticipant with _$CarePlanParticipant {
 abstract class CarePlanActivity with _$CarePlanActivity {
   const factory CarePlanActivity({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Reference> actionResulting,
     Annotation progress,
@@ -279,7 +279,7 @@ abstract class CarePlanActivity with _$CarePlanActivity {
 abstract class GoalOutcome with _$GoalOutcome {
   const factory GoalOutcome({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept resultX,
   }) = _GoalOutcome;
@@ -292,7 +292,7 @@ abstract class GoalOutcome with _$GoalOutcome {
 abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   const factory NutritionOrderOralDiet({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> type,
     List<Timing> schedule,
@@ -310,7 +310,7 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
   const factory NutritionOrderSupplement({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept type,
     String productName,
@@ -328,7 +328,7 @@ abstract class NutritionOrderEnteralFormula
     with _$NutritionOrderEnteralFormula {
   const factory NutritionOrderEnteralFormula({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept baseFormulaType,
     String baseFormulaProductName,
@@ -349,7 +349,7 @@ abstract class NutritionOrderEnteralFormula
 abstract class CarePlanDetail with _$CarePlanDetail {
   const factory CarePlanDetail({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept category,
     CodeableConcept code,
@@ -376,7 +376,7 @@ abstract class CarePlanDetail with _$CarePlanDetail {
 abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
   const factory NutritionOrderNutrient({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept modifier,
     Quantity amount,
@@ -390,7 +390,7 @@ abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
 abstract class NutritionOrderTexture with _$NutritionOrderTexture {
   const factory NutritionOrderTexture({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept modifier,
     CodeableConcept foodType,
@@ -405,7 +405,7 @@ abstract class NutritionOrderAdministration
     with _$NutritionOrderAdministration {
   const factory NutritionOrderAdministration({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Timing schedule,
     Quantity quantity,

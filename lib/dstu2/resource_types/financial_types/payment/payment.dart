@@ -75,7 +75,7 @@ abstract class PaymentReconciliation
 abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   const factory PaymentReconciliationDetail({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding type,
     Reference request,
@@ -94,7 +94,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
   const factory PaymentReconciliationNote({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Coding type,
     String text,

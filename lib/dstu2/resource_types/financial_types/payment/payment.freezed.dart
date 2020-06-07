@@ -1491,7 +1491,7 @@ class _$PaymentReconciliationDetailTearOff {
 
   _PaymentReconciliationDetail call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding type,
       Reference request,
@@ -1521,7 +1521,7 @@ const $PaymentReconciliationDetail = _$PaymentReconciliationDetailTearOff();
 mixin _$PaymentReconciliationDetail {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Coding get type;
@@ -1544,7 +1544,7 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
       _$PaymentReconciliationDetailCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding type,
       Reference request,
@@ -1554,7 +1554,6 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
       Date date,
       Quantity amount});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get request;
@@ -1589,7 +1588,7 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1602,16 +1601,6 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
       date: date == freezed ? _value.date : date as Date,
       amount: amount == freezed ? _value.amount : amount as Quantity,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -1694,7 +1683,7 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding type,
       Reference request,
@@ -1704,8 +1693,6 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
       Date date,
       Quantity amount});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -1751,7 +1738,7 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1789,7 +1776,7 @@ class _$_PaymentReconciliationDetail implements _PaymentReconciliationDetail {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -1873,7 +1860,7 @@ abstract class _PaymentReconciliationDetail
     implements PaymentReconciliationDetail {
   const factory _PaymentReconciliationDetail(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding type,
       Reference request,
@@ -1890,7 +1877,7 @@ abstract class _PaymentReconciliationDetail
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -1923,7 +1910,7 @@ class _$PaymentReconciliationNoteTearOff {
 
   _PaymentReconciliationNote call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       String text}) {
@@ -1943,7 +1930,7 @@ const $PaymentReconciliationNote = _$PaymentReconciliationNoteTearOff();
 mixin _$PaymentReconciliationNote {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   Coding get type;
   String get text;
@@ -1958,12 +1945,11 @@ abstract class $PaymentReconciliationNoteCopyWith<$Res> {
       _$PaymentReconciliationNoteCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       String text});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
 }
@@ -1988,23 +1974,13 @@ class _$PaymentReconciliationNoteCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as Coding,
       text: text == freezed ? _value.text : text as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2036,13 +2012,11 @@ abstract class _$PaymentReconciliationNoteCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       String text});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -2072,7 +2046,7 @@ class __$PaymentReconciliationNoteCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2098,7 +2072,7 @@ class _$_PaymentReconciliationNote implements _PaymentReconciliationNote {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2153,7 +2127,7 @@ class _$_PaymentReconciliationNote implements _PaymentReconciliationNote {
 abstract class _PaymentReconciliationNote implements PaymentReconciliationNote {
   const factory _PaymentReconciliationNote(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       String text}) = _$_PaymentReconciliationNote;
@@ -2165,7 +2139,7 @@ abstract class _PaymentReconciliationNote implements PaymentReconciliationNote {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

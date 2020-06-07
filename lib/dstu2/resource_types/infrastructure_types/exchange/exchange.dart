@@ -102,7 +102,7 @@ abstract class Parameters with _$Parameters implements Resource {
 abstract class ParametersParameter with _$ParametersParameter {
   const factory ParametersParameter({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     Integer valueInteger,
@@ -140,7 +140,7 @@ abstract class ParametersParameter with _$ParametersParameter {
 abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
   const factory OperationOutcomeIssue({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
     @required
@@ -159,7 +159,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 abstract class SubscriptionChannel with _$SubscriptionChannel {
   const factory SubscriptionChannel({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
     @required
@@ -177,7 +177,7 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
 abstract class MessageHeaderResponse with _$MessageHeaderResponse {
   const factory MessageHeaderResponse({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Id identifier,
     @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
@@ -194,7 +194,7 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
 abstract class MessageHeaderSource with _$MessageHeaderSource {
   const factory MessageHeaderSource({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     String software,
@@ -211,7 +211,7 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
 abstract class MessageHeaderDestination with _$MessageHeaderDestination {
   const factory MessageHeaderDestination({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     Reference target,

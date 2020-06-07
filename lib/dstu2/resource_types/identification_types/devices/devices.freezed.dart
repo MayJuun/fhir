@@ -2114,7 +2114,7 @@ class _$DeviceComponentProductionSpecificationTearOff {
 
   _DeviceComponentProductionSpecification call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept specType,
       Identifier componentId,
@@ -2137,7 +2137,7 @@ const $DeviceComponentProductionSpecification =
 mixin _$DeviceComponentProductionSpecification {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get specType;
   Identifier get componentId;
@@ -2155,13 +2155,12 @@ abstract class $DeviceComponentProductionSpecificationCopyWith<$Res> {
       _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept specType,
       Identifier componentId,
       String productionSpec});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get specType;
   $IdentifierCopyWith<$Res> get componentId;
@@ -2188,7 +2187,7 @@ class _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2201,16 +2200,6 @@ class _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
           ? _value.productionSpec
           : productionSpec as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2253,14 +2242,12 @@ abstract class _$DeviceComponentProductionSpecificationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept specType,
       Identifier componentId,
       String productionSpec});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -2295,7 +2282,7 @@ class __$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2330,7 +2317,7 @@ class _$_DeviceComponentProductionSpecification
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2394,7 +2381,7 @@ abstract class _DeviceComponentProductionSpecification
     implements DeviceComponentProductionSpecification {
   const factory _DeviceComponentProductionSpecification(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept specType,
       Identifier componentId,
@@ -2408,7 +2395,7 @@ abstract class _DeviceComponentProductionSpecification
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2433,7 +2420,7 @@ class _$DeviceMetricCalibrationTearOff {
   _DeviceMetricCalibration call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType type,
@@ -2457,7 +2444,7 @@ const $DeviceMetricCalibration = _$DeviceMetricCalibrationTearOff();
 mixin _$DeviceMetricCalibration {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(unknownEnumValue: CalibrationType.unknown)
   CalibrationType get type;
@@ -2476,7 +2463,7 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType type,
@@ -2484,7 +2471,6 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
           CalibrationState state,
       Instant time});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -2509,7 +2495,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2517,16 +2503,6 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
       state: state == freezed ? _value.state : state as CalibrationState,
       time: time == freezed ? _value.time : time as Instant,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2549,7 +2525,7 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType type,
@@ -2557,8 +2533,6 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
           CalibrationState state,
       Instant time});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -2587,7 +2561,7 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2615,7 +2589,7 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2677,7 +2651,7 @@ abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
   const factory _DeviceMetricCalibration(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType type,
@@ -2692,7 +2666,7 @@ abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

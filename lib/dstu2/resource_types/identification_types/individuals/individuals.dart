@@ -108,7 +108,7 @@ abstract class PractitionerPractitionerRole
     with _$PractitionerPractitionerRole {
   const factory PractitionerPractitionerRole({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Reference managingOrganization,
     CodeableConcept role,
@@ -126,7 +126,7 @@ abstract class PractitionerPractitionerRole
 abstract class PractitionerQualification with _$PractitionerQualification {
   const factory PractitionerQualification({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) @required CodeableConcept code,
@@ -142,7 +142,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
 abstract class PatientContact with _$PatientContact {
   const factory PatientContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept relationship,
     HumanName name,
@@ -161,7 +161,7 @@ abstract class PatientContact with _$PatientContact {
 abstract class PatientAnimal with _$PatientAnimal {
   const factory PatientAnimal({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept species,
     CodeableConcept breed,
@@ -176,7 +176,7 @@ abstract class PatientAnimal with _$PatientAnimal {
 abstract class PatientCommunication with _$PatientCommunication {
   const factory PatientCommunication({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept language,
     Boolean preferred,
@@ -190,7 +190,7 @@ abstract class PatientCommunication with _$PatientCommunication {
 abstract class PatientLink with _$PatientLink {
   const factory PatientLink({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference other,
     @JsonKey(required: true, unknownEnumValue: LinkType.unknown)

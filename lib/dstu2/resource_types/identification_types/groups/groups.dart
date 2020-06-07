@@ -104,7 +104,7 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
 abstract class OrganizationContact with _$OrganizationContact {
   const factory OrganizationContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept purpose,
     HumanName name,
@@ -120,7 +120,7 @@ abstract class OrganizationContact with _$OrganizationContact {
 abstract class GroupCharacteristic with _$GroupCharacteristic {
   const factory GroupCharacteristic({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
     CodeableConcept valueCodeableConcept,
@@ -139,7 +139,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
 abstract class GroupMember with _$GroupMember {
   const factory GroupMember({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference entity,
     Period period,
@@ -155,7 +155,7 @@ abstract class HealthcareServiceServiceType
     with _$HealthcareServiceServiceType {
   const factory HealthcareServiceServiceType({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept type,
     List<CodeableConcept> specialty,
@@ -170,7 +170,7 @@ abstract class HealthcareServiceAvailableTime
     with _$HealthcareServiceAvailableTime {
   const factory HealthcareServiceAvailableTime({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<AvailableTimeDaysOfWeek> daysOfWeek,
     Boolean allDay,
@@ -187,7 +187,7 @@ abstract class HealthcareServiceNotAvailable
     with _$HealthcareServiceNotAvailable {
   const factory HealthcareServiceNotAvailable({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String description,
     Period during,

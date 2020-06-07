@@ -282,9 +282,11 @@ _$_ProcessResponse _$_$_ProcessResponseFromJson(Map<String, dynamic> json) {
     contained: json['contained'] == null
         ? null
         : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -349,7 +351,8 @@ Map<String, dynamic> _$_$_ProcessResponseToJson(_$_ProcessResponse instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
@@ -481,9 +484,11 @@ _$_ProcessRequestItem _$_$_ProcessRequestItemFromJson(
   $checkKeys(json, requiredKeys: const ['sequenceLinkId']);
   return _$_ProcessRequestItem(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -505,7 +510,8 @@ Map<String, dynamic> _$_$_ProcessRequestItemToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('sequenceLinkId', instance.sequenceLinkId?.toJson());
   return val;
@@ -515,9 +521,11 @@ _$_ProcessResponseNotes _$_$_ProcessResponseNotesFromJson(
     Map<String, dynamic> json) {
   return _$_ProcessResponseNotes(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -540,7 +548,8 @@ Map<String, dynamic> _$_$_ProcessResponseNotesToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('text', instance.text);
@@ -550,9 +559,11 @@ Map<String, dynamic> _$_$_ProcessResponseNotesToJson(
 _$_SupplyRequestWhen _$_$_SupplyRequestWhenFromJson(Map<String, dynamic> json) {
   return _$_SupplyRequestWhen(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -577,7 +588,8 @@ Map<String, dynamic> _$_$_SupplyRequestWhenToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('schedule', instance.schedule?.toJson());

@@ -92,7 +92,7 @@ abstract class Person with _$Person implements Resource {
 abstract class SubstanceInstance with _$SubstanceInstance {
   const factory SubstanceInstance({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     FhirDateTime expiry,
@@ -107,7 +107,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
 abstract class SubstanceIngredient with _$SubstanceIngredient {
   const factory SubstanceIngredient({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Ratio quantity,
     @JsonKey(required: true) @required Reference substance,
@@ -121,7 +121,7 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
 abstract class LocationPosition with _$LocationPosition {
   const factory LocationPosition({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Decimal longitude,
     @JsonKey(required: true) @required Decimal latitude,
@@ -136,7 +136,7 @@ abstract class LocationPosition with _$LocationPosition {
 abstract class PersonLink with _$PersonLink {
   const factory PersonLink({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference target,
     @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance assurance,
@@ -150,7 +150,7 @@ abstract class PersonLink with _$PersonLink {
 abstract class TermActor with _$TermActor {
   const factory TermActor({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference entity,
     List<CodeableConcept> role,
@@ -201,7 +201,7 @@ abstract class Contract with _$Contract implements Resource {
 abstract class ContractActor with _$ContractActor {
   const factory ContractActor({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference entity,
     List<CodeableConcept> role,
@@ -215,7 +215,7 @@ abstract class ContractActor with _$ContractActor {
 abstract class ContractValuedItem with _$ContractValuedItem {
   const factory ContractValuedItem({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept entityX,
     Identifier identifier,
@@ -235,7 +235,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
 abstract class ContractSigner with _$ContractSigner {
   const factory ContractSigner({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding type,
     @JsonKey(required: true) @required Reference party,
@@ -250,7 +250,7 @@ abstract class ContractSigner with _$ContractSigner {
 abstract class ContractTerm with _$ContractTerm {
   const factory ContractTerm({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     FhirDateTime issued,
@@ -274,7 +274,7 @@ abstract class ContractTerm with _$ContractTerm {
 abstract class ContractFriendly with _$ContractFriendly {
   const factory ContractFriendly({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Attachment contentX,
   }) = _ContractFriendly;
@@ -287,7 +287,7 @@ abstract class ContractFriendly with _$ContractFriendly {
 abstract class ContractLegal with _$ContractLegal {
   const factory ContractLegal({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Attachment contentX,
   }) = _ContractLegal;
@@ -300,7 +300,7 @@ abstract class ContractLegal with _$ContractLegal {
 abstract class ContractRule with _$ContractRule {
   const factory ContractRule({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Attachment contentX,
   }) = _ContractRule;

@@ -1501,7 +1501,7 @@ class _$ProcessResponseTearOff {
       Code language,
       Narrative text,
       Resource contained,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Reference request,
@@ -1553,7 +1553,7 @@ mixin _$ProcessResponse {
   Narrative get text;
   Resource get contained;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   List<Identifier> get identifier;
   Reference get request;
@@ -1584,7 +1584,7 @@ abstract class $ProcessResponseCopyWith<$Res> {
       Code language,
       Narrative text,
       Resource contained,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Reference request,
@@ -1602,7 +1602,6 @@ abstract class $ProcessResponseCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get request;
   $CodingCopyWith<$Res> get outcome;
@@ -1658,7 +1657,7 @@ class _$ProcessResponseCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1707,16 +1706,6 @@ class _$ProcessResponseCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
     });
   }
 
@@ -1824,7 +1813,7 @@ abstract class _$ProcessResponseCopyWith<$Res>
       Code language,
       Narrative text,
       Resource contained,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Reference request,
@@ -1844,8 +1833,6 @@ abstract class _$ProcessResponseCopyWith<$Res>
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -1912,7 +1899,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
           contained == freezed ? _value.contained : contained as Resource,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1987,7 +1974,7 @@ class _$_ProcessResponse implements _ProcessResponse {
   final Resource contained;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2128,7 +2115,7 @@ abstract class _ProcessResponse implements ProcessResponse {
       Code language,
       Narrative text,
       Resource contained,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Reference request,
@@ -2161,7 +2148,7 @@ abstract class _ProcessResponse implements ProcessResponse {
   Resource get contained;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2891,7 +2878,7 @@ class _$ProcessRequestItemTearOff {
 
   _ProcessRequestItem call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Integer sequenceLinkId}) {
     return _ProcessRequestItem(
@@ -2909,7 +2896,7 @@ const $ProcessRequestItem = _$ProcessRequestItemTearOff();
 mixin _$ProcessRequestItem {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Integer get sequenceLinkId;
@@ -2924,11 +2911,10 @@ abstract class $ProcessRequestItemCopyWith<$Res> {
       _$ProcessRequestItemCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Integer sequenceLinkId});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -2951,7 +2937,7 @@ class _$ProcessRequestItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2959,16 +2945,6 @@ class _$ProcessRequestItemCopyWithImpl<$Res>
           ? _value.sequenceLinkId
           : sequenceLinkId as Integer,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2990,12 +2966,10 @@ abstract class _$ProcessRequestItemCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Integer sequenceLinkId});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -3021,7 +2995,7 @@ class __$ProcessRequestItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3048,7 +3022,7 @@ class _$_ProcessRequestItem implements _ProcessRequestItem {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3098,7 +3072,7 @@ class _$_ProcessRequestItem implements _ProcessRequestItem {
 abstract class _ProcessRequestItem implements ProcessRequestItem {
   const factory _ProcessRequestItem(
           {Id id,
-          @JsonKey(name: 'extension') FhirExtension extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
           @required @JsonKey(required: true) Integer sequenceLinkId}) =
       _$_ProcessRequestItem;
@@ -3110,7 +3084,7 @@ abstract class _ProcessRequestItem implements ProcessRequestItem {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3129,7 +3103,7 @@ class _$ProcessResponseNotesTearOff {
 
   _ProcessResponseNotes call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       String text}) {
@@ -3149,7 +3123,7 @@ const $ProcessResponseNotes = _$ProcessResponseNotesTearOff();
 mixin _$ProcessResponseNotes {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   Coding get type;
   String get text;
@@ -3164,12 +3138,11 @@ abstract class $ProcessResponseNotesCopyWith<$Res> {
       _$ProcessResponseNotesCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       String text});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
 }
@@ -3194,23 +3167,13 @@ class _$ProcessResponseNotesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as Coding,
       text: text == freezed ? _value.text : text as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3242,13 +3205,11 @@ abstract class _$ProcessResponseNotesCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       String text});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3277,7 +3238,7 @@ class __$ProcessResponseNotesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3303,7 +3264,7 @@ class _$_ProcessResponseNotes implements _ProcessResponseNotes {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3357,7 +3318,7 @@ class _$_ProcessResponseNotes implements _ProcessResponseNotes {
 abstract class _ProcessResponseNotes implements ProcessResponseNotes {
   const factory _ProcessResponseNotes(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       String text}) = _$_ProcessResponseNotes;
@@ -3369,7 +3330,7 @@ abstract class _ProcessResponseNotes implements ProcessResponseNotes {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3389,7 +3350,7 @@ class _$SupplyRequestWhenTearOff {
 
   _SupplyRequestWhen call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule}) {
@@ -3409,7 +3370,7 @@ const $SupplyRequestWhen = _$SupplyRequestWhenTearOff();
 mixin _$SupplyRequestWhen {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get code;
   Timing get schedule;
@@ -3424,12 +3385,11 @@ abstract class $SupplyRequestWhenCopyWith<$Res> {
       _$SupplyRequestWhenCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get code;
   $TimingCopyWith<$Res> get schedule;
@@ -3455,23 +3415,13 @@ class _$SupplyRequestWhenCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       code: code == freezed ? _value.code : code as CodeableConcept,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3513,13 +3463,11 @@ abstract class _$SupplyRequestWhenCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3550,7 +3498,7 @@ class __$SupplyRequestWhenCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3576,7 +3524,7 @@ class _$_SupplyRequestWhen implements _SupplyRequestWhen {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3630,7 +3578,7 @@ class _$_SupplyRequestWhen implements _SupplyRequestWhen {
 abstract class _SupplyRequestWhen implements SupplyRequestWhen {
   const factory _SupplyRequestWhen(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule}) = _$_SupplyRequestWhen;
@@ -3642,7 +3590,7 @@ abstract class _SupplyRequestWhen implements SupplyRequestWhen {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

@@ -148,7 +148,7 @@ abstract class List_ with _$List_ implements Resource {
 abstract class CompositionAttester with _$CompositionAttester {
   const factory CompositionAttester({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<AttesterMode> mode,
     FhirDateTime time,
@@ -163,7 +163,7 @@ abstract class CompositionAttester with _$CompositionAttester {
 abstract class CompositionEvent with _$CompositionEvent {
   const factory CompositionEvent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> code,
     List<Period> period,
@@ -178,7 +178,7 @@ abstract class CompositionEvent with _$CompositionEvent {
 abstract class CompositionSection with _$CompositionSection {
   const factory CompositionSection({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String title,
     CodeableConcept code,
@@ -198,7 +198,7 @@ abstract class CompositionSection with _$CompositionSection {
 abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   const factory DocumentReferenceRelatesTo({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: RelatesToCode.unknown)
     @required
@@ -214,7 +214,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 abstract class DocumentReferenceContent with _$DocumentReferenceContent {
   const factory DocumentReferenceContent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Attachment attachment,
     List<Coding> format,
@@ -228,7 +228,7 @@ abstract class DocumentReferenceContent with _$DocumentReferenceContent {
 abstract class DocumentReferenceContext with _$DocumentReferenceContext {
   const factory DocumentReferenceContext({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Reference encounter,
     List<CodeableConcept> event,
@@ -247,7 +247,7 @@ abstract class DocumentReferenceContext with _$DocumentReferenceContext {
 abstract class DocumentManifestContent with _$DocumentManifestContent {
   const factory DocumentManifestContent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Attachment pAttachment,
     Reference pReference,
@@ -261,7 +261,7 @@ abstract class DocumentManifestContent with _$DocumentManifestContent {
 abstract class DocumentManifestRelated with _$DocumentManifestRelated {
   const factory DocumentManifestRelated({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     Reference ref,
@@ -275,7 +275,7 @@ abstract class DocumentManifestRelated with _$DocumentManifestRelated {
 abstract class ListEntry with _$ListEntry {
   const factory ListEntry({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept flag,
     Boolean deleted,
@@ -291,7 +291,7 @@ abstract class ListEntry with _$ListEntry {
 abstract class DocumentReferenceRelated with _$DocumentReferenceRelated {
   const factory DocumentReferenceRelated({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     Reference ref,

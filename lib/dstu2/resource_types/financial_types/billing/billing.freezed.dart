@@ -1832,7 +1832,7 @@ class _$ClaimPayeeTearOff {
 
   _ClaimPayee call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       Reference provider,
@@ -1856,7 +1856,7 @@ const $ClaimPayee = _$ClaimPayeeTearOff();
 mixin _$ClaimPayee {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   Coding get type;
   Reference get provider;
@@ -1873,14 +1873,13 @@ abstract class $ClaimPayeeCopyWith<$Res> {
       _$ClaimPayeeCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       Reference provider,
       Reference organization,
       Reference person});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get provider;
@@ -1909,7 +1908,7 @@ class _$ClaimPayeeCopyWithImpl<$Res> implements $ClaimPayeeCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1920,16 +1919,6 @@ class _$ClaimPayeeCopyWithImpl<$Res> implements $ClaimPayeeCopyWith<$Res> {
           : organization as Reference,
       person: person == freezed ? _value.person : person as Reference,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -1990,15 +1979,13 @@ abstract class _$ClaimPayeeCopyWith<$Res> implements $ClaimPayeeCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       Reference provider,
       Reference organization,
       Reference person});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -2034,7 +2021,7 @@ class __$ClaimPayeeCopyWithImpl<$Res> extends _$ClaimPayeeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2066,7 +2053,7 @@ class _$_ClaimPayee implements _ClaimPayee {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2131,7 +2118,7 @@ class _$_ClaimPayee implements _ClaimPayee {
 abstract class _ClaimPayee implements ClaimPayee {
   const factory _ClaimPayee(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Coding type,
       Reference provider,
@@ -2145,7 +2132,7 @@ abstract class _ClaimPayee implements ClaimPayee {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2169,7 +2156,7 @@ class _$ClaimDiagnosisTearOff {
 
   _ClaimDiagnosis call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding diagnosis}) {
@@ -2189,7 +2176,7 @@ const $ClaimDiagnosis = _$ClaimDiagnosisTearOff();
 mixin _$ClaimDiagnosis {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequence;
@@ -2206,12 +2193,11 @@ abstract class $ClaimDiagnosisCopyWith<$Res> {
       _$ClaimDiagnosisCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding diagnosis});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get diagnosis;
 }
@@ -2236,23 +2222,13 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
       diagnosis: diagnosis == freezed ? _value.diagnosis : diagnosis as Coding,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2284,13 +2260,11 @@ abstract class _$ClaimDiagnosisCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding diagnosis});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -2319,7 +2293,7 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2347,7 +2321,7 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2404,7 +2378,7 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
 abstract class _ClaimDiagnosis implements ClaimDiagnosis {
   const factory _ClaimDiagnosis(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding diagnosis}) = _$_ClaimDiagnosis;
@@ -2416,7 +2390,7 @@ abstract class _ClaimDiagnosis implements ClaimDiagnosis {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2438,7 +2412,7 @@ class _$ClaimCoverageTearOff {
 
   _ClaimCoverage call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Boolean focal,
@@ -2470,7 +2444,7 @@ const $ClaimCoverage = _$ClaimCoverageTearOff();
 mixin _$ClaimCoverage {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequence;
@@ -2495,7 +2469,7 @@ abstract class $ClaimCoverageCopyWith<$Res> {
       _$ClaimCoverageCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Boolean focal,
@@ -2506,7 +2480,6 @@ abstract class $ClaimCoverageCopyWith<$Res> {
       Reference claimResponse,
       Coding originalRuleset});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get coverage;
   $CodingCopyWith<$Res> get relationship;
@@ -2540,7 +2513,7 @@ class _$ClaimCoverageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2563,16 +2536,6 @@ class _$ClaimCoverageCopyWithImpl<$Res>
           ? _value.originalRuleset
           : originalRuleset as Coding,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2634,7 +2597,7 @@ abstract class _$ClaimCoverageCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Boolean focal,
@@ -2645,8 +2608,6 @@ abstract class _$ClaimCoverageCopyWith<$Res>
       Reference claimResponse,
       Coding originalRuleset});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -2687,7 +2648,7 @@ class __$ClaimCoverageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2739,7 +2700,7 @@ class _$_ClaimCoverage implements _ClaimCoverage {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2833,7 +2794,7 @@ class _$_ClaimCoverage implements _ClaimCoverage {
 abstract class _ClaimCoverage implements ClaimCoverage {
   const factory _ClaimCoverage(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Boolean focal,
@@ -2851,7 +2812,7 @@ abstract class _ClaimCoverage implements ClaimCoverage {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2887,7 +2848,7 @@ class _$ClaimItemTearOff {
 
   _ClaimItem call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding type,
@@ -2937,7 +2898,7 @@ const $ClaimItem = _$ClaimItemTearOff();
 mixin _$ClaimItem {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequence;
@@ -2969,7 +2930,7 @@ abstract class $ClaimItemCopyWith<$Res> {
       _$ClaimItemCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding type,
@@ -2989,7 +2950,6 @@ abstract class $ClaimItemCopyWith<$Res> {
       List<ClaimDetail> detail,
       ClaimProsthesis prosthesis});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get provider;
@@ -3036,7 +2996,7 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3065,16 +3025,6 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
           ? _value.prosthesis
           : prosthesis as ClaimProsthesis,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3185,7 +3135,7 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding type,
@@ -3205,8 +3155,6 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       List<ClaimDetail> detail,
       ClaimProsthesis prosthesis});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3264,7 +3212,7 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3330,7 +3278,7 @@ class _$_ClaimItem implements _ClaimItem {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3472,7 +3420,7 @@ class _$_ClaimItem implements _ClaimItem {
 abstract class _ClaimItem implements ClaimItem {
   const factory _ClaimItem(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding type,
@@ -3499,7 +3447,7 @@ abstract class _ClaimItem implements ClaimItem {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3552,7 +3500,7 @@ class _$ClaimDetailTearOff {
 
   _ClaimDetail call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding type,
@@ -3588,7 +3536,7 @@ const $ClaimDetail = _$ClaimDetailTearOff();
 mixin _$ClaimDetail {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequence;
@@ -3614,7 +3562,7 @@ abstract class $ClaimDetailCopyWith<$Res> {
       _$ClaimDetailCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding type,
@@ -3627,7 +3575,6 @@ abstract class $ClaimDetailCopyWith<$Res> {
       Coding udi,
       List<ClaimSubDetail> subDetail});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
   $CodingCopyWith<$Res> get service;
@@ -3664,7 +3611,7 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3682,16 +3629,6 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
           ? _value.subDetail
           : subDetail as List<ClaimSubDetail>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3773,7 +3710,7 @@ abstract class _$ClaimDetailCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding type,
@@ -3786,8 +3723,6 @@ abstract class _$ClaimDetailCopyWith<$Res>
       Coding udi,
       List<ClaimSubDetail> subDetail});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3833,7 +3768,7 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3881,7 +3816,7 @@ class _$_ClaimDetail implements _ClaimDetail {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3982,7 +3917,7 @@ class _$_ClaimDetail implements _ClaimDetail {
 abstract class _ClaimDetail implements ClaimDetail {
   const factory _ClaimDetail(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding type,
@@ -4002,7 +3937,7 @@ abstract class _ClaimDetail implements ClaimDetail {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -4041,7 +3976,7 @@ class _$ClaimSubDetailTearOff {
 
   _ClaimSubDetail call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding type,
@@ -4075,7 +4010,7 @@ const $ClaimSubDetail = _$ClaimSubDetailTearOff();
 mixin _$ClaimSubDetail {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequence;
@@ -4100,7 +4035,7 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
       _$ClaimSubDetailCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding type,
@@ -4112,7 +4047,6 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
       Quantity net,
       Coding udi});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
   $CodingCopyWith<$Res> get service;
@@ -4149,7 +4083,7 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4164,16 +4098,6 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
       net: net == freezed ? _value.net : net as Quantity,
       udi: udi == freezed ? _value.udi : udi as Coding,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -4255,7 +4179,7 @@ abstract class _$ClaimSubDetailCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Coding type,
@@ -4267,8 +4191,6 @@ abstract class _$ClaimSubDetailCopyWith<$Res>
       Quantity net,
       Coding udi});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -4314,7 +4236,7 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4358,7 +4280,7 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -4453,7 +4375,7 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
 abstract class _ClaimSubDetail implements ClaimSubDetail {
   const factory _ClaimSubDetail(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Coding type,
@@ -4472,7 +4394,7 @@ abstract class _ClaimSubDetail implements ClaimSubDetail {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -4509,7 +4431,7 @@ class _$ClaimProsthesisTearOff {
 
   _ClaimProsthesis call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Boolean initial,
       Date priorDate,
@@ -4531,7 +4453,7 @@ const $ClaimProsthesis = _$ClaimProsthesisTearOff();
 mixin _$ClaimProsthesis {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   Boolean get initial;
   Date get priorDate;
@@ -4547,13 +4469,12 @@ abstract class $ClaimProsthesisCopyWith<$Res> {
       _$ClaimProsthesisCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Boolean initial,
       Date priorDate,
       Coding priorMaterial});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get priorMaterial;
 }
@@ -4579,7 +4500,7 @@ class _$ClaimProsthesisCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4589,16 +4510,6 @@ class _$ClaimProsthesisCopyWithImpl<$Res>
           ? _value.priorMaterial
           : priorMaterial as Coding,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -4630,14 +4541,12 @@ abstract class _$ClaimProsthesisCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Boolean initial,
       Date priorDate,
       Coding priorMaterial});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -4667,7 +4576,7 @@ class __$ClaimProsthesisCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4697,7 +4606,7 @@ class _$_ClaimProsthesis implements _ClaimProsthesis {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -4758,7 +4667,7 @@ class _$_ClaimProsthesis implements _ClaimProsthesis {
 abstract class _ClaimProsthesis implements ClaimProsthesis {
   const factory _ClaimProsthesis(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Boolean initial,
       Date priorDate,
@@ -4771,7 +4680,7 @@ abstract class _ClaimProsthesis implements ClaimProsthesis {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -4793,7 +4702,7 @@ class _$ClaimMissingTeethTearOff {
 
   _ClaimMissingTeeth call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding tooth,
       Coding reason,
@@ -4815,7 +4724,7 @@ const $ClaimMissingTeeth = _$ClaimMissingTeethTearOff();
 mixin _$ClaimMissingTeeth {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Coding get tooth;
@@ -4832,13 +4741,12 @@ abstract class $ClaimMissingTeethCopyWith<$Res> {
       _$ClaimMissingTeethCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding tooth,
       Coding reason,
       Date extractionDate});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get tooth;
   $CodingCopyWith<$Res> get reason;
@@ -4865,7 +4773,7 @@ class _$ClaimMissingTeethCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4875,16 +4783,6 @@ class _$ClaimMissingTeethCopyWithImpl<$Res>
           ? _value.extractionDate
           : extractionDate as Date,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -4926,14 +4824,12 @@ abstract class _$ClaimMissingTeethCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding tooth,
       Coding reason,
       Date extractionDate});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -4965,7 +4861,7 @@ class __$ClaimMissingTeethCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4996,7 +4892,7 @@ class _$_ClaimMissingTeeth implements _ClaimMissingTeeth {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -5056,7 +4952,7 @@ class _$_ClaimMissingTeeth implements _ClaimMissingTeeth {
 abstract class _ClaimMissingTeeth implements ClaimMissingTeeth {
   const factory _ClaimMissingTeeth(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding tooth,
       Coding reason,
@@ -5069,7 +4965,7 @@ abstract class _ClaimMissingTeeth implements ClaimMissingTeeth {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -6193,7 +6089,7 @@ class _$ClaimResponseItemTearOff {
 
   _ClaimResponseItem call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
@@ -6217,7 +6113,7 @@ const $ClaimResponseItem = _$ClaimResponseItemTearOff();
 mixin _$ClaimResponseItem {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
@@ -6235,14 +6131,13 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       _$ClaimResponseItemCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
       List<ItemDetail> detail});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -6268,7 +6163,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -6283,16 +6178,6 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
           : adjudication as List<ClaimResponseAdjudication>,
       detail: detail == freezed ? _value.detail : detail as List<ItemDetail>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -6314,15 +6199,13 @@ abstract class _$ClaimResponseItemCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
       List<ItemDetail> detail});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -6351,7 +6234,7 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -6388,7 +6271,7 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -6455,7 +6338,7 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
 abstract class _ClaimResponseItem implements ClaimResponseItem {
   const factory _ClaimResponseItem(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
@@ -6469,7 +6352,7 @@ abstract class _ClaimResponseItem implements ClaimResponseItem {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -6495,7 +6378,7 @@ class _$ClaimResponseAdjudicationTearOff {
 
   _ClaimResponseAdjudication call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding code,
       Quantity amount,
@@ -6517,7 +6400,7 @@ const $ClaimResponseAdjudication = _$ClaimResponseAdjudicationTearOff();
 mixin _$ClaimResponseAdjudication {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Coding get code;
@@ -6534,13 +6417,12 @@ abstract class $ClaimResponseAdjudicationCopyWith<$Res> {
       _$ClaimResponseAdjudicationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding code,
       Quantity amount,
       Decimal value});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get code;
   $QuantityCopyWith<$Res> get amount;
@@ -6567,7 +6449,7 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -6575,16 +6457,6 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
       amount: amount == freezed ? _value.amount : amount as Quantity,
       value: value == freezed ? _value.value : value as Decimal,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -6626,14 +6498,12 @@ abstract class _$ClaimResponseAdjudicationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding code,
       Quantity amount,
       Decimal value});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -6666,7 +6536,7 @@ class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -6695,7 +6565,7 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -6756,7 +6626,7 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
 abstract class _ClaimResponseAdjudication implements ClaimResponseAdjudication {
   const factory _ClaimResponseAdjudication(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding code,
       Quantity amount,
@@ -6769,7 +6639,7 @@ abstract class _ClaimResponseAdjudication implements ClaimResponseAdjudication {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -6792,7 +6662,7 @@ class _$ItemDetailTearOff {
 
   _ItemDetail call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<ClaimResponseAdjudication> adjudication,
@@ -6814,7 +6684,7 @@ const $ItemDetail = _$ItemDetailTearOff();
 mixin _$ItemDetail {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
@@ -6831,13 +6701,12 @@ abstract class $ItemDetailCopyWith<$Res> {
       _$ItemDetailCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<ClaimResponseAdjudication> adjudication,
       List<ClaimResponseSubDetail> subDetail});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -6861,7 +6730,7 @@ class _$ItemDetailCopyWithImpl<$Res> implements $ItemDetailCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -6875,16 +6744,6 @@ class _$ItemDetailCopyWithImpl<$Res> implements $ItemDetailCopyWith<$Res> {
           ? _value.subDetail
           : subDetail as List<ClaimResponseSubDetail>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -6905,14 +6764,12 @@ abstract class _$ItemDetailCopyWith<$Res> implements $ItemDetailCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<ClaimResponseAdjudication> adjudication,
       List<ClaimResponseSubDetail> subDetail});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -6939,7 +6796,7 @@ class __$ItemDetailCopyWithImpl<$Res> extends _$ItemDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -6974,7 +6831,7 @@ class _$_ItemDetail implements _ItemDetail {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -7036,7 +6893,7 @@ class _$_ItemDetail implements _ItemDetail {
 abstract class _ItemDetail implements ItemDetail {
   const factory _ItemDetail(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<ClaimResponseAdjudication> adjudication,
@@ -7049,7 +6906,7 @@ abstract class _ItemDetail implements ItemDetail {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -7073,7 +6930,7 @@ class _$ClaimResponseSubDetailTearOff {
 
   _ClaimResponseSubDetail call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<ClaimResponseAdjudication> adjudication}) {
@@ -7093,7 +6950,7 @@ const $ClaimResponseSubDetail = _$ClaimResponseSubDetailTearOff();
 mixin _$ClaimResponseSubDetail {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
@@ -7109,12 +6966,11 @@ abstract class $ClaimResponseSubDetailCopyWith<$Res> {
       _$ClaimResponseSubDetailCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<ClaimResponseAdjudication> adjudication});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -7138,7 +6994,7 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -7149,16 +7005,6 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res>
           ? _value.adjudication
           : adjudication as List<ClaimResponseAdjudication>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -7180,13 +7026,11 @@ abstract class _$ClaimResponseSubDetailCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<ClaimResponseAdjudication> adjudication});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -7213,7 +7057,7 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -7244,7 +7088,7 @@ class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -7301,7 +7145,7 @@ class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
 abstract class _ClaimResponseSubDetail implements ClaimResponseSubDetail {
   const factory _ClaimResponseSubDetail(
           {Id id,
-          @JsonKey(name: 'extension') FhirExtension extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
           @required @JsonKey(required: true) PositiveInt sequenceLinkId,
           List<ClaimResponseAdjudication> adjudication}) =
@@ -7314,7 +7158,7 @@ abstract class _ClaimResponseSubDetail implements ClaimResponseSubDetail {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -7335,7 +7179,7 @@ class _$ClaimResponseAddItemTearOff {
 
   _ClaimResponseAddItem call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<PositiveInt> sequenceLinkId,
       @required @JsonKey(required: true) Coding service,
@@ -7363,7 +7207,7 @@ const $ClaimResponseAddItem = _$ClaimResponseAddItemTearOff();
 mixin _$ClaimResponseAddItem {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   List<PositiveInt> get sequenceLinkId;
   @JsonKey(required: true)
@@ -7383,7 +7227,7 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       _$ClaimResponseAddItemCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<PositiveInt> sequenceLinkId,
       @JsonKey(required: true) Coding service,
@@ -7392,7 +7236,6 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       List<ClaimResponseAdjudication> adjudication,
       AddItemDetail detail});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get service;
   $QuantityCopyWith<$Res> get fee;
@@ -7423,7 +7266,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -7440,16 +7283,6 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
           : adjudication as List<ClaimResponseAdjudication>,
       detail: detail == freezed ? _value.detail : detail as AddItemDetail,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -7501,7 +7334,7 @@ abstract class _$ClaimResponseAddItemCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<PositiveInt> sequenceLinkId,
       @JsonKey(required: true) Coding service,
@@ -7510,8 +7343,6 @@ abstract class _$ClaimResponseAddItemCopyWith<$Res>
       List<ClaimResponseAdjudication> adjudication,
       AddItemDetail detail});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -7548,7 +7379,7 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -7589,7 +7420,7 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -7668,7 +7499,7 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
 abstract class _ClaimResponseAddItem implements ClaimResponseAddItem {
   const factory _ClaimResponseAddItem(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<PositiveInt> sequenceLinkId,
       @required @JsonKey(required: true) Coding service,
@@ -7684,7 +7515,7 @@ abstract class _ClaimResponseAddItem implements ClaimResponseAddItem {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -7713,7 +7544,7 @@ class _$AddItemDetailTearOff {
 
   _AddItemDetail call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding service,
       Quantity fee,
@@ -7735,7 +7566,7 @@ const $AddItemDetail = _$AddItemDetailTearOff();
 mixin _$AddItemDetail {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Coding get service;
@@ -7752,13 +7583,12 @@ abstract class $AddItemDetailCopyWith<$Res> {
       _$AddItemDetailCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding service,
       Quantity fee,
       List<ClaimResponseAdjudication> adjudication});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get service;
   $QuantityCopyWith<$Res> get fee;
@@ -7785,7 +7615,7 @@ class _$AddItemDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -7795,16 +7625,6 @@ class _$AddItemDetailCopyWithImpl<$Res>
           ? _value.adjudication
           : adjudication as List<ClaimResponseAdjudication>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -7846,14 +7666,12 @@ abstract class _$AddItemDetailCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding service,
       Quantity fee,
       List<ClaimResponseAdjudication> adjudication});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -7885,7 +7703,7 @@ class __$AddItemDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -7916,7 +7734,7 @@ class _$_AddItemDetail implements _AddItemDetail {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -7977,7 +7795,7 @@ class _$_AddItemDetail implements _AddItemDetail {
 abstract class _AddItemDetail implements AddItemDetail {
   const factory _AddItemDetail(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding service,
       Quantity fee,
@@ -7990,7 +7808,7 @@ abstract class _AddItemDetail implements AddItemDetail {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -8013,7 +7831,7 @@ class _$ClaimResponseErrorTearOff {
 
   _ClaimResponseError call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       PositiveInt sequenceLinkId,
       PositiveInt detailSequenceLinkId,
@@ -8037,7 +7855,7 @@ const $ClaimResponseError = _$ClaimResponseErrorTearOff();
 mixin _$ClaimResponseError {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   PositiveInt get sequenceLinkId;
   PositiveInt get detailSequenceLinkId;
@@ -8055,14 +7873,13 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
       _$ClaimResponseErrorCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       PositiveInt sequenceLinkId,
       PositiveInt detailSequenceLinkId,
       PositiveInt subdetailSequenceLinkId,
       @JsonKey(required: true) Coding code});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get code;
 }
@@ -8089,7 +7906,7 @@ class _$ClaimResponseErrorCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -8104,16 +7921,6 @@ class _$ClaimResponseErrorCopyWithImpl<$Res>
           : subdetailSequenceLinkId as PositiveInt,
       code: code == freezed ? _value.code : code as Coding,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -8145,15 +7952,13 @@ abstract class _$ClaimResponseErrorCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       PositiveInt sequenceLinkId,
       PositiveInt detailSequenceLinkId,
       PositiveInt subdetailSequenceLinkId,
       @JsonKey(required: true) Coding code});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -8184,7 +7989,7 @@ class __$ClaimResponseErrorCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -8221,7 +8026,7 @@ class _$_ClaimResponseError implements _ClaimResponseError {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -8289,7 +8094,7 @@ class _$_ClaimResponseError implements _ClaimResponseError {
 abstract class _ClaimResponseError implements ClaimResponseError {
   const factory _ClaimResponseError(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       PositiveInt sequenceLinkId,
       PositiveInt detailSequenceLinkId,
@@ -8303,7 +8108,7 @@ abstract class _ClaimResponseError implements ClaimResponseError {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -8328,7 +8133,7 @@ class _$ClaimResponseNoteTearOff {
 
   _ClaimResponseNote call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       PositiveInt number,
       Coding type,
@@ -8350,7 +8155,7 @@ const $ClaimResponseNote = _$ClaimResponseNoteTearOff();
 mixin _$ClaimResponseNote {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   PositiveInt get number;
   Coding get type;
@@ -8366,13 +8171,12 @@ abstract class $ClaimResponseNoteCopyWith<$Res> {
       _$ClaimResponseNoteCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       PositiveInt number,
       Coding type,
       String text});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
 }
@@ -8398,7 +8202,7 @@ class _$ClaimResponseNoteCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -8406,16 +8210,6 @@ class _$ClaimResponseNoteCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as Coding,
       text: text == freezed ? _value.text : text as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -8447,14 +8241,12 @@ abstract class _$ClaimResponseNoteCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       PositiveInt number,
       Coding type,
       String text});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -8484,7 +8276,7 @@ class __$ClaimResponseNoteCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -8512,7 +8304,7 @@ class _$_ClaimResponseNote implements _ClaimResponseNote {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -8570,7 +8362,7 @@ class _$_ClaimResponseNote implements _ClaimResponseNote {
 abstract class _ClaimResponseNote implements ClaimResponseNote {
   const factory _ClaimResponseNote(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       PositiveInt number,
       Coding type,
@@ -8583,7 +8375,7 @@ abstract class _ClaimResponseNote implements ClaimResponseNote {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -8606,7 +8398,7 @@ class _$ClaimResponseCoverageTearOff {
 
   _ClaimResponseCoverage call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Boolean focal,
@@ -8638,7 +8430,7 @@ const $ClaimResponseCoverage = _$ClaimResponseCoverageTearOff();
 mixin _$ClaimResponseCoverage {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   PositiveInt get sequence;
@@ -8663,7 +8455,7 @@ abstract class $ClaimResponseCoverageCopyWith<$Res> {
       _$ClaimResponseCoverageCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Boolean focal,
@@ -8674,7 +8466,6 @@ abstract class $ClaimResponseCoverageCopyWith<$Res> {
       Reference claimResponse,
       Coding originalRuleset});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get coverage;
   $CodingCopyWith<$Res> get relationship;
@@ -8708,7 +8499,7 @@ class _$ClaimResponseCoverageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -8731,16 +8522,6 @@ class _$ClaimResponseCoverageCopyWithImpl<$Res>
           ? _value.originalRuleset
           : originalRuleset as Coding,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -8802,7 +8583,7 @@ abstract class _$ClaimResponseCoverageCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
       @JsonKey(required: true) Boolean focal,
@@ -8813,8 +8594,6 @@ abstract class _$ClaimResponseCoverageCopyWith<$Res>
       Reference claimResponse,
       Coding originalRuleset});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -8855,7 +8634,7 @@ class __$ClaimResponseCoverageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -8907,7 +8686,7 @@ class _$_ClaimResponseCoverage implements _ClaimResponseCoverage {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -9002,7 +8781,7 @@ class _$_ClaimResponseCoverage implements _ClaimResponseCoverage {
 abstract class _ClaimResponseCoverage implements ClaimResponseCoverage {
   const factory _ClaimResponseCoverage(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
       @required @JsonKey(required: true) Boolean focal,
@@ -9020,7 +8799,7 @@ abstract class _ClaimResponseCoverage implements ClaimResponseCoverage {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

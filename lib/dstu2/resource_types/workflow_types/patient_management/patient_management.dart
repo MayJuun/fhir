@@ -141,7 +141,7 @@ abstract class Flag with _$Flag implements Resource {
 abstract class CommunicationPayload with _$CommunicationPayload {
   const factory CommunicationPayload({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String contentString,
     Attachment contentAttachment,
@@ -156,7 +156,7 @@ abstract class CommunicationPayload with _$CommunicationPayload {
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   const factory EpisodeOfCareStatusHistory({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(
         required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
@@ -173,7 +173,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
   const factory EpisodeOfCareCareTeam({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> role,
     Period period,
@@ -188,7 +188,7 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
 abstract class EncounterStatusHistory with _$EncounterStatusHistory {
   const factory EncounterStatusHistory({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
     @required
@@ -204,7 +204,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
 abstract class EncounterParticipant with _$EncounterParticipant {
   const factory EncounterParticipant({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> type,
     Period period,
@@ -219,7 +219,7 @@ abstract class EncounterParticipant with _$EncounterParticipant {
 abstract class EncounterHospitalization with _$EncounterHospitalization {
   const factory EncounterHospitalization({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier preAdmissionIdentifier,
     Reference origin,
@@ -242,7 +242,7 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
 abstract class EncounterLocation with _$EncounterLocation {
   const factory EncounterLocation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference location,
     @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,

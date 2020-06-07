@@ -1803,7 +1803,7 @@ class _$BundleLinkTearOff {
 
   _BundleLink call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String relation,
       @required @JsonKey(required: true) FhirUri url}) {
@@ -1823,7 +1823,7 @@ const $BundleLink = _$BundleLinkTearOff();
 mixin _$BundleLink {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   String get relation;
@@ -1840,12 +1840,11 @@ abstract class $BundleLinkCopyWith<$Res> {
       _$BundleLinkCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String relation,
       @JsonKey(required: true) FhirUri url});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -1868,23 +1867,13 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       relation: relation == freezed ? _value.relation : relation as String,
       url: url == freezed ? _value.url : url as FhirUri,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -1905,13 +1894,11 @@ abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String relation,
       @JsonKey(required: true) FhirUri url});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -1937,7 +1924,7 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -1965,7 +1952,7 @@ class _$_BundleLink implements _BundleLink {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2021,7 +2008,7 @@ class _$_BundleLink implements _BundleLink {
 abstract class _BundleLink implements BundleLink {
   const factory _BundleLink(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String relation,
       @required @JsonKey(required: true) FhirUri url}) = _$_BundleLink;
@@ -2033,7 +2020,7 @@ abstract class _BundleLink implements BundleLink {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2055,7 +2042,7 @@ class _$BundleEntryTearOff {
 
   _BundleEntry call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<BundleLink> link,
       FhirUri fullUrl,
@@ -2083,7 +2070,7 @@ const $BundleEntry = _$BundleEntryTearOff();
 mixin _$BundleEntry {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   List<BundleLink> get link;
   FhirUri get fullUrl;
@@ -2102,7 +2089,7 @@ abstract class $BundleEntryCopyWith<$Res> {
       _$BundleEntryCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<BundleLink> link,
       FhirUri fullUrl,
@@ -2111,7 +2098,6 @@ abstract class $BundleEntryCopyWith<$Res> {
       BundleRequest request,
       BundleResponse response});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $BundleSearchCopyWith<$Res> get search;
   $BundleRequestCopyWith<$Res> get request;
@@ -2141,7 +2127,7 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2153,16 +2139,6 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
       response:
           response == freezed ? _value.response : response as BundleResponse,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2214,7 +2190,7 @@ abstract class _$BundleEntryCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<BundleLink> link,
       FhirUri fullUrl,
@@ -2223,8 +2199,6 @@ abstract class _$BundleEntryCopyWith<$Res>
       BundleRequest request,
       BundleResponse response});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -2260,7 +2234,7 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2295,7 +2269,7 @@ class _$_BundleEntry implements _BundleEntry {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2372,7 +2346,7 @@ class _$_BundleEntry implements _BundleEntry {
 abstract class _BundleEntry implements BundleEntry {
   const factory _BundleEntry(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<BundleLink> link,
       FhirUri fullUrl,
@@ -2388,7 +2362,7 @@ abstract class _BundleEntry implements BundleEntry {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2416,7 +2390,7 @@ class _$BundleSearchTearOff {
 
   _BundleSearch call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score}) {
@@ -2436,7 +2410,7 @@ const $BundleSearch = _$BundleSearchTearOff();
 mixin _$BundleSearch {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(unknownEnumValue: SearchMode.unknown)
   SearchMode get mode;
@@ -2452,12 +2426,11 @@ abstract class $BundleSearchCopyWith<$Res> {
       _$BundleSearchCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -2480,23 +2453,13 @@ class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       mode: mode == freezed ? _value.mode : mode as SearchMode,
       score: score == freezed ? _value.score : score as Decimal,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2518,13 +2481,11 @@ abstract class _$BundleSearchCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -2550,7 +2511,7 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2576,7 +2537,7 @@ class _$_BundleSearch implements _BundleSearch {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2630,7 +2591,7 @@ class _$_BundleSearch implements _BundleSearch {
 abstract class _BundleSearch implements BundleSearch {
   const factory _BundleSearch(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score}) = _$_BundleSearch;
@@ -2642,7 +2603,7 @@ abstract class _BundleSearch implements BundleSearch {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2664,7 +2625,7 @@ class _$BundleRequestTearOff {
   _BundleRequest call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
@@ -2696,7 +2657,7 @@ const $BundleRequest = _$BundleRequestTearOff();
 mixin _$BundleRequest {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
   RequestMethod get method;
@@ -2718,7 +2679,7 @@ abstract class $BundleRequestCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
           RequestMethod method,
@@ -2729,7 +2690,6 @@ abstract class $BundleRequestCopyWith<$Res> {
       String ifMatch,
       String ifNoneExist});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -2757,7 +2717,7 @@ class _$BundleRequestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2772,16 +2732,6 @@ class _$BundleRequestCopyWithImpl<$Res>
       ifNoneExist:
           ifNoneExist == freezed ? _value.ifNoneExist : ifNoneExist as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2804,7 +2754,7 @@ abstract class _$BundleRequestCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
           RequestMethod method,
@@ -2815,8 +2765,6 @@ abstract class _$BundleRequestCopyWith<$Res>
       String ifMatch,
       String ifNoneExist});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -2847,7 +2795,7 @@ class __$BundleRequestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2892,7 +2840,7 @@ class _$_BundleRequest implements _BundleRequest {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2972,7 +2920,7 @@ abstract class _BundleRequest implements BundleRequest {
   const factory _BundleRequest(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
@@ -2992,7 +2940,7 @@ abstract class _BundleRequest implements BundleRequest {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3022,7 +2970,7 @@ class _$BundleResponseTearOff {
 
   _BundleResponse call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String status,
       FhirUri location,
@@ -3046,7 +2994,7 @@ const $BundleResponse = _$BundleResponseTearOff();
 mixin _$BundleResponse {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   String get status;
@@ -3064,14 +3012,13 @@ abstract class $BundleResponseCopyWith<$Res> {
       _$BundleResponseCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String status,
       FhirUri location,
       String etag,
       Instant lastModified});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -3097,7 +3044,7 @@ class _$BundleResponseCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3108,16 +3055,6 @@ class _$BundleResponseCopyWithImpl<$Res>
           ? _value.lastModified
           : lastModified as Instant,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3139,15 +3076,13 @@ abstract class _$BundleResponseCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String status,
       FhirUri location,
       String etag,
       Instant lastModified});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -3176,7 +3111,7 @@ class __$BundleResponseCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3209,7 +3144,7 @@ class _$_BundleResponse implements _BundleResponse {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3275,7 +3210,7 @@ class _$_BundleResponse implements _BundleResponse {
 abstract class _BundleResponse implements BundleResponse {
   const factory _BundleResponse(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String status,
       FhirUri location,
@@ -3289,7 +3224,7 @@ abstract class _BundleResponse implements BundleResponse {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

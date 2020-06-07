@@ -341,9 +341,11 @@ _$_StructureDefinitionContact _$_$_StructureDefinitionContactFromJson(
     Map<String, dynamic> json) {
   return _$_StructureDefinitionContact(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -367,7 +369,8 @@ Map<String, dynamic> _$_$_StructureDefinitionContactToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
@@ -379,9 +382,11 @@ _$_StructureDefinitionMapping _$_$_StructureDefinitionMappingFromJson(
   $checkKeys(json, requiredKeys: const ['identity']);
   return _$_StructureDefinitionMapping(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -406,7 +411,8 @@ Map<String, dynamic> _$_$_StructureDefinitionMappingToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identity', instance.identity?.toJson());
   writeNotNull('uri', instance.uri?.toJson());
@@ -420,9 +426,11 @@ _$_StructureDefinitionSnapshot _$_$_StructureDefinitionSnapshotFromJson(
   $checkKeys(json, requiredKeys: const ['element']);
   return _$_StructureDefinitionSnapshot(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -446,7 +454,8 @@ Map<String, dynamic> _$_$_StructureDefinitionSnapshotToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('element', instance.element?.map((e) => e?.toJson())?.toList());
   return val;
@@ -457,9 +466,11 @@ _$_StructureDefinitionDifferential _$_$_StructureDefinitionDifferentialFromJson(
   $checkKeys(json, requiredKeys: const ['element']);
   return _$_StructureDefinitionDifferential(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -483,7 +494,8 @@ Map<String, dynamic> _$_$_StructureDefinitionDifferentialToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('element', instance.element?.map((e) => e?.toJson())?.toList());
   return val;
@@ -493,9 +505,11 @@ _$_DataElementContact _$_$_DataElementContactFromJson(
     Map<String, dynamic> json) {
   return _$_DataElementContact(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -519,7 +533,8 @@ Map<String, dynamic> _$_$_DataElementContactToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
@@ -531,9 +546,11 @@ _$_DataElementMapping _$_$_DataElementMappingFromJson(
   $checkKeys(json, requiredKeys: const ['identity']);
   return _$_DataElementMapping(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -558,7 +575,8 @@ Map<String, dynamic> _$_$_DataElementMappingToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identity', instance.identity?.toJson());
   writeNotNull('uri', instance.uri?.toJson());

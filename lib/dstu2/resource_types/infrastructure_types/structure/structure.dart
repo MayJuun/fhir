@@ -99,7 +99,7 @@ abstract class Bundle with _$Bundle implements Resource {
 abstract class BundleLink with _$BundleLink {
   const factory BundleLink({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String relation,
     @JsonKey(required: true) @required FhirUri url,
@@ -113,7 +113,7 @@ abstract class BundleLink with _$BundleLink {
 abstract class BundleEntry with _$BundleEntry {
   const factory BundleEntry({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<BundleLink> link,
     FhirUri fullUrl,
@@ -131,7 +131,7 @@ abstract class BundleEntry with _$BundleEntry {
 abstract class BundleSearch with _$BundleSearch {
   const factory BundleSearch({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
     Decimal score,
@@ -145,7 +145,7 @@ abstract class BundleSearch with _$BundleSearch {
 abstract class BundleRequest with _$BundleRequest {
   const factory BundleRequest({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
     @required
@@ -165,7 +165,7 @@ abstract class BundleRequest with _$BundleRequest {
 abstract class BundleResponse with _$BundleResponse {
   const factory BundleResponse({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String status,
     FhirUri location,

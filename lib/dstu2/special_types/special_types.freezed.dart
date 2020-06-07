@@ -17,7 +17,7 @@ class _$FhirExtensionTearOff {
 
   _FhirExtension call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) FhirUri url,
       Integer valueInteger,
       Decimal valueDecimal,
@@ -79,7 +79,7 @@ const $FhirExtension = _$FhirExtensionTearOff();
 mixin _$FhirExtension {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @JsonKey(required: true)
   FhirUri get url;
   Integer get valueInteger;
@@ -116,7 +116,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       _$FhirExtensionCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) FhirUri url,
       Integer valueInteger,
       Decimal valueDecimal,
@@ -198,7 +198,7 @@ class _$FhirExtensionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
@@ -402,7 +402,7 @@ abstract class _$FhirExtensionCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) FhirUri url,
       Integer valueInteger,
       Decimal valueDecimal,
@@ -499,7 +499,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
@@ -603,7 +603,7 @@ class _$_FhirExtension implements _FhirExtension {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   @JsonKey(required: true)
   final FhirUri url;
@@ -777,7 +777,7 @@ class _$_FhirExtension implements _FhirExtension {
 abstract class _FhirExtension implements FhirExtension {
   const factory _FhirExtension(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) FhirUri url,
       Integer valueInteger,
       Decimal valueDecimal,
@@ -810,7 +810,7 @@ abstract class _FhirExtension implements FhirExtension {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   @JsonKey(required: true)
   FhirUri get url;
@@ -873,7 +873,7 @@ class _$MetaTearOff {
 
   _Meta call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -897,7 +897,7 @@ const $Meta = _$MetaTearOff();
 mixin _$Meta {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   Id get versionId;
   Instant get lastUpdated;
   List<FhirUri> get profile;
@@ -913,14 +913,12 @@ abstract class $MetaCopyWith<$Res> {
       _$MetaCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
       List<Coding> security,
       List<Coding> tag});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
@@ -944,7 +942,7 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       versionId: versionId == freezed ? _value.versionId : versionId as Id,
       lastUpdated:
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
@@ -954,16 +952,6 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
       tag: tag == freezed ? _value.tag : tag as List<Coding>,
     ));
   }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
-  }
 }
 
 abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
@@ -972,15 +960,12 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
       List<Coding> security,
       List<Coding> tag});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
@@ -1005,7 +990,7 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       versionId: versionId == freezed ? _value.versionId : versionId as Id,
       lastUpdated:
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
@@ -1035,7 +1020,7 @@ class _$_Meta implements _Meta {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final Id versionId;
   @override
@@ -1101,7 +1086,7 @@ class _$_Meta implements _Meta {
 abstract class _Meta implements Meta {
   const factory _Meta(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -1114,7 +1099,7 @@ abstract class _Meta implements Meta {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   Id get versionId;
   @override
@@ -1138,7 +1123,7 @@ class _$ReferenceTearOff {
 
   _Reference call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String reference,
       String display}) {
     return _Reference(
@@ -1156,7 +1141,7 @@ const $Reference = _$ReferenceTearOff();
 mixin _$Reference {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   String get reference;
   String get display;
 
@@ -1169,11 +1154,9 @@ abstract class $ReferenceCopyWith<$Res> {
       _$ReferenceCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String reference,
       String display});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
@@ -1194,20 +1177,10 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       reference: reference == freezed ? _value.reference : reference as String,
       display: display == freezed ? _value.display : display as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -1218,12 +1191,9 @@ abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String reference,
       String display});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
@@ -1245,7 +1215,7 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       reference: reference == freezed ? _value.reference : reference as String,
       display: display == freezed ? _value.display : display as String,
     ));
@@ -1267,7 +1237,7 @@ class _$_Reference implements _Reference {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final String reference;
   @override
@@ -1315,7 +1285,7 @@ class _$_Reference implements _Reference {
 abstract class _Reference implements Reference {
   const factory _Reference(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       String reference,
       String display}) = _$_Reference;
 
@@ -1326,7 +1296,7 @@ abstract class _Reference implements Reference {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   String get reference;
   @override
@@ -1342,7 +1312,8 @@ Element _$ElementFromJson(Map<String, dynamic> json) {
 class _$ElementTearOff {
   const _$ElementTearOff();
 
-  _Element call({Id id, @JsonKey(name: 'extension') FhirExtension extension_}) {
+  _Element call(
+      {Id id, @JsonKey(name: 'extension') List<FhirExtension> extension_}) {
     return _Element(
       id: id,
       extension_: extension_,
@@ -1356,7 +1327,7 @@ const $Element = _$ElementTearOff();
 mixin _$Element {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
 
   Map<String, dynamic> toJson();
   $ElementCopyWith<Element> get copyWith;
@@ -1365,9 +1336,8 @@ mixin _$Element {
 abstract class $ElementCopyWith<$Res> {
   factory $ElementCopyWith(Element value, $Res Function(Element) then) =
       _$ElementCopyWithImpl<$Res>;
-  $Res call({Id id, @JsonKey(name: 'extension') FhirExtension extension_});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
+  $Res call(
+      {Id id, @JsonKey(name: 'extension') List<FhirExtension> extension_});
 }
 
 class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
@@ -1386,18 +1356,8 @@ class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -1405,10 +1365,8 @@ abstract class _$ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
   factory _$ElementCopyWith(_Element value, $Res Function(_Element) then) =
       __$ElementCopyWithImpl<$Res>;
   @override
-  $Res call({Id id, @JsonKey(name: 'extension') FhirExtension extension_});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
+  $Res call(
+      {Id id, @JsonKey(name: 'extension') List<FhirExtension> extension_});
 }
 
 class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
@@ -1428,7 +1386,7 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
     ));
   }
 }
@@ -1444,7 +1402,7 @@ class _$_Element implements _Element {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
 
   @override
   String toString() {
@@ -1481,7 +1439,7 @@ class _$_Element implements _Element {
 abstract class _Element implements Element {
   const factory _Element(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_}) = _$_Element;
+      @JsonKey(name: 'extension') List<FhirExtension> extension_}) = _$_Element;
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
@@ -1489,7 +1447,7 @@ abstract class _Element implements Element {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   _$ElementCopyWith<_Element> get copyWith;
 }
@@ -1503,7 +1461,7 @@ class _$ElementDefinitionTearOff {
 
   _ElementDefinition call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) String path,
       List<Code> representation,
       String name,
@@ -1843,7 +1801,7 @@ const $ElementDefinition = _$ElementDefinitionTearOff();
 mixin _$ElementDefinition {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @JsonKey(required: true)
   String get path;
   List<Code> get representation;
@@ -2019,7 +1977,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       _$ElementDefinitionCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) String path,
       List<Code> representation,
       String name,
@@ -2184,7 +2142,6 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       ElementDefinitionBinding binding,
       List<ElementDefinitionMapping> mapping});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $CodingCopyWith<$Res> get code;
   $ElementCopyWith<$Res> get slicing;
   $ElementDefinitionBaseCopyWith<$Res> get base;
@@ -2449,7 +2406,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       representation: representation == freezed
           ? _value.representation
@@ -2887,16 +2844,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.mapping
           : mapping as List<ElementDefinitionMapping>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3734,7 +3681,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) String path,
       List<Code> representation,
       String name,
@@ -3899,8 +3846,6 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       ElementDefinitionBinding binding,
       List<ElementDefinitionMapping> mapping});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $CodingCopyWith<$Res> get code;
   @override
@@ -4249,7 +4194,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       representation: representation == freezed
           ? _value.representation
@@ -4867,7 +4812,7 @@ class _$_ElementDefinition implements _ElementDefinition {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   @JsonKey(required: true)
   final String path;
@@ -5596,7 +5541,7 @@ class _$_ElementDefinition implements _ElementDefinition {
 abstract class _ElementDefinition implements ElementDefinition {
   const factory _ElementDefinition(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) String path,
       List<Code> representation,
       String name,
@@ -5768,7 +5713,7 @@ abstract class _ElementDefinition implements ElementDefinition {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   @JsonKey(required: true)
   String get path;
@@ -6110,7 +6055,7 @@ class _$NarrativeTearOff {
   _Narrative call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @required
       @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
@@ -6132,7 +6077,7 @@ const $Narrative = _$NarrativeTearOff();
 mixin _$Narrative {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus get status;
   @JsonKey(required: true)
@@ -6148,13 +6093,11 @@ abstract class $NarrativeCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
       @JsonKey(required: true)
           String div});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
@@ -6175,20 +6118,10 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       status: status == freezed ? _value.status : status as NarrativeStatus,
       div: div == freezed ? _value.div : div as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -6200,14 +6133,11 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
       @JsonKey(required: true)
           String div});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
@@ -6229,7 +6159,7 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       status: status == freezed ? _value.status : status as NarrativeStatus,
       div: div == freezed ? _value.div : div as String,
     ));
@@ -6258,7 +6188,7 @@ class _$_Narrative implements _Narrative {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
   final NarrativeStatus status;
@@ -6308,7 +6238,7 @@ abstract class _Narrative implements Narrative {
   const factory _Narrative(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @required
       @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
@@ -6323,7 +6253,7 @@ abstract class _Narrative implements Narrative {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus get status;
@@ -6345,7 +6275,7 @@ class _$ElementDefinitionSlicingTearOff {
   _ElementDefinitionSlicing call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       List<String> discriminator,
       String description,
       Boolean ordered,
@@ -6369,7 +6299,7 @@ const $ElementDefinitionSlicing = _$ElementDefinitionSlicingTearOff();
 mixin _$ElementDefinitionSlicing {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   List<String> get discriminator;
   String get description;
   Boolean get ordered;
@@ -6387,14 +6317,12 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       List<String> discriminator,
       String description,
       Boolean ordered,
       @JsonKey(required: true, unknownEnumValue: SlicingRules.unknown)
           SlicingRules rules});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$ElementDefinitionSlicingCopyWithImpl<$Res>
@@ -6418,7 +6346,7 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       discriminator: discriminator == freezed
           ? _value.discriminator
           : discriminator as List<String>,
@@ -6427,16 +6355,6 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
       ordered: ordered == freezed ? _value.ordered : ordered as Boolean,
       rules: rules == freezed ? _value.rules : rules as SlicingRules,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -6449,15 +6367,12 @@ abstract class _$ElementDefinitionSlicingCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       List<String> discriminator,
       String description,
       Boolean ordered,
       @JsonKey(required: true, unknownEnumValue: SlicingRules.unknown)
           SlicingRules rules});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$ElementDefinitionSlicingCopyWithImpl<$Res>
@@ -6484,7 +6399,7 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       discriminator: discriminator == freezed
           ? _value.discriminator
           : discriminator as List<String>,
@@ -6517,7 +6432,7 @@ class _$_ElementDefinitionSlicing implements _ElementDefinitionSlicing {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final List<String> discriminator;
   @override
@@ -6580,7 +6495,7 @@ abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
   const factory _ElementDefinitionSlicing(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       List<String> discriminator,
       String description,
       Boolean ordered,
@@ -6595,7 +6510,7 @@ abstract class _ElementDefinitionSlicing implements ElementDefinitionSlicing {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   List<String> get discriminator;
   @override
@@ -6619,7 +6534,7 @@ class _$ElementDefinitionBaseTearOff {
 
   _ElementDefinitionBase call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) String path,
       @required @JsonKey(required: true) Integer min,
       @required @JsonKey(required: true) String max}) {
@@ -6639,7 +6554,7 @@ const $ElementDefinitionBase = _$ElementDefinitionBaseTearOff();
 mixin _$ElementDefinitionBase {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @JsonKey(required: true)
   String get path;
   @JsonKey(required: true)
@@ -6657,12 +6572,10 @@ abstract class $ElementDefinitionBaseCopyWith<$Res> {
       _$ElementDefinitionBaseCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) String path,
       @JsonKey(required: true) Integer min,
       @JsonKey(required: true) String max});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$ElementDefinitionBaseCopyWithImpl<$Res>
@@ -6685,21 +6598,11 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       min: min == freezed ? _value.min : min as Integer,
       max: max == freezed ? _value.max : max as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -6711,13 +6614,10 @@ abstract class _$ElementDefinitionBaseCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) String path,
       @JsonKey(required: true) Integer min,
       @JsonKey(required: true) String max});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$ElementDefinitionBaseCopyWithImpl<$Res>
@@ -6742,7 +6642,7 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       path: path == freezed ? _value.path : path as String,
       min: min == freezed ? _value.min : min as Integer,
       max: max == freezed ? _value.max : max as String,
@@ -6769,7 +6669,7 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   @JsonKey(required: true)
   final String path;
@@ -6825,7 +6725,7 @@ class _$_ElementDefinitionBase implements _ElementDefinitionBase {
 abstract class _ElementDefinitionBase implements ElementDefinitionBase {
   const factory _ElementDefinitionBase(
           {Id id,
-          @JsonKey(name: 'extension') FhirExtension extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           @required @JsonKey(required: true) String path,
           @required @JsonKey(required: true) Integer min,
           @required @JsonKey(required: true) String max}) =
@@ -6838,7 +6738,7 @@ abstract class _ElementDefinitionBase implements ElementDefinitionBase {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   @JsonKey(required: true)
   String get path;
@@ -6862,7 +6762,7 @@ class _$ElementDefinitionTypeTearOff {
 
   _ElementDefinitionType call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) Code code,
       List<FhirUri> profile,
       List<TypeAggregation> aggregation}) {
@@ -6882,7 +6782,7 @@ const $ElementDefinitionType = _$ElementDefinitionTypeTearOff();
 mixin _$ElementDefinitionType {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @JsonKey(required: true)
   Code get code;
   List<FhirUri> get profile;
@@ -6898,12 +6798,10 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       _$ElementDefinitionTypeCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) Code code,
       List<FhirUri> profile,
       List<TypeAggregation> aggregation});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$ElementDefinitionTypeCopyWithImpl<$Res>
@@ -6926,23 +6824,13 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       aggregation: aggregation == freezed
           ? _value.aggregation
           : aggregation as List<TypeAggregation>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -6954,13 +6842,10 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) Code code,
       List<FhirUri> profile,
       List<TypeAggregation> aggregation});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$ElementDefinitionTypeCopyWithImpl<$Res>
@@ -6985,7 +6870,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       aggregation: aggregation == freezed
@@ -7012,7 +6897,7 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   @JsonKey(required: true)
   final Code code;
@@ -7068,7 +6953,7 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
 abstract class _ElementDefinitionType implements ElementDefinitionType {
   const factory _ElementDefinitionType(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) Code code,
       List<FhirUri> profile,
       List<TypeAggregation> aggregation}) = _$_ElementDefinitionType;
@@ -7080,7 +6965,7 @@ abstract class _ElementDefinitionType implements ElementDefinitionType {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   @JsonKey(required: true)
   Code get code;
@@ -7103,7 +6988,7 @@ class _$ElementDefinitionConstraintTearOff {
   _ElementDefinitionConstraint call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @required
       @JsonKey(required: true)
           Id key,
@@ -7135,7 +7020,7 @@ const $ElementDefinitionConstraint = _$ElementDefinitionConstraintTearOff();
 mixin _$ElementDefinitionConstraint {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @JsonKey(required: true)
   Id get key;
   String get requirements;
@@ -7159,7 +7044,7 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @JsonKey(required: true)
           Id key,
       String requirements,
@@ -7169,8 +7054,6 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
           String human,
       @JsonKey(required: true)
           String xpath});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$ElementDefinitionConstraintCopyWithImpl<$Res>
@@ -7195,7 +7078,7 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       key: key == freezed ? _value.key : key as Id,
       requirements: requirements == freezed
           ? _value.requirements
@@ -7206,16 +7089,6 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
       human: human == freezed ? _value.human : human as String,
       xpath: xpath == freezed ? _value.xpath : xpath as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -7229,7 +7102,7 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @JsonKey(required: true)
           Id key,
       String requirements,
@@ -7239,9 +7112,6 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
           String human,
       @JsonKey(required: true)
           String xpath});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$ElementDefinitionConstraintCopyWithImpl<$Res>
@@ -7270,7 +7140,7 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       key: key == freezed ? _value.key : key as Id,
       requirements: requirements == freezed
           ? _value.requirements
@@ -7315,7 +7185,7 @@ class _$_ElementDefinitionConstraint implements _ElementDefinitionConstraint {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   @JsonKey(required: true)
   final Id key;
@@ -7386,7 +7256,7 @@ abstract class _ElementDefinitionConstraint
   const factory _ElementDefinitionConstraint(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @required
       @JsonKey(required: true)
           Id key,
@@ -7408,7 +7278,7 @@ abstract class _ElementDefinitionConstraint
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   @JsonKey(required: true)
   Id get key;
@@ -7439,7 +7309,7 @@ class _$ElementDefinitionBindingTearOff {
   _ElementDefinitionBinding call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @required
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
@@ -7461,7 +7331,7 @@ const $ElementDefinitionBinding = _$ElementDefinitionBindingTearOff();
 mixin _$ElementDefinitionBinding {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
   BindingStrength get strength;
   String get description;
@@ -7478,13 +7348,11 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
       String description,
       FhirUri valueSetX});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$ElementDefinitionBindingCopyWithImpl<$Res>
@@ -7507,23 +7375,13 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       strength:
           strength == freezed ? _value.strength : strength as BindingStrength,
       description:
           description == freezed ? _value.description : description as String,
       valueSetX: valueSetX == freezed ? _value.valueSetX : valueSetX as FhirUri,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -7536,14 +7394,11 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
       String description,
       FhirUri valueSetX});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$ElementDefinitionBindingCopyWithImpl<$Res>
@@ -7569,7 +7424,7 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       strength:
           strength == freezed ? _value.strength : strength as BindingStrength,
       description:
@@ -7599,7 +7454,7 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
   final BindingStrength strength;
@@ -7657,7 +7512,7 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
   const factory _ElementDefinitionBinding(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @required
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
@@ -7671,7 +7526,7 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
   BindingStrength get strength;
@@ -7693,7 +7548,7 @@ class _$ElementDefinitionMappingTearOff {
 
   _ElementDefinitionMapping call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) Id identity,
       Code language,
       @required @JsonKey(required: true) String map}) {
@@ -7713,7 +7568,7 @@ const $ElementDefinitionMapping = _$ElementDefinitionMappingTearOff();
 mixin _$ElementDefinitionMapping {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @JsonKey(required: true)
   Id get identity;
   Code get language;
@@ -7730,12 +7585,10 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       _$ElementDefinitionMappingCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) Id identity,
       Code language,
       @JsonKey(required: true) String map});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$ElementDefinitionMappingCopyWithImpl<$Res>
@@ -7758,21 +7611,11 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       identity: identity == freezed ? _value.identity : identity as Id,
       language: language == freezed ? _value.language : language as Code,
       map: map == freezed ? _value.map : map as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -7784,13 +7627,10 @@ abstract class _$ElementDefinitionMappingCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) Id identity,
       Code language,
       @JsonKey(required: true) String map});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$ElementDefinitionMappingCopyWithImpl<$Res>
@@ -7816,7 +7656,7 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       identity: identity == freezed ? _value.identity : identity as Id,
       language: language == freezed ? _value.language : language as Code,
       map: map == freezed ? _value.map : map as String,
@@ -7842,7 +7682,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   @JsonKey(required: true)
   final Id identity;
@@ -7899,7 +7739,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
 abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
   const factory _ElementDefinitionMapping(
           {Id id,
-          @JsonKey(name: 'extension') FhirExtension extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           @required @JsonKey(required: true) Id identity,
           Code language,
           @required @JsonKey(required: true) String map}) =
@@ -7912,7 +7752,7 @@ abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   @JsonKey(required: true)
   Id get identity;
@@ -7934,7 +7774,7 @@ class _$BackboneElementTearOff {
 
   _BackboneElement call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension}) {
     return _BackboneElement(
       id: id,
@@ -7950,7 +7790,7 @@ const $BackboneElement = _$BackboneElementTearOff();
 mixin _$BackboneElement {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
 
   Map<String, dynamic> toJson();
@@ -7963,10 +7803,9 @@ abstract class $BackboneElementCopyWith<$Res> {
       _$BackboneElementCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -7988,21 +7827,11 @@ class _$BackboneElementCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -8024,11 +7853,9 @@ abstract class _$BackboneElementCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -8053,7 +7880,7 @@ class __$BackboneElementCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -8075,7 +7902,7 @@ class _$_BackboneElement implements _BackboneElement {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
 
@@ -8118,7 +7945,7 @@ class _$_BackboneElement implements _BackboneElement {
 abstract class _BackboneElement implements BackboneElement {
   const factory _BackboneElement(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension}) = _$_BackboneElement;
 
   factory _BackboneElement.fromJson(Map<String, dynamic> json) =
@@ -8128,7 +7955,7 @@ abstract class _BackboneElement implements BackboneElement {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

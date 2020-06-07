@@ -97,7 +97,7 @@ abstract class DataElement with _$DataElement implements Resource {
 abstract class StructureDefinitionContact with _$StructureDefinitionContact {
   const factory StructureDefinitionContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -111,7 +111,7 @@ abstract class StructureDefinitionContact with _$StructureDefinitionContact {
 abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
   const factory StructureDefinitionMapping({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Id identity,
     FhirUri uri,
@@ -127,7 +127,7 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
 abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   const factory StructureDefinitionSnapshot({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
@@ -141,7 +141,7 @@ abstract class StructureDefinitionDifferential
     with _$StructureDefinitionDifferential {
   const factory StructureDefinitionDifferential({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
@@ -154,7 +154,7 @@ abstract class StructureDefinitionDifferential
 abstract class DataElementContact with _$DataElementContact {
   const factory DataElementContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -168,7 +168,7 @@ abstract class DataElementContact with _$DataElementContact {
 abstract class DataElementMapping with _$DataElementMapping {
   const factory DataElementMapping({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Id identity,
     FhirUri uri,

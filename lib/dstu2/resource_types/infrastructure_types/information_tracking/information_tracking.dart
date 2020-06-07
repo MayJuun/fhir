@@ -121,7 +121,7 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
 abstract class QuestionnaireGroup with _$QuestionnaireGroup {
   const factory QuestionnaireGroup({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String linkId,
     String title,
@@ -141,7 +141,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
 abstract class ProvenanceAgent with _$ProvenanceAgent {
   const factory ProvenanceAgent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding role,
     Reference actor,
@@ -157,7 +157,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
 abstract class ProvenanceEntity with _$ProvenanceEntity {
   const factory ProvenanceEntity({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: EntityRole.unknown)
     @required
@@ -176,7 +176,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
 abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
   const factory QuestionnaireResponseGroup({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String linkId,
     String title,
@@ -194,7 +194,7 @@ abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
 abstract class AuditEventEvent with _$AuditEventEvent {
   const factory AuditEventEvent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding type,
     List<Coding> subtype,
@@ -213,7 +213,7 @@ abstract class AuditEventEvent with _$AuditEventEvent {
 abstract class AuditEventParticipant with _$AuditEventParticipant {
   const factory AuditEventParticipant({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> role,
     Reference reference,
@@ -236,7 +236,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
 abstract class AuditEventSource with _$AuditEventSource {
   const factory AuditEventSource({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String site,
     @JsonKey(required: true) @required Identifier identifier,
@@ -251,7 +251,7 @@ abstract class AuditEventSource with _$AuditEventSource {
 abstract class AuditEventObject with _$AuditEventObject {
   const factory AuditEventObject({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     Reference reference,
@@ -273,7 +273,7 @@ abstract class AuditEventObject with _$AuditEventObject {
 abstract class QuestionnaireQuestion with _$QuestionnaireQuestion {
   const factory QuestionnaireQuestion({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String linkId,
     List<Coding> concept,
@@ -294,7 +294,7 @@ abstract class QuestionnaireQuestion with _$QuestionnaireQuestion {
 abstract class ProvenanceRelatedAgent with _$ProvenanceRelatedAgent {
   const factory ProvenanceRelatedAgent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept type,
     @JsonKey(required: true) @required FhirUri target,
@@ -309,7 +309,7 @@ abstract class QuestionnaireResponseQuestion
     with _$QuestionnaireResponseQuestion {
   const factory QuestionnaireResponseQuestion({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String linkId,
     String text,
@@ -324,7 +324,7 @@ abstract class QuestionnaireResponseQuestion
 abstract class AuditEventNetwork with _$AuditEventNetwork {
   const factory AuditEventNetwork({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String address,
     Code type,
@@ -338,7 +338,7 @@ abstract class AuditEventNetwork with _$AuditEventNetwork {
 abstract class AuditEventDetail with _$AuditEventDetail {
   const factory AuditEventDetail({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String type,
     @JsonKey(required: true) @required Base64Binary value,
@@ -352,7 +352,7 @@ abstract class AuditEventDetail with _$AuditEventDetail {
 abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   const factory QuestionnaireResponseAnswer({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Boolean valueBoolean,
     Decimal valueDecimal,

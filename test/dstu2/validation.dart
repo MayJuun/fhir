@@ -12,16 +12,18 @@ void main() async {
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
     var resource = fhir_dstu2.Resource.fromJson(json.decode(contents));
-    if (resource == null) {
-      print(file);
-    } else {
-      string += await checkJsonEquality(
-          json.decode(contents), resource.toJson(), file.toString(), 'input');
-      string += await checkJsonEquality(
-          resource.toJson(), json.decode(contents), file.toString(), 'output');
-    }
+    print(resource.toJson().toString());
   }
-  writeErrorFile(string);
+  //   if (resource == null) {
+  //     print(file);
+  //   } else {
+  //     string += await checkJsonEquality(
+  //         json.decode(contents), resource.toJson(), file.toString(), 'input');
+  //     string += await checkJsonEquality(
+  //         resource.toJson(), json.decode(contents), file.toString(), 'output');
+  //   }
+  // }
+  // writeErrorFile(string);
 }
 
 Future<String> checkJsonEquality(Map<String, dynamic> input,

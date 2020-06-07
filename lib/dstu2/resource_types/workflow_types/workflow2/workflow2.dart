@@ -82,7 +82,7 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
     Code language,
     Narrative text,
     Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference request,
@@ -137,7 +137,7 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
 abstract class ProcessRequestItem with _$ProcessRequestItem {
   const factory ProcessRequestItem({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Integer sequenceLinkId,
   }) = _ProcessRequestItem;
@@ -150,7 +150,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 abstract class ProcessResponseNotes with _$ProcessResponseNotes {
   const factory ProcessResponseNotes({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Coding type,
     String text,
@@ -164,7 +164,7 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
 abstract class SupplyRequestWhen with _$SupplyRequestWhen {
   const factory SupplyRequestWhen({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept code,
     Timing schedule,

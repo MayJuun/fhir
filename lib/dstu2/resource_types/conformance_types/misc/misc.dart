@@ -51,7 +51,7 @@ abstract class ImplementationGuide
 abstract class ImplementationGuideContact with _$ImplementationGuideContact {
   const factory ImplementationGuideContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -66,7 +66,7 @@ abstract class ImplementationGuideDependency
     with _$ImplementationGuideDependency {
   const factory ImplementationGuideDependency({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: DependencyType.unknown)
     @required
@@ -82,7 +82,7 @@ abstract class ImplementationGuideDependency
 abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
   const factory ImplementationGuidePackage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     String description,
@@ -97,7 +97,7 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
 abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   const factory ImplementationGuideGlobal({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Code type,
     @JsonKey(required: true) @required Reference profile,
@@ -111,7 +111,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 abstract class ImplementationGuidePage with _$ImplementationGuidePage {
   const factory ImplementationGuidePage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri source,
     @JsonKey(required: true) @required String name,
@@ -132,7 +132,7 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
 abstract class ImplementationGuideResource with _$ImplementationGuideResource {
   const factory ImplementationGuideResource({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ResourcePurpose.unknown)
     @required
@@ -193,7 +193,7 @@ abstract class TestScript with _$TestScript implements Resource {
 abstract class TestScriptContact with _$TestScriptContact {
   const factory TestScriptContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -207,7 +207,7 @@ abstract class TestScriptContact with _$TestScriptContact {
 abstract class TestScriptMetadata with _$TestScriptMetadata {
   const factory TestScriptMetadata({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<TestScriptLink> link,
     @JsonKey(required: true) @required TestScriptCapability capability,
@@ -221,7 +221,7 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
 abstract class TestScriptLink with _$TestScriptLink {
   const factory TestScriptLink({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri url,
     String description,
@@ -235,7 +235,7 @@ abstract class TestScriptLink with _$TestScriptLink {
 abstract class TestScriptCapability with _$TestScriptCapability {
   const factory TestScriptCapability({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(name: 'required') Boolean required_,
     Boolean validated,
@@ -253,7 +253,7 @@ abstract class TestScriptCapability with _$TestScriptCapability {
 abstract class TestScriptFixture with _$TestScriptFixture {
   const factory TestScriptFixture({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Boolean autocreate,
     Boolean autodelete,
@@ -268,7 +268,7 @@ abstract class TestScriptFixture with _$TestScriptFixture {
 abstract class TestScriptVariable with _$TestScriptVariable {
   const factory TestScriptVariable({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     String headerField,
@@ -284,7 +284,7 @@ abstract class TestScriptVariable with _$TestScriptVariable {
 abstract class TestScriptSetup with _$TestScriptSetup {
   const factory TestScriptSetup({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     TestScriptMetadata metadata,
     @JsonKey(required: true) @required List<SetupAction> action,
@@ -298,7 +298,7 @@ abstract class TestScriptSetup with _$TestScriptSetup {
 abstract class SetupAction with _$SetupAction {
   const factory SetupAction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     ActionOperation operation,
     @JsonKey(name: 'assert') ActionAssert assert_,
@@ -312,7 +312,7 @@ abstract class SetupAction with _$SetupAction {
 abstract class ActionOperation with _$ActionOperation {
   const factory ActionOperation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Coding type,
     Code resource,
@@ -339,7 +339,7 @@ abstract class ActionOperation with _$ActionOperation {
 abstract class ActionAssert with _$ActionAssert {
   const factory ActionAssert({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String label,
     String description,
@@ -372,7 +372,7 @@ abstract class ActionAssert with _$ActionAssert {
 abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
   const factory TestScriptRequestHeader({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtensio,
     @JsonKey(required: true) @required String field,
     @JsonKey(required: true) @required String value,
@@ -386,7 +386,7 @@ abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
 abstract class TestScriptTest with _$TestScriptTest {
   const factory TestScriptTest({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     String description,
@@ -402,7 +402,7 @@ abstract class TestScriptTest with _$TestScriptTest {
 abstract class TestScriptTeardown with _$TestScriptTeardown {
   const factory TestScriptTeardown({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<TeardownAction> action,
   }) = _TestScriptTeardown;
@@ -415,7 +415,7 @@ abstract class TestScriptTeardown with _$TestScriptTeardown {
 abstract class TeardownAction with _$TeardownAction {
   const factory TeardownAction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     ActionOperation operation,
   }) = _TeardownAction;

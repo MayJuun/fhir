@@ -50,7 +50,7 @@ abstract class ValueSet with _$ValueSet implements Resource {
 abstract class ValueSetContact with _$ValueSetContact {
   const factory ValueSetContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -80,7 +80,7 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
 abstract class ValueSetConcept with _$ValueSetConcept {
   const factory ValueSetConcept({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Code code,
     Boolean abstract,
@@ -98,7 +98,7 @@ abstract class ValueSetConcept with _$ValueSetConcept {
 abstract class ValueSetDesignation with _$ValueSetDesignation {
   const factory ValueSetDesignation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Code language,
     Coding use,
@@ -113,7 +113,7 @@ abstract class ValueSetDesignation with _$ValueSetDesignation {
 abstract class ValueSetCompose with _$ValueSetCompose {
   const factory ValueSetCompose({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<FhirUri> import,
     List<IncludeExclude> include,
@@ -128,7 +128,7 @@ abstract class ValueSetCompose with _$ValueSetCompose {
 abstract class IncludeExclude with _$IncludeExclude {
   const factory IncludeExclude({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri system,
     String version,
@@ -144,7 +144,7 @@ abstract class IncludeExclude with _$IncludeExclude {
 abstract class IncludeExcludeConcept with _$IncludeExcludeConcept {
   const factory IncludeExcludeConcept({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Code code,
     String display,
@@ -159,7 +159,7 @@ abstract class IncludeExcludeConcept with _$IncludeExcludeConcept {
 abstract class IncludeExcludeFilter with _$IncludeExcludeFilter {
   const factory IncludeExcludeFilter({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Code property,
     @JsonKey(required: true, unknownEnumValue: FilterOp.unknown)
@@ -176,7 +176,7 @@ abstract class IncludeExcludeFilter with _$IncludeExcludeFilter {
 abstract class ValueSetExpansion with _$ValueSetExpansion {
   const factory ValueSetExpansion({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri identifier,
     @JsonKey(required: true) @required FhirDateTime timestamp,
@@ -194,7 +194,7 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
 abstract class ValueSetParameter with _$ValueSetParameter {
   const factory ValueSetParameter({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     String valueString,
@@ -213,7 +213,7 @@ abstract class ValueSetParameter with _$ValueSetParameter {
 abstract class ValueSetContains with _$ValueSetContains {
   const factory ValueSetContains({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri system,
     @JsonKey(name: 'abstract') Boolean abstract_,
@@ -304,7 +304,7 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
 abstract class NamingSystemContact with _$NamingSystemContact {
   const factory NamingSystemContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -318,7 +318,7 @@ abstract class NamingSystemContact with _$NamingSystemContact {
 abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
   const factory NamingSystemUniqueId({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: UniqueIdType.unknown)
     @required
@@ -336,7 +336,7 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
 abstract class ConceptMapContact with _$ConceptMapContact {
   const factory ConceptMapContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -350,7 +350,7 @@ abstract class ConceptMapContact with _$ConceptMapContact {
 abstract class ConceptMapElement with _$ConceptMapElement {
   const factory ConceptMapElement({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri codeSystem,
     Code code,
@@ -365,7 +365,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
 abstract class ConceptMapTarget with _$ConceptMapTarget {
   const factory ConceptMapTarget({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri codeSystem,
     Code code,
@@ -385,7 +385,7 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
 abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
   const factory ConceptMapDependsOn({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri element,
     @JsonKey(required: true) @required FhirUri codeSystem,

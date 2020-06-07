@@ -11,7 +11,7 @@ part 'general_types.g.dart';
 abstract class Period with _$Period {
   const factory Period({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirDateTime start,
     FhirDateTime end,
   }) = _Period;
@@ -23,7 +23,7 @@ abstract class Period with _$Period {
 abstract class Coding with _$Coding {
   const factory Coding({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirUri system,
     String version,
     Code code,
@@ -38,7 +38,7 @@ abstract class Coding with _$Coding {
 abstract class Range with _$Range {
   const factory Range({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Quantity low,
     Quantity high,
   }) = _Range;
@@ -50,7 +50,7 @@ abstract class Range with _$Range {
 abstract class Quantity with _$Quantity {
   const factory Quantity({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Decimal value,
     @JsonKey(unknownEnumValue: QuantityComparator.unknown)
         QuantityComparator comparator,
@@ -67,7 +67,7 @@ abstract class Quantity with _$Quantity {
 abstract class Attachment with _$Attachment {
   const factory Attachment({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Code contentType,
     Code language,
     Base64Binary data,
@@ -86,7 +86,7 @@ abstract class Attachment with _$Attachment {
 abstract class Ratio with _$Ratio {
   const factory Ratio({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Quantity numerator,
     Quantity denominator,
   }) = _Ratio;
@@ -98,7 +98,7 @@ abstract class Ratio with _$Ratio {
 abstract class Annotation with _$Annotation {
   const factory Annotation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Reference authorX,
     FhirDateTime time,
     @JsonKey(required: true) @required String text,
@@ -112,7 +112,7 @@ abstract class Annotation with _$Annotation {
 abstract class SampledData with _$SampledData {
   const factory SampledData({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required Quantity origin,
     @JsonKey(required: true) @required Decimal period,
     Decimal factor,
@@ -130,7 +130,7 @@ abstract class SampledData with _$SampledData {
 abstract class CodeableConcept with _$CodeableConcept {
   const factory CodeableConcept({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<Coding> coding,
     String text,
   }) = _CodeableConcept;
@@ -143,7 +143,7 @@ abstract class CodeableConcept with _$CodeableConcept {
 abstract class Identifier with _$Identifier {
   const factory Identifier({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
     CodeableConcept type,
     FhirUri system,
@@ -160,7 +160,7 @@ abstract class Identifier with _$Identifier {
 abstract class Signature with _$Signature {
   const factory Signature({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required List<Coding> type,
     @JsonKey(required: true) @required Instant when,
     @JsonKey(required: true) @required FhirUri whoX,
@@ -176,7 +176,7 @@ abstract class Signature with _$Signature {
 abstract class Timing with _$Timing {
   const factory Timing({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirDateTime> event,
     Element repeat,
     CodeableConcept code,
@@ -189,7 +189,7 @@ abstract class Timing with _$Timing {
 abstract class Address with _$Address {
   const factory Address({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
     @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
     String text,
@@ -210,7 +210,7 @@ abstract class Address with _$Address {
 abstract class HumanName with _$HumanName {
   const factory HumanName({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
     String text,
     List<String> family,
@@ -228,7 +228,7 @@ abstract class HumanName with _$HumanName {
 abstract class ContactPoint with _$ContactPoint {
   const factory ContactPoint({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
         ContactPointSystem system,
     String value,
@@ -245,7 +245,7 @@ abstract class ContactPoint with _$ContactPoint {
 abstract class TimingRepeat with _$TimingRepeat {
   const factory TimingRepeat({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Quantity boundsQuantity,
     Range boundsRange,
     Period boundsPeriod,

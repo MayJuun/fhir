@@ -1897,7 +1897,7 @@ class _$ParametersParameterTearOff {
 
   _ParametersParameter call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String name,
       Integer valueInteger,
@@ -1965,7 +1965,7 @@ const $ParametersParameter = _$ParametersParameterTearOff();
 mixin _$ParametersParameter {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   String get name;
@@ -2005,7 +2005,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       _$ParametersParameterCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String name,
       Integer valueInteger,
@@ -2034,7 +2034,6 @@ abstract class $ParametersParameterCopyWith<$Res> {
       Resource resource,
       List<ParametersParameter> part});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get valueCoding;
   $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
@@ -2095,7 +2094,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2161,16 +2160,6 @@ class _$ParametersParameterCopyWithImpl<$Res>
       resource: resource == freezed ? _value.resource : resource as Resource,
       part: part == freezed ? _value.part : part as List<ParametersParameter>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2322,7 +2311,7 @@ abstract class _$ParametersParameterCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) String name,
       Integer valueInteger,
@@ -2351,8 +2340,6 @@ abstract class _$ParametersParameterCopyWith<$Res>
       Resource resource,
       List<ParametersParameter> part});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -2429,7 +2416,7 @@ class __$ParametersParameterCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2539,7 +2526,7 @@ class _$_ParametersParameter implements _ParametersParameter {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -2726,7 +2713,7 @@ class _$_ParametersParameter implements _ParametersParameter {
 abstract class _ParametersParameter implements ParametersParameter {
   const factory _ParametersParameter(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) String name,
       Integer valueInteger,
@@ -2762,7 +2749,7 @@ abstract class _ParametersParameter implements ParametersParameter {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -2833,7 +2820,7 @@ class _$OperationOutcomeIssueTearOff {
   _OperationOutcomeIssue call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
@@ -2863,7 +2850,7 @@ const $OperationOutcomeIssue = _$OperationOutcomeIssueTearOff();
 mixin _$OperationOutcomeIssue {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
   IssueSeverity get severity;
@@ -2884,7 +2871,7 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
           IssueSeverity severity,
@@ -2894,7 +2881,6 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
       String diagnostics,
       List<String> location});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get details;
 }
@@ -2922,7 +2908,7 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2935,16 +2921,6 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
       location:
           location == freezed ? _value.location : location as List<String>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -2977,7 +2953,7 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
           IssueSeverity severity,
@@ -2987,8 +2963,6 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
       String diagnostics,
       List<String> location});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3020,7 +2994,7 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3062,7 +3036,7 @@ class _$_OperationOutcomeIssue implements _OperationOutcomeIssue {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3138,7 +3112,7 @@ abstract class _OperationOutcomeIssue implements OperationOutcomeIssue {
   const factory _OperationOutcomeIssue(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
@@ -3157,7 +3131,7 @@ abstract class _OperationOutcomeIssue implements OperationOutcomeIssue {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3186,7 +3160,7 @@ class _$SubscriptionChannelTearOff {
   _SubscriptionChannel call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
@@ -3214,7 +3188,7 @@ const $SubscriptionChannel = _$SubscriptionChannelTearOff();
 mixin _$SubscriptionChannel {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
   ChannelType get type;
@@ -3234,7 +3208,7 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
           ChannelType type,
@@ -3243,7 +3217,6 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
           String payload,
       String header});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
@@ -3269,7 +3242,7 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3278,16 +3251,6 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
       payload: payload == freezed ? _value.payload : payload as String,
       header: header == freezed ? _value.header : header as String,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3310,7 +3273,7 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
           ChannelType type,
@@ -3319,8 +3282,6 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
           String payload,
       String header});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -3349,7 +3310,7 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3386,7 +3347,7 @@ class _$_SubscriptionChannel implements _SubscriptionChannel {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3455,7 +3416,7 @@ abstract class _SubscriptionChannel implements SubscriptionChannel {
   const factory _SubscriptionChannel(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
@@ -3473,7 +3434,7 @@ abstract class _SubscriptionChannel implements SubscriptionChannel {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3501,7 +3462,7 @@ class _$MessageHeaderResponseTearOff {
   _MessageHeaderResponse call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -3527,7 +3488,7 @@ const $MessageHeaderResponse = _$MessageHeaderResponseTearOff();
 mixin _$MessageHeaderResponse {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Id get identifier;
@@ -3546,7 +3507,7 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           Id identifier,
@@ -3554,7 +3515,6 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
           ResponseCode code,
       Reference details});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get details;
 }
@@ -3580,7 +3540,7 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3588,16 +3548,6 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as ResponseCode,
       details: details == freezed ? _value.details : details as Reference,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3630,7 +3580,7 @@ abstract class _$MessageHeaderResponseCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true)
           Id identifier,
@@ -3638,8 +3588,6 @@ abstract class _$MessageHeaderResponseCopyWith<$Res>
           ResponseCode code,
       Reference details});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3669,7 +3617,7 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3704,7 +3652,7 @@ class _$_MessageHeaderResponse implements _MessageHeaderResponse {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3767,7 +3715,7 @@ abstract class _MessageHeaderResponse implements MessageHeaderResponse {
   const factory _MessageHeaderResponse(
       {Id id,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required
       @JsonKey(required: true)
@@ -3784,7 +3732,7 @@ abstract class _MessageHeaderResponse implements MessageHeaderResponse {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3808,7 +3756,7 @@ class _$MessageHeaderSourceTearOff {
 
   _MessageHeaderSource call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String name,
       String software,
@@ -3834,7 +3782,7 @@ const $MessageHeaderSource = _$MessageHeaderSourceTearOff();
 mixin _$MessageHeaderSource {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   String get name;
   String get software;
@@ -3853,7 +3801,7 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
       _$MessageHeaderSourceCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String name,
       String software,
@@ -3861,7 +3809,6 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
       ContactPoint contact,
       @JsonKey(required: true) FhirUri endpoint});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ContactPointCopyWith<$Res> get contact;
 }
@@ -3889,7 +3836,7 @@ class _$MessageHeaderSourceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3899,16 +3846,6 @@ class _$MessageHeaderSourceCopyWithImpl<$Res>
       contact: contact == freezed ? _value.contact : contact as ContactPoint,
       endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3940,7 +3877,7 @@ abstract class _$MessageHeaderSourceCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String name,
       String software,
@@ -3948,8 +3885,6 @@ abstract class _$MessageHeaderSourceCopyWith<$Res>
       ContactPoint contact,
       @JsonKey(required: true) FhirUri endpoint});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3981,7 +3916,7 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4014,7 +3949,7 @@ class _$_MessageHeaderSource implements _MessageHeaderSource {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -4088,7 +4023,7 @@ class _$_MessageHeaderSource implements _MessageHeaderSource {
 abstract class _MessageHeaderSource implements MessageHeaderSource {
   const factory _MessageHeaderSource(
           {Id id,
-          @JsonKey(name: 'extension') FhirExtension extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
           String name,
           String software,
@@ -4104,7 +4039,7 @@ abstract class _MessageHeaderSource implements MessageHeaderSource {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -4132,7 +4067,7 @@ class _$MessageHeaderDestinationTearOff {
 
   _MessageHeaderDestination call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String name,
       Reference target,
@@ -4154,7 +4089,7 @@ const $MessageHeaderDestination = _$MessageHeaderDestinationTearOff();
 mixin _$MessageHeaderDestination {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   String get name;
   Reference get target;
@@ -4171,13 +4106,12 @@ abstract class $MessageHeaderDestinationCopyWith<$Res> {
       _$MessageHeaderDestinationCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String name,
       Reference target,
       @JsonKey(required: true) FhirUri endpoint});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get target;
 }
@@ -4203,7 +4137,7 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4211,16 +4145,6 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
       target: target == freezed ? _value.target : target as Reference,
       endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -4252,14 +4176,12 @@ abstract class _$MessageHeaderDestinationCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String name,
       Reference target,
       @JsonKey(required: true) FhirUri endpoint});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -4290,7 +4212,7 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -4319,7 +4241,7 @@ class _$_MessageHeaderDestination implements _MessageHeaderDestination {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -4380,7 +4302,7 @@ class _$_MessageHeaderDestination implements _MessageHeaderDestination {
 abstract class _MessageHeaderDestination implements MessageHeaderDestination {
   const factory _MessageHeaderDestination(
           {Id id,
-          @JsonKey(name: 'extension') FhirExtension extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
           String name,
           Reference target,
@@ -4394,7 +4316,7 @@ abstract class _MessageHeaderDestination implements MessageHeaderDestination {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

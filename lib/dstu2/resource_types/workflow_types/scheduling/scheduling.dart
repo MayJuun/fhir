@@ -125,7 +125,7 @@ abstract class Schedule with _$Schedule implements Resource {
 abstract class AppointmentParticipant with _$AppointmentParticipant {
   const factory AppointmentParticipant({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> type,
     Reference actor,

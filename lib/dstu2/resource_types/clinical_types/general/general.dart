@@ -280,7 +280,7 @@ abstract class AllergyIntolerance
 abstract class ConditionStage with _$ConditionStage {
   const factory ConditionStage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept summary,
     List<Reference> assessment,
@@ -294,7 +294,7 @@ abstract class ConditionStage with _$ConditionStage {
 abstract class ConditionEvidence with _$ConditionEvidence {
   const factory ConditionEvidence({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept code,
     List<Reference> detail,
@@ -308,7 +308,7 @@ abstract class ConditionEvidence with _$ConditionEvidence {
 abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
   const factory DetectedIssueMitigation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept action,
     FhirDateTime date,
@@ -324,7 +324,7 @@ abstract class FamilyMemberHistoryCondition
     with _$FamilyMemberHistoryCondition {
   const factory FamilyMemberHistoryCondition({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
     CodeableConcept outcome,
@@ -343,7 +343,7 @@ abstract class FamilyMemberHistoryCondition
 abstract class ProcedurePerformer with _$ProcedurePerformer {
   const factory ProcedurePerformer({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Reference actor,
     CodeableConcept role,
@@ -357,7 +357,7 @@ abstract class ProcedurePerformer with _$ProcedurePerformer {
 abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
   const factory ProcedureFocalDevice({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept action,
     @JsonKey(required: true) @required Reference manipulated,
@@ -372,7 +372,7 @@ abstract class ClinicalImpressionInvestigations
     with _$ClinicalImpressionInvestigations {
   const factory ClinicalImpressionInvestigations({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
     List<Reference> item,
@@ -387,7 +387,7 @@ abstract class ClinicalImpressionInvestigations
 abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   const factory ClinicalImpressionFinding({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept item,
     String cause,
@@ -401,7 +401,7 @@ abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
   const factory ClinicalImpressionRuledOut({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept item,
     String reason,
@@ -415,7 +415,7 @@ abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
 abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   const factory RiskAssessmentPrediction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept outcome,
     Decimal probabilityX,
@@ -432,7 +432,7 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   const factory AllergyIntoleranceReaction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept substance,
     @JsonKey(unknownEnumValue: ReactionCertainty.unknown)

@@ -3469,7 +3469,7 @@ class _$OrderWhenTearOff {
 
   _OrderWhen call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule}) {
@@ -3489,7 +3489,7 @@ const $OrderWhen = _$OrderWhenTearOff();
 mixin _$OrderWhen {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   CodeableConcept get code;
   Timing get schedule;
@@ -3503,12 +3503,11 @@ abstract class $OrderWhenCopyWith<$Res> {
       _$OrderWhenCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get code;
   $TimingCopyWith<$Res> get schedule;
@@ -3533,23 +3532,13 @@ class _$OrderWhenCopyWithImpl<$Res> implements $OrderWhenCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       code: code == freezed ? _value.code : code as CodeableConcept,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3590,13 +3579,11 @@ abstract class _$OrderWhenCopyWith<$Res> implements $OrderWhenCopyWith<$Res> {
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3625,7 +3612,7 @@ class __$OrderWhenCopyWithImpl<$Res> extends _$OrderWhenCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3651,7 +3638,7 @@ class _$_OrderWhen implements _OrderWhen {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -3705,7 +3692,7 @@ class _$_OrderWhen implements _OrderWhen {
 abstract class _OrderWhen implements OrderWhen {
   const factory _OrderWhen(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       CodeableConcept code,
       Timing schedule}) = _$_OrderWhen;
@@ -3717,7 +3704,7 @@ abstract class _OrderWhen implements OrderWhen {
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override
@@ -3738,7 +3725,7 @@ class _$CommunicationRequestPayloadTearOff {
 
   _CommunicationRequestPayload call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String contentString,
       Attachment contentAttachment,
@@ -3760,7 +3747,7 @@ const $CommunicationRequestPayload = _$CommunicationRequestPayloadTearOff();
 mixin _$CommunicationRequestPayload {
   Id get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   String get contentString;
   Attachment get contentAttachment;
@@ -3778,13 +3765,12 @@ abstract class $CommunicationRequestPayloadCopyWith<$Res> {
       _$CommunicationRequestPayloadCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String contentString,
       Attachment contentAttachment,
       Reference contentReference});
 
-  $FhirExtensionCopyWith<$Res> get extension_;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $AttachmentCopyWith<$Res> get contentAttachment;
   $ReferenceCopyWith<$Res> get contentReference;
@@ -3811,7 +3797,7 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3825,16 +3811,6 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
           ? _value.contentReference
           : contentReference as Reference,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 
   @override
@@ -3877,14 +3853,12 @@ abstract class _$CommunicationRequestPayloadCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String contentString,
       Attachment contentAttachment,
       Reference contentReference});
 
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
@@ -3918,7 +3892,7 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3952,7 +3926,7 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
   final Id id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -4015,7 +3989,7 @@ abstract class _CommunicationRequestPayload
     implements CommunicationRequestPayload {
   const factory _CommunicationRequestPayload(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       String contentString,
       Attachment contentAttachment,
@@ -4028,7 +4002,7 @@ abstract class _CommunicationRequestPayload
   Id get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
   @override

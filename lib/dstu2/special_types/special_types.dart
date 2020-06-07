@@ -11,7 +11,7 @@ part 'special_types.g.dart';
 abstract class FhirExtension with _$FhirExtension {
   const factory FhirExtension({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required FhirUri url,
     Integer valueInteger,
     Decimal valueDecimal,
@@ -46,7 +46,7 @@ abstract class FhirExtension with _$FhirExtension {
 abstract class Meta with _$Meta {
   const factory Meta({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     Id versionId,
     Instant lastUpdated,
     List<FhirUri> profile,
@@ -61,7 +61,7 @@ abstract class Meta with _$Meta {
 abstract class Reference with _$Reference {
   const factory Reference({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     String reference,
     String display,
   }) = _Reference;
@@ -74,7 +74,7 @@ abstract class Reference with _$Reference {
 abstract class Element with _$Element {
   const factory Element({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
   }) = _Element;
 
   factory Element.fromJson(Map<String, dynamic> json) =>
@@ -85,7 +85,7 @@ abstract class Element with _$Element {
 abstract class ElementDefinition with _$ElementDefinition {
   const factory ElementDefinition(
       {Id id,
-      @JsonKey(name: 'extension') FhirExtension extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) @required String path,
       List<Code> representation,
       String name,
@@ -258,7 +258,7 @@ abstract class ElementDefinition with _$ElementDefinition {
 abstract class Narrative with _$Narrative {
   const factory Narrative({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
     @required
         NarrativeStatus status,
@@ -273,7 +273,7 @@ abstract class Narrative with _$Narrative {
 abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   const factory ElementDefinitionSlicing({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<String> discriminator,
     String description,
     Boolean ordered,
@@ -290,7 +290,7 @@ abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 abstract class ElementDefinitionBase with _$ElementDefinitionBase {
   const factory ElementDefinitionBase({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required String path,
     @JsonKey(required: true) @required Integer min,
     @JsonKey(required: true) @required String max,
@@ -304,7 +304,7 @@ abstract class ElementDefinitionBase with _$ElementDefinitionBase {
 abstract class ElementDefinitionType with _$ElementDefinitionType {
   const factory ElementDefinitionType({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required Code code,
     List<FhirUri> profile,
     List<TypeAggregation> aggregation,
@@ -318,7 +318,7 @@ abstract class ElementDefinitionType with _$ElementDefinitionType {
 abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   const factory ElementDefinitionConstraint({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required Id key,
     String requirements,
     @JsonKey(required: true, unknownEnumValue: ConstraintSeverity.unknown)
@@ -336,7 +336,7 @@ abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
   const factory ElementDefinitionBinding({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
     @required
         BindingStrength strength,
@@ -352,7 +352,7 @@ abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
 abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
   const factory ElementDefinitionMapping({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required Id identity,
     Code language,
     @JsonKey(required: true) @required String map,
@@ -366,7 +366,7 @@ abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
 abstract class BackboneElement with _$BackboneElement {
   const factory BackboneElement({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
   }) = _BackboneElement;
 

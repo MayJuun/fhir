@@ -254,7 +254,7 @@ abstract class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
   const factory ImmunizationRecommendationRecommendation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirDateTime date,
     @JsonKey(required: true) @required CodeableConcept vaccineCode,
@@ -276,7 +276,7 @@ abstract class MedicationDispenseDosageInstruction
     with _$MedicationDispenseDosageInstruction {
   const factory MedicationDispenseDosageInstruction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String text,
     CodeableConcept additionalInstructions,
@@ -304,7 +304,7 @@ abstract class MedicationDispenseSubstitution
     with _$MedicationDispenseSubstitution {
   const factory MedicationDispenseSubstitution({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept type,
     List<CodeableConcept> reason,
@@ -319,7 +319,7 @@ abstract class MedicationDispenseSubstitution
 abstract class MedicationStatementDosage with _$MedicationStatementDosage {
   const factory MedicationStatementDosage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String text,
     Timing timing,
@@ -344,7 +344,7 @@ abstract class MedicationStatementDosage with _$MedicationStatementDosage {
 abstract class ImmunizationExplanation with _$ImmunizationExplanation {
   const factory ImmunizationExplanation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> reason,
     List<CodeableConcept> reasonNotGiven,
@@ -358,7 +358,7 @@ abstract class ImmunizationExplanation with _$ImmunizationExplanation {
 abstract class ImmunizationReaction with _$ImmunizationReaction {
   const factory ImmunizationReaction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirDateTime date,
     Reference detail,
@@ -374,7 +374,7 @@ abstract class ImmunizationVaccinationProtocol
     with _$ImmunizationVaccinationProtocol {
   const factory ImmunizationVaccinationProtocol({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required PositiveInt doseSequence,
     String description,
@@ -394,7 +394,7 @@ abstract class ImmunizationVaccinationProtocol
 abstract class MedicationProduct with _$MedicationProduct {
   const factory MedicationProduct({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept form,
     List<MedicationIngredient> ingredient,
@@ -409,7 +409,7 @@ abstract class MedicationProduct with _$MedicationProduct {
 abstract class MedicationPackage with _$MedicationPackage {
   const factory MedicationPackage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept container,
     List<MedicationContent> content,
@@ -424,7 +424,7 @@ abstract class MedicationAdministrationDosage
     with _$MedicationAdministrationDosage {
   const factory MedicationAdministrationDosage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String text,
     CodeableConcept siteCodeableConcept,
@@ -445,7 +445,7 @@ abstract class MedicationOrderDosageInstruction
     with _$MedicationOrderDosageInstruction {
   const factory MedicationOrderDosageInstruction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String text,
     CodeableConcept additionalInstructions,
@@ -473,7 +473,7 @@ abstract class MedicationOrderDispenseRequest
     with _$MedicationOrderDispenseRequest {
   const factory MedicationOrderDispenseRequest({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept medicationX,
     Period validityPeriod,
@@ -490,7 +490,7 @@ abstract class MedicationOrderDispenseRequest
 abstract class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
   const factory MedicationOrderSubstitution({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept type,
     CodeableConcept reason,
@@ -521,7 +521,7 @@ abstract class ImmunizationRecommendationProtocol
     with _$ImmunizationRecommendationProtocol {
   const factory ImmunizationRecommendationProtocol({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExten,
     Integer doseSequence,
     String description,
@@ -538,7 +538,7 @@ abstract class ImmunizationRecommendationProtocol
 abstract class MedicationIngredient with _$MedicationIngredient {
   const factory MedicationIngredient({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference item,
     Ratio amount,
@@ -552,7 +552,7 @@ abstract class MedicationIngredient with _$MedicationIngredient {
 abstract class MedicationBatch with _$MedicationBatch {
   const factory MedicationBatch({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String lotNumber,
     FhirDateTime expirationDate,
@@ -566,7 +566,7 @@ abstract class MedicationBatch with _$MedicationBatch {
 abstract class MedicationContent with _$MedicationContent {
   const factory MedicationContent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference item,
     Quantity amount,
