@@ -217,7 +217,8 @@ abstract class ContractValuedItem with _$ContractValuedItem {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    CodeableConcept entityX,
+    CodeableConcept entityCodeableConcept,
+    Reference entityReference,
     Identifier identifier,
     FhirDateTime effectiveTime,
     Quantity quantity,
@@ -276,7 +277,8 @@ abstract class ContractFriendly with _$ContractFriendly {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required Attachment contentX,
+    Attachment contentAttachment,
+    Reference contactReference,
   }) = _ContractFriendly;
 
   factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
@@ -289,7 +291,8 @@ abstract class ContractLegal with _$ContractLegal {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required Attachment contentX,
+    Attachment contentAttachment,
+    Reference content,
   }) = _ContractLegal;
 
   factory ContractLegal.fromJson(Map<String, dynamic> json) =>
@@ -302,7 +305,8 @@ abstract class ContractRule with _$ContractRule {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required Attachment contentX,
+    Attachment contentAttachment,
+    Reference contentReference,
   }) = _ContractRule;
 
   factory ContractRule.fromJson(Map<String, dynamic> json) =>

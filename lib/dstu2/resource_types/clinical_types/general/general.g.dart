@@ -1461,15 +1461,25 @@ _$_RiskAssessmentPrediction _$_$_RiskAssessmentPredictionFromJson(
     outcome: json['outcome'] == null
         ? null
         : CodeableConcept.fromJson(json['outcome'] as Map<String, dynamic>),
-    probabilityX: json['probabilityX'] == null
+    probabilityDecimal: json['probabilityDecimal'] == null
         ? null
-        : Decimal.fromJson(json['probabilityX']),
+        : Decimal.fromJson(json['probabilityDecimal']),
+    probabilityRange: json['probabilityRange'] == null
+        ? null
+        : Range.fromJson(json['probabilityRange'] as Map<String, dynamic>),
+    probabilityCodeableConcept: json['probabilityCodeableConcept'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['probabilityCodeableConcept'] as Map<String, dynamic>),
     relativeRisk: json['relativeRisk'] == null
         ? null
         : Decimal.fromJson(json['relativeRisk']),
-    whenX: json['whenX'] == null
+    whenPeriod: json['whenPeriod'] == null
         ? null
-        : Period.fromJson(json['whenX'] as Map<String, dynamic>),
+        : Period.fromJson(json['whenPeriod'] as Map<String, dynamic>),
+    whenRange: json['whenRange'] == null
+        ? null
+        : Range.fromJson(json['whenRange'] as Map<String, dynamic>),
     rationale: json['rationale'] as String,
   );
 }
@@ -1489,9 +1499,13 @@ Map<String, dynamic> _$_$_RiskAssessmentPredictionToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('outcome', instance.outcome?.toJson());
-  writeNotNull('probabilityX', instance.probabilityX?.toJson());
+  writeNotNull('probabilityDecimal', instance.probabilityDecimal?.toJson());
+  writeNotNull('probabilityRange', instance.probabilityRange?.toJson());
+  writeNotNull('probabilityCodeableConcept',
+      instance.probabilityCodeableConcept?.toJson());
   writeNotNull('relativeRisk', instance.relativeRisk?.toJson());
-  writeNotNull('whenX', instance.whenX?.toJson());
+  writeNotNull('whenPeriod', instance.whenPeriod?.toJson());
+  writeNotNull('whenRange', instance.whenRange?.toJson());
   writeNotNull('rationale', instance.rationale);
   return val;
 }

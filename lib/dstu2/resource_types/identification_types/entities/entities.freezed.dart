@@ -4106,7 +4106,8 @@ class _$ContractValuedItemTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept entityX,
+      CodeableConcept entityCodeableConcept,
+      Reference entityReference,
       Identifier identifier,
       FhirDateTime effectiveTime,
       Quantity quantity,
@@ -4118,7 +4119,8 @@ class _$ContractValuedItemTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      entityX: entityX,
+      entityCodeableConcept: entityCodeableConcept,
+      entityReference: entityReference,
       identifier: identifier,
       effectiveTime: effectiveTime,
       quantity: quantity,
@@ -4138,7 +4140,8 @@ mixin _$ContractValuedItem {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  CodeableConcept get entityX;
+  CodeableConcept get entityCodeableConcept;
+  Reference get entityReference;
   Identifier get identifier;
   FhirDateTime get effectiveTime;
   Quantity get quantity;
@@ -4159,7 +4162,8 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept entityX,
+      CodeableConcept entityCodeableConcept,
+      Reference entityReference,
       Identifier identifier,
       FhirDateTime effectiveTime,
       Quantity quantity,
@@ -4169,7 +4173,8 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       Quantity net});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get entityX;
+  $CodeableConceptCopyWith<$Res> get entityCodeableConcept;
+  $ReferenceCopyWith<$Res> get entityReference;
   $IdentifierCopyWith<$Res> get identifier;
   $QuantityCopyWith<$Res> get quantity;
   $QuantityCopyWith<$Res> get unitPrice;
@@ -4189,7 +4194,8 @@ class _$ContractValuedItemCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object entityX = freezed,
+    Object entityCodeableConcept = freezed,
+    Object entityReference = freezed,
     Object identifier = freezed,
     Object effectiveTime = freezed,
     Object quantity = freezed,
@@ -4206,7 +4212,12 @@ class _$ContractValuedItemCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      entityX: entityX == freezed ? _value.entityX : entityX as CodeableConcept,
+      entityCodeableConcept: entityCodeableConcept == freezed
+          ? _value.entityCodeableConcept
+          : entityCodeableConcept as CodeableConcept,
+      entityReference: entityReference == freezed
+          ? _value.entityReference
+          : entityReference as Reference,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       effectiveTime: effectiveTime == freezed
@@ -4232,12 +4243,23 @@ class _$ContractValuedItemCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get entityX {
-    if (_value.entityX == null) {
+  $CodeableConceptCopyWith<$Res> get entityCodeableConcept {
+    if (_value.entityCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.entityX, (value) {
-      return _then(_value.copyWith(entityX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.entityCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(entityCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get entityReference {
+    if (_value.entityReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.entityReference, (value) {
+      return _then(_value.copyWith(entityReference: value));
     });
   }
 
@@ -4292,7 +4314,8 @@ abstract class _$ContractValuedItemCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept entityX,
+      CodeableConcept entityCodeableConcept,
+      Reference entityReference,
       Identifier identifier,
       FhirDateTime effectiveTime,
       Quantity quantity,
@@ -4304,7 +4327,9 @@ abstract class _$ContractValuedItemCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $CodeableConceptCopyWith<$Res> get entityX;
+  $CodeableConceptCopyWith<$Res> get entityCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get entityReference;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
@@ -4330,7 +4355,8 @@ class __$ContractValuedItemCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object entityX = freezed,
+    Object entityCodeableConcept = freezed,
+    Object entityReference = freezed,
     Object identifier = freezed,
     Object effectiveTime = freezed,
     Object quantity = freezed,
@@ -4347,7 +4373,12 @@ class __$ContractValuedItemCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      entityX: entityX == freezed ? _value.entityX : entityX as CodeableConcept,
+      entityCodeableConcept: entityCodeableConcept == freezed
+          ? _value.entityCodeableConcept
+          : entityCodeableConcept as CodeableConcept,
+      entityReference: entityReference == freezed
+          ? _value.entityReference
+          : entityReference as Reference,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       effectiveTime: effectiveTime == freezed
@@ -4369,7 +4400,8 @@ class _$_ContractValuedItem implements _ContractValuedItem {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.entityX,
+      this.entityCodeableConcept,
+      this.entityReference,
       this.identifier,
       this.effectiveTime,
       this.quantity,
@@ -4389,7 +4421,9 @@ class _$_ContractValuedItem implements _ContractValuedItem {
   @override
   final FhirExtension modifierExtension;
   @override
-  final CodeableConcept entityX;
+  final CodeableConcept entityCodeableConcept;
+  @override
+  final Reference entityReference;
   @override
   final Identifier identifier;
   @override
@@ -4407,7 +4441,7 @@ class _$_ContractValuedItem implements _ContractValuedItem {
 
   @override
   String toString() {
-    return 'ContractValuedItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, entityX: $entityX, identifier: $identifier, effectiveTime: $effectiveTime, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, points: $points, net: $net)';
+    return 'ContractValuedItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, entityCodeableConcept: $entityCodeableConcept, entityReference: $entityReference, identifier: $identifier, effectiveTime: $effectiveTime, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, points: $points, net: $net)';
   }
 
   @override
@@ -4422,9 +4456,12 @@ class _$_ContractValuedItem implements _ContractValuedItem {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.entityX, entityX) ||
+            (identical(other.entityCodeableConcept, entityCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.entityCodeableConcept, entityCodeableConcept)) &&
+            (identical(other.entityReference, entityReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.entityX, entityX)) &&
+                    .equals(other.entityReference, entityReference)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -4451,7 +4488,8 @@ class _$_ContractValuedItem implements _ContractValuedItem {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(entityX) ^
+      const DeepCollectionEquality().hash(entityCodeableConcept) ^
+      const DeepCollectionEquality().hash(entityReference) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(effectiveTime) ^
       const DeepCollectionEquality().hash(quantity) ^
@@ -4475,7 +4513,8 @@ abstract class _ContractValuedItem implements ContractValuedItem {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept entityX,
+      CodeableConcept entityCodeableConcept,
+      Reference entityReference,
       Identifier identifier,
       FhirDateTime effectiveTime,
       Quantity quantity,
@@ -4495,7 +4534,9 @@ abstract class _ContractValuedItem implements ContractValuedItem {
   @override
   FhirExtension get modifierExtension;
   @override
-  CodeableConcept get entityX;
+  CodeableConcept get entityCodeableConcept;
+  @override
+  Reference get entityReference;
   @override
   Identifier get identifier;
   @override
@@ -5309,12 +5350,14 @@ class _$ContractFriendlyTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Attachment contentX}) {
+      Attachment contentAttachment,
+      Reference contactReference}) {
     return _ContractFriendly(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      contentX: contentX,
+      contentAttachment: contentAttachment,
+      contactReference: contactReference,
     );
   }
 }
@@ -5327,8 +5370,8 @@ mixin _$ContractFriendly {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  @JsonKey(required: true)
-  Attachment get contentX;
+  Attachment get contentAttachment;
+  Reference get contactReference;
 
   Map<String, dynamic> toJson();
   $ContractFriendlyCopyWith<ContractFriendly> get copyWith;
@@ -5342,10 +5385,12 @@ abstract class $ContractFriendlyCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) Attachment contentX});
+      Attachment contentAttachment,
+      Reference contactReference});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $AttachmentCopyWith<$Res> get contentX;
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  $ReferenceCopyWith<$Res> get contactReference;
 }
 
 class _$ContractFriendlyCopyWithImpl<$Res>
@@ -5361,7 +5406,8 @@ class _$ContractFriendlyCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentAttachment = freezed,
+    Object contactReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -5371,7 +5417,12 @@ class _$ContractFriendlyCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as Attachment,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      contactReference: contactReference == freezed
+          ? _value.contactReference
+          : contactReference as Reference,
     ));
   }
 
@@ -5386,12 +5437,22 @@ class _$ContractFriendlyCopyWithImpl<$Res>
   }
 
   @override
-  $AttachmentCopyWith<$Res> get contentX {
-    if (_value.contentX == null) {
+  $AttachmentCopyWith<$Res> get contentAttachment {
+    if (_value.contentAttachment == null) {
       return null;
     }
-    return $AttachmentCopyWith<$Res>(_value.contentX, (value) {
-      return _then(_value.copyWith(contentX: value));
+    return $AttachmentCopyWith<$Res>(_value.contentAttachment, (value) {
+      return _then(_value.copyWith(contentAttachment: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get contactReference {
+    if (_value.contactReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.contactReference, (value) {
+      return _then(_value.copyWith(contactReference: value));
     });
   }
 }
@@ -5406,12 +5467,15 @@ abstract class _$ContractFriendlyCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) Attachment contentX});
+      Attachment contentAttachment,
+      Reference contactReference});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $AttachmentCopyWith<$Res> get contentX;
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  @override
+  $ReferenceCopyWith<$Res> get contactReference;
 }
 
 class __$ContractFriendlyCopyWithImpl<$Res>
@@ -5429,7 +5493,8 @@ class __$ContractFriendlyCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentAttachment = freezed,
+    Object contactReference = freezed,
   }) {
     return _then(_ContractFriendly(
       id: id == freezed ? _value.id : id as Id,
@@ -5439,7 +5504,12 @@ class __$ContractFriendlyCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as Attachment,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      contactReference: contactReference == freezed
+          ? _value.contactReference
+          : contactReference as Reference,
     ));
   }
 }
@@ -5450,8 +5520,8 @@ class _$_ContractFriendly implements _ContractFriendly {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required @JsonKey(required: true) this.contentX})
-      : assert(contentX != null);
+      this.contentAttachment,
+      this.contactReference});
 
   factory _$_ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFriendlyFromJson(json);
@@ -5464,12 +5534,13 @@ class _$_ContractFriendly implements _ContractFriendly {
   @override
   final FhirExtension modifierExtension;
   @override
-  @JsonKey(required: true)
-  final Attachment contentX;
+  final Attachment contentAttachment;
+  @override
+  final Reference contactReference;
 
   @override
   String toString() {
-    return 'ContractFriendly(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentX: $contentX)';
+    return 'ContractFriendly(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentAttachment: $contentAttachment, contactReference: $contactReference)';
   }
 
   @override
@@ -5484,9 +5555,12 @@ class _$_ContractFriendly implements _ContractFriendly {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.contentX, contentX) ||
+            (identical(other.contentAttachment, contentAttachment) ||
                 const DeepCollectionEquality()
-                    .equals(other.contentX, contentX)));
+                    .equals(other.contentAttachment, contentAttachment)) &&
+            (identical(other.contactReference, contactReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.contactReference, contactReference)));
   }
 
   @override
@@ -5495,7 +5569,8 @@ class _$_ContractFriendly implements _ContractFriendly {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(contentX);
+      const DeepCollectionEquality().hash(contentAttachment) ^
+      const DeepCollectionEquality().hash(contactReference);
 
   @override
   _$ContractFriendlyCopyWith<_ContractFriendly> get copyWith =>
@@ -5509,11 +5584,11 @@ class _$_ContractFriendly implements _ContractFriendly {
 
 abstract class _ContractFriendly implements ContractFriendly {
   const factory _ContractFriendly(
-          {Id id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          @required @JsonKey(required: true) Attachment contentX}) =
-      _$_ContractFriendly;
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      Attachment contentAttachment,
+      Reference contactReference}) = _$_ContractFriendly;
 
   factory _ContractFriendly.fromJson(Map<String, dynamic> json) =
       _$_ContractFriendly.fromJson;
@@ -5526,8 +5601,9 @@ abstract class _ContractFriendly implements ContractFriendly {
   @override
   FhirExtension get modifierExtension;
   @override
-  @JsonKey(required: true)
-  Attachment get contentX;
+  Attachment get contentAttachment;
+  @override
+  Reference get contactReference;
   @override
   _$ContractFriendlyCopyWith<_ContractFriendly> get copyWith;
 }
@@ -5543,12 +5619,14 @@ class _$ContractLegalTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Attachment contentX}) {
+      Attachment contentAttachment,
+      Reference content}) {
     return _ContractLegal(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      contentX: contentX,
+      contentAttachment: contentAttachment,
+      content: content,
     );
   }
 }
@@ -5561,8 +5639,8 @@ mixin _$ContractLegal {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  @JsonKey(required: true)
-  Attachment get contentX;
+  Attachment get contentAttachment;
+  Reference get content;
 
   Map<String, dynamic> toJson();
   $ContractLegalCopyWith<ContractLegal> get copyWith;
@@ -5576,10 +5654,12 @@ abstract class $ContractLegalCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) Attachment contentX});
+      Attachment contentAttachment,
+      Reference content});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $AttachmentCopyWith<$Res> get contentX;
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  $ReferenceCopyWith<$Res> get content;
 }
 
 class _$ContractLegalCopyWithImpl<$Res>
@@ -5595,7 +5675,8 @@ class _$ContractLegalCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentAttachment = freezed,
+    Object content = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -5605,7 +5686,10 @@ class _$ContractLegalCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as Attachment,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      content: content == freezed ? _value.content : content as Reference,
     ));
   }
 
@@ -5620,12 +5704,22 @@ class _$ContractLegalCopyWithImpl<$Res>
   }
 
   @override
-  $AttachmentCopyWith<$Res> get contentX {
-    if (_value.contentX == null) {
+  $AttachmentCopyWith<$Res> get contentAttachment {
+    if (_value.contentAttachment == null) {
       return null;
     }
-    return $AttachmentCopyWith<$Res>(_value.contentX, (value) {
-      return _then(_value.copyWith(contentX: value));
+    return $AttachmentCopyWith<$Res>(_value.contentAttachment, (value) {
+      return _then(_value.copyWith(contentAttachment: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get content {
+    if (_value.content == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.content, (value) {
+      return _then(_value.copyWith(content: value));
     });
   }
 }
@@ -5640,12 +5734,15 @@ abstract class _$ContractLegalCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) Attachment contentX});
+      Attachment contentAttachment,
+      Reference content});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $AttachmentCopyWith<$Res> get contentX;
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  @override
+  $ReferenceCopyWith<$Res> get content;
 }
 
 class __$ContractLegalCopyWithImpl<$Res>
@@ -5663,7 +5760,8 @@ class __$ContractLegalCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentAttachment = freezed,
+    Object content = freezed,
   }) {
     return _then(_ContractLegal(
       id: id == freezed ? _value.id : id as Id,
@@ -5673,7 +5771,10 @@ class __$ContractLegalCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as Attachment,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      content: content == freezed ? _value.content : content as Reference,
     ));
   }
 }
@@ -5684,8 +5785,8 @@ class _$_ContractLegal implements _ContractLegal {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required @JsonKey(required: true) this.contentX})
-      : assert(contentX != null);
+      this.contentAttachment,
+      this.content});
 
   factory _$_ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractLegalFromJson(json);
@@ -5698,12 +5799,13 @@ class _$_ContractLegal implements _ContractLegal {
   @override
   final FhirExtension modifierExtension;
   @override
-  @JsonKey(required: true)
-  final Attachment contentX;
+  final Attachment contentAttachment;
+  @override
+  final Reference content;
 
   @override
   String toString() {
-    return 'ContractLegal(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentX: $contentX)';
+    return 'ContractLegal(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentAttachment: $contentAttachment, content: $content)';
   }
 
   @override
@@ -5718,9 +5820,11 @@ class _$_ContractLegal implements _ContractLegal {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.contentX, contentX) ||
+            (identical(other.contentAttachment, contentAttachment) ||
                 const DeepCollectionEquality()
-                    .equals(other.contentX, contentX)));
+                    .equals(other.contentAttachment, contentAttachment)) &&
+            (identical(other.content, content) ||
+                const DeepCollectionEquality().equals(other.content, content)));
   }
 
   @override
@@ -5729,7 +5833,8 @@ class _$_ContractLegal implements _ContractLegal {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(contentX);
+      const DeepCollectionEquality().hash(contentAttachment) ^
+      const DeepCollectionEquality().hash(content);
 
   @override
   _$ContractLegalCopyWith<_ContractLegal> get copyWith =>
@@ -5743,11 +5848,11 @@ class _$_ContractLegal implements _ContractLegal {
 
 abstract class _ContractLegal implements ContractLegal {
   const factory _ContractLegal(
-          {Id id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          @required @JsonKey(required: true) Attachment contentX}) =
-      _$_ContractLegal;
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      Attachment contentAttachment,
+      Reference content}) = _$_ContractLegal;
 
   factory _ContractLegal.fromJson(Map<String, dynamic> json) =
       _$_ContractLegal.fromJson;
@@ -5760,8 +5865,9 @@ abstract class _ContractLegal implements ContractLegal {
   @override
   FhirExtension get modifierExtension;
   @override
-  @JsonKey(required: true)
-  Attachment get contentX;
+  Attachment get contentAttachment;
+  @override
+  Reference get content;
   @override
   _$ContractLegalCopyWith<_ContractLegal> get copyWith;
 }
@@ -5777,12 +5883,14 @@ class _$ContractRuleTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Attachment contentX}) {
+      Attachment contentAttachment,
+      Reference contentReference}) {
     return _ContractRule(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      contentX: contentX,
+      contentAttachment: contentAttachment,
+      contentReference: contentReference,
     );
   }
 }
@@ -5795,8 +5903,8 @@ mixin _$ContractRule {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  @JsonKey(required: true)
-  Attachment get contentX;
+  Attachment get contentAttachment;
+  Reference get contentReference;
 
   Map<String, dynamic> toJson();
   $ContractRuleCopyWith<ContractRule> get copyWith;
@@ -5810,10 +5918,12 @@ abstract class $ContractRuleCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) Attachment contentX});
+      Attachment contentAttachment,
+      Reference contentReference});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $AttachmentCopyWith<$Res> get contentX;
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  $ReferenceCopyWith<$Res> get contentReference;
 }
 
 class _$ContractRuleCopyWithImpl<$Res> implements $ContractRuleCopyWith<$Res> {
@@ -5828,7 +5938,8 @@ class _$ContractRuleCopyWithImpl<$Res> implements $ContractRuleCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentAttachment = freezed,
+    Object contentReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -5838,7 +5949,12 @@ class _$ContractRuleCopyWithImpl<$Res> implements $ContractRuleCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as Attachment,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      contentReference: contentReference == freezed
+          ? _value.contentReference
+          : contentReference as Reference,
     ));
   }
 
@@ -5853,12 +5969,22 @@ class _$ContractRuleCopyWithImpl<$Res> implements $ContractRuleCopyWith<$Res> {
   }
 
   @override
-  $AttachmentCopyWith<$Res> get contentX {
-    if (_value.contentX == null) {
+  $AttachmentCopyWith<$Res> get contentAttachment {
+    if (_value.contentAttachment == null) {
       return null;
     }
-    return $AttachmentCopyWith<$Res>(_value.contentX, (value) {
-      return _then(_value.copyWith(contentX: value));
+    return $AttachmentCopyWith<$Res>(_value.contentAttachment, (value) {
+      return _then(_value.copyWith(contentAttachment: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get contentReference {
+    if (_value.contentReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.contentReference, (value) {
+      return _then(_value.copyWith(contentReference: value));
     });
   }
 }
@@ -5873,12 +5999,15 @@ abstract class _$ContractRuleCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @JsonKey(required: true) Attachment contentX});
+      Attachment contentAttachment,
+      Reference contentReference});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $AttachmentCopyWith<$Res> get contentX;
+  $AttachmentCopyWith<$Res> get contentAttachment;
+  @override
+  $ReferenceCopyWith<$Res> get contentReference;
 }
 
 class __$ContractRuleCopyWithImpl<$Res> extends _$ContractRuleCopyWithImpl<$Res>
@@ -5895,7 +6024,8 @@ class __$ContractRuleCopyWithImpl<$Res> extends _$ContractRuleCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object contentX = freezed,
+    Object contentAttachment = freezed,
+    Object contentReference = freezed,
   }) {
     return _then(_ContractRule(
       id: id == freezed ? _value.id : id as Id,
@@ -5905,7 +6035,12 @@ class __$ContractRuleCopyWithImpl<$Res> extends _$ContractRuleCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      contentX: contentX == freezed ? _value.contentX : contentX as Attachment,
+      contentAttachment: contentAttachment == freezed
+          ? _value.contentAttachment
+          : contentAttachment as Attachment,
+      contentReference: contentReference == freezed
+          ? _value.contentReference
+          : contentReference as Reference,
     ));
   }
 }
@@ -5916,8 +6051,8 @@ class _$_ContractRule implements _ContractRule {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required @JsonKey(required: true) this.contentX})
-      : assert(contentX != null);
+      this.contentAttachment,
+      this.contentReference});
 
   factory _$_ContractRule.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractRuleFromJson(json);
@@ -5930,12 +6065,13 @@ class _$_ContractRule implements _ContractRule {
   @override
   final FhirExtension modifierExtension;
   @override
-  @JsonKey(required: true)
-  final Attachment contentX;
+  final Attachment contentAttachment;
+  @override
+  final Reference contentReference;
 
   @override
   String toString() {
-    return 'ContractRule(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentX: $contentX)';
+    return 'ContractRule(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentAttachment: $contentAttachment, contentReference: $contentReference)';
   }
 
   @override
@@ -5950,9 +6086,12 @@ class _$_ContractRule implements _ContractRule {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.contentX, contentX) ||
+            (identical(other.contentAttachment, contentAttachment) ||
                 const DeepCollectionEquality()
-                    .equals(other.contentX, contentX)));
+                    .equals(other.contentAttachment, contentAttachment)) &&
+            (identical(other.contentReference, contentReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.contentReference, contentReference)));
   }
 
   @override
@@ -5961,7 +6100,8 @@ class _$_ContractRule implements _ContractRule {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(contentX);
+      const DeepCollectionEquality().hash(contentAttachment) ^
+      const DeepCollectionEquality().hash(contentReference);
 
   @override
   _$ContractRuleCopyWith<_ContractRule> get copyWith =>
@@ -5975,11 +6115,11 @@ class _$_ContractRule implements _ContractRule {
 
 abstract class _ContractRule implements ContractRule {
   const factory _ContractRule(
-          {Id id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          @required @JsonKey(required: true) Attachment contentX}) =
-      _$_ContractRule;
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      Attachment contentAttachment,
+      Reference contentReference}) = _$_ContractRule;
 
   factory _ContractRule.fromJson(Map<String, dynamic> json) =
       _$_ContractRule.fromJson;
@@ -5992,8 +6132,9 @@ abstract class _ContractRule implements ContractRule {
   @override
   FhirExtension get modifierExtension;
   @override
-  @JsonKey(required: true)
-  Attachment get contentX;
+  Attachment get contentAttachment;
+  @override
+  Reference get contentReference;
   @override
   _$ContractRuleCopyWith<_ContractRule> get copyWith;
 }

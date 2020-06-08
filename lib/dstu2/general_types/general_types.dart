@@ -99,7 +99,8 @@ abstract class Annotation with _$Annotation {
   const factory Annotation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    Reference authorX,
+    Reference authorReference,
+    String authorString,
     FhirDateTime time,
     @JsonKey(required: true) @required String text,
   }) = _Annotation;
@@ -163,7 +164,8 @@ abstract class Signature with _$Signature {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required List<Coding> type,
     @JsonKey(required: true) @required Instant when,
-    @JsonKey(required: true) @required FhirUri whoX,
+    FhirUri whoUri,
+    Reference whoReference,
     @JsonKey(required: true) @required Code contentType,
     @JsonKey(required: true) @required Base64Binary blob,
   }) = _Signature;

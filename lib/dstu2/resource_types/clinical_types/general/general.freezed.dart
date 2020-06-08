@@ -8360,18 +8360,24 @@ class _$RiskAssessmentPredictionTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) CodeableConcept outcome,
-      Decimal probabilityX,
+      Decimal probabilityDecimal,
+      Range probabilityRange,
+      CodeableConcept probabilityCodeableConcept,
       Decimal relativeRisk,
-      Period whenX,
+      Period whenPeriod,
+      Range whenRange,
       String rationale}) {
     return _RiskAssessmentPrediction(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       outcome: outcome,
-      probabilityX: probabilityX,
+      probabilityDecimal: probabilityDecimal,
+      probabilityRange: probabilityRange,
+      probabilityCodeableConcept: probabilityCodeableConcept,
       relativeRisk: relativeRisk,
-      whenX: whenX,
+      whenPeriod: whenPeriod,
+      whenRange: whenRange,
       rationale: rationale,
     );
   }
@@ -8387,9 +8393,12 @@ mixin _$RiskAssessmentPrediction {
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   CodeableConcept get outcome;
-  Decimal get probabilityX;
+  Decimal get probabilityDecimal;
+  Range get probabilityRange;
+  CodeableConcept get probabilityCodeableConcept;
   Decimal get relativeRisk;
-  Period get whenX;
+  Period get whenPeriod;
+  Range get whenRange;
   String get rationale;
 
   Map<String, dynamic> toJson();
@@ -8405,14 +8414,20 @@ abstract class $RiskAssessmentPredictionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) CodeableConcept outcome,
-      Decimal probabilityX,
+      Decimal probabilityDecimal,
+      Range probabilityRange,
+      CodeableConcept probabilityCodeableConcept,
       Decimal relativeRisk,
-      Period whenX,
+      Period whenPeriod,
+      Range whenRange,
       String rationale});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get outcome;
-  $PeriodCopyWith<$Res> get whenX;
+  $RangeCopyWith<$Res> get probabilityRange;
+  $CodeableConceptCopyWith<$Res> get probabilityCodeableConcept;
+  $PeriodCopyWith<$Res> get whenPeriod;
+  $RangeCopyWith<$Res> get whenRange;
 }
 
 class _$RiskAssessmentPredictionCopyWithImpl<$Res>
@@ -8429,9 +8444,12 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object outcome = freezed,
-    Object probabilityX = freezed,
+    Object probabilityDecimal = freezed,
+    Object probabilityRange = freezed,
+    Object probabilityCodeableConcept = freezed,
     Object relativeRisk = freezed,
-    Object whenX = freezed,
+    Object whenPeriod = freezed,
+    Object whenRange = freezed,
     Object rationale = freezed,
   }) {
     return _then(_value.copyWith(
@@ -8443,13 +8461,21 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
-      probabilityX: probabilityX == freezed
-          ? _value.probabilityX
-          : probabilityX as Decimal,
+      probabilityDecimal: probabilityDecimal == freezed
+          ? _value.probabilityDecimal
+          : probabilityDecimal as Decimal,
+      probabilityRange: probabilityRange == freezed
+          ? _value.probabilityRange
+          : probabilityRange as Range,
+      probabilityCodeableConcept: probabilityCodeableConcept == freezed
+          ? _value.probabilityCodeableConcept
+          : probabilityCodeableConcept as CodeableConcept,
       relativeRisk: relativeRisk == freezed
           ? _value.relativeRisk
           : relativeRisk as Decimal,
-      whenX: whenX == freezed ? _value.whenX : whenX as Period,
+      whenPeriod:
+          whenPeriod == freezed ? _value.whenPeriod : whenPeriod as Period,
+      whenRange: whenRange == freezed ? _value.whenRange : whenRange as Range,
       rationale: rationale == freezed ? _value.rationale : rationale as String,
     ));
   }
@@ -8475,12 +8501,43 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
   }
 
   @override
-  $PeriodCopyWith<$Res> get whenX {
-    if (_value.whenX == null) {
+  $RangeCopyWith<$Res> get probabilityRange {
+    if (_value.probabilityRange == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.whenX, (value) {
-      return _then(_value.copyWith(whenX: value));
+    return $RangeCopyWith<$Res>(_value.probabilityRange, (value) {
+      return _then(_value.copyWith(probabilityRange: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get probabilityCodeableConcept {
+    if (_value.probabilityCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.probabilityCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(probabilityCodeableConcept: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get whenPeriod {
+    if (_value.whenPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.whenPeriod, (value) {
+      return _then(_value.copyWith(whenPeriod: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get whenRange {
+    if (_value.whenRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.whenRange, (value) {
+      return _then(_value.copyWith(whenRange: value));
     });
   }
 }
@@ -8496,9 +8553,12 @@ abstract class _$RiskAssessmentPredictionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) CodeableConcept outcome,
-      Decimal probabilityX,
+      Decimal probabilityDecimal,
+      Range probabilityRange,
+      CodeableConcept probabilityCodeableConcept,
       Decimal relativeRisk,
-      Period whenX,
+      Period whenPeriod,
+      Range whenRange,
       String rationale});
 
   @override
@@ -8506,7 +8566,13 @@ abstract class _$RiskAssessmentPredictionCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get outcome;
   @override
-  $PeriodCopyWith<$Res> get whenX;
+  $RangeCopyWith<$Res> get probabilityRange;
+  @override
+  $CodeableConceptCopyWith<$Res> get probabilityCodeableConcept;
+  @override
+  $PeriodCopyWith<$Res> get whenPeriod;
+  @override
+  $RangeCopyWith<$Res> get whenRange;
 }
 
 class __$RiskAssessmentPredictionCopyWithImpl<$Res>
@@ -8526,9 +8592,12 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object outcome = freezed,
-    Object probabilityX = freezed,
+    Object probabilityDecimal = freezed,
+    Object probabilityRange = freezed,
+    Object probabilityCodeableConcept = freezed,
     Object relativeRisk = freezed,
-    Object whenX = freezed,
+    Object whenPeriod = freezed,
+    Object whenRange = freezed,
     Object rationale = freezed,
   }) {
     return _then(_RiskAssessmentPrediction(
@@ -8540,13 +8609,21 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       outcome: outcome == freezed ? _value.outcome : outcome as CodeableConcept,
-      probabilityX: probabilityX == freezed
-          ? _value.probabilityX
-          : probabilityX as Decimal,
+      probabilityDecimal: probabilityDecimal == freezed
+          ? _value.probabilityDecimal
+          : probabilityDecimal as Decimal,
+      probabilityRange: probabilityRange == freezed
+          ? _value.probabilityRange
+          : probabilityRange as Range,
+      probabilityCodeableConcept: probabilityCodeableConcept == freezed
+          ? _value.probabilityCodeableConcept
+          : probabilityCodeableConcept as CodeableConcept,
       relativeRisk: relativeRisk == freezed
           ? _value.relativeRisk
           : relativeRisk as Decimal,
-      whenX: whenX == freezed ? _value.whenX : whenX as Period,
+      whenPeriod:
+          whenPeriod == freezed ? _value.whenPeriod : whenPeriod as Period,
+      whenRange: whenRange == freezed ? _value.whenRange : whenRange as Range,
       rationale: rationale == freezed ? _value.rationale : rationale as String,
     ));
   }
@@ -8559,9 +8636,12 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.outcome,
-      this.probabilityX,
+      this.probabilityDecimal,
+      this.probabilityRange,
+      this.probabilityCodeableConcept,
       this.relativeRisk,
-      this.whenX,
+      this.whenPeriod,
+      this.whenRange,
       this.rationale})
       : assert(outcome != null);
 
@@ -8579,17 +8659,23 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
   @JsonKey(required: true)
   final CodeableConcept outcome;
   @override
-  final Decimal probabilityX;
+  final Decimal probabilityDecimal;
+  @override
+  final Range probabilityRange;
+  @override
+  final CodeableConcept probabilityCodeableConcept;
   @override
   final Decimal relativeRisk;
   @override
-  final Period whenX;
+  final Period whenPeriod;
+  @override
+  final Range whenRange;
   @override
   final String rationale;
 
   @override
   String toString() {
-    return 'RiskAssessmentPrediction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, outcome: $outcome, probabilityX: $probabilityX, relativeRisk: $relativeRisk, whenX: $whenX, rationale: $rationale)';
+    return 'RiskAssessmentPrediction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, outcome: $outcome, probabilityDecimal: $probabilityDecimal, probabilityRange: $probabilityRange, probabilityCodeableConcept: $probabilityCodeableConcept, relativeRisk: $relativeRisk, whenPeriod: $whenPeriod, whenRange: $whenRange, rationale: $rationale)';
   }
 
   @override
@@ -8607,14 +8693,26 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
             (identical(other.outcome, outcome) ||
                 const DeepCollectionEquality()
                     .equals(other.outcome, outcome)) &&
-            (identical(other.probabilityX, probabilityX) ||
+            (identical(other.probabilityDecimal, probabilityDecimal) ||
                 const DeepCollectionEquality()
-                    .equals(other.probabilityX, probabilityX)) &&
+                    .equals(other.probabilityDecimal, probabilityDecimal)) &&
+            (identical(other.probabilityRange, probabilityRange) ||
+                const DeepCollectionEquality()
+                    .equals(other.probabilityRange, probabilityRange)) &&
+            (identical(other.probabilityCodeableConcept,
+                    probabilityCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.probabilityCodeableConcept,
+                    probabilityCodeableConcept)) &&
             (identical(other.relativeRisk, relativeRisk) ||
                 const DeepCollectionEquality()
                     .equals(other.relativeRisk, relativeRisk)) &&
-            (identical(other.whenX, whenX) ||
-                const DeepCollectionEquality().equals(other.whenX, whenX)) &&
+            (identical(other.whenPeriod, whenPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.whenPeriod, whenPeriod)) &&
+            (identical(other.whenRange, whenRange) ||
+                const DeepCollectionEquality()
+                    .equals(other.whenRange, whenRange)) &&
             (identical(other.rationale, rationale) ||
                 const DeepCollectionEquality()
                     .equals(other.rationale, rationale)));
@@ -8627,9 +8725,12 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(outcome) ^
-      const DeepCollectionEquality().hash(probabilityX) ^
+      const DeepCollectionEquality().hash(probabilityDecimal) ^
+      const DeepCollectionEquality().hash(probabilityRange) ^
+      const DeepCollectionEquality().hash(probabilityCodeableConcept) ^
       const DeepCollectionEquality().hash(relativeRisk) ^
-      const DeepCollectionEquality().hash(whenX) ^
+      const DeepCollectionEquality().hash(whenPeriod) ^
+      const DeepCollectionEquality().hash(whenRange) ^
       const DeepCollectionEquality().hash(rationale);
 
   @override
@@ -8649,9 +8750,12 @@ abstract class _RiskAssessmentPrediction implements RiskAssessmentPrediction {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) CodeableConcept outcome,
-      Decimal probabilityX,
+      Decimal probabilityDecimal,
+      Range probabilityRange,
+      CodeableConcept probabilityCodeableConcept,
       Decimal relativeRisk,
-      Period whenX,
+      Period whenPeriod,
+      Range whenRange,
       String rationale}) = _$_RiskAssessmentPrediction;
 
   factory _RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =
@@ -8668,11 +8772,17 @@ abstract class _RiskAssessmentPrediction implements RiskAssessmentPrediction {
   @JsonKey(required: true)
   CodeableConcept get outcome;
   @override
-  Decimal get probabilityX;
+  Decimal get probabilityDecimal;
+  @override
+  Range get probabilityRange;
+  @override
+  CodeableConcept get probabilityCodeableConcept;
   @override
   Decimal get relativeRisk;
   @override
-  Period get whenX;
+  Period get whenPeriod;
+  @override
+  Range get whenRange;
   @override
   String get rationale;
   @override

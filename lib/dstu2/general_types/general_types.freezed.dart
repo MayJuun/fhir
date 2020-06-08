@@ -1458,13 +1458,15 @@ class _$AnnotationTearOff {
   _Annotation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Reference authorX,
+      Reference authorReference,
+      String authorString,
       FhirDateTime time,
       @required @JsonKey(required: true) String text}) {
     return _Annotation(
       id: id,
       extension_: extension_,
-      authorX: authorX,
+      authorReference: authorReference,
+      authorString: authorString,
       time: time,
       text: text,
     );
@@ -1478,7 +1480,8 @@ mixin _$Annotation {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  Reference get authorX;
+  Reference get authorReference;
+  String get authorString;
   FhirDateTime get time;
   @JsonKey(required: true)
   String get text;
@@ -1494,11 +1497,12 @@ abstract class $AnnotationCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Reference authorX,
+      Reference authorReference,
+      String authorString,
       FhirDateTime time,
       @JsonKey(required: true) String text});
 
-  $ReferenceCopyWith<$Res> get authorX;
+  $ReferenceCopyWith<$Res> get authorReference;
 }
 
 class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
@@ -1512,7 +1516,8 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
-    Object authorX = freezed,
+    Object authorReference = freezed,
+    Object authorString = freezed,
     Object time = freezed,
     Object text = freezed,
   }) {
@@ -1521,19 +1526,24 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
-      authorX: authorX == freezed ? _value.authorX : authorX as Reference,
+      authorReference: authorReference == freezed
+          ? _value.authorReference
+          : authorReference as Reference,
+      authorString: authorString == freezed
+          ? _value.authorString
+          : authorString as String,
       time: time == freezed ? _value.time : time as FhirDateTime,
       text: text == freezed ? _value.text : text as String,
     ));
   }
 
   @override
-  $ReferenceCopyWith<$Res> get authorX {
-    if (_value.authorX == null) {
+  $ReferenceCopyWith<$Res> get authorReference {
+    if (_value.authorReference == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.authorX, (value) {
-      return _then(_value.copyWith(authorX: value));
+    return $ReferenceCopyWith<$Res>(_value.authorReference, (value) {
+      return _then(_value.copyWith(authorReference: value));
     });
   }
 }
@@ -1546,12 +1556,13 @@ abstract class _$AnnotationCopyWith<$Res> implements $AnnotationCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Reference authorX,
+      Reference authorReference,
+      String authorString,
       FhirDateTime time,
       @JsonKey(required: true) String text});
 
   @override
-  $ReferenceCopyWith<$Res> get authorX;
+  $ReferenceCopyWith<$Res> get authorReference;
 }
 
 class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
@@ -1567,7 +1578,8 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
-    Object authorX = freezed,
+    Object authorReference = freezed,
+    Object authorString = freezed,
     Object time = freezed,
     Object text = freezed,
   }) {
@@ -1576,7 +1588,12 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
-      authorX: authorX == freezed ? _value.authorX : authorX as Reference,
+      authorReference: authorReference == freezed
+          ? _value.authorReference
+          : authorReference as Reference,
+      authorString: authorString == freezed
+          ? _value.authorString
+          : authorString as String,
       time: time == freezed ? _value.time : time as FhirDateTime,
       text: text == freezed ? _value.text : text as String,
     ));
@@ -1588,7 +1605,8 @@ class _$_Annotation implements _Annotation {
   const _$_Annotation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      this.authorX,
+      this.authorReference,
+      this.authorString,
       this.time,
       @required @JsonKey(required: true) this.text})
       : assert(text != null);
@@ -1602,7 +1620,9 @@ class _$_Annotation implements _Annotation {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  final Reference authorX;
+  final Reference authorReference;
+  @override
+  final String authorString;
   @override
   final FhirDateTime time;
   @override
@@ -1611,7 +1631,7 @@ class _$_Annotation implements _Annotation {
 
   @override
   String toString() {
-    return 'Annotation(id: $id, extension_: $extension_, authorX: $authorX, time: $time, text: $text)';
+    return 'Annotation(id: $id, extension_: $extension_, authorReference: $authorReference, authorString: $authorString, time: $time, text: $text)';
   }
 
   @override
@@ -1623,9 +1643,12 @@ class _$_Annotation implements _Annotation {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
-            (identical(other.authorX, authorX) ||
+            (identical(other.authorReference, authorReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.authorX, authorX)) &&
+                    .equals(other.authorReference, authorReference)) &&
+            (identical(other.authorString, authorString) ||
+                const DeepCollectionEquality()
+                    .equals(other.authorString, authorString)) &&
             (identical(other.time, time) ||
                 const DeepCollectionEquality().equals(other.time, time)) &&
             (identical(other.text, text) ||
@@ -1637,7 +1660,8 @@ class _$_Annotation implements _Annotation {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(authorX) ^
+      const DeepCollectionEquality().hash(authorReference) ^
+      const DeepCollectionEquality().hash(authorString) ^
       const DeepCollectionEquality().hash(time) ^
       const DeepCollectionEquality().hash(text);
 
@@ -1655,7 +1679,8 @@ abstract class _Annotation implements Annotation {
   const factory _Annotation(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Reference authorX,
+      Reference authorReference,
+      String authorString,
       FhirDateTime time,
       @required @JsonKey(required: true) String text}) = _$_Annotation;
 
@@ -1668,7 +1693,9 @@ abstract class _Annotation implements Annotation {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  Reference get authorX;
+  Reference get authorReference;
+  @override
+  String get authorString;
   @override
   FhirDateTime get time;
   @override
@@ -2517,7 +2544,8 @@ class _$SignatureTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) List<Coding> type,
       @required @JsonKey(required: true) Instant when,
-      @required @JsonKey(required: true) FhirUri whoX,
+      FhirUri whoUri,
+      Reference whoReference,
       @required @JsonKey(required: true) Code contentType,
       @required @JsonKey(required: true) Base64Binary blob}) {
     return _Signature(
@@ -2525,7 +2553,8 @@ class _$SignatureTearOff {
       extension_: extension_,
       type: type,
       when: when,
-      whoX: whoX,
+      whoUri: whoUri,
+      whoReference: whoReference,
       contentType: contentType,
       blob: blob,
     );
@@ -2543,8 +2572,8 @@ mixin _$Signature {
   List<Coding> get type;
   @JsonKey(required: true)
   Instant get when;
-  @JsonKey(required: true)
-  FhirUri get whoX;
+  FhirUri get whoUri;
+  Reference get whoReference;
   @JsonKey(required: true)
   Code get contentType;
   @JsonKey(required: true)
@@ -2562,9 +2591,12 @@ abstract class $SignatureCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) List<Coding> type,
       @JsonKey(required: true) Instant when,
-      @JsonKey(required: true) FhirUri whoX,
+      FhirUri whoUri,
+      Reference whoReference,
       @JsonKey(required: true) Code contentType,
       @JsonKey(required: true) Base64Binary blob});
+
+  $ReferenceCopyWith<$Res> get whoReference;
 }
 
 class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
@@ -2580,7 +2612,8 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
     Object extension_ = freezed,
     Object type = freezed,
     Object when = freezed,
-    Object whoX = freezed,
+    Object whoUri = freezed,
+    Object whoReference = freezed,
     Object contentType = freezed,
     Object blob = freezed,
   }) {
@@ -2591,11 +2624,24 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
           : extension_ as List<FhirExtension>,
       type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant,
-      whoX: whoX == freezed ? _value.whoX : whoX as FhirUri,
+      whoUri: whoUri == freezed ? _value.whoUri : whoUri as FhirUri,
+      whoReference: whoReference == freezed
+          ? _value.whoReference
+          : whoReference as Reference,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code,
       blob: blob == freezed ? _value.blob : blob as Base64Binary,
     ));
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get whoReference {
+    if (_value.whoReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.whoReference, (value) {
+      return _then(_value.copyWith(whoReference: value));
+    });
   }
 }
 
@@ -2609,9 +2655,13 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) List<Coding> type,
       @JsonKey(required: true) Instant when,
-      @JsonKey(required: true) FhirUri whoX,
+      FhirUri whoUri,
+      Reference whoReference,
       @JsonKey(required: true) Code contentType,
       @JsonKey(required: true) Base64Binary blob});
+
+  @override
+  $ReferenceCopyWith<$Res> get whoReference;
 }
 
 class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
@@ -2628,7 +2678,8 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object type = freezed,
     Object when = freezed,
-    Object whoX = freezed,
+    Object whoUri = freezed,
+    Object whoReference = freezed,
     Object contentType = freezed,
     Object blob = freezed,
   }) {
@@ -2639,7 +2690,10 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant,
-      whoX: whoX == freezed ? _value.whoX : whoX as FhirUri,
+      whoUri: whoUri == freezed ? _value.whoUri : whoUri as FhirUri,
+      whoReference: whoReference == freezed
+          ? _value.whoReference
+          : whoReference as Reference,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code,
       blob: blob == freezed ? _value.blob : blob as Base64Binary,
@@ -2654,12 +2708,12 @@ class _$_Signature implements _Signature {
       @JsonKey(name: 'extension') this.extension_,
       @required @JsonKey(required: true) this.type,
       @required @JsonKey(required: true) this.when,
-      @required @JsonKey(required: true) this.whoX,
+      this.whoUri,
+      this.whoReference,
       @required @JsonKey(required: true) this.contentType,
       @required @JsonKey(required: true) this.blob})
       : assert(type != null),
         assert(when != null),
-        assert(whoX != null),
         assert(contentType != null),
         assert(blob != null);
 
@@ -2678,8 +2732,9 @@ class _$_Signature implements _Signature {
   @JsonKey(required: true)
   final Instant when;
   @override
-  @JsonKey(required: true)
-  final FhirUri whoX;
+  final FhirUri whoUri;
+  @override
+  final Reference whoReference;
   @override
   @JsonKey(required: true)
   final Code contentType;
@@ -2689,7 +2744,7 @@ class _$_Signature implements _Signature {
 
   @override
   String toString() {
-    return 'Signature(id: $id, extension_: $extension_, type: $type, when: $when, whoX: $whoX, contentType: $contentType, blob: $blob)';
+    return 'Signature(id: $id, extension_: $extension_, type: $type, when: $when, whoUri: $whoUri, whoReference: $whoReference, contentType: $contentType, blob: $blob)';
   }
 
   @override
@@ -2705,8 +2760,11 @@ class _$_Signature implements _Signature {
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.when, when) ||
                 const DeepCollectionEquality().equals(other.when, when)) &&
-            (identical(other.whoX, whoX) ||
-                const DeepCollectionEquality().equals(other.whoX, whoX)) &&
+            (identical(other.whoUri, whoUri) ||
+                const DeepCollectionEquality().equals(other.whoUri, whoUri)) &&
+            (identical(other.whoReference, whoReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.whoReference, whoReference)) &&
             (identical(other.contentType, contentType) ||
                 const DeepCollectionEquality()
                     .equals(other.contentType, contentType)) &&
@@ -2721,7 +2779,8 @@ class _$_Signature implements _Signature {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(when) ^
-      const DeepCollectionEquality().hash(whoX) ^
+      const DeepCollectionEquality().hash(whoUri) ^
+      const DeepCollectionEquality().hash(whoReference) ^
       const DeepCollectionEquality().hash(contentType) ^
       const DeepCollectionEquality().hash(blob);
 
@@ -2741,7 +2800,8 @@ abstract class _Signature implements Signature {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) List<Coding> type,
       @required @JsonKey(required: true) Instant when,
-      @required @JsonKey(required: true) FhirUri whoX,
+      FhirUri whoUri,
+      Reference whoReference,
       @required @JsonKey(required: true) Code contentType,
       @required @JsonKey(required: true) Base64Binary blob}) = _$_Signature;
 
@@ -2760,8 +2820,9 @@ abstract class _Signature implements Signature {
   @JsonKey(required: true)
   Instant get when;
   @override
-  @JsonKey(required: true)
-  FhirUri get whoX;
+  FhirUri get whoUri;
+  @override
+  Reference get whoReference;
   @override
   @JsonKey(required: true)
   Code get contentType;

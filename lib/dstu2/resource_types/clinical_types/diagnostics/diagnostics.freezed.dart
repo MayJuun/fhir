@@ -848,9 +848,8 @@ class _$DiagnosticReportTearOff {
       @JsonKey(required: true)
           Reference subject,
       Reference encounter,
-      @required
-      @JsonKey(required: true)
-          FhirDateTime effectiveX,
+      FhirDateTime effectiveDateTime,
+      Period effectivePeriod,
       @required
       @JsonKey(required: true)
           Instant issued,
@@ -881,7 +880,8 @@ class _$DiagnosticReportTearOff {
       code: code,
       subject: subject,
       encounter: encounter,
-      effectiveX: effectiveX,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
       issued: issued,
       performer: performer,
       request: request,
@@ -920,8 +920,8 @@ mixin _$DiagnosticReport {
   @JsonKey(required: true)
   Reference get subject;
   Reference get encounter;
-  @JsonKey(required: true)
-  FhirDateTime get effectiveX;
+  FhirDateTime get effectiveDateTime;
+  Period get effectivePeriod;
   @JsonKey(required: true)
   Instant get issued;
   @JsonKey(required: true)
@@ -964,8 +964,8 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       @JsonKey(required: true)
           Reference subject,
       Reference encounter,
-      @JsonKey(required: true)
-          FhirDateTime effectiveX,
+      FhirDateTime effectiveDateTime,
+      Period effectivePeriod,
       @JsonKey(required: true)
           Instant issued,
       @JsonKey(required: true)
@@ -986,6 +986,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get encounter;
+  $PeriodCopyWith<$Res> get effectivePeriod;
   $ReferenceCopyWith<$Res> get performer;
 }
 
@@ -1014,7 +1015,8 @@ class _$DiagnosticReportCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
-    Object effectiveX = freezed,
+    Object effectiveDateTime = freezed,
+    Object effectivePeriod = freezed,
     Object issued = freezed,
     Object performer = freezed,
     Object request = freezed,
@@ -1056,9 +1058,12 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      effectiveX: effectiveX == freezed
-          ? _value.effectiveX
-          : effectiveX as FhirDateTime,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod as Period,
       issued: issued == freezed ? _value.issued : issued as Instant,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
@@ -1154,6 +1159,16 @@ class _$DiagnosticReportCopyWithImpl<$Res>
   }
 
   @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res> get performer {
     if (_value.performer == null) {
       return null;
@@ -1191,8 +1206,8 @@ abstract class _$DiagnosticReportCopyWith<$Res>
       @JsonKey(required: true)
           Reference subject,
       Reference encounter,
-      @JsonKey(required: true)
-          FhirDateTime effectiveX,
+      FhirDateTime effectiveDateTime,
+      Period effectivePeriod,
       @JsonKey(required: true)
           Instant issued,
       @JsonKey(required: true)
@@ -1220,6 +1235,8 @@ abstract class _$DiagnosticReportCopyWith<$Res>
   $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res> get encounter;
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod;
   @override
   $ReferenceCopyWith<$Res> get performer;
 }
@@ -1251,7 +1268,8 @@ class __$DiagnosticReportCopyWithImpl<$Res>
     Object code = freezed,
     Object subject = freezed,
     Object encounter = freezed,
-    Object effectiveX = freezed,
+    Object effectiveDateTime = freezed,
+    Object effectivePeriod = freezed,
     Object issued = freezed,
     Object performer = freezed,
     Object request = freezed,
@@ -1293,9 +1311,12 @@ class __$DiagnosticReportCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      effectiveX: effectiveX == freezed
-          ? _value.effectiveX
-          : effectiveX as FhirDateTime,
+      effectiveDateTime: effectiveDateTime == freezed
+          ? _value.effectiveDateTime
+          : effectiveDateTime as FhirDateTime,
+      effectivePeriod: effectivePeriod == freezed
+          ? _value.effectivePeriod
+          : effectivePeriod as Period,
       issued: issued == freezed ? _value.issued : issued as Instant,
       performer:
           performer == freezed ? _value.performer : performer as Reference,
@@ -1347,9 +1368,8 @@ class _$_DiagnosticReport implements _DiagnosticReport {
       @JsonKey(required: true)
           this.subject,
       this.encounter,
-      @required
-      @JsonKey(required: true)
-          this.effectiveX,
+      this.effectiveDateTime,
+      this.effectivePeriod,
       @required
       @JsonKey(required: true)
           this.issued,
@@ -1367,7 +1387,6 @@ class _$_DiagnosticReport implements _DiagnosticReport {
       : assert(status != null),
         assert(code != null),
         assert(subject != null),
-        assert(effectiveX != null),
         assert(issued != null),
         assert(performer != null);
 
@@ -1410,8 +1429,9 @@ class _$_DiagnosticReport implements _DiagnosticReport {
   @override
   final Reference encounter;
   @override
-  @JsonKey(required: true)
-  final FhirDateTime effectiveX;
+  final FhirDateTime effectiveDateTime;
+  @override
+  final Period effectivePeriod;
   @override
   @JsonKey(required: true)
   final Instant issued;
@@ -1437,7 +1457,7 @@ class _$_DiagnosticReport implements _DiagnosticReport {
 
   @override
   String toString() {
-    return 'DiagnosticReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveX: $effectiveX, issued: $issued, performer: $performer, request: $request, specimen: $specimen, result: $result, imagingStudy: $imagingStudy, image: $image, conclusion: $conclusion, codedDiagnosis: $codedDiagnosis, presentedForm: $presentedForm)';
+    return 'DiagnosticReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, issued: $issued, performer: $performer, request: $request, specimen: $specimen, result: $result, imagingStudy: $imagingStudy, image: $image, conclusion: $conclusion, codedDiagnosis: $codedDiagnosis, presentedForm: $presentedForm)';
   }
 
   @override
@@ -1484,9 +1504,12 @@ class _$_DiagnosticReport implements _DiagnosticReport {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
-            (identical(other.effectiveX, effectiveX) ||
+            (identical(other.effectiveDateTime, effectiveDateTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.effectiveX, effectiveX)) &&
+                    .equals(other.effectiveDateTime, effectiveDateTime)) &&
+            (identical(other.effectivePeriod, effectivePeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.effectivePeriod, effectivePeriod)) &&
             (identical(other.issued, issued) ||
                 const DeepCollectionEquality().equals(other.issued, issued)) &&
             (identical(other.performer, performer) ||
@@ -1509,10 +1532,8 @@ class _$_DiagnosticReport implements _DiagnosticReport {
                 const DeepCollectionEquality()
                     .equals(other.conclusion, conclusion)) &&
             (identical(other.codedDiagnosis, codedDiagnosis) ||
-                const DeepCollectionEquality()
-                    .equals(other.codedDiagnosis, codedDiagnosis)) &&
-            (identical(other.presentedForm, presentedForm) ||
-                const DeepCollectionEquality().equals(other.presentedForm, presentedForm)));
+                const DeepCollectionEquality().equals(other.codedDiagnosis, codedDiagnosis)) &&
+            (identical(other.presentedForm, presentedForm) || const DeepCollectionEquality().equals(other.presentedForm, presentedForm)));
   }
 
   @override
@@ -1533,7 +1554,8 @@ class _$_DiagnosticReport implements _DiagnosticReport {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(effectiveX) ^
+      const DeepCollectionEquality().hash(effectiveDateTime) ^
+      const DeepCollectionEquality().hash(effectivePeriod) ^
       const DeepCollectionEquality().hash(issued) ^
       const DeepCollectionEquality().hash(performer) ^
       const DeepCollectionEquality().hash(request) ^
@@ -1580,9 +1602,8 @@ abstract class _DiagnosticReport implements DiagnosticReport {
       @JsonKey(required: true)
           Reference subject,
       Reference encounter,
-      @required
-      @JsonKey(required: true)
-          FhirDateTime effectiveX,
+      FhirDateTime effectiveDateTime,
+      Period effectivePeriod,
       @required
       @JsonKey(required: true)
           Instant issued,
@@ -1637,8 +1658,9 @@ abstract class _DiagnosticReport implements DiagnosticReport {
   @override
   Reference get encounter;
   @override
-  @JsonKey(required: true)
-  FhirDateTime get effectiveX;
+  FhirDateTime get effectiveDateTime;
+  @override
+  Period get effectivePeriod;
   @override
   @JsonKey(required: true)
   Instant get issued;
@@ -7504,7 +7526,8 @@ class _$SpecimenCollectionTearOff {
       FhirExtension modifierExtension,
       Reference collector,
       List<String> comment,
-      FhirDateTime collectedX,
+      FhirDateTime collectedDateTime,
+      Period collectedPeriod,
       Quantity quantity,
       CodeableConcept method,
       CodeableConcept bodySite}) {
@@ -7514,7 +7537,8 @@ class _$SpecimenCollectionTearOff {
       modifierExtension: modifierExtension,
       collector: collector,
       comment: comment,
-      collectedX: collectedX,
+      collectedDateTime: collectedDateTime,
+      collectedPeriod: collectedPeriod,
       quantity: quantity,
       method: method,
       bodySite: bodySite,
@@ -7532,7 +7556,8 @@ mixin _$SpecimenCollection {
   FhirExtension get modifierExtension;
   Reference get collector;
   List<String> get comment;
-  FhirDateTime get collectedX;
+  FhirDateTime get collectedDateTime;
+  Period get collectedPeriod;
   Quantity get quantity;
   CodeableConcept get method;
   CodeableConcept get bodySite;
@@ -7551,13 +7576,15 @@ abstract class $SpecimenCollectionCopyWith<$Res> {
       FhirExtension modifierExtension,
       Reference collector,
       List<String> comment,
-      FhirDateTime collectedX,
+      FhirDateTime collectedDateTime,
+      Period collectedPeriod,
       Quantity quantity,
       CodeableConcept method,
       CodeableConcept bodySite});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get collector;
+  $PeriodCopyWith<$Res> get collectedPeriod;
   $QuantityCopyWith<$Res> get quantity;
   $CodeableConceptCopyWith<$Res> get method;
   $CodeableConceptCopyWith<$Res> get bodySite;
@@ -7578,7 +7605,8 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object collector = freezed,
     Object comment = freezed,
-    Object collectedX = freezed,
+    Object collectedDateTime = freezed,
+    Object collectedPeriod = freezed,
     Object quantity = freezed,
     Object method = freezed,
     Object bodySite = freezed,
@@ -7594,9 +7622,12 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
       collector:
           collector == freezed ? _value.collector : collector as Reference,
       comment: comment == freezed ? _value.comment : comment as List<String>,
-      collectedX: collectedX == freezed
-          ? _value.collectedX
-          : collectedX as FhirDateTime,
+      collectedDateTime: collectedDateTime == freezed
+          ? _value.collectedDateTime
+          : collectedDateTime as FhirDateTime,
+      collectedPeriod: collectedPeriod == freezed
+          ? _value.collectedPeriod
+          : collectedPeriod as Period,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       method: method == freezed ? _value.method : method as CodeableConcept,
       bodySite:
@@ -7621,6 +7652,16 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.collector, (value) {
       return _then(_value.copyWith(collector: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get collectedPeriod {
+    if (_value.collectedPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.collectedPeriod, (value) {
+      return _then(_value.copyWith(collectedPeriod: value));
     });
   }
 
@@ -7667,7 +7708,8 @@ abstract class _$SpecimenCollectionCopyWith<$Res>
       FhirExtension modifierExtension,
       Reference collector,
       List<String> comment,
-      FhirDateTime collectedX,
+      FhirDateTime collectedDateTime,
+      Period collectedPeriod,
       Quantity quantity,
       CodeableConcept method,
       CodeableConcept bodySite});
@@ -7676,6 +7718,8 @@ abstract class _$SpecimenCollectionCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ReferenceCopyWith<$Res> get collector;
+  @override
+  $PeriodCopyWith<$Res> get collectedPeriod;
   @override
   $QuantityCopyWith<$Res> get quantity;
   @override
@@ -7701,7 +7745,8 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object collector = freezed,
     Object comment = freezed,
-    Object collectedX = freezed,
+    Object collectedDateTime = freezed,
+    Object collectedPeriod = freezed,
     Object quantity = freezed,
     Object method = freezed,
     Object bodySite = freezed,
@@ -7717,9 +7762,12 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
       collector:
           collector == freezed ? _value.collector : collector as Reference,
       comment: comment == freezed ? _value.comment : comment as List<String>,
-      collectedX: collectedX == freezed
-          ? _value.collectedX
-          : collectedX as FhirDateTime,
+      collectedDateTime: collectedDateTime == freezed
+          ? _value.collectedDateTime
+          : collectedDateTime as FhirDateTime,
+      collectedPeriod: collectedPeriod == freezed
+          ? _value.collectedPeriod
+          : collectedPeriod as Period,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       method: method == freezed ? _value.method : method as CodeableConcept,
       bodySite:
@@ -7736,7 +7784,8 @@ class _$_SpecimenCollection implements _SpecimenCollection {
       this.modifierExtension,
       this.collector,
       this.comment,
-      this.collectedX,
+      this.collectedDateTime,
+      this.collectedPeriod,
       this.quantity,
       this.method,
       this.bodySite});
@@ -7756,7 +7805,9 @@ class _$_SpecimenCollection implements _SpecimenCollection {
   @override
   final List<String> comment;
   @override
-  final FhirDateTime collectedX;
+  final FhirDateTime collectedDateTime;
+  @override
+  final Period collectedPeriod;
   @override
   final Quantity quantity;
   @override
@@ -7766,7 +7817,7 @@ class _$_SpecimenCollection implements _SpecimenCollection {
 
   @override
   String toString() {
-    return 'SpecimenCollection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, collector: $collector, comment: $comment, collectedX: $collectedX, quantity: $quantity, method: $method, bodySite: $bodySite)';
+    return 'SpecimenCollection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, collector: $collector, comment: $comment, collectedDateTime: $collectedDateTime, collectedPeriod: $collectedPeriod, quantity: $quantity, method: $method, bodySite: $bodySite)';
   }
 
   @override
@@ -7787,9 +7838,12 @@ class _$_SpecimenCollection implements _SpecimenCollection {
             (identical(other.comment, comment) ||
                 const DeepCollectionEquality()
                     .equals(other.comment, comment)) &&
-            (identical(other.collectedX, collectedX) ||
+            (identical(other.collectedDateTime, collectedDateTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.collectedX, collectedX)) &&
+                    .equals(other.collectedDateTime, collectedDateTime)) &&
+            (identical(other.collectedPeriod, collectedPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.collectedPeriod, collectedPeriod)) &&
             (identical(other.quantity, quantity) ||
                 const DeepCollectionEquality()
                     .equals(other.quantity, quantity)) &&
@@ -7808,7 +7862,8 @@ class _$_SpecimenCollection implements _SpecimenCollection {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(collector) ^
       const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(collectedX) ^
+      const DeepCollectionEquality().hash(collectedDateTime) ^
+      const DeepCollectionEquality().hash(collectedPeriod) ^
       const DeepCollectionEquality().hash(quantity) ^
       const DeepCollectionEquality().hash(method) ^
       const DeepCollectionEquality().hash(bodySite);
@@ -7830,7 +7885,8 @@ abstract class _SpecimenCollection implements SpecimenCollection {
       FhirExtension modifierExtension,
       Reference collector,
       List<String> comment,
-      FhirDateTime collectedX,
+      FhirDateTime collectedDateTime,
+      Period collectedPeriod,
       Quantity quantity,
       CodeableConcept method,
       CodeableConcept bodySite}) = _$_SpecimenCollection;
@@ -7850,7 +7906,9 @@ abstract class _SpecimenCollection implements SpecimenCollection {
   @override
   List<String> get comment;
   @override
-  FhirDateTime get collectedX;
+  FhirDateTime get collectedDateTime;
+  @override
+  Period get collectedPeriod;
   @override
   Quantity get quantity;
   @override
@@ -8152,7 +8210,8 @@ class _$SpecimenContainerTearOff {
       CodeableConcept type,
       Quantity capacity,
       Quantity specimenQuantity,
-      CodeableConcept additiveX}) {
+      CodeableConcept additiveCodeableConcept,
+      Reference additiveReference}) {
     return _SpecimenContainer(
       id: id,
       extension_: extension_,
@@ -8162,7 +8221,8 @@ class _$SpecimenContainerTearOff {
       type: type,
       capacity: capacity,
       specimenQuantity: specimenQuantity,
-      additiveX: additiveX,
+      additiveCodeableConcept: additiveCodeableConcept,
+      additiveReference: additiveReference,
     );
   }
 }
@@ -8180,7 +8240,8 @@ mixin _$SpecimenContainer {
   CodeableConcept get type;
   Quantity get capacity;
   Quantity get specimenQuantity;
-  CodeableConcept get additiveX;
+  CodeableConcept get additiveCodeableConcept;
+  Reference get additiveReference;
 
   Map<String, dynamic> toJson();
   $SpecimenContainerCopyWith<SpecimenContainer> get copyWith;
@@ -8199,13 +8260,15 @@ abstract class $SpecimenContainerCopyWith<$Res> {
       CodeableConcept type,
       Quantity capacity,
       Quantity specimenQuantity,
-      CodeableConcept additiveX});
+      CodeableConcept additiveCodeableConcept,
+      Reference additiveReference});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get type;
   $QuantityCopyWith<$Res> get capacity;
   $QuantityCopyWith<$Res> get specimenQuantity;
-  $CodeableConceptCopyWith<$Res> get additiveX;
+  $CodeableConceptCopyWith<$Res> get additiveCodeableConcept;
+  $ReferenceCopyWith<$Res> get additiveReference;
 }
 
 class _$SpecimenContainerCopyWithImpl<$Res>
@@ -8226,7 +8289,8 @@ class _$SpecimenContainerCopyWithImpl<$Res>
     Object type = freezed,
     Object capacity = freezed,
     Object specimenQuantity = freezed,
-    Object additiveX = freezed,
+    Object additiveCodeableConcept = freezed,
+    Object additiveReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -8246,9 +8310,12 @@ class _$SpecimenContainerCopyWithImpl<$Res>
       specimenQuantity: specimenQuantity == freezed
           ? _value.specimenQuantity
           : specimenQuantity as Quantity,
-      additiveX: additiveX == freezed
-          ? _value.additiveX
-          : additiveX as CodeableConcept,
+      additiveCodeableConcept: additiveCodeableConcept == freezed
+          ? _value.additiveCodeableConcept
+          : additiveCodeableConcept as CodeableConcept,
+      additiveReference: additiveReference == freezed
+          ? _value.additiveReference
+          : additiveReference as Reference,
     ));
   }
 
@@ -8293,12 +8360,23 @@ class _$SpecimenContainerCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get additiveX {
-    if (_value.additiveX == null) {
+  $CodeableConceptCopyWith<$Res> get additiveCodeableConcept {
+    if (_value.additiveCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.additiveX, (value) {
-      return _then(_value.copyWith(additiveX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.additiveCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(additiveCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get additiveReference {
+    if (_value.additiveReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.additiveReference, (value) {
+      return _then(_value.copyWith(additiveReference: value));
     });
   }
 }
@@ -8318,7 +8396,8 @@ abstract class _$SpecimenContainerCopyWith<$Res>
       CodeableConcept type,
       Quantity capacity,
       Quantity specimenQuantity,
-      CodeableConcept additiveX});
+      CodeableConcept additiveCodeableConcept,
+      Reference additiveReference});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -8329,7 +8408,9 @@ abstract class _$SpecimenContainerCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get specimenQuantity;
   @override
-  $CodeableConceptCopyWith<$Res> get additiveX;
+  $CodeableConceptCopyWith<$Res> get additiveCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get additiveReference;
 }
 
 class __$SpecimenContainerCopyWithImpl<$Res>
@@ -8352,7 +8433,8 @@ class __$SpecimenContainerCopyWithImpl<$Res>
     Object type = freezed,
     Object capacity = freezed,
     Object specimenQuantity = freezed,
-    Object additiveX = freezed,
+    Object additiveCodeableConcept = freezed,
+    Object additiveReference = freezed,
   }) {
     return _then(_SpecimenContainer(
       id: id == freezed ? _value.id : id as Id,
@@ -8372,9 +8454,12 @@ class __$SpecimenContainerCopyWithImpl<$Res>
       specimenQuantity: specimenQuantity == freezed
           ? _value.specimenQuantity
           : specimenQuantity as Quantity,
-      additiveX: additiveX == freezed
-          ? _value.additiveX
-          : additiveX as CodeableConcept,
+      additiveCodeableConcept: additiveCodeableConcept == freezed
+          ? _value.additiveCodeableConcept
+          : additiveCodeableConcept as CodeableConcept,
+      additiveReference: additiveReference == freezed
+          ? _value.additiveReference
+          : additiveReference as Reference,
     ));
   }
 }
@@ -8390,7 +8475,8 @@ class _$_SpecimenContainer implements _SpecimenContainer {
       this.type,
       this.capacity,
       this.specimenQuantity,
-      this.additiveX});
+      this.additiveCodeableConcept,
+      this.additiveReference});
 
   factory _$_SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$_$_SpecimenContainerFromJson(json);
@@ -8413,11 +8499,13 @@ class _$_SpecimenContainer implements _SpecimenContainer {
   @override
   final Quantity specimenQuantity;
   @override
-  final CodeableConcept additiveX;
+  final CodeableConcept additiveCodeableConcept;
+  @override
+  final Reference additiveReference;
 
   @override
   String toString() {
-    return 'SpecimenContainer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, description: $description, type: $type, capacity: $capacity, specimenQuantity: $specimenQuantity, additiveX: $additiveX)';
+    return 'SpecimenContainer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, description: $description, type: $type, capacity: $capacity, specimenQuantity: $specimenQuantity, additiveCodeableConcept: $additiveCodeableConcept, additiveReference: $additiveReference)';
   }
 
   @override
@@ -8446,9 +8534,13 @@ class _$_SpecimenContainer implements _SpecimenContainer {
             (identical(other.specimenQuantity, specimenQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.specimenQuantity, specimenQuantity)) &&
-            (identical(other.additiveX, additiveX) ||
+            (identical(
+                    other.additiveCodeableConcept, additiveCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.additiveCodeableConcept, additiveCodeableConcept)) &&
+            (identical(other.additiveReference, additiveReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.additiveX, additiveX)));
+                    .equals(other.additiveReference, additiveReference)));
   }
 
   @override
@@ -8462,7 +8554,8 @@ class _$_SpecimenContainer implements _SpecimenContainer {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(capacity) ^
       const DeepCollectionEquality().hash(specimenQuantity) ^
-      const DeepCollectionEquality().hash(additiveX);
+      const DeepCollectionEquality().hash(additiveCodeableConcept) ^
+      const DeepCollectionEquality().hash(additiveReference);
 
   @override
   _$SpecimenContainerCopyWith<_SpecimenContainer> get copyWith =>
@@ -8484,7 +8577,8 @@ abstract class _SpecimenContainer implements SpecimenContainer {
       CodeableConcept type,
       Quantity capacity,
       Quantity specimenQuantity,
-      CodeableConcept additiveX}) = _$_SpecimenContainer;
+      CodeableConcept additiveCodeableConcept,
+      Reference additiveReference}) = _$_SpecimenContainer;
 
   factory _SpecimenContainer.fromJson(Map<String, dynamic> json) =
       _$_SpecimenContainer.fromJson;
@@ -8507,7 +8601,9 @@ abstract class _SpecimenContainer implements SpecimenContainer {
   @override
   Quantity get specimenQuantity;
   @override
-  CodeableConcept get additiveX;
+  CodeableConcept get additiveCodeableConcept;
+  @override
+  Reference get additiveReference;
   @override
   _$SpecimenContainerCopyWith<_SpecimenContainer> get copyWith;
 }

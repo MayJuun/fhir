@@ -86,7 +86,9 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     String description,
-    @JsonKey(required: true) @required List<ImplementationGuideResource> resource,
+    @JsonKey(required: true)
+    @required
+        List<ImplementationGuideResource> resource,
   }) = _ImplementationGuidePackage;
 
   factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
@@ -140,7 +142,8 @@ abstract class ImplementationGuideResource with _$ImplementationGuideResource {
     String name,
     String description,
     String acronym,
-    @JsonKey(required: true) @required FhirUri sourceX,
+    FhirUri sourceUri,
+    Reference sourceReference,
     Reference exampleFor,
   }) = _ImplementationGuideResource;
 

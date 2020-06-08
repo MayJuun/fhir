@@ -265,9 +265,13 @@ _$_DeviceUseRequest _$_$_DeviceUseRequestFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    bodySiteX: json['bodySiteX'] == null
+    bodySiteCodeableConcept: json['bodySiteCodeableConcept'] == null
         ? null
-        : CodeableConcept.fromJson(json['bodySiteX'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(
+            json['bodySiteCodeableConcept'] as Map<String, dynamic>),
+    bodySiteReference: json['bodySiteReference'] == null
+        ? null
+        : Reference.fromJson(json['bodySiteReference'] as Map<String, dynamic>),
     status: _$enumDecodeNullable(
         _$DeviceUseRequestStatusEnumMap, json['status'],
         unknownValue: DeviceUseRequestStatus.unknown),
@@ -336,7 +340,9 @@ Map<String, dynamic> _$_$_DeviceUseRequestToJson(_$_DeviceUseRequest instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('bodySiteX', instance.bodySiteX?.toJson());
+  writeNotNull(
+      'bodySiteCodeableConcept', instance.bodySiteCodeableConcept?.toJson());
+  writeNotNull('bodySiteReference', instance.bodySiteReference?.toJson());
   writeNotNull('status', _$DeviceUseRequestStatusEnumMap[instance.status]);
   writeNotNull('device', instance.device?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());

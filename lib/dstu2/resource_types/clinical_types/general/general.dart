@@ -418,9 +418,12 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept outcome,
-    Decimal probabilityX,
+    Decimal probabilityDecimal,
+    Range probabilityRange,
+    CodeableConcept probabilityCodeableConcept,
     Decimal relativeRisk,
-    Period whenX,
+    Period whenPeriod,
+    Range whenRange,
     String rationale,
   }) = _RiskAssessmentPrediction;
 

@@ -1182,7 +1182,8 @@ class _$DeviceUseRequestTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept bodySiteX,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
           DeviceUseRequestStatus status,
       @required
@@ -1213,7 +1214,8 @@ class _$DeviceUseRequestTearOff {
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      bodySiteX: bodySiteX,
+      bodySiteCodeableConcept: bodySiteCodeableConcept,
+      bodySiteReference: bodySiteReference,
       status: status,
       device: device,
       encounter: encounter,
@@ -1247,7 +1249,8 @@ mixin _$DeviceUseRequest {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  CodeableConcept get bodySiteX;
+  CodeableConcept get bodySiteCodeableConcept;
+  Reference get bodySiteReference;
   @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
   DeviceUseRequestStatus get status;
   @JsonKey(required: true)
@@ -1287,7 +1290,8 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept bodySiteX,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
           DeviceUseRequestStatus status,
       @JsonKey(required: true)
@@ -1310,7 +1314,8 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get bodySiteX;
+  $CodeableConceptCopyWith<$Res> get bodySiteCodeableConcept;
+  $ReferenceCopyWith<$Res> get bodySiteReference;
   $ReferenceCopyWith<$Res> get device;
   $ReferenceCopyWith<$Res> get encounter;
   $ReferenceCopyWith<$Res> get subject;
@@ -1337,7 +1342,8 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object bodySiteX = freezed,
+    Object bodySiteCodeableConcept = freezed,
+    Object bodySiteReference = freezed,
     Object status = freezed,
     Object device = freezed,
     Object encounter = freezed,
@@ -1372,9 +1378,12 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      bodySiteX: bodySiteX == freezed
-          ? _value.bodySiteX
-          : bodySiteX as CodeableConcept,
+      bodySiteCodeableConcept: bodySiteCodeableConcept == freezed
+          ? _value.bodySiteCodeableConcept
+          : bodySiteCodeableConcept as CodeableConcept,
+      bodySiteReference: bodySiteReference == freezed
+          ? _value.bodySiteReference
+          : bodySiteReference as Reference,
       status:
           status == freezed ? _value.status : status as DeviceUseRequestStatus,
       device: device == freezed ? _value.device : device as Reference,
@@ -1442,12 +1451,23 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get bodySiteX {
-    if (_value.bodySiteX == null) {
+  $CodeableConceptCopyWith<$Res> get bodySiteCodeableConcept {
+    if (_value.bodySiteCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.bodySiteX, (value) {
-      return _then(_value.copyWith(bodySiteX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.bodySiteCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(bodySiteCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get bodySiteReference {
+    if (_value.bodySiteReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.bodySiteReference, (value) {
+      return _then(_value.copyWith(bodySiteReference: value));
     });
   }
 
@@ -1520,7 +1540,8 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept bodySiteX,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
           DeviceUseRequestStatus status,
       @JsonKey(required: true)
@@ -1547,7 +1568,9 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $CodeableConceptCopyWith<$Res> get bodySiteX;
+  $CodeableConceptCopyWith<$Res> get bodySiteCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get bodySiteReference;
   @override
   $ReferenceCopyWith<$Res> get device;
   @override
@@ -1581,7 +1604,8 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
     Object contained = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object bodySiteX = freezed,
+    Object bodySiteCodeableConcept = freezed,
+    Object bodySiteReference = freezed,
     Object status = freezed,
     Object device = freezed,
     Object encounter = freezed,
@@ -1616,9 +1640,12 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      bodySiteX: bodySiteX == freezed
-          ? _value.bodySiteX
-          : bodySiteX as CodeableConcept,
+      bodySiteCodeableConcept: bodySiteCodeableConcept == freezed
+          ? _value.bodySiteCodeableConcept
+          : bodySiteCodeableConcept as CodeableConcept,
+      bodySiteReference: bodySiteReference == freezed
+          ? _value.bodySiteReference
+          : bodySiteReference as Reference,
       status:
           status == freezed ? _value.status : status as DeviceUseRequestStatus,
       device: device == freezed ? _value.device : device as Reference,
@@ -1670,7 +1697,8 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
-      this.bodySiteX,
+      this.bodySiteCodeableConcept,
+      this.bodySiteReference,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
           this.status,
       @required
@@ -1718,7 +1746,9 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
   @override
   final FhirExtension modifierExtension;
   @override
-  final CodeableConcept bodySiteX;
+  final CodeableConcept bodySiteCodeableConcept;
+  @override
+  final Reference bodySiteReference;
   @override
   @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
   final DeviceUseRequestStatus status;
@@ -1754,7 +1784,7 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
 
   @override
   String toString() {
-    return 'DeviceUseRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteX: $bodySiteX, status: $status, device: $device, encounter: $encounter, identifier: $identifier, indication: $indication, notes: $notes, prnReason: $prnReason, orderedOn: $orderedOn, recordedOn: $recordedOn, subject: $subject, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime, priority: $priority)';
+    return 'DeviceUseRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteCodeableConcept: $bodySiteCodeableConcept, bodySiteReference: $bodySiteReference, status: $status, device: $device, encounter: $encounter, identifier: $identifier, indication: $indication, notes: $notes, prnReason: $prnReason, orderedOn: $orderedOn, recordedOn: $recordedOn, subject: $subject, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime, priority: $priority)';
   }
 
   @override
@@ -1785,9 +1815,12 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.bodySiteX, bodySiteX) ||
+            (identical(other.bodySiteCodeableConcept, bodySiteCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.bodySiteCodeableConcept, bodySiteCodeableConcept)) &&
+            (identical(other.bodySiteReference, bodySiteReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.bodySiteX, bodySiteX)) &&
+                    .equals(other.bodySiteReference, bodySiteReference)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.device, device) ||
@@ -1815,18 +1848,10 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
             (identical(other.subject, subject) ||
                 const DeepCollectionEquality()
                     .equals(other.subject, subject)) &&
-            (identical(other.timingTiming, timingTiming) ||
-                const DeepCollectionEquality()
-                    .equals(other.timingTiming, timingTiming)) &&
-            (identical(other.timingPeriod, timingPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.timingPeriod, timingPeriod)) &&
-            (identical(other.timingDateTime, timingDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.timingDateTime, timingDateTime)) &&
-            (identical(other.priority, priority) ||
-                const DeepCollectionEquality()
-                    .equals(other.priority, priority)));
+            (identical(other.timingTiming, timingTiming) || const DeepCollectionEquality().equals(other.timingTiming, timingTiming)) &&
+            (identical(other.timingPeriod, timingPeriod) || const DeepCollectionEquality().equals(other.timingPeriod, timingPeriod)) &&
+            (identical(other.timingDateTime, timingDateTime) || const DeepCollectionEquality().equals(other.timingDateTime, timingDateTime)) &&
+            (identical(other.priority, priority) || const DeepCollectionEquality().equals(other.priority, priority)));
   }
 
   @override
@@ -1841,7 +1866,8 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(bodySiteX) ^
+      const DeepCollectionEquality().hash(bodySiteCodeableConcept) ^
+      const DeepCollectionEquality().hash(bodySiteReference) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(device) ^
       const DeepCollectionEquality().hash(encounter) ^
@@ -1880,7 +1906,8 @@ abstract class _DeviceUseRequest implements DeviceUseRequest {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept bodySiteX,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
           DeviceUseRequestStatus status,
       @required
@@ -1926,7 +1953,9 @@ abstract class _DeviceUseRequest implements DeviceUseRequest {
   @override
   FhirExtension get modifierExtension;
   @override
-  CodeableConcept get bodySiteX;
+  CodeableConcept get bodySiteCodeableConcept;
+  @override
+  Reference get bodySiteReference;
   @override
   @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
   DeviceUseRequestStatus get status;

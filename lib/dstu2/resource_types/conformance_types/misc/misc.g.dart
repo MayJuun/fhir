@@ -415,7 +415,7 @@ const _$PageKindEnumMap = {
 
 _$_ImplementationGuideResource _$_$_ImplementationGuideResourceFromJson(
     Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['purpose', 'sourceX']);
+  $checkKeys(json, requiredKeys: const ['purpose']);
   return _$_ImplementationGuideResource(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension_: (json['extension'] as List)
@@ -432,9 +432,12 @@ _$_ImplementationGuideResource _$_$_ImplementationGuideResourceFromJson(
     name: json['name'] as String,
     description: json['description'] as String,
     acronym: json['acronym'] as String,
-    sourceX: json['sourceX'] == null
+    sourceUri: json['sourceUri'] == null
         ? null
-        : FhirUri.fromJson(json['sourceX'] as String),
+        : FhirUri.fromJson(json['sourceUri'] as String),
+    sourceReference: json['sourceReference'] == null
+        ? null
+        : Reference.fromJson(json['sourceReference'] as Map<String, dynamic>),
     exampleFor: json['exampleFor'] == null
         ? null
         : Reference.fromJson(json['exampleFor'] as Map<String, dynamic>),
@@ -459,7 +462,8 @@ Map<String, dynamic> _$_$_ImplementationGuideResourceToJson(
   writeNotNull('name', instance.name);
   writeNotNull('description', instance.description);
   writeNotNull('acronym', instance.acronym);
-  writeNotNull('sourceX', instance.sourceX?.toJson());
+  writeNotNull('sourceUri', instance.sourceUri?.toJson());
+  writeNotNull('sourceReference', instance.sourceReference?.toJson());
   writeNotNull('exampleFor', instance.exampleFor?.toJson());
   return val;
 }

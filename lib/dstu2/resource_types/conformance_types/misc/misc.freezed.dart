@@ -2234,9 +2234,8 @@ class _$ImplementationGuideResourceTearOff {
       String name,
       String description,
       String acronym,
-      @required
-      @JsonKey(required: true)
-          FhirUri sourceX,
+      FhirUri sourceUri,
+      Reference sourceReference,
       Reference exampleFor}) {
     return _ImplementationGuideResource(
       id: id,
@@ -2246,7 +2245,8 @@ class _$ImplementationGuideResourceTearOff {
       name: name,
       description: description,
       acronym: acronym,
-      sourceX: sourceX,
+      sourceUri: sourceUri,
+      sourceReference: sourceReference,
       exampleFor: exampleFor,
     );
   }
@@ -2265,8 +2265,8 @@ mixin _$ImplementationGuideResource {
   String get name;
   String get description;
   String get acronym;
-  @JsonKey(required: true)
-  FhirUri get sourceX;
+  FhirUri get sourceUri;
+  Reference get sourceReference;
   Reference get exampleFor;
 
   Map<String, dynamic> toJson();
@@ -2289,11 +2289,12 @@ abstract class $ImplementationGuideResourceCopyWith<$Res> {
       String name,
       String description,
       String acronym,
-      @JsonKey(required: true)
-          FhirUri sourceX,
+      FhirUri sourceUri,
+      Reference sourceReference,
       Reference exampleFor});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ReferenceCopyWith<$Res> get sourceReference;
   $ReferenceCopyWith<$Res> get exampleFor;
 }
 
@@ -2314,7 +2315,8 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
     Object name = freezed,
     Object description = freezed,
     Object acronym = freezed,
-    Object sourceX = freezed,
+    Object sourceUri = freezed,
+    Object sourceReference = freezed,
     Object exampleFor = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2330,7 +2332,10 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       acronym: acronym == freezed ? _value.acronym : acronym as String,
-      sourceX: sourceX == freezed ? _value.sourceX : sourceX as FhirUri,
+      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
+      sourceReference: sourceReference == freezed
+          ? _value.sourceReference
+          : sourceReference as Reference,
       exampleFor:
           exampleFor == freezed ? _value.exampleFor : exampleFor as Reference,
     ));
@@ -2343,6 +2348,16 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get sourceReference {
+    if (_value.sourceReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.sourceReference, (value) {
+      return _then(_value.copyWith(sourceReference: value));
     });
   }
 
@@ -2374,12 +2389,14 @@ abstract class _$ImplementationGuideResourceCopyWith<$Res>
       String name,
       String description,
       String acronym,
-      @JsonKey(required: true)
-          FhirUri sourceX,
+      FhirUri sourceUri,
+      Reference sourceReference,
       Reference exampleFor});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ReferenceCopyWith<$Res> get sourceReference;
   @override
   $ReferenceCopyWith<$Res> get exampleFor;
 }
@@ -2405,7 +2422,8 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
     Object name = freezed,
     Object description = freezed,
     Object acronym = freezed,
-    Object sourceX = freezed,
+    Object sourceUri = freezed,
+    Object sourceReference = freezed,
     Object exampleFor = freezed,
   }) {
     return _then(_ImplementationGuideResource(
@@ -2421,7 +2439,10 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       acronym: acronym == freezed ? _value.acronym : acronym as String,
-      sourceX: sourceX == freezed ? _value.sourceX : sourceX as FhirUri,
+      sourceUri: sourceUri == freezed ? _value.sourceUri : sourceUri as FhirUri,
+      sourceReference: sourceReference == freezed
+          ? _value.sourceReference
+          : sourceReference as Reference,
       exampleFor:
           exampleFor == freezed ? _value.exampleFor : exampleFor as Reference,
     ));
@@ -2441,12 +2462,10 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
       this.name,
       this.description,
       this.acronym,
-      @required
-      @JsonKey(required: true)
-          this.sourceX,
+      this.sourceUri,
+      this.sourceReference,
       this.exampleFor})
-      : assert(purpose != null),
-        assert(sourceX != null);
+      : assert(purpose != null);
 
   factory _$_ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuideResourceFromJson(json);
@@ -2468,14 +2487,15 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
   @override
   final String acronym;
   @override
-  @JsonKey(required: true)
-  final FhirUri sourceX;
+  final FhirUri sourceUri;
+  @override
+  final Reference sourceReference;
   @override
   final Reference exampleFor;
 
   @override
   String toString() {
-    return 'ImplementationGuideResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, purpose: $purpose, name: $name, description: $description, acronym: $acronym, sourceX: $sourceX, exampleFor: $exampleFor)';
+    return 'ImplementationGuideResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, purpose: $purpose, name: $name, description: $description, acronym: $acronym, sourceUri: $sourceUri, sourceReference: $sourceReference, exampleFor: $exampleFor)';
   }
 
   @override
@@ -2501,9 +2521,12 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
             (identical(other.acronym, acronym) ||
                 const DeepCollectionEquality()
                     .equals(other.acronym, acronym)) &&
-            (identical(other.sourceX, sourceX) ||
+            (identical(other.sourceUri, sourceUri) ||
                 const DeepCollectionEquality()
-                    .equals(other.sourceX, sourceX)) &&
+                    .equals(other.sourceUri, sourceUri)) &&
+            (identical(other.sourceReference, sourceReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.sourceReference, sourceReference)) &&
             (identical(other.exampleFor, exampleFor) ||
                 const DeepCollectionEquality()
                     .equals(other.exampleFor, exampleFor)));
@@ -2519,7 +2542,8 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(acronym) ^
-      const DeepCollectionEquality().hash(sourceX) ^
+      const DeepCollectionEquality().hash(sourceUri) ^
+      const DeepCollectionEquality().hash(sourceReference) ^
       const DeepCollectionEquality().hash(exampleFor);
 
   @override
@@ -2546,9 +2570,8 @@ abstract class _ImplementationGuideResource
       String name,
       String description,
       String acronym,
-      @required
-      @JsonKey(required: true)
-          FhirUri sourceX,
+      FhirUri sourceUri,
+      Reference sourceReference,
       Reference exampleFor}) = _$_ImplementationGuideResource;
 
   factory _ImplementationGuideResource.fromJson(Map<String, dynamic> json) =
@@ -2571,8 +2594,9 @@ abstract class _ImplementationGuideResource
   @override
   String get acronym;
   @override
-  @JsonKey(required: true)
-  FhirUri get sourceX;
+  FhirUri get sourceUri;
+  @override
+  Reference get sourceReference;
   @override
   Reference get exampleFor;
   @override

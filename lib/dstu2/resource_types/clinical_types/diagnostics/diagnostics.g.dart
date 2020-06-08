@@ -174,14 +174,8 @@ const _$ImagingStudyAvailabilityEnumMap = {
 };
 
 _$_DiagnosticReport _$_$_DiagnosticReportFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const [
-    'status',
-    'code',
-    'subject',
-    'effectiveX',
-    'issued',
-    'performer'
-  ]);
+  $checkKeys(json,
+      requiredKeys: const ['status', 'code', 'subject', 'issued', 'performer']);
   return _$_DiagnosticReport(
     resourceType: json['resourceType'] as String ?? 'DiagnosticReport',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -229,9 +223,12 @@ _$_DiagnosticReport _$_$_DiagnosticReportFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-    effectiveX: json['effectiveX'] == null
+    effectiveDateTime: json['effectiveDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['effectiveX'] as String),
+        : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
+    effectivePeriod: json['effectivePeriod'] == null
+        ? null
+        : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
     issued: json['issued'] == null
         ? null
         : Instant.fromJson(json['issued'] as String),
@@ -299,7 +296,8 @@ Map<String, dynamic> _$_$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('effectiveX', instance.effectiveX?.toJson());
+  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
+  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
   writeNotNull('issued', instance.issued?.toJson());
   writeNotNull('performer', instance.performer?.toJson());
   writeNotNull('request', instance.request?.map((e) => e?.toJson())?.toList());
@@ -1327,9 +1325,12 @@ _$_SpecimenCollection _$_$_SpecimenCollectionFromJson(
         ? null
         : Reference.fromJson(json['collector'] as Map<String, dynamic>),
     comment: (json['comment'] as List)?.map((e) => e as String)?.toList(),
-    collectedX: json['collectedX'] == null
+    collectedDateTime: json['collectedDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['collectedX'] as String),
+        : FhirDateTime.fromJson(json['collectedDateTime'] as String),
+    collectedPeriod: json['collectedPeriod'] == null
+        ? null
+        : Period.fromJson(json['collectedPeriod'] as Map<String, dynamic>),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -1358,7 +1359,8 @@ Map<String, dynamic> _$_$_SpecimenCollectionToJson(
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('collector', instance.collector?.toJson());
   writeNotNull('comment', instance.comment);
-  writeNotNull('collectedX', instance.collectedX?.toJson());
+  writeNotNull('collectedDateTime', instance.collectedDateTime?.toJson());
+  writeNotNull('collectedPeriod', instance.collectedPeriod?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('method', instance.method?.toJson());
   writeNotNull('bodySite', instance.bodySite?.toJson());
@@ -1435,9 +1437,13 @@ _$_SpecimenContainer _$_$_SpecimenContainerFromJson(Map<String, dynamic> json) {
     specimenQuantity: json['specimenQuantity'] == null
         ? null
         : Quantity.fromJson(json['specimenQuantity'] as Map<String, dynamic>),
-    additiveX: json['additiveX'] == null
+    additiveCodeableConcept: json['additiveCodeableConcept'] == null
         ? null
-        : CodeableConcept.fromJson(json['additiveX'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(
+            json['additiveCodeableConcept'] as Map<String, dynamic>),
+    additiveReference: json['additiveReference'] == null
+        ? null
+        : Reference.fromJson(json['additiveReference'] as Map<String, dynamic>),
   );
 }
 
@@ -1461,7 +1467,9 @@ Map<String, dynamic> _$_$_SpecimenContainerToJson(
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('capacity', instance.capacity?.toJson());
   writeNotNull('specimenQuantity', instance.specimenQuantity?.toJson());
-  writeNotNull('additiveX', instance.additiveX?.toJson());
+  writeNotNull(
+      'additiveCodeableConcept', instance.additiveCodeableConcept?.toJson());
+  writeNotNull('additiveReference', instance.additiveReference?.toJson());
   return val;
 }
 

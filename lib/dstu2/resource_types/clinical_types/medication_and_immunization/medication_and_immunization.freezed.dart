@@ -9960,7 +9960,8 @@ class _$MedicationOrderDispenseRequestTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept medicationX,
+      CodeableConcept medicationCodeableConcept,
+      Reference medicationReference,
       Period validityPeriod,
       PositiveInt numberOfRepeatsAllowed,
       Quantity quantity,
@@ -9969,7 +9970,8 @@ class _$MedicationOrderDispenseRequestTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      medicationX: medicationX,
+      medicationCodeableConcept: medicationCodeableConcept,
+      medicationReference: medicationReference,
       validityPeriod: validityPeriod,
       numberOfRepeatsAllowed: numberOfRepeatsAllowed,
       quantity: quantity,
@@ -9987,7 +9989,8 @@ mixin _$MedicationOrderDispenseRequest {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  CodeableConcept get medicationX;
+  CodeableConcept get medicationCodeableConcept;
+  Reference get medicationReference;
   Period get validityPeriod;
   PositiveInt get numberOfRepeatsAllowed;
   Quantity get quantity;
@@ -10007,14 +10010,16 @@ abstract class $MedicationOrderDispenseRequestCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept medicationX,
+      CodeableConcept medicationCodeableConcept,
+      Reference medicationReference,
       Period validityPeriod,
       PositiveInt numberOfRepeatsAllowed,
       Quantity quantity,
       Quantity expectedSupplyDuration});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get medicationX;
+  $CodeableConceptCopyWith<$Res> get medicationCodeableConcept;
+  $ReferenceCopyWith<$Res> get medicationReference;
   $PeriodCopyWith<$Res> get validityPeriod;
   $QuantityCopyWith<$Res> get quantity;
   $QuantityCopyWith<$Res> get expectedSupplyDuration;
@@ -10033,7 +10038,8 @@ class _$MedicationOrderDispenseRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object medicationX = freezed,
+    Object medicationCodeableConcept = freezed,
+    Object medicationReference = freezed,
     Object validityPeriod = freezed,
     Object numberOfRepeatsAllowed = freezed,
     Object quantity = freezed,
@@ -10047,9 +10053,12 @@ class _$MedicationOrderDispenseRequestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      medicationX: medicationX == freezed
-          ? _value.medicationX
-          : medicationX as CodeableConcept,
+      medicationCodeableConcept: medicationCodeableConcept == freezed
+          ? _value.medicationCodeableConcept
+          : medicationCodeableConcept as CodeableConcept,
+      medicationReference: medicationReference == freezed
+          ? _value.medicationReference
+          : medicationReference as Reference,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
           : validityPeriod as Period,
@@ -10074,12 +10083,23 @@ class _$MedicationOrderDispenseRequestCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get medicationX {
-    if (_value.medicationX == null) {
+  $CodeableConceptCopyWith<$Res> get medicationCodeableConcept {
+    if (_value.medicationCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.medicationX, (value) {
-      return _then(_value.copyWith(medicationX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.medicationCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(medicationCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get medicationReference {
+    if (_value.medicationReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.medicationReference, (value) {
+      return _then(_value.copyWith(medicationReference: value));
     });
   }
 
@@ -10125,7 +10145,8 @@ abstract class _$MedicationOrderDispenseRequestCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept medicationX,
+      CodeableConcept medicationCodeableConcept,
+      Reference medicationReference,
       Period validityPeriod,
       PositiveInt numberOfRepeatsAllowed,
       Quantity quantity,
@@ -10134,7 +10155,9 @@ abstract class _$MedicationOrderDispenseRequestCopyWith<$Res>
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $CodeableConceptCopyWith<$Res> get medicationX;
+  $CodeableConceptCopyWith<$Res> get medicationCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get medicationReference;
   @override
   $PeriodCopyWith<$Res> get validityPeriod;
   @override
@@ -10160,7 +10183,8 @@ class __$MedicationOrderDispenseRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object medicationX = freezed,
+    Object medicationCodeableConcept = freezed,
+    Object medicationReference = freezed,
     Object validityPeriod = freezed,
     Object numberOfRepeatsAllowed = freezed,
     Object quantity = freezed,
@@ -10174,9 +10198,12 @@ class __$MedicationOrderDispenseRequestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      medicationX: medicationX == freezed
-          ? _value.medicationX
-          : medicationX as CodeableConcept,
+      medicationCodeableConcept: medicationCodeableConcept == freezed
+          ? _value.medicationCodeableConcept
+          : medicationCodeableConcept as CodeableConcept,
+      medicationReference: medicationReference == freezed
+          ? _value.medicationReference
+          : medicationReference as Reference,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
           : validityPeriod as Period,
@@ -10198,7 +10225,8 @@ class _$_MedicationOrderDispenseRequest
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.medicationX,
+      this.medicationCodeableConcept,
+      this.medicationReference,
       this.validityPeriod,
       this.numberOfRepeatsAllowed,
       this.quantity,
@@ -10216,7 +10244,9 @@ class _$_MedicationOrderDispenseRequest
   @override
   final FhirExtension modifierExtension;
   @override
-  final CodeableConcept medicationX;
+  final CodeableConcept medicationCodeableConcept;
+  @override
+  final Reference medicationReference;
   @override
   final Period validityPeriod;
   @override
@@ -10228,7 +10258,7 @@ class _$_MedicationOrderDispenseRequest
 
   @override
   String toString() {
-    return 'MedicationOrderDispenseRequest(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, medicationX: $medicationX, validityPeriod: $validityPeriod, numberOfRepeatsAllowed: $numberOfRepeatsAllowed, quantity: $quantity, expectedSupplyDuration: $expectedSupplyDuration)';
+    return 'MedicationOrderDispenseRequest(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, validityPeriod: $validityPeriod, numberOfRepeatsAllowed: $numberOfRepeatsAllowed, quantity: $quantity, expectedSupplyDuration: $expectedSupplyDuration)';
   }
 
   @override
@@ -10243,9 +10273,14 @@ class _$_MedicationOrderDispenseRequest
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.medicationX, medicationX) ||
+            (identical(other.medicationCodeableConcept,
+                    medicationCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.medicationCodeableConcept,
+                    medicationCodeableConcept)) &&
+            (identical(other.medicationReference, medicationReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.medicationX, medicationX)) &&
+                    .equals(other.medicationReference, medicationReference)) &&
             (identical(other.validityPeriod, validityPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.validityPeriod, validityPeriod)) &&
@@ -10266,7 +10301,8 @@ class _$_MedicationOrderDispenseRequest
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(medicationX) ^
+      const DeepCollectionEquality().hash(medicationCodeableConcept) ^
+      const DeepCollectionEquality().hash(medicationReference) ^
       const DeepCollectionEquality().hash(validityPeriod) ^
       const DeepCollectionEquality().hash(numberOfRepeatsAllowed) ^
       const DeepCollectionEquality().hash(quantity) ^
@@ -10289,7 +10325,8 @@ abstract class _MedicationOrderDispenseRequest
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept medicationX,
+      CodeableConcept medicationCodeableConcept,
+      Reference medicationReference,
       Period validityPeriod,
       PositiveInt numberOfRepeatsAllowed,
       Quantity quantity,
@@ -10306,7 +10343,9 @@ abstract class _MedicationOrderDispenseRequest
   @override
   FhirExtension get modifierExtension;
   @override
-  CodeableConcept get medicationX;
+  CodeableConcept get medicationCodeableConcept;
+  @override
+  Reference get medicationReference;
   @override
   Period get validityPeriod;
   @override

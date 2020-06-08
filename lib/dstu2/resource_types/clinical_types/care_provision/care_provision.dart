@@ -23,14 +23,18 @@ abstract class ProcedureRequest with _$ProcedureRequest implements Resource {
     @JsonKey(required: true) @required Reference subject,
     @JsonKey(required: true) @required CodeableConcept code,
     List<CodeableConcept> bodySite,
-    CodeableConcept reasonX,
-    FhirDateTime scheduledX,
+    CodeableConcept reasonCodeableConcept,
+    Reference reasonReference,
+    FhirDateTime scheduledDateTime,
+    Period scheduledPeriod,
+    Timing scheduledTiming,
     Reference encounter,
     Reference performer,
     @JsonKey(unknownEnumValue: ProcedureRequestStatus.unknown)
         ProcedureRequestStatus status,
     List<Annotation> notes,
-    Boolean asNeededX,
+    Boolean asNeededBoolean,
+    CodeableConcept asNeededCodeableConcept,
     FhirDateTime orderedOn,
     Reference orderer,
     @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
@@ -60,7 +64,8 @@ abstract class VisionPrescription
     Reference patient,
     Reference prescriber,
     Reference encounter,
-    CodeableConcept reasonX,
+    CodeableConcept reasonCodeableConcept,
+    Reference reasonReference,
     VisionPrescriptionDispense dispense,
   }) = _VisionPrescription;
 
@@ -118,8 +123,10 @@ abstract class Goal with _$Goal implements Resource {
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference subject,
-    Date startX,
-    Date targetX,
+    Date startDate,
+    CodeableConcept startCodeableConcept,
+    Date targetDate,
+    Quantity targetQuantity,
     List<CodeableConcept> category,
     @JsonKey(required: true) @required String description,
     @JsonKey(required: true, unknownEnumValue: GoalStatus.unknown)
@@ -281,7 +288,8 @@ abstract class GoalOutcome with _$GoalOutcome {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    CodeableConcept resultX,
+    CodeableConcept resultCodeableConcept,
+    Reference resultReference,
   }) = _GoalOutcome;
 
   factory GoalOutcome.fromJson(Map<String, dynamic> json) =>
@@ -359,10 +367,13 @@ abstract class CarePlanDetail with _$CarePlanDetail {
     @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
     CodeableConcept statusReason,
     @JsonKey(required: true) @required Boolean prohibited,
-    Timing scheduledX,
+    Timing scheduledTiming,
+    Period scheduledPeriod,
+    String scheduledString,
     Reference location,
     List<Reference> performer,
-    CodeableConcept productX,
+    CodeableConcept productCodeableConcept,
+    Reference productReference,
     Quantity dailyAmount,
     Quantity quantity,
     String description,
@@ -409,7 +420,8 @@ abstract class NutritionOrderAdministration
     FhirExtension modifierExtension,
     Timing schedule,
     Quantity quantity,
-    Quantity rateX,
+    Quantity rateQuantity,
+    Ratio rateRatio,
   }) = _NutritionOrderAdministration;
 
   factory NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =>

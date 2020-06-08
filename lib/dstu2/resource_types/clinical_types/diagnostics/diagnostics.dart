@@ -62,7 +62,8 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     @JsonKey(required: true) @required CodeableConcept code,
     @JsonKey(required: true) @required Reference subject,
     Reference encounter,
-    @JsonKey(required: true) @required FhirDateTime effectiveX,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
     @JsonKey(required: true) @required Instant issued,
     @JsonKey(required: true) @required Reference performer,
     List<Reference> request,
@@ -360,7 +361,8 @@ abstract class SpecimenCollection with _$SpecimenCollection {
     FhirExtension modifierExtension,
     Reference collector,
     List<String> comment,
-    FhirDateTime collectedX,
+    FhirDateTime collectedDateTime,
+    Period collectedPeriod,
     Quantity quantity,
     CodeableConcept method,
     CodeableConcept bodySite,
@@ -396,7 +398,8 @@ abstract class SpecimenContainer with _$SpecimenContainer {
     CodeableConcept type,
     Quantity capacity,
     Quantity specimenQuantity,
-    CodeableConcept additiveX,
+    CodeableConcept additiveCodeableConcept,
+    Reference additiveReference,
   }) = _SpecimenContainer;
 
   factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>

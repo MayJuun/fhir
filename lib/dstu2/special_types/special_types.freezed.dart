@@ -7314,13 +7314,15 @@ class _$ElementDefinitionBindingTearOff {
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
       String description,
-      FhirUri valueSetX}) {
+      FhirUri valueSetUri,
+      Reference valueSetReference}) {
     return _ElementDefinitionBinding(
       id: id,
       extension_: extension_,
       strength: strength,
       description: description,
-      valueSetX: valueSetX,
+      valueSetUri: valueSetUri,
+      valueSetReference: valueSetReference,
     );
   }
 }
@@ -7335,7 +7337,8 @@ mixin _$ElementDefinitionBinding {
   @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
   BindingStrength get strength;
   String get description;
-  FhirUri get valueSetX;
+  FhirUri get valueSetUri;
+  Reference get valueSetReference;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionBindingCopyWith<ElementDefinitionBinding> get copyWith;
@@ -7352,7 +7355,10 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
       String description,
-      FhirUri valueSetX});
+      FhirUri valueSetUri,
+      Reference valueSetReference});
+
+  $ReferenceCopyWith<$Res> get valueSetReference;
 }
 
 class _$ElementDefinitionBindingCopyWithImpl<$Res>
@@ -7369,7 +7375,8 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object strength = freezed,
     Object description = freezed,
-    Object valueSetX = freezed,
+    Object valueSetUri = freezed,
+    Object valueSetReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -7380,8 +7387,22 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
           strength == freezed ? _value.strength : strength as BindingStrength,
       description:
           description == freezed ? _value.description : description as String,
-      valueSetX: valueSetX == freezed ? _value.valueSetX : valueSetX as FhirUri,
+      valueSetUri:
+          valueSetUri == freezed ? _value.valueSetUri : valueSetUri as FhirUri,
+      valueSetReference: valueSetReference == freezed
+          ? _value.valueSetReference
+          : valueSetReference as Reference,
     ));
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get valueSetReference {
+    if (_value.valueSetReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.valueSetReference, (value) {
+      return _then(_value.copyWith(valueSetReference: value));
+    });
   }
 }
 
@@ -7398,7 +7419,11 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
       String description,
-      FhirUri valueSetX});
+      FhirUri valueSetUri,
+      Reference valueSetReference});
+
+  @override
+  $ReferenceCopyWith<$Res> get valueSetReference;
 }
 
 class __$ElementDefinitionBindingCopyWithImpl<$Res>
@@ -7418,7 +7443,8 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object strength = freezed,
     Object description = freezed,
-    Object valueSetX = freezed,
+    Object valueSetUri = freezed,
+    Object valueSetReference = freezed,
   }) {
     return _then(_ElementDefinitionBinding(
       id: id == freezed ? _value.id : id as Id,
@@ -7429,7 +7455,11 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
           strength == freezed ? _value.strength : strength as BindingStrength,
       description:
           description == freezed ? _value.description : description as String,
-      valueSetX: valueSetX == freezed ? _value.valueSetX : valueSetX as FhirUri,
+      valueSetUri:
+          valueSetUri == freezed ? _value.valueSetUri : valueSetUri as FhirUri,
+      valueSetReference: valueSetReference == freezed
+          ? _value.valueSetReference
+          : valueSetReference as Reference,
     ));
   }
 }
@@ -7444,7 +7474,8 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
           this.strength,
       this.description,
-      this.valueSetX})
+      this.valueSetUri,
+      this.valueSetReference})
       : assert(strength != null);
 
   factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
@@ -7461,11 +7492,13 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
   @override
   final String description;
   @override
-  final FhirUri valueSetX;
+  final FhirUri valueSetUri;
+  @override
+  final Reference valueSetReference;
 
   @override
   String toString() {
-    return 'ElementDefinitionBinding(id: $id, extension_: $extension_, strength: $strength, description: $description, valueSetX: $valueSetX)';
+    return 'ElementDefinitionBinding(id: $id, extension_: $extension_, strength: $strength, description: $description, valueSetUri: $valueSetUri, valueSetReference: $valueSetReference)';
   }
 
   @override
@@ -7483,9 +7516,12 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
-            (identical(other.valueSetX, valueSetX) ||
+            (identical(other.valueSetUri, valueSetUri) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueSetX, valueSetX)));
+                    .equals(other.valueSetUri, valueSetUri)) &&
+            (identical(other.valueSetReference, valueSetReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueSetReference, valueSetReference)));
   }
 
   @override
@@ -7495,7 +7531,8 @@ class _$_ElementDefinitionBinding implements _ElementDefinitionBinding {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(strength) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(valueSetX);
+      const DeepCollectionEquality().hash(valueSetUri) ^
+      const DeepCollectionEquality().hash(valueSetReference);
 
   @override
   _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith =>
@@ -7517,7 +7554,8 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
       @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
           BindingStrength strength,
       String description,
-      FhirUri valueSetX}) = _$_ElementDefinitionBinding;
+      FhirUri valueSetUri,
+      Reference valueSetReference}) = _$_ElementDefinitionBinding;
 
   factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinitionBinding.fromJson;
@@ -7533,7 +7571,9 @@ abstract class _ElementDefinitionBinding implements ElementDefinitionBinding {
   @override
   String get description;
   @override
-  FhirUri get valueSetX;
+  FhirUri get valueSetUri;
+  @override
+  Reference get valueSetReference;
   @override
   _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith;
 }

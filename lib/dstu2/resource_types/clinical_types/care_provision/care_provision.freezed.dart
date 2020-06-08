@@ -35,14 +35,18 @@ class _$ProcedureRequestTearOff {
       @JsonKey(required: true)
           CodeableConcept code,
       List<CodeableConcept> bodySite,
-      CodeableConcept reasonX,
-      FhirDateTime scheduledX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
+      FhirDateTime scheduledDateTime,
+      Period scheduledPeriod,
+      Timing scheduledTiming,
       Reference encounter,
       Reference performer,
       @JsonKey(unknownEnumValue: ProcedureRequestStatus.unknown)
           ProcedureRequestStatus status,
       List<Annotation> notes,
-      Boolean asNeededX,
+      Boolean asNeededBoolean,
+      CodeableConcept asNeededCodeableConcept,
       FhirDateTime orderedOn,
       Reference orderer,
       @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
@@ -61,13 +65,17 @@ class _$ProcedureRequestTearOff {
       subject: subject,
       code: code,
       bodySite: bodySite,
-      reasonX: reasonX,
-      scheduledX: scheduledX,
+      reasonCodeableConcept: reasonCodeableConcept,
+      reasonReference: reasonReference,
+      scheduledDateTime: scheduledDateTime,
+      scheduledPeriod: scheduledPeriod,
+      scheduledTiming: scheduledTiming,
       encounter: encounter,
       performer: performer,
       status: status,
       notes: notes,
-      asNeededX: asNeededX,
+      asNeededBoolean: asNeededBoolean,
+      asNeededCodeableConcept: asNeededCodeableConcept,
       orderedOn: orderedOn,
       orderer: orderer,
       priority: priority,
@@ -96,14 +104,18 @@ mixin _$ProcedureRequest {
   @JsonKey(required: true)
   CodeableConcept get code;
   List<CodeableConcept> get bodySite;
-  CodeableConcept get reasonX;
-  FhirDateTime get scheduledX;
+  CodeableConcept get reasonCodeableConcept;
+  Reference get reasonReference;
+  FhirDateTime get scheduledDateTime;
+  Period get scheduledPeriod;
+  Timing get scheduledTiming;
   Reference get encounter;
   Reference get performer;
   @JsonKey(unknownEnumValue: ProcedureRequestStatus.unknown)
   ProcedureRequestStatus get status;
   List<Annotation> get notes;
-  Boolean get asNeededX;
+  Boolean get asNeededBoolean;
+  CodeableConcept get asNeededCodeableConcept;
   FhirDateTime get orderedOn;
   Reference get orderer;
   @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
@@ -135,14 +147,18 @@ abstract class $ProcedureRequestCopyWith<$Res> {
       @JsonKey(required: true)
           CodeableConcept code,
       List<CodeableConcept> bodySite,
-      CodeableConcept reasonX,
-      FhirDateTime scheduledX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
+      FhirDateTime scheduledDateTime,
+      Period scheduledPeriod,
+      Timing scheduledTiming,
       Reference encounter,
       Reference performer,
       @JsonKey(unknownEnumValue: ProcedureRequestStatus.unknown)
           ProcedureRequestStatus status,
       List<Annotation> notes,
-      Boolean asNeededX,
+      Boolean asNeededBoolean,
+      CodeableConcept asNeededCodeableConcept,
       FhirDateTime orderedOn,
       Reference orderer,
       @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
@@ -153,9 +169,13 @@ abstract class $ProcedureRequestCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get subject;
   $CodeableConceptCopyWith<$Res> get code;
-  $CodeableConceptCopyWith<$Res> get reasonX;
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
+  $ReferenceCopyWith<$Res> get reasonReference;
+  $PeriodCopyWith<$Res> get scheduledPeriod;
+  $TimingCopyWith<$Res> get scheduledTiming;
   $ReferenceCopyWith<$Res> get encounter;
   $ReferenceCopyWith<$Res> get performer;
+  $CodeableConceptCopyWith<$Res> get asNeededCodeableConcept;
   $ReferenceCopyWith<$Res> get orderer;
 }
 
@@ -182,13 +202,17 @@ class _$ProcedureRequestCopyWithImpl<$Res>
     Object subject = freezed,
     Object code = freezed,
     Object bodySite = freezed,
-    Object reasonX = freezed,
-    Object scheduledX = freezed,
+    Object reasonCodeableConcept = freezed,
+    Object reasonReference = freezed,
+    Object scheduledDateTime = freezed,
+    Object scheduledPeriod = freezed,
+    Object scheduledTiming = freezed,
     Object encounter = freezed,
     Object performer = freezed,
     Object status = freezed,
     Object notes = freezed,
-    Object asNeededX = freezed,
+    Object asNeededBoolean = freezed,
+    Object asNeededCodeableConcept = freezed,
     Object orderedOn = freezed,
     Object orderer = freezed,
     Object priority = freezed,
@@ -220,10 +244,21 @@ class _$ProcedureRequestCopyWithImpl<$Res>
       bodySite: bodySite == freezed
           ? _value.bodySite
           : bodySite as List<CodeableConcept>,
-      reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
-      scheduledX: scheduledX == freezed
-          ? _value.scheduledX
-          : scheduledX as FhirDateTime,
+      reasonCodeableConcept: reasonCodeableConcept == freezed
+          ? _value.reasonCodeableConcept
+          : reasonCodeableConcept as CodeableConcept,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference as Reference,
+      scheduledDateTime: scheduledDateTime == freezed
+          ? _value.scheduledDateTime
+          : scheduledDateTime as FhirDateTime,
+      scheduledPeriod: scheduledPeriod == freezed
+          ? _value.scheduledPeriod
+          : scheduledPeriod as Period,
+      scheduledTiming: scheduledTiming == freezed
+          ? _value.scheduledTiming
+          : scheduledTiming as Timing,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
       performer:
@@ -231,7 +266,12 @@ class _$ProcedureRequestCopyWithImpl<$Res>
       status:
           status == freezed ? _value.status : status as ProcedureRequestStatus,
       notes: notes == freezed ? _value.notes : notes as List<Annotation>,
-      asNeededX: asNeededX == freezed ? _value.asNeededX : asNeededX as Boolean,
+      asNeededBoolean: asNeededBoolean == freezed
+          ? _value.asNeededBoolean
+          : asNeededBoolean as Boolean,
+      asNeededCodeableConcept: asNeededCodeableConcept == freezed
+          ? _value.asNeededCodeableConcept
+          : asNeededCodeableConcept as CodeableConcept,
       orderedOn:
           orderedOn == freezed ? _value.orderedOn : orderedOn as FhirDateTime,
       orderer: orderer == freezed ? _value.orderer : orderer as Reference,
@@ -292,12 +332,43 @@ class _$ProcedureRequestCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get reasonX {
-    if (_value.reasonX == null) {
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept {
+    if (_value.reasonCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.reasonX, (value) {
-      return _then(_value.copyWith(reasonX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.reasonCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(reasonCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get reasonReference {
+    if (_value.reasonReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.reasonReference, (value) {
+      return _then(_value.copyWith(reasonReference: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get scheduledPeriod {
+    if (_value.scheduledPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.scheduledPeriod, (value) {
+      return _then(_value.copyWith(scheduledPeriod: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get scheduledTiming {
+    if (_value.scheduledTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.scheduledTiming, (value) {
+      return _then(_value.copyWith(scheduledTiming: value));
     });
   }
 
@@ -318,6 +389,17 @@ class _$ProcedureRequestCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.performer, (value) {
       return _then(_value.copyWith(performer: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get asNeededCodeableConcept {
+    if (_value.asNeededCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.asNeededCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(asNeededCodeableConcept: value));
     });
   }
 
@@ -356,14 +438,18 @@ abstract class _$ProcedureRequestCopyWith<$Res>
       @JsonKey(required: true)
           CodeableConcept code,
       List<CodeableConcept> bodySite,
-      CodeableConcept reasonX,
-      FhirDateTime scheduledX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
+      FhirDateTime scheduledDateTime,
+      Period scheduledPeriod,
+      Timing scheduledTiming,
       Reference encounter,
       Reference performer,
       @JsonKey(unknownEnumValue: ProcedureRequestStatus.unknown)
           ProcedureRequestStatus status,
       List<Annotation> notes,
-      Boolean asNeededX,
+      Boolean asNeededBoolean,
+      CodeableConcept asNeededCodeableConcept,
       FhirDateTime orderedOn,
       Reference orderer,
       @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
@@ -380,11 +466,19 @@ abstract class _$ProcedureRequestCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
-  $CodeableConceptCopyWith<$Res> get reasonX;
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get reasonReference;
+  @override
+  $PeriodCopyWith<$Res> get scheduledPeriod;
+  @override
+  $TimingCopyWith<$Res> get scheduledTiming;
   @override
   $ReferenceCopyWith<$Res> get encounter;
   @override
   $ReferenceCopyWith<$Res> get performer;
+  @override
+  $CodeableConceptCopyWith<$Res> get asNeededCodeableConcept;
   @override
   $ReferenceCopyWith<$Res> get orderer;
 }
@@ -414,13 +508,17 @@ class __$ProcedureRequestCopyWithImpl<$Res>
     Object subject = freezed,
     Object code = freezed,
     Object bodySite = freezed,
-    Object reasonX = freezed,
-    Object scheduledX = freezed,
+    Object reasonCodeableConcept = freezed,
+    Object reasonReference = freezed,
+    Object scheduledDateTime = freezed,
+    Object scheduledPeriod = freezed,
+    Object scheduledTiming = freezed,
     Object encounter = freezed,
     Object performer = freezed,
     Object status = freezed,
     Object notes = freezed,
-    Object asNeededX = freezed,
+    Object asNeededBoolean = freezed,
+    Object asNeededCodeableConcept = freezed,
     Object orderedOn = freezed,
     Object orderer = freezed,
     Object priority = freezed,
@@ -452,10 +550,21 @@ class __$ProcedureRequestCopyWithImpl<$Res>
       bodySite: bodySite == freezed
           ? _value.bodySite
           : bodySite as List<CodeableConcept>,
-      reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
-      scheduledX: scheduledX == freezed
-          ? _value.scheduledX
-          : scheduledX as FhirDateTime,
+      reasonCodeableConcept: reasonCodeableConcept == freezed
+          ? _value.reasonCodeableConcept
+          : reasonCodeableConcept as CodeableConcept,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference as Reference,
+      scheduledDateTime: scheduledDateTime == freezed
+          ? _value.scheduledDateTime
+          : scheduledDateTime as FhirDateTime,
+      scheduledPeriod: scheduledPeriod == freezed
+          ? _value.scheduledPeriod
+          : scheduledPeriod as Period,
+      scheduledTiming: scheduledTiming == freezed
+          ? _value.scheduledTiming
+          : scheduledTiming as Timing,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
       performer:
@@ -463,7 +572,12 @@ class __$ProcedureRequestCopyWithImpl<$Res>
       status:
           status == freezed ? _value.status : status as ProcedureRequestStatus,
       notes: notes == freezed ? _value.notes : notes as List<Annotation>,
-      asNeededX: asNeededX == freezed ? _value.asNeededX : asNeededX as Boolean,
+      asNeededBoolean: asNeededBoolean == freezed
+          ? _value.asNeededBoolean
+          : asNeededBoolean as Boolean,
+      asNeededCodeableConcept: asNeededCodeableConcept == freezed
+          ? _value.asNeededCodeableConcept
+          : asNeededCodeableConcept as CodeableConcept,
       orderedOn:
           orderedOn == freezed ? _value.orderedOn : orderedOn as FhirDateTime,
       orderer: orderer == freezed ? _value.orderer : orderer as Reference,
@@ -496,14 +610,18 @@ class _$_ProcedureRequest implements _ProcedureRequest {
       @JsonKey(required: true)
           this.code,
       this.bodySite,
-      this.reasonX,
-      this.scheduledX,
+      this.reasonCodeableConcept,
+      this.reasonReference,
+      this.scheduledDateTime,
+      this.scheduledPeriod,
+      this.scheduledTiming,
       this.encounter,
       this.performer,
       @JsonKey(unknownEnumValue: ProcedureRequestStatus.unknown)
           this.status,
       this.notes,
-      this.asNeededX,
+      this.asNeededBoolean,
+      this.asNeededCodeableConcept,
       this.orderedOn,
       this.orderer,
       @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
@@ -545,9 +663,15 @@ class _$_ProcedureRequest implements _ProcedureRequest {
   @override
   final List<CodeableConcept> bodySite;
   @override
-  final CodeableConcept reasonX;
+  final CodeableConcept reasonCodeableConcept;
   @override
-  final FhirDateTime scheduledX;
+  final Reference reasonReference;
+  @override
+  final FhirDateTime scheduledDateTime;
+  @override
+  final Period scheduledPeriod;
+  @override
+  final Timing scheduledTiming;
   @override
   final Reference encounter;
   @override
@@ -558,7 +682,9 @@ class _$_ProcedureRequest implements _ProcedureRequest {
   @override
   final List<Annotation> notes;
   @override
-  final Boolean asNeededX;
+  final Boolean asNeededBoolean;
+  @override
+  final CodeableConcept asNeededCodeableConcept;
   @override
   final FhirDateTime orderedOn;
   @override
@@ -569,7 +695,7 @@ class _$_ProcedureRequest implements _ProcedureRequest {
 
   @override
   String toString() {
-    return 'ProcedureRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, code: $code, bodySite: $bodySite, reasonX: $reasonX, scheduledX: $scheduledX, encounter: $encounter, performer: $performer, status: $status, notes: $notes, asNeededX: $asNeededX, orderedOn: $orderedOn, orderer: $orderer, priority: $priority)';
+    return 'ProcedureRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, code: $code, bodySite: $bodySite, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, scheduledDateTime: $scheduledDateTime, scheduledPeriod: $scheduledPeriod, scheduledTiming: $scheduledTiming, encounter: $encounter, performer: $performer, status: $status, notes: $notes, asNeededBoolean: $asNeededBoolean, asNeededCodeableConcept: $asNeededCodeableConcept, orderedOn: $orderedOn, orderer: $orderer, priority: $priority)';
   }
 
   @override
@@ -611,12 +737,21 @@ class _$_ProcedureRequest implements _ProcedureRequest {
             (identical(other.bodySite, bodySite) ||
                 const DeepCollectionEquality()
                     .equals(other.bodySite, bodySite)) &&
-            (identical(other.reasonX, reasonX) ||
+            (identical(other.reasonCodeableConcept, reasonCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.reasonCodeableConcept, reasonCodeableConcept)) &&
+            (identical(other.reasonReference, reasonReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.reasonX, reasonX)) &&
-            (identical(other.scheduledX, scheduledX) ||
+                    .equals(other.reasonReference, reasonReference)) &&
+            (identical(other.scheduledDateTime, scheduledDateTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.scheduledX, scheduledX)) &&
+                    .equals(other.scheduledDateTime, scheduledDateTime)) &&
+            (identical(other.scheduledPeriod, scheduledPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.scheduledPeriod, scheduledPeriod)) &&
+            (identical(other.scheduledTiming, scheduledTiming) ||
+                const DeepCollectionEquality()
+                    .equals(other.scheduledTiming, scheduledTiming)) &&
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
@@ -627,18 +762,15 @@ class _$_ProcedureRequest implements _ProcedureRequest {
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.notes, notes) ||
                 const DeepCollectionEquality().equals(other.notes, notes)) &&
-            (identical(other.asNeededX, asNeededX) ||
+            (identical(other.asNeededBoolean, asNeededBoolean) ||
                 const DeepCollectionEquality()
-                    .equals(other.asNeededX, asNeededX)) &&
-            (identical(other.orderedOn, orderedOn) ||
-                const DeepCollectionEquality()
-                    .equals(other.orderedOn, orderedOn)) &&
-            (identical(other.orderer, orderer) ||
-                const DeepCollectionEquality()
-                    .equals(other.orderer, orderer)) &&
-            (identical(other.priority, priority) ||
-                const DeepCollectionEquality()
-                    .equals(other.priority, priority)));
+                    .equals(other.asNeededBoolean, asNeededBoolean)) &&
+            (identical(other.asNeededCodeableConcept, asNeededCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.asNeededCodeableConcept, asNeededCodeableConcept)) &&
+            (identical(other.orderedOn, orderedOn) || const DeepCollectionEquality().equals(other.orderedOn, orderedOn)) &&
+            (identical(other.orderer, orderer) || const DeepCollectionEquality().equals(other.orderer, orderer)) &&
+            (identical(other.priority, priority) || const DeepCollectionEquality().equals(other.priority, priority)));
   }
 
   @override
@@ -657,13 +789,17 @@ class _$_ProcedureRequest implements _ProcedureRequest {
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(bodySite) ^
-      const DeepCollectionEquality().hash(reasonX) ^
-      const DeepCollectionEquality().hash(scheduledX) ^
+      const DeepCollectionEquality().hash(reasonCodeableConcept) ^
+      const DeepCollectionEquality().hash(reasonReference) ^
+      const DeepCollectionEquality().hash(scheduledDateTime) ^
+      const DeepCollectionEquality().hash(scheduledPeriod) ^
+      const DeepCollectionEquality().hash(scheduledTiming) ^
       const DeepCollectionEquality().hash(encounter) ^
       const DeepCollectionEquality().hash(performer) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(notes) ^
-      const DeepCollectionEquality().hash(asNeededX) ^
+      const DeepCollectionEquality().hash(asNeededBoolean) ^
+      const DeepCollectionEquality().hash(asNeededCodeableConcept) ^
       const DeepCollectionEquality().hash(orderedOn) ^
       const DeepCollectionEquality().hash(orderer) ^
       const DeepCollectionEquality().hash(priority);
@@ -699,14 +835,18 @@ abstract class _ProcedureRequest implements ProcedureRequest {
       @JsonKey(required: true)
           CodeableConcept code,
       List<CodeableConcept> bodySite,
-      CodeableConcept reasonX,
-      FhirDateTime scheduledX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
+      FhirDateTime scheduledDateTime,
+      Period scheduledPeriod,
+      Timing scheduledTiming,
       Reference encounter,
       Reference performer,
       @JsonKey(unknownEnumValue: ProcedureRequestStatus.unknown)
           ProcedureRequestStatus status,
       List<Annotation> notes,
-      Boolean asNeededX,
+      Boolean asNeededBoolean,
+      CodeableConcept asNeededCodeableConcept,
       FhirDateTime orderedOn,
       Reference orderer,
       @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
@@ -746,9 +886,15 @@ abstract class _ProcedureRequest implements ProcedureRequest {
   @override
   List<CodeableConcept> get bodySite;
   @override
-  CodeableConcept get reasonX;
+  CodeableConcept get reasonCodeableConcept;
   @override
-  FhirDateTime get scheduledX;
+  Reference get reasonReference;
+  @override
+  FhirDateTime get scheduledDateTime;
+  @override
+  Period get scheduledPeriod;
+  @override
+  Timing get scheduledTiming;
   @override
   Reference get encounter;
   @override
@@ -759,7 +905,9 @@ abstract class _ProcedureRequest implements ProcedureRequest {
   @override
   List<Annotation> get notes;
   @override
-  Boolean get asNeededX;
+  Boolean get asNeededBoolean;
+  @override
+  CodeableConcept get asNeededCodeableConcept;
   @override
   FhirDateTime get orderedOn;
   @override
@@ -793,7 +941,8 @@ class _$VisionPrescriptionTearOff {
       Reference patient,
       Reference prescriber,
       Reference encounter,
-      CodeableConcept reasonX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       VisionPrescriptionDispense dispense}) {
     return _VisionPrescription(
       resourceType: resourceType,
@@ -810,7 +959,8 @@ class _$VisionPrescriptionTearOff {
       patient: patient,
       prescriber: prescriber,
       encounter: encounter,
-      reasonX: reasonX,
+      reasonCodeableConcept: reasonCodeableConcept,
+      reasonReference: reasonReference,
       dispense: dispense,
     );
   }
@@ -836,7 +986,8 @@ mixin _$VisionPrescription {
   Reference get patient;
   Reference get prescriber;
   Reference get encounter;
-  CodeableConcept get reasonX;
+  CodeableConcept get reasonCodeableConcept;
+  Reference get reasonReference;
   VisionPrescriptionDispense get dispense;
 
   Map<String, dynamic> toJson();
@@ -862,7 +1013,8 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
       Reference patient,
       Reference prescriber,
       Reference encounter,
-      CodeableConcept reasonX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       VisionPrescriptionDispense dispense});
 
   $MetaCopyWith<$Res> get meta;
@@ -871,7 +1023,8 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res> get prescriber;
   $ReferenceCopyWith<$Res> get encounter;
-  $CodeableConceptCopyWith<$Res> get reasonX;
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
+  $ReferenceCopyWith<$Res> get reasonReference;
   $VisionPrescriptionDispenseCopyWith<$Res> get dispense;
 }
 
@@ -899,7 +1052,8 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
     Object patient = freezed,
     Object prescriber = freezed,
     Object encounter = freezed,
-    Object reasonX = freezed,
+    Object reasonCodeableConcept = freezed,
+    Object reasonReference = freezed,
     Object dispense = freezed,
   }) {
     return _then(_value.copyWith(
@@ -932,7 +1086,12 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
           prescriber == freezed ? _value.prescriber : prescriber as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
+      reasonCodeableConcept: reasonCodeableConcept == freezed
+          ? _value.reasonCodeableConcept
+          : reasonCodeableConcept as CodeableConcept,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference as Reference,
       dispense: dispense == freezed
           ? _value.dispense
           : dispense as VisionPrescriptionDispense,
@@ -1000,12 +1159,23 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get reasonX {
-    if (_value.reasonX == null) {
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept {
+    if (_value.reasonCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.reasonX, (value) {
-      return _then(_value.copyWith(reasonX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.reasonCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(reasonCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get reasonReference {
+    if (_value.reasonReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.reasonReference, (value) {
+      return _then(_value.copyWith(reasonReference: value));
     });
   }
 
@@ -1041,7 +1211,8 @@ abstract class _$VisionPrescriptionCopyWith<$Res>
       Reference patient,
       Reference prescriber,
       Reference encounter,
-      CodeableConcept reasonX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       VisionPrescriptionDispense dispense});
 
   @override
@@ -1057,7 +1228,9 @@ abstract class _$VisionPrescriptionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res> get encounter;
   @override
-  $CodeableConceptCopyWith<$Res> get reasonX;
+  $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get reasonReference;
   @override
   $VisionPrescriptionDispenseCopyWith<$Res> get dispense;
 }
@@ -1088,7 +1261,8 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
     Object patient = freezed,
     Object prescriber = freezed,
     Object encounter = freezed,
-    Object reasonX = freezed,
+    Object reasonCodeableConcept = freezed,
+    Object reasonReference = freezed,
     Object dispense = freezed,
   }) {
     return _then(_VisionPrescription(
@@ -1121,7 +1295,12 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
           prescriber == freezed ? _value.prescriber : prescriber as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
-      reasonX: reasonX == freezed ? _value.reasonX : reasonX as CodeableConcept,
+      reasonCodeableConcept: reasonCodeableConcept == freezed
+          ? _value.reasonCodeableConcept
+          : reasonCodeableConcept as CodeableConcept,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference as Reference,
       dispense: dispense == freezed
           ? _value.dispense
           : dispense as VisionPrescriptionDispense,
@@ -1146,7 +1325,8 @@ class _$_VisionPrescription implements _VisionPrescription {
       this.patient,
       this.prescriber,
       this.encounter,
-      this.reasonX,
+      this.reasonCodeableConcept,
+      this.reasonReference,
       this.dispense});
 
   factory _$_VisionPrescription.fromJson(Map<String, dynamic> json) =>
@@ -1183,13 +1363,15 @@ class _$_VisionPrescription implements _VisionPrescription {
   @override
   final Reference encounter;
   @override
-  final CodeableConcept reasonX;
+  final CodeableConcept reasonCodeableConcept;
+  @override
+  final Reference reasonReference;
   @override
   final VisionPrescriptionDispense dispense;
 
   @override
   String toString() {
-    return 'VisionPrescription(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, dateWritten: $dateWritten, patient: $patient, prescriber: $prescriber, encounter: $encounter, reasonX: $reasonX, dispense: $dispense)';
+    return 'VisionPrescription(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, dateWritten: $dateWritten, patient: $patient, prescriber: $prescriber, encounter: $encounter, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, dispense: $dispense)';
   }
 
   @override
@@ -1235,9 +1417,12 @@ class _$_VisionPrescription implements _VisionPrescription {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
-            (identical(other.reasonX, reasonX) ||
+            (identical(other.reasonCodeableConcept, reasonCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.reasonCodeableConcept, reasonCodeableConcept)) &&
+            (identical(other.reasonReference, reasonReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.reasonX, reasonX)) &&
+                    .equals(other.reasonReference, reasonReference)) &&
             (identical(other.dispense, dispense) ||
                 const DeepCollectionEquality()
                     .equals(other.dispense, dispense)));
@@ -1260,7 +1445,8 @@ class _$_VisionPrescription implements _VisionPrescription {
       const DeepCollectionEquality().hash(patient) ^
       const DeepCollectionEquality().hash(prescriber) ^
       const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(reasonX) ^
+      const DeepCollectionEquality().hash(reasonCodeableConcept) ^
+      const DeepCollectionEquality().hash(reasonReference) ^
       const DeepCollectionEquality().hash(dispense);
 
   @override
@@ -1289,7 +1475,8 @@ abstract class _VisionPrescription implements VisionPrescription {
       Reference patient,
       Reference prescriber,
       Reference encounter,
-      CodeableConcept reasonX,
+      CodeableConcept reasonCodeableConcept,
+      Reference reasonReference,
       VisionPrescriptionDispense dispense}) = _$_VisionPrescription;
 
   factory _VisionPrescription.fromJson(Map<String, dynamic> json) =
@@ -1326,7 +1513,9 @@ abstract class _VisionPrescription implements VisionPrescription {
   @override
   Reference get encounter;
   @override
-  CodeableConcept get reasonX;
+  CodeableConcept get reasonCodeableConcept;
+  @override
+  Reference get reasonReference;
   @override
   VisionPrescriptionDispense get dispense;
   @override
@@ -2096,8 +2285,10 @@ class _$GoalTearOff {
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Reference subject,
-      Date startX,
-      Date targetX,
+      Date startDate,
+      CodeableConcept startCodeableConcept,
+      Date targetDate,
+      Quantity targetQuantity,
       List<CodeableConcept> category,
       @required
       @JsonKey(required: true)
@@ -2124,8 +2315,10 @@ class _$GoalTearOff {
       modifierExtension: modifierExtension,
       identifier: identifier,
       subject: subject,
-      startX: startX,
-      targetX: targetX,
+      startDate: startDate,
+      startCodeableConcept: startCodeableConcept,
+      targetDate: targetDate,
+      targetQuantity: targetQuantity,
       category: category,
       description: description,
       status: status,
@@ -2157,8 +2350,10 @@ mixin _$Goal {
   FhirExtension get modifierExtension;
   List<Identifier> get identifier;
   Reference get subject;
-  Date get startX;
-  Date get targetX;
+  Date get startDate;
+  CodeableConcept get startCodeableConcept;
+  Date get targetDate;
+  Quantity get targetQuantity;
   List<CodeableConcept> get category;
   @JsonKey(required: true)
   String get description;
@@ -2193,8 +2388,10 @@ abstract class $GoalCopyWith<$Res> {
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Reference subject,
-      Date startX,
-      Date targetX,
+      Date startDate,
+      CodeableConcept startCodeableConcept,
+      Date targetDate,
+      Quantity targetQuantity,
       List<CodeableConcept> category,
       @JsonKey(required: true)
           String description,
@@ -2212,6 +2409,8 @@ abstract class $GoalCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get subject;
+  $CodeableConceptCopyWith<$Res> get startCodeableConcept;
+  $QuantityCopyWith<$Res> get targetQuantity;
   $CodeableConceptCopyWith<$Res> get statusReason;
   $ReferenceCopyWith<$Res> get author;
   $CodeableConceptCopyWith<$Res> get priority;
@@ -2237,8 +2436,10 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object subject = freezed,
-    Object startX = freezed,
-    Object targetX = freezed,
+    Object startDate = freezed,
+    Object startCodeableConcept = freezed,
+    Object targetDate = freezed,
+    Object targetQuantity = freezed,
     Object category = freezed,
     Object description = freezed,
     Object status = freezed,
@@ -2273,8 +2474,15 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
           ? _value.identifier
           : identifier as List<Identifier>,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      startX: startX == freezed ? _value.startX : startX as Date,
-      targetX: targetX == freezed ? _value.targetX : targetX as Date,
+      startDate: startDate == freezed ? _value.startDate : startDate as Date,
+      startCodeableConcept: startCodeableConcept == freezed
+          ? _value.startCodeableConcept
+          : startCodeableConcept as CodeableConcept,
+      targetDate:
+          targetDate == freezed ? _value.targetDate : targetDate as Date,
+      targetQuantity: targetQuantity == freezed
+          ? _value.targetQuantity
+          : targetQuantity as Quantity,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
@@ -2339,6 +2547,26 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
   }
 
   @override
+  $CodeableConceptCopyWith<$Res> get startCodeableConcept {
+    if (_value.startCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.startCodeableConcept, (value) {
+      return _then(_value.copyWith(startCodeableConcept: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get targetQuantity {
+    if (_value.targetQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.targetQuantity, (value) {
+      return _then(_value.copyWith(targetQuantity: value));
+    });
+  }
+
+  @override
   $CodeableConceptCopyWith<$Res> get statusReason {
     if (_value.statusReason == null) {
       return null;
@@ -2387,8 +2615,10 @@ abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Reference subject,
-      Date startX,
-      Date targetX,
+      Date startDate,
+      CodeableConcept startCodeableConcept,
+      Date targetDate,
+      Quantity targetQuantity,
       List<CodeableConcept> category,
       @JsonKey(required: true)
           String description,
@@ -2410,6 +2640,10 @@ abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ReferenceCopyWith<$Res> get subject;
+  @override
+  $CodeableConceptCopyWith<$Res> get startCodeableConcept;
+  @override
+  $QuantityCopyWith<$Res> get targetQuantity;
   @override
   $CodeableConceptCopyWith<$Res> get statusReason;
   @override
@@ -2439,8 +2673,10 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object identifier = freezed,
     Object subject = freezed,
-    Object startX = freezed,
-    Object targetX = freezed,
+    Object startDate = freezed,
+    Object startCodeableConcept = freezed,
+    Object targetDate = freezed,
+    Object targetQuantity = freezed,
     Object category = freezed,
     Object description = freezed,
     Object status = freezed,
@@ -2475,8 +2711,15 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier>,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      startX: startX == freezed ? _value.startX : startX as Date,
-      targetX: targetX == freezed ? _value.targetX : targetX as Date,
+      startDate: startDate == freezed ? _value.startDate : startDate as Date,
+      startCodeableConcept: startCodeableConcept == freezed
+          ? _value.startCodeableConcept
+          : startCodeableConcept as CodeableConcept,
+      targetDate:
+          targetDate == freezed ? _value.targetDate : targetDate as Date,
+      targetQuantity: targetQuantity == freezed
+          ? _value.targetQuantity
+          : targetQuantity as Quantity,
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept>,
@@ -2517,8 +2760,10 @@ class _$_Goal implements _Goal {
       this.modifierExtension,
       this.identifier,
       this.subject,
-      this.startX,
-      this.targetX,
+      this.startDate,
+      this.startCodeableConcept,
+      this.targetDate,
+      this.targetQuantity,
       this.category,
       @required
       @JsonKey(required: true)
@@ -2564,9 +2809,13 @@ class _$_Goal implements _Goal {
   @override
   final Reference subject;
   @override
-  final Date startX;
+  final Date startDate;
   @override
-  final Date targetX;
+  final CodeableConcept startCodeableConcept;
+  @override
+  final Date targetDate;
+  @override
+  final Quantity targetQuantity;
   @override
   final List<CodeableConcept> category;
   @override
@@ -2592,7 +2841,7 @@ class _$_Goal implements _Goal {
 
   @override
   String toString() {
-    return 'Goal(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, startX: $startX, targetX: $targetX, category: $category, description: $description, status: $status, statusDate: $statusDate, statusReason: $statusReason, author: $author, priority: $priority, addresses: $addresses, note: $note, outcome: $outcome)';
+    return 'Goal(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, startDate: $startDate, startCodeableConcept: $startCodeableConcept, targetDate: $targetDate, targetQuantity: $targetQuantity, category: $category, description: $description, status: $status, statusDate: $statusDate, statusReason: $statusReason, author: $author, priority: $priority, addresses: $addresses, note: $note, outcome: $outcome)';
   }
 
   @override
@@ -2629,11 +2878,18 @@ class _$_Goal implements _Goal {
             (identical(other.subject, subject) ||
                 const DeepCollectionEquality()
                     .equals(other.subject, subject)) &&
-            (identical(other.startX, startX) ||
-                const DeepCollectionEquality().equals(other.startX, startX)) &&
-            (identical(other.targetX, targetX) ||
+            (identical(other.startDate, startDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.targetX, targetX)) &&
+                    .equals(other.startDate, startDate)) &&
+            (identical(other.startCodeableConcept, startCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.startCodeableConcept, startCodeableConcept)) &&
+            (identical(other.targetDate, targetDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.targetDate, targetDate)) &&
+            (identical(other.targetQuantity, targetQuantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.targetQuantity, targetQuantity)) &&
             (identical(other.category, category) ||
                 const DeepCollectionEquality()
                     .equals(other.category, category)) &&
@@ -2676,8 +2932,10 @@ class _$_Goal implements _Goal {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(startX) ^
-      const DeepCollectionEquality().hash(targetX) ^
+      const DeepCollectionEquality().hash(startDate) ^
+      const DeepCollectionEquality().hash(startCodeableConcept) ^
+      const DeepCollectionEquality().hash(targetDate) ^
+      const DeepCollectionEquality().hash(targetQuantity) ^
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(status) ^
@@ -2714,8 +2972,10 @@ abstract class _Goal implements Goal {
       FhirExtension modifierExtension,
       List<Identifier> identifier,
       Reference subject,
-      Date startX,
-      Date targetX,
+      Date startDate,
+      CodeableConcept startCodeableConcept,
+      Date targetDate,
+      Quantity targetQuantity,
       List<CodeableConcept> category,
       @required
       @JsonKey(required: true)
@@ -2758,9 +3018,13 @@ abstract class _Goal implements Goal {
   @override
   Reference get subject;
   @override
-  Date get startX;
+  Date get startDate;
   @override
-  Date get targetX;
+  CodeableConcept get startCodeableConcept;
+  @override
+  Date get targetDate;
+  @override
+  Quantity get targetQuantity;
   @override
   List<CodeableConcept> get category;
   @override
@@ -5666,12 +5930,14 @@ class _$GoalOutcomeTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept resultX}) {
+      CodeableConcept resultCodeableConcept,
+      Reference resultReference}) {
     return _GoalOutcome(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      resultX: resultX,
+      resultCodeableConcept: resultCodeableConcept,
+      resultReference: resultReference,
     );
   }
 }
@@ -5684,7 +5950,8 @@ mixin _$GoalOutcome {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  CodeableConcept get resultX;
+  CodeableConcept get resultCodeableConcept;
+  Reference get resultReference;
 
   Map<String, dynamic> toJson();
   $GoalOutcomeCopyWith<GoalOutcome> get copyWith;
@@ -5698,10 +5965,12 @@ abstract class $GoalOutcomeCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept resultX});
+      CodeableConcept resultCodeableConcept,
+      Reference resultReference});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get resultX;
+  $CodeableConceptCopyWith<$Res> get resultCodeableConcept;
+  $ReferenceCopyWith<$Res> get resultReference;
 }
 
 class _$GoalOutcomeCopyWithImpl<$Res> implements $GoalOutcomeCopyWith<$Res> {
@@ -5716,7 +5985,8 @@ class _$GoalOutcomeCopyWithImpl<$Res> implements $GoalOutcomeCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object resultX = freezed,
+    Object resultCodeableConcept = freezed,
+    Object resultReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -5726,7 +5996,12 @@ class _$GoalOutcomeCopyWithImpl<$Res> implements $GoalOutcomeCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      resultX: resultX == freezed ? _value.resultX : resultX as CodeableConcept,
+      resultCodeableConcept: resultCodeableConcept == freezed
+          ? _value.resultCodeableConcept
+          : resultCodeableConcept as CodeableConcept,
+      resultReference: resultReference == freezed
+          ? _value.resultReference
+          : resultReference as Reference,
     ));
   }
 
@@ -5741,12 +6016,23 @@ class _$GoalOutcomeCopyWithImpl<$Res> implements $GoalOutcomeCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get resultX {
-    if (_value.resultX == null) {
+  $CodeableConceptCopyWith<$Res> get resultCodeableConcept {
+    if (_value.resultCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.resultX, (value) {
-      return _then(_value.copyWith(resultX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.resultCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(resultCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get resultReference {
+    if (_value.resultReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.resultReference, (value) {
+      return _then(_value.copyWith(resultReference: value));
     });
   }
 }
@@ -5761,12 +6047,15 @@ abstract class _$GoalOutcomeCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept resultX});
+      CodeableConcept resultCodeableConcept,
+      Reference resultReference});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
-  $CodeableConceptCopyWith<$Res> get resultX;
+  $CodeableConceptCopyWith<$Res> get resultCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get resultReference;
 }
 
 class __$GoalOutcomeCopyWithImpl<$Res> extends _$GoalOutcomeCopyWithImpl<$Res>
@@ -5783,7 +6072,8 @@ class __$GoalOutcomeCopyWithImpl<$Res> extends _$GoalOutcomeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
-    Object resultX = freezed,
+    Object resultCodeableConcept = freezed,
+    Object resultReference = freezed,
   }) {
     return _then(_GoalOutcome(
       id: id == freezed ? _value.id : id as Id,
@@ -5793,7 +6083,12 @@ class __$GoalOutcomeCopyWithImpl<$Res> extends _$GoalOutcomeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      resultX: resultX == freezed ? _value.resultX : resultX as CodeableConcept,
+      resultCodeableConcept: resultCodeableConcept == freezed
+          ? _value.resultCodeableConcept
+          : resultCodeableConcept as CodeableConcept,
+      resultReference: resultReference == freezed
+          ? _value.resultReference
+          : resultReference as Reference,
     ));
   }
 }
@@ -5804,7 +6099,8 @@ class _$_GoalOutcome implements _GoalOutcome {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.resultX});
+      this.resultCodeableConcept,
+      this.resultReference});
 
   factory _$_GoalOutcome.fromJson(Map<String, dynamic> json) =>
       _$_$_GoalOutcomeFromJson(json);
@@ -5817,11 +6113,13 @@ class _$_GoalOutcome implements _GoalOutcome {
   @override
   final FhirExtension modifierExtension;
   @override
-  final CodeableConcept resultX;
+  final CodeableConcept resultCodeableConcept;
+  @override
+  final Reference resultReference;
 
   @override
   String toString() {
-    return 'GoalOutcome(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, resultX: $resultX)';
+    return 'GoalOutcome(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, resultCodeableConcept: $resultCodeableConcept, resultReference: $resultReference)';
   }
 
   @override
@@ -5836,8 +6134,12 @@ class _$_GoalOutcome implements _GoalOutcome {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.resultX, resultX) ||
-                const DeepCollectionEquality().equals(other.resultX, resultX)));
+            (identical(other.resultCodeableConcept, resultCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.resultCodeableConcept, resultCodeableConcept)) &&
+            (identical(other.resultReference, resultReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.resultReference, resultReference)));
   }
 
   @override
@@ -5846,7 +6148,8 @@ class _$_GoalOutcome implements _GoalOutcome {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(resultX);
+      const DeepCollectionEquality().hash(resultCodeableConcept) ^
+      const DeepCollectionEquality().hash(resultReference);
 
   @override
   _$GoalOutcomeCopyWith<_GoalOutcome> get copyWith =>
@@ -5863,7 +6166,8 @@ abstract class _GoalOutcome implements GoalOutcome {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept resultX}) = _$_GoalOutcome;
+      CodeableConcept resultCodeableConcept,
+      Reference resultReference}) = _$_GoalOutcome;
 
   factory _GoalOutcome.fromJson(Map<String, dynamic> json) =
       _$_GoalOutcome.fromJson;
@@ -5876,7 +6180,9 @@ abstract class _GoalOutcome implements GoalOutcome {
   @override
   FhirExtension get modifierExtension;
   @override
-  CodeableConcept get resultX;
+  CodeableConcept get resultCodeableConcept;
+  @override
+  Reference get resultReference;
   @override
   _$GoalOutcomeCopyWith<_GoalOutcome> get copyWith;
 }
@@ -7035,10 +7341,13 @@ class _$CarePlanDetailTearOff {
       @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
       @required @JsonKey(required: true) Boolean prohibited,
-      Timing scheduledX,
+      Timing scheduledTiming,
+      Period scheduledPeriod,
+      String scheduledString,
       Reference location,
       List<Reference> performer,
-      CodeableConcept productX,
+      CodeableConcept productCodeableConcept,
+      Reference productReference,
       Quantity dailyAmount,
       Quantity quantity,
       String description}) {
@@ -7054,10 +7363,13 @@ class _$CarePlanDetailTearOff {
       status: status,
       statusReason: statusReason,
       prohibited: prohibited,
-      scheduledX: scheduledX,
+      scheduledTiming: scheduledTiming,
+      scheduledPeriod: scheduledPeriod,
+      scheduledString: scheduledString,
       location: location,
       performer: performer,
-      productX: productX,
+      productCodeableConcept: productCodeableConcept,
+      productReference: productReference,
       dailyAmount: dailyAmount,
       quantity: quantity,
       description: description,
@@ -7083,10 +7395,13 @@ mixin _$CarePlanDetail {
   CodeableConcept get statusReason;
   @JsonKey(required: true)
   Boolean get prohibited;
-  Timing get scheduledX;
+  Timing get scheduledTiming;
+  Period get scheduledPeriod;
+  String get scheduledString;
   Reference get location;
   List<Reference> get performer;
-  CodeableConcept get productX;
+  CodeableConcept get productCodeableConcept;
+  Reference get productReference;
   Quantity get dailyAmount;
   Quantity get quantity;
   String get description;
@@ -7111,10 +7426,13 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
       @JsonKey(required: true) Boolean prohibited,
-      Timing scheduledX,
+      Timing scheduledTiming,
+      Period scheduledPeriod,
+      String scheduledString,
       Reference location,
       List<Reference> performer,
-      CodeableConcept productX,
+      CodeableConcept productCodeableConcept,
+      Reference productReference,
       Quantity dailyAmount,
       Quantity quantity,
       String description});
@@ -7123,9 +7441,11 @@ abstract class $CarePlanDetailCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get code;
   $CodeableConceptCopyWith<$Res> get statusReason;
-  $TimingCopyWith<$Res> get scheduledX;
+  $TimingCopyWith<$Res> get scheduledTiming;
+  $PeriodCopyWith<$Res> get scheduledPeriod;
   $ReferenceCopyWith<$Res> get location;
-  $CodeableConceptCopyWith<$Res> get productX;
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept;
+  $ReferenceCopyWith<$Res> get productReference;
   $QuantityCopyWith<$Res> get dailyAmount;
   $QuantityCopyWith<$Res> get quantity;
 }
@@ -7151,10 +7471,13 @@ class _$CarePlanDetailCopyWithImpl<$Res>
     Object status = freezed,
     Object statusReason = freezed,
     Object prohibited = freezed,
-    Object scheduledX = freezed,
+    Object scheduledTiming = freezed,
+    Object scheduledPeriod = freezed,
+    Object scheduledString = freezed,
     Object location = freezed,
     Object performer = freezed,
-    Object productX = freezed,
+    Object productCodeableConcept = freezed,
+    Object productReference = freezed,
     Object dailyAmount = freezed,
     Object quantity = freezed,
     Object description = freezed,
@@ -7183,14 +7506,25 @@ class _$CarePlanDetailCopyWithImpl<$Res>
           : statusReason as CodeableConcept,
       prohibited:
           prohibited == freezed ? _value.prohibited : prohibited as Boolean,
-      scheduledX:
-          scheduledX == freezed ? _value.scheduledX : scheduledX as Timing,
+      scheduledTiming: scheduledTiming == freezed
+          ? _value.scheduledTiming
+          : scheduledTiming as Timing,
+      scheduledPeriod: scheduledPeriod == freezed
+          ? _value.scheduledPeriod
+          : scheduledPeriod as Period,
+      scheduledString: scheduledString == freezed
+          ? _value.scheduledString
+          : scheduledString as String,
       location: location == freezed ? _value.location : location as Reference,
       performer: performer == freezed
           ? _value.performer
           : performer as List<Reference>,
-      productX:
-          productX == freezed ? _value.productX : productX as CodeableConcept,
+      productCodeableConcept: productCodeableConcept == freezed
+          ? _value.productCodeableConcept
+          : productCodeableConcept as CodeableConcept,
+      productReference: productReference == freezed
+          ? _value.productReference
+          : productReference as Reference,
       dailyAmount:
           dailyAmount == freezed ? _value.dailyAmount : dailyAmount as Quantity,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
@@ -7240,12 +7574,22 @@ class _$CarePlanDetailCopyWithImpl<$Res>
   }
 
   @override
-  $TimingCopyWith<$Res> get scheduledX {
-    if (_value.scheduledX == null) {
+  $TimingCopyWith<$Res> get scheduledTiming {
+    if (_value.scheduledTiming == null) {
       return null;
     }
-    return $TimingCopyWith<$Res>(_value.scheduledX, (value) {
-      return _then(_value.copyWith(scheduledX: value));
+    return $TimingCopyWith<$Res>(_value.scheduledTiming, (value) {
+      return _then(_value.copyWith(scheduledTiming: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get scheduledPeriod {
+    if (_value.scheduledPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.scheduledPeriod, (value) {
+      return _then(_value.copyWith(scheduledPeriod: value));
     });
   }
 
@@ -7260,12 +7604,23 @@ class _$CarePlanDetailCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get productX {
-    if (_value.productX == null) {
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept {
+    if (_value.productCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.productX, (value) {
-      return _then(_value.copyWith(productX: value));
+    return $CodeableConceptCopyWith<$Res>(_value.productCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(productCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get productReference {
+    if (_value.productReference == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.productReference, (value) {
+      return _then(_value.copyWith(productReference: value));
     });
   }
 
@@ -7308,10 +7663,13 @@ abstract class _$CarePlanDetailCopyWith<$Res>
       @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
       @JsonKey(required: true) Boolean prohibited,
-      Timing scheduledX,
+      Timing scheduledTiming,
+      Period scheduledPeriod,
+      String scheduledString,
       Reference location,
       List<Reference> performer,
-      CodeableConcept productX,
+      CodeableConcept productCodeableConcept,
+      Reference productReference,
       Quantity dailyAmount,
       Quantity quantity,
       String description});
@@ -7325,11 +7683,15 @@ abstract class _$CarePlanDetailCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res> get statusReason;
   @override
-  $TimingCopyWith<$Res> get scheduledX;
+  $TimingCopyWith<$Res> get scheduledTiming;
+  @override
+  $PeriodCopyWith<$Res> get scheduledPeriod;
   @override
   $ReferenceCopyWith<$Res> get location;
   @override
-  $CodeableConceptCopyWith<$Res> get productX;
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept;
+  @override
+  $ReferenceCopyWith<$Res> get productReference;
   @override
   $QuantityCopyWith<$Res> get dailyAmount;
   @override
@@ -7359,10 +7721,13 @@ class __$CarePlanDetailCopyWithImpl<$Res>
     Object status = freezed,
     Object statusReason = freezed,
     Object prohibited = freezed,
-    Object scheduledX = freezed,
+    Object scheduledTiming = freezed,
+    Object scheduledPeriod = freezed,
+    Object scheduledString = freezed,
     Object location = freezed,
     Object performer = freezed,
-    Object productX = freezed,
+    Object productCodeableConcept = freezed,
+    Object productReference = freezed,
     Object dailyAmount = freezed,
     Object quantity = freezed,
     Object description = freezed,
@@ -7391,14 +7756,25 @@ class __$CarePlanDetailCopyWithImpl<$Res>
           : statusReason as CodeableConcept,
       prohibited:
           prohibited == freezed ? _value.prohibited : prohibited as Boolean,
-      scheduledX:
-          scheduledX == freezed ? _value.scheduledX : scheduledX as Timing,
+      scheduledTiming: scheduledTiming == freezed
+          ? _value.scheduledTiming
+          : scheduledTiming as Timing,
+      scheduledPeriod: scheduledPeriod == freezed
+          ? _value.scheduledPeriod
+          : scheduledPeriod as Period,
+      scheduledString: scheduledString == freezed
+          ? _value.scheduledString
+          : scheduledString as String,
       location: location == freezed ? _value.location : location as Reference,
       performer: performer == freezed
           ? _value.performer
           : performer as List<Reference>,
-      productX:
-          productX == freezed ? _value.productX : productX as CodeableConcept,
+      productCodeableConcept: productCodeableConcept == freezed
+          ? _value.productCodeableConcept
+          : productCodeableConcept as CodeableConcept,
+      productReference: productReference == freezed
+          ? _value.productReference
+          : productReference as Reference,
       dailyAmount:
           dailyAmount == freezed ? _value.dailyAmount : dailyAmount as Quantity,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
@@ -7422,10 +7798,13 @@ class _$_CarePlanDetail implements _CarePlanDetail {
       @JsonKey(unknownEnumValue: DetailStatus.unknown) this.status,
       this.statusReason,
       @required @JsonKey(required: true) this.prohibited,
-      this.scheduledX,
+      this.scheduledTiming,
+      this.scheduledPeriod,
+      this.scheduledString,
       this.location,
       this.performer,
-      this.productX,
+      this.productCodeableConcept,
+      this.productReference,
       this.dailyAmount,
       this.quantity,
       this.description})
@@ -7460,13 +7839,19 @@ class _$_CarePlanDetail implements _CarePlanDetail {
   @JsonKey(required: true)
   final Boolean prohibited;
   @override
-  final Timing scheduledX;
+  final Timing scheduledTiming;
+  @override
+  final Period scheduledPeriod;
+  @override
+  final String scheduledString;
   @override
   final Reference location;
   @override
   final List<Reference> performer;
   @override
-  final CodeableConcept productX;
+  final CodeableConcept productCodeableConcept;
+  @override
+  final Reference productReference;
   @override
   final Quantity dailyAmount;
   @override
@@ -7476,7 +7861,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
 
   @override
   String toString() {
-    return 'CarePlanDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, code: $code, reasonCode: $reasonCode, reasonReference: $reasonReference, goal: $goal, status: $status, statusReason: $statusReason, prohibited: $prohibited, scheduledX: $scheduledX, location: $location, performer: $performer, productX: $productX, dailyAmount: $dailyAmount, quantity: $quantity, description: $description)';
+    return 'CarePlanDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, code: $code, reasonCode: $reasonCode, reasonReference: $reasonReference, goal: $goal, status: $status, statusReason: $statusReason, prohibited: $prohibited, scheduledTiming: $scheduledTiming, scheduledPeriod: $scheduledPeriod, scheduledString: $scheduledString, location: $location, performer: $performer, productCodeableConcept: $productCodeableConcept, productReference: $productReference, dailyAmount: $dailyAmount, quantity: $quantity, description: $description)';
   }
 
   @override
@@ -7512,18 +7897,27 @@ class _$_CarePlanDetail implements _CarePlanDetail {
             (identical(other.prohibited, prohibited) ||
                 const DeepCollectionEquality()
                     .equals(other.prohibited, prohibited)) &&
-            (identical(other.scheduledX, scheduledX) ||
+            (identical(other.scheduledTiming, scheduledTiming) ||
                 const DeepCollectionEquality()
-                    .equals(other.scheduledX, scheduledX)) &&
+                    .equals(other.scheduledTiming, scheduledTiming)) &&
+            (identical(other.scheduledPeriod, scheduledPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.scheduledPeriod, scheduledPeriod)) &&
+            (identical(other.scheduledString, scheduledString) ||
+                const DeepCollectionEquality()
+                    .equals(other.scheduledString, scheduledString)) &&
             (identical(other.location, location) ||
                 const DeepCollectionEquality()
                     .equals(other.location, location)) &&
             (identical(other.performer, performer) ||
                 const DeepCollectionEquality()
                     .equals(other.performer, performer)) &&
-            (identical(other.productX, productX) ||
+            (identical(other.productCodeableConcept, productCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.productCodeableConcept, productCodeableConcept)) &&
+            (identical(other.productReference, productReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.productX, productX)) &&
+                    .equals(other.productReference, productReference)) &&
             (identical(other.dailyAmount, dailyAmount) ||
                 const DeepCollectionEquality()
                     .equals(other.dailyAmount, dailyAmount)) &&
@@ -7549,10 +7943,13 @@ class _$_CarePlanDetail implements _CarePlanDetail {
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusReason) ^
       const DeepCollectionEquality().hash(prohibited) ^
-      const DeepCollectionEquality().hash(scheduledX) ^
+      const DeepCollectionEquality().hash(scheduledTiming) ^
+      const DeepCollectionEquality().hash(scheduledPeriod) ^
+      const DeepCollectionEquality().hash(scheduledString) ^
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(performer) ^
-      const DeepCollectionEquality().hash(productX) ^
+      const DeepCollectionEquality().hash(productCodeableConcept) ^
+      const DeepCollectionEquality().hash(productReference) ^
       const DeepCollectionEquality().hash(dailyAmount) ^
       const DeepCollectionEquality().hash(quantity) ^
       const DeepCollectionEquality().hash(description);
@@ -7580,10 +7977,13 @@ abstract class _CarePlanDetail implements CarePlanDetail {
       @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
       @required @JsonKey(required: true) Boolean prohibited,
-      Timing scheduledX,
+      Timing scheduledTiming,
+      Period scheduledPeriod,
+      String scheduledString,
       Reference location,
       List<Reference> performer,
-      CodeableConcept productX,
+      CodeableConcept productCodeableConcept,
+      Reference productReference,
       Quantity dailyAmount,
       Quantity quantity,
       String description}) = _$_CarePlanDetail;
@@ -7617,13 +8017,19 @@ abstract class _CarePlanDetail implements CarePlanDetail {
   @JsonKey(required: true)
   Boolean get prohibited;
   @override
-  Timing get scheduledX;
+  Timing get scheduledTiming;
+  @override
+  Period get scheduledPeriod;
+  @override
+  String get scheduledString;
   @override
   Reference get location;
   @override
   List<Reference> get performer;
   @override
-  CodeableConcept get productX;
+  CodeableConcept get productCodeableConcept;
+  @override
+  Reference get productReference;
   @override
   Quantity get dailyAmount;
   @override
@@ -8179,14 +8585,16 @@ class _$NutritionOrderAdministrationTearOff {
       FhirExtension modifierExtension,
       Timing schedule,
       Quantity quantity,
-      Quantity rateX}) {
+      Quantity rateQuantity,
+      Ratio rateRatio}) {
     return _NutritionOrderAdministration(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       schedule: schedule,
       quantity: quantity,
-      rateX: rateX,
+      rateQuantity: rateQuantity,
+      rateRatio: rateRatio,
     );
   }
 }
@@ -8201,7 +8609,8 @@ mixin _$NutritionOrderAdministration {
   FhirExtension get modifierExtension;
   Timing get schedule;
   Quantity get quantity;
-  Quantity get rateX;
+  Quantity get rateQuantity;
+  Ratio get rateRatio;
 
   Map<String, dynamic> toJson();
   $NutritionOrderAdministrationCopyWith<NutritionOrderAdministration>
@@ -8219,12 +8628,14 @@ abstract class $NutritionOrderAdministrationCopyWith<$Res> {
       FhirExtension modifierExtension,
       Timing schedule,
       Quantity quantity,
-      Quantity rateX});
+      Quantity rateQuantity,
+      Ratio rateRatio});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $TimingCopyWith<$Res> get schedule;
   $QuantityCopyWith<$Res> get quantity;
-  $QuantityCopyWith<$Res> get rateX;
+  $QuantityCopyWith<$Res> get rateQuantity;
+  $RatioCopyWith<$Res> get rateRatio;
 }
 
 class _$NutritionOrderAdministrationCopyWithImpl<$Res>
@@ -8242,7 +8653,8 @@ class _$NutritionOrderAdministrationCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object schedule = freezed,
     Object quantity = freezed,
-    Object rateX = freezed,
+    Object rateQuantity = freezed,
+    Object rateRatio = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -8254,7 +8666,10 @@ class _$NutritionOrderAdministrationCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      rateX: rateX == freezed ? _value.rateX : rateX as Quantity,
+      rateQuantity: rateQuantity == freezed
+          ? _value.rateQuantity
+          : rateQuantity as Quantity,
+      rateRatio: rateRatio == freezed ? _value.rateRatio : rateRatio as Ratio,
     ));
   }
 
@@ -8289,12 +8704,22 @@ class _$NutritionOrderAdministrationCopyWithImpl<$Res>
   }
 
   @override
-  $QuantityCopyWith<$Res> get rateX {
-    if (_value.rateX == null) {
+  $QuantityCopyWith<$Res> get rateQuantity {
+    if (_value.rateQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.rateX, (value) {
-      return _then(_value.copyWith(rateX: value));
+    return $QuantityCopyWith<$Res>(_value.rateQuantity, (value) {
+      return _then(_value.copyWith(rateQuantity: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get rateRatio {
+    if (_value.rateRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.rateRatio, (value) {
+      return _then(_value.copyWith(rateRatio: value));
     });
   }
 }
@@ -8312,7 +8737,8 @@ abstract class _$NutritionOrderAdministrationCopyWith<$Res>
       FhirExtension modifierExtension,
       Timing schedule,
       Quantity quantity,
-      Quantity rateX});
+      Quantity rateQuantity,
+      Ratio rateRatio});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -8321,7 +8747,9 @@ abstract class _$NutritionOrderAdministrationCopyWith<$Res>
   @override
   $QuantityCopyWith<$Res> get quantity;
   @override
-  $QuantityCopyWith<$Res> get rateX;
+  $QuantityCopyWith<$Res> get rateQuantity;
+  @override
+  $RatioCopyWith<$Res> get rateRatio;
 }
 
 class __$NutritionOrderAdministrationCopyWithImpl<$Res>
@@ -8343,7 +8771,8 @@ class __$NutritionOrderAdministrationCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object schedule = freezed,
     Object quantity = freezed,
-    Object rateX = freezed,
+    Object rateQuantity = freezed,
+    Object rateRatio = freezed,
   }) {
     return _then(_NutritionOrderAdministration(
       id: id == freezed ? _value.id : id as Id,
@@ -8355,7 +8784,10 @@ class __$NutritionOrderAdministrationCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      rateX: rateX == freezed ? _value.rateX : rateX as Quantity,
+      rateQuantity: rateQuantity == freezed
+          ? _value.rateQuantity
+          : rateQuantity as Quantity,
+      rateRatio: rateRatio == freezed ? _value.rateRatio : rateRatio as Ratio,
     ));
   }
 }
@@ -8368,7 +8800,8 @@ class _$_NutritionOrderAdministration implements _NutritionOrderAdministration {
       this.modifierExtension,
       this.schedule,
       this.quantity,
-      this.rateX});
+      this.rateQuantity,
+      this.rateRatio});
 
   factory _$_NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =>
       _$_$_NutritionOrderAdministrationFromJson(json);
@@ -8385,11 +8818,13 @@ class _$_NutritionOrderAdministration implements _NutritionOrderAdministration {
   @override
   final Quantity quantity;
   @override
-  final Quantity rateX;
+  final Quantity rateQuantity;
+  @override
+  final Ratio rateRatio;
 
   @override
   String toString() {
-    return 'NutritionOrderAdministration(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, schedule: $schedule, quantity: $quantity, rateX: $rateX)';
+    return 'NutritionOrderAdministration(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, schedule: $schedule, quantity: $quantity, rateQuantity: $rateQuantity, rateRatio: $rateRatio)';
   }
 
   @override
@@ -8410,8 +8845,12 @@ class _$_NutritionOrderAdministration implements _NutritionOrderAdministration {
             (identical(other.quantity, quantity) ||
                 const DeepCollectionEquality()
                     .equals(other.quantity, quantity)) &&
-            (identical(other.rateX, rateX) ||
-                const DeepCollectionEquality().equals(other.rateX, rateX)));
+            (identical(other.rateQuantity, rateQuantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.rateQuantity, rateQuantity)) &&
+            (identical(other.rateRatio, rateRatio) ||
+                const DeepCollectionEquality()
+                    .equals(other.rateRatio, rateRatio)));
   }
 
   @override
@@ -8422,7 +8861,8 @@ class _$_NutritionOrderAdministration implements _NutritionOrderAdministration {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(schedule) ^
       const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(rateX);
+      const DeepCollectionEquality().hash(rateQuantity) ^
+      const DeepCollectionEquality().hash(rateRatio);
 
   @override
   _$NutritionOrderAdministrationCopyWith<_NutritionOrderAdministration>
@@ -8443,7 +8883,8 @@ abstract class _NutritionOrderAdministration
       FhirExtension modifierExtension,
       Timing schedule,
       Quantity quantity,
-      Quantity rateX}) = _$_NutritionOrderAdministration;
+      Quantity rateQuantity,
+      Ratio rateRatio}) = _$_NutritionOrderAdministration;
 
   factory _NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =
       _$_NutritionOrderAdministration.fromJson;
@@ -8460,7 +8901,9 @@ abstract class _NutritionOrderAdministration
   @override
   Quantity get quantity;
   @override
-  Quantity get rateX;
+  Quantity get rateQuantity;
+  @override
+  Ratio get rateRatio;
   @override
   _$NutritionOrderAdministrationCopyWith<_NutritionOrderAdministration>
       get copyWith;

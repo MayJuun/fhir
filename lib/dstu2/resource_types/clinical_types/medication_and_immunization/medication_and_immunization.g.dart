@@ -1646,9 +1646,14 @@ _$_MedicationOrderDispenseRequest _$_$_MedicationOrderDispenseRequestFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    medicationX: json['medicationX'] == null
+    medicationCodeableConcept: json['medicationCodeableConcept'] == null
         ? null
-        : CodeableConcept.fromJson(json['medicationX'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(
+            json['medicationCodeableConcept'] as Map<String, dynamic>),
+    medicationReference: json['medicationReference'] == null
+        ? null
+        : Reference.fromJson(
+            json['medicationReference'] as Map<String, dynamic>),
     validityPeriod: json['validityPeriod'] == null
         ? null
         : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
@@ -1679,7 +1684,9 @@ Map<String, dynamic> _$_$_MedicationOrderDispenseRequestToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('medicationX', instance.medicationX?.toJson());
+  writeNotNull('medicationCodeableConcept',
+      instance.medicationCodeableConcept?.toJson());
+  writeNotNull('medicationReference', instance.medicationReference?.toJson());
   writeNotNull('validityPeriod', instance.validityPeriod?.toJson());
   writeNotNull(
       'numberOfRepeatsAllowed', instance.numberOfRepeatsAllowed?.toJson());

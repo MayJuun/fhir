@@ -10,6 +10,7 @@ void main() async {
   await File('./test/dstu2/errors.txt').writeAsString('');
   var string = '';
   for (var file in await dir.list().toList()) {
+    print(file.path.split('/').last);
     var contents = await File(file.path).readAsString();
     var resource = fhir_dstu2.Resource.fromJson(json.decode(contents));
     print(resource.toJson().toString());

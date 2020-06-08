@@ -72,7 +72,8 @@ abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    CodeableConcept bodySiteX,
+    CodeableConcept bodySiteCodeableConcept,
+    Reference bodySiteReference,
     @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
         DeviceUseRequestStatus status,
     @JsonKey(required: true) @required Reference device,

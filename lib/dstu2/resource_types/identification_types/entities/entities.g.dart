@@ -776,9 +776,13 @@ _$_ContractValuedItem _$_$_ContractValuedItemFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    entityX: json['entityX'] == null
+    entityCodeableConcept: json['entityCodeableConcept'] == null
         ? null
-        : CodeableConcept.fromJson(json['entityX'] as Map<String, dynamic>),
+        : CodeableConcept.fromJson(
+            json['entityCodeableConcept'] as Map<String, dynamic>),
+    entityReference: json['entityReference'] == null
+        ? null
+        : Reference.fromJson(json['entityReference'] as Map<String, dynamic>),
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -813,7 +817,9 @@ Map<String, dynamic> _$_$_ContractValuedItemToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('entityX', instance.entityX?.toJson());
+  writeNotNull(
+      'entityCodeableConcept', instance.entityCodeableConcept?.toJson());
+  writeNotNull('entityReference', instance.entityReference?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('effectiveTime', instance.effectiveTime?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
@@ -954,7 +960,6 @@ Map<String, dynamic> _$_$_ContractTermToJson(_$_ContractTerm instance) {
 }
 
 _$_ContractFriendly _$_$_ContractFriendlyFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['contentX']);
   return _$_ContractFriendly(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension_: (json['extension'] as List)
@@ -966,9 +971,13 @@ _$_ContractFriendly _$_$_ContractFriendlyFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    contentX: json['contentX'] == null
+    contentAttachment: json['contentAttachment'] == null
         ? null
-        : Attachment.fromJson(json['contentX'] as Map<String, dynamic>),
+        : Attachment.fromJson(
+            json['contentAttachment'] as Map<String, dynamic>),
+    contactReference: json['contactReference'] == null
+        ? null
+        : Reference.fromJson(json['contactReference'] as Map<String, dynamic>),
   );
 }
 
@@ -985,12 +994,12 @@ Map<String, dynamic> _$_$_ContractFriendlyToJson(_$_ContractFriendly instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('contentX', instance.contentX?.toJson());
+  writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
+  writeNotNull('contactReference', instance.contactReference?.toJson());
   return val;
 }
 
 _$_ContractLegal _$_$_ContractLegalFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['contentX']);
   return _$_ContractLegal(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension_: (json['extension'] as List)
@@ -1002,9 +1011,13 @@ _$_ContractLegal _$_$_ContractLegalFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    contentX: json['contentX'] == null
+    contentAttachment: json['contentAttachment'] == null
         ? null
-        : Attachment.fromJson(json['contentX'] as Map<String, dynamic>),
+        : Attachment.fromJson(
+            json['contentAttachment'] as Map<String, dynamic>),
+    content: json['content'] == null
+        ? null
+        : Reference.fromJson(json['content'] as Map<String, dynamic>),
   );
 }
 
@@ -1021,12 +1034,12 @@ Map<String, dynamic> _$_$_ContractLegalToJson(_$_ContractLegal instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('contentX', instance.contentX?.toJson());
+  writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
+  writeNotNull('content', instance.content?.toJson());
   return val;
 }
 
 _$_ContractRule _$_$_ContractRuleFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['contentX']);
   return _$_ContractRule(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension_: (json['extension'] as List)
@@ -1038,9 +1051,13 @@ _$_ContractRule _$_$_ContractRuleFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    contentX: json['contentX'] == null
+    contentAttachment: json['contentAttachment'] == null
         ? null
-        : Attachment.fromJson(json['contentX'] as Map<String, dynamic>),
+        : Attachment.fromJson(
+            json['contentAttachment'] as Map<String, dynamic>),
+    contentReference: json['contentReference'] == null
+        ? null
+        : Reference.fromJson(json['contentReference'] as Map<String, dynamic>),
   );
 }
 
@@ -1057,6 +1074,7 @@ Map<String, dynamic> _$_$_ContractRuleToJson(_$_ContractRule instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('contentX', instance.contentX?.toJson());
+  writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
+  writeNotNull('contentReference', instance.contentReference?.toJson());
   return val;
 }

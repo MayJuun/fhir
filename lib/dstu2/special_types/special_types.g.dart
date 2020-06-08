@@ -1189,9 +1189,12 @@ _$_ElementDefinitionBinding _$_$_ElementDefinitionBindingFromJson(
     strength: _$enumDecodeNullable(_$BindingStrengthEnumMap, json['strength'],
         unknownValue: BindingStrength.unknown),
     description: json['description'] as String,
-    valueSetX: json['valueSetX'] == null
+    valueSetUri: json['valueSetUri'] == null
         ? null
-        : FhirUri.fromJson(json['valueSetX'] as String),
+        : FhirUri.fromJson(json['valueSetUri'] as String),
+    valueSetReference: json['valueSetReference'] == null
+        ? null
+        : Reference.fromJson(json['valueSetReference'] as Map<String, dynamic>),
   );
 }
 
@@ -1210,7 +1213,8 @@ Map<String, dynamic> _$_$_ElementDefinitionBindingToJson(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('strength', _$BindingStrengthEnumMap[instance.strength]);
   writeNotNull('description', instance.description);
-  writeNotNull('valueSetX', instance.valueSetX?.toJson());
+  writeNotNull('valueSetUri', instance.valueSetUri?.toJson());
+  writeNotNull('valueSetReference', instance.valueSetReference?.toJson());
   return val;
 }
 

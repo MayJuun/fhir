@@ -289,9 +289,10 @@ _$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    authorX: json['authorX'] == null
+    authorReference: json['authorReference'] == null
         ? null
-        : Reference.fromJson(json['authorX'] as Map<String, dynamic>),
+        : Reference.fromJson(json['authorReference'] as Map<String, dynamic>),
+    authorString: json['authorString'] as String,
     time: json['time'] == null
         ? null
         : FhirDateTime.fromJson(json['time'] as String),
@@ -311,7 +312,8 @@ Map<String, dynamic> _$_$_AnnotationToJson(_$_Annotation instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
-  writeNotNull('authorX', instance.authorX?.toJson());
+  writeNotNull('authorReference', instance.authorReference?.toJson());
+  writeNotNull('authorString', instance.authorString);
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('text', instance.text);
   return val;
@@ -456,8 +458,7 @@ const _$IdentifierUseEnumMap = {
 };
 
 _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
-  $checkKeys(json,
-      requiredKeys: const ['type', 'when', 'whoX', 'contentType', 'blob']);
+  $checkKeys(json, requiredKeys: const ['type', 'when', 'contentType', 'blob']);
   return _$_Signature(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension_: (json['extension'] as List)
@@ -471,8 +472,12 @@ _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
         ?.toList(),
     when:
         json['when'] == null ? null : Instant.fromJson(json['when'] as String),
-    whoX:
-        json['whoX'] == null ? null : FhirUri.fromJson(json['whoX'] as String),
+    whoUri: json['whoUri'] == null
+        ? null
+        : FhirUri.fromJson(json['whoUri'] as String),
+    whoReference: json['whoReference'] == null
+        ? null
+        : Reference.fromJson(json['whoReference'] as Map<String, dynamic>),
     contentType: json['contentType'] == null
         ? null
         : Code.fromJson(json['contentType'] as String),
@@ -496,7 +501,8 @@ Map<String, dynamic> _$_$_SignatureToJson(_$_Signature instance) {
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
   writeNotNull('when', instance.when?.toJson());
-  writeNotNull('whoX', instance.whoX?.toJson());
+  writeNotNull('whoUri', instance.whoUri?.toJson());
+  writeNotNull('whoReference', instance.whoReference?.toJson());
   writeNotNull('contentType', instance.contentType?.toJson());
   writeNotNull('blob', instance.blob?.toJson());
   return val;

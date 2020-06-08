@@ -341,7 +341,8 @@ abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
     @required
         BindingStrength strength,
     String description,
-    FhirUri valueSetX,
+    FhirUri valueSetUri,
+    Reference valueSetReference,
   }) = _ElementDefinitionBinding;
 
   factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
