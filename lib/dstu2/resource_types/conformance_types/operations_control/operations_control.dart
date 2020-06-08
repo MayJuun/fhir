@@ -208,7 +208,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
     List<ConformanceEndpoint> endpoint,
     UnsignedInt reliableCache,
     String documentation,
-    @JsonKey(required: true) @required ConformanceEvent event,
+    @JsonKey(required: true) @required List<ConformanceEvent> event,
   }) = _ConformanceMessaging;
 
   factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
@@ -454,7 +454,7 @@ abstract class ConformanceSearchParam with _$ConformanceSearchParam {
     @required
         SearchParamType type,
     String documentation,
-    Code target,
+    List<Code> target,
     List<SearchParamModifier> modifier,
     List<String> chain,
   }) = _ConformanceSearchParam;

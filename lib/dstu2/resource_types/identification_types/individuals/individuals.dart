@@ -144,7 +144,7 @@ abstract class PatientContact with _$PatientContact {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    CodeableConcept relationship,
+    List<CodeableConcept> relationship,
     HumanName name,
     List<ContactPoint> telecom,
     Address address,

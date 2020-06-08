@@ -622,10 +622,9 @@ _$_CompositionEvent _$_$_CompositionEventFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    period: (json['period'] as List)
-        ?.map((e) =>
-            e == null ? null : Period.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    period: json['period'] == null
+        ? null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
     detail: (json['detail'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -647,7 +646,7 @@ Map<String, dynamic> _$_$_CompositionEventToJson(_$_CompositionEvent instance) {
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
-  writeNotNull('period', instance.period?.map((e) => e?.toJson())?.toList());
+  writeNotNull('period', instance.period?.toJson());
   writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
   return val;
 }

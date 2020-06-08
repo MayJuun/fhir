@@ -264,7 +264,7 @@ Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
 }
 
 _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['type', 'link']);
+  $checkKeys(json, requiredKeys: const ['type']);
   return _$_Bundle(
     resourceType: json['resourceType'] as String ?? 'Bundle',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),

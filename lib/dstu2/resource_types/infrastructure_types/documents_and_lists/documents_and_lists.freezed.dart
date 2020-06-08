@@ -3326,7 +3326,7 @@ class _$CompositionEventTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<CodeableConcept> code,
-      List<Period> period,
+      Period period,
       List<Reference> detail}) {
     return _CompositionEvent(
       id: id,
@@ -3348,7 +3348,7 @@ mixin _$CompositionEvent {
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   List<CodeableConcept> get code;
-  List<Period> get period;
+  Period get period;
   List<Reference> get detail;
 
   Map<String, dynamic> toJson();
@@ -3364,10 +3364,11 @@ abstract class $CompositionEventCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<CodeableConcept> code,
-      List<Period> period,
+      Period period,
       List<Reference> detail});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$CompositionEventCopyWithImpl<$Res>
@@ -3396,7 +3397,7 @@ class _$CompositionEventCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       code: code == freezed ? _value.code : code as List<CodeableConcept>,
-      period: period == freezed ? _value.period : period as List<Period>,
+      period: period == freezed ? _value.period : period as Period,
       detail: detail == freezed ? _value.detail : detail as List<Reference>,
     ));
   }
@@ -3408,6 +3409,16 @@ class _$CompositionEventCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
     });
   }
 }
@@ -3423,11 +3434,13 @@ abstract class _$CompositionEventCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<CodeableConcept> code,
-      List<Period> period,
+      Period period,
       List<Reference> detail});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $PeriodCopyWith<$Res> get period;
 }
 
 class __$CompositionEventCopyWithImpl<$Res>
@@ -3458,7 +3471,7 @@ class __$CompositionEventCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       code: code == freezed ? _value.code : code as List<CodeableConcept>,
-      period: period == freezed ? _value.period : period as List<Period>,
+      period: period == freezed ? _value.period : period as Period,
       detail: detail == freezed ? _value.detail : detail as List<Reference>,
     ));
   }
@@ -3487,7 +3500,7 @@ class _$_CompositionEvent implements _CompositionEvent {
   @override
   final List<CodeableConcept> code;
   @override
-  final List<Period> period;
+  final Period period;
   @override
   final List<Reference> detail;
 
@@ -3542,7 +3555,7 @@ abstract class _CompositionEvent implements CompositionEvent {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<CodeableConcept> code,
-      List<Period> period,
+      Period period,
       List<Reference> detail}) = _$_CompositionEvent;
 
   factory _CompositionEvent.fromJson(Map<String, dynamic> json) =
@@ -3558,7 +3571,7 @@ abstract class _CompositionEvent implements CompositionEvent {
   @override
   List<CodeableConcept> get code;
   @override
-  List<Period> get period;
+  Period get period;
   @override
   List<Reference> get detail;
   @override

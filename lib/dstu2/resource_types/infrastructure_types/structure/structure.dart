@@ -87,7 +87,7 @@ abstract class Bundle with _$Bundle implements Resource {
     @required
         BundleType type,
     UnsignedInt total,
-    @JsonKey(required: true) @required List<BundleLink> link,
+    List<BundleLink> link,
     List<BundleEntry> entry,
     Signature signature,
   }) = _Bundle;

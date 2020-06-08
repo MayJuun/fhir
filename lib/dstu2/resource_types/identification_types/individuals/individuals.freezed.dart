@@ -2702,7 +2702,7 @@ class _$PatientContactTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept relationship,
+      List<CodeableConcept> relationship,
       HumanName name,
       List<ContactPoint> telecom,
       Address address,
@@ -2732,7 +2732,7 @@ mixin _$PatientContact {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  CodeableConcept get relationship;
+  List<CodeableConcept> get relationship;
   HumanName get name;
   List<ContactPoint> get telecom;
   Address get address;
@@ -2753,7 +2753,7 @@ abstract class $PatientContactCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept relationship,
+      List<CodeableConcept> relationship,
       HumanName name,
       List<ContactPoint> telecom,
       Address address,
@@ -2762,7 +2762,6 @@ abstract class $PatientContactCopyWith<$Res> {
       Period period});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get relationship;
   $HumanNameCopyWith<$Res> get name;
   $AddressCopyWith<$Res> get address;
   $ReferenceCopyWith<$Res> get organization;
@@ -2800,7 +2799,7 @@ class _$PatientContactCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as CodeableConcept,
+          : relationship as List<CodeableConcept>,
       name: name == freezed ? _value.name : name as HumanName,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
@@ -2820,16 +2819,6 @@ class _$PatientContactCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get relationship {
-    if (_value.relationship == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.relationship, (value) {
-      return _then(_value.copyWith(relationship: value));
     });
   }
 
@@ -2884,7 +2873,7 @@ abstract class _$PatientContactCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept relationship,
+      List<CodeableConcept> relationship,
       HumanName name,
       List<ContactPoint> telecom,
       Address address,
@@ -2894,8 +2883,6 @@ abstract class _$PatientContactCopyWith<$Res>
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $CodeableConceptCopyWith<$Res> get relationship;
   @override
   $HumanNameCopyWith<$Res> get name;
   @override
@@ -2939,7 +2926,7 @@ class __$PatientContactCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as CodeableConcept,
+          : relationship as List<CodeableConcept>,
       name: name == freezed ? _value.name : name as HumanName,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
@@ -2978,7 +2965,7 @@ class _$_PatientContact implements _PatientContact {
   @override
   final FhirExtension modifierExtension;
   @override
-  final CodeableConcept relationship;
+  final List<CodeableConcept> relationship;
   @override
   final HumanName name;
   @override
@@ -3059,7 +3046,7 @@ abstract class _PatientContact implements PatientContact {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept relationship,
+      List<CodeableConcept> relationship,
       HumanName name,
       List<ContactPoint> telecom,
       Address address,
@@ -3078,7 +3065,7 @@ abstract class _PatientContact implements PatientContact {
   @override
   FhirExtension get modifierExtension;
   @override
-  CodeableConcept get relationship;
+  List<CodeableConcept> get relationship;
   @override
   HumanName get name;
   @override

@@ -724,9 +724,11 @@ _$_ConformanceMessaging _$_$_ConformanceMessagingFromJson(
         ? null
         : UnsignedInt.fromJson(json['reliableCache']),
     documentation: json['documentation'] as String,
-    event: json['event'] == null
-        ? null
-        : ConformanceEvent.fromJson(json['event'] as Map<String, dynamic>),
+    event: (json['event'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ConformanceEvent.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -748,7 +750,7 @@ Map<String, dynamic> _$_$_ConformanceMessagingToJson(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
   writeNotNull('reliableCache', instance.reliableCache?.toJson());
   writeNotNull('documentation', instance.documentation);
-  writeNotNull('event', instance.event?.toJson());
+  writeNotNull('event', instance.event?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -1449,8 +1451,9 @@ _$_ConformanceSearchParam _$_$_ConformanceSearchParamFromJson(
     type: _$enumDecodeNullable(_$SearchParamTypeEnumMap, json['type'],
         unknownValue: SearchParamType.unknown),
     documentation: json['documentation'] as String,
-    target:
-        json['target'] == null ? null : Code.fromJson(json['target'] as String),
+    target: (json['target'] as List)
+        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.toList(),
     modifier: (json['modifier'] as List)
         ?.map((e) => _$enumDecodeNullable(_$SearchParamModifierEnumMap, e))
         ?.toList(),
@@ -1476,7 +1479,7 @@ Map<String, dynamic> _$_$_ConformanceSearchParamToJson(
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull('type', _$SearchParamTypeEnumMap[instance.type]);
   writeNotNull('documentation', instance.documentation);
-  writeNotNull('target', instance.target?.toJson());
+  writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifier',
       instance.modifier?.map((e) => _$SearchParamModifierEnumMap[e])?.toList());
   writeNotNull('chain', instance.chain);

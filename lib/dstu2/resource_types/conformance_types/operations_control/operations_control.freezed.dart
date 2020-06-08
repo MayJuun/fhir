@@ -3647,7 +3647,7 @@ class _$ConformanceMessagingTearOff {
       List<ConformanceEndpoint> endpoint,
       UnsignedInt reliableCache,
       String documentation,
-      @required @JsonKey(required: true) ConformanceEvent event}) {
+      @required @JsonKey(required: true) List<ConformanceEvent> event}) {
     return _ConformanceMessaging(
       id: id,
       extension_: extension_,
@@ -3672,7 +3672,7 @@ mixin _$ConformanceMessaging {
   UnsignedInt get reliableCache;
   String get documentation;
   @JsonKey(required: true)
-  ConformanceEvent get event;
+  List<ConformanceEvent> get event;
 
   Map<String, dynamic> toJson();
   $ConformanceMessagingCopyWith<ConformanceMessaging> get copyWith;
@@ -3689,10 +3689,9 @@ abstract class $ConformanceMessagingCopyWith<$Res> {
       List<ConformanceEndpoint> endpoint,
       UnsignedInt reliableCache,
       String documentation,
-      @JsonKey(required: true) ConformanceEvent event});
+      @JsonKey(required: true) List<ConformanceEvent> event});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $ConformanceEventCopyWith<$Res> get event;
 }
 
 class _$ConformanceMessagingCopyWithImpl<$Res>
@@ -3730,7 +3729,7 @@ class _$ConformanceMessagingCopyWithImpl<$Res>
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
-      event: event == freezed ? _value.event : event as ConformanceEvent,
+      event: event == freezed ? _value.event : event as List<ConformanceEvent>,
     ));
   }
 
@@ -3741,16 +3740,6 @@ class _$ConformanceMessagingCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $ConformanceEventCopyWith<$Res> get event {
-    if (_value.event == null) {
-      return null;
-    }
-    return $ConformanceEventCopyWith<$Res>(_value.event, (value) {
-      return _then(_value.copyWith(event: value));
     });
   }
 }
@@ -3768,12 +3757,10 @@ abstract class _$ConformanceMessagingCopyWith<$Res>
       List<ConformanceEndpoint> endpoint,
       UnsignedInt reliableCache,
       String documentation,
-      @JsonKey(required: true) ConformanceEvent event});
+      @JsonKey(required: true) List<ConformanceEvent> event});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $ConformanceEventCopyWith<$Res> get event;
 }
 
 class __$ConformanceMessagingCopyWithImpl<$Res>
@@ -3813,7 +3800,7 @@ class __$ConformanceMessagingCopyWithImpl<$Res>
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
-      event: event == freezed ? _value.event : event as ConformanceEvent,
+      event: event == freezed ? _value.event : event as List<ConformanceEvent>,
     ));
   }
 }
@@ -3848,7 +3835,7 @@ class _$_ConformanceMessaging implements _ConformanceMessaging {
   final String documentation;
   @override
   @JsonKey(required: true)
-  final ConformanceEvent event;
+  final List<ConformanceEvent> event;
 
   @override
   String toString() {
@@ -3910,7 +3897,7 @@ abstract class _ConformanceMessaging implements ConformanceMessaging {
           List<ConformanceEndpoint> endpoint,
           UnsignedInt reliableCache,
           String documentation,
-          @required @JsonKey(required: true) ConformanceEvent event}) =
+          @required @JsonKey(required: true) List<ConformanceEvent> event}) =
       _$_ConformanceMessaging;
 
   factory _ConformanceMessaging.fromJson(Map<String, dynamic> json) =
@@ -3931,7 +3918,7 @@ abstract class _ConformanceMessaging implements ConformanceMessaging {
   String get documentation;
   @override
   @JsonKey(required: true)
-  ConformanceEvent get event;
+  List<ConformanceEvent> get event;
   @override
   _$ConformanceMessagingCopyWith<_ConformanceMessaging> get copyWith;
 }
@@ -8031,7 +8018,7 @@ class _$ConformanceSearchParamTearOff {
       @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
           SearchParamType type,
       String documentation,
-      Code target,
+      List<Code> target,
       List<SearchParamModifier> modifier,
       List<String> chain}) {
     return _ConformanceSearchParam(
@@ -8063,7 +8050,7 @@ mixin _$ConformanceSearchParam {
   @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
   SearchParamType get type;
   String get documentation;
-  Code get target;
+  List<Code> get target;
   List<SearchParamModifier> get modifier;
   List<String> get chain;
 
@@ -8086,7 +8073,7 @@ abstract class $ConformanceSearchParamCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
           SearchParamType type,
       String documentation,
-      Code target,
+      List<Code> target,
       List<SearchParamModifier> modifier,
       List<String> chain});
 
@@ -8129,7 +8116,7 @@ class _$ConformanceSearchParamCopyWithImpl<$Res>
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
-      target: target == freezed ? _value.target : target as Code,
+      target: target == freezed ? _value.target : target as List<Code>,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<SearchParamModifier>,
@@ -8165,7 +8152,7 @@ abstract class _$ConformanceSearchParamCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
           SearchParamType type,
       String documentation,
-      Code target,
+      List<Code> target,
       List<SearchParamModifier> modifier,
       List<String> chain});
 
@@ -8211,7 +8198,7 @@ class __$ConformanceSearchParamCopyWithImpl<$Res>
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
-      target: target == freezed ? _value.target : target as Code,
+      target: target == freezed ? _value.target : target as List<Code>,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<SearchParamModifier>,
@@ -8262,7 +8249,7 @@ class _$_ConformanceSearchParam implements _ConformanceSearchParam {
   @override
   final String documentation;
   @override
-  final Code target;
+  final List<Code> target;
   @override
   final List<SearchParamModifier> modifier;
   @override
@@ -8343,7 +8330,7 @@ abstract class _ConformanceSearchParam implements ConformanceSearchParam {
       @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
           SearchParamType type,
       String documentation,
-      Code target,
+      List<Code> target,
       List<SearchParamModifier> modifier,
       List<String> chain}) = _$_ConformanceSearchParam;
 
@@ -8368,7 +8355,7 @@ abstract class _ConformanceSearchParam implements ConformanceSearchParam {
   @override
   String get documentation;
   @override
-  Code get target;
+  List<Code> get target;
   @override
   List<SearchParamModifier> get modifier;
   @override

@@ -166,7 +166,7 @@ abstract class CompositionEvent with _$CompositionEvent {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> code,
-    List<Period> period,
+    Period period,
     List<Reference> detail,
   }) = _CompositionEvent;
 

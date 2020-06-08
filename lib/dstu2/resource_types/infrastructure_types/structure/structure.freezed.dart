@@ -1450,9 +1450,7 @@ class _$BundleTearOff {
       @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
           BundleType type,
       UnsignedInt total,
-      @required
-      @JsonKey(required: true)
-          List<BundleLink> link,
+      List<BundleLink> link,
       List<BundleEntry> entry,
       Signature signature}) {
     return _Bundle(
@@ -1483,7 +1481,6 @@ mixin _$Bundle {
   @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
   BundleType get type;
   UnsignedInt get total;
-  @JsonKey(required: true)
   List<BundleLink> get link;
   List<BundleEntry> get entry;
   Signature get signature;
@@ -1505,8 +1502,7 @@ abstract class $BundleCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
           BundleType type,
       UnsignedInt total,
-      @JsonKey(required: true)
-          List<BundleLink> link,
+      List<BundleLink> link,
       List<BundleEntry> entry,
       Signature signature});
 
@@ -1588,8 +1584,7 @@ abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
           BundleType type,
       UnsignedInt total,
-      @JsonKey(required: true)
-          List<BundleLink> link,
+      List<BundleLink> link,
       List<BundleEntry> entry,
       Signature signature});
 
@@ -1653,13 +1648,10 @@ class _$_Bundle implements _Bundle {
       @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
           this.type,
       this.total,
-      @required
-      @JsonKey(required: true)
-          this.link,
+      this.link,
       this.entry,
       this.signature})
-      : assert(type != null),
-        assert(link != null);
+      : assert(type != null);
 
   factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
       _$_$_BundleFromJson(json);
@@ -1681,7 +1673,6 @@ class _$_Bundle implements _Bundle {
   @override
   final UnsignedInt total;
   @override
-  @JsonKey(required: true)
   final List<BundleLink> link;
   @override
   final List<BundleEntry> entry;
@@ -1759,9 +1750,7 @@ abstract class _Bundle implements Bundle {
       @JsonKey(required: true, unknownEnumValue: BundleType.unknown)
           BundleType type,
       UnsignedInt total,
-      @required
-      @JsonKey(required: true)
-          List<BundleLink> link,
+      List<BundleLink> link,
       List<BundleEntry> entry,
       Signature signature}) = _$_Bundle;
 
@@ -1784,7 +1773,6 @@ abstract class _Bundle implements Bundle {
   @override
   UnsignedInt get total;
   @override
-  @JsonKey(required: true)
   List<BundleLink> get link;
   @override
   List<BundleEntry> get entry;
