@@ -67,7 +67,7 @@ abstract class Claim with _$Claim implements Resource {
     Reference originalPrescription,
     ClaimPayee payee,
     Reference referral,
-    ClaimDiagnosis diagnosis,
+    List<ClaimDiagnosis> diagnosis,
     List<Coding> condition,
     @JsonKey(required: true) @required Reference patient,
     List<ClaimCoverage> coverage,

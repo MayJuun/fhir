@@ -701,7 +701,7 @@ class _$ClaimTearOff {
       Reference originalPrescription,
       ClaimPayee payee,
       Reference referral,
-      ClaimDiagnosis diagnosis,
+      List<ClaimDiagnosis> diagnosis,
       List<Coding> condition,
       @required
       @JsonKey(required: true)
@@ -792,7 +792,7 @@ mixin _$Claim {
   Reference get originalPrescription;
   ClaimPayee get payee;
   Reference get referral;
-  ClaimDiagnosis get diagnosis;
+  List<ClaimDiagnosis> get diagnosis;
   List<Coding> get condition;
   @JsonKey(required: true)
   Reference get patient;
@@ -844,7 +844,7 @@ abstract class $ClaimCopyWith<$Res> {
       Reference originalPrescription,
       ClaimPayee payee,
       Reference referral,
-      ClaimDiagnosis diagnosis,
+      List<ClaimDiagnosis> diagnosis,
       List<Coding> condition,
       @JsonKey(required: true)
           Reference patient,
@@ -874,7 +874,6 @@ abstract class $ClaimCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get originalPrescription;
   $ClaimPayeeCopyWith<$Res> get payee;
   $ReferenceCopyWith<$Res> get referral;
-  $ClaimDiagnosisCopyWith<$Res> get diagnosis;
   $ReferenceCopyWith<$Res> get patient;
   $CodingCopyWith<$Res> get accidentType;
 }
@@ -975,8 +974,9 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
           : originalPrescription as Reference,
       payee: payee == freezed ? _value.payee : payee as ClaimPayee,
       referral: referral == freezed ? _value.referral : referral as Reference,
-      diagnosis:
-          diagnosis == freezed ? _value.diagnosis : diagnosis as ClaimDiagnosis,
+      diagnosis: diagnosis == freezed
+          ? _value.diagnosis
+          : diagnosis as List<ClaimDiagnosis>,
       condition:
           condition == freezed ? _value.condition : condition as List<Coding>,
       patient: patient == freezed ? _value.patient : patient as Reference,
@@ -1164,16 +1164,6 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
   }
 
   @override
-  $ClaimDiagnosisCopyWith<$Res> get diagnosis {
-    if (_value.diagnosis == null) {
-      return null;
-    }
-    return $ClaimDiagnosisCopyWith<$Res>(_value.diagnosis, (value) {
-      return _then(_value.copyWith(diagnosis: value));
-    });
-  }
-
-  @override
   $ReferenceCopyWith<$Res> get patient {
     if (_value.patient == null) {
       return null;
@@ -1229,7 +1219,7 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       Reference originalPrescription,
       ClaimPayee payee,
       Reference referral,
-      ClaimDiagnosis diagnosis,
+      List<ClaimDiagnosis> diagnosis,
       List<Coding> condition,
       @JsonKey(required: true)
           Reference patient,
@@ -1275,8 +1265,6 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   $ClaimPayeeCopyWith<$Res> get payee;
   @override
   $ReferenceCopyWith<$Res> get referral;
-  @override
-  $ClaimDiagnosisCopyWith<$Res> get diagnosis;
   @override
   $ReferenceCopyWith<$Res> get patient;
   @override
@@ -1380,8 +1368,9 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
           : originalPrescription as Reference,
       payee: payee == freezed ? _value.payee : payee as ClaimPayee,
       referral: referral == freezed ? _value.referral : referral as Reference,
-      diagnosis:
-          diagnosis == freezed ? _value.diagnosis : diagnosis as ClaimDiagnosis,
+      diagnosis: diagnosis == freezed
+          ? _value.diagnosis
+          : diagnosis as List<ClaimDiagnosis>,
       condition:
           condition == freezed ? _value.condition : condition as List<Coding>,
       patient: patient == freezed ? _value.patient : patient as Reference,
@@ -1520,7 +1509,7 @@ class _$_Claim implements _Claim {
   @override
   final Reference referral;
   @override
-  final ClaimDiagnosis diagnosis;
+  final List<ClaimDiagnosis> diagnosis;
   @override
   final List<Coding> condition;
   @override
@@ -1721,7 +1710,7 @@ abstract class _Claim implements Claim {
       Reference originalPrescription,
       ClaimPayee payee,
       Reference referral,
-      ClaimDiagnosis diagnosis,
+      List<ClaimDiagnosis> diagnosis,
       List<Coding> condition,
       @required
       @JsonKey(required: true)
@@ -1795,7 +1784,7 @@ abstract class _Claim implements Claim {
   @override
   Reference get referral;
   @override
-  ClaimDiagnosis get diagnosis;
+  List<ClaimDiagnosis> get diagnosis;
   @override
   List<Coding> get condition;
   @override

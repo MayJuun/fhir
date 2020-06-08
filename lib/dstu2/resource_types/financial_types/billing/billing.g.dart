@@ -221,9 +221,11 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
     referral: json['referral'] == null
         ? null
         : Reference.fromJson(json['referral'] as Map<String, dynamic>),
-    diagnosis: json['diagnosis'] == null
-        ? null
-        : ClaimDiagnosis.fromJson(json['diagnosis'] as Map<String, dynamic>),
+    diagnosis: (json['diagnosis'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ClaimDiagnosis.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     condition: (json['condition'] as List)
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
@@ -305,7 +307,8 @@ Map<String, dynamic> _$_$_ClaimToJson(_$_Claim instance) {
   writeNotNull('originalPrescription', instance.originalPrescription?.toJson());
   writeNotNull('payee', instance.payee?.toJson());
   writeNotNull('referral', instance.referral?.toJson());
-  writeNotNull('diagnosis', instance.diagnosis?.toJson());
+  writeNotNull(
+      'diagnosis', instance.diagnosis?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'condition', instance.condition?.map((e) => e?.toJson())?.toList());
   writeNotNull('patient', instance.patient?.toJson());
