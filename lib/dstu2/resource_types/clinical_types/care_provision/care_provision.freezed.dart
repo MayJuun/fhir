@@ -5601,7 +5601,7 @@ class _$CarePlanActivityTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Reference> actionResulting,
-      Annotation progress,
+      List<Annotation> progress,
       Reference reference,
       CarePlanDetail detail}) {
     return _CarePlanActivity(
@@ -5625,7 +5625,7 @@ mixin _$CarePlanActivity {
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
   List<Reference> get actionResulting;
-  Annotation get progress;
+  List<Annotation> get progress;
   Reference get reference;
   CarePlanDetail get detail;
 
@@ -5642,12 +5642,11 @@ abstract class $CarePlanActivityCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Reference> actionResulting,
-      Annotation progress,
+      List<Annotation> progress,
       Reference reference,
       CarePlanDetail detail});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $AnnotationCopyWith<$Res> get progress;
   $ReferenceCopyWith<$Res> get reference;
   $CarePlanDetailCopyWith<$Res> get detail;
 }
@@ -5681,7 +5680,8 @@ class _$CarePlanActivityCopyWithImpl<$Res>
       actionResulting: actionResulting == freezed
           ? _value.actionResulting
           : actionResulting as List<Reference>,
-      progress: progress == freezed ? _value.progress : progress as Annotation,
+      progress:
+          progress == freezed ? _value.progress : progress as List<Annotation>,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
       detail: detail == freezed ? _value.detail : detail as CarePlanDetail,
@@ -5695,16 +5695,6 @@ class _$CarePlanActivityCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $AnnotationCopyWith<$Res> get progress {
-    if (_value.progress == null) {
-      return null;
-    }
-    return $AnnotationCopyWith<$Res>(_value.progress, (value) {
-      return _then(_value.copyWith(progress: value));
     });
   }
 
@@ -5740,14 +5730,12 @@ abstract class _$CarePlanActivityCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Reference> actionResulting,
-      Annotation progress,
+      List<Annotation> progress,
       Reference reference,
       CarePlanDetail detail});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $AnnotationCopyWith<$Res> get progress;
   @override
   $ReferenceCopyWith<$Res> get reference;
   @override
@@ -5785,7 +5773,8 @@ class __$CarePlanActivityCopyWithImpl<$Res>
       actionResulting: actionResulting == freezed
           ? _value.actionResulting
           : actionResulting as List<Reference>,
-      progress: progress == freezed ? _value.progress : progress as Annotation,
+      progress:
+          progress == freezed ? _value.progress : progress as List<Annotation>,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
       detail: detail == freezed ? _value.detail : detail as CarePlanDetail,
@@ -5817,7 +5806,7 @@ class _$_CarePlanActivity implements _CarePlanActivity {
   @override
   final List<Reference> actionResulting;
   @override
-  final Annotation progress;
+  final List<Annotation> progress;
   @override
   final Reference reference;
   @override
@@ -5880,7 +5869,7 @@ abstract class _CarePlanActivity implements CarePlanActivity {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       List<Reference> actionResulting,
-      Annotation progress,
+      List<Annotation> progress,
       Reference reference,
       CarePlanDetail detail}) = _$_CarePlanActivity;
 
@@ -5897,7 +5886,7 @@ abstract class _CarePlanActivity implements CarePlanActivity {
   @override
   List<Reference> get actionResulting;
   @override
-  Annotation get progress;
+  List<Annotation> get progress;
   @override
   Reference get reference;
   @override
@@ -7318,16 +7307,21 @@ class _$CarePlanDetailTearOff {
 
   _CarePlanDetail call(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept category,
+      @JsonKey(unknownEnumValue: DetailCategory.unknown)
+          DetailCategory category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown)
+          DetailStatus status,
       CodeableConcept statusReason,
-      @required @JsonKey(required: true) Boolean prohibited,
+      @required
+      @JsonKey(required: true)
+          Boolean prohibited,
       Timing scheduledTiming,
       Period scheduledPeriod,
       String scheduledString,
@@ -7372,7 +7366,8 @@ mixin _$CarePlanDetail {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  CodeableConcept get category;
+  @JsonKey(unknownEnumValue: DetailCategory.unknown)
+  DetailCategory get category;
   CodeableConcept get code;
   List<CodeableConcept> get reasonCode;
   List<Reference> get reasonReference;
@@ -7403,16 +7398,20 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       _$CarePlanDetailCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept category,
+      @JsonKey(unknownEnumValue: DetailCategory.unknown)
+          DetailCategory category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown)
+          DetailStatus status,
       CodeableConcept statusReason,
-      @JsonKey(required: true) Boolean prohibited,
+      @JsonKey(required: true)
+          Boolean prohibited,
       Timing scheduledTiming,
       Period scheduledPeriod,
       String scheduledString,
@@ -7425,7 +7424,6 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       String description});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get code;
   $CodeableConceptCopyWith<$Res> get statusReason;
   $TimingCopyWith<$Res> get scheduledTiming;
@@ -7478,7 +7476,7 @@ class _$CarePlanDetailCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       category:
-          category == freezed ? _value.category : category as CodeableConcept,
+          category == freezed ? _value.category : category as DetailCategory,
       code: code == freezed ? _value.code : code as CodeableConcept,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
@@ -7527,16 +7525,6 @@ class _$CarePlanDetailCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get category {
-    if (_value.category == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
-      return _then(_value.copyWith(category: value));
     });
   }
 
@@ -7640,16 +7628,20 @@ abstract class _$CarePlanDetailCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept category,
+      @JsonKey(unknownEnumValue: DetailCategory.unknown)
+          DetailCategory category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown)
+          DetailStatus status,
       CodeableConcept statusReason,
-      @JsonKey(required: true) Boolean prohibited,
+      @JsonKey(required: true)
+          Boolean prohibited,
       Timing scheduledTiming,
       Period scheduledPeriod,
       String scheduledString,
@@ -7663,8 +7655,6 @@ abstract class _$CarePlanDetailCopyWith<$Res>
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $CodeableConceptCopyWith<$Res> get category;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -7728,7 +7718,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       category:
-          category == freezed ? _value.category : category as CodeableConcept,
+          category == freezed ? _value.category : category as DetailCategory,
       code: code == freezed ? _value.code : code as CodeableConcept,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
@@ -7777,7 +7767,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.category,
+      @JsonKey(unknownEnumValue: DetailCategory.unknown) this.category,
       this.code,
       this.reasonCode,
       this.reasonReference,
@@ -7808,7 +7798,8 @@ class _$_CarePlanDetail implements _CarePlanDetail {
   @override
   final FhirExtension modifierExtension;
   @override
-  final CodeableConcept category;
+  @JsonKey(unknownEnumValue: DetailCategory.unknown)
+  final DetailCategory category;
   @override
   final CodeableConcept code;
   @override
@@ -7954,16 +7945,21 @@ class _$_CarePlanDetail implements _CarePlanDetail {
 abstract class _CarePlanDetail implements CarePlanDetail {
   const factory _CarePlanDetail(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      CodeableConcept category,
+      @JsonKey(unknownEnumValue: DetailCategory.unknown)
+          DetailCategory category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown)
+          DetailStatus status,
       CodeableConcept statusReason,
-      @required @JsonKey(required: true) Boolean prohibited,
+      @required
+      @JsonKey(required: true)
+          Boolean prohibited,
       Timing scheduledTiming,
       Period scheduledPeriod,
       String scheduledString,
@@ -7986,7 +7982,8 @@ abstract class _CarePlanDetail implements CarePlanDetail {
   @override
   FhirExtension get modifierExtension;
   @override
-  CodeableConcept get category;
+  @JsonKey(unknownEnumValue: DetailCategory.unknown)
+  DetailCategory get category;
   @override
   CodeableConcept get code;
   @override

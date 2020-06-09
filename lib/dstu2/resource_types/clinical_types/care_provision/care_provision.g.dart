@@ -1040,9 +1040,10 @@ _$_CarePlanActivity _$_$_CarePlanActivityFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    progress: json['progress'] == null
-        ? null
-        : Annotation.fromJson(json['progress'] as Map<String, dynamic>),
+    progress: (json['progress'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     reference: json['reference'] == null
         ? null
         : Reference.fromJson(json['reference'] as Map<String, dynamic>),
@@ -1067,7 +1068,8 @@ Map<String, dynamic> _$_$_CarePlanActivityToJson(_$_CarePlanActivity instance) {
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('actionResulting',
       instance.actionResulting?.map((e) => e?.toJson())?.toList());
-  writeNotNull('progress', instance.progress?.toJson());
+  writeNotNull(
+      'progress', instance.progress?.map((e) => e?.toJson())?.toList());
   writeNotNull('reference', instance.reference?.toJson());
   writeNotNull('detail', instance.detail?.toJson());
   return val;
@@ -1315,9 +1317,8 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    category: json['category'] == null
-        ? null
-        : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
+    category: _$enumDecodeNullable(_$DetailCategoryEnumMap, json['category'],
+        unknownValue: DetailCategory.unknown),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1387,7 +1388,7 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('category', instance.category?.toJson());
+  writeNotNull('category', _$DetailCategoryEnumMap[instance.category]);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull(
       'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
@@ -1411,6 +1412,17 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
   writeNotNull('description', instance.description);
   return val;
 }
+
+const _$DetailCategoryEnumMap = {
+  DetailCategory.diet: 'diet',
+  DetailCategory.drug: 'drug',
+  DetailCategory.encounter: 'encounter',
+  DetailCategory.observation: 'observation',
+  DetailCategory.procedure: 'procedure',
+  DetailCategory.supply: 'supply',
+  DetailCategory.other: 'other',
+  DetailCategory.unknown: 'unknown',
+};
 
 const _$DetailStatusEnumMap = {
   DetailStatus.not_started: 'not-started',

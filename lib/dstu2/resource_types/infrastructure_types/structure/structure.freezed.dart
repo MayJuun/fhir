@@ -702,7 +702,7 @@ class _$BasicTearOff {
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @required @JsonKey(required: true) CodeableConcept code,
       Reference subject,
@@ -741,7 +741,7 @@ mixin _$Basic {
   List<Resource> get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   @JsonKey(required: true)
   CodeableConcept get code;
@@ -765,7 +765,7 @@ abstract class $BasicCopyWith<$Res> {
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true) CodeableConcept code,
       Reference subject,
@@ -774,7 +774,6 @@ abstract class $BasicCopyWith<$Res> {
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get author;
@@ -822,7 +821,7 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -850,16 +849,6 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
     });
   }
 
@@ -907,7 +896,7 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true) CodeableConcept code,
       Reference subject,
@@ -918,8 +907,6 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   $MetaCopyWith<$Res> get meta;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -971,7 +958,7 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -1024,7 +1011,7 @@ class _$_Basic implements _Basic {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  final FhirExtension modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -1122,7 +1109,7 @@ abstract class _Basic implements Basic {
       Narrative text,
       List<Resource> contained,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @required @JsonKey(required: true) CodeableConcept code,
       Reference subject,
@@ -1150,7 +1137,7 @@ abstract class _Basic implements Basic {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override

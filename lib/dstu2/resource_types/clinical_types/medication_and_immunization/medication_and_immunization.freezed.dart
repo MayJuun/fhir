@@ -2167,7 +2167,7 @@ class _$ImmunizationTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @required
       @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
           ImmunizationStatus status,
@@ -2248,7 +2248,7 @@ mixin _$Immunization {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
   ImmunizationStatus get status;
   FhirDateTime get date;
@@ -2295,7 +2295,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
           ImmunizationStatus status,
       FhirDateTime date,
@@ -2325,7 +2325,6 @@ abstract class $ImmunizationCopyWith<$Res> {
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get vaccineCode;
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res> get performer;
@@ -2398,8 +2397,9 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as ImmunizationStatus,
       date: date == freezed ? _value.date : date as FhirDateTime,
       vaccineCode: vaccineCode == freezed
@@ -2468,16 +2468,6 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -2610,7 +2600,7 @@ abstract class _$ImmunizationCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
           ImmunizationStatus status,
       FhirDateTime date,
@@ -2643,8 +2633,6 @@ abstract class _$ImmunizationCopyWith<$Res>
   $NarrativeCopyWith<$Res> get text;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get vaccineCode;
   @override
@@ -2730,8 +2718,9 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as ImmunizationStatus,
       date: date == freezed ? _value.date : date as FhirDateTime,
       vaccineCode: vaccineCode == freezed
@@ -2849,7 +2838,7 @@ class _$_Immunization implements _Immunization {
   @override
   final FhirExtension modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
   final ImmunizationStatus status;
@@ -3037,7 +3026,7 @@ abstract class _Immunization implements Immunization {
           @JsonKey(name: 'extension')
               List<FhirExtension> extension_,
           FhirExtension modifierExtension,
-          Identifier identifier,
+          List<Identifier> identifier,
           @required
           @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
               ImmunizationStatus status,
@@ -3094,7 +3083,7 @@ abstract class _Immunization implements Immunization {
   @override
   FhirExtension get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
   ImmunizationStatus get status;

@@ -1341,7 +1341,7 @@ class _$ValueSetConceptTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Code code,
-      Boolean abstract,
+      @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
       String definition,
       List<ValueSetDesignation> designation,
@@ -1351,7 +1351,7 @@ class _$ValueSetConceptTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
-      abstract: abstract,
+      abstract_: abstract_,
       display: display,
       definition: definition,
       designation: designation,
@@ -1370,7 +1370,8 @@ mixin _$ValueSetConcept {
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   Code get code;
-  Boolean get abstract;
+  @JsonKey(name: 'abstract')
+  Boolean get abstract_;
   String get display;
   String get definition;
   List<ValueSetDesignation> get designation;
@@ -1389,7 +1390,7 @@ abstract class $ValueSetConceptCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Code code,
-      Boolean abstract,
+      @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
       String definition,
       List<ValueSetDesignation> designation,
@@ -1412,7 +1413,7 @@ class _$ValueSetConceptCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object abstract = freezed,
+    Object abstract_ = freezed,
     Object display = freezed,
     Object definition = freezed,
     Object designation = freezed,
@@ -1427,7 +1428,7 @@ class _$ValueSetConceptCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       code: code == freezed ? _value.code : code as Code,
-      abstract: abstract == freezed ? _value.abstract : abstract as Boolean,
+      abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       display: display == freezed ? _value.display : display as String,
       definition:
           definition == freezed ? _value.definition : definition as String,
@@ -1462,7 +1463,7 @@ abstract class _$ValueSetConceptCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Code code,
-      Boolean abstract,
+      @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
       String definition,
       List<ValueSetDesignation> designation,
@@ -1488,7 +1489,7 @@ class __$ValueSetConceptCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object code = freezed,
-    Object abstract = freezed,
+    Object abstract_ = freezed,
     Object display = freezed,
     Object definition = freezed,
     Object designation = freezed,
@@ -1503,7 +1504,7 @@ class __$ValueSetConceptCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       code: code == freezed ? _value.code : code as Code,
-      abstract: abstract == freezed ? _value.abstract : abstract as Boolean,
+      abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       display: display == freezed ? _value.display : display as String,
       definition:
           definition == freezed ? _value.definition : definition as String,
@@ -1524,7 +1525,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.code,
-      this.abstract,
+      @JsonKey(name: 'abstract') this.abstract_,
       this.display,
       this.definition,
       this.designation,
@@ -1545,7 +1546,8 @@ class _$_ValueSetConcept implements _ValueSetConcept {
   @JsonKey(required: true)
   final Code code;
   @override
-  final Boolean abstract;
+  @JsonKey(name: 'abstract')
+  final Boolean abstract_;
   @override
   final String display;
   @override
@@ -1557,7 +1559,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
 
   @override
   String toString() {
-    return 'ValueSetConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, abstract: $abstract, display: $display, definition: $definition, designation: $designation, concept: $concept)';
+    return 'ValueSetConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, abstract_: $abstract_, display: $display, definition: $definition, designation: $designation, concept: $concept)';
   }
 
   @override
@@ -1574,9 +1576,9 @@ class _$_ValueSetConcept implements _ValueSetConcept {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.abstract, abstract) ||
+            (identical(other.abstract_, abstract_) ||
                 const DeepCollectionEquality()
-                    .equals(other.abstract, abstract)) &&
+                    .equals(other.abstract_, abstract_)) &&
             (identical(other.display, display) ||
                 const DeepCollectionEquality()
                     .equals(other.display, display)) &&
@@ -1597,7 +1599,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(abstract) ^
+      const DeepCollectionEquality().hash(abstract_) ^
       const DeepCollectionEquality().hash(display) ^
       const DeepCollectionEquality().hash(definition) ^
       const DeepCollectionEquality().hash(designation) ^
@@ -1619,7 +1621,7 @@ abstract class _ValueSetConcept implements ValueSetConcept {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Code code,
-      Boolean abstract,
+      @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
       String definition,
       List<ValueSetDesignation> designation,
@@ -1639,7 +1641,8 @@ abstract class _ValueSetConcept implements ValueSetConcept {
   @JsonKey(required: true)
   Code get code;
   @override
-  Boolean get abstract;
+  @JsonKey(name: 'abstract')
+  Boolean get abstract_;
   @override
   String get display;
   @override

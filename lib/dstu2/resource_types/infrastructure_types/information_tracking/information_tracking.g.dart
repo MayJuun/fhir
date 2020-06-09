@@ -743,9 +743,10 @@ _$_AuditEventParticipant _$_$_AuditEventParticipantFromJson(
     network: json['network'] == null
         ? null
         : AuditEventNetwork.fromJson(json['network'] as Map<String, dynamic>),
-    purposeOfUse: json['purposeOfUse'] == null
-        ? null
-        : Coding.fromJson(json['purposeOfUse'] as Map<String, dynamic>),
+    purposeOfUse: (json['purposeOfUse'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -773,7 +774,8 @@ Map<String, dynamic> _$_$_AuditEventParticipantToJson(
   writeNotNull('policy', instance.policy?.map((e) => e?.toJson())?.toList());
   writeNotNull('media', instance.media?.toJson());
   writeNotNull('network', instance.network?.toJson());
-  writeNotNull('purposeOfUse', instance.purposeOfUse?.toJson());
+  writeNotNull(
+      'purposeOfUse', instance.purposeOfUse?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

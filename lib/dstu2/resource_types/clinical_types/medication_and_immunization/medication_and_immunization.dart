@@ -121,7 +121,7 @@ abstract class Immunization with _$Immunization implements Resource {
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: ImmunizationStatus.unknown)
     @required
         ImmunizationStatus status,

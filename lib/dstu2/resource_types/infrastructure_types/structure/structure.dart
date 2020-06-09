@@ -49,7 +49,7 @@ abstract class Basic with _$Basic implements Resource {
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) @required CodeableConcept code,
     Reference subject,

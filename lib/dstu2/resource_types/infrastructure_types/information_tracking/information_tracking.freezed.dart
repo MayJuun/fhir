@@ -4014,7 +4014,7 @@ class _$AuditEventParticipantTearOff {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      Coding purposeOfUse}) {
+      List<Coding> purposeOfUse}) {
     return _AuditEventParticipant(
       id: id,
       extension_: extension_,
@@ -4053,7 +4053,7 @@ mixin _$AuditEventParticipant {
   List<FhirUri> get policy;
   Coding get media;
   AuditEventNetwork get network;
-  Coding get purposeOfUse;
+  List<Coding> get purposeOfUse;
 
   Map<String, dynamic> toJson();
   $AuditEventParticipantCopyWith<AuditEventParticipant> get copyWith;
@@ -4077,7 +4077,7 @@ abstract class $AuditEventParticipantCopyWith<$Res> {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      Coding purposeOfUse});
+      List<Coding> purposeOfUse});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get reference;
@@ -4085,7 +4085,6 @@ abstract class $AuditEventParticipantCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get location;
   $CodingCopyWith<$Res> get media;
   $AuditEventNetworkCopyWith<$Res> get network;
-  $CodingCopyWith<$Res> get purposeOfUse;
 }
 
 class _$AuditEventParticipantCopyWithImpl<$Res>
@@ -4135,7 +4134,7 @@ class _$AuditEventParticipantCopyWithImpl<$Res>
           network == freezed ? _value.network : network as AuditEventNetwork,
       purposeOfUse: purposeOfUse == freezed
           ? _value.purposeOfUse
-          : purposeOfUse as Coding,
+          : purposeOfUse as List<Coding>,
     ));
   }
 
@@ -4198,16 +4197,6 @@ class _$AuditEventParticipantCopyWithImpl<$Res>
       return _then(_value.copyWith(network: value));
     });
   }
-
-  @override
-  $CodingCopyWith<$Res> get purposeOfUse {
-    if (_value.purposeOfUse == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.purposeOfUse, (value) {
-      return _then(_value.copyWith(purposeOfUse: value));
-    });
-  }
 }
 
 abstract class _$AuditEventParticipantCopyWith<$Res>
@@ -4230,7 +4219,7 @@ abstract class _$AuditEventParticipantCopyWith<$Res>
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      Coding purposeOfUse});
+      List<Coding> purposeOfUse});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -4244,8 +4233,6 @@ abstract class _$AuditEventParticipantCopyWith<$Res>
   $CodingCopyWith<$Res> get media;
   @override
   $AuditEventNetworkCopyWith<$Res> get network;
-  @override
-  $CodingCopyWith<$Res> get purposeOfUse;
 }
 
 class __$AuditEventParticipantCopyWithImpl<$Res>
@@ -4297,7 +4284,7 @@ class __$AuditEventParticipantCopyWithImpl<$Res>
           network == freezed ? _value.network : network as AuditEventNetwork,
       purposeOfUse: purposeOfUse == freezed
           ? _value.purposeOfUse
-          : purposeOfUse as Coding,
+          : purposeOfUse as List<Coding>,
     ));
   }
 }
@@ -4353,7 +4340,7 @@ class _$_AuditEventParticipant implements _AuditEventParticipant {
   @override
   final AuditEventNetwork network;
   @override
-  final Coding purposeOfUse;
+  final List<Coding> purposeOfUse;
 
   @override
   String toString() {
@@ -4445,7 +4432,7 @@ abstract class _AuditEventParticipant implements AuditEventParticipant {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      Coding purposeOfUse}) = _$_AuditEventParticipant;
+      List<Coding> purposeOfUse}) = _$_AuditEventParticipant;
 
   factory _AuditEventParticipant.fromJson(Map<String, dynamic> json) =
       _$_AuditEventParticipant.fromJson;
@@ -4479,7 +4466,7 @@ abstract class _AuditEventParticipant implements AuditEventParticipant {
   @override
   AuditEventNetwork get network;
   @override
-  Coding get purposeOfUse;
+  List<Coding> get purposeOfUse;
   @override
   _$AuditEventParticipantCopyWith<_AuditEventParticipant> get copyWith;
 }

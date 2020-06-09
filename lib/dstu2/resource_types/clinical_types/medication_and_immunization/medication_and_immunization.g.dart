@@ -439,9 +439,10 @@ _$_Immunization _$_$_ImmunizationFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$ImmunizationStatusEnumMap, json['status'],
         unknownValue: ImmunizationStatus.unknown),
     date: json['date'] == null
@@ -528,7 +529,8 @@ Map<String, dynamic> _$_$_ImmunizationToJson(_$_Immunization instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', _$ImmunizationStatusEnumMap[instance.status]);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('vaccineCode', instance.vaccineCode?.toJson());

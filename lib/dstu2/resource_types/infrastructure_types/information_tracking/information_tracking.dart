@@ -225,7 +225,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
     List<FhirUri> policy,
     Coding media,
     AuditEventNetwork network,
-    Coding purposeOfUse,
+    List<Coding> purposeOfUse,
   }) = _AuditEventParticipant;
 
   factory AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
