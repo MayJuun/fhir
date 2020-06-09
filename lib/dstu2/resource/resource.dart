@@ -155,7 +155,7 @@ class Resource {
         return DocumentManifest.fromJson(json);
       case 'DocumentReference':
         return DocumentReference.fromJson(json);
-      case 'Lists':
+      case 'List':
         return List_.fromJson(json);
       case 'Media':
         return Media.fromJson(json);

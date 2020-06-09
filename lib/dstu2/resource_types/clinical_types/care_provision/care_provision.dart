@@ -66,7 +66,7 @@ abstract class VisionPrescription
     Reference encounter,
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
-    VisionPrescriptionDispense dispense,
+    List<VisionPrescriptionDispense> dispense,
   }) = _VisionPrescription;
 
   factory VisionPrescription.fromJson(Map<String, dynamic> json) =>

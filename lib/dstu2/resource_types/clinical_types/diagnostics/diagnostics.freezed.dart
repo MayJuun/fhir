@@ -51,7 +51,7 @@ class _$ImagingStudyTearOff {
       List<Reference> procedure,
       Reference interpreter,
       String description,
-      ImagingStudySeries series}) {
+      List<ImagingStudySeries> series}) {
     return _ImagingStudy(
       resourceType: resourceType,
       id: id,
@@ -117,7 +117,7 @@ mixin _$ImagingStudy {
   List<Reference> get procedure;
   Reference get interpreter;
   String get description;
-  ImagingStudySeries get series;
+  List<ImagingStudySeries> get series;
 
   Map<String, dynamic> toJson();
   $ImagingStudyCopyWith<ImagingStudy> get copyWith;
@@ -159,7 +159,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       List<Reference> procedure,
       Reference interpreter,
       String description,
-      ImagingStudySeries series});
+      List<ImagingStudySeries> series});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -168,7 +168,6 @@ abstract class $ImagingStudyCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get accession;
   $ReferenceCopyWith<$Res> get referrer;
   $ReferenceCopyWith<$Res> get interpreter;
-  $ImagingStudySeriesCopyWith<$Res> get series;
 }
 
 class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
@@ -256,7 +255,9 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
           : interpreter as Reference,
       description:
           description == freezed ? _value.description : description as String,
-      series: series == freezed ? _value.series : series as ImagingStudySeries,
+      series: series == freezed
+          ? _value.series
+          : series as List<ImagingStudySeries>,
     ));
   }
 
@@ -329,16 +330,6 @@ class _$ImagingStudyCopyWithImpl<$Res> implements $ImagingStudyCopyWith<$Res> {
       return _then(_value.copyWith(interpreter: value));
     });
   }
-
-  @override
-  $ImagingStudySeriesCopyWith<$Res> get series {
-    if (_value.series == null) {
-      return null;
-    }
-    return $ImagingStudySeriesCopyWith<$Res>(_value.series, (value) {
-      return _then(_value.copyWith(series: value));
-    });
-  }
 }
 
 abstract class _$ImagingStudyCopyWith<$Res>
@@ -379,7 +370,7 @@ abstract class _$ImagingStudyCopyWith<$Res>
       List<Reference> procedure,
       Reference interpreter,
       String description,
-      ImagingStudySeries series});
+      List<ImagingStudySeries> series});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -395,8 +386,6 @@ abstract class _$ImagingStudyCopyWith<$Res>
   $ReferenceCopyWith<$Res> get referrer;
   @override
   $ReferenceCopyWith<$Res> get interpreter;
-  @override
-  $ImagingStudySeriesCopyWith<$Res> get series;
 }
 
 class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
@@ -486,7 +475,9 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
           : interpreter as Reference,
       description:
           description == freezed ? _value.description : description as String,
-      series: series == freezed ? _value.series : series as ImagingStudySeries,
+      series: series == freezed
+          ? _value.series
+          : series as List<ImagingStudySeries>,
     ));
   }
 }
@@ -594,7 +585,7 @@ class _$_ImagingStudy implements _ImagingStudy {
   @override
   final String description;
   @override
-  final ImagingStudySeries series;
+  final List<ImagingStudySeries> series;
 
   @override
   String toString() {
@@ -751,7 +742,7 @@ abstract class _ImagingStudy implements ImagingStudy {
       List<Reference> procedure,
       Reference interpreter,
       String description,
-      ImagingStudySeries series}) = _$_ImagingStudy;
+      List<ImagingStudySeries> series}) = _$_ImagingStudy;
 
   factory _ImagingStudy.fromJson(Map<String, dynamic> json) =
       _$_ImagingStudy.fromJson;
@@ -812,7 +803,7 @@ abstract class _ImagingStudy implements ImagingStudy {
   @override
   String get description;
   @override
-  ImagingStudySeries get series;
+  List<ImagingStudySeries> get series;
   @override
   _$ImagingStudyCopyWith<_ImagingStudy> get copyWith;
 }

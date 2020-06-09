@@ -943,7 +943,7 @@ class _$VisionPrescriptionTearOff {
       Reference encounter,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      VisionPrescriptionDispense dispense}) {
+      List<VisionPrescriptionDispense> dispense}) {
     return _VisionPrescription(
       resourceType: resourceType,
       id: id,
@@ -988,7 +988,7 @@ mixin _$VisionPrescription {
   Reference get encounter;
   CodeableConcept get reasonCodeableConcept;
   Reference get reasonReference;
-  VisionPrescriptionDispense get dispense;
+  List<VisionPrescriptionDispense> get dispense;
 
   Map<String, dynamic> toJson();
   $VisionPrescriptionCopyWith<VisionPrescription> get copyWith;
@@ -1015,7 +1015,7 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
       Reference encounter,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      VisionPrescriptionDispense dispense});
+      List<VisionPrescriptionDispense> dispense});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1025,7 +1025,6 @@ abstract class $VisionPrescriptionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get encounter;
   $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
   $ReferenceCopyWith<$Res> get reasonReference;
-  $VisionPrescriptionDispenseCopyWith<$Res> get dispense;
 }
 
 class _$VisionPrescriptionCopyWithImpl<$Res>
@@ -1094,7 +1093,7 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
           : reasonReference as Reference,
       dispense: dispense == freezed
           ? _value.dispense
-          : dispense as VisionPrescriptionDispense,
+          : dispense as List<VisionPrescriptionDispense>,
     ));
   }
 
@@ -1178,16 +1177,6 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
       return _then(_value.copyWith(reasonReference: value));
     });
   }
-
-  @override
-  $VisionPrescriptionDispenseCopyWith<$Res> get dispense {
-    if (_value.dispense == null) {
-      return null;
-    }
-    return $VisionPrescriptionDispenseCopyWith<$Res>(_value.dispense, (value) {
-      return _then(_value.copyWith(dispense: value));
-    });
-  }
 }
 
 abstract class _$VisionPrescriptionCopyWith<$Res>
@@ -1213,7 +1202,7 @@ abstract class _$VisionPrescriptionCopyWith<$Res>
       Reference encounter,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      VisionPrescriptionDispense dispense});
+      List<VisionPrescriptionDispense> dispense});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1231,8 +1220,6 @@ abstract class _$VisionPrescriptionCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
   @override
   $ReferenceCopyWith<$Res> get reasonReference;
-  @override
-  $VisionPrescriptionDispenseCopyWith<$Res> get dispense;
 }
 
 class __$VisionPrescriptionCopyWithImpl<$Res>
@@ -1303,7 +1290,7 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
           : reasonReference as Reference,
       dispense: dispense == freezed
           ? _value.dispense
-          : dispense as VisionPrescriptionDispense,
+          : dispense as List<VisionPrescriptionDispense>,
     ));
   }
 }
@@ -1367,7 +1354,7 @@ class _$_VisionPrescription implements _VisionPrescription {
   @override
   final Reference reasonReference;
   @override
-  final VisionPrescriptionDispense dispense;
+  final List<VisionPrescriptionDispense> dispense;
 
   @override
   String toString() {
@@ -1477,7 +1464,7 @@ abstract class _VisionPrescription implements VisionPrescription {
       Reference encounter,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      VisionPrescriptionDispense dispense}) = _$_VisionPrescription;
+      List<VisionPrescriptionDispense> dispense}) = _$_VisionPrescription;
 
   factory _VisionPrescription.fromJson(Map<String, dynamic> json) =
       _$_VisionPrescription.fromJson;
@@ -1517,7 +1504,7 @@ abstract class _VisionPrescription implements VisionPrescription {
   @override
   Reference get reasonReference;
   @override
-  VisionPrescriptionDispense get dispense;
+  List<VisionPrescriptionDispense> get dispense;
   @override
   _$VisionPrescriptionCopyWith<_VisionPrescription> get copyWith;
 }

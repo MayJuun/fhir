@@ -84,9 +84,11 @@ _$_ImagingStudy _$_$_ImagingStudyFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['interpreter'] as Map<String, dynamic>),
     description: json['description'] as String,
-    series: json['series'] == null
-        ? null
-        : ImagingStudySeries.fromJson(json['series'] as Map<String, dynamic>),
+    series: (json['series'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ImagingStudySeries.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -129,7 +131,7 @@ Map<String, dynamic> _$_$_ImagingStudyToJson(_$_ImagingStudy instance) {
       'procedure', instance.procedure?.map((e) => e?.toJson())?.toList());
   writeNotNull('interpreter', instance.interpreter?.toJson());
   writeNotNull('description', instance.description);
-  writeNotNull('series', instance.series?.toJson());
+  writeNotNull('series', instance.series?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

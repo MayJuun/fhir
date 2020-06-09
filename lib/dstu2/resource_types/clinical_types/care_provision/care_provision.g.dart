@@ -252,10 +252,11 @@ _$_VisionPrescription _$_$_VisionPrescriptionFromJson(
     reasonReference: json['reasonReference'] == null
         ? null
         : Reference.fromJson(json['reasonReference'] as Map<String, dynamic>),
-    dispense: json['dispense'] == null
-        ? null
-        : VisionPrescriptionDispense.fromJson(
-            json['dispense'] as Map<String, dynamic>),
+    dispense: (json['dispense'] as List)
+        ?.map((e) => e == null
+            ? null
+            : VisionPrescriptionDispense.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -289,7 +290,8 @@ Map<String, dynamic> _$_$_VisionPrescriptionToJson(
   writeNotNull(
       'reasonCodeableConcept', instance.reasonCodeableConcept?.toJson());
   writeNotNull('reasonReference', instance.reasonReference?.toJson());
-  writeNotNull('dispense', instance.dispense?.toJson());
+  writeNotNull(
+      'dispense', instance.dispense?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

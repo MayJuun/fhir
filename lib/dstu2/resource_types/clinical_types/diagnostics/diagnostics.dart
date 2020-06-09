@@ -35,7 +35,7 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     List<Reference> procedure,
     Reference interpreter,
     String description,
-    ImagingStudySeries series,
+    List<ImagingStudySeries> series,
   }) = _ImagingStudy;
 
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
