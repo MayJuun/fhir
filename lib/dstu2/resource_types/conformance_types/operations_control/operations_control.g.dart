@@ -352,14 +352,7 @@ const _$OperationDefinitionKindEnumMap = {
 };
 
 _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const [
-    'url',
-    'name',
-    'code',
-    'base',
-    'type',
-    'description'
-  ]);
+  $checkKeys(json, requiredKeys: const ['url', 'name', 'code', 'type']);
   return _$_SearchParameter(
     resourceType: json['resourceType'] as String ?? 'SearchParameter',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),

@@ -1084,7 +1084,6 @@ Map<String, dynamic> _$_$_ElementDefinitionBaseToJson(
 
 _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
     Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['code']);
   return _$_ElementDefinitionType(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension_: (json['extension'] as List)
@@ -1093,6 +1092,11 @@ _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
+    codeExtension: json['_code'] == null
+        ? null
+        : TypeCodeExtension.fromJson(json['_code'] as Map<String, dynamic>),
     profile: (json['profile'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
@@ -1116,6 +1120,8 @@ Map<String, dynamic> _$_$_ElementDefinitionTypeToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
+  writeNotNull('_code', instance.codeExtension?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());
   writeNotNull('aggregation',
       instance.aggregation?.map((e) => _$TypeAggregationEnumMap[e])?.toList());
@@ -1128,6 +1134,31 @@ const _$TypeAggregationEnumMap = {
   TypeAggregation.bundled_howaggregated: 'bundled-howaggregated',
   TypeAggregation.unknown: 'unknown',
 };
+
+_$_TypeCodeExtension _$_$_TypeCodeExtensionFromJson(Map<String, dynamic> json) {
+  return _$_TypeCodeExtension(
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$_$_TypeCodeExtensionToJson(
+    _$_TypeCodeExtension instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  return val;
+}
 
 _$_ElementDefinitionConstraint _$_$_ElementDefinitionConstraintFromJson(
     Map<String, dynamic> json) {

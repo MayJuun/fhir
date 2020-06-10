@@ -1736,15 +1736,11 @@ class _$SearchParameterTearOff {
       @required
       @JsonKey(required: true)
           Code code,
-      @required
-      @JsonKey(required: true)
-          Code base,
+      Code base,
       @required
       @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType type,
-      @required
-      @JsonKey(required: true)
-          String description,
+      String description,
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
@@ -1806,11 +1802,9 @@ mixin _$SearchParameter {
   String get requirements;
   @JsonKey(required: true)
   Code get code;
-  @JsonKey(required: true)
   Code get base;
   @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
   SearchParameterType get type;
-  @JsonKey(required: true)
   String get description;
   String get xpath;
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
@@ -1850,12 +1844,10 @@ abstract class $SearchParameterCopyWith<$Res> {
       String requirements,
       @JsonKey(required: true)
           Code code,
-      @JsonKey(required: true)
-          Code base,
+      Code base,
       @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType type,
-      @JsonKey(required: true)
-          String description,
+      String description,
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
@@ -2010,12 +2002,10 @@ abstract class _$SearchParameterCopyWith<$Res>
       String requirements,
       @JsonKey(required: true)
           Code code,
-      @JsonKey(required: true)
-          Code base,
+      Code base,
       @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType type,
-      @JsonKey(required: true)
-          String description,
+      String description,
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
@@ -2144,15 +2134,11 @@ class _$_SearchParameter implements _SearchParameter {
       @required
       @JsonKey(required: true)
           this.code,
-      @required
-      @JsonKey(required: true)
-          this.base,
+      this.base,
       @required
       @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
           this.type,
-      @required
-      @JsonKey(required: true)
-          this.description,
+      this.description,
       this.xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           this.xpathUsage,
@@ -2160,9 +2146,7 @@ class _$_SearchParameter implements _SearchParameter {
       : assert(url != null),
         assert(name != null),
         assert(code != null),
-        assert(base != null),
-        assert(type != null),
-        assert(description != null);
+        assert(type != null);
 
   factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$_$_SearchParameterFromJson(json);
@@ -2210,13 +2194,11 @@ class _$_SearchParameter implements _SearchParameter {
   @JsonKey(required: true)
   final Code code;
   @override
-  @JsonKey(required: true)
   final Code base;
   @override
   @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
   final SearchParameterType type;
   @override
-  @JsonKey(required: true)
   final String description;
   @override
   final String xpath;
@@ -2364,15 +2346,11 @@ abstract class _SearchParameter implements SearchParameter {
       @required
       @JsonKey(required: true)
           Code code,
-      @required
-      @JsonKey(required: true)
-          Code base,
+      Code base,
       @required
       @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType type,
-      @required
-      @JsonKey(required: true)
-          String description,
+      String description,
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
@@ -2424,13 +2402,11 @@ abstract class _SearchParameter implements SearchParameter {
   @JsonKey(required: true)
   Code get code;
   @override
-  @JsonKey(required: true)
   Code get base;
   @override
   @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
   SearchParameterType get type;
   @override
-  @JsonKey(required: true)
   String get description;
   @override
   String get xpath;

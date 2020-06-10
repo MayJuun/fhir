@@ -305,13 +305,25 @@ abstract class ElementDefinitionType with _$ElementDefinitionType {
   const factory ElementDefinitionType({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @JsonKey(required: true) @required Code code,
+    Code code,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
+    @JsonKey(name: '_code') TypeCodeExtension codeExtension,
     List<FhirUri> profile,
     List<TypeAggregation> aggregation,
   }) = _ElementDefinitionType;
 
   factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
+}
+
+@freezed
+abstract class TypeCodeExtension with _$TypeCodeExtension {
+  const factory TypeCodeExtension({
+    @JsonKey(name: "extension") List<FhirExtension> extension_,
+  }) = _TypeCodeExtension;
+
+  factory TypeCodeExtension.fromJson(Map<String, dynamic> json) =>
+      _$TypeCodeExtensionFromJson(json);
 }
 
 @freezed

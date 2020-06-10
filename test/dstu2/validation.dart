@@ -13,18 +13,16 @@ void main() async {
     print(file.path.split('/').last);
     var contents = await File(file.path).readAsString();
     var resource = fhir_dstu2.Resource.fromJson(json.decode(contents));
-    print(resource.toJson().toString());
+    if (resource == null) {
+      print(file);
+    } else {
+      string += await checkJsonEquality(
+          json.decode(contents), resource.toJson(), file.toString(), 'input');
+      string += await checkJsonEquality(
+          resource.toJson(), json.decode(contents), file.toString(), 'output');
+    }
   }
-  //   if (resource == null) {
-  //     print(file);
-  //   } else {
-  //     string += await checkJsonEquality(
-  //         json.decode(contents), resource.toJson(), file.toString(), 'input');
-  //     string += await checkJsonEquality(
-  //         resource.toJson(), json.decode(contents), file.toString(), 'output');
-  //   }
-  // }
-  // writeErrorFile(string);
+  writeErrorFile(string);
 }
 
 Future<String> checkJsonEquality(Map<String, dynamic> input,

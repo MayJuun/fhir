@@ -6763,13 +6763,17 @@ class _$ElementDefinitionTypeTearOff {
   _ElementDefinitionType call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @required @JsonKey(required: true) Code code,
+      Code code,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
+      @JsonKey(name: '_code') TypeCodeExtension codeExtension,
       List<FhirUri> profile,
       List<TypeAggregation> aggregation}) {
     return _ElementDefinitionType(
       id: id,
       extension_: extension_,
       code: code,
+      fhirComments: fhirComments,
+      codeExtension: codeExtension,
       profile: profile,
       aggregation: aggregation,
     );
@@ -6783,8 +6787,11 @@ mixin _$ElementDefinitionType {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  @JsonKey(required: true)
   Code get code;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
+  @JsonKey(name: '_code')
+  TypeCodeExtension get codeExtension;
   List<FhirUri> get profile;
   List<TypeAggregation> get aggregation;
 
@@ -6799,9 +6806,13 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(required: true) Code code,
+      Code code,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
+      @JsonKey(name: '_code') TypeCodeExtension codeExtension,
       List<FhirUri> profile,
       List<TypeAggregation> aggregation});
+
+  $TypeCodeExtensionCopyWith<$Res> get codeExtension;
 }
 
 class _$ElementDefinitionTypeCopyWithImpl<$Res>
@@ -6817,6 +6828,8 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object code = freezed,
+    Object fhirComments = freezed,
+    Object codeExtension = freezed,
     Object profile = freezed,
     Object aggregation = freezed,
   }) {
@@ -6826,11 +6839,27 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
+      codeExtension: codeExtension == freezed
+          ? _value.codeExtension
+          : codeExtension as TypeCodeExtension,
       profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       aggregation: aggregation == freezed
           ? _value.aggregation
           : aggregation as List<TypeAggregation>,
     ));
+  }
+
+  @override
+  $TypeCodeExtensionCopyWith<$Res> get codeExtension {
+    if (_value.codeExtension == null) {
+      return null;
+    }
+    return $TypeCodeExtensionCopyWith<$Res>(_value.codeExtension, (value) {
+      return _then(_value.copyWith(codeExtension: value));
+    });
   }
 }
 
@@ -6843,9 +6872,14 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(required: true) Code code,
+      Code code,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
+      @JsonKey(name: '_code') TypeCodeExtension codeExtension,
       List<FhirUri> profile,
       List<TypeAggregation> aggregation});
+
+  @override
+  $TypeCodeExtensionCopyWith<$Res> get codeExtension;
 }
 
 class __$ElementDefinitionTypeCopyWithImpl<$Res>
@@ -6863,6 +6897,8 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object code = freezed,
+    Object fhirComments = freezed,
+    Object codeExtension = freezed,
     Object profile = freezed,
     Object aggregation = freezed,
   }) {
@@ -6872,6 +6908,12 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
+      codeExtension: codeExtension == freezed
+          ? _value.codeExtension
+          : codeExtension as TypeCodeExtension,
       profile: profile == freezed ? _value.profile : profile as List<FhirUri>,
       aggregation: aggregation == freezed
           ? _value.aggregation
@@ -6885,10 +6927,11 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
   const _$_ElementDefinitionType(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      @required @JsonKey(required: true) this.code,
+      this.code,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: '_code') this.codeExtension,
       this.profile,
-      this.aggregation})
-      : assert(code != null);
+      this.aggregation});
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementDefinitionTypeFromJson(json);
@@ -6899,8 +6942,13 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(required: true)
   final Code code;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
+  @JsonKey(name: '_code')
+  final TypeCodeExtension codeExtension;
   @override
   final List<FhirUri> profile;
   @override
@@ -6908,7 +6956,7 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
 
   @override
   String toString() {
-    return 'ElementDefinitionType(id: $id, extension_: $extension_, code: $code, profile: $profile, aggregation: $aggregation)';
+    return 'ElementDefinitionType(id: $id, extension_: $extension_, code: $code, fhirComments: $fhirComments, codeExtension: $codeExtension, profile: $profile, aggregation: $aggregation)';
   }
 
   @override
@@ -6922,6 +6970,12 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
                     .equals(other.extension_, extension_)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
+            (identical(other.codeExtension, codeExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeExtension, codeExtension)) &&
             (identical(other.profile, profile) ||
                 const DeepCollectionEquality()
                     .equals(other.profile, profile)) &&
@@ -6936,6 +6990,8 @@ class _$_ElementDefinitionType implements _ElementDefinitionType {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
+      const DeepCollectionEquality().hash(codeExtension) ^
       const DeepCollectionEquality().hash(profile) ^
       const DeepCollectionEquality().hash(aggregation);
 
@@ -6954,7 +7010,9 @@ abstract class _ElementDefinitionType implements ElementDefinitionType {
   const factory _ElementDefinitionType(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @required @JsonKey(required: true) Code code,
+      Code code,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
+      @JsonKey(name: '_code') TypeCodeExtension codeExtension,
       List<FhirUri> profile,
       List<TypeAggregation> aggregation}) = _$_ElementDefinitionType;
 
@@ -6967,14 +7025,157 @@ abstract class _ElementDefinitionType implements ElementDefinitionType {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(required: true)
   Code get code;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
+  @override
+  @JsonKey(name: '_code')
+  TypeCodeExtension get codeExtension;
   @override
   List<FhirUri> get profile;
   @override
   List<TypeAggregation> get aggregation;
   @override
   _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith;
+}
+
+TypeCodeExtension _$TypeCodeExtensionFromJson(Map<String, dynamic> json) {
+  return _TypeCodeExtension.fromJson(json);
+}
+
+class _$TypeCodeExtensionTearOff {
+  const _$TypeCodeExtensionTearOff();
+
+  _TypeCodeExtension call(
+      {@JsonKey(name: 'extension') List<FhirExtension> extension_}) {
+    return _TypeCodeExtension(
+      extension_: extension_,
+    );
+  }
+}
+
+// ignore: unused_element
+const $TypeCodeExtension = _$TypeCodeExtensionTearOff();
+
+mixin _$TypeCodeExtension {
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+
+  Map<String, dynamic> toJson();
+  $TypeCodeExtensionCopyWith<TypeCodeExtension> get copyWith;
+}
+
+abstract class $TypeCodeExtensionCopyWith<$Res> {
+  factory $TypeCodeExtensionCopyWith(
+          TypeCodeExtension value, $Res Function(TypeCodeExtension) then) =
+      _$TypeCodeExtensionCopyWithImpl<$Res>;
+  $Res call({@JsonKey(name: 'extension') List<FhirExtension> extension_});
+}
+
+class _$TypeCodeExtensionCopyWithImpl<$Res>
+    implements $TypeCodeExtensionCopyWith<$Res> {
+  _$TypeCodeExtensionCopyWithImpl(this._value, this._then);
+
+  final TypeCodeExtension _value;
+  // ignore: unused_field
+  final $Res Function(TypeCodeExtension) _then;
+
+  @override
+  $Res call({
+    Object extension_ = freezed,
+  }) {
+    return _then(_value.copyWith(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+    ));
+  }
+}
+
+abstract class _$TypeCodeExtensionCopyWith<$Res>
+    implements $TypeCodeExtensionCopyWith<$Res> {
+  factory _$TypeCodeExtensionCopyWith(
+          _TypeCodeExtension value, $Res Function(_TypeCodeExtension) then) =
+      __$TypeCodeExtensionCopyWithImpl<$Res>;
+  @override
+  $Res call({@JsonKey(name: 'extension') List<FhirExtension> extension_});
+}
+
+class __$TypeCodeExtensionCopyWithImpl<$Res>
+    extends _$TypeCodeExtensionCopyWithImpl<$Res>
+    implements _$TypeCodeExtensionCopyWith<$Res> {
+  __$TypeCodeExtensionCopyWithImpl(
+      _TypeCodeExtension _value, $Res Function(_TypeCodeExtension) _then)
+      : super(_value, (v) => _then(v as _TypeCodeExtension));
+
+  @override
+  _TypeCodeExtension get _value => super._value as _TypeCodeExtension;
+
+  @override
+  $Res call({
+    Object extension_ = freezed,
+  }) {
+    return _then(_TypeCodeExtension(
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_TypeCodeExtension implements _TypeCodeExtension {
+  const _$_TypeCodeExtension({@JsonKey(name: 'extension') this.extension_});
+
+  factory _$_TypeCodeExtension.fromJson(Map<String, dynamic> json) =>
+      _$_$_TypeCodeExtensionFromJson(json);
+
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+
+  @override
+  String toString() {
+    return 'TypeCodeExtension(extension_: $extension_)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _TypeCodeExtension &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(extension_);
+
+  @override
+  _$TypeCodeExtensionCopyWith<_TypeCodeExtension> get copyWith =>
+      __$TypeCodeExtensionCopyWithImpl<_TypeCodeExtension>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_TypeCodeExtensionToJson(this);
+  }
+}
+
+abstract class _TypeCodeExtension implements TypeCodeExtension {
+  const factory _TypeCodeExtension(
+          {@JsonKey(name: 'extension') List<FhirExtension> extension_}) =
+      _$_TypeCodeExtension;
+
+  factory _TypeCodeExtension.fromJson(Map<String, dynamic> json) =
+      _$_TypeCodeExtension.fromJson;
+
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  _$TypeCodeExtensionCopyWith<_TypeCodeExtension> get copyWith;
 }
 
 ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(

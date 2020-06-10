@@ -117,11 +117,11 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     FhirDateTime date,
     String requirements,
     @JsonKey(required: true) @required Code code,
-    @JsonKey(required: true) @required Code base,
+    Code base,
     @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
     @required
         SearchParameterType type,
-    @JsonKey(required: true) @required String description,
+    String description,
     String xpath,
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
         SearchParameterXpathUsage xpathUsage,
