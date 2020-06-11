@@ -1339,7 +1339,7 @@ class _$ValueSetConceptTearOff {
   _ValueSetConcept call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       @required @JsonKey(required: true) Code code,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
@@ -1367,7 +1367,7 @@ mixin _$ValueSetConcept {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   @JsonKey(required: true)
   Code get code;
   @JsonKey(name: 'abstract')
@@ -1388,15 +1388,13 @@ abstract class $ValueSetConceptCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       @JsonKey(required: true) Code code,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
       String definition,
       List<ValueSetDesignation> designation,
       List<ValueSetConcept> concept});
-
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class _$ValueSetConceptCopyWithImpl<$Res>
@@ -1426,7 +1424,7 @@ class _$ValueSetConceptCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       display: display == freezed ? _value.display : display as String,
@@ -1440,16 +1438,6 @@ class _$ValueSetConceptCopyWithImpl<$Res>
           : concept as List<ValueSetConcept>,
     ));
   }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension {
-    if (_value.modifierExtension == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
-      return _then(_value.copyWith(modifierExtension: value));
-    });
-  }
 }
 
 abstract class _$ValueSetConceptCopyWith<$Res>
@@ -1461,16 +1449,13 @@ abstract class _$ValueSetConceptCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       @JsonKey(required: true) Code code,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
       String definition,
       List<ValueSetDesignation> designation,
       List<ValueSetConcept> concept});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
 
 class __$ValueSetConceptCopyWithImpl<$Res>
@@ -1502,7 +1487,7 @@ class __$ValueSetConceptCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as FhirExtension,
+          : modifierExtension as List<FhirExtension>,
       code: code == freezed ? _value.code : code as Code,
       abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       display: display == freezed ? _value.display : display as String,
@@ -1541,7 +1526,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
-  final FhirExtension modifierExtension;
+  final List<FhirExtension> modifierExtension;
   @override
   @JsonKey(required: true)
   final Code code;
@@ -1619,7 +1604,7 @@ abstract class _ValueSetConcept implements ValueSetConcept {
   const factory _ValueSetConcept(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
+      List<FhirExtension> modifierExtension,
       @required @JsonKey(required: true) Code code,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
@@ -1636,7 +1621,7 @@ abstract class _ValueSetConcept implements ValueSetConcept {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
-  FhirExtension get modifierExtension;
+  List<FhirExtension> get modifierExtension;
   @override
   @JsonKey(required: true)
   Code get code;

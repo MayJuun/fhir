@@ -31,6 +31,11 @@ abstract class Practitioner with _$Practitioner implements Resource {
     List<PractitionerPractitionerRole> practitionerRole,
     List<PractitionerQualification> qualification,
     List<CodeableConcept> communication,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
   }) = _Practitioner;
 
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
@@ -60,6 +65,11 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
     List<Address> address,
     List<Attachment> photo,
     Period period,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
   }) = _RelatedPerson;
 
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
@@ -77,7 +87,7 @@ abstract class Patient with _$Patient implements Resource {
     Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     List<HumanName> name,
@@ -97,6 +107,15 @@ abstract class Patient with _$Patient implements Resource {
     List<Reference> careProvider,
     Reference managingOrganization,
     List<PatientLink> link,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
+    @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
+    @JsonKey(name: '_deceasedDateTime') Element deceasedDateTimeElement,
+    @JsonKey(name: '_multipleBirthBoolean') Element multipleBirthBooleanElement,
+    @JsonKey(name: '_multipleBirthInteger') Element multipleBirthIntegerElement,
   }) = _Patient;
 
   factory Patient.fromJson(Map<String, dynamic> json) =>
@@ -151,6 +170,7 @@ abstract class PatientContact with _$PatientContact {
     @JsonKey(unknownEnumValue: ContactGender.unknown) ContactGender gender,
     Reference organization,
     Period period,
+    @JsonKey(name: '_gender') Element genderElement,
   }) = _PatientContact;
 
   factory PatientContact.fromJson(Map<String, dynamic> json) =>
@@ -180,6 +200,7 @@ abstract class PatientCommunication with _$PatientCommunication {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept language,
     Boolean preferred,
+    @JsonKey(name: '_preferred') Element preferredElement,
   }) = _PatientCommunication;
 
   factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
@@ -196,6 +217,7 @@ abstract class PatientLink with _$PatientLink {
     @JsonKey(required: true, unknownEnumValue: LinkType.unknown)
     @required
         LinkType type,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _PatientLink;
 
   factory PatientLink.fromJson(Map<String, dynamic> json) =>

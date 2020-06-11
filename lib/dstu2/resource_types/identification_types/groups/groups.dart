@@ -27,6 +27,11 @@ abstract class Organization with _$Organization implements Resource {
     List<Address> address,
     Reference partOf,
     List<OrganizationContact> contact,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_alias') Element aliasElement,
   }) = _Organization;
 
   factory Organization.fromJson(Map<String, dynamic> json) =>
@@ -55,6 +60,12 @@ abstract class Group with _$Group implements Resource {
     UnsignedInt quantity,
     List<GroupCharacteristic> characteristic,
     List<GroupMember> member,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_actual') Element actualElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_quantity') Element quantityElement,
   }) = _Group;
 
   factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
@@ -94,6 +105,13 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
     List<HealthcareServiceAvailableTime> availableTime,
     List<HealthcareServiceNotAvailable> notAvailable,
     String availabilityExceptions,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_extraDetails') Element extraDetailsElement,
+    @JsonKey(name: '_appointmentRequired') Element appointmentRequiredElement,
+    @JsonKey(name: '_availabilityExceptions')
+        Element availabilityExceptionsElement,
   }) = _HealthcareService;
 
   factory HealthcareService.fromJson(Map<String, dynamic> json) =>
@@ -129,6 +147,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
     Range valueRange,
     @JsonKey(required: true) @required Boolean exclude,
     Period period,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _GroupCharacteristic;
 
   factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -144,6 +163,7 @@ abstract class GroupMember with _$GroupMember {
     @JsonKey(required: true) @required Reference entity,
     Period period,
     Boolean inactive,
+    @JsonKey(name: '_inactive') Element inactiveElement,
   }) = _GroupMember;
 
   factory GroupMember.fromJson(Map<String, dynamic> json) =>
@@ -176,6 +196,10 @@ abstract class HealthcareServiceAvailableTime
     Boolean allDay,
     Time availableStartTime,
     Time availableEndTime,
+    @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+    @JsonKey(name: '_allDay') Element allDayElement,
+    @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+    @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
@@ -191,6 +215,7 @@ abstract class HealthcareServiceNotAvailable
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String description,
     Period during,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _HealthcareServiceNotAvailable;
 
   factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>

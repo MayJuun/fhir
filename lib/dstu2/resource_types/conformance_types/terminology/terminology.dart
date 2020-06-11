@@ -81,7 +81,7 @@ abstract class ValueSetConcept with _$ValueSetConcept {
   const factory ValueSetConcept({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    FhirExtension modifierExtension,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required Code code,
     @JsonKey(name: 'abstract') Boolean abstract_,
     String display,

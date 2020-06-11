@@ -23,6 +23,7 @@ It contains packages for the 3 released FHIR versions:
 ### Dstu2
   * [SearchParameter](https://www.hl7.org/fhir/DSTU2/searchparameter.html): at least according to this website, it does appear that the field "base" and "description" should be required. However, many, many of the examples that are provided on the website do not have those fields, so I have not made them mandatory.
   * [ElementDefinition](https://www.hl7.org/fhir/DSTU2/elementdefinition.html#ElementDefinition) It seems that in the type field, "code" is required, but if "_code" is present, this does not seem to be the case in the examples. I have therefore removed the requirement from the code field.
+  * There are private fields in this FHIR version that appear to correlate to the private Element fields in R4. I cannot find these specifically stated anywhere, so I'm going to assume all R4 private fields are valid as long as there is a corresponding public field. A few of these should actually be lists. But if they are not in the examples, then I do not know which. So there are likely some that should be lists that I have not implemented as such.
 
 ## First Package
 This is the first time I've ever created a package, feedback and pull requests are welcome. I've also been started to implement type checking using [Freezed](https://pub.dev/packages/freezed). But if you run into any issues with this, either incorrect validation, or frustrating to work with returned failures, please let me know.
