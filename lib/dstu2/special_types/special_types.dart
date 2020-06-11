@@ -90,7 +90,7 @@ abstract class Element with _$Element {
   const factory Element({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @JsonKey(name: 'fhir_comments') List<String> fhirElement,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
   }) = _Element;
 
   factory Element.fromJson(Map<String, dynamic> json) =>

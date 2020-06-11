@@ -284,6 +284,7 @@ class _$CodingTearOff {
   _Coding call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirUri system,
       String version,
       Code code,
@@ -297,6 +298,7 @@ class _$CodingTearOff {
     return _Coding(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       system: system,
       version: version,
       code: code,
@@ -318,6 +320,8 @@ mixin _$Coding {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   FhirUri get system;
   String get version;
   Code get code;
@@ -344,6 +348,7 @@ abstract class $CodingCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirUri system,
       String version,
       Code code,
@@ -373,6 +378,7 @@ class _$CodingCopyWithImpl<$Res> implements $CodingCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object system = freezed,
     Object version = freezed,
     Object code = freezed,
@@ -389,6 +395,9 @@ class _$CodingCopyWithImpl<$Res> implements $CodingCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
       code: code == freezed ? _value.code : code as Code,
@@ -471,6 +480,7 @@ abstract class _$CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirUri system,
       String version,
       Code code,
@@ -506,6 +516,7 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object system = freezed,
     Object version = freezed,
     Object code = freezed,
@@ -522,6 +533,9 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
       code: code == freezed ? _value.code : code as Code,
@@ -552,6 +566,7 @@ class _$_Coding implements _Coding {
   const _$_Coding(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.system,
       this.version,
       this.code,
@@ -571,6 +586,9 @@ class _$_Coding implements _Coding {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final FhirUri system;
   @override
@@ -599,7 +617,7 @@ class _$_Coding implements _Coding {
 
   @override
   String toString() {
-    return 'Coding(id: $id, extension_: $extension_, system: $system, version: $version, code: $code, display: $display, userSelected: $userSelected, systemElement: $systemElement, versionElement: $versionElement, codeElement: $codeElement, displayElement: $displayElement, userSelectedElement: $userSelectedElement)';
+    return 'Coding(id: $id, extension_: $extension_, fhirComments: $fhirComments, system: $system, version: $version, code: $code, display: $display, userSelected: $userSelected, systemElement: $systemElement, versionElement: $versionElement, codeElement: $codeElement, displayElement: $displayElement, userSelectedElement: $userSelectedElement)';
   }
 
   @override
@@ -611,6 +629,9 @@ class _$_Coding implements _Coding {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.version, version) ||
@@ -646,6 +667,7 @@ class _$_Coding implements _Coding {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(code) ^
@@ -671,6 +693,7 @@ abstract class _Coding implements Coding {
   const factory _Coding(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirUri system,
       String version,
       Code code,
@@ -689,6 +712,9 @@ abstract class _Coding implements Coding {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   FhirUri get system;
   @override
@@ -4287,7 +4313,7 @@ class _$TimingTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirDateTime> event,
-      Element repeat,
+      TimingRepeat repeat,
       CodeableConcept code,
       @JsonKey(name: '_event') Element eventElement}) {
     return _Timing(
@@ -4309,7 +4335,7 @@ mixin _$Timing {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirDateTime> get event;
-  Element get repeat;
+  TimingRepeat get repeat;
   CodeableConcept get code;
   @JsonKey(name: '_event')
   Element get eventElement;
@@ -4325,11 +4351,11 @@ abstract class $TimingCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirDateTime> event,
-      Element repeat,
+      TimingRepeat repeat,
       CodeableConcept code,
       @JsonKey(name: '_event') Element eventElement});
 
-  $ElementCopyWith<$Res> get repeat;
+  $TimingRepeatCopyWith<$Res> get repeat;
   $CodeableConceptCopyWith<$Res> get code;
   $ElementCopyWith<$Res> get eventElement;
 }
@@ -4356,7 +4382,7 @@ class _$TimingCopyWithImpl<$Res> implements $TimingCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       event: event == freezed ? _value.event : event as List<FhirDateTime>,
-      repeat: repeat == freezed ? _value.repeat : repeat as Element,
+      repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat,
       code: code == freezed ? _value.code : code as CodeableConcept,
       eventElement: eventElement == freezed
           ? _value.eventElement
@@ -4365,11 +4391,11 @@ class _$TimingCopyWithImpl<$Res> implements $TimingCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get repeat {
+  $TimingRepeatCopyWith<$Res> get repeat {
     if (_value.repeat == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.repeat, (value) {
+    return $TimingRepeatCopyWith<$Res>(_value.repeat, (value) {
       return _then(_value.copyWith(repeat: value));
     });
   }
@@ -4403,12 +4429,12 @@ abstract class _$TimingCopyWith<$Res> implements $TimingCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirDateTime> event,
-      Element repeat,
+      TimingRepeat repeat,
       CodeableConcept code,
       @JsonKey(name: '_event') Element eventElement});
 
   @override
-  $ElementCopyWith<$Res> get repeat;
+  $TimingRepeatCopyWith<$Res> get repeat;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -4438,7 +4464,7 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       event: event == freezed ? _value.event : event as List<FhirDateTime>,
-      repeat: repeat == freezed ? _value.repeat : repeat as Element,
+      repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat,
       code: code == freezed ? _value.code : code as CodeableConcept,
       eventElement: eventElement == freezed
           ? _value.eventElement
@@ -4468,7 +4494,7 @@ class _$_Timing implements _Timing {
   @override
   final List<FhirDateTime> event;
   @override
-  final Element repeat;
+  final TimingRepeat repeat;
   @override
   final CodeableConcept code;
   @override
@@ -4525,7 +4551,7 @@ abstract class _Timing implements Timing {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirDateTime> event,
-      Element repeat,
+      TimingRepeat repeat,
       CodeableConcept code,
       @JsonKey(name: '_event') Element eventElement}) = _$_Timing;
 
@@ -4539,7 +4565,7 @@ abstract class _Timing implements Timing {
   @override
   List<FhirDateTime> get event;
   @override
-  Element get repeat;
+  TimingRepeat get repeat;
   @override
   CodeableConcept get code;
   @override
@@ -4559,6 +4585,7 @@ class _$AddressTearOff {
   _Address call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       String text,
@@ -4581,6 +4608,7 @@ class _$AddressTearOff {
     return _Address(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       use: use,
       type: type,
       text: text,
@@ -4611,6 +4639,8 @@ mixin _$Address {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   AddressUse get use;
   @JsonKey(unknownEnumValue: AddressType.unknown)
@@ -4652,6 +4682,7 @@ abstract class $AddressCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       String text,
@@ -4695,6 +4726,7 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object use = freezed,
     Object type = freezed,
     Object text = freezed,
@@ -4720,6 +4752,9 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       use: use == freezed ? _value.use : use as AddressUse,
       type: type == freezed ? _value.type : type as AddressType,
       text: text == freezed ? _value.text : text as String,
@@ -4864,6 +4899,7 @@ abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       String text,
@@ -4918,6 +4954,7 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object use = freezed,
     Object type = freezed,
     Object text = freezed,
@@ -4943,6 +4980,9 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       use: use == freezed ? _value.use : use as AddressUse,
       type: type == freezed ? _value.type : type as AddressType,
       text: text == freezed ? _value.text : text as String,
@@ -4985,6 +5025,7 @@ class _$_Address implements _Address {
   const _$_Address(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @JsonKey(unknownEnumValue: AddressUse.unknown) this.use,
       @JsonKey(unknownEnumValue: AddressType.unknown) this.type,
       this.text,
@@ -5013,6 +5054,9 @@ class _$_Address implements _Address {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   final AddressUse use;
@@ -5065,7 +5109,7 @@ class _$_Address implements _Address {
 
   @override
   String toString() {
-    return 'Address(id: $id, extension_: $extension_, use: $use, type: $type, text: $text, line: $line, city: $city, district: $district, state: $state, postalCode: $postalCode, country: $country, period: $period, useElement: $useElement, typeElement: $typeElement, textElement: $textElement, lineElement: $lineElement, cityElement: $cityElement, districtElement: $districtElement, stateElement: $stateElement, postalCodeElement: $postalCodeElement, countryElement: $countryElement)';
+    return 'Address(id: $id, extension_: $extension_, fhirComments: $fhirComments, use: $use, type: $type, text: $text, line: $line, city: $city, district: $district, state: $state, postalCode: $postalCode, country: $country, period: $period, useElement: $useElement, typeElement: $typeElement, textElement: $textElement, lineElement: $lineElement, cityElement: $cityElement, districtElement: $districtElement, stateElement: $stateElement, postalCodeElement: $postalCodeElement, countryElement: $countryElement)';
   }
 
   @override
@@ -5077,6 +5121,9 @@ class _$_Address implements _Address {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
             (identical(other.type, type) ||
@@ -5134,6 +5181,7 @@ class _$_Address implements _Address {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(use) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(text) ^
@@ -5168,6 +5216,7 @@ abstract class _Address implements Address {
   const factory _Address(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       String text,
@@ -5195,6 +5244,9 @@ abstract class _Address implements Address {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   AddressUse get use;

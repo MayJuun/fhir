@@ -56,6 +56,8 @@ _$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     system: json['system'] == null
         ? null
         : FhirUri.fromJson(json['system'] as String),
@@ -95,6 +97,7 @@ Map<String, dynamic> _$_$_CodingToJson(_$_Coding instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('code', instance.code?.toJson());
@@ -669,7 +672,7 @@ _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
         ?.toList(),
     repeat: json['repeat'] == null
         ? null
-        : Element.fromJson(json['repeat'] as Map<String, dynamic>),
+        : TimingRepeat.fromJson(json['repeat'] as Map<String, dynamic>),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -706,6 +709,8 @@ _$_Address _$_$_AddressFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     use: _$enumDecodeNullable(_$AddressUseEnumMap, json['use'],
         unknownValue: AddressUse.unknown),
     type: _$enumDecodeNullable(_$AddressTypeEnumMap, json['type'],
@@ -762,6 +767,7 @@ Map<String, dynamic> _$_$_AddressToJson(_$_Address instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('use', _$AddressUseEnumMap[instance.use]);
   writeNotNull('type', _$AddressTypeEnumMap[instance.type]);
   writeNotNull('text', instance.text);

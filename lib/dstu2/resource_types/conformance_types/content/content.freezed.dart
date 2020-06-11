@@ -55,8 +55,8 @@ class _$StructureDefinitionTearOff {
           StructureDefinitionKind kind,
       Code constrainedType,
       @required
-      @JsonKey(required: true)
-          Boolean abstract,
+      @JsonKey(name: 'abstract', required: true)
+          Boolean abstract_,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
           StructureDefinitionContextType contextType,
       List<String> context,
@@ -92,7 +92,7 @@ class _$StructureDefinitionTearOff {
       mapping: mapping,
       kind: kind,
       constrainedType: constrainedType,
-      abstract: abstract,
+      abstract_: abstract_,
       contextType: contextType,
       context: context,
       base: base,
@@ -140,8 +140,8 @@ mixin _$StructureDefinition {
   @JsonKey(required: true, unknownEnumValue: StructureDefinitionKind.unknown)
   StructureDefinitionKind get kind;
   Code get constrainedType;
-  @JsonKey(required: true)
-  Boolean get abstract;
+  @JsonKey(name: 'abstract', required: true)
+  Boolean get abstract_;
   @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
   StructureDefinitionContextType get contextType;
   List<String> get context;
@@ -192,8 +192,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: StructureDefinitionKind.unknown)
           StructureDefinitionKind kind,
       Code constrainedType,
-      @JsonKey(required: true)
-          Boolean abstract,
+      @JsonKey(name: 'abstract', required: true)
+          Boolean abstract_,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
           StructureDefinitionContextType contextType,
       List<String> context,
@@ -246,7 +246,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
     Object mapping = freezed,
     Object kind = freezed,
     Object constrainedType = freezed,
-    Object abstract = freezed,
+    Object abstract_ = freezed,
     Object contextType = freezed,
     Object context = freezed,
     Object base = freezed,
@@ -309,7 +309,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       constrainedType: constrainedType == freezed
           ? _value.constrainedType
           : constrainedType as Code,
-      abstract: abstract == freezed ? _value.abstract : abstract as Boolean,
+      abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       contextType: contextType == freezed
           ? _value.contextType
           : contextType as StructureDefinitionContextType,
@@ -417,8 +417,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: StructureDefinitionKind.unknown)
           StructureDefinitionKind kind,
       Code constrainedType,
-      @JsonKey(required: true)
-          Boolean abstract,
+      @JsonKey(name: 'abstract', required: true)
+          Boolean abstract_,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
           StructureDefinitionContextType contextType,
       List<String> context,
@@ -478,7 +478,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
     Object mapping = freezed,
     Object kind = freezed,
     Object constrainedType = freezed,
-    Object abstract = freezed,
+    Object abstract_ = freezed,
     Object contextType = freezed,
     Object context = freezed,
     Object base = freezed,
@@ -541,7 +541,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       constrainedType: constrainedType == freezed
           ? _value.constrainedType
           : constrainedType as Code,
-      abstract: abstract == freezed ? _value.abstract : abstract as Boolean,
+      abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       contextType: contextType == freezed
           ? _value.contextType
           : contextType as StructureDefinitionContextType,
@@ -599,8 +599,8 @@ class _$_StructureDefinition implements _StructureDefinition {
           this.kind,
       this.constrainedType,
       @required
-      @JsonKey(required: true)
-          this.abstract,
+      @JsonKey(name: 'abstract', required: true)
+          this.abstract_,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
           this.contextType,
       this.context,
@@ -611,7 +611,7 @@ class _$_StructureDefinition implements _StructureDefinition {
         assert(name != null),
         assert(status != null),
         assert(kind != null),
-        assert(abstract != null);
+        assert(abstract_ != null);
 
   factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionFromJson(json);
@@ -679,8 +679,8 @@ class _$_StructureDefinition implements _StructureDefinition {
   @override
   final Code constrainedType;
   @override
-  @JsonKey(required: true)
-  final Boolean abstract;
+  @JsonKey(name: 'abstract', required: true)
+  final Boolean abstract_;
   @override
   @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
   final StructureDefinitionContextType contextType;
@@ -695,7 +695,7 @@ class _$_StructureDefinition implements _StructureDefinition {
 
   @override
   String toString() {
-    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, display: $display, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, code: $code, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, constrainedType: $constrainedType, abstract: $abstract, contextType: $contextType, context: $context, base: $base, snapshot: $snapshot, differential: $differential)';
+    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, display: $display, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, code: $code, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, constrainedType: $constrainedType, abstract_: $abstract_, contextType: $contextType, context: $context, base: $base, snapshot: $snapshot, differential: $differential)';
   }
 
   @override
@@ -773,7 +773,7 @@ class _$_StructureDefinition implements _StructureDefinition {
                 const DeepCollectionEquality().equals(other.mapping, mapping)) &&
             (identical(other.kind, kind) || const DeepCollectionEquality().equals(other.kind, kind)) &&
             (identical(other.constrainedType, constrainedType) || const DeepCollectionEquality().equals(other.constrainedType, constrainedType)) &&
-            (identical(other.abstract, abstract) || const DeepCollectionEquality().equals(other.abstract, abstract)) &&
+            (identical(other.abstract_, abstract_) || const DeepCollectionEquality().equals(other.abstract_, abstract_)) &&
             (identical(other.contextType, contextType) || const DeepCollectionEquality().equals(other.contextType, contextType)) &&
             (identical(other.context, context) || const DeepCollectionEquality().equals(other.context, context)) &&
             (identical(other.base, base) || const DeepCollectionEquality().equals(other.base, base)) &&
@@ -812,7 +812,7 @@ class _$_StructureDefinition implements _StructureDefinition {
       const DeepCollectionEquality().hash(mapping) ^
       const DeepCollectionEquality().hash(kind) ^
       const DeepCollectionEquality().hash(constrainedType) ^
-      const DeepCollectionEquality().hash(abstract) ^
+      const DeepCollectionEquality().hash(abstract_) ^
       const DeepCollectionEquality().hash(contextType) ^
       const DeepCollectionEquality().hash(context) ^
       const DeepCollectionEquality().hash(base) ^
@@ -871,8 +871,8 @@ abstract class _StructureDefinition implements StructureDefinition {
           StructureDefinitionKind kind,
       Code constrainedType,
       @required
-      @JsonKey(required: true)
-          Boolean abstract,
+      @JsonKey(name: 'abstract', required: true)
+          Boolean abstract_,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
           StructureDefinitionContextType contextType,
       List<String> context,
@@ -946,8 +946,8 @@ abstract class _StructureDefinition implements StructureDefinition {
   @override
   Code get constrainedType;
   @override
-  @JsonKey(required: true)
-  Boolean get abstract;
+  @JsonKey(name: 'abstract', required: true)
+  Boolean get abstract_;
   @override
   @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
   StructureDefinitionContextType get contextType;

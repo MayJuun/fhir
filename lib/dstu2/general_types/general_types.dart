@@ -26,6 +26,7 @@ abstract class Coding with _$Coding {
   const factory Coding({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirUri system,
     String version,
     Code code,
@@ -217,7 +218,7 @@ abstract class Timing with _$Timing {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirDateTime> event,
-    Element repeat,
+    TimingRepeat repeat,
     CodeableConcept code,
     @JsonKey(name: '_event') Element eventElement,
   }) = _Timing;
@@ -230,6 +231,7 @@ abstract class Address with _$Address {
   const factory Address({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
     @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
     String text,

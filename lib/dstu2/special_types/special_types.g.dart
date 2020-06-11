@@ -275,7 +275,7 @@ _$_Element _$_$_ElementFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    fhirElement:
+    fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
   );
 }
@@ -292,7 +292,7 @@ Map<String, dynamic> _$_$_ElementToJson(_$_Element instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
-  writeNotNull('fhir_comments', instance.fhirElement);
+  writeNotNull('fhir_comments', instance.fhirComments);
   return val;
 }
 

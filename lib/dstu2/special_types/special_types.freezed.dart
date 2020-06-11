@@ -1877,11 +1877,11 @@ class _$ElementTearOff {
   _Element call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(name: 'fhir_comments') List<String> fhirElement}) {
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments}) {
     return _Element(
       id: id,
       extension_: extension_,
-      fhirElement: fhirElement,
+      fhirComments: fhirComments,
     );
   }
 }
@@ -1894,7 +1894,7 @@ mixin _$Element {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @JsonKey(name: 'fhir_comments')
-  List<String> get fhirElement;
+  List<String> get fhirComments;
 
   Map<String, dynamic> toJson();
   $ElementCopyWith<Element> get copyWith;
@@ -1906,7 +1906,7 @@ abstract class $ElementCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(name: 'fhir_comments') List<String> fhirElement});
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments});
 }
 
 class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
@@ -1920,16 +1920,16 @@ class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
-    Object fhirElement = freezed,
+    Object fhirComments = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
-      fhirElement: fhirElement == freezed
-          ? _value.fhirElement
-          : fhirElement as List<String>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
     ));
   }
 }
@@ -1941,7 +1941,7 @@ abstract class _$ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(name: 'fhir_comments') List<String> fhirElement});
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments});
 }
 
 class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
@@ -1956,16 +1956,16 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
-    Object fhirElement = freezed,
+    Object fhirComments = freezed,
   }) {
     return _then(_Element(
       id: id == freezed ? _value.id : id as Id,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
-      fhirElement: fhirElement == freezed
-          ? _value.fhirElement
-          : fhirElement as List<String>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
     ));
   }
 }
@@ -1975,7 +1975,7 @@ class _$_Element implements _Element {
   const _$_Element(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(name: 'fhir_comments') this.fhirElement});
+      @JsonKey(name: 'fhir_comments') this.fhirComments});
 
   factory _$_Element.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementFromJson(json);
@@ -1987,11 +1987,11 @@ class _$_Element implements _Element {
   final List<FhirExtension> extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String> fhirElement;
+  final List<String> fhirComments;
 
   @override
   String toString() {
-    return 'Element(id: $id, extension_: $extension_, fhirElement: $fhirElement)';
+    return 'Element(id: $id, extension_: $extension_, fhirComments: $fhirComments)';
   }
 
   @override
@@ -2003,9 +2003,9 @@ class _$_Element implements _Element {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
-            (identical(other.fhirElement, fhirElement) ||
+            (identical(other.fhirComments, fhirComments) ||
                 const DeepCollectionEquality()
-                    .equals(other.fhirElement, fhirElement)));
+                    .equals(other.fhirComments, fhirComments)));
   }
 
   @override
@@ -2013,7 +2013,7 @@ class _$_Element implements _Element {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(fhirElement);
+      const DeepCollectionEquality().hash(fhirComments);
 
   @override
   _$ElementCopyWith<_Element> get copyWith =>
@@ -2029,7 +2029,7 @@ abstract class _Element implements Element {
   const factory _Element(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(name: 'fhir_comments') List<String> fhirElement}) = _$_Element;
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments}) = _$_Element;
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
@@ -2040,7 +2040,7 @@ abstract class _Element implements Element {
   List<FhirExtension> get extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String> get fhirElement;
+  List<String> get fhirComments;
   @override
   _$ElementCopyWith<_Element> get copyWith;
 }

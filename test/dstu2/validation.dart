@@ -14,13 +14,12 @@ void main() async {
     var contents = await File(file.path).readAsString();
     var resource = fhir_dstu2.Resource.fromJson(json.decode(contents));
     if (resource == null) {
-      print(file);
+      print('null: $file');
     } else {
-      print(resource.toJson());
-      // print(await checkJsonEquality(
-      //     json.decode(contents), resource.toJson(), file.toString(), 'input'));
-      // print(await checkJsonEquality(
-      //     resource.toJson(), json.decode(contents), file.toString(), 'output'));
+      print(await checkJsonEquality(
+          json.decode(contents), resource.toJson(), file.toString(), 'input'));
+      print(await checkJsonEquality(
+          resource.toJson(), json.decode(contents), file.toString(), 'output'));
     }
   }
   // writeErrorFile(string);

@@ -45,7 +45,7 @@ abstract class StructureDefinition
     @required
         StructureDefinitionKind kind,
     Code constrainedType,
-    @JsonKey(required: true) @required Boolean abstract,
+    @JsonKey(name: 'abstract', required: true) @required Boolean abstract_,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
         StructureDefinitionContextType contextType,
     List<String> context,

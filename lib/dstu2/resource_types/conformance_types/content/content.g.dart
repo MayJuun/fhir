@@ -86,7 +86,7 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     constrainedType: json['constrainedType'] == null
         ? null
         : Code.fromJson(json['constrainedType'] as String),
-    abstract:
+    abstract_:
         json['abstract'] == null ? null : Boolean.fromJson(json['abstract']),
     contextType: _$enumDecodeNullable(
         _$StructureDefinitionContextTypeEnumMap, json['contextType'],
@@ -147,7 +147,7 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('mapping', instance.mapping?.map((e) => e?.toJson())?.toList());
   writeNotNull('kind', _$StructureDefinitionKindEnumMap[instance.kind]);
   writeNotNull('constrainedType', instance.constrainedType?.toJson());
-  writeNotNull('abstract', instance.abstract?.toJson());
+  writeNotNull('abstract', instance.abstract_?.toJson());
   writeNotNull('contextType',
       _$StructureDefinitionContextTypeEnumMap[instance.contextType]);
   writeNotNull('context', instance.context);
