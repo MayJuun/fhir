@@ -162,6 +162,7 @@ abstract class CodeableConcept with _$CodeableConcept {
   const factory CodeableConcept({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     List<Coding> coding,
     String text,
     @JsonKey(name: '_text') Element textElement,

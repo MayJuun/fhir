@@ -40,6 +40,18 @@ abstract class ValueSet with _$ValueSet implements Resource {
     ValueSetCodeSystem codeSystem,
     ValueSetCompose compose,
     ValueSetExpansion expansion,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_immutable') Element immutableElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
   }) = _ValueSet;
 
   factory ValueSet.fromJson(Map<String, dynamic> json) =>
@@ -88,6 +100,8 @@ abstract class ValueSetConcept with _$ValueSetConcept {
     String definition,
     List<ValueSetDesignation> designation,
     List<ValueSetConcept> concept,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_display') Element displayElement,
   }) = _ValueSetConcept;
 
   factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
@@ -103,6 +117,8 @@ abstract class ValueSetDesignation with _$ValueSetDesignation {
     Code language,
     Coding use,
     @JsonKey(required: true) @required String value,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetDesignation;
 
   factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
@@ -134,6 +150,8 @@ abstract class IncludeExclude with _$IncludeExclude {
     String version,
     List<IncludeExcludeConcept> concept,
     List<IncludeExcludeFilter> filter,
+    @JsonKey(name: '_system') Element systemElement,
+    @JsonKey(name: '_version') Element versionElement,
   }) = _IncludeExclude;
 
   factory IncludeExclude.fromJson(Map<String, dynamic> json) =>
@@ -149,6 +167,8 @@ abstract class IncludeExcludeConcept with _$IncludeExcludeConcept {
     @JsonKey(required: true) @required Code code,
     String display,
     List<ValueSetDesignation> designation,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_display') Element displayElement,
   }) = _IncludeExcludeConcept;
 
   factory IncludeExcludeConcept.fromJson(Map<String, dynamic> json) =>
@@ -166,6 +186,9 @@ abstract class IncludeExcludeFilter with _$IncludeExcludeFilter {
     @required
         FilterOp op,
     @JsonKey(required: true) @required Code value,
+    @JsonKey(name: '_property') Element propertyElement,
+    @JsonKey(name: '_op') Element opElement,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _IncludeExcludeFilter;
 
   factory IncludeExcludeFilter.fromJson(Map<String, dynamic> json) =>
@@ -184,6 +207,10 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
     Integer offset,
     List<ValueSetParameter> parameter,
     List<ValueSetContains> contains,
+    @JsonKey(name: '_identifier') Element identifierElement,
+    @JsonKey(name: '_timestamp') Element timestampElement,
+    @JsonKey(name: '_total') Element totalElement,
+    @JsonKey(name: '_offset') Element offsetElement,
   }) = _ValueSetExpansion;
 
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
@@ -203,6 +230,13 @@ abstract class ValueSetParameter with _$ValueSetParameter {
     Decimal valueDecimal,
     FhirUri valueUri,
     Code valueCode,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
   }) = _ValueSetParameter;
 
   factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
@@ -221,6 +255,11 @@ abstract class ValueSetContains with _$ValueSetContains {
     Code code,
     String display,
     List<ValueSetContains> contains,
+    @JsonKey(name: '_system') Element systemElement,
+    @JsonKey(name: '_abstract') Element abstractElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_display') Element displayElement,
   }) = _ValueSetContains;
 
   factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
@@ -256,6 +295,16 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     String usage,
     @JsonKey(required: true) @required List<NamingSystemUniqueId> uniqueId,
     Reference replacedBy,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_kind') Element kindElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_responsible') Element responsibleElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_usage') Element usageElement,
   }) = _NamingSystem;
 
   factory NamingSystem.fromJson(Map<String, dynamic> json) =>
@@ -294,6 +343,19 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
     FhirUri targetUri,
     Reference targetReference,
     List<ConceptMapElement> element,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_sourceUri') Element sourceUriElement,
+    @JsonKey(name: '_targetUri') Element targetUriElement,
   }) = _ConceptMap;
 
   factory ConceptMap.fromJson(Map<String, dynamic> json) =>
@@ -326,6 +388,9 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
     @JsonKey(required: true) @required String value,
     Boolean preferred,
     Period period,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_value') Element valueElement,
+    @JsonKey(name: '_preferred') Element preferredElement,
   }) = _NamingSystemUniqueId;
 
   factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
@@ -355,6 +420,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
     FhirUri codeSystem,
     Code code,
     List<ConceptMapTarget> target,
+    @JsonKey(name: '_code') Element codeElement,
   }) = _ConceptMapElement;
 
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
@@ -375,6 +441,9 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
     String comments,
     List<ConceptMapDependsOn> dependsOn,
     List<ConceptMapDependsOn> product,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_equivalence') Element equivalenceElement,
+    @JsonKey(name: '_comments') Element commentsElement,
   }) = _ConceptMapTarget;
 
   factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>

@@ -16,13 +16,13 @@ void main() async {
     if (resource == null) {
       print('null: $file');
     } else {
-      print(await checkJsonEquality(
-          json.decode(contents), resource.toJson(), file.toString(), 'input'));
-      print(await checkJsonEquality(
-          resource.toJson(), json.decode(contents), file.toString(), 'output'));
+      await checkJsonEquality(
+          json.decode(contents), resource.toJson(), file.toString(), 'input');
+      await checkJsonEquality(
+          resource.toJson(), json.decode(contents), file.toString(), 'output');
     }
   }
-  // writeErrorFile(string);
+  writeErrorFile(string);
 }
 
 Future<String> checkJsonEquality(Map<String, dynamic> input,

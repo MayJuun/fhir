@@ -47,7 +47,31 @@ class _$ValueSetTearOff {
       Boolean extensible,
       ValueSetCodeSystem codeSystem,
       ValueSetCompose compose,
-      ValueSetExpansion expansion}) {
+      ValueSetExpansion expansion,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_immutable')
+          Element immutableElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement}) {
     return _ValueSet(
       resourceType: resourceType,
       id: id,
@@ -77,6 +101,18 @@ class _$ValueSetTearOff {
       codeSystem: codeSystem,
       compose: compose,
       expansion: expansion,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      immutableElement: immutableElement,
+      copyrightElement: copyrightElement,
     );
   }
 }
@@ -116,6 +152,30 @@ mixin _$ValueSet {
   ValueSetCodeSystem get codeSystem;
   ValueSetCompose get compose;
   ValueSetExpansion get expansion;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_immutable')
+  Element get immutableElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
 
   Map<String, dynamic> toJson();
   $ValueSetCopyWith<ValueSet> get copyWith;
@@ -155,7 +215,31 @@ abstract class $ValueSetCopyWith<$Res> {
       Boolean extensible,
       ValueSetCodeSystem codeSystem,
       ValueSetCompose compose,
-      ValueSetExpansion expansion});
+      ValueSetExpansion expansion,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_immutable')
+          Element immutableElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -164,6 +248,18 @@ abstract class $ValueSetCopyWith<$Res> {
   $ValueSetCodeSystemCopyWith<$Res> get codeSystem;
   $ValueSetComposeCopyWith<$Res> get compose;
   $ValueSetExpansionCopyWith<$Res> get expansion;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get immutableElement;
+  $ElementCopyWith<$Res> get copyrightElement;
 }
 
 class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
@@ -203,6 +299,18 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     Object codeSystem = freezed,
     Object compose = freezed,
     Object expansion = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object immutableElement = freezed,
+    Object copyrightElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -258,6 +366,39 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       expansion: expansion == freezed
           ? _value.expansion
           : expansion as ValueSetExpansion,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      immutableElement: immutableElement == freezed
+          ? _value.immutableElement
+          : immutableElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
     ));
   }
 
@@ -330,6 +471,126 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       return _then(_value.copyWith(expansion: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get immutableElement {
+    if (_value.immutableElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.immutableElement, (value) {
+      return _then(_value.copyWith(immutableElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
 }
 
 abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
@@ -367,7 +628,31 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       Boolean extensible,
       ValueSetCodeSystem codeSystem,
       ValueSetCompose compose,
-      ValueSetExpansion expansion});
+      ValueSetExpansion expansion,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_immutable')
+          Element immutableElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -383,6 +668,30 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   $ValueSetComposeCopyWith<$Res> get compose;
   @override
   $ValueSetExpansionCopyWith<$Res> get expansion;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get immutableElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
 }
 
 class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
@@ -423,6 +732,18 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
     Object codeSystem = freezed,
     Object compose = freezed,
     Object expansion = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object immutableElement = freezed,
+    Object copyrightElement = freezed,
   }) {
     return _then(_ValueSet(
       resourceType: resourceType == freezed
@@ -478,6 +799,39 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       expansion: expansion == freezed
           ? _value.expansion
           : expansion as ValueSetExpansion,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      immutableElement: immutableElement == freezed
+          ? _value.immutableElement
+          : immutableElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
     ));
   }
 }
@@ -516,7 +870,31 @@ class _$_ValueSet implements _ValueSet {
       this.extensible,
       this.codeSystem,
       this.compose,
-      this.expansion})
+      this.expansion,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_immutable')
+          this.immutableElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement})
       : assert(status != null);
 
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
@@ -581,10 +959,46 @@ class _$_ValueSet implements _ValueSet {
   final ValueSetCompose compose;
   @override
   final ValueSetExpansion expansion;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_immutable')
+  final Element immutableElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
 
   @override
   String toString() {
-    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, lockedDate: $lockedDate, description: $description, useContext: $useContext, immutable: $immutable, requirements: $requirements, copyright: $copyright, extensible: $extensible, codeSystem: $codeSystem, compose: $compose, expansion: $expansion)';
+    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, lockedDate: $lockedDate, description: $description, useContext: $useContext, immutable: $immutable, requirements: $requirements, copyright: $copyright, extensible: $extensible, codeSystem: $codeSystem, compose: $compose, expansion: $expansion, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, immutableElement: $immutableElement, copyrightElement: $copyrightElement)';
   }
 
   @override
@@ -661,7 +1075,19 @@ class _$_ValueSet implements _ValueSet {
                     .equals(other.extensible, extensible)) &&
             (identical(other.codeSystem, codeSystem) || const DeepCollectionEquality().equals(other.codeSystem, codeSystem)) &&
             (identical(other.compose, compose) || const DeepCollectionEquality().equals(other.compose, compose)) &&
-            (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)));
+            (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.immutableElement, immutableElement) || const DeepCollectionEquality().equals(other.immutableElement, immutableElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)));
   }
 
   @override
@@ -694,7 +1120,19 @@ class _$_ValueSet implements _ValueSet {
       const DeepCollectionEquality().hash(extensible) ^
       const DeepCollectionEquality().hash(codeSystem) ^
       const DeepCollectionEquality().hash(compose) ^
-      const DeepCollectionEquality().hash(expansion);
+      const DeepCollectionEquality().hash(expansion) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(immutableElement) ^
+      const DeepCollectionEquality().hash(copyrightElement);
 
   @override
   _$ValueSetCopyWith<_ValueSet> get copyWith =>
@@ -739,7 +1177,31 @@ abstract class _ValueSet implements ValueSet {
       Boolean extensible,
       ValueSetCodeSystem codeSystem,
       ValueSetCompose compose,
-      ValueSetExpansion expansion}) = _$_ValueSet;
+      ValueSetExpansion expansion,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_immutable')
+          Element immutableElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement}) = _$_ValueSet;
 
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
@@ -802,6 +1264,42 @@ abstract class _ValueSet implements ValueSet {
   ValueSetCompose get compose;
   @override
   ValueSetExpansion get expansion;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_immutable')
+  Element get immutableElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
   @override
   _$ValueSetCopyWith<_ValueSet> get copyWith;
 }
@@ -1345,7 +1843,9 @@ class _$ValueSetConceptTearOff {
       String display,
       String definition,
       List<ValueSetDesignation> designation,
-      List<ValueSetConcept> concept}) {
+      List<ValueSetConcept> concept,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement}) {
     return _ValueSetConcept(
       id: id,
       extension_: extension_,
@@ -1356,6 +1856,8 @@ class _$ValueSetConceptTearOff {
       definition: definition,
       designation: designation,
       concept: concept,
+      codeElement: codeElement,
+      displayElement: displayElement,
     );
   }
 }
@@ -1376,6 +1878,10 @@ mixin _$ValueSetConcept {
   String get definition;
   List<ValueSetDesignation> get designation;
   List<ValueSetConcept> get concept;
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @JsonKey(name: '_display')
+  Element get displayElement;
 
   Map<String, dynamic> toJson();
   $ValueSetConceptCopyWith<ValueSetConcept> get copyWith;
@@ -1394,7 +1900,12 @@ abstract class $ValueSetConceptCopyWith<$Res> {
       String display,
       String definition,
       List<ValueSetDesignation> designation,
-      List<ValueSetConcept> concept});
+      List<ValueSetConcept> concept,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement});
+
+  $ElementCopyWith<$Res> get codeElement;
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class _$ValueSetConceptCopyWithImpl<$Res>
@@ -1416,6 +1927,8 @@ class _$ValueSetConceptCopyWithImpl<$Res>
     Object definition = freezed,
     Object designation = freezed,
     Object concept = freezed,
+    Object codeElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -1436,7 +1949,32 @@ class _$ValueSetConceptCopyWithImpl<$Res>
       concept: concept == freezed
           ? _value.concept
           : concept as List<ValueSetConcept>,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.codeElement, (value) {
+      return _then(_value.copyWith(codeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.displayElement, (value) {
+      return _then(_value.copyWith(displayElement: value));
+    });
   }
 }
 
@@ -1455,7 +1993,14 @@ abstract class _$ValueSetConceptCopyWith<$Res>
       String display,
       String definition,
       List<ValueSetDesignation> designation,
-      List<ValueSetConcept> concept});
+      List<ValueSetConcept> concept,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement});
+
+  @override
+  $ElementCopyWith<$Res> get codeElement;
+  @override
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class __$ValueSetConceptCopyWithImpl<$Res>
@@ -1479,6 +2024,8 @@ class __$ValueSetConceptCopyWithImpl<$Res>
     Object definition = freezed,
     Object designation = freezed,
     Object concept = freezed,
+    Object codeElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_ValueSetConcept(
       id: id == freezed ? _value.id : id as Id,
@@ -1499,6 +2046,11 @@ class __$ValueSetConceptCopyWithImpl<$Res>
       concept: concept == freezed
           ? _value.concept
           : concept as List<ValueSetConcept>,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
   }
 }
@@ -1514,7 +2066,9 @@ class _$_ValueSetConcept implements _ValueSetConcept {
       this.display,
       this.definition,
       this.designation,
-      this.concept})
+      this.concept,
+      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(name: '_display') this.displayElement})
       : assert(code != null);
 
   factory _$_ValueSetConcept.fromJson(Map<String, dynamic> json) =>
@@ -1541,10 +2095,16 @@ class _$_ValueSetConcept implements _ValueSetConcept {
   final List<ValueSetDesignation> designation;
   @override
   final List<ValueSetConcept> concept;
+  @override
+  @JsonKey(name: '_code')
+  final Element codeElement;
+  @override
+  @JsonKey(name: '_display')
+  final Element displayElement;
 
   @override
   String toString() {
-    return 'ValueSetConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, abstract_: $abstract_, display: $display, definition: $definition, designation: $designation, concept: $concept)';
+    return 'ValueSetConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, abstract_: $abstract_, display: $display, definition: $definition, designation: $designation, concept: $concept, codeElement: $codeElement, displayElement: $displayElement)';
   }
 
   @override
@@ -1574,7 +2134,14 @@ class _$_ValueSetConcept implements _ValueSetConcept {
                 const DeepCollectionEquality()
                     .equals(other.designation, designation)) &&
             (identical(other.concept, concept) ||
-                const DeepCollectionEquality().equals(other.concept, concept)));
+                const DeepCollectionEquality()
+                    .equals(other.concept, concept)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
+            (identical(other.displayElement, displayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayElement, displayElement)));
   }
 
   @override
@@ -1588,7 +2155,9 @@ class _$_ValueSetConcept implements _ValueSetConcept {
       const DeepCollectionEquality().hash(display) ^
       const DeepCollectionEquality().hash(definition) ^
       const DeepCollectionEquality().hash(designation) ^
-      const DeepCollectionEquality().hash(concept);
+      const DeepCollectionEquality().hash(concept) ^
+      const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(displayElement);
 
   @override
   _$ValueSetConceptCopyWith<_ValueSetConcept> get copyWith =>
@@ -1610,7 +2179,9 @@ abstract class _ValueSetConcept implements ValueSetConcept {
       String display,
       String definition,
       List<ValueSetDesignation> designation,
-      List<ValueSetConcept> concept}) = _$_ValueSetConcept;
+      List<ValueSetConcept> concept,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement}) = _$_ValueSetConcept;
 
   factory _ValueSetConcept.fromJson(Map<String, dynamic> json) =
       _$_ValueSetConcept.fromJson;
@@ -1637,6 +2208,12 @@ abstract class _ValueSetConcept implements ValueSetConcept {
   @override
   List<ValueSetConcept> get concept;
   @override
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @override
+  @JsonKey(name: '_display')
+  Element get displayElement;
+  @override
   _$ValueSetConceptCopyWith<_ValueSetConcept> get copyWith;
 }
 
@@ -1653,7 +2230,9 @@ class _$ValueSetDesignationTearOff {
       FhirExtension modifierExtension,
       Code language,
       Coding use,
-      @required @JsonKey(required: true) String value}) {
+      @required @JsonKey(required: true) String value,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_value') Element valueElement}) {
     return _ValueSetDesignation(
       id: id,
       extension_: extension_,
@@ -1661,6 +2240,8 @@ class _$ValueSetDesignationTearOff {
       language: language,
       use: use,
       value: value,
+      languageElement: languageElement,
+      valueElement: valueElement,
     );
   }
 }
@@ -1677,6 +2258,10 @@ mixin _$ValueSetDesignation {
   Coding get use;
   @JsonKey(required: true)
   String get value;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_value')
+  Element get valueElement;
 
   Map<String, dynamic> toJson();
   $ValueSetDesignationCopyWith<ValueSetDesignation> get copyWith;
@@ -1692,10 +2277,14 @@ abstract class $ValueSetDesignationCopyWith<$Res> {
       FhirExtension modifierExtension,
       Code language,
       Coding use,
-      @JsonKey(required: true) String value});
+      @JsonKey(required: true) String value,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_value') Element valueElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get use;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$ValueSetDesignationCopyWithImpl<$Res>
@@ -1714,6 +2303,8 @@ class _$ValueSetDesignationCopyWithImpl<$Res>
     Object language = freezed,
     Object use = freezed,
     Object value = freezed,
+    Object languageElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -1726,6 +2317,12 @@ class _$ValueSetDesignationCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       use: use == freezed ? _value.use : use as Coding,
       value: value == freezed ? _value.value : value as String,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 
@@ -1748,6 +2345,26 @@ class _$ValueSetDesignationCopyWithImpl<$Res>
       return _then(_value.copyWith(use: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
+  }
 }
 
 abstract class _$ValueSetDesignationCopyWith<$Res>
@@ -1762,12 +2379,18 @@ abstract class _$ValueSetDesignationCopyWith<$Res>
       FhirExtension modifierExtension,
       Code language,
       Coding use,
-      @JsonKey(required: true) String value});
+      @JsonKey(required: true) String value,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_value') Element valueElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $CodingCopyWith<$Res> get use;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$ValueSetDesignationCopyWithImpl<$Res>
@@ -1788,6 +2411,8 @@ class __$ValueSetDesignationCopyWithImpl<$Res>
     Object language = freezed,
     Object use = freezed,
     Object value = freezed,
+    Object languageElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_ValueSetDesignation(
       id: id == freezed ? _value.id : id as Id,
@@ -1800,6 +2425,12 @@ class __$ValueSetDesignationCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code,
       use: use == freezed ? _value.use : use as Coding,
       value: value == freezed ? _value.value : value as String,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 }
@@ -1812,7 +2443,9 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
       this.modifierExtension,
       this.language,
       this.use,
-      @required @JsonKey(required: true) this.value})
+      @required @JsonKey(required: true) this.value,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_value') this.valueElement})
       : assert(value != null);
 
   factory _$_ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
@@ -1832,10 +2465,16 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
   @override
   @JsonKey(required: true)
   final String value;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
 
   @override
   String toString() {
-    return 'ValueSetDesignation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, language: $language, use: $use, value: $value)';
+    return 'ValueSetDesignation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, language: $language, use: $use, value: $value, languageElement: $languageElement, valueElement: $valueElement)';
   }
 
   @override
@@ -1856,7 +2495,13 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
             (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)));
   }
 
   @override
@@ -1867,7 +2512,9 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(use) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(valueElement);
 
   @override
   _$ValueSetDesignationCopyWith<_ValueSetDesignation> get copyWith =>
@@ -1882,13 +2529,14 @@ class _$_ValueSetDesignation implements _ValueSetDesignation {
 
 abstract class _ValueSetDesignation implements ValueSetDesignation {
   const factory _ValueSetDesignation(
-          {Id id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          FhirExtension modifierExtension,
-          Code language,
-          Coding use,
-          @required @JsonKey(required: true) String value}) =
-      _$_ValueSetDesignation;
+      {Id id,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      FhirExtension modifierExtension,
+      Code language,
+      Coding use,
+      @required @JsonKey(required: true) String value,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_value') Element valueElement}) = _$_ValueSetDesignation;
 
   factory _ValueSetDesignation.fromJson(Map<String, dynamic> json) =
       _$_ValueSetDesignation.fromJson;
@@ -1907,6 +2555,12 @@ abstract class _ValueSetDesignation implements ValueSetDesignation {
   @override
   @JsonKey(required: true)
   String get value;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
   @override
   _$ValueSetDesignationCopyWith<_ValueSetDesignation> get copyWith;
 }
@@ -2181,7 +2835,9 @@ class _$IncludeExcludeTearOff {
       @required @JsonKey(required: true) FhirUri system,
       String version,
       List<IncludeExcludeConcept> concept,
-      List<IncludeExcludeFilter> filter}) {
+      List<IncludeExcludeFilter> filter,
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_version') Element versionElement}) {
     return _IncludeExclude(
       id: id,
       extension_: extension_,
@@ -2190,6 +2846,8 @@ class _$IncludeExcludeTearOff {
       version: version,
       concept: concept,
       filter: filter,
+      systemElement: systemElement,
+      versionElement: versionElement,
     );
   }
 }
@@ -2207,6 +2865,10 @@ mixin _$IncludeExclude {
   String get version;
   List<IncludeExcludeConcept> get concept;
   List<IncludeExcludeFilter> get filter;
+  @JsonKey(name: '_system')
+  Element get systemElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
 
   Map<String, dynamic> toJson();
   $IncludeExcludeCopyWith<IncludeExclude> get copyWith;
@@ -2223,9 +2885,13 @@ abstract class $IncludeExcludeCopyWith<$Res> {
       @JsonKey(required: true) FhirUri system,
       String version,
       List<IncludeExcludeConcept> concept,
-      List<IncludeExcludeFilter> filter});
+      List<IncludeExcludeFilter> filter,
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_version') Element versionElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get systemElement;
+  $ElementCopyWith<$Res> get versionElement;
 }
 
 class _$IncludeExcludeCopyWithImpl<$Res>
@@ -2245,6 +2911,8 @@ class _$IncludeExcludeCopyWithImpl<$Res>
     Object version = freezed,
     Object concept = freezed,
     Object filter = freezed,
+    Object systemElement = freezed,
+    Object versionElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -2262,6 +2930,12 @@ class _$IncludeExcludeCopyWithImpl<$Res>
       filter: filter == freezed
           ? _value.filter
           : filter as List<IncludeExcludeFilter>,
+      systemElement: systemElement == freezed
+          ? _value.systemElement
+          : systemElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
     ));
   }
 
@@ -2272,6 +2946,26 @@ class _$IncludeExcludeCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get systemElement {
+    if (_value.systemElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.systemElement, (value) {
+      return _then(_value.copyWith(systemElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
     });
   }
 }
@@ -2289,10 +2983,16 @@ abstract class _$IncludeExcludeCopyWith<$Res>
       @JsonKey(required: true) FhirUri system,
       String version,
       List<IncludeExcludeConcept> concept,
-      List<IncludeExcludeFilter> filter});
+      List<IncludeExcludeFilter> filter,
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_version') Element versionElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get systemElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
 }
 
 class __$IncludeExcludeCopyWithImpl<$Res>
@@ -2314,6 +3014,8 @@ class __$IncludeExcludeCopyWithImpl<$Res>
     Object version = freezed,
     Object concept = freezed,
     Object filter = freezed,
+    Object systemElement = freezed,
+    Object versionElement = freezed,
   }) {
     return _then(_IncludeExclude(
       id: id == freezed ? _value.id : id as Id,
@@ -2331,6 +3033,12 @@ class __$IncludeExcludeCopyWithImpl<$Res>
       filter: filter == freezed
           ? _value.filter
           : filter as List<IncludeExcludeFilter>,
+      systemElement: systemElement == freezed
+          ? _value.systemElement
+          : systemElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
     ));
   }
 }
@@ -2344,7 +3052,9 @@ class _$_IncludeExclude implements _IncludeExclude {
       @required @JsonKey(required: true) this.system,
       this.version,
       this.concept,
-      this.filter})
+      this.filter,
+      @JsonKey(name: '_system') this.systemElement,
+      @JsonKey(name: '_version') this.versionElement})
       : assert(system != null);
 
   factory _$_IncludeExclude.fromJson(Map<String, dynamic> json) =>
@@ -2366,10 +3076,16 @@ class _$_IncludeExclude implements _IncludeExclude {
   final List<IncludeExcludeConcept> concept;
   @override
   final List<IncludeExcludeFilter> filter;
+  @override
+  @JsonKey(name: '_system')
+  final Element systemElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
 
   @override
   String toString() {
-    return 'IncludeExclude(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, version: $version, concept: $concept, filter: $filter)';
+    return 'IncludeExclude(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, version: $version, concept: $concept, filter: $filter, systemElement: $systemElement, versionElement: $versionElement)';
   }
 
   @override
@@ -2393,7 +3109,13 @@ class _$_IncludeExclude implements _IncludeExclude {
                 const DeepCollectionEquality()
                     .equals(other.concept, concept)) &&
             (identical(other.filter, filter) ||
-                const DeepCollectionEquality().equals(other.filter, filter)));
+                const DeepCollectionEquality().equals(other.filter, filter)) &&
+            (identical(other.systemElement, systemElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.systemElement, systemElement)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)));
   }
 
   @override
@@ -2405,7 +3127,9 @@ class _$_IncludeExclude implements _IncludeExclude {
       const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(concept) ^
-      const DeepCollectionEquality().hash(filter);
+      const DeepCollectionEquality().hash(filter) ^
+      const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(versionElement);
 
   @override
   _$IncludeExcludeCopyWith<_IncludeExclude> get copyWith =>
@@ -2425,7 +3149,9 @@ abstract class _IncludeExclude implements IncludeExclude {
       @required @JsonKey(required: true) FhirUri system,
       String version,
       List<IncludeExcludeConcept> concept,
-      List<IncludeExcludeFilter> filter}) = _$_IncludeExclude;
+      List<IncludeExcludeFilter> filter,
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_version') Element versionElement}) = _$_IncludeExclude;
 
   factory _IncludeExclude.fromJson(Map<String, dynamic> json) =
       _$_IncludeExclude.fromJson;
@@ -2447,6 +3173,12 @@ abstract class _IncludeExclude implements IncludeExclude {
   @override
   List<IncludeExcludeFilter> get filter;
   @override
+  @JsonKey(name: '_system')
+  Element get systemElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
   _$IncludeExcludeCopyWith<_IncludeExclude> get copyWith;
 }
 
@@ -2464,7 +3196,9 @@ class _$IncludeExcludeConceptTearOff {
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Code code,
       String display,
-      List<ValueSetDesignation> designation}) {
+      List<ValueSetDesignation> designation,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement}) {
     return _IncludeExcludeConcept(
       id: id,
       extension_: extension_,
@@ -2472,6 +3206,8 @@ class _$IncludeExcludeConceptTearOff {
       code: code,
       display: display,
       designation: designation,
+      codeElement: codeElement,
+      displayElement: displayElement,
     );
   }
 }
@@ -2488,6 +3224,10 @@ mixin _$IncludeExcludeConcept {
   Code get code;
   String get display;
   List<ValueSetDesignation> get designation;
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @JsonKey(name: '_display')
+  Element get displayElement;
 
   Map<String, dynamic> toJson();
   $IncludeExcludeConceptCopyWith<IncludeExcludeConcept> get copyWith;
@@ -2503,9 +3243,13 @@ abstract class $IncludeExcludeConceptCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true) Code code,
       String display,
-      List<ValueSetDesignation> designation});
+      List<ValueSetDesignation> designation,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get codeElement;
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class _$IncludeExcludeConceptCopyWithImpl<$Res>
@@ -2524,6 +3268,8 @@ class _$IncludeExcludeConceptCopyWithImpl<$Res>
     Object code = freezed,
     Object display = freezed,
     Object designation = freezed,
+    Object codeElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -2538,6 +3284,11 @@ class _$IncludeExcludeConceptCopyWithImpl<$Res>
       designation: designation == freezed
           ? _value.designation
           : designation as List<ValueSetDesignation>,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
   }
 
@@ -2548,6 +3299,26 @@ class _$IncludeExcludeConceptCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.codeElement, (value) {
+      return _then(_value.copyWith(codeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.displayElement, (value) {
+      return _then(_value.copyWith(displayElement: value));
     });
   }
 }
@@ -2564,10 +3335,16 @@ abstract class _$IncludeExcludeConceptCopyWith<$Res>
       FhirExtension modifierExtension,
       @JsonKey(required: true) Code code,
       String display,
-      List<ValueSetDesignation> designation});
+      List<ValueSetDesignation> designation,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get codeElement;
+  @override
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class __$IncludeExcludeConceptCopyWithImpl<$Res>
@@ -2588,6 +3365,8 @@ class __$IncludeExcludeConceptCopyWithImpl<$Res>
     Object code = freezed,
     Object display = freezed,
     Object designation = freezed,
+    Object codeElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_IncludeExcludeConcept(
       id: id == freezed ? _value.id : id as Id,
@@ -2602,6 +3381,11 @@ class __$IncludeExcludeConceptCopyWithImpl<$Res>
       designation: designation == freezed
           ? _value.designation
           : designation as List<ValueSetDesignation>,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
   }
 }
@@ -2614,7 +3398,9 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
       this.modifierExtension,
       @required @JsonKey(required: true) this.code,
       this.display,
-      this.designation})
+      this.designation,
+      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(name: '_display') this.displayElement})
       : assert(code != null);
 
   factory _$_IncludeExcludeConcept.fromJson(Map<String, dynamic> json) =>
@@ -2634,10 +3420,16 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
   final String display;
   @override
   final List<ValueSetDesignation> designation;
+  @override
+  @JsonKey(name: '_code')
+  final Element codeElement;
+  @override
+  @JsonKey(name: '_display')
+  final Element displayElement;
 
   @override
   String toString() {
-    return 'IncludeExcludeConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, display: $display, designation: $designation)';
+    return 'IncludeExcludeConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, display: $display, designation: $designation, codeElement: $codeElement, displayElement: $displayElement)';
   }
 
   @override
@@ -2659,7 +3451,13 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
                     .equals(other.display, display)) &&
             (identical(other.designation, designation) ||
                 const DeepCollectionEquality()
-                    .equals(other.designation, designation)));
+                    .equals(other.designation, designation)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
+            (identical(other.displayElement, displayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayElement, displayElement)));
   }
 
   @override
@@ -2670,7 +3468,9 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(designation);
+      const DeepCollectionEquality().hash(designation) ^
+      const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(displayElement);
 
   @override
   _$IncludeExcludeConceptCopyWith<_IncludeExcludeConcept> get copyWith =>
@@ -2685,12 +3485,15 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
 
 abstract class _IncludeExcludeConcept implements IncludeExcludeConcept {
   const factory _IncludeExcludeConcept(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Code code,
-      String display,
-      List<ValueSetDesignation> designation}) = _$_IncludeExcludeConcept;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          @required @JsonKey(required: true) Code code,
+          String display,
+          List<ValueSetDesignation> designation,
+          @JsonKey(name: '_code') Element codeElement,
+          @JsonKey(name: '_display') Element displayElement}) =
+      _$_IncludeExcludeConcept;
 
   factory _IncludeExcludeConcept.fromJson(Map<String, dynamic> json) =
       _$_IncludeExcludeConcept.fromJson;
@@ -2709,6 +3512,12 @@ abstract class _IncludeExcludeConcept implements IncludeExcludeConcept {
   String get display;
   @override
   List<ValueSetDesignation> get designation;
+  @override
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @override
+  @JsonKey(name: '_display')
+  Element get displayElement;
   @override
   _$IncludeExcludeConceptCopyWith<_IncludeExcludeConcept> get copyWith;
 }
@@ -2733,7 +3542,13 @@ class _$IncludeExcludeFilterTearOff {
           FilterOp op,
       @required
       @JsonKey(required: true)
-          Code value}) {
+          Code value,
+      @JsonKey(name: '_property')
+          Element propertyElement,
+      @JsonKey(name: '_op')
+          Element opElement,
+      @JsonKey(name: '_value')
+          Element valueElement}) {
     return _IncludeExcludeFilter(
       id: id,
       extension_: extension_,
@@ -2741,6 +3556,9 @@ class _$IncludeExcludeFilterTearOff {
       property: property,
       op: op,
       value: value,
+      propertyElement: propertyElement,
+      opElement: opElement,
+      valueElement: valueElement,
     );
   }
 }
@@ -2759,6 +3577,12 @@ mixin _$IncludeExcludeFilter {
   FilterOp get op;
   @JsonKey(required: true)
   Code get value;
+  @JsonKey(name: '_property')
+  Element get propertyElement;
+  @JsonKey(name: '_op')
+  Element get opElement;
+  @JsonKey(name: '_value')
+  Element get valueElement;
 
   Map<String, dynamic> toJson();
   $IncludeExcludeFilterCopyWith<IncludeExcludeFilter> get copyWith;
@@ -2774,9 +3598,15 @@ abstract class $IncludeExcludeFilterCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true) Code property,
       @JsonKey(required: true, unknownEnumValue: FilterOp.unknown) FilterOp op,
-      @JsonKey(required: true) Code value});
+      @JsonKey(required: true) Code value,
+      @JsonKey(name: '_property') Element propertyElement,
+      @JsonKey(name: '_op') Element opElement,
+      @JsonKey(name: '_value') Element valueElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get propertyElement;
+  $ElementCopyWith<$Res> get opElement;
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$IncludeExcludeFilterCopyWithImpl<$Res>
@@ -2795,6 +3625,9 @@ class _$IncludeExcludeFilterCopyWithImpl<$Res>
     Object property = freezed,
     Object op = freezed,
     Object value = freezed,
+    Object propertyElement = freezed,
+    Object opElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -2807,6 +3640,13 @@ class _$IncludeExcludeFilterCopyWithImpl<$Res>
       property: property == freezed ? _value.property : property as Code,
       op: op == freezed ? _value.op : op as FilterOp,
       value: value == freezed ? _value.value : value as Code,
+      propertyElement: propertyElement == freezed
+          ? _value.propertyElement
+          : propertyElement as Element,
+      opElement: opElement == freezed ? _value.opElement : opElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 
@@ -2817,6 +3657,36 @@ class _$IncludeExcludeFilterCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get propertyElement {
+    if (_value.propertyElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.propertyElement, (value) {
+      return _then(_value.copyWith(propertyElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get opElement {
+    if (_value.opElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.opElement, (value) {
+      return _then(_value.copyWith(opElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
     });
   }
 }
@@ -2833,10 +3703,19 @@ abstract class _$IncludeExcludeFilterCopyWith<$Res>
       FhirExtension modifierExtension,
       @JsonKey(required: true) Code property,
       @JsonKey(required: true, unknownEnumValue: FilterOp.unknown) FilterOp op,
-      @JsonKey(required: true) Code value});
+      @JsonKey(required: true) Code value,
+      @JsonKey(name: '_property') Element propertyElement,
+      @JsonKey(name: '_op') Element opElement,
+      @JsonKey(name: '_value') Element valueElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get propertyElement;
+  @override
+  $ElementCopyWith<$Res> get opElement;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$IncludeExcludeFilterCopyWithImpl<$Res>
@@ -2857,6 +3736,9 @@ class __$IncludeExcludeFilterCopyWithImpl<$Res>
     Object property = freezed,
     Object op = freezed,
     Object value = freezed,
+    Object propertyElement = freezed,
+    Object opElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_IncludeExcludeFilter(
       id: id == freezed ? _value.id : id as Id,
@@ -2869,6 +3751,13 @@ class __$IncludeExcludeFilterCopyWithImpl<$Res>
       property: property == freezed ? _value.property : property as Code,
       op: op == freezed ? _value.op : op as FilterOp,
       value: value == freezed ? _value.value : value as Code,
+      propertyElement: propertyElement == freezed
+          ? _value.propertyElement
+          : propertyElement as Element,
+      opElement: opElement == freezed ? _value.opElement : opElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 }
@@ -2888,7 +3777,13 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
           this.op,
       @required
       @JsonKey(required: true)
-          this.value})
+          this.value,
+      @JsonKey(name: '_property')
+          this.propertyElement,
+      @JsonKey(name: '_op')
+          this.opElement,
+      @JsonKey(name: '_value')
+          this.valueElement})
       : assert(property != null),
         assert(op != null),
         assert(value != null);
@@ -2912,10 +3807,19 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
   @override
   @JsonKey(required: true)
   final Code value;
+  @override
+  @JsonKey(name: '_property')
+  final Element propertyElement;
+  @override
+  @JsonKey(name: '_op')
+  final Element opElement;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
 
   @override
   String toString() {
-    return 'IncludeExcludeFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, property: $property, op: $op, value: $value)';
+    return 'IncludeExcludeFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, property: $property, op: $op, value: $value, propertyElement: $propertyElement, opElement: $opElement, valueElement: $valueElement)';
   }
 
   @override
@@ -2936,7 +3840,16 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
             (identical(other.op, op) ||
                 const DeepCollectionEquality().equals(other.op, op)) &&
             (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.propertyElement, propertyElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.propertyElement, propertyElement)) &&
+            (identical(other.opElement, opElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.opElement, opElement)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)));
   }
 
   @override
@@ -2947,7 +3860,10 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(property) ^
       const DeepCollectionEquality().hash(op) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(propertyElement) ^
+      const DeepCollectionEquality().hash(opElement) ^
+      const DeepCollectionEquality().hash(valueElement);
 
   @override
   _$IncludeExcludeFilterCopyWith<_IncludeExcludeFilter> get copyWith =>
@@ -2974,7 +3890,13 @@ abstract class _IncludeExcludeFilter implements IncludeExcludeFilter {
           FilterOp op,
       @required
       @JsonKey(required: true)
-          Code value}) = _$_IncludeExcludeFilter;
+          Code value,
+      @JsonKey(name: '_property')
+          Element propertyElement,
+      @JsonKey(name: '_op')
+          Element opElement,
+      @JsonKey(name: '_value')
+          Element valueElement}) = _$_IncludeExcludeFilter;
 
   factory _IncludeExcludeFilter.fromJson(Map<String, dynamic> json) =
       _$_IncludeExcludeFilter.fromJson;
@@ -2996,6 +3918,15 @@ abstract class _IncludeExcludeFilter implements IncludeExcludeFilter {
   @JsonKey(required: true)
   Code get value;
   @override
+  @JsonKey(name: '_property')
+  Element get propertyElement;
+  @override
+  @JsonKey(name: '_op')
+  Element get opElement;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
+  @override
   _$IncludeExcludeFilterCopyWith<_IncludeExcludeFilter> get copyWith;
 }
 
@@ -3015,7 +3946,11 @@ class _$ValueSetExpansionTearOff {
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains}) {
+      List<ValueSetContains> contains,
+      @JsonKey(name: '_identifier') Element identifierElement,
+      @JsonKey(name: '_timestamp') Element timestampElement,
+      @JsonKey(name: '_total') Element totalElement,
+      @JsonKey(name: '_offset') Element offsetElement}) {
     return _ValueSetExpansion(
       id: id,
       extension_: extension_,
@@ -3026,6 +3961,10 @@ class _$ValueSetExpansionTearOff {
       offset: offset,
       parameter: parameter,
       contains: contains,
+      identifierElement: identifierElement,
+      timestampElement: timestampElement,
+      totalElement: totalElement,
+      offsetElement: offsetElement,
     );
   }
 }
@@ -3046,6 +3985,14 @@ mixin _$ValueSetExpansion {
   Integer get offset;
   List<ValueSetParameter> get parameter;
   List<ValueSetContains> get contains;
+  @JsonKey(name: '_identifier')
+  Element get identifierElement;
+  @JsonKey(name: '_timestamp')
+  Element get timestampElement;
+  @JsonKey(name: '_total')
+  Element get totalElement;
+  @JsonKey(name: '_offset')
+  Element get offsetElement;
 
   Map<String, dynamic> toJson();
   $ValueSetExpansionCopyWith<ValueSetExpansion> get copyWith;
@@ -3064,9 +4011,17 @@ abstract class $ValueSetExpansionCopyWith<$Res> {
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains});
+      List<ValueSetContains> contains,
+      @JsonKey(name: '_identifier') Element identifierElement,
+      @JsonKey(name: '_timestamp') Element timestampElement,
+      @JsonKey(name: '_total') Element totalElement,
+      @JsonKey(name: '_offset') Element offsetElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get identifierElement;
+  $ElementCopyWith<$Res> get timestampElement;
+  $ElementCopyWith<$Res> get totalElement;
+  $ElementCopyWith<$Res> get offsetElement;
 }
 
 class _$ValueSetExpansionCopyWithImpl<$Res>
@@ -3088,6 +4043,10 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
     Object offset = freezed,
     Object parameter = freezed,
     Object contains = freezed,
+    Object identifierElement = freezed,
+    Object timestampElement = freezed,
+    Object totalElement = freezed,
+    Object offsetElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3109,6 +4068,18 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
       contains: contains == freezed
           ? _value.contains
           : contains as List<ValueSetContains>,
+      identifierElement: identifierElement == freezed
+          ? _value.identifierElement
+          : identifierElement as Element,
+      timestampElement: timestampElement == freezed
+          ? _value.timestampElement
+          : timestampElement as Element,
+      totalElement: totalElement == freezed
+          ? _value.totalElement
+          : totalElement as Element,
+      offsetElement: offsetElement == freezed
+          ? _value.offsetElement
+          : offsetElement as Element,
     ));
   }
 
@@ -3119,6 +4090,46 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get identifierElement {
+    if (_value.identifierElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.identifierElement, (value) {
+      return _then(_value.copyWith(identifierElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timestampElement {
+    if (_value.timestampElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timestampElement, (value) {
+      return _then(_value.copyWith(timestampElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get totalElement {
+    if (_value.totalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.totalElement, (value) {
+      return _then(_value.copyWith(totalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get offsetElement {
+    if (_value.offsetElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.offsetElement, (value) {
+      return _then(_value.copyWith(offsetElement: value));
     });
   }
 }
@@ -3138,10 +4149,22 @@ abstract class _$ValueSetExpansionCopyWith<$Res>
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains});
+      List<ValueSetContains> contains,
+      @JsonKey(name: '_identifier') Element identifierElement,
+      @JsonKey(name: '_timestamp') Element timestampElement,
+      @JsonKey(name: '_total') Element totalElement,
+      @JsonKey(name: '_offset') Element offsetElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get identifierElement;
+  @override
+  $ElementCopyWith<$Res> get timestampElement;
+  @override
+  $ElementCopyWith<$Res> get totalElement;
+  @override
+  $ElementCopyWith<$Res> get offsetElement;
 }
 
 class __$ValueSetExpansionCopyWithImpl<$Res>
@@ -3165,6 +4188,10 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
     Object offset = freezed,
     Object parameter = freezed,
     Object contains = freezed,
+    Object identifierElement = freezed,
+    Object timestampElement = freezed,
+    Object totalElement = freezed,
+    Object offsetElement = freezed,
   }) {
     return _then(_ValueSetExpansion(
       id: id == freezed ? _value.id : id as Id,
@@ -3186,6 +4213,18 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
       contains: contains == freezed
           ? _value.contains
           : contains as List<ValueSetContains>,
+      identifierElement: identifierElement == freezed
+          ? _value.identifierElement
+          : identifierElement as Element,
+      timestampElement: timestampElement == freezed
+          ? _value.timestampElement
+          : timestampElement as Element,
+      totalElement: totalElement == freezed
+          ? _value.totalElement
+          : totalElement as Element,
+      offsetElement: offsetElement == freezed
+          ? _value.offsetElement
+          : offsetElement as Element,
     ));
   }
 }
@@ -3201,7 +4240,11 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
       this.total,
       this.offset,
       this.parameter,
-      this.contains})
+      this.contains,
+      @JsonKey(name: '_identifier') this.identifierElement,
+      @JsonKey(name: '_timestamp') this.timestampElement,
+      @JsonKey(name: '_total') this.totalElement,
+      @JsonKey(name: '_offset') this.offsetElement})
       : assert(identifier != null),
         assert(timestamp != null);
 
@@ -3229,10 +4272,22 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
   final List<ValueSetParameter> parameter;
   @override
   final List<ValueSetContains> contains;
+  @override
+  @JsonKey(name: '_identifier')
+  final Element identifierElement;
+  @override
+  @JsonKey(name: '_timestamp')
+  final Element timestampElement;
+  @override
+  @JsonKey(name: '_total')
+  final Element totalElement;
+  @override
+  @JsonKey(name: '_offset')
+  final Element offsetElement;
 
   @override
   String toString() {
-    return 'ValueSetExpansion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, timestamp: $timestamp, total: $total, offset: $offset, parameter: $parameter, contains: $contains)';
+    return 'ValueSetExpansion(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, timestamp: $timestamp, total: $total, offset: $offset, parameter: $parameter, contains: $contains, identifierElement: $identifierElement, timestampElement: $timestampElement, totalElement: $totalElement, offsetElement: $offsetElement)';
   }
 
   @override
@@ -3262,7 +4317,19 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
                     .equals(other.parameter, parameter)) &&
             (identical(other.contains, contains) ||
                 const DeepCollectionEquality()
-                    .equals(other.contains, contains)));
+                    .equals(other.contains, contains)) &&
+            (identical(other.identifierElement, identifierElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifierElement, identifierElement)) &&
+            (identical(other.timestampElement, timestampElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.timestampElement, timestampElement)) &&
+            (identical(other.totalElement, totalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.totalElement, totalElement)) &&
+            (identical(other.offsetElement, offsetElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.offsetElement, offsetElement)));
   }
 
   @override
@@ -3276,7 +4343,11 @@ class _$_ValueSetExpansion implements _ValueSetExpansion {
       const DeepCollectionEquality().hash(total) ^
       const DeepCollectionEquality().hash(offset) ^
       const DeepCollectionEquality().hash(parameter) ^
-      const DeepCollectionEquality().hash(contains);
+      const DeepCollectionEquality().hash(contains) ^
+      const DeepCollectionEquality().hash(identifierElement) ^
+      const DeepCollectionEquality().hash(timestampElement) ^
+      const DeepCollectionEquality().hash(totalElement) ^
+      const DeepCollectionEquality().hash(offsetElement);
 
   @override
   _$ValueSetExpansionCopyWith<_ValueSetExpansion> get copyWith =>
@@ -3298,7 +4369,11 @@ abstract class _ValueSetExpansion implements ValueSetExpansion {
       Integer total,
       Integer offset,
       List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains}) = _$_ValueSetExpansion;
+      List<ValueSetContains> contains,
+      @JsonKey(name: '_identifier') Element identifierElement,
+      @JsonKey(name: '_timestamp') Element timestampElement,
+      @JsonKey(name: '_total') Element totalElement,
+      @JsonKey(name: '_offset') Element offsetElement}) = _$_ValueSetExpansion;
 
   factory _ValueSetExpansion.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansion.fromJson;
@@ -3325,6 +4400,18 @@ abstract class _ValueSetExpansion implements ValueSetExpansion {
   @override
   List<ValueSetContains> get contains;
   @override
+  @JsonKey(name: '_identifier')
+  Element get identifierElement;
+  @override
+  @JsonKey(name: '_timestamp')
+  Element get timestampElement;
+  @override
+  @JsonKey(name: '_total')
+  Element get totalElement;
+  @override
+  @JsonKey(name: '_offset')
+  Element get offsetElement;
+  @override
   _$ValueSetExpansionCopyWith<_ValueSetExpansion> get copyWith;
 }
 
@@ -3345,7 +4432,14 @@ class _$ValueSetParameterTearOff {
       Integer valueInteger,
       Decimal valueDecimal,
       FhirUri valueUri,
-      Code valueCode}) {
+      Code valueCode,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement}) {
     return _ValueSetParameter(
       id: id,
       extension_: extension_,
@@ -3357,6 +4451,13 @@ class _$ValueSetParameterTearOff {
       valueDecimal: valueDecimal,
       valueUri: valueUri,
       valueCode: valueCode,
+      nameElement: nameElement,
+      valueStringElement: valueStringElement,
+      valueBooleanElement: valueBooleanElement,
+      valueIntegerElement: valueIntegerElement,
+      valueDecimalElement: valueDecimalElement,
+      valueUriElement: valueUriElement,
+      valueCodeElement: valueCodeElement,
     );
   }
 }
@@ -3377,6 +4478,20 @@ mixin _$ValueSetParameter {
   Decimal get valueDecimal;
   FhirUri get valueUri;
   Code get valueCode;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
+  @JsonKey(name: '_valueCode')
+  Element get valueCodeElement;
 
   Map<String, dynamic> toJson();
   $ValueSetParameterCopyWith<ValueSetParameter> get copyWith;
@@ -3396,9 +4511,23 @@ abstract class $ValueSetParameterCopyWith<$Res> {
       Integer valueInteger,
       Decimal valueDecimal,
       FhirUri valueUri,
-      Code valueCode});
+      Code valueCode,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get valueStringElement;
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  $ElementCopyWith<$Res> get valueUriElement;
+  $ElementCopyWith<$Res> get valueCodeElement;
 }
 
 class _$ValueSetParameterCopyWithImpl<$Res>
@@ -3421,6 +4550,13 @@ class _$ValueSetParameterCopyWithImpl<$Res>
     Object valueDecimal = freezed,
     Object valueUri = freezed,
     Object valueCode = freezed,
+    Object nameElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueUriElement = freezed,
+    Object valueCodeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3444,6 +4580,26 @@ class _$ValueSetParameterCopyWithImpl<$Res>
           : valueDecimal as Decimal,
       valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
     ));
   }
 
@@ -3454,6 +4610,76 @@ class _$ValueSetParameterCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement {
+    if (_value.valueDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement, (value) {
+      return _then(_value.copyWith(valueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUriElement {
+    if (_value.valueUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUriElement, (value) {
+      return _then(_value.copyWith(valueUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueCodeElement {
+    if (_value.valueCodeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueCodeElement, (value) {
+      return _then(_value.copyWith(valueCodeElement: value));
     });
   }
 }
@@ -3474,10 +4700,31 @@ abstract class _$ValueSetParameterCopyWith<$Res>
       Integer valueInteger,
       Decimal valueDecimal,
       FhirUri valueUri,
-      Code valueCode});
+      Code valueCode,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get valueStringElement;
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get valueUriElement;
+  @override
+  $ElementCopyWith<$Res> get valueCodeElement;
 }
 
 class __$ValueSetParameterCopyWithImpl<$Res>
@@ -3502,6 +4749,13 @@ class __$ValueSetParameterCopyWithImpl<$Res>
     Object valueDecimal = freezed,
     Object valueUri = freezed,
     Object valueCode = freezed,
+    Object nameElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueUriElement = freezed,
+    Object valueCodeElement = freezed,
   }) {
     return _then(_ValueSetParameter(
       id: id == freezed ? _value.id : id as Id,
@@ -3525,6 +4779,26 @@ class __$ValueSetParameterCopyWithImpl<$Res>
           : valueDecimal as Decimal,
       valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
       valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
     ));
   }
 }
@@ -3541,7 +4815,14 @@ class _$_ValueSetParameter implements _ValueSetParameter {
       this.valueInteger,
       this.valueDecimal,
       this.valueUri,
-      this.valueCode})
+      this.valueCode,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      @JsonKey(name: '_valueUri') this.valueUriElement,
+      @JsonKey(name: '_valueCode') this.valueCodeElement})
       : assert(name != null);
 
   factory _$_ValueSetParameter.fromJson(Map<String, dynamic> json) =>
@@ -3569,10 +4850,31 @@ class _$_ValueSetParameter implements _ValueSetParameter {
   final FhirUri valueUri;
   @override
   final Code valueCode;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element valueStringElement;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  final Element valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  final Element valueUriElement;
+  @override
+  @JsonKey(name: '_valueCode')
+  final Element valueCodeElement;
 
   @override
   String toString() {
-    return 'ValueSetParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, valueString: $valueString, valueBoolean: $valueBoolean, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueUri: $valueUri, valueCode: $valueCode)';
+    return 'ValueSetParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, valueString: $valueString, valueBoolean: $valueBoolean, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueUri: $valueUri, valueCode: $valueCode, nameElement: $nameElement, valueStringElement: $valueStringElement, valueBooleanElement: $valueBooleanElement, valueIntegerElement: $valueIntegerElement, valueDecimalElement: $valueDecimalElement, valueUriElement: $valueUriElement, valueCodeElement: $valueCodeElement)';
   }
 
   @override
@@ -3606,7 +4908,28 @@ class _$_ValueSetParameter implements _ValueSetParameter {
                     .equals(other.valueUri, valueUri)) &&
             (identical(other.valueCode, valueCode) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueCode, valueCode)));
+                    .equals(other.valueCode, valueCode)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.valueStringElement, valueStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueIntegerElement, valueIntegerElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDecimalElement, valueDecimalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueUriElement, valueUriElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueUriElement, valueUriElement)) &&
+            (identical(other.valueCodeElement, valueCodeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueCodeElement, valueCodeElement)));
   }
 
   @override
@@ -3621,7 +4944,14 @@ class _$_ValueSetParameter implements _ValueSetParameter {
       const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueUri) ^
-      const DeepCollectionEquality().hash(valueCode);
+      const DeepCollectionEquality().hash(valueCode) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueUriElement) ^
+      const DeepCollectionEquality().hash(valueCodeElement);
 
   @override
   _$ValueSetParameterCopyWith<_ValueSetParameter> get copyWith =>
@@ -3635,16 +4965,24 @@ class _$_ValueSetParameter implements _ValueSetParameter {
 
 abstract class _ValueSetParameter implements ValueSetParameter {
   const factory _ValueSetParameter(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) String name,
-      String valueString,
-      Boolean valueBoolean,
-      Integer valueInteger,
-      Decimal valueDecimal,
-      FhirUri valueUri,
-      Code valueCode}) = _$_ValueSetParameter;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          @required @JsonKey(required: true) String name,
+          String valueString,
+          Boolean valueBoolean,
+          Integer valueInteger,
+          Decimal valueDecimal,
+          FhirUri valueUri,
+          Code valueCode,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_valueString') Element valueStringElement,
+          @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+          @JsonKey(name: '_valueUri') Element valueUriElement,
+          @JsonKey(name: '_valueCode') Element valueCodeElement}) =
+      _$_ValueSetParameter;
 
   factory _ValueSetParameter.fromJson(Map<String, dynamic> json) =
       _$_ValueSetParameter.fromJson;
@@ -3672,6 +5010,27 @@ abstract class _ValueSetParameter implements ValueSetParameter {
   @override
   Code get valueCode;
   @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
+  @override
+  @JsonKey(name: '_valueCode')
+  Element get valueCodeElement;
+  @override
   _$ValueSetParameterCopyWith<_ValueSetParameter> get copyWith;
 }
 
@@ -3691,7 +5050,12 @@ class _$ValueSetContainsTearOff {
       String version,
       Code code,
       String display,
-      List<ValueSetContains> contains}) {
+      List<ValueSetContains> contains,
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_abstract') Element abstractElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement}) {
     return _ValueSetContains(
       id: id,
       extension_: extension_,
@@ -3702,6 +5066,11 @@ class _$ValueSetContainsTearOff {
       code: code,
       display: display,
       contains: contains,
+      systemElement: systemElement,
+      abstractElement: abstractElement,
+      versionElement: versionElement,
+      codeElement: codeElement,
+      displayElement: displayElement,
     );
   }
 }
@@ -3721,6 +5090,16 @@ mixin _$ValueSetContains {
   Code get code;
   String get display;
   List<ValueSetContains> get contains;
+  @JsonKey(name: '_system')
+  Element get systemElement;
+  @JsonKey(name: '_abstract')
+  Element get abstractElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @JsonKey(name: '_display')
+  Element get displayElement;
 
   Map<String, dynamic> toJson();
   $ValueSetContainsCopyWith<ValueSetContains> get copyWith;
@@ -3739,9 +5118,19 @@ abstract class $ValueSetContainsCopyWith<$Res> {
       String version,
       Code code,
       String display,
-      List<ValueSetContains> contains});
+      List<ValueSetContains> contains,
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_abstract') Element abstractElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get systemElement;
+  $ElementCopyWith<$Res> get abstractElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get codeElement;
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class _$ValueSetContainsCopyWithImpl<$Res>
@@ -3763,6 +5152,11 @@ class _$ValueSetContainsCopyWithImpl<$Res>
     Object code = freezed,
     Object display = freezed,
     Object contains = freezed,
+    Object systemElement = freezed,
+    Object abstractElement = freezed,
+    Object versionElement = freezed,
+    Object codeElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3780,6 +5174,20 @@ class _$ValueSetContainsCopyWithImpl<$Res>
       contains: contains == freezed
           ? _value.contains
           : contains as List<ValueSetContains>,
+      systemElement: systemElement == freezed
+          ? _value.systemElement
+          : systemElement as Element,
+      abstractElement: abstractElement == freezed
+          ? _value.abstractElement
+          : abstractElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
   }
 
@@ -3790,6 +5198,56 @@ class _$ValueSetContainsCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get systemElement {
+    if (_value.systemElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.systemElement, (value) {
+      return _then(_value.copyWith(systemElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get abstractElement {
+    if (_value.abstractElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.abstractElement, (value) {
+      return _then(_value.copyWith(abstractElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.codeElement, (value) {
+      return _then(_value.copyWith(codeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.displayElement, (value) {
+      return _then(_value.copyWith(displayElement: value));
     });
   }
 }
@@ -3809,10 +5267,25 @@ abstract class _$ValueSetContainsCopyWith<$Res>
       String version,
       Code code,
       String display,
-      List<ValueSetContains> contains});
+      List<ValueSetContains> contains,
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_abstract') Element abstractElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get systemElement;
+  @override
+  $ElementCopyWith<$Res> get abstractElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get codeElement;
+  @override
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class __$ValueSetContainsCopyWithImpl<$Res>
@@ -3836,6 +5309,11 @@ class __$ValueSetContainsCopyWithImpl<$Res>
     Object code = freezed,
     Object display = freezed,
     Object contains = freezed,
+    Object systemElement = freezed,
+    Object abstractElement = freezed,
+    Object versionElement = freezed,
+    Object codeElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_ValueSetContains(
       id: id == freezed ? _value.id : id as Id,
@@ -3853,6 +5331,20 @@ class __$ValueSetContainsCopyWithImpl<$Res>
       contains: contains == freezed
           ? _value.contains
           : contains as List<ValueSetContains>,
+      systemElement: systemElement == freezed
+          ? _value.systemElement
+          : systemElement as Element,
+      abstractElement: abstractElement == freezed
+          ? _value.abstractElement
+          : abstractElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
   }
 }
@@ -3868,7 +5360,12 @@ class _$_ValueSetContains implements _ValueSetContains {
       this.version,
       this.code,
       this.display,
-      this.contains});
+      this.contains,
+      @JsonKey(name: '_system') this.systemElement,
+      @JsonKey(name: '_abstract') this.abstractElement,
+      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(name: '_display') this.displayElement});
 
   factory _$_ValueSetContains.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetContainsFromJson(json);
@@ -3893,10 +5390,25 @@ class _$_ValueSetContains implements _ValueSetContains {
   final String display;
   @override
   final List<ValueSetContains> contains;
+  @override
+  @JsonKey(name: '_system')
+  final Element systemElement;
+  @override
+  @JsonKey(name: '_abstract')
+  final Element abstractElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_code')
+  final Element codeElement;
+  @override
+  @JsonKey(name: '_display')
+  final Element displayElement;
 
   @override
   String toString() {
-    return 'ValueSetContains(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, abstract_: $abstract_, version: $version, code: $code, display: $display, contains: $contains)';
+    return 'ValueSetContains(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, abstract_: $abstract_, version: $version, code: $code, display: $display, contains: $contains, systemElement: $systemElement, abstractElement: $abstractElement, versionElement: $versionElement, codeElement: $codeElement, displayElement: $displayElement)';
   }
 
   @override
@@ -3926,7 +5438,22 @@ class _$_ValueSetContains implements _ValueSetContains {
                     .equals(other.display, display)) &&
             (identical(other.contains, contains) ||
                 const DeepCollectionEquality()
-                    .equals(other.contains, contains)));
+                    .equals(other.contains, contains)) &&
+            (identical(other.systemElement, systemElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.systemElement, systemElement)) &&
+            (identical(other.abstractElement, abstractElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.abstractElement, abstractElement)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
+            (identical(other.displayElement, displayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayElement, displayElement)));
   }
 
   @override
@@ -3940,7 +5467,12 @@ class _$_ValueSetContains implements _ValueSetContains {
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(contains);
+      const DeepCollectionEquality().hash(contains) ^
+      const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(abstractElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(displayElement);
 
   @override
   _$ValueSetContainsCopyWith<_ValueSetContains> get copyWith =>
@@ -3962,7 +5494,12 @@ abstract class _ValueSetContains implements ValueSetContains {
       String version,
       Code code,
       String display,
-      List<ValueSetContains> contains}) = _$_ValueSetContains;
+      List<ValueSetContains> contains,
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_abstract') Element abstractElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: '_display') Element displayElement}) = _$_ValueSetContains;
 
   factory _ValueSetContains.fromJson(Map<String, dynamic> json) =
       _$_ValueSetContains.fromJson;
@@ -3987,6 +5524,21 @@ abstract class _ValueSetContains implements ValueSetContains {
   String get display;
   @override
   List<ValueSetContains> get contains;
+  @override
+  @JsonKey(name: '_system')
+  Element get systemElement;
+  @override
+  @JsonKey(name: '_abstract')
+  Element get abstractElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @override
+  @JsonKey(name: '_display')
+  Element get displayElement;
   @override
   _$ValueSetContainsCopyWith<_ValueSetContains> get copyWith;
 }
@@ -4032,7 +5584,27 @@ class _$NamingSystemTearOff {
       @required
       @JsonKey(required: true)
           List<NamingSystemUniqueId> uniqueId,
-      Reference replacedBy}) {
+      Reference replacedBy,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_responsible')
+          Element responsibleElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_usage')
+          Element usageElement}) {
     return _NamingSystem(
       resourceType: resourceType,
       id: id,
@@ -4056,6 +5628,16 @@ class _$NamingSystemTearOff {
       usage: usage,
       uniqueId: uniqueId,
       replacedBy: replacedBy,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      nameElement: nameElement,
+      statusElement: statusElement,
+      kindElement: kindElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      responsibleElement: responsibleElement,
+      descriptionElement: descriptionElement,
+      usageElement: usageElement,
     );
   }
 }
@@ -4093,6 +5675,26 @@ mixin _$NamingSystem {
   @JsonKey(required: true)
   List<NamingSystemUniqueId> get uniqueId;
   Reference get replacedBy;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_kind')
+  Element get kindElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_responsible')
+  Element get responsibleElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_usage')
+  Element get usageElement;
 
   Map<String, dynamic> toJson();
   $NamingSystemCopyWith<NamingSystem> get copyWith;
@@ -4131,13 +5733,43 @@ abstract class $NamingSystemCopyWith<$Res> {
       String usage,
       @JsonKey(required: true)
           List<NamingSystemUniqueId> uniqueId,
-      Reference replacedBy});
+      Reference replacedBy,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_responsible')
+          Element responsibleElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_usage')
+          Element usageElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get replacedBy;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get kindElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get responsibleElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get usageElement;
 }
 
 class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
@@ -4171,6 +5803,16 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
     Object usage = freezed,
     Object uniqueId = freezed,
     Object replacedBy = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object kindElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object responsibleElement = freezed,
+    Object descriptionElement = freezed,
+    Object usageElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -4213,6 +5855,33 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
           : uniqueId as List<NamingSystemUniqueId>,
       replacedBy:
           replacedBy == freezed ? _value.replacedBy : replacedBy as Reference,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      responsibleElement: responsibleElement == freezed
+          ? _value.responsibleElement
+          : responsibleElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
     ));
   }
 
@@ -4265,6 +5934,106 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       return _then(_value.copyWith(replacedBy: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get kindElement {
+    if (_value.kindElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.kindElement, (value) {
+      return _then(_value.copyWith(kindElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get responsibleElement {
+    if (_value.responsibleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.responsibleElement, (value) {
+      return _then(_value.copyWith(responsibleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get usageElement {
+    if (_value.usageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.usageElement, (value) {
+      return _then(_value.copyWith(usageElement: value));
+    });
+  }
 }
 
 abstract class _$NamingSystemCopyWith<$Res>
@@ -4302,7 +6071,27 @@ abstract class _$NamingSystemCopyWith<$Res>
       String usage,
       @JsonKey(required: true)
           List<NamingSystemUniqueId> uniqueId,
-      Reference replacedBy});
+      Reference replacedBy,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_responsible')
+          Element responsibleElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_usage')
+          Element usageElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -4314,6 +6103,26 @@ abstract class _$NamingSystemCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get type;
   @override
   $ReferenceCopyWith<$Res> get replacedBy;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get kindElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get responsibleElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get usageElement;
 }
 
 class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
@@ -4349,6 +6158,16 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
     Object usage = freezed,
     Object uniqueId = freezed,
     Object replacedBy = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object kindElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object responsibleElement = freezed,
+    Object descriptionElement = freezed,
+    Object usageElement = freezed,
   }) {
     return _then(_NamingSystem(
       resourceType: resourceType == freezed
@@ -4391,6 +6210,33 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           : uniqueId as List<NamingSystemUniqueId>,
       replacedBy:
           replacedBy == freezed ? _value.replacedBy : replacedBy as Reference,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      responsibleElement: responsibleElement == freezed
+          ? _value.responsibleElement
+          : responsibleElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
     ));
   }
 }
@@ -4431,7 +6277,27 @@ class _$_NamingSystem implements _NamingSystem {
       @required
       @JsonKey(required: true)
           this.uniqueId,
-      this.replacedBy})
+      this.replacedBy,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_kind')
+          this.kindElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_responsible')
+          this.responsibleElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_usage')
+          this.usageElement})
       : assert(name != null),
         assert(status != null),
         assert(kind != null),
@@ -4492,10 +6358,40 @@ class _$_NamingSystem implements _NamingSystem {
   final List<NamingSystemUniqueId> uniqueId;
   @override
   final Reference replacedBy;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_kind')
+  final Element kindElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_responsible')
+  final Element responsibleElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_usage')
+  final Element usageElement;
 
   @override
   String toString() {
-    return 'NamingSystem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, status: $status, kind: $kind, publisher: $publisher, contact: $contact, responsible: $responsible, date: $date, type: $type, description: $description, useContext: $useContext, usage: $usage, uniqueId: $uniqueId, replacedBy: $replacedBy)';
+    return 'NamingSystem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, status: $status, kind: $kind, publisher: $publisher, contact: $contact, responsible: $responsible, date: $date, type: $type, description: $description, useContext: $useContext, usage: $usage, uniqueId: $uniqueId, replacedBy: $replacedBy, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, nameElement: $nameElement, statusElement: $statusElement, kindElement: $kindElement, dateElement: $dateElement, publisherElement: $publisherElement, responsibleElement: $responsibleElement, descriptionElement: $descriptionElement, usageElement: $usageElement)';
   }
 
   @override
@@ -4558,7 +6454,25 @@ class _$_NamingSystem implements _NamingSystem {
                     .equals(other.uniqueId, uniqueId)) &&
             (identical(other.replacedBy, replacedBy) ||
                 const DeepCollectionEquality()
-                    .equals(other.replacedBy, replacedBy)));
+                    .equals(other.replacedBy, replacedBy)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.responsibleElement, responsibleElement) || const DeepCollectionEquality().equals(other.responsibleElement, responsibleElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)));
   }
 
   @override
@@ -4585,7 +6499,17 @@ class _$_NamingSystem implements _NamingSystem {
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(usage) ^
       const DeepCollectionEquality().hash(uniqueId) ^
-      const DeepCollectionEquality().hash(replacedBy);
+      const DeepCollectionEquality().hash(replacedBy) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(kindElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(responsibleElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(usageElement);
 
   @override
   _$NamingSystemCopyWith<_NamingSystem> get copyWith =>
@@ -4632,7 +6556,27 @@ abstract class _NamingSystem implements NamingSystem {
       @required
       @JsonKey(required: true)
           List<NamingSystemUniqueId> uniqueId,
-      Reference replacedBy}) = _$_NamingSystem;
+      Reference replacedBy,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_responsible')
+          Element responsibleElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_usage')
+          Element usageElement}) = _$_NamingSystem;
 
   factory _NamingSystem.fromJson(Map<String, dynamic> json) =
       _$_NamingSystem.fromJson;
@@ -4689,6 +6633,36 @@ abstract class _NamingSystem implements NamingSystem {
   @override
   Reference get replacedBy;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_kind')
+  Element get kindElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_responsible')
+  Element get responsibleElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @override
   _$NamingSystemCopyWith<_NamingSystem> get copyWith;
 }
 
@@ -4730,7 +6704,33 @@ class _$ConceptMapTearOff {
       Reference sourceReference,
       FhirUri targetUri,
       Reference targetReference,
-      List<ConceptMapElement> element}) {
+      List<ConceptMapElement> element,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_sourceUri')
+          Element sourceUriElement,
+      @JsonKey(name: '_targetUri')
+          Element targetUriElement}) {
     return _ConceptMap(
       resourceType: resourceType,
       id: id,
@@ -4759,6 +6759,19 @@ class _$ConceptMapTearOff {
       targetUri: targetUri,
       targetReference: targetReference,
       element: element,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      copyrightElement: copyrightElement,
+      sourceUriElement: sourceUriElement,
+      targetUriElement: targetUriElement,
     );
   }
 }
@@ -4797,6 +6810,32 @@ mixin _$ConceptMap {
   FhirUri get targetUri;
   Reference get targetReference;
   List<ConceptMapElement> get element;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @JsonKey(name: '_sourceUri')
+  Element get sourceUriElement;
+  @JsonKey(name: '_targetUri')
+  Element get targetUriElement;
 
   Map<String, dynamic> toJson();
   $ConceptMapCopyWith<ConceptMap> get copyWith;
@@ -4836,7 +6875,33 @@ abstract class $ConceptMapCopyWith<$Res> {
       Reference sourceReference,
       FhirUri targetUri,
       Reference targetReference,
-      List<ConceptMapElement> element});
+      List<ConceptMapElement> element,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_sourceUri')
+          Element sourceUriElement,
+      @JsonKey(name: '_targetUri')
+          Element targetUriElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -4844,6 +6909,19 @@ abstract class $ConceptMapCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get sourceReference;
   $ReferenceCopyWith<$Res> get targetReference;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get copyrightElement;
+  $ElementCopyWith<$Res> get sourceUriElement;
+  $ElementCopyWith<$Res> get targetUriElement;
 }
 
 class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
@@ -4882,6 +6960,19 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
     Object targetUri = freezed,
     Object targetReference = freezed,
     Object element = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object copyrightElement = freezed,
+    Object sourceUriElement = freezed,
+    Object targetUriElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -4936,6 +7027,42 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       element: element == freezed
           ? _value.element
           : element as List<ConceptMapElement>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      sourceUriElement: sourceUriElement == freezed
+          ? _value.sourceUriElement
+          : sourceUriElement as Element,
+      targetUriElement: targetUriElement == freezed
+          ? _value.targetUriElement
+          : targetUriElement as Element,
     ));
   }
 
@@ -4998,6 +7125,136 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       return _then(_value.copyWith(targetReference: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sourceUriElement {
+    if (_value.sourceUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sourceUriElement, (value) {
+      return _then(_value.copyWith(sourceUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get targetUriElement {
+    if (_value.targetUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.targetUriElement, (value) {
+      return _then(_value.copyWith(targetUriElement: value));
+    });
+  }
 }
 
 abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
@@ -5035,7 +7292,33 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       Reference sourceReference,
       FhirUri targetUri,
       Reference targetReference,
-      List<ConceptMapElement> element});
+      List<ConceptMapElement> element,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_sourceUri')
+          Element sourceUriElement,
+      @JsonKey(name: '_targetUri')
+          Element targetUriElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -5049,6 +7332,32 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get sourceReference;
   @override
   $ReferenceCopyWith<$Res> get targetReference;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
+  @override
+  $ElementCopyWith<$Res> get sourceUriElement;
+  @override
+  $ElementCopyWith<$Res> get targetUriElement;
 }
 
 class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
@@ -5089,6 +7398,19 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
     Object targetUri = freezed,
     Object targetReference = freezed,
     Object element = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object copyrightElement = freezed,
+    Object sourceUriElement = freezed,
+    Object targetUriElement = freezed,
   }) {
     return _then(_ConceptMap(
       resourceType: resourceType == freezed
@@ -5143,6 +7465,42 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       element: element == freezed
           ? _value.element
           : element as List<ConceptMapElement>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      sourceUriElement: sourceUriElement == freezed
+          ? _value.sourceUriElement
+          : sourceUriElement as Element,
+      targetUriElement: targetUriElement == freezed
+          ? _value.targetUriElement
+          : targetUriElement as Element,
     ));
   }
 }
@@ -5180,7 +7538,33 @@ class _$_ConceptMap implements _ConceptMap {
       this.sourceReference,
       this.targetUri,
       this.targetReference,
-      this.element})
+      this.element,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      @JsonKey(name: '_sourceUri')
+          this.sourceUriElement,
+      @JsonKey(name: '_targetUri')
+          this.targetUriElement})
       : assert(status != null);
 
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
@@ -5243,10 +7627,49 @@ class _$_ConceptMap implements _ConceptMap {
   final Reference targetReference;
   @override
   final List<ConceptMapElement> element;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
+  @JsonKey(name: '_sourceUri')
+  final Element sourceUriElement;
+  @override
+  @JsonKey(name: '_targetUri')
+  final Element targetUriElement;
 
   @override
   String toString() {
-    return 'ConceptMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, sourceUri: $sourceUri, sourceReference: $sourceReference, targetUri: $targetUri, targetReference: $targetReference, element: $element)';
+    return 'ConceptMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, sourceUri: $sourceUri, sourceReference: $sourceReference, targetUri: $targetUri, targetReference: $targetReference, element: $element, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, copyrightElement: $copyrightElement, sourceUriElement: $sourceUriElement, targetUriElement: $targetUriElement)';
   }
 
   @override
@@ -5322,7 +7745,20 @@ class _$_ConceptMap implements _ConceptMap {
                 const DeepCollectionEquality()
                     .equals(other.targetUri, targetUri)) &&
             (identical(other.targetReference, targetReference) || const DeepCollectionEquality().equals(other.targetReference, targetReference)) &&
-            (identical(other.element, element) || const DeepCollectionEquality().equals(other.element, element)));
+            (identical(other.element, element) || const DeepCollectionEquality().equals(other.element, element)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.sourceUriElement, sourceUriElement) || const DeepCollectionEquality().equals(other.sourceUriElement, sourceUriElement)) &&
+            (identical(other.targetUriElement, targetUriElement) || const DeepCollectionEquality().equals(other.targetUriElement, targetUriElement)));
   }
 
   @override
@@ -5354,7 +7790,20 @@ class _$_ConceptMap implements _ConceptMap {
       const DeepCollectionEquality().hash(sourceReference) ^
       const DeepCollectionEquality().hash(targetUri) ^
       const DeepCollectionEquality().hash(targetReference) ^
-      const DeepCollectionEquality().hash(element);
+      const DeepCollectionEquality().hash(element) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(sourceUriElement) ^
+      const DeepCollectionEquality().hash(targetUriElement);
 
   @override
   _$ConceptMapCopyWith<_ConceptMap> get copyWith =>
@@ -5398,7 +7847,33 @@ abstract class _ConceptMap implements ConceptMap {
       Reference sourceReference,
       FhirUri targetUri,
       Reference targetReference,
-      List<ConceptMapElement> element}) = _$_ConceptMap;
+      List<ConceptMapElement> element,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_sourceUri')
+          Element sourceUriElement,
+      @JsonKey(name: '_targetUri')
+          Element targetUriElement}) = _$_ConceptMap;
 
   factory _ConceptMap.fromJson(Map<String, dynamic> json) =
       _$_ConceptMap.fromJson;
@@ -5460,6 +7935,45 @@ abstract class _ConceptMap implements ConceptMap {
   Reference get targetReference;
   @override
   List<ConceptMapElement> get element;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
+  @JsonKey(name: '_sourceUri')
+  Element get sourceUriElement;
+  @override
+  @JsonKey(name: '_targetUri')
+  Element get targetUriElement;
   @override
   _$ConceptMapCopyWith<_ConceptMap> get copyWith;
 }
@@ -5719,7 +8233,13 @@ class _$NamingSystemUniqueIdTearOff {
       @JsonKey(required: true)
           String value,
       Boolean preferred,
-      Period period}) {
+      Period period,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(name: '_preferred')
+          Element preferredElement}) {
     return _NamingSystemUniqueId(
       id: id,
       extension_: extension_,
@@ -5728,6 +8248,9 @@ class _$NamingSystemUniqueIdTearOff {
       value: value,
       preferred: preferred,
       period: period,
+      typeElement: typeElement,
+      valueElement: valueElement,
+      preferredElement: preferredElement,
     );
   }
 }
@@ -5746,6 +8269,12 @@ mixin _$NamingSystemUniqueId {
   String get value;
   Boolean get preferred;
   Period get period;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_value')
+  Element get valueElement;
+  @JsonKey(name: '_preferred')
+  Element get preferredElement;
 
   Map<String, dynamic> toJson();
   $NamingSystemUniqueIdCopyWith<NamingSystemUniqueId> get copyWith;
@@ -5765,10 +8294,19 @@ abstract class $NamingSystemUniqueIdCopyWith<$Res> {
       @JsonKey(required: true)
           String value,
       Boolean preferred,
-      Period period});
+      Period period,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(name: '_preferred')
+          Element preferredElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get valueElement;
+  $ElementCopyWith<$Res> get preferredElement;
 }
 
 class _$NamingSystemUniqueIdCopyWithImpl<$Res>
@@ -5788,6 +8326,9 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
     Object value = freezed,
     Object preferred = freezed,
     Object period = freezed,
+    Object typeElement = freezed,
+    Object valueElement = freezed,
+    Object preferredElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -5801,6 +8342,14 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
       value: value == freezed ? _value.value : value as String,
       preferred: preferred == freezed ? _value.preferred : preferred as Boolean,
       period: period == freezed ? _value.period : period as Period,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
+      preferredElement: preferredElement == freezed
+          ? _value.preferredElement
+          : preferredElement as Element,
     ));
   }
 
@@ -5823,6 +8372,36 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
       return _then(_value.copyWith(period: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get preferredElement {
+    if (_value.preferredElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.preferredElement, (value) {
+      return _then(_value.copyWith(preferredElement: value));
+    });
+  }
 }
 
 abstract class _$NamingSystemUniqueIdCopyWith<$Res>
@@ -5841,12 +8420,24 @@ abstract class _$NamingSystemUniqueIdCopyWith<$Res>
       @JsonKey(required: true)
           String value,
       Boolean preferred,
-      Period period});
+      Period period,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(name: '_preferred')
+          Element preferredElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
+  @override
+  $ElementCopyWith<$Res> get preferredElement;
 }
 
 class __$NamingSystemUniqueIdCopyWithImpl<$Res>
@@ -5868,6 +8459,9 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
     Object value = freezed,
     Object preferred = freezed,
     Object period = freezed,
+    Object typeElement = freezed,
+    Object valueElement = freezed,
+    Object preferredElement = freezed,
   }) {
     return _then(_NamingSystemUniqueId(
       id: id == freezed ? _value.id : id as Id,
@@ -5881,6 +8475,14 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
       value: value == freezed ? _value.value : value as String,
       preferred: preferred == freezed ? _value.preferred : preferred as Boolean,
       period: period == freezed ? _value.period : period as Period,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
+      preferredElement: preferredElement == freezed
+          ? _value.preferredElement
+          : preferredElement as Element,
     ));
   }
 }
@@ -5899,7 +8501,13 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
       @JsonKey(required: true)
           this.value,
       this.preferred,
-      this.period})
+      this.period,
+      @JsonKey(name: '_type')
+          this.typeElement,
+      @JsonKey(name: '_value')
+          this.valueElement,
+      @JsonKey(name: '_preferred')
+          this.preferredElement})
       : assert(type != null),
         assert(value != null);
 
@@ -5923,10 +8531,19 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
   final Boolean preferred;
   @override
   final Period period;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
+  @override
+  @JsonKey(name: '_preferred')
+  final Element preferredElement;
 
   @override
   String toString() {
-    return 'NamingSystemUniqueId(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, value: $value, preferred: $preferred, period: $period)';
+    return 'NamingSystemUniqueId(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, value: $value, preferred: $preferred, period: $period, typeElement: $typeElement, valueElement: $valueElement, preferredElement: $preferredElement)';
   }
 
   @override
@@ -5949,7 +8566,16 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
                 const DeepCollectionEquality()
                     .equals(other.preferred, preferred)) &&
             (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)));
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)) &&
+            (identical(other.preferredElement, preferredElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.preferredElement, preferredElement)));
   }
 
   @override
@@ -5961,7 +8587,10 @@ class _$_NamingSystemUniqueId implements _NamingSystemUniqueId {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(preferred) ^
-      const DeepCollectionEquality().hash(period);
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(preferredElement);
 
   @override
   _$NamingSystemUniqueIdCopyWith<_NamingSystemUniqueId> get copyWith =>
@@ -5987,7 +8616,13 @@ abstract class _NamingSystemUniqueId implements NamingSystemUniqueId {
       @JsonKey(required: true)
           String value,
       Boolean preferred,
-      Period period}) = _$_NamingSystemUniqueId;
+      Period period,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(name: '_preferred')
+          Element preferredElement}) = _$_NamingSystemUniqueId;
 
   factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemUniqueId.fromJson;
@@ -6009,6 +8644,15 @@ abstract class _NamingSystemUniqueId implements NamingSystemUniqueId {
   Boolean get preferred;
   @override
   Period get period;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
+  @override
+  @JsonKey(name: '_preferred')
+  Element get preferredElement;
   @override
   _$NamingSystemUniqueIdCopyWith<_NamingSystemUniqueId> get copyWith;
 }
@@ -6261,7 +8905,8 @@ class _$ConceptMapElementTearOff {
       FhirExtension modifierExtension,
       FhirUri codeSystem,
       Code code,
-      List<ConceptMapTarget> target}) {
+      List<ConceptMapTarget> target,
+      @JsonKey(name: '_code') Element codeElement}) {
     return _ConceptMapElement(
       id: id,
       extension_: extension_,
@@ -6269,6 +8914,7 @@ class _$ConceptMapElementTearOff {
       codeSystem: codeSystem,
       code: code,
       target: target,
+      codeElement: codeElement,
     );
   }
 }
@@ -6284,6 +8930,8 @@ mixin _$ConceptMapElement {
   FhirUri get codeSystem;
   Code get code;
   List<ConceptMapTarget> get target;
+  @JsonKey(name: '_code')
+  Element get codeElement;
 
   Map<String, dynamic> toJson();
   $ConceptMapElementCopyWith<ConceptMapElement> get copyWith;
@@ -6299,9 +8947,11 @@ abstract class $ConceptMapElementCopyWith<$Res> {
       FhirExtension modifierExtension,
       FhirUri codeSystem,
       Code code,
-      List<ConceptMapTarget> target});
+      List<ConceptMapTarget> target,
+      @JsonKey(name: '_code') Element codeElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get codeElement;
 }
 
 class _$ConceptMapElementCopyWithImpl<$Res>
@@ -6320,6 +8970,7 @@ class _$ConceptMapElementCopyWithImpl<$Res>
     Object codeSystem = freezed,
     Object code = freezed,
     Object target = freezed,
+    Object codeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -6334,6 +8985,8 @@ class _$ConceptMapElementCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Code,
       target:
           target == freezed ? _value.target : target as List<ConceptMapTarget>,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
   }
 
@@ -6344,6 +8997,16 @@ class _$ConceptMapElementCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.codeElement, (value) {
+      return _then(_value.copyWith(codeElement: value));
     });
   }
 }
@@ -6360,10 +9023,13 @@ abstract class _$ConceptMapElementCopyWith<$Res>
       FhirExtension modifierExtension,
       FhirUri codeSystem,
       Code code,
-      List<ConceptMapTarget> target});
+      List<ConceptMapTarget> target,
+      @JsonKey(name: '_code') Element codeElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get codeElement;
 }
 
 class __$ConceptMapElementCopyWithImpl<$Res>
@@ -6384,6 +9050,7 @@ class __$ConceptMapElementCopyWithImpl<$Res>
     Object codeSystem = freezed,
     Object code = freezed,
     Object target = freezed,
+    Object codeElement = freezed,
   }) {
     return _then(_ConceptMapElement(
       id: id == freezed ? _value.id : id as Id,
@@ -6398,6 +9065,8 @@ class __$ConceptMapElementCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Code,
       target:
           target == freezed ? _value.target : target as List<ConceptMapTarget>,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
   }
 }
@@ -6410,7 +9079,8 @@ class _$_ConceptMapElement implements _ConceptMapElement {
       this.modifierExtension,
       this.codeSystem,
       this.code,
-      this.target});
+      this.target,
+      @JsonKey(name: '_code') this.codeElement});
 
   factory _$_ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapElementFromJson(json);
@@ -6428,10 +9098,13 @@ class _$_ConceptMapElement implements _ConceptMapElement {
   final Code code;
   @override
   final List<ConceptMapTarget> target;
+  @override
+  @JsonKey(name: '_code')
+  final Element codeElement;
 
   @override
   String toString() {
-    return 'ConceptMapElement(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, codeSystem: $codeSystem, code: $code, target: $target)';
+    return 'ConceptMapElement(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, codeSystem: $codeSystem, code: $code, target: $target, codeElement: $codeElement)';
   }
 
   @override
@@ -6452,7 +9125,10 @@ class _$_ConceptMapElement implements _ConceptMapElement {
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.target, target) ||
-                const DeepCollectionEquality().equals(other.target, target)));
+                const DeepCollectionEquality().equals(other.target, target)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)));
   }
 
   @override
@@ -6463,7 +9139,8 @@ class _$_ConceptMapElement implements _ConceptMapElement {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(codeSystem) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(target);
+      const DeepCollectionEquality().hash(target) ^
+      const DeepCollectionEquality().hash(codeElement);
 
   @override
   _$ConceptMapElementCopyWith<_ConceptMapElement> get copyWith =>
@@ -6482,7 +9159,8 @@ abstract class _ConceptMapElement implements ConceptMapElement {
       FhirExtension modifierExtension,
       FhirUri codeSystem,
       Code code,
-      List<ConceptMapTarget> target}) = _$_ConceptMapElement;
+      List<ConceptMapTarget> target,
+      @JsonKey(name: '_code') Element codeElement}) = _$_ConceptMapElement;
 
   factory _ConceptMapElement.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElement.fromJson;
@@ -6500,6 +9178,9 @@ abstract class _ConceptMapElement implements ConceptMapElement {
   Code get code;
   @override
   List<ConceptMapTarget> get target;
+  @override
+  @JsonKey(name: '_code')
+  Element get codeElement;
   @override
   _$ConceptMapElementCopyWith<_ConceptMapElement> get copyWith;
 }
@@ -6523,7 +9204,13 @@ class _$ConceptMapTargetTearOff {
           TargetEquivalence equivalence,
       String comments,
       List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product}) {
+      List<ConceptMapDependsOn> product,
+      @JsonKey(name: '_code')
+          Element codeElement,
+      @JsonKey(name: '_equivalence')
+          Element equivalenceElement,
+      @JsonKey(name: '_comments')
+          Element commentsElement}) {
     return _ConceptMapTarget(
       id: id,
       extension_: extension_,
@@ -6534,6 +9221,9 @@ class _$ConceptMapTargetTearOff {
       comments: comments,
       dependsOn: dependsOn,
       product: product,
+      codeElement: codeElement,
+      equivalenceElement: equivalenceElement,
+      commentsElement: commentsElement,
     );
   }
 }
@@ -6553,6 +9243,12 @@ mixin _$ConceptMapTarget {
   String get comments;
   List<ConceptMapDependsOn> get dependsOn;
   List<ConceptMapDependsOn> get product;
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @JsonKey(name: '_equivalence')
+  Element get equivalenceElement;
+  @JsonKey(name: '_comments')
+  Element get commentsElement;
 
   Map<String, dynamic> toJson();
   $ConceptMapTargetCopyWith<ConceptMapTarget> get copyWith;
@@ -6573,9 +9269,18 @@ abstract class $ConceptMapTargetCopyWith<$Res> {
           TargetEquivalence equivalence,
       String comments,
       List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product});
+      List<ConceptMapDependsOn> product,
+      @JsonKey(name: '_code')
+          Element codeElement,
+      @JsonKey(name: '_equivalence')
+          Element equivalenceElement,
+      @JsonKey(name: '_comments')
+          Element commentsElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get codeElement;
+  $ElementCopyWith<$Res> get equivalenceElement;
+  $ElementCopyWith<$Res> get commentsElement;
 }
 
 class _$ConceptMapTargetCopyWithImpl<$Res>
@@ -6597,6 +9302,9 @@ class _$ConceptMapTargetCopyWithImpl<$Res>
     Object comments = freezed,
     Object dependsOn = freezed,
     Object product = freezed,
+    Object codeElement = freezed,
+    Object equivalenceElement = freezed,
+    Object commentsElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -6619,6 +9327,14 @@ class _$ConceptMapTargetCopyWithImpl<$Res>
       product: product == freezed
           ? _value.product
           : product as List<ConceptMapDependsOn>,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      equivalenceElement: equivalenceElement == freezed
+          ? _value.equivalenceElement
+          : equivalenceElement as Element,
+      commentsElement: commentsElement == freezed
+          ? _value.commentsElement
+          : commentsElement as Element,
     ));
   }
 
@@ -6629,6 +9345,36 @@ class _$ConceptMapTargetCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get codeElement {
+    if (_value.codeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.codeElement, (value) {
+      return _then(_value.copyWith(codeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get equivalenceElement {
+    if (_value.equivalenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.equivalenceElement, (value) {
+      return _then(_value.copyWith(equivalenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get commentsElement {
+    if (_value.commentsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.commentsElement, (value) {
+      return _then(_value.copyWith(commentsElement: value));
     });
   }
 }
@@ -6650,10 +9396,22 @@ abstract class _$ConceptMapTargetCopyWith<$Res>
           TargetEquivalence equivalence,
       String comments,
       List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product});
+      List<ConceptMapDependsOn> product,
+      @JsonKey(name: '_code')
+          Element codeElement,
+      @JsonKey(name: '_equivalence')
+          Element equivalenceElement,
+      @JsonKey(name: '_comments')
+          Element commentsElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get codeElement;
+  @override
+  $ElementCopyWith<$Res> get equivalenceElement;
+  @override
+  $ElementCopyWith<$Res> get commentsElement;
 }
 
 class __$ConceptMapTargetCopyWithImpl<$Res>
@@ -6677,6 +9435,9 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
     Object comments = freezed,
     Object dependsOn = freezed,
     Object product = freezed,
+    Object codeElement = freezed,
+    Object equivalenceElement = freezed,
+    Object commentsElement = freezed,
   }) {
     return _then(_ConceptMapTarget(
       id: id == freezed ? _value.id : id as Id,
@@ -6699,6 +9460,14 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
       product: product == freezed
           ? _value.product
           : product as List<ConceptMapDependsOn>,
+      codeElement:
+          codeElement == freezed ? _value.codeElement : codeElement as Element,
+      equivalenceElement: equivalenceElement == freezed
+          ? _value.equivalenceElement
+          : equivalenceElement as Element,
+      commentsElement: commentsElement == freezed
+          ? _value.commentsElement
+          : commentsElement as Element,
     ));
   }
 }
@@ -6717,7 +9486,13 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
           this.equivalence,
       this.comments,
       this.dependsOn,
-      this.product})
+      this.product,
+      @JsonKey(name: '_code')
+          this.codeElement,
+      @JsonKey(name: '_equivalence')
+          this.equivalenceElement,
+      @JsonKey(name: '_comments')
+          this.commentsElement})
       : assert(equivalence != null);
 
   factory _$_ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
@@ -6743,10 +9518,19 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
   final List<ConceptMapDependsOn> dependsOn;
   @override
   final List<ConceptMapDependsOn> product;
+  @override
+  @JsonKey(name: '_code')
+  final Element codeElement;
+  @override
+  @JsonKey(name: '_equivalence')
+  final Element equivalenceElement;
+  @override
+  @JsonKey(name: '_comments')
+  final Element commentsElement;
 
   @override
   String toString() {
-    return 'ConceptMapTarget(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, codeSystem: $codeSystem, code: $code, equivalence: $equivalence, comments: $comments, dependsOn: $dependsOn, product: $product)';
+    return 'ConceptMapTarget(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, codeSystem: $codeSystem, code: $code, equivalence: $equivalence, comments: $comments, dependsOn: $dependsOn, product: $product, codeElement: $codeElement, equivalenceElement: $equivalenceElement, commentsElement: $commentsElement)';
   }
 
   @override
@@ -6776,7 +9560,17 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
                 const DeepCollectionEquality()
                     .equals(other.dependsOn, dependsOn)) &&
             (identical(other.product, product) ||
-                const DeepCollectionEquality().equals(other.product, product)));
+                const DeepCollectionEquality()
+                    .equals(other.product, product)) &&
+            (identical(other.codeElement, codeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.codeElement, codeElement)) &&
+            (identical(other.equivalenceElement, equivalenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.equivalenceElement, equivalenceElement)) &&
+            (identical(other.commentsElement, commentsElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.commentsElement, commentsElement)));
   }
 
   @override
@@ -6790,7 +9584,10 @@ class _$_ConceptMapTarget implements _ConceptMapTarget {
       const DeepCollectionEquality().hash(equivalence) ^
       const DeepCollectionEquality().hash(comments) ^
       const DeepCollectionEquality().hash(dependsOn) ^
-      const DeepCollectionEquality().hash(product);
+      const DeepCollectionEquality().hash(product) ^
+      const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(equivalenceElement) ^
+      const DeepCollectionEquality().hash(commentsElement);
 
   @override
   _$ConceptMapTargetCopyWith<_ConceptMapTarget> get copyWith =>
@@ -6815,7 +9612,13 @@ abstract class _ConceptMapTarget implements ConceptMapTarget {
           TargetEquivalence equivalence,
       String comments,
       List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product}) = _$_ConceptMapTarget;
+      List<ConceptMapDependsOn> product,
+      @JsonKey(name: '_code')
+          Element codeElement,
+      @JsonKey(name: '_equivalence')
+          Element equivalenceElement,
+      @JsonKey(name: '_comments')
+          Element commentsElement}) = _$_ConceptMapTarget;
 
   factory _ConceptMapTarget.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapTarget.fromJson;
@@ -6840,6 +9643,15 @@ abstract class _ConceptMapTarget implements ConceptMapTarget {
   List<ConceptMapDependsOn> get dependsOn;
   @override
   List<ConceptMapDependsOn> get product;
+  @override
+  @JsonKey(name: '_code')
+  Element get codeElement;
+  @override
+  @JsonKey(name: '_equivalence')
+  Element get equivalenceElement;
+  @override
+  @JsonKey(name: '_comments')
+  Element get commentsElement;
   @override
   _$ConceptMapTargetCopyWith<_ConceptMapTarget> get copyWith;
 }

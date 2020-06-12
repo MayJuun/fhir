@@ -13,6 +13,7 @@ abstract class FhirExtension with _$FhirExtension {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     @JsonKey(required: true) @required FhirUri url,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Integer valueInteger,
     Decimal valueDecimal,
     FhirDateTime valueDateTime,
@@ -75,6 +76,7 @@ abstract class Reference with _$Reference {
   const factory Reference({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     String reference,
     String display,
     @JsonKey(name: '_reference') Element referenceElement,
@@ -392,6 +394,7 @@ abstract class Narrative with _$Narrative {
   const factory Narrative({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
     @required
         NarrativeStatus status,

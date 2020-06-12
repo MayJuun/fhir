@@ -16,6 +16,8 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     valueInteger: json['valueInteger'] == null
         ? null
         : Integer.fromJson(json['valueInteger']),
@@ -134,6 +136,7 @@ Map<String, dynamic> _$_$_FhirExtensionToJson(_$_FhirExtension instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('url', instance.url?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
@@ -237,6 +240,8 @@ _$_Reference _$_$_ReferenceFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     reference: json['reference'] as String,
     display: json['display'] as String,
     referenceElement: json['_reference'] == null
@@ -260,6 +265,7 @@ Map<String, dynamic> _$_$_ReferenceToJson(_$_Reference instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('reference', instance.reference);
   writeNotNull('display', instance.display);
   writeNotNull('_reference', instance.referenceElement?.toJson());
@@ -1249,6 +1255,8 @@ _$_Narrative _$_$_NarrativeFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     status: _$enumDecodeNullable(_$NarrativeStatusEnumMap, json['status'],
         unknownValue: NarrativeStatus.unknown),
     div: json['div'] as String,
@@ -1270,6 +1278,7 @@ Map<String, dynamic> _$_$_NarrativeToJson(_$_Narrative instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('status', _$NarrativeStatusEnumMap[instance.status]);
   writeNotNull('div', instance.div);
   writeNotNull('_status', instance.statusElement?.toJson());

@@ -3201,12 +3201,14 @@ class _$CodeableConceptTearOff {
   _CodeableConcept call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<Coding> coding,
       String text,
       @JsonKey(name: '_text') Element textElement}) {
     return _CodeableConcept(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       coding: coding,
       text: text,
       textElement: textElement,
@@ -3221,6 +3223,8 @@ mixin _$CodeableConcept {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   List<Coding> get coding;
   String get text;
   @JsonKey(name: '_text')
@@ -3237,6 +3241,7 @@ abstract class $CodeableConceptCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<Coding> coding,
       String text,
       @JsonKey(name: '_text') Element textElement});
@@ -3256,6 +3261,7 @@ class _$CodeableConceptCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object coding = freezed,
     Object text = freezed,
     Object textElement = freezed,
@@ -3265,6 +3271,9 @@ class _$CodeableConceptCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       coding: coding == freezed ? _value.coding : coding as List<Coding>,
       text: text == freezed ? _value.text : text as String,
       textElement:
@@ -3292,6 +3301,7 @@ abstract class _$CodeableConceptCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<Coding> coding,
       String text,
       @JsonKey(name: '_text') Element textElement});
@@ -3314,6 +3324,7 @@ class __$CodeableConceptCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object coding = freezed,
     Object text = freezed,
     Object textElement = freezed,
@@ -3323,6 +3334,9 @@ class __$CodeableConceptCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       coding: coding == freezed ? _value.coding : coding as List<Coding>,
       text: text == freezed ? _value.text : text as String,
       textElement:
@@ -3336,6 +3350,7 @@ class _$_CodeableConcept implements _CodeableConcept {
   const _$_CodeableConcept(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.coding,
       this.text,
       @JsonKey(name: '_text') this.textElement});
@@ -3349,6 +3364,9 @@ class _$_CodeableConcept implements _CodeableConcept {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final List<Coding> coding;
   @override
   final String text;
@@ -3358,7 +3376,7 @@ class _$_CodeableConcept implements _CodeableConcept {
 
   @override
   String toString() {
-    return 'CodeableConcept(id: $id, extension_: $extension_, coding: $coding, text: $text, textElement: $textElement)';
+    return 'CodeableConcept(id: $id, extension_: $extension_, fhirComments: $fhirComments, coding: $coding, text: $text, textElement: $textElement)';
   }
 
   @override
@@ -3370,6 +3388,9 @@ class _$_CodeableConcept implements _CodeableConcept {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.coding, coding) ||
                 const DeepCollectionEquality().equals(other.coding, coding)) &&
             (identical(other.text, text) ||
@@ -3384,6 +3405,7 @@ class _$_CodeableConcept implements _CodeableConcept {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(coding) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
@@ -3402,6 +3424,7 @@ abstract class _CodeableConcept implements CodeableConcept {
   const factory _CodeableConcept(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<Coding> coding,
       String text,
       @JsonKey(name: '_text') Element textElement}) = _$_CodeableConcept;
@@ -3414,6 +3437,9 @@ abstract class _CodeableConcept implements CodeableConcept {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   List<Coding> get coding;
   @override

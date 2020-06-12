@@ -19,6 +19,7 @@ class _$FhirExtensionTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) FhirUri url,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Integer valueInteger,
       Decimal valueDecimal,
       FhirDateTime valueDateTime,
@@ -57,6 +58,7 @@ class _$FhirExtensionTearOff {
       id: id,
       extension_: extension_,
       url: url,
+      fhirComments: fhirComments,
       valueInteger: valueInteger,
       valueDecimal: valueDecimal,
       valueDateTime: valueDateTime,
@@ -104,6 +106,8 @@ mixin _$FhirExtension {
   List<FhirExtension> get extension_;
   @JsonKey(required: true)
   FhirUri get url;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   Integer get valueInteger;
   Decimal get valueDecimal;
   FhirDateTime get valueDateTime;
@@ -162,6 +166,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) FhirUri url,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Integer valueInteger,
       Decimal valueDecimal,
       FhirDateTime valueDateTime,
@@ -236,6 +241,7 @@ class _$FhirExtensionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object url = freezed,
+    Object fhirComments = freezed,
     Object valueInteger = freezed,
     Object valueDecimal = freezed,
     Object valueDateTime = freezed,
@@ -277,6 +283,9 @@ class _$FhirExtensionCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
           : valueInteger as Integer,
@@ -621,6 +630,7 @@ abstract class _$FhirExtensionCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @JsonKey(required: true) FhirUri url,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Integer valueInteger,
       Decimal valueDecimal,
       FhirDateTime valueDateTime,
@@ -721,6 +731,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object url = freezed,
+    Object fhirComments = freezed,
     Object valueInteger = freezed,
     Object valueDecimal = freezed,
     Object valueDateTime = freezed,
@@ -762,6 +773,9 @@ class __$FhirExtensionCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       url: url == freezed ? _value.url : url as FhirUri,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
           : valueInteger as Integer,
@@ -862,6 +876,7 @@ class _$_FhirExtension implements _FhirExtension {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @required @JsonKey(required: true) this.url,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.valueInteger,
       this.valueDecimal,
       this.valueDateTime,
@@ -909,6 +924,9 @@ class _$_FhirExtension implements _FhirExtension {
   @override
   @JsonKey(required: true)
   final FhirUri url;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final Integer valueInteger;
   @override
@@ -991,7 +1009,7 @@ class _$_FhirExtension implements _FhirExtension {
 
   @override
   String toString() {
-    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueDateTime: $valueDateTime, valueDate: $valueDate, valueInstant: $valueInstant, valueString: $valueString, valueUri: $valueUri, valueBoolean: $valueBoolean, valueCode: $valueCode, valueBase64Binary: $valueBase64Binary, valueCoding: $valueCoding, valueCodeableConcept: $valueCodeableConcept, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueQuantity: $valueQuantity, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueHumanName: $valueHumanName, valueAddress: $valueAddress, valueContactPoint: $valueContactPoint, valueSchedule: $valueSchedule, valueReference: $valueReference, urlElement: $urlElement, valueBase64BinaryElement: $valueBase64BinaryElement, valueBooleanElement: $valueBooleanElement, valueCodeElement: $valueCodeElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueDecimalElement: $valueDecimalElement, valueInstantElement: $valueInstantElement, valueIntegerElement: $valueIntegerElement, valueStringElement: $valueStringElement, valueUriElement: $valueUriElement)';
+    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, fhirComments: $fhirComments, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueDateTime: $valueDateTime, valueDate: $valueDate, valueInstant: $valueInstant, valueString: $valueString, valueUri: $valueUri, valueBoolean: $valueBoolean, valueCode: $valueCode, valueBase64Binary: $valueBase64Binary, valueCoding: $valueCoding, valueCodeableConcept: $valueCodeableConcept, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueQuantity: $valueQuantity, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueHumanName: $valueHumanName, valueAddress: $valueAddress, valueContactPoint: $valueContactPoint, valueSchedule: $valueSchedule, valueReference: $valueReference, urlElement: $urlElement, valueBase64BinaryElement: $valueBase64BinaryElement, valueBooleanElement: $valueBooleanElement, valueCodeElement: $valueCodeElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueDecimalElement: $valueDecimalElement, valueInstantElement: $valueInstantElement, valueIntegerElement: $valueIntegerElement, valueStringElement: $valueStringElement, valueUriElement: $valueUriElement)';
   }
 
   @override
@@ -1005,6 +1023,9 @@ class _$_FhirExtension implements _FhirExtension {
                     .equals(other.extension_, extension_)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.valueInteger, valueInteger) ||
                 const DeepCollectionEquality()
                     .equals(other.valueInteger, valueInteger)) &&
@@ -1060,10 +1081,8 @@ class _$_FhirExtension implements _FhirExtension {
                 const DeepCollectionEquality()
                     .equals(other.valueRatio, valueRatio)) &&
             (identical(other.valueHumanName, valueHumanName) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueHumanName, valueHumanName)) &&
-            (identical(other.valueAddress, valueAddress) ||
-                const DeepCollectionEquality().equals(other.valueAddress, valueAddress)) &&
+                const DeepCollectionEquality().equals(other.valueHumanName, valueHumanName)) &&
+            (identical(other.valueAddress, valueAddress) || const DeepCollectionEquality().equals(other.valueAddress, valueAddress)) &&
             (identical(other.valueContactPoint, valueContactPoint) || const DeepCollectionEquality().equals(other.valueContactPoint, valueContactPoint)) &&
             (identical(other.valueSchedule, valueSchedule) || const DeepCollectionEquality().equals(other.valueSchedule, valueSchedule)) &&
             (identical(other.valueReference, valueReference) || const DeepCollectionEquality().equals(other.valueReference, valueReference)) &&
@@ -1086,6 +1105,7 @@ class _$_FhirExtension implements _FhirExtension {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDateTime) ^
@@ -1136,6 +1156,7 @@ abstract class _FhirExtension implements FhirExtension {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       @required @JsonKey(required: true) FhirUri url,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Integer valueInteger,
       Decimal valueDecimal,
       FhirDateTime valueDateTime,
@@ -1182,6 +1203,9 @@ abstract class _FhirExtension implements FhirExtension {
   @override
   @JsonKey(required: true)
   FhirUri get url;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   Integer get valueInteger;
   @override
@@ -1605,6 +1629,7 @@ class _$ReferenceTearOff {
   _Reference call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String reference,
       String display,
       @JsonKey(name: '_reference') Element referenceElement,
@@ -1612,6 +1637,7 @@ class _$ReferenceTearOff {
     return _Reference(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       reference: reference,
       display: display,
       referenceElement: referenceElement,
@@ -1627,6 +1653,8 @@ mixin _$Reference {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   String get reference;
   String get display;
   @JsonKey(name: '_reference')
@@ -1644,6 +1672,7 @@ abstract class $ReferenceCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String reference,
       String display,
       @JsonKey(name: '_reference') Element referenceElement,
@@ -1664,6 +1693,7 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object reference = freezed,
     Object display = freezed,
     Object referenceElement = freezed,
@@ -1674,6 +1704,9 @@ class _$ReferenceCopyWithImpl<$Res> implements $ReferenceCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       reference: reference == freezed ? _value.reference : reference as String,
       display: display == freezed ? _value.display : display as String,
       referenceElement: referenceElement == freezed
@@ -1714,6 +1747,7 @@ abstract class _$ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String reference,
       String display,
       @JsonKey(name: '_reference') Element referenceElement,
@@ -1737,6 +1771,7 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object reference = freezed,
     Object display = freezed,
     Object referenceElement = freezed,
@@ -1747,6 +1782,9 @@ class __$ReferenceCopyWithImpl<$Res> extends _$ReferenceCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       reference: reference == freezed ? _value.reference : reference as String,
       display: display == freezed ? _value.display : display as String,
       referenceElement: referenceElement == freezed
@@ -1764,6 +1802,7 @@ class _$_Reference implements _Reference {
   const _$_Reference(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.reference,
       this.display,
       @JsonKey(name: '_reference') this.referenceElement,
@@ -1778,6 +1817,9 @@ class _$_Reference implements _Reference {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final String reference;
   @override
   final String display;
@@ -1790,7 +1832,7 @@ class _$_Reference implements _Reference {
 
   @override
   String toString() {
-    return 'Reference(id: $id, extension_: $extension_, reference: $reference, display: $display, referenceElement: $referenceElement, displayElement: $displayElement)';
+    return 'Reference(id: $id, extension_: $extension_, fhirComments: $fhirComments, reference: $reference, display: $display, referenceElement: $referenceElement, displayElement: $displayElement)';
   }
 
   @override
@@ -1802,6 +1844,9 @@ class _$_Reference implements _Reference {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.reference, reference) ||
                 const DeepCollectionEquality()
                     .equals(other.reference, reference)) &&
@@ -1821,6 +1866,7 @@ class _$_Reference implements _Reference {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(reference) ^
       const DeepCollectionEquality().hash(display) ^
       const DeepCollectionEquality().hash(referenceElement) ^
@@ -1840,6 +1886,7 @@ abstract class _Reference implements Reference {
   const factory _Reference(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String reference,
       String display,
       @JsonKey(name: '_reference') Element referenceElement,
@@ -1853,6 +1900,9 @@ abstract class _Reference implements Reference {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   String get reference;
   @override
@@ -9043,6 +9093,8 @@ class _$NarrativeTearOff {
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @required
       @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
@@ -9054,6 +9106,7 @@ class _$NarrativeTearOff {
     return _Narrative(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       status: status,
       div: div,
       statusElement: statusElement,
@@ -9068,6 +9121,8 @@ mixin _$Narrative {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus get status;
   @JsonKey(required: true)
@@ -9086,6 +9141,8 @@ abstract class $NarrativeCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
       @JsonKey(required: true)
@@ -9107,6 +9164,7 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object status = freezed,
     Object div = freezed,
     Object statusElement = freezed,
@@ -9116,6 +9174,9 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       status: status == freezed ? _value.status : status as NarrativeStatus,
       div: div == freezed ? _value.div : div as String,
       statusElement: statusElement == freezed
@@ -9144,6 +9205,8 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
       @JsonKey(required: true)
@@ -9167,6 +9230,7 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object status = freezed,
     Object div = freezed,
     Object statusElement = freezed,
@@ -9176,6 +9240,9 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       status: status == freezed ? _value.status : status as NarrativeStatus,
       div: div == freezed ? _value.div : div as String,
       statusElement: statusElement == freezed
@@ -9191,6 +9258,8 @@ class _$_Narrative implements _Narrative {
       {this.id,
       @JsonKey(name: 'extension')
           this.extension_,
+      @JsonKey(name: 'fhir_comments')
+          this.fhirComments,
       @required
       @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
           this.status,
@@ -9211,6 +9280,9 @@ class _$_Narrative implements _Narrative {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
   final NarrativeStatus status;
   @override
@@ -9222,7 +9294,7 @@ class _$_Narrative implements _Narrative {
 
   @override
   String toString() {
-    return 'Narrative(id: $id, extension_: $extension_, status: $status, div: $div, statusElement: $statusElement)';
+    return 'Narrative(id: $id, extension_: $extension_, fhirComments: $fhirComments, status: $status, div: $div, statusElement: $statusElement)';
   }
 
   @override
@@ -9234,6 +9306,9 @@ class _$_Narrative implements _Narrative {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.div, div) ||
@@ -9248,6 +9323,7 @@ class _$_Narrative implements _Narrative {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(div) ^
       const DeepCollectionEquality().hash(statusElement);
@@ -9267,6 +9343,8 @@ abstract class _Narrative implements Narrative {
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @required
       @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
           NarrativeStatus status,
@@ -9284,6 +9362,9 @@ abstract class _Narrative implements Narrative {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus get status;

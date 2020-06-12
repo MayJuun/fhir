@@ -67,6 +67,9 @@ abstract class VisionPrescription
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
     List<VisionPrescriptionDispense> dispense,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_dateWritten') Element dateWrittenElement,
   }) = _VisionPrescription;
 
   factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
@@ -103,6 +106,10 @@ abstract class CarePlan with _$CarePlan implements Resource {
     List<Reference> goal,
     List<CarePlanActivity> activity,
     Annotation note,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _CarePlan;
 
   factory CarePlan.fromJson(Map<String, dynamic> json) =>
@@ -139,6 +146,11 @@ abstract class Goal with _$Goal implements Resource {
     List<Reference> addresses,
     List<Annotation> note,
     List<GoalOutcome> outcome,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_startDate') Element startDateElement,
+    @JsonKey(name: '_statusDate') Element statusDateElement,
+    @JsonKey(name: '_statusReason') Element statusReasonElement,
   }) = _Goal;
 
   factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
@@ -169,6 +181,10 @@ abstract class NutritionOrder with _$NutritionOrder implements Resource {
     NutritionOrderOralDiet oralDiet,
     List<NutritionOrderSupplement> supplement,
     NutritionOrderEnteralFormula enteralFormula,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_dateTime') Element dateTimeElement,
   }) = _NutritionOrder;
 
   factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
@@ -308,6 +324,7 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
     List<NutritionOrderTexture> texture,
     List<CodeableConcept> fluidConsistencyType,
     String instruction,
+    @JsonKey(name: '_instruction') Element instructionElement,
   }) = _NutritionOrderOralDiet;
 
   factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
@@ -325,6 +342,8 @@ abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
     List<Timing> schedule,
     Quantity quantity,
     String instruction,
+    @JsonKey(name: '_productName') Element productNameElement,
+    @JsonKey(name: '_instruction') Element instructionElement,
   }) = _NutritionOrderSupplement;
 
   factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
@@ -347,6 +366,9 @@ abstract class NutritionOrderEnteralFormula
     List<NutritionOrderAdministration> administration,
     Quantity maxVolumeToDeliver,
     String administrationInstruction,
+    @JsonKey(name: '_baseFormulaProductName')
+        Element baseFormulaProductNameElement,
+    @JsonKey(name: '_additiveProductName') Element additiveProductNameElement,
   }) = _NutritionOrderEnteralFormula;
 
   factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
@@ -377,6 +399,9 @@ abstract class CarePlanDetail with _$CarePlanDetail {
     Quantity dailyAmount,
     Quantity quantity,
     String description,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_scheduledString') Element scheduledStringElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _CarePlanDetail;
 
   factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>

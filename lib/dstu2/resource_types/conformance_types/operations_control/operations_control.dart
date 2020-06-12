@@ -45,6 +45,7 @@ abstract class Conformance with _$Conformance implements Resource {
     List<ConformanceRest> rest,
     List<ConformanceMessaging> messaging,
     List<ConformanceDocument> document,
+    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
   }) = _Conformance;
 
   factory Conformance.fromJson(Map<String, dynamic> json) =>
@@ -181,6 +182,7 @@ abstract class ConformanceRest with _$ConformanceRest {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true, unknownEnumValue: RestMode.unknown)
     @required
         RestMode mode,
@@ -253,6 +255,7 @@ abstract class OperationDefinitionParameter
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code name,
     @JsonKey(required: true, unknownEnumValue: ParameterUse.unknown)
     @required
@@ -294,6 +297,7 @@ abstract class ConformanceSecurity with _$ConformanceSecurity {
     List<CodeableConcept> service,
     String description,
     List<ConformanceCertificate> certificate,
+    @JsonKey(name: '_cors') Element corsElement,
   }) = _ConformanceSecurity;
 
   factory ConformanceSecurity.fromJson(Map<String, dynamic> json) =>
@@ -306,6 +310,7 @@ abstract class ConformanceResource with _$ConformanceResource {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code type,
     Reference profile,
     @JsonKey(required: true)
@@ -351,6 +356,7 @@ abstract class ConformanceOperation with _$ConformanceOperation {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required String name,
     @JsonKey(required: true) @required Reference definition,
   }) = _ConformanceOperation;
@@ -448,6 +454,7 @@ abstract class ConformanceSearchParam with _$ConformanceSearchParam {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required String name,
     FhirUri definition,
     @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)

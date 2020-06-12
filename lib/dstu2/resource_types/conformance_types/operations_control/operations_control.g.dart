@@ -100,6 +100,9 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
             ? null
             : ConformanceDocument.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    acceptUnknownElement: json['_acceptUnknown'] == null
+        ? null
+        : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
   );
 }
 
@@ -148,6 +151,7 @@ Map<String, dynamic> _$_$_ConformanceToJson(_$_Conformance instance) {
       'messaging', instance.messaging?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'document', instance.document?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_acceptUnknown', instance.acceptUnknownElement?.toJson());
   return val;
 }
 
@@ -613,6 +617,8 @@ _$_ConformanceRest _$_$_ConformanceRestFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     mode: _$enumDecodeNullable(_$RestModeEnumMap, json['mode'],
         unknownValue: RestMode.unknown),
     documentation: json['documentation'] as String,
@@ -662,6 +668,7 @@ Map<String, dynamic> _$_$_ConformanceRestToJson(_$_ConformanceRest instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('mode', _$RestModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation);
   writeNotNull('security', instance.security?.toJson());
@@ -850,6 +857,8 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
     use: _$enumDecodeNullable(_$ParameterUseEnumMap, json['use'],
         unknownValue: ParameterUse.unknown),
@@ -886,6 +895,7 @@ Map<String, dynamic> _$_$_OperationDefinitionParameterToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('use', _$ParameterUseEnumMap[instance.use]);
   writeNotNull('min', instance.min?.toJson());
@@ -969,6 +979,9 @@ _$_ConformanceSecurity _$_$_ConformanceSecurityFromJson(
             ? null
             : ConformanceCertificate.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    corsElement: json['_cors'] == null
+        ? null
+        : Element.fromJson(json['_cors'] as Map<String, dynamic>),
   );
 }
 
@@ -991,6 +1004,7 @@ Map<String, dynamic> _$_$_ConformanceSecurityToJson(
   writeNotNull('description', instance.description);
   writeNotNull(
       'certificate', instance.certificate?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_cors', instance.corsElement?.toJson());
   return val;
 }
 
@@ -1008,6 +1022,8 @@ _$_ConformanceResource _$_$_ConformanceResourceFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     profile: json['profile'] == null
         ? null
@@ -1062,6 +1078,7 @@ Map<String, dynamic> _$_$_ConformanceResourceToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
   writeNotNull(
@@ -1155,6 +1172,8 @@ _$_ConformanceOperation _$_$_ConformanceOperationFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     name: json['name'] as String,
     definition: json['definition'] == null
         ? null
@@ -1176,6 +1195,7 @@ Map<String, dynamic> _$_$_ConformanceOperationToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('name', instance.name);
   writeNotNull('definition', instance.definition?.toJson());
   return val;
@@ -1437,6 +1457,8 @@ _$_ConformanceSearchParam _$_$_ConformanceSearchParamFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     name: json['name'] as String,
     definition: json['definition'] == null
         ? null
@@ -1468,6 +1490,7 @@ Map<String, dynamic> _$_$_ConformanceSearchParamToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('name', instance.name);
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull('type', _$SearchParamTypeEnumMap[instance.type]);

@@ -58,7 +58,19 @@ class _$ConditionTearOff {
       ConditionStage stage,
       List<ConditionEvidence> evidence,
       List<CodeableConcept> bodySite,
-      String notes}) {
+      String notes,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_onsetDateTime')
+          Element onsetDateTimeElement,
+      @JsonKey(name: '_onsetString')
+          Element onsetStringElement,
+      @JsonKey(name: '_abatementDateTime')
+          Element abatementDateTimeElement,
+      @JsonKey(name: '_abatementString')
+          Element abatementStringElement}) {
     return _Condition(
       resourceType: resourceType,
       id: id,
@@ -94,6 +106,12 @@ class _$ConditionTearOff {
       evidence: evidence,
       bodySite: bodySite,
       notes: notes,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      onsetDateTimeElement: onsetDateTimeElement,
+      onsetStringElement: onsetStringElement,
+      abatementDateTimeElement: abatementDateTimeElement,
+      abatementStringElement: abatementStringElement,
     );
   }
 }
@@ -143,6 +161,18 @@ mixin _$Condition {
   List<ConditionEvidence> get evidence;
   List<CodeableConcept> get bodySite;
   String get notes;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_onsetDateTime')
+  Element get onsetDateTimeElement;
+  @JsonKey(name: '_onsetString')
+  Element get onsetStringElement;
+  @JsonKey(name: '_abatementDateTime')
+  Element get abatementDateTimeElement;
+  @JsonKey(name: '_abatementString')
+  Element get abatementStringElement;
 
   Map<String, dynamic> toJson();
   $ConditionCopyWith<Condition> get copyWith;
@@ -191,7 +221,19 @@ abstract class $ConditionCopyWith<$Res> {
       ConditionStage stage,
       List<ConditionEvidence> evidence,
       List<CodeableConcept> bodySite,
-      String notes});
+      String notes,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_onsetDateTime')
+          Element onsetDateTimeElement,
+      @JsonKey(name: '_onsetString')
+          Element onsetStringElement,
+      @JsonKey(name: '_abatementDateTime')
+          Element abatementDateTimeElement,
+      @JsonKey(name: '_abatementString')
+          Element abatementStringElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -209,6 +251,12 @@ abstract class $ConditionCopyWith<$Res> {
   $PeriodCopyWith<$Res> get abatementPeriod;
   $RangeCopyWith<$Res> get abatementRange;
   $ConditionStageCopyWith<$Res> get stage;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get onsetDateTimeElement;
+  $ElementCopyWith<$Res> get onsetStringElement;
+  $ElementCopyWith<$Res> get abatementDateTimeElement;
+  $ElementCopyWith<$Res> get abatementStringElement;
 }
 
 class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
@@ -254,6 +302,12 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
     Object evidence = freezed,
     Object bodySite = freezed,
     Object notes = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object onsetDateTimeElement = freezed,
+    Object onsetStringElement = freezed,
+    Object abatementDateTimeElement = freezed,
+    Object abatementStringElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -332,6 +386,24 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
           ? _value.bodySite
           : bodySite as List<CodeableConcept>,
       notes: notes == freezed ? _value.notes : notes as String,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      onsetDateTimeElement: onsetDateTimeElement == freezed
+          ? _value.onsetDateTimeElement
+          : onsetDateTimeElement as Element,
+      onsetStringElement: onsetStringElement == freezed
+          ? _value.onsetStringElement
+          : onsetStringElement as Element,
+      abatementDateTimeElement: abatementDateTimeElement == freezed
+          ? _value.abatementDateTimeElement
+          : abatementDateTimeElement as Element,
+      abatementStringElement: abatementStringElement == freezed
+          ? _value.abatementStringElement
+          : abatementStringElement as Element,
     ));
   }
 
@@ -494,6 +566,66 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       return _then(_value.copyWith(stage: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get onsetDateTimeElement {
+    if (_value.onsetDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.onsetDateTimeElement, (value) {
+      return _then(_value.copyWith(onsetDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get onsetStringElement {
+    if (_value.onsetStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.onsetStringElement, (value) {
+      return _then(_value.copyWith(onsetStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get abatementDateTimeElement {
+    if (_value.abatementDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.abatementDateTimeElement, (value) {
+      return _then(_value.copyWith(abatementDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get abatementStringElement {
+    if (_value.abatementStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.abatementStringElement, (value) {
+      return _then(_value.copyWith(abatementStringElement: value));
+    });
+  }
 }
 
 abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
@@ -541,7 +673,19 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       ConditionStage stage,
       List<ConditionEvidence> evidence,
       List<CodeableConcept> bodySite,
-      String notes});
+      String notes,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_onsetDateTime')
+          Element onsetDateTimeElement,
+      @JsonKey(name: '_onsetString')
+          Element onsetStringElement,
+      @JsonKey(name: '_abatementDateTime')
+          Element abatementDateTimeElement,
+      @JsonKey(name: '_abatementString')
+          Element abatementStringElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -575,6 +719,18 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
   $RangeCopyWith<$Res> get abatementRange;
   @override
   $ConditionStageCopyWith<$Res> get stage;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get onsetDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get onsetStringElement;
+  @override
+  $ElementCopyWith<$Res> get abatementDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get abatementStringElement;
 }
 
 class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
@@ -621,6 +777,12 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
     Object evidence = freezed,
     Object bodySite = freezed,
     Object notes = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object onsetDateTimeElement = freezed,
+    Object onsetStringElement = freezed,
+    Object abatementDateTimeElement = freezed,
+    Object abatementStringElement = freezed,
   }) {
     return _then(_Condition(
       resourceType: resourceType == freezed
@@ -699,6 +861,24 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
           ? _value.bodySite
           : bodySite as List<CodeableConcept>,
       notes: notes == freezed ? _value.notes : notes as String,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      onsetDateTimeElement: onsetDateTimeElement == freezed
+          ? _value.onsetDateTimeElement
+          : onsetDateTimeElement as Element,
+      onsetStringElement: onsetStringElement == freezed
+          ? _value.onsetStringElement
+          : onsetStringElement as Element,
+      abatementDateTimeElement: abatementDateTimeElement == freezed
+          ? _value.abatementDateTimeElement
+          : abatementDateTimeElement as Element,
+      abatementStringElement: abatementStringElement == freezed
+          ? _value.abatementStringElement
+          : abatementStringElement as Element,
     ));
   }
 }
@@ -748,7 +928,19 @@ class _$_Condition implements _Condition {
       this.stage,
       this.evidence,
       this.bodySite,
-      this.notes})
+      this.notes,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_onsetDateTime')
+          this.onsetDateTimeElement,
+      @JsonKey(name: '_onsetString')
+          this.onsetStringElement,
+      @JsonKey(name: '_abatementDateTime')
+          this.abatementDateTimeElement,
+      @JsonKey(name: '_abatementString')
+          this.abatementStringElement})
       : assert(patient != null),
         assert(code != null),
         assert(verificationStatus != null);
@@ -831,10 +1023,28 @@ class _$_Condition implements _Condition {
   final List<CodeableConcept> bodySite;
   @override
   final String notes;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_onsetDateTime')
+  final Element onsetDateTimeElement;
+  @override
+  @JsonKey(name: '_onsetString')
+  final Element onsetStringElement;
+  @override
+  @JsonKey(name: '_abatementDateTime')
+  final Element abatementDateTimeElement;
+  @override
+  @JsonKey(name: '_abatementString')
+  final Element abatementStringElement;
 
   @override
   String toString() {
-    return 'Condition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, patient: $patient, encounter: $encounter, asserter: $asserter, dateRecorded: $dateRecorded, code: $code, category: $category, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, severity: $severity, onsetDateTime: $onsetDateTime, onsetQuantity: $onsetQuantity, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, abatementDateTime: $abatementDateTime, abatementQuantity: $abatementQuantity, abatementBoolean: $abatementBoolean, abatementPeriod: $abatementPeriod, abatementRange: $abatementRange, abatementString: $abatementString, stage: $stage, evidence: $evidence, bodySite: $bodySite, notes: $notes)';
+    return 'Condition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, patient: $patient, encounter: $encounter, asserter: $asserter, dateRecorded: $dateRecorded, code: $code, category: $category, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, severity: $severity, onsetDateTime: $onsetDateTime, onsetQuantity: $onsetQuantity, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, abatementDateTime: $abatementDateTime, abatementQuantity: $abatementQuantity, abatementBoolean: $abatementBoolean, abatementPeriod: $abatementPeriod, abatementRange: $abatementRange, abatementString: $abatementString, stage: $stage, evidence: $evidence, bodySite: $bodySite, notes: $notes, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, onsetDateTimeElement: $onsetDateTimeElement, onsetStringElement: $onsetStringElement, abatementDateTimeElement: $abatementDateTimeElement, abatementStringElement: $abatementStringElement)';
   }
 
   @override
@@ -917,7 +1127,13 @@ class _$_Condition implements _Condition {
             (identical(other.stage, stage) || const DeepCollectionEquality().equals(other.stage, stage)) &&
             (identical(other.evidence, evidence) || const DeepCollectionEquality().equals(other.evidence, evidence)) &&
             (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
-            (identical(other.notes, notes) || const DeepCollectionEquality().equals(other.notes, notes)));
+            (identical(other.notes, notes) || const DeepCollectionEquality().equals(other.notes, notes)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.onsetDateTimeElement, onsetDateTimeElement) || const DeepCollectionEquality().equals(other.onsetDateTimeElement, onsetDateTimeElement)) &&
+            (identical(other.onsetStringElement, onsetStringElement) || const DeepCollectionEquality().equals(other.onsetStringElement, onsetStringElement)) &&
+            (identical(other.abatementDateTimeElement, abatementDateTimeElement) || const DeepCollectionEquality().equals(other.abatementDateTimeElement, abatementDateTimeElement)) &&
+            (identical(other.abatementStringElement, abatementStringElement) || const DeepCollectionEquality().equals(other.abatementStringElement, abatementStringElement)));
   }
 
   @override
@@ -956,7 +1172,13 @@ class _$_Condition implements _Condition {
       const DeepCollectionEquality().hash(stage) ^
       const DeepCollectionEquality().hash(evidence) ^
       const DeepCollectionEquality().hash(bodySite) ^
-      const DeepCollectionEquality().hash(notes);
+      const DeepCollectionEquality().hash(notes) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(onsetDateTimeElement) ^
+      const DeepCollectionEquality().hash(onsetStringElement) ^
+      const DeepCollectionEquality().hash(abatementDateTimeElement) ^
+      const DeepCollectionEquality().hash(abatementStringElement);
 
   @override
   _$ConditionCopyWith<_Condition> get copyWith =>
@@ -1012,7 +1234,19 @@ abstract class _Condition implements Condition {
       ConditionStage stage,
       List<ConditionEvidence> evidence,
       List<CodeableConcept> bodySite,
-      String notes}) = _$_Condition;
+      String notes,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_onsetDateTime')
+          Element onsetDateTimeElement,
+      @JsonKey(name: '_onsetString')
+          Element onsetStringElement,
+      @JsonKey(name: '_abatementDateTime')
+          Element abatementDateTimeElement,
+      @JsonKey(name: '_abatementString')
+          Element abatementStringElement}) = _$_Condition;
 
   factory _Condition.fromJson(Map<String, dynamic> json) =
       _$_Condition.fromJson;
@@ -1093,6 +1327,24 @@ abstract class _Condition implements Condition {
   @override
   String get notes;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_onsetDateTime')
+  Element get onsetDateTimeElement;
+  @override
+  @JsonKey(name: '_onsetString')
+  Element get onsetStringElement;
+  @override
+  @JsonKey(name: '_abatementDateTime')
+  Element get abatementDateTimeElement;
+  @override
+  @JsonKey(name: '_abatementString')
+  Element get abatementStringElement;
+  @override
   _$ConditionCopyWith<_Condition> get copyWith;
 }
 
@@ -1125,7 +1377,17 @@ class _$DetectedIssueTearOff {
       Reference author,
       Identifier identifier,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation}) {
+      List<DetectedIssueMitigation> mitigation,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_severity')
+          Element severityElement,
+      @JsonKey(name: '_detail')
+          Element detailElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement}) {
     return _DetectedIssue(
       resourceType: resourceType,
       id: id,
@@ -1146,6 +1408,11 @@ class _$DetectedIssueTearOff {
       identifier: identifier,
       reference: reference,
       mitigation: mitigation,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      severityElement: severityElement,
+      detailElement: detailElement,
+      referenceElement: referenceElement,
     );
   }
 }
@@ -1176,6 +1443,16 @@ mixin _$DetectedIssue {
   Identifier get identifier;
   FhirUri get reference;
   List<DetectedIssueMitigation> get mitigation;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_severity')
+  Element get severityElement;
+  @JsonKey(name: '_detail')
+  Element get detailElement;
+  @JsonKey(name: '_reference')
+  Element get referenceElement;
 
   Map<String, dynamic> toJson();
   $DetectedIssueCopyWith<DetectedIssue> get copyWith;
@@ -1207,7 +1484,17 @@ abstract class $DetectedIssueCopyWith<$Res> {
       Reference author,
       Identifier identifier,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation});
+      List<DetectedIssueMitigation> mitigation,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_severity')
+          Element severityElement,
+      @JsonKey(name: '_detail')
+          Element detailElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1216,6 +1503,11 @@ abstract class $DetectedIssueCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get category;
   $ReferenceCopyWith<$Res> get author;
   $IdentifierCopyWith<$Res> get identifier;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get severityElement;
+  $ElementCopyWith<$Res> get detailElement;
+  $ElementCopyWith<$Res> get referenceElement;
 }
 
 class _$DetectedIssueCopyWithImpl<$Res>
@@ -1247,6 +1539,11 @@ class _$DetectedIssueCopyWithImpl<$Res>
     Object identifier = freezed,
     Object reference = freezed,
     Object mitigation = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object severityElement = freezed,
+    Object detailElement = freezed,
+    Object referenceElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -1285,6 +1582,21 @@ class _$DetectedIssueCopyWithImpl<$Res>
       mitigation: mitigation == freezed
           ? _value.mitigation
           : mitigation as List<DetectedIssueMitigation>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      severityElement: severityElement == freezed
+          ? _value.severityElement
+          : severityElement as Element,
+      detailElement: detailElement == freezed
+          ? _value.detailElement
+          : detailElement as Element,
+      referenceElement: referenceElement == freezed
+          ? _value.referenceElement
+          : referenceElement as Element,
     ));
   }
 
@@ -1357,6 +1669,56 @@ class _$DetectedIssueCopyWithImpl<$Res>
       return _then(_value.copyWith(identifier: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get severityElement {
+    if (_value.severityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.severityElement, (value) {
+      return _then(_value.copyWith(severityElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get detailElement {
+    if (_value.detailElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.detailElement, (value) {
+      return _then(_value.copyWith(detailElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get referenceElement {
+    if (_value.referenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.referenceElement, (value) {
+      return _then(_value.copyWith(referenceElement: value));
+    });
+  }
 }
 
 abstract class _$DetectedIssueCopyWith<$Res>
@@ -1387,7 +1749,17 @@ abstract class _$DetectedIssueCopyWith<$Res>
       Reference author,
       Identifier identifier,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation});
+      List<DetectedIssueMitigation> mitigation,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_severity')
+          Element severityElement,
+      @JsonKey(name: '_detail')
+          Element detailElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1403,6 +1775,16 @@ abstract class _$DetectedIssueCopyWith<$Res>
   $ReferenceCopyWith<$Res> get author;
   @override
   $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get severityElement;
+  @override
+  $ElementCopyWith<$Res> get detailElement;
+  @override
+  $ElementCopyWith<$Res> get referenceElement;
 }
 
 class __$DetectedIssueCopyWithImpl<$Res>
@@ -1436,6 +1818,11 @@ class __$DetectedIssueCopyWithImpl<$Res>
     Object identifier = freezed,
     Object reference = freezed,
     Object mitigation = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object severityElement = freezed,
+    Object detailElement = freezed,
+    Object referenceElement = freezed,
   }) {
     return _then(_DetectedIssue(
       resourceType: resourceType == freezed
@@ -1474,6 +1861,21 @@ class __$DetectedIssueCopyWithImpl<$Res>
       mitigation: mitigation == freezed
           ? _value.mitigation
           : mitigation as List<DetectedIssueMitigation>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      severityElement: severityElement == freezed
+          ? _value.severityElement
+          : severityElement as Element,
+      detailElement: detailElement == freezed
+          ? _value.detailElement
+          : detailElement as Element,
+      referenceElement: referenceElement == freezed
+          ? _value.referenceElement
+          : referenceElement as Element,
     ));
   }
 }
@@ -1499,7 +1901,12 @@ class _$_DetectedIssue implements _DetectedIssue {
       this.author,
       this.identifier,
       this.reference,
-      this.mitigation});
+      this.mitigation,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_severity') this.severityElement,
+      @JsonKey(name: '_detail') this.detailElement,
+      @JsonKey(name: '_reference') this.referenceElement});
 
   factory _$_DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$_$_DetectedIssueFromJson(json);
@@ -1545,10 +1952,25 @@ class _$_DetectedIssue implements _DetectedIssue {
   final FhirUri reference;
   @override
   final List<DetectedIssueMitigation> mitigation;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_severity')
+  final Element severityElement;
+  @override
+  @JsonKey(name: '_detail')
+  final Element detailElement;
+  @override
+  @JsonKey(name: '_reference')
+  final Element referenceElement;
 
   @override
   String toString() {
-    return 'DetectedIssue(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, category: $category, severity: $severity, implicated: $implicated, detail: $detail, date: $date, author: $author, identifier: $identifier, reference: $reference, mitigation: $mitigation)';
+    return 'DetectedIssue(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, category: $category, severity: $severity, implicated: $implicated, detail: $detail, date: $date, author: $author, identifier: $identifier, reference: $reference, mitigation: $mitigation, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, severityElement: $severityElement, detailElement: $detailElement, referenceElement: $referenceElement)';
   }
 
   @override
@@ -1605,7 +2027,22 @@ class _$_DetectedIssue implements _DetectedIssue {
                     .equals(other.reference, reference)) &&
             (identical(other.mitigation, mitigation) ||
                 const DeepCollectionEquality()
-                    .equals(other.mitigation, mitigation)));
+                    .equals(other.mitigation, mitigation)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.severityElement, severityElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.severityElement, severityElement)) &&
+            (identical(other.detailElement, detailElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.detailElement, detailElement)) &&
+            (identical(other.referenceElement, referenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.referenceElement, referenceElement)));
   }
 
   @override
@@ -1629,7 +2066,12 @@ class _$_DetectedIssue implements _DetectedIssue {
       const DeepCollectionEquality().hash(author) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(mitigation);
+      const DeepCollectionEquality().hash(mitigation) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(severityElement) ^
+      const DeepCollectionEquality().hash(detailElement) ^
+      const DeepCollectionEquality().hash(referenceElement);
 
   @override
   _$DetectedIssueCopyWith<_DetectedIssue> get copyWith =>
@@ -1664,7 +2106,17 @@ abstract class _DetectedIssue implements DetectedIssue {
       Reference author,
       Identifier identifier,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation}) = _$_DetectedIssue;
+      List<DetectedIssueMitigation> mitigation,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_severity')
+          Element severityElement,
+      @JsonKey(name: '_detail')
+          Element detailElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement}) = _$_DetectedIssue;
 
   factory _DetectedIssue.fromJson(Map<String, dynamic> json) =
       _$_DetectedIssue.fromJson;
@@ -1710,6 +2162,21 @@ abstract class _DetectedIssue implements DetectedIssue {
   FhirUri get reference;
   @override
   List<DetectedIssueMitigation> get mitigation;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_severity')
+  Element get severityElement;
+  @override
+  @JsonKey(name: '_detail')
+  Element get detailElement;
+  @override
+  @JsonKey(name: '_reference')
+  Element get referenceElement;
   @override
   _$DetectedIssueCopyWith<_DetectedIssue> get copyWith;
 }
@@ -1759,7 +2226,29 @@ class _$FamilyMemberHistoryTearOff {
       Date deceasedDate,
       String deceasedString,
       Annotation note,
-      List<FamilyMemberHistoryCondition> condition}) {
+      List<FamilyMemberHistoryCondition> condition,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_bornDate')
+          Element bornDateElement,
+      @JsonKey(name: '_bornString')
+          Element bornStringElement,
+      @JsonKey(name: '_ageString')
+          Element ageStringElement,
+      @JsonKey(name: '_deceasedBoolean')
+          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDate')
+          Element deceasedDateElement,
+      @JsonKey(name: '_deceasedString')
+          Element deceasedStringElement}) {
     return _FamilyMemberHistory(
       resourceType: resourceType,
       id: id,
@@ -1790,6 +2279,17 @@ class _$FamilyMemberHistoryTearOff {
       deceasedString: deceasedString,
       note: note,
       condition: condition,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
+      dateElement: dateElement,
+      nameElement: nameElement,
+      bornDateElement: bornDateElement,
+      bornStringElement: bornStringElement,
+      ageStringElement: ageStringElement,
+      deceasedBooleanElement: deceasedBooleanElement,
+      deceasedDateElement: deceasedDateElement,
+      deceasedStringElement: deceasedStringElement,
     );
   }
 }
@@ -1833,6 +2333,28 @@ mixin _$FamilyMemberHistory {
   String get deceasedString;
   Annotation get note;
   List<FamilyMemberHistoryCondition> get condition;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_bornDate')
+  Element get bornDateElement;
+  @JsonKey(name: '_bornString')
+  Element get bornStringElement;
+  @JsonKey(name: '_ageString')
+  Element get ageStringElement;
+  @JsonKey(name: '_deceasedBoolean')
+  Element get deceasedBooleanElement;
+  @JsonKey(name: '_deceasedDate')
+  Element get deceasedDateElement;
+  @JsonKey(name: '_deceasedString')
+  Element get deceasedStringElement;
 
   Map<String, dynamic> toJson();
   $FamilyMemberHistoryCopyWith<FamilyMemberHistory> get copyWith;
@@ -1877,7 +2399,29 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       Date deceasedDate,
       String deceasedString,
       Annotation note,
-      List<FamilyMemberHistoryCondition> condition});
+      List<FamilyMemberHistoryCondition> condition,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_bornDate')
+          Element bornDateElement,
+      @JsonKey(name: '_bornString')
+          Element bornStringElement,
+      @JsonKey(name: '_ageString')
+          Element ageStringElement,
+      @JsonKey(name: '_deceasedBoolean')
+          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDate')
+          Element deceasedDateElement,
+      @JsonKey(name: '_deceasedString')
+          Element deceasedStringElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1890,6 +2434,17 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
   $QuantityCopyWith<$Res> get deceasedQuantity;
   $RangeCopyWith<$Res> get deceasedRange;
   $AnnotationCopyWith<$Res> get note;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get bornDateElement;
+  $ElementCopyWith<$Res> get bornStringElement;
+  $ElementCopyWith<$Res> get ageStringElement;
+  $ElementCopyWith<$Res> get deceasedBooleanElement;
+  $ElementCopyWith<$Res> get deceasedDateElement;
+  $ElementCopyWith<$Res> get deceasedStringElement;
 }
 
 class _$FamilyMemberHistoryCopyWithImpl<$Res>
@@ -1931,6 +2486,17 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
     Object deceasedString = freezed,
     Object note = freezed,
     Object condition = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object dateElement = freezed,
+    Object nameElement = freezed,
+    Object bornDateElement = freezed,
+    Object bornStringElement = freezed,
+    Object ageStringElement = freezed,
+    Object deceasedBooleanElement = freezed,
+    Object deceasedDateElement = freezed,
+    Object deceasedStringElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -1993,6 +2559,37 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       condition: condition == freezed
           ? _value.condition
           : condition as List<FamilyMemberHistoryCondition>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      bornDateElement: bornDateElement == freezed
+          ? _value.bornDateElement
+          : bornDateElement as Element,
+      bornStringElement: bornStringElement == freezed
+          ? _value.bornStringElement
+          : bornStringElement as Element,
+      ageStringElement: ageStringElement == freezed
+          ? _value.ageStringElement
+          : ageStringElement as Element,
+      deceasedBooleanElement: deceasedBooleanElement == freezed
+          ? _value.deceasedBooleanElement
+          : deceasedBooleanElement as Element,
+      deceasedDateElement: deceasedDateElement == freezed
+          ? _value.deceasedDateElement
+          : deceasedDateElement as Element,
+      deceasedStringElement: deceasedStringElement == freezed
+          ? _value.deceasedStringElement
+          : deceasedStringElement as Element,
     ));
   }
 
@@ -2105,6 +2702,116 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       return _then(_value.copyWith(note: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get bornDateElement {
+    if (_value.bornDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.bornDateElement, (value) {
+      return _then(_value.copyWith(bornDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get bornStringElement {
+    if (_value.bornStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.bornStringElement, (value) {
+      return _then(_value.copyWith(bornStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get ageStringElement {
+    if (_value.ageStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.ageStringElement, (value) {
+      return _then(_value.copyWith(ageStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get deceasedBooleanElement {
+    if (_value.deceasedBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.deceasedBooleanElement, (value) {
+      return _then(_value.copyWith(deceasedBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get deceasedDateElement {
+    if (_value.deceasedDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.deceasedDateElement, (value) {
+      return _then(_value.copyWith(deceasedDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get deceasedStringElement {
+    if (_value.deceasedStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.deceasedStringElement, (value) {
+      return _then(_value.copyWith(deceasedStringElement: value));
+    });
+  }
 }
 
 abstract class _$FamilyMemberHistoryCopyWith<$Res>
@@ -2148,7 +2855,29 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
       Date deceasedDate,
       String deceasedString,
       Annotation note,
-      List<FamilyMemberHistoryCondition> condition});
+      List<FamilyMemberHistoryCondition> condition,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_bornDate')
+          Element bornDateElement,
+      @JsonKey(name: '_bornString')
+          Element bornStringElement,
+      @JsonKey(name: '_ageString')
+          Element ageStringElement,
+      @JsonKey(name: '_deceasedBoolean')
+          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDate')
+          Element deceasedDateElement,
+      @JsonKey(name: '_deceasedString')
+          Element deceasedStringElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2172,6 +2901,28 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
   $RangeCopyWith<$Res> get deceasedRange;
   @override
   $AnnotationCopyWith<$Res> get note;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get bornDateElement;
+  @override
+  $ElementCopyWith<$Res> get bornStringElement;
+  @override
+  $ElementCopyWith<$Res> get ageStringElement;
+  @override
+  $ElementCopyWith<$Res> get deceasedBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get deceasedDateElement;
+  @override
+  $ElementCopyWith<$Res> get deceasedStringElement;
 }
 
 class __$FamilyMemberHistoryCopyWithImpl<$Res>
@@ -2215,6 +2966,17 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
     Object deceasedString = freezed,
     Object note = freezed,
     Object condition = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object dateElement = freezed,
+    Object nameElement = freezed,
+    Object bornDateElement = freezed,
+    Object bornStringElement = freezed,
+    Object ageStringElement = freezed,
+    Object deceasedBooleanElement = freezed,
+    Object deceasedDateElement = freezed,
+    Object deceasedStringElement = freezed,
   }) {
     return _then(_FamilyMemberHistory(
       resourceType: resourceType == freezed
@@ -2277,6 +3039,37 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
       condition: condition == freezed
           ? _value.condition
           : condition as List<FamilyMemberHistoryCondition>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      bornDateElement: bornDateElement == freezed
+          ? _value.bornDateElement
+          : bornDateElement as Element,
+      bornStringElement: bornStringElement == freezed
+          ? _value.bornStringElement
+          : bornStringElement as Element,
+      ageStringElement: ageStringElement == freezed
+          ? _value.ageStringElement
+          : ageStringElement as Element,
+      deceasedBooleanElement: deceasedBooleanElement == freezed
+          ? _value.deceasedBooleanElement
+          : deceasedBooleanElement as Element,
+      deceasedDateElement: deceasedDateElement == freezed
+          ? _value.deceasedDateElement
+          : deceasedDateElement as Element,
+      deceasedStringElement: deceasedStringElement == freezed
+          ? _value.deceasedStringElement
+          : deceasedStringElement as Element,
     ));
   }
 }
@@ -2321,7 +3114,29 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
       this.deceasedDate,
       this.deceasedString,
       this.note,
-      this.condition})
+      this.condition,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_bornDate')
+          this.bornDateElement,
+      @JsonKey(name: '_bornString')
+          this.bornStringElement,
+      @JsonKey(name: '_ageString')
+          this.ageStringElement,
+      @JsonKey(name: '_deceasedBoolean')
+          this.deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDate')
+          this.deceasedDateElement,
+      @JsonKey(name: '_deceasedString')
+          this.deceasedStringElement})
       : assert(patient != null),
         assert(status != null),
         assert(relationship != null);
@@ -2393,10 +3208,43 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
   final Annotation note;
   @override
   final List<FamilyMemberHistoryCondition> condition;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_bornDate')
+  final Element bornDateElement;
+  @override
+  @JsonKey(name: '_bornString')
+  final Element bornStringElement;
+  @override
+  @JsonKey(name: '_ageString')
+  final Element ageStringElement;
+  @override
+  @JsonKey(name: '_deceasedBoolean')
+  final Element deceasedBooleanElement;
+  @override
+  @JsonKey(name: '_deceasedDate')
+  final Element deceasedDateElement;
+  @override
+  @JsonKey(name: '_deceasedString')
+  final Element deceasedStringElement;
 
   @override
   String toString() {
-    return 'FamilyMemberHistory(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, patient: $patient, date: $date, status: $status, name: $name, relationship: $relationship, gender: $gender, bornPeriod: $bornPeriod, bornDate: $bornDate, bornString: $bornString, ageQuantity: $ageQuantity, ageRange: $ageRange, ageString: $ageString, deceasedBoolean: $deceasedBoolean, deceasedQuantity: $deceasedQuantity, deceasedRange: $deceasedRange, deceasedDate: $deceasedDate, deceasedString: $deceasedString, note: $note, condition: $condition)';
+    return 'FamilyMemberHistory(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, patient: $patient, date: $date, status: $status, name: $name, relationship: $relationship, gender: $gender, bornPeriod: $bornPeriod, bornDate: $bornDate, bornString: $bornString, ageQuantity: $ageQuantity, ageRange: $ageRange, ageString: $ageString, deceasedBoolean: $deceasedBoolean, deceasedQuantity: $deceasedQuantity, deceasedRange: $deceasedRange, deceasedDate: $deceasedDate, deceasedString: $deceasedString, note: $note, condition: $condition, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, dateElement: $dateElement, nameElement: $nameElement, bornDateElement: $bornDateElement, bornStringElement: $bornStringElement, ageStringElement: $ageStringElement, deceasedBooleanElement: $deceasedBooleanElement, deceasedDateElement: $deceasedDateElement, deceasedStringElement: $deceasedStringElement)';
   }
 
   @override
@@ -2474,7 +3322,18 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
             (identical(other.deceasedDate, deceasedDate) || const DeepCollectionEquality().equals(other.deceasedDate, deceasedDate)) &&
             (identical(other.deceasedString, deceasedString) || const DeepCollectionEquality().equals(other.deceasedString, deceasedString)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.condition, condition) || const DeepCollectionEquality().equals(other.condition, condition)));
+            (identical(other.condition, condition) || const DeepCollectionEquality().equals(other.condition, condition)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.bornDateElement, bornDateElement) || const DeepCollectionEquality().equals(other.bornDateElement, bornDateElement)) &&
+            (identical(other.bornStringElement, bornStringElement) || const DeepCollectionEquality().equals(other.bornStringElement, bornStringElement)) &&
+            (identical(other.ageStringElement, ageStringElement) || const DeepCollectionEquality().equals(other.ageStringElement, ageStringElement)) &&
+            (identical(other.deceasedBooleanElement, deceasedBooleanElement) || const DeepCollectionEquality().equals(other.deceasedBooleanElement, deceasedBooleanElement)) &&
+            (identical(other.deceasedDateElement, deceasedDateElement) || const DeepCollectionEquality().equals(other.deceasedDateElement, deceasedDateElement)) &&
+            (identical(other.deceasedStringElement, deceasedStringElement) || const DeepCollectionEquality().equals(other.deceasedStringElement, deceasedStringElement)));
   }
 
   @override
@@ -2508,7 +3367,18 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
       const DeepCollectionEquality().hash(deceasedDate) ^
       const DeepCollectionEquality().hash(deceasedString) ^
       const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(condition);
+      const DeepCollectionEquality().hash(condition) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(bornDateElement) ^
+      const DeepCollectionEquality().hash(bornStringElement) ^
+      const DeepCollectionEquality().hash(ageStringElement) ^
+      const DeepCollectionEquality().hash(deceasedBooleanElement) ^
+      const DeepCollectionEquality().hash(deceasedDateElement) ^
+      const DeepCollectionEquality().hash(deceasedStringElement);
 
   @override
   _$FamilyMemberHistoryCopyWith<_FamilyMemberHistory> get copyWith =>
@@ -2560,7 +3430,29 @@ abstract class _FamilyMemberHistory implements FamilyMemberHistory {
       Date deceasedDate,
       String deceasedString,
       Annotation note,
-      List<FamilyMemberHistoryCondition> condition}) = _$_FamilyMemberHistory;
+      List<FamilyMemberHistoryCondition> condition,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_bornDate')
+          Element bornDateElement,
+      @JsonKey(name: '_bornString')
+          Element bornStringElement,
+      @JsonKey(name: '_ageString')
+          Element ageStringElement,
+      @JsonKey(name: '_deceasedBoolean')
+          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDate')
+          Element deceasedDateElement,
+      @JsonKey(name: '_deceasedString')
+          Element deceasedStringElement}) = _$_FamilyMemberHistory;
 
   factory _FamilyMemberHistory.fromJson(Map<String, dynamic> json) =
       _$_FamilyMemberHistory.fromJson;
@@ -2630,6 +3522,39 @@ abstract class _FamilyMemberHistory implements FamilyMemberHistory {
   @override
   List<FamilyMemberHistoryCondition> get condition;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_bornDate')
+  Element get bornDateElement;
+  @override
+  @JsonKey(name: '_bornString')
+  Element get bornStringElement;
+  @override
+  @JsonKey(name: '_ageString')
+  Element get ageStringElement;
+  @override
+  @JsonKey(name: '_deceasedBoolean')
+  Element get deceasedBooleanElement;
+  @override
+  @JsonKey(name: '_deceasedDate')
+  Element get deceasedDateElement;
+  @override
+  @JsonKey(name: '_deceasedString')
+  Element get deceasedStringElement;
+  @override
   _$FamilyMemberHistoryCopyWith<_FamilyMemberHistory> get copyWith;
 }
 
@@ -2680,7 +3605,15 @@ class _$ProcedureTearOff {
       Reference request,
       List<Annotation> notes,
       List<ProcedureFocalDevice> focalDevice,
-      List<Reference> used}) {
+      List<Reference> used,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_performedDateTime')
+          Element performedDateTimeElement}) {
     return _Procedure(
       resourceType: resourceType,
       id: id,
@@ -2714,6 +3647,10 @@ class _$ProcedureTearOff {
       notes: notes,
       focalDevice: focalDevice,
       used: used,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
+      performedDateTimeElement: performedDateTimeElement,
     );
   }
 }
@@ -2759,6 +3696,14 @@ mixin _$Procedure {
   List<Annotation> get notes;
   List<ProcedureFocalDevice> get focalDevice;
   List<Reference> get used;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_performedDateTime')
+  Element get performedDateTimeElement;
 
   Map<String, dynamic> toJson();
   $ProcedureCopyWith<Procedure> get copyWith;
@@ -2804,7 +3749,15 @@ abstract class $ProcedureCopyWith<$Res> {
       Reference request,
       List<Annotation> notes,
       List<ProcedureFocalDevice> focalDevice,
-      List<Reference> used});
+      List<Reference> used,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_performedDateTime')
+          Element performedDateTimeElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -2819,6 +3772,10 @@ abstract class $ProcedureCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get location;
   $CodeableConceptCopyWith<$Res> get outcome;
   $ReferenceCopyWith<$Res> get request;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get performedDateTimeElement;
 }
 
 class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
@@ -2862,6 +3819,10 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
     Object notes = freezed,
     Object focalDevice = freezed,
     Object used = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object performedDateTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2931,6 +3892,18 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
           ? _value.focalDevice
           : focalDevice as List<ProcedureFocalDevice>,
       used: used == freezed ? _value.used : used as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      performedDateTimeElement: performedDateTimeElement == freezed
+          ? _value.performedDateTimeElement
+          : performedDateTimeElement as Element,
     ));
   }
 
@@ -3064,6 +4037,46 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
       return _then(_value.copyWith(request: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get performedDateTimeElement {
+    if (_value.performedDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.performedDateTimeElement, (value) {
+      return _then(_value.copyWith(performedDateTimeElement: value));
+    });
+  }
 }
 
 abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
@@ -3108,7 +4121,15 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       Reference request,
       List<Annotation> notes,
       List<ProcedureFocalDevice> focalDevice,
-      List<Reference> used});
+      List<Reference> used,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_performedDateTime')
+          Element performedDateTimeElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -3136,6 +4157,14 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get outcome;
   @override
   $ReferenceCopyWith<$Res> get request;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get performedDateTimeElement;
 }
 
 class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
@@ -3180,6 +4209,10 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
     Object notes = freezed,
     Object focalDevice = freezed,
     Object used = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object performedDateTimeElement = freezed,
   }) {
     return _then(_Procedure(
       resourceType: resourceType == freezed
@@ -3249,6 +4282,18 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
           ? _value.focalDevice
           : focalDevice as List<ProcedureFocalDevice>,
       used: used == freezed ? _value.used : used as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      performedDateTimeElement: performedDateTimeElement == freezed
+          ? _value.performedDateTimeElement
+          : performedDateTimeElement as Element,
     ));
   }
 }
@@ -3295,7 +4340,15 @@ class _$_Procedure implements _Procedure {
       this.request,
       this.notes,
       this.focalDevice,
-      this.used})
+      this.used,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_performedDateTime')
+          this.performedDateTimeElement})
       : assert(subject != null),
         assert(status != null),
         assert(code != null);
@@ -3372,10 +4425,22 @@ class _$_Procedure implements _Procedure {
   final List<ProcedureFocalDevice> focalDevice;
   @override
   final List<Reference> used;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_performedDateTime')
+  final Element performedDateTimeElement;
 
   @override
   String toString() {
-    return 'Procedure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, status: $status, category: $category, code: $code, notPerformed: $notPerformed, reasonNotPerformed: $reasonNotPerformed, bodySite: $bodySite, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, performer: $performer, performedDateTime: $performedDateTime, performedPeriod: $performedPeriod, encounter: $encounter, location: $location, outcome: $outcome, report: $report, complication: $complication, followUp: $followUp, request: $request, notes: $notes, focalDevice: $focalDevice, used: $used)';
+    return 'Procedure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, status: $status, category: $category, code: $code, notPerformed: $notPerformed, reasonNotPerformed: $reasonNotPerformed, bodySite: $bodySite, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, performer: $performer, performedDateTime: $performedDateTime, performedPeriod: $performedPeriod, encounter: $encounter, location: $location, outcome: $outcome, report: $report, complication: $complication, followUp: $followUp, request: $request, notes: $notes, focalDevice: $focalDevice, used: $used, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, performedDateTimeElement: $performedDateTimeElement)';
   }
 
   @override
@@ -3456,7 +4521,11 @@ class _$_Procedure implements _Procedure {
             (identical(other.request, request) || const DeepCollectionEquality().equals(other.request, request)) &&
             (identical(other.notes, notes) || const DeepCollectionEquality().equals(other.notes, notes)) &&
             (identical(other.focalDevice, focalDevice) || const DeepCollectionEquality().equals(other.focalDevice, focalDevice)) &&
-            (identical(other.used, used) || const DeepCollectionEquality().equals(other.used, used)));
+            (identical(other.used, used) || const DeepCollectionEquality().equals(other.used, used)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.performedDateTimeElement, performedDateTimeElement) || const DeepCollectionEquality().equals(other.performedDateTimeElement, performedDateTimeElement)));
   }
 
   @override
@@ -3493,7 +4562,11 @@ class _$_Procedure implements _Procedure {
       const DeepCollectionEquality().hash(request) ^
       const DeepCollectionEquality().hash(notes) ^
       const DeepCollectionEquality().hash(focalDevice) ^
-      const DeepCollectionEquality().hash(used);
+      const DeepCollectionEquality().hash(used) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(performedDateTimeElement);
 
   @override
   _$ProcedureCopyWith<_Procedure> get copyWith =>
@@ -3546,7 +4619,15 @@ abstract class _Procedure implements Procedure {
       Reference request,
       List<Annotation> notes,
       List<ProcedureFocalDevice> focalDevice,
-      List<Reference> used}) = _$_Procedure;
+      List<Reference> used,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_performedDateTime')
+          Element performedDateTimeElement}) = _$_Procedure;
 
   factory _Procedure.fromJson(Map<String, dynamic> json) =
       _$_Procedure.fromJson;
@@ -3621,6 +4702,18 @@ abstract class _Procedure implements Procedure {
   @override
   List<Reference> get used;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_performedDateTime')
+  Element get performedDateTimeElement;
+  @override
   _$ProcedureCopyWith<_Procedure> get copyWith;
 }
 
@@ -3664,7 +4757,21 @@ class _$ClinicalImpressionTearOff {
       List<ClinicalImpressionRuledOut> ruledOut,
       String prognosis,
       List<Reference> plan,
-      List<Reference> action}) {
+      List<Reference> action,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_protocol')
+          List<Element> protocolElement,
+      @JsonKey(name: '_summary')
+          Element summaryElement}) {
     return _ClinicalImpression(
       resourceType: resourceType,
       id: id,
@@ -3693,6 +4800,13 @@ class _$ClinicalImpressionTearOff {
       prognosis: prognosis,
       plan: plan,
       action: action,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
+      descriptionElement: descriptionElement,
+      dateElement: dateElement,
+      protocolElement: protocolElement,
+      summaryElement: summaryElement,
     );
   }
 }
@@ -3732,6 +4846,20 @@ mixin _$ClinicalImpression {
   String get prognosis;
   List<Reference> get plan;
   List<Reference> get action;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_protocol')
+  List<Element> get protocolElement;
+  @JsonKey(name: '_summary')
+  Element get summaryElement;
 
   Map<String, dynamic> toJson();
   $ClinicalImpressionCopyWith<ClinicalImpression> get copyWith;
@@ -3772,7 +4900,21 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       List<ClinicalImpressionRuledOut> ruledOut,
       String prognosis,
       List<Reference> plan,
-      List<Reference> action});
+      List<Reference> action,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_protocol')
+          List<Element> protocolElement,
+      @JsonKey(name: '_summary')
+          Element summaryElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -3782,6 +4924,12 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get previous;
   $CodeableConceptCopyWith<$Res> get triggerCodeableConcept;
   $ReferenceCopyWith<$Res> get triggerReference;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get summaryElement;
 }
 
 class _$ClinicalImpressionCopyWithImpl<$Res>
@@ -3821,6 +4969,13 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
     Object prognosis = freezed,
     Object plan = freezed,
     Object action = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object descriptionElement = freezed,
+    Object dateElement = freezed,
+    Object protocolElement = freezed,
+    Object summaryElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -3874,6 +5029,26 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
       prognosis: prognosis == freezed ? _value.prognosis : prognosis as String,
       plan: plan == freezed ? _value.plan : plan as List<Reference>,
       action: action == freezed ? _value.action : action as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      protocolElement: protocolElement == freezed
+          ? _value.protocolElement
+          : protocolElement as List<Element>,
+      summaryElement: summaryElement == freezed
+          ? _value.summaryElement
+          : summaryElement as Element,
     ));
   }
 
@@ -3957,6 +5132,66 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
       return _then(_value.copyWith(triggerReference: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get summaryElement {
+    if (_value.summaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.summaryElement, (value) {
+      return _then(_value.copyWith(summaryElement: value));
+    });
+  }
 }
 
 abstract class _$ClinicalImpressionCopyWith<$Res>
@@ -3996,7 +5231,21 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
       List<ClinicalImpressionRuledOut> ruledOut,
       String prognosis,
       List<Reference> plan,
-      List<Reference> action});
+      List<Reference> action,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_protocol')
+          List<Element> protocolElement,
+      @JsonKey(name: '_summary')
+          Element summaryElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -4014,6 +5263,18 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get triggerCodeableConcept;
   @override
   $ReferenceCopyWith<$Res> get triggerReference;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get summaryElement;
 }
 
 class __$ClinicalImpressionCopyWithImpl<$Res>
@@ -4055,6 +5316,13 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
     Object prognosis = freezed,
     Object plan = freezed,
     Object action = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object descriptionElement = freezed,
+    Object dateElement = freezed,
+    Object protocolElement = freezed,
+    Object summaryElement = freezed,
   }) {
     return _then(_ClinicalImpression(
       resourceType: resourceType == freezed
@@ -4108,6 +5376,26 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
       prognosis: prognosis == freezed ? _value.prognosis : prognosis as String,
       plan: plan == freezed ? _value.plan : plan as List<Reference>,
       action: action == freezed ? _value.action : action as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      protocolElement: protocolElement == freezed
+          ? _value.protocolElement
+          : protocolElement as List<Element>,
+      summaryElement: summaryElement == freezed
+          ? _value.summaryElement
+          : summaryElement as Element,
     ));
   }
 }
@@ -4147,7 +5435,21 @@ class _$_ClinicalImpression implements _ClinicalImpression {
       this.ruledOut,
       this.prognosis,
       this.plan,
-      this.action})
+      this.action,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_protocol')
+          this.protocolElement,
+      @JsonKey(name: '_summary')
+          this.summaryElement})
       : assert(patient != null),
         assert(status != null);
 
@@ -4212,10 +5514,31 @@ class _$_ClinicalImpression implements _ClinicalImpression {
   final List<Reference> plan;
   @override
   final List<Reference> action;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_protocol')
+  final List<Element> protocolElement;
+  @override
+  @JsonKey(name: '_summary')
+  final Element summaryElement;
 
   @override
   String toString() {
-    return 'ClinicalImpression(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, assessor: $assessor, status: $status, date: $date, description: $description, previous: $previous, problem: $problem, triggerCodeableConcept: $triggerCodeableConcept, triggerReference: $triggerReference, investigations: $investigations, protocol: $protocol, summary: $summary, finding: $finding, resolved: $resolved, ruledOut: $ruledOut, prognosis: $prognosis, plan: $plan, action: $action)';
+    return 'ClinicalImpression(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, assessor: $assessor, status: $status, date: $date, description: $description, previous: $previous, problem: $problem, triggerCodeableConcept: $triggerCodeableConcept, triggerReference: $triggerReference, investigations: $investigations, protocol: $protocol, summary: $summary, finding: $finding, resolved: $resolved, ruledOut: $ruledOut, prognosis: $prognosis, plan: $plan, action: $action, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, descriptionElement: $descriptionElement, dateElement: $dateElement, protocolElement: $protocolElement, summaryElement: $summaryElement)';
   }
 
   @override
@@ -4290,7 +5613,14 @@ class _$_ClinicalImpression implements _ClinicalImpression {
                 const DeepCollectionEquality().equals(other.ruledOut, ruledOut)) &&
             (identical(other.prognosis, prognosis) || const DeepCollectionEquality().equals(other.prognosis, prognosis)) &&
             (identical(other.plan, plan) || const DeepCollectionEquality().equals(other.plan, plan)) &&
-            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)));
+            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.protocolElement, protocolElement) || const DeepCollectionEquality().equals(other.protocolElement, protocolElement)) &&
+            (identical(other.summaryElement, summaryElement) || const DeepCollectionEquality().equals(other.summaryElement, summaryElement)));
   }
 
   @override
@@ -4322,7 +5652,14 @@ class _$_ClinicalImpression implements _ClinicalImpression {
       const DeepCollectionEquality().hash(ruledOut) ^
       const DeepCollectionEquality().hash(prognosis) ^
       const DeepCollectionEquality().hash(plan) ^
-      const DeepCollectionEquality().hash(action);
+      const DeepCollectionEquality().hash(action) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(protocolElement) ^
+      const DeepCollectionEquality().hash(summaryElement);
 
   @override
   _$ClinicalImpressionCopyWith<_ClinicalImpression> get copyWith =>
@@ -4368,7 +5705,21 @@ abstract class _ClinicalImpression implements ClinicalImpression {
       List<ClinicalImpressionRuledOut> ruledOut,
       String prognosis,
       List<Reference> plan,
-      List<Reference> action}) = _$_ClinicalImpression;
+      List<Reference> action,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_protocol')
+          List<Element> protocolElement,
+      @JsonKey(name: '_summary')
+          Element summaryElement}) = _$_ClinicalImpression;
 
   factory _ClinicalImpression.fromJson(Map<String, dynamic> json) =
       _$_ClinicalImpression.fromJson;
@@ -4432,6 +5783,27 @@ abstract class _ClinicalImpression implements ClinicalImpression {
   @override
   List<Reference> get action;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_protocol')
+  List<Element> get protocolElement;
+  @override
+  @JsonKey(name: '_summary')
+  Element get summaryElement;
+  @override
   _$ClinicalImpressionCopyWith<_ClinicalImpression> get copyWith;
 }
 
@@ -4461,7 +5833,10 @@ class _$RiskAssessmentTearOff {
       CodeableConcept method,
       List<Reference> basis,
       List<RiskAssessmentPrediction> prediction,
-      String mitigation}) {
+      String mitigation,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_mitigation') Element mitigationElement}) {
     return _RiskAssessment(
       resourceType: resourceType,
       id: id,
@@ -4482,6 +5857,9 @@ class _$RiskAssessmentTearOff {
       basis: basis,
       prediction: prediction,
       mitigation: mitigation,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      mitigationElement: mitigationElement,
     );
   }
 }
@@ -4511,6 +5889,12 @@ mixin _$RiskAssessment {
   List<Reference> get basis;
   List<RiskAssessmentPrediction> get prediction;
   String get mitigation;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_mitigation')
+  Element get mitigationElement;
 
   Map<String, dynamic> toJson();
   $RiskAssessmentCopyWith<RiskAssessment> get copyWith;
@@ -4539,7 +5923,10 @@ abstract class $RiskAssessmentCopyWith<$Res> {
       CodeableConcept method,
       List<Reference> basis,
       List<RiskAssessmentPrediction> prediction,
-      String mitigation});
+      String mitigation,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_mitigation') Element mitigationElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -4550,6 +5937,9 @@ abstract class $RiskAssessmentCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get performer;
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get method;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get mitigationElement;
 }
 
 class _$RiskAssessmentCopyWithImpl<$Res>
@@ -4581,6 +5971,9 @@ class _$RiskAssessmentCopyWithImpl<$Res>
     Object basis = freezed,
     Object prediction = freezed,
     Object mitigation = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object mitigationElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -4618,6 +6011,15 @@ class _$RiskAssessmentCopyWithImpl<$Res>
           : prediction as List<RiskAssessmentPrediction>,
       mitigation:
           mitigation == freezed ? _value.mitigation : mitigation as String,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      mitigationElement: mitigationElement == freezed
+          ? _value.mitigationElement
+          : mitigationElement as Element,
     ));
   }
 
@@ -4710,6 +6112,36 @@ class _$RiskAssessmentCopyWithImpl<$Res>
       return _then(_value.copyWith(method: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get mitigationElement {
+    if (_value.mitigationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.mitigationElement, (value) {
+      return _then(_value.copyWith(mitigationElement: value));
+    });
+  }
 }
 
 abstract class _$RiskAssessmentCopyWith<$Res>
@@ -4737,7 +6169,10 @@ abstract class _$RiskAssessmentCopyWith<$Res>
       CodeableConcept method,
       List<Reference> basis,
       List<RiskAssessmentPrediction> prediction,
-      String mitigation});
+      String mitigation,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_mitigation') Element mitigationElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -4757,6 +6192,12 @@ abstract class _$RiskAssessmentCopyWith<$Res>
   $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get method;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get mitigationElement;
 }
 
 class __$RiskAssessmentCopyWithImpl<$Res>
@@ -4790,6 +6231,9 @@ class __$RiskAssessmentCopyWithImpl<$Res>
     Object basis = freezed,
     Object prediction = freezed,
     Object mitigation = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object mitigationElement = freezed,
   }) {
     return _then(_RiskAssessment(
       resourceType: resourceType == freezed
@@ -4827,6 +6271,15 @@ class __$RiskAssessmentCopyWithImpl<$Res>
           : prediction as List<RiskAssessmentPrediction>,
       mitigation:
           mitigation == freezed ? _value.mitigation : mitigation as String,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      mitigationElement: mitigationElement == freezed
+          ? _value.mitigationElement
+          : mitigationElement as Element,
     ));
   }
 }
@@ -4852,7 +6305,10 @@ class _$_RiskAssessment implements _RiskAssessment {
       this.method,
       this.basis,
       this.prediction,
-      this.mitigation});
+      this.mitigation,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_mitigation') this.mitigationElement});
 
   factory _$_RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$_$_RiskAssessmentFromJson(json);
@@ -4897,10 +6353,19 @@ class _$_RiskAssessment implements _RiskAssessment {
   final List<RiskAssessmentPrediction> prediction;
   @override
   final String mitigation;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_mitigation')
+  final Element mitigationElement;
 
   @override
   String toString() {
-    return 'RiskAssessment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, subject: $subject, date: $date, condition: $condition, encounter: $encounter, performer: $performer, identifier: $identifier, method: $method, basis: $basis, prediction: $prediction, mitigation: $mitigation)';
+    return 'RiskAssessment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, subject: $subject, date: $date, condition: $condition, encounter: $encounter, performer: $performer, identifier: $identifier, method: $method, basis: $basis, prediction: $prediction, mitigation: $mitigation, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, mitigationElement: $mitigationElement)';
   }
 
   @override
@@ -4957,7 +6422,16 @@ class _$_RiskAssessment implements _RiskAssessment {
                     .equals(other.prediction, prediction)) &&
             (identical(other.mitigation, mitigation) ||
                 const DeepCollectionEquality()
-                    .equals(other.mitigation, mitigation)));
+                    .equals(other.mitigation, mitigation)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.mitigationElement, mitigationElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.mitigationElement, mitigationElement)));
   }
 
   @override
@@ -4981,7 +6455,10 @@ class _$_RiskAssessment implements _RiskAssessment {
       const DeepCollectionEquality().hash(method) ^
       const DeepCollectionEquality().hash(basis) ^
       const DeepCollectionEquality().hash(prediction) ^
-      const DeepCollectionEquality().hash(mitigation);
+      const DeepCollectionEquality().hash(mitigation) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(mitigationElement);
 
   @override
   _$RiskAssessmentCopyWith<_RiskAssessment> get copyWith =>
@@ -4995,25 +6472,29 @@ class _$_RiskAssessment implements _RiskAssessment {
 
 abstract class _RiskAssessment implements RiskAssessment {
   const factory _RiskAssessment(
-      {@JsonKey(defaultValue: 'RiskAssessment') String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      Reference subject,
-      FhirDateTime date,
-      Reference condition,
-      Reference encounter,
-      Reference performer,
-      Identifier identifier,
-      CodeableConcept method,
-      List<Reference> basis,
-      List<RiskAssessmentPrediction> prediction,
-      String mitigation}) = _$_RiskAssessment;
+          {@JsonKey(defaultValue: 'RiskAssessment') String resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          Code language,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          Reference subject,
+          FhirDateTime date,
+          Reference condition,
+          Reference encounter,
+          Reference performer,
+          Identifier identifier,
+          CodeableConcept method,
+          List<Reference> basis,
+          List<RiskAssessmentPrediction> prediction,
+          String mitigation,
+          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+          @JsonKey(name: '_language') Element languageElement,
+          @JsonKey(name: '_mitigation') Element mitigationElement}) =
+      _$_RiskAssessment;
 
   factory _RiskAssessment.fromJson(Map<String, dynamic> json) =
       _$_RiskAssessment.fromJson;
@@ -5059,6 +6540,15 @@ abstract class _RiskAssessment implements RiskAssessment {
   @override
   String get mitigation;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_mitigation')
+  Element get mitigationElement;
+  @override
   _$RiskAssessmentCopyWith<_RiskAssessment> get copyWith;
 }
 
@@ -5102,7 +6592,21 @@ class _$AllergyIntoleranceTearOff {
           AllergyIntoleranceCategory category,
       FhirDateTime lastOccurence,
       Annotation note,
-      List<AllergyIntoleranceReaction> reaction}) {
+      List<AllergyIntoleranceReaction> reaction,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_category')
+          List<Element> categoryElement,
+      @JsonKey(name: '_criticality')
+          Element criticalityElement,
+      @JsonKey(name: '_recordedDate')
+          Element recordedDateElement,
+      @JsonKey(name: '_lastOccurrence')
+          Element lastOccurrenceElement}) {
     return _AllergyIntolerance(
       resourceType: resourceType,
       id: id,
@@ -5127,6 +6631,13 @@ class _$AllergyIntoleranceTearOff {
       lastOccurence: lastOccurence,
       note: note,
       reaction: reaction,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      typeElement: typeElement,
+      categoryElement: categoryElement,
+      criticalityElement: criticalityElement,
+      recordedDateElement: recordedDateElement,
+      lastOccurrenceElement: lastOccurrenceElement,
     );
   }
 }
@@ -5166,6 +6677,20 @@ mixin _$AllergyIntolerance {
   FhirDateTime get lastOccurence;
   Annotation get note;
   List<AllergyIntoleranceReaction> get reaction;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_category')
+  List<Element> get categoryElement;
+  @JsonKey(name: '_criticality')
+  Element get criticalityElement;
+  @JsonKey(name: '_recordedDate')
+  Element get recordedDateElement;
+  @JsonKey(name: '_lastOccurrence')
+  Element get lastOccurrenceElement;
 
   Map<String, dynamic> toJson();
   $AllergyIntoleranceCopyWith<AllergyIntolerance> get copyWith;
@@ -5206,7 +6731,21 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
           AllergyIntoleranceCategory category,
       FhirDateTime lastOccurence,
       Annotation note,
-      List<AllergyIntoleranceReaction> reaction});
+      List<AllergyIntoleranceReaction> reaction,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_category')
+          List<Element> categoryElement,
+      @JsonKey(name: '_criticality')
+          Element criticalityElement,
+      @JsonKey(name: '_recordedDate')
+          Element recordedDateElement,
+      @JsonKey(name: '_lastOccurrence')
+          Element lastOccurrenceElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -5216,6 +6755,12 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get reporter;
   $CodeableConceptCopyWith<$Res> get substance;
   $AnnotationCopyWith<$Res> get note;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get criticalityElement;
+  $ElementCopyWith<$Res> get recordedDateElement;
+  $ElementCopyWith<$Res> get lastOccurrenceElement;
 }
 
 class _$AllergyIntoleranceCopyWithImpl<$Res>
@@ -5251,6 +6796,13 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
     Object lastOccurence = freezed,
     Object note = freezed,
     Object reaction = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object typeElement = freezed,
+    Object categoryElement = freezed,
+    Object criticalityElement = freezed,
+    Object recordedDateElement = freezed,
+    Object lastOccurrenceElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -5301,6 +6853,26 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       reaction: reaction == freezed
           ? _value.reaction
           : reaction as List<AllergyIntoleranceReaction>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      categoryElement: categoryElement == freezed
+          ? _value.categoryElement
+          : categoryElement as List<Element>,
+      criticalityElement: criticalityElement == freezed
+          ? _value.criticalityElement
+          : criticalityElement as Element,
+      recordedDateElement: recordedDateElement == freezed
+          ? _value.recordedDateElement
+          : recordedDateElement as Element,
+      lastOccurrenceElement: lastOccurrenceElement == freezed
+          ? _value.lastOccurrenceElement
+          : lastOccurrenceElement as Element,
     ));
   }
 
@@ -5383,6 +6955,66 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       return _then(_value.copyWith(note: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get criticalityElement {
+    if (_value.criticalityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.criticalityElement, (value) {
+      return _then(_value.copyWith(criticalityElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get recordedDateElement {
+    if (_value.recordedDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.recordedDateElement, (value) {
+      return _then(_value.copyWith(recordedDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lastOccurrenceElement {
+    if (_value.lastOccurrenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lastOccurrenceElement, (value) {
+      return _then(_value.copyWith(lastOccurrenceElement: value));
+    });
+  }
 }
 
 abstract class _$AllergyIntoleranceCopyWith<$Res>
@@ -5422,7 +7054,21 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
           AllergyIntoleranceCategory category,
       FhirDateTime lastOccurence,
       Annotation note,
-      List<AllergyIntoleranceReaction> reaction});
+      List<AllergyIntoleranceReaction> reaction,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_category')
+          List<Element> categoryElement,
+      @JsonKey(name: '_criticality')
+          Element criticalityElement,
+      @JsonKey(name: '_recordedDate')
+          Element recordedDateElement,
+      @JsonKey(name: '_lastOccurrence')
+          Element lastOccurrenceElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -5440,6 +7086,18 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get substance;
   @override
   $AnnotationCopyWith<$Res> get note;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get criticalityElement;
+  @override
+  $ElementCopyWith<$Res> get recordedDateElement;
+  @override
+  $ElementCopyWith<$Res> get lastOccurrenceElement;
 }
 
 class __$AllergyIntoleranceCopyWithImpl<$Res>
@@ -5477,6 +7135,13 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
     Object lastOccurence = freezed,
     Object note = freezed,
     Object reaction = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object typeElement = freezed,
+    Object categoryElement = freezed,
+    Object criticalityElement = freezed,
+    Object recordedDateElement = freezed,
+    Object lastOccurrenceElement = freezed,
   }) {
     return _then(_AllergyIntolerance(
       resourceType: resourceType == freezed
@@ -5527,6 +7192,26 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       reaction: reaction == freezed
           ? _value.reaction
           : reaction as List<AllergyIntoleranceReaction>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      categoryElement: categoryElement == freezed
+          ? _value.categoryElement
+          : categoryElement as List<Element>,
+      criticalityElement: criticalityElement == freezed
+          ? _value.criticalityElement
+          : criticalityElement as Element,
+      recordedDateElement: recordedDateElement == freezed
+          ? _value.recordedDateElement
+          : recordedDateElement as Element,
+      lastOccurrenceElement: lastOccurrenceElement == freezed
+          ? _value.lastOccurrenceElement
+          : lastOccurrenceElement as Element,
     ));
   }
 }
@@ -5566,7 +7251,21 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
           this.category,
       this.lastOccurence,
       this.note,
-      this.reaction})
+      this.reaction,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_type')
+          this.typeElement,
+      @JsonKey(name: '_category')
+          this.categoryElement,
+      @JsonKey(name: '_criticality')
+          this.criticalityElement,
+      @JsonKey(name: '_recordedDate')
+          this.recordedDateElement,
+      @JsonKey(name: '_lastOccurrence')
+          this.lastOccurrenceElement})
       : assert(patient != null),
         assert(substance != null);
 
@@ -5627,10 +7326,31 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   final Annotation note;
   @override
   final List<AllergyIntoleranceReaction> reaction;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_category')
+  final List<Element> categoryElement;
+  @override
+  @JsonKey(name: '_criticality')
+  final Element criticalityElement;
+  @override
+  @JsonKey(name: '_recordedDate')
+  final Element recordedDateElement;
+  @override
+  @JsonKey(name: '_lastOccurrence')
+  final Element lastOccurrenceElement;
 
   @override
   String toString() {
-    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, onset: $onset, recordedDate: $recordedDate, recorder: $recorder, patient: $patient, reporter: $reporter, substance: $substance, status: $status, criticality: $criticality, type: $type, category: $category, lastOccurence: $lastOccurence, note: $note, reaction: $reaction)';
+    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, onset: $onset, recordedDate: $recordedDate, recorder: $recorder, patient: $patient, reporter: $reporter, substance: $substance, status: $status, criticality: $criticality, type: $type, category: $category, lastOccurence: $lastOccurence, note: $note, reaction: $reaction, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, typeElement: $typeElement, categoryElement: $categoryElement, criticalityElement: $criticalityElement, recordedDateElement: $recordedDateElement, lastOccurrenceElement: $lastOccurrenceElement)';
   }
 
   @override
@@ -5698,7 +7418,17 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
                 const DeepCollectionEquality().equals(other.note, note)) &&
             (identical(other.reaction, reaction) ||
                 const DeepCollectionEquality()
-                    .equals(other.reaction, reaction)));
+                    .equals(other.reaction, reaction)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.typeElement, typeElement) || const DeepCollectionEquality().equals(other.typeElement, typeElement)) &&
+            (identical(other.categoryElement, categoryElement) || const DeepCollectionEquality().equals(other.categoryElement, categoryElement)) &&
+            (identical(other.criticalityElement, criticalityElement) || const DeepCollectionEquality().equals(other.criticalityElement, criticalityElement)) &&
+            (identical(other.recordedDateElement, recordedDateElement) || const DeepCollectionEquality().equals(other.recordedDateElement, recordedDateElement)) &&
+            (identical(other.lastOccurrenceElement, lastOccurrenceElement) || const DeepCollectionEquality().equals(other.lastOccurrenceElement, lastOccurrenceElement)));
   }
 
   @override
@@ -5726,7 +7456,14 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(lastOccurence) ^
       const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(reaction);
+      const DeepCollectionEquality().hash(reaction) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(categoryElement) ^
+      const DeepCollectionEquality().hash(criticalityElement) ^
+      const DeepCollectionEquality().hash(recordedDateElement) ^
+      const DeepCollectionEquality().hash(lastOccurrenceElement);
 
   @override
   _$AllergyIntoleranceCopyWith<_AllergyIntolerance> get copyWith =>
@@ -5772,7 +7509,21 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
           AllergyIntoleranceCategory category,
       FhirDateTime lastOccurence,
       Annotation note,
-      List<AllergyIntoleranceReaction> reaction}) = _$_AllergyIntolerance;
+      List<AllergyIntoleranceReaction> reaction,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_category')
+          List<Element> categoryElement,
+      @JsonKey(name: '_criticality')
+          Element criticalityElement,
+      @JsonKey(name: '_recordedDate')
+          Element recordedDateElement,
+      @JsonKey(name: '_lastOccurrence')
+          Element lastOccurrenceElement}) = _$_AllergyIntolerance;
 
   factory _AllergyIntolerance.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntolerance.fromJson;
@@ -5831,6 +7582,27 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
   Annotation get note;
   @override
   List<AllergyIntoleranceReaction> get reaction;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_category')
+  List<Element> get categoryElement;
+  @override
+  @JsonKey(name: '_criticality')
+  Element get criticalityElement;
+  @override
+  @JsonKey(name: '_recordedDate')
+  Element get recordedDateElement;
+  @override
+  @JsonKey(name: '_lastOccurrence')
+  Element get lastOccurrenceElement;
   @override
   _$AllergyIntoleranceCopyWith<_AllergyIntolerance> get copyWith;
 }
@@ -6635,7 +8407,8 @@ class _$FamilyMemberHistoryConditionTearOff {
       Range onsetRange,
       Period onsetPeriod,
       String onsetString,
-      Annotation note}) {
+      Annotation note,
+      @JsonKey(name: '_onsetString') Element onsetStringElement}) {
     return _FamilyMemberHistoryCondition(
       id: id,
       extension_: extension_,
@@ -6647,6 +8420,7 @@ class _$FamilyMemberHistoryConditionTearOff {
       onsetPeriod: onsetPeriod,
       onsetString: onsetString,
       note: note,
+      onsetStringElement: onsetStringElement,
     );
   }
 }
@@ -6667,6 +8441,8 @@ mixin _$FamilyMemberHistoryCondition {
   Period get onsetPeriod;
   String get onsetString;
   Annotation get note;
+  @JsonKey(name: '_onsetString')
+  Element get onsetStringElement;
 
   Map<String, dynamic> toJson();
   $FamilyMemberHistoryConditionCopyWith<FamilyMemberHistoryCondition>
@@ -6688,7 +8464,8 @@ abstract class $FamilyMemberHistoryConditionCopyWith<$Res> {
       Range onsetRange,
       Period onsetPeriod,
       String onsetString,
-      Annotation note});
+      Annotation note,
+      @JsonKey(name: '_onsetString') Element onsetStringElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get code;
@@ -6697,6 +8474,7 @@ abstract class $FamilyMemberHistoryConditionCopyWith<$Res> {
   $RangeCopyWith<$Res> get onsetRange;
   $PeriodCopyWith<$Res> get onsetPeriod;
   $AnnotationCopyWith<$Res> get note;
+  $ElementCopyWith<$Res> get onsetStringElement;
 }
 
 class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
@@ -6719,6 +8497,7 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
     Object onsetPeriod = freezed,
     Object onsetString = freezed,
     Object note = freezed,
+    Object onsetStringElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -6740,6 +8519,9 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
       onsetString:
           onsetString == freezed ? _value.onsetString : onsetString as String,
       note: note == freezed ? _value.note : note as Annotation,
+      onsetStringElement: onsetStringElement == freezed
+          ? _value.onsetStringElement
+          : onsetStringElement as Element,
     ));
   }
 
@@ -6812,6 +8594,16 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res>
       return _then(_value.copyWith(note: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get onsetStringElement {
+    if (_value.onsetStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.onsetStringElement, (value) {
+      return _then(_value.copyWith(onsetStringElement: value));
+    });
+  }
 }
 
 abstract class _$FamilyMemberHistoryConditionCopyWith<$Res>
@@ -6831,7 +8623,8 @@ abstract class _$FamilyMemberHistoryConditionCopyWith<$Res>
       Range onsetRange,
       Period onsetPeriod,
       String onsetString,
-      Annotation note});
+      Annotation note,
+      @JsonKey(name: '_onsetString') Element onsetStringElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -6847,6 +8640,8 @@ abstract class _$FamilyMemberHistoryConditionCopyWith<$Res>
   $PeriodCopyWith<$Res> get onsetPeriod;
   @override
   $AnnotationCopyWith<$Res> get note;
+  @override
+  $ElementCopyWith<$Res> get onsetStringElement;
 }
 
 class __$FamilyMemberHistoryConditionCopyWithImpl<$Res>
@@ -6873,6 +8668,7 @@ class __$FamilyMemberHistoryConditionCopyWithImpl<$Res>
     Object onsetPeriod = freezed,
     Object onsetString = freezed,
     Object note = freezed,
+    Object onsetStringElement = freezed,
   }) {
     return _then(_FamilyMemberHistoryCondition(
       id: id == freezed ? _value.id : id as Id,
@@ -6894,6 +8690,9 @@ class __$FamilyMemberHistoryConditionCopyWithImpl<$Res>
       onsetString:
           onsetString == freezed ? _value.onsetString : onsetString as String,
       note: note == freezed ? _value.note : note as Annotation,
+      onsetStringElement: onsetStringElement == freezed
+          ? _value.onsetStringElement
+          : onsetStringElement as Element,
     ));
   }
 }
@@ -6910,7 +8709,8 @@ class _$_FamilyMemberHistoryCondition implements _FamilyMemberHistoryCondition {
       this.onsetRange,
       this.onsetPeriod,
       this.onsetString,
-      this.note})
+      this.note,
+      @JsonKey(name: '_onsetString') this.onsetStringElement})
       : assert(code != null);
 
   factory _$_FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
@@ -6938,10 +8738,13 @@ class _$_FamilyMemberHistoryCondition implements _FamilyMemberHistoryCondition {
   final String onsetString;
   @override
   final Annotation note;
+  @override
+  @JsonKey(name: '_onsetString')
+  final Element onsetStringElement;
 
   @override
   String toString() {
-    return 'FamilyMemberHistoryCondition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, outcome: $outcome, onsetQuantity: $onsetQuantity, onsetRange: $onsetRange, onsetPeriod: $onsetPeriod, onsetString: $onsetString, note: $note)';
+    return 'FamilyMemberHistoryCondition(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, outcome: $outcome, onsetQuantity: $onsetQuantity, onsetRange: $onsetRange, onsetPeriod: $onsetPeriod, onsetString: $onsetString, note: $note, onsetStringElement: $onsetStringElement)';
   }
 
   @override
@@ -6974,7 +8777,10 @@ class _$_FamilyMemberHistoryCondition implements _FamilyMemberHistoryCondition {
                 const DeepCollectionEquality()
                     .equals(other.onsetString, onsetString)) &&
             (identical(other.note, note) ||
-                const DeepCollectionEquality().equals(other.note, note)));
+                const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.onsetStringElement, onsetStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.onsetStringElement, onsetStringElement)));
   }
 
   @override
@@ -6989,7 +8795,8 @@ class _$_FamilyMemberHistoryCondition implements _FamilyMemberHistoryCondition {
       const DeepCollectionEquality().hash(onsetRange) ^
       const DeepCollectionEquality().hash(onsetPeriod) ^
       const DeepCollectionEquality().hash(onsetString) ^
-      const DeepCollectionEquality().hash(note);
+      const DeepCollectionEquality().hash(note) ^
+      const DeepCollectionEquality().hash(onsetStringElement);
 
   @override
   _$FamilyMemberHistoryConditionCopyWith<_FamilyMemberHistoryCondition>
@@ -7005,16 +8812,18 @@ class _$_FamilyMemberHistoryCondition implements _FamilyMemberHistoryCondition {
 abstract class _FamilyMemberHistoryCondition
     implements FamilyMemberHistoryCondition {
   const factory _FamilyMemberHistoryCondition(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) CodeableConcept code,
-      CodeableConcept outcome,
-      Quantity onsetQuantity,
-      Range onsetRange,
-      Period onsetPeriod,
-      String onsetString,
-      Annotation note}) = _$_FamilyMemberHistoryCondition;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          @required @JsonKey(required: true) CodeableConcept code,
+          CodeableConcept outcome,
+          Quantity onsetQuantity,
+          Range onsetRange,
+          Period onsetPeriod,
+          String onsetString,
+          Annotation note,
+          @JsonKey(name: '_onsetString') Element onsetStringElement}) =
+      _$_FamilyMemberHistoryCondition;
 
   factory _FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =
       _$_FamilyMemberHistoryCondition.fromJson;
@@ -7041,6 +8850,9 @@ abstract class _FamilyMemberHistoryCondition
   String get onsetString;
   @override
   Annotation get note;
+  @override
+  @JsonKey(name: '_onsetString')
+  Element get onsetStringElement;
   @override
   _$FamilyMemberHistoryConditionCopyWith<_FamilyMemberHistoryCondition>
       get copyWith;
@@ -8366,7 +10178,10 @@ class _$RiskAssessmentPredictionTearOff {
       Decimal relativeRisk,
       Period whenPeriod,
       Range whenRange,
-      String rationale}) {
+      String rationale,
+      @JsonKey(name: '_probabilityDecimal') Element probabilityDecimalElement,
+      @JsonKey(name: '_relativeRisk') Element relativeRiskElement,
+      @JsonKey(name: '_rationale') Element rationaleElement}) {
     return _RiskAssessmentPrediction(
       id: id,
       extension_: extension_,
@@ -8379,6 +10194,9 @@ class _$RiskAssessmentPredictionTearOff {
       whenPeriod: whenPeriod,
       whenRange: whenRange,
       rationale: rationale,
+      probabilityDecimalElement: probabilityDecimalElement,
+      relativeRiskElement: relativeRiskElement,
+      rationaleElement: rationaleElement,
     );
   }
 }
@@ -8400,6 +10218,12 @@ mixin _$RiskAssessmentPrediction {
   Period get whenPeriod;
   Range get whenRange;
   String get rationale;
+  @JsonKey(name: '_probabilityDecimal')
+  Element get probabilityDecimalElement;
+  @JsonKey(name: '_relativeRisk')
+  Element get relativeRiskElement;
+  @JsonKey(name: '_rationale')
+  Element get rationaleElement;
 
   Map<String, dynamic> toJson();
   $RiskAssessmentPredictionCopyWith<RiskAssessmentPrediction> get copyWith;
@@ -8420,7 +10244,10 @@ abstract class $RiskAssessmentPredictionCopyWith<$Res> {
       Decimal relativeRisk,
       Period whenPeriod,
       Range whenRange,
-      String rationale});
+      String rationale,
+      @JsonKey(name: '_probabilityDecimal') Element probabilityDecimalElement,
+      @JsonKey(name: '_relativeRisk') Element relativeRiskElement,
+      @JsonKey(name: '_rationale') Element rationaleElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get outcome;
@@ -8428,6 +10255,9 @@ abstract class $RiskAssessmentPredictionCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get probabilityCodeableConcept;
   $PeriodCopyWith<$Res> get whenPeriod;
   $RangeCopyWith<$Res> get whenRange;
+  $ElementCopyWith<$Res> get probabilityDecimalElement;
+  $ElementCopyWith<$Res> get relativeRiskElement;
+  $ElementCopyWith<$Res> get rationaleElement;
 }
 
 class _$RiskAssessmentPredictionCopyWithImpl<$Res>
@@ -8451,6 +10281,9 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
     Object whenPeriod = freezed,
     Object whenRange = freezed,
     Object rationale = freezed,
+    Object probabilityDecimalElement = freezed,
+    Object relativeRiskElement = freezed,
+    Object rationaleElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -8477,6 +10310,15 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
           whenPeriod == freezed ? _value.whenPeriod : whenPeriod as Period,
       whenRange: whenRange == freezed ? _value.whenRange : whenRange as Range,
       rationale: rationale == freezed ? _value.rationale : rationale as String,
+      probabilityDecimalElement: probabilityDecimalElement == freezed
+          ? _value.probabilityDecimalElement
+          : probabilityDecimalElement as Element,
+      relativeRiskElement: relativeRiskElement == freezed
+          ? _value.relativeRiskElement
+          : relativeRiskElement as Element,
+      rationaleElement: rationaleElement == freezed
+          ? _value.rationaleElement
+          : rationaleElement as Element,
     ));
   }
 
@@ -8540,6 +10382,36 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
       return _then(_value.copyWith(whenRange: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get probabilityDecimalElement {
+    if (_value.probabilityDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.probabilityDecimalElement, (value) {
+      return _then(_value.copyWith(probabilityDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get relativeRiskElement {
+    if (_value.relativeRiskElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.relativeRiskElement, (value) {
+      return _then(_value.copyWith(relativeRiskElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get rationaleElement {
+    if (_value.rationaleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.rationaleElement, (value) {
+      return _then(_value.copyWith(rationaleElement: value));
+    });
+  }
 }
 
 abstract class _$RiskAssessmentPredictionCopyWith<$Res>
@@ -8559,7 +10431,10 @@ abstract class _$RiskAssessmentPredictionCopyWith<$Res>
       Decimal relativeRisk,
       Period whenPeriod,
       Range whenRange,
-      String rationale});
+      String rationale,
+      @JsonKey(name: '_probabilityDecimal') Element probabilityDecimalElement,
+      @JsonKey(name: '_relativeRisk') Element relativeRiskElement,
+      @JsonKey(name: '_rationale') Element rationaleElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -8573,6 +10448,12 @@ abstract class _$RiskAssessmentPredictionCopyWith<$Res>
   $PeriodCopyWith<$Res> get whenPeriod;
   @override
   $RangeCopyWith<$Res> get whenRange;
+  @override
+  $ElementCopyWith<$Res> get probabilityDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get relativeRiskElement;
+  @override
+  $ElementCopyWith<$Res> get rationaleElement;
 }
 
 class __$RiskAssessmentPredictionCopyWithImpl<$Res>
@@ -8599,6 +10480,9 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
     Object whenPeriod = freezed,
     Object whenRange = freezed,
     Object rationale = freezed,
+    Object probabilityDecimalElement = freezed,
+    Object relativeRiskElement = freezed,
+    Object rationaleElement = freezed,
   }) {
     return _then(_RiskAssessmentPrediction(
       id: id == freezed ? _value.id : id as Id,
@@ -8625,6 +10509,15 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
           whenPeriod == freezed ? _value.whenPeriod : whenPeriod as Period,
       whenRange: whenRange == freezed ? _value.whenRange : whenRange as Range,
       rationale: rationale == freezed ? _value.rationale : rationale as String,
+      probabilityDecimalElement: probabilityDecimalElement == freezed
+          ? _value.probabilityDecimalElement
+          : probabilityDecimalElement as Element,
+      relativeRiskElement: relativeRiskElement == freezed
+          ? _value.relativeRiskElement
+          : relativeRiskElement as Element,
+      rationaleElement: rationaleElement == freezed
+          ? _value.rationaleElement
+          : rationaleElement as Element,
     ));
   }
 }
@@ -8642,7 +10535,10 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
       this.relativeRisk,
       this.whenPeriod,
       this.whenRange,
-      this.rationale})
+      this.rationale,
+      @JsonKey(name: '_probabilityDecimal') this.probabilityDecimalElement,
+      @JsonKey(name: '_relativeRisk') this.relativeRiskElement,
+      @JsonKey(name: '_rationale') this.rationaleElement})
       : assert(outcome != null);
 
   factory _$_RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
@@ -8672,10 +10568,19 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
   final Range whenRange;
   @override
   final String rationale;
+  @override
+  @JsonKey(name: '_probabilityDecimal')
+  final Element probabilityDecimalElement;
+  @override
+  @JsonKey(name: '_relativeRisk')
+  final Element relativeRiskElement;
+  @override
+  @JsonKey(name: '_rationale')
+  final Element rationaleElement;
 
   @override
   String toString() {
-    return 'RiskAssessmentPrediction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, outcome: $outcome, probabilityDecimal: $probabilityDecimal, probabilityRange: $probabilityRange, probabilityCodeableConcept: $probabilityCodeableConcept, relativeRisk: $relativeRisk, whenPeriod: $whenPeriod, whenRange: $whenRange, rationale: $rationale)';
+    return 'RiskAssessmentPrediction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, outcome: $outcome, probabilityDecimal: $probabilityDecimal, probabilityRange: $probabilityRange, probabilityCodeableConcept: $probabilityCodeableConcept, relativeRisk: $relativeRisk, whenPeriod: $whenPeriod, whenRange: $whenRange, rationale: $rationale, probabilityDecimalElement: $probabilityDecimalElement, relativeRiskElement: $relativeRiskElement, rationaleElement: $rationaleElement)';
   }
 
   @override
@@ -8715,7 +10620,18 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
                     .equals(other.whenRange, whenRange)) &&
             (identical(other.rationale, rationale) ||
                 const DeepCollectionEquality()
-                    .equals(other.rationale, rationale)));
+                    .equals(other.rationale, rationale)) &&
+            (identical(other.probabilityDecimalElement,
+                    probabilityDecimalElement) ||
+                const DeepCollectionEquality().equals(
+                    other.probabilityDecimalElement,
+                    probabilityDecimalElement)) &&
+            (identical(other.relativeRiskElement, relativeRiskElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.relativeRiskElement, relativeRiskElement)) &&
+            (identical(other.rationaleElement, rationaleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.rationaleElement, rationaleElement)));
   }
 
   @override
@@ -8731,7 +10647,10 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
       const DeepCollectionEquality().hash(relativeRisk) ^
       const DeepCollectionEquality().hash(whenPeriod) ^
       const DeepCollectionEquality().hash(whenRange) ^
-      const DeepCollectionEquality().hash(rationale);
+      const DeepCollectionEquality().hash(rationale) ^
+      const DeepCollectionEquality().hash(probabilityDecimalElement) ^
+      const DeepCollectionEquality().hash(relativeRiskElement) ^
+      const DeepCollectionEquality().hash(rationaleElement);
 
   @override
   _$RiskAssessmentPredictionCopyWith<_RiskAssessmentPrediction> get copyWith =>
@@ -8747,16 +10666,25 @@ class _$_RiskAssessmentPrediction implements _RiskAssessmentPrediction {
 abstract class _RiskAssessmentPrediction implements RiskAssessmentPrediction {
   const factory _RiskAssessmentPrediction(
       {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @required @JsonKey(required: true) CodeableConcept outcome,
+      @required
+      @JsonKey(required: true)
+          CodeableConcept outcome,
       Decimal probabilityDecimal,
       Range probabilityRange,
       CodeableConcept probabilityCodeableConcept,
       Decimal relativeRisk,
       Period whenPeriod,
       Range whenRange,
-      String rationale}) = _$_RiskAssessmentPrediction;
+      String rationale,
+      @JsonKey(name: '_probabilityDecimal')
+          Element probabilityDecimalElement,
+      @JsonKey(name: '_relativeRisk')
+          Element relativeRiskElement,
+      @JsonKey(name: '_rationale')
+          Element rationaleElement}) = _$_RiskAssessmentPrediction;
 
   factory _RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =
       _$_RiskAssessmentPrediction.fromJson;
@@ -8786,6 +10714,15 @@ abstract class _RiskAssessmentPrediction implements RiskAssessmentPrediction {
   @override
   String get rationale;
   @override
+  @JsonKey(name: '_probabilityDecimal')
+  Element get probabilityDecimalElement;
+  @override
+  @JsonKey(name: '_relativeRisk')
+  Element get relativeRiskElement;
+  @override
+  @JsonKey(name: '_rationale')
+  Element get rationaleElement;
+  @override
   _$RiskAssessmentPredictionCopyWith<_RiskAssessmentPrediction> get copyWith;
 }
 
@@ -8813,7 +10750,13 @@ class _$AllergyIntoleranceReactionTearOff {
       @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
           ReactionSeverity severity,
       CodeableConcept exposureRoute,
-      Annotation note}) {
+      Annotation note,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_onset')
+          Element onsetElement,
+      @JsonKey(name: '_severity')
+          Element severityElement}) {
     return _AllergyIntoleranceReaction(
       id: id,
       extension_: extension_,
@@ -8826,6 +10769,9 @@ class _$AllergyIntoleranceReactionTearOff {
       severity: severity,
       exposureRoute: exposureRoute,
       note: note,
+      descriptionElement: descriptionElement,
+      onsetElement: onsetElement,
+      severityElement: severityElement,
     );
   }
 }
@@ -8849,6 +10795,12 @@ mixin _$AllergyIntoleranceReaction {
   ReactionSeverity get severity;
   CodeableConcept get exposureRoute;
   Annotation get note;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_onset')
+  Element get onsetElement;
+  @JsonKey(name: '_severity')
+  Element get severityElement;
 
   Map<String, dynamic> toJson();
   $AllergyIntoleranceReactionCopyWith<AllergyIntoleranceReaction> get copyWith;
@@ -8873,12 +10825,21 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
           ReactionSeverity severity,
       CodeableConcept exposureRoute,
-      Annotation note});
+      Annotation note,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_onset')
+          Element onsetElement,
+      @JsonKey(name: '_severity')
+          Element severityElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get substance;
   $CodeableConceptCopyWith<$Res> get exposureRoute;
   $AnnotationCopyWith<$Res> get note;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get onsetElement;
+  $ElementCopyWith<$Res> get severityElement;
 }
 
 class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
@@ -8902,6 +10863,9 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
     Object severity = freezed,
     Object exposureRoute = freezed,
     Object note = freezed,
+    Object descriptionElement = freezed,
+    Object onsetElement = freezed,
+    Object severityElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -8929,6 +10893,15 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
           ? _value.exposureRoute
           : exposureRoute as CodeableConcept,
       note: note == freezed ? _value.note : note as Annotation,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      onsetElement: onsetElement == freezed
+          ? _value.onsetElement
+          : onsetElement as Element,
+      severityElement: severityElement == freezed
+          ? _value.severityElement
+          : severityElement as Element,
     ));
   }
 
@@ -8971,6 +10944,36 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
       return _then(_value.copyWith(note: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get onsetElement {
+    if (_value.onsetElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.onsetElement, (value) {
+      return _then(_value.copyWith(onsetElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get severityElement {
+    if (_value.severityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.severityElement, (value) {
+      return _then(_value.copyWith(severityElement: value));
+    });
+  }
 }
 
 abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
@@ -8995,7 +10998,13 @@ abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
       @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
           ReactionSeverity severity,
       CodeableConcept exposureRoute,
-      Annotation note});
+      Annotation note,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_onset')
+          Element onsetElement,
+      @JsonKey(name: '_severity')
+          Element severityElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -9005,6 +11014,12 @@ abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get exposureRoute;
   @override
   $AnnotationCopyWith<$Res> get note;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get onsetElement;
+  @override
+  $ElementCopyWith<$Res> get severityElement;
 }
 
 class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
@@ -9031,6 +11046,9 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
     Object severity = freezed,
     Object exposureRoute = freezed,
     Object note = freezed,
+    Object descriptionElement = freezed,
+    Object onsetElement = freezed,
+    Object severityElement = freezed,
   }) {
     return _then(_AllergyIntoleranceReaction(
       id: id == freezed ? _value.id : id as Id,
@@ -9058,6 +11076,15 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
           ? _value.exposureRoute
           : exposureRoute as CodeableConcept,
       note: note == freezed ? _value.note : note as Annotation,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      onsetElement: onsetElement == freezed
+          ? _value.onsetElement
+          : onsetElement as Element,
+      severityElement: severityElement == freezed
+          ? _value.severityElement
+          : severityElement as Element,
     ));
   }
 }
@@ -9075,7 +11102,10 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
       this.onset,
       @JsonKey(unknownEnumValue: ReactionSeverity.unknown) this.severity,
       this.exposureRoute,
-      this.note})
+      this.note,
+      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_onset') this.onsetElement,
+      @JsonKey(name: '_severity') this.severityElement})
       : assert(manifestation != null);
 
   factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
@@ -9107,10 +11137,19 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
   final CodeableConcept exposureRoute;
   @override
   final Annotation note;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_onset')
+  final Element onsetElement;
+  @override
+  @JsonKey(name: '_severity')
+  final Element severityElement;
 
   @override
   String toString() {
-    return 'AllergyIntoleranceReaction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, substance: $substance, certainty: $certainty, manifestation: $manifestation, description: $description, onset: $onset, severity: $severity, exposureRoute: $exposureRoute, note: $note)';
+    return 'AllergyIntoleranceReaction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, substance: $substance, certainty: $certainty, manifestation: $manifestation, description: $description, onset: $onset, severity: $severity, exposureRoute: $exposureRoute, note: $note, descriptionElement: $descriptionElement, onsetElement: $onsetElement, severityElement: $severityElement)';
   }
 
   @override
@@ -9146,7 +11185,16 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
                 const DeepCollectionEquality()
                     .equals(other.exposureRoute, exposureRoute)) &&
             (identical(other.note, note) ||
-                const DeepCollectionEquality().equals(other.note, note)));
+                const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.onsetElement, onsetElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.onsetElement, onsetElement)) &&
+            (identical(other.severityElement, severityElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.severityElement, severityElement)));
   }
 
   @override
@@ -9162,7 +11210,10 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
       const DeepCollectionEquality().hash(onset) ^
       const DeepCollectionEquality().hash(severity) ^
       const DeepCollectionEquality().hash(exposureRoute) ^
-      const DeepCollectionEquality().hash(note);
+      const DeepCollectionEquality().hash(note) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(onsetElement) ^
+      const DeepCollectionEquality().hash(severityElement);
 
   @override
   _$AllergyIntoleranceReactionCopyWith<_AllergyIntoleranceReaction>
@@ -9193,7 +11244,13 @@ abstract class _AllergyIntoleranceReaction
       @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
           ReactionSeverity severity,
       CodeableConcept exposureRoute,
-      Annotation note}) = _$_AllergyIntoleranceReaction;
+      Annotation note,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_onset')
+          Element onsetElement,
+      @JsonKey(name: '_severity')
+          Element severityElement}) = _$_AllergyIntoleranceReaction;
 
   factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntoleranceReaction.fromJson;
@@ -9224,6 +11281,15 @@ abstract class _AllergyIntoleranceReaction
   CodeableConcept get exposureRoute;
   @override
   Annotation get note;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_onset')
+  Element get onsetElement;
+  @override
+  @JsonKey(name: '_severity')
+  Element get severityElement;
   @override
   _$AllergyIntoleranceReactionCopyWith<_AllergyIntoleranceReaction>
       get copyWith;
