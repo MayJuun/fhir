@@ -266,6 +266,7 @@ abstract class MedicationOrder with _$MedicationOrder implements Resource {
     MedicationOrderDispenseRequest dispenseRequest,
     MedicationOrderSubstitution substitution,
     Reference priorPrescription,
+    @JsonKey(name: '_id') Element idElement,
   }) = _MedicationOrder;
 
   factory MedicationOrder.fromJson(Map<String, dynamic> json) =>
@@ -422,6 +423,7 @@ abstract class MedicationProduct with _$MedicationProduct {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept form,
     List<MedicationIngredient> ingredient,
     List<MedicationBatch> batch,
@@ -437,6 +439,7 @@ abstract class MedicationPackage with _$MedicationPackage {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept container,
     List<MedicationContent> content,
   }) = _MedicationPackage;

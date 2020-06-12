@@ -5694,7 +5694,9 @@ class _$ClaimResponseTearOff {
       @JsonKey(name: '_outcome')
           Element outcomeElement,
       @JsonKey(name: '_disposition')
-          Element dispositionElement}) {
+          Element dispositionElement,
+      @JsonKey(name: '_paymentDate')
+          Element paymentDateElement}) {
     return _ClaimResponse(
       resourceType: resourceType,
       id: id,
@@ -5736,6 +5738,7 @@ class _$ClaimResponseTearOff {
       createdElement: createdElement,
       outcomeElement: outcomeElement,
       dispositionElement: dispositionElement,
+      paymentDateElement: paymentDateElement,
     );
   }
 }
@@ -5792,6 +5795,8 @@ mixin _$ClaimResponse {
   Element get outcomeElement;
   @JsonKey(name: '_disposition')
   Element get dispositionElement;
+  @JsonKey(name: '_paymentDate')
+  Element get paymentDateElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseCopyWith<ClaimResponse> get copyWith;
@@ -5849,7 +5854,9 @@ abstract class $ClaimResponseCopyWith<$Res> {
       @JsonKey(name: '_outcome')
           Element outcomeElement,
       @JsonKey(name: '_disposition')
-          Element dispositionElement});
+          Element dispositionElement,
+      @JsonKey(name: '_paymentDate')
+          Element paymentDateElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -5875,6 +5882,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $ElementCopyWith<$Res> get createdElement;
   $ElementCopyWith<$Res> get outcomeElement;
   $ElementCopyWith<$Res> get dispositionElement;
+  $ElementCopyWith<$Res> get paymentDateElement;
 }
 
 class _$ClaimResponseCopyWithImpl<$Res>
@@ -5927,6 +5935,7 @@ class _$ClaimResponseCopyWithImpl<$Res>
     Object createdElement = freezed,
     Object outcomeElement = freezed,
     Object dispositionElement = freezed,
+    Object paymentDateElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -6018,6 +6027,9 @@ class _$ClaimResponseCopyWithImpl<$Res>
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
           : dispositionElement as Element,
+      paymentDateElement: paymentDateElement == freezed
+          ? _value.paymentDateElement
+          : paymentDateElement as Element,
     ));
   }
 
@@ -6260,6 +6272,16 @@ class _$ClaimResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(dispositionElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get paymentDateElement {
+    if (_value.paymentDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.paymentDateElement, (value) {
+      return _then(_value.copyWith(paymentDateElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseCopyWith<$Res>
@@ -6316,7 +6338,9 @@ abstract class _$ClaimResponseCopyWith<$Res>
       @JsonKey(name: '_outcome')
           Element outcomeElement,
       @JsonKey(name: '_disposition')
-          Element dispositionElement});
+          Element dispositionElement,
+      @JsonKey(name: '_paymentDate')
+          Element paymentDateElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -6366,6 +6390,8 @@ abstract class _$ClaimResponseCopyWith<$Res>
   $ElementCopyWith<$Res> get outcomeElement;
   @override
   $ElementCopyWith<$Res> get dispositionElement;
+  @override
+  $ElementCopyWith<$Res> get paymentDateElement;
 }
 
 class __$ClaimResponseCopyWithImpl<$Res>
@@ -6420,6 +6446,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
     Object createdElement = freezed,
     Object outcomeElement = freezed,
     Object dispositionElement = freezed,
+    Object paymentDateElement = freezed,
   }) {
     return _then(_ClaimResponse(
       resourceType: resourceType == freezed
@@ -6511,6 +6538,9 @@ class __$ClaimResponseCopyWithImpl<$Res>
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
           : dispositionElement as Element,
+      paymentDateElement: paymentDateElement == freezed
+          ? _value.paymentDateElement
+          : paymentDateElement as Element,
     ));
   }
 }
@@ -6557,7 +6587,8 @@ class _$_ClaimResponse implements _ClaimResponse {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_created') this.createdElement,
       @JsonKey(name: '_outcome') this.outcomeElement,
-      @JsonKey(name: '_disposition') this.dispositionElement});
+      @JsonKey(name: '_disposition') this.dispositionElement,
+      @JsonKey(name: '_paymentDate') this.paymentDateElement});
 
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseFromJson(json);
@@ -6650,10 +6681,13 @@ class _$_ClaimResponse implements _ClaimResponse {
   @override
   @JsonKey(name: '_disposition')
   final Element dispositionElement;
+  @override
+  @JsonKey(name: '_paymentDate')
+  final Element paymentDateElement;
 
   @override
   String toString() {
-    return 'ClaimResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, outcome: $outcome, disposition: $disposition, payeeType: $payeeType, item: $item, addItem: $addItem, error: $error, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, paymentAdjustment: $paymentAdjustment, paymentAdjustmentReason: $paymentAdjustmentReason, paymentDate: $paymentDate, paymentAmount: $paymentAmount, paymentRef: $paymentRef, reserved: $reserved, form: $form, note: $note, coverage: $coverage, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, createdElement: $createdElement, outcomeElement: $outcomeElement, dispositionElement: $dispositionElement)';
+    return 'ClaimResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, outcome: $outcome, disposition: $disposition, payeeType: $payeeType, item: $item, addItem: $addItem, error: $error, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, paymentAdjustment: $paymentAdjustment, paymentAdjustmentReason: $paymentAdjustmentReason, paymentDate: $paymentDate, paymentAmount: $paymentAmount, paymentRef: $paymentRef, reserved: $reserved, form: $form, note: $note, coverage: $coverage, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, createdElement: $createdElement, outcomeElement: $outcomeElement, dispositionElement: $dispositionElement, paymentDateElement: $paymentDateElement)';
   }
 
   @override
@@ -6742,7 +6776,8 @@ class _$_ClaimResponse implements _ClaimResponse {
             (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
             (identical(other.createdElement, createdElement) || const DeepCollectionEquality().equals(other.createdElement, createdElement)) &&
             (identical(other.outcomeElement, outcomeElement) || const DeepCollectionEquality().equals(other.outcomeElement, outcomeElement)) &&
-            (identical(other.dispositionElement, dispositionElement) || const DeepCollectionEquality().equals(other.dispositionElement, dispositionElement)));
+            (identical(other.dispositionElement, dispositionElement) || const DeepCollectionEquality().equals(other.dispositionElement, dispositionElement)) &&
+            (identical(other.paymentDateElement, paymentDateElement) || const DeepCollectionEquality().equals(other.paymentDateElement, paymentDateElement)));
   }
 
   @override
@@ -6787,7 +6822,8 @@ class _$_ClaimResponse implements _ClaimResponse {
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(createdElement) ^
       const DeepCollectionEquality().hash(outcomeElement) ^
-      const DeepCollectionEquality().hash(dispositionElement);
+      const DeepCollectionEquality().hash(dispositionElement) ^
+      const DeepCollectionEquality().hash(paymentDateElement);
 
   @override
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith =>
@@ -6848,7 +6884,9 @@ abstract class _ClaimResponse implements ClaimResponse {
       @JsonKey(name: '_outcome')
           Element outcomeElement,
       @JsonKey(name: '_disposition')
-          Element dispositionElement}) = _$_ClaimResponse;
+          Element dispositionElement,
+      @JsonKey(name: '_paymentDate')
+          Element paymentDateElement}) = _$_ClaimResponse;
 
   factory _ClaimResponse.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponse.fromJson;
@@ -6941,6 +6979,9 @@ abstract class _ClaimResponse implements ClaimResponse {
   @override
   @JsonKey(name: '_disposition')
   Element get dispositionElement;
+  @override
+  @JsonKey(name: '_paymentDate')
+  Element get paymentDateElement;
   @override
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith;
 }

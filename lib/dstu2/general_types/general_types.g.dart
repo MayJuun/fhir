@@ -14,6 +14,8 @@ _$_Period _$_$_PeriodFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     start: json['start'] == null
         ? null
         : FhirDateTime.fromJson(json['start'] as String),
@@ -41,6 +43,7 @@ Map<String, dynamic> _$_$_PeriodToJson(_$_Period instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('start', instance.start?.toJson());
   writeNotNull('end', instance.end?.toJson());
   writeNotNull('_start', instance.startElement?.toJson());
@@ -253,6 +256,8 @@ _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     contentType: json['contentType'] == null
         ? null
         : Code.fromJson(json['contentType'] as String),
@@ -310,6 +315,7 @@ Map<String, dynamic> _$_$_AttachmentToJson(_$_Attachment instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('contentType', instance.contentType?.toJson());
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('data', instance.data?.toJson());
@@ -634,6 +640,9 @@ _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
     dataElement: json['_data'] == null
         ? null
         : Element.fromJson(json['_data'] as Map<String, dynamic>),
+    contentElement: json['_content'] == null
+        ? null
+        : Element.fromJson(json['_content'] as Map<String, dynamic>),
   );
 }
 
@@ -659,6 +668,7 @@ Map<String, dynamic> _$_$_SignatureToJson(_$_Signature instance) {
   writeNotNull('_targetFormat', instance.targetFormatElement?.toJson());
   writeNotNull('_sigFormat', instance.sigFormatElement?.toJson());
   writeNotNull('_data', instance.dataElement?.toJson());
+  writeNotNull('_content', instance.contentElement?.toJson());
   return val;
 }
 

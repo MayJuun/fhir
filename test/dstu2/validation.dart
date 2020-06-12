@@ -9,20 +9,44 @@ void main() async {
   var dir = Directory('./test/dstu2/dstu2_examples');
   await File('./test/dstu2/errors.txt').writeAsString('');
   var string = '';
+  int i = 0;
   for (var file in await dir.list().toList()) {
-    print(file.path.split('/').last);
+    i += 1;
+    // print('$i: ${file.path.split('/').last}');
     var contents = await File(file.path).readAsString();
-    var resource = fhir_dstu2.Resource.fromJson(json.decode(contents));
-    if (resource == null) {
-      print('null: $file');
+    var resource = json.decode(contents);
+    var name = resource['resourceType'];
+    printComments(name, resource);
+
+    //   var resource = fhir_dstu2.Resource.fromJson(json.decode(contents));
+    //   if (resource == null) {
+    //     print('null: $file');
+    //   } else {
+    //     string += await checkJsonEquality(
+    //         json.decode(contents), resource.toJson(), file.toString(), 'input');
+    //     string += await checkJsonEquality(
+    //         resource.toJson(), json.decode(contents), file.toString(), 'output');
+    //   }
+    // }
+    // writeErrorFile(string);
+  }
+}
+
+void printComments(String name, object) {
+  if (object is Map) {
+    if (object.keys.contains('fhir_comments')) {
+      print('$name.fhir_comments');
     } else {
-      await checkJsonEquality(
-          json.decode(contents), resource.toJson(), file.toString(), 'input');
-      await checkJsonEquality(
-          resource.toJson(), json.decode(contents), file.toString(), 'output');
+      object.forEach((k, v) => printComments('$name.$k', v));
+    }
+  } else if (object is List) {
+    if (object.contains('fhir_comments')) {
+      print('$name.fhir_comments');
+      for (var i = 0; i < object.length; i++) {
+        printComments('$name.${object[i]}', object[i]);
+      }
     }
   }
-  writeErrorFile(string);
 }
 
 Future<String> checkJsonEquality(Map<String, dynamic> input,

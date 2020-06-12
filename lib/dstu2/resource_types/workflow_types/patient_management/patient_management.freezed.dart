@@ -1760,7 +1760,9 @@ class _$EncounterTearOff {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_status')
-          Element statusElement}) {
+          Element statusElement,
+      @JsonKey(name: '_class')
+          Element classElement}) {
     return _Encounter(
       resourceType: resourceType,
       id: id,
@@ -1793,6 +1795,7 @@ class _$EncounterTearOff {
       implicitRulesElement: implicitRulesElement,
       languageElement: languageElement,
       statusElement: statusElement,
+      classElement: classElement,
     );
   }
 }
@@ -1839,6 +1842,8 @@ mixin _$Encounter {
   Element get languageElement;
   @JsonKey(name: '_status')
   Element get statusElement;
+  @JsonKey(name: '_class')
+  Element get classElement;
 
   Map<String, dynamic> toJson();
   $EncounterCopyWith<Encounter> get copyWith;
@@ -1885,7 +1890,9 @@ abstract class $EncounterCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_status')
-          Element statusElement});
+          Element statusElement,
+      @JsonKey(name: '_class')
+          Element classElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1901,6 +1908,7 @@ abstract class $EncounterCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get classElement;
 }
 
 class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
@@ -1943,6 +1951,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object statusElement = freezed,
+    Object classElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2013,6 +2022,9 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
+      classElement: classElement == freezed
+          ? _value.classElement
+          : classElement as Element,
     ));
   }
 
@@ -2156,6 +2168,16 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       return _then(_value.copyWith(statusElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get classElement {
+    if (_value.classElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.classElement, (value) {
+      return _then(_value.copyWith(classElement: value));
+    });
+  }
 }
 
 abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
@@ -2201,7 +2223,9 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_status')
-          Element statusElement});
+          Element statusElement,
+      @JsonKey(name: '_class')
+          Element classElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2231,6 +2255,8 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   @override
   $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get classElement;
 }
 
 class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
@@ -2274,6 +2300,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object statusElement = freezed,
+    Object classElement = freezed,
   }) {
     return _then(_Encounter(
       resourceType: resourceType == freezed
@@ -2344,6 +2371,9 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element,
+      classElement: classElement == freezed
+          ? _value.classElement
+          : classElement as Element,
     ));
   }
 }
@@ -2389,7 +2419,9 @@ class _$_Encounter implements _Encounter {
       @JsonKey(name: '_language')
           this.languageElement,
       @JsonKey(name: '_status')
-          this.statusElement})
+          this.statusElement,
+      @JsonKey(name: '_class')
+          this.classElement})
       : assert(status != null);
 
   factory _$_Encounter.fromJson(Map<String, dynamic> json) =>
@@ -2464,10 +2496,13 @@ class _$_Encounter implements _Encounter {
   @override
   @JsonKey(name: '_status')
   final Element statusElement;
+  @override
+  @JsonKey(name: '_class')
+  final Element classElement;
 
   @override
   String toString() {
-    return 'Encounter(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusHistory: $statusHistory, class_: $class_, type: $type, priority: $priority, patient: $patient, episodeOfCare: $episodeOfCare, incomingReferral: $incomingReferral, participant: $participant, appointment: $appointment, period: $period, length: $length, reason: $reason, indication: $indication, hospitalization: $hospitalization, location: $location, serviceProvider: $serviceProvider, partOf: $partOf, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement)';
+    return 'Encounter(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusHistory: $statusHistory, class_: $class_, type: $type, priority: $priority, patient: $patient, episodeOfCare: $episodeOfCare, incomingReferral: $incomingReferral, participant: $participant, appointment: $appointment, period: $period, length: $length, reason: $reason, indication: $indication, hospitalization: $hospitalization, location: $location, serviceProvider: $serviceProvider, partOf: $partOf, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, classElement: $classElement)';
   }
 
   @override
@@ -2547,7 +2582,8 @@ class _$_Encounter implements _Encounter {
             (identical(other.partOf, partOf) || const DeepCollectionEquality().equals(other.partOf, partOf)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)));
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.classElement, classElement) || const DeepCollectionEquality().equals(other.classElement, classElement)));
   }
 
   @override
@@ -2583,7 +2619,8 @@ class _$_Encounter implements _Encounter {
       const DeepCollectionEquality().hash(partOf) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(statusElement);
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(classElement);
 
   @override
   _$EncounterCopyWith<_Encounter> get copyWith =>
@@ -2635,7 +2672,9 @@ abstract class _Encounter implements Encounter {
       @JsonKey(name: '_language')
           Element languageElement,
       @JsonKey(name: '_status')
-          Element statusElement}) = _$_Encounter;
+          Element statusElement,
+      @JsonKey(name: '_class')
+          Element classElement}) = _$_Encounter;
 
   factory _Encounter.fromJson(Map<String, dynamic> json) =
       _$_Encounter.fromJson;
@@ -2709,6 +2748,9 @@ abstract class _Encounter implements Encounter {
   @override
   @JsonKey(name: '_status')
   Element get statusElement;
+  @override
+  @JsonKey(name: '_class')
+  Element get classElement;
   @override
   _$EncounterCopyWith<_Encounter> get copyWith;
 }
@@ -5022,6 +5064,7 @@ class _$EncounterHospitalizationTearOff {
   _EncounterHospitalization call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
@@ -5037,6 +5080,7 @@ class _$EncounterHospitalizationTearOff {
     return _EncounterHospitalization(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       modifierExtension: modifierExtension,
       preAdmissionIdentifier: preAdmissionIdentifier,
       origin: origin,
@@ -5060,6 +5104,8 @@ mixin _$EncounterHospitalization {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   FhirExtension get modifierExtension;
   Identifier get preAdmissionIdentifier;
   Reference get origin;
@@ -5084,6 +5130,7 @@ abstract class $EncounterHospitalizationCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
@@ -5118,6 +5165,7 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object modifierExtension = freezed,
     Object preAdmissionIdentifier = freezed,
     Object origin = freezed,
@@ -5136,6 +5184,9 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -5253,6 +5304,7 @@ abstract class _$EncounterHospitalizationCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
@@ -5297,6 +5349,7 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object modifierExtension = freezed,
     Object preAdmissionIdentifier = freezed,
     Object origin = freezed,
@@ -5315,6 +5368,9 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -5358,6 +5414,7 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
   const _$_EncounterHospitalization(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.modifierExtension,
       this.preAdmissionIdentifier,
       this.origin,
@@ -5379,6 +5436,9 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -5406,7 +5466,7 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
 
   @override
   String toString() {
-    return 'EncounterHospitalization(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, preAdmissionIdentifier: $preAdmissionIdentifier, origin: $origin, admitSource: $admitSource, admittingDiagnosis: $admittingDiagnosis, reAdmission: $reAdmission, dietPreference: $dietPreference, specialCourtesy: $specialCourtesy, specialArrangement: $specialArrangement, destination: $destination, dischargeDisposition: $dischargeDisposition, dischargeDiagnosis: $dischargeDiagnosis)';
+    return 'EncounterHospitalization(id: $id, extension_: $extension_, fhirComments: $fhirComments, modifierExtension: $modifierExtension, preAdmissionIdentifier: $preAdmissionIdentifier, origin: $origin, admitSource: $admitSource, admittingDiagnosis: $admittingDiagnosis, reAdmission: $reAdmission, dietPreference: $dietPreference, specialCourtesy: $specialCourtesy, specialArrangement: $specialArrangement, destination: $destination, dischargeDisposition: $dischargeDisposition, dischargeDiagnosis: $dischargeDiagnosis)';
   }
 
   @override
@@ -5418,6 +5478,9 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -5460,6 +5523,7 @@ class _$_EncounterHospitalization implements _EncounterHospitalization {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(preAdmissionIdentifier) ^
       const DeepCollectionEquality().hash(origin) ^
@@ -5488,6 +5552,7 @@ abstract class _EncounterHospitalization implements EncounterHospitalization {
   const factory _EncounterHospitalization(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
@@ -5509,6 +5574,9 @@ abstract class _EncounterHospitalization implements EncounterHospitalization {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   FhirExtension get modifierExtension;
   @override

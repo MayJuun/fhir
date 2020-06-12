@@ -317,6 +317,8 @@ _$_ValueSetConcept _$_$_ValueSetConceptFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     abstract_:
         json['abstract'] == null ? null : Boolean.fromJson(json['abstract']),
@@ -355,6 +357,7 @@ Map<String, dynamic> _$_$_ValueSetConceptToJson(_$_ValueSetConcept instance) {
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('abstract', instance.abstract_?.toJson());
   writeNotNull('display', instance.display);

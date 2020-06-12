@@ -100,6 +100,12 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
             ? null
             : ConformanceDocument.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    fhirVersionElement: json['_fhirVersion'] == null
+        ? null
+        : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
     acceptUnknownElement: json['_acceptUnknown'] == null
         ? null
         : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
@@ -151,6 +157,8 @@ Map<String, dynamic> _$_$_ConformanceToJson(_$_Conformance instance) {
       'messaging', instance.messaging?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'document', instance.document?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
   writeNotNull('_acceptUnknown', instance.acceptUnknownElement?.toJson());
   return val;
 }
@@ -652,6 +660,9 @@ _$_ConformanceRest _$_$_ConformanceRestFromJson(Map<String, dynamic> json) {
     compartment: (json['compartment'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
+    modeElement: json['_mode'] == null
+        ? null
+        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
   );
 }
 
@@ -684,6 +695,7 @@ Map<String, dynamic> _$_$_ConformanceRestToJson(_$_ConformanceRest instance) {
       'operation', instance.operation?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'compartment', instance.compartment?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_mode', instance.modeElement?.toJson());
   return val;
 }
 
@@ -715,6 +727,8 @@ _$_ConformanceMessaging _$_$_ConformanceMessagingFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     endpoint: (json['endpoint'] as List)
         ?.map((e) => e == null
             ? null
@@ -746,6 +760,7 @@ Map<String, dynamic> _$_$_ConformanceMessagingToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
   writeNotNull('reliableCache', instance.reliableCache?.toJson());
@@ -768,6 +783,8 @@ _$_ConformanceDocument _$_$_ConformanceDocumentFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     mode: _$enumDecodeNullable(_$DocumentModeEnumMap, json['mode'],
         unknownValue: DocumentMode.unknown),
     documentation: json['documentation'] as String,
@@ -791,6 +808,7 @@ Map<String, dynamic> _$_$_ConformanceDocumentToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('mode', _$DocumentModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation);
   writeNotNull('profile', instance.profile?.toJson());
@@ -1061,6 +1079,15 @@ _$_ConformanceResource _$_$_ConformanceResourceFromJson(
             ? null
             : ConformanceSearchParam.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    updateCreateElement: json['_updateCreate'] == null
+        ? null
+        : Element.fromJson(json['_updateCreate'] as Map<String, dynamic>),
+    conditionalCreateElement: json['_conditionalCreate'] == null
+        ? null
+        : Element.fromJson(json['_conditionalCreate'] as Map<String, dynamic>),
+    conditionalDeleteElement: json['_conditionalDelete'] == null
+        ? null
+        : Element.fromJson(json['_conditionalDelete'] as Map<String, dynamic>),
   );
 }
 
@@ -1094,6 +1121,11 @@ Map<String, dynamic> _$_$_ConformanceResourceToJson(
   writeNotNull('searchRevInclude', instance.searchRevInclude);
   writeNotNull(
       'searchParam', instance.searchParam?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_updateCreate', instance.updateCreateElement?.toJson());
+  writeNotNull(
+      '_conditionalCreate', instance.conditionalCreateElement?.toJson());
+  writeNotNull(
+      '_conditionalDelete', instance.conditionalDeleteElement?.toJson());
   return val;
 }
 
@@ -1221,6 +1253,9 @@ _$_ConformanceEndpoint _$_$_ConformanceEndpointFromJson(
     address: json['address'] == null
         ? null
         : FhirUri.fromJson(json['address'] as String),
+    addressElement: json['_address'] == null
+        ? null
+        : Element.fromJson(json['_address'] as Map<String, dynamic>),
   );
 }
 
@@ -1240,6 +1275,7 @@ Map<String, dynamic> _$_$_ConformanceEndpointToJson(
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('protocol', instance.protocol?.toJson());
   writeNotNull('address', instance.address?.toJson());
+  writeNotNull('_address', instance.addressElement?.toJson());
   return val;
 }
 
@@ -1273,6 +1309,9 @@ _$_ConformanceEvent _$_$_ConformanceEventFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['response'] as Map<String, dynamic>),
     documentation: json['documentation'] as String,
+    modeElement: json['_mode'] == null
+        ? null
+        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
   );
 }
 
@@ -1296,6 +1335,7 @@ Map<String, dynamic> _$_$_ConformanceEventToJson(_$_ConformanceEvent instance) {
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());
   writeNotNull('documentation', instance.documentation);
+  writeNotNull('_mode', instance.modeElement?.toJson());
   return val;
 }
 
@@ -1382,6 +1422,9 @@ _$_ConformanceCertificate _$_$_ConformanceCertificateFromJson(
     blob: json['blob'] == null
         ? null
         : Base64Binary.fromJson(json['blob'] as String),
+    blobElement: json['_blob'] == null
+        ? null
+        : Element.fromJson(json['_blob'] as Map<String, dynamic>),
   );
 }
 
@@ -1401,6 +1444,7 @@ Map<String, dynamic> _$_$_ConformanceCertificateToJson(
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('blob', instance.blob?.toJson());
+  writeNotNull('_blob', instance.blobElement?.toJson());
   return val;
 }
 

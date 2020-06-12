@@ -962,6 +962,9 @@ _$_MedicationOrder _$_$_MedicationOrderFromJson(Map<String, dynamic> json) {
     priorPrescription: json['priorPrescription'] == null
         ? null
         : Reference.fromJson(json['priorPrescription'] as Map<String, dynamic>),
+    idElement: json['_id'] == null
+        ? null
+        : Element.fromJson(json['_id'] as Map<String, dynamic>),
   );
 }
 
@@ -1006,6 +1009,7 @@ Map<String, dynamic> _$_$_MedicationOrderToJson(_$_MedicationOrder instance) {
   writeNotNull('dispenseRequest', instance.dispenseRequest?.toJson());
   writeNotNull('substitution', instance.substitution?.toJson());
   writeNotNull('priorPrescription', instance.priorPrescription?.toJson());
+  writeNotNull('_id', instance.idElement?.toJson());
   return val;
 }
 
@@ -1506,6 +1510,8 @@ _$_MedicationProduct _$_$_MedicationProductFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     form: json['form'] == null
         ? null
         : CodeableConcept.fromJson(json['form'] as Map<String, dynamic>),
@@ -1536,6 +1542,7 @@ Map<String, dynamic> _$_$_MedicationProductToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('form', instance.form?.toJson());
   writeNotNull(
       'ingredient', instance.ingredient?.map((e) => e?.toJson())?.toList());
@@ -1555,6 +1562,8 @@ _$_MedicationPackage _$_$_MedicationPackageFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     container: json['container'] == null
         ? null
         : CodeableConcept.fromJson(json['container'] as Map<String, dynamic>),
@@ -1580,6 +1589,7 @@ Map<String, dynamic> _$_$_MedicationPackageToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('container', instance.container?.toJson());
   writeNotNull('content', instance.content?.map((e) => e?.toJson())?.toList());
   return val;

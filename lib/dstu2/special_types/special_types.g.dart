@@ -183,6 +183,8 @@ _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     versionId: json['versionId'] == null
         ? null
         : Id.fromJson(json['versionId'] as String),
@@ -221,6 +223,7 @@ Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('versionId', instance.versionId?.toJson());
   writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e?.toJson())?.toList());

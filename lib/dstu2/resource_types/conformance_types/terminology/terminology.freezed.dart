@@ -1838,6 +1838,7 @@ class _$ValueSetConceptTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) Code code,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
@@ -1850,6 +1851,7 @@ class _$ValueSetConceptTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       code: code,
       abstract_: abstract_,
       display: display,
@@ -1870,6 +1872,8 @@ mixin _$ValueSetConcept {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   Code get code;
   @JsonKey(name: 'abstract')
@@ -1895,6 +1899,7 @@ abstract class $ValueSetConceptCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Code code,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
@@ -1921,6 +1926,7 @@ class _$ValueSetConceptCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object abstract_ = freezed,
     Object display = freezed,
@@ -1938,6 +1944,9 @@ class _$ValueSetConceptCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as Code,
       abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       display: display == freezed ? _value.display : display as String,
@@ -1988,6 +1997,7 @@ abstract class _$ValueSetConceptCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Code code,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
@@ -2018,6 +2028,7 @@ class __$ValueSetConceptCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object abstract_ = freezed,
     Object display = freezed,
@@ -2035,6 +2046,9 @@ class __$ValueSetConceptCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as Code,
       abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       display: display == freezed ? _value.display : display as String,
@@ -2061,6 +2075,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.code,
       @JsonKey(name: 'abstract') this.abstract_,
       this.display,
@@ -2081,6 +2096,9 @@ class _$_ValueSetConcept implements _ValueSetConcept {
   final List<FhirExtension> extension_;
   @override
   final List<FhirExtension> modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   @JsonKey(required: true)
   final Code code;
@@ -2104,7 +2122,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
 
   @override
   String toString() {
-    return 'ValueSetConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, abstract_: $abstract_, display: $display, definition: $definition, designation: $designation, concept: $concept, codeElement: $codeElement, displayElement: $displayElement)';
+    return 'ValueSetConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, code: $code, abstract_: $abstract_, display: $display, definition: $definition, designation: $designation, concept: $concept, codeElement: $codeElement, displayElement: $displayElement)';
   }
 
   @override
@@ -2119,6 +2137,9 @@ class _$_ValueSetConcept implements _ValueSetConcept {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.abstract_, abstract_) ||
@@ -2150,6 +2171,7 @@ class _$_ValueSetConcept implements _ValueSetConcept {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(abstract_) ^
       const DeepCollectionEquality().hash(display) ^
@@ -2174,6 +2196,7 @@ abstract class _ValueSetConcept implements ValueSetConcept {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) Code code,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String display,
@@ -2193,6 +2216,9 @@ abstract class _ValueSetConcept implements ValueSetConcept {
   List<FhirExtension> get extension_;
   @override
   List<FhirExtension> get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   Code get code;

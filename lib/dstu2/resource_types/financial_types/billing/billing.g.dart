@@ -1015,6 +1015,9 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
     dispositionElement: json['_disposition'] == null
         ? null
         : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
+    paymentDateElement: json['_paymentDate'] == null
+        ? null
+        : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
   );
 }
 
@@ -1072,6 +1075,7 @@ Map<String, dynamic> _$_$_ClaimResponseToJson(_$_ClaimResponse instance) {
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
+  writeNotNull('_paymentDate', instance.paymentDateElement?.toJson());
   return val;
 }
 

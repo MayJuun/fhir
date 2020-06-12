@@ -18,6 +18,7 @@ class _$PeriodTearOff {
   _Period call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirDateTime start,
       FhirDateTime end,
       @JsonKey(name: '_start') Element startElement,
@@ -25,6 +26,7 @@ class _$PeriodTearOff {
     return _Period(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       start: start,
       end: end,
       startElement: startElement,
@@ -40,6 +42,8 @@ mixin _$Period {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   FhirDateTime get start;
   FhirDateTime get end;
   @JsonKey(name: '_start')
@@ -57,6 +61,7 @@ abstract class $PeriodCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirDateTime start,
       FhirDateTime end,
       @JsonKey(name: '_start') Element startElement,
@@ -77,6 +82,7 @@ class _$PeriodCopyWithImpl<$Res> implements $PeriodCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object start = freezed,
     Object end = freezed,
     Object startElement = freezed,
@@ -87,6 +93,9 @@ class _$PeriodCopyWithImpl<$Res> implements $PeriodCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       start: start == freezed ? _value.start : start as FhirDateTime,
       end: end == freezed ? _value.end : end as FhirDateTime,
       startElement: startElement == freezed
@@ -125,6 +134,7 @@ abstract class _$PeriodCopyWith<$Res> implements $PeriodCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirDateTime start,
       FhirDateTime end,
       @JsonKey(name: '_start') Element startElement,
@@ -148,6 +158,7 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object start = freezed,
     Object end = freezed,
     Object startElement = freezed,
@@ -158,6 +169,9 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       start: start == freezed ? _value.start : start as FhirDateTime,
       end: end == freezed ? _value.end : end as FhirDateTime,
       startElement: startElement == freezed
@@ -174,6 +188,7 @@ class _$_Period implements _Period {
   const _$_Period(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.start,
       this.end,
       @JsonKey(name: '_start') this.startElement,
@@ -188,6 +203,9 @@ class _$_Period implements _Period {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final FhirDateTime start;
   @override
   final FhirDateTime end;
@@ -200,7 +218,7 @@ class _$_Period implements _Period {
 
   @override
   String toString() {
-    return 'Period(id: $id, extension_: $extension_, start: $start, end: $end, startElement: $startElement, endElement: $endElement)';
+    return 'Period(id: $id, extension_: $extension_, fhirComments: $fhirComments, start: $start, end: $end, startElement: $startElement, endElement: $endElement)';
   }
 
   @override
@@ -212,6 +230,9 @@ class _$_Period implements _Period {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.start, start) ||
                 const DeepCollectionEquality().equals(other.start, start)) &&
             (identical(other.end, end) ||
@@ -229,6 +250,7 @@ class _$_Period implements _Period {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(start) ^
       const DeepCollectionEquality().hash(end) ^
       const DeepCollectionEquality().hash(startElement) ^
@@ -248,6 +270,7 @@ abstract class _Period implements Period {
   const factory _Period(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirDateTime start,
       FhirDateTime end,
       @JsonKey(name: '_start') Element startElement,
@@ -260,6 +283,9 @@ abstract class _Period implements Period {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   FhirDateTime get start;
   @override
@@ -1441,6 +1467,7 @@ class _$AttachmentTearOff {
   _Attachment call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -1460,6 +1487,7 @@ class _$AttachmentTearOff {
     return _Attachment(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       contentType: contentType,
       language: language,
       data: data,
@@ -1487,6 +1515,8 @@ mixin _$Attachment {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   Code get contentType;
   Code get language;
   Base64Binary get data;
@@ -1523,6 +1553,7 @@ abstract class $AttachmentCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -1561,6 +1592,7 @@ class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object contentType = freezed,
     Object language = freezed,
     Object data = freezed,
@@ -1583,6 +1615,9 @@ class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code,
       language: language == freezed ? _value.language : language as Code,
@@ -1705,6 +1740,7 @@ abstract class _$AttachmentCopyWith<$Res> implements $AttachmentCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -1753,6 +1789,7 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object contentType = freezed,
     Object language = freezed,
     Object data = freezed,
@@ -1775,6 +1812,9 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code,
       language: language == freezed ? _value.language : language as Code,
@@ -1814,6 +1854,7 @@ class _$_Attachment implements _Attachment {
   const _$_Attachment(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.contentType,
       this.language,
       this.data,
@@ -1839,6 +1880,9 @@ class _$_Attachment implements _Attachment {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final Code contentType;
   @override
@@ -1882,7 +1926,7 @@ class _$_Attachment implements _Attachment {
 
   @override
   String toString() {
-    return 'Attachment(id: $id, extension_: $extension_, contentType: $contentType, language: $language, data: $data, url: $url, size: $size, hash: $hash, title: $title, creation: $creation, contentTypeElement: $contentTypeElement, languageElement: $languageElement, dataElement: $dataElement, urlElement: $urlElement, sizeElement: $sizeElement, hashElement: $hashElement, titleElement: $titleElement, creationElement: $creationElement)';
+    return 'Attachment(id: $id, extension_: $extension_, fhirComments: $fhirComments, contentType: $contentType, language: $language, data: $data, url: $url, size: $size, hash: $hash, title: $title, creation: $creation, contentTypeElement: $contentTypeElement, languageElement: $languageElement, dataElement: $dataElement, urlElement: $urlElement, sizeElement: $sizeElement, hashElement: $hashElement, titleElement: $titleElement, creationElement: $creationElement)';
   }
 
   @override
@@ -1894,6 +1938,9 @@ class _$_Attachment implements _Attachment {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.contentType, contentType) ||
                 const DeepCollectionEquality()
                     .equals(other.contentType, contentType)) &&
@@ -1944,6 +1991,7 @@ class _$_Attachment implements _Attachment {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(contentType) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(data) ^
@@ -1975,6 +2023,7 @@ abstract class _Attachment implements Attachment {
   const factory _Attachment(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Code contentType,
       Code language,
       Base64Binary data,
@@ -2000,6 +2049,9 @@ abstract class _Attachment implements Attachment {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   Code get contentType;
   @override
@@ -3894,7 +3946,8 @@ class _$SignatureTearOff {
       @JsonKey(name: '_when') Element whenElement,
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
-      @JsonKey(name: '_data') Element dataElement}) {
+      @JsonKey(name: '_data') Element dataElement,
+      @JsonKey(name: '_content') Element contentElement}) {
     return _Signature(
       id: id,
       extension_: extension_,
@@ -3908,6 +3961,7 @@ class _$SignatureTearOff {
       targetFormatElement: targetFormatElement,
       sigFormatElement: sigFormatElement,
       dataElement: dataElement,
+      contentElement: contentElement,
     );
   }
 }
@@ -3937,6 +3991,8 @@ mixin _$Signature {
   Element get sigFormatElement;
   @JsonKey(name: '_data')
   Element get dataElement;
+  @JsonKey(name: '_content')
+  Element get contentElement;
 
   Map<String, dynamic> toJson();
   $SignatureCopyWith<Signature> get copyWith;
@@ -3957,13 +4013,15 @@ abstract class $SignatureCopyWith<$Res> {
       @JsonKey(name: '_when') Element whenElement,
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
-      @JsonKey(name: '_data') Element dataElement});
+      @JsonKey(name: '_data') Element dataElement,
+      @JsonKey(name: '_content') Element contentElement});
 
   $ReferenceCopyWith<$Res> get whoReference;
   $ElementCopyWith<$Res> get whenElement;
   $ElementCopyWith<$Res> get targetFormatElement;
   $ElementCopyWith<$Res> get sigFormatElement;
   $ElementCopyWith<$Res> get dataElement;
+  $ElementCopyWith<$Res> get contentElement;
 }
 
 class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
@@ -3987,6 +4045,7 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
     Object targetFormatElement = freezed,
     Object sigFormatElement = freezed,
     Object dataElement = freezed,
+    Object contentElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -4012,6 +4071,9 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
           : sigFormatElement as Element,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
+      contentElement: contentElement == freezed
+          ? _value.contentElement
+          : contentElement as Element,
     ));
   }
 
@@ -4064,6 +4126,16 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
       return _then(_value.copyWith(dataElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get contentElement {
+    if (_value.contentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.contentElement, (value) {
+      return _then(_value.copyWith(contentElement: value));
+    });
+  }
 }
 
 abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
@@ -4083,7 +4155,8 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
       @JsonKey(name: '_when') Element whenElement,
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
-      @JsonKey(name: '_data') Element dataElement});
+      @JsonKey(name: '_data') Element dataElement,
+      @JsonKey(name: '_content') Element contentElement});
 
   @override
   $ReferenceCopyWith<$Res> get whoReference;
@@ -4095,6 +4168,8 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
   $ElementCopyWith<$Res> get sigFormatElement;
   @override
   $ElementCopyWith<$Res> get dataElement;
+  @override
+  $ElementCopyWith<$Res> get contentElement;
 }
 
 class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
@@ -4119,6 +4194,7 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
     Object targetFormatElement = freezed,
     Object sigFormatElement = freezed,
     Object dataElement = freezed,
+    Object contentElement = freezed,
   }) {
     return _then(_Signature(
       id: id == freezed ? _value.id : id as Id,
@@ -4144,6 +4220,9 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
           : sigFormatElement as Element,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
+      contentElement: contentElement == freezed
+          ? _value.contentElement
+          : contentElement as Element,
     ));
   }
 }
@@ -4162,7 +4241,8 @@ class _$_Signature implements _Signature {
       @JsonKey(name: '_when') this.whenElement,
       @JsonKey(name: '_targetFormat') this.targetFormatElement,
       @JsonKey(name: '_sigFormat') this.sigFormatElement,
-      @JsonKey(name: '_data') this.dataElement})
+      @JsonKey(name: '_data') this.dataElement,
+      @JsonKey(name: '_content') this.contentElement})
       : assert(type != null),
         assert(when != null),
         assert(contentType != null),
@@ -4204,10 +4284,13 @@ class _$_Signature implements _Signature {
   @override
   @JsonKey(name: '_data')
   final Element dataElement;
+  @override
+  @JsonKey(name: '_content')
+  final Element contentElement;
 
   @override
   String toString() {
-    return 'Signature(id: $id, extension_: $extension_, type: $type, when: $when, whoUri: $whoUri, whoReference: $whoReference, contentType: $contentType, blob: $blob, whenElement: $whenElement, targetFormatElement: $targetFormatElement, sigFormatElement: $sigFormatElement, dataElement: $dataElement)';
+    return 'Signature(id: $id, extension_: $extension_, type: $type, when: $when, whoUri: $whoUri, whoReference: $whoReference, contentType: $contentType, blob: $blob, whenElement: $whenElement, targetFormatElement: $targetFormatElement, sigFormatElement: $sigFormatElement, dataElement: $dataElement, contentElement: $contentElement)';
   }
 
   @override
@@ -4244,7 +4327,10 @@ class _$_Signature implements _Signature {
                     .equals(other.sigFormatElement, sigFormatElement)) &&
             (identical(other.dataElement, dataElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.dataElement, dataElement)));
+                    .equals(other.dataElement, dataElement)) &&
+            (identical(other.contentElement, contentElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.contentElement, contentElement)));
   }
 
   @override
@@ -4261,7 +4347,8 @@ class _$_Signature implements _Signature {
       const DeepCollectionEquality().hash(whenElement) ^
       const DeepCollectionEquality().hash(targetFormatElement) ^
       const DeepCollectionEquality().hash(sigFormatElement) ^
-      const DeepCollectionEquality().hash(dataElement);
+      const DeepCollectionEquality().hash(dataElement) ^
+      const DeepCollectionEquality().hash(contentElement);
 
   @override
   _$SignatureCopyWith<_Signature> get copyWith =>
@@ -4286,7 +4373,8 @@ abstract class _Signature implements Signature {
       @JsonKey(name: '_when') Element whenElement,
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
-      @JsonKey(name: '_data') Element dataElement}) = _$_Signature;
+      @JsonKey(name: '_data') Element dataElement,
+      @JsonKey(name: '_content') Element contentElement}) = _$_Signature;
 
   factory _Signature.fromJson(Map<String, dynamic> json) =
       _$_Signature.fromJson;
@@ -4324,6 +4412,9 @@ abstract class _Signature implements Signature {
   @override
   @JsonKey(name: '_data')
   Element get dataElement;
+  @override
+  @JsonKey(name: '_content')
+  Element get contentElement;
   @override
   _$SignatureCopyWith<_Signature> get copyWith;
 }

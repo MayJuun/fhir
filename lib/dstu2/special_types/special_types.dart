@@ -59,6 +59,7 @@ abstract class Meta with _$Meta {
   const factory Meta({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Id versionId,
     Instant lastUpdated,
     List<FhirUri> profile,

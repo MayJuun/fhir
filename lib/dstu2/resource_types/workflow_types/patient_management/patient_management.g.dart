@@ -428,6 +428,9 @@ _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    classElement: json['_class'] == null
+        ? null
+        : Element.fromJson(json['_class'] as Map<String, dynamic>),
   );
 }
 
@@ -480,6 +483,7 @@ Map<String, dynamic> _$_$_EncounterToJson(_$_Encounter instance) {
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_class', instance.classElement?.toJson());
   return val;
 }
 
@@ -872,6 +876,8 @@ _$_EncounterHospitalization _$_$_EncounterHospitalizationFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -935,6 +941,7 @@ Map<String, dynamic> _$_$_EncounterHospitalizationToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull(
       'preAdmissionIdentifier', instance.preAdmissionIdentifier?.toJson());

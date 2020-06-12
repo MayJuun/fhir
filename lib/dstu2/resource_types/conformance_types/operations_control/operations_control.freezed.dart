@@ -59,6 +59,10 @@ class _$ConformanceTearOff {
       List<ConformanceRest> rest,
       List<ConformanceMessaging> messaging,
       List<ConformanceDocument> document,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
       @JsonKey(name: '_acceptUnknown')
           Element acceptUnknownElement}) {
     return _Conformance(
@@ -92,6 +96,8 @@ class _$ConformanceTearOff {
       rest: rest,
       messaging: messaging,
       document: document,
+      urlElement: urlElement,
+      fhirVersionElement: fhirVersionElement,
       acceptUnknownElement: acceptUnknownElement,
     );
   }
@@ -139,6 +145,10 @@ mixin _$Conformance {
   List<ConformanceRest> get rest;
   List<ConformanceMessaging> get messaging;
   List<ConformanceDocument> get document;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_fhirVersion')
+  Element get fhirVersionElement;
   @JsonKey(name: '_acceptUnknown')
   Element get acceptUnknownElement;
 
@@ -189,6 +199,10 @@ abstract class $ConformanceCopyWith<$Res> {
       List<ConformanceRest> rest,
       List<ConformanceMessaging> messaging,
       List<ConformanceDocument> document,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
       @JsonKey(name: '_acceptUnknown')
           Element acceptUnknownElement});
 
@@ -197,6 +211,8 @@ abstract class $ConformanceCopyWith<$Res> {
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ConformanceSoftwareCopyWith<$Res> get software;
   $ConformanceImplementationCopyWith<$Res> get implementation;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get fhirVersionElement;
   $ElementCopyWith<$Res> get acceptUnknownElement;
 }
 
@@ -239,6 +255,8 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
     Object rest = freezed,
     Object messaging = freezed,
     Object document = freezed,
+    Object urlElement = freezed,
+    Object fhirVersionElement = freezed,
     Object acceptUnknownElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -300,6 +318,11 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
       document: document == freezed
           ? _value.document
           : document as List<ConformanceDocument>,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      fhirVersionElement: fhirVersionElement == freezed
+          ? _value.fhirVersionElement
+          : fhirVersionElement as Element,
       acceptUnknownElement: acceptUnknownElement == freezed
           ? _value.acceptUnknownElement
           : acceptUnknownElement as Element,
@@ -354,6 +377,26 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
     return $ConformanceImplementationCopyWith<$Res>(_value.implementation,
         (value) {
       return _then(_value.copyWith(implementation: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fhirVersionElement {
+    if (_value.fhirVersionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fhirVersionElement, (value) {
+      return _then(_value.copyWith(fhirVersionElement: value));
     });
   }
 
@@ -413,6 +456,10 @@ abstract class _$ConformanceCopyWith<$Res>
       List<ConformanceRest> rest,
       List<ConformanceMessaging> messaging,
       List<ConformanceDocument> document,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
       @JsonKey(name: '_acceptUnknown')
           Element acceptUnknownElement});
 
@@ -426,6 +473,10 @@ abstract class _$ConformanceCopyWith<$Res>
   $ConformanceSoftwareCopyWith<$Res> get software;
   @override
   $ConformanceImplementationCopyWith<$Res> get implementation;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get fhirVersionElement;
   @override
   $ElementCopyWith<$Res> get acceptUnknownElement;
 }
@@ -471,6 +522,8 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
     Object rest = freezed,
     Object messaging = freezed,
     Object document = freezed,
+    Object urlElement = freezed,
+    Object fhirVersionElement = freezed,
     Object acceptUnknownElement = freezed,
   }) {
     return _then(_Conformance(
@@ -532,6 +585,11 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
       document: document == freezed
           ? _value.document
           : document as List<ConformanceDocument>,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      fhirVersionElement: fhirVersionElement == freezed
+          ? _value.fhirVersionElement
+          : fhirVersionElement as Element,
       acceptUnknownElement: acceptUnknownElement == freezed
           ? _value.acceptUnknownElement
           : acceptUnknownElement as Element,
@@ -585,6 +643,10 @@ class _$_Conformance implements _Conformance {
       this.rest,
       this.messaging,
       this.document,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_fhirVersion')
+          this.fhirVersionElement,
       @JsonKey(name: '_acceptUnknown')
           this.acceptUnknownElement})
       : assert(date != null),
@@ -665,12 +727,18 @@ class _$_Conformance implements _Conformance {
   @override
   final List<ConformanceDocument> document;
   @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_fhirVersion')
+  final Element fhirVersionElement;
+  @override
   @JsonKey(name: '_acceptUnknown')
   final Element acceptUnknownElement;
 
   @override
   String toString() {
-    return 'Conformance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, acceptUnknown: $acceptUnknown, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document, acceptUnknownElement: $acceptUnknownElement)';
+    return 'Conformance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, acceptUnknown: $acceptUnknown, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document, urlElement: $urlElement, fhirVersionElement: $fhirVersionElement, acceptUnknownElement: $acceptUnknownElement)';
   }
 
   @override
@@ -750,6 +818,8 @@ class _$_Conformance implements _Conformance {
             (identical(other.rest, rest) || const DeepCollectionEquality().equals(other.rest, rest)) &&
             (identical(other.messaging, messaging) || const DeepCollectionEquality().equals(other.messaging, messaging)) &&
             (identical(other.document, document) || const DeepCollectionEquality().equals(other.document, document)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.fhirVersionElement, fhirVersionElement) || const DeepCollectionEquality().equals(other.fhirVersionElement, fhirVersionElement)) &&
             (identical(other.acceptUnknownElement, acceptUnknownElement) || const DeepCollectionEquality().equals(other.acceptUnknownElement, acceptUnknownElement)));
   }
 
@@ -786,6 +856,8 @@ class _$_Conformance implements _Conformance {
       const DeepCollectionEquality().hash(rest) ^
       const DeepCollectionEquality().hash(messaging) ^
       const DeepCollectionEquality().hash(document) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(fhirVersionElement) ^
       const DeepCollectionEquality().hash(acceptUnknownElement);
 
   @override
@@ -843,6 +915,10 @@ abstract class _Conformance implements Conformance {
       List<ConformanceRest> rest,
       List<ConformanceMessaging> messaging,
       List<ConformanceDocument> document,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
       @JsonKey(name: '_acceptUnknown')
           Element acceptUnknownElement}) = _$_Conformance;
 
@@ -917,6 +993,12 @@ abstract class _Conformance implements Conformance {
   List<ConformanceMessaging> get messaging;
   @override
   List<ConformanceDocument> get document;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_fhirVersion')
+  Element get fhirVersionElement;
   @override
   @JsonKey(name: '_acceptUnknown')
   Element get acceptUnknownElement;
@@ -3229,7 +3311,9 @@ class _$ConformanceRestTearOff {
           RestTransactionMode transactionMode,
       List<ConformanceSearchParam> searchParam,
       List<ConformanceOperation> operation,
-      List<FhirUri> compartment}) {
+      List<FhirUri> compartment,
+      @JsonKey(name: '_mode')
+          Element modeElement}) {
     return _ConformanceRest(
       id: id,
       extension_: extension_,
@@ -3244,6 +3328,7 @@ class _$ConformanceRestTearOff {
       searchParam: searchParam,
       operation: operation,
       compartment: compartment,
+      modeElement: modeElement,
     );
   }
 }
@@ -3270,6 +3355,8 @@ mixin _$ConformanceRest {
   List<ConformanceSearchParam> get searchParam;
   List<ConformanceOperation> get operation;
   List<FhirUri> get compartment;
+  @JsonKey(name: '_mode')
+  Element get modeElement;
 
   Map<String, dynamic> toJson();
   $ConformanceRestCopyWith<ConformanceRest> get copyWith;
@@ -3297,10 +3384,13 @@ abstract class $ConformanceRestCopyWith<$Res> {
           RestTransactionMode transactionMode,
       List<ConformanceSearchParam> searchParam,
       List<ConformanceOperation> operation,
-      List<FhirUri> compartment});
+      List<FhirUri> compartment,
+      @JsonKey(name: '_mode')
+          Element modeElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ConformanceSecurityCopyWith<$Res> get security;
+  $ElementCopyWith<$Res> get modeElement;
 }
 
 class _$ConformanceRestCopyWithImpl<$Res>
@@ -3326,6 +3416,7 @@ class _$ConformanceRestCopyWithImpl<$Res>
     Object searchParam = freezed,
     Object operation = freezed,
     Object compartment = freezed,
+    Object modeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3363,6 +3454,8 @@ class _$ConformanceRestCopyWithImpl<$Res>
       compartment: compartment == freezed
           ? _value.compartment
           : compartment as List<FhirUri>,
+      modeElement:
+          modeElement == freezed ? _value.modeElement : modeElement as Element,
     ));
   }
 
@@ -3383,6 +3476,16 @@ class _$ConformanceRestCopyWithImpl<$Res>
     }
     return $ConformanceSecurityCopyWith<$Res>(_value.security, (value) {
       return _then(_value.copyWith(security: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get modeElement {
+    if (_value.modeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.modeElement, (value) {
+      return _then(_value.copyWith(modeElement: value));
     });
   }
 }
@@ -3411,12 +3514,16 @@ abstract class _$ConformanceRestCopyWith<$Res>
           RestTransactionMode transactionMode,
       List<ConformanceSearchParam> searchParam,
       List<ConformanceOperation> operation,
-      List<FhirUri> compartment});
+      List<FhirUri> compartment,
+      @JsonKey(name: '_mode')
+          Element modeElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ConformanceSecurityCopyWith<$Res> get security;
+  @override
+  $ElementCopyWith<$Res> get modeElement;
 }
 
 class __$ConformanceRestCopyWithImpl<$Res>
@@ -3444,6 +3551,7 @@ class __$ConformanceRestCopyWithImpl<$Res>
     Object searchParam = freezed,
     Object operation = freezed,
     Object compartment = freezed,
+    Object modeElement = freezed,
   }) {
     return _then(_ConformanceRest(
       id: id == freezed ? _value.id : id as Id,
@@ -3481,6 +3589,8 @@ class __$ConformanceRestCopyWithImpl<$Res>
       compartment: compartment == freezed
           ? _value.compartment
           : compartment as List<FhirUri>,
+      modeElement:
+          modeElement == freezed ? _value.modeElement : modeElement as Element,
     ));
   }
 }
@@ -3507,7 +3617,9 @@ class _$_ConformanceRest implements _ConformanceRest {
           this.transactionMode,
       this.searchParam,
       this.operation,
-      this.compartment})
+      this.compartment,
+      @JsonKey(name: '_mode')
+          this.modeElement})
       : assert(mode != null),
         assert(resource != null);
 
@@ -3545,10 +3657,13 @@ class _$_ConformanceRest implements _ConformanceRest {
   final List<ConformanceOperation> operation;
   @override
   final List<FhirUri> compartment;
+  @override
+  @JsonKey(name: '_mode')
+  final Element modeElement;
 
   @override
   String toString() {
-    return 'ConformanceRest(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, mode: $mode, documentation: $documentation, security: $security, resource: $resource, interaction: $interaction, transactionMode: $transactionMode, searchParam: $searchParam, operation: $operation, compartment: $compartment)';
+    return 'ConformanceRest(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, mode: $mode, documentation: $documentation, security: $security, resource: $resource, interaction: $interaction, transactionMode: $transactionMode, searchParam: $searchParam, operation: $operation, compartment: $compartment, modeElement: $modeElement)';
   }
 
   @override
@@ -3591,7 +3706,10 @@ class _$_ConformanceRest implements _ConformanceRest {
                     .equals(other.operation, operation)) &&
             (identical(other.compartment, compartment) ||
                 const DeepCollectionEquality()
-                    .equals(other.compartment, compartment)));
+                    .equals(other.compartment, compartment)) &&
+            (identical(other.modeElement, modeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.modeElement, modeElement)));
   }
 
   @override
@@ -3609,7 +3727,8 @@ class _$_ConformanceRest implements _ConformanceRest {
       const DeepCollectionEquality().hash(transactionMode) ^
       const DeepCollectionEquality().hash(searchParam) ^
       const DeepCollectionEquality().hash(operation) ^
-      const DeepCollectionEquality().hash(compartment);
+      const DeepCollectionEquality().hash(compartment) ^
+      const DeepCollectionEquality().hash(modeElement);
 
   @override
   _$ConformanceRestCopyWith<_ConformanceRest> get copyWith =>
@@ -3642,7 +3761,9 @@ abstract class _ConformanceRest implements ConformanceRest {
           RestTransactionMode transactionMode,
       List<ConformanceSearchParam> searchParam,
       List<ConformanceOperation> operation,
-      List<FhirUri> compartment}) = _$_ConformanceRest;
+      List<FhirUri> compartment,
+      @JsonKey(name: '_mode')
+          Element modeElement}) = _$_ConformanceRest;
 
   factory _ConformanceRest.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRest.fromJson;
@@ -3679,6 +3800,9 @@ abstract class _ConformanceRest implements ConformanceRest {
   @override
   List<FhirUri> get compartment;
   @override
+  @JsonKey(name: '_mode')
+  Element get modeElement;
+  @override
   _$ConformanceRestCopyWith<_ConformanceRest> get copyWith;
 }
 
@@ -3693,6 +3817,7 @@ class _$ConformanceMessagingTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<ConformanceEndpoint> endpoint,
       UnsignedInt reliableCache,
       String documentation,
@@ -3701,6 +3826,7 @@ class _$ConformanceMessagingTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       endpoint: endpoint,
       reliableCache: reliableCache,
       documentation: documentation,
@@ -3717,6 +3843,8 @@ mixin _$ConformanceMessaging {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   List<ConformanceEndpoint> get endpoint;
   UnsignedInt get reliableCache;
   String get documentation;
@@ -3735,6 +3863,7 @@ abstract class $ConformanceMessagingCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<ConformanceEndpoint> endpoint,
       UnsignedInt reliableCache,
       String documentation,
@@ -3756,6 +3885,7 @@ class _$ConformanceMessagingCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object endpoint = freezed,
     Object reliableCache = freezed,
     Object documentation = freezed,
@@ -3769,6 +3899,9 @@ class _$ConformanceMessagingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint as List<ConformanceEndpoint>,
@@ -3803,6 +3936,7 @@ abstract class _$ConformanceMessagingCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<ConformanceEndpoint> endpoint,
       UnsignedInt reliableCache,
       String documentation,
@@ -3827,6 +3961,7 @@ class __$ConformanceMessagingCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object endpoint = freezed,
     Object reliableCache = freezed,
     Object documentation = freezed,
@@ -3840,6 +3975,9 @@ class __$ConformanceMessagingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint as List<ConformanceEndpoint>,
@@ -3860,6 +3998,7 @@ class _$_ConformanceMessaging implements _ConformanceMessaging {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.endpoint,
       this.reliableCache,
       this.documentation,
@@ -3877,6 +4016,9 @@ class _$_ConformanceMessaging implements _ConformanceMessaging {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final List<ConformanceEndpoint> endpoint;
   @override
   final UnsignedInt reliableCache;
@@ -3888,7 +4030,7 @@ class _$_ConformanceMessaging implements _ConformanceMessaging {
 
   @override
   String toString() {
-    return 'ConformanceMessaging(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, endpoint: $endpoint, reliableCache: $reliableCache, documentation: $documentation, event: $event)';
+    return 'ConformanceMessaging(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, endpoint: $endpoint, reliableCache: $reliableCache, documentation: $documentation, event: $event)';
   }
 
   @override
@@ -3903,6 +4045,9 @@ class _$_ConformanceMessaging implements _ConformanceMessaging {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.endpoint, endpoint) ||
                 const DeepCollectionEquality()
                     .equals(other.endpoint, endpoint)) &&
@@ -3922,6 +4067,7 @@ class _$_ConformanceMessaging implements _ConformanceMessaging {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(endpoint) ^
       const DeepCollectionEquality().hash(reliableCache) ^
       const DeepCollectionEquality().hash(documentation) ^
@@ -3943,6 +4089,7 @@ abstract class _ConformanceMessaging implements ConformanceMessaging {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           List<ConformanceEndpoint> endpoint,
           UnsignedInt reliableCache,
           String documentation,
@@ -3959,6 +4106,9 @@ abstract class _ConformanceMessaging implements ConformanceMessaging {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   List<ConformanceEndpoint> get endpoint;
   @override
@@ -3984,6 +4134,8 @@ class _$ConformanceDocumentTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @required
       @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
           DocumentMode mode,
@@ -3995,6 +4147,7 @@ class _$ConformanceDocumentTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       mode: mode,
       documentation: documentation,
       profile: profile,
@@ -4010,6 +4163,8 @@ mixin _$ConformanceDocument {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
   DocumentMode get mode;
   String get documentation;
@@ -4029,6 +4184,8 @@ abstract class $ConformanceDocumentCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
           DocumentMode mode,
       String documentation,
@@ -4052,6 +4209,7 @@ class _$ConformanceDocumentCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object mode = freezed,
     Object documentation = freezed,
     Object profile = freezed,
@@ -4064,6 +4222,9 @@ class _$ConformanceDocumentCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       mode: mode == freezed ? _value.mode : mode as DocumentMode,
       documentation: documentation == freezed
           ? _value.documentation
@@ -4104,6 +4265,8 @@ abstract class _$ConformanceDocumentCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
           DocumentMode mode,
       String documentation,
@@ -4131,6 +4294,7 @@ class __$ConformanceDocumentCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object mode = freezed,
     Object documentation = freezed,
     Object profile = freezed,
@@ -4143,6 +4307,9 @@ class __$ConformanceDocumentCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       mode: mode == freezed ? _value.mode : mode as DocumentMode,
       documentation: documentation == freezed
           ? _value.documentation
@@ -4159,6 +4326,8 @@ class _$_ConformanceDocument implements _ConformanceDocument {
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          this.fhirComments,
       @required
       @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
           this.mode,
@@ -4180,6 +4349,9 @@ class _$_ConformanceDocument implements _ConformanceDocument {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
   final DocumentMode mode;
   @override
@@ -4190,7 +4362,7 @@ class _$_ConformanceDocument implements _ConformanceDocument {
 
   @override
   String toString() {
-    return 'ConformanceDocument(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, mode: $mode, documentation: $documentation, profile: $profile)';
+    return 'ConformanceDocument(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, mode: $mode, documentation: $documentation, profile: $profile)';
   }
 
   @override
@@ -4205,6 +4377,9 @@ class _$_ConformanceDocument implements _ConformanceDocument {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.mode, mode) ||
                 const DeepCollectionEquality().equals(other.mode, mode)) &&
             (identical(other.documentation, documentation) ||
@@ -4220,6 +4395,7 @@ class _$_ConformanceDocument implements _ConformanceDocument {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(mode) ^
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(profile);
@@ -4241,6 +4417,8 @@ abstract class _ConformanceDocument implements ConformanceDocument {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @required
       @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
           DocumentMode mode,
@@ -4259,6 +4437,9 @@ abstract class _ConformanceDocument implements ConformanceDocument {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
   DocumentMode get mode;
@@ -5594,7 +5775,13 @@ class _$ConformanceResourceTearOff {
           ResourceConditionalDelete conditionalDelete,
       List<String> searchInclude,
       List<String> searchRevInclude,
-      List<ConformanceSearchParam> searchParam}) {
+      List<ConformanceSearchParam> searchParam,
+      @JsonKey(name: '_updateCreate')
+          Element updateCreateElement,
+      @JsonKey(name: '_conditionalCreate')
+          Element conditionalCreateElement,
+      @JsonKey(name: '_conditionalDelete')
+          Element conditionalDeleteElement}) {
     return _ConformanceResource(
       id: id,
       extension_: extension_,
@@ -5612,6 +5799,9 @@ class _$ConformanceResourceTearOff {
       searchInclude: searchInclude,
       searchRevInclude: searchRevInclude,
       searchParam: searchParam,
+      updateCreateElement: updateCreateElement,
+      conditionalCreateElement: conditionalCreateElement,
+      conditionalDeleteElement: conditionalDeleteElement,
     );
   }
 }
@@ -5642,6 +5832,12 @@ mixin _$ConformanceResource {
   List<String> get searchInclude;
   List<String> get searchRevInclude;
   List<ConformanceSearchParam> get searchParam;
+  @JsonKey(name: '_updateCreate')
+  Element get updateCreateElement;
+  @JsonKey(name: '_conditionalCreate')
+  Element get conditionalCreateElement;
+  @JsonKey(name: '_conditionalDelete')
+  Element get conditionalDeleteElement;
 
   Map<String, dynamic> toJson();
   $ConformanceResourceCopyWith<ConformanceResource> get copyWith;
@@ -5673,10 +5869,19 @@ abstract class $ConformanceResourceCopyWith<$Res> {
           ResourceConditionalDelete conditionalDelete,
       List<String> searchInclude,
       List<String> searchRevInclude,
-      List<ConformanceSearchParam> searchParam});
+      List<ConformanceSearchParam> searchParam,
+      @JsonKey(name: '_updateCreate')
+          Element updateCreateElement,
+      @JsonKey(name: '_conditionalCreate')
+          Element conditionalCreateElement,
+      @JsonKey(name: '_conditionalDelete')
+          Element conditionalDeleteElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get profile;
+  $ElementCopyWith<$Res> get updateCreateElement;
+  $ElementCopyWith<$Res> get conditionalCreateElement;
+  $ElementCopyWith<$Res> get conditionalDeleteElement;
 }
 
 class _$ConformanceResourceCopyWithImpl<$Res>
@@ -5705,6 +5910,9 @@ class _$ConformanceResourceCopyWithImpl<$Res>
     Object searchInclude = freezed,
     Object searchRevInclude = freezed,
     Object searchParam = freezed,
+    Object updateCreateElement = freezed,
+    Object conditionalCreateElement = freezed,
+    Object conditionalDeleteElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -5748,6 +5956,15 @@ class _$ConformanceResourceCopyWithImpl<$Res>
       searchParam: searchParam == freezed
           ? _value.searchParam
           : searchParam as List<ConformanceSearchParam>,
+      updateCreateElement: updateCreateElement == freezed
+          ? _value.updateCreateElement
+          : updateCreateElement as Element,
+      conditionalCreateElement: conditionalCreateElement == freezed
+          ? _value.conditionalCreateElement
+          : conditionalCreateElement as Element,
+      conditionalDeleteElement: conditionalDeleteElement == freezed
+          ? _value.conditionalDeleteElement
+          : conditionalDeleteElement as Element,
     ));
   }
 
@@ -5768,6 +5985,36 @@ class _$ConformanceResourceCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.profile, (value) {
       return _then(_value.copyWith(profile: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get updateCreateElement {
+    if (_value.updateCreateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.updateCreateElement, (value) {
+      return _then(_value.copyWith(updateCreateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get conditionalCreateElement {
+    if (_value.conditionalCreateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.conditionalCreateElement, (value) {
+      return _then(_value.copyWith(conditionalCreateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get conditionalDeleteElement {
+    if (_value.conditionalDeleteElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.conditionalDeleteElement, (value) {
+      return _then(_value.copyWith(conditionalDeleteElement: value));
     });
   }
 }
@@ -5800,12 +6047,24 @@ abstract class _$ConformanceResourceCopyWith<$Res>
           ResourceConditionalDelete conditionalDelete,
       List<String> searchInclude,
       List<String> searchRevInclude,
-      List<ConformanceSearchParam> searchParam});
+      List<ConformanceSearchParam> searchParam,
+      @JsonKey(name: '_updateCreate')
+          Element updateCreateElement,
+      @JsonKey(name: '_conditionalCreate')
+          Element conditionalCreateElement,
+      @JsonKey(name: '_conditionalDelete')
+          Element conditionalDeleteElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ReferenceCopyWith<$Res> get profile;
+  @override
+  $ElementCopyWith<$Res> get updateCreateElement;
+  @override
+  $ElementCopyWith<$Res> get conditionalCreateElement;
+  @override
+  $ElementCopyWith<$Res> get conditionalDeleteElement;
 }
 
 class __$ConformanceResourceCopyWithImpl<$Res>
@@ -5836,6 +6095,9 @@ class __$ConformanceResourceCopyWithImpl<$Res>
     Object searchInclude = freezed,
     Object searchRevInclude = freezed,
     Object searchParam = freezed,
+    Object updateCreateElement = freezed,
+    Object conditionalCreateElement = freezed,
+    Object conditionalDeleteElement = freezed,
   }) {
     return _then(_ConformanceResource(
       id: id == freezed ? _value.id : id as Id,
@@ -5879,6 +6141,15 @@ class __$ConformanceResourceCopyWithImpl<$Res>
       searchParam: searchParam == freezed
           ? _value.searchParam
           : searchParam as List<ConformanceSearchParam>,
+      updateCreateElement: updateCreateElement == freezed
+          ? _value.updateCreateElement
+          : updateCreateElement as Element,
+      conditionalCreateElement: conditionalCreateElement == freezed
+          ? _value.conditionalCreateElement
+          : conditionalCreateElement as Element,
+      conditionalDeleteElement: conditionalDeleteElement == freezed
+          ? _value.conditionalDeleteElement
+          : conditionalDeleteElement as Element,
     ));
   }
 }
@@ -5909,7 +6180,13 @@ class _$_ConformanceResource implements _ConformanceResource {
           this.conditionalDelete,
       this.searchInclude,
       this.searchRevInclude,
-      this.searchParam})
+      this.searchParam,
+      @JsonKey(name: '_updateCreate')
+          this.updateCreateElement,
+      @JsonKey(name: '_conditionalCreate')
+          this.conditionalCreateElement,
+      @JsonKey(name: '_conditionalDelete')
+          this.conditionalDeleteElement})
       : assert(type != null),
         assert(interaction != null);
 
@@ -5954,10 +6231,19 @@ class _$_ConformanceResource implements _ConformanceResource {
   final List<String> searchRevInclude;
   @override
   final List<ConformanceSearchParam> searchParam;
+  @override
+  @JsonKey(name: '_updateCreate')
+  final Element updateCreateElement;
+  @override
+  @JsonKey(name: '_conditionalCreate')
+  final Element conditionalCreateElement;
+  @override
+  @JsonKey(name: '_conditionalDelete')
+  final Element conditionalDeleteElement;
 
   @override
   String toString() {
-    return 'ConformanceResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, type: $type, profile: $profile, interaction: $interaction, versioning: $versioning, readHistory: $readHistory, updateCreate: $updateCreate, conditionalCreate: $conditionalCreate, conditionalUpdate: $conditionalUpdate, conditionalDelete: $conditionalDelete, searchInclude: $searchInclude, searchRevInclude: $searchRevInclude, searchParam: $searchParam)';
+    return 'ConformanceResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, type: $type, profile: $profile, interaction: $interaction, versioning: $versioning, readHistory: $readHistory, updateCreate: $updateCreate, conditionalCreate: $conditionalCreate, conditionalUpdate: $conditionalUpdate, conditionalDelete: $conditionalDelete, searchInclude: $searchInclude, searchRevInclude: $searchRevInclude, searchParam: $searchParam, updateCreateElement: $updateCreateElement, conditionalCreateElement: $conditionalCreateElement, conditionalDeleteElement: $conditionalDeleteElement)';
   }
 
   @override
@@ -6009,7 +6295,19 @@ class _$_ConformanceResource implements _ConformanceResource {
                     .equals(other.searchRevInclude, searchRevInclude)) &&
             (identical(other.searchParam, searchParam) ||
                 const DeepCollectionEquality()
-                    .equals(other.searchParam, searchParam)));
+                    .equals(other.searchParam, searchParam)) &&
+            (identical(other.updateCreateElement, updateCreateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.updateCreateElement, updateCreateElement)) &&
+            (identical(
+                    other.conditionalCreateElement, conditionalCreateElement) ||
+                const DeepCollectionEquality().equals(
+                    other.conditionalCreateElement,
+                    conditionalCreateElement)) &&
+            (identical(
+                    other.conditionalDeleteElement, conditionalDeleteElement) ||
+                const DeepCollectionEquality().equals(
+                    other.conditionalDeleteElement, conditionalDeleteElement)));
   }
 
   @override
@@ -6030,7 +6328,10 @@ class _$_ConformanceResource implements _ConformanceResource {
       const DeepCollectionEquality().hash(conditionalDelete) ^
       const DeepCollectionEquality().hash(searchInclude) ^
       const DeepCollectionEquality().hash(searchRevInclude) ^
-      const DeepCollectionEquality().hash(searchParam);
+      const DeepCollectionEquality().hash(searchParam) ^
+      const DeepCollectionEquality().hash(updateCreateElement) ^
+      const DeepCollectionEquality().hash(conditionalCreateElement) ^
+      const DeepCollectionEquality().hash(conditionalDeleteElement);
 
   @override
   _$ConformanceResourceCopyWith<_ConformanceResource> get copyWith =>
@@ -6068,7 +6369,13 @@ abstract class _ConformanceResource implements ConformanceResource {
           ResourceConditionalDelete conditionalDelete,
       List<String> searchInclude,
       List<String> searchRevInclude,
-      List<ConformanceSearchParam> searchParam}) = _$_ConformanceResource;
+      List<ConformanceSearchParam> searchParam,
+      @JsonKey(name: '_updateCreate')
+          Element updateCreateElement,
+      @JsonKey(name: '_conditionalCreate')
+          Element conditionalCreateElement,
+      @JsonKey(name: '_conditionalDelete')
+          Element conditionalDeleteElement}) = _$_ConformanceResource;
 
   factory _ConformanceResource.fromJson(Map<String, dynamic> json) =
       _$_ConformanceResource.fromJson;
@@ -6111,6 +6418,15 @@ abstract class _ConformanceResource implements ConformanceResource {
   List<String> get searchRevInclude;
   @override
   List<ConformanceSearchParam> get searchParam;
+  @override
+  @JsonKey(name: '_updateCreate')
+  Element get updateCreateElement;
+  @override
+  @JsonKey(name: '_conditionalCreate')
+  Element get conditionalCreateElement;
+  @override
+  @JsonKey(name: '_conditionalDelete')
+  Element get conditionalDeleteElement;
   @override
   _$ConformanceResourceCopyWith<_ConformanceResource> get copyWith;
 }
@@ -6679,13 +6995,15 @@ class _$ConformanceEndpointTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding protocol,
-      @required @JsonKey(required: true) FhirUri address}) {
+      @required @JsonKey(required: true) FhirUri address,
+      @JsonKey(name: '_address') Element addressElement}) {
     return _ConformanceEndpoint(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       protocol: protocol,
       address: address,
+      addressElement: addressElement,
     );
   }
 }
@@ -6702,6 +7020,8 @@ mixin _$ConformanceEndpoint {
   Coding get protocol;
   @JsonKey(required: true)
   FhirUri get address;
+  @JsonKey(name: '_address')
+  Element get addressElement;
 
   Map<String, dynamic> toJson();
   $ConformanceEndpointCopyWith<ConformanceEndpoint> get copyWith;
@@ -6716,10 +7036,12 @@ abstract class $ConformanceEndpointCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding protocol,
-      @JsonKey(required: true) FhirUri address});
+      @JsonKey(required: true) FhirUri address,
+      @JsonKey(name: '_address') Element addressElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get protocol;
+  $ElementCopyWith<$Res> get addressElement;
 }
 
 class _$ConformanceEndpointCopyWithImpl<$Res>
@@ -6737,6 +7059,7 @@ class _$ConformanceEndpointCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object protocol = freezed,
     Object address = freezed,
+    Object addressElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -6748,6 +7071,9 @@ class _$ConformanceEndpointCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       protocol: protocol == freezed ? _value.protocol : protocol as Coding,
       address: address == freezed ? _value.address : address as FhirUri,
+      addressElement: addressElement == freezed
+          ? _value.addressElement
+          : addressElement as Element,
     ));
   }
 
@@ -6770,6 +7096,16 @@ class _$ConformanceEndpointCopyWithImpl<$Res>
       return _then(_value.copyWith(protocol: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get addressElement {
+    if (_value.addressElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.addressElement, (value) {
+      return _then(_value.copyWith(addressElement: value));
+    });
+  }
 }
 
 abstract class _$ConformanceEndpointCopyWith<$Res>
@@ -6783,12 +7119,15 @@ abstract class _$ConformanceEndpointCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding protocol,
-      @JsonKey(required: true) FhirUri address});
+      @JsonKey(required: true) FhirUri address,
+      @JsonKey(name: '_address') Element addressElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $CodingCopyWith<$Res> get protocol;
+  @override
+  $ElementCopyWith<$Res> get addressElement;
 }
 
 class __$ConformanceEndpointCopyWithImpl<$Res>
@@ -6808,6 +7147,7 @@ class __$ConformanceEndpointCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object protocol = freezed,
     Object address = freezed,
+    Object addressElement = freezed,
   }) {
     return _then(_ConformanceEndpoint(
       id: id == freezed ? _value.id : id as Id,
@@ -6819,6 +7159,9 @@ class __$ConformanceEndpointCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       protocol: protocol == freezed ? _value.protocol : protocol as Coding,
       address: address == freezed ? _value.address : address as FhirUri,
+      addressElement: addressElement == freezed
+          ? _value.addressElement
+          : addressElement as Element,
     ));
   }
 }
@@ -6830,7 +7173,8 @@ class _$_ConformanceEndpoint implements _ConformanceEndpoint {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.protocol,
-      @required @JsonKey(required: true) this.address})
+      @required @JsonKey(required: true) this.address,
+      @JsonKey(name: '_address') this.addressElement})
       : assert(protocol != null),
         assert(address != null);
 
@@ -6850,10 +7194,13 @@ class _$_ConformanceEndpoint implements _ConformanceEndpoint {
   @override
   @JsonKey(required: true)
   final FhirUri address;
+  @override
+  @JsonKey(name: '_address')
+  final Element addressElement;
 
   @override
   String toString() {
-    return 'ConformanceEndpoint(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, protocol: $protocol, address: $address)';
+    return 'ConformanceEndpoint(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, protocol: $protocol, address: $address, addressElement: $addressElement)';
   }
 
   @override
@@ -6872,7 +7219,11 @@ class _$_ConformanceEndpoint implements _ConformanceEndpoint {
                 const DeepCollectionEquality()
                     .equals(other.protocol, protocol)) &&
             (identical(other.address, address) ||
-                const DeepCollectionEquality().equals(other.address, address)));
+                const DeepCollectionEquality()
+                    .equals(other.address, address)) &&
+            (identical(other.addressElement, addressElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.addressElement, addressElement)));
   }
 
   @override
@@ -6882,7 +7233,8 @@ class _$_ConformanceEndpoint implements _ConformanceEndpoint {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(protocol) ^
-      const DeepCollectionEquality().hash(address);
+      const DeepCollectionEquality().hash(address) ^
+      const DeepCollectionEquality().hash(addressElement);
 
   @override
   _$ConformanceEndpointCopyWith<_ConformanceEndpoint> get copyWith =>
@@ -6901,7 +7253,8 @@ abstract class _ConformanceEndpoint implements ConformanceEndpoint {
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
           @required @JsonKey(required: true) Coding protocol,
-          @required @JsonKey(required: true) FhirUri address}) =
+          @required @JsonKey(required: true) FhirUri address,
+          @JsonKey(name: '_address') Element addressElement}) =
       _$_ConformanceEndpoint;
 
   factory _ConformanceEndpoint.fromJson(Map<String, dynamic> json) =
@@ -6920,6 +7273,9 @@ abstract class _ConformanceEndpoint implements ConformanceEndpoint {
   @override
   @JsonKey(required: true)
   FhirUri get address;
+  @override
+  @JsonKey(name: '_address')
+  Element get addressElement;
   @override
   _$ConformanceEndpointCopyWith<_ConformanceEndpoint> get copyWith;
 }
@@ -6953,7 +7309,9 @@ class _$ConformanceEventTearOff {
       @required
       @JsonKey(required: true)
           Reference response,
-      String documentation}) {
+      String documentation,
+      @JsonKey(name: '_mode')
+          Element modeElement}) {
     return _ConformanceEvent(
       id: id,
       extension_: extension_,
@@ -6965,6 +7323,7 @@ class _$ConformanceEventTearOff {
       request: request,
       response: response,
       documentation: documentation,
+      modeElement: modeElement,
     );
   }
 }
@@ -6990,6 +7349,8 @@ mixin _$ConformanceEvent {
   @JsonKey(required: true)
   Reference get response;
   String get documentation;
+  @JsonKey(name: '_mode')
+  Element get modeElement;
 
   Map<String, dynamic> toJson();
   $ConformanceEventCopyWith<ConformanceEvent> get copyWith;
@@ -7016,12 +7377,15 @@ abstract class $ConformanceEventCopyWith<$Res> {
           Reference request,
       @JsonKey(required: true)
           Reference response,
-      String documentation});
+      String documentation,
+      @JsonKey(name: '_mode')
+          Element modeElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get request;
   $ReferenceCopyWith<$Res> get response;
+  $ElementCopyWith<$Res> get modeElement;
 }
 
 class _$ConformanceEventCopyWithImpl<$Res>
@@ -7044,6 +7408,7 @@ class _$ConformanceEventCopyWithImpl<$Res>
     Object request = freezed,
     Object response = freezed,
     Object documentation = freezed,
+    Object modeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -7063,6 +7428,8 @@ class _$ConformanceEventCopyWithImpl<$Res>
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
+      modeElement:
+          modeElement == freezed ? _value.modeElement : modeElement as Element,
     ));
   }
 
@@ -7105,6 +7472,16 @@ class _$ConformanceEventCopyWithImpl<$Res>
       return _then(_value.copyWith(response: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get modeElement {
+    if (_value.modeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.modeElement, (value) {
+      return _then(_value.copyWith(modeElement: value));
+    });
+  }
 }
 
 abstract class _$ConformanceEventCopyWith<$Res>
@@ -7130,7 +7507,9 @@ abstract class _$ConformanceEventCopyWith<$Res>
           Reference request,
       @JsonKey(required: true)
           Reference response,
-      String documentation});
+      String documentation,
+      @JsonKey(name: '_mode')
+          Element modeElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -7140,6 +7519,8 @@ abstract class _$ConformanceEventCopyWith<$Res>
   $ReferenceCopyWith<$Res> get request;
   @override
   $ReferenceCopyWith<$Res> get response;
+  @override
+  $ElementCopyWith<$Res> get modeElement;
 }
 
 class __$ConformanceEventCopyWithImpl<$Res>
@@ -7164,6 +7545,7 @@ class __$ConformanceEventCopyWithImpl<$Res>
     Object request = freezed,
     Object response = freezed,
     Object documentation = freezed,
+    Object modeElement = freezed,
   }) {
     return _then(_ConformanceEvent(
       id: id == freezed ? _value.id : id as Id,
@@ -7183,6 +7565,8 @@ class __$ConformanceEventCopyWithImpl<$Res>
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String,
+      modeElement:
+          modeElement == freezed ? _value.modeElement : modeElement as Element,
     ));
   }
 }
@@ -7211,7 +7595,9 @@ class _$_ConformanceEvent implements _ConformanceEvent {
       @required
       @JsonKey(required: true)
           this.response,
-      this.documentation})
+      this.documentation,
+      @JsonKey(name: '_mode')
+          this.modeElement})
       : assert(code != null),
         assert(mode != null),
         assert(focus != null),
@@ -7248,10 +7634,13 @@ class _$_ConformanceEvent implements _ConformanceEvent {
   final Reference response;
   @override
   final String documentation;
+  @override
+  @JsonKey(name: '_mode')
+  final Element modeElement;
 
   @override
   String toString() {
-    return 'ConformanceEvent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, category: $category, mode: $mode, focus: $focus, request: $request, response: $response, documentation: $documentation)';
+    return 'ConformanceEvent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, category: $category, mode: $mode, focus: $focus, request: $request, response: $response, documentation: $documentation, modeElement: $modeElement)';
   }
 
   @override
@@ -7283,7 +7672,10 @@ class _$_ConformanceEvent implements _ConformanceEvent {
                     .equals(other.response, response)) &&
             (identical(other.documentation, documentation) ||
                 const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)));
+                    .equals(other.documentation, documentation)) &&
+            (identical(other.modeElement, modeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.modeElement, modeElement)));
   }
 
   @override
@@ -7298,7 +7690,8 @@ class _$_ConformanceEvent implements _ConformanceEvent {
       const DeepCollectionEquality().hash(focus) ^
       const DeepCollectionEquality().hash(request) ^
       const DeepCollectionEquality().hash(response) ^
-      const DeepCollectionEquality().hash(documentation);
+      const DeepCollectionEquality().hash(documentation) ^
+      const DeepCollectionEquality().hash(modeElement);
 
   @override
   _$ConformanceEventCopyWith<_ConformanceEvent> get copyWith =>
@@ -7333,7 +7726,9 @@ abstract class _ConformanceEvent implements ConformanceEvent {
       @required
       @JsonKey(required: true)
           Reference response,
-      String documentation}) = _$_ConformanceEvent;
+      String documentation,
+      @JsonKey(name: '_mode')
+          Element modeElement}) = _$_ConformanceEvent;
 
   factory _ConformanceEvent.fromJson(Map<String, dynamic> json) =
       _$_ConformanceEvent.fromJson;
@@ -7365,6 +7760,9 @@ abstract class _ConformanceEvent implements ConformanceEvent {
   Reference get response;
   @override
   String get documentation;
+  @override
+  @JsonKey(name: '_mode')
+  Element get modeElement;
   @override
   _$ConformanceEventCopyWith<_ConformanceEvent> get copyWith;
 }
@@ -7688,13 +8086,15 @@ class _$ConformanceCertificateTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Code type,
-      Base64Binary blob}) {
+      Base64Binary blob,
+      @JsonKey(name: '_blob') Element blobElement}) {
     return _ConformanceCertificate(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
       blob: blob,
+      blobElement: blobElement,
     );
   }
 }
@@ -7709,6 +8109,8 @@ mixin _$ConformanceCertificate {
   FhirExtension get modifierExtension;
   Code get type;
   Base64Binary get blob;
+  @JsonKey(name: '_blob')
+  Element get blobElement;
 
   Map<String, dynamic> toJson();
   $ConformanceCertificateCopyWith<ConformanceCertificate> get copyWith;
@@ -7723,9 +8125,11 @@ abstract class $ConformanceCertificateCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Code type,
-      Base64Binary blob});
+      Base64Binary blob,
+      @JsonKey(name: '_blob') Element blobElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get blobElement;
 }
 
 class _$ConformanceCertificateCopyWithImpl<$Res>
@@ -7743,6 +8147,7 @@ class _$ConformanceCertificateCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object blob = freezed,
+    Object blobElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -7754,6 +8159,8 @@ class _$ConformanceCertificateCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as Code,
       blob: blob == freezed ? _value.blob : blob as Base64Binary,
+      blobElement:
+          blobElement == freezed ? _value.blobElement : blobElement as Element,
     ));
   }
 
@@ -7764,6 +8171,16 @@ class _$ConformanceCertificateCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get blobElement {
+    if (_value.blobElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.blobElement, (value) {
+      return _then(_value.copyWith(blobElement: value));
     });
   }
 }
@@ -7779,10 +8196,13 @@ abstract class _$ConformanceCertificateCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Code type,
-      Base64Binary blob});
+      Base64Binary blob,
+      @JsonKey(name: '_blob') Element blobElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get blobElement;
 }
 
 class __$ConformanceCertificateCopyWithImpl<$Res>
@@ -7802,6 +8222,7 @@ class __$ConformanceCertificateCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object blob = freezed,
+    Object blobElement = freezed,
   }) {
     return _then(_ConformanceCertificate(
       id: id == freezed ? _value.id : id as Id,
@@ -7813,6 +8234,8 @@ class __$ConformanceCertificateCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as Code,
       blob: blob == freezed ? _value.blob : blob as Base64Binary,
+      blobElement:
+          blobElement == freezed ? _value.blobElement : blobElement as Element,
     ));
   }
 }
@@ -7824,7 +8247,8 @@ class _$_ConformanceCertificate implements _ConformanceCertificate {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.type,
-      this.blob});
+      this.blob,
+      @JsonKey(name: '_blob') this.blobElement});
 
   factory _$_ConformanceCertificate.fromJson(Map<String, dynamic> json) =>
       _$_$_ConformanceCertificateFromJson(json);
@@ -7840,10 +8264,13 @@ class _$_ConformanceCertificate implements _ConformanceCertificate {
   final Code type;
   @override
   final Base64Binary blob;
+  @override
+  @JsonKey(name: '_blob')
+  final Element blobElement;
 
   @override
   String toString() {
-    return 'ConformanceCertificate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, blob: $blob)';
+    return 'ConformanceCertificate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, blob: $blob, blobElement: $blobElement)';
   }
 
   @override
@@ -7861,7 +8288,10 @@ class _$_ConformanceCertificate implements _ConformanceCertificate {
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.blob, blob) ||
-                const DeepCollectionEquality().equals(other.blob, blob)));
+                const DeepCollectionEquality().equals(other.blob, blob)) &&
+            (identical(other.blobElement, blobElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.blobElement, blobElement)));
   }
 
   @override
@@ -7871,7 +8301,8 @@ class _$_ConformanceCertificate implements _ConformanceCertificate {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(blob);
+      const DeepCollectionEquality().hash(blob) ^
+      const DeepCollectionEquality().hash(blobElement);
 
   @override
   _$ConformanceCertificateCopyWith<_ConformanceCertificate> get copyWith =>
@@ -7890,7 +8321,8 @@ abstract class _ConformanceCertificate implements ConformanceCertificate {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       Code type,
-      Base64Binary blob}) = _$_ConformanceCertificate;
+      Base64Binary blob,
+      @JsonKey(name: '_blob') Element blobElement}) = _$_ConformanceCertificate;
 
   factory _ConformanceCertificate.fromJson(Map<String, dynamic> json) =
       _$_ConformanceCertificate.fromJson;
@@ -7906,6 +8338,9 @@ abstract class _ConformanceCertificate implements ConformanceCertificate {
   Code get type;
   @override
   Base64Binary get blob;
+  @override
+  @JsonKey(name: '_blob')
+  Element get blobElement;
   @override
   _$ConformanceCertificateCopyWith<_ConformanceCertificate> get copyWith;
 }

@@ -129,6 +129,9 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
     abatementStringElement: json['_abatementString'] == null
         ? null
         : Element.fromJson(json['_abatementString'] as Map<String, dynamic>),
+    dateRecordedElement: json['_dateRecorded'] == null
+        ? null
+        : Element.fromJson(json['_dateRecorded'] as Map<String, dynamic>),
   );
 }
 
@@ -189,6 +192,7 @@ Map<String, dynamic> _$_$_ConditionToJson(_$_Condition instance) {
   writeNotNull(
       '_abatementDateTime', instance.abatementDateTimeElement?.toJson());
   writeNotNull('_abatementString', instance.abatementStringElement?.toJson());
+  writeNotNull('_dateRecorded', instance.dateRecordedElement?.toJson());
   return val;
 }
 
@@ -1126,6 +1130,9 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1186,6 +1193,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
       'reaction', instance.reaction?.map((e) => e?.toJson())?.toList());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull(
       '_category', instance.categoryElement?.map((e) => e?.toJson())?.toList());
@@ -1236,6 +1244,8 @@ _$_ConditionStage _$_$_ConditionStageFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1262,6 +1272,7 @@ Map<String, dynamic> _$_$_ConditionStageToJson(_$_ConditionStage instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('summary', instance.summary?.toJson());
   writeNotNull(

@@ -94,6 +94,7 @@ abstract class ValueSetConcept with _$ValueSetConcept {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code code,
     @JsonKey(name: 'abstract') Boolean abstract_,
     String display,

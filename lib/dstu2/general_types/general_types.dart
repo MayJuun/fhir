@@ -12,6 +12,7 @@ abstract class Period with _$Period {
   const factory Period({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirDateTime start,
     FhirDateTime end,
     @JsonKey(name: '_start') Element startElement,
@@ -81,6 +82,7 @@ abstract class Attachment with _$Attachment {
   const factory Attachment({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Code contentType,
     Code language,
     Base64Binary data,
@@ -207,6 +209,7 @@ abstract class Signature with _$Signature {
     @JsonKey(name: '_targetFormat') Element targetFormatElement,
     @JsonKey(name: '_sigFormat') Element sigFormatElement,
     @JsonKey(name: '_data') Element dataElement,
+    @JsonKey(name: '_content') Element contentElement,
   }) = _Signature;
 
   factory Signature.fromJson(Map<String, dynamic> json) =>

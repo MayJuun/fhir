@@ -54,6 +54,7 @@ abstract class Condition with _$Condition implements Resource {
     @JsonKey(name: '_onsetString') Element onsetStringElement,
     @JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
     @JsonKey(name: '_abatementString') Element abatementStringElement,
+    @JsonKey(name: '_dateRecorded') Element dateRecordedElement,
   }) = _Condition;
 
   factory Condition.fromJson(Map<String, dynamic> json) =>
@@ -308,6 +309,7 @@ abstract class AllergyIntolerance
     List<AllergyIntoleranceReaction> reaction,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
     @JsonKey(name: '_type') Element typeElement,
     @JsonKey(name: '_category') List<Element> categoryElement,
     @JsonKey(name: '_criticality') Element criticalityElement,
@@ -324,6 +326,7 @@ abstract class ConditionStage with _$ConditionStage {
   const factory ConditionStage({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirExtension modifierExtension,
     CodeableConcept summary,
     List<Reference> assessment,

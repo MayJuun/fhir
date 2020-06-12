@@ -115,6 +115,7 @@ abstract class Encounter with _$Encounter implements Resource {
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_class') Element classElement,
   }) = _Encounter;
 
   factory Encounter.fromJson(Map<String, dynamic> json) =>
@@ -237,6 +238,7 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
   const factory EncounterHospitalization({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirExtension modifierExtension,
     Identifier preAdmissionIdentifier,
     Reference origin,

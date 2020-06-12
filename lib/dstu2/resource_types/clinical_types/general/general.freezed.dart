@@ -70,7 +70,9 @@ class _$ConditionTearOff {
       @JsonKey(name: '_abatementDateTime')
           Element abatementDateTimeElement,
       @JsonKey(name: '_abatementString')
-          Element abatementStringElement}) {
+          Element abatementStringElement,
+      @JsonKey(name: '_dateRecorded')
+          Element dateRecordedElement}) {
     return _Condition(
       resourceType: resourceType,
       id: id,
@@ -112,6 +114,7 @@ class _$ConditionTearOff {
       onsetStringElement: onsetStringElement,
       abatementDateTimeElement: abatementDateTimeElement,
       abatementStringElement: abatementStringElement,
+      dateRecordedElement: dateRecordedElement,
     );
   }
 }
@@ -173,6 +176,8 @@ mixin _$Condition {
   Element get abatementDateTimeElement;
   @JsonKey(name: '_abatementString')
   Element get abatementStringElement;
+  @JsonKey(name: '_dateRecorded')
+  Element get dateRecordedElement;
 
   Map<String, dynamic> toJson();
   $ConditionCopyWith<Condition> get copyWith;
@@ -233,7 +238,9 @@ abstract class $ConditionCopyWith<$Res> {
       @JsonKey(name: '_abatementDateTime')
           Element abatementDateTimeElement,
       @JsonKey(name: '_abatementString')
-          Element abatementStringElement});
+          Element abatementStringElement,
+      @JsonKey(name: '_dateRecorded')
+          Element dateRecordedElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -257,6 +264,7 @@ abstract class $ConditionCopyWith<$Res> {
   $ElementCopyWith<$Res> get onsetStringElement;
   $ElementCopyWith<$Res> get abatementDateTimeElement;
   $ElementCopyWith<$Res> get abatementStringElement;
+  $ElementCopyWith<$Res> get dateRecordedElement;
 }
 
 class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
@@ -308,6 +316,7 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
     Object onsetStringElement = freezed,
     Object abatementDateTimeElement = freezed,
     Object abatementStringElement = freezed,
+    Object dateRecordedElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -404,6 +413,9 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       abatementStringElement: abatementStringElement == freezed
           ? _value.abatementStringElement
           : abatementStringElement as Element,
+      dateRecordedElement: dateRecordedElement == freezed
+          ? _value.dateRecordedElement
+          : dateRecordedElement as Element,
     ));
   }
 
@@ -626,6 +638,16 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       return _then(_value.copyWith(abatementStringElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get dateRecordedElement {
+    if (_value.dateRecordedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateRecordedElement, (value) {
+      return _then(_value.copyWith(dateRecordedElement: value));
+    });
+  }
 }
 
 abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
@@ -685,7 +707,9 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       @JsonKey(name: '_abatementDateTime')
           Element abatementDateTimeElement,
       @JsonKey(name: '_abatementString')
-          Element abatementStringElement});
+          Element abatementStringElement,
+      @JsonKey(name: '_dateRecorded')
+          Element dateRecordedElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -731,6 +755,8 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
   $ElementCopyWith<$Res> get abatementDateTimeElement;
   @override
   $ElementCopyWith<$Res> get abatementStringElement;
+  @override
+  $ElementCopyWith<$Res> get dateRecordedElement;
 }
 
 class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
@@ -783,6 +809,7 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
     Object onsetStringElement = freezed,
     Object abatementDateTimeElement = freezed,
     Object abatementStringElement = freezed,
+    Object dateRecordedElement = freezed,
   }) {
     return _then(_Condition(
       resourceType: resourceType == freezed
@@ -879,6 +906,9 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
       abatementStringElement: abatementStringElement == freezed
           ? _value.abatementStringElement
           : abatementStringElement as Element,
+      dateRecordedElement: dateRecordedElement == freezed
+          ? _value.dateRecordedElement
+          : dateRecordedElement as Element,
     ));
   }
 }
@@ -940,7 +970,9 @@ class _$_Condition implements _Condition {
       @JsonKey(name: '_abatementDateTime')
           this.abatementDateTimeElement,
       @JsonKey(name: '_abatementString')
-          this.abatementStringElement})
+          this.abatementStringElement,
+      @JsonKey(name: '_dateRecorded')
+          this.dateRecordedElement})
       : assert(patient != null),
         assert(code != null),
         assert(verificationStatus != null);
@@ -1041,10 +1073,13 @@ class _$_Condition implements _Condition {
   @override
   @JsonKey(name: '_abatementString')
   final Element abatementStringElement;
+  @override
+  @JsonKey(name: '_dateRecorded')
+  final Element dateRecordedElement;
 
   @override
   String toString() {
-    return 'Condition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, patient: $patient, encounter: $encounter, asserter: $asserter, dateRecorded: $dateRecorded, code: $code, category: $category, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, severity: $severity, onsetDateTime: $onsetDateTime, onsetQuantity: $onsetQuantity, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, abatementDateTime: $abatementDateTime, abatementQuantity: $abatementQuantity, abatementBoolean: $abatementBoolean, abatementPeriod: $abatementPeriod, abatementRange: $abatementRange, abatementString: $abatementString, stage: $stage, evidence: $evidence, bodySite: $bodySite, notes: $notes, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, onsetDateTimeElement: $onsetDateTimeElement, onsetStringElement: $onsetStringElement, abatementDateTimeElement: $abatementDateTimeElement, abatementStringElement: $abatementStringElement)';
+    return 'Condition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, patient: $patient, encounter: $encounter, asserter: $asserter, dateRecorded: $dateRecorded, code: $code, category: $category, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, severity: $severity, onsetDateTime: $onsetDateTime, onsetQuantity: $onsetQuantity, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, abatementDateTime: $abatementDateTime, abatementQuantity: $abatementQuantity, abatementBoolean: $abatementBoolean, abatementPeriod: $abatementPeriod, abatementRange: $abatementRange, abatementString: $abatementString, stage: $stage, evidence: $evidence, bodySite: $bodySite, notes: $notes, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, onsetDateTimeElement: $onsetDateTimeElement, onsetStringElement: $onsetStringElement, abatementDateTimeElement: $abatementDateTimeElement, abatementStringElement: $abatementStringElement, dateRecordedElement: $dateRecordedElement)';
   }
 
   @override
@@ -1133,7 +1168,8 @@ class _$_Condition implements _Condition {
             (identical(other.onsetDateTimeElement, onsetDateTimeElement) || const DeepCollectionEquality().equals(other.onsetDateTimeElement, onsetDateTimeElement)) &&
             (identical(other.onsetStringElement, onsetStringElement) || const DeepCollectionEquality().equals(other.onsetStringElement, onsetStringElement)) &&
             (identical(other.abatementDateTimeElement, abatementDateTimeElement) || const DeepCollectionEquality().equals(other.abatementDateTimeElement, abatementDateTimeElement)) &&
-            (identical(other.abatementStringElement, abatementStringElement) || const DeepCollectionEquality().equals(other.abatementStringElement, abatementStringElement)));
+            (identical(other.abatementStringElement, abatementStringElement) || const DeepCollectionEquality().equals(other.abatementStringElement, abatementStringElement)) &&
+            (identical(other.dateRecordedElement, dateRecordedElement) || const DeepCollectionEquality().equals(other.dateRecordedElement, dateRecordedElement)));
   }
 
   @override
@@ -1178,7 +1214,8 @@ class _$_Condition implements _Condition {
       const DeepCollectionEquality().hash(onsetDateTimeElement) ^
       const DeepCollectionEquality().hash(onsetStringElement) ^
       const DeepCollectionEquality().hash(abatementDateTimeElement) ^
-      const DeepCollectionEquality().hash(abatementStringElement);
+      const DeepCollectionEquality().hash(abatementStringElement) ^
+      const DeepCollectionEquality().hash(dateRecordedElement);
 
   @override
   _$ConditionCopyWith<_Condition> get copyWith =>
@@ -1246,7 +1283,9 @@ abstract class _Condition implements Condition {
       @JsonKey(name: '_abatementDateTime')
           Element abatementDateTimeElement,
       @JsonKey(name: '_abatementString')
-          Element abatementStringElement}) = _$_Condition;
+          Element abatementStringElement,
+      @JsonKey(name: '_dateRecorded')
+          Element dateRecordedElement}) = _$_Condition;
 
   factory _Condition.fromJson(Map<String, dynamic> json) =
       _$_Condition.fromJson;
@@ -1344,6 +1383,9 @@ abstract class _Condition implements Condition {
   @override
   @JsonKey(name: '_abatementString')
   Element get abatementStringElement;
+  @override
+  @JsonKey(name: '_dateRecorded')
+  Element get dateRecordedElement;
   @override
   _$ConditionCopyWith<_Condition> get copyWith;
 }
@@ -6597,6 +6639,8 @@ class _$AllergyIntoleranceTearOff {
           Element implicitRulesElement,
       @JsonKey(name: '_language')
           Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       @JsonKey(name: '_type')
           Element typeElement,
       @JsonKey(name: '_category')
@@ -6633,6 +6677,7 @@ class _$AllergyIntoleranceTearOff {
       reaction: reaction,
       implicitRulesElement: implicitRulesElement,
       languageElement: languageElement,
+      statusElement: statusElement,
       typeElement: typeElement,
       categoryElement: categoryElement,
       criticalityElement: criticalityElement,
@@ -6681,6 +6726,8 @@ mixin _$AllergyIntolerance {
   Element get implicitRulesElement;
   @JsonKey(name: '_language')
   Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @JsonKey(name: '_type')
   Element get typeElement;
   @JsonKey(name: '_category')
@@ -6736,6 +6783,8 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
           Element implicitRulesElement,
       @JsonKey(name: '_language')
           Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       @JsonKey(name: '_type')
           Element typeElement,
       @JsonKey(name: '_category')
@@ -6757,6 +6806,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
   $AnnotationCopyWith<$Res> get note;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get typeElement;
   $ElementCopyWith<$Res> get criticalityElement;
   $ElementCopyWith<$Res> get recordedDateElement;
@@ -6798,6 +6848,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
     Object reaction = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
+    Object statusElement = freezed,
     Object typeElement = freezed,
     Object categoryElement = freezed,
     Object criticalityElement = freezed,
@@ -6859,6 +6910,9 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
       categoryElement: categoryElement == freezed
@@ -6977,6 +7031,16 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get typeElement {
     if (_value.typeElement == null) {
       return null;
@@ -7059,6 +7123,8 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
           Element implicitRulesElement,
       @JsonKey(name: '_language')
           Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       @JsonKey(name: '_type')
           Element typeElement,
       @JsonKey(name: '_category')
@@ -7090,6 +7156,8 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
   $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
   @override
   $ElementCopyWith<$Res> get typeElement;
   @override
@@ -7137,6 +7205,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
     Object reaction = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
+    Object statusElement = freezed,
     Object typeElement = freezed,
     Object categoryElement = freezed,
     Object criticalityElement = freezed,
@@ -7198,6 +7267,9 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
       categoryElement: categoryElement == freezed
@@ -7256,6 +7328,8 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
           this.implicitRulesElement,
       @JsonKey(name: '_language')
           this.languageElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       @JsonKey(name: '_type')
           this.typeElement,
       @JsonKey(name: '_category')
@@ -7333,6 +7407,9 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   @JsonKey(name: '_language')
   final Element languageElement;
   @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
   @JsonKey(name: '_type')
   final Element typeElement;
   @override
@@ -7350,7 +7427,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
 
   @override
   String toString() {
-    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, onset: $onset, recordedDate: $recordedDate, recorder: $recorder, patient: $patient, reporter: $reporter, substance: $substance, status: $status, criticality: $criticality, type: $type, category: $category, lastOccurence: $lastOccurence, note: $note, reaction: $reaction, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, typeElement: $typeElement, categoryElement: $categoryElement, criticalityElement: $criticalityElement, recordedDateElement: $recordedDateElement, lastOccurrenceElement: $lastOccurrenceElement)';
+    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, onset: $onset, recordedDate: $recordedDate, recorder: $recorder, patient: $patient, reporter: $reporter, substance: $substance, status: $status, criticality: $criticality, type: $type, category: $category, lastOccurence: $lastOccurence, note: $note, reaction: $reaction, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, typeElement: $typeElement, categoryElement: $categoryElement, criticalityElement: $criticalityElement, recordedDateElement: $recordedDateElement, lastOccurrenceElement: $lastOccurrenceElement)';
   }
 
   @override
@@ -7424,6 +7501,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
                     other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.languageElement, languageElement) ||
                 const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
             (identical(other.typeElement, typeElement) || const DeepCollectionEquality().equals(other.typeElement, typeElement)) &&
             (identical(other.categoryElement, categoryElement) || const DeepCollectionEquality().equals(other.categoryElement, categoryElement)) &&
             (identical(other.criticalityElement, criticalityElement) || const DeepCollectionEquality().equals(other.criticalityElement, criticalityElement)) &&
@@ -7459,6 +7537,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
       const DeepCollectionEquality().hash(reaction) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(categoryElement) ^
       const DeepCollectionEquality().hash(criticalityElement) ^
@@ -7514,6 +7593,8 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
           Element implicitRulesElement,
       @JsonKey(name: '_language')
           Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       @JsonKey(name: '_type')
           Element typeElement,
       @JsonKey(name: '_category')
@@ -7589,6 +7670,9 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
   @JsonKey(name: '_language')
   Element get languageElement;
   @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
   @JsonKey(name: '_type')
   Element get typeElement;
   @override
@@ -7617,12 +7701,14 @@ class _$ConditionStageTearOff {
   _ConditionStage call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       CodeableConcept summary,
       List<Reference> assessment}) {
     return _ConditionStage(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       modifierExtension: modifierExtension,
       summary: summary,
       assessment: assessment,
@@ -7637,6 +7723,8 @@ mixin _$ConditionStage {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   FhirExtension get modifierExtension;
   CodeableConcept get summary;
   List<Reference> get assessment;
@@ -7652,6 +7740,7 @@ abstract class $ConditionStageCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       CodeableConcept summary,
       List<Reference> assessment});
@@ -7672,6 +7761,7 @@ class _$ConditionStageCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object modifierExtension = freezed,
     Object summary = freezed,
     Object assessment = freezed,
@@ -7681,6 +7771,9 @@ class _$ConditionStageCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -7721,6 +7814,7 @@ abstract class _$ConditionStageCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       CodeableConcept summary,
       List<Reference> assessment});
@@ -7745,6 +7839,7 @@ class __$ConditionStageCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object modifierExtension = freezed,
     Object summary = freezed,
     Object assessment = freezed,
@@ -7754,6 +7849,9 @@ class __$ConditionStageCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -7770,6 +7868,7 @@ class _$_ConditionStage implements _ConditionStage {
   const _$_ConditionStage(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.modifierExtension,
       this.summary,
       this.assessment});
@@ -7783,6 +7882,9 @@ class _$_ConditionStage implements _ConditionStage {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final FhirExtension modifierExtension;
   @override
   final CodeableConcept summary;
@@ -7791,7 +7893,7 @@ class _$_ConditionStage implements _ConditionStage {
 
   @override
   String toString() {
-    return 'ConditionStage(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, summary: $summary, assessment: $assessment)';
+    return 'ConditionStage(id: $id, extension_: $extension_, fhirComments: $fhirComments, modifierExtension: $modifierExtension, summary: $summary, assessment: $assessment)';
   }
 
   @override
@@ -7803,6 +7905,9 @@ class _$_ConditionStage implements _ConditionStage {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -7819,6 +7924,7 @@ class _$_ConditionStage implements _ConditionStage {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(summary) ^
       const DeepCollectionEquality().hash(assessment);
@@ -7837,6 +7943,7 @@ abstract class _ConditionStage implements ConditionStage {
   const factory _ConditionStage(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       CodeableConcept summary,
       List<Reference> assessment}) = _$_ConditionStage;
@@ -7849,6 +7956,9 @@ abstract class _ConditionStage implements ConditionStage {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   FhirExtension get modifierExtension;
   @override

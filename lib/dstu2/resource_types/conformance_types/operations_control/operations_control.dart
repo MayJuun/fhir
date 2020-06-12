@@ -45,6 +45,8 @@ abstract class Conformance with _$Conformance implements Resource {
     List<ConformanceRest> rest,
     List<ConformanceMessaging> messaging,
     List<ConformanceDocument> document,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
     @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
   }) = _Conformance;
 
@@ -195,6 +197,7 @@ abstract class ConformanceRest with _$ConformanceRest {
     List<ConformanceSearchParam> searchParam,
     List<ConformanceOperation> operation,
     List<FhirUri> compartment,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _ConformanceRest;
 
   factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
@@ -207,6 +210,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     List<ConformanceEndpoint> endpoint,
     UnsignedInt reliableCache,
     String documentation,
@@ -223,6 +227,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
     @required
         DocumentMode mode,
@@ -327,6 +332,9 @@ abstract class ConformanceResource with _$ConformanceResource {
     List<String> searchInclude,
     List<String> searchRevInclude,
     List<ConformanceSearchParam> searchParam,
+    @JsonKey(name: '_updateCreate') Element updateCreateElement,
+    @JsonKey(name: '_conditionalCreate') Element conditionalCreateElement,
+    @JsonKey(name: '_conditionalDelete') Element conditionalDeleteElement,
   }) = _ConformanceResource;
 
   factory ConformanceResource.fromJson(Map<String, dynamic> json) =>
@@ -373,6 +381,7 @@ abstract class ConformanceEndpoint with _$ConformanceEndpoint {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding protocol,
     @JsonKey(required: true) @required FhirUri address,
+    @JsonKey(name: '_address') Element addressElement,
   }) = _ConformanceEndpoint;
 
   factory ConformanceEndpoint.fromJson(Map<String, dynamic> json) =>
@@ -394,6 +403,7 @@ abstract class ConformanceEvent with _$ConformanceEvent {
     @JsonKey(required: true) @required Reference request,
     @JsonKey(required: true) @required Reference response,
     String documentation,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _ConformanceEvent;
 
   factory ConformanceEvent.fromJson(Map<String, dynamic> json) =>
@@ -426,6 +436,7 @@ abstract class ConformanceCertificate with _$ConformanceCertificate {
     FhirExtension modifierExtension,
     Code type,
     Base64Binary blob,
+    @JsonKey(name: '_blob') Element blobElement,
   }) = _ConformanceCertificate;
 
   factory ConformanceCertificate.fromJson(Map<String, dynamic> json) =>

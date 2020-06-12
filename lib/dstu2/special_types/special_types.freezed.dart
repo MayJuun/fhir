@@ -1299,6 +1299,7 @@ class _$MetaTearOff {
   _Meta call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -1309,6 +1310,7 @@ class _$MetaTearOff {
     return _Meta(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       versionId: versionId,
       lastUpdated: lastUpdated,
       profile: profile,
@@ -1327,6 +1329,8 @@ mixin _$Meta {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   Id get versionId;
   Instant get lastUpdated;
   List<FhirUri> get profile;
@@ -1347,6 +1351,7 @@ abstract class $MetaCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -1370,6 +1375,7 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object versionId = freezed,
     Object lastUpdated = freezed,
     Object profile = freezed,
@@ -1383,6 +1389,9 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       versionId: versionId == freezed ? _value.versionId : versionId as Id,
       lastUpdated:
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
@@ -1427,6 +1436,7 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -1453,6 +1463,7 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object versionId = freezed,
     Object lastUpdated = freezed,
     Object profile = freezed,
@@ -1466,6 +1477,9 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       versionId: versionId == freezed ? _value.versionId : versionId as Id,
       lastUpdated:
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant,
@@ -1488,6 +1502,7 @@ class _$_Meta implements _Meta {
   const _$_Meta(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.versionId,
       this.lastUpdated,
       this.profile,
@@ -1504,6 +1519,9 @@ class _$_Meta implements _Meta {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final Id versionId;
   @override
@@ -1523,7 +1541,7 @@ class _$_Meta implements _Meta {
 
   @override
   String toString() {
-    return 'Meta(id: $id, extension_: $extension_, versionId: $versionId, lastUpdated: $lastUpdated, profile: $profile, security: $security, tag: $tag, versionIdElement: $versionIdElement, lastUpdatedElement: $lastUpdatedElement)';
+    return 'Meta(id: $id, extension_: $extension_, fhirComments: $fhirComments, versionId: $versionId, lastUpdated: $lastUpdated, profile: $profile, security: $security, tag: $tag, versionIdElement: $versionIdElement, lastUpdatedElement: $lastUpdatedElement)';
   }
 
   @override
@@ -1535,6 +1553,9 @@ class _$_Meta implements _Meta {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.versionId, versionId) ||
                 const DeepCollectionEquality()
                     .equals(other.versionId, versionId)) &&
@@ -1562,6 +1583,7 @@ class _$_Meta implements _Meta {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(versionId) ^
       const DeepCollectionEquality().hash(lastUpdated) ^
       const DeepCollectionEquality().hash(profile) ^
@@ -1584,6 +1606,7 @@ abstract class _Meta implements Meta {
   const factory _Meta(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Id versionId,
       Instant lastUpdated,
       List<FhirUri> profile,
@@ -1599,6 +1622,9 @@ abstract class _Meta implements Meta {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   Id get versionId;
   @override

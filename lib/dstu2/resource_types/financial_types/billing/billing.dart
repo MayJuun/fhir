@@ -297,6 +297,7 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
     @JsonKey(name: '_created') Element createdElement,
     @JsonKey(name: '_outcome') Element outcomeElement,
     @JsonKey(name: '_disposition') Element dispositionElement,
+    @JsonKey(name: '_paymentDate') Element paymentDateElement,
   }) = _ClaimResponse;
 
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
