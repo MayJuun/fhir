@@ -132,6 +132,9 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    displayElement: json['_display'] == null
+        ? null
+        : Element.fromJson(json['_display'] as Map<String, dynamic>),
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -206,6 +209,7 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('_publisher', instance.publisherElement?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_display', instance.displayElement?.toJson());
   writeNotNull('_copyright', instance.copyrightElement?.toJson());
   writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
   writeNotNull('_kind', instance.kindElement?.toJson());

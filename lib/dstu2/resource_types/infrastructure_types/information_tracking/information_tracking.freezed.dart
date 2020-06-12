@@ -39,6 +39,8 @@ class _$QuestionnaireTearOff {
       @required
       @JsonKey(required: true)
           QuestionnaireGroup group,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -71,6 +73,7 @@ class _$QuestionnaireTearOff {
       telecom: telecom,
       subjectType: subjectType,
       group: group,
+      idElement: idElement,
       implicitRulesElement: implicitRulesElement,
       languageElement: languageElement,
       versionElement: versionElement,
@@ -107,6 +110,8 @@ mixin _$Questionnaire {
   List<Code> get subjectType;
   @JsonKey(required: true)
   QuestionnaireGroup get group;
+  @JsonKey(name: '_id')
+  Element get idElement;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @JsonKey(name: '_language')
@@ -152,6 +157,8 @@ abstract class $QuestionnaireCopyWith<$Res> {
       List<Code> subjectType,
       @JsonKey(required: true)
           QuestionnaireGroup group,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -171,6 +178,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $QuestionnaireGroupCopyWith<$Res> get group;
+  $ElementCopyWith<$Res> get idElement;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get versionElement;
@@ -206,6 +214,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
     Object telecom = freezed,
     Object subjectType = freezed,
     Object group = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object versionElement = freezed,
@@ -246,6 +255,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
           ? _value.subjectType
           : subjectType as List<Code>,
       group: group == freezed ? _value.group : group as QuestionnaireGroup,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -306,6 +316,16 @@ class _$QuestionnaireCopyWithImpl<$Res>
     }
     return $QuestionnaireGroupCopyWith<$Res>(_value.group, (value) {
       return _then(_value.copyWith(group: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get idElement {
+    if (_value.idElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.idElement, (value) {
+      return _then(_value.copyWith(idElement: value));
     });
   }
 
@@ -398,6 +418,8 @@ abstract class _$QuestionnaireCopyWith<$Res>
       List<Code> subjectType,
       @JsonKey(required: true)
           QuestionnaireGroup group,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -421,6 +443,8 @@ abstract class _$QuestionnaireCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $QuestionnaireGroupCopyWith<$Res> get group;
+  @override
+  $ElementCopyWith<$Res> get idElement;
   @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
@@ -464,6 +488,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
     Object telecom = freezed,
     Object subjectType = freezed,
     Object group = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object versionElement = freezed,
@@ -504,6 +529,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
           ? _value.subjectType
           : subjectType as List<Code>,
       group: group == freezed ? _value.group : group as QuestionnaireGroup,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -554,6 +580,8 @@ class _$_Questionnaire implements _Questionnaire {
       @required
       @JsonKey(required: true)
           this.group,
+      @JsonKey(name: '_id')
+          this.idElement,
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
       @JsonKey(name: '_language')
@@ -613,6 +641,9 @@ class _$_Questionnaire implements _Questionnaire {
   @JsonKey(required: true)
   final QuestionnaireGroup group;
   @override
+  @JsonKey(name: '_id')
+  final Element idElement;
+  @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
@@ -636,7 +667,7 @@ class _$_Questionnaire implements _Questionnaire {
 
   @override
   String toString() {
-    return 'Questionnaire(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, version: $version, status: $status, date: $date, publisher: $publisher, telecom: $telecom, subjectType: $subjectType, group: $group, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, versionElement: $versionElement, statusElement: $statusElement, subjectTypeElement: $subjectTypeElement, dateElement: $dateElement, publisherElement: $publisherElement)';
+    return 'Questionnaire(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, version: $version, status: $status, date: $date, publisher: $publisher, telecom: $telecom, subjectType: $subjectType, group: $group, idElement: $idElement, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, versionElement: $versionElement, statusElement: $statusElement, subjectTypeElement: $subjectTypeElement, dateElement: $dateElement, publisherElement: $publisherElement)';
   }
 
   @override
@@ -688,6 +719,9 @@ class _$_Questionnaire implements _Questionnaire {
                     .equals(other.subjectType, subjectType)) &&
             (identical(other.group, group) ||
                 const DeepCollectionEquality().equals(other.group, group)) &&
+            (identical(other.idElement, idElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.idElement, idElement)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
                 const DeepCollectionEquality().equals(
                     other.implicitRulesElement, implicitRulesElement)) &&
@@ -707,8 +741,7 @@ class _$_Questionnaire implements _Questionnaire {
                 const DeepCollectionEquality()
                     .equals(other.dateElement, dateElement)) &&
             (identical(other.publisherElement, publisherElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisherElement, publisherElement)));
+                const DeepCollectionEquality().equals(other.publisherElement, publisherElement)));
   }
 
   @override
@@ -731,6 +764,7 @@ class _$_Questionnaire implements _Questionnaire {
       const DeepCollectionEquality().hash(telecom) ^
       const DeepCollectionEquality().hash(subjectType) ^
       const DeepCollectionEquality().hash(group) ^
+      const DeepCollectionEquality().hash(idElement) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(versionElement) ^
@@ -774,6 +808,8 @@ abstract class _Questionnaire implements Questionnaire {
       @required
       @JsonKey(required: true)
           QuestionnaireGroup group,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -830,6 +866,9 @@ abstract class _Questionnaire implements Questionnaire {
   @override
   @JsonKey(required: true)
   QuestionnaireGroup get group;
+  @override
+  @JsonKey(name: '_id')
+  Element get idElement;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
@@ -1615,6 +1654,8 @@ class _$QuestionnaireResponseTearOff {
       Reference source,
       Reference encounter,
       QuestionnaireResponseGroup group,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -1642,6 +1683,7 @@ class _$QuestionnaireResponseTearOff {
       source: source,
       encounter: encounter,
       group: group,
+      idElement: idElement,
       implicitRulesElement: implicitRulesElement,
       languageElement: languageElement,
       statusElement: statusElement,
@@ -1676,6 +1718,8 @@ mixin _$QuestionnaireResponse {
   Reference get source;
   Reference get encounter;
   QuestionnaireResponseGroup get group;
+  @JsonKey(name: '_id')
+  Element get idElement;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @JsonKey(name: '_language')
@@ -1715,6 +1759,8 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       Reference source,
       Reference encounter,
       QuestionnaireResponseGroup group,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -1734,6 +1780,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get source;
   $ReferenceCopyWith<$Res> get encounter;
   $QuestionnaireResponseGroupCopyWith<$Res> get group;
+  $ElementCopyWith<$Res> get idElement;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get statusElement;
@@ -1768,6 +1815,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
     Object source = freezed,
     Object encounter = freezed,
     Object group = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object statusElement = freezed,
@@ -1809,6 +1857,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
           encounter == freezed ? _value.encounter : encounter as Reference,
       group:
           group == freezed ? _value.group : group as QuestionnaireResponseGroup,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -1925,6 +1974,16 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get idElement {
+    if (_value.idElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.idElement, (value) {
+      return _then(_value.copyWith(idElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
@@ -1993,6 +2052,8 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
       Reference source,
       Reference encounter,
       QuestionnaireResponseGroup group,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -2022,6 +2083,8 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get encounter;
   @override
   $QuestionnaireResponseGroupCopyWith<$Res> get group;
+  @override
+  $ElementCopyWith<$Res> get idElement;
   @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
@@ -2062,6 +2125,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
     Object source = freezed,
     Object encounter = freezed,
     Object group = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object statusElement = freezed,
@@ -2103,6 +2167,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
           encounter == freezed ? _value.encounter : encounter as Reference,
       group:
           group == freezed ? _value.group : group as QuestionnaireResponseGroup,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -2144,6 +2209,8 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
       this.source,
       this.encounter,
       this.group,
+      @JsonKey(name: '_id')
+          this.idElement,
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
       @JsonKey(name: '_language')
@@ -2198,6 +2265,9 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
   @override
   final QuestionnaireResponseGroup group;
   @override
+  @JsonKey(name: '_id')
+  final Element idElement;
+  @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
@@ -2212,7 +2282,7 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
 
   @override
   String toString() {
-    return 'QuestionnaireResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, questionnaire: $questionnaire, status: $status, subject: $subject, author: $author, authored: $authored, source: $source, encounter: $encounter, group: $group, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, authoredElement: $authoredElement)';
+    return 'QuestionnaireResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, questionnaire: $questionnaire, status: $status, subject: $subject, author: $author, authored: $authored, source: $source, encounter: $encounter, group: $group, idElement: $idElement, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, authoredElement: $authoredElement)';
   }
 
   @override
@@ -2266,6 +2336,9 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
                     .equals(other.encounter, encounter)) &&
             (identical(other.group, group) ||
                 const DeepCollectionEquality().equals(other.group, group)) &&
+            (identical(other.idElement, idElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.idElement, idElement)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
                 const DeepCollectionEquality().equals(
                     other.implicitRulesElement, implicitRulesElement)) &&
@@ -2301,6 +2374,7 @@ class _$_QuestionnaireResponse implements _QuestionnaireResponse {
       const DeepCollectionEquality().hash(source) ^
       const DeepCollectionEquality().hash(encounter) ^
       const DeepCollectionEquality().hash(group) ^
+      const DeepCollectionEquality().hash(idElement) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(statusElement) ^
@@ -2341,6 +2415,8 @@ abstract class _QuestionnaireResponse implements QuestionnaireResponse {
       Reference source,
       Reference encounter,
       QuestionnaireResponseGroup group,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -2393,6 +2469,9 @@ abstract class _QuestionnaireResponse implements QuestionnaireResponse {
   Reference get encounter;
   @override
   QuestionnaireResponseGroup get group;
+  @override
+  @JsonKey(name: '_id')
+  Element get idElement;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
@@ -2987,7 +3066,8 @@ class _$QuestionnaireGroupTearOff {
       @JsonKey(name: 'required') Boolean required_,
       Boolean repeats,
       List<QuestionnaireGroup> group,
-      List<QuestionnaireQuestion> question}) {
+      List<QuestionnaireQuestion> question,
+      @JsonKey(name: '_title') Element titleElement}) {
     return _QuestionnaireGroup(
       id: id,
       extension_: extension_,
@@ -3000,6 +3080,7 @@ class _$QuestionnaireGroupTearOff {
       repeats: repeats,
       group: group,
       question: question,
+      titleElement: titleElement,
     );
   }
 }
@@ -3021,6 +3102,8 @@ mixin _$QuestionnaireGroup {
   Boolean get repeats;
   List<QuestionnaireGroup> get group;
   List<QuestionnaireQuestion> get question;
+  @JsonKey(name: '_title')
+  Element get titleElement;
 
   Map<String, dynamic> toJson();
   $QuestionnaireGroupCopyWith<QuestionnaireGroup> get copyWith;
@@ -3041,9 +3124,11 @@ abstract class $QuestionnaireGroupCopyWith<$Res> {
       @JsonKey(name: 'required') Boolean required_,
       Boolean repeats,
       List<QuestionnaireGroup> group,
-      List<QuestionnaireQuestion> question});
+      List<QuestionnaireQuestion> question,
+      @JsonKey(name: '_title') Element titleElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get titleElement;
 }
 
 class _$QuestionnaireGroupCopyWithImpl<$Res>
@@ -3067,6 +3152,7 @@ class _$QuestionnaireGroupCopyWithImpl<$Res>
     Object repeats = freezed,
     Object group = freezed,
     Object question = freezed,
+    Object titleElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3087,6 +3173,9 @@ class _$QuestionnaireGroupCopyWithImpl<$Res>
       question: question == freezed
           ? _value.question
           : question as List<QuestionnaireQuestion>,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
     ));
   }
 
@@ -3097,6 +3186,16 @@ class _$QuestionnaireGroupCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
     });
   }
 }
@@ -3118,10 +3217,13 @@ abstract class _$QuestionnaireGroupCopyWith<$Res>
       @JsonKey(name: 'required') Boolean required_,
       Boolean repeats,
       List<QuestionnaireGroup> group,
-      List<QuestionnaireQuestion> question});
+      List<QuestionnaireQuestion> question,
+      @JsonKey(name: '_title') Element titleElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
 }
 
 class __$QuestionnaireGroupCopyWithImpl<$Res>
@@ -3147,6 +3249,7 @@ class __$QuestionnaireGroupCopyWithImpl<$Res>
     Object repeats = freezed,
     Object group = freezed,
     Object question = freezed,
+    Object titleElement = freezed,
   }) {
     return _then(_QuestionnaireGroup(
       id: id == freezed ? _value.id : id as Id,
@@ -3167,6 +3270,9 @@ class __$QuestionnaireGroupCopyWithImpl<$Res>
       question: question == freezed
           ? _value.question
           : question as List<QuestionnaireQuestion>,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
     ));
   }
 }
@@ -3184,7 +3290,8 @@ class _$_QuestionnaireGroup implements _QuestionnaireGroup {
       @JsonKey(name: 'required') this.required_,
       this.repeats,
       this.group,
-      this.question});
+      this.question,
+      @JsonKey(name: '_title') this.titleElement});
 
   factory _$_QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireGroupFromJson(json);
@@ -3213,10 +3320,13 @@ class _$_QuestionnaireGroup implements _QuestionnaireGroup {
   final List<QuestionnaireGroup> group;
   @override
   final List<QuestionnaireQuestion> question;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
 
   @override
   String toString() {
-    return 'QuestionnaireGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, title: $title, concept: $concept, text: $text, required_: $required_, repeats: $repeats, group: $group, question: $question)';
+    return 'QuestionnaireGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, title: $title, concept: $concept, text: $text, required_: $required_, repeats: $repeats, group: $group, question: $question, titleElement: $titleElement)';
   }
 
   @override
@@ -3250,7 +3360,10 @@ class _$_QuestionnaireGroup implements _QuestionnaireGroup {
                 const DeepCollectionEquality().equals(other.group, group)) &&
             (identical(other.question, question) ||
                 const DeepCollectionEquality()
-                    .equals(other.question, question)));
+                    .equals(other.question, question)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)));
   }
 
   @override
@@ -3266,7 +3379,8 @@ class _$_QuestionnaireGroup implements _QuestionnaireGroup {
       const DeepCollectionEquality().hash(required_) ^
       const DeepCollectionEquality().hash(repeats) ^
       const DeepCollectionEquality().hash(group) ^
-      const DeepCollectionEquality().hash(question);
+      const DeepCollectionEquality().hash(question) ^
+      const DeepCollectionEquality().hash(titleElement);
 
   @override
   _$QuestionnaireGroupCopyWith<_QuestionnaireGroup> get copyWith =>
@@ -3290,7 +3404,8 @@ abstract class _QuestionnaireGroup implements QuestionnaireGroup {
       @JsonKey(name: 'required') Boolean required_,
       Boolean repeats,
       List<QuestionnaireGroup> group,
-      List<QuestionnaireQuestion> question}) = _$_QuestionnaireGroup;
+      List<QuestionnaireQuestion> question,
+      @JsonKey(name: '_title') Element titleElement}) = _$_QuestionnaireGroup;
 
   factory _QuestionnaireGroup.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireGroup.fromJson;
@@ -3319,6 +3434,9 @@ abstract class _QuestionnaireGroup implements QuestionnaireGroup {
   List<QuestionnaireGroup> get group;
   @override
   List<QuestionnaireQuestion> get question;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
   @override
   _$QuestionnaireGroupCopyWith<_QuestionnaireGroup> get copyWith;
 }
@@ -4050,22 +4168,26 @@ class _$QuestionnaireResponseGroupTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String linkId,
       String title,
       String text,
       Reference subject,
       List<QuestionnaireResponseGroup> group,
-      List<QuestionnaireResponseQuestion> question}) {
+      List<QuestionnaireResponseQuestion> question,
+      @JsonKey(name: '_title') Element titleElement}) {
     return _QuestionnaireResponseGroup(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       linkId: linkId,
       title: title,
       text: text,
       subject: subject,
       group: group,
       question: question,
+      titleElement: titleElement,
     );
   }
 }
@@ -4078,12 +4200,16 @@ mixin _$QuestionnaireResponseGroup {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   String get linkId;
   String get title;
   String get text;
   Reference get subject;
   List<QuestionnaireResponseGroup> get group;
   List<QuestionnaireResponseQuestion> get question;
+  @JsonKey(name: '_title')
+  Element get titleElement;
 
   Map<String, dynamic> toJson();
   $QuestionnaireResponseGroupCopyWith<QuestionnaireResponseGroup> get copyWith;
@@ -4097,15 +4223,18 @@ abstract class $QuestionnaireResponseGroupCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String linkId,
       String title,
       String text,
       Reference subject,
       List<QuestionnaireResponseGroup> group,
-      List<QuestionnaireResponseQuestion> question});
+      List<QuestionnaireResponseQuestion> question,
+      @JsonKey(name: '_title') Element titleElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get subject;
+  $ElementCopyWith<$Res> get titleElement;
 }
 
 class _$QuestionnaireResponseGroupCopyWithImpl<$Res>
@@ -4121,12 +4250,14 @@ class _$QuestionnaireResponseGroupCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object linkId = freezed,
     Object title = freezed,
     Object text = freezed,
     Object subject = freezed,
     Object group = freezed,
     Object question = freezed,
+    Object titleElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -4136,6 +4267,9 @@ class _$QuestionnaireResponseGroupCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       linkId: linkId == freezed ? _value.linkId : linkId as String,
       title: title == freezed ? _value.title : title as String,
       text: text == freezed ? _value.text : text as String,
@@ -4146,6 +4280,9 @@ class _$QuestionnaireResponseGroupCopyWithImpl<$Res>
       question: question == freezed
           ? _value.question
           : question as List<QuestionnaireResponseQuestion>,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
     ));
   }
 
@@ -4168,6 +4305,16 @@ class _$QuestionnaireResponseGroupCopyWithImpl<$Res>
       return _then(_value.copyWith(subject: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
 }
 
 abstract class _$QuestionnaireResponseGroupCopyWith<$Res>
@@ -4181,17 +4328,21 @@ abstract class _$QuestionnaireResponseGroupCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String linkId,
       String title,
       String text,
       Reference subject,
       List<QuestionnaireResponseGroup> group,
-      List<QuestionnaireResponseQuestion> question});
+      List<QuestionnaireResponseQuestion> question,
+      @JsonKey(name: '_title') Element titleElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ReferenceCopyWith<$Res> get subject;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
 }
 
 class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
@@ -4210,12 +4361,14 @@ class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object linkId = freezed,
     Object title = freezed,
     Object text = freezed,
     Object subject = freezed,
     Object group = freezed,
     Object question = freezed,
+    Object titleElement = freezed,
   }) {
     return _then(_QuestionnaireResponseGroup(
       id: id == freezed ? _value.id : id as Id,
@@ -4225,6 +4378,9 @@ class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       linkId: linkId == freezed ? _value.linkId : linkId as String,
       title: title == freezed ? _value.title : title as String,
       text: text == freezed ? _value.text : text as String,
@@ -4235,6 +4391,9 @@ class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
       question: question == freezed
           ? _value.question
           : question as List<QuestionnaireResponseQuestion>,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
     ));
   }
 }
@@ -4245,12 +4404,14 @@ class _$_QuestionnaireResponseGroup implements _QuestionnaireResponseGroup {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.linkId,
       this.title,
       this.text,
       this.subject,
       this.group,
-      this.question});
+      this.question,
+      @JsonKey(name: '_title') this.titleElement});
 
   factory _$_QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireResponseGroupFromJson(json);
@@ -4263,6 +4424,9 @@ class _$_QuestionnaireResponseGroup implements _QuestionnaireResponseGroup {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final String linkId;
   @override
   final String title;
@@ -4274,10 +4438,13 @@ class _$_QuestionnaireResponseGroup implements _QuestionnaireResponseGroup {
   final List<QuestionnaireResponseGroup> group;
   @override
   final List<QuestionnaireResponseQuestion> question;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
 
   @override
   String toString() {
-    return 'QuestionnaireResponseGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, title: $title, text: $text, subject: $subject, group: $group, question: $question)';
+    return 'QuestionnaireResponseGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, linkId: $linkId, title: $title, text: $text, subject: $subject, group: $group, question: $question, titleElement: $titleElement)';
   }
 
   @override
@@ -4292,6 +4459,9 @@ class _$_QuestionnaireResponseGroup implements _QuestionnaireResponseGroup {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.linkId, linkId) ||
                 const DeepCollectionEquality().equals(other.linkId, linkId)) &&
             (identical(other.title, title) ||
@@ -4305,7 +4475,10 @@ class _$_QuestionnaireResponseGroup implements _QuestionnaireResponseGroup {
                 const DeepCollectionEquality().equals(other.group, group)) &&
             (identical(other.question, question) ||
                 const DeepCollectionEquality()
-                    .equals(other.question, question)));
+                    .equals(other.question, question)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)));
   }
 
   @override
@@ -4314,12 +4487,14 @@ class _$_QuestionnaireResponseGroup implements _QuestionnaireResponseGroup {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(linkId) ^
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(group) ^
-      const DeepCollectionEquality().hash(question);
+      const DeepCollectionEquality().hash(question) ^
+      const DeepCollectionEquality().hash(titleElement);
 
   @override
   _$QuestionnaireResponseGroupCopyWith<_QuestionnaireResponseGroup>
@@ -4338,12 +4513,14 @@ abstract class _QuestionnaireResponseGroup
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           String linkId,
           String title,
           String text,
           Reference subject,
           List<QuestionnaireResponseGroup> group,
-          List<QuestionnaireResponseQuestion> question}) =
+          List<QuestionnaireResponseQuestion> question,
+          @JsonKey(name: '_title') Element titleElement}) =
       _$_QuestionnaireResponseGroup;
 
   factory _QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =
@@ -4357,6 +4534,9 @@ abstract class _QuestionnaireResponseGroup
   @override
   FhirExtension get modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
+  @override
   String get linkId;
   @override
   String get title;
@@ -4368,6 +4548,9 @@ abstract class _QuestionnaireResponseGroup
   List<QuestionnaireResponseGroup> get group;
   @override
   List<QuestionnaireResponseQuestion> get question;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
   @override
   _$QuestionnaireResponseGroupCopyWith<_QuestionnaireResponseGroup>
       get copyWith;

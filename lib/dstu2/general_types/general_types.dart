@@ -60,6 +60,7 @@ abstract class Quantity with _$Quantity {
   const factory Quantity({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Decimal value,
     @JsonKey(unknownEnumValue: QuantityComparator.unknown)
         QuantityComparator comparator,
@@ -179,6 +180,7 @@ abstract class Identifier with _$Identifier {
   const factory Identifier({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
     CodeableConcept type,
     FhirUri system,
@@ -221,6 +223,7 @@ abstract class Timing with _$Timing {
   const factory Timing({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     List<FhirDateTime> event,
     TimingRepeat repeat,
     CodeableConcept code,
@@ -266,6 +269,7 @@ abstract class HumanName with _$HumanName {
   const factory HumanName({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
     String text,
     List<String> family,

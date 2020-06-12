@@ -2138,8 +2138,8 @@ class _$ElementDefinitionTearOff {
       List<Code> representation,
       String name,
       String label,
-      Coding code,
-      Element slicing,
+      List<Coding> code,
+      ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
       Markdown comments,
@@ -2296,6 +2296,7 @@ class _$ElementDefinitionTearOff {
       Boolean isModifier,
       Boolean isSummary,
       ElementDefinitionBinding binding,
+      List<ElementDefinitionMapping> mapping,
       @JsonKey(name: '_representation')
           Element representationElement,
       @JsonKey(name: '_label')
@@ -2409,8 +2410,7 @@ class _$ElementDefinitionTearOff {
       @JsonKey(name: '_isModifier')
           Element isModifierElement,
       @JsonKey(name: '_isSummary')
-          Element isSummaryElement,
-      List<ElementDefinitionMapping> mapping}) {
+          Element isSummaryElement}) {
     return _ElementDefinition(
       id: id,
       extension_: extension_,
@@ -2576,6 +2576,7 @@ class _$ElementDefinitionTearOff {
       isModifier: isModifier,
       isSummary: isSummary,
       binding: binding,
+      mapping: mapping,
       representationElement: representationElement,
       labelElement: labelElement,
       shortElement: shortElement,
@@ -2633,7 +2634,6 @@ class _$ElementDefinitionTearOff {
       mustSupportElement: mustSupportElement,
       isModifierElement: isModifierElement,
       isSummaryElement: isSummaryElement,
-      mapping: mapping,
     );
   }
 }
@@ -2650,8 +2650,8 @@ mixin _$ElementDefinition {
   List<Code> get representation;
   String get name;
   String get label;
-  Coding get code;
-  Element get slicing;
+  List<Coding> get code;
+  ElementDefinitionSlicing get slicing;
   String get short;
   Markdown get definition;
   Markdown get comments;
@@ -2808,6 +2808,7 @@ mixin _$ElementDefinition {
   Boolean get isModifier;
   Boolean get isSummary;
   ElementDefinitionBinding get binding;
+  List<ElementDefinitionMapping> get mapping;
   @JsonKey(name: '_representation')
   Element get representationElement;
   @JsonKey(name: '_label')
@@ -2922,7 +2923,6 @@ mixin _$ElementDefinition {
   Element get isModifierElement;
   @JsonKey(name: '_isSummary')
   Element get isSummaryElement;
-  List<ElementDefinitionMapping> get mapping;
 
   Map<String, dynamic> toJson();
   $ElementDefinitionCopyWith<ElementDefinition> get copyWith;
@@ -2941,8 +2941,8 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       List<Code> representation,
       String name,
       String label,
-      Coding code,
-      Element slicing,
+      List<Coding> code,
+      ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
       Markdown comments,
@@ -3099,6 +3099,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Boolean isModifier,
       Boolean isSummary,
       ElementDefinitionBinding binding,
+      List<ElementDefinitionMapping> mapping,
       @JsonKey(name: '_representation')
           Element representationElement,
       @JsonKey(name: '_label')
@@ -3212,11 +3213,9 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       @JsonKey(name: '_isModifier')
           Element isModifierElement,
       @JsonKey(name: '_isSummary')
-          Element isSummaryElement,
-      List<ElementDefinitionMapping> mapping});
+          Element isSummaryElement});
 
-  $CodingCopyWith<$Res> get code;
-  $ElementCopyWith<$Res> get slicing;
+  $ElementDefinitionSlicingCopyWith<$Res> get slicing;
   $ElementDefinitionBaseCopyWith<$Res> get base;
   $CodingCopyWith<$Res> get defaultValueCoding;
   $CodeableConceptCopyWith<$Res> get defaultValueCodeableConcept;
@@ -3530,6 +3529,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object isModifier = freezed,
     Object isSummary = freezed,
     Object binding = freezed,
+    Object mapping = freezed,
     Object representationElement = freezed,
     Object labelElement = freezed,
     Object shortElement = freezed,
@@ -3587,7 +3587,6 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object mustSupportElement = freezed,
     Object isModifierElement = freezed,
     Object isSummaryElement = freezed,
-    Object mapping = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3600,8 +3599,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : representation as List<Code>,
       name: name == freezed ? _value.name : name as String,
       label: label == freezed ? _value.label : label as String,
-      code: code == freezed ? _value.code : code as Coding,
-      slicing: slicing == freezed ? _value.slicing : slicing as Element,
+      code: code == freezed ? _value.code : code as List<Coding>,
+      slicing: slicing == freezed
+          ? _value.slicing
+          : slicing as ElementDefinitionSlicing,
       short: short == freezed ? _value.short : short as String,
       definition:
           definition == freezed ? _value.definition : definition as Markdown,
@@ -4021,6 +4022,9 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       binding: binding == freezed
           ? _value.binding
           : binding as ElementDefinitionBinding,
+      mapping: mapping == freezed
+          ? _value.mapping
+          : mapping as List<ElementDefinitionMapping>,
       representationElement: representationElement == freezed
           ? _value.representationElement
           : representationElement as Element,
@@ -4191,28 +4195,15 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       isSummaryElement: isSummaryElement == freezed
           ? _value.isSummaryElement
           : isSummaryElement as Element,
-      mapping: mapping == freezed
-          ? _value.mapping
-          : mapping as List<ElementDefinitionMapping>,
     ));
   }
 
   @override
-  $CodingCopyWith<$Res> get code {
-    if (_value.code == null) {
-      return null;
-    }
-    return $CodingCopyWith<$Res>(_value.code, (value) {
-      return _then(_value.copyWith(code: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get slicing {
+  $ElementDefinitionSlicingCopyWith<$Res> get slicing {
     if (_value.slicing == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.slicing, (value) {
+    return $ElementDefinitionSlicingCopyWith<$Res>(_value.slicing, (value) {
       return _then(_value.copyWith(slicing: value));
     });
   }
@@ -5610,8 +5601,8 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       List<Code> representation,
       String name,
       String label,
-      Coding code,
-      Element slicing,
+      List<Coding> code,
+      ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
       Markdown comments,
@@ -5768,6 +5759,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Boolean isModifier,
       Boolean isSummary,
       ElementDefinitionBinding binding,
+      List<ElementDefinitionMapping> mapping,
       @JsonKey(name: '_representation')
           Element representationElement,
       @JsonKey(name: '_label')
@@ -5881,13 +5873,10 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       @JsonKey(name: '_isModifier')
           Element isModifierElement,
       @JsonKey(name: '_isSummary')
-          Element isSummaryElement,
-      List<ElementDefinitionMapping> mapping});
+          Element isSummaryElement});
 
   @override
-  $CodingCopyWith<$Res> get code;
-  @override
-  $ElementCopyWith<$Res> get slicing;
+  $ElementDefinitionSlicingCopyWith<$Res> get slicing;
   @override
   $ElementDefinitionBaseCopyWith<$Res> get base;
   @override
@@ -6340,6 +6329,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object isModifier = freezed,
     Object isSummary = freezed,
     Object binding = freezed,
+    Object mapping = freezed,
     Object representationElement = freezed,
     Object labelElement = freezed,
     Object shortElement = freezed,
@@ -6397,7 +6387,6 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object mustSupportElement = freezed,
     Object isModifierElement = freezed,
     Object isSummaryElement = freezed,
-    Object mapping = freezed,
   }) {
     return _then(_ElementDefinition(
       id: id == freezed ? _value.id : id as Id,
@@ -6410,8 +6399,10 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : representation as List<Code>,
       name: name == freezed ? _value.name : name as String,
       label: label == freezed ? _value.label : label as String,
-      code: code == freezed ? _value.code : code as Coding,
-      slicing: slicing == freezed ? _value.slicing : slicing as Element,
+      code: code == freezed ? _value.code : code as List<Coding>,
+      slicing: slicing == freezed
+          ? _value.slicing
+          : slicing as ElementDefinitionSlicing,
       short: short == freezed ? _value.short : short as String,
       definition:
           definition == freezed ? _value.definition : definition as Markdown,
@@ -6831,6 +6822,9 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       binding: binding == freezed
           ? _value.binding
           : binding as ElementDefinitionBinding,
+      mapping: mapping == freezed
+          ? _value.mapping
+          : mapping as List<ElementDefinitionMapping>,
       representationElement: representationElement == freezed
           ? _value.representationElement
           : representationElement as Element,
@@ -7001,9 +6995,6 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       isSummaryElement: isSummaryElement == freezed
           ? _value.isSummaryElement
           : isSummaryElement as Element,
-      mapping: mapping == freezed
-          ? _value.mapping
-          : mapping as List<ElementDefinitionMapping>,
     ));
   }
 }
@@ -7178,6 +7169,7 @@ class _$_ElementDefinition implements _ElementDefinition {
       this.isModifier,
       this.isSummary,
       this.binding,
+      this.mapping,
       @JsonKey(name: '_representation')
           this.representationElement,
       @JsonKey(name: '_label')
@@ -7291,8 +7283,7 @@ class _$_ElementDefinition implements _ElementDefinition {
       @JsonKey(name: '_isModifier')
           this.isModifierElement,
       @JsonKey(name: '_isSummary')
-          this.isSummaryElement,
-      this.mapping})
+          this.isSummaryElement})
       : assert(path != null);
 
   factory _$_ElementDefinition.fromJson(Map<String, dynamic> json) =>
@@ -7313,9 +7304,9 @@ class _$_ElementDefinition implements _ElementDefinition {
   @override
   final String label;
   @override
-  final Coding code;
+  final List<Coding> code;
   @override
-  final Element slicing;
+  final ElementDefinitionSlicing slicing;
   @override
   final String short;
   @override
@@ -7629,6 +7620,8 @@ class _$_ElementDefinition implements _ElementDefinition {
   @override
   final ElementDefinitionBinding binding;
   @override
+  final List<ElementDefinitionMapping> mapping;
+  @override
   @JsonKey(name: '_representation')
   final Element representationElement;
   @override
@@ -7799,12 +7792,10 @@ class _$_ElementDefinition implements _ElementDefinition {
   @override
   @JsonKey(name: '_isSummary')
   final Element isSummaryElement;
-  @override
-  final List<ElementDefinitionMapping> mapping;
 
   @override
   String toString() {
-    return 'ElementDefinition(id: $id, extension_: $extension_, path: $path, representation: $representation, name: $name, label: $label, code: $code, slicing: $slicing, short: $short, definition: $definition, comments: $comments, requirements: $requirements, alias: $alias, min: $min, max: $max, base: $base, type: $type, nameReference: $nameReference, defaultValueInteger: $defaultValueInteger, defaultValueDecimal: $defaultValueDecimal, defaultValueDateTime: $defaultValueDateTime, defaultValueDate: $defaultValueDate, defaultValueInstant: $defaultValueInstant, defaultValueString: $defaultValueString, defaultValueUri: $defaultValueUri, defaultValueBoolean: $defaultValueBoolean, defaultValueCode: $defaultValueCode, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueCoding: $defaultValueCoding, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueAttachment: $defaultValueAttachment, defaultValueIdentifier: $defaultValueIdentifier, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValuePeriod: $defaultValuePeriod, defaultValueRatio: $defaultValueRatio, defaultValueHumanName: $defaultValueHumanName, defaultValueAddress: $defaultValueAddress, defaultValueContactPoint: $defaultValueContactPoint, defaultValueSchedule: $defaultValueSchedule, defaultValueReference: $defaultValueReference, meaningWhenMissing: $meaningWhenMissing, fixedInteger: $fixedInteger, fixedDecimal: $fixedDecimal, fixedDateTime: $fixedDateTime, fixedDate: $fixedDate, fixedInstant: $fixedInstant, fixedString: $fixedString, fixedUri: $fixedUri, fixedBoolean: $fixedBoolean, fixedCode: $fixedCode, fixedBase64Binary: $fixedBase64Binary, fixedCoding: $fixedCoding, fixedCodeableConcept: $fixedCodeableConcept, fixedAttachment: $fixedAttachment, fixedIdentifier: $fixedIdentifier, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedPeriod: $fixedPeriod, fixedRatio: $fixedRatio, fixedHumanName: $fixedHumanName, fixedAddress: $fixedAddress, fixedContactPoint: $fixedContactPoint, fixedSchedule: $fixedSchedule, fixedReference: $fixedReference, patternInteger: $patternInteger, patternDecimal: $patternDecimal, patternDateTime: $patternDateTime, patternDate: $patternDate, patternInstant: $patternInstant, patternString: $patternString, patternUri: $patternUri, patternBoolean: $patternBoolean, patternCode: $patternCode, patternBase64Binary: $patternBase64Binary, patternCoding: $patternCoding, patternCodeableConcept: $patternCodeableConcept, patternAttachment: $patternAttachment, patternIdentifier: $patternIdentifier, patternQuantity: $patternQuantity, patternRange: $patternRange, patternPeriod: $patternPeriod, patternRatio: $patternRatio, patternHumanName: $patternHumanName, patternAddress: $patternAddress, patternContactPoint: $patternContactPoint, patternSchedule: $patternSchedule, patternReference: $patternReference, exampleInteger: $exampleInteger, exampleDecimal: $exampleDecimal, exampleDateTime: $exampleDateTime, exampleDate: $exampleDate, exampleInstant: $exampleInstant, exampleString: $exampleString, exampleUri: $exampleUri, exampleBoolean: $exampleBoolean, exampleCode: $exampleCode, exampleBase64Binary: $exampleBase64Binary, exampleCoding: $exampleCoding, exampleCodeableConcept: $exampleCodeableConcept, exampleAttachment: $exampleAttachment, exampleIdentifier: $exampleIdentifier, exampleQuantity: $exampleQuantity, exampleRange: $exampleRange, examplePeriod: $examplePeriod, exampleRatio: $exampleRatio, exampleHumanName: $exampleHumanName, exampleAddress: $exampleAddress, exampleContactPoint: $exampleContactPoint, exampleSchedule: $exampleSchedule, exampleReference: $exampleReference, minValueInteger: $minValueInteger, minValueDecimal: $minValueDecimal, minValueDateTime: $minValueDateTime, minValueDate: $minValueDate, minValueInstant: $minValueInstant, minValueString: $minValueString, minValueUri: $minValueUri, minValueBoolean: $minValueBoolean, minValueCode: $minValueCode, minValueBase64Binary: $minValueBase64Binary, minValueCoding: $minValueCoding, minValueCodeableConcept: $minValueCodeableConcept, minValueAttachment: $minValueAttachment, minValueIdentifier: $minValueIdentifier, minValueQuantity: $minValueQuantity, minValueRange: $minValueRange, minValuePeriod: $minValuePeriod, minValueRatio: $minValueRatio, minValueHumanName: $minValueHumanName, minValueAddress: $minValueAddress, minValueContactPoint: $minValueContactPoint, minValueSchedule: $minValueSchedule, minValueReference: $minValueReference, maxValueInteger: $maxValueInteger, maxValueDecimal: $maxValueDecimal, maxValueDateTime: $maxValueDateTime, maxValueDate: $maxValueDate, maxValueInstant: $maxValueInstant, maxValueString: $maxValueString, maxValueUri: $maxValueUri, maxValueBoolean: $maxValueBoolean, maxValueCode: $maxValueCode, maxValueBase64Binary: $maxValueBase64Binary, maxValueCoding: $maxValueCoding, maxValueCodeableConcept: $maxValueCodeableConcept, maxValueAttachment: $maxValueAttachment, maxValueIdentifier: $maxValueIdentifier, maxValueQuantity: $maxValueQuantity, maxValueRange: $maxValueRange, maxValuePeriod: $maxValuePeriod, maxValueRatio: $maxValueRatio, maxValueHumanName: $maxValueHumanName, maxValueAddress: $maxValueAddress, maxValueContactPoint: $maxValueContactPoint, maxValueSchedule: $maxValueSchedule, maxValueReference: $maxValueReference, maxLength: $maxLength, condition: $condition, constraint: $constraint, mustSupport: $mustSupport, isModifier: $isModifier, isSummary: $isSummary, binding: $binding, representationElement: $representationElement, labelElement: $labelElement, shortElement: $shortElement, definitionElement: $definitionElement, commentElement: $commentElement, requirementsElement: $requirementsElement, aliasElement: $aliasElement, minElement: $minElement, maxElement: $maxElement, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueInstantElement: $defaultValueInstantElement, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueStringElement: $defaultValueStringElement, defaultValueUriElement: $defaultValueUriElement, meaningWhenMissingElement: $meaningWhenMissingElement, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBooleanElement: $fixedBooleanElement, fixedCodeElement: $fixedCodeElement, fixedDateElement: $fixedDateElement, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimalElement: $fixedDecimalElement, fixedInstantElement: $fixedInstantElement, fixedIntegerElement: $fixedIntegerElement, fixedStringElement: $fixedStringElement, fixedUriElement: $fixedUriElement, patternBase64BinaryElement: $patternBase64BinaryElement, patternBooleanElement: $patternBooleanElement, patternCodeElement: $patternCodeElement, patternDateElement: $patternDateElement, patternDateTimeElement: $patternDateTimeElement, patternDecimalElement: $patternDecimalElement, patternInstantElement: $patternInstantElement, patternIntegerElement: $patternIntegerElement, patternStringElement: $patternStringElement, patternUriElement: $patternUriElement, minValueDateElement: $minValueDateElement, minValueDateTimeElement: $minValueDateTimeElement, minValueInstantElement: $minValueInstantElement, minValueDecimalElement: $minValueDecimalElement, minValueIntegerElement: $minValueIntegerElement, minValueUnsignedIntElement: $minValueUnsignedIntElement, maxValueDateElement: $maxValueDateElement, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstantElement: $maxValueInstantElement, maxValueTimeElement: $maxValueTimeElement, maxValueDecimalElement: $maxValueDecimalElement, maxValueIntegerElement: $maxValueIntegerElement, maxLengthElement: $maxLengthElement, conditionElement: $conditionElement, mustSupportElement: $mustSupportElement, isModifierElement: $isModifierElement, isSummaryElement: $isSummaryElement, mapping: $mapping)';
+    return 'ElementDefinition(id: $id, extension_: $extension_, path: $path, representation: $representation, name: $name, label: $label, code: $code, slicing: $slicing, short: $short, definition: $definition, comments: $comments, requirements: $requirements, alias: $alias, min: $min, max: $max, base: $base, type: $type, nameReference: $nameReference, defaultValueInteger: $defaultValueInteger, defaultValueDecimal: $defaultValueDecimal, defaultValueDateTime: $defaultValueDateTime, defaultValueDate: $defaultValueDate, defaultValueInstant: $defaultValueInstant, defaultValueString: $defaultValueString, defaultValueUri: $defaultValueUri, defaultValueBoolean: $defaultValueBoolean, defaultValueCode: $defaultValueCode, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueCoding: $defaultValueCoding, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueAttachment: $defaultValueAttachment, defaultValueIdentifier: $defaultValueIdentifier, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValuePeriod: $defaultValuePeriod, defaultValueRatio: $defaultValueRatio, defaultValueHumanName: $defaultValueHumanName, defaultValueAddress: $defaultValueAddress, defaultValueContactPoint: $defaultValueContactPoint, defaultValueSchedule: $defaultValueSchedule, defaultValueReference: $defaultValueReference, meaningWhenMissing: $meaningWhenMissing, fixedInteger: $fixedInteger, fixedDecimal: $fixedDecimal, fixedDateTime: $fixedDateTime, fixedDate: $fixedDate, fixedInstant: $fixedInstant, fixedString: $fixedString, fixedUri: $fixedUri, fixedBoolean: $fixedBoolean, fixedCode: $fixedCode, fixedBase64Binary: $fixedBase64Binary, fixedCoding: $fixedCoding, fixedCodeableConcept: $fixedCodeableConcept, fixedAttachment: $fixedAttachment, fixedIdentifier: $fixedIdentifier, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedPeriod: $fixedPeriod, fixedRatio: $fixedRatio, fixedHumanName: $fixedHumanName, fixedAddress: $fixedAddress, fixedContactPoint: $fixedContactPoint, fixedSchedule: $fixedSchedule, fixedReference: $fixedReference, patternInteger: $patternInteger, patternDecimal: $patternDecimal, patternDateTime: $patternDateTime, patternDate: $patternDate, patternInstant: $patternInstant, patternString: $patternString, patternUri: $patternUri, patternBoolean: $patternBoolean, patternCode: $patternCode, patternBase64Binary: $patternBase64Binary, patternCoding: $patternCoding, patternCodeableConcept: $patternCodeableConcept, patternAttachment: $patternAttachment, patternIdentifier: $patternIdentifier, patternQuantity: $patternQuantity, patternRange: $patternRange, patternPeriod: $patternPeriod, patternRatio: $patternRatio, patternHumanName: $patternHumanName, patternAddress: $patternAddress, patternContactPoint: $patternContactPoint, patternSchedule: $patternSchedule, patternReference: $patternReference, exampleInteger: $exampleInteger, exampleDecimal: $exampleDecimal, exampleDateTime: $exampleDateTime, exampleDate: $exampleDate, exampleInstant: $exampleInstant, exampleString: $exampleString, exampleUri: $exampleUri, exampleBoolean: $exampleBoolean, exampleCode: $exampleCode, exampleBase64Binary: $exampleBase64Binary, exampleCoding: $exampleCoding, exampleCodeableConcept: $exampleCodeableConcept, exampleAttachment: $exampleAttachment, exampleIdentifier: $exampleIdentifier, exampleQuantity: $exampleQuantity, exampleRange: $exampleRange, examplePeriod: $examplePeriod, exampleRatio: $exampleRatio, exampleHumanName: $exampleHumanName, exampleAddress: $exampleAddress, exampleContactPoint: $exampleContactPoint, exampleSchedule: $exampleSchedule, exampleReference: $exampleReference, minValueInteger: $minValueInteger, minValueDecimal: $minValueDecimal, minValueDateTime: $minValueDateTime, minValueDate: $minValueDate, minValueInstant: $minValueInstant, minValueString: $minValueString, minValueUri: $minValueUri, minValueBoolean: $minValueBoolean, minValueCode: $minValueCode, minValueBase64Binary: $minValueBase64Binary, minValueCoding: $minValueCoding, minValueCodeableConcept: $minValueCodeableConcept, minValueAttachment: $minValueAttachment, minValueIdentifier: $minValueIdentifier, minValueQuantity: $minValueQuantity, minValueRange: $minValueRange, minValuePeriod: $minValuePeriod, minValueRatio: $minValueRatio, minValueHumanName: $minValueHumanName, minValueAddress: $minValueAddress, minValueContactPoint: $minValueContactPoint, minValueSchedule: $minValueSchedule, minValueReference: $minValueReference, maxValueInteger: $maxValueInteger, maxValueDecimal: $maxValueDecimal, maxValueDateTime: $maxValueDateTime, maxValueDate: $maxValueDate, maxValueInstant: $maxValueInstant, maxValueString: $maxValueString, maxValueUri: $maxValueUri, maxValueBoolean: $maxValueBoolean, maxValueCode: $maxValueCode, maxValueBase64Binary: $maxValueBase64Binary, maxValueCoding: $maxValueCoding, maxValueCodeableConcept: $maxValueCodeableConcept, maxValueAttachment: $maxValueAttachment, maxValueIdentifier: $maxValueIdentifier, maxValueQuantity: $maxValueQuantity, maxValueRange: $maxValueRange, maxValuePeriod: $maxValuePeriod, maxValueRatio: $maxValueRatio, maxValueHumanName: $maxValueHumanName, maxValueAddress: $maxValueAddress, maxValueContactPoint: $maxValueContactPoint, maxValueSchedule: $maxValueSchedule, maxValueReference: $maxValueReference, maxLength: $maxLength, condition: $condition, constraint: $constraint, mustSupport: $mustSupport, isModifier: $isModifier, isSummary: $isSummary, binding: $binding, mapping: $mapping, representationElement: $representationElement, labelElement: $labelElement, shortElement: $shortElement, definitionElement: $definitionElement, commentElement: $commentElement, requirementsElement: $requirementsElement, aliasElement: $aliasElement, minElement: $minElement, maxElement: $maxElement, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueInstantElement: $defaultValueInstantElement, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueStringElement: $defaultValueStringElement, defaultValueUriElement: $defaultValueUriElement, meaningWhenMissingElement: $meaningWhenMissingElement, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBooleanElement: $fixedBooleanElement, fixedCodeElement: $fixedCodeElement, fixedDateElement: $fixedDateElement, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimalElement: $fixedDecimalElement, fixedInstantElement: $fixedInstantElement, fixedIntegerElement: $fixedIntegerElement, fixedStringElement: $fixedStringElement, fixedUriElement: $fixedUriElement, patternBase64BinaryElement: $patternBase64BinaryElement, patternBooleanElement: $patternBooleanElement, patternCodeElement: $patternCodeElement, patternDateElement: $patternDateElement, patternDateTimeElement: $patternDateTimeElement, patternDecimalElement: $patternDecimalElement, patternInstantElement: $patternInstantElement, patternIntegerElement: $patternIntegerElement, patternStringElement: $patternStringElement, patternUriElement: $patternUriElement, minValueDateElement: $minValueDateElement, minValueDateTimeElement: $minValueDateTimeElement, minValueInstantElement: $minValueInstantElement, minValueDecimalElement: $minValueDecimalElement, minValueIntegerElement: $minValueIntegerElement, minValueUnsignedIntElement: $minValueUnsignedIntElement, maxValueDateElement: $maxValueDateElement, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstantElement: $maxValueInstantElement, maxValueTimeElement: $maxValueTimeElement, maxValueDecimalElement: $maxValueDecimalElement, maxValueIntegerElement: $maxValueIntegerElement, maxLengthElement: $maxLengthElement, conditionElement: $conditionElement, mustSupportElement: $mustSupportElement, isModifierElement: $isModifierElement, isSummaryElement: $isSummaryElement)';
   }
 
   @override
@@ -8017,6 +8008,7 @@ class _$_ElementDefinition implements _ElementDefinition {
             (identical(other.isModifier, isModifier) || const DeepCollectionEquality().equals(other.isModifier, isModifier)) &&
             (identical(other.isSummary, isSummary) || const DeepCollectionEquality().equals(other.isSummary, isSummary)) &&
             (identical(other.binding, binding) || const DeepCollectionEquality().equals(other.binding, binding)) &&
+            (identical(other.mapping, mapping) || const DeepCollectionEquality().equals(other.mapping, mapping)) &&
             (identical(other.representationElement, representationElement) || const DeepCollectionEquality().equals(other.representationElement, representationElement)) &&
             (identical(other.labelElement, labelElement) || const DeepCollectionEquality().equals(other.labelElement, labelElement)) &&
             (identical(other.shortElement, shortElement) || const DeepCollectionEquality().equals(other.shortElement, shortElement)) &&
@@ -8073,8 +8065,7 @@ class _$_ElementDefinition implements _ElementDefinition {
             (identical(other.conditionElement, conditionElement) || const DeepCollectionEquality().equals(other.conditionElement, conditionElement)) &&
             (identical(other.mustSupportElement, mustSupportElement) || const DeepCollectionEquality().equals(other.mustSupportElement, mustSupportElement)) &&
             (identical(other.isModifierElement, isModifierElement) || const DeepCollectionEquality().equals(other.isModifierElement, isModifierElement)) &&
-            (identical(other.isSummaryElement, isSummaryElement) || const DeepCollectionEquality().equals(other.isSummaryElement, isSummaryElement)) &&
-            (identical(other.mapping, mapping) || const DeepCollectionEquality().equals(other.mapping, mapping)));
+            (identical(other.isSummaryElement, isSummaryElement) || const DeepCollectionEquality().equals(other.isSummaryElement, isSummaryElement)));
   }
 
   @override
@@ -8244,6 +8235,7 @@ class _$_ElementDefinition implements _ElementDefinition {
       const DeepCollectionEquality().hash(isModifier) ^
       const DeepCollectionEquality().hash(isSummary) ^
       const DeepCollectionEquality().hash(binding) ^
+      const DeepCollectionEquality().hash(mapping) ^
       const DeepCollectionEquality().hash(representationElement) ^
       const DeepCollectionEquality().hash(labelElement) ^
       const DeepCollectionEquality().hash(shortElement) ^
@@ -8300,8 +8292,7 @@ class _$_ElementDefinition implements _ElementDefinition {
       const DeepCollectionEquality().hash(conditionElement) ^
       const DeepCollectionEquality().hash(mustSupportElement) ^
       const DeepCollectionEquality().hash(isModifierElement) ^
-      const DeepCollectionEquality().hash(isSummaryElement) ^
-      const DeepCollectionEquality().hash(mapping);
+      const DeepCollectionEquality().hash(isSummaryElement);
 
   @override
   _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith =>
@@ -8324,8 +8315,8 @@ abstract class _ElementDefinition implements ElementDefinition {
       List<Code> representation,
       String name,
       String label,
-      Coding code,
-      Element slicing,
+      List<Coding> code,
+      ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
       Markdown comments,
@@ -8482,6 +8473,7 @@ abstract class _ElementDefinition implements ElementDefinition {
       Boolean isModifier,
       Boolean isSummary,
       ElementDefinitionBinding binding,
+      List<ElementDefinitionMapping> mapping,
       @JsonKey(name: '_representation')
           Element representationElement,
       @JsonKey(name: '_label')
@@ -8595,8 +8587,7 @@ abstract class _ElementDefinition implements ElementDefinition {
       @JsonKey(name: '_isModifier')
           Element isModifierElement,
       @JsonKey(name: '_isSummary')
-          Element isSummaryElement,
-      List<ElementDefinitionMapping> mapping}) = _$_ElementDefinition;
+          Element isSummaryElement}) = _$_ElementDefinition;
 
   factory _ElementDefinition.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinition.fromJson;
@@ -8616,9 +8607,9 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   String get label;
   @override
-  Coding get code;
+  List<Coding> get code;
   @override
-  Element get slicing;
+  ElementDefinitionSlicing get slicing;
   @override
   String get short;
   @override
@@ -8932,6 +8923,8 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   ElementDefinitionBinding get binding;
   @override
+  List<ElementDefinitionMapping> get mapping;
+  @override
   @JsonKey(name: '_representation')
   Element get representationElement;
   @override
@@ -9102,8 +9095,6 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   @JsonKey(name: '_isSummary')
   Element get isSummaryElement;
-  @override
-  List<ElementDefinitionMapping> get mapping;
   @override
   _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith;
 }

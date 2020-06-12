@@ -20,6 +20,7 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<OperationOutcomeIssue> issue,
+    @JsonKey(name: '_id') Element idElement,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     @JsonKey(name: '_language') Element languageElement,
   }) = _OperationOutcome;

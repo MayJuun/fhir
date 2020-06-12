@@ -30,6 +30,7 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
         DeviceComponentMeasurementPrinciple measurementPrinciple,
     List<DeviceComponentProductionSpecification> productionSpecification,
     CodeableConcept languageCode,
+    @JsonKey(name: '_id') Element idElement,
   }) = _DeviceComponent;
 
   factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
@@ -108,6 +109,7 @@ abstract class Device with _$Device implements Resource {
     @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
     @JsonKey(name: '_lotNumber') Element lotNumberElement,
     @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_udi') Element udiElement,
   }) = _Device;
 
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);

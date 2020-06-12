@@ -48,10 +48,11 @@ abstract class ValueSet with _$ValueSet implements Resource {
     @JsonKey(name: '_status') Element statusElement,
     @JsonKey(name: '_experimental') Element experimentalElement,
     @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
     @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
     @JsonKey(name: '_immutable') Element immutableElement,
     @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_lockedDate') Element lockedDateElement,
   }) = _ValueSet;
 
   factory ValueSet.fromJson(Map<String, dynamic> json) =>
@@ -78,10 +79,12 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required FhirUri system,
     String version,
     Boolean caseSensitive,
     @JsonKey(required: true) @required List<ValueSetConcept> concept,
+    @JsonKey(name: '_system') Element systemElement,
   }) = _ValueSetCodeSystem;
 
   factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
@@ -132,6 +135,7 @@ abstract class ValueSetCompose with _$ValueSetCompose {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     List<FhirUri> import,
     List<IncludeExclude> include,
     List<IncludeExclude> exclude,
@@ -202,6 +206,7 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required FhirUri identifier,
     @JsonKey(required: true) @required FhirDateTime timestamp,
     Integer total,

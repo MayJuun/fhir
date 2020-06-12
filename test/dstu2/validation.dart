@@ -12,24 +12,19 @@ void main() async {
   int i = 0;
   for (var file in await dir.list().toList()) {
     i += 1;
-    // print('$i: ${file.path.split('/').last}');
+    print('$i: ${file.path.split('/').last}');
     var contents = await File(file.path).readAsString();
-    var resource = json.decode(contents);
-    var name = resource['resourceType'];
-    printComments(name, resource);
-
-    //   var resource = fhir_dstu2.Resource.fromJson(json.decode(contents));
-    //   if (resource == null) {
-    //     print('null: $file');
-    //   } else {
-    //     string += await checkJsonEquality(
-    //         json.decode(contents), resource.toJson(), file.toString(), 'input');
-    //     string += await checkJsonEquality(
-    //         resource.toJson(), json.decode(contents), file.toString(), 'output');
-    //   }
-    // }
-    // writeErrorFile(string);
+    var resource = fhir_dstu2.Resource.fromJson(json.decode(contents));
+    if (resource == null) {
+      print('null: $file');
+    } else {
+      string += await checkJsonEquality(
+          json.decode(contents), resource.toJson(), file.toString(), 'input');
+      string += await checkJsonEquality(
+          resource.toJson(), json.decode(contents), file.toString(), 'output');
+    }
   }
+  writeErrorFile(string);
 }
 
 void printComments(String name, object) {

@@ -63,6 +63,7 @@ abstract class Location with _$Location implements Resource {
     @JsonKey(name: '_name') Element nameElement,
     @JsonKey(name: '_description') Element descriptionElement,
     @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _Location;
 
   factory Location.fromJson(Map<String, dynamic> json) =>

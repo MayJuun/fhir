@@ -1193,6 +1193,8 @@ _$_NutritionOrderOralDiet _$_$_NutritionOrderOralDietFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     type: (json['type'] as List)
         ?.map((e) => e == null
             ? null
@@ -1238,6 +1240,7 @@ Map<String, dynamic> _$_$_NutritionOrderOralDietToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'schedule', instance.schedule?.map((e) => e?.toJson())?.toList());
@@ -1323,6 +1326,8 @@ _$_NutritionOrderEnteralFormula _$_$_NutritionOrderEnteralFormulaFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     baseFormulaType: json['baseFormulaType'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -1357,6 +1362,10 @@ _$_NutritionOrderEnteralFormula _$_$_NutritionOrderEnteralFormulaFromJson(
         ? null
         : Element.fromJson(
             json['_additiveProductName'] as Map<String, dynamic>),
+    administrationInstructionElement: json['_administrationInstruction'] == null
+        ? null
+        : Element.fromJson(
+            json['_administrationInstruction'] as Map<String, dynamic>),
   );
 }
 
@@ -1374,6 +1383,7 @@ Map<String, dynamic> _$_$_NutritionOrderEnteralFormulaToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('baseFormulaType', instance.baseFormulaType?.toJson());
   writeNotNull('baseFormulaProductName', instance.baseFormulaProductName);
   writeNotNull('additiveType', instance.additiveType?.toJson());
@@ -1389,6 +1399,8 @@ Map<String, dynamic> _$_$_NutritionOrderEnteralFormulaToJson(
       instance.baseFormulaProductNameElement?.toJson());
   writeNotNull(
       '_additiveProductName', instance.additiveProductNameElement?.toJson());
+  writeNotNull('_administrationInstruction',
+      instance.administrationInstructionElement?.toJson());
   return val;
 }
 
@@ -1547,6 +1559,8 @@ _$_NutritionOrderNutrient _$_$_NutritionOrderNutrientFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     modifier: json['modifier'] == null
         ? null
         : CodeableConcept.fromJson(json['modifier'] as Map<String, dynamic>),
@@ -1570,6 +1584,7 @@ Map<String, dynamic> _$_$_NutritionOrderNutrientToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('modifier', instance.modifier?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
   return val;

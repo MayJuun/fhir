@@ -75,6 +75,9 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['languageCode'] as Map<String, dynamic>),
+    idElement: json['_id'] == null
+        ? null
+        : Element.fromJson(json['_id'] as Map<String, dynamic>),
   );
 }
 
@@ -113,6 +116,7 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
   writeNotNull('productionSpecification',
       instance.productionSpecification?.map((e) => e?.toJson())?.toList());
   writeNotNull('languageCode', instance.languageCode?.toJson());
+  writeNotNull('_id', instance.idElement?.toJson());
   return val;
 }
 
@@ -399,6 +403,9 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    udiElement: json['_udi'] == null
+        ? null
+        : Element.fromJson(json['_udi'] as Map<String, dynamic>),
   );
 }
 
@@ -446,6 +453,7 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull('_manufactureDate', instance.manufactureDateElement?.toJson());
   writeNotNull('_lotNumber', instance.lotNumberElement?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_udi', instance.udiElement?.toJson());
   return val;
 }
 

@@ -392,6 +392,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
   const factory SpecimenCollection({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirExtension modifierExtension,
     Reference collector,
     List<String> comment,

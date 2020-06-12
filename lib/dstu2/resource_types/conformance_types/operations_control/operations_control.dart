@@ -129,6 +129,7 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
         SearchParameterXpathUsage xpathUsage,
     List<Code> target,
+    @JsonKey(name: '_requirements') Element requirementsElement,
   }) = _SearchParameter;
 
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>

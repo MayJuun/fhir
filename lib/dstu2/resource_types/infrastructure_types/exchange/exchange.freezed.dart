@@ -26,6 +26,7 @@ class _$OperationOutcomeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) List<OperationOutcomeIssue> issue,
+      @JsonKey(name: '_id') Element idElement,
       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       @JsonKey(name: '_language') Element languageElement}) {
     return _OperationOutcome(
@@ -39,6 +40,7 @@ class _$OperationOutcomeTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       issue: issue,
+      idElement: idElement,
       implicitRulesElement: implicitRulesElement,
       languageElement: languageElement,
     );
@@ -62,6 +64,8 @@ mixin _$OperationOutcome {
   FhirExtension get modifierExtension;
   @JsonKey(required: true)
   List<OperationOutcomeIssue> get issue;
+  @JsonKey(name: '_id')
+  Element get idElement;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @JsonKey(name: '_language')
@@ -86,12 +90,14 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) List<OperationOutcomeIssue> issue,
+      @JsonKey(name: '_id') Element idElement,
       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       @JsonKey(name: '_language') Element languageElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get idElement;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
 }
@@ -116,6 +122,7 @@ class _$OperationOutcomeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object issue = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
   }) {
@@ -141,6 +148,7 @@ class _$OperationOutcomeCopyWithImpl<$Res>
       issue: issue == freezed
           ? _value.issue
           : issue as List<OperationOutcomeIssue>,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -177,6 +185,16 @@ class _$OperationOutcomeCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get idElement {
+    if (_value.idElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.idElement, (value) {
+      return _then(_value.copyWith(idElement: value));
     });
   }
 
@@ -218,6 +236,7 @@ abstract class _$OperationOutcomeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) List<OperationOutcomeIssue> issue,
+      @JsonKey(name: '_id') Element idElement,
       @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       @JsonKey(name: '_language') Element languageElement});
 
@@ -227,6 +246,8 @@ abstract class _$OperationOutcomeCopyWith<$Res>
   $NarrativeCopyWith<$Res> get text;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get idElement;
   @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
@@ -255,6 +276,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object issue = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
   }) {
@@ -280,6 +302,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
       issue: issue == freezed
           ? _value.issue
           : issue as List<OperationOutcomeIssue>,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -303,6 +326,7 @@ class _$_OperationOutcome implements _OperationOutcome {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.issue,
+      @JsonKey(name: '_id') this.idElement,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       @JsonKey(name: '_language') this.languageElement})
       : assert(issue != null);
@@ -334,6 +358,9 @@ class _$_OperationOutcome implements _OperationOutcome {
   @JsonKey(required: true)
   final List<OperationOutcomeIssue> issue;
   @override
+  @JsonKey(name: '_id')
+  final Element idElement;
+  @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
@@ -342,7 +369,7 @@ class _$_OperationOutcome implements _OperationOutcome {
 
   @override
   String toString() {
-    return 'OperationOutcome(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, issue: $issue, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement)';
+    return 'OperationOutcome(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, issue: $issue, idElement: $idElement, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement)';
   }
 
   @override
@@ -375,6 +402,9 @@ class _$_OperationOutcome implements _OperationOutcome {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.issue, issue) ||
                 const DeepCollectionEquality().equals(other.issue, issue)) &&
+            (identical(other.idElement, idElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.idElement, idElement)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
                 const DeepCollectionEquality().equals(
                     other.implicitRulesElement, implicitRulesElement)) &&
@@ -396,6 +426,7 @@ class _$_OperationOutcome implements _OperationOutcome {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(issue) ^
+      const DeepCollectionEquality().hash(idElement) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(languageElement);
 
@@ -421,6 +452,7 @@ abstract class _OperationOutcome implements OperationOutcome {
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
           @required @JsonKey(required: true) List<OperationOutcomeIssue> issue,
+          @JsonKey(name: '_id') Element idElement,
           @JsonKey(name: '_implicitRules') Element implicitRulesElement,
           @JsonKey(name: '_language') Element languageElement}) =
       _$_OperationOutcome;
@@ -451,6 +483,9 @@ abstract class _OperationOutcome implements OperationOutcome {
   @override
   @JsonKey(required: true)
   List<OperationOutcomeIssue> get issue;
+  @override
+  @JsonKey(name: '_id')
+  Element get idElement;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;

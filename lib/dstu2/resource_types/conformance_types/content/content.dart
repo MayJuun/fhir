@@ -62,6 +62,7 @@ abstract class StructureDefinition
     @JsonKey(name: '_date') Element dateElement,
     @JsonKey(name: '_publisher') Element publisherElement,
     @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_display') Element displayElement,
     @JsonKey(name: '_copyright') Element copyrightElement,
     @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
     @JsonKey(name: '_kind') Element kindElement,

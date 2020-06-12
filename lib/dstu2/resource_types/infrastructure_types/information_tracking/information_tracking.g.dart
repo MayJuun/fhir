@@ -57,6 +57,9 @@ _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
     group: json['group'] == null
         ? null
         : QuestionnaireGroup.fromJson(json['group'] as Map<String, dynamic>),
+    idElement: json['_id'] == null
+        ? null
+        : Element.fromJson(json['_id'] as Map<String, dynamic>),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
@@ -112,6 +115,7 @@ Map<String, dynamic> _$_$_QuestionnaireToJson(_$_Questionnaire instance) {
   writeNotNull(
       'subjectType', instance.subjectType?.map((e) => e?.toJson())?.toList());
   writeNotNull('group', instance.group?.toJson());
+  writeNotNull('_id', instance.idElement?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_version', instance.versionElement?.toJson());
@@ -344,6 +348,9 @@ _$_QuestionnaireResponse _$_$_QuestionnaireResponseFromJson(
         ? null
         : QuestionnaireResponseGroup.fromJson(
             json['group'] as Map<String, dynamic>),
+    idElement: json['_id'] == null
+        ? null
+        : Element.fromJson(json['_id'] as Map<String, dynamic>),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
@@ -389,6 +396,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseToJson(
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('group', instance.group?.toJson());
+  writeNotNull('_id', instance.idElement?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
@@ -521,6 +529,9 @@ _$_QuestionnaireGroup _$_$_QuestionnaireGroupFromJson(
             ? null
             : QuestionnaireQuestion.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    titleElement: json['_title'] == null
+        ? null
+        : Element.fromJson(json['_title'] as Map<String, dynamic>),
   );
 }
 
@@ -547,6 +558,7 @@ Map<String, dynamic> _$_$_QuestionnaireGroupToJson(
   writeNotNull('group', instance.group?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'question', instance.question?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_title', instance.titleElement?.toJson());
   return val;
 }
 
@@ -675,6 +687,8 @@ _$_QuestionnaireResponseGroup _$_$_QuestionnaireResponseGroupFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     linkId: json['linkId'] as String,
     title: json['title'] as String,
     text: json['text'] as String,
@@ -691,6 +705,9 @@ _$_QuestionnaireResponseGroup _$_$_QuestionnaireResponseGroupFromJson(
             ? null
             : QuestionnaireResponseQuestion.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    titleElement: json['_title'] == null
+        ? null
+        : Element.fromJson(json['_title'] as Map<String, dynamic>),
   );
 }
 
@@ -708,6 +725,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseGroupToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('linkId', instance.linkId);
   writeNotNull('title', instance.title);
   writeNotNull('text', instance.text);
@@ -715,6 +733,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseGroupToJson(
   writeNotNull('group', instance.group?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'question', instance.question?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_title', instance.titleElement?.toJson());
   return val;
 }
 

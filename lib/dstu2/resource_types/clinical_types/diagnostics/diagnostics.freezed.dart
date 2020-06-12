@@ -8928,6 +8928,7 @@ class _$SpecimenCollectionTearOff {
   _SpecimenCollection call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Reference collector,
       List<String> comment,
@@ -8940,6 +8941,7 @@ class _$SpecimenCollectionTearOff {
     return _SpecimenCollection(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       modifierExtension: modifierExtension,
       collector: collector,
       comment: comment,
@@ -8960,6 +8962,8 @@ mixin _$SpecimenCollection {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   FhirExtension get modifierExtension;
   Reference get collector;
   List<String> get comment;
@@ -8982,6 +8986,7 @@ abstract class $SpecimenCollectionCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Reference collector,
       List<String> comment,
@@ -9013,6 +9018,7 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object modifierExtension = freezed,
     Object collector = freezed,
     Object comment = freezed,
@@ -9028,6 +9034,9 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -9130,6 +9139,7 @@ abstract class _$SpecimenCollectionCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Reference collector,
       List<String> comment,
@@ -9170,6 +9180,7 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object modifierExtension = freezed,
     Object collector = freezed,
     Object comment = freezed,
@@ -9185,6 +9196,9 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -9213,6 +9227,7 @@ class _$_SpecimenCollection implements _SpecimenCollection {
   const _$_SpecimenCollection(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.modifierExtension,
       this.collector,
       this.comment,
@@ -9231,6 +9246,9 @@ class _$_SpecimenCollection implements _SpecimenCollection {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final FhirExtension modifierExtension;
   @override
@@ -9253,7 +9271,7 @@ class _$_SpecimenCollection implements _SpecimenCollection {
 
   @override
   String toString() {
-    return 'SpecimenCollection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, collector: $collector, comment: $comment, collectedDateTime: $collectedDateTime, collectedPeriod: $collectedPeriod, quantity: $quantity, method: $method, bodySite: $bodySite, collectedDateTimeElement: $collectedDateTimeElement)';
+    return 'SpecimenCollection(id: $id, extension_: $extension_, fhirComments: $fhirComments, modifierExtension: $modifierExtension, collector: $collector, comment: $comment, collectedDateTime: $collectedDateTime, collectedPeriod: $collectedPeriod, quantity: $quantity, method: $method, bodySite: $bodySite, collectedDateTimeElement: $collectedDateTimeElement)';
   }
 
   @override
@@ -9265,6 +9283,9 @@ class _$_SpecimenCollection implements _SpecimenCollection {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -9299,6 +9320,7 @@ class _$_SpecimenCollection implements _SpecimenCollection {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(collector) ^
       const DeepCollectionEquality().hash(comment) ^
@@ -9324,6 +9346,8 @@ abstract class _SpecimenCollection implements SpecimenCollection {
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       FhirExtension modifierExtension,
       Reference collector,
       List<String> comment,
@@ -9343,6 +9367,9 @@ abstract class _SpecimenCollection implements SpecimenCollection {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   FhirExtension get modifierExtension;
   @override

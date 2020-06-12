@@ -320,12 +320,14 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ?.toList(),
     name: json['name'] as String,
     label: json['label'] as String,
-    code: json['code'] == null
-        ? null
-        : Coding.fromJson(json['code'] as Map<String, dynamic>),
+    code: (json['code'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     slicing: json['slicing'] == null
         ? null
-        : Element.fromJson(json['slicing'] as Map<String, dynamic>),
+        : ElementDefinitionSlicing.fromJson(
+            json['slicing'] as Map<String, dynamic>),
     short: json['short'] as String,
     definition: json['definition'] == null
         ? null
@@ -801,6 +803,11 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : ElementDefinitionBinding.fromJson(
             json['binding'] as Map<String, dynamic>),
+    mapping: (json['mapping'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ElementDefinitionMapping.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     representationElement: json['_representation'] == null
         ? null
         : Element.fromJson(json['_representation'] as Map<String, dynamic>),
@@ -980,11 +987,6 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
     isSummaryElement: json['_isSummary'] == null
         ? null
         : Element.fromJson(json['_isSummary'] as Map<String, dynamic>),
-    mapping: (json['mapping'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ElementDefinitionMapping.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
   );
 }
 
@@ -1006,7 +1008,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
       instance.representation?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name);
   writeNotNull('label', instance.label);
-  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
   writeNotNull('slicing', instance.slicing?.toJson());
   writeNotNull('short', instance.short);
   writeNotNull('definition', instance.definition?.toJson());
@@ -1177,6 +1179,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('isModifier', instance.isModifier?.toJson());
   writeNotNull('isSummary', instance.isSummary?.toJson());
   writeNotNull('binding', instance.binding?.toJson());
+  writeNotNull('mapping', instance.mapping?.map((e) => e?.toJson())?.toList());
   writeNotNull('_representation', instance.representationElement?.toJson());
   writeNotNull('_label', instance.labelElement?.toJson());
   writeNotNull('_short', instance.shortElement?.toJson());
@@ -1245,7 +1248,6 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('_mustSupport', instance.mustSupportElement?.toJson());
   writeNotNull('_isModifier', instance.isModifierElement?.toJson());
   writeNotNull('_isSummary', instance.isSummaryElement?.toJson());
-  writeNotNull('mapping', instance.mapping?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

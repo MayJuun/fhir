@@ -28,6 +28,7 @@ abstract class OrderResponse with _$OrderResponse implements Resource {
         OrderResponseOrderStatus orderStatus,
     String description,
     List<Reference> fulfillment,
+    @JsonKey(name: '_orderStatus') Element orderStatusElement,
   }) = _OrderResponse;
 
   factory OrderResponse.fromJson(Map<String, dynamic> json) =>
@@ -182,6 +183,7 @@ abstract class OrderWhen with _$OrderWhen {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept code,
     Timing schedule,
   }) = _OrderWhen;

@@ -185,6 +185,9 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
     modeElement: json['_mode'] == null
         ? null
         : Element.fromJson(json['_mode'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
   );
 }
 
@@ -226,6 +229,7 @@ Map<String, dynamic> _$_$_LocationToJson(_$_Location instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('_mode', instance.modeElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
   return val;
 }
 

@@ -43,7 +43,9 @@ class _$DeviceComponentTearOff {
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
       List<DeviceComponentProductionSpecification> productionSpecification,
-      CodeableConcept languageCode}) {
+      CodeableConcept languageCode,
+      @JsonKey(name: '_id')
+          Element idElement}) {
     return _DeviceComponent(
       resourceType: resourceType,
       id: id,
@@ -64,6 +66,7 @@ class _$DeviceComponentTearOff {
       measurementPrinciple: measurementPrinciple,
       productionSpecification: productionSpecification,
       languageCode: languageCode,
+      idElement: idElement,
     );
   }
 }
@@ -97,6 +100,8 @@ mixin _$DeviceComponent {
   DeviceComponentMeasurementPrinciple get measurementPrinciple;
   List<DeviceComponentProductionSpecification> get productionSpecification;
   CodeableConcept get languageCode;
+  @JsonKey(name: '_id')
+  Element get idElement;
 
   Map<String, dynamic> toJson();
   $DeviceComponentCopyWith<DeviceComponent> get copyWith;
@@ -131,7 +136,9 @@ abstract class $DeviceComponentCopyWith<$Res> {
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
       List<DeviceComponentProductionSpecification> productionSpecification,
-      CodeableConcept languageCode});
+      CodeableConcept languageCode,
+      @JsonKey(name: '_id')
+          Element idElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -142,6 +149,7 @@ abstract class $DeviceComponentCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get parent;
   $CodeableConceptCopyWith<$Res> get parameterGroup;
   $CodeableConceptCopyWith<$Res> get languageCode;
+  $ElementCopyWith<$Res> get idElement;
 }
 
 class _$DeviceComponentCopyWithImpl<$Res>
@@ -173,6 +181,7 @@ class _$DeviceComponentCopyWithImpl<$Res>
     Object measurementPrinciple = freezed,
     Object productionSpecification = freezed,
     Object languageCode = freezed,
+    Object idElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -217,6 +226,7 @@ class _$DeviceComponentCopyWithImpl<$Res>
       languageCode: languageCode == freezed
           ? _value.languageCode
           : languageCode as CodeableConcept,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
     ));
   }
 
@@ -309,6 +319,16 @@ class _$DeviceComponentCopyWithImpl<$Res>
       return _then(_value.copyWith(languageCode: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get idElement {
+    if (_value.idElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.idElement, (value) {
+      return _then(_value.copyWith(idElement: value));
+    });
+  }
 }
 
 abstract class _$DeviceComponentCopyWith<$Res>
@@ -342,7 +362,9 @@ abstract class _$DeviceComponentCopyWith<$Res>
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
       List<DeviceComponentProductionSpecification> productionSpecification,
-      CodeableConcept languageCode});
+      CodeableConcept languageCode,
+      @JsonKey(name: '_id')
+          Element idElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -362,6 +384,8 @@ abstract class _$DeviceComponentCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get parameterGroup;
   @override
   $CodeableConceptCopyWith<$Res> get languageCode;
+  @override
+  $ElementCopyWith<$Res> get idElement;
 }
 
 class __$DeviceComponentCopyWithImpl<$Res>
@@ -395,6 +419,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
     Object measurementPrinciple = freezed,
     Object productionSpecification = freezed,
     Object languageCode = freezed,
+    Object idElement = freezed,
   }) {
     return _then(_DeviceComponent(
       resourceType: resourceType == freezed
@@ -439,6 +464,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
       languageCode: languageCode == freezed
           ? _value.languageCode
           : languageCode as CodeableConcept,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
     ));
   }
 }
@@ -473,7 +499,9 @@ class _$_DeviceComponent implements _DeviceComponent {
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           this.measurementPrinciple,
       this.productionSpecification,
-      this.languageCode})
+      this.languageCode,
+      @JsonKey(name: '_id')
+          this.idElement})
       : assert(type != null),
         assert(identifier != null),
         assert(lastSystemChange != null);
@@ -525,10 +553,13 @@ class _$_DeviceComponent implements _DeviceComponent {
   final List<DeviceComponentProductionSpecification> productionSpecification;
   @override
   final CodeableConcept languageCode;
+  @override
+  @JsonKey(name: '_id')
+  final Element idElement;
 
   @override
   String toString() {
-    return 'DeviceComponent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, lastSystemChange: $lastSystemChange, source: $source, parent: $parent, operationalStatus: $operationalStatus, parameterGroup: $parameterGroup, measurementPrinciple: $measurementPrinciple, productionSpecification: $productionSpecification, languageCode: $languageCode)';
+    return 'DeviceComponent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, lastSystemChange: $lastSystemChange, source: $source, parent: $parent, operationalStatus: $operationalStatus, parameterGroup: $parameterGroup, measurementPrinciple: $measurementPrinciple, productionSpecification: $productionSpecification, languageCode: $languageCode, idElement: $idElement)';
   }
 
   @override
@@ -586,7 +617,10 @@ class _$_DeviceComponent implements _DeviceComponent {
                     other.productionSpecification, productionSpecification)) &&
             (identical(other.languageCode, languageCode) ||
                 const DeepCollectionEquality()
-                    .equals(other.languageCode, languageCode)));
+                    .equals(other.languageCode, languageCode)) &&
+            (identical(other.idElement, idElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.idElement, idElement)));
   }
 
   @override
@@ -610,7 +644,8 @@ class _$_DeviceComponent implements _DeviceComponent {
       const DeepCollectionEquality().hash(parameterGroup) ^
       const DeepCollectionEquality().hash(measurementPrinciple) ^
       const DeepCollectionEquality().hash(productionSpecification) ^
-      const DeepCollectionEquality().hash(languageCode);
+      const DeepCollectionEquality().hash(languageCode) ^
+      const DeepCollectionEquality().hash(idElement);
 
   @override
   _$DeviceComponentCopyWith<_DeviceComponent> get copyWith =>
@@ -651,7 +686,9 @@ abstract class _DeviceComponent implements DeviceComponent {
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple measurementPrinciple,
       List<DeviceComponentProductionSpecification> productionSpecification,
-      CodeableConcept languageCode}) = _$_DeviceComponent;
+      CodeableConcept languageCode,
+      @JsonKey(name: '_id')
+          Element idElement}) = _$_DeviceComponent;
 
   factory _DeviceComponent.fromJson(Map<String, dynamic> json) =
       _$_DeviceComponent.fromJson;
@@ -700,6 +737,9 @@ abstract class _DeviceComponent implements DeviceComponent {
   List<DeviceComponentProductionSpecification> get productionSpecification;
   @override
   CodeableConcept get languageCode;
+  @override
+  @JsonKey(name: '_id')
+  Element get idElement;
   @override
   _$DeviceComponentCopyWith<_DeviceComponent> get copyWith;
 }
@@ -1653,7 +1693,8 @@ class _$DeviceTearOff {
       @JsonKey(name: '_manufacturer') Element manufacturerElement,
       @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
       @JsonKey(name: '_lotNumber') Element lotNumberElement,
-      @JsonKey(name: '_url') Element urlElement}) {
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_udi') Element udiElement}) {
     return _Device(
       resourceType: resourceType,
       id: id,
@@ -1687,6 +1728,7 @@ class _$DeviceTearOff {
       manufactureDateElement: manufactureDateElement,
       lotNumberElement: lotNumberElement,
       urlElement: urlElement,
+      udiElement: udiElement,
     );
   }
 }
@@ -1738,6 +1780,8 @@ mixin _$Device {
   Element get lotNumberElement;
   @JsonKey(name: '_url')
   Element get urlElement;
+  @JsonKey(name: '_udi')
+  Element get udiElement;
 
   Map<String, dynamic> toJson();
   $DeviceCopyWith<Device> get copyWith;
@@ -1778,7 +1822,8 @@ abstract class $DeviceCopyWith<$Res> {
       @JsonKey(name: '_manufacturer') Element manufacturerElement,
       @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
       @JsonKey(name: '_lotNumber') Element lotNumberElement,
-      @JsonKey(name: '_url') Element urlElement});
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_udi') Element udiElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1794,6 +1839,7 @@ abstract class $DeviceCopyWith<$Res> {
   $ElementCopyWith<$Res> get manufactureDateElement;
   $ElementCopyWith<$Res> get lotNumberElement;
   $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get udiElement;
 }
 
 class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
@@ -1837,6 +1883,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
     Object manufactureDateElement = freezed,
     Object lotNumberElement = freezed,
     Object urlElement = freezed,
+    Object udiElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -1900,6 +1947,8 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
           : lotNumberElement as Element,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
+      udiElement:
+          udiElement == freezed ? _value.udiElement : udiElement as Element,
     ));
   }
 
@@ -2042,6 +2091,16 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       return _then(_value.copyWith(urlElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get udiElement {
+    if (_value.udiElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.udiElement, (value) {
+      return _then(_value.copyWith(udiElement: value));
+    });
+  }
 }
 
 abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
@@ -2080,7 +2139,8 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       @JsonKey(name: '_manufacturer') Element manufacturerElement,
       @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
       @JsonKey(name: '_lotNumber') Element lotNumberElement,
-      @JsonKey(name: '_url') Element urlElement});
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_udi') Element udiElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2110,6 +2170,8 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
   $ElementCopyWith<$Res> get lotNumberElement;
   @override
   $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get udiElement;
 }
 
 class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
@@ -2154,6 +2216,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
     Object manufactureDateElement = freezed,
     Object lotNumberElement = freezed,
     Object urlElement = freezed,
+    Object udiElement = freezed,
   }) {
     return _then(_Device(
       resourceType: resourceType == freezed
@@ -2217,6 +2280,8 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
           : lotNumberElement as Element,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
+      udiElement:
+          udiElement == freezed ? _value.udiElement : udiElement as Element,
     ));
   }
 }
@@ -2255,7 +2320,8 @@ class _$_Device implements _Device {
       @JsonKey(name: '_manufacturer') this.manufacturerElement,
       @JsonKey(name: '_manufactureDate') this.manufactureDateElement,
       @JsonKey(name: '_lotNumber') this.lotNumberElement,
-      @JsonKey(name: '_url') this.urlElement})
+      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_udi') this.udiElement})
       : assert(type != null);
 
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
@@ -2336,10 +2402,13 @@ class _$_Device implements _Device {
   @override
   @JsonKey(name: '_url')
   final Element urlElement;
+  @override
+  @JsonKey(name: '_udi')
+  final Element udiElement;
 
   @override
   String toString() {
-    return 'Device(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, note: $note, status: $status, manufacturer: $manufacturer, model: $model, version: $version, manufactureDate: $manufactureDate, expiry: $expiry, udi: $udi, lotNumber: $lotNumber, owner: $owner, location: $location, patient: $patient, contact: $contact, url: $url, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, manufacturerElement: $manufacturerElement, manufactureDateElement: $manufactureDateElement, lotNumberElement: $lotNumberElement, urlElement: $urlElement)';
+    return 'Device(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, note: $note, status: $status, manufacturer: $manufacturer, model: $model, version: $version, manufactureDate: $manufactureDate, expiry: $expiry, udi: $udi, lotNumber: $lotNumber, owner: $owner, location: $location, patient: $patient, contact: $contact, url: $url, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, manufacturerElement: $manufacturerElement, manufactureDateElement: $manufactureDateElement, lotNumberElement: $lotNumberElement, urlElement: $urlElement, udiElement: $udiElement)';
   }
 
   @override
@@ -2420,7 +2489,8 @@ class _$_Device implements _Device {
             (identical(other.manufacturerElement, manufacturerElement) || const DeepCollectionEquality().equals(other.manufacturerElement, manufacturerElement)) &&
             (identical(other.manufactureDateElement, manufactureDateElement) || const DeepCollectionEquality().equals(other.manufactureDateElement, manufactureDateElement)) &&
             (identical(other.lotNumberElement, lotNumberElement) || const DeepCollectionEquality().equals(other.lotNumberElement, lotNumberElement)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)));
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.udiElement, udiElement) || const DeepCollectionEquality().equals(other.udiElement, udiElement)));
   }
 
   @override
@@ -2457,7 +2527,8 @@ class _$_Device implements _Device {
       const DeepCollectionEquality().hash(manufacturerElement) ^
       const DeepCollectionEquality().hash(manufactureDateElement) ^
       const DeepCollectionEquality().hash(lotNumberElement) ^
-      const DeepCollectionEquality().hash(urlElement);
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(udiElement);
 
   @override
   _$DeviceCopyWith<_Device> get copyWith =>
@@ -2502,7 +2573,8 @@ abstract class _Device implements Device {
       @JsonKey(name: '_manufacturer') Element manufacturerElement,
       @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
       @JsonKey(name: '_lotNumber') Element lotNumberElement,
-      @JsonKey(name: '_url') Element urlElement}) = _$_Device;
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_udi') Element udiElement}) = _$_Device;
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
@@ -2581,6 +2653,9 @@ abstract class _Device implements Device {
   @override
   @JsonKey(name: '_url')
   Element get urlElement;
+  @override
+  @JsonKey(name: '_udi')
+  Element get udiElement;
   @override
   _$DeviceCopyWith<_Device> get copyWith;
 }

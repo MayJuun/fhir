@@ -57,6 +57,9 @@ _$_OrderResponse _$_$_OrderResponseFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    orderStatusElement: json['_orderStatus'] == null
+        ? null
+        : Element.fromJson(json['_orderStatus'] as Map<String, dynamic>),
   );
 }
 
@@ -90,6 +93,7 @@ Map<String, dynamic> _$_$_OrderResponseToJson(_$_OrderResponse instance) {
   writeNotNull('description', instance.description);
   writeNotNull(
       'fulfillment', instance.fulfillment?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_orderStatus', instance.orderStatusElement?.toJson());
   return val;
 }
 
@@ -697,6 +701,8 @@ _$_OrderWhen _$_$_OrderWhenFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -719,6 +725,7 @@ Map<String, dynamic> _$_$_OrderWhenToJson(_$_OrderWhen instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('schedule', instance.schedule?.toJson());
   return val;

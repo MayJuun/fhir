@@ -156,6 +156,8 @@ _$_Quantity _$_$_QuantityFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     value: json['value'] == null ? null : Decimal.fromJson(json['value']),
     comparator: _$enumDecodeNullable(
         _$QuantityComparatorEnumMap, json['comparator'],
@@ -195,6 +197,7 @@ Map<String, dynamic> _$_$_QuantityToJson(_$_Quantity instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('value', instance.value?.toJson());
   writeNotNull('comparator', _$QuantityComparatorEnumMap[instance.comparator]);
   writeNotNull('unit', instance.unit);
@@ -542,6 +545,8 @@ _$_Identifier _$_$_IdentifierFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     use: _$enumDecodeNullable(_$IdentifierUseEnumMap, json['use'],
         unknownValue: IdentifierUse.unknown),
     type: json['type'] == null
@@ -581,6 +586,7 @@ Map<String, dynamic> _$_$_IdentifierToJson(_$_Identifier instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('use', _$IdentifierUseEnumMap[instance.use]);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('system', instance.system?.toJson());
@@ -680,6 +686,8 @@ _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     event: (json['event'] as List)
         ?.map((e) => e == null ? null : FhirDateTime.fromJson(e as String))
         ?.toList(),
@@ -707,6 +715,7 @@ Map<String, dynamic> _$_$_TimingToJson(_$_Timing instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('event', instance.event?.map((e) => e?.toJson())?.toList());
   writeNotNull('repeat', instance.repeat?.toJson());
   writeNotNull('code', instance.code?.toJson());
@@ -826,6 +835,8 @@ _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     use: _$enumDecodeNullable(_$HumanNameUseEnumMap, json['use'],
         unknownValue: HumanNameUse.unknown),
     text: json['text'] as String,
@@ -871,6 +882,7 @@ Map<String, dynamic> _$_$_HumanNameToJson(_$_HumanName instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('use', _$HumanNameUseEnumMap[instance.use]);
   writeNotNull('text', instance.text);
   writeNotNull('family', instance.family);

@@ -650,7 +650,8 @@ class _$LocationTearOff {
       @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_name') Element nameElement,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_mode') Element modeElement}) {
+      @JsonKey(name: '_mode') Element modeElement,
+      @JsonKey(name: '_status') Element statusElement}) {
     return _Location(
       resourceType: resourceType,
       id: id,
@@ -678,6 +679,7 @@ class _$LocationTearOff {
       nameElement: nameElement,
       descriptionElement: descriptionElement,
       modeElement: modeElement,
+      statusElement: statusElement,
     );
   }
 }
@@ -721,6 +723,8 @@ mixin _$Location {
   Element get descriptionElement;
   @JsonKey(name: '_mode')
   Element get modeElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $LocationCopyWith<Location> get copyWith;
@@ -755,7 +759,8 @@ abstract class $LocationCopyWith<$Res> {
       @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_name') Element nameElement,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_mode') Element modeElement});
+      @JsonKey(name: '_mode') Element modeElement,
+      @JsonKey(name: '_status') Element statusElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -771,6 +776,7 @@ abstract class $LocationCopyWith<$Res> {
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get modeElement;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
@@ -808,6 +814,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
     Object nameElement = freezed,
     Object descriptionElement = freezed,
     Object modeElement = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -862,6 +869,9 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
           : descriptionElement as Element,
       modeElement:
           modeElement == freezed ? _value.modeElement : modeElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -1004,6 +1014,16 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       return _then(_value.copyWith(modeElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
 }
 
 abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
@@ -1036,7 +1056,8 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_name') Element nameElement,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_mode') Element modeElement});
+      @JsonKey(name: '_mode') Element modeElement,
+      @JsonKey(name: '_status') Element statusElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1066,6 +1087,8 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
   @override
   $ElementCopyWith<$Res> get modeElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
@@ -1104,6 +1127,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     Object nameElement = freezed,
     Object descriptionElement = freezed,
     Object modeElement = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_Location(
       resourceType: resourceType == freezed
@@ -1158,6 +1182,9 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
           : descriptionElement as Element,
       modeElement:
           modeElement == freezed ? _value.modeElement : modeElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -1190,7 +1217,8 @@ class _$_Location implements _Location {
       @JsonKey(name: '_language') this.languageElement,
       @JsonKey(name: '_name') this.nameElement,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(name: '_mode') this.modeElement});
+      @JsonKey(name: '_mode') this.modeElement,
+      @JsonKey(name: '_status') this.statusElement});
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$_$_LocationFromJson(json);
@@ -1256,10 +1284,13 @@ class _$_Location implements _Location {
   @override
   @JsonKey(name: '_mode')
   final Element modeElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'Location(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, name: $name, description: $description, mode: $mode, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, nameElement: $nameElement, descriptionElement: $descriptionElement, modeElement: $modeElement)';
+    return 'Location(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, name: $name, description: $description, mode: $mode, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, nameElement: $nameElement, descriptionElement: $descriptionElement, modeElement: $modeElement, statusElement: $statusElement)';
   }
 
   @override
@@ -1333,7 +1364,8 @@ class _$_Location implements _Location {
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.modeElement, modeElement) || const DeepCollectionEquality().equals(other.modeElement, modeElement)));
+            (identical(other.modeElement, modeElement) || const DeepCollectionEquality().equals(other.modeElement, modeElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)));
   }
 
   @override
@@ -1364,7 +1396,8 @@ class _$_Location implements _Location {
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(modeElement);
+      const DeepCollectionEquality().hash(modeElement) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$LocationCopyWith<_Location> get copyWith =>
@@ -1403,7 +1436,8 @@ abstract class _Location implements Location {
       @JsonKey(name: '_language') Element languageElement,
       @JsonKey(name: '_name') Element nameElement,
       @JsonKey(name: '_description') Element descriptionElement,
-      @JsonKey(name: '_mode') Element modeElement}) = _$_Location;
+      @JsonKey(name: '_mode') Element modeElement,
+      @JsonKey(name: '_status') Element statusElement}) = _$_Location;
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
@@ -1468,6 +1502,9 @@ abstract class _Location implements Location {
   @override
   @JsonKey(name: '_mode')
   Element get modeElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   _$LocationCopyWith<_Location> get copyWith;
 }

@@ -1868,7 +1868,9 @@ class _$SearchParameterTearOff {
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
-      List<Code> target}) {
+      List<Code> target,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement}) {
     return _SearchParameter(
       resourceType: resourceType,
       id: id,
@@ -1894,6 +1896,7 @@ class _$SearchParameterTearOff {
       xpath: xpath,
       xpathUsage: xpathUsage,
       target: target,
+      requirementsElement: requirementsElement,
     );
   }
 }
@@ -1934,6 +1937,8 @@ mixin _$SearchParameter {
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
   SearchParameterXpathUsage get xpathUsage;
   List<Code> get target;
+  @JsonKey(name: '_requirements')
+  Element get requirementsElement;
 
   Map<String, dynamic> toJson();
   $SearchParameterCopyWith<SearchParameter> get copyWith;
@@ -1975,11 +1980,14 @@ abstract class $SearchParameterCopyWith<$Res> {
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
-      List<Code> target});
+      List<Code> target,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get requirementsElement;
 }
 
 class _$SearchParameterCopyWithImpl<$Res>
@@ -2016,6 +2024,7 @@ class _$SearchParameterCopyWithImpl<$Res>
     Object xpath = freezed,
     Object xpathUsage = freezed,
     Object target = freezed,
+    Object requirementsElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2061,6 +2070,9 @@ class _$SearchParameterCopyWithImpl<$Res>
           ? _value.xpathUsage
           : xpathUsage as SearchParameterXpathUsage,
       target: target == freezed ? _value.target : target as List<Code>,
+      requirementsElement: requirementsElement == freezed
+          ? _value.requirementsElement
+          : requirementsElement as Element,
     ));
   }
 
@@ -2091,6 +2103,16 @@ class _$SearchParameterCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requirementsElement {
+    if (_value.requirementsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requirementsElement, (value) {
+      return _then(_value.copyWith(requirementsElement: value));
     });
   }
 }
@@ -2133,7 +2155,9 @@ abstract class _$SearchParameterCopyWith<$Res>
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
-      List<Code> target});
+      List<Code> target,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2141,6 +2165,8 @@ abstract class _$SearchParameterCopyWith<$Res>
   $NarrativeCopyWith<$Res> get text;
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get requirementsElement;
 }
 
 class __$SearchParameterCopyWithImpl<$Res>
@@ -2179,6 +2205,7 @@ class __$SearchParameterCopyWithImpl<$Res>
     Object xpath = freezed,
     Object xpathUsage = freezed,
     Object target = freezed,
+    Object requirementsElement = freezed,
   }) {
     return _then(_SearchParameter(
       resourceType: resourceType == freezed
@@ -2224,6 +2251,9 @@ class __$SearchParameterCopyWithImpl<$Res>
           ? _value.xpathUsage
           : xpathUsage as SearchParameterXpathUsage,
       target: target == freezed ? _value.target : target as List<Code>,
+      requirementsElement: requirementsElement == freezed
+          ? _value.requirementsElement
+          : requirementsElement as Element,
     ));
   }
 }
@@ -2266,7 +2296,9 @@ class _$_SearchParameter implements _SearchParameter {
       this.xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           this.xpathUsage,
-      this.target})
+      this.target,
+      @JsonKey(name: '_requirements')
+          this.requirementsElement})
       : assert(url != null),
         assert(name != null),
         assert(code != null),
@@ -2331,10 +2363,13 @@ class _$_SearchParameter implements _SearchParameter {
   final SearchParameterXpathUsage xpathUsage;
   @override
   final List<Code> target;
+  @override
+  @JsonKey(name: '_requirements')
+  final Element requirementsElement;
 
   @override
   String toString() {
-    return 'SearchParameter(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target)';
+    return 'SearchParameter(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target, requirementsElement: $requirementsElement)';
   }
 
   @override
@@ -2400,7 +2435,10 @@ class _$_SearchParameter implements _SearchParameter {
                 const DeepCollectionEquality()
                     .equals(other.xpathUsage, xpathUsage)) &&
             (identical(other.target, target) ||
-                const DeepCollectionEquality().equals(other.target, target)));
+                const DeepCollectionEquality().equals(other.target, target)) &&
+            (identical(other.requirementsElement, requirementsElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.requirementsElement, requirementsElement)));
   }
 
   @override
@@ -2429,7 +2467,8 @@ class _$_SearchParameter implements _SearchParameter {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(xpath) ^
       const DeepCollectionEquality().hash(xpathUsage) ^
-      const DeepCollectionEquality().hash(target);
+      const DeepCollectionEquality().hash(target) ^
+      const DeepCollectionEquality().hash(requirementsElement);
 
   @override
   _$SearchParameterCopyWith<_SearchParameter> get copyWith =>
@@ -2478,7 +2517,9 @@ abstract class _SearchParameter implements SearchParameter {
       String xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage xpathUsage,
-      List<Code> target}) = _$_SearchParameter;
+      List<Code> target,
+      @JsonKey(name: '_requirements')
+          Element requirementsElement}) = _$_SearchParameter;
 
   factory _SearchParameter.fromJson(Map<String, dynamic> json) =
       _$_SearchParameter.fromJson;
@@ -2539,6 +2580,9 @@ abstract class _SearchParameter implements SearchParameter {
   SearchParameterXpathUsage get xpathUsage;
   @override
   List<Code> get target;
+  @override
+  @JsonKey(name: '_requirements')
+  Element get requirementsElement;
   @override
   _$SearchParameterCopyWith<_SearchParameter> get copyWith;
 }

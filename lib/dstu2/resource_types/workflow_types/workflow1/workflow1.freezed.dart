@@ -37,7 +37,9 @@ class _$OrderResponseTearOff {
       @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
           OrderResponseOrderStatus orderStatus,
       String description,
-      List<Reference> fulfillment}) {
+      List<Reference> fulfillment,
+      @JsonKey(name: '_orderStatus')
+          Element orderStatusElement}) {
     return _OrderResponse(
       resourceType: resourceType,
       id: id,
@@ -55,6 +57,7 @@ class _$OrderResponseTearOff {
       orderStatus: orderStatus,
       description: description,
       fulfillment: fulfillment,
+      orderStatusElement: orderStatusElement,
     );
   }
 }
@@ -83,6 +86,8 @@ mixin _$OrderResponse {
   OrderResponseOrderStatus get orderStatus;
   String get description;
   List<Reference> get fulfillment;
+  @JsonKey(name: '_orderStatus')
+  Element get orderStatusElement;
 
   Map<String, dynamic> toJson();
   $OrderResponseCopyWith<OrderResponse> get copyWith;
@@ -112,13 +117,16 @@ abstract class $OrderResponseCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
           OrderResponseOrderStatus orderStatus,
       String description,
-      List<Reference> fulfillment});
+      List<Reference> fulfillment,
+      @JsonKey(name: '_orderStatus')
+          Element orderStatusElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get request;
   $ReferenceCopyWith<$Res> get who;
+  $ElementCopyWith<$Res> get orderStatusElement;
 }
 
 class _$OrderResponseCopyWithImpl<$Res>
@@ -147,6 +155,7 @@ class _$OrderResponseCopyWithImpl<$Res>
     Object orderStatus = freezed,
     Object description = freezed,
     Object fulfillment = freezed,
+    Object orderStatusElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -181,6 +190,9 @@ class _$OrderResponseCopyWithImpl<$Res>
       fulfillment: fulfillment == freezed
           ? _value.fulfillment
           : fulfillment as List<Reference>,
+      orderStatusElement: orderStatusElement == freezed
+          ? _value.orderStatusElement
+          : orderStatusElement as Element,
     ));
   }
 
@@ -233,6 +245,16 @@ class _$OrderResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(who: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get orderStatusElement {
+    if (_value.orderStatusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.orderStatusElement, (value) {
+      return _then(_value.copyWith(orderStatusElement: value));
+    });
+  }
 }
 
 abstract class _$OrderResponseCopyWith<$Res>
@@ -261,7 +283,9 @@ abstract class _$OrderResponseCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
           OrderResponseOrderStatus orderStatus,
       String description,
-      List<Reference> fulfillment});
+      List<Reference> fulfillment,
+      @JsonKey(name: '_orderStatus')
+          Element orderStatusElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -273,6 +297,8 @@ abstract class _$OrderResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get request;
   @override
   $ReferenceCopyWith<$Res> get who;
+  @override
+  $ElementCopyWith<$Res> get orderStatusElement;
 }
 
 class __$OrderResponseCopyWithImpl<$Res>
@@ -303,6 +329,7 @@ class __$OrderResponseCopyWithImpl<$Res>
     Object orderStatus = freezed,
     Object description = freezed,
     Object fulfillment = freezed,
+    Object orderStatusElement = freezed,
   }) {
     return _then(_OrderResponse(
       resourceType: resourceType == freezed
@@ -337,6 +364,9 @@ class __$OrderResponseCopyWithImpl<$Res>
       fulfillment: fulfillment == freezed
           ? _value.fulfillment
           : fulfillment as List<Reference>,
+      orderStatusElement: orderStatusElement == freezed
+          ? _value.orderStatusElement
+          : orderStatusElement as Element,
     ));
   }
 }
@@ -365,7 +395,9 @@ class _$_OrderResponse implements _OrderResponse {
       @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
           this.orderStatus,
       this.description,
-      this.fulfillment})
+      this.fulfillment,
+      @JsonKey(name: '_orderStatus')
+          this.orderStatusElement})
       : assert(request != null),
         assert(orderStatus != null);
 
@@ -408,10 +440,13 @@ class _$_OrderResponse implements _OrderResponse {
   final String description;
   @override
   final List<Reference> fulfillment;
+  @override
+  @JsonKey(name: '_orderStatus')
+  final Element orderStatusElement;
 
   @override
   String toString() {
-    return 'OrderResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, date: $date, who: $who, orderStatus: $orderStatus, description: $description, fulfillment: $fulfillment)';
+    return 'OrderResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, date: $date, who: $who, orderStatus: $orderStatus, description: $description, fulfillment: $fulfillment, orderStatusElement: $orderStatusElement)';
   }
 
   @override
@@ -460,7 +495,10 @@ class _$_OrderResponse implements _OrderResponse {
                     .equals(other.description, description)) &&
             (identical(other.fulfillment, fulfillment) ||
                 const DeepCollectionEquality()
-                    .equals(other.fulfillment, fulfillment)));
+                    .equals(other.fulfillment, fulfillment)) &&
+            (identical(other.orderStatusElement, orderStatusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.orderStatusElement, orderStatusElement)));
   }
 
   @override
@@ -481,7 +519,8 @@ class _$_OrderResponse implements _OrderResponse {
       const DeepCollectionEquality().hash(who) ^
       const DeepCollectionEquality().hash(orderStatus) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(fulfillment);
+      const DeepCollectionEquality().hash(fulfillment) ^
+      const DeepCollectionEquality().hash(orderStatusElement);
 
   @override
   _$OrderResponseCopyWith<_OrderResponse> get copyWith =>
@@ -516,7 +555,9 @@ abstract class _OrderResponse implements OrderResponse {
       @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
           OrderResponseOrderStatus orderStatus,
       String description,
-      List<Reference> fulfillment}) = _$_OrderResponse;
+      List<Reference> fulfillment,
+      @JsonKey(name: '_orderStatus')
+          Element orderStatusElement}) = _$_OrderResponse;
 
   factory _OrderResponse.fromJson(Map<String, dynamic> json) =
       _$_OrderResponse.fromJson;
@@ -557,6 +598,9 @@ abstract class _OrderResponse implements OrderResponse {
   String get description;
   @override
   List<Reference> get fulfillment;
+  @override
+  @JsonKey(name: '_orderStatus')
+  Element get orderStatusElement;
   @override
   _$OrderResponseCopyWith<_OrderResponse> get copyWith;
 }
@@ -3987,12 +4031,14 @@ class _$OrderWhenTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept code,
       Timing schedule}) {
     return _OrderWhen(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       code: code,
       schedule: schedule,
     );
@@ -4007,6 +4053,8 @@ mixin _$OrderWhen {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   CodeableConcept get code;
   Timing get schedule;
 
@@ -4021,6 +4069,7 @@ abstract class $OrderWhenCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept code,
       Timing schedule});
 
@@ -4041,6 +4090,7 @@ class _$OrderWhenCopyWithImpl<$Res> implements $OrderWhenCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object schedule = freezed,
   }) {
@@ -4052,6 +4102,9 @@ class _$OrderWhenCopyWithImpl<$Res> implements $OrderWhenCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
     ));
@@ -4097,6 +4150,7 @@ abstract class _$OrderWhenCopyWith<$Res> implements $OrderWhenCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept code,
       Timing schedule});
 
@@ -4121,6 +4175,7 @@ class __$OrderWhenCopyWithImpl<$Res> extends _$OrderWhenCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object schedule = freezed,
   }) {
@@ -4132,6 +4187,9 @@ class __$OrderWhenCopyWithImpl<$Res> extends _$OrderWhenCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing,
     ));
@@ -4144,6 +4202,7 @@ class _$_OrderWhen implements _OrderWhen {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.code,
       this.schedule});
 
@@ -4158,13 +4217,16 @@ class _$_OrderWhen implements _OrderWhen {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final CodeableConcept code;
   @override
   final Timing schedule;
 
   @override
   String toString() {
-    return 'OrderWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, schedule: $schedule)';
+    return 'OrderWhen(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, code: $code, schedule: $schedule)';
   }
 
   @override
@@ -4179,6 +4241,9 @@ class _$_OrderWhen implements _OrderWhen {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.schedule, schedule) ||
@@ -4192,6 +4257,7 @@ class _$_OrderWhen implements _OrderWhen {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(schedule);
 
@@ -4210,6 +4276,7 @@ abstract class _OrderWhen implements OrderWhen {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept code,
       Timing schedule}) = _$_OrderWhen;
 
@@ -4223,6 +4290,9 @@ abstract class _OrderWhen implements OrderWhen {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   CodeableConcept get code;
   @override

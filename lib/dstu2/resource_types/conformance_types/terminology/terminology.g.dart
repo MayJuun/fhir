@@ -106,18 +106,21 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    publisherElement: json['_publisher'] == null
-        ? null
-        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    publisherElement: json['_publisher'] == null
+        ? null
+        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
     immutableElement: json['_immutable'] == null
         ? null
         : Element.fromJson(json['_immutable'] as Map<String, dynamic>),
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+    lockedDateElement: json['_lockedDate'] == null
+        ? null
+        : Element.fromJson(json['_lockedDate'] as Map<String, dynamic>),
   );
 }
 
@@ -169,10 +172,11 @@ Map<String, dynamic> _$_$_ValueSetToJson(_$_ValueSet instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('_publisher', instance.publisherElement?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_publisher', instance.publisherElement?.toJson());
   writeNotNull('_immutable', instance.immutableElement?.toJson());
   writeNotNull('_copyright', instance.copyrightElement?.toJson());
+  writeNotNull('_lockedDate', instance.lockedDateElement?.toJson());
   return val;
 }
 
@@ -267,6 +271,8 @@ _$_ValueSetCodeSystem _$_$_ValueSetCodeSystemFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     system: json['system'] == null
         ? null
         : FhirUri.fromJson(json['system'] as String),
@@ -279,6 +285,9 @@ _$_ValueSetCodeSystem _$_$_ValueSetCodeSystemFromJson(
             ? null
             : ValueSetConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    systemElement: json['_system'] == null
+        ? null
+        : Element.fromJson(json['_system'] as Map<String, dynamic>),
   );
 }
 
@@ -296,10 +305,12 @@ Map<String, dynamic> _$_$_ValueSetCodeSystemToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('caseSensitive', instance.caseSensitive?.toJson());
   writeNotNull('concept', instance.concept?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_system', instance.systemElement?.toJson());
   return val;
 }
 
@@ -434,6 +445,8 @@ _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     import: (json['import'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
@@ -463,6 +476,7 @@ Map<String, dynamic> _$_$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('import', instance.import?.map((e) => e?.toJson())?.toList());
   writeNotNull('include', instance.include?.map((e) => e?.toJson())?.toList());
   writeNotNull('exclude', instance.exclude?.map((e) => e?.toJson())?.toList());
@@ -659,6 +673,8 @@ _$_ValueSetExpansion _$_$_ValueSetExpansionFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     identifier: json['identifier'] == null
         ? null
         : FhirUri.fromJson(json['identifier'] as String),
@@ -706,6 +722,7 @@ Map<String, dynamic> _$_$_ValueSetExpansionToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('timestamp', instance.timestamp?.toJson());
   writeNotNull('total', instance.total?.toJson());

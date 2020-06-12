@@ -318,6 +318,7 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     List<CodeableConcept> type,
     List<Timing> schedule,
     List<NutritionOrderNutrient> nutrient,
@@ -357,6 +358,7 @@ abstract class NutritionOrderEnteralFormula
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept baseFormulaType,
     String baseFormulaProductName,
     CodeableConcept additiveType,
@@ -369,6 +371,8 @@ abstract class NutritionOrderEnteralFormula
     @JsonKey(name: '_baseFormulaProductName')
         Element baseFormulaProductNameElement,
     @JsonKey(name: '_additiveProductName') Element additiveProductNameElement,
+    @JsonKey(name: '_administrationInstruction')
+        Element administrationInstructionElement,
   }) = _NutritionOrderEnteralFormula;
 
   factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
@@ -414,6 +418,7 @@ abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept modifier,
     Quantity amount,
   }) = _NutritionOrderNutrient;

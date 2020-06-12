@@ -83,6 +83,8 @@ class _$StructureDefinitionTearOff {
           Element publisherElement,
       @JsonKey(name: '_description')
           Element descriptionElement,
+      @JsonKey(name: '_display')
+          Element displayElement,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       @JsonKey(name: '_fhirVersion')
@@ -136,6 +138,7 @@ class _$StructureDefinitionTearOff {
       dateElement: dateElement,
       publisherElement: publisherElement,
       descriptionElement: descriptionElement,
+      displayElement: displayElement,
       copyrightElement: copyrightElement,
       fhirVersionElement: fhirVersionElement,
       kindElement: kindElement,
@@ -210,6 +213,8 @@ mixin _$StructureDefinition {
   Element get publisherElement;
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  @JsonKey(name: '_display')
+  Element get displayElement;
   @JsonKey(name: '_copyright')
   Element get copyrightElement;
   @JsonKey(name: '_fhirVersion')
@@ -290,6 +295,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
           Element publisherElement,
       @JsonKey(name: '_description')
           Element descriptionElement,
+      @JsonKey(name: '_display')
+          Element displayElement,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       @JsonKey(name: '_fhirVersion')
@@ -314,6 +321,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get dateElement;
   $ElementCopyWith<$Res> get publisherElement;
   $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get displayElement;
   $ElementCopyWith<$Res> get copyrightElement;
   $ElementCopyWith<$Res> get fhirVersionElement;
   $ElementCopyWith<$Res> get kindElement;
@@ -374,6 +382,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
     Object dateElement = freezed,
     Object publisherElement = freezed,
     Object descriptionElement = freezed,
+    Object displayElement = freezed,
     Object copyrightElement = freezed,
     Object fhirVersionElement = freezed,
     Object kindElement = freezed,
@@ -474,6 +483,9 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element,
@@ -640,6 +652,16 @@ class _$StructureDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.displayElement, (value) {
+      return _then(_value.copyWith(displayElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get copyrightElement {
     if (_value.copyrightElement == null) {
       return null;
@@ -749,6 +771,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
           Element publisherElement,
       @JsonKey(name: '_description')
           Element descriptionElement,
+      @JsonKey(name: '_display')
+          Element displayElement,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       @JsonKey(name: '_fhirVersion')
@@ -788,6 +812,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res> get publisherElement;
   @override
   $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get displayElement;
   @override
   $ElementCopyWith<$Res> get copyrightElement;
   @override
@@ -854,6 +880,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
     Object dateElement = freezed,
     Object publisherElement = freezed,
     Object descriptionElement = freezed,
+    Object displayElement = freezed,
     Object copyrightElement = freezed,
     Object fhirVersionElement = freezed,
     Object kindElement = freezed,
@@ -954,6 +981,9 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element,
@@ -1039,6 +1069,8 @@ class _$_StructureDefinition implements _StructureDefinition {
           this.publisherElement,
       @JsonKey(name: '_description')
           this.descriptionElement,
+      @JsonKey(name: '_display')
+          this.displayElement,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
       @JsonKey(name: '_fhirVersion')
@@ -1163,6 +1195,9 @@ class _$_StructureDefinition implements _StructureDefinition {
   @JsonKey(name: '_description')
   final Element descriptionElement;
   @override
+  @JsonKey(name: '_display')
+  final Element displayElement;
+  @override
   @JsonKey(name: '_copyright')
   final Element copyrightElement;
   @override
@@ -1177,7 +1212,7 @@ class _$_StructureDefinition implements _StructureDefinition {
 
   @override
   String toString() {
-    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, display: $display, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, code: $code, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, constrainedType: $constrainedType, abstract_: $abstract_, contextType: $contextType, context: $context, base: $base, snapshot: $snapshot, differential: $differential, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, copyrightElement: $copyrightElement, fhirVersionElement: $fhirVersionElement, kindElement: $kindElement, abstractElement: $abstractElement)';
+    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, display: $display, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, code: $code, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, constrainedType: $constrainedType, abstract_: $abstract_, contextType: $contextType, context: $context, base: $base, snapshot: $snapshot, differential: $differential, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, displayElement: $displayElement, copyrightElement: $copyrightElement, fhirVersionElement: $fhirVersionElement, kindElement: $kindElement, abstractElement: $abstractElement)';
   }
 
   @override
@@ -1271,6 +1306,7 @@ class _$_StructureDefinition implements _StructureDefinition {
             (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
             (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
             (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.displayElement, displayElement) || const DeepCollectionEquality().equals(other.displayElement, displayElement)) &&
             (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
             (identical(other.fhirVersionElement, fhirVersionElement) || const DeepCollectionEquality().equals(other.fhirVersionElement, fhirVersionElement)) &&
             (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
@@ -1324,6 +1360,7 @@ class _$_StructureDefinition implements _StructureDefinition {
       const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(publisherElement) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(displayElement) ^
       const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(fhirVersionElement) ^
       const DeepCollectionEquality().hash(kindElement) ^
@@ -1409,6 +1446,8 @@ abstract class _StructureDefinition implements StructureDefinition {
           Element publisherElement,
       @JsonKey(name: '_description')
           Element descriptionElement,
+      @JsonKey(name: '_display')
+          Element displayElement,
       @JsonKey(name: '_copyright')
           Element copyrightElement,
       @JsonKey(name: '_fhirVersion')
@@ -1527,6 +1566,9 @@ abstract class _StructureDefinition implements StructureDefinition {
   @override
   @JsonKey(name: '_description')
   Element get descriptionElement;
+  @override
+  @JsonKey(name: '_display')
+  Element get displayElement;
   @override
   @JsonKey(name: '_copyright')
   Element get copyrightElement;

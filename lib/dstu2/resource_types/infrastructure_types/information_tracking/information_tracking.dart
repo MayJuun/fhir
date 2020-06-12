@@ -29,6 +29,7 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
     List<ContactPoint> telecom,
     List<Code> subjectType,
     @JsonKey(required: true) @required QuestionnaireGroup group,
+    @JsonKey(name: '_id') Element idElement,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_version') Element versionElement,
@@ -100,6 +101,7 @@ abstract class QuestionnaireResponse
     Reference source,
     Reference encounter,
     QuestionnaireResponseGroup group,
+    @JsonKey(name: '_id') Element idElement,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_status') Element statusElement,
@@ -148,6 +150,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
     Boolean repeats,
     List<QuestionnaireGroup> group,
     List<QuestionnaireQuestion> question,
+    @JsonKey(name: '_title') Element titleElement,
   }) = _QuestionnaireGroup;
 
   factory QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
@@ -196,12 +199,14 @@ abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     String linkId,
     String title,
     String text,
     Reference subject,
     List<QuestionnaireResponseGroup> group,
     List<QuestionnaireResponseQuestion> question,
+    @JsonKey(name: '_title') Element titleElement,
   }) = _QuestionnaireResponseGroup;
 
   factory QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
