@@ -66,6 +66,21 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
         ? null
         : Reference.fromJson(
             json['requestOrganization'] as Map<String, dynamic>),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
+    outcomeElement: json['_outcome'] == null
+        ? null
+        : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
+    dispositionElement: json['_disposition'] == null
+        ? null
+        : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
   );
 }
 
@@ -102,6 +117,11 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
+  writeNotNull('_outcome', instance.outcomeElement?.toJson());
+  writeNotNull('_disposition', instance.dispositionElement?.toJson());
   return val;
 }
 

@@ -66,6 +66,27 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     content: json['content'] == null
         ? null
         : Attachment.fromJson(json['content'] as Map<String, dynamic>),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    deviceNameElement: json['_deviceName'] == null
+        ? null
+        : Element.fromJson(json['_deviceName'] as Map<String, dynamic>),
+    heightElement: json['_height'] == null
+        ? null
+        : Element.fromJson(json['_height'] as Map<String, dynamic>),
+    widthElement: json['_width'] == null
+        ? null
+        : Element.fromJson(json['_width'] as Map<String, dynamic>),
+    framesElement: json['_frames'] == null
+        ? null
+        : Element.fromJson(json['_frames'] as Map<String, dynamic>),
+    durationElement: json['_duration'] == null
+        ? null
+        : Element.fromJson(json['_duration'] as Map<String, dynamic>),
   );
 }
 
@@ -102,6 +123,13 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   writeNotNull('frames', instance.frames?.toJson());
   writeNotNull('duration', instance.duration?.toJson());
   writeNotNull('content', instance.content?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_deviceName', instance.deviceNameElement?.toJson());
+  writeNotNull('_height', instance.heightElement?.toJson());
+  writeNotNull('_width', instance.widthElement?.toJson());
+  writeNotNull('_frames', instance.framesElement?.toJson());
+  writeNotNull('_duration', instance.durationElement?.toJson());
   return val;
 }
 
@@ -191,6 +219,15 @@ _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
     created: json['created'] == null
         ? null
         : Date.fromJson(json['created'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
   );
 }
 
@@ -221,6 +258,9 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('author', instance.author?.toJson());
   writeNotNull('created', instance.created?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
   return val;
 }
 
@@ -243,6 +283,15 @@ _$_Binary _$_$_BinaryFromJson(Map<String, dynamic> json) {
     content: json['content'] == null
         ? null
         : Base64Binary.fromJson(json['content'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    contentTypeElement: json['_contentType'] == null
+        ? null
+        : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
   );
 }
 
@@ -262,6 +311,9 @@ Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('contentType', instance.contentType?.toJson());
   writeNotNull('content', instance.content?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_contentType', instance.contentTypeElement?.toJson());
   return val;
 }
 
@@ -293,6 +345,18 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
     signature: json['signature'] == null
         ? null
         : Signature.fromJson(json['signature'] as Map<String, dynamic>),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    totalElement: json['_total'] == null
+        ? null
+        : Element.fromJson(json['_total'] as Map<String, dynamic>),
   );
 }
 
@@ -315,6 +379,10 @@ Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) {
   writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
   writeNotNull('entry', instance.entry?.map((e) => e?.toJson())?.toList());
   writeNotNull('signature', instance.signature?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('_total', instance.totalElement?.toJson());
   return val;
 }
 
@@ -346,6 +414,12 @@ _$_BundleLink _$_$_BundleLinkFromJson(Map<String, dynamic> json) {
             json['modifierExtension'] as Map<String, dynamic>),
     relation: json['relation'] as String,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    relationElement: json['_relation'] == null
+        ? null
+        : Element.fromJson(json['_relation'] as Map<String, dynamic>),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
   );
 }
 
@@ -364,6 +438,8 @@ Map<String, dynamic> _$_$_BundleLinkToJson(_$_BundleLink instance) {
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('relation', instance.relation);
   writeNotNull('url', instance.url?.toJson());
+  writeNotNull('_relation', instance.relationElement?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
   return val;
 }
 
@@ -398,6 +474,9 @@ _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
     response: json['response'] == null
         ? null
         : BundleResponse.fromJson(json['response'] as Map<String, dynamic>),
+    fullUrlElement: json['_fullUrl'] == null
+        ? null
+        : Element.fromJson(json['_fullUrl'] as Map<String, dynamic>),
   );
 }
 
@@ -420,6 +499,7 @@ Map<String, dynamic> _$_$_BundleEntryToJson(_$_BundleEntry instance) {
   writeNotNull('search', instance.search?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());
+  writeNotNull('_fullUrl', instance.fullUrlElement?.toJson());
   return val;
 }
 
@@ -438,6 +518,12 @@ _$_BundleSearch _$_$_BundleSearchFromJson(Map<String, dynamic> json) {
     mode: _$enumDecodeNullable(_$SearchModeEnumMap, json['mode'],
         unknownValue: SearchMode.unknown),
     score: json['score'] == null ? null : Decimal.fromJson(json['score']),
+    modeElement: json['_mode'] == null
+        ? null
+        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
+    scoreElement: json['_score'] == null
+        ? null
+        : Element.fromJson(json['_score'] as Map<String, dynamic>),
   );
 }
 
@@ -456,6 +542,8 @@ Map<String, dynamic> _$_$_BundleSearchToJson(_$_BundleSearch instance) {
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('mode', _$SearchModeEnumMap[instance.mode]);
   writeNotNull('score', instance.score?.toJson());
+  writeNotNull('_mode', instance.modeElement?.toJson());
+  writeNotNull('_score', instance.scoreElement?.toJson());
   return val;
 }
 
@@ -488,6 +576,24 @@ _$_BundleRequest _$_$_BundleRequestFromJson(Map<String, dynamic> json) {
         : Instant.fromJson(json['ifModifiedSince'] as String),
     ifMatch: json['ifMatch'] as String,
     ifNoneExist: json['ifNoneExist'] as String,
+    methodElement: json['_method'] == null
+        ? null
+        : Element.fromJson(json['_method'] as Map<String, dynamic>),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    ifNoneMatchElement: json['_ifNoneMatch'] == null
+        ? null
+        : Element.fromJson(json['_ifNoneMatch'] as Map<String, dynamic>),
+    ifModifiedSinceElement: json['_ifModifiedSince'] == null
+        ? null
+        : Element.fromJson(json['_ifModifiedSince'] as Map<String, dynamic>),
+    ifMatchElement: json['_ifMatch'] == null
+        ? null
+        : Element.fromJson(json['_ifMatch'] as Map<String, dynamic>),
+    ifNoneExistElement: json['_ifNoneExist'] == null
+        ? null
+        : Element.fromJson(json['_ifNoneExist'] as Map<String, dynamic>),
   );
 }
 
@@ -510,6 +616,12 @@ Map<String, dynamic> _$_$_BundleRequestToJson(_$_BundleRequest instance) {
   writeNotNull('ifModifiedSince', instance.ifModifiedSince?.toJson());
   writeNotNull('ifMatch', instance.ifMatch);
   writeNotNull('ifNoneExist', instance.ifNoneExist);
+  writeNotNull('_method', instance.methodElement?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_ifNoneMatch', instance.ifNoneMatchElement?.toJson());
+  writeNotNull('_ifModifiedSince', instance.ifModifiedSinceElement?.toJson());
+  writeNotNull('_ifMatch', instance.ifMatchElement?.toJson());
+  writeNotNull('_ifNoneExist', instance.ifNoneExistElement?.toJson());
   return val;
 }
 
@@ -542,6 +654,18 @@ _$_BundleResponse _$_$_BundleResponseFromJson(Map<String, dynamic> json) {
     lastModified: json['lastModified'] == null
         ? null
         : Instant.fromJson(json['lastModified'] as String),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    locationElement: json['_location'] == null
+        ? null
+        : Element.fromJson(json['_location'] as Map<String, dynamic>),
+    etagElement: json['_etag'] == null
+        ? null
+        : Element.fromJson(json['_etag'] as Map<String, dynamic>),
+    lastModifiedElement: json['_lastModified'] == null
+        ? null
+        : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
   );
 }
 
@@ -562,5 +686,9 @@ Map<String, dynamic> _$_$_BundleResponseToJson(_$_BundleResponse instance) {
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('etag', instance.etag);
   writeNotNull('lastModified', instance.lastModified?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_location', instance.locationElement?.toJson());
+  writeNotNull('_etag', instance.etagElement?.toJson());
+  writeNotNull('_lastModified', instance.lastModifiedElement?.toJson());
   return val;
 }

@@ -36,6 +36,12 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     Reference interpreter,
     String description,
     List<ImagingStudySeries> series,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_started') Element startedElement,
+    @JsonKey(name: '_numberOfSeries') Element numberOfSeriesElement,
+    @JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _ImagingStudy;
 
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
@@ -74,6 +80,12 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     String conclusion,
     List<CodeableConcept> codedDiagnosis,
     List<Attachment> presentedForm,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_conclusion') Element conclusionElement,
   }) = _DiagnosticReport;
 
   factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
@@ -175,6 +187,14 @@ abstract class Observation with _$Observation implements Resource {
     List<ObservationReferenceRange> referenceRange,
     List<ObservationRelated> related,
     List<ObservationComponent> component,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _Observation;
 
   factory Observation.fromJson(Map<String, dynamic> json) =>
@@ -203,6 +223,10 @@ abstract class Specimen with _$Specimen implements Resource {
     SpecimenCollection collection,
     List<SpecimenTreatment> treatment,
     List<SpecimenContainer> container,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_receivedTime') Element receivedTimeElement,
   }) = _Specimen;
 
   factory Specimen.fromJson(Map<String, dynamic> json) =>
@@ -259,6 +283,11 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     Coding laterality,
     FhirDateTime started,
     List<ImagingStudyInstance> instance,
+    @JsonKey(name: '_uid') Element uidElement,
+    @JsonKey(name: '_number') Element numberElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
+    @JsonKey(name: '_started') Element startedElement,
   }) = _ImagingStudySeries;
 
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
@@ -273,6 +302,7 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
     FhirExtension modifierExtension,
     String comment,
     @JsonKey(required: true) @required Reference link,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _DiagnosticReportImage;
 
   factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
@@ -308,6 +338,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
     CodeableConcept meaning,
     Range age,
     String text,
+    @JsonKey(name: '_text') Element textElement,
   }) = _ObservationReferenceRange;
 
   factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
@@ -347,6 +378,9 @@ abstract class ObservationComponent with _$ObservationComponent {
     Period valuePeriod,
     CodeableConcept dataAbsentReason,
     List<ObservationReferenceRange> referenceRange,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _ObservationComponent;
 
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
@@ -366,6 +400,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
     Quantity quantity,
     CodeableConcept method,
     CodeableConcept bodySite,
+    @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
   }) = _SpecimenCollection;
 
   factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
@@ -400,6 +435,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
     Quantity specimenQuantity,
     CodeableConcept additiveCodeableConcept,
     Reference additiveReference,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _SpecimenContainer;
 
   factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
@@ -453,6 +489,9 @@ abstract class ImagingStudyInstance with _$ImagingStudyInstance {
     String type,
     String title,
     List<Attachment> content,
+    @JsonKey(name: '_uid') Element uidElement,
+    @JsonKey(name: '_number') Element numberElement,
+    @JsonKey(name: '_title') Element titleElement,
   }) = _ImagingStudyInstance;
 
   factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>

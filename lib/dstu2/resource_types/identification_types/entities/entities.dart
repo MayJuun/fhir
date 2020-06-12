@@ -25,6 +25,9 @@ abstract class Substance with _$Substance implements Resource {
     String description,
     List<SubstanceInstance> instance,
     List<SubstanceIngredient> ingredient,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _Substance;
 
   factory Substance.fromJson(Map<String, dynamic> json) =>
@@ -55,6 +58,11 @@ abstract class Location with _$Location implements Resource {
     LocationPosition position,
     Reference managingOrganization,
     Reference partOf,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _Location;
 
   factory Location.fromJson(Map<String, dynamic> json) =>
@@ -83,6 +91,11 @@ abstract class Person with _$Person implements Resource {
     Reference managingOrganization,
     Boolean active,
     List<PersonLink> link,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
+    @JsonKey(name: '_active') Element activeElement,
   }) = _Person;
 
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
@@ -97,6 +110,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
     Identifier identifier,
     FhirDateTime expiry,
     Quantity quantity,
+    @JsonKey(name: '_expiry') Element expiryElement,
   }) = _SubstanceInstance;
 
   factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
@@ -126,6 +140,9 @@ abstract class LocationPosition with _$LocationPosition {
     @JsonKey(required: true) @required Decimal longitude,
     @JsonKey(required: true) @required Decimal latitude,
     Decimal altitude,
+    @JsonKey(name: '_longitude') Element longitudeElement,
+    @JsonKey(name: '_latitude') Element latitudeElement,
+    @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
 
   factory LocationPosition.fromJson(Map<String, dynamic> json) =>
@@ -140,6 +157,7 @@ abstract class PersonLink with _$PersonLink {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference target,
     @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance assurance,
+    @JsonKey(name: '_assurance') Element assuranceElement,
   }) = _PersonLink;
 
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
@@ -191,6 +209,9 @@ abstract class Contract with _$Contract implements Resource {
     List<ContractFriendly> friendly,
     List<ContractLegal> legal,
     List<ContractRule> rule,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_issued') Element issuedElement,
   }) = _Contract;
 
   factory Contract.fromJson(Map<String, dynamic> json) =>
@@ -226,6 +247,10 @@ abstract class ContractValuedItem with _$ContractValuedItem {
     Decimal factor,
     Decimal points,
     Quantity net,
+    @JsonKey(name: '_effectiveTime') Element effectiveTimeElement,
+    @JsonKey(name: '_factor') Element factorElement,
+    @JsonKey(name: '_points') Element pointsElement,
+    List<Element> securityLabelNumberElement,
   }) = _ContractValuedItem;
 
   factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
@@ -265,6 +290,8 @@ abstract class ContractTerm with _$ContractTerm {
     String text,
     List<ContractValuedItem> valuedItem,
     List<ContractTerm> group,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_text') Element textElement,
   }) = _ContractTerm;
 
   factory ContractTerm.fromJson(Map<String, dynamic> json) =>

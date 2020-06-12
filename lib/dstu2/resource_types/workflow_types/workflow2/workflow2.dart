@@ -67,6 +67,9 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
     FhirDateTime time,
     Reference destination,
     List<Reference> receiver,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _SupplyDelivery;
 
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
@@ -127,6 +130,9 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
     SupplyRequestWhen when,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _SupplyRequest;
 
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>

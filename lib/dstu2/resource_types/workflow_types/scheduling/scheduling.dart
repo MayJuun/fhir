@@ -33,6 +33,15 @@ abstract class Appointment with _$Appointment implements Resource {
     List<Reference> slot,
     String comment,
     @JsonKey(required: true) @required List<AppointmentParticipant> participant,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_minutesDuration') Element minutesDurationElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _Appointment;
 
   factory Appointment.fromJson(Map<String, dynamic> json) =>
@@ -61,6 +70,12 @@ abstract class Slot with _$Slot implements Resource {
     @JsonKey(required: true) @required Instant end,
     Boolean overbooked,
     String comment,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_overbooked') Element overbookedElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
 
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
@@ -92,6 +107,12 @@ abstract class AppointmentResponse
     @required
         AppointmentResponseParticipantStatus participantStatus,
     String comment,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_participantStatus') Element participantStatusElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
 
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
@@ -115,6 +136,9 @@ abstract class Schedule with _$Schedule implements Resource {
     @JsonKey(required: true) @required Reference actor,
     Period planningHorizon,
     String comment,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
 
   factory Schedule.fromJson(Map<String, dynamic> json) =>
@@ -134,6 +158,8 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
     @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
     @required
         ParticipantStatus status,
+    @JsonKey(name: '_required') Element requiredElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _AppointmentParticipant;
 
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>

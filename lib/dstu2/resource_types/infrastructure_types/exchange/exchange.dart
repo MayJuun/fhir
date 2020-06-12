@@ -20,6 +20,8 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<OperationOutcomeIssue> issue,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _OperationOutcome;
 
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
@@ -48,6 +50,13 @@ abstract class Subscription with _$Subscription implements Resource {
     @JsonKey(required: true) @required SubscriptionChannel channel,
     Instant end,
     List<Coding> tag,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_reason') Element reasonElement,
+    @JsonKey(name: '_criteria') Element criteriaElement,
+    @JsonKey(name: '_error') Element errorElement,
   }) = _Subscription;
 
   factory Subscription.fromJson(Map<String, dynamic> json) =>
@@ -77,6 +86,8 @@ abstract class MessageHeader with _$MessageHeader implements Resource {
     Reference responsible,
     CodeableConcept reason,
     List<Reference> data,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _MessageHeader;
 
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
@@ -92,6 +103,8 @@ abstract class Parameters with _$Parameters implements Resource {
     FhirUri implicitRules,
     Code language,
     List<ParametersParameter> parameter,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _Parameters;
 
   factory Parameters.fromJson(Map<String, dynamic> json) =>
@@ -130,6 +143,17 @@ abstract class ParametersParameter with _$ParametersParameter {
     Reference valueReference,
     Resource resource,
     List<ParametersParameter> part,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
   }) = _ParametersParameter;
 
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
@@ -149,6 +173,8 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
     CodeableConcept details,
     String diagnostics,
     List<String> location,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _OperationOutcomeIssue;
 
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
@@ -167,6 +193,10 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
     FhirUri endpoint,
     @JsonKey(required: true) @required String payload,
     String header,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_endpoint') Element endpointElement,
+    @JsonKey(name: '_payload') Element payloadElement,
+    @JsonKey(name: '_header') List<Element> headerElement,
   }) = _SubscriptionChannel;
 
   factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
@@ -184,6 +214,8 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
     @required
         ResponseCode code,
     Reference details,
+    @JsonKey(name: '_identifier') Element identifierElement,
+    @JsonKey(name: '_code') Element codeElement,
   }) = _MessageHeaderResponse;
 
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
@@ -201,6 +233,10 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
     String version,
     ContactPoint contact,
     @JsonKey(required: true) @required FhirUri endpoint,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_software') Element softwareElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderSource;
 
   factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
@@ -216,6 +252,8 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
     String name,
     Reference target,
     @JsonKey(required: true) @required FhirUri endpoint,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderDestination;
 
   factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>

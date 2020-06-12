@@ -26,6 +26,8 @@ abstract class ImmunizationRecommendation
     @JsonKey(required: true)
     @required
         List<ImmunizationRecommendationRecommendation> recommendation,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _ImmunizationRecommendation;
 
   factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
@@ -64,6 +66,11 @@ abstract class MedicationDispense
     String note,
     List<MedicationDispenseDosageInstruction> dosageInstruction,
     MedicationDispenseSubstitution substitution,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_whenPrepared') Element whenPreparedElement,
+    @JsonKey(name: '_whenHandedOver') Element whenHandedOverElement,
   }) = _MedicationDispense;
 
   factory MedicationDispense.fromJson(Map<String, dynamic> json) =>
@@ -103,6 +110,11 @@ abstract class MedicationStatement
     CodeableConcept medicationCodeableConcept,
     Reference medicationReference,
     List<MedicationStatementDosage> dosage,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_dateAsserted') Element dateAssertedElement,
   }) = _MedicationStatement;
 
   factory MedicationStatement.fromJson(Map<String, dynamic> json) =>
@@ -144,6 +156,11 @@ abstract class Immunization with _$Immunization implements Resource {
     ImmunizationExplanation explanation,
     List<ImmunizationReaction> reaction,
     List<ImmunizationVaccinationProtocol> vaccinationProtocol,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_lotNumber') Element lotNumberElement,
+    @JsonKey(name: '_expirationDate') Element expirationDateElement,
   }) = _Immunization;
 
   factory Immunization.fromJson(Map<String, dynamic> json) =>
@@ -167,6 +184,8 @@ abstract class Medication with _$Medication implements Resource {
     Reference manufacturer,
     MedicationProduct product,
     MedicationPackage package,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _Medication;
 
   factory Medication.fromJson(Map<String, dynamic> json) =>
@@ -207,6 +226,10 @@ abstract class MedicationAdministration
     List<Reference> device,
     String note,
     MedicationAdministrationDosage dosage,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
   }) = _MedicationAdministration;
 
   factory MedicationAdministration.fromJson(Map<String, dynamic> json) =>
@@ -363,6 +386,8 @@ abstract class ImmunizationReaction with _$ImmunizationReaction {
     FhirDateTime date,
     Reference detail,
     Boolean reported,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_reported') Element reportedElement,
   }) = _ImmunizationReaction;
 
   factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
@@ -384,6 +409,7 @@ abstract class ImmunizationVaccinationProtocol
     List<CodeableConcept> targetDisease,
     @JsonKey(required: true) @required CodeableConcept doseStatus,
     CodeableConcept doseStatusReason,
+    @JsonKey(name: '_series') Element seriesElement,
   }) = _ImmunizationVaccinationProtocol;
 
   factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =>
@@ -434,6 +460,7 @@ abstract class MedicationAdministrationDosage
     Quantity quantity,
     Ratio rateRatio,
     Range rateRange,
+    @JsonKey(name: '_text') Element textElement,
   }) = _MedicationAdministrationDosage;
 
   factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
@@ -510,6 +537,7 @@ abstract class ImmunizationRecommendationDateCriterion
     FhirExtension modifier,
     @JsonKey(required: true) @required CodeableConcept code,
     @JsonKey(required: true) @required FhirDateTime value,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _ImmunizationRecommendationDateCriterion;
 
   factory ImmunizationRecommendationDateCriterion.fromJson(
@@ -528,6 +556,7 @@ abstract class ImmunizationRecommendationProtocol
     String description,
     Reference authority,
     String series,
+    @JsonKey(name: '_series') Element seriesElement,
   }) = _ImmunizationRecommendationProtocol;
 
   factory ImmunizationRecommendationProtocol.fromJson(
@@ -557,6 +586,8 @@ abstract class MedicationBatch with _$MedicationBatch {
     FhirExtension modifierExtension,
     String lotNumber,
     FhirDateTime expirationDate,
+    @JsonKey(name: '_lotNumber') Element lotNumberElement,
+    @JsonKey(name: '_expirationDate') Element expirationDateElement,
   }) = _MedicationBatch;
 
   factory MedicationBatch.fromJson(Map<String, dynamic> json) =>

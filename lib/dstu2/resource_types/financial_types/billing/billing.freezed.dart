@@ -35,7 +35,12 @@ class _$AccountTearOff {
       Period coveragePeriod,
       Reference subject,
       Reference owner,
-      String description}) {
+      String description,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _Account(
       resourceType: resourceType,
       id: id,
@@ -57,6 +62,11 @@ class _$AccountTearOff {
       subject: subject,
       owner: owner,
       description: description,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
+      nameElement: nameElement,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -88,6 +98,16 @@ mixin _$Account {
   Reference get subject;
   Reference get owner;
   String get description;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $AccountCopyWith<Account> get copyWith;
@@ -116,7 +136,12 @@ abstract class $AccountCopyWith<$Res> {
       Period coveragePeriod,
       Reference subject,
       Reference owner,
-      String description});
+      String description,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -128,6 +153,11 @@ abstract class $AccountCopyWith<$Res> {
   $PeriodCopyWith<$Res> get coveragePeriod;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get owner;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
@@ -159,6 +189,11 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
     Object subject = freezed,
     Object owner = freezed,
     Object description = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -197,6 +232,20 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
       owner: owner == freezed ? _value.owner : owner as Reference,
       description:
           description == freezed ? _value.description : description as String,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 
@@ -299,6 +348,56 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
       return _then(_value.copyWith(owner: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
 }
 
 abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
@@ -325,7 +424,12 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       Period coveragePeriod,
       Reference subject,
       Reference owner,
-      String description});
+      String description,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -347,6 +451,16 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res> get owner;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
@@ -379,6 +493,11 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
     Object subject = freezed,
     Object owner = freezed,
     Object description = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_Account(
       resourceType: resourceType == freezed
@@ -417,6 +536,20 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
       owner: owner == freezed ? _value.owner : owner as Reference,
       description:
           description == freezed ? _value.description : description as String,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
@@ -443,7 +576,12 @@ class _$_Account implements _Account {
       this.coveragePeriod,
       this.subject,
       this.owner,
-      this.description});
+      this.description,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountFromJson(json);
@@ -491,10 +629,25 @@ class _$_Account implements _Account {
   final Reference owner;
   @override
   final String description;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'Account(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, type: $type, status: $status, activePeriod: $activePeriod, currency: $currency, balance: $balance, coveragePeriod: $coveragePeriod, subject: $subject, owner: $owner, description: $description)';
+    return 'Account(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, type: $type, status: $status, activePeriod: $activePeriod, currency: $currency, balance: $balance, coveragePeriod: $coveragePeriod, subject: $subject, owner: $owner, description: $description, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, nameElement: $nameElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -553,7 +706,22 @@ class _$_Account implements _Account {
                 const DeepCollectionEquality().equals(other.owner, owner)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
-                    .equals(other.description, description)));
+                    .equals(other.description, description)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
@@ -578,7 +746,12 @@ class _$_Account implements _Account {
       const DeepCollectionEquality().hash(coveragePeriod) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(owner) ^
-      const DeepCollectionEquality().hash(description);
+      const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$AccountCopyWith<_Account> get copyWith =>
@@ -611,7 +784,12 @@ abstract class _Account implements Account {
       Period coveragePeriod,
       Reference subject,
       Reference owner,
-      String description}) = _$_Account;
+      String description,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement}) = _$_Account;
 
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
@@ -658,6 +836,21 @@ abstract class _Account implements Account {
   Reference get owner;
   @override
   String get description;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   _$AccountCopyWith<_Account> get copyWith;
 }
@@ -714,7 +907,15 @@ class _$ClaimTearOff {
       List<Coding> interventionException,
       List<ClaimItem> item,
       List<Coding> additionalMaterials,
-      List<ClaimMissingTeeth> missingTeeth}) {
+      List<ClaimMissingTeeth> missingTeeth,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_use')
+          Element useElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) {
     return _Claim(
       resourceType: resourceType,
       id: id,
@@ -754,6 +955,10 @@ class _$ClaimTearOff {
       item: item,
       additionalMaterials: additionalMaterials,
       missingTeeth: missingTeeth,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      useElement: useElement,
+      createdElement: createdElement,
     );
   }
 }
@@ -805,6 +1010,14 @@ mixin _$Claim {
   List<ClaimItem> get item;
   List<Coding> get additionalMaterials;
   List<ClaimMissingTeeth> get missingTeeth;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_use')
+  Element get useElement;
+  @JsonKey(name: '_created')
+  Element get createdElement;
 
   Map<String, dynamic> toJson();
   $ClaimCopyWith<Claim> get copyWith;
@@ -856,7 +1069,15 @@ abstract class $ClaimCopyWith<$Res> {
       List<Coding> interventionException,
       List<ClaimItem> item,
       List<Coding> additionalMaterials,
-      List<ClaimMissingTeeth> missingTeeth});
+      List<ClaimMissingTeeth> missingTeeth,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_use')
+          Element useElement,
+      @JsonKey(name: '_created')
+          Element createdElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -876,6 +1097,10 @@ abstract class $ClaimCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get referral;
   $ReferenceCopyWith<$Res> get patient;
   $CodingCopyWith<$Res> get accidentType;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get useElement;
+  $ElementCopyWith<$Res> get createdElement;
 }
 
 class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
@@ -925,6 +1150,10 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
     Object item = freezed,
     Object additionalMaterials = freezed,
     Object missingTeeth = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object useElement = freezed,
+    Object createdElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -1000,6 +1229,17 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       missingTeeth: missingTeeth == freezed
           ? _value.missingTeeth
           : missingTeeth as List<ClaimMissingTeeth>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      useElement:
+          useElement == freezed ? _value.useElement : useElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
     ));
   }
 
@@ -1182,6 +1422,46 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       return _then(_value.copyWith(accidentType: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get useElement {
+    if (_value.useElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.useElement, (value) {
+      return _then(_value.copyWith(useElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
@@ -1231,7 +1511,15 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       List<Coding> interventionException,
       List<ClaimItem> item,
       List<Coding> additionalMaterials,
-      List<ClaimMissingTeeth> missingTeeth});
+      List<ClaimMissingTeeth> missingTeeth,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_use')
+          Element useElement,
+      @JsonKey(name: '_created')
+          Element createdElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1269,6 +1557,14 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get patient;
   @override
   $CodingCopyWith<$Res> get accidentType;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get useElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
 }
 
 class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
@@ -1319,6 +1615,10 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
     Object item = freezed,
     Object additionalMaterials = freezed,
     Object missingTeeth = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object useElement = freezed,
+    Object createdElement = freezed,
   }) {
     return _then(_Claim(
       resourceType: resourceType == freezed
@@ -1394,6 +1694,17 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
       missingTeeth: missingTeeth == freezed
           ? _value.missingTeeth
           : missingTeeth as List<ClaimMissingTeeth>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      useElement:
+          useElement == freezed ? _value.useElement : useElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
     ));
   }
 }
@@ -1445,7 +1756,15 @@ class _$_Claim implements _Claim {
       this.interventionException,
       this.item,
       this.additionalMaterials,
-      this.missingTeeth})
+      this.missingTeeth,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_use')
+          this.useElement,
+      @JsonKey(name: '_created')
+          this.createdElement})
       : assert(type != null),
         assert(patient != null);
 
@@ -1533,10 +1852,22 @@ class _$_Claim implements _Claim {
   final List<Coding> additionalMaterials;
   @override
   final List<ClaimMissingTeeth> missingTeeth;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_use')
+  final Element useElement;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
 
   @override
   String toString() {
-    return 'Claim(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, target: $target, provider: $provider, organization: $organization, use: $use, priority: $priority, fundsReserve: $fundsReserve, enterer: $enterer, facility: $facility, prescription: $prescription, originalPrescription: $originalPrescription, payee: $payee, referral: $referral, diagnosis: $diagnosis, condition: $condition, patient: $patient, coverage: $coverage, exception: $exception, school: $school, accident: $accident, accidentType: $accidentType, interventionException: $interventionException, item: $item, additionalMaterials: $additionalMaterials, missingTeeth: $missingTeeth)';
+    return 'Claim(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, target: $target, provider: $provider, organization: $organization, use: $use, priority: $priority, fundsReserve: $fundsReserve, enterer: $enterer, facility: $facility, prescription: $prescription, originalPrescription: $originalPrescription, payee: $payee, referral: $referral, diagnosis: $diagnosis, condition: $condition, patient: $patient, coverage: $coverage, exception: $exception, school: $school, accident: $accident, accidentType: $accidentType, interventionException: $interventionException, item: $item, additionalMaterials: $additionalMaterials, missingTeeth: $missingTeeth, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, useElement: $useElement, createdElement: $createdElement)';
   }
 
   @override
@@ -1622,7 +1953,11 @@ class _$_Claim implements _Claim {
             (identical(other.interventionException, interventionException) || const DeepCollectionEquality().equals(other.interventionException, interventionException)) &&
             (identical(other.item, item) || const DeepCollectionEquality().equals(other.item, item)) &&
             (identical(other.additionalMaterials, additionalMaterials) || const DeepCollectionEquality().equals(other.additionalMaterials, additionalMaterials)) &&
-            (identical(other.missingTeeth, missingTeeth) || const DeepCollectionEquality().equals(other.missingTeeth, missingTeeth)));
+            (identical(other.missingTeeth, missingTeeth) || const DeepCollectionEquality().equals(other.missingTeeth, missingTeeth)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.useElement, useElement) || const DeepCollectionEquality().equals(other.useElement, useElement)) &&
+            (identical(other.createdElement, createdElement) || const DeepCollectionEquality().equals(other.createdElement, createdElement)));
   }
 
   @override
@@ -1665,7 +2000,11 @@ class _$_Claim implements _Claim {
       const DeepCollectionEquality().hash(interventionException) ^
       const DeepCollectionEquality().hash(item) ^
       const DeepCollectionEquality().hash(additionalMaterials) ^
-      const DeepCollectionEquality().hash(missingTeeth);
+      const DeepCollectionEquality().hash(missingTeeth) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(useElement) ^
+      const DeepCollectionEquality().hash(createdElement);
 
   @override
   _$ClaimCopyWith<_Claim> get copyWith =>
@@ -1723,7 +2062,15 @@ abstract class _Claim implements Claim {
       List<Coding> interventionException,
       List<ClaimItem> item,
       List<Coding> additionalMaterials,
-      List<ClaimMissingTeeth> missingTeeth}) = _$_Claim;
+      List<ClaimMissingTeeth> missingTeeth,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_use')
+          Element useElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) = _$_Claim;
 
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
 
@@ -1808,6 +2155,18 @@ abstract class _Claim implements Claim {
   List<Coding> get additionalMaterials;
   @override
   List<ClaimMissingTeeth> get missingTeeth;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_use')
+  Element get useElement;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
   @override
   _$ClaimCopyWith<_Claim> get copyWith;
 }
@@ -2148,13 +2507,15 @@ class _$ClaimDiagnosisTearOff {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
-      @required @JsonKey(required: true) Coding diagnosis}) {
+      @required @JsonKey(required: true) Coding diagnosis,
+      @JsonKey(name: '_sequence') Element sequenceElement}) {
     return _ClaimDiagnosis(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       sequence: sequence,
       diagnosis: diagnosis,
+      sequenceElement: sequenceElement,
     );
   }
 }
@@ -2171,6 +2532,8 @@ mixin _$ClaimDiagnosis {
   PositiveInt get sequence;
   @JsonKey(required: true)
   Coding get diagnosis;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
 
   Map<String, dynamic> toJson();
   $ClaimDiagnosisCopyWith<ClaimDiagnosis> get copyWith;
@@ -2185,10 +2548,12 @@ abstract class $ClaimDiagnosisCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
-      @JsonKey(required: true) Coding diagnosis});
+      @JsonKey(required: true) Coding diagnosis,
+      @JsonKey(name: '_sequence') Element sequenceElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get diagnosis;
+  $ElementCopyWith<$Res> get sequenceElement;
 }
 
 class _$ClaimDiagnosisCopyWithImpl<$Res>
@@ -2206,6 +2571,7 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object sequence = freezed,
     Object diagnosis = freezed,
+    Object sequenceElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -2217,6 +2583,9 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
       diagnosis: diagnosis == freezed ? _value.diagnosis : diagnosis as Coding,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
     ));
   }
 
@@ -2239,6 +2608,16 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
       return _then(_value.copyWith(diagnosis: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimDiagnosisCopyWith<$Res>
@@ -2252,12 +2631,15 @@ abstract class _$ClaimDiagnosisCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @JsonKey(required: true) PositiveInt sequence,
-      @JsonKey(required: true) Coding diagnosis});
+      @JsonKey(required: true) Coding diagnosis,
+      @JsonKey(name: '_sequence') Element sequenceElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $CodingCopyWith<$Res> get diagnosis;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
 }
 
 class __$ClaimDiagnosisCopyWithImpl<$Res>
@@ -2277,6 +2659,7 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object sequence = freezed,
     Object diagnosis = freezed,
+    Object sequenceElement = freezed,
   }) {
     return _then(_ClaimDiagnosis(
       id: id == freezed ? _value.id : id as Id,
@@ -2288,6 +2671,9 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
       diagnosis: diagnosis == freezed ? _value.diagnosis : diagnosis as Coding,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
     ));
   }
 }
@@ -2299,7 +2685,8 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @required @JsonKey(required: true) this.sequence,
-      @required @JsonKey(required: true) this.diagnosis})
+      @required @JsonKey(required: true) this.diagnosis,
+      @JsonKey(name: '_sequence') this.sequenceElement})
       : assert(sequence != null),
         assert(diagnosis != null);
 
@@ -2319,10 +2706,13 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
   @override
   @JsonKey(required: true)
   final Coding diagnosis;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
 
   @override
   String toString() {
-    return 'ClaimDiagnosis(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, diagnosis: $diagnosis)';
+    return 'ClaimDiagnosis(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, diagnosis: $diagnosis, sequenceElement: $sequenceElement)';
   }
 
   @override
@@ -2342,7 +2732,10 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
                     .equals(other.sequence, sequence)) &&
             (identical(other.diagnosis, diagnosis) ||
                 const DeepCollectionEquality()
-                    .equals(other.diagnosis, diagnosis)));
+                    .equals(other.diagnosis, diagnosis)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)));
   }
 
   @override
@@ -2352,7 +2745,8 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(sequence) ^
-      const DeepCollectionEquality().hash(diagnosis);
+      const DeepCollectionEquality().hash(diagnosis) ^
+      const DeepCollectionEquality().hash(sequenceElement);
 
   @override
   _$ClaimDiagnosisCopyWith<_ClaimDiagnosis> get copyWith =>
@@ -2370,7 +2764,8 @@ abstract class _ClaimDiagnosis implements ClaimDiagnosis {
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) PositiveInt sequence,
-      @required @JsonKey(required: true) Coding diagnosis}) = _$_ClaimDiagnosis;
+      @required @JsonKey(required: true) Coding diagnosis,
+      @JsonKey(name: '_sequence') Element sequenceElement}) = _$_ClaimDiagnosis;
 
   factory _ClaimDiagnosis.fromJson(Map<String, dynamic> json) =
       _$_ClaimDiagnosis.fromJson;
@@ -2388,6 +2783,9 @@ abstract class _ClaimDiagnosis implements ClaimDiagnosis {
   @override
   @JsonKey(required: true)
   Coding get diagnosis;
+  @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
   @override
   _$ClaimDiagnosisCopyWith<_ClaimDiagnosis> get copyWith;
 }
@@ -2855,7 +3253,10 @@ class _$ClaimItemTearOff {
       List<Coding> subSite,
       List<Coding> modifier,
       List<ClaimDetail> detail,
-      ClaimProsthesis prosthesis}) {
+      ClaimProsthesis prosthesis,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_factor') Element factorElement}) {
     return _ClaimItem(
       id: id,
       extension_: extension_,
@@ -2877,6 +3278,9 @@ class _$ClaimItemTearOff {
       modifier: modifier,
       detail: detail,
       prosthesis: prosthesis,
+      sequenceElement: sequenceElement,
+      servicedDateElement: servicedDateElement,
+      factorElement: factorElement,
     );
   }
 }
@@ -2909,6 +3313,12 @@ mixin _$ClaimItem {
   List<Coding> get modifier;
   List<ClaimDetail> get detail;
   ClaimProsthesis get prosthesis;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_servicedDate')
+  Element get servicedDateElement;
+  @JsonKey(name: '_factor')
+  Element get factorElement;
 
   Map<String, dynamic> toJson();
   $ClaimItemCopyWith<ClaimItem> get copyWith;
@@ -2937,7 +3347,10 @@ abstract class $ClaimItemCopyWith<$Res> {
       List<Coding> subSite,
       List<Coding> modifier,
       List<ClaimDetail> detail,
-      ClaimProsthesis prosthesis});
+      ClaimProsthesis prosthesis,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
@@ -2949,6 +3362,9 @@ abstract class $ClaimItemCopyWith<$Res> {
   $CodingCopyWith<$Res> get udi;
   $CodingCopyWith<$Res> get bodySite;
   $ClaimProsthesisCopyWith<$Res> get prosthesis;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get servicedDateElement;
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
@@ -2980,6 +3396,9 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
     Object modifier = freezed,
     Object detail = freezed,
     Object prosthesis = freezed,
+    Object sequenceElement = freezed,
+    Object servicedDateElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3013,6 +3432,15 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
       prosthesis: prosthesis == freezed
           ? _value.prosthesis
           : prosthesis as ClaimProsthesis,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      servicedDateElement: servicedDateElement == freezed
+          ? _value.servicedDateElement
+          : servicedDateElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 
@@ -3115,6 +3543,36 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
       return _then(_value.copyWith(prosthesis: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get servicedDateElement {
+    if (_value.servicedDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.servicedDateElement, (value) {
+      return _then(_value.copyWith(servicedDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get factorElement {
+    if (_value.factorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.factorElement, (value) {
+      return _then(_value.copyWith(factorElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
@@ -3142,7 +3600,10 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       List<Coding> subSite,
       List<Coding> modifier,
       List<ClaimDetail> detail,
-      ClaimProsthesis prosthesis});
+      ClaimProsthesis prosthesis,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -3164,6 +3625,12 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
   $CodingCopyWith<$Res> get bodySite;
   @override
   $ClaimProsthesisCopyWith<$Res> get prosthesis;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get servicedDateElement;
+  @override
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
@@ -3196,6 +3663,9 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
     Object modifier = freezed,
     Object detail = freezed,
     Object prosthesis = freezed,
+    Object sequenceElement = freezed,
+    Object servicedDateElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_ClaimItem(
       id: id == freezed ? _value.id : id as Id,
@@ -3229,6 +3699,15 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
       prosthesis: prosthesis == freezed
           ? _value.prosthesis
           : prosthesis as ClaimProsthesis,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      servicedDateElement: servicedDateElement == freezed
+          ? _value.servicedDateElement
+          : servicedDateElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 }
@@ -3255,7 +3734,10 @@ class _$_ClaimItem implements _ClaimItem {
       this.subSite,
       this.modifier,
       this.detail,
-      this.prosthesis})
+      this.prosthesis,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_servicedDate') this.servicedDateElement,
+      @JsonKey(name: '_factor') this.factorElement})
       : assert(sequence != null),
         assert(type != null),
         assert(service != null);
@@ -3307,10 +3789,19 @@ class _$_ClaimItem implements _ClaimItem {
   final List<ClaimDetail> detail;
   @override
   final ClaimProsthesis prosthesis;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_servicedDate')
+  final Element servicedDateElement;
+  @override
+  @JsonKey(name: '_factor')
+  final Element factorElement;
 
   @override
   String toString() {
-    return 'ClaimItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, type: $type, provider: $provider, diagnosisLinkId: $diagnosisLinkId, service: $service, serviceDate: $serviceDate, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, points: $points, net: $net, udi: $udi, bodySite: $bodySite, subSite: $subSite, modifier: $modifier, detail: $detail, prosthesis: $prosthesis)';
+    return 'ClaimItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, type: $type, provider: $provider, diagnosisLinkId: $diagnosisLinkId, service: $service, serviceDate: $serviceDate, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, points: $points, net: $net, udi: $udi, bodySite: $bodySite, subSite: $subSite, modifier: $modifier, detail: $detail, prosthesis: $prosthesis, sequenceElement: $sequenceElement, servicedDateElement: $servicedDateElement, factorElement: $factorElement)';
   }
 
   @override
@@ -3369,7 +3860,16 @@ class _$_ClaimItem implements _ClaimItem {
                 const DeepCollectionEquality().equals(other.detail, detail)) &&
             (identical(other.prosthesis, prosthesis) ||
                 const DeepCollectionEquality()
-                    .equals(other.prosthesis, prosthesis)));
+                    .equals(other.prosthesis, prosthesis)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.servicedDateElement, servicedDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.servicedDateElement, servicedDateElement)) &&
+            (identical(other.factorElement, factorElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.factorElement, factorElement)));
   }
 
   @override
@@ -3394,7 +3894,10 @@ class _$_ClaimItem implements _ClaimItem {
       const DeepCollectionEquality().hash(subSite) ^
       const DeepCollectionEquality().hash(modifier) ^
       const DeepCollectionEquality().hash(detail) ^
-      const DeepCollectionEquality().hash(prosthesis);
+      const DeepCollectionEquality().hash(prosthesis) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(servicedDateElement) ^
+      const DeepCollectionEquality().hash(factorElement);
 
   @override
   _$ClaimItemCopyWith<_ClaimItem> get copyWith =>
@@ -3427,7 +3930,10 @@ abstract class _ClaimItem implements ClaimItem {
       List<Coding> subSite,
       List<Coding> modifier,
       List<ClaimDetail> detail,
-      ClaimProsthesis prosthesis}) = _$_ClaimItem;
+      ClaimProsthesis prosthesis,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_factor') Element factorElement}) = _$_ClaimItem;
 
   factory _ClaimItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimItem.fromJson;
@@ -3477,6 +3983,15 @@ abstract class _ClaimItem implements ClaimItem {
   @override
   ClaimProsthesis get prosthesis;
   @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_servicedDate')
+  Element get servicedDateElement;
+  @override
+  @JsonKey(name: '_factor')
+  Element get factorElement;
+  @override
   _$ClaimItemCopyWith<_ClaimItem> get copyWith;
 }
 
@@ -3500,7 +4015,9 @@ class _$ClaimDetailTearOff {
       Decimal points,
       Quantity net,
       Coding udi,
-      List<ClaimSubDetail> subDetail}) {
+      List<ClaimSubDetail> subDetail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement}) {
     return _ClaimDetail(
       id: id,
       extension_: extension_,
@@ -3515,6 +4032,8 @@ class _$ClaimDetailTearOff {
       net: net,
       udi: udi,
       subDetail: subDetail,
+      sequenceElement: sequenceElement,
+      factorElement: factorElement,
     );
   }
 }
@@ -3540,6 +4059,10 @@ mixin _$ClaimDetail {
   Quantity get net;
   Coding get udi;
   List<ClaimSubDetail> get subDetail;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_factor')
+  Element get factorElement;
 
   Map<String, dynamic> toJson();
   $ClaimDetailCopyWith<ClaimDetail> get copyWith;
@@ -3562,7 +4085,9 @@ abstract class $ClaimDetailCopyWith<$Res> {
       Decimal points,
       Quantity net,
       Coding udi,
-      List<ClaimSubDetail> subDetail});
+      List<ClaimSubDetail> subDetail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
@@ -3571,6 +4096,8 @@ abstract class $ClaimDetailCopyWith<$Res> {
   $QuantityCopyWith<$Res> get unitPrice;
   $QuantityCopyWith<$Res> get net;
   $CodingCopyWith<$Res> get udi;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
@@ -3595,6 +4122,8 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
     Object net = freezed,
     Object udi = freezed,
     Object subDetail = freezed,
+    Object sequenceElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3617,6 +4146,12 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
       subDetail: subDetail == freezed
           ? _value.subDetail
           : subDetail as List<ClaimSubDetail>,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 
@@ -3689,6 +4224,26 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
       return _then(_value.copyWith(udi: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get factorElement {
+    if (_value.factorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.factorElement, (value) {
+      return _then(_value.copyWith(factorElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimDetailCopyWith<$Res>
@@ -3710,7 +4265,9 @@ abstract class _$ClaimDetailCopyWith<$Res>
       Decimal points,
       Quantity net,
       Coding udi,
-      List<ClaimSubDetail> subDetail});
+      List<ClaimSubDetail> subDetail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -3726,6 +4283,10 @@ abstract class _$ClaimDetailCopyWith<$Res>
   $QuantityCopyWith<$Res> get net;
   @override
   $CodingCopyWith<$Res> get udi;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
@@ -3752,6 +4313,8 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
     Object net = freezed,
     Object udi = freezed,
     Object subDetail = freezed,
+    Object sequenceElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_ClaimDetail(
       id: id == freezed ? _value.id : id as Id,
@@ -3774,6 +4337,12 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
       subDetail: subDetail == freezed
           ? _value.subDetail
           : subDetail as List<ClaimSubDetail>,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 }
@@ -3793,7 +4362,9 @@ class _$_ClaimDetail implements _ClaimDetail {
       this.points,
       this.net,
       this.udi,
-      this.subDetail})
+      this.subDetail,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_factor') this.factorElement})
       : assert(sequence != null),
         assert(type != null),
         assert(service != null);
@@ -3831,10 +4402,16 @@ class _$_ClaimDetail implements _ClaimDetail {
   final Coding udi;
   @override
   final List<ClaimSubDetail> subDetail;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_factor')
+  final Element factorElement;
 
   @override
   String toString() {
-    return 'ClaimDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, type: $type, service: $service, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, points: $points, net: $net, udi: $udi, subDetail: $subDetail)';
+    return 'ClaimDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, type: $type, service: $service, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, points: $points, net: $net, udi: $udi, subDetail: $subDetail, sequenceElement: $sequenceElement, factorElement: $factorElement)';
   }
 
   @override
@@ -3873,7 +4450,13 @@ class _$_ClaimDetail implements _ClaimDetail {
                 const DeepCollectionEquality().equals(other.udi, udi)) &&
             (identical(other.subDetail, subDetail) ||
                 const DeepCollectionEquality()
-                    .equals(other.subDetail, subDetail)));
+                    .equals(other.subDetail, subDetail)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.factorElement, factorElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.factorElement, factorElement)));
   }
 
   @override
@@ -3891,7 +4474,9 @@ class _$_ClaimDetail implements _ClaimDetail {
       const DeepCollectionEquality().hash(points) ^
       const DeepCollectionEquality().hash(net) ^
       const DeepCollectionEquality().hash(udi) ^
-      const DeepCollectionEquality().hash(subDetail);
+      const DeepCollectionEquality().hash(subDetail) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(factorElement);
 
   @override
   _$ClaimDetailCopyWith<_ClaimDetail> get copyWith =>
@@ -3917,7 +4502,9 @@ abstract class _ClaimDetail implements ClaimDetail {
       Decimal points,
       Quantity net,
       Coding udi,
-      List<ClaimSubDetail> subDetail}) = _$_ClaimDetail;
+      List<ClaimSubDetail> subDetail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement}) = _$_ClaimDetail;
 
   factory _ClaimDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimDetail.fromJson;
@@ -3953,6 +4540,12 @@ abstract class _ClaimDetail implements ClaimDetail {
   @override
   List<ClaimSubDetail> get subDetail;
   @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_factor')
+  Element get factorElement;
+  @override
   _$ClaimDetailCopyWith<_ClaimDetail> get copyWith;
 }
 
@@ -3975,7 +4568,9 @@ class _$ClaimSubDetailTearOff {
       Decimal factor,
       Decimal points,
       Quantity net,
-      Coding udi}) {
+      Coding udi,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement}) {
     return _ClaimSubDetail(
       id: id,
       extension_: extension_,
@@ -3989,6 +4584,8 @@ class _$ClaimSubDetailTearOff {
       points: points,
       net: net,
       udi: udi,
+      sequenceElement: sequenceElement,
+      factorElement: factorElement,
     );
   }
 }
@@ -4013,6 +4610,10 @@ mixin _$ClaimSubDetail {
   Decimal get points;
   Quantity get net;
   Coding get udi;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_factor')
+  Element get factorElement;
 
   Map<String, dynamic> toJson();
   $ClaimSubDetailCopyWith<ClaimSubDetail> get copyWith;
@@ -4034,7 +4635,9 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
       Decimal factor,
       Decimal points,
       Quantity net,
-      Coding udi});
+      Coding udi,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
@@ -4043,6 +4646,8 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
   $QuantityCopyWith<$Res> get unitPrice;
   $QuantityCopyWith<$Res> get net;
   $CodingCopyWith<$Res> get udi;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class _$ClaimSubDetailCopyWithImpl<$Res>
@@ -4067,6 +4672,8 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
     Object points = freezed,
     Object net = freezed,
     Object udi = freezed,
+    Object sequenceElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -4086,6 +4693,12 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
       points: points == freezed ? _value.points : points as Decimal,
       net: net == freezed ? _value.net : net as Quantity,
       udi: udi == freezed ? _value.udi : udi as Coding,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 
@@ -4158,6 +4771,26 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
       return _then(_value.copyWith(udi: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get factorElement {
+    if (_value.factorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.factorElement, (value) {
+      return _then(_value.copyWith(factorElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimSubDetailCopyWith<$Res>
@@ -4178,7 +4811,9 @@ abstract class _$ClaimSubDetailCopyWith<$Res>
       Decimal factor,
       Decimal points,
       Quantity net,
-      Coding udi});
+      Coding udi,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -4194,6 +4829,10 @@ abstract class _$ClaimSubDetailCopyWith<$Res>
   $QuantityCopyWith<$Res> get net;
   @override
   $CodingCopyWith<$Res> get udi;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class __$ClaimSubDetailCopyWithImpl<$Res>
@@ -4220,6 +4859,8 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
     Object points = freezed,
     Object net = freezed,
     Object udi = freezed,
+    Object sequenceElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_ClaimSubDetail(
       id: id == freezed ? _value.id : id as Id,
@@ -4239,6 +4880,12 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
       points: points == freezed ? _value.points : points as Decimal,
       net: net == freezed ? _value.net : net as Quantity,
       udi: udi == freezed ? _value.udi : udi as Coding,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 }
@@ -4257,7 +4904,9 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
       this.factor,
       this.points,
       this.net,
-      this.udi})
+      this.udi,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_factor') this.factorElement})
       : assert(sequence != null),
         assert(type != null),
         assert(service != null);
@@ -4293,10 +4942,16 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
   final Quantity net;
   @override
   final Coding udi;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_factor')
+  final Element factorElement;
 
   @override
   String toString() {
-    return 'ClaimSubDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, type: $type, service: $service, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, points: $points, net: $net, udi: $udi)';
+    return 'ClaimSubDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequence: $sequence, type: $type, service: $service, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, points: $points, net: $net, udi: $udi, sequenceElement: $sequenceElement, factorElement: $factorElement)';
   }
 
   @override
@@ -4332,7 +4987,13 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
             (identical(other.net, net) ||
                 const DeepCollectionEquality().equals(other.net, net)) &&
             (identical(other.udi, udi) ||
-                const DeepCollectionEquality().equals(other.udi, udi)));
+                const DeepCollectionEquality().equals(other.udi, udi)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.factorElement, factorElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.factorElement, factorElement)));
   }
 
   @override
@@ -4349,7 +5010,9 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
       const DeepCollectionEquality().hash(factor) ^
       const DeepCollectionEquality().hash(points) ^
       const DeepCollectionEquality().hash(net) ^
-      const DeepCollectionEquality().hash(udi);
+      const DeepCollectionEquality().hash(udi) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(factorElement);
 
   @override
   _$ClaimSubDetailCopyWith<_ClaimSubDetail> get copyWith =>
@@ -4374,7 +5037,9 @@ abstract class _ClaimSubDetail implements ClaimSubDetail {
       Decimal factor,
       Decimal points,
       Quantity net,
-      Coding udi}) = _$_ClaimSubDetail;
+      Coding udi,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement}) = _$_ClaimSubDetail;
 
   factory _ClaimSubDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimSubDetail.fromJson;
@@ -4407,6 +5072,12 @@ abstract class _ClaimSubDetail implements ClaimSubDetail {
   Quantity get net;
   @override
   Coding get udi;
+  @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_factor')
+  Element get factorElement;
   @override
   _$ClaimSubDetailCopyWith<_ClaimSubDetail> get copyWith;
 }
@@ -5013,7 +5684,17 @@ class _$ClaimResponseTearOff {
       Coding reserved,
       Coding form,
       List<ClaimResponseNote> note,
-      List<ClaimResponseCoverage> coverage}) {
+      List<ClaimResponseCoverage> coverage,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_outcome')
+          Element outcomeElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement}) {
     return _ClaimResponse(
       resourceType: resourceType,
       id: id,
@@ -5050,6 +5731,11 @@ class _$ClaimResponseTearOff {
       form: form,
       note: note,
       coverage: coverage,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      createdElement: createdElement,
+      outcomeElement: outcomeElement,
+      dispositionElement: dispositionElement,
     );
   }
 }
@@ -5096,6 +5782,16 @@ mixin _$ClaimResponse {
   Coding get form;
   List<ClaimResponseNote> get note;
   List<ClaimResponseCoverage> get coverage;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_created')
+  Element get createdElement;
+  @JsonKey(name: '_outcome')
+  Element get outcomeElement;
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseCopyWith<ClaimResponse> get copyWith;
@@ -5143,7 +5839,17 @@ abstract class $ClaimResponseCopyWith<$Res> {
       Coding reserved,
       Coding form,
       List<ClaimResponseNote> note,
-      List<ClaimResponseCoverage> coverage});
+      List<ClaimResponseCoverage> coverage,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_outcome')
+          Element outcomeElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -5164,6 +5870,11 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $IdentifierCopyWith<$Res> get paymentRef;
   $CodingCopyWith<$Res> get reserved;
   $CodingCopyWith<$Res> get form;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res> get outcomeElement;
+  $ElementCopyWith<$Res> get dispositionElement;
 }
 
 class _$ClaimResponseCopyWithImpl<$Res>
@@ -5211,6 +5922,11 @@ class _$ClaimResponseCopyWithImpl<$Res>
     Object form = freezed,
     Object note = freezed,
     Object coverage = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object createdElement = freezed,
+    Object outcomeElement = freezed,
+    Object dispositionElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -5287,6 +6003,21 @@ class _$ClaimResponseCopyWithImpl<$Res>
       coverage: coverage == freezed
           ? _value.coverage
           : coverage as List<ClaimResponseCoverage>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
+      outcomeElement: outcomeElement == freezed
+          ? _value.outcomeElement
+          : outcomeElement as Element,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
     ));
   }
 
@@ -5479,6 +6210,56 @@ class _$ClaimResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(form: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get outcomeElement {
+    if (_value.outcomeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.outcomeElement, (value) {
+      return _then(_value.copyWith(outcomeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dispositionElement {
+    if (_value.dispositionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+      return _then(_value.copyWith(dispositionElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseCopyWith<$Res>
@@ -5525,7 +6306,17 @@ abstract class _$ClaimResponseCopyWith<$Res>
       Coding reserved,
       Coding form,
       List<ClaimResponseNote> note,
-      List<ClaimResponseCoverage> coverage});
+      List<ClaimResponseCoverage> coverage,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_outcome')
+          Element outcomeElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -5565,6 +6356,16 @@ abstract class _$ClaimResponseCopyWith<$Res>
   $CodingCopyWith<$Res> get reserved;
   @override
   $CodingCopyWith<$Res> get form;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
+  @override
+  $ElementCopyWith<$Res> get outcomeElement;
+  @override
+  $ElementCopyWith<$Res> get dispositionElement;
 }
 
 class __$ClaimResponseCopyWithImpl<$Res>
@@ -5614,6 +6415,11 @@ class __$ClaimResponseCopyWithImpl<$Res>
     Object form = freezed,
     Object note = freezed,
     Object coverage = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object createdElement = freezed,
+    Object outcomeElement = freezed,
+    Object dispositionElement = freezed,
   }) {
     return _then(_ClaimResponse(
       resourceType: resourceType == freezed
@@ -5690,6 +6496,21 @@ class __$ClaimResponseCopyWithImpl<$Res>
       coverage: coverage == freezed
           ? _value.coverage
           : coverage as List<ClaimResponseCoverage>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
+      outcomeElement: outcomeElement == freezed
+          ? _value.outcomeElement
+          : outcomeElement as Element,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
     ));
   }
 }
@@ -5731,7 +6552,12 @@ class _$_ClaimResponse implements _ClaimResponse {
       this.reserved,
       this.form,
       this.note,
-      this.coverage});
+      this.coverage,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_outcome') this.outcomeElement,
+      @JsonKey(name: '_disposition') this.dispositionElement});
 
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseFromJson(json);
@@ -5809,10 +6635,25 @@ class _$_ClaimResponse implements _ClaimResponse {
   final List<ClaimResponseNote> note;
   @override
   final List<ClaimResponseCoverage> coverage;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
+  @override
+  @JsonKey(name: '_outcome')
+  final Element outcomeElement;
+  @override
+  @JsonKey(name: '_disposition')
+  final Element dispositionElement;
 
   @override
   String toString() {
-    return 'ClaimResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, outcome: $outcome, disposition: $disposition, payeeType: $payeeType, item: $item, addItem: $addItem, error: $error, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, paymentAdjustment: $paymentAdjustment, paymentAdjustmentReason: $paymentAdjustmentReason, paymentDate: $paymentDate, paymentAmount: $paymentAmount, paymentRef: $paymentRef, reserved: $reserved, form: $form, note: $note, coverage: $coverage)';
+    return 'ClaimResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, outcome: $outcome, disposition: $disposition, payeeType: $payeeType, item: $item, addItem: $addItem, error: $error, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, paymentAdjustment: $paymentAdjustment, paymentAdjustmentReason: $paymentAdjustmentReason, paymentDate: $paymentDate, paymentAmount: $paymentAmount, paymentRef: $paymentRef, reserved: $reserved, form: $form, note: $note, coverage: $coverage, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, createdElement: $createdElement, outcomeElement: $outcomeElement, dispositionElement: $dispositionElement)';
   }
 
   @override
@@ -5896,7 +6737,12 @@ class _$_ClaimResponse implements _ClaimResponse {
             (identical(other.reserved, reserved) || const DeepCollectionEquality().equals(other.reserved, reserved)) &&
             (identical(other.form, form) || const DeepCollectionEquality().equals(other.form, form)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.coverage, coverage) || const DeepCollectionEquality().equals(other.coverage, coverage)));
+            (identical(other.coverage, coverage) || const DeepCollectionEquality().equals(other.coverage, coverage)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.createdElement, createdElement) || const DeepCollectionEquality().equals(other.createdElement, createdElement)) &&
+            (identical(other.outcomeElement, outcomeElement) || const DeepCollectionEquality().equals(other.outcomeElement, outcomeElement)) &&
+            (identical(other.dispositionElement, dispositionElement) || const DeepCollectionEquality().equals(other.dispositionElement, dispositionElement)));
   }
 
   @override
@@ -5936,7 +6782,12 @@ class _$_ClaimResponse implements _ClaimResponse {
       const DeepCollectionEquality().hash(reserved) ^
       const DeepCollectionEquality().hash(form) ^
       const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(coverage);
+      const DeepCollectionEquality().hash(coverage) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(createdElement) ^
+      const DeepCollectionEquality().hash(outcomeElement) ^
+      const DeepCollectionEquality().hash(dispositionElement);
 
   @override
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith =>
@@ -5987,7 +6838,17 @@ abstract class _ClaimResponse implements ClaimResponse {
       Coding reserved,
       Coding form,
       List<ClaimResponseNote> note,
-      List<ClaimResponseCoverage> coverage}) = _$_ClaimResponse;
+      List<ClaimResponseCoverage> coverage,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_outcome')
+          Element outcomeElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement}) = _$_ClaimResponse;
 
   factory _ClaimResponse.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponse.fromJson;
@@ -6066,6 +6927,21 @@ abstract class _ClaimResponse implements ClaimResponse {
   @override
   List<ClaimResponseCoverage> get coverage;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
+  @override
+  @JsonKey(name: '_outcome')
+  Element get outcomeElement;
+  @override
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
+  @override
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith;
 }
 
@@ -6083,7 +6959,8 @@ class _$ClaimResponseItemTearOff {
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ItemDetail> detail}) {
+      List<ItemDetail> detail,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement}) {
     return _ClaimResponseItem(
       id: id,
       extension_: extension_,
@@ -6092,6 +6969,7 @@ class _$ClaimResponseItemTearOff {
       noteNumber: noteNumber,
       adjudication: adjudication,
       detail: detail,
+      noteNumberElement: noteNumberElement,
     );
   }
 }
@@ -6109,6 +6987,8 @@ mixin _$ClaimResponseItem {
   List<PositiveInt> get noteNumber;
   List<ClaimResponseAdjudication> get adjudication;
   List<ItemDetail> get detail;
+  @JsonKey(name: '_noteNumber')
+  List<Element> get noteNumberElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseItemCopyWith<ClaimResponseItem> get copyWith;
@@ -6125,7 +7005,8 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ItemDetail> detail});
+      List<ItemDetail> detail,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
 }
@@ -6147,6 +7028,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
     Object noteNumber = freezed,
     Object adjudication = freezed,
     Object detail = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -6166,6 +7048,9 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
           ? _value.adjudication
           : adjudication as List<ClaimResponseAdjudication>,
       detail: detail == freezed ? _value.detail : detail as List<ItemDetail>,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as List<Element>,
     ));
   }
 
@@ -6193,7 +7078,8 @@ abstract class _$ClaimResponseItemCopyWith<$Res>
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ItemDetail> detail});
+      List<ItemDetail> detail,
+      @JsonKey(name: '_noteNumber') List<Element> noteNumberElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -6218,6 +7104,7 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
     Object noteNumber = freezed,
     Object adjudication = freezed,
     Object detail = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_ClaimResponseItem(
       id: id == freezed ? _value.id : id as Id,
@@ -6237,6 +7124,9 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
           ? _value.adjudication
           : adjudication as List<ClaimResponseAdjudication>,
       detail: detail == freezed ? _value.detail : detail as List<ItemDetail>,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as List<Element>,
     ));
   }
 }
@@ -6250,7 +7140,8 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
       @required @JsonKey(required: true) this.sequenceLinkId,
       this.noteNumber,
       this.adjudication,
-      this.detail})
+      this.detail,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement})
       : assert(sequenceLinkId != null);
 
   factory _$_ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -6272,10 +7163,13 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
   final List<ClaimResponseAdjudication> adjudication;
   @override
   final List<ItemDetail> detail;
+  @override
+  @JsonKey(name: '_noteNumber')
+  final List<Element> noteNumberElement;
 
   @override
   String toString() {
-    return 'ClaimResponseItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication, detail: $detail)';
+    return 'ClaimResponseItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication, detail: $detail, noteNumberElement: $noteNumberElement)';
   }
 
   @override
@@ -6300,7 +7194,10 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
                 const DeepCollectionEquality()
                     .equals(other.adjudication, adjudication)) &&
             (identical(other.detail, detail) ||
-                const DeepCollectionEquality().equals(other.detail, detail)));
+                const DeepCollectionEquality().equals(other.detail, detail)) &&
+            (identical(other.noteNumberElement, noteNumberElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.noteNumberElement, noteNumberElement)));
   }
 
   @override
@@ -6312,7 +7209,8 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
       const DeepCollectionEquality().hash(sequenceLinkId) ^
       const DeepCollectionEquality().hash(noteNumber) ^
       const DeepCollectionEquality().hash(adjudication) ^
-      const DeepCollectionEquality().hash(detail);
+      const DeepCollectionEquality().hash(detail) ^
+      const DeepCollectionEquality().hash(noteNumberElement);
 
   @override
   _$ClaimResponseItemCopyWith<_ClaimResponseItem> get copyWith =>
@@ -6326,13 +7224,15 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
 
 abstract class _ClaimResponseItem implements ClaimResponseItem {
   const factory _ClaimResponseItem(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) PositiveInt sequenceLinkId,
-      List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ItemDetail> detail}) = _$_ClaimResponseItem;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          @required @JsonKey(required: true) PositiveInt sequenceLinkId,
+          List<PositiveInt> noteNumber,
+          List<ClaimResponseAdjudication> adjudication,
+          List<ItemDetail> detail,
+          @JsonKey(name: '_noteNumber') List<Element> noteNumberElement}) =
+      _$_ClaimResponseItem;
 
   factory _ClaimResponseItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseItem.fromJson;
@@ -6354,6 +7254,9 @@ abstract class _ClaimResponseItem implements ClaimResponseItem {
   @override
   List<ItemDetail> get detail;
   @override
+  @JsonKey(name: '_noteNumber')
+  List<Element> get noteNumberElement;
+  @override
   _$ClaimResponseItemCopyWith<_ClaimResponseItem> get copyWith;
 }
 
@@ -6371,7 +7274,8 @@ class _$ClaimResponseAdjudicationTearOff {
       FhirExtension modifierExtension,
       @required @JsonKey(required: true) Coding code,
       Quantity amount,
-      Decimal value}) {
+      Decimal value,
+      @JsonKey(name: '_value') Element valueElement}) {
     return _ClaimResponseAdjudication(
       id: id,
       extension_: extension_,
@@ -6379,6 +7283,7 @@ class _$ClaimResponseAdjudicationTearOff {
       code: code,
       amount: amount,
       value: value,
+      valueElement: valueElement,
     );
   }
 }
@@ -6395,6 +7300,8 @@ mixin _$ClaimResponseAdjudication {
   Coding get code;
   Quantity get amount;
   Decimal get value;
+  @JsonKey(name: '_value')
+  Element get valueElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseAdjudicationCopyWith<ClaimResponseAdjudication> get copyWith;
@@ -6410,11 +7317,13 @@ abstract class $ClaimResponseAdjudicationCopyWith<$Res> {
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding code,
       Quantity amount,
-      Decimal value});
+      Decimal value,
+      @JsonKey(name: '_value') Element valueElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get code;
   $QuantityCopyWith<$Res> get amount;
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
@@ -6433,6 +7342,7 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
     Object code = freezed,
     Object amount = freezed,
     Object value = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -6445,6 +7355,9 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Coding,
       amount: amount == freezed ? _value.amount : amount as Quantity,
       value: value == freezed ? _value.value : value as Decimal,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 
@@ -6477,6 +7390,16 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
       return _then(_value.copyWith(amount: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseAdjudicationCopyWith<$Res>
@@ -6491,7 +7414,8 @@ abstract class _$ClaimResponseAdjudicationCopyWith<$Res>
       FhirExtension modifierExtension,
       @JsonKey(required: true) Coding code,
       Quantity amount,
-      Decimal value});
+      Decimal value,
+      @JsonKey(name: '_value') Element valueElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -6499,6 +7423,8 @@ abstract class _$ClaimResponseAdjudicationCopyWith<$Res>
   $CodingCopyWith<$Res> get code;
   @override
   $QuantityCopyWith<$Res> get amount;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
@@ -6520,6 +7446,7 @@ class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
     Object code = freezed,
     Object amount = freezed,
     Object value = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_ClaimResponseAdjudication(
       id: id == freezed ? _value.id : id as Id,
@@ -6532,6 +7459,9 @@ class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as Coding,
       amount: amount == freezed ? _value.amount : amount as Quantity,
       value: value == freezed ? _value.value : value as Decimal,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 }
@@ -6544,7 +7474,8 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
       this.modifierExtension,
       @required @JsonKey(required: true) this.code,
       this.amount,
-      this.value})
+      this.value,
+      @JsonKey(name: '_value') this.valueElement})
       : assert(code != null);
 
   factory _$_ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
@@ -6564,10 +7495,13 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
   final Quantity amount;
   @override
   final Decimal value;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
 
   @override
   String toString() {
-    return 'ClaimResponseAdjudication(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, amount: $amount, value: $value)';
+    return 'ClaimResponseAdjudication(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, amount: $amount, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -6587,7 +7521,10 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
             (identical(other.amount, amount) ||
                 const DeepCollectionEquality().equals(other.amount, amount)) &&
             (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)));
   }
 
   @override
@@ -6598,7 +7535,8 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(amount) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(valueElement);
 
   @override
   _$ClaimResponseAdjudicationCopyWith<_ClaimResponseAdjudication>
@@ -6614,12 +7552,14 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
 
 abstract class _ClaimResponseAdjudication implements ClaimResponseAdjudication {
   const factory _ClaimResponseAdjudication(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Coding code,
-      Quantity amount,
-      Decimal value}) = _$_ClaimResponseAdjudication;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          @required @JsonKey(required: true) Coding code,
+          Quantity amount,
+          Decimal value,
+          @JsonKey(name: '_value') Element valueElement}) =
+      _$_ClaimResponseAdjudication;
 
   factory _ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseAdjudication.fromJson;
@@ -6638,6 +7578,9 @@ abstract class _ClaimResponseAdjudication implements ClaimResponseAdjudication {
   Quantity get amount;
   @override
   Decimal get value;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
   @override
   _$ClaimResponseAdjudicationCopyWith<_ClaimResponseAdjudication> get copyWith;
 }
@@ -8126,7 +9069,10 @@ class _$ClaimResponseNoteTearOff {
       FhirExtension modifierExtension,
       PositiveInt number,
       Coding type,
-      String text}) {
+      String text,
+      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_text') Element textElement}) {
     return _ClaimResponseNote(
       id: id,
       extension_: extension_,
@@ -8134,6 +9080,9 @@ class _$ClaimResponseNoteTearOff {
       number: number,
       type: type,
       text: text,
+      numberElement: numberElement,
+      typeElement: typeElement,
+      textElement: textElement,
     );
   }
 }
@@ -8149,6 +9098,12 @@ mixin _$ClaimResponseNote {
   PositiveInt get number;
   Coding get type;
   String get text;
+  @JsonKey(name: '_number')
+  Element get numberElement;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_text')
+  Element get textElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseNoteCopyWith<ClaimResponseNote> get copyWith;
@@ -8164,10 +9119,16 @@ abstract class $ClaimResponseNoteCopyWith<$Res> {
       FhirExtension modifierExtension,
       PositiveInt number,
       Coding type,
-      String text});
+      String text,
+      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_text') Element textElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodingCopyWith<$Res> get type;
+  $ElementCopyWith<$Res> get numberElement;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get textElement;
 }
 
 class _$ClaimResponseNoteCopyWithImpl<$Res>
@@ -8186,6 +9147,9 @@ class _$ClaimResponseNoteCopyWithImpl<$Res>
     Object number = freezed,
     Object type = freezed,
     Object text = freezed,
+    Object numberElement = freezed,
+    Object typeElement = freezed,
+    Object textElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -8198,6 +9162,13 @@ class _$ClaimResponseNoteCopyWithImpl<$Res>
       number: number == freezed ? _value.number : number as PositiveInt,
       type: type == freezed ? _value.type : type as Coding,
       text: text == freezed ? _value.text : text as String,
+      numberElement: numberElement == freezed
+          ? _value.numberElement
+          : numberElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
     ));
   }
 
@@ -8220,6 +9191,36 @@ class _$ClaimResponseNoteCopyWithImpl<$Res>
       return _then(_value.copyWith(type: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get numberElement {
+    if (_value.numberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.numberElement, (value) {
+      return _then(_value.copyWith(numberElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get textElement {
+    if (_value.textElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.textElement, (value) {
+      return _then(_value.copyWith(textElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseNoteCopyWith<$Res>
@@ -8234,12 +9235,21 @@ abstract class _$ClaimResponseNoteCopyWith<$Res>
       FhirExtension modifierExtension,
       PositiveInt number,
       Coding type,
-      String text});
+      String text,
+      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_text') Element textElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $CodingCopyWith<$Res> get type;
+  @override
+  $ElementCopyWith<$Res> get numberElement;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get textElement;
 }
 
 class __$ClaimResponseNoteCopyWithImpl<$Res>
@@ -8260,6 +9270,9 @@ class __$ClaimResponseNoteCopyWithImpl<$Res>
     Object number = freezed,
     Object type = freezed,
     Object text = freezed,
+    Object numberElement = freezed,
+    Object typeElement = freezed,
+    Object textElement = freezed,
   }) {
     return _then(_ClaimResponseNote(
       id: id == freezed ? _value.id : id as Id,
@@ -8272,6 +9285,13 @@ class __$ClaimResponseNoteCopyWithImpl<$Res>
       number: number == freezed ? _value.number : number as PositiveInt,
       type: type == freezed ? _value.type : type as Coding,
       text: text == freezed ? _value.text : text as String,
+      numberElement: numberElement == freezed
+          ? _value.numberElement
+          : numberElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
     ));
   }
 }
@@ -8284,7 +9304,10 @@ class _$_ClaimResponseNote implements _ClaimResponseNote {
       this.modifierExtension,
       this.number,
       this.type,
-      this.text});
+      this.text,
+      @JsonKey(name: '_number') this.numberElement,
+      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_text') this.textElement});
 
   factory _$_ClaimResponseNote.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseNoteFromJson(json);
@@ -8302,10 +9325,19 @@ class _$_ClaimResponseNote implements _ClaimResponseNote {
   final Coding type;
   @override
   final String text;
+  @override
+  @JsonKey(name: '_number')
+  final Element numberElement;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_text')
+  final Element textElement;
 
   @override
   String toString() {
-    return 'ClaimResponseNote(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, number: $number, type: $type, text: $text)';
+    return 'ClaimResponseNote(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, number: $number, type: $type, text: $text, numberElement: $numberElement, typeElement: $typeElement, textElement: $textElement)';
   }
 
   @override
@@ -8325,7 +9357,16 @@ class _$_ClaimResponseNote implements _ClaimResponseNote {
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)));
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.numberElement, numberElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.numberElement, numberElement)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.textElement, textElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.textElement, textElement)));
   }
 
   @override
@@ -8336,7 +9377,10 @@ class _$_ClaimResponseNote implements _ClaimResponseNote {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(number) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(text);
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(numberElement) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(textElement);
 
   @override
   _$ClaimResponseNoteCopyWith<_ClaimResponseNote> get copyWith =>
@@ -8355,7 +9399,10 @@ abstract class _ClaimResponseNote implements ClaimResponseNote {
       FhirExtension modifierExtension,
       PositiveInt number,
       Coding type,
-      String text}) = _$_ClaimResponseNote;
+      String text,
+      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_text') Element textElement}) = _$_ClaimResponseNote;
 
   factory _ClaimResponseNote.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseNote.fromJson;
@@ -8373,6 +9420,15 @@ abstract class _ClaimResponseNote implements ClaimResponseNote {
   Coding get type;
   @override
   String get text;
+  @override
+  @JsonKey(name: '_number')
+  Element get numberElement;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_text')
+  Element get textElement;
   @override
   _$ClaimResponseNoteCopyWith<_ClaimResponseNote> get copyWith;
 }

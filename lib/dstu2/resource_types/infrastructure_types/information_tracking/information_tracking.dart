@@ -29,6 +29,13 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
     List<ContactPoint> telecom,
     List<Code> subjectType,
     @JsonKey(required: true) @required QuestionnaireGroup group,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_subjectType') List<Element> subjectTypeElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
   }) = _Questionnaire;
 
   factory Questionnaire.fromJson(Map<String, dynamic> json) =>
@@ -57,6 +64,10 @@ abstract class Provenance with _$Provenance implements Resource {
     List<ProvenanceAgent> agent,
     List<ProvenanceEntity> entity,
     List<Signature> signature,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_recorded') Element recordedElement,
+    @JsonKey(name: '_policy') List<Element> policyElement,
   }) = _Provenance;
 
   factory Provenance.fromJson(Map<String, dynamic> json) =>
@@ -89,6 +100,10 @@ abstract class QuestionnaireResponse
     Reference source,
     Reference encounter,
     QuestionnaireResponseGroup group,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_authored') Element authoredElement,
   }) = _QuestionnaireResponse;
 
   factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
@@ -111,6 +126,8 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
     @JsonKey(required: true) @required List<AuditEventParticipant> participant,
     @JsonKey(required: true) @required AuditEventSource source,
     List<AuditEventObject> object,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
   }) = _AuditEvent;
 
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
@@ -166,6 +183,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     @JsonKey(required: true) @required FhirUri reference,
     String display,
     ProvenanceAgent agent,
+    @JsonKey(name: '_role') Element roleElement,
   }) = _ProvenanceEntity;
 
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
@@ -241,6 +259,7 @@ abstract class AuditEventSource with _$AuditEventSource {
     String site,
     @JsonKey(required: true) @required Identifier identifier,
     List<Coding> type,
+    @JsonKey(name: '_site') Element siteElement,
   }) = _AuditEventSource;
 
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
@@ -328,6 +347,8 @@ abstract class AuditEventNetwork with _$AuditEventNetwork {
     FhirExtension modifierExtension,
     String address,
     Code type,
+    @JsonKey(name: '_address') Element addressElement,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _AuditEventNetwork;
 
   factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
@@ -342,6 +363,7 @@ abstract class AuditEventDetail with _$AuditEventDetail {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String type,
     @JsonKey(required: true) @required Base64Binary value,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _AuditEventDetail;
 
   factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
@@ -368,6 +390,14 @@ abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
     Quantity valueQuantity,
     Reference valueReference,
     List<QuestionnaireResponseGroup> group,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
   }) = _QuestionnaireResponseAnswer;
 
   factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>

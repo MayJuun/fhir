@@ -52,6 +52,20 @@ abstract class StructureDefinition
     FhirUri base,
     StructureDefinitionSnapshot snapshot,
     StructureDefinitionDifferential differential,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    @JsonKey(name: '_kind') Element kindElement,
+    @JsonKey(name: '_abstract') Element abstractElement,
   }) = _StructureDefinition;
 
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
@@ -117,6 +131,10 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
     FhirUri uri,
     String name,
     String comments,
+    @JsonKey(name: '_identity') Element identityElement,
+    @JsonKey(name: '_uri') Element uriElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_comments') Element commentElement,
   }) = _StructureDefinitionMapping;
 
   factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
@@ -174,6 +192,10 @@ abstract class DataElementMapping with _$DataElementMapping {
     FhirUri uri,
     String name,
     String comments,
+    @JsonKey(name: '_identity') Element identityElement,
+    @JsonKey(name: '_uri') Element uriElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _DataElementMapping;
 
   factory DataElementMapping.fromJson(Map<String, dynamic> json) =>

@@ -29,6 +29,9 @@ abstract class PaymentNotice with _$PaymentNotice implements Resource {
     Reference request,
     Reference response,
     @JsonKey(required: true) @required Coding paymentStatus,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _PaymentNotice;
 
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
@@ -65,6 +68,11 @@ abstract class PaymentReconciliation
     Coding form,
     @JsonKey(required: true) @required Quantity total,
     List<PaymentReconciliationNote> note,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_outcome') Element outcomeElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
   }) = _PaymentReconciliation;
 
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
@@ -84,6 +92,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     Reference payee,
     Date date,
     Quantity amount,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _PaymentReconciliationDetail;
 
   factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
@@ -98,6 +107,8 @@ abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
     FhirExtension modifierExtension,
     Coding type,
     String text,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_text') Element textElement,
   }) = _PaymentReconciliationNote;
 
   factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>

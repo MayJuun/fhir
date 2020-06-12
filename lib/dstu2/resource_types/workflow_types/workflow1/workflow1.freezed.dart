@@ -1203,7 +1203,15 @@ class _$DeviceUseRequestTearOff {
       Period timingPeriod,
       FhirDateTime timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-          DeviceUseRequestPriority priority}) {
+          DeviceUseRequestPriority priority,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement}) {
     return _DeviceUseRequest(
       resourceType: resourceType,
       id: id,
@@ -1230,6 +1238,10 @@ class _$DeviceUseRequestTearOff {
       timingPeriod: timingPeriod,
       timingDateTime: timingDateTime,
       priority: priority,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
+      priorityElement: priorityElement,
     );
   }
 }
@@ -1269,6 +1281,14 @@ mixin _$DeviceUseRequest {
   FhirDateTime get timingDateTime;
   @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
   DeviceUseRequestPriority get priority;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_priority')
+  Element get priorityElement;
 
   Map<String, dynamic> toJson();
   $DeviceUseRequestCopyWith<DeviceUseRequest> get copyWith;
@@ -1309,7 +1329,15 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
       Period timingPeriod,
       FhirDateTime timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-          DeviceUseRequestPriority priority});
+          DeviceUseRequestPriority priority,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1321,6 +1349,10 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get subject;
   $TimingCopyWith<$Res> get timingTiming;
   $PeriodCopyWith<$Res> get timingPeriod;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get priorityElement;
 }
 
 class _$DeviceUseRequestCopyWithImpl<$Res>
@@ -1358,6 +1390,10 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
     Object timingPeriod = freezed,
     Object timingDateTime = freezed,
     Object priority = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object priorityElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -1417,6 +1453,18 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
       priority: priority == freezed
           ? _value.priority
           : priority as DeviceUseRequestPriority,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement as Element,
     ));
   }
 
@@ -1520,6 +1568,46 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(timingPeriod: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get priorityElement {
+    if (_value.priorityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.priorityElement, (value) {
+      return _then(_value.copyWith(priorityElement: value));
+    });
+  }
 }
 
 abstract class _$DeviceUseRequestCopyWith<$Res>
@@ -1559,7 +1647,15 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
       Period timingPeriod,
       FhirDateTime timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-          DeviceUseRequestPriority priority});
+          DeviceUseRequestPriority priority,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1581,6 +1677,14 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
   $TimingCopyWith<$Res> get timingTiming;
   @override
   $PeriodCopyWith<$Res> get timingPeriod;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get priorityElement;
 }
 
 class __$DeviceUseRequestCopyWithImpl<$Res>
@@ -1620,6 +1724,10 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
     Object timingPeriod = freezed,
     Object timingDateTime = freezed,
     Object priority = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object priorityElement = freezed,
   }) {
     return _then(_DeviceUseRequest(
       resourceType: resourceType == freezed
@@ -1679,6 +1787,18 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
       priority: priority == freezed
           ? _value.priority
           : priority as DeviceUseRequestPriority,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement as Element,
     ));
   }
 }
@@ -1718,7 +1838,15 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
       this.timingPeriod,
       this.timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-          this.priority})
+          this.priority,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_priority')
+          this.priorityElement})
       : assert(device != null),
         assert(subject != null);
 
@@ -1781,10 +1909,22 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
   @override
   @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
   final DeviceUseRequestPriority priority;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_priority')
+  final Element priorityElement;
 
   @override
   String toString() {
-    return 'DeviceUseRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteCodeableConcept: $bodySiteCodeableConcept, bodySiteReference: $bodySiteReference, status: $status, device: $device, encounter: $encounter, identifier: $identifier, indication: $indication, notes: $notes, prnReason: $prnReason, orderedOn: $orderedOn, recordedOn: $recordedOn, subject: $subject, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime, priority: $priority)';
+    return 'DeviceUseRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteCodeableConcept: $bodySiteCodeableConcept, bodySiteReference: $bodySiteReference, status: $status, device: $device, encounter: $encounter, identifier: $identifier, indication: $indication, notes: $notes, prnReason: $prnReason, orderedOn: $orderedOn, recordedOn: $recordedOn, subject: $subject, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime, priority: $priority, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, priorityElement: $priorityElement)';
   }
 
   @override
@@ -1851,7 +1991,11 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
             (identical(other.timingTiming, timingTiming) || const DeepCollectionEquality().equals(other.timingTiming, timingTiming)) &&
             (identical(other.timingPeriod, timingPeriod) || const DeepCollectionEquality().equals(other.timingPeriod, timingPeriod)) &&
             (identical(other.timingDateTime, timingDateTime) || const DeepCollectionEquality().equals(other.timingDateTime, timingDateTime)) &&
-            (identical(other.priority, priority) || const DeepCollectionEquality().equals(other.priority, priority)));
+            (identical(other.priority, priority) || const DeepCollectionEquality().equals(other.priority, priority)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.priorityElement, priorityElement) || const DeepCollectionEquality().equals(other.priorityElement, priorityElement)));
   }
 
   @override
@@ -1881,7 +2025,11 @@ class _$_DeviceUseRequest implements _DeviceUseRequest {
       const DeepCollectionEquality().hash(timingTiming) ^
       const DeepCollectionEquality().hash(timingPeriod) ^
       const DeepCollectionEquality().hash(timingDateTime) ^
-      const DeepCollectionEquality().hash(priority);
+      const DeepCollectionEquality().hash(priority) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(priorityElement);
 
   @override
   _$DeviceUseRequestCopyWith<_DeviceUseRequest> get copyWith =>
@@ -1927,7 +2075,15 @@ abstract class _DeviceUseRequest implements DeviceUseRequest {
       Period timingPeriod,
       FhirDateTime timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-          DeviceUseRequestPriority priority}) = _$_DeviceUseRequest;
+          DeviceUseRequestPriority priority,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement}) = _$_DeviceUseRequest;
 
   factory _DeviceUseRequest.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseRequest.fromJson;
@@ -1989,6 +2145,18 @@ abstract class _DeviceUseRequest implements DeviceUseRequest {
   @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
   DeviceUseRequestPriority get priority;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_priority')
+  Element get priorityElement;
+  @override
   _$DeviceUseRequestCopyWith<_DeviceUseRequest> get copyWith;
 }
 
@@ -2020,7 +2188,11 @@ class _$DeviceUseStatementTearOff {
       @required @JsonKey(required: true) Reference subject,
       Timing timingTiming,
       Period timingPeriod,
-      FhirDateTime timingDateTime}) {
+      FhirDateTime timingDateTime,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+      @JsonKey(name: '_recordedOn') Element recordedOnElement}) {
     return _DeviceUseStatement(
       resourceType: resourceType,
       id: id,
@@ -2043,6 +2215,10 @@ class _$DeviceUseStatementTearOff {
       timingTiming: timingTiming,
       timingPeriod: timingPeriod,
       timingDateTime: timingDateTime,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      timingDateTimeElement: timingDateTimeElement,
+      recordedOnElement: recordedOnElement,
     );
   }
 }
@@ -2076,6 +2252,14 @@ mixin _$DeviceUseStatement {
   Timing get timingTiming;
   Period get timingPeriod;
   FhirDateTime get timingDateTime;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
+  @JsonKey(name: '_recordedOn')
+  Element get recordedOnElement;
 
   Map<String, dynamic> toJson();
   $DeviceUseStatementCopyWith<DeviceUseStatement> get copyWith;
@@ -2106,7 +2290,11 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       @JsonKey(required: true) Reference subject,
       Timing timingTiming,
       Period timingPeriod,
-      FhirDateTime timingDateTime});
+      FhirDateTime timingDateTime,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+      @JsonKey(name: '_recordedOn') Element recordedOnElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -2118,6 +2306,10 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get subject;
   $TimingCopyWith<$Res> get timingTiming;
   $PeriodCopyWith<$Res> get timingPeriod;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get timingDateTimeElement;
+  $ElementCopyWith<$Res> get recordedOnElement;
 }
 
 class _$DeviceUseStatementCopyWithImpl<$Res>
@@ -2151,6 +2343,10 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
     Object timingTiming = freezed,
     Object timingPeriod = freezed,
     Object timingDateTime = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object timingDateTimeElement = freezed,
+    Object recordedOnElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2199,6 +2395,18 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
+      recordedOnElement: recordedOnElement == freezed
+          ? _value.recordedOnElement
+          : recordedOnElement as Element,
     ));
   }
 
@@ -2302,6 +2510,46 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       return _then(_value.copyWith(timingPeriod: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement {
+    if (_value.timingDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timingDateTimeElement, (value) {
+      return _then(_value.copyWith(timingDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get recordedOnElement {
+    if (_value.recordedOnElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.recordedOnElement, (value) {
+      return _then(_value.copyWith(recordedOnElement: value));
+    });
+  }
 }
 
 abstract class _$DeviceUseStatementCopyWith<$Res>
@@ -2331,7 +2579,11 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       @JsonKey(required: true) Reference subject,
       Timing timingTiming,
       Period timingPeriod,
-      FhirDateTime timingDateTime});
+      FhirDateTime timingDateTime,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+      @JsonKey(name: '_recordedOn') Element recordedOnElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2353,6 +2605,14 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
   $TimingCopyWith<$Res> get timingTiming;
   @override
   $PeriodCopyWith<$Res> get timingPeriod;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get timingDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get recordedOnElement;
 }
 
 class __$DeviceUseStatementCopyWithImpl<$Res>
@@ -2388,6 +2648,10 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
     Object timingTiming = freezed,
     Object timingPeriod = freezed,
     Object timingDateTime = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object timingDateTimeElement = freezed,
+    Object recordedOnElement = freezed,
   }) {
     return _then(_DeviceUseStatement(
       resourceType: resourceType == freezed
@@ -2436,6 +2700,18 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      timingDateTimeElement: timingDateTimeElement == freezed
+          ? _value.timingDateTimeElement
+          : timingDateTimeElement as Element,
+      recordedOnElement: recordedOnElement == freezed
+          ? _value.recordedOnElement
+          : recordedOnElement as Element,
     ));
   }
 }
@@ -2463,7 +2739,11 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       @required @JsonKey(required: true) this.subject,
       this.timingTiming,
       this.timingPeriod,
-      this.timingDateTime})
+      this.timingDateTime,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
+      @JsonKey(name: '_recordedOn') this.recordedOnElement})
       : assert(device != null),
         assert(subject != null);
 
@@ -2516,10 +2796,22 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
   final Period timingPeriod;
   @override
   final FhirDateTime timingDateTime;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  final Element timingDateTimeElement;
+  @override
+  @JsonKey(name: '_recordedOn')
+  final Element recordedOnElement;
 
   @override
   String toString() {
-    return 'DeviceUseStatement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteCodeableConcept: $bodySiteCodeableConcept, bodySiteReference: $bodySiteReference, whenUsed: $whenUsed, device: $device, identifier: $identifier, indication: $indication, notes: $notes, recordedOn: $recordedOn, subject: $subject, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime)';
+    return 'DeviceUseStatement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, bodySiteCodeableConcept: $bodySiteCodeableConcept, bodySiteReference: $bodySiteReference, whenUsed: $whenUsed, device: $device, identifier: $identifier, indication: $indication, notes: $notes, recordedOn: $recordedOn, subject: $subject, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, timingDateTimeElement: $timingDateTimeElement, recordedOnElement: $recordedOnElement)';
   }
 
   @override
@@ -2582,7 +2874,11 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
                 const DeepCollectionEquality()
                     .equals(other.timingPeriod, timingPeriod)) &&
             (identical(other.timingDateTime, timingDateTime) ||
-                const DeepCollectionEquality().equals(other.timingDateTime, timingDateTime)));
+                const DeepCollectionEquality().equals(other.timingDateTime, timingDateTime)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.timingDateTimeElement, timingDateTimeElement) || const DeepCollectionEquality().equals(other.timingDateTimeElement, timingDateTimeElement)) &&
+            (identical(other.recordedOnElement, recordedOnElement) || const DeepCollectionEquality().equals(other.recordedOnElement, recordedOnElement)));
   }
 
   @override
@@ -2608,7 +2904,11 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(timingTiming) ^
       const DeepCollectionEquality().hash(timingPeriod) ^
-      const DeepCollectionEquality().hash(timingDateTime);
+      const DeepCollectionEquality().hash(timingDateTime) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(timingDateTimeElement) ^
+      const DeepCollectionEquality().hash(recordedOnElement);
 
   @override
   _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith =>
@@ -2622,27 +2922,32 @@ class _$_DeviceUseStatement implements _DeviceUseStatement {
 
 abstract class _DeviceUseStatement implements DeviceUseStatement {
   const factory _DeviceUseStatement(
-      {@JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      Code language,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      CodeableConcept bodySiteCodeableConcept,
-      Reference bodySiteReference,
-      Period whenUsed,
-      @required @JsonKey(required: true) Reference device,
-      List<Identifier> identifier,
-      List<CodeableConcept> indication,
-      List<String> notes,
-      FhirDateTime recordedOn,
-      @required @JsonKey(required: true) Reference subject,
-      Timing timingTiming,
-      Period timingPeriod,
-      FhirDateTime timingDateTime}) = _$_DeviceUseStatement;
+          {@JsonKey(defaultValue: 'DeviceUseStatement') String resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          Code language,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          CodeableConcept bodySiteCodeableConcept,
+          Reference bodySiteReference,
+          Period whenUsed,
+          @required @JsonKey(required: true) Reference device,
+          List<Identifier> identifier,
+          List<CodeableConcept> indication,
+          List<String> notes,
+          FhirDateTime recordedOn,
+          @required @JsonKey(required: true) Reference subject,
+          Timing timingTiming,
+          Period timingPeriod,
+          FhirDateTime timingDateTime,
+          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+          @JsonKey(name: '_language') Element languageElement,
+          @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+          @JsonKey(name: '_recordedOn') Element recordedOnElement}) =
+      _$_DeviceUseStatement;
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseStatement.fromJson;
@@ -2694,6 +2999,18 @@ abstract class _DeviceUseStatement implements DeviceUseStatement {
   @override
   FhirDateTime get timingDateTime;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_timingDateTime')
+  Element get timingDateTimeElement;
+  @override
+  @JsonKey(name: '_recordedOn')
+  Element get recordedOnElement;
+  @override
   _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith;
 }
 
@@ -2731,7 +3048,15 @@ class _$CommunicationRequestTearOff {
       List<CodeableConcept> reason,
       FhirDateTime requestedOn,
       Reference subject,
-      CodeableConcept priority}) {
+      CodeableConcept priority,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement}) {
     return _CommunicationRequest(
       resourceType: resourceType,
       id: id,
@@ -2757,6 +3082,10 @@ class _$CommunicationRequestTearOff {
       requestedOn: requestedOn,
       subject: subject,
       priority: priority,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
+      priorityElement: priorityElement,
     );
   }
 }
@@ -2792,6 +3121,14 @@ mixin _$CommunicationRequest {
   FhirDateTime get requestedOn;
   Reference get subject;
   CodeableConcept get priority;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_priority')
+  Element get priorityElement;
 
   Map<String, dynamic> toJson();
   $CommunicationRequestCopyWith<CommunicationRequest> get copyWith;
@@ -2828,7 +3165,15 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       List<CodeableConcept> reason,
       FhirDateTime requestedOn,
       Reference subject,
-      CodeableConcept priority});
+      CodeableConcept priority,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -2841,6 +3186,10 @@ abstract class $CommunicationRequestCopyWith<$Res> {
   $PeriodCopyWith<$Res> get scheduledPeriod;
   $ReferenceCopyWith<$Res> get subject;
   $CodeableConceptCopyWith<$Res> get priority;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get priorityElement;
 }
 
 class _$CommunicationRequestCopyWithImpl<$Res>
@@ -2877,6 +3226,10 @@ class _$CommunicationRequestCopyWithImpl<$Res>
     Object requestedOn = freezed,
     Object subject = freezed,
     Object priority = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object priorityElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2932,6 +3285,18 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement as Element,
     ));
   }
 
@@ -3044,6 +3409,46 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(priority: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get priorityElement {
+    if (_value.priorityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.priorityElement, (value) {
+      return _then(_value.copyWith(priorityElement: value));
+    });
+  }
 }
 
 abstract class _$CommunicationRequestCopyWith<$Res>
@@ -3079,7 +3484,15 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       List<CodeableConcept> reason,
       FhirDateTime requestedOn,
       Reference subject,
-      CodeableConcept priority});
+      CodeableConcept priority,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -3103,6 +3516,14 @@ abstract class _$CommunicationRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get subject;
   @override
   $CodeableConceptCopyWith<$Res> get priority;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get priorityElement;
 }
 
 class __$CommunicationRequestCopyWithImpl<$Res>
@@ -3141,6 +3562,10 @@ class __$CommunicationRequestCopyWithImpl<$Res>
     Object requestedOn = freezed,
     Object subject = freezed,
     Object priority = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object priorityElement = freezed,
   }) {
     return _then(_CommunicationRequest(
       resourceType: resourceType == freezed
@@ -3196,6 +3621,18 @@ class __$CommunicationRequestCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement as Element,
     ));
   }
 }
@@ -3229,7 +3666,15 @@ class _$_CommunicationRequest implements _CommunicationRequest {
       this.reason,
       this.requestedOn,
       this.subject,
-      this.priority});
+      this.priority,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_priority')
+          this.priorityElement});
 
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestFromJson(json);
@@ -3285,10 +3730,22 @@ class _$_CommunicationRequest implements _CommunicationRequest {
   final Reference subject;
   @override
   final CodeableConcept priority;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_priority')
+  final Element priorityElement;
 
   @override
   String toString() {
-    return 'CommunicationRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, sender: $sender, recipient: $recipient, payload: $payload, medium: $medium, requester: $requester, status: $status, encounter: $encounter, scheduledDateTime: $scheduledDateTime, scheduledPeriod: $scheduledPeriod, reason: $reason, requestedOn: $requestedOn, subject: $subject, priority: $priority)';
+    return 'CommunicationRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, sender: $sender, recipient: $recipient, payload: $payload, medium: $medium, requester: $requester, status: $status, encounter: $encounter, scheduledDateTime: $scheduledDateTime, scheduledPeriod: $scheduledPeriod, reason: $reason, requestedOn: $requestedOn, subject: $subject, priority: $priority, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, priorityElement: $priorityElement)';
   }
 
   @override
@@ -3359,7 +3816,13 @@ class _$_CommunicationRequest implements _CommunicationRequest {
                     .equals(other.subject, subject)) &&
             (identical(other.priority, priority) ||
                 const DeepCollectionEquality()
-                    .equals(other.priority, priority)));
+                    .equals(other.priority, priority)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.priorityElement, priorityElement) || const DeepCollectionEquality().equals(other.priorityElement, priorityElement)));
   }
 
   @override
@@ -3388,7 +3851,11 @@ class _$_CommunicationRequest implements _CommunicationRequest {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(requestedOn) ^
       const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(priority);
+      const DeepCollectionEquality().hash(priority) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(priorityElement);
 
   @override
   _$CommunicationRequestCopyWith<_CommunicationRequest> get copyWith =>
@@ -3429,7 +3896,15 @@ abstract class _CommunicationRequest implements CommunicationRequest {
       List<CodeableConcept> reason,
       FhirDateTime requestedOn,
       Reference subject,
-      CodeableConcept priority}) = _$_CommunicationRequest;
+      CodeableConcept priority,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement}) = _$_CommunicationRequest;
 
   factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequest.fromJson;
@@ -3485,6 +3960,18 @@ abstract class _CommunicationRequest implements CommunicationRequest {
   Reference get subject;
   @override
   CodeableConcept get priority;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_priority')
+  Element get priorityElement;
   @override
   _$CommunicationRequestCopyWith<_CommunicationRequest> get copyWith;
 }
@@ -3758,7 +4245,8 @@ class _$CommunicationRequestPayloadTearOff {
       FhirExtension modifierExtension,
       String contentString,
       Attachment contentAttachment,
-      Reference contentReference}) {
+      Reference contentReference,
+      @JsonKey(name: '_contentString') Element contentStringElement}) {
     return _CommunicationRequestPayload(
       id: id,
       extension_: extension_,
@@ -3766,6 +4254,7 @@ class _$CommunicationRequestPayloadTearOff {
       contentString: contentString,
       contentAttachment: contentAttachment,
       contentReference: contentReference,
+      contentStringElement: contentStringElement,
     );
   }
 }
@@ -3781,6 +4270,8 @@ mixin _$CommunicationRequestPayload {
   String get contentString;
   Attachment get contentAttachment;
   Reference get contentReference;
+  @JsonKey(name: '_contentString')
+  Element get contentStringElement;
 
   Map<String, dynamic> toJson();
   $CommunicationRequestPayloadCopyWith<CommunicationRequestPayload>
@@ -3798,11 +4289,13 @@ abstract class $CommunicationRequestPayloadCopyWith<$Res> {
       FhirExtension modifierExtension,
       String contentString,
       Attachment contentAttachment,
-      Reference contentReference});
+      Reference contentReference,
+      @JsonKey(name: '_contentString') Element contentStringElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $AttachmentCopyWith<$Res> get contentAttachment;
   $ReferenceCopyWith<$Res> get contentReference;
+  $ElementCopyWith<$Res> get contentStringElement;
 }
 
 class _$CommunicationRequestPayloadCopyWithImpl<$Res>
@@ -3821,6 +4314,7 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
     Object contentString = freezed,
     Object contentAttachment = freezed,
     Object contentReference = freezed,
+    Object contentStringElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -3839,6 +4333,9 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
       contentReference: contentReference == freezed
           ? _value.contentReference
           : contentReference as Reference,
+      contentStringElement: contentStringElement == freezed
+          ? _value.contentStringElement
+          : contentStringElement as Element,
     ));
   }
 
@@ -3871,6 +4368,16 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
       return _then(_value.copyWith(contentReference: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get contentStringElement {
+    if (_value.contentStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.contentStringElement, (value) {
+      return _then(_value.copyWith(contentStringElement: value));
+    });
+  }
 }
 
 abstract class _$CommunicationRequestPayloadCopyWith<$Res>
@@ -3886,7 +4393,8 @@ abstract class _$CommunicationRequestPayloadCopyWith<$Res>
       FhirExtension modifierExtension,
       String contentString,
       Attachment contentAttachment,
-      Reference contentReference});
+      Reference contentReference,
+      @JsonKey(name: '_contentString') Element contentStringElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -3894,6 +4402,8 @@ abstract class _$CommunicationRequestPayloadCopyWith<$Res>
   $AttachmentCopyWith<$Res> get contentAttachment;
   @override
   $ReferenceCopyWith<$Res> get contentReference;
+  @override
+  $ElementCopyWith<$Res> get contentStringElement;
 }
 
 class __$CommunicationRequestPayloadCopyWithImpl<$Res>
@@ -3916,6 +4426,7 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
     Object contentString = freezed,
     Object contentAttachment = freezed,
     Object contentReference = freezed,
+    Object contentStringElement = freezed,
   }) {
     return _then(_CommunicationRequestPayload(
       id: id == freezed ? _value.id : id as Id,
@@ -3934,6 +4445,9 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
       contentReference: contentReference == freezed
           ? _value.contentReference
           : contentReference as Reference,
+      contentStringElement: contentStringElement == freezed
+          ? _value.contentStringElement
+          : contentStringElement as Element,
     ));
   }
 }
@@ -3946,7 +4460,8 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
       this.modifierExtension,
       this.contentString,
       this.contentAttachment,
-      this.contentReference});
+      this.contentReference,
+      @JsonKey(name: '_contentString') this.contentStringElement});
 
   factory _$_CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestPayloadFromJson(json);
@@ -3964,10 +4479,13 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
   final Attachment contentAttachment;
   @override
   final Reference contentReference;
+  @override
+  @JsonKey(name: '_contentString')
+  final Element contentStringElement;
 
   @override
   String toString() {
-    return 'CommunicationRequestPayload(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentString: $contentString, contentAttachment: $contentAttachment, contentReference: $contentReference)';
+    return 'CommunicationRequestPayload(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, contentString: $contentString, contentAttachment: $contentAttachment, contentReference: $contentReference, contentStringElement: $contentStringElement)';
   }
 
   @override
@@ -3990,7 +4508,10 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
                     .equals(other.contentAttachment, contentAttachment)) &&
             (identical(other.contentReference, contentReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.contentReference, contentReference)));
+                    .equals(other.contentReference, contentReference)) &&
+            (identical(other.contentStringElement, contentStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.contentStringElement, contentStringElement)));
   }
 
   @override
@@ -4001,7 +4522,8 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(contentString) ^
       const DeepCollectionEquality().hash(contentAttachment) ^
-      const DeepCollectionEquality().hash(contentReference);
+      const DeepCollectionEquality().hash(contentReference) ^
+      const DeepCollectionEquality().hash(contentStringElement);
 
   @override
   _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
@@ -4017,12 +4539,14 @@ class _$_CommunicationRequestPayload implements _CommunicationRequestPayload {
 abstract class _CommunicationRequestPayload
     implements CommunicationRequestPayload {
   const factory _CommunicationRequestPayload(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      String contentString,
-      Attachment contentAttachment,
-      Reference contentReference}) = _$_CommunicationRequestPayload;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          String contentString,
+          Attachment contentAttachment,
+          Reference contentReference,
+          @JsonKey(name: '_contentString') Element contentStringElement}) =
+      _$_CommunicationRequestPayload;
 
   factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequestPayload.fromJson;
@@ -4040,6 +4564,9 @@ abstract class _CommunicationRequestPayload
   Attachment get contentAttachment;
   @override
   Reference get contentReference;
+  @override
+  @JsonKey(name: '_contentString')
+  Element get contentStringElement;
   @override
   _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
       get copyWith;

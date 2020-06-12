@@ -90,6 +90,10 @@ abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
     FhirDateTime timingDateTime,
     @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
         DeviceUseRequestPriority priority,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
   }) = _DeviceUseRequest;
 
   factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
@@ -122,6 +126,10 @@ abstract class DeviceUseStatement
     Timing timingTiming,
     Period timingPeriod,
     FhirDateTime timingDateTime,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    @JsonKey(name: '_recordedOn') Element recordedOnElement,
   }) = _DeviceUseStatement;
 
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
@@ -158,6 +166,10 @@ abstract class CommunicationRequest
     FhirDateTime requestedOn,
     Reference subject,
     CodeableConcept priority,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
   }) = _CommunicationRequest;
 
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
@@ -187,6 +199,7 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
     String contentString,
     Attachment contentAttachment,
     Reference contentReference,
+    @JsonKey(name: '_contentString') Element contentStringElement,
   }) = _CommunicationRequestPayload;
 
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>

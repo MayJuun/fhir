@@ -309,8 +309,8 @@ abstract class Library with _$Library implements Resource {
 }
 
 @freezed
-abstract class Lists with _$Lists implements Resource {
-  const factory Lists({
+abstract class List_ with _$List_ implements Resource {
+  const factory List_({
     @JsonKey(required: true, defaultValue: 'List')
     @required
         String resourceType,
@@ -341,8 +341,8 @@ abstract class Lists with _$Lists implements Resource {
     @JsonKey(name: '_mode') Element modeElement,
     @JsonKey(name: '_title') Element titleElement,
     @JsonKey(name: '_date') Element dateElement,
-  }) = _Lists;
-  factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
+  }) = _List_;
+  factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
 }
 
 @freezed

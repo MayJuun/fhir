@@ -6896,14 +6896,14 @@ abstract class _Library implements Library {
   _$LibraryCopyWith<_Library> get copyWith;
 }
 
-Lists _$ListsFromJson(Map<String, dynamic> json) {
-  return _Lists.fromJson(json);
+List_ _$List_FromJson(Map<String, dynamic> json) {
+  return _List_.fromJson(json);
 }
 
-class _$ListsTearOff {
-  const _$ListsTearOff();
+class _$List_TearOff {
+  const _$List_TearOff();
 
-  _Lists call(
+  _List_ call(
       {@required
       @JsonKey(required: true, defaultValue: 'List')
           String resourceType,
@@ -6943,7 +6943,7 @@ class _$ListsTearOff {
           Element titleElement,
       @JsonKey(name: '_date')
           Element dateElement}) {
-    return _Lists(
+    return _List_(
       resourceType: resourceType,
       id: id,
       meta: meta,
@@ -6977,9 +6977,9 @@ class _$ListsTearOff {
 }
 
 // ignore: unused_element
-const $Lists = _$ListsTearOff();
+const $List_ = _$List_TearOff();
 
-mixin _$Lists {
+mixin _$List_ {
   @JsonKey(required: true, defaultValue: 'List')
   String get resourceType;
   Id get id;
@@ -7020,12 +7020,12 @@ mixin _$Lists {
   Element get dateElement;
 
   Map<String, dynamic> toJson();
-  $ListsCopyWith<Lists> get copyWith;
+  $List_CopyWith<List_> get copyWith;
 }
 
-abstract class $ListsCopyWith<$Res> {
-  factory $ListsCopyWith(Lists value, $Res Function(Lists) then) =
-      _$ListsCopyWithImpl<$Res>;
+abstract class $List_CopyWith<$Res> {
+  factory $List_CopyWith(List_ value, $Res Function(List_) then) =
+      _$List_CopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'List') String resourceType,
       Id id,
@@ -7072,12 +7072,12 @@ abstract class $ListsCopyWith<$Res> {
   $ElementCopyWith<$Res> get dateElement;
 }
 
-class _$ListsCopyWithImpl<$Res> implements $ListsCopyWith<$Res> {
-  _$ListsCopyWithImpl(this._value, this._then);
+class _$List_CopyWithImpl<$Res> implements $List_CopyWith<$Res> {
+  _$List_CopyWithImpl(this._value, this._then);
 
-  final Lists _value;
+  final List_ _value;
   // ignore: unused_field
-  final $Res Function(Lists) _then;
+  final $Res Function(List_) _then;
 
   @override
   $Res call({
@@ -7309,9 +7309,9 @@ class _$ListsCopyWithImpl<$Res> implements $ListsCopyWith<$Res> {
   }
 }
 
-abstract class _$ListsCopyWith<$Res> implements $ListsCopyWith<$Res> {
-  factory _$ListsCopyWith(_Lists value, $Res Function(_Lists) then) =
-      __$ListsCopyWithImpl<$Res>;
+abstract class _$List_CopyWith<$Res> implements $List_CopyWith<$Res> {
+  factory _$List_CopyWith(_List_ value, $Res Function(_List_) then) =
+      __$List_CopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'List') String resourceType,
@@ -7373,13 +7373,13 @@ abstract class _$ListsCopyWith<$Res> implements $ListsCopyWith<$Res> {
   $ElementCopyWith<$Res> get dateElement;
 }
 
-class __$ListsCopyWithImpl<$Res> extends _$ListsCopyWithImpl<$Res>
-    implements _$ListsCopyWith<$Res> {
-  __$ListsCopyWithImpl(_Lists _value, $Res Function(_Lists) _then)
-      : super(_value, (v) => _then(v as _Lists));
+class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
+    implements _$List_CopyWith<$Res> {
+  __$List_CopyWithImpl(_List_ _value, $Res Function(_List_) _then)
+      : super(_value, (v) => _then(v as _List_));
 
   @override
-  _Lists get _value => super._value as _Lists;
+  _List_ get _value => super._value as _List_;
 
   @override
   $Res call({
@@ -7412,7 +7412,7 @@ class __$ListsCopyWithImpl<$Res> extends _$ListsCopyWithImpl<$Res>
     Object titleElement = freezed,
     Object dateElement = freezed,
   }) {
-    return _then(_Lists(
+    return _then(_List_(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
@@ -7472,8 +7472,8 @@ class __$ListsCopyWithImpl<$Res> extends _$ListsCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Lists implements _Lists {
-  const _$_Lists(
+class _$_List_ implements _List_ {
+  const _$_List_(
       {@required
       @JsonKey(required: true, defaultValue: 'List')
           this.resourceType,
@@ -7515,8 +7515,8 @@ class _$_Lists implements _Lists {
           this.dateElement})
       : assert(resourceType != null);
 
-  factory _$_Lists.fromJson(Map<String, dynamic> json) =>
-      _$_$_ListsFromJson(json);
+  factory _$_List_.fromJson(Map<String, dynamic> json) =>
+      _$_$_List_FromJson(json);
 
   @override
   @JsonKey(required: true, defaultValue: 'List')
@@ -7587,13 +7587,13 @@ class _$_Lists implements _Lists {
 
   @override
   String toString() {
-    return 'Lists(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, mode: $mode, title: $title, code: $code, subject: $subject, encounter: $encounter, date: $date, source: $source, orderedBy: $orderedBy, note: $note, entry: $entry, emptyReason: $emptyReason, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, modeElement: $modeElement, titleElement: $titleElement, dateElement: $dateElement)';
+    return 'List_(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, mode: $mode, title: $title, code: $code, subject: $subject, encounter: $encounter, date: $date, source: $source, orderedBy: $orderedBy, note: $note, entry: $entry, emptyReason: $emptyReason, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, modeElement: $modeElement, titleElement: $titleElement, dateElement: $dateElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Lists &&
+        (other is _List_ &&
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
@@ -7700,17 +7700,17 @@ class _$_Lists implements _Lists {
       const DeepCollectionEquality().hash(dateElement);
 
   @override
-  _$ListsCopyWith<_Lists> get copyWith =>
-      __$ListsCopyWithImpl<_Lists>(this, _$identity);
+  _$List_CopyWith<_List_> get copyWith =>
+      __$List_CopyWithImpl<_List_>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ListsToJson(this);
+    return _$_$_List_ToJson(this);
   }
 }
 
-abstract class _Lists implements Lists {
-  const factory _Lists(
+abstract class _List_ implements List_ {
+  const factory _List_(
       {@required
       @JsonKey(required: true, defaultValue: 'List')
           String resourceType,
@@ -7749,9 +7749,9 @@ abstract class _Lists implements Lists {
       @JsonKey(name: '_title')
           Element titleElement,
       @JsonKey(name: '_date')
-          Element dateElement}) = _$_Lists;
+          Element dateElement}) = _$_List_;
 
-  factory _Lists.fromJson(Map<String, dynamic> json) = _$_Lists.fromJson;
+  factory _List_.fromJson(Map<String, dynamic> json) = _$_List_.fromJson;
 
   @override
   @JsonKey(required: true, defaultValue: 'List')
@@ -7820,7 +7820,7 @@ abstract class _Lists implements Lists {
   @JsonKey(name: '_date')
   Element get dateElement;
   @override
-  _$ListsCopyWith<_Lists> get copyWith;
+  _$List_CopyWith<_List_> get copyWith;
 }
 
 ListEntry _$ListEntryFromJson(Map<String, dynamic> json) {

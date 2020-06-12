@@ -41,6 +41,18 @@ abstract class ImplementationGuide
     List<ImplementationGuideGlobal> global,
     List<FhirUri> binary,
     @JsonKey(required: true) @required ImplementationGuidePage page,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_fhirVersion') List<Element> fhirVersionElement,
   }) = _ImplementationGuide;
 
   factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
@@ -103,6 +115,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Code type,
     @JsonKey(required: true) @required Reference profile,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _ImplementationGuideGlobal;
 
   factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
@@ -186,6 +199,16 @@ abstract class TestScript with _$TestScript implements Resource {
     TestScriptSetup setup,
     List<TestScriptTest> test,
     TestScriptTeardown teardown,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
   }) = _TestScript;
 
   factory TestScript.fromJson(Map<String, dynamic> json) =>
@@ -228,6 +251,8 @@ abstract class TestScriptLink with _$TestScriptLink {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri url,
     String description,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _TestScriptLink;
 
   factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
@@ -246,6 +271,11 @@ abstract class TestScriptCapability with _$TestScriptCapability {
     Integer destination,
     List<FhirUri> link,
     @JsonKey(required: true) @required Reference conformance,
+    @JsonKey(name: '_required') Element requiredElement,
+    @JsonKey(name: '_validated') Element validatedElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_destination') Element destinationElement,
+    @JsonKey(name: '_link') List<Element> linkElement,
   }) = _TestScriptCapability;
 
   factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
@@ -261,6 +291,8 @@ abstract class TestScriptFixture with _$TestScriptFixture {
     Boolean autocreate,
     Boolean autodelete,
     Reference resource,
+    @JsonKey(name: '_autocreate') Element autocreateElement,
+    @JsonKey(name: '_autodelete') Element autodeleteElement,
   }) = _TestScriptFixture;
 
   factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
@@ -277,6 +309,10 @@ abstract class TestScriptVariable with _$TestScriptVariable {
     String headerField,
     String path,
     Id sourceId,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_headerField') Element headerFieldElement,
+    @JsonKey(name: '_path') Element pathElement,
+    @JsonKey(name: '_sourceId') Element sourceIdElement,
   }) = _TestScriptVariable;
 
   factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
@@ -332,6 +368,18 @@ abstract class ActionOperation with _$ActionOperation {
     Id sourceId,
     Id targetId,
     String url,
+    @JsonKey(name: '_resource') Element resourceElement,
+    @JsonKey(name: '_label') Element labelElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_accept') Element acceptElement,
+    @JsonKey(name: '_contentType') Element contentTypeElement,
+    @JsonKey(name: '_destination') Element destinationElement,
+    @JsonKey(name: '_encodeRequestUrl') Element encodeRequestUrlElement,
+    @JsonKey(name: '_params') Element paramsElement,
+    @JsonKey(name: '_responseId') Element responseIdElement,
+    @JsonKey(name: '_sourceId') Element sourceIdElement,
+    @JsonKey(name: '_targetId') Element targetIdElement,
+    @JsonKey(name: '_url') Element urlElement,
   }) = _ActionOperation;
 
   factory ActionOperation.fromJson(Map<String, dynamic> json) =>
@@ -365,6 +413,23 @@ abstract class ActionAssert with _$ActionAssert {
     Id validateProfileId,
     String value,
     Boolean warningOnly,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_direction') Element directionElement,
+    @JsonKey(name: '_compareToSourceId') Element compareToSourceIdElement,
+    @JsonKey(name: '_compareToSourcePath') Element compareToSourcePathElement,
+    @JsonKey(name: '_contentType') Element contentTypeElement,
+    @JsonKey(name: '_headerField') Element headerFieldElement,
+    @JsonKey(name: '_minimumId') Element minimumIdElement,
+    @JsonKey(name: '_navigationLinks') Element navigationLinksElement,
+    @JsonKey(name: '_operator') Element operatorElement,
+    @JsonKey(name: '_path') Element pathElement,
+    @JsonKey(name: '_resource') Element resourceElement,
+    @JsonKey(name: '_response') Element responseElement,
+    @JsonKey(name: '_responseCode') Element responseCodeElement,
+    @JsonKey(name: '_sourceId') Element sourceIdElement,
+    @JsonKey(name: '_validateProfileId') Element validateProfileIdElement,
+    @JsonKey(name: '_value') Element valueElement,
+    @JsonKey(name: '_warningOnly') Element warningOnlyElement,
   }) = _ActionAssert;
 
   factory ActionAssert.fromJson(Map<String, dynamic> json) =>
@@ -379,6 +444,8 @@ abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
     FhirExtension modifierExtensio,
     @JsonKey(required: true) @required String field,
     @JsonKey(required: true) @required String value,
+    @JsonKey(name: '_field') Element fieldElement,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _TestScriptRequestHeader;
 
   factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
@@ -395,6 +462,8 @@ abstract class TestScriptTest with _$TestScriptTest {
     String description,
     TestScriptMetadata metadata,
     @JsonKey(required: true) @required List<SetupAction> action,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _TestScriptTest;
 
   factory TestScriptTest.fromJson(Map<String, dynamic> json) =>

@@ -30,6 +30,11 @@ abstract class Account with _$Account implements Resource {
     Reference subject,
     Reference owner,
     String description,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _Account;
 
   factory Account.fromJson(Map<String, dynamic> json) =>
@@ -79,6 +84,10 @@ abstract class Claim with _$Claim implements Resource {
     List<ClaimItem> item,
     List<Coding> additionalMaterials,
     List<ClaimMissingTeeth> missingTeeth,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_use') Element useElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _Claim;
 
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
@@ -108,6 +117,7 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required PositiveInt sequence,
     @JsonKey(required: true) @required Coding diagnosis,
+    @JsonKey(name: '_sequence') Element sequenceElement,
   }) = _ClaimDiagnosis;
 
   factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
@@ -157,6 +167,9 @@ abstract class ClaimItem with _$ClaimItem {
     List<Coding> modifier,
     List<ClaimDetail> detail,
     ClaimProsthesis prosthesis,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @JsonKey(name: '_servicedDate') Element servicedDateElement,
+    @JsonKey(name: '_factor') Element factorElement,
   }) = _ClaimItem;
 
   factory ClaimItem.fromJson(Map<String, dynamic> json) =>
@@ -179,6 +192,8 @@ abstract class ClaimDetail with _$ClaimDetail {
     Quantity net,
     Coding udi,
     List<ClaimSubDetail> subDetail,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @JsonKey(name: '_factor') Element factorElement,
   }) = _ClaimDetail;
 
   factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
@@ -200,6 +215,8 @@ abstract class ClaimSubDetail with _$ClaimSubDetail {
     Decimal points,
     Quantity net,
     Coding udi,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @JsonKey(name: '_factor') Element factorElement,
   }) = _ClaimSubDetail;
 
   factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
@@ -275,6 +292,11 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
     Coding form,
     List<ClaimResponseNote> note,
     List<ClaimResponseCoverage> coverage,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_outcome') Element outcomeElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
   }) = _ClaimResponse;
 
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
@@ -291,6 +313,7 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
     List<PositiveInt> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
     List<ItemDetail> detail,
+    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
   }) = _ClaimResponseItem;
 
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -306,6 +329,7 @@ abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
     @JsonKey(required: true) @required Coding code,
     Quantity amount,
     Decimal value,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _ClaimResponseAdjudication;
 
   factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
@@ -399,6 +423,9 @@ abstract class ClaimResponseNote with _$ClaimResponseNote {
     PositiveInt number,
     Coding type,
     String text,
+    @JsonKey(name: '_number') Element numberElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_text') Element textElement,
   }) = _ClaimResponseNote;
 
   factory ClaimResponseNote.fromJson(Map<String, dynamic> json) =>

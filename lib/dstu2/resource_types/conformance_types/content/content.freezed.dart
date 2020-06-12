@@ -62,7 +62,35 @@ class _$StructureDefinitionTearOff {
       List<String> context,
       FhirUri base,
       StructureDefinitionSnapshot snapshot,
-      StructureDefinitionDifferential differential}) {
+      StructureDefinitionDifferential differential,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_abstract')
+          Element abstractElement}) {
     return _StructureDefinition(
       resourceType: resourceType,
       id: id,
@@ -98,6 +126,20 @@ class _$StructureDefinitionTearOff {
       base: base,
       snapshot: snapshot,
       differential: differential,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      copyrightElement: copyrightElement,
+      fhirVersionElement: fhirVersionElement,
+      kindElement: kindElement,
+      abstractElement: abstractElement,
     );
   }
 }
@@ -148,6 +190,34 @@ mixin _$StructureDefinition {
   FhirUri get base;
   StructureDefinitionSnapshot get snapshot;
   StructureDefinitionDifferential get differential;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @JsonKey(name: '_fhirVersion')
+  Element get fhirVersionElement;
+  @JsonKey(name: '_kind')
+  Element get kindElement;
+  @JsonKey(name: '_abstract')
+  Element get abstractElement;
 
   Map<String, dynamic> toJson();
   $StructureDefinitionCopyWith<StructureDefinition> get copyWith;
@@ -199,13 +269,55 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       List<String> context,
       FhirUri base,
       StructureDefinitionSnapshot snapshot,
-      StructureDefinitionDifferential differential});
+      StructureDefinitionDifferential differential,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_abstract')
+          Element abstractElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $StructureDefinitionSnapshotCopyWith<$Res> get snapshot;
   $StructureDefinitionDifferentialCopyWith<$Res> get differential;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get copyrightElement;
+  $ElementCopyWith<$Res> get fhirVersionElement;
+  $ElementCopyWith<$Res> get kindElement;
+  $ElementCopyWith<$Res> get abstractElement;
 }
 
 class _$StructureDefinitionCopyWithImpl<$Res>
@@ -252,6 +364,20 @@ class _$StructureDefinitionCopyWithImpl<$Res>
     Object base = freezed,
     Object snapshot = freezed,
     Object differential = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object copyrightElement = freezed,
+    Object fhirVersionElement = freezed,
+    Object kindElement = freezed,
+    Object abstractElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -321,6 +447,44 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       differential: differential == freezed
           ? _value.differential
           : differential as StructureDefinitionDifferential,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      fhirVersionElement: fhirVersionElement == freezed
+          ? _value.fhirVersionElement
+          : fhirVersionElement as Element,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
+      abstractElement: abstractElement == freezed
+          ? _value.abstractElement
+          : abstractElement as Element,
     ));
   }
 
@@ -374,6 +538,146 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       return _then(_value.copyWith(differential: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fhirVersionElement {
+    if (_value.fhirVersionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fhirVersionElement, (value) {
+      return _then(_value.copyWith(fhirVersionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get kindElement {
+    if (_value.kindElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.kindElement, (value) {
+      return _then(_value.copyWith(kindElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get abstractElement {
+    if (_value.abstractElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.abstractElement, (value) {
+      return _then(_value.copyWith(abstractElement: value));
+    });
+  }
 }
 
 abstract class _$StructureDefinitionCopyWith<$Res>
@@ -424,7 +728,35 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       List<String> context,
       FhirUri base,
       StructureDefinitionSnapshot snapshot,
-      StructureDefinitionDifferential differential});
+      StructureDefinitionDifferential differential,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_abstract')
+          Element abstractElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -436,6 +768,34 @@ abstract class _$StructureDefinitionCopyWith<$Res>
   $StructureDefinitionSnapshotCopyWith<$Res> get snapshot;
   @override
   $StructureDefinitionDifferentialCopyWith<$Res> get differential;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
+  @override
+  $ElementCopyWith<$Res> get fhirVersionElement;
+  @override
+  $ElementCopyWith<$Res> get kindElement;
+  @override
+  $ElementCopyWith<$Res> get abstractElement;
 }
 
 class __$StructureDefinitionCopyWithImpl<$Res>
@@ -484,6 +844,20 @@ class __$StructureDefinitionCopyWithImpl<$Res>
     Object base = freezed,
     Object snapshot = freezed,
     Object differential = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object copyrightElement = freezed,
+    Object fhirVersionElement = freezed,
+    Object kindElement = freezed,
+    Object abstractElement = freezed,
   }) {
     return _then(_StructureDefinition(
       resourceType: resourceType == freezed
@@ -553,6 +927,44 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       differential: differential == freezed
           ? _value.differential
           : differential as StructureDefinitionDifferential,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      fhirVersionElement: fhirVersionElement == freezed
+          ? _value.fhirVersionElement
+          : fhirVersionElement as Element,
+      kindElement:
+          kindElement == freezed ? _value.kindElement : kindElement as Element,
+      abstractElement: abstractElement == freezed
+          ? _value.abstractElement
+          : abstractElement as Element,
     ));
   }
 }
@@ -606,7 +1018,35 @@ class _$_StructureDefinition implements _StructureDefinition {
       this.context,
       this.base,
       this.snapshot,
-      this.differential})
+      this.differential,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      @JsonKey(name: '_fhirVersion')
+          this.fhirVersionElement,
+      @JsonKey(name: '_kind')
+          this.kindElement,
+      @JsonKey(name: '_abstract')
+          this.abstractElement})
       : assert(url != null),
         assert(name != null),
         assert(status != null),
@@ -692,10 +1132,52 @@ class _$_StructureDefinition implements _StructureDefinition {
   final StructureDefinitionSnapshot snapshot;
   @override
   final StructureDefinitionDifferential differential;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
+  @JsonKey(name: '_fhirVersion')
+  final Element fhirVersionElement;
+  @override
+  @JsonKey(name: '_kind')
+  final Element kindElement;
+  @override
+  @JsonKey(name: '_abstract')
+  final Element abstractElement;
 
   @override
   String toString() {
-    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, display: $display, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, code: $code, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, constrainedType: $constrainedType, abstract_: $abstract_, contextType: $contextType, context: $context, base: $base, snapshot: $snapshot, differential: $differential)';
+    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, display: $display, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, useContext: $useContext, requirements: $requirements, copyright: $copyright, code: $code, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, constrainedType: $constrainedType, abstract_: $abstract_, contextType: $contextType, context: $context, base: $base, snapshot: $snapshot, differential: $differential, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, copyrightElement: $copyrightElement, fhirVersionElement: $fhirVersionElement, kindElement: $kindElement, abstractElement: $abstractElement)';
   }
 
   @override
@@ -778,7 +1260,21 @@ class _$_StructureDefinition implements _StructureDefinition {
             (identical(other.context, context) || const DeepCollectionEquality().equals(other.context, context)) &&
             (identical(other.base, base) || const DeepCollectionEquality().equals(other.base, base)) &&
             (identical(other.snapshot, snapshot) || const DeepCollectionEquality().equals(other.snapshot, snapshot)) &&
-            (identical(other.differential, differential) || const DeepCollectionEquality().equals(other.differential, differential)));
+            (identical(other.differential, differential) || const DeepCollectionEquality().equals(other.differential, differential)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.fhirVersionElement, fhirVersionElement) || const DeepCollectionEquality().equals(other.fhirVersionElement, fhirVersionElement)) &&
+            (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
+            (identical(other.abstractElement, abstractElement) || const DeepCollectionEquality().equals(other.abstractElement, abstractElement)));
   }
 
   @override
@@ -817,7 +1313,21 @@ class _$_StructureDefinition implements _StructureDefinition {
       const DeepCollectionEquality().hash(context) ^
       const DeepCollectionEquality().hash(base) ^
       const DeepCollectionEquality().hash(snapshot) ^
-      const DeepCollectionEquality().hash(differential);
+      const DeepCollectionEquality().hash(differential) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(fhirVersionElement) ^
+      const DeepCollectionEquality().hash(kindElement) ^
+      const DeepCollectionEquality().hash(abstractElement);
 
   @override
   _$StructureDefinitionCopyWith<_StructureDefinition> get copyWith =>
@@ -878,7 +1388,35 @@ abstract class _StructureDefinition implements StructureDefinition {
       List<String> context,
       FhirUri base,
       StructureDefinitionSnapshot snapshot,
-      StructureDefinitionDifferential differential}) = _$_StructureDefinition;
+      StructureDefinitionDifferential differential,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_fhirVersion')
+          Element fhirVersionElement,
+      @JsonKey(name: '_kind')
+          Element kindElement,
+      @JsonKey(name: '_abstract')
+          Element abstractElement}) = _$_StructureDefinition;
 
   factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinition.fromJson;
@@ -959,6 +1497,48 @@ abstract class _StructureDefinition implements StructureDefinition {
   StructureDefinitionSnapshot get snapshot;
   @override
   StructureDefinitionDifferential get differential;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
+  @JsonKey(name: '_fhirVersion')
+  Element get fhirVersionElement;
+  @override
+  @JsonKey(name: '_kind')
+  Element get kindElement;
+  @override
+  @JsonKey(name: '_abstract')
+  Element get abstractElement;
   @override
   _$StructureDefinitionCopyWith<_StructureDefinition> get copyWith;
 }
@@ -1896,7 +2476,11 @@ class _$StructureDefinitionMappingTearOff {
       @required @JsonKey(required: true) Id identity,
       FhirUri uri,
       String name,
-      String comments}) {
+      String comments,
+      @JsonKey(name: '_identity') Element identityElement,
+      @JsonKey(name: '_uri') Element uriElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_comments') Element commentElement}) {
     return _StructureDefinitionMapping(
       id: id,
       extension_: extension_,
@@ -1905,6 +2489,10 @@ class _$StructureDefinitionMappingTearOff {
       uri: uri,
       name: name,
       comments: comments,
+      identityElement: identityElement,
+      uriElement: uriElement,
+      nameElement: nameElement,
+      commentElement: commentElement,
     );
   }
 }
@@ -1922,6 +2510,14 @@ mixin _$StructureDefinitionMapping {
   FhirUri get uri;
   String get name;
   String get comments;
+  @JsonKey(name: '_identity')
+  Element get identityElement;
+  @JsonKey(name: '_uri')
+  Element get uriElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_comments')
+  Element get commentElement;
 
   Map<String, dynamic> toJson();
   $StructureDefinitionMappingCopyWith<StructureDefinitionMapping> get copyWith;
@@ -1938,9 +2534,17 @@ abstract class $StructureDefinitionMappingCopyWith<$Res> {
       @JsonKey(required: true) Id identity,
       FhirUri uri,
       String name,
-      String comments});
+      String comments,
+      @JsonKey(name: '_identity') Element identityElement,
+      @JsonKey(name: '_uri') Element uriElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_comments') Element commentElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get identityElement;
+  $ElementCopyWith<$Res> get uriElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get commentElement;
 }
 
 class _$StructureDefinitionMappingCopyWithImpl<$Res>
@@ -1960,6 +2564,10 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res>
     Object uri = freezed,
     Object name = freezed,
     Object comments = freezed,
+    Object identityElement = freezed,
+    Object uriElement = freezed,
+    Object nameElement = freezed,
+    Object commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -1973,6 +2581,16 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res>
       uri: uri == freezed ? _value.uri : uri as FhirUri,
       name: name == freezed ? _value.name : name as String,
       comments: comments == freezed ? _value.comments : comments as String,
+      identityElement: identityElement == freezed
+          ? _value.identityElement
+          : identityElement as Element,
+      uriElement:
+          uriElement == freezed ? _value.uriElement : uriElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
     ));
   }
 
@@ -1983,6 +2601,46 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get identityElement {
+    if (_value.identityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.identityElement, (value) {
+      return _then(_value.copyWith(identityElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get uriElement {
+    if (_value.uriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.uriElement, (value) {
+      return _then(_value.copyWith(uriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get commentElement {
+    if (_value.commentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+      return _then(_value.copyWith(commentElement: value));
     });
   }
 }
@@ -2001,10 +2659,22 @@ abstract class _$StructureDefinitionMappingCopyWith<$Res>
       @JsonKey(required: true) Id identity,
       FhirUri uri,
       String name,
-      String comments});
+      String comments,
+      @JsonKey(name: '_identity') Element identityElement,
+      @JsonKey(name: '_uri') Element uriElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_comments') Element commentElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get identityElement;
+  @override
+  $ElementCopyWith<$Res> get uriElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get commentElement;
 }
 
 class __$StructureDefinitionMappingCopyWithImpl<$Res>
@@ -2027,6 +2697,10 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
     Object uri = freezed,
     Object name = freezed,
     Object comments = freezed,
+    Object identityElement = freezed,
+    Object uriElement = freezed,
+    Object nameElement = freezed,
+    Object commentElement = freezed,
   }) {
     return _then(_StructureDefinitionMapping(
       id: id == freezed ? _value.id : id as Id,
@@ -2040,6 +2714,16 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
       uri: uri == freezed ? _value.uri : uri as FhirUri,
       name: name == freezed ? _value.name : name as String,
       comments: comments == freezed ? _value.comments : comments as String,
+      identityElement: identityElement == freezed
+          ? _value.identityElement
+          : identityElement as Element,
+      uriElement:
+          uriElement == freezed ? _value.uriElement : uriElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
     ));
   }
 }
@@ -2053,7 +2737,11 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
       @required @JsonKey(required: true) this.identity,
       this.uri,
       this.name,
-      this.comments})
+      this.comments,
+      @JsonKey(name: '_identity') this.identityElement,
+      @JsonKey(name: '_uri') this.uriElement,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_comments') this.commentElement})
       : assert(identity != null);
 
   factory _$_StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
@@ -2075,10 +2763,22 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
   final String name;
   @override
   final String comments;
+  @override
+  @JsonKey(name: '_identity')
+  final Element identityElement;
+  @override
+  @JsonKey(name: '_uri')
+  final Element uriElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_comments')
+  final Element commentElement;
 
   @override
   String toString() {
-    return 'StructureDefinitionMapping(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identity: $identity, uri: $uri, name: $name, comments: $comments)';
+    return 'StructureDefinitionMapping(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identity: $identity, uri: $uri, name: $name, comments: $comments, identityElement: $identityElement, uriElement: $uriElement, nameElement: $nameElement, commentElement: $commentElement)';
   }
 
   @override
@@ -2102,7 +2802,19 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.comments, comments) ||
                 const DeepCollectionEquality()
-                    .equals(other.comments, comments)));
+                    .equals(other.comments, comments)) &&
+            (identical(other.identityElement, identityElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.identityElement, identityElement)) &&
+            (identical(other.uriElement, uriElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.uriElement, uriElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.commentElement, commentElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.commentElement, commentElement)));
   }
 
   @override
@@ -2114,7 +2826,11 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
       const DeepCollectionEquality().hash(identity) ^
       const DeepCollectionEquality().hash(uri) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(comments);
+      const DeepCollectionEquality().hash(comments) ^
+      const DeepCollectionEquality().hash(identityElement) ^
+      const DeepCollectionEquality().hash(uriElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(commentElement);
 
   @override
   _$StructureDefinitionMappingCopyWith<_StructureDefinitionMapping>
@@ -2130,13 +2846,18 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
 abstract class _StructureDefinitionMapping
     implements StructureDefinitionMapping {
   const factory _StructureDefinitionMapping(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Id identity,
-      FhirUri uri,
-      String name,
-      String comments}) = _$_StructureDefinitionMapping;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          @required @JsonKey(required: true) Id identity,
+          FhirUri uri,
+          String name,
+          String comments,
+          @JsonKey(name: '_identity') Element identityElement,
+          @JsonKey(name: '_uri') Element uriElement,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_comments') Element commentElement}) =
+      _$_StructureDefinitionMapping;
 
   factory _StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionMapping.fromJson;
@@ -2157,6 +2878,18 @@ abstract class _StructureDefinitionMapping
   String get name;
   @override
   String get comments;
+  @override
+  @JsonKey(name: '_identity')
+  Element get identityElement;
+  @override
+  @JsonKey(name: '_uri')
+  Element get uriElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_comments')
+  Element get commentElement;
   @override
   _$StructureDefinitionMappingCopyWith<_StructureDefinitionMapping>
       get copyWith;
@@ -2880,7 +3613,11 @@ class _$DataElementMappingTearOff {
       @required @JsonKey(required: true) Id identity,
       FhirUri uri,
       String name,
-      String comments}) {
+      String comments,
+      @JsonKey(name: '_identity') Element identityElement,
+      @JsonKey(name: '_uri') Element uriElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_comment') Element commentElement}) {
     return _DataElementMapping(
       id: id,
       extension_: extension_,
@@ -2889,6 +3626,10 @@ class _$DataElementMappingTearOff {
       uri: uri,
       name: name,
       comments: comments,
+      identityElement: identityElement,
+      uriElement: uriElement,
+      nameElement: nameElement,
+      commentElement: commentElement,
     );
   }
 }
@@ -2906,6 +3647,14 @@ mixin _$DataElementMapping {
   FhirUri get uri;
   String get name;
   String get comments;
+  @JsonKey(name: '_identity')
+  Element get identityElement;
+  @JsonKey(name: '_uri')
+  Element get uriElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_comment')
+  Element get commentElement;
 
   Map<String, dynamic> toJson();
   $DataElementMappingCopyWith<DataElementMapping> get copyWith;
@@ -2922,9 +3671,17 @@ abstract class $DataElementMappingCopyWith<$Res> {
       @JsonKey(required: true) Id identity,
       FhirUri uri,
       String name,
-      String comments});
+      String comments,
+      @JsonKey(name: '_identity') Element identityElement,
+      @JsonKey(name: '_uri') Element uriElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_comment') Element commentElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get identityElement;
+  $ElementCopyWith<$Res> get uriElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get commentElement;
 }
 
 class _$DataElementMappingCopyWithImpl<$Res>
@@ -2944,6 +3701,10 @@ class _$DataElementMappingCopyWithImpl<$Res>
     Object uri = freezed,
     Object name = freezed,
     Object comments = freezed,
+    Object identityElement = freezed,
+    Object uriElement = freezed,
+    Object nameElement = freezed,
+    Object commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -2957,6 +3718,16 @@ class _$DataElementMappingCopyWithImpl<$Res>
       uri: uri == freezed ? _value.uri : uri as FhirUri,
       name: name == freezed ? _value.name : name as String,
       comments: comments == freezed ? _value.comments : comments as String,
+      identityElement: identityElement == freezed
+          ? _value.identityElement
+          : identityElement as Element,
+      uriElement:
+          uriElement == freezed ? _value.uriElement : uriElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
     ));
   }
 
@@ -2967,6 +3738,46 @@ class _$DataElementMappingCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get identityElement {
+    if (_value.identityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.identityElement, (value) {
+      return _then(_value.copyWith(identityElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get uriElement {
+    if (_value.uriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.uriElement, (value) {
+      return _then(_value.copyWith(uriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get commentElement {
+    if (_value.commentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+      return _then(_value.copyWith(commentElement: value));
     });
   }
 }
@@ -2984,10 +3795,22 @@ abstract class _$DataElementMappingCopyWith<$Res>
       @JsonKey(required: true) Id identity,
       FhirUri uri,
       String name,
-      String comments});
+      String comments,
+      @JsonKey(name: '_identity') Element identityElement,
+      @JsonKey(name: '_uri') Element uriElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_comment') Element commentElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get identityElement;
+  @override
+  $ElementCopyWith<$Res> get uriElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get commentElement;
 }
 
 class __$DataElementMappingCopyWithImpl<$Res>
@@ -3009,6 +3832,10 @@ class __$DataElementMappingCopyWithImpl<$Res>
     Object uri = freezed,
     Object name = freezed,
     Object comments = freezed,
+    Object identityElement = freezed,
+    Object uriElement = freezed,
+    Object nameElement = freezed,
+    Object commentElement = freezed,
   }) {
     return _then(_DataElementMapping(
       id: id == freezed ? _value.id : id as Id,
@@ -3022,6 +3849,16 @@ class __$DataElementMappingCopyWithImpl<$Res>
       uri: uri == freezed ? _value.uri : uri as FhirUri,
       name: name == freezed ? _value.name : name as String,
       comments: comments == freezed ? _value.comments : comments as String,
+      identityElement: identityElement == freezed
+          ? _value.identityElement
+          : identityElement as Element,
+      uriElement:
+          uriElement == freezed ? _value.uriElement : uriElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      commentElement: commentElement == freezed
+          ? _value.commentElement
+          : commentElement as Element,
     ));
   }
 }
@@ -3035,7 +3872,11 @@ class _$_DataElementMapping implements _DataElementMapping {
       @required @JsonKey(required: true) this.identity,
       this.uri,
       this.name,
-      this.comments})
+      this.comments,
+      @JsonKey(name: '_identity') this.identityElement,
+      @JsonKey(name: '_uri') this.uriElement,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_comment') this.commentElement})
       : assert(identity != null);
 
   factory _$_DataElementMapping.fromJson(Map<String, dynamic> json) =>
@@ -3057,10 +3898,22 @@ class _$_DataElementMapping implements _DataElementMapping {
   final String name;
   @override
   final String comments;
+  @override
+  @JsonKey(name: '_identity')
+  final Element identityElement;
+  @override
+  @JsonKey(name: '_uri')
+  final Element uriElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_comment')
+  final Element commentElement;
 
   @override
   String toString() {
-    return 'DataElementMapping(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identity: $identity, uri: $uri, name: $name, comments: $comments)';
+    return 'DataElementMapping(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identity: $identity, uri: $uri, name: $name, comments: $comments, identityElement: $identityElement, uriElement: $uriElement, nameElement: $nameElement, commentElement: $commentElement)';
   }
 
   @override
@@ -3084,7 +3937,19 @@ class _$_DataElementMapping implements _DataElementMapping {
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.comments, comments) ||
                 const DeepCollectionEquality()
-                    .equals(other.comments, comments)));
+                    .equals(other.comments, comments)) &&
+            (identical(other.identityElement, identityElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.identityElement, identityElement)) &&
+            (identical(other.uriElement, uriElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.uriElement, uriElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.commentElement, commentElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.commentElement, commentElement)));
   }
 
   @override
@@ -3096,7 +3961,11 @@ class _$_DataElementMapping implements _DataElementMapping {
       const DeepCollectionEquality().hash(identity) ^
       const DeepCollectionEquality().hash(uri) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(comments);
+      const DeepCollectionEquality().hash(comments) ^
+      const DeepCollectionEquality().hash(identityElement) ^
+      const DeepCollectionEquality().hash(uriElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(commentElement);
 
   @override
   _$DataElementMappingCopyWith<_DataElementMapping> get copyWith =>
@@ -3110,13 +3979,18 @@ class _$_DataElementMapping implements _DataElementMapping {
 
 abstract class _DataElementMapping implements DataElementMapping {
   const factory _DataElementMapping(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @required @JsonKey(required: true) Id identity,
-      FhirUri uri,
-      String name,
-      String comments}) = _$_DataElementMapping;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          @required @JsonKey(required: true) Id identity,
+          FhirUri uri,
+          String name,
+          String comments,
+          @JsonKey(name: '_identity') Element identityElement,
+          @JsonKey(name: '_uri') Element uriElement,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_comment') Element commentElement}) =
+      _$_DataElementMapping;
 
   factory _DataElementMapping.fromJson(Map<String, dynamic> json) =
       _$_DataElementMapping.fromJson;
@@ -3137,6 +4011,18 @@ abstract class _DataElementMapping implements DataElementMapping {
   String get name;
   @override
   String get comments;
+  @override
+  @JsonKey(name: '_identity')
+  Element get identityElement;
+  @override
+  @JsonKey(name: '_uri')
+  Element get uriElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_comment')
+  Element get commentElement;
   @override
   _$DataElementMappingCopyWith<_DataElementMapping> get copyWith;
 }

@@ -59,6 +59,15 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
             ? null
             : SubstanceIngredient.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
   );
 }
 
@@ -92,6 +101,9 @@ Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
       'instance', instance.instance?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'ingredient', instance.ingredient?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
   return val;
 }
 
@@ -158,6 +170,21 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
     partOf: json['partOf'] == null
         ? null
         : Reference.fromJson(json['partOf'] as Map<String, dynamic>),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    modeElement: json['_mode'] == null
+        ? null
+        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
   );
 }
 
@@ -194,6 +221,11 @@ Map<String, dynamic> _$_$_LocationToJson(_$_Location instance) {
   writeNotNull('position', instance.position?.toJson());
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('partOf', instance.partOf?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_mode', instance.modeElement?.toJson());
   return val;
 }
 
@@ -304,6 +336,21 @@ _$_Person _$_$_PersonFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : PersonLink.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    genderElement: json['_gender'] == null
+        ? null
+        : Element.fromJson(json['_gender'] as Map<String, dynamic>),
+    birthDateElement: json['_birthDate'] == null
+        ? null
+        : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
+    activeElement: json['_active'] == null
+        ? null
+        : Element.fromJson(json['_active'] as Map<String, dynamic>),
   );
 }
 
@@ -338,6 +385,11 @@ Map<String, dynamic> _$_$_PersonToJson(_$_Person instance) {
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('active', instance.active?.toJson());
   writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_gender', instance.genderElement?.toJson());
+  writeNotNull('_birthDate', instance.birthDateElement?.toJson());
+  writeNotNull('_active', instance.activeElement?.toJson());
   return val;
 }
 
@@ -369,6 +421,9 @@ _$_SubstanceInstance _$_$_SubstanceInstanceFromJson(Map<String, dynamic> json) {
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+    expiryElement: json['_expiry'] == null
+        ? null
+        : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
   );
 }
 
@@ -389,6 +444,7 @@ Map<String, dynamic> _$_$_SubstanceInstanceToJson(
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('expiry', instance.expiry?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
+  writeNotNull('_expiry', instance.expiryElement?.toJson());
   return val;
 }
 
@@ -453,6 +509,15 @@ _$_LocationPosition _$_$_LocationPositionFromJson(Map<String, dynamic> json) {
         json['latitude'] == null ? null : Decimal.fromJson(json['latitude']),
     altitude:
         json['altitude'] == null ? null : Decimal.fromJson(json['altitude']),
+    longitudeElement: json['_longitude'] == null
+        ? null
+        : Element.fromJson(json['_longitude'] as Map<String, dynamic>),
+    latitudeElement: json['_latitude'] == null
+        ? null
+        : Element.fromJson(json['_latitude'] as Map<String, dynamic>),
+    altitudeElement: json['_altitude'] == null
+        ? null
+        : Element.fromJson(json['_altitude'] as Map<String, dynamic>),
   );
 }
 
@@ -472,6 +537,9 @@ Map<String, dynamic> _$_$_LocationPositionToJson(_$_LocationPosition instance) {
   writeNotNull('longitude', instance.longitude?.toJson());
   writeNotNull('latitude', instance.latitude?.toJson());
   writeNotNull('altitude', instance.altitude?.toJson());
+  writeNotNull('_longitude', instance.longitudeElement?.toJson());
+  writeNotNull('_latitude', instance.latitudeElement?.toJson());
+  writeNotNull('_altitude', instance.altitudeElement?.toJson());
   return val;
 }
 
@@ -493,6 +561,9 @@ _$_PersonLink _$_$_PersonLinkFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
     assurance: _$enumDecodeNullable(_$LinkAssuranceEnumMap, json['assurance'],
         unknownValue: LinkAssurance.unknown),
+    assuranceElement: json['_assurance'] == null
+        ? null
+        : Element.fromJson(json['_assurance'] as Map<String, dynamic>),
   );
 }
 
@@ -511,6 +582,7 @@ Map<String, dynamic> _$_$_PersonLinkToJson(_$_PersonLink instance) {
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('target', instance.target?.toJson());
   writeNotNull('assurance', _$LinkAssuranceEnumMap[instance.assurance]);
+  writeNotNull('_assurance', instance.assuranceElement?.toJson());
   return val;
 }
 
@@ -672,6 +744,15 @@ _$_Contract _$_$_ContractFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContractRule.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    issuedElement: json['_issued'] == null
+        ? null
+        : Element.fromJson(json['_issued'] as Map<String, dynamic>),
   );
 }
 
@@ -718,6 +799,9 @@ Map<String, dynamic> _$_$_ContractToJson(_$_Contract instance) {
       'friendly', instance.friendly?.map((e) => e?.toJson())?.toList());
   writeNotNull('legal', instance.legal?.map((e) => e?.toJson())?.toList());
   writeNotNull('rule', instance.rule?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_issued', instance.issuedElement?.toJson());
   return val;
 }
 
@@ -800,6 +884,19 @@ _$_ContractValuedItem _$_$_ContractValuedItemFromJson(
     net: json['net'] == null
         ? null
         : Quantity.fromJson(json['net'] as Map<String, dynamic>),
+    effectiveTimeElement: json['_effectiveTime'] == null
+        ? null
+        : Element.fromJson(json['_effectiveTime'] as Map<String, dynamic>),
+    factorElement: json['_factor'] == null
+        ? null
+        : Element.fromJson(json['_factor'] as Map<String, dynamic>),
+    pointsElement: json['_points'] == null
+        ? null
+        : Element.fromJson(json['_points'] as Map<String, dynamic>),
+    securityLabelNumberElement: (json['securityLabelNumberElement'] as List)
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -827,6 +924,11 @@ Map<String, dynamic> _$_$_ContractValuedItemToJson(
   writeNotNull('factor', instance.factor?.toJson());
   writeNotNull('points', instance.points?.toJson());
   writeNotNull('net', instance.net?.toJson());
+  writeNotNull('_effectiveTime', instance.effectiveTimeElement?.toJson());
+  writeNotNull('_factor', instance.factorElement?.toJson());
+  writeNotNull('_points', instance.pointsElement?.toJson());
+  writeNotNull('securityLabelNumberElement',
+      instance.securityLabelNumberElement?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -926,6 +1028,12 @@ _$_ContractTerm _$_$_ContractTermFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContractTerm.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    issuedElement: json['_issued'] == null
+        ? null
+        : Element.fromJson(json['_issued'] as Map<String, dynamic>),
+    textElement: json['_text'] == null
+        ? null
+        : Element.fromJson(json['_text'] as Map<String, dynamic>),
   );
 }
 
@@ -956,6 +1064,8 @@ Map<String, dynamic> _$_$_ContractTermToJson(_$_ContractTerm instance) {
   writeNotNull(
       'valuedItem', instance.valuedItem?.map((e) => e?.toJson())?.toList());
   writeNotNull('group', instance.group?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_issued', instance.issuedElement?.toJson());
+  writeNotNull('_text', instance.textElement?.toJson());
   return val;
 }
 

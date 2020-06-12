@@ -35,6 +35,12 @@ abstract class Composition with _$Composition implements Resource {
     List<CompositionEvent> event,
     Reference encounter,
     List<CompositionSection> section,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_confidentiality') Element confidentialityElement,
   }) = _Composition;
 
   factory Composition.fromJson(Map<String, dynamic> json) =>
@@ -72,6 +78,11 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
     List<CodeableConcept> securityLabel,
     @JsonKey(required: true) @required List<DocumentReferenceContent> content,
     DocumentReferenceContext context,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_docStatus') Element docStatusElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _DocumentReference;
 
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
@@ -104,6 +115,12 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
     String description,
     @JsonKey(required: true) @required List<DocumentManifestContent> content,
     List<DocumentManifestRelated> related,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_source') Element sourceElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _DocumentManifest;
 
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
@@ -139,6 +156,12 @@ abstract class List_ with _$List_ implements Resource {
     String note,
     List<ListEntry> entry,
     CodeableConcept emptyReason,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _List_;
 
   factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
@@ -153,6 +176,8 @@ abstract class CompositionAttester with _$CompositionAttester {
     @JsonKey(required: true) @required List<AttesterMode> mode,
     FhirDateTime time,
     Reference party,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_time') Element timeElement,
   }) = _CompositionAttester;
 
   factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
@@ -188,6 +213,8 @@ abstract class CompositionSection with _$CompositionSection {
     List<Reference> entry,
     CodeableConcept emptyReason,
     List<CompositionSection> section,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _CompositionSection;
 
   factory CompositionSection.fromJson(Map<String, dynamic> json) =>
@@ -204,6 +231,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
     @required
         RelatesToCode code,
     @JsonKey(required: true) @required Reference target,
+    @JsonKey(name: '_code') Element codeElement,
   }) = _DocumentReferenceRelatesTo;
 
   factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
@@ -281,6 +309,8 @@ abstract class ListEntry with _$ListEntry {
     Boolean deleted,
     FhirDateTime date,
     @JsonKey(required: true) @required Reference item,
+    @JsonKey(name: '_deleted') Element deletedElement,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _ListEntry;
 
   factory ListEntry.fromJson(Map<String, dynamic> json) =>

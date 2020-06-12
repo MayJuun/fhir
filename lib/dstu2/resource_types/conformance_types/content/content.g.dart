@@ -102,6 +102,48 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
         ? null
         : StructureDefinitionDifferential.fromJson(
             json['differential'] as Map<String, dynamic>),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    experimentalElement: json['_experimental'] == null
+        ? null
+        : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
+    dateElement: json['_date'] == null
+        ? null
+        : Element.fromJson(json['_date'] as Map<String, dynamic>),
+    publisherElement: json['_publisher'] == null
+        ? null
+        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    copyrightElement: json['_copyright'] == null
+        ? null
+        : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+    fhirVersionElement: json['_fhirVersion'] == null
+        ? null
+        : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
+    kindElement: json['_kind'] == null
+        ? null
+        : Element.fromJson(json['_kind'] as Map<String, dynamic>),
+    abstractElement: json['_abstract'] == null
+        ? null
+        : Element.fromJson(json['_abstract'] as Map<String, dynamic>),
   );
 }
 
@@ -154,6 +196,20 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('base', instance.base?.toJson());
   writeNotNull('snapshot', instance.snapshot?.toJson());
   writeNotNull('differential', instance.differential?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_version', instance.versionElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_experimental', instance.experimentalElement?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
+  writeNotNull('_publisher', instance.publisherElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_copyright', instance.copyrightElement?.toJson());
+  writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
+  writeNotNull('_kind', instance.kindElement?.toJson());
+  writeNotNull('_abstract', instance.abstractElement?.toJson());
   return val;
 }
 
@@ -401,6 +457,18 @@ _$_StructureDefinitionMapping _$_$_StructureDefinitionMappingFromJson(
     uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
     name: json['name'] as String,
     comments: json['comments'] as String,
+    identityElement: json['_identity'] == null
+        ? null
+        : Element.fromJson(json['_identity'] as Map<String, dynamic>),
+    uriElement: json['_uri'] == null
+        ? null
+        : Element.fromJson(json['_uri'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    commentElement: json['_comments'] == null
+        ? null
+        : Element.fromJson(json['_comments'] as Map<String, dynamic>),
   );
 }
 
@@ -422,6 +490,10 @@ Map<String, dynamic> _$_$_StructureDefinitionMappingToJson(
   writeNotNull('uri', instance.uri?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('comments', instance.comments);
+  writeNotNull('_identity', instance.identityElement?.toJson());
+  writeNotNull('_uri', instance.uriElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_comments', instance.commentElement?.toJson());
   return val;
 }
 
@@ -565,6 +637,18 @@ _$_DataElementMapping _$_$_DataElementMappingFromJson(
     uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
     name: json['name'] as String,
     comments: json['comments'] as String,
+    identityElement: json['_identity'] == null
+        ? null
+        : Element.fromJson(json['_identity'] as Map<String, dynamic>),
+    uriElement: json['_uri'] == null
+        ? null
+        : Element.fromJson(json['_uri'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    commentElement: json['_comment'] == null
+        ? null
+        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
   );
 }
 
@@ -586,5 +670,9 @@ Map<String, dynamic> _$_$_DataElementMappingToJson(
   writeNotNull('uri', instance.uri?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('comments', instance.comments);
+  writeNotNull('_identity', instance.identityElement?.toJson());
+  writeNotNull('_uri', instance.uriElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_comment', instance.commentElement?.toJson());
   return val;
 }

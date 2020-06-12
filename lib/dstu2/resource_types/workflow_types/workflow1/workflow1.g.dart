@@ -317,6 +317,18 @@ _$_DeviceUseRequest _$_$_DeviceUseRequestFromJson(Map<String, dynamic> json) {
     priority: _$enumDecodeNullable(
         _$DeviceUseRequestPriorityEnumMap, json['priority'],
         unknownValue: DeviceUseRequestPriority.unknown),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    priorityElement: json['_priority'] == null
+        ? null
+        : Element.fromJson(json['_priority'] as Map<String, dynamic>),
   );
 }
 
@@ -361,6 +373,10 @@ Map<String, dynamic> _$_$_DeviceUseRequestToJson(_$_DeviceUseRequest instance) {
   writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
   writeNotNull(
       'priority', _$DeviceUseRequestPriorityEnumMap[instance.priority]);
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_priority', instance.priorityElement?.toJson());
   return val;
 }
 
@@ -455,6 +471,18 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
     timingDateTime: json['timingDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['timingDateTime'] as String),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    timingDateTimeElement: json['_timingDateTime'] == null
+        ? null
+        : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
+    recordedOnElement: json['_recordedOn'] == null
+        ? null
+        : Element.fromJson(json['_recordedOn'] as Map<String, dynamic>),
   );
 }
 
@@ -494,6 +522,10 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
   writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
+  writeNotNull('_recordedOn', instance.recordedOnElement?.toJson());
   return val;
 }
 
@@ -579,6 +611,18 @@ _$_CommunicationRequest _$_$_CommunicationRequestFromJson(
     priority: json['priority'] == null
         ? null
         : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
+    implicitRulesElement: json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+    languageElement: json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    priorityElement: json['_priority'] == null
+        ? null
+        : Element.fromJson(json['_priority'] as Map<String, dynamic>),
   );
 }
 
@@ -620,6 +664,10 @@ Map<String, dynamic> _$_$_CommunicationRequestToJson(
   writeNotNull('requestedOn', instance.requestedOn?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_priority', instance.priorityElement?.toJson());
   return val;
 }
 
@@ -697,6 +745,9 @@ _$_CommunicationRequestPayload _$_$_CommunicationRequestPayloadFromJson(
     contentReference: json['contentReference'] == null
         ? null
         : Reference.fromJson(json['contentReference'] as Map<String, dynamic>),
+    contentStringElement: json['_contentString'] == null
+        ? null
+        : Element.fromJson(json['_contentString'] as Map<String, dynamic>),
   );
 }
 
@@ -717,5 +768,6 @@ Map<String, dynamic> _$_$_CommunicationRequestPayloadToJson(
   writeNotNull('contentString', instance.contentString);
   writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
   writeNotNull('contentReference', instance.contentReference?.toJson());
+  writeNotNull('_contentString', instance.contentStringElement?.toJson());
   return val;
 }

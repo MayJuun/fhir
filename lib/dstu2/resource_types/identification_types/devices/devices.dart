@@ -62,6 +62,11 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
         DeviceMetricCategory category,
     Timing measurementPeriod,
     List<DeviceMetricCalibration> calibration,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_operationalStatus') Element operationalStatusElement,
+    @JsonKey(name: '_color') Element colorElement,
+    @JsonKey(name: '_category') Element categoryElement,
   }) = _DeviceMetric;
 
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
@@ -96,6 +101,13 @@ abstract class Device with _$Device implements Resource {
     Reference patient,
     List<ContactPoint> contact,
     FhirUri url,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_manufacturer') Element manufacturerElement,
+    @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+    @JsonKey(name: '_lotNumber') Element lotNumberElement,
+    @JsonKey(name: '_url') Element urlElement,
   }) = _Device;
 
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
@@ -127,6 +139,9 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
     @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType type,
     @JsonKey(unknownEnumValue: CalibrationState.unknown) CalibrationState state,
     Instant time,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_state') Element stateElement,
+    @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
 
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>

@@ -740,7 +740,17 @@ class _$DeviceMetricTearOff {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      List<DeviceMetricCalibration> calibration}) {
+      List<DeviceMetricCalibration> calibration,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_operationalStatus')
+          Element operationalStatusElement,
+      @JsonKey(name: '_color')
+          Element colorElement,
+      @JsonKey(name: '_category')
+          Element categoryElement}) {
     return _DeviceMetric(
       resourceType: resourceType,
       id: id,
@@ -761,6 +771,11 @@ class _$DeviceMetricTearOff {
       category: category,
       measurementPeriod: measurementPeriod,
       calibration: calibration,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      operationalStatusElement: operationalStatusElement,
+      colorElement: colorElement,
+      categoryElement: categoryElement,
     );
   }
 }
@@ -795,6 +810,16 @@ mixin _$DeviceMetric {
   DeviceMetricCategory get category;
   Timing get measurementPeriod;
   List<DeviceMetricCalibration> get calibration;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_operationalStatus')
+  Element get operationalStatusElement;
+  @JsonKey(name: '_color')
+  Element get colorElement;
+  @JsonKey(name: '_category')
+  Element get categoryElement;
 
   Map<String, dynamic> toJson();
   $DeviceMetricCopyWith<DeviceMetric> get copyWith;
@@ -830,7 +855,17 @@ abstract class $DeviceMetricCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      List<DeviceMetricCalibration> calibration});
+      List<DeviceMetricCalibration> calibration,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_operationalStatus')
+          Element operationalStatusElement,
+      @JsonKey(name: '_color')
+          Element colorElement,
+      @JsonKey(name: '_category')
+          Element categoryElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -841,6 +876,11 @@ abstract class $DeviceMetricCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get source;
   $ReferenceCopyWith<$Res> get parent;
   $TimingCopyWith<$Res> get measurementPeriod;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get operationalStatusElement;
+  $ElementCopyWith<$Res> get colorElement;
+  $ElementCopyWith<$Res> get categoryElement;
 }
 
 class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
@@ -871,6 +911,11 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
     Object category = freezed,
     Object measurementPeriod = freezed,
     Object calibration = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object operationalStatusElement = freezed,
+    Object colorElement = freezed,
+    Object categoryElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -910,6 +955,21 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
       calibration: calibration == freezed
           ? _value.calibration
           : calibration as List<DeviceMetricCalibration>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      operationalStatusElement: operationalStatusElement == freezed
+          ? _value.operationalStatusElement
+          : operationalStatusElement as Element,
+      colorElement: colorElement == freezed
+          ? _value.colorElement
+          : colorElement as Element,
+      categoryElement: categoryElement == freezed
+          ? _value.categoryElement
+          : categoryElement as Element,
     ));
   }
 
@@ -1002,6 +1062,56 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
       return _then(_value.copyWith(measurementPeriod: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get operationalStatusElement {
+    if (_value.operationalStatusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.operationalStatusElement, (value) {
+      return _then(_value.copyWith(operationalStatusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get colorElement {
+    if (_value.colorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.colorElement, (value) {
+      return _then(_value.copyWith(colorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get categoryElement {
+    if (_value.categoryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.categoryElement, (value) {
+      return _then(_value.copyWith(categoryElement: value));
+    });
+  }
 }
 
 abstract class _$DeviceMetricCopyWith<$Res>
@@ -1036,7 +1146,17 @@ abstract class _$DeviceMetricCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      List<DeviceMetricCalibration> calibration});
+      List<DeviceMetricCalibration> calibration,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_operationalStatus')
+          Element operationalStatusElement,
+      @JsonKey(name: '_color')
+          Element colorElement,
+      @JsonKey(name: '_category')
+          Element categoryElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1056,6 +1176,16 @@ abstract class _$DeviceMetricCopyWith<$Res>
   $ReferenceCopyWith<$Res> get parent;
   @override
   $TimingCopyWith<$Res> get measurementPeriod;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get operationalStatusElement;
+  @override
+  $ElementCopyWith<$Res> get colorElement;
+  @override
+  $ElementCopyWith<$Res> get categoryElement;
 }
 
 class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
@@ -1088,6 +1218,11 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
     Object category = freezed,
     Object measurementPeriod = freezed,
     Object calibration = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object operationalStatusElement = freezed,
+    Object colorElement = freezed,
+    Object categoryElement = freezed,
   }) {
     return _then(_DeviceMetric(
       resourceType: resourceType == freezed
@@ -1127,6 +1262,21 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
       calibration: calibration == freezed
           ? _value.calibration
           : calibration as List<DeviceMetricCalibration>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      operationalStatusElement: operationalStatusElement == freezed
+          ? _value.operationalStatusElement
+          : operationalStatusElement as Element,
+      colorElement: colorElement == freezed
+          ? _value.colorElement
+          : colorElement as Element,
+      categoryElement: categoryElement == freezed
+          ? _value.categoryElement
+          : categoryElement as Element,
     ));
   }
 }
@@ -1162,7 +1312,17 @@ class _$_DeviceMetric implements _DeviceMetric {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           this.category,
       this.measurementPeriod,
-      this.calibration})
+      this.calibration,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @JsonKey(name: '_operationalStatus')
+          this.operationalStatusElement,
+      @JsonKey(name: '_color')
+          this.colorElement,
+      @JsonKey(name: '_category')
+          this.categoryElement})
       : assert(type != null),
         assert(identifier != null),
         assert(category != null);
@@ -1215,10 +1375,25 @@ class _$_DeviceMetric implements _DeviceMetric {
   final Timing measurementPeriod;
   @override
   final List<DeviceMetricCalibration> calibration;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_operationalStatus')
+  final Element operationalStatusElement;
+  @override
+  @JsonKey(name: '_color')
+  final Element colorElement;
+  @override
+  @JsonKey(name: '_category')
+  final Element categoryElement;
 
   @override
   String toString() {
-    return 'DeviceMetric(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, unit: $unit, source: $source, parent: $parent, operationalStatus: $operationalStatus, color: $color, category: $category, measurementPeriod: $measurementPeriod, calibration: $calibration)';
+    return 'DeviceMetric(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, identifier: $identifier, unit: $unit, source: $source, parent: $parent, operationalStatus: $operationalStatus, color: $color, category: $category, measurementPeriod: $measurementPeriod, calibration: $calibration, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, operationalStatusElement: $operationalStatusElement, colorElement: $colorElement, categoryElement: $categoryElement)';
   }
 
   @override
@@ -1273,7 +1448,23 @@ class _$_DeviceMetric implements _DeviceMetric {
                     .equals(other.measurementPeriod, measurementPeriod)) &&
             (identical(other.calibration, calibration) ||
                 const DeepCollectionEquality()
-                    .equals(other.calibration, calibration)));
+                    .equals(other.calibration, calibration)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.operationalStatusElement, operationalStatusElement) ||
+                const DeepCollectionEquality().equals(
+                    other.operationalStatusElement,
+                    operationalStatusElement)) &&
+            (identical(other.colorElement, colorElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.colorElement, colorElement)) &&
+            (identical(other.categoryElement, categoryElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.categoryElement, categoryElement)));
   }
 
   @override
@@ -1297,7 +1488,12 @@ class _$_DeviceMetric implements _DeviceMetric {
       const DeepCollectionEquality().hash(color) ^
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(measurementPeriod) ^
-      const DeepCollectionEquality().hash(calibration);
+      const DeepCollectionEquality().hash(calibration) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(operationalStatusElement) ^
+      const DeepCollectionEquality().hash(colorElement) ^
+      const DeepCollectionEquality().hash(categoryElement);
 
   @override
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith =>
@@ -1339,7 +1535,17 @@ abstract class _DeviceMetric implements DeviceMetric {
       @JsonKey(required: true, unknownEnumValue: DeviceMetricCategory.unknown)
           DeviceMetricCategory category,
       Timing measurementPeriod,
-      List<DeviceMetricCalibration> calibration}) = _$_DeviceMetric;
+      List<DeviceMetricCalibration> calibration,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_operationalStatus')
+          Element operationalStatusElement,
+      @JsonKey(name: '_color')
+          Element colorElement,
+      @JsonKey(name: '_category')
+          Element categoryElement}) = _$_DeviceMetric;
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetric.fromJson;
@@ -1390,6 +1596,21 @@ abstract class _DeviceMetric implements DeviceMetric {
   @override
   List<DeviceMetricCalibration> get calibration;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_operationalStatus')
+  Element get operationalStatusElement;
+  @override
+  @JsonKey(name: '_color')
+  Element get colorElement;
+  @override
+  @JsonKey(name: '_category')
+  Element get categoryElement;
+  @override
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith;
 }
 
@@ -1425,7 +1646,14 @@ class _$DeviceTearOff {
       Reference location,
       Reference patient,
       List<ContactPoint> contact,
-      FhirUri url}) {
+      FhirUri url,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_manufacturer') Element manufacturerElement,
+      @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      @JsonKey(name: '_url') Element urlElement}) {
     return _Device(
       resourceType: resourceType,
       id: id,
@@ -1452,6 +1680,13 @@ class _$DeviceTearOff {
       patient: patient,
       contact: contact,
       url: url,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
+      manufacturerElement: manufacturerElement,
+      manufactureDateElement: manufactureDateElement,
+      lotNumberElement: lotNumberElement,
+      urlElement: urlElement,
     );
   }
 }
@@ -1489,6 +1724,20 @@ mixin _$Device {
   Reference get patient;
   List<ContactPoint> get contact;
   FhirUri get url;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_manufacturer')
+  Element get manufacturerElement;
+  @JsonKey(name: '_manufactureDate')
+  Element get manufactureDateElement;
+  @JsonKey(name: '_lotNumber')
+  Element get lotNumberElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
 
   Map<String, dynamic> toJson();
   $DeviceCopyWith<Device> get copyWith;
@@ -1522,7 +1771,14 @@ abstract class $DeviceCopyWith<$Res> {
       Reference location,
       Reference patient,
       List<ContactPoint> contact,
-      FhirUri url});
+      FhirUri url,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_manufacturer') Element manufacturerElement,
+      @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      @JsonKey(name: '_url') Element urlElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -1531,6 +1787,13 @@ abstract class $DeviceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get owner;
   $ReferenceCopyWith<$Res> get location;
   $ReferenceCopyWith<$Res> get patient;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get manufacturerElement;
+  $ElementCopyWith<$Res> get manufactureDateElement;
+  $ElementCopyWith<$Res> get lotNumberElement;
+  $ElementCopyWith<$Res> get urlElement;
 }
 
 class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
@@ -1567,6 +1830,13 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
     Object patient = freezed,
     Object contact = freezed,
     Object url = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object manufacturerElement = freezed,
+    Object manufactureDateElement = freezed,
+    Object lotNumberElement = freezed,
+    Object urlElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -1610,6 +1880,26 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       contact:
           contact == freezed ? _value.contact : contact as List<ContactPoint>,
       url: url == freezed ? _value.url : url as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      manufacturerElement: manufacturerElement == freezed
+          ? _value.manufacturerElement
+          : manufacturerElement as Element,
+      manufactureDateElement: manufactureDateElement == freezed
+          ? _value.manufactureDateElement
+          : manufactureDateElement as Element,
+      lotNumberElement: lotNumberElement == freezed
+          ? _value.lotNumberElement
+          : lotNumberElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
     ));
   }
 
@@ -1682,6 +1972,76 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       return _then(_value.copyWith(patient: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get manufacturerElement {
+    if (_value.manufacturerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.manufacturerElement, (value) {
+      return _then(_value.copyWith(manufacturerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get manufactureDateElement {
+    if (_value.manufactureDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.manufactureDateElement, (value) {
+      return _then(_value.copyWith(manufactureDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lotNumberElement {
+    if (_value.lotNumberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lotNumberElement, (value) {
+      return _then(_value.copyWith(lotNumberElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
 }
 
 abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
@@ -1713,7 +2073,14 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Reference location,
       Reference patient,
       List<ContactPoint> contact,
-      FhirUri url});
+      FhirUri url,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_manufacturer') Element manufacturerElement,
+      @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      @JsonKey(name: '_url') Element urlElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1729,6 +2096,20 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get location;
   @override
   $ReferenceCopyWith<$Res> get patient;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get manufacturerElement;
+  @override
+  $ElementCopyWith<$Res> get manufactureDateElement;
+  @override
+  $ElementCopyWith<$Res> get lotNumberElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
 }
 
 class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
@@ -1766,6 +2147,13 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
     Object patient = freezed,
     Object contact = freezed,
     Object url = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
+    Object manufacturerElement = freezed,
+    Object manufactureDateElement = freezed,
+    Object lotNumberElement = freezed,
+    Object urlElement = freezed,
   }) {
     return _then(_Device(
       resourceType: resourceType == freezed
@@ -1809,6 +2197,26 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       contact:
           contact == freezed ? _value.contact : contact as List<ContactPoint>,
       url: url == freezed ? _value.url : url as FhirUri,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      manufacturerElement: manufacturerElement == freezed
+          ? _value.manufacturerElement
+          : manufacturerElement as Element,
+      manufactureDateElement: manufactureDateElement == freezed
+          ? _value.manufactureDateElement
+          : manufactureDateElement as Element,
+      lotNumberElement: lotNumberElement == freezed
+          ? _value.lotNumberElement
+          : lotNumberElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
     ));
   }
 }
@@ -1840,7 +2248,14 @@ class _$_Device implements _Device {
       this.location,
       this.patient,
       this.contact,
-      this.url})
+      this.url,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_manufacturer') this.manufacturerElement,
+      @JsonKey(name: '_manufactureDate') this.manufactureDateElement,
+      @JsonKey(name: '_lotNumber') this.lotNumberElement,
+      @JsonKey(name: '_url') this.urlElement})
       : assert(type != null);
 
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
@@ -1900,10 +2315,31 @@ class _$_Device implements _Device {
   final List<ContactPoint> contact;
   @override
   final FhirUri url;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_manufacturer')
+  final Element manufacturerElement;
+  @override
+  @JsonKey(name: '_manufactureDate')
+  final Element manufactureDateElement;
+  @override
+  @JsonKey(name: '_lotNumber')
+  final Element lotNumberElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
 
   @override
   String toString() {
-    return 'Device(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, note: $note, status: $status, manufacturer: $manufacturer, model: $model, version: $version, manufactureDate: $manufactureDate, expiry: $expiry, udi: $udi, lotNumber: $lotNumber, owner: $owner, location: $location, patient: $patient, contact: $contact, url: $url)';
+    return 'Device(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, note: $note, status: $status, manufacturer: $manufacturer, model: $model, version: $version, manufactureDate: $manufactureDate, expiry: $expiry, udi: $udi, lotNumber: $lotNumber, owner: $owner, location: $location, patient: $patient, contact: $contact, url: $url, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, manufacturerElement: $manufacturerElement, manufactureDateElement: $manufactureDateElement, lotNumberElement: $lotNumberElement, urlElement: $urlElement)';
   }
 
   @override
@@ -1973,7 +2409,18 @@ class _$_Device implements _Device {
                 const DeepCollectionEquality()
                     .equals(other.contact, contact)) &&
             (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)));
+                const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.manufacturerElement, manufacturerElement) || const DeepCollectionEquality().equals(other.manufacturerElement, manufacturerElement)) &&
+            (identical(other.manufactureDateElement, manufactureDateElement) || const DeepCollectionEquality().equals(other.manufactureDateElement, manufactureDateElement)) &&
+            (identical(other.lotNumberElement, lotNumberElement) || const DeepCollectionEquality().equals(other.lotNumberElement, lotNumberElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)));
   }
 
   @override
@@ -2003,7 +2450,14 @@ class _$_Device implements _Device {
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(patient) ^
       const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(url);
+      const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(manufacturerElement) ^
+      const DeepCollectionEquality().hash(manufactureDateElement) ^
+      const DeepCollectionEquality().hash(lotNumberElement) ^
+      const DeepCollectionEquality().hash(urlElement);
 
   @override
   _$DeviceCopyWith<_Device> get copyWith =>
@@ -2041,7 +2495,14 @@ abstract class _Device implements Device {
       Reference location,
       Reference patient,
       List<ContactPoint> contact,
-      FhirUri url}) = _$_Device;
+      FhirUri url,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_manufacturer') Element manufacturerElement,
+      @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      @JsonKey(name: '_url') Element urlElement}) = _$_Device;
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
@@ -2099,6 +2560,27 @@ abstract class _Device implements Device {
   List<ContactPoint> get contact;
   @override
   FhirUri get url;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_manufacturer')
+  Element get manufacturerElement;
+  @override
+  @JsonKey(name: '_manufactureDate')
+  Element get manufactureDateElement;
+  @override
+  @JsonKey(name: '_lotNumber')
+  Element get lotNumberElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
   @override
   _$DeviceCopyWith<_Device> get copyWith;
 }
@@ -2426,7 +2908,13 @@ class _$DeviceMetricCalibrationTearOff {
           CalibrationType type,
       @JsonKey(unknownEnumValue: CalibrationState.unknown)
           CalibrationState state,
-      Instant time}) {
+      Instant time,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_state')
+          Element stateElement,
+      @JsonKey(name: '_time')
+          Element timeElement}) {
     return _DeviceMetricCalibration(
       id: id,
       extension_: extension_,
@@ -2434,6 +2922,9 @@ class _$DeviceMetricCalibrationTearOff {
       type: type,
       state: state,
       time: time,
+      typeElement: typeElement,
+      stateElement: stateElement,
+      timeElement: timeElement,
     );
   }
 }
@@ -2451,6 +2942,12 @@ mixin _$DeviceMetricCalibration {
   @JsonKey(unknownEnumValue: CalibrationState.unknown)
   CalibrationState get state;
   Instant get time;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_state')
+  Element get stateElement;
+  @JsonKey(name: '_time')
+  Element get timeElement;
 
   Map<String, dynamic> toJson();
   $DeviceMetricCalibrationCopyWith<DeviceMetricCalibration> get copyWith;
@@ -2469,9 +2966,18 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
           CalibrationType type,
       @JsonKey(unknownEnumValue: CalibrationState.unknown)
           CalibrationState state,
-      Instant time});
+      Instant time,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_state')
+          Element stateElement,
+      @JsonKey(name: '_time')
+          Element timeElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get stateElement;
+  $ElementCopyWith<$Res> get timeElement;
 }
 
 class _$DeviceMetricCalibrationCopyWithImpl<$Res>
@@ -2490,6 +2996,9 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
     Object type = freezed,
     Object state = freezed,
     Object time = freezed,
+    Object typeElement = freezed,
+    Object stateElement = freezed,
+    Object timeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -2502,6 +3011,13 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CalibrationType,
       state: state == freezed ? _value.state : state as CalibrationState,
       time: time == freezed ? _value.time : time as Instant,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      stateElement: stateElement == freezed
+          ? _value.stateElement
+          : stateElement as Element,
+      timeElement:
+          timeElement == freezed ? _value.timeElement : timeElement as Element,
     ));
   }
 
@@ -2512,6 +3028,36 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get stateElement {
+    if (_value.stateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.stateElement, (value) {
+      return _then(_value.copyWith(stateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timeElement {
+    if (_value.timeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timeElement, (value) {
+      return _then(_value.copyWith(timeElement: value));
     });
   }
 }
@@ -2531,10 +3077,22 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
           CalibrationType type,
       @JsonKey(unknownEnumValue: CalibrationState.unknown)
           CalibrationState state,
-      Instant time});
+      Instant time,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_state')
+          Element stateElement,
+      @JsonKey(name: '_time')
+          Element timeElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get stateElement;
+  @override
+  $ElementCopyWith<$Res> get timeElement;
 }
 
 class __$DeviceMetricCalibrationCopyWithImpl<$Res>
@@ -2556,6 +3114,9 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
     Object type = freezed,
     Object state = freezed,
     Object time = freezed,
+    Object typeElement = freezed,
+    Object stateElement = freezed,
+    Object timeElement = freezed,
   }) {
     return _then(_DeviceMetricCalibration(
       id: id == freezed ? _value.id : id as Id,
@@ -2568,6 +3129,13 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CalibrationType,
       state: state == freezed ? _value.state : state as CalibrationState,
       time: time == freezed ? _value.time : time as Instant,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      stateElement: stateElement == freezed
+          ? _value.stateElement
+          : stateElement as Element,
+      timeElement:
+          timeElement == freezed ? _value.timeElement : timeElement as Element,
     ));
   }
 }
@@ -2580,7 +3148,10 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
       this.modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown) this.type,
       @JsonKey(unknownEnumValue: CalibrationState.unknown) this.state,
-      this.time});
+      this.time,
+      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_state') this.stateElement,
+      @JsonKey(name: '_time') this.timeElement});
 
   factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceMetricCalibrationFromJson(json);
@@ -2600,10 +3171,19 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
   final CalibrationState state;
   @override
   final Instant time;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_state')
+  final Element stateElement;
+  @override
+  @JsonKey(name: '_time')
+  final Element timeElement;
 
   @override
   String toString() {
-    return 'DeviceMetricCalibration(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, state: $state, time: $time)';
+    return 'DeviceMetricCalibration(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, state: $state, time: $time, typeElement: $typeElement, stateElement: $stateElement, timeElement: $timeElement)';
   }
 
   @override
@@ -2623,7 +3203,16 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
             (identical(other.state, state) ||
                 const DeepCollectionEquality().equals(other.state, state)) &&
             (identical(other.time, time) ||
-                const DeepCollectionEquality().equals(other.time, time)));
+                const DeepCollectionEquality().equals(other.time, time)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.stateElement, stateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.stateElement, stateElement)) &&
+            (identical(other.timeElement, timeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.timeElement, timeElement)));
   }
 
   @override
@@ -2634,7 +3223,10 @@ class _$_DeviceMetricCalibration implements _DeviceMetricCalibration {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(state) ^
-      const DeepCollectionEquality().hash(time);
+      const DeepCollectionEquality().hash(time) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(stateElement) ^
+      const DeepCollectionEquality().hash(timeElement);
 
   @override
   _$DeviceMetricCalibrationCopyWith<_DeviceMetricCalibration> get copyWith =>
@@ -2657,7 +3249,13 @@ abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
           CalibrationType type,
       @JsonKey(unknownEnumValue: CalibrationState.unknown)
           CalibrationState state,
-      Instant time}) = _$_DeviceMetricCalibration;
+      Instant time,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_state')
+          Element stateElement,
+      @JsonKey(name: '_time')
+          Element timeElement}) = _$_DeviceMetricCalibration;
 
   factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetricCalibration.fromJson;
@@ -2677,6 +3275,15 @@ abstract class _DeviceMetricCalibration implements DeviceMetricCalibration {
   CalibrationState get state;
   @override
   Instant get time;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_state')
+  Element get stateElement;
+  @override
+  @JsonKey(name: '_time')
+  Element get timeElement;
   @override
   _$DeviceMetricCalibrationCopyWith<_DeviceMetricCalibration> get copyWith;
 }

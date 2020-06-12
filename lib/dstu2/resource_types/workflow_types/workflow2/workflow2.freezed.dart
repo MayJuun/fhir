@@ -826,7 +826,13 @@ class _$SupplyDeliveryTearOff {
       Period whenPrepared,
       FhirDateTime time,
       Reference destination,
-      List<Reference> receiver}) {
+      List<Reference> receiver,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _SupplyDelivery(
       resourceType: resourceType,
       id: id,
@@ -848,6 +854,9 @@ class _$SupplyDeliveryTearOff {
       time: time,
       destination: destination,
       receiver: receiver,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
     );
   }
 }
@@ -879,6 +888,12 @@ mixin _$SupplyDelivery {
   FhirDateTime get time;
   Reference get destination;
   List<Reference> get receiver;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $SupplyDeliveryCopyWith<SupplyDelivery> get copyWith;
@@ -911,7 +926,13 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       Period whenPrepared,
       FhirDateTime time,
       Reference destination,
-      List<Reference> receiver});
+      List<Reference> receiver,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -924,6 +945,9 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get supplier;
   $PeriodCopyWith<$Res> get whenPrepared;
   $ReferenceCopyWith<$Res> get destination;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$SupplyDeliveryCopyWithImpl<$Res>
@@ -956,6 +980,9 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
     Object time = freezed,
     Object destination = freezed,
     Object receiver = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -996,6 +1023,15 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
           : destination as Reference,
       receiver:
           receiver == freezed ? _value.receiver : receiver as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -1108,6 +1144,36 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
       return _then(_value.copyWith(destination: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
 }
 
 abstract class _$SupplyDeliveryCopyWith<$Res>
@@ -1139,7 +1205,13 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       Period whenPrepared,
       FhirDateTime time,
       Reference destination,
-      List<Reference> receiver});
+      List<Reference> receiver,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1163,6 +1235,12 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
   $PeriodCopyWith<$Res> get whenPrepared;
   @override
   $ReferenceCopyWith<$Res> get destination;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$SupplyDeliveryCopyWithImpl<$Res>
@@ -1197,6 +1275,9 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
     Object time = freezed,
     Object destination = freezed,
     Object receiver = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_SupplyDelivery(
       resourceType: resourceType == freezed
@@ -1237,6 +1318,15 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
           : destination as Reference,
       receiver:
           receiver == freezed ? _value.receiver : receiver as List<Reference>,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -1263,7 +1353,10 @@ class _$_SupplyDelivery implements _SupplyDelivery {
       this.whenPrepared,
       this.time,
       this.destination,
-      this.receiver});
+      this.receiver,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_status') this.statusElement});
 
   factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyDeliveryFromJson(json);
@@ -1311,10 +1404,19 @@ class _$_SupplyDelivery implements _SupplyDelivery {
   final Reference destination;
   @override
   final List<Reference> receiver;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'SupplyDelivery(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, patient: $patient, type: $type, quantity: $quantity, suppliedItem: $suppliedItem, supplier: $supplier, whenPrepared: $whenPrepared, time: $time, destination: $destination, receiver: $receiver)';
+    return 'SupplyDelivery(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, patient: $patient, type: $type, quantity: $quantity, suppliedItem: $suppliedItem, supplier: $supplier, whenPrepared: $whenPrepared, time: $time, destination: $destination, receiver: $receiver, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement)';
   }
 
   @override
@@ -1374,7 +1476,16 @@ class _$_SupplyDelivery implements _SupplyDelivery {
                     .equals(other.destination, destination)) &&
             (identical(other.receiver, receiver) ||
                 const DeepCollectionEquality()
-                    .equals(other.receiver, receiver)));
+                    .equals(other.receiver, receiver)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)));
   }
 
   @override
@@ -1399,7 +1510,10 @@ class _$_SupplyDelivery implements _SupplyDelivery {
       const DeepCollectionEquality().hash(whenPrepared) ^
       const DeepCollectionEquality().hash(time) ^
       const DeepCollectionEquality().hash(destination) ^
-      const DeepCollectionEquality().hash(receiver);
+      const DeepCollectionEquality().hash(receiver) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith =>
@@ -1435,7 +1549,13 @@ abstract class _SupplyDelivery implements SupplyDelivery {
       Period whenPrepared,
       FhirDateTime time,
       Reference destination,
-      List<Reference> receiver}) = _$_SupplyDelivery;
+      List<Reference> receiver,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_SupplyDelivery;
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
       _$_SupplyDelivery.fromJson;
@@ -1483,6 +1603,15 @@ abstract class _SupplyDelivery implements SupplyDelivery {
   Reference get destination;
   @override
   List<Reference> get receiver;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith;
 }
@@ -2211,7 +2340,13 @@ class _$SupplyRequestTearOff {
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      SupplyRequestWhen when}) {
+      SupplyRequestWhen when,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _SupplyRequest(
       resourceType: resourceType,
       id: id,
@@ -2233,6 +2368,9 @@ class _$SupplyRequestTearOff {
       reasonCodeableConcept: reasonCodeableConcept,
       reasonReference: reasonReference,
       when: when,
+      implicitRulesElement: implicitRulesElement,
+      languageElement: languageElement,
+      statusElement: statusElement,
     );
   }
 }
@@ -2264,6 +2402,12 @@ mixin _$SupplyRequest {
   CodeableConcept get reasonCodeableConcept;
   Reference get reasonReference;
   SupplyRequestWhen get when;
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $SupplyRequestCopyWith<SupplyRequest> get copyWith;
@@ -2296,7 +2440,13 @@ abstract class $SupplyRequestCopyWith<$Res> {
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      SupplyRequestWhen when});
+      SupplyRequestWhen when,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -2309,6 +2459,9 @@ abstract class $SupplyRequestCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get reasonCodeableConcept;
   $ReferenceCopyWith<$Res> get reasonReference;
   $SupplyRequestWhenCopyWith<$Res> get when;
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$SupplyRequestCopyWithImpl<$Res>
@@ -2341,6 +2494,9 @@ class _$SupplyRequestCopyWithImpl<$Res>
     Object reasonCodeableConcept = freezed,
     Object reasonReference = freezed,
     Object when = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2380,6 +2536,15 @@ class _$SupplyRequestCopyWithImpl<$Res>
           ? _value.reasonReference
           : reasonReference as Reference,
       when: when == freezed ? _value.when : when as SupplyRequestWhen,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -2493,6 +2658,36 @@ class _$SupplyRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(when: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
 }
 
 abstract class _$SupplyRequestCopyWith<$Res>
@@ -2524,7 +2719,13 @@ abstract class _$SupplyRequestCopyWith<$Res>
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      SupplyRequestWhen when});
+      SupplyRequestWhen when,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2548,6 +2749,12 @@ abstract class _$SupplyRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get reasonReference;
   @override
   $SupplyRequestWhenCopyWith<$Res> get when;
+  @override
+  $ElementCopyWith<$Res> get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res> get languageElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$SupplyRequestCopyWithImpl<$Res>
@@ -2582,6 +2789,9 @@ class __$SupplyRequestCopyWithImpl<$Res>
     Object reasonCodeableConcept = freezed,
     Object reasonReference = freezed,
     Object when = freezed,
+    Object implicitRulesElement = freezed,
+    Object languageElement = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_SupplyRequest(
       resourceType: resourceType == freezed
@@ -2621,6 +2831,15 @@ class __$SupplyRequestCopyWithImpl<$Res>
           ? _value.reasonReference
           : reasonReference as Reference,
       when: when == freezed ? _value.when : when as SupplyRequestWhen,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement as Element,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -2647,7 +2866,10 @@ class _$_SupplyRequest implements _SupplyRequest {
       this.supplier,
       this.reasonCodeableConcept,
       this.reasonReference,
-      this.when});
+      this.when,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_status') this.statusElement});
 
   factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplyRequestFromJson(json);
@@ -2695,10 +2917,19 @@ class _$_SupplyRequest implements _SupplyRequest {
   final Reference reasonReference;
   @override
   final SupplyRequestWhen when;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  final Element languageElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'SupplyRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, source: $source, date: $date, identifier: $identifier, status: $status, kind: $kind, orderedItem: $orderedItem, supplier: $supplier, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, when: $when)';
+    return 'SupplyRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, patient: $patient, source: $source, date: $date, identifier: $identifier, status: $status, kind: $kind, orderedItem: $orderedItem, supplier: $supplier, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, when: $when, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement)';
   }
 
   @override
@@ -2756,7 +2987,16 @@ class _$_SupplyRequest implements _SupplyRequest {
                 const DeepCollectionEquality()
                     .equals(other.reasonReference, reasonReference)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)));
   }
 
   @override
@@ -2781,7 +3021,10 @@ class _$_SupplyRequest implements _SupplyRequest {
       const DeepCollectionEquality().hash(supplier) ^
       const DeepCollectionEquality().hash(reasonCodeableConcept) ^
       const DeepCollectionEquality().hash(reasonReference) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$SupplyRequestCopyWith<_SupplyRequest> get copyWith =>
@@ -2817,7 +3060,13 @@ abstract class _SupplyRequest implements SupplyRequest {
       List<Reference> supplier,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
-      SupplyRequestWhen when}) = _$_SupplyRequest;
+      SupplyRequestWhen when,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_SupplyRequest;
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequest.fromJson;
@@ -2865,6 +3114,15 @@ abstract class _SupplyRequest implements SupplyRequest {
   Reference get reasonReference;
   @override
   SupplyRequestWhen get when;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element get implicitRulesElement;
+  @override
+  @JsonKey(name: '_language')
+  Element get languageElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   _$SupplyRequestCopyWith<_SupplyRequest> get copyWith;
 }
