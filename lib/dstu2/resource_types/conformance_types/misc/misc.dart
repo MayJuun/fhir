@@ -18,8 +18,8 @@ abstract class ImplementationGuide
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri url,
     String version,
@@ -41,6 +41,18 @@ abstract class ImplementationGuide
     List<ImplementationGuideGlobal> global,
     List<FhirUri> binary,
     @JsonKey(required: true) @required ImplementationGuidePage page,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_fhirVersion') List<Element> fhirVersionElement,
   }) = _ImplementationGuide;
 
   factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
@@ -51,7 +63,7 @@ abstract class ImplementationGuide
 abstract class ImplementationGuideContact with _$ImplementationGuideContact {
   const factory ImplementationGuideContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -66,12 +78,13 @@ abstract class ImplementationGuideDependency
     with _$ImplementationGuideDependency {
   const factory ImplementationGuideDependency({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: DependencyType.unknown)
     @required
         DependencyType type,
     @JsonKey(required: true) @required FhirUri uri,
+    @JsonKey(name: '_uri') Element uriElement,
   }) = _ImplementationGuideDependency;
 
   factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
@@ -82,11 +95,13 @@ abstract class ImplementationGuideDependency
 abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
   const factory ImplementationGuidePackage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     String description,
-    @JsonKey(required: true) @required List<ImplementationGuideResource> resource,
+    @JsonKey(required: true)
+    @required
+        List<ImplementationGuideResource> resource,
   }) = _ImplementationGuidePackage;
 
   factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
@@ -97,10 +112,11 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
 abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   const factory ImplementationGuideGlobal({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Code type,
     @JsonKey(required: true) @required Reference profile,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _ImplementationGuideGlobal;
 
   factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
@@ -111,7 +127,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 abstract class ImplementationGuidePage with _$ImplementationGuidePage {
   const factory ImplementationGuidePage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri source,
     @JsonKey(required: true) @required String name,
@@ -132,7 +148,7 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
 abstract class ImplementationGuideResource with _$ImplementationGuideResource {
   const factory ImplementationGuideResource({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ResourcePurpose.unknown)
     @required
@@ -140,8 +156,10 @@ abstract class ImplementationGuideResource with _$ImplementationGuideResource {
     String name,
     String description,
     String acronym,
-    @JsonKey(required: true) @required FhirUri sourceX,
+    FhirUri sourceUri,
+    Reference sourceReference,
     Reference exampleFor,
+    @JsonKey(name: '_acronym') Element acronymElement,
   }) = _ImplementationGuideResource;
 
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
@@ -157,8 +175,8 @@ abstract class TestScript with _$TestScript implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri url,
     String version,
@@ -183,6 +201,16 @@ abstract class TestScript with _$TestScript implements Resource {
     TestScriptSetup setup,
     List<TestScriptTest> test,
     TestScriptTeardown teardown,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
   }) = _TestScript;
 
   factory TestScript.fromJson(Map<String, dynamic> json) =>
@@ -193,7 +221,7 @@ abstract class TestScript with _$TestScript implements Resource {
 abstract class TestScriptContact with _$TestScriptContact {
   const factory TestScriptContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -207,10 +235,10 @@ abstract class TestScriptContact with _$TestScriptContact {
 abstract class TestScriptMetadata with _$TestScriptMetadata {
   const factory TestScriptMetadata({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<TestScriptLink> link,
-    @JsonKey(required: true) @required TestScriptCapability capability,
+    @JsonKey(required: true) @required List<TestScriptCapability> capability,
   }) = _TestScriptMetadata;
 
   factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
@@ -221,10 +249,12 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
 abstract class TestScriptLink with _$TestScriptLink {
   const factory TestScriptLink({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri url,
     String description,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _TestScriptLink;
 
   factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
@@ -235,7 +265,7 @@ abstract class TestScriptLink with _$TestScriptLink {
 abstract class TestScriptCapability with _$TestScriptCapability {
   const factory TestScriptCapability({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(name: 'required') Boolean required_,
     Boolean validated,
@@ -243,6 +273,11 @@ abstract class TestScriptCapability with _$TestScriptCapability {
     Integer destination,
     List<FhirUri> link,
     @JsonKey(required: true) @required Reference conformance,
+    @JsonKey(name: '_required') Element requiredElement,
+    @JsonKey(name: '_validated') Element validatedElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_destination') Element destinationElement,
+    @JsonKey(name: '_link') List<Element> linkElement,
   }) = _TestScriptCapability;
 
   factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
@@ -253,11 +288,13 @@ abstract class TestScriptCapability with _$TestScriptCapability {
 abstract class TestScriptFixture with _$TestScriptFixture {
   const factory TestScriptFixture({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Boolean autocreate,
     Boolean autodelete,
     Reference resource,
+    @JsonKey(name: '_autocreate') Element autocreateElement,
+    @JsonKey(name: '_autodelete') Element autodeleteElement,
   }) = _TestScriptFixture;
 
   factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
@@ -268,12 +305,16 @@ abstract class TestScriptFixture with _$TestScriptFixture {
 abstract class TestScriptVariable with _$TestScriptVariable {
   const factory TestScriptVariable({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     String headerField,
     String path,
     Id sourceId,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_headerField') Element headerFieldElement,
+    @JsonKey(name: '_path') Element pathElement,
+    @JsonKey(name: '_sourceId') Element sourceIdElement,
   }) = _TestScriptVariable;
 
   factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
@@ -284,7 +325,7 @@ abstract class TestScriptVariable with _$TestScriptVariable {
 abstract class TestScriptSetup with _$TestScriptSetup {
   const factory TestScriptSetup({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     TestScriptMetadata metadata,
     @JsonKey(required: true) @required List<SetupAction> action,
@@ -298,8 +339,9 @@ abstract class TestScriptSetup with _$TestScriptSetup {
 abstract class SetupAction with _$SetupAction {
   const factory SetupAction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     ActionOperation operation,
     @JsonKey(name: 'assert') ActionAssert assert_,
   }) = _SetupAction;
@@ -312,8 +354,9 @@ abstract class SetupAction with _$SetupAction {
 abstract class ActionOperation with _$ActionOperation {
   const factory ActionOperation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Coding type,
     Code resource,
     String label,
@@ -329,6 +372,18 @@ abstract class ActionOperation with _$ActionOperation {
     Id sourceId,
     Id targetId,
     String url,
+    @JsonKey(name: '_resource') Element resourceElement,
+    @JsonKey(name: '_label') Element labelElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_accept') Element acceptElement,
+    @JsonKey(name: '_contentType') Element contentTypeElement,
+    @JsonKey(name: '_destination') Element destinationElement,
+    @JsonKey(name: '_encodeRequestUrl') Element encodeRequestUrlElement,
+    @JsonKey(name: '_params') Element paramsElement,
+    @JsonKey(name: '_responseId') Element responseIdElement,
+    @JsonKey(name: '_sourceId') Element sourceIdElement,
+    @JsonKey(name: '_targetId') Element targetIdElement,
+    @JsonKey(name: '_url') Element urlElement,
   }) = _ActionOperation;
 
   factory ActionOperation.fromJson(Map<String, dynamic> json) =>
@@ -339,7 +394,7 @@ abstract class ActionOperation with _$ActionOperation {
 abstract class ActionAssert with _$ActionAssert {
   const factory ActionAssert({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String label,
     String description,
@@ -362,6 +417,23 @@ abstract class ActionAssert with _$ActionAssert {
     Id validateProfileId,
     String value,
     Boolean warningOnly,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_direction') Element directionElement,
+    @JsonKey(name: '_compareToSourceId') Element compareToSourceIdElement,
+    @JsonKey(name: '_compareToSourcePath') Element compareToSourcePathElement,
+    @JsonKey(name: '_contentType') Element contentTypeElement,
+    @JsonKey(name: '_headerField') Element headerFieldElement,
+    @JsonKey(name: '_minimumId') Element minimumIdElement,
+    @JsonKey(name: '_navigationLinks') Element navigationLinksElement,
+    @JsonKey(name: '_operator') Element operatorElement,
+    @JsonKey(name: '_path') Element pathElement,
+    @JsonKey(name: '_resource') Element resourceElement,
+    @JsonKey(name: '_response') Element responseElement,
+    @JsonKey(name: '_responseCode') Element responseCodeElement,
+    @JsonKey(name: '_sourceId') Element sourceIdElement,
+    @JsonKey(name: '_validateProfileId') Element validateProfileIdElement,
+    @JsonKey(name: '_value') Element valueElement,
+    @JsonKey(name: '_warningOnly') Element warningOnlyElement,
   }) = _ActionAssert;
 
   factory ActionAssert.fromJson(Map<String, dynamic> json) =>
@@ -372,10 +444,12 @@ abstract class ActionAssert with _$ActionAssert {
 abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
   const factory TestScriptRequestHeader({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtensio,
     @JsonKey(required: true) @required String field,
     @JsonKey(required: true) @required String value,
+    @JsonKey(name: '_field') Element fieldElement,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _TestScriptRequestHeader;
 
   factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
@@ -386,12 +460,14 @@ abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
 abstract class TestScriptTest with _$TestScriptTest {
   const factory TestScriptTest({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     String description,
     TestScriptMetadata metadata,
     @JsonKey(required: true) @required List<SetupAction> action,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _TestScriptTest;
 
   factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
@@ -402,7 +478,7 @@ abstract class TestScriptTest with _$TestScriptTest {
 abstract class TestScriptTeardown with _$TestScriptTeardown {
   const factory TestScriptTeardown({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<TeardownAction> action,
   }) = _TestScriptTeardown;
@@ -415,8 +491,9 @@ abstract class TestScriptTeardown with _$TestScriptTeardown {
 abstract class TeardownAction with _$TeardownAction {
   const factory TeardownAction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     ActionOperation operation,
   }) = _TeardownAction;
 

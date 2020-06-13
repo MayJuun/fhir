@@ -1,5 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+export 'base/base.enums.dart';
+export 'clinical/clinical.enums.dart';
+export 'financial/financial.enums.dart';
+export 'foundation/foundation.enums.dart';
+export 'specialized/specialized.enums.dart';
+
 enum Status {
   @JsonValue('draft')
   draft,

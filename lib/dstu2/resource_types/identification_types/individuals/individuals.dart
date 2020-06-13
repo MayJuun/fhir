@@ -16,8 +16,8 @@ abstract class Practitioner with _$Practitioner implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Boolean active,
@@ -31,6 +31,11 @@ abstract class Practitioner with _$Practitioner implements Resource {
     List<PractitionerPractitionerRole> practitionerRole,
     List<PractitionerQualification> qualification,
     List<CodeableConcept> communication,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
   }) = _Practitioner;
 
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
@@ -46,8 +51,8 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) @required Reference patient,
@@ -60,6 +65,11 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
     List<Address> address,
     List<Attachment> photo,
     Period period,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
   }) = _RelatedPerson;
 
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
@@ -75,9 +85,9 @@ abstract class Patient with _$Patient implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
-    FhirExtension modifierExtension,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     List<HumanName> name,
@@ -97,6 +107,16 @@ abstract class Patient with _$Patient implements Resource {
     List<Reference> careProvider,
     Reference managingOrganization,
     List<PatientLink> link,
+    @JsonKey(name: '_id') Element idElement,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
+    @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
+    @JsonKey(name: '_deceasedDateTime') Element deceasedDateTimeElement,
+    @JsonKey(name: '_multipleBirthBoolean') Element multipleBirthBooleanElement,
+    @JsonKey(name: '_multipleBirthInteger') Element multipleBirthIntegerElement,
   }) = _Patient;
 
   factory Patient.fromJson(Map<String, dynamic> json) =>
@@ -108,7 +128,8 @@ abstract class PractitionerPractitionerRole
     with _$PractitionerPractitionerRole {
   const factory PractitionerPractitionerRole({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirExtension modifierExtension,
     Reference managingOrganization,
     CodeableConcept role,
@@ -126,7 +147,7 @@ abstract class PractitionerPractitionerRole
 abstract class PractitionerQualification with _$PractitionerQualification {
   const factory PractitionerQualification({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) @required CodeableConcept code,
@@ -142,15 +163,16 @@ abstract class PractitionerQualification with _$PractitionerQualification {
 abstract class PatientContact with _$PatientContact {
   const factory PatientContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    CodeableConcept relationship,
+    List<CodeableConcept> relationship,
     HumanName name,
     List<ContactPoint> telecom,
     Address address,
     @JsonKey(unknownEnumValue: ContactGender.unknown) ContactGender gender,
     Reference organization,
     Period period,
+    @JsonKey(name: '_gender') Element genderElement,
   }) = _PatientContact;
 
   factory PatientContact.fromJson(Map<String, dynamic> json) =>
@@ -161,7 +183,7 @@ abstract class PatientContact with _$PatientContact {
 abstract class PatientAnimal with _$PatientAnimal {
   const factory PatientAnimal({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept species,
     CodeableConcept breed,
@@ -176,10 +198,11 @@ abstract class PatientAnimal with _$PatientAnimal {
 abstract class PatientCommunication with _$PatientCommunication {
   const factory PatientCommunication({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept language,
     Boolean preferred,
+    @JsonKey(name: '_preferred') Element preferredElement,
   }) = _PatientCommunication;
 
   factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
@@ -190,12 +213,13 @@ abstract class PatientCommunication with _$PatientCommunication {
 abstract class PatientLink with _$PatientLink {
   const factory PatientLink({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference other,
     @JsonKey(required: true, unknownEnumValue: LinkType.unknown)
     @required
         LinkType type,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _PatientLink;
 
   factory PatientLink.fromJson(Map<String, dynamic> json) =>

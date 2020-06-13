@@ -16,8 +16,8 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
     @required
@@ -52,8 +52,8 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
@@ -67,6 +67,9 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
     FhirDateTime time,
     Reference destination,
     List<Reference> receiver,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _SupplyDelivery;
 
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
@@ -76,13 +79,14 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
 @freezed
 abstract class ProcessResponse with _$ProcessResponse implements Resource {
   const factory ProcessResponse({
+    @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference request,
@@ -112,8 +116,8 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Reference patient,
     Reference source,
@@ -127,6 +131,9 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
     CodeableConcept reasonCodeableConcept,
     Reference reasonReference,
     SupplyRequestWhen when,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _SupplyRequest;
 
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
@@ -137,7 +144,7 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
 abstract class ProcessRequestItem with _$ProcessRequestItem {
   const factory ProcessRequestItem({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Integer sequenceLinkId,
   }) = _ProcessRequestItem;
@@ -150,7 +157,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 abstract class ProcessResponseNotes with _$ProcessResponseNotes {
   const factory ProcessResponseNotes({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Coding type,
     String text,
@@ -164,7 +171,7 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
 abstract class SupplyRequestWhen with _$SupplyRequestWhen {
   const factory SupplyRequestWhen({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept code,
     Timing schedule,

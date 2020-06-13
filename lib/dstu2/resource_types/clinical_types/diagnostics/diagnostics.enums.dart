@@ -39,6 +39,10 @@ enum ObservationStatus {
   final_,
   @JsonValue('amended')
   amended,
+  @JsonValue('cancelled')
+  cancelled,
+  @JsonValue('entered-in-error')
+  entered_in_error,
   @JsonValue('unknown')
   unknown,
 }

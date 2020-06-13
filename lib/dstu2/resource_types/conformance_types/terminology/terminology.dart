@@ -16,8 +16,8 @@ abstract class ValueSet with _$ValueSet implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri url,
     Identifier identifier,
@@ -40,6 +40,20 @@ abstract class ValueSet with _$ValueSet implements Resource {
     ValueSetCodeSystem codeSystem,
     ValueSetCompose compose,
     ValueSetExpansion expansion,
+    @JsonKey(name: '_id') Element idElement,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_immutable') Element immutableElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_lockedDate') Element lockedDateElement,
   }) = _ValueSet;
 
   factory ValueSet.fromJson(Map<String, dynamic> json) =>
@@ -50,8 +64,9 @@ abstract class ValueSet with _$ValueSet implements Resource {
 abstract class ValueSetContact with _$ValueSetContact {
   const factory ValueSetContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     String name,
     List<ContactPoint> telecom,
   }) = _ValueSetContact;
@@ -64,12 +79,16 @@ abstract class ValueSetContact with _$ValueSetContact {
 abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
   const factory ValueSetCodeSystem({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required FhirUri system,
     String version,
     Boolean caseSensitive,
     @JsonKey(required: true) @required List<ValueSetConcept> concept,
+    @JsonKey(name: '_system') Element systemElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_caseSensitive') Element caseSensitiveElement,
   }) = _ValueSetCodeSystem;
 
   factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
@@ -80,14 +99,17 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
 abstract class ValueSetConcept with _$ValueSetConcept {
   const factory ValueSetConcept({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
-    FhirExtension modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code code,
-    Boolean abstract,
+    @JsonKey(name: 'abstract') Boolean abstract_,
     String display,
     String definition,
     List<ValueSetDesignation> designation,
     List<ValueSetConcept> concept,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_display') Element displayElement,
   }) = _ValueSetConcept;
 
   factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
@@ -98,11 +120,13 @@ abstract class ValueSetConcept with _$ValueSetConcept {
 abstract class ValueSetDesignation with _$ValueSetDesignation {
   const factory ValueSetDesignation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Code language,
     Coding use,
     @JsonKey(required: true) @required String value,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetDesignation;
 
   factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
@@ -113,8 +137,9 @@ abstract class ValueSetDesignation with _$ValueSetDesignation {
 abstract class ValueSetCompose with _$ValueSetCompose {
   const factory ValueSetCompose({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     List<FhirUri> import,
     List<IncludeExclude> include,
     List<IncludeExclude> exclude,
@@ -128,12 +153,15 @@ abstract class ValueSetCompose with _$ValueSetCompose {
 abstract class IncludeExclude with _$IncludeExclude {
   const factory IncludeExclude({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required FhirUri system,
     String version,
     List<IncludeExcludeConcept> concept,
     List<IncludeExcludeFilter> filter,
+    @JsonKey(name: '_system') Element systemElement,
+    @JsonKey(name: '_version') Element versionElement,
   }) = _IncludeExclude;
 
   factory IncludeExclude.fromJson(Map<String, dynamic> json) =>
@@ -144,11 +172,14 @@ abstract class IncludeExclude with _$IncludeExclude {
 abstract class IncludeExcludeConcept with _$IncludeExcludeConcept {
   const factory IncludeExcludeConcept({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code code,
     String display,
     List<ValueSetDesignation> designation,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_display') Element displayElement,
   }) = _IncludeExcludeConcept;
 
   factory IncludeExcludeConcept.fromJson(Map<String, dynamic> json) =>
@@ -159,13 +190,17 @@ abstract class IncludeExcludeConcept with _$IncludeExcludeConcept {
 abstract class IncludeExcludeFilter with _$IncludeExcludeFilter {
   const factory IncludeExcludeFilter({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code property,
     @JsonKey(required: true, unknownEnumValue: FilterOp.unknown)
     @required
         FilterOp op,
     @JsonKey(required: true) @required Code value,
+    @JsonKey(name: '_property') Element propertyElement,
+    @JsonKey(name: '_op') Element opElement,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _IncludeExcludeFilter;
 
   factory IncludeExcludeFilter.fromJson(Map<String, dynamic> json) =>
@@ -176,14 +211,19 @@ abstract class IncludeExcludeFilter with _$IncludeExcludeFilter {
 abstract class ValueSetExpansion with _$ValueSetExpansion {
   const factory ValueSetExpansion({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required FhirUri identifier,
     @JsonKey(required: true) @required FhirDateTime timestamp,
     Integer total,
     Integer offset,
     List<ValueSetParameter> parameter,
-    ValueSetContains contains,
+    List<ValueSetContains> contains,
+    @JsonKey(name: '_identifier') Element identifierElement,
+    @JsonKey(name: '_timestamp') Element timestampElement,
+    @JsonKey(name: '_total') Element totalElement,
+    @JsonKey(name: '_offset') Element offsetElement,
   }) = _ValueSetExpansion;
 
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
@@ -194,8 +234,9 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
 abstract class ValueSetParameter with _$ValueSetParameter {
   const factory ValueSetParameter({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required String name,
     String valueString,
     Boolean valueBoolean,
@@ -203,6 +244,13 @@ abstract class ValueSetParameter with _$ValueSetParameter {
     Decimal valueDecimal,
     FhirUri valueUri,
     Code valueCode,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
   }) = _ValueSetParameter;
 
   factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
@@ -213,14 +261,21 @@ abstract class ValueSetParameter with _$ValueSetParameter {
 abstract class ValueSetContains with _$ValueSetContains {
   const factory ValueSetContains({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirUri system,
     @JsonKey(name: 'abstract') Boolean abstract_,
     String version,
     Code code,
     String display,
     List<ValueSetContains> contains,
+    @JsonKey(name: '_system') Element systemElement,
+    @JsonKey(name: '_abstract') Element abstractElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_display') Element displayElement,
   }) = _ValueSetContains;
 
   factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
@@ -236,8 +291,8 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     @JsonKey(required: true, unknownEnumValue: NamingSystemStatus.unknown)
@@ -256,6 +311,16 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
     String usage,
     @JsonKey(required: true) @required List<NamingSystemUniqueId> uniqueId,
     Reference replacedBy,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_kind') Element kindElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_responsible') Element responsibleElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_usage') Element usageElement,
   }) = _NamingSystem;
 
   factory NamingSystem.fromJson(Map<String, dynamic> json) =>
@@ -271,8 +336,8 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri url,
     Identifier identifier,
@@ -294,6 +359,19 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
     FhirUri targetUri,
     Reference targetReference,
     List<ConceptMapElement> element,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_sourceUri') Element sourceUriElement,
+    @JsonKey(name: '_targetUri') Element targetUriElement,
   }) = _ConceptMap;
 
   factory ConceptMap.fromJson(Map<String, dynamic> json) =>
@@ -304,7 +382,7 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
 abstract class NamingSystemContact with _$NamingSystemContact {
   const factory NamingSystemContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -318,7 +396,7 @@ abstract class NamingSystemContact with _$NamingSystemContact {
 abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
   const factory NamingSystemUniqueId({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: UniqueIdType.unknown)
     @required
@@ -326,6 +404,9 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
     @JsonKey(required: true) @required String value,
     Boolean preferred,
     Period period,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_value') Element valueElement,
+    @JsonKey(name: '_preferred') Element preferredElement,
   }) = _NamingSystemUniqueId;
 
   factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
@@ -336,7 +417,7 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
 abstract class ConceptMapContact with _$ConceptMapContact {
   const factory ConceptMapContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -350,11 +431,12 @@ abstract class ConceptMapContact with _$ConceptMapContact {
 abstract class ConceptMapElement with _$ConceptMapElement {
   const factory ConceptMapElement({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri codeSystem,
     Code code,
     List<ConceptMapTarget> target,
+    @JsonKey(name: '_code') Element codeElement,
   }) = _ConceptMapElement;
 
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
@@ -365,7 +447,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
 abstract class ConceptMapTarget with _$ConceptMapTarget {
   const factory ConceptMapTarget({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri codeSystem,
     Code code,
@@ -375,6 +457,9 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
     String comments,
     List<ConceptMapDependsOn> dependsOn,
     List<ConceptMapDependsOn> product,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_equivalence') Element equivalenceElement,
+    @JsonKey(name: '_comments') Element commentsElement,
   }) = _ConceptMapTarget;
 
   factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
@@ -385,7 +470,7 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
 abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
   const factory ConceptMapDependsOn({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri element,
     @JsonKey(required: true) @required FhirUri codeSystem,

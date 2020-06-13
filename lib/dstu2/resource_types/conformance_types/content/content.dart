@@ -18,8 +18,8 @@ abstract class StructureDefinition
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri url,
     List<Identifier> identifier,
@@ -45,13 +45,28 @@ abstract class StructureDefinition
     @required
         StructureDefinitionKind kind,
     Code constrainedType,
-    @JsonKey(required: true) @required Boolean abstract,
+    @JsonKey(name: 'abstract', required: true) @required Boolean abstract_,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
         StructureDefinitionContextType contextType,
     List<String> context,
     FhirUri base,
     StructureDefinitionSnapshot snapshot,
     StructureDefinitionDifferential differential,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_display') Element displayElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    @JsonKey(name: '_kind') Element kindElement,
+    @JsonKey(name: '_abstract') Element abstractElement,
   }) = _StructureDefinition;
 
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
@@ -67,8 +82,8 @@ abstract class DataElement with _$DataElement implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri url,
     List<Identifier> identifier,
@@ -97,7 +112,7 @@ abstract class DataElement with _$DataElement implements Resource {
 abstract class StructureDefinitionContact with _$StructureDefinitionContact {
   const factory StructureDefinitionContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -111,12 +126,17 @@ abstract class StructureDefinitionContact with _$StructureDefinitionContact {
 abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
   const factory StructureDefinitionMapping({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Id identity,
     FhirUri uri,
     String name,
     String comments,
+    @JsonKey(name: '_identity') Element identityElement,
+    @JsonKey(name: '_uri') Element uriElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_comments') Element commentElement,
   }) = _StructureDefinitionMapping;
 
   factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
@@ -127,7 +147,7 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
 abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   const factory StructureDefinitionSnapshot({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
@@ -141,7 +161,7 @@ abstract class StructureDefinitionDifferential
     with _$StructureDefinitionDifferential {
   const factory StructureDefinitionDifferential({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
@@ -154,7 +174,7 @@ abstract class StructureDefinitionDifferential
 abstract class DataElementContact with _$DataElementContact {
   const factory DataElementContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -168,12 +188,17 @@ abstract class DataElementContact with _$DataElementContact {
 abstract class DataElementMapping with _$DataElementMapping {
   const factory DataElementMapping({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Id identity,
     FhirUri uri,
     String name,
     String comments,
+    @JsonKey(name: '_identity') Element identityElement,
+    @JsonKey(name: '_uri') Element uriElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _DataElementMapping;
 
   factory DataElementMapping.fromJson(Map<String, dynamic> json) =>

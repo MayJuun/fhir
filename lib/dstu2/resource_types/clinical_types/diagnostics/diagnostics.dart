@@ -16,8 +16,8 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirDateTime started,
     @JsonKey(required: true) @required Reference patient,
@@ -35,7 +35,13 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     List<Reference> procedure,
     Reference interpreter,
     String description,
-    ImagingStudySeries series,
+    List<ImagingStudySeries> series,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_started') Element startedElement,
+    @JsonKey(name: '_numberOfSeries') Element numberOfSeriesElement,
+    @JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _ImagingStudy;
 
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
@@ -51,8 +57,8 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: DiagnosticReportStatus.unknown)
@@ -62,7 +68,8 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     @JsonKey(required: true) @required CodeableConcept code,
     @JsonKey(required: true) @required Reference subject,
     Reference encounter,
-    @JsonKey(required: true) @required FhirDateTime effectiveX,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
     @JsonKey(required: true) @required Instant issued,
     @JsonKey(required: true) @required Reference performer,
     List<Reference> request,
@@ -73,6 +80,12 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     String conclusion,
     List<CodeableConcept> codedDiagnosis,
     List<Attachment> presentedForm,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_conclusion') Element conclusionElement,
   }) = _DiagnosticReport;
 
   factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
@@ -90,8 +103,8 @@ abstract class ImagingObjectSelection
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Oid uid,
     @JsonKey(required: true) @required Reference patient,
@@ -115,8 +128,8 @@ abstract class BodySite with _$BodySite implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference patient,
     List<Identifier> identifier,
@@ -139,8 +152,8 @@ abstract class Observation with _$Observation implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: ObservationStatus.unknown)
@@ -150,10 +163,20 @@ abstract class Observation with _$Observation implements Resource {
     @JsonKey(required: true) @required CodeableConcept code,
     Reference subject,
     Reference encounter,
-    FhirDateTime effectiveX,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
     Instant issued,
-    Reference performer,
-    Quantity valueX,
+    List<Reference> performer,
+    Quantity valueQuantity,
+    CodeableConcept valueCodeableConcept,
+    String valueString,
+    Range valueRange,
+    Ratio valueRatio,
+    SampledData valueSampledData,
+    Attachment valueAttachment,
+    Time valueTime,
+    FhirDateTime valueDateTime,
+    Period valuePeriod,
     CodeableConcept dataAbsentReason,
     CodeableConcept interpretation,
     String comments,
@@ -164,6 +187,15 @@ abstract class Observation with _$Observation implements Resource {
     List<ObservationReferenceRange> referenceRange,
     List<ObservationRelated> related,
     List<ObservationComponent> component,
+    @JsonKey(name: '_id') Element idElement,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _Observation;
 
   factory Observation.fromJson(Map<String, dynamic> json) =>
@@ -179,8 +211,8 @@ abstract class Specimen with _$Specimen implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
@@ -192,6 +224,10 @@ abstract class Specimen with _$Specimen implements Resource {
     SpecimenCollection collection,
     List<SpecimenTreatment> treatment,
     List<SpecimenContainer> container,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_receivedTime') Element receivedTimeElement,
   }) = _Specimen;
 
   factory Specimen.fromJson(Map<String, dynamic> json) =>
@@ -207,8 +243,8 @@ abstract class DiagnosticOrder with _$DiagnosticOrder implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference subject,
     Reference orderer,
@@ -234,7 +270,7 @@ abstract class DiagnosticOrder with _$DiagnosticOrder implements Resource {
 abstract class ImagingStudySeries with _$ImagingStudySeries {
   const factory ImagingStudySeries({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     UnsignedInt number,
     @JsonKey(required: true) @required Coding modality,
@@ -248,6 +284,11 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     Coding laterality,
     FhirDateTime started,
     List<ImagingStudyInstance> instance,
+    @JsonKey(name: '_uid') Element uidElement,
+    @JsonKey(name: '_number') Element numberElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
+    @JsonKey(name: '_started') Element startedElement,
   }) = _ImagingStudySeries;
 
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
@@ -258,10 +299,11 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
 abstract class DiagnosticReportImage with _$DiagnosticReportImage {
   const factory DiagnosticReportImage({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String comment,
     @JsonKey(required: true) @required Reference link,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _DiagnosticReportImage;
 
   factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
@@ -272,7 +314,7 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
   const factory ImagingObjectSelectionStudy({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Oid uid,
     FhirUri url,
@@ -290,13 +332,15 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
 abstract class ObservationReferenceRange with _$ObservationReferenceRange {
   const factory ObservationReferenceRange({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Quantity low,
     Quantity high,
     CodeableConcept meaning,
     Range age,
     String text,
+    @JsonKey(name: '_text') Element textElement,
   }) = _ObservationReferenceRange;
 
   factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
@@ -307,8 +351,9 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
 abstract class ObservationRelated with _$ObservationRelated {
   const factory ObservationRelated({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
     @JsonKey(required: true) @required Reference target,
   }) = _ObservationRelated;
@@ -321,8 +366,9 @@ abstract class ObservationRelated with _$ObservationRelated {
 abstract class ObservationComponent with _$ObservationComponent {
   const factory ObservationComponent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required CodeableConcept code,
     Quantity valueQuantity,
     CodeableConcept valueCodeableConcept,
@@ -336,6 +382,9 @@ abstract class ObservationComponent with _$ObservationComponent {
     Period valuePeriod,
     CodeableConcept dataAbsentReason,
     List<ObservationReferenceRange> referenceRange,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _ObservationComponent;
 
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
@@ -346,14 +395,17 @@ abstract class ObservationComponent with _$ObservationComponent {
 abstract class SpecimenCollection with _$SpecimenCollection {
   const factory SpecimenCollection({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirExtension modifierExtension,
     Reference collector,
     List<String> comment,
-    FhirDateTime collectedX,
+    FhirDateTime collectedDateTime,
+    Period collectedPeriod,
     Quantity quantity,
     CodeableConcept method,
     CodeableConcept bodySite,
+    @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
   }) = _SpecimenCollection;
 
   factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
@@ -364,7 +416,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
 abstract class SpecimenTreatment with _$SpecimenTreatment {
   const factory SpecimenTreatment({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String description,
     CodeableConcept procedure,
@@ -379,14 +431,16 @@ abstract class SpecimenTreatment with _$SpecimenTreatment {
 abstract class SpecimenContainer with _$SpecimenContainer {
   const factory SpecimenContainer({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     String description,
     CodeableConcept type,
     Quantity capacity,
     Quantity specimenQuantity,
-    CodeableConcept additiveX,
+    CodeableConcept additiveCodeableConcept,
+    Reference additiveReference,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _SpecimenContainer;
 
   factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
@@ -397,7 +451,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
 abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
   const factory DiagnosticOrderEvent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: EventStatus.unknown)
     @required
@@ -415,7 +469,7 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
 abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
   const factory DiagnosticOrderItem({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
     List<Reference> specimen,
@@ -432,7 +486,7 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
 abstract class ImagingStudyInstance with _$ImagingStudyInstance {
   const factory ImagingStudyInstance({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     UnsignedInt number,
     @JsonKey(required: true) @required Oid uid,
@@ -440,6 +494,9 @@ abstract class ImagingStudyInstance with _$ImagingStudyInstance {
     String type,
     String title,
     List<Attachment> content,
+    @JsonKey(name: '_uid') Element uidElement,
+    @JsonKey(name: '_number') Element numberElement,
+    @JsonKey(name: '_title') Element titleElement,
   }) = _ImagingStudyInstance;
 
   factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
@@ -451,7 +508,7 @@ abstract class ImagingObjectSelectionSeries
     with _$ImagingObjectSelectionSeries {
   const factory ImagingObjectSelectionSeries({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Oid uid,
     FhirUri url,
@@ -469,7 +526,7 @@ abstract class ImagingObjectSelectionInstance
     with _$ImagingObjectSelectionInstance {
   const factory ImagingObjectSelectionInstance({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Oid sopClass,
     @JsonKey(required: true) @required Oid uid,
@@ -486,7 +543,7 @@ abstract class ImagingObjectSelectionFrames
     with _$ImagingObjectSelectionFrames {
   const factory ImagingObjectSelectionFrames({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExte,
     @JsonKey(required: true) @required List<UnsignedInt> frameNumbers,
     @JsonKey(required: true) @required FhirUri url,

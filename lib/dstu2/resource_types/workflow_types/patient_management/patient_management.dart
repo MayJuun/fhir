@@ -16,8 +16,8 @@ abstract class Communication with _$Communication implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     CodeableConcept category,
@@ -33,6 +33,11 @@ abstract class Communication with _$Communication implements Resource {
     List<CodeableConcept> reason,
     Reference subject,
     Reference requestDetail,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_sent') Element sentElement,
+    @JsonKey(name: '_received') Element receivedElement,
   }) = _Communication;
 
   factory Communication.fromJson(Map<String, dynamic> json) =>
@@ -48,8 +53,8 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
@@ -64,6 +69,9 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
     List<Reference> referralRequest,
     Reference careManager,
     List<EpisodeOfCareCareTeam> careTeam,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _EpisodeOfCare;
 
   factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
@@ -79,8 +87,8 @@ abstract class Encounter with _$Encounter implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
@@ -104,6 +112,10 @@ abstract class Encounter with _$Encounter implements Resource {
     List<EncounterLocation> location,
     Reference serviceProvider,
     Reference partOf,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_class') Element classElement,
   }) = _Encounter;
 
   factory Encounter.fromJson(Map<String, dynamic> json) =>
@@ -119,8 +131,8 @@ abstract class Flag with _$Flag implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     CodeableConcept category,
@@ -132,6 +144,9 @@ abstract class Flag with _$Flag implements Resource {
     Reference encounter,
     Reference author,
     @JsonKey(required: true) @required CodeableConcept code,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _Flag;
 
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
@@ -141,11 +156,12 @@ abstract class Flag with _$Flag implements Resource {
 abstract class CommunicationPayload with _$CommunicationPayload {
   const factory CommunicationPayload({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String contentString,
     Attachment contentAttachment,
     Reference contentReference,
+    @JsonKey(name: '_contentString') Element contentStringElement,
   }) = _CommunicationPayload;
 
   factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
@@ -156,13 +172,14 @@ abstract class CommunicationPayload with _$CommunicationPayload {
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   const factory EpisodeOfCareStatusHistory({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(
         required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
     @required
         EpisodeOfCareHistoryStatus status,
     @JsonKey(required: true) @required Period period,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _EpisodeOfCareStatusHistory;
 
   factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -173,7 +190,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
   const factory EpisodeOfCareCareTeam({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> role,
     Period period,
@@ -188,12 +205,13 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
 abstract class EncounterStatusHistory with _$EncounterStatusHistory {
   const factory EncounterStatusHistory({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
     @required
         EncounterHistoryStatus status,
     @JsonKey(required: true) @required Period period,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _EncounterStatusHistory;
 
   factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -204,7 +222,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
 abstract class EncounterParticipant with _$EncounterParticipant {
   const factory EncounterParticipant({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> type,
     Period period,
@@ -219,7 +237,8 @@ abstract class EncounterParticipant with _$EncounterParticipant {
 abstract class EncounterHospitalization with _$EncounterHospitalization {
   const factory EncounterHospitalization({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirExtension modifierExtension,
     Identifier preAdmissionIdentifier,
     Reference origin,
@@ -242,11 +261,12 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
 abstract class EncounterLocation with _$EncounterLocation {
   const factory EncounterLocation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference location,
     @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
     Period period,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _EncounterLocation;
 
   factory EncounterLocation.fromJson(Map<String, dynamic> json) =>

@@ -1,5 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+export 'billing/billing.enums.dart';
+export 'general/general.enums.dart';
+export 'support/support.enums.dart';
+
 enum ProcessNoteType {
   @JsonValue('display')
   display,

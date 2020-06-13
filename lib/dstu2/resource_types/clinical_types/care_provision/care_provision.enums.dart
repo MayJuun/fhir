@@ -156,3 +156,22 @@ enum DetailStatus {
   @JsonValue('unknown')
   unknown,
 }
+
+enum DetailCategory {
+  @JsonValue('diet')
+  diet,
+  @JsonValue('drug')
+  drug,
+  @JsonValue('encounter')
+  encounter,
+  @JsonValue('observation')
+  observation,
+  @JsonValue('procedure')
+  procedure,
+  @JsonValue('supply')
+  supply,
+  @JsonValue('other')
+  other,
+  @JsonValue('unknown')
+  unknown,
+}

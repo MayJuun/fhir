@@ -16,8 +16,8 @@ abstract class Coverage with _$Coverage implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Reference issuer,
     Identifier bin,
@@ -33,6 +33,11 @@ abstract class Coverage with _$Coverage implements Resource {
     Reference subscriber,
     Identifier network,
     List<Reference> contract,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+    @JsonKey(name: '_dependent') Element dependentElement,
+    @JsonKey(name: '_network') Element networkElement,
   }) = _Coverage;
 
   factory Coverage.fromJson(Map<String, dynamic> json) =>
@@ -50,8 +55,8 @@ abstract class EligibilityRequest
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Coding ruleset,
@@ -60,6 +65,9 @@ abstract class EligibilityRequest
     Reference target,
     Reference provider,
     Reference organization,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _EligibilityRequest;
 
   factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
@@ -75,8 +83,8 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Coding ruleset,
@@ -88,6 +96,9 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
     @JsonKey(required: true) @required Reference subject,
     @JsonKey(required: true) @required Reference coverage,
     @JsonKey(required: true) @required Coding relationship,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _EnrollmentRequest;
 
   factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
@@ -105,8 +116,8 @@ abstract class EnrollmentResponse
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference request,
@@ -119,6 +130,11 @@ abstract class EnrollmentResponse
     Reference organization,
     Reference requestProvider,
     Reference requestOrganization,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_outcome') Element outcomeElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _EnrollmentResponse;
 
   factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
@@ -136,8 +152,8 @@ abstract class EligibilityResponse
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference request,
@@ -150,6 +166,11 @@ abstract class EligibilityResponse
     Reference organization,
     Reference requestProvider,
     Reference requestOrganization,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_outcome') Element outcomeElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
   }) = _EligibilityResponse;
 
   factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>

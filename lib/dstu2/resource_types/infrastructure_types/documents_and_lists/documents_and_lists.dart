@@ -16,8 +16,8 @@ abstract class Composition with _$Composition implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     @JsonKey(required: true) @required FhirDateTime date,
@@ -35,6 +35,12 @@ abstract class Composition with _$Composition implements Resource {
     List<CompositionEvent> event,
     Reference encounter,
     List<CompositionSection> section,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_confidentiality') Element confidentialityElement,
   }) = _Composition;
 
   factory Composition.fromJson(Map<String, dynamic> json) =>
@@ -50,8 +56,8 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
@@ -72,6 +78,11 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
     List<CodeableConcept> securityLabel,
     @JsonKey(required: true) @required List<DocumentReferenceContent> content,
     DocumentReferenceContext context,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_docStatus') Element docStatusElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _DocumentReference;
 
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
@@ -87,8 +98,8 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
@@ -104,6 +115,12 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
     String description,
     @JsonKey(required: true) @required List<DocumentManifestContent> content,
     List<DocumentManifestRelated> related,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_source') Element sourceElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _DocumentManifest;
 
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
@@ -119,8 +136,8 @@ abstract class List_ with _$List_ implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     String title,
@@ -139,6 +156,12 @@ abstract class List_ with _$List_ implements Resource {
     String note,
     List<ListEntry> entry,
     CodeableConcept emptyReason,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _List_;
 
   factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
@@ -148,11 +171,13 @@ abstract class List_ with _$List_ implements Resource {
 abstract class CompositionAttester with _$CompositionAttester {
   const factory CompositionAttester({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required List<AttesterMode> mode,
     FhirDateTime time,
     Reference party,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_time') Element timeElement,
   }) = _CompositionAttester;
 
   factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
@@ -163,10 +188,10 @@ abstract class CompositionAttester with _$CompositionAttester {
 abstract class CompositionEvent with _$CompositionEvent {
   const factory CompositionEvent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<CodeableConcept> code,
-    List<Period> period,
+    Period period,
     List<Reference> detail,
   }) = _CompositionEvent;
 
@@ -178,8 +203,9 @@ abstract class CompositionEvent with _$CompositionEvent {
 abstract class CompositionSection with _$CompositionSection {
   const factory CompositionSection({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     String title,
     CodeableConcept code,
     Narrative text,
@@ -188,6 +214,8 @@ abstract class CompositionSection with _$CompositionSection {
     List<Reference> entry,
     CodeableConcept emptyReason,
     List<CompositionSection> section,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _CompositionSection;
 
   factory CompositionSection.fromJson(Map<String, dynamic> json) =>
@@ -198,12 +226,13 @@ abstract class CompositionSection with _$CompositionSection {
 abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   const factory DocumentReferenceRelatesTo({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: RelatesToCode.unknown)
     @required
         RelatesToCode code,
     @JsonKey(required: true) @required Reference target,
+    @JsonKey(name: '_code') Element codeElement,
   }) = _DocumentReferenceRelatesTo;
 
   factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
@@ -214,7 +243,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 abstract class DocumentReferenceContent with _$DocumentReferenceContent {
   const factory DocumentReferenceContent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Attachment attachment,
     List<Coding> format,
@@ -228,7 +257,7 @@ abstract class DocumentReferenceContent with _$DocumentReferenceContent {
 abstract class DocumentReferenceContext with _$DocumentReferenceContext {
   const factory DocumentReferenceContext({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Reference encounter,
     List<CodeableConcept> event,
@@ -247,7 +276,7 @@ abstract class DocumentReferenceContext with _$DocumentReferenceContext {
 abstract class DocumentManifestContent with _$DocumentManifestContent {
   const factory DocumentManifestContent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Attachment pAttachment,
     Reference pReference,
@@ -261,7 +290,7 @@ abstract class DocumentManifestContent with _$DocumentManifestContent {
 abstract class DocumentManifestRelated with _$DocumentManifestRelated {
   const factory DocumentManifestRelated({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     Reference ref,
@@ -275,12 +304,15 @@ abstract class DocumentManifestRelated with _$DocumentManifestRelated {
 abstract class ListEntry with _$ListEntry {
   const factory ListEntry({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept flag,
     Boolean deleted,
     FhirDateTime date,
     @JsonKey(required: true) @required Reference item,
+    @JsonKey(name: '_deleted') Element deletedElement,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _ListEntry;
 
   factory ListEntry.fromJson(Map<String, dynamic> json) =>
@@ -291,7 +323,7 @@ abstract class ListEntry with _$ListEntry {
 abstract class DocumentReferenceRelated with _$DocumentReferenceRelated {
   const factory DocumentReferenceRelated({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     Reference ref,

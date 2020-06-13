@@ -685,7 +685,7 @@ class _$ElementTearOff {
   const _$ElementTearOff();
 
   _Element call(
-      {String id, @JsonKey(name: 'extension') FhirExtension extension_}) {
+      {String id, @JsonKey(name: 'extension') List<FhirExtension> extension_}) {
     return _Element(
       id: id,
       extension_: extension_,
@@ -699,7 +699,7 @@ const $Element = _$ElementTearOff();
 mixin _$Element {
   String get id;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
 
   Map<String, dynamic> toJson();
   $ElementCopyWith<Element> get copyWith;
@@ -708,9 +708,8 @@ mixin _$Element {
 abstract class $ElementCopyWith<$Res> {
   factory $ElementCopyWith(Element value, $Res Function(Element) then) =
       _$ElementCopyWithImpl<$Res>;
-  $Res call({String id, @JsonKey(name: 'extension') FhirExtension extension_});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
+  $Res call(
+      {String id, @JsonKey(name: 'extension') List<FhirExtension> extension_});
 }
 
 class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
@@ -729,18 +728,8 @@ class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -748,10 +737,8 @@ abstract class _$ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
   factory _$ElementCopyWith(_Element value, $Res Function(_Element) then) =
       __$ElementCopyWithImpl<$Res>;
   @override
-  $Res call({String id, @JsonKey(name: 'extension') FhirExtension extension_});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
+  $Res call(
+      {String id, @JsonKey(name: 'extension') List<FhirExtension> extension_});
 }
 
 class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
@@ -771,7 +758,7 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
     ));
   }
 }
@@ -787,7 +774,7 @@ class _$_Element implements _Element {
   final String id;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
 
   @override
   String toString() {
@@ -824,7 +811,7 @@ class _$_Element implements _Element {
 abstract class _Element implements Element {
   const factory _Element(
       {String id,
-      @JsonKey(name: 'extension') FhirExtension extension_}) = _$_Element;
+      @JsonKey(name: 'extension') List<FhirExtension> extension_}) = _$_Element;
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
@@ -832,7 +819,7 @@ abstract class _Element implements Element {
   String get id;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   _$ElementCopyWith<_Element> get copyWith;
 }

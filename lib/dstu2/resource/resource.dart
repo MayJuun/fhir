@@ -27,6 +27,8 @@ class Resource {
 
   static Resource fromJson(Map<String, dynamic> json) {
     switch (json['resourceType']) {
+      case 'Account':
+        return Account.fromJson(json);
       case 'AllergyIntolerance':
         return AllergyIntolerance.fromJson(json);
       case 'Condition':
@@ -155,7 +157,7 @@ class Resource {
         return DocumentManifest.fromJson(json);
       case 'DocumentReference':
         return DocumentReference.fromJson(json);
-      case 'Lists':
+      case 'List':
         return List_.fromJson(json);
       case 'Media':
         return Media.fromJson(json);

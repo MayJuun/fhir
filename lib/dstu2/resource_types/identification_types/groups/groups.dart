@@ -16,8 +16,8 @@ abstract class Organization with _$Organization implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Boolean active,
@@ -27,6 +27,11 @@ abstract class Organization with _$Organization implements Resource {
     List<Address> address,
     Reference partOf,
     List<OrganizationContact> contact,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_alias') Element aliasElement,
   }) = _Organization;
 
   factory Organization.fromJson(Map<String, dynamic> json) =>
@@ -42,8 +47,8 @@ abstract class Group with _$Group implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true, unknownEnumValue: GroupType.unknown)
@@ -55,6 +60,12 @@ abstract class Group with _$Group implements Resource {
     UnsignedInt quantity,
     List<GroupCharacteristic> characteristic,
     List<GroupMember> member,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_actual') Element actualElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_quantity') Element quantityElement,
   }) = _Group;
 
   factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
@@ -69,8 +80,8 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference providedBy,
@@ -94,6 +105,13 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
     List<HealthcareServiceAvailableTime> availableTime,
     List<HealthcareServiceNotAvailable> notAvailable,
     String availabilityExceptions,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_extraDetails') Element extraDetailsElement,
+    @JsonKey(name: '_appointmentRequired') Element appointmentRequiredElement,
+    @JsonKey(name: '_availabilityExceptions')
+        Element availabilityExceptionsElement,
   }) = _HealthcareService;
 
   factory HealthcareService.fromJson(Map<String, dynamic> json) =>
@@ -104,8 +122,9 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
 abstract class OrganizationContact with _$OrganizationContact {
   const factory OrganizationContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept purpose,
     HumanName name,
     List<ContactPoint> telecom,
@@ -120,7 +139,7 @@ abstract class OrganizationContact with _$OrganizationContact {
 abstract class GroupCharacteristic with _$GroupCharacteristic {
   const factory GroupCharacteristic({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept code,
     CodeableConcept valueCodeableConcept,
@@ -129,6 +148,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
     Range valueRange,
     @JsonKey(required: true) @required Boolean exclude,
     Period period,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _GroupCharacteristic;
 
   factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -139,11 +159,12 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
 abstract class GroupMember with _$GroupMember {
   const factory GroupMember({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference entity,
     Period period,
     Boolean inactive,
+    @JsonKey(name: '_inactive') Element inactiveElement,
   }) = _GroupMember;
 
   factory GroupMember.fromJson(Map<String, dynamic> json) =>
@@ -155,7 +176,7 @@ abstract class HealthcareServiceServiceType
     with _$HealthcareServiceServiceType {
   const factory HealthcareServiceServiceType({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required CodeableConcept type,
     List<CodeableConcept> specialty,
@@ -170,12 +191,16 @@ abstract class HealthcareServiceAvailableTime
     with _$HealthcareServiceAvailableTime {
   const factory HealthcareServiceAvailableTime({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<AvailableTimeDaysOfWeek> daysOfWeek,
     Boolean allDay,
     Time availableStartTime,
     Time availableEndTime,
+    @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+    @JsonKey(name: '_allDay') Element allDayElement,
+    @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+    @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
@@ -187,10 +212,11 @@ abstract class HealthcareServiceNotAvailable
     with _$HealthcareServiceNotAvailable {
   const factory HealthcareServiceNotAvailable({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String description,
     Period during,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _HealthcareServiceNotAvailable;
 
   factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>

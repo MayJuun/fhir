@@ -16,8 +16,8 @@ abstract class Conformance with _$Conformance implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri url,
     String version,
@@ -45,6 +45,9 @@ abstract class Conformance with _$Conformance implements Resource {
     List<ConformanceRest> rest,
     List<ConformanceMessaging> messaging,
     List<ConformanceDocument> document,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
   }) = _Conformance;
 
   factory Conformance.fromJson(Map<String, dynamic> json) =>
@@ -62,8 +65,8 @@ abstract class OperationDefinition
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     FhirUri url,
     String version,
@@ -104,8 +107,8 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required FhirUri url,
     @JsonKey(required: true) @required String name,
@@ -117,15 +120,16 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     FhirDateTime date,
     String requirements,
     @JsonKey(required: true) @required Code code,
-    @JsonKey(required: true) @required Code base,
+    Code base,
     @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
     @required
         SearchParameterType type,
-    @JsonKey(required: true) @required String description,
+    String description,
     String xpath,
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
         SearchParameterXpathUsage xpathUsage,
     List<Code> target,
+    @JsonKey(name: '_requirements') Element requirementsElement,
   }) = _SearchParameter;
 
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
@@ -136,7 +140,7 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
 abstract class ConformanceContact with _$ConformanceContact {
   const factory ConformanceContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -150,7 +154,7 @@ abstract class ConformanceContact with _$ConformanceContact {
 abstract class ConformanceSoftware with _$ConformanceSoftware {
   const factory ConformanceSoftware({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String name,
     String version,
@@ -165,7 +169,7 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
 abstract class ConformanceImplementation with _$ConformanceImplementation {
   const factory ConformanceImplementation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required String description,
     FhirUri url,
@@ -179,8 +183,9 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
 abstract class ConformanceRest with _$ConformanceRest {
   const factory ConformanceRest({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true, unknownEnumValue: RestMode.unknown)
     @required
         RestMode mode,
@@ -193,6 +198,7 @@ abstract class ConformanceRest with _$ConformanceRest {
     List<ConformanceSearchParam> searchParam,
     List<ConformanceOperation> operation,
     List<FhirUri> compartment,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _ConformanceRest;
 
   factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
@@ -203,12 +209,13 @@ abstract class ConformanceRest with _$ConformanceRest {
 abstract class ConformanceMessaging with _$ConformanceMessaging {
   const factory ConformanceMessaging({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     List<ConformanceEndpoint> endpoint,
     UnsignedInt reliableCache,
     String documentation,
-    @JsonKey(required: true) @required ConformanceEvent event,
+    @JsonKey(required: true) @required List<ConformanceEvent> event,
   }) = _ConformanceMessaging;
 
   factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
@@ -219,8 +226,9 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
 abstract class ConformanceDocument with _$ConformanceDocument {
   const factory ConformanceDocument({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
     @required
         DocumentMode mode,
@@ -236,7 +244,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
 abstract class OperationDefinitionContact with _$OperationDefinitionContact {
   const factory OperationDefinitionContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -251,8 +259,9 @@ abstract class OperationDefinitionParameter
     with _$OperationDefinitionParameter {
   const factory OperationDefinitionParameter({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code name,
     @JsonKey(required: true, unknownEnumValue: ParameterUse.unknown)
     @required
@@ -274,7 +283,7 @@ abstract class OperationDefinitionParameter
 abstract class SearchParameterContact with _$SearchParameterContact {
   const factory SearchParameterContact({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String name,
     List<ContactPoint> telecom,
@@ -288,12 +297,13 @@ abstract class SearchParameterContact with _$SearchParameterContact {
 abstract class ConformanceSecurity with _$ConformanceSecurity {
   const factory ConformanceSecurity({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Boolean cors,
     List<CodeableConcept> service,
     String description,
     List<ConformanceCertificate> certificate,
+    @JsonKey(name: '_cors') Element corsElement,
   }) = _ConformanceSecurity;
 
   factory ConformanceSecurity.fromJson(Map<String, dynamic> json) =>
@@ -304,8 +314,9 @@ abstract class ConformanceSecurity with _$ConformanceSecurity {
 abstract class ConformanceResource with _$ConformanceResource {
   const factory ConformanceResource({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code type,
     Reference profile,
     @JsonKey(required: true)
@@ -322,6 +333,10 @@ abstract class ConformanceResource with _$ConformanceResource {
     List<String> searchInclude,
     List<String> searchRevInclude,
     List<ConformanceSearchParam> searchParam,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_updateCreate') Element updateCreateElement,
+    @JsonKey(name: '_conditionalCreate') Element conditionalCreateElement,
+    @JsonKey(name: '_conditionalDelete') Element conditionalDeleteElement,
   }) = _ConformanceResource;
 
   factory ConformanceResource.fromJson(Map<String, dynamic> json) =>
@@ -333,7 +348,7 @@ abstract class ConformanceResourceInteraction
     with _$ConformanceResourceInteraction {
   const factory ConformanceResourceInteraction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
     @required
@@ -349,8 +364,9 @@ abstract class ConformanceResourceInteraction
 abstract class ConformanceOperation with _$ConformanceOperation {
   const factory ConformanceOperation({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required String name,
     @JsonKey(required: true) @required Reference definition,
   }) = _ConformanceOperation;
@@ -363,10 +379,11 @@ abstract class ConformanceOperation with _$ConformanceOperation {
 abstract class ConformanceEndpoint with _$ConformanceEndpoint {
   const factory ConformanceEndpoint({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding protocol,
     @JsonKey(required: true) @required FhirUri address,
+    @JsonKey(name: '_address') Element addressElement,
   }) = _ConformanceEndpoint;
 
   factory ConformanceEndpoint.fromJson(Map<String, dynamic> json) =>
@@ -377,7 +394,7 @@ abstract class ConformanceEndpoint with _$ConformanceEndpoint {
 abstract class ConformanceEvent with _$ConformanceEvent {
   const factory ConformanceEvent({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding code,
     @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
@@ -388,6 +405,7 @@ abstract class ConformanceEvent with _$ConformanceEvent {
     @JsonKey(required: true) @required Reference request,
     @JsonKey(required: true) @required Reference response,
     String documentation,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _ConformanceEvent;
 
   factory ConformanceEvent.fromJson(Map<String, dynamic> json) =>
@@ -398,7 +416,7 @@ abstract class ConformanceEvent with _$ConformanceEvent {
 abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
   const factory OperationDefinitionBinding({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: BindingStrength.unknown)
     @JsonKey(required: true)
@@ -416,10 +434,11 @@ abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
 abstract class ConformanceCertificate with _$ConformanceCertificate {
   const factory ConformanceCertificate({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Code type,
     Base64Binary blob,
+    @JsonKey(name: '_blob') Element blobElement,
   }) = _ConformanceCertificate;
 
   factory ConformanceCertificate.fromJson(Map<String, dynamic> json) =>
@@ -430,7 +449,7 @@ abstract class ConformanceCertificate with _$ConformanceCertificate {
 abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
   const factory ConformanceRestInteraction({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true, unknownEnumValue: InteractionCode.unknown)
     @required
@@ -446,15 +465,16 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
 abstract class ConformanceSearchParam with _$ConformanceSearchParam {
   const factory ConformanceSearchParam({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required String name,
     FhirUri definition,
     @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
     @required
         SearchParamType type,
     String documentation,
-    Code target,
+    List<Code> target,
     List<SearchParamModifier> modifier,
     List<String> chain,
   }) = _ConformanceSearchParam;

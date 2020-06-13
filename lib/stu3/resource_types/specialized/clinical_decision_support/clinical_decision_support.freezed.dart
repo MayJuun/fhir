@@ -616,7 +616,7 @@ class _$ContributorTearOff {
       {@JsonKey(defaultValue: 'Contributor')
           String resourceType,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @required
       @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
           ContributorType type,
@@ -641,7 +641,7 @@ mixin _$Contributor {
   @JsonKey(defaultValue: 'Contributor')
   String get resourceType;
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
   ContributorType get type;
   @JsonKey(required: true)
@@ -660,14 +660,12 @@ abstract class $ContributorCopyWith<$Res> {
       {@JsonKey(defaultValue: 'Contributor')
           String resourceType,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
           ContributorType type,
       @JsonKey(required: true)
           String name,
       List<ContactDetail> contact});
-
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
@@ -691,22 +689,12 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
           : resourceType as String,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       type: type == freezed ? _value.type : type as ContributorType,
       name: name == freezed ? _value.name : name as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
     ));
-  }
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_ {
-    if (_value.extension_ == null) {
-      return null;
-    }
-    return $FhirExtensionCopyWith<$Res>(_value.extension_, (value) {
-      return _then(_value.copyWith(extension_: value));
-    });
   }
 }
 
@@ -720,15 +708,12 @@ abstract class _$ContributorCopyWith<$Res>
       {@JsonKey(defaultValue: 'Contributor')
           String resourceType,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
           ContributorType type,
       @JsonKey(required: true)
           String name,
       List<ContactDetail> contact});
-
-  @override
-  $FhirExtensionCopyWith<$Res> get extension_;
 }
 
 class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
@@ -754,7 +739,7 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
           : resourceType as String,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as FhirExtension,
+          : extension_ as List<FhirExtension>,
       type: type == freezed ? _value.type : type as ContributorType,
       name: name == freezed ? _value.name : name as String,
       contact:
@@ -788,7 +773,7 @@ class _$_Contributor implements _Contributor {
   final String resourceType;
   @override
   @JsonKey(name: 'extension')
-  final FhirExtension extension_;
+  final List<FhirExtension> extension_;
   @override
   @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
   final ContributorType type;
@@ -845,7 +830,7 @@ abstract class _Contributor implements Contributor {
       {@JsonKey(defaultValue: 'Contributor')
           String resourceType,
       @JsonKey(name: 'extension')
-          FhirExtension extension_,
+          List<FhirExtension> extension_,
       @required
       @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
           ContributorType type,
@@ -862,7 +847,7 @@ abstract class _Contributor implements Contributor {
   String get resourceType;
   @override
   @JsonKey(name: 'extension')
-  FhirExtension get extension_;
+  List<FhirExtension> get extension_;
   @override
   @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
   ContributorType get type;

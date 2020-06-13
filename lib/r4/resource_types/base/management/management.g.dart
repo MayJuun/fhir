@@ -1211,9 +1211,9 @@ const _$StatusEnumMap = {
   Status.unknown: 'unknown',
 };
 
-_$_Lists _$_$_ListsFromJson(Map<String, dynamic> json) {
+_$_List_ _$_$_List_FromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['resourceType']);
-  return _$_Lists(
+  return _$_List_(
     resourceType: json['resourceType'] as String ?? 'List',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
@@ -1301,7 +1301,7 @@ _$_Lists _$_$_ListsFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ListsToJson(_$_Lists instance) {
+Map<String, dynamic> _$_$_List_ToJson(_$_List_ instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

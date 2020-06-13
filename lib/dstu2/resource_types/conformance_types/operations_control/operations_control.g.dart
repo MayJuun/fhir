@@ -29,12 +29,15 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] == null
-        ? null
-        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -97,6 +100,15 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
             ? null
             : ConformanceDocument.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    fhirVersionElement: json['_fhirVersion'] == null
+        ? null
+        : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
+    acceptUnknownElement: json['_acceptUnknown'] == null
+        ? null
+        : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
   );
 }
 
@@ -115,8 +127,10 @@ Map<String, dynamic> _$_$_ConformanceToJson(_$_Conformance instance) {
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
-  writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
@@ -143,6 +157,9 @@ Map<String, dynamic> _$_$_ConformanceToJson(_$_Conformance instance) {
       'messaging', instance.messaging?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'document', instance.document?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
+  writeNotNull('_acceptUnknown', instance.acceptUnknownElement?.toJson());
   return val;
 }
 
@@ -232,12 +249,15 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] == null
-        ? null
-        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -302,8 +322,10 @@ Map<String, dynamic> _$_$_OperationDefinitionToJson(
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
-  writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
@@ -342,14 +364,7 @@ const _$OperationDefinitionKindEnumMap = {
 };
 
 _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const [
-    'url',
-    'name',
-    'code',
-    'base',
-    'type',
-    'description'
-  ]);
+  $checkKeys(json, requiredKeys: const ['url', 'name', 'code', 'type']);
   return _$_SearchParameter(
     resourceType: json['resourceType'] as String ?? 'SearchParameter',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
@@ -365,12 +380,15 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: json['contained'] == null
-        ? null
-        : Resource.fromJson(json['contained'] as Map<String, dynamic>),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -404,6 +422,9 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     target: (json['target'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
+    requirementsElement: json['_requirements'] == null
+        ? null
+        : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
   );
 }
 
@@ -422,8 +443,10 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
-  writeNotNull('contained', instance.contained?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('name', instance.name);
@@ -441,6 +464,7 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull(
       'xpathUsage', _$SearchParameterXpathUsageEnumMap[instance.xpathUsage]);
   writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_requirements', instance.requirementsElement?.toJson());
   return val;
 }
 
@@ -476,9 +500,11 @@ _$_ConformanceContact _$_$_ConformanceContactFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceContact(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -502,7 +528,8 @@ Map<String, dynamic> _$_$_ConformanceContactToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
@@ -514,9 +541,11 @@ _$_ConformanceSoftware _$_$_ConformanceSoftwareFromJson(
   $checkKeys(json, requiredKeys: const ['name']);
   return _$_ConformanceSoftware(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -540,7 +569,8 @@ Map<String, dynamic> _$_$_ConformanceSoftwareToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('version', instance.version);
@@ -553,9 +583,11 @@ _$_ConformanceImplementation _$_$_ConformanceImplementationFromJson(
   $checkKeys(json, requiredKeys: const ['description']);
   return _$_ConformanceImplementation(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -576,7 +608,8 @@ Map<String, dynamic> _$_$_ConformanceImplementationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('url', instance.url?.toJson());
@@ -587,13 +620,17 @@ _$_ConformanceRest _$_$_ConformanceRestFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['mode', 'resource']);
   return _$_ConformanceRest(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     mode: _$enumDecodeNullable(_$RestModeEnumMap, json['mode'],
         unknownValue: RestMode.unknown),
     documentation: json['documentation'] as String,
@@ -627,6 +664,9 @@ _$_ConformanceRest _$_$_ConformanceRestFromJson(Map<String, dynamic> json) {
     compartment: (json['compartment'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
+    modeElement: json['_mode'] == null
+        ? null
+        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
   );
 }
 
@@ -640,8 +680,10 @@ Map<String, dynamic> _$_$_ConformanceRestToJson(_$_ConformanceRest instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('mode', _$RestModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation);
   writeNotNull('security', instance.security?.toJson());
@@ -657,6 +699,7 @@ Map<String, dynamic> _$_$_ConformanceRestToJson(_$_ConformanceRest instance) {
       'operation', instance.operation?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'compartment', instance.compartment?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_mode', instance.modeElement?.toJson());
   return val;
 }
 
@@ -679,13 +722,17 @@ _$_ConformanceMessaging _$_$_ConformanceMessagingFromJson(
   $checkKeys(json, requiredKeys: const ['event']);
   return _$_ConformanceMessaging(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     endpoint: (json['endpoint'] as List)
         ?.map((e) => e == null
             ? null
@@ -695,9 +742,11 @@ _$_ConformanceMessaging _$_$_ConformanceMessagingFromJson(
         ? null
         : UnsignedInt.fromJson(json['reliableCache']),
     documentation: json['documentation'] as String,
-    event: json['event'] == null
-        ? null
-        : ConformanceEvent.fromJson(json['event'] as Map<String, dynamic>),
+    event: (json['event'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ConformanceEvent.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -712,13 +761,15 @@ Map<String, dynamic> _$_$_ConformanceMessagingToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
   writeNotNull('reliableCache', instance.reliableCache?.toJson());
   writeNotNull('documentation', instance.documentation);
-  writeNotNull('event', instance.event?.toJson());
+  writeNotNull('event', instance.event?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -727,13 +778,17 @@ _$_ConformanceDocument _$_$_ConformanceDocumentFromJson(
   $checkKeys(json, requiredKeys: const ['mode', 'profile']);
   return _$_ConformanceDocument(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     mode: _$enumDecodeNullable(_$DocumentModeEnumMap, json['mode'],
         unknownValue: DocumentMode.unknown),
     documentation: json['documentation'] as String,
@@ -754,8 +809,10 @@ Map<String, dynamic> _$_$_ConformanceDocumentToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('mode', _$DocumentModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation);
   writeNotNull('profile', instance.profile?.toJson());
@@ -772,9 +829,11 @@ _$_OperationDefinitionContact _$_$_OperationDefinitionContactFromJson(
     Map<String, dynamic> json) {
   return _$_OperationDefinitionContact(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -798,7 +857,8 @@ Map<String, dynamic> _$_$_OperationDefinitionContactToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
@@ -810,13 +870,17 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
   $checkKeys(json, requiredKeys: const ['name', 'use', 'min', 'max']);
   return _$_OperationDefinitionParameter(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
     use: _$enumDecodeNullable(_$ParameterUseEnumMap, json['use'],
         unknownValue: ParameterUse.unknown),
@@ -850,8 +914,10 @@ Map<String, dynamic> _$_$_OperationDefinitionParameterToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('use', _$ParameterUseEnumMap[instance.use]);
   writeNotNull('min', instance.min?.toJson());
@@ -874,9 +940,11 @@ _$_SearchParameterContact _$_$_SearchParameterContactFromJson(
     Map<String, dynamic> json) {
   return _$_SearchParameterContact(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -900,7 +968,8 @@ Map<String, dynamic> _$_$_SearchParameterContactToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
@@ -911,9 +980,11 @@ _$_ConformanceSecurity _$_$_ConformanceSecurityFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceSecurity(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -930,6 +1001,9 @@ _$_ConformanceSecurity _$_$_ConformanceSecurityFromJson(
             ? null
             : ConformanceCertificate.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    corsElement: json['_cors'] == null
+        ? null
+        : Element.fromJson(json['_cors'] as Map<String, dynamic>),
   );
 }
 
@@ -944,13 +1018,15 @@ Map<String, dynamic> _$_$_ConformanceSecurityToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('cors', instance.cors?.toJson());
   writeNotNull('service', instance.service?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
   writeNotNull(
       'certificate', instance.certificate?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_cors', instance.corsElement?.toJson());
   return val;
 }
 
@@ -959,13 +1035,17 @@ _$_ConformanceResource _$_$_ConformanceResourceFromJson(
   $checkKeys(json, requiredKeys: const ['type', 'interaction']);
   return _$_ConformanceResource(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     profile: json['profile'] == null
         ? null
@@ -1003,6 +1083,18 @@ _$_ConformanceResource _$_$_ConformanceResourceFromJson(
             ? null
             : ConformanceSearchParam.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    updateCreateElement: json['_updateCreate'] == null
+        ? null
+        : Element.fromJson(json['_updateCreate'] as Map<String, dynamic>),
+    conditionalCreateElement: json['_conditionalCreate'] == null
+        ? null
+        : Element.fromJson(json['_conditionalCreate'] as Map<String, dynamic>),
+    conditionalDeleteElement: json['_conditionalDelete'] == null
+        ? null
+        : Element.fromJson(json['_conditionalDelete'] as Map<String, dynamic>),
   );
 }
 
@@ -1017,8 +1109,10 @@ Map<String, dynamic> _$_$_ConformanceResourceToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
   writeNotNull(
@@ -1034,6 +1128,12 @@ Map<String, dynamic> _$_$_ConformanceResourceToJson(
   writeNotNull('searchRevInclude', instance.searchRevInclude);
   writeNotNull(
       'searchParam', instance.searchParam?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('_updateCreate', instance.updateCreateElement?.toJson());
+  writeNotNull(
+      '_conditionalCreate', instance.conditionalCreateElement?.toJson());
+  writeNotNull(
+      '_conditionalDelete', instance.conditionalDeleteElement?.toJson());
   return val;
 }
 
@@ -1057,9 +1157,11 @@ _$_ConformanceResourceInteraction _$_$_ConformanceResourceInteractionFromJson(
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ConformanceResourceInteraction(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1081,7 +1183,8 @@ Map<String, dynamic> _$_$_ConformanceResourceInteractionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', _$InteractionCodeEnumMap[instance.code]);
   writeNotNull('documentation', instance.documentation);
@@ -1100,13 +1203,17 @@ _$_ConformanceOperation _$_$_ConformanceOperationFromJson(
   $checkKeys(json, requiredKeys: const ['name', 'definition']);
   return _$_ConformanceOperation(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     name: json['name'] as String,
     definition: json['definition'] == null
         ? null
@@ -1125,8 +1232,10 @@ Map<String, dynamic> _$_$_ConformanceOperationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('name', instance.name);
   writeNotNull('definition', instance.definition?.toJson());
   return val;
@@ -1137,9 +1246,11 @@ _$_ConformanceEndpoint _$_$_ConformanceEndpointFromJson(
   $checkKeys(json, requiredKeys: const ['protocol', 'address']);
   return _$_ConformanceEndpoint(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1150,6 +1261,9 @@ _$_ConformanceEndpoint _$_$_ConformanceEndpointFromJson(
     address: json['address'] == null
         ? null
         : FhirUri.fromJson(json['address'] as String),
+    addressElement: json['_address'] == null
+        ? null
+        : Element.fromJson(json['_address'] as Map<String, dynamic>),
   );
 }
 
@@ -1164,10 +1278,12 @@ Map<String, dynamic> _$_$_ConformanceEndpointToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('protocol', instance.protocol?.toJson());
   writeNotNull('address', instance.address?.toJson());
+  writeNotNull('_address', instance.addressElement?.toJson());
   return val;
 }
 
@@ -1176,9 +1292,11 @@ _$_ConformanceEvent _$_$_ConformanceEventFromJson(Map<String, dynamic> json) {
       requiredKeys: const ['code', 'mode', 'focus', 'request', 'response']);
   return _$_ConformanceEvent(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1199,6 +1317,9 @@ _$_ConformanceEvent _$_$_ConformanceEventFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['response'] as Map<String, dynamic>),
     documentation: json['documentation'] as String,
+    modeElement: json['_mode'] == null
+        ? null
+        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
   );
 }
 
@@ -1212,7 +1333,8 @@ Map<String, dynamic> _$_$_ConformanceEventToJson(_$_ConformanceEvent instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('category', _$EventCategoryEnumMap[instance.category]);
@@ -1221,6 +1343,7 @@ Map<String, dynamic> _$_$_ConformanceEventToJson(_$_ConformanceEvent instance) {
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());
   writeNotNull('documentation', instance.documentation);
+  writeNotNull('_mode', instance.modeElement?.toJson());
   return val;
 }
 
@@ -1242,9 +1365,11 @@ _$_OperationDefinitionBinding _$_$_OperationDefinitionBindingFromJson(
   $checkKeys(json, requiredKeys: const ['strength']);
   return _$_OperationDefinitionBinding(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1271,7 +1396,8 @@ Map<String, dynamic> _$_$_OperationDefinitionBindingToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('strength', _$BindingStrengthEnumMap[instance.strength]);
   writeNotNull('valueSetUri', instance.valueSetUri?.toJson());
@@ -1291,9 +1417,11 @@ _$_ConformanceCertificate _$_$_ConformanceCertificateFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceCertificate(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1302,6 +1430,9 @@ _$_ConformanceCertificate _$_$_ConformanceCertificateFromJson(
     blob: json['blob'] == null
         ? null
         : Base64Binary.fromJson(json['blob'] as String),
+    blobElement: json['_blob'] == null
+        ? null
+        : Element.fromJson(json['_blob'] as Map<String, dynamic>),
   );
 }
 
@@ -1316,10 +1447,12 @@ Map<String, dynamic> _$_$_ConformanceCertificateToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('blob', instance.blob?.toJson());
+  writeNotNull('_blob', instance.blobElement?.toJson());
   return val;
 }
 
@@ -1328,9 +1461,11 @@ _$_ConformanceRestInteraction _$_$_ConformanceRestInteractionFromJson(
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ConformanceRestInteraction(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
@@ -1352,7 +1487,8 @@ Map<String, dynamic> _$_$_ConformanceRestInteractionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', _$InteractionCodeEnumMap[instance.code]);
   writeNotNull('documentation', instance.documentation);
@@ -1364,13 +1500,17 @@ _$_ConformanceSearchParam _$_$_ConformanceSearchParamFromJson(
   $checkKeys(json, requiredKeys: const ['name', 'type']);
   return _$_ConformanceSearchParam(
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
-    extension_: json['extension'] == null
-        ? null
-        : FhirExtension.fromJson(json['extension'] as Map<String, dynamic>),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     name: json['name'] as String,
     definition: json['definition'] == null
         ? null
@@ -1378,8 +1518,9 @@ _$_ConformanceSearchParam _$_$_ConformanceSearchParamFromJson(
     type: _$enumDecodeNullable(_$SearchParamTypeEnumMap, json['type'],
         unknownValue: SearchParamType.unknown),
     documentation: json['documentation'] as String,
-    target:
-        json['target'] == null ? null : Code.fromJson(json['target'] as String),
+    target: (json['target'] as List)
+        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.toList(),
     modifier: (json['modifier'] as List)
         ?.map((e) => _$enumDecodeNullable(_$SearchParamModifierEnumMap, e))
         ?.toList(),
@@ -1398,13 +1539,15 @@ Map<String, dynamic> _$_$_ConformanceSearchParamToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
-  writeNotNull('extension', instance.extension_?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('name', instance.name);
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull('type', _$SearchParamTypeEnumMap[instance.type]);
   writeNotNull('documentation', instance.documentation);
-  writeNotNull('target', instance.target?.toJson());
+  writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifier',
       instance.modifier?.map((e) => _$SearchParamModifierEnumMap[e])?.toList());
   writeNotNull('chain', instance.chain);

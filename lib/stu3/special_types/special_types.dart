@@ -54,7 +54,7 @@ abstract class Meta with _$Meta {
 abstract class Element with _$Element {
   const factory Element({
     String id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
   }) = _Element;
   factory Element.fromJson(Map<String, dynamic> json) =>
       _$ElementFromJson(json);

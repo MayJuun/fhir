@@ -18,8 +18,8 @@ abstract class ExplanationOfBenefit
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     Reference request,
@@ -32,6 +32,11 @@ abstract class ExplanationOfBenefit
     Reference organization,
     Reference requestProvider,
     Reference requestOrganization,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_outcome') Element outcomeElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
   }) = _ExplanationOfBenefit;
 
   factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>

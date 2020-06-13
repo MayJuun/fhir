@@ -16,8 +16,8 @@ abstract class OrderResponse with _$OrderResponse implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) @required Reference request,
@@ -28,6 +28,7 @@ abstract class OrderResponse with _$OrderResponse implements Resource {
         OrderResponseOrderStatus orderStatus,
     String description,
     List<Reference> fulfillment,
+    @JsonKey(name: '_orderStatus') Element orderStatusElement,
   }) = _OrderResponse;
 
   factory OrderResponse.fromJson(Map<String, dynamic> json) =>
@@ -43,8 +44,8 @@ abstract class Order with _$Order implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     FhirDateTime date,
@@ -69,10 +70,11 @@ abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    CodeableConcept bodySiteX,
+    CodeableConcept bodySiteCodeableConcept,
+    Reference bodySiteReference,
     @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
         DeviceUseRequestStatus status,
     @JsonKey(required: true) @required Reference device,
@@ -89,6 +91,10 @@ abstract class DeviceUseRequest with _$DeviceUseRequest implements Resource {
     FhirDateTime timingDateTime,
     @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
         DeviceUseRequestPriority priority,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
   }) = _DeviceUseRequest;
 
   factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
@@ -106,8 +112,8 @@ abstract class DeviceUseStatement
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     CodeableConcept bodySiteCodeableConcept,
     Reference bodySiteReference,
@@ -121,6 +127,10 @@ abstract class DeviceUseStatement
     Timing timingTiming,
     Period timingPeriod,
     FhirDateTime timingDateTime,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    @JsonKey(name: '_recordedOn') Element recordedOnElement,
   }) = _DeviceUseStatement;
 
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
@@ -138,8 +148,8 @@ abstract class CommunicationRequest
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     CodeableConcept category,
@@ -157,6 +167,10 @@ abstract class CommunicationRequest
     FhirDateTime requestedOn,
     Reference subject,
     CodeableConcept priority,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
   }) = _CommunicationRequest;
 
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
@@ -167,8 +181,9 @@ abstract class CommunicationRequest
 abstract class OrderWhen with _$OrderWhen {
   const factory OrderWhen({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept code,
     Timing schedule,
   }) = _OrderWhen;
@@ -181,11 +196,12 @@ abstract class OrderWhen with _$OrderWhen {
 abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
   const factory CommunicationRequestPayload({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     String contentString,
     Attachment contentAttachment,
     Reference contentReference,
+    @JsonKey(name: '_contentString') Element contentStringElement,
   }) = _CommunicationRequestPayload;
 
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>

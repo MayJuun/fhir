@@ -149,7 +149,7 @@ class Resource {
       case 'Linkage':
         return Linkage.fromJson(json);
       case 'List':
-        return Lists.fromJson(json);
+        return List_.fromJson(json);
       case 'Location':
         return Location.fromJson(json);
       case 'Measure':

@@ -16,8 +16,8 @@ abstract class Substance with _$Substance implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     List<CodeableConcept> category,
@@ -25,6 +25,9 @@ abstract class Substance with _$Substance implements Resource {
     String description,
     List<SubstanceInstance> instance,
     List<SubstanceIngredient> ingredient,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _Substance;
 
   factory Substance.fromJson(Map<String, dynamic> json) =>
@@ -40,8 +43,8 @@ abstract class Location with _$Location implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
@@ -55,6 +58,12 @@ abstract class Location with _$Location implements Resource {
     LocationPosition position,
     Reference managingOrganization,
     Reference partOf,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _Location;
 
   factory Location.fromJson(Map<String, dynamic> json) =>
@@ -70,8 +79,8 @@ abstract class Person with _$Person implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     List<Identifier> identifier,
     List<HumanName> name,
@@ -83,6 +92,11 @@ abstract class Person with _$Person implements Resource {
     Reference managingOrganization,
     Boolean active,
     List<PersonLink> link,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_gender') Element genderElement,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
+    @JsonKey(name: '_active') Element activeElement,
   }) = _Person;
 
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
@@ -92,11 +106,12 @@ abstract class Person with _$Person implements Resource {
 abstract class SubstanceInstance with _$SubstanceInstance {
   const factory SubstanceInstance({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     FhirDateTime expiry,
     Quantity quantity,
+    @JsonKey(name: '_expiry') Element expiryElement,
   }) = _SubstanceInstance;
 
   factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
@@ -107,7 +122,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
 abstract class SubstanceIngredient with _$SubstanceIngredient {
   const factory SubstanceIngredient({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Ratio quantity,
     @JsonKey(required: true) @required Reference substance,
@@ -121,11 +136,14 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
 abstract class LocationPosition with _$LocationPosition {
   const factory LocationPosition({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Decimal longitude,
     @JsonKey(required: true) @required Decimal latitude,
     Decimal altitude,
+    @JsonKey(name: '_longitude') Element longitudeElement,
+    @JsonKey(name: '_latitude') Element latitudeElement,
+    @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
 
   factory LocationPosition.fromJson(Map<String, dynamic> json) =>
@@ -136,10 +154,11 @@ abstract class LocationPosition with _$LocationPosition {
 abstract class PersonLink with _$PersonLink {
   const factory PersonLink({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference target,
     @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance assurance,
+    @JsonKey(name: '_assurance') Element assuranceElement,
   }) = _PersonLink;
 
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
@@ -150,7 +169,7 @@ abstract class PersonLink with _$PersonLink {
 abstract class TermActor with _$TermActor {
   const factory TermActor({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference entity,
     List<CodeableConcept> role,
@@ -169,8 +188,8 @@ abstract class Contract with _$Contract implements Resource {
     FhirUri implicitRules,
     Code language,
     Narrative text,
-    Resource contained,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     FhirDateTime issued,
@@ -191,6 +210,9 @@ abstract class Contract with _$Contract implements Resource {
     List<ContractFriendly> friendly,
     List<ContractLegal> legal,
     List<ContractRule> rule,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    @JsonKey(name: '_language') Element languageElement,
+    @JsonKey(name: '_issued') Element issuedElement,
   }) = _Contract;
 
   factory Contract.fromJson(Map<String, dynamic> json) =>
@@ -201,7 +223,7 @@ abstract class Contract with _$Contract implements Resource {
 abstract class ContractActor with _$ContractActor {
   const factory ContractActor({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Reference entity,
     List<CodeableConcept> role,
@@ -215,9 +237,10 @@ abstract class ContractActor with _$ContractActor {
 abstract class ContractValuedItem with _$ContractValuedItem {
   const factory ContractValuedItem({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    CodeableConcept entityX,
+    CodeableConcept entityCodeableConcept,
+    Reference entityReference,
     Identifier identifier,
     FhirDateTime effectiveTime,
     Quantity quantity,
@@ -225,6 +248,10 @@ abstract class ContractValuedItem with _$ContractValuedItem {
     Decimal factor,
     Decimal points,
     Quantity net,
+    @JsonKey(name: '_effectiveTime') Element effectiveTimeElement,
+    @JsonKey(name: '_factor') Element factorElement,
+    @JsonKey(name: '_points') Element pointsElement,
+    List<Element> securityLabelNumberElement,
   }) = _ContractValuedItem;
 
   factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
@@ -235,7 +262,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
 abstract class ContractSigner with _$ContractSigner {
   const factory ContractSigner({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     @JsonKey(required: true) @required Coding type,
     @JsonKey(required: true) @required Reference party,
@@ -250,7 +277,7 @@ abstract class ContractSigner with _$ContractSigner {
 abstract class ContractTerm with _$ContractTerm {
   const factory ContractTerm({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
     Identifier identifier,
     FhirDateTime issued,
@@ -264,6 +291,8 @@ abstract class ContractTerm with _$ContractTerm {
     String text,
     List<ContractValuedItem> valuedItem,
     List<ContractTerm> group,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_text') Element textElement,
   }) = _ContractTerm;
 
   factory ContractTerm.fromJson(Map<String, dynamic> json) =>
@@ -274,9 +303,10 @@ abstract class ContractTerm with _$ContractTerm {
 abstract class ContractFriendly with _$ContractFriendly {
   const factory ContractFriendly({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required Attachment contentX,
+    Attachment contentAttachment,
+    Reference contactReference,
   }) = _ContractFriendly;
 
   factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
@@ -287,9 +317,10 @@ abstract class ContractFriendly with _$ContractFriendly {
 abstract class ContractLegal with _$ContractLegal {
   const factory ContractLegal({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required Attachment contentX,
+    Attachment contentAttachment,
+    Reference content,
   }) = _ContractLegal;
 
   factory ContractLegal.fromJson(Map<String, dynamic> json) =>
@@ -300,9 +331,10 @@ abstract class ContractLegal with _$ContractLegal {
 abstract class ContractRule with _$ContractRule {
   const factory ContractRule({
     Id id,
-    @JsonKey(name: 'extension') FhirExtension extension_,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    @JsonKey(required: true) @required Attachment contentX,
+    Attachment contentAttachment,
+    Reference contentReference,
   }) = _ContractRule;
 
   factory ContractRule.fromJson(Map<String, dynamic> json) =>
