@@ -1417,8 +1417,9 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
-    category: _$enumDecodeNullable(_$DetailCategoryEnumMap, json['category'],
-        unknownValue: DetailCategory.unknown),
+    category: json['category'] == null
+        ? null
+        : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1497,7 +1498,7 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('category', _$DetailCategoryEnumMap[instance.category]);
+  writeNotNull('category', instance.category?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull(
       'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
@@ -1524,17 +1525,6 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
   writeNotNull('_description', instance.descriptionElement?.toJson());
   return val;
 }
-
-const _$DetailCategoryEnumMap = {
-  DetailCategory.diet: 'diet',
-  DetailCategory.drug: 'drug',
-  DetailCategory.encounter: 'encounter',
-  DetailCategory.observation: 'observation',
-  DetailCategory.procedure: 'procedure',
-  DetailCategory.supply: 'supply',
-  DetailCategory.other: 'other',
-  DetailCategory.unknown: 'unknown',
-};
 
 const _$DetailStatusEnumMap = {
   DetailStatus.not_started: 'not-started',

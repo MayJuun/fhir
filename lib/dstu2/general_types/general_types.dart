@@ -294,6 +294,7 @@ abstract class ContactPoint with _$ContactPoint {
   const factory ContactPoint({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
         ContactPointSystem system,
     String value,

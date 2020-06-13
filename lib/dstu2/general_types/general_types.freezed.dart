@@ -6038,6 +6038,8 @@ class _$ContactPointTearOff {
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem system,
       String value,
@@ -6056,6 +6058,7 @@ class _$ContactPointTearOff {
     return _ContactPoint(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       system: system,
       value: value,
       use: use,
@@ -6076,6 +6079,8 @@ mixin _$ContactPoint {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   ContactPointSystem get system;
   String get value;
@@ -6104,6 +6109,8 @@ abstract class $ContactPointCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem system,
       String value,
@@ -6138,6 +6145,7 @@ class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object system = freezed,
     Object value = freezed,
     Object use = freezed,
@@ -6153,6 +6161,9 @@ class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       system: system == freezed ? _value.system : system as ContactPointSystem,
       value: value == freezed ? _value.value : value as String,
       use: use == freezed ? _value.use : use as ContactPointUse,
@@ -6232,6 +6243,8 @@ abstract class _$ContactPointCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem system,
       String value,
@@ -6273,6 +6286,7 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object system = freezed,
     Object value = freezed,
     Object use = freezed,
@@ -6288,6 +6302,9 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       system: system == freezed ? _value.system : system as ContactPointSystem,
       value: value == freezed ? _value.value : value as String,
       use: use == freezed ? _value.use : use as ContactPointUse,
@@ -6312,6 +6329,7 @@ class _$_ContactPoint implements _ContactPoint {
   const _$_ContactPoint(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown) this.system,
       this.value,
       @JsonKey(unknownEnumValue: ContactPointUse.unknown) this.use,
@@ -6330,6 +6348,9 @@ class _$_ContactPoint implements _ContactPoint {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   final ContactPointSystem system;
@@ -6357,7 +6378,7 @@ class _$_ContactPoint implements _ContactPoint {
 
   @override
   String toString() {
-    return 'ContactPoint(id: $id, extension_: $extension_, system: $system, value: $value, use: $use, rank: $rank, period: $period, systemElement: $systemElement, valueElement: $valueElement, useElement: $useElement, rankElement: $rankElement)';
+    return 'ContactPoint(id: $id, extension_: $extension_, fhirComments: $fhirComments, system: $system, value: $value, use: $use, rank: $rank, period: $period, systemElement: $systemElement, valueElement: $valueElement, useElement: $useElement, rankElement: $rankElement)';
   }
 
   @override
@@ -6369,6 +6390,9 @@ class _$_ContactPoint implements _ContactPoint {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.value, value) ||
@@ -6398,6 +6422,7 @@ class _$_ContactPoint implements _ContactPoint {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(use) ^
@@ -6423,6 +6448,8 @@ abstract class _ContactPoint implements ContactPoint {
       {Id id,
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem system,
       String value,
@@ -6447,6 +6474,9 @@ abstract class _ContactPoint implements ContactPoint {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   ContactPointSystem get system;

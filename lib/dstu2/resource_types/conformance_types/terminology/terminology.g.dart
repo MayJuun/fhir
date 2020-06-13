@@ -231,6 +231,8 @@ _$_ValueSetContact _$_$_ValueSetContactFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     name: json['name'] as String,
     telecom: (json['telecom'] as List)
         ?.map((e) =>
@@ -252,6 +254,7 @@ Map<String, dynamic> _$_$_ValueSetContactToJson(_$_ValueSetContact instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('name', instance.name);
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   return val;
@@ -288,6 +291,12 @@ _$_ValueSetCodeSystem _$_$_ValueSetCodeSystemFromJson(
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
+    caseSensitiveElement: json['_caseSensitive'] == null
+        ? null
+        : Element.fromJson(json['_caseSensitive'] as Map<String, dynamic>),
   );
 }
 
@@ -311,6 +320,8 @@ Map<String, dynamic> _$_$_ValueSetCodeSystemToJson(
   writeNotNull('caseSensitive', instance.caseSensitive?.toJson());
   writeNotNull('concept', instance.concept?.map((e) => e?.toJson())?.toList());
   writeNotNull('_system', instance.systemElement?.toJson());
+  writeNotNull('_version', instance.versionElement?.toJson());
+  writeNotNull('_caseSensitive', instance.caseSensitiveElement?.toJson());
   return val;
 }
 
@@ -496,6 +507,8 @@ _$_IncludeExclude _$_$_IncludeExcludeFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     system: json['system'] == null
         ? null
         : FhirUri.fromJson(json['system'] as String),
@@ -532,6 +545,7 @@ Map<String, dynamic> _$_$_IncludeExcludeToJson(_$_IncludeExclude instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('concept', instance.concept?.map((e) => e?.toJson())?.toList());
@@ -555,6 +569,8 @@ _$_IncludeExcludeConcept _$_$_IncludeExcludeConceptFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     display: json['display'] as String,
     designation: (json['designation'] as List)
@@ -585,6 +601,7 @@ Map<String, dynamic> _$_$_IncludeExcludeConceptToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('display', instance.display);
   writeNotNull(
@@ -608,6 +625,8 @@ _$_IncludeExcludeFilter _$_$_IncludeExcludeFilterFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     property: json['property'] == null
         ? null
         : Code.fromJson(json['property'] as String),
@@ -641,6 +660,7 @@ Map<String, dynamic> _$_$_IncludeExcludeFilterToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('property', instance.property?.toJson());
   writeNotNull('op', _$FilterOpEnumMap[instance.op]);
   writeNotNull('value', instance.value?.toJson());
@@ -751,6 +771,8 @@ _$_ValueSetParameter _$_$_ValueSetParameterFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     name: json['name'] as String,
     valueString: json['valueString'] as String,
     valueBoolean: json['valueBoolean'] == null
@@ -806,6 +828,7 @@ Map<String, dynamic> _$_$_ValueSetParameterToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('name', instance.name);
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
@@ -835,6 +858,8 @@ _$_ValueSetContains _$_$_ValueSetContainsFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     system: json['system'] == null
         ? null
         : FhirUri.fromJson(json['system'] as String),
@@ -879,6 +904,7 @@ Map<String, dynamic> _$_$_ValueSetContainsToJson(_$_ValueSetContains instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('abstract', instance.abstract_?.toJson());
   writeNotNull('version', instance.version);

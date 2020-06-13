@@ -920,6 +920,8 @@ _$_ContactPoint _$_$_ContactPointFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     system: _$enumDecodeNullable(_$ContactPointSystemEnumMap, json['system'],
         unknownValue: ContactPointSystem.unknown),
     value: json['value'] as String,
@@ -956,6 +958,7 @@ Map<String, dynamic> _$_$_ContactPointToJson(_$_ContactPoint instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('system', _$ContactPointSystemEnumMap[instance.system]);
   writeNotNull('value', instance.value);
   writeNotNull('use', _$ContactPointUseEnumMap[instance.use]);

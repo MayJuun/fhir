@@ -385,7 +385,7 @@ abstract class CarePlanDetail with _$CarePlanDetail {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
-    @JsonKey(unknownEnumValue: DetailCategory.unknown) DetailCategory category,
+    CodeableConcept category,
     CodeableConcept code,
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,

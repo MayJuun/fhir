@@ -67,6 +67,8 @@ Future<String> checkJsonEquality(Map<String, dynamic> input,
             checkJsonEquality(input[k][j], output[k][j], file, source);
           }
         } else {
+          // print(input[k][j]);
+          // print(output[k][j]);
           if (input[k][j] != output[k][j]) {
             if (isDate(input[k][j])) {
               if (DateTime.tryParse(input[k][j]) !=
@@ -84,6 +86,8 @@ Future<String> checkJsonEquality(Map<String, dynamic> input,
     } else {
       if (input[k].runtimeType.toString() == 'List<String>') {
         for (var x = 0; x < input[k].length; x++) {
+          // print(input[k][x]);
+          // print(output[k][x]);
           if (input[k][x] != output[k][x]) {
             if (isDate(input[k][x])) {
               if (DateTime.tryParse(input[k][x]) !=
@@ -98,6 +102,8 @@ Future<String> checkJsonEquality(Map<String, dynamic> input,
           }
         }
       } else {
+        // print(input[k]);
+        // print(output[k]);
         if (input[k] != output[k]) {
           if (isDate(input[k])) {
             if (DateTime.tryParse(input[k]) != DateTime.tryParse(output[k])) {

@@ -532,6 +532,9 @@ _$_QuestionnaireGroup _$_$_QuestionnaireGroupFromJson(
     titleElement: json['_title'] == null
         ? null
         : Element.fromJson(json['_title'] as Map<String, dynamic>),
+    linkIdElement: json['_linkId'] == null
+        ? null
+        : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
   );
 }
 
@@ -559,6 +562,7 @@ Map<String, dynamic> _$_$_QuestionnaireGroupToJson(
   writeNotNull(
       'question', instance.question?.map((e) => e?.toJson())?.toList());
   writeNotNull('_title', instance.titleElement?.toJson());
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   return val;
 }
 
@@ -708,6 +712,9 @@ _$_QuestionnaireResponseGroup _$_$_QuestionnaireResponseGroupFromJson(
     titleElement: json['_title'] == null
         ? null
         : Element.fromJson(json['_title'] as Map<String, dynamic>),
+    linkIdElement: json['_linkId'] == null
+        ? null
+        : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
   );
 }
 
@@ -734,6 +741,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseGroupToJson(
   writeNotNull(
       'question', instance.question?.map((e) => e?.toJson())?.toList());
   writeNotNull('_title', instance.titleElement?.toJson());
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   return val;
 }
 
@@ -1013,7 +1021,7 @@ _$_QuestionnaireQuestion _$_$_QuestionnaireQuestionFromJson(
     text: json['text'] as String,
     type: _$enumDecodeNullable(_$QuestionTypeEnumMap, json['type'],
         unknownValue: QuestionType.unknown),
-    required:
+    required_:
         json['required'] == null ? null : Boolean.fromJson(json['required']),
     repeats: json['repeats'] == null ? null : Boolean.fromJson(json['repeats']),
     options: json['options'] == null
@@ -1049,7 +1057,7 @@ Map<String, dynamic> _$_$_QuestionnaireQuestionToJson(
   writeNotNull('concept', instance.concept?.map((e) => e?.toJson())?.toList());
   writeNotNull('text', instance.text);
   writeNotNull('type', _$QuestionTypeEnumMap[instance.type]);
-  writeNotNull('required', instance.required?.toJson());
+  writeNotNull('required', instance.required_?.toJson());
   writeNotNull('repeats', instance.repeats?.toJson());
   writeNotNull('options', instance.options?.toJson());
   writeNotNull('option', instance.option?.map((e) => e?.toJson())?.toList());
@@ -1121,6 +1129,8 @@ _$_QuestionnaireResponseQuestion _$_$_QuestionnaireResponseQuestionFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     linkId: json['linkId'] as String,
     text: json['text'] as String,
     answer: (json['answer'] as List)
@@ -1128,6 +1138,9 @@ _$_QuestionnaireResponseQuestion _$_$_QuestionnaireResponseQuestionFromJson(
             ? null
             : QuestionnaireResponseAnswer.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    linkIdElement: json['_linkId'] == null
+        ? null
+        : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
   );
 }
 
@@ -1145,9 +1158,11 @@ Map<String, dynamic> _$_$_QuestionnaireResponseQuestionToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('linkId', instance.linkId);
   writeNotNull('text', instance.text);
   writeNotNull('answer', instance.answer?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_linkId', instance.linkIdElement?.toJson());
   return val;
 }
 
@@ -1250,6 +1265,8 @@ _$_QuestionnaireResponseAnswer _$_$_QuestionnaireResponseAnswerFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     valueBoolean: json['valueBoolean'] == null
         ? null
         : Boolean.fromJson(json['valueBoolean']),
@@ -1333,6 +1350,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseAnswerToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
   writeNotNull('valueInteger', instance.valueInteger?.toJson());

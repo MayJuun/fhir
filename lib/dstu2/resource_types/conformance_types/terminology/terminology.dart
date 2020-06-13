@@ -65,6 +65,7 @@ abstract class ValueSetContact with _$ValueSetContact {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     String name,
     List<ContactPoint> telecom,
   }) = _ValueSetContact;
@@ -85,6 +86,8 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
     Boolean caseSensitive,
     @JsonKey(required: true) @required List<ValueSetConcept> concept,
     @JsonKey(name: '_system') Element systemElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_caseSensitive') Element caseSensitiveElement,
   }) = _ValueSetCodeSystem;
 
   factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
@@ -151,6 +154,7 @@ abstract class IncludeExclude with _$IncludeExclude {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required FhirUri system,
     String version,
     List<IncludeExcludeConcept> concept,
@@ -169,6 +173,7 @@ abstract class IncludeExcludeConcept with _$IncludeExcludeConcept {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code code,
     String display,
     List<ValueSetDesignation> designation,
@@ -186,6 +191,7 @@ abstract class IncludeExcludeFilter with _$IncludeExcludeFilter {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Code property,
     @JsonKey(required: true, unknownEnumValue: FilterOp.unknown)
     @required
@@ -229,6 +235,7 @@ abstract class ValueSetParameter with _$ValueSetParameter {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required String name,
     String valueString,
     Boolean valueBoolean,
@@ -255,6 +262,8 @@ abstract class ValueSetContains with _$ValueSetContains {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirUri system,
     @JsonKey(name: 'abstract') Boolean abstract_,
     String version,

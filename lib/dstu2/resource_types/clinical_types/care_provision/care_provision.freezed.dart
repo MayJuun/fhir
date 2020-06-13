@@ -8293,21 +8293,16 @@ class _$CarePlanDetailTearOff {
 
   _CarePlanDetail call(
       {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @JsonKey(unknownEnumValue: DetailCategory.unknown)
-          DetailCategory category,
+      CodeableConcept category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      @JsonKey(unknownEnumValue: DetailStatus.unknown)
-          DetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
-      @required
-      @JsonKey(required: true)
-          Boolean prohibited,
+      @required @JsonKey(required: true) Boolean prohibited,
       Timing scheduledTiming,
       Period scheduledPeriod,
       String scheduledString,
@@ -8318,12 +8313,9 @@ class _$CarePlanDetailTearOff {
       Quantity dailyAmount,
       Quantity quantity,
       String description,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_scheduledString')
-          Element scheduledStringElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement}) {
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_scheduledString') Element scheduledStringElement,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _CarePlanDetail(
       id: id,
       extension_: extension_,
@@ -8361,8 +8353,7 @@ mixin _$CarePlanDetail {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
-  @JsonKey(unknownEnumValue: DetailCategory.unknown)
-  DetailCategory get category;
+  CodeableConcept get category;
   CodeableConcept get code;
   List<CodeableConcept> get reasonCode;
   List<Reference> get reasonReference;
@@ -8399,20 +8390,16 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       _$CarePlanDetailCopyWithImpl<$Res>;
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @JsonKey(unknownEnumValue: DetailCategory.unknown)
-          DetailCategory category,
+      CodeableConcept category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      @JsonKey(unknownEnumValue: DetailStatus.unknown)
-          DetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
-      @JsonKey(required: true)
-          Boolean prohibited,
+      @JsonKey(required: true) Boolean prohibited,
       Timing scheduledTiming,
       Period scheduledPeriod,
       String scheduledString,
@@ -8423,14 +8410,12 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       Quantity dailyAmount,
       Quantity quantity,
       String description,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_scheduledString')
-          Element scheduledStringElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement});
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_scheduledString') Element scheduledStringElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get code;
   $CodeableConceptCopyWith<$Res> get statusReason;
   $TimingCopyWith<$Res> get scheduledTiming;
@@ -8489,7 +8474,7 @@ class _$CarePlanDetailCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       category:
-          category == freezed ? _value.category : category as DetailCategory,
+          category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
@@ -8547,6 +8532,16 @@ class _$CarePlanDetailCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
     });
   }
 
@@ -8680,20 +8675,16 @@ abstract class _$CarePlanDetailCopyWith<$Res>
   @override
   $Res call(
       {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
-      @JsonKey(unknownEnumValue: DetailCategory.unknown)
-          DetailCategory category,
+      CodeableConcept category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
       List<Reference> goal,
-      @JsonKey(unknownEnumValue: DetailStatus.unknown)
-          DetailStatus status,
+      @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
       CodeableConcept statusReason,
-      @JsonKey(required: true)
-          Boolean prohibited,
+      @JsonKey(required: true) Boolean prohibited,
       Timing scheduledTiming,
       Period scheduledPeriod,
       String scheduledString,
@@ -8704,15 +8695,14 @@ abstract class _$CarePlanDetailCopyWith<$Res>
       Quantity dailyAmount,
       Quantity quantity,
       String description,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_scheduledString')
-          Element scheduledStringElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement});
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_scheduledString') Element scheduledStringElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $CodeableConceptCopyWith<$Res> get category;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -8785,7 +8775,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
       category:
-          category == freezed ? _value.category : category as DetailCategory,
+          category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
@@ -8843,7 +8833,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: DetailCategory.unknown) this.category,
+      this.category,
       this.code,
       this.reasonCode,
       this.reasonReference,
@@ -8877,8 +8867,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
   @override
   final FhirExtension modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: DetailCategory.unknown)
-  final DetailCategory category;
+  final CodeableConcept category;
   @override
   final CodeableConcept code;
   @override
@@ -9042,38 +9031,31 @@ class _$_CarePlanDetail implements _CarePlanDetail {
 
 abstract class _CarePlanDetail implements CarePlanDetail {
   const factory _CarePlanDetail(
-      {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(unknownEnumValue: DetailCategory.unknown)
-          DetailCategory category,
-      CodeableConcept code,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
-      List<Reference> goal,
-      @JsonKey(unknownEnumValue: DetailStatus.unknown)
-          DetailStatus status,
-      CodeableConcept statusReason,
-      @required
-      @JsonKey(required: true)
-          Boolean prohibited,
-      Timing scheduledTiming,
-      Period scheduledPeriod,
-      String scheduledString,
-      Reference location,
-      List<Reference> performer,
-      CodeableConcept productCodeableConcept,
-      Reference productReference,
-      Quantity dailyAmount,
-      Quantity quantity,
-      String description,
-      @JsonKey(name: '_status')
-          Element statusElement,
-      @JsonKey(name: '_scheduledString')
-          Element scheduledStringElement,
-      @JsonKey(name: '_description')
-          Element descriptionElement}) = _$_CarePlanDetail;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          CodeableConcept category,
+          CodeableConcept code,
+          List<CodeableConcept> reasonCode,
+          List<Reference> reasonReference,
+          List<Reference> goal,
+          @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus status,
+          CodeableConcept statusReason,
+          @required @JsonKey(required: true) Boolean prohibited,
+          Timing scheduledTiming,
+          Period scheduledPeriod,
+          String scheduledString,
+          Reference location,
+          List<Reference> performer,
+          CodeableConcept productCodeableConcept,
+          Reference productReference,
+          Quantity dailyAmount,
+          Quantity quantity,
+          String description,
+          @JsonKey(name: '_status') Element statusElement,
+          @JsonKey(name: '_scheduledString') Element scheduledStringElement,
+          @JsonKey(name: '_description') Element descriptionElement}) =
+      _$_CarePlanDetail;
 
   factory _CarePlanDetail.fromJson(Map<String, dynamic> json) =
       _$_CarePlanDetail.fromJson;
@@ -9086,8 +9068,7 @@ abstract class _CarePlanDetail implements CarePlanDetail {
   @override
   FhirExtension get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: DetailCategory.unknown)
-  DetailCategory get category;
+  CodeableConcept get category;
   @override
   CodeableConcept get code;
   @override

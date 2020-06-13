@@ -128,6 +128,7 @@ abstract class PractitionerPractitionerRole
   const factory PractitionerPractitionerRole({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     FhirExtension modifierExtension,
     Reference managingOrganization,
     CodeableConcept role,

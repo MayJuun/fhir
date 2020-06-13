@@ -2820,6 +2820,7 @@ class _$PractitionerPractitionerRoleTearOff {
   _PractitionerPractitionerRole call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
@@ -2830,6 +2831,7 @@ class _$PractitionerPractitionerRoleTearOff {
     return _PractitionerPractitionerRole(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       modifierExtension: modifierExtension,
       managingOrganization: managingOrganization,
       role: role,
@@ -2848,6 +2850,8 @@ mixin _$PractitionerPractitionerRole {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   FhirExtension get modifierExtension;
   Reference get managingOrganization;
   CodeableConcept get role;
@@ -2869,6 +2873,7 @@ abstract class $PractitionerPractitionerRoleCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
@@ -2895,6 +2900,7 @@ class _$PractitionerPractitionerRoleCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object modifierExtension = freezed,
     Object managingOrganization = freezed,
     Object role = freezed,
@@ -2908,6 +2914,9 @@ class _$PractitionerPractitionerRoleCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -2978,6 +2987,7 @@ abstract class _$PractitionerPractitionerRoleCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
@@ -3012,6 +3022,7 @@ class __$PractitionerPractitionerRoleCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object modifierExtension = freezed,
     Object managingOrganization = freezed,
     Object role = freezed,
@@ -3025,6 +3036,9 @@ class __$PractitionerPractitionerRoleCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
@@ -3050,6 +3064,7 @@ class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
   const _$_PractitionerPractitionerRole(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.modifierExtension,
       this.managingOrganization,
       this.role,
@@ -3067,6 +3082,9 @@ class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final FhirExtension modifierExtension;
   @override
   final Reference managingOrganization;
@@ -3083,7 +3101,7 @@ class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
 
   @override
   String toString() {
-    return 'PractitionerPractitionerRole(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, managingOrganization: $managingOrganization, role: $role, specialty: $specialty, period: $period, location: $location, healthcareService: $healthcareService)';
+    return 'PractitionerPractitionerRole(id: $id, extension_: $extension_, fhirComments: $fhirComments, modifierExtension: $modifierExtension, managingOrganization: $managingOrganization, role: $role, specialty: $specialty, period: $period, location: $location, healthcareService: $healthcareService)';
   }
 
   @override
@@ -3095,6 +3113,9 @@ class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
@@ -3121,6 +3142,7 @@ class _$_PractitionerPractitionerRole implements _PractitionerPractitionerRole {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(managingOrganization) ^
       const DeepCollectionEquality().hash(role) ^
@@ -3145,6 +3167,7 @@ abstract class _PractitionerPractitionerRole
   const factory _PractitionerPractitionerRole(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirExtension modifierExtension,
       Reference managingOrganization,
       CodeableConcept role,
@@ -3161,6 +3184,9 @@ abstract class _PractitionerPractitionerRole
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   FhirExtension get modifierExtension;
   @override

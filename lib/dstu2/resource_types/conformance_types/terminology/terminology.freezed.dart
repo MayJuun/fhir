@@ -1357,12 +1357,14 @@ class _$ValueSetContactTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String name,
       List<ContactPoint> telecom}) {
     return _ValueSetContact(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       name: name,
       telecom: telecom,
     );
@@ -1377,6 +1379,8 @@ mixin _$ValueSetContact {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   String get name;
   List<ContactPoint> get telecom;
 
@@ -1392,6 +1396,7 @@ abstract class $ValueSetContactCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String name,
       List<ContactPoint> telecom});
 
@@ -1411,6 +1416,7 @@ class _$ValueSetContactCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object name = freezed,
     Object telecom = freezed,
   }) {
@@ -1422,6 +1428,9 @@ class _$ValueSetContactCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       name: name == freezed ? _value.name : name as String,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
@@ -1449,6 +1458,7 @@ abstract class _$ValueSetContactCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String name,
       List<ContactPoint> telecom});
 
@@ -1471,6 +1481,7 @@ class __$ValueSetContactCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object name = freezed,
     Object telecom = freezed,
   }) {
@@ -1482,6 +1493,9 @@ class __$ValueSetContactCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       name: name == freezed ? _value.name : name as String,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
@@ -1495,6 +1509,7 @@ class _$_ValueSetContact implements _ValueSetContact {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.name,
       this.telecom});
 
@@ -1509,13 +1524,16 @@ class _$_ValueSetContact implements _ValueSetContact {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final String name;
   @override
   final List<ContactPoint> telecom;
 
   @override
   String toString() {
-    return 'ValueSetContact(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, telecom: $telecom)';
+    return 'ValueSetContact(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, telecom: $telecom)';
   }
 
   @override
@@ -1530,6 +1548,9 @@ class _$_ValueSetContact implements _ValueSetContact {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.telecom, telecom) ||
@@ -1542,6 +1563,7 @@ class _$_ValueSetContact implements _ValueSetContact {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
@@ -1560,6 +1582,7 @@ abstract class _ValueSetContact implements ValueSetContact {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String name,
       List<ContactPoint> telecom}) = _$_ValueSetContact;
 
@@ -1573,6 +1596,9 @@ abstract class _ValueSetContact implements ValueSetContact {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   String get name;
   @override
@@ -1597,7 +1623,9 @@ class _$ValueSetCodeSystemTearOff {
       String version,
       Boolean caseSensitive,
       @required @JsonKey(required: true) List<ValueSetConcept> concept,
-      @JsonKey(name: '_system') Element systemElement}) {
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_caseSensitive') Element caseSensitiveElement}) {
     return _ValueSetCodeSystem(
       id: id,
       extension_: extension_,
@@ -1608,6 +1636,8 @@ class _$ValueSetCodeSystemTearOff {
       caseSensitive: caseSensitive,
       concept: concept,
       systemElement: systemElement,
+      versionElement: versionElement,
+      caseSensitiveElement: caseSensitiveElement,
     );
   }
 }
@@ -1630,6 +1660,10 @@ mixin _$ValueSetCodeSystem {
   List<ValueSetConcept> get concept;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_caseSensitive')
+  Element get caseSensitiveElement;
 
   Map<String, dynamic> toJson();
   $ValueSetCodeSystemCopyWith<ValueSetCodeSystem> get copyWith;
@@ -1648,10 +1682,14 @@ abstract class $ValueSetCodeSystemCopyWith<$Res> {
       String version,
       Boolean caseSensitive,
       @JsonKey(required: true) List<ValueSetConcept> concept,
-      @JsonKey(name: '_system') Element systemElement});
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_caseSensitive') Element caseSensitiveElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ElementCopyWith<$Res> get systemElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get caseSensitiveElement;
 }
 
 class _$ValueSetCodeSystemCopyWithImpl<$Res>
@@ -1673,6 +1711,8 @@ class _$ValueSetCodeSystemCopyWithImpl<$Res>
     Object caseSensitive = freezed,
     Object concept = freezed,
     Object systemElement = freezed,
+    Object versionElement = freezed,
+    Object caseSensitiveElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -1696,6 +1736,12 @@ class _$ValueSetCodeSystemCopyWithImpl<$Res>
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      caseSensitiveElement: caseSensitiveElement == freezed
+          ? _value.caseSensitiveElement
+          : caseSensitiveElement as Element,
     ));
   }
 
@@ -1718,6 +1764,26 @@ class _$ValueSetCodeSystemCopyWithImpl<$Res>
       return _then(_value.copyWith(systemElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get caseSensitiveElement {
+    if (_value.caseSensitiveElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.caseSensitiveElement, (value) {
+      return _then(_value.copyWith(caseSensitiveElement: value));
+    });
+  }
 }
 
 abstract class _$ValueSetCodeSystemCopyWith<$Res>
@@ -1735,12 +1801,18 @@ abstract class _$ValueSetCodeSystemCopyWith<$Res>
       String version,
       Boolean caseSensitive,
       @JsonKey(required: true) List<ValueSetConcept> concept,
-      @JsonKey(name: '_system') Element systemElement});
+      @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_caseSensitive') Element caseSensitiveElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ElementCopyWith<$Res> get systemElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get caseSensitiveElement;
 }
 
 class __$ValueSetCodeSystemCopyWithImpl<$Res>
@@ -1764,6 +1836,8 @@ class __$ValueSetCodeSystemCopyWithImpl<$Res>
     Object caseSensitive = freezed,
     Object concept = freezed,
     Object systemElement = freezed,
+    Object versionElement = freezed,
+    Object caseSensitiveElement = freezed,
   }) {
     return _then(_ValueSetCodeSystem(
       id: id == freezed ? _value.id : id as Id,
@@ -1787,6 +1861,12 @@ class __$ValueSetCodeSystemCopyWithImpl<$Res>
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      caseSensitiveElement: caseSensitiveElement == freezed
+          ? _value.caseSensitiveElement
+          : caseSensitiveElement as Element,
     ));
   }
 }
@@ -1802,7 +1882,9 @@ class _$_ValueSetCodeSystem implements _ValueSetCodeSystem {
       this.version,
       this.caseSensitive,
       @required @JsonKey(required: true) this.concept,
-      @JsonKey(name: '_system') this.systemElement})
+      @JsonKey(name: '_system') this.systemElement,
+      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_caseSensitive') this.caseSensitiveElement})
       : assert(system != null),
         assert(concept != null);
 
@@ -1832,10 +1914,16 @@ class _$_ValueSetCodeSystem implements _ValueSetCodeSystem {
   @override
   @JsonKey(name: '_system')
   final Element systemElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_caseSensitive')
+  final Element caseSensitiveElement;
 
   @override
   String toString() {
-    return 'ValueSetCodeSystem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, system: $system, version: $version, caseSensitive: $caseSensitive, concept: $concept, systemElement: $systemElement)';
+    return 'ValueSetCodeSystem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, system: $system, version: $version, caseSensitive: $caseSensitive, concept: $concept, systemElement: $systemElement, versionElement: $versionElement, caseSensitiveElement: $caseSensitiveElement)';
   }
 
   @override
@@ -1866,7 +1954,13 @@ class _$_ValueSetCodeSystem implements _ValueSetCodeSystem {
                     .equals(other.concept, concept)) &&
             (identical(other.systemElement, systemElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.systemElement, systemElement)));
+                    .equals(other.systemElement, systemElement)) &&
+            (identical(other.versionElement, versionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.versionElement, versionElement)) &&
+            (identical(other.caseSensitiveElement, caseSensitiveElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.caseSensitiveElement, caseSensitiveElement)));
   }
 
   @override
@@ -1880,7 +1974,9 @@ class _$_ValueSetCodeSystem implements _ValueSetCodeSystem {
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(caseSensitive) ^
       const DeepCollectionEquality().hash(concept) ^
-      const DeepCollectionEquality().hash(systemElement);
+      const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(caseSensitiveElement);
 
   @override
   _$ValueSetCodeSystemCopyWith<_ValueSetCodeSystem> get copyWith =>
@@ -1894,15 +1990,18 @@ class _$_ValueSetCodeSystem implements _ValueSetCodeSystem {
 
 abstract class _ValueSetCodeSystem implements ValueSetCodeSystem {
   const factory _ValueSetCodeSystem(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirExtension modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-      @required @JsonKey(required: true) FhirUri system,
-      String version,
-      Boolean caseSensitive,
-      @required @JsonKey(required: true) List<ValueSetConcept> concept,
-      @JsonKey(name: '_system') Element systemElement}) = _$_ValueSetCodeSystem;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
+          @required @JsonKey(required: true) FhirUri system,
+          String version,
+          Boolean caseSensitive,
+          @required @JsonKey(required: true) List<ValueSetConcept> concept,
+          @JsonKey(name: '_system') Element systemElement,
+          @JsonKey(name: '_version') Element versionElement,
+          @JsonKey(name: '_caseSensitive') Element caseSensitiveElement}) =
+      _$_ValueSetCodeSystem;
 
   factory _ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCodeSystem.fromJson;
@@ -1930,6 +2029,12 @@ abstract class _ValueSetCodeSystem implements ValueSetCodeSystem {
   @override
   @JsonKey(name: '_system')
   Element get systemElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_caseSensitive')
+  Element get caseSensitiveElement;
   @override
   _$ValueSetCodeSystemCopyWith<_ValueSetCodeSystem> get copyWith;
 }
@@ -2991,6 +3096,7 @@ class _$IncludeExcludeTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) FhirUri system,
       String version,
       List<IncludeExcludeConcept> concept,
@@ -3001,6 +3107,7 @@ class _$IncludeExcludeTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       system: system,
       version: version,
       concept: concept,
@@ -3019,6 +3126,8 @@ mixin _$IncludeExclude {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   FhirUri get system;
   String get version;
@@ -3041,6 +3150,7 @@ abstract class $IncludeExcludeCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) FhirUri system,
       String version,
       List<IncludeExcludeConcept> concept,
@@ -3066,6 +3176,7 @@ class _$IncludeExcludeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object system = freezed,
     Object version = freezed,
     Object concept = freezed,
@@ -3081,6 +3192,9 @@ class _$IncludeExcludeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
       concept: concept == freezed
@@ -3139,6 +3253,7 @@ abstract class _$IncludeExcludeCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) FhirUri system,
       String version,
       List<IncludeExcludeConcept> concept,
@@ -3169,6 +3284,7 @@ class __$IncludeExcludeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object system = freezed,
     Object version = freezed,
     Object concept = freezed,
@@ -3184,6 +3300,9 @@ class __$IncludeExcludeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
       concept: concept == freezed
@@ -3208,6 +3327,7 @@ class _$_IncludeExclude implements _IncludeExclude {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.system,
       this.version,
       this.concept,
@@ -3227,6 +3347,9 @@ class _$_IncludeExclude implements _IncludeExclude {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(required: true)
   final FhirUri system;
   @override
@@ -3244,7 +3367,7 @@ class _$_IncludeExclude implements _IncludeExclude {
 
   @override
   String toString() {
-    return 'IncludeExclude(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, version: $version, concept: $concept, filter: $filter, systemElement: $systemElement, versionElement: $versionElement)';
+    return 'IncludeExclude(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, system: $system, version: $version, concept: $concept, filter: $filter, systemElement: $systemElement, versionElement: $versionElement)';
   }
 
   @override
@@ -3259,6 +3382,9 @@ class _$_IncludeExclude implements _IncludeExclude {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.version, version) ||
@@ -3283,6 +3409,7 @@ class _$_IncludeExclude implements _IncludeExclude {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(concept) ^
@@ -3305,6 +3432,7 @@ abstract class _IncludeExclude implements IncludeExclude {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) FhirUri system,
       String version,
       List<IncludeExcludeConcept> concept,
@@ -3322,6 +3450,9 @@ abstract class _IncludeExclude implements IncludeExclude {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   FhirUri get system;
@@ -3353,6 +3484,7 @@ class _$IncludeExcludeConceptTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) Code code,
       String display,
       List<ValueSetDesignation> designation,
@@ -3362,6 +3494,7 @@ class _$IncludeExcludeConceptTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       code: code,
       display: display,
       designation: designation,
@@ -3379,6 +3512,8 @@ mixin _$IncludeExcludeConcept {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   Code get code;
   String get display;
@@ -3400,6 +3535,7 @@ abstract class $IncludeExcludeConceptCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Code code,
       String display,
       List<ValueSetDesignation> designation,
@@ -3424,6 +3560,7 @@ class _$IncludeExcludeConceptCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object display = freezed,
     Object designation = freezed,
@@ -3438,6 +3575,9 @@ class _$IncludeExcludeConceptCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as Code,
       display: display == freezed ? _value.display : display as String,
       designation: designation == freezed
@@ -3492,6 +3632,7 @@ abstract class _$IncludeExcludeConceptCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Code code,
       String display,
       List<ValueSetDesignation> designation,
@@ -3521,6 +3662,7 @@ class __$IncludeExcludeConceptCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object display = freezed,
     Object designation = freezed,
@@ -3535,6 +3677,9 @@ class __$IncludeExcludeConceptCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as Code,
       display: display == freezed ? _value.display : display as String,
       designation: designation == freezed
@@ -3555,6 +3700,7 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.code,
       this.display,
       this.designation,
@@ -3573,6 +3719,9 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(required: true)
   final Code code;
   @override
@@ -3588,7 +3737,7 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
 
   @override
   String toString() {
-    return 'IncludeExcludeConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, display: $display, designation: $designation, codeElement: $codeElement, displayElement: $displayElement)';
+    return 'IncludeExcludeConcept(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, code: $code, display: $display, designation: $designation, codeElement: $codeElement, displayElement: $displayElement)';
   }
 
   @override
@@ -3603,6 +3752,9 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.display, display) ||
@@ -3625,6 +3777,7 @@ class _$_IncludeExcludeConcept implements _IncludeExcludeConcept {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(display) ^
       const DeepCollectionEquality().hash(designation) ^
@@ -3647,6 +3800,7 @@ abstract class _IncludeExcludeConcept implements IncludeExcludeConcept {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           @required @JsonKey(required: true) Code code,
           String display,
           List<ValueSetDesignation> designation,
@@ -3664,6 +3818,9 @@ abstract class _IncludeExcludeConcept implements IncludeExcludeConcept {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   Code get code;
@@ -3693,6 +3850,8 @@ class _$IncludeExcludeFilterTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @required
       @JsonKey(required: true)
           Code property,
@@ -3712,6 +3871,7 @@ class _$IncludeExcludeFilterTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       property: property,
       op: op,
       value: value,
@@ -3730,6 +3890,8 @@ mixin _$IncludeExcludeFilter {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   Code get property;
   @JsonKey(required: true, unknownEnumValue: FilterOp.unknown)
@@ -3755,6 +3917,7 @@ abstract class $IncludeExcludeFilterCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Code property,
       @JsonKey(required: true, unknownEnumValue: FilterOp.unknown) FilterOp op,
       @JsonKey(required: true) Code value,
@@ -3781,6 +3944,7 @@ class _$IncludeExcludeFilterCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object property = freezed,
     Object op = freezed,
     Object value = freezed,
@@ -3796,6 +3960,9 @@ class _$IncludeExcludeFilterCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       property: property == freezed ? _value.property : property as Code,
       op: op == freezed ? _value.op : op as FilterOp,
       value: value == freezed ? _value.value : value as Code,
@@ -3860,6 +4027,7 @@ abstract class _$IncludeExcludeFilterCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Code property,
       @JsonKey(required: true, unknownEnumValue: FilterOp.unknown) FilterOp op,
       @JsonKey(required: true) Code value,
@@ -3892,6 +4060,7 @@ class __$IncludeExcludeFilterCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object property = freezed,
     Object op = freezed,
     Object value = freezed,
@@ -3907,6 +4076,9 @@ class __$IncludeExcludeFilterCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       property: property == freezed ? _value.property : property as Code,
       op: op == freezed ? _value.op : op as FilterOp,
       value: value == freezed ? _value.value : value as Code,
@@ -3928,6 +4100,8 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          this.fhirComments,
       @required
       @JsonKey(required: true)
           this.property,
@@ -3958,6 +4132,9 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(required: true)
   final Code property;
   @override
@@ -3978,7 +4155,7 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
 
   @override
   String toString() {
-    return 'IncludeExcludeFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, property: $property, op: $op, value: $value, propertyElement: $propertyElement, opElement: $opElement, valueElement: $valueElement)';
+    return 'IncludeExcludeFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, property: $property, op: $op, value: $value, propertyElement: $propertyElement, opElement: $opElement, valueElement: $valueElement)';
   }
 
   @override
@@ -3993,6 +4170,9 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.property, property) ||
                 const DeepCollectionEquality()
                     .equals(other.property, property)) &&
@@ -4017,6 +4197,7 @@ class _$_IncludeExcludeFilter implements _IncludeExcludeFilter {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(property) ^
       const DeepCollectionEquality().hash(op) ^
       const DeepCollectionEquality().hash(value) ^
@@ -4041,6 +4222,8 @@ abstract class _IncludeExcludeFilter implements IncludeExcludeFilter {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @required
       @JsonKey(required: true)
           Code property,
@@ -4067,6 +4250,9 @@ abstract class _IncludeExcludeFilter implements IncludeExcludeFilter {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   Code get property;
@@ -4611,6 +4797,7 @@ class _$ValueSetParameterTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) String name,
       String valueString,
       Boolean valueBoolean,
@@ -4629,6 +4816,7 @@ class _$ValueSetParameterTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       name: name,
       valueString: valueString,
       valueBoolean: valueBoolean,
@@ -4655,6 +4843,8 @@ mixin _$ValueSetParameter {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   String get name;
   String get valueString;
@@ -4690,6 +4880,7 @@ abstract class $ValueSetParameterCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) String name,
       String valueString,
       Boolean valueBoolean,
@@ -4728,6 +4919,7 @@ class _$ValueSetParameterCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object name = freezed,
     Object valueString = freezed,
     Object valueBoolean = freezed,
@@ -4751,6 +4943,9 @@ class _$ValueSetParameterCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       name: name == freezed ? _value.name : name as String,
       valueString:
           valueString == freezed ? _value.valueString : valueString as String,
@@ -4879,6 +5074,7 @@ abstract class _$ValueSetParameterCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) String name,
       String valueString,
       Boolean valueBoolean,
@@ -4927,6 +5123,7 @@ class __$ValueSetParameterCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object name = freezed,
     Object valueString = freezed,
     Object valueBoolean = freezed,
@@ -4950,6 +5147,9 @@ class __$ValueSetParameterCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       name: name == freezed ? _value.name : name as String,
       valueString:
           valueString == freezed ? _value.valueString : valueString as String,
@@ -4994,6 +5194,7 @@ class _$_ValueSetParameter implements _ValueSetParameter {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.name,
       this.valueString,
       this.valueBoolean,
@@ -5020,6 +5221,9 @@ class _$_ValueSetParameter implements _ValueSetParameter {
   final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   @JsonKey(required: true)
   final String name;
@@ -5059,7 +5263,7 @@ class _$_ValueSetParameter implements _ValueSetParameter {
 
   @override
   String toString() {
-    return 'ValueSetParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, valueString: $valueString, valueBoolean: $valueBoolean, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueUri: $valueUri, valueCode: $valueCode, nameElement: $nameElement, valueStringElement: $valueStringElement, valueBooleanElement: $valueBooleanElement, valueIntegerElement: $valueIntegerElement, valueDecimalElement: $valueDecimalElement, valueUriElement: $valueUriElement, valueCodeElement: $valueCodeElement)';
+    return 'ValueSetParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, valueString: $valueString, valueBoolean: $valueBoolean, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueUri: $valueUri, valueCode: $valueCode, nameElement: $nameElement, valueStringElement: $valueStringElement, valueBooleanElement: $valueBooleanElement, valueIntegerElement: $valueIntegerElement, valueDecimalElement: $valueDecimalElement, valueUriElement: $valueUriElement, valueCodeElement: $valueCodeElement)';
   }
 
   @override
@@ -5074,6 +5278,9 @@ class _$_ValueSetParameter implements _ValueSetParameter {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.valueString, valueString) ||
@@ -5123,6 +5330,7 @@ class _$_ValueSetParameter implements _ValueSetParameter {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(valueString) ^
       const DeepCollectionEquality().hash(valueBoolean) ^
@@ -5153,6 +5361,7 @@ abstract class _ValueSetParameter implements ValueSetParameter {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           @required @JsonKey(required: true) String name,
           String valueString,
           Boolean valueBoolean,
@@ -5179,6 +5388,9 @@ abstract class _ValueSetParameter implements ValueSetParameter {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   String get name;
@@ -5230,6 +5442,7 @@ class _$ValueSetContainsTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirUri system,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String version,
@@ -5245,6 +5458,7 @@ class _$ValueSetContainsTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       system: system,
       abstract_: abstract_,
       version: version,
@@ -5268,6 +5482,8 @@ mixin _$ValueSetContains {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   FhirUri get system;
   @JsonKey(name: 'abstract')
   Boolean get abstract_;
@@ -5298,6 +5514,7 @@ abstract class $ValueSetContainsCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirUri system,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String version,
@@ -5331,6 +5548,7 @@ class _$ValueSetContainsCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object system = freezed,
     Object abstract_ = freezed,
     Object version = freezed,
@@ -5351,6 +5569,9 @@ class _$ValueSetContainsCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       system: system == freezed ? _value.system : system as FhirUri,
       abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       version: version == freezed ? _value.version : version as String,
@@ -5447,6 +5668,7 @@ abstract class _$ValueSetContainsCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirUri system,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String version,
@@ -5488,6 +5710,7 @@ class __$ValueSetContainsCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object system = freezed,
     Object abstract_ = freezed,
     Object version = freezed,
@@ -5508,6 +5731,9 @@ class __$ValueSetContainsCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       system: system == freezed ? _value.system : system as FhirUri,
       abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       version: version == freezed ? _value.version : version as String,
@@ -5540,6 +5766,7 @@ class _$_ValueSetContains implements _ValueSetContains {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.system,
       @JsonKey(name: 'abstract') this.abstract_,
       this.version,
@@ -5562,6 +5789,9 @@ class _$_ValueSetContains implements _ValueSetContains {
   final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final FhirUri system;
   @override
@@ -5593,7 +5823,7 @@ class _$_ValueSetContains implements _ValueSetContains {
 
   @override
   String toString() {
-    return 'ValueSetContains(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, abstract_: $abstract_, version: $version, code: $code, display: $display, contains: $contains, systemElement: $systemElement, abstractElement: $abstractElement, versionElement: $versionElement, codeElement: $codeElement, displayElement: $displayElement)';
+    return 'ValueSetContains(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, system: $system, abstract_: $abstract_, version: $version, code: $code, display: $display, contains: $contains, systemElement: $systemElement, abstractElement: $abstractElement, versionElement: $versionElement, codeElement: $codeElement, displayElement: $displayElement)';
   }
 
   @override
@@ -5608,6 +5838,9 @@ class _$_ValueSetContains implements _ValueSetContains {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.abstract_, abstract_) ||
@@ -5647,6 +5880,7 @@ class _$_ValueSetContains implements _ValueSetContains {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(abstract_) ^
       const DeepCollectionEquality().hash(version) ^
@@ -5674,6 +5908,7 @@ abstract class _ValueSetContains implements ValueSetContains {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       FhirUri system,
       @JsonKey(name: 'abstract') Boolean abstract_,
       String version,
@@ -5696,6 +5931,9 @@ abstract class _ValueSetContains implements ValueSetContains {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   FhirUri get system;
   @override

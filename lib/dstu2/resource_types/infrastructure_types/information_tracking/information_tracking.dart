@@ -151,6 +151,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
     List<QuestionnaireGroup> group,
     List<QuestionnaireQuestion> question,
     @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_linkId') Element linkIdElement,
   }) = _QuestionnaireGroup;
 
   factory QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
@@ -207,6 +208,7 @@ abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
     List<QuestionnaireResponseGroup> group,
     List<QuestionnaireResponseQuestion> question,
     @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_linkId') Element linkIdElement,
   }) = _QuestionnaireResponseGroup;
 
   factory QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
@@ -303,11 +305,12 @@ abstract class QuestionnaireQuestion with _$QuestionnaireQuestion {
     List<Coding> concept,
     String text,
     @JsonKey(unknownEnumValue: QuestionType.unknown) QuestionType type,
-    Boolean required,
+    @JsonKey(name: 'required') Boolean required_,
     Boolean repeats,
     Reference options,
     List<Coding> option,
     List<QuestionnaireGroup> group,
+
   }) = _QuestionnaireQuestion;
 
   factory QuestionnaireQuestion.fromJson(Map<String, dynamic> json) =>
@@ -335,9 +338,11 @@ abstract class QuestionnaireResponseQuestion
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     String linkId,
     String text,
     List<QuestionnaireResponseAnswer> answer,
+    @JsonKey(name: '_linkId') Element linkIdElement,
   }) = _QuestionnaireResponseQuestion;
 
   factory QuestionnaireResponseQuestion.fromJson(Map<String, dynamic> json) =>
@@ -381,6 +386,7 @@ abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Boolean valueBoolean,
     Decimal valueDecimal,
     Integer valueInteger,
