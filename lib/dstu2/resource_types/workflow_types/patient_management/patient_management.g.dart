@@ -502,6 +502,7 @@ const _$EncounterClassEnumMap = {
   EncounterClass.outpatient: 'outpatient',
   EncounterClass.ambulatory: 'ambulatory',
   EncounterClass.emergency: 'emergency',
+  EncounterClass.virtual: 'virtual',
   EncounterClass.unknown: 'unknown',
 };
 

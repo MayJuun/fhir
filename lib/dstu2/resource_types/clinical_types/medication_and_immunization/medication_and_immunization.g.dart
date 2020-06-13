@@ -965,6 +965,9 @@ _$_MedicationOrder _$_$_MedicationOrderFromJson(Map<String, dynamic> json) {
     idElement: json['_id'] == null
         ? null
         : Element.fromJson(json['_id'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
   );
 }
 
@@ -1010,6 +1013,7 @@ Map<String, dynamic> _$_$_MedicationOrderToJson(_$_MedicationOrder instance) {
   writeNotNull('substitution', instance.substitution?.toJson());
   writeNotNull('priorPrescription', instance.priorPrescription?.toJson());
   writeNotNull('_id', instance.idElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
   return val;
 }
 

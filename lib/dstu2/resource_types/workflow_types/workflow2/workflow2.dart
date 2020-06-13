@@ -79,6 +79,7 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
 @freezed
 abstract class ProcessResponse with _$ProcessResponse implements Resource {
   const factory ProcessResponse({
+    @JsonKey(defaultValue: 'ProcessResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

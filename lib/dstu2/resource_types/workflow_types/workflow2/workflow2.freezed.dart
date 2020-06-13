@@ -1624,7 +1624,8 @@ class _$ProcessResponseTearOff {
   const _$ProcessResponseTearOff();
 
   _ProcessResponse call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1646,6 +1647,7 @@ class _$ProcessResponseTearOff {
       List<ProcessResponseNotes> notes,
       List<Coding> error}) {
     return _ProcessResponse(
+      resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
@@ -1675,6 +1677,8 @@ class _$ProcessResponseTearOff {
 const $ProcessResponse = _$ProcessResponseTearOff();
 
 mixin _$ProcessResponse {
+  @JsonKey(defaultValue: 'ProcessResponse')
+  String get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1707,7 +1711,8 @@ abstract class $ProcessResponseCopyWith<$Res> {
           ProcessResponse value, $Res Function(ProcessResponse) then) =
       _$ProcessResponseCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1752,6 +1757,7 @@ class _$ProcessResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -1775,6 +1781,9 @@ class _$ProcessResponseCopyWithImpl<$Res>
     Object error = freezed,
   }) {
     return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1936,7 +1945,8 @@ abstract class _$ProcessResponseCopyWith<$Res>
       __$ProcessResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -1994,6 +2004,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object resourceType = freezed,
     Object id = freezed,
     Object meta = freezed,
     Object implicitRules = freezed,
@@ -2017,6 +2028,9 @@ class __$ProcessResponseCopyWithImpl<$Res>
     Object error = freezed,
   }) {
     return _then(_ProcessResponse(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2064,7 +2078,8 @@ class __$ProcessResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ProcessResponse implements _ProcessResponse {
   const _$_ProcessResponse(
-      {this.id,
+      {@JsonKey(defaultValue: 'ProcessResponse') this.resourceType,
+      this.id,
       this.meta,
       this.implicitRules,
       this.language,
@@ -2089,6 +2104,9 @@ class _$_ProcessResponse implements _ProcessResponse {
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseFromJson(json);
 
+  @override
+  @JsonKey(defaultValue: 'ProcessResponse')
+  final String resourceType;
   @override
   final Id id;
   @override
@@ -2135,13 +2153,16 @@ class _$_ProcessResponse implements _ProcessResponse {
 
   @override
   String toString() {
-    return 'ProcessResponse(id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, outcome: $outcome, disposition: $disposition, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, form: $form, notes: $notes, error: $error)';
+    return 'ProcessResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, outcome: $outcome, disposition: $disposition, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, form: $form, notes: $notes, error: $error)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ProcessResponse &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.meta, meta) ||
@@ -2204,6 +2225,7 @@ class _$_ProcessResponse implements _ProcessResponse {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
@@ -2238,7 +2260,8 @@ class _$_ProcessResponse implements _ProcessResponse {
 
 abstract class _ProcessResponse implements ProcessResponse {
   const factory _ProcessResponse(
-      {Id id,
+      {@JsonKey(defaultValue: 'ProcessResponse') String resourceType,
+      Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
@@ -2263,6 +2286,9 @@ abstract class _ProcessResponse implements ProcessResponse {
   factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponse.fromJson;
 
+  @override
+  @JsonKey(defaultValue: 'ProcessResponse')
+  String get resourceType;
   @override
   Id get id;
   @override

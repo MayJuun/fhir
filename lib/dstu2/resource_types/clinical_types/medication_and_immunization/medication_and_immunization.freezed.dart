@@ -5466,7 +5466,9 @@ class _$MedicationOrderTearOff {
       MedicationOrderSubstitution substitution,
       Reference priorPrescription,
       @JsonKey(name: '_id')
-          Element idElement}) {
+          Element idElement,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _MedicationOrder(
       resourceType: resourceType,
       id: id,
@@ -5495,6 +5497,7 @@ class _$MedicationOrderTearOff {
       substitution: substitution,
       priorPrescription: priorPrescription,
       idElement: idElement,
+      statusElement: statusElement,
     );
   }
 }
@@ -5534,6 +5537,8 @@ mixin _$MedicationOrder {
   Reference get priorPrescription;
   @JsonKey(name: '_id')
   Element get idElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $MedicationOrderCopyWith<MedicationOrder> get copyWith;
@@ -5574,7 +5579,9 @@ abstract class $MedicationOrderCopyWith<$Res> {
       MedicationOrderSubstitution substitution,
       Reference priorPrescription,
       @JsonKey(name: '_id')
-          Element idElement});
+          Element idElement,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -5591,6 +5598,7 @@ abstract class $MedicationOrderCopyWith<$Res> {
   $MedicationOrderSubstitutionCopyWith<$Res> get substitution;
   $ReferenceCopyWith<$Res> get priorPrescription;
   $ElementCopyWith<$Res> get idElement;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$MedicationOrderCopyWithImpl<$Res>
@@ -5630,6 +5638,7 @@ class _$MedicationOrderCopyWithImpl<$Res>
     Object substitution = freezed,
     Object priorPrescription = freezed,
     Object idElement = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -5694,6 +5703,9 @@ class _$MedicationOrderCopyWithImpl<$Res>
           ? _value.priorPrescription
           : priorPrescription as Reference,
       idElement: idElement == freezed ? _value.idElement : idElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -5850,6 +5862,16 @@ class _$MedicationOrderCopyWithImpl<$Res>
       return _then(_value.copyWith(idElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
 }
 
 abstract class _$MedicationOrderCopyWith<$Res>
@@ -5889,7 +5911,9 @@ abstract class _$MedicationOrderCopyWith<$Res>
       MedicationOrderSubstitution substitution,
       Reference priorPrescription,
       @JsonKey(name: '_id')
-          Element idElement});
+          Element idElement,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -5921,6 +5945,8 @@ abstract class _$MedicationOrderCopyWith<$Res>
   $ReferenceCopyWith<$Res> get priorPrescription;
   @override
   $ElementCopyWith<$Res> get idElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$MedicationOrderCopyWithImpl<$Res>
@@ -5962,6 +5988,7 @@ class __$MedicationOrderCopyWithImpl<$Res>
     Object substitution = freezed,
     Object priorPrescription = freezed,
     Object idElement = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_MedicationOrder(
       resourceType: resourceType == freezed
@@ -6026,6 +6053,9 @@ class __$MedicationOrderCopyWithImpl<$Res>
           ? _value.priorPrescription
           : priorPrescription as Reference,
       idElement: idElement == freezed ? _value.idElement : idElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -6059,7 +6089,8 @@ class _$_MedicationOrder implements _MedicationOrder {
       this.dispenseRequest,
       this.substitution,
       this.priorPrescription,
-      @JsonKey(name: '_id') this.idElement});
+      @JsonKey(name: '_id') this.idElement,
+      @JsonKey(name: '_status') this.statusElement});
 
   factory _$_MedicationOrder.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationOrderFromJson(json);
@@ -6122,10 +6153,13 @@ class _$_MedicationOrder implements _MedicationOrder {
   @override
   @JsonKey(name: '_id')
   final Element idElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'MedicationOrder(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, dateWritten: $dateWritten, status: $status, dateEnded: $dateEnded, reasonEnded: $reasonEnded, patient: $patient, prescriber: $prescriber, encounter: $encounter, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, dosageInstruction: $dosageInstruction, dispenseRequest: $dispenseRequest, substitution: $substitution, priorPrescription: $priorPrescription, idElement: $idElement)';
+    return 'MedicationOrder(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, dateWritten: $dateWritten, status: $status, dateEnded: $dateEnded, reasonEnded: $reasonEnded, patient: $patient, prescriber: $prescriber, encounter: $encounter, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, dosageInstruction: $dosageInstruction, dispenseRequest: $dispenseRequest, substitution: $substitution, priorPrescription: $priorPrescription, idElement: $idElement, statusElement: $statusElement)';
   }
 
   @override
@@ -6200,7 +6234,8 @@ class _$_MedicationOrder implements _MedicationOrder {
             (identical(other.dispenseRequest, dispenseRequest) || const DeepCollectionEquality().equals(other.dispenseRequest, dispenseRequest)) &&
             (identical(other.substitution, substitution) || const DeepCollectionEquality().equals(other.substitution, substitution)) &&
             (identical(other.priorPrescription, priorPrescription) || const DeepCollectionEquality().equals(other.priorPrescription, priorPrescription)) &&
-            (identical(other.idElement, idElement) || const DeepCollectionEquality().equals(other.idElement, idElement)));
+            (identical(other.idElement, idElement) || const DeepCollectionEquality().equals(other.idElement, idElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)));
   }
 
   @override
@@ -6232,7 +6267,8 @@ class _$_MedicationOrder implements _MedicationOrder {
       const DeepCollectionEquality().hash(dispenseRequest) ^
       const DeepCollectionEquality().hash(substitution) ^
       const DeepCollectionEquality().hash(priorPrescription) ^
-      const DeepCollectionEquality().hash(idElement);
+      const DeepCollectionEquality().hash(idElement) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$MedicationOrderCopyWith<_MedicationOrder> get copyWith =>
@@ -6276,7 +6312,9 @@ abstract class _MedicationOrder implements MedicationOrder {
       MedicationOrderSubstitution substitution,
       Reference priorPrescription,
       @JsonKey(name: '_id')
-          Element idElement}) = _$_MedicationOrder;
+          Element idElement,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_MedicationOrder;
 
   factory _MedicationOrder.fromJson(Map<String, dynamic> json) =
       _$_MedicationOrder.fromJson;
@@ -6339,6 +6377,9 @@ abstract class _MedicationOrder implements MedicationOrder {
   @override
   @JsonKey(name: '_id')
   Element get idElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   _$MedicationOrderCopyWith<_MedicationOrder> get copyWith;
 }

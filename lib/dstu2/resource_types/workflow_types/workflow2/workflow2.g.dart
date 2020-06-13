@@ -282,6 +282,7 @@ const _$SupplyDeliveryStatusEnumMap = {
 
 _$_ProcessResponse _$_$_ProcessResponseFromJson(Map<String, dynamic> json) {
   return _$_ProcessResponse(
+    resourceType: json['resourceType'] as String ?? 'ProcessResponse',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -362,6 +363,7 @@ Map<String, dynamic> _$_$_ProcessResponseToJson(_$_ProcessResponse instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

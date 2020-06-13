@@ -267,6 +267,7 @@ abstract class MedicationOrder with _$MedicationOrder implements Resource {
     MedicationOrderSubstitution substitution,
     Reference priorPrescription,
     @JsonKey(name: '_id') Element idElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _MedicationOrder;
 
   factory MedicationOrder.fromJson(Map<String, dynamic> json) =>

@@ -55,9 +55,12 @@ enum EncounterClass {
   ambulatory,
   @JsonValue('emergency')
   emergency,
+  @JsonValue('virtual')
+  virtual,
   @JsonValue('unknown')
   unknown,
 }
+
 enum FlagStatus {
   @JsonValue('active')
   active,
