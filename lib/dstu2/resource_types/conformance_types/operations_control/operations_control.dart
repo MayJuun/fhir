@@ -333,6 +333,7 @@ abstract class ConformanceResource with _$ConformanceResource {
     List<String> searchInclude,
     List<String> searchRevInclude,
     List<ConformanceSearchParam> searchParam,
+    @JsonKey(name: '_type') Element typeElement,
     @JsonKey(name: '_updateCreate') Element updateCreateElement,
     @JsonKey(name: '_conditionalCreate') Element conditionalCreateElement,
     @JsonKey(name: '_conditionalDelete') Element conditionalDeleteElement,

@@ -1083,6 +1083,9 @@ _$_ConformanceResource _$_$_ConformanceResourceFromJson(
             ? null
             : ConformanceSearchParam.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
     updateCreateElement: json['_updateCreate'] == null
         ? null
         : Element.fromJson(json['_updateCreate'] as Map<String, dynamic>),
@@ -1125,6 +1128,7 @@ Map<String, dynamic> _$_$_ConformanceResourceToJson(
   writeNotNull('searchRevInclude', instance.searchRevInclude);
   writeNotNull(
       'searchParam', instance.searchParam?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('_updateCreate', instance.updateCreateElement?.toJson());
   writeNotNull(
       '_conditionalCreate', instance.conditionalCreateElement?.toJson());

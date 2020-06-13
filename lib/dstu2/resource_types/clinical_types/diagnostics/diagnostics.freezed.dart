@@ -7613,6 +7613,7 @@ class _$ObservationReferenceRangeTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Quantity low,
       Quantity high,
       CodeableConcept meaning,
@@ -7623,6 +7624,7 @@ class _$ObservationReferenceRangeTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       low: low,
       high: high,
       meaning: meaning,
@@ -7641,6 +7643,8 @@ mixin _$ObservationReferenceRange {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   Quantity get low;
   Quantity get high;
   CodeableConcept get meaning;
@@ -7661,6 +7665,7 @@ abstract class $ObservationReferenceRangeCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Quantity low,
       Quantity high,
       CodeableConcept meaning,
@@ -7689,6 +7694,7 @@ class _$ObservationReferenceRangeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object low = freezed,
     Object high = freezed,
     Object meaning = freezed,
@@ -7704,6 +7710,9 @@ class _$ObservationReferenceRangeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       low: low == freezed ? _value.low : low as Quantity,
       high: high == freezed ? _value.high : high as Quantity,
       meaning: meaning == freezed ? _value.meaning : meaning as CodeableConcept,
@@ -7785,6 +7794,7 @@ abstract class _$ObservationReferenceRangeCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Quantity low,
       Quantity high,
       CodeableConcept meaning,
@@ -7822,6 +7832,7 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object low = freezed,
     Object high = freezed,
     Object meaning = freezed,
@@ -7837,6 +7848,9 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       low: low == freezed ? _value.low : low as Quantity,
       high: high == freezed ? _value.high : high as Quantity,
       meaning: meaning == freezed ? _value.meaning : meaning as CodeableConcept,
@@ -7854,6 +7868,7 @@ class _$_ObservationReferenceRange implements _ObservationReferenceRange {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.low,
       this.high,
       this.meaning,
@@ -7872,6 +7887,9 @@ class _$_ObservationReferenceRange implements _ObservationReferenceRange {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final Quantity low;
   @override
   final Quantity high;
@@ -7887,7 +7905,7 @@ class _$_ObservationReferenceRange implements _ObservationReferenceRange {
 
   @override
   String toString() {
-    return 'ObservationReferenceRange(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, low: $low, high: $high, meaning: $meaning, age: $age, text: $text, textElement: $textElement)';
+    return 'ObservationReferenceRange(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, low: $low, high: $high, meaning: $meaning, age: $age, text: $text, textElement: $textElement)';
   }
 
   @override
@@ -7902,6 +7920,9 @@ class _$_ObservationReferenceRange implements _ObservationReferenceRange {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.low, low) ||
                 const DeepCollectionEquality().equals(other.low, low)) &&
             (identical(other.high, high) ||
@@ -7924,6 +7945,7 @@ class _$_ObservationReferenceRange implements _ObservationReferenceRange {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(low) ^
       const DeepCollectionEquality().hash(high) ^
       const DeepCollectionEquality().hash(meaning) ^
@@ -7948,6 +7970,7 @@ abstract class _ObservationReferenceRange implements ObservationReferenceRange {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           Quantity low,
           Quantity high,
           CodeableConcept meaning,
@@ -7966,6 +7989,9 @@ abstract class _ObservationReferenceRange implements ObservationReferenceRange {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   Quantity get low;
   @override
@@ -7994,12 +8020,14 @@ class _$ObservationRelatedTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
       @required @JsonKey(required: true) Reference target}) {
     return _ObservationRelated(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       type: type,
       target: target,
     );
@@ -8014,6 +8042,8 @@ mixin _$ObservationRelated {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(unknownEnumValue: RelatedType.unknown)
   RelatedType get type;
   @JsonKey(required: true)
@@ -8031,6 +8061,7 @@ abstract class $ObservationRelatedCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
       @JsonKey(required: true) Reference target});
 
@@ -8051,6 +8082,7 @@ class _$ObservationRelatedCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object type = freezed,
     Object target = freezed,
   }) {
@@ -8062,6 +8094,9 @@ class _$ObservationRelatedCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       type: type == freezed ? _value.type : type as RelatedType,
       target: target == freezed ? _value.target : target as Reference,
     ));
@@ -8098,6 +8133,7 @@ abstract class _$ObservationRelatedCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
       @JsonKey(required: true) Reference target});
 
@@ -8122,6 +8158,7 @@ class __$ObservationRelatedCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object type = freezed,
     Object target = freezed,
   }) {
@@ -8133,6 +8170,9 @@ class __$ObservationRelatedCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       type: type == freezed ? _value.type : type as RelatedType,
       target: target == freezed ? _value.target : target as Reference,
     ));
@@ -8145,6 +8185,7 @@ class _$_ObservationRelated implements _ObservationRelated {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @JsonKey(unknownEnumValue: RelatedType.unknown) this.type,
       @required @JsonKey(required: true) this.target})
       : assert(target != null);
@@ -8160,6 +8201,9 @@ class _$_ObservationRelated implements _ObservationRelated {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(unknownEnumValue: RelatedType.unknown)
   final RelatedType type;
   @override
@@ -8168,7 +8212,7 @@ class _$_ObservationRelated implements _ObservationRelated {
 
   @override
   String toString() {
-    return 'ObservationRelated(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, target: $target)';
+    return 'ObservationRelated(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, type: $type, target: $target)';
   }
 
   @override
@@ -8183,6 +8227,9 @@ class _$_ObservationRelated implements _ObservationRelated {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.target, target) ||
@@ -8195,6 +8242,7 @@ class _$_ObservationRelated implements _ObservationRelated {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(target);
 
@@ -8213,6 +8261,7 @@ abstract class _ObservationRelated implements ObservationRelated {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
           @required @JsonKey(required: true) Reference target}) =
       _$_ObservationRelated;
@@ -8227,6 +8276,9 @@ abstract class _ObservationRelated implements ObservationRelated {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(unknownEnumValue: RelatedType.unknown)
   RelatedType get type;
@@ -8248,6 +8300,7 @@ class _$ObservationComponentTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) CodeableConcept code,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
@@ -8268,6 +8321,7 @@ class _$ObservationComponentTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       code: code,
       valueQuantity: valueQuantity,
       valueCodeableConcept: valueCodeableConcept,
@@ -8296,6 +8350,8 @@ mixin _$ObservationComponent {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   CodeableConcept get code;
   Quantity get valueQuantity;
@@ -8329,6 +8385,7 @@ abstract class $ObservationComponentCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) CodeableConcept code,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
@@ -8374,6 +8431,7 @@ class _$ObservationComponentCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object valueQuantity = freezed,
     Object valueCodeableConcept = freezed,
@@ -8399,6 +8457,9 @@ class _$ObservationComponentCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
@@ -8583,6 +8644,7 @@ abstract class _$ObservationComponentCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) CodeableConcept code,
       Quantity valueQuantity,
       CodeableConcept valueCodeableConcept,
@@ -8643,6 +8705,7 @@ class __$ObservationComponentCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object valueQuantity = freezed,
     Object valueCodeableConcept = freezed,
@@ -8668,6 +8731,9 @@ class __$ObservationComponentCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
@@ -8718,6 +8784,7 @@ class _$_ObservationComponent implements _ObservationComponent {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.code,
       this.valueQuantity,
       this.valueCodeableConcept,
@@ -8746,6 +8813,9 @@ class _$_ObservationComponent implements _ObservationComponent {
   final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   @JsonKey(required: true)
   final CodeableConcept code;
@@ -8785,7 +8855,7 @@ class _$_ObservationComponent implements _ObservationComponent {
 
   @override
   String toString() {
-    return 'ObservationComponent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueAttachment: $valueAttachment, valueTime: $valueTime, valueDateTime: $valueDateTime, valuePeriod: $valuePeriod, dataAbsentReason: $dataAbsentReason, referenceRange: $referenceRange, valueStringElement: $valueStringElement, valueTimeElement: $valueTimeElement, valueDateTimeElement: $valueDateTimeElement)';
+    return 'ObservationComponent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, code: $code, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueAttachment: $valueAttachment, valueTime: $valueTime, valueDateTime: $valueDateTime, valuePeriod: $valuePeriod, dataAbsentReason: $dataAbsentReason, referenceRange: $referenceRange, valueStringElement: $valueStringElement, valueTimeElement: $valueTimeElement, valueDateTimeElement: $valueDateTimeElement)';
   }
 
   @override
@@ -8800,6 +8870,9 @@ class _$_ObservationComponent implements _ObservationComponent {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.valueQuantity, valueQuantity) ||
@@ -8855,6 +8928,7 @@ class _$_ObservationComponent implements _ObservationComponent {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueCodeableConcept) ^
@@ -8888,6 +8962,7 @@ abstract class _ObservationComponent implements ObservationComponent {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           @required @JsonKey(required: true) CodeableConcept code,
           Quantity valueQuantity,
           CodeableConcept valueCodeableConcept,
@@ -8916,6 +8991,9 @@ abstract class _ObservationComponent implements ObservationComponent {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   CodeableConcept get code;

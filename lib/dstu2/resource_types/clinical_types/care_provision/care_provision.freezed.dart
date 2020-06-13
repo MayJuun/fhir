@@ -7260,6 +7260,7 @@ class _$NutritionOrderSupplementTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept type,
       String productName,
       List<Timing> schedule,
@@ -7271,6 +7272,7 @@ class _$NutritionOrderSupplementTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       type: type,
       productName: productName,
       schedule: schedule,
@@ -7290,6 +7292,8 @@ mixin _$NutritionOrderSupplement {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   CodeableConcept get type;
   String get productName;
   List<Timing> get schedule;
@@ -7312,6 +7316,7 @@ abstract class $NutritionOrderSupplementCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept type,
       String productName,
       List<Timing> schedule,
@@ -7340,6 +7345,7 @@ class _$NutritionOrderSupplementCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object type = freezed,
     Object productName = freezed,
     Object schedule = freezed,
@@ -7356,6 +7362,9 @@ class _$NutritionOrderSupplementCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       productName:
           productName == freezed ? _value.productName : productName as String,
@@ -7434,6 +7443,7 @@ abstract class _$NutritionOrderSupplementCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept type,
       String productName,
       List<Timing> schedule,
@@ -7470,6 +7480,7 @@ class __$NutritionOrderSupplementCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object type = freezed,
     Object productName = freezed,
     Object schedule = freezed,
@@ -7486,6 +7497,9 @@ class __$NutritionOrderSupplementCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       productName:
           productName == freezed ? _value.productName : productName as String,
@@ -7510,6 +7524,7 @@ class _$_NutritionOrderSupplement implements _NutritionOrderSupplement {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.type,
       this.productName,
       this.schedule,
@@ -7529,6 +7544,9 @@ class _$_NutritionOrderSupplement implements _NutritionOrderSupplement {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final CodeableConcept type;
   @override
   final String productName;
@@ -7547,7 +7565,7 @@ class _$_NutritionOrderSupplement implements _NutritionOrderSupplement {
 
   @override
   String toString() {
-    return 'NutritionOrderSupplement(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, productName: $productName, schedule: $schedule, quantity: $quantity, instruction: $instruction, productNameElement: $productNameElement, instructionElement: $instructionElement)';
+    return 'NutritionOrderSupplement(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, type: $type, productName: $productName, schedule: $schedule, quantity: $quantity, instruction: $instruction, productNameElement: $productNameElement, instructionElement: $instructionElement)';
   }
 
   @override
@@ -7562,6 +7580,9 @@ class _$_NutritionOrderSupplement implements _NutritionOrderSupplement {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.productName, productName) ||
@@ -7590,6 +7611,7 @@ class _$_NutritionOrderSupplement implements _NutritionOrderSupplement {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(productName) ^
       const DeepCollectionEquality().hash(schedule) ^
@@ -7614,6 +7636,7 @@ abstract class _NutritionOrderSupplement implements NutritionOrderSupplement {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           CodeableConcept type,
           String productName,
           List<Timing> schedule,
@@ -7633,6 +7656,9 @@ abstract class _NutritionOrderSupplement implements NutritionOrderSupplement {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   CodeableConcept get type;
   @override
@@ -9471,12 +9497,14 @@ class _$NutritionOrderTextureTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept modifier,
       CodeableConcept foodType}) {
     return _NutritionOrderTexture(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       modifier: modifier,
       foodType: foodType,
     );
@@ -9491,6 +9519,8 @@ mixin _$NutritionOrderTexture {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   CodeableConcept get modifier;
   CodeableConcept get foodType;
 
@@ -9506,6 +9536,7 @@ abstract class $NutritionOrderTextureCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept modifier,
       CodeableConcept foodType});
 
@@ -9527,6 +9558,7 @@ class _$NutritionOrderTextureCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object modifier = freezed,
     Object foodType = freezed,
   }) {
@@ -9538,6 +9570,9 @@ class _$NutritionOrderTextureCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifier:
           modifier == freezed ? _value.modifier : modifier as CodeableConcept,
       foodType:
@@ -9586,6 +9621,7 @@ abstract class _$NutritionOrderTextureCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept modifier,
       CodeableConcept foodType});
 
@@ -9612,6 +9648,7 @@ class __$NutritionOrderTextureCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object modifier = freezed,
     Object foodType = freezed,
   }) {
@@ -9623,6 +9660,9 @@ class __$NutritionOrderTextureCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       modifier:
           modifier == freezed ? _value.modifier : modifier as CodeableConcept,
       foodType:
@@ -9637,6 +9677,7 @@ class _$_NutritionOrderTexture implements _NutritionOrderTexture {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.modifier,
       this.foodType});
 
@@ -9651,13 +9692,16 @@ class _$_NutritionOrderTexture implements _NutritionOrderTexture {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final CodeableConcept modifier;
   @override
   final CodeableConcept foodType;
 
   @override
   String toString() {
-    return 'NutritionOrderTexture(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, modifier: $modifier, foodType: $foodType)';
+    return 'NutritionOrderTexture(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, modifier: $modifier, foodType: $foodType)';
   }
 
   @override
@@ -9672,6 +9716,9 @@ class _$_NutritionOrderTexture implements _NutritionOrderTexture {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.modifier, modifier) ||
                 const DeepCollectionEquality()
                     .equals(other.modifier, modifier)) &&
@@ -9686,6 +9733,7 @@ class _$_NutritionOrderTexture implements _NutritionOrderTexture {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(modifier) ^
       const DeepCollectionEquality().hash(foodType);
 
@@ -9705,6 +9753,7 @@ abstract class _NutritionOrderTexture implements NutritionOrderTexture {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept modifier,
       CodeableConcept foodType}) = _$_NutritionOrderTexture;
 
@@ -9718,6 +9767,9 @@ abstract class _NutritionOrderTexture implements NutritionOrderTexture {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   CodeableConcept get modifier;
   @override

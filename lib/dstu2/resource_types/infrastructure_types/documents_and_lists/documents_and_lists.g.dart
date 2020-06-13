@@ -764,6 +764,8 @@ _$_CompositionSection _$_$_CompositionSectionFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     title: json['title'] as String,
     code: json['code'] == null
         ? null
@@ -811,6 +813,7 @@ Map<String, dynamic> _$_$_CompositionSectionToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('title', instance.title);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('text', instance.text?.toJson());
@@ -1089,6 +1092,8 @@ _$_ListEntry _$_$_ListEntryFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     flag: json['flag'] == null
         ? null
         : CodeableConcept.fromJson(json['flag'] as Map<String, dynamic>),
@@ -1121,6 +1126,7 @@ Map<String, dynamic> _$_$_ListEntryToJson(_$_ListEntry instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('flag', instance.flag?.toJson());
   writeNotNull('deleted', instance.deleted?.toJson());
   writeNotNull('date', instance.date?.toJson());

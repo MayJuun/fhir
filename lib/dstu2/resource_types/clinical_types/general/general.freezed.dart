@@ -6649,8 +6649,8 @@ class _$AllergyIntoleranceTearOff {
           Element criticalityElement,
       @JsonKey(name: '_recordedDate')
           Element recordedDateElement,
-      @JsonKey(name: '_lastOccurrence')
-          Element lastOccurrenceElement}) {
+      @JsonKey(name: '_lastOccurence')
+          Element lastOccurenceElement}) {
     return _AllergyIntolerance(
       resourceType: resourceType,
       id: id,
@@ -6682,7 +6682,7 @@ class _$AllergyIntoleranceTearOff {
       categoryElement: categoryElement,
       criticalityElement: criticalityElement,
       recordedDateElement: recordedDateElement,
-      lastOccurrenceElement: lastOccurrenceElement,
+      lastOccurenceElement: lastOccurenceElement,
     );
   }
 }
@@ -6736,8 +6736,8 @@ mixin _$AllergyIntolerance {
   Element get criticalityElement;
   @JsonKey(name: '_recordedDate')
   Element get recordedDateElement;
-  @JsonKey(name: '_lastOccurrence')
-  Element get lastOccurrenceElement;
+  @JsonKey(name: '_lastOccurence')
+  Element get lastOccurenceElement;
 
   Map<String, dynamic> toJson();
   $AllergyIntoleranceCopyWith<AllergyIntolerance> get copyWith;
@@ -6793,8 +6793,8 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
           Element criticalityElement,
       @JsonKey(name: '_recordedDate')
           Element recordedDateElement,
-      @JsonKey(name: '_lastOccurrence')
-          Element lastOccurrenceElement});
+      @JsonKey(name: '_lastOccurence')
+          Element lastOccurenceElement});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -6811,7 +6811,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
   $ElementCopyWith<$Res> get categoryElement;
   $ElementCopyWith<$Res> get criticalityElement;
   $ElementCopyWith<$Res> get recordedDateElement;
-  $ElementCopyWith<$Res> get lastOccurrenceElement;
+  $ElementCopyWith<$Res> get lastOccurenceElement;
 }
 
 class _$AllergyIntoleranceCopyWithImpl<$Res>
@@ -6854,7 +6854,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
     Object categoryElement = freezed,
     Object criticalityElement = freezed,
     Object recordedDateElement = freezed,
-    Object lastOccurrenceElement = freezed,
+    Object lastOccurenceElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -6925,9 +6925,9 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       recordedDateElement: recordedDateElement == freezed
           ? _value.recordedDateElement
           : recordedDateElement as Element,
-      lastOccurrenceElement: lastOccurrenceElement == freezed
-          ? _value.lastOccurrenceElement
-          : lastOccurrenceElement as Element,
+      lastOccurenceElement: lastOccurenceElement == freezed
+          ? _value.lastOccurenceElement
+          : lastOccurenceElement as Element,
     ));
   }
 
@@ -7082,12 +7082,12 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
   }
 
   @override
-  $ElementCopyWith<$Res> get lastOccurrenceElement {
-    if (_value.lastOccurrenceElement == null) {
+  $ElementCopyWith<$Res> get lastOccurenceElement {
+    if (_value.lastOccurenceElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.lastOccurrenceElement, (value) {
-      return _then(_value.copyWith(lastOccurrenceElement: value));
+    return $ElementCopyWith<$Res>(_value.lastOccurenceElement, (value) {
+      return _then(_value.copyWith(lastOccurenceElement: value));
     });
   }
 }
@@ -7144,8 +7144,8 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
           Element criticalityElement,
       @JsonKey(name: '_recordedDate')
           Element recordedDateElement,
-      @JsonKey(name: '_lastOccurrence')
-          Element lastOccurrenceElement});
+      @JsonKey(name: '_lastOccurence')
+          Element lastOccurenceElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -7178,7 +7178,7 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get recordedDateElement;
   @override
-  $ElementCopyWith<$Res> get lastOccurrenceElement;
+  $ElementCopyWith<$Res> get lastOccurenceElement;
 }
 
 class __$AllergyIntoleranceCopyWithImpl<$Res>
@@ -7223,7 +7223,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
     Object categoryElement = freezed,
     Object criticalityElement = freezed,
     Object recordedDateElement = freezed,
-    Object lastOccurrenceElement = freezed,
+    Object lastOccurenceElement = freezed,
   }) {
     return _then(_AllergyIntolerance(
       resourceType: resourceType == freezed
@@ -7294,9 +7294,9 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       recordedDateElement: recordedDateElement == freezed
           ? _value.recordedDateElement
           : recordedDateElement as Element,
-      lastOccurrenceElement: lastOccurrenceElement == freezed
-          ? _value.lastOccurrenceElement
-          : lastOccurrenceElement as Element,
+      lastOccurenceElement: lastOccurenceElement == freezed
+          ? _value.lastOccurenceElement
+          : lastOccurenceElement as Element,
     ));
   }
 }
@@ -7351,8 +7351,8 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
           this.criticalityElement,
       @JsonKey(name: '_recordedDate')
           this.recordedDateElement,
-      @JsonKey(name: '_lastOccurrence')
-          this.lastOccurrenceElement})
+      @JsonKey(name: '_lastOccurence')
+          this.lastOccurenceElement})
       : assert(patient != null),
         assert(substance != null);
 
@@ -7435,12 +7435,12 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   @JsonKey(name: '_recordedDate')
   final Element recordedDateElement;
   @override
-  @JsonKey(name: '_lastOccurrence')
-  final Element lastOccurrenceElement;
+  @JsonKey(name: '_lastOccurence')
+  final Element lastOccurenceElement;
 
   @override
   String toString() {
-    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, onset: $onset, recordedDate: $recordedDate, recorder: $recorder, patient: $patient, reporter: $reporter, substance: $substance, status: $status, criticality: $criticality, type: $type, category: $category, lastOccurence: $lastOccurence, note: $note, reaction: $reaction, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, typeElement: $typeElement, categoryElement: $categoryElement, criticalityElement: $criticalityElement, recordedDateElement: $recordedDateElement, lastOccurrenceElement: $lastOccurrenceElement)';
+    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, onset: $onset, recordedDate: $recordedDate, recorder: $recorder, patient: $patient, reporter: $reporter, substance: $substance, status: $status, criticality: $criticality, type: $type, category: $category, lastOccurence: $lastOccurence, note: $note, reaction: $reaction, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, typeElement: $typeElement, categoryElement: $categoryElement, criticalityElement: $criticalityElement, recordedDateElement: $recordedDateElement, lastOccurenceElement: $lastOccurenceElement)';
   }
 
   @override
@@ -7519,7 +7519,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
             (identical(other.categoryElement, categoryElement) || const DeepCollectionEquality().equals(other.categoryElement, categoryElement)) &&
             (identical(other.criticalityElement, criticalityElement) || const DeepCollectionEquality().equals(other.criticalityElement, criticalityElement)) &&
             (identical(other.recordedDateElement, recordedDateElement) || const DeepCollectionEquality().equals(other.recordedDateElement, recordedDateElement)) &&
-            (identical(other.lastOccurrenceElement, lastOccurrenceElement) || const DeepCollectionEquality().equals(other.lastOccurrenceElement, lastOccurrenceElement)));
+            (identical(other.lastOccurenceElement, lastOccurenceElement) || const DeepCollectionEquality().equals(other.lastOccurenceElement, lastOccurenceElement)));
   }
 
   @override
@@ -7555,7 +7555,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
       const DeepCollectionEquality().hash(categoryElement) ^
       const DeepCollectionEquality().hash(criticalityElement) ^
       const DeepCollectionEquality().hash(recordedDateElement) ^
-      const DeepCollectionEquality().hash(lastOccurrenceElement);
+      const DeepCollectionEquality().hash(lastOccurenceElement);
 
   @override
   _$AllergyIntoleranceCopyWith<_AllergyIntolerance> get copyWith =>
@@ -7616,8 +7616,8 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
           Element criticalityElement,
       @JsonKey(name: '_recordedDate')
           Element recordedDateElement,
-      @JsonKey(name: '_lastOccurrence')
-          Element lastOccurrenceElement}) = _$_AllergyIntolerance;
+      @JsonKey(name: '_lastOccurence')
+          Element lastOccurenceElement}) = _$_AllergyIntolerance;
 
   factory _AllergyIntolerance.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntolerance.fromJson;
@@ -7698,8 +7698,8 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
   @JsonKey(name: '_recordedDate')
   Element get recordedDateElement;
   @override
-  @JsonKey(name: '_lastOccurrence')
-  Element get lastOccurrenceElement;
+  @JsonKey(name: '_lastOccurence')
+  Element get lastOccurenceElement;
   @override
   _$AllergyIntoleranceCopyWith<_AllergyIntolerance> get copyWith;
 }
@@ -9018,12 +9018,14 @@ class _$ProcedurePerformerTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Reference actor,
       CodeableConcept role}) {
     return _ProcedurePerformer(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       actor: actor,
       role: role,
     );
@@ -9038,6 +9040,8 @@ mixin _$ProcedurePerformer {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   Reference get actor;
   CodeableConcept get role;
 
@@ -9053,6 +9057,7 @@ abstract class $ProcedurePerformerCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Reference actor,
       CodeableConcept role});
 
@@ -9074,6 +9079,7 @@ class _$ProcedurePerformerCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object actor = freezed,
     Object role = freezed,
   }) {
@@ -9085,6 +9091,9 @@ class _$ProcedurePerformerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       actor: actor == freezed ? _value.actor : actor as Reference,
       role: role == freezed ? _value.role : role as CodeableConcept,
     ));
@@ -9131,6 +9140,7 @@ abstract class _$ProcedurePerformerCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Reference actor,
       CodeableConcept role});
 
@@ -9157,6 +9167,7 @@ class __$ProcedurePerformerCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object actor = freezed,
     Object role = freezed,
   }) {
@@ -9168,6 +9179,9 @@ class __$ProcedurePerformerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       actor: actor == freezed ? _value.actor : actor as Reference,
       role: role == freezed ? _value.role : role as CodeableConcept,
     ));
@@ -9180,6 +9194,7 @@ class _$_ProcedurePerformer implements _ProcedurePerformer {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.actor,
       this.role});
 
@@ -9194,13 +9209,16 @@ class _$_ProcedurePerformer implements _ProcedurePerformer {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final Reference actor;
   @override
   final CodeableConcept role;
 
   @override
   String toString() {
-    return 'ProcedurePerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, actor: $actor, role: $role)';
+    return 'ProcedurePerformer(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, actor: $actor, role: $role)';
   }
 
   @override
@@ -9215,6 +9233,9 @@ class _$_ProcedurePerformer implements _ProcedurePerformer {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.actor, actor) ||
                 const DeepCollectionEquality().equals(other.actor, actor)) &&
             (identical(other.role, role) ||
@@ -9227,6 +9248,7 @@ class _$_ProcedurePerformer implements _ProcedurePerformer {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(actor) ^
       const DeepCollectionEquality().hash(role);
 
@@ -9245,6 +9267,7 @@ abstract class _ProcedurePerformer implements ProcedurePerformer {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Reference actor,
       CodeableConcept role}) = _$_ProcedurePerformer;
 
@@ -9258,6 +9281,9 @@ abstract class _ProcedurePerformer implements ProcedurePerformer {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   Reference get actor;
   @override

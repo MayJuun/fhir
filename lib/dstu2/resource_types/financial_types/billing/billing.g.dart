@@ -1098,6 +1098,8 @@ _$_ClaimResponseItem _$_$_ClaimResponseItemFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     sequenceLinkId: json['sequenceLinkId'] == null
         ? null
         : PositiveInt.fromJson(json['sequenceLinkId']),
@@ -1134,6 +1136,7 @@ Map<String, dynamic> _$_$_ClaimResponseItemToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('sequenceLinkId', instance.sequenceLinkId?.toJson());
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e?.toJson())?.toList());

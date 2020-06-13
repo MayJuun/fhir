@@ -4650,6 +4650,7 @@ class _$CompositionSectionTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String title,
       CodeableConcept code,
       Narrative text,
@@ -4664,6 +4665,7 @@ class _$CompositionSectionTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       title: title,
       code: code,
       text: text,
@@ -4686,6 +4688,8 @@ mixin _$CompositionSection {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   String get title;
   CodeableConcept get code;
   Narrative get text;
@@ -4712,6 +4716,7 @@ abstract class $CompositionSectionCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String title,
       CodeableConcept code,
       Narrative text,
@@ -4745,6 +4750,7 @@ class _$CompositionSectionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object title = freezed,
     Object code = freezed,
     Object text = freezed,
@@ -4764,6 +4770,9 @@ class _$CompositionSectionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       title: title == freezed ? _value.title : title as String,
       code: code == freezed ? _value.code : code as CodeableConcept,
       text: text == freezed ? _value.text : text as Narrative,
@@ -4867,6 +4876,7 @@ abstract class _$CompositionSectionCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String title,
       CodeableConcept code,
       Narrative text,
@@ -4909,6 +4919,7 @@ class __$CompositionSectionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object title = freezed,
     Object code = freezed,
     Object text = freezed,
@@ -4928,6 +4939,9 @@ class __$CompositionSectionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       title: title == freezed ? _value.title : title as String,
       code: code == freezed ? _value.code : code as CodeableConcept,
       text: text == freezed ? _value.text : text as Narrative,
@@ -4957,6 +4971,7 @@ class _$_CompositionSection implements _CompositionSection {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.title,
       this.code,
       this.text,
@@ -4978,6 +4993,9 @@ class _$_CompositionSection implements _CompositionSection {
   final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final String title;
   @override
@@ -5004,7 +5022,7 @@ class _$_CompositionSection implements _CompositionSection {
 
   @override
   String toString() {
-    return 'CompositionSection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, title: $title, code: $code, text: $text, mode: $mode, orderedBy: $orderedBy, entry: $entry, emptyReason: $emptyReason, section: $section, titleElement: $titleElement, modeElement: $modeElement)';
+    return 'CompositionSection(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, title: $title, code: $code, text: $text, mode: $mode, orderedBy: $orderedBy, entry: $entry, emptyReason: $emptyReason, section: $section, titleElement: $titleElement, modeElement: $modeElement)';
   }
 
   @override
@@ -5019,6 +5037,9 @@ class _$_CompositionSection implements _CompositionSection {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.code, code) ||
@@ -5052,6 +5073,7 @@ class _$_CompositionSection implements _CompositionSection {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(text) ^
@@ -5078,6 +5100,7 @@ abstract class _CompositionSection implements CompositionSection {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       String title,
       CodeableConcept code,
       Narrative text,
@@ -5099,6 +5122,9 @@ abstract class _CompositionSection implements CompositionSection {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   String get title;
   @override
@@ -6664,6 +6690,7 @@ class _$ListEntryTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept flag,
       Boolean deleted,
       FhirDateTime date,
@@ -6674,6 +6701,7 @@ class _$ListEntryTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       flag: flag,
       deleted: deleted,
       date: date,
@@ -6692,6 +6720,8 @@ mixin _$ListEntry {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   CodeableConcept get flag;
   Boolean get deleted;
   FhirDateTime get date;
@@ -6713,6 +6743,7 @@ abstract class $ListEntryCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept flag,
       Boolean deleted,
       FhirDateTime date,
@@ -6739,6 +6770,7 @@ class _$ListEntryCopyWithImpl<$Res> implements $ListEntryCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object flag = freezed,
     Object deleted = freezed,
     Object date = freezed,
@@ -6754,6 +6786,9 @@ class _$ListEntryCopyWithImpl<$Res> implements $ListEntryCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       flag: flag == freezed ? _value.flag : flag as CodeableConcept,
       deleted: deleted == freezed ? _value.deleted : deleted as Boolean,
       date: date == freezed ? _value.date : date as FhirDateTime,
@@ -6826,6 +6861,7 @@ abstract class _$ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept flag,
       Boolean deleted,
       FhirDateTime date,
@@ -6858,6 +6894,7 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object flag = freezed,
     Object deleted = freezed,
     Object date = freezed,
@@ -6873,6 +6910,9 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       flag: flag == freezed ? _value.flag : flag as CodeableConcept,
       deleted: deleted == freezed ? _value.deleted : deleted as Boolean,
       date: date == freezed ? _value.date : date as FhirDateTime,
@@ -6892,6 +6932,7 @@ class _$_ListEntry implements _ListEntry {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.flag,
       this.deleted,
       this.date,
@@ -6911,6 +6952,9 @@ class _$_ListEntry implements _ListEntry {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final CodeableConcept flag;
   @override
   final Boolean deleted;
@@ -6928,7 +6972,7 @@ class _$_ListEntry implements _ListEntry {
 
   @override
   String toString() {
-    return 'ListEntry(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, flag: $flag, deleted: $deleted, date: $date, item: $item, deletedElement: $deletedElement, dateElement: $dateElement)';
+    return 'ListEntry(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, flag: $flag, deleted: $deleted, date: $date, item: $item, deletedElement: $deletedElement, dateElement: $dateElement)';
   }
 
   @override
@@ -6943,6 +6987,9 @@ class _$_ListEntry implements _ListEntry {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.flag, flag) ||
                 const DeepCollectionEquality().equals(other.flag, flag)) &&
             (identical(other.deleted, deleted) ||
@@ -6966,6 +7013,7 @@ class _$_ListEntry implements _ListEntry {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(flag) ^
       const DeepCollectionEquality().hash(deleted) ^
       const DeepCollectionEquality().hash(date) ^
@@ -6988,6 +7036,7 @@ abstract class _ListEntry implements ListEntry {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept flag,
       Boolean deleted,
       FhirDateTime date,
@@ -7005,6 +7054,9 @@ abstract class _ListEntry implements ListEntry {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   CodeableConcept get flag;
   @override

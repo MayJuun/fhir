@@ -339,6 +339,7 @@ abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept type,
     String productName,
     List<Timing> schedule,
@@ -435,6 +436,7 @@ abstract class NutritionOrderTexture with _$NutritionOrderTexture {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept modifier,
     CodeableConcept foodType,
   }) = _NutritionOrderTexture;

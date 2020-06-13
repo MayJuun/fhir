@@ -334,6 +334,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Quantity low,
     Quantity high,
     CodeableConcept meaning,
@@ -352,6 +353,7 @@ abstract class ObservationRelated with _$ObservationRelated {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
     @JsonKey(required: true) @required Reference target,
   }) = _ObservationRelated;
@@ -366,6 +368,7 @@ abstract class ObservationComponent with _$ObservationComponent {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required CodeableConcept code,
     Quantity valueQuantity,
     CodeableConcept valueCodeableConcept,

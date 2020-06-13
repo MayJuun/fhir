@@ -2515,6 +2515,7 @@ class _$StructureDefinitionMappingTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) Id identity,
       FhirUri uri,
       String name,
@@ -2527,6 +2528,7 @@ class _$StructureDefinitionMappingTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       identity: identity,
       uri: uri,
       name: name,
@@ -2547,6 +2549,8 @@ mixin _$StructureDefinitionMapping {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   Id get identity;
   FhirUri get uri;
@@ -2573,6 +2577,7 @@ abstract class $StructureDefinitionMappingCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Id identity,
       FhirUri uri,
       String name,
@@ -2602,6 +2607,7 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object identity = freezed,
     Object uri = freezed,
     Object name = freezed,
@@ -2619,6 +2625,9 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       identity: identity == freezed ? _value.identity : identity as Id,
       uri: uri == freezed ? _value.uri : uri as FhirUri,
       name: name == freezed ? _value.name : name as String,
@@ -2698,6 +2707,7 @@ abstract class _$StructureDefinitionMappingCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Id identity,
       FhirUri uri,
       String name,
@@ -2735,6 +2745,7 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object identity = freezed,
     Object uri = freezed,
     Object name = freezed,
@@ -2752,6 +2763,9 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       identity: identity == freezed ? _value.identity : identity as Id,
       uri: uri == freezed ? _value.uri : uri as FhirUri,
       name: name == freezed ? _value.name : name as String,
@@ -2776,6 +2790,7 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.identity,
       this.uri,
       this.name,
@@ -2796,6 +2811,9 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
   final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   @JsonKey(required: true)
   final Id identity;
@@ -2820,7 +2838,7 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
 
   @override
   String toString() {
-    return 'StructureDefinitionMapping(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identity: $identity, uri: $uri, name: $name, comments: $comments, identityElement: $identityElement, uriElement: $uriElement, nameElement: $nameElement, commentElement: $commentElement)';
+    return 'StructureDefinitionMapping(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, identity: $identity, uri: $uri, name: $name, comments: $comments, identityElement: $identityElement, uriElement: $uriElement, nameElement: $nameElement, commentElement: $commentElement)';
   }
 
   @override
@@ -2835,6 +2853,9 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.identity, identity) ||
                 const DeepCollectionEquality()
                     .equals(other.identity, identity)) &&
@@ -2865,6 +2886,7 @@ class _$_StructureDefinitionMapping implements _StructureDefinitionMapping {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(identity) ^
       const DeepCollectionEquality().hash(uri) ^
       const DeepCollectionEquality().hash(name) ^
@@ -2891,6 +2913,7 @@ abstract class _StructureDefinitionMapping
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           @required @JsonKey(required: true) Id identity,
           FhirUri uri,
           String name,
@@ -2911,6 +2934,9 @@ abstract class _StructureDefinitionMapping
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   Id get identity;

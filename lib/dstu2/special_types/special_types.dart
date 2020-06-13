@@ -470,6 +470,7 @@ abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
   const factory ElementDefinitionMapping({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Id identity,
     Code language,
     @JsonKey(required: true) @required String map,

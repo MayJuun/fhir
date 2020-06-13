@@ -4029,7 +4029,7 @@ class _$SignatureTearOff {
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
       @JsonKey(name: '_data') Element dataElement,
-      @JsonKey(name: '_content') Element contentElement}) {
+      @JsonKey(name: '_contentType') Element contentTypeElement}) {
     return _Signature(
       id: id,
       extension_: extension_,
@@ -4043,7 +4043,7 @@ class _$SignatureTearOff {
       targetFormatElement: targetFormatElement,
       sigFormatElement: sigFormatElement,
       dataElement: dataElement,
-      contentElement: contentElement,
+      contentTypeElement: contentTypeElement,
     );
   }
 }
@@ -4073,8 +4073,8 @@ mixin _$Signature {
   Element get sigFormatElement;
   @JsonKey(name: '_data')
   Element get dataElement;
-  @JsonKey(name: '_content')
-  Element get contentElement;
+  @JsonKey(name: '_contentType')
+  Element get contentTypeElement;
 
   Map<String, dynamic> toJson();
   $SignatureCopyWith<Signature> get copyWith;
@@ -4096,14 +4096,14 @@ abstract class $SignatureCopyWith<$Res> {
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
       @JsonKey(name: '_data') Element dataElement,
-      @JsonKey(name: '_content') Element contentElement});
+      @JsonKey(name: '_contentType') Element contentTypeElement});
 
   $ReferenceCopyWith<$Res> get whoReference;
   $ElementCopyWith<$Res> get whenElement;
   $ElementCopyWith<$Res> get targetFormatElement;
   $ElementCopyWith<$Res> get sigFormatElement;
   $ElementCopyWith<$Res> get dataElement;
-  $ElementCopyWith<$Res> get contentElement;
+  $ElementCopyWith<$Res> get contentTypeElement;
 }
 
 class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
@@ -4127,7 +4127,7 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
     Object targetFormatElement = freezed,
     Object sigFormatElement = freezed,
     Object dataElement = freezed,
-    Object contentElement = freezed,
+    Object contentTypeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -4153,9 +4153,9 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
           : sigFormatElement as Element,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
-      contentElement: contentElement == freezed
-          ? _value.contentElement
-          : contentElement as Element,
+      contentTypeElement: contentTypeElement == freezed
+          ? _value.contentTypeElement
+          : contentTypeElement as Element,
     ));
   }
 
@@ -4210,12 +4210,12 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res> get contentElement {
-    if (_value.contentElement == null) {
+  $ElementCopyWith<$Res> get contentTypeElement {
+    if (_value.contentTypeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.contentElement, (value) {
-      return _then(_value.copyWith(contentElement: value));
+    return $ElementCopyWith<$Res>(_value.contentTypeElement, (value) {
+      return _then(_value.copyWith(contentTypeElement: value));
     });
   }
 }
@@ -4238,7 +4238,7 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
       @JsonKey(name: '_data') Element dataElement,
-      @JsonKey(name: '_content') Element contentElement});
+      @JsonKey(name: '_contentType') Element contentTypeElement});
 
   @override
   $ReferenceCopyWith<$Res> get whoReference;
@@ -4251,7 +4251,7 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res> get dataElement;
   @override
-  $ElementCopyWith<$Res> get contentElement;
+  $ElementCopyWith<$Res> get contentTypeElement;
 }
 
 class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
@@ -4276,7 +4276,7 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
     Object targetFormatElement = freezed,
     Object sigFormatElement = freezed,
     Object dataElement = freezed,
-    Object contentElement = freezed,
+    Object contentTypeElement = freezed,
   }) {
     return _then(_Signature(
       id: id == freezed ? _value.id : id as Id,
@@ -4302,9 +4302,9 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
           : sigFormatElement as Element,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
-      contentElement: contentElement == freezed
-          ? _value.contentElement
-          : contentElement as Element,
+      contentTypeElement: contentTypeElement == freezed
+          ? _value.contentTypeElement
+          : contentTypeElement as Element,
     ));
   }
 }
@@ -4324,7 +4324,7 @@ class _$_Signature implements _Signature {
       @JsonKey(name: '_targetFormat') this.targetFormatElement,
       @JsonKey(name: '_sigFormat') this.sigFormatElement,
       @JsonKey(name: '_data') this.dataElement,
-      @JsonKey(name: '_content') this.contentElement})
+      @JsonKey(name: '_contentType') this.contentTypeElement})
       : assert(type != null),
         assert(when != null),
         assert(contentType != null),
@@ -4367,12 +4367,12 @@ class _$_Signature implements _Signature {
   @JsonKey(name: '_data')
   final Element dataElement;
   @override
-  @JsonKey(name: '_content')
-  final Element contentElement;
+  @JsonKey(name: '_contentType')
+  final Element contentTypeElement;
 
   @override
   String toString() {
-    return 'Signature(id: $id, extension_: $extension_, type: $type, when: $when, whoUri: $whoUri, whoReference: $whoReference, contentType: $contentType, blob: $blob, whenElement: $whenElement, targetFormatElement: $targetFormatElement, sigFormatElement: $sigFormatElement, dataElement: $dataElement, contentElement: $contentElement)';
+    return 'Signature(id: $id, extension_: $extension_, type: $type, when: $when, whoUri: $whoUri, whoReference: $whoReference, contentType: $contentType, blob: $blob, whenElement: $whenElement, targetFormatElement: $targetFormatElement, sigFormatElement: $sigFormatElement, dataElement: $dataElement, contentTypeElement: $contentTypeElement)';
   }
 
   @override
@@ -4410,9 +4410,9 @@ class _$_Signature implements _Signature {
             (identical(other.dataElement, dataElement) ||
                 const DeepCollectionEquality()
                     .equals(other.dataElement, dataElement)) &&
-            (identical(other.contentElement, contentElement) ||
+            (identical(other.contentTypeElement, contentTypeElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.contentElement, contentElement)));
+                    .equals(other.contentTypeElement, contentTypeElement)));
   }
 
   @override
@@ -4430,7 +4430,7 @@ class _$_Signature implements _Signature {
       const DeepCollectionEquality().hash(targetFormatElement) ^
       const DeepCollectionEquality().hash(sigFormatElement) ^
       const DeepCollectionEquality().hash(dataElement) ^
-      const DeepCollectionEquality().hash(contentElement);
+      const DeepCollectionEquality().hash(contentTypeElement);
 
   @override
   _$SignatureCopyWith<_Signature> get copyWith =>
@@ -4444,19 +4444,20 @@ class _$_Signature implements _Signature {
 
 abstract class _Signature implements Signature {
   const factory _Signature(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @required @JsonKey(required: true) List<Coding> type,
-      @required @JsonKey(required: true) Instant when,
-      FhirUri whoUri,
-      Reference whoReference,
-      @required @JsonKey(required: true) Code contentType,
-      @required @JsonKey(required: true) Base64Binary blob,
-      @JsonKey(name: '_when') Element whenElement,
-      @JsonKey(name: '_targetFormat') Element targetFormatElement,
-      @JsonKey(name: '_sigFormat') Element sigFormatElement,
-      @JsonKey(name: '_data') Element dataElement,
-      @JsonKey(name: '_content') Element contentElement}) = _$_Signature;
+          {Id id,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          @required @JsonKey(required: true) List<Coding> type,
+          @required @JsonKey(required: true) Instant when,
+          FhirUri whoUri,
+          Reference whoReference,
+          @required @JsonKey(required: true) Code contentType,
+          @required @JsonKey(required: true) Base64Binary blob,
+          @JsonKey(name: '_when') Element whenElement,
+          @JsonKey(name: '_targetFormat') Element targetFormatElement,
+          @JsonKey(name: '_sigFormat') Element sigFormatElement,
+          @JsonKey(name: '_data') Element dataElement,
+          @JsonKey(name: '_contentType') Element contentTypeElement}) =
+      _$_Signature;
 
   factory _Signature.fromJson(Map<String, dynamic> json) =
       _$_Signature.fromJson;
@@ -4495,8 +4496,8 @@ abstract class _Signature implements Signature {
   @JsonKey(name: '_data')
   Element get dataElement;
   @override
-  @JsonKey(name: '_content')
-  Element get contentElement;
+  @JsonKey(name: '_contentType')
+  Element get contentTypeElement;
   @override
   _$SignatureCopyWith<_Signature> get copyWith;
 }

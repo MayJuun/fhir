@@ -142,6 +142,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     String linkId,
     String title,
     List<Coding> concept,
@@ -164,6 +165,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true) @required Coding role,
     Reference actor,
     Identifier userId,
@@ -180,6 +182,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     @JsonKey(required: true, unknownEnumValue: EntityRole.unknown)
     @required
         EntityRole role,
@@ -188,6 +191,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     String display,
     ProvenanceAgent agent,
     @JsonKey(name: '_role') Element roleElement,
+    @JsonKey(name: '_reference') Element referenceElement,
   }) = _ProvenanceEntity;
 
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
@@ -303,6 +307,7 @@ abstract class QuestionnaireQuestion with _$QuestionnaireQuestion {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     String linkId,
     List<Coding> concept,
     String text,
@@ -311,8 +316,8 @@ abstract class QuestionnaireQuestion with _$QuestionnaireQuestion {
     Boolean repeats,
     Reference options,
     List<Coding> option,
+    @JsonKey(name: '_linkId') Element linkIdElement,
     List<QuestionnaireGroup> group,
-
   }) = _QuestionnaireQuestion;
 
   factory QuestionnaireQuestion.fromJson(Map<String, dynamic> json) =>

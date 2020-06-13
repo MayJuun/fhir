@@ -6997,6 +6997,7 @@ class _$ClaimResponseItemTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
@@ -7006,6 +7007,7 @@ class _$ClaimResponseItemTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       sequenceLinkId: sequenceLinkId,
       noteNumber: noteNumber,
       adjudication: adjudication,
@@ -7023,6 +7025,8 @@ mixin _$ClaimResponseItem {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;
   List<PositiveInt> get noteNumber;
@@ -7043,6 +7047,7 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
@@ -7065,6 +7070,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object sequenceLinkId = freezed,
     Object noteNumber = freezed,
     Object adjudication = freezed,
@@ -7079,6 +7085,9 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
           : sequenceLinkId as PositiveInt,
@@ -7116,6 +7125,7 @@ abstract class _$ClaimResponseItemCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
@@ -7141,6 +7151,7 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object sequenceLinkId = freezed,
     Object noteNumber = freezed,
     Object adjudication = freezed,
@@ -7155,6 +7166,9 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
           : sequenceLinkId as PositiveInt,
@@ -7178,6 +7192,7 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.sequenceLinkId,
       this.noteNumber,
       this.adjudication,
@@ -7196,6 +7211,9 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(required: true)
   final PositiveInt sequenceLinkId;
   @override
@@ -7210,7 +7228,7 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
 
   @override
   String toString() {
-    return 'ClaimResponseItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication, detail: $detail, noteNumberElement: $noteNumberElement)';
+    return 'ClaimResponseItem(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication, detail: $detail, noteNumberElement: $noteNumberElement)';
   }
 
   @override
@@ -7225,6 +7243,9 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.sequenceLinkId, sequenceLinkId) ||
                 const DeepCollectionEquality()
                     .equals(other.sequenceLinkId, sequenceLinkId)) &&
@@ -7247,6 +7268,7 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(sequenceLinkId) ^
       const DeepCollectionEquality().hash(noteNumber) ^
       const DeepCollectionEquality().hash(adjudication) ^
@@ -7268,6 +7290,7 @@ abstract class _ClaimResponseItem implements ClaimResponseItem {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           @required @JsonKey(required: true) PositiveInt sequenceLinkId,
           List<PositiveInt> noteNumber,
           List<ClaimResponseAdjudication> adjudication,
@@ -7285,6 +7308,9 @@ abstract class _ClaimResponseItem implements ClaimResponseItem {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   PositiveInt get sequenceLinkId;

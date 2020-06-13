@@ -212,7 +212,7 @@ abstract class Signature with _$Signature {
     @JsonKey(name: '_targetFormat') Element targetFormatElement,
     @JsonKey(name: '_sigFormat') Element sigFormatElement,
     @JsonKey(name: '_data') Element dataElement,
-    @JsonKey(name: '_content') Element contentElement,
+    @JsonKey(name: '_contentType') Element contentTypeElement,
   }) = _Signature;
 
   factory Signature.fromJson(Map<String, dynamic> json) =>

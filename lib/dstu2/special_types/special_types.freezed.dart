@@ -11935,6 +11935,7 @@ class _$ElementDefinitionMappingTearOff {
   _ElementDefinitionMapping call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) Id identity,
       Code language,
       @required @JsonKey(required: true) String map,
@@ -11944,6 +11945,7 @@ class _$ElementDefinitionMappingTearOff {
     return _ElementDefinitionMapping(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       identity: identity,
       language: language,
       map: map,
@@ -11961,6 +11963,8 @@ mixin _$ElementDefinitionMapping {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   Id get identity;
   Code get language;
@@ -11984,6 +11988,7 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Id identity,
       Code language,
       @JsonKey(required: true) String map,
@@ -12008,6 +12013,7 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object identity = freezed,
     Object language = freezed,
     Object map = freezed,
@@ -12020,6 +12026,9 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       identity: identity == freezed ? _value.identity : identity as Id,
       language: language == freezed ? _value.language : language as Code,
       map: map == freezed ? _value.map : map as String,
@@ -12074,6 +12083,7 @@ abstract class _$ElementDefinitionMappingCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) Id identity,
       Code language,
       @JsonKey(required: true) String map,
@@ -12104,6 +12114,7 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object identity = freezed,
     Object language = freezed,
     Object map = freezed,
@@ -12116,6 +12127,9 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       identity: identity == freezed ? _value.identity : identity as Id,
       language: language == freezed ? _value.language : language as Code,
       map: map == freezed ? _value.map : map as String,
@@ -12136,6 +12150,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
   const _$_ElementDefinitionMapping(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.identity,
       this.language,
       @required @JsonKey(required: true) this.map,
@@ -12153,6 +12168,9 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   @JsonKey(required: true)
   final Id identity;
@@ -12173,7 +12191,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
 
   @override
   String toString() {
-    return 'ElementDefinitionMapping(id: $id, extension_: $extension_, identity: $identity, language: $language, map: $map, identityElement: $identityElement, languageElement: $languageElement, mapElement: $mapElement)';
+    return 'ElementDefinitionMapping(id: $id, extension_: $extension_, fhirComments: $fhirComments, identity: $identity, language: $language, map: $map, identityElement: $identityElement, languageElement: $languageElement, mapElement: $mapElement)';
   }
 
   @override
@@ -12185,6 +12203,9 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.identity, identity) ||
                 const DeepCollectionEquality()
                     .equals(other.identity, identity)) &&
@@ -12209,6 +12230,7 @@ class _$_ElementDefinitionMapping implements _ElementDefinitionMapping {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(identity) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(map) ^
@@ -12231,6 +12253,7 @@ abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
   const factory _ElementDefinitionMapping(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) Id identity,
       Code language,
       @required @JsonKey(required: true) String map,
@@ -12246,6 +12269,9 @@ abstract class _ElementDefinitionMapping implements ElementDefinitionMapping {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   Id get identity;

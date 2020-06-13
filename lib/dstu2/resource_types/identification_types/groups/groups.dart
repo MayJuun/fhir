@@ -124,6 +124,7 @@ abstract class OrganizationContact with _$OrganizationContact {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept purpose,
     HumanName name,
     List<ContactPoint> telecom,

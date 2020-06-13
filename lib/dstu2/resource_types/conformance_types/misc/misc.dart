@@ -84,6 +84,7 @@ abstract class ImplementationGuideDependency
     @required
         DependencyType type,
     @JsonKey(required: true) @required FhirUri uri,
+    @JsonKey(name: '_uri') Element uriElement,
   }) = _ImplementationGuideDependency;
 
   factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
@@ -158,6 +159,7 @@ abstract class ImplementationGuideResource with _$ImplementationGuideResource {
     FhirUri sourceUri,
     Reference sourceReference,
     Reference exampleFor,
+    @JsonKey(name: '_acronym') Element acronymElement,
   }) = _ImplementationGuideResource;
 
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
@@ -339,6 +341,7 @@ abstract class SetupAction with _$SetupAction {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     ActionOperation operation,
     @JsonKey(name: 'assert') ActionAssert assert_,
   }) = _SetupAction;
@@ -353,6 +356,7 @@ abstract class ActionOperation with _$ActionOperation {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Coding type,
     Code resource,
     String label,
@@ -489,6 +493,7 @@ abstract class TeardownAction with _$TeardownAction {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     ActionOperation operation,
   }) = _TeardownAction;
 

@@ -1694,6 +1694,8 @@ _$_ElementDefinitionMapping _$_$_ElementDefinitionMappingFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     identity: json['identity'] == null
         ? null
         : Id.fromJson(json['identity'] as String),
@@ -1726,6 +1728,7 @@ Map<String, dynamic> _$_$_ElementDefinitionMappingToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('identity', instance.identity?.toJson());
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('map', instance.map);

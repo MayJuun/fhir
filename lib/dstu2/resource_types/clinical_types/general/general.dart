@@ -314,7 +314,7 @@ abstract class AllergyIntolerance
     @JsonKey(name: '_category') Element categoryElement,
     @JsonKey(name: '_criticality') Element criticalityElement,
     @JsonKey(name: '_recordedDate') Element recordedDateElement,
-    @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
+    @JsonKey(name: '_lastOccurence') Element lastOccurenceElement,
   }) = _AllergyIntolerance;
 
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
@@ -393,6 +393,7 @@ abstract class ProcedurePerformer with _$ProcedurePerformer {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Reference actor,
     CodeableConcept role,
   }) = _ProcedurePerformer;

@@ -649,9 +649,9 @@ _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
     dataElement: json['_data'] == null
         ? null
         : Element.fromJson(json['_data'] as Map<String, dynamic>),
-    contentElement: json['_content'] == null
+    contentTypeElement: json['_contentType'] == null
         ? null
-        : Element.fromJson(json['_content'] as Map<String, dynamic>),
+        : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
   );
 }
 
@@ -677,7 +677,7 @@ Map<String, dynamic> _$_$_SignatureToJson(_$_Signature instance) {
   writeNotNull('_targetFormat', instance.targetFormatElement?.toJson());
   writeNotNull('_sigFormat', instance.sigFormatElement?.toJson());
   writeNotNull('_data', instance.dataElement?.toJson());
-  writeNotNull('_content', instance.contentElement?.toJson());
+  writeNotNull('_contentType', instance.contentTypeElement?.toJson());
   return val;
 }
 

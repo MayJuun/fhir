@@ -1145,9 +1145,9 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
     recordedDateElement: json['_recordedDate'] == null
         ? null
         : Element.fromJson(json['_recordedDate'] as Map<String, dynamic>),
-    lastOccurrenceElement: json['_lastOccurrence'] == null
+    lastOccurenceElement: json['_lastOccurence'] == null
         ? null
-        : Element.fromJson(json['_lastOccurrence'] as Map<String, dynamic>),
+        : Element.fromJson(json['_lastOccurence'] as Map<String, dynamic>),
   );
 }
 
@@ -1197,7 +1197,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
   writeNotNull('_category', instance.categoryElement?.toJson());
   writeNotNull('_criticality', instance.criticalityElement?.toJson());
   writeNotNull('_recordedDate', instance.recordedDateElement?.toJson());
-  writeNotNull('_lastOccurrence', instance.lastOccurrenceElement?.toJson());
+  writeNotNull('_lastOccurence', instance.lastOccurenceElement?.toJson());
   return val;
 }
 
@@ -1445,6 +1445,8 @@ _$_ProcedurePerformer _$_$_ProcedurePerformerFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     actor: json['actor'] == null
         ? null
         : Reference.fromJson(json['actor'] as Map<String, dynamic>),
@@ -1468,6 +1470,7 @@ Map<String, dynamic> _$_$_ProcedurePerformerToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('actor', instance.actor?.toJson());
   writeNotNull('role', instance.role?.toJson());
   return val;

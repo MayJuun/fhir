@@ -1270,6 +1270,8 @@ _$_NutritionOrderSupplement _$_$_NutritionOrderSupplementFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -1305,6 +1307,7 @@ Map<String, dynamic> _$_$_NutritionOrderSupplementToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('productName', instance.productName);
   writeNotNull(
@@ -1599,6 +1602,8 @@ _$_NutritionOrderTexture _$_$_NutritionOrderTextureFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     modifier: json['modifier'] == null
         ? null
         : CodeableConcept.fromJson(json['modifier'] as Map<String, dynamic>),
@@ -1622,6 +1627,7 @@ Map<String, dynamic> _$_$_NutritionOrderTextureToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('modifier', instance.modifier?.toJson());
   writeNotNull('foodType', instance.foodType?.toJson());
   return val;

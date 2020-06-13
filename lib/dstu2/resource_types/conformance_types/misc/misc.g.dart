@@ -280,6 +280,9 @@ _$_ImplementationGuideDependency _$_$_ImplementationGuideDependencyFromJson(
     type: _$enumDecodeNullable(_$DependencyTypeEnumMap, json['type'],
         unknownValue: DependencyType.unknown),
     uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
+    uriElement: json['_uri'] == null
+        ? null
+        : Element.fromJson(json['_uri'] as Map<String, dynamic>),
   );
 }
 
@@ -299,6 +302,7 @@ Map<String, dynamic> _$_$_ImplementationGuideDependencyToJson(
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', _$DependencyTypeEnumMap[instance.type]);
   writeNotNull('uri', instance.uri?.toJson());
+  writeNotNull('_uri', instance.uriElement?.toJson());
   return val;
 }
 
@@ -495,6 +499,9 @@ _$_ImplementationGuideResource _$_$_ImplementationGuideResourceFromJson(
     exampleFor: json['exampleFor'] == null
         ? null
         : Reference.fromJson(json['exampleFor'] as Map<String, dynamic>),
+    acronymElement: json['_acronym'] == null
+        ? null
+        : Element.fromJson(json['_acronym'] as Map<String, dynamic>),
   );
 }
 
@@ -519,6 +526,7 @@ Map<String, dynamic> _$_$_ImplementationGuideResourceToJson(
   writeNotNull('sourceUri', instance.sourceUri?.toJson());
   writeNotNull('sourceReference', instance.sourceReference?.toJson());
   writeNotNull('exampleFor', instance.exampleFor?.toJson());
+  writeNotNull('_acronym', instance.acronymElement?.toJson());
   return val;
 }
 
@@ -1088,6 +1096,8 @@ _$_SetupAction _$_$_SetupActionFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     operation: json['operation'] == null
         ? null
         : ActionOperation.fromJson(json['operation'] as Map<String, dynamic>),
@@ -1110,6 +1120,7 @@ Map<String, dynamic> _$_$_SetupActionToJson(_$_SetupAction instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('operation', instance.operation?.toJson());
   writeNotNull('assert', instance.assert_?.toJson());
   return val;
@@ -1127,6 +1138,8 @@ _$_ActionOperation _$_$_ActionOperationFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     type: json['type'] == null
         ? null
         : Coding.fromJson(json['type'] as Map<String, dynamic>),
@@ -1214,6 +1227,7 @@ Map<String, dynamic> _$_$_ActionOperationToJson(_$_ActionOperation instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
   writeNotNull('label', instance.label);
@@ -1604,6 +1618,8 @@ _$_TeardownAction _$_$_TeardownActionFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     operation: json['operation'] == null
         ? null
         : ActionOperation.fromJson(json['operation'] as Map<String, dynamic>),
@@ -1623,6 +1639,7 @@ Map<String, dynamic> _$_$_TeardownActionToJson(_$_TeardownAction instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('operation', instance.operation?.toJson());
   return val;
 }

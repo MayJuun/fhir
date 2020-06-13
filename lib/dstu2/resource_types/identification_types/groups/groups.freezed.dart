@@ -2700,6 +2700,7 @@ class _$OrganizationContactTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept purpose,
       HumanName name,
       List<ContactPoint> telecom,
@@ -2708,6 +2709,7 @@ class _$OrganizationContactTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       purpose: purpose,
       name: name,
       telecom: telecom,
@@ -2724,6 +2726,8 @@ mixin _$OrganizationContact {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   CodeableConcept get purpose;
   HumanName get name;
   List<ContactPoint> get telecom;
@@ -2741,6 +2745,7 @@ abstract class $OrganizationContactCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept purpose,
       HumanName name,
       List<ContactPoint> telecom,
@@ -2765,6 +2770,7 @@ class _$OrganizationContactCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object purpose = freezed,
     Object name = freezed,
     Object telecom = freezed,
@@ -2778,6 +2784,9 @@ class _$OrganizationContactCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       purpose: purpose == freezed ? _value.purpose : purpose as CodeableConcept,
       name: name == freezed ? _value.name : name as HumanName,
       telecom:
@@ -2837,6 +2846,7 @@ abstract class _$OrganizationContactCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept purpose,
       HumanName name,
       List<ContactPoint> telecom,
@@ -2867,6 +2877,7 @@ class __$OrganizationContactCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object purpose = freezed,
     Object name = freezed,
     Object telecom = freezed,
@@ -2880,6 +2891,9 @@ class __$OrganizationContactCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       purpose: purpose == freezed ? _value.purpose : purpose as CodeableConcept,
       name: name == freezed ? _value.name : name as HumanName,
       telecom:
@@ -2895,6 +2909,7 @@ class _$_OrganizationContact implements _OrganizationContact {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.purpose,
       this.name,
       this.telecom,
@@ -2911,6 +2926,9 @@ class _$_OrganizationContact implements _OrganizationContact {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final CodeableConcept purpose;
   @override
   final HumanName name;
@@ -2921,7 +2939,7 @@ class _$_OrganizationContact implements _OrganizationContact {
 
   @override
   String toString() {
-    return 'OrganizationContact(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, purpose: $purpose, name: $name, telecom: $telecom, address: $address)';
+    return 'OrganizationContact(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, purpose: $purpose, name: $name, telecom: $telecom, address: $address)';
   }
 
   @override
@@ -2936,6 +2954,9 @@ class _$_OrganizationContact implements _OrganizationContact {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.purpose, purpose) ||
                 const DeepCollectionEquality()
                     .equals(other.purpose, purpose)) &&
@@ -2954,6 +2975,7 @@ class _$_OrganizationContact implements _OrganizationContact {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(purpose) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom) ^
@@ -2975,6 +2997,7 @@ abstract class _OrganizationContact implements OrganizationContact {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept purpose,
       HumanName name,
       List<ContactPoint> telecom,
@@ -2990,6 +3013,9 @@ abstract class _OrganizationContact implements OrganizationContact {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   CodeableConcept get purpose;
   @override

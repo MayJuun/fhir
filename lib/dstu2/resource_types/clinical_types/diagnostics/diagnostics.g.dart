@@ -1259,6 +1259,8 @@ _$_ObservationReferenceRange _$_$_ObservationReferenceRangeFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     low: json['low'] == null
         ? null
         : Quantity.fromJson(json['low'] as Map<String, dynamic>),
@@ -1292,6 +1294,7 @@ Map<String, dynamic> _$_$_ObservationReferenceRangeToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('low', instance.low?.toJson());
   writeNotNull('high', instance.high?.toJson());
   writeNotNull('meaning', instance.meaning?.toJson());
@@ -1315,6 +1318,8 @@ _$_ObservationRelated _$_$_ObservationRelatedFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     type: _$enumDecodeNullable(_$RelatedTypeEnumMap, json['type'],
         unknownValue: RelatedType.unknown),
     target: json['target'] == null
@@ -1337,6 +1342,7 @@ Map<String, dynamic> _$_$_ObservationRelatedToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('type', _$RelatedTypeEnumMap[instance.type]);
   writeNotNull('target', instance.target?.toJson());
   return val;
@@ -1366,6 +1372,8 @@ _$_ObservationComponent _$_$_ObservationComponentFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1434,6 +1442,7 @@ Map<String, dynamic> _$_$_ObservationComponentToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());

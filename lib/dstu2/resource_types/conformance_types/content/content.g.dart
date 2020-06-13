@@ -455,6 +455,8 @@ _$_StructureDefinitionMapping _$_$_StructureDefinitionMappingFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     identity: json['identity'] == null
         ? null
         : Id.fromJson(json['identity'] as String),
@@ -490,6 +492,7 @@ Map<String, dynamic> _$_$_StructureDefinitionMappingToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('identity', instance.identity?.toJson());
   writeNotNull('uri', instance.uri?.toJson());
   writeNotNull('name', instance.name);

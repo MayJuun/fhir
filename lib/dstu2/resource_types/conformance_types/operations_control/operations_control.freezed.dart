@@ -5820,6 +5820,8 @@ class _$ConformanceResourceTearOff {
       List<String> searchInclude,
       List<String> searchRevInclude,
       List<ConformanceSearchParam> searchParam,
+      @JsonKey(name: '_type')
+          Element typeElement,
       @JsonKey(name: '_updateCreate')
           Element updateCreateElement,
       @JsonKey(name: '_conditionalCreate')
@@ -5843,6 +5845,7 @@ class _$ConformanceResourceTearOff {
       searchInclude: searchInclude,
       searchRevInclude: searchRevInclude,
       searchParam: searchParam,
+      typeElement: typeElement,
       updateCreateElement: updateCreateElement,
       conditionalCreateElement: conditionalCreateElement,
       conditionalDeleteElement: conditionalDeleteElement,
@@ -5876,6 +5879,8 @@ mixin _$ConformanceResource {
   List<String> get searchInclude;
   List<String> get searchRevInclude;
   List<ConformanceSearchParam> get searchParam;
+  @JsonKey(name: '_type')
+  Element get typeElement;
   @JsonKey(name: '_updateCreate')
   Element get updateCreateElement;
   @JsonKey(name: '_conditionalCreate')
@@ -5914,6 +5919,8 @@ abstract class $ConformanceResourceCopyWith<$Res> {
       List<String> searchInclude,
       List<String> searchRevInclude,
       List<ConformanceSearchParam> searchParam,
+      @JsonKey(name: '_type')
+          Element typeElement,
       @JsonKey(name: '_updateCreate')
           Element updateCreateElement,
       @JsonKey(name: '_conditionalCreate')
@@ -5923,6 +5930,7 @@ abstract class $ConformanceResourceCopyWith<$Res> {
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get profile;
+  $ElementCopyWith<$Res> get typeElement;
   $ElementCopyWith<$Res> get updateCreateElement;
   $ElementCopyWith<$Res> get conditionalCreateElement;
   $ElementCopyWith<$Res> get conditionalDeleteElement;
@@ -5954,6 +5962,7 @@ class _$ConformanceResourceCopyWithImpl<$Res>
     Object searchInclude = freezed,
     Object searchRevInclude = freezed,
     Object searchParam = freezed,
+    Object typeElement = freezed,
     Object updateCreateElement = freezed,
     Object conditionalCreateElement = freezed,
     Object conditionalDeleteElement = freezed,
@@ -6000,6 +6009,8 @@ class _$ConformanceResourceCopyWithImpl<$Res>
       searchParam: searchParam == freezed
           ? _value.searchParam
           : searchParam as List<ConformanceSearchParam>,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
       updateCreateElement: updateCreateElement == freezed
           ? _value.updateCreateElement
           : updateCreateElement as Element,
@@ -6029,6 +6040,16 @@ class _$ConformanceResourceCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.profile, (value) {
       return _then(_value.copyWith(profile: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
     });
   }
 
@@ -6092,6 +6113,8 @@ abstract class _$ConformanceResourceCopyWith<$Res>
       List<String> searchInclude,
       List<String> searchRevInclude,
       List<ConformanceSearchParam> searchParam,
+      @JsonKey(name: '_type')
+          Element typeElement,
       @JsonKey(name: '_updateCreate')
           Element updateCreateElement,
       @JsonKey(name: '_conditionalCreate')
@@ -6103,6 +6126,8 @@ abstract class _$ConformanceResourceCopyWith<$Res>
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   @override
   $ReferenceCopyWith<$Res> get profile;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
   @override
   $ElementCopyWith<$Res> get updateCreateElement;
   @override
@@ -6139,6 +6164,7 @@ class __$ConformanceResourceCopyWithImpl<$Res>
     Object searchInclude = freezed,
     Object searchRevInclude = freezed,
     Object searchParam = freezed,
+    Object typeElement = freezed,
     Object updateCreateElement = freezed,
     Object conditionalCreateElement = freezed,
     Object conditionalDeleteElement = freezed,
@@ -6185,6 +6211,8 @@ class __$ConformanceResourceCopyWithImpl<$Res>
       searchParam: searchParam == freezed
           ? _value.searchParam
           : searchParam as List<ConformanceSearchParam>,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
       updateCreateElement: updateCreateElement == freezed
           ? _value.updateCreateElement
           : updateCreateElement as Element,
@@ -6225,6 +6253,8 @@ class _$_ConformanceResource implements _ConformanceResource {
       this.searchInclude,
       this.searchRevInclude,
       this.searchParam,
+      @JsonKey(name: '_type')
+          this.typeElement,
       @JsonKey(name: '_updateCreate')
           this.updateCreateElement,
       @JsonKey(name: '_conditionalCreate')
@@ -6276,6 +6306,9 @@ class _$_ConformanceResource implements _ConformanceResource {
   @override
   final List<ConformanceSearchParam> searchParam;
   @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
   @JsonKey(name: '_updateCreate')
   final Element updateCreateElement;
   @override
@@ -6287,7 +6320,7 @@ class _$_ConformanceResource implements _ConformanceResource {
 
   @override
   String toString() {
-    return 'ConformanceResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, type: $type, profile: $profile, interaction: $interaction, versioning: $versioning, readHistory: $readHistory, updateCreate: $updateCreate, conditionalCreate: $conditionalCreate, conditionalUpdate: $conditionalUpdate, conditionalDelete: $conditionalDelete, searchInclude: $searchInclude, searchRevInclude: $searchRevInclude, searchParam: $searchParam, updateCreateElement: $updateCreateElement, conditionalCreateElement: $conditionalCreateElement, conditionalDeleteElement: $conditionalDeleteElement)';
+    return 'ConformanceResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, type: $type, profile: $profile, interaction: $interaction, versioning: $versioning, readHistory: $readHistory, updateCreate: $updateCreate, conditionalCreate: $conditionalCreate, conditionalUpdate: $conditionalUpdate, conditionalDelete: $conditionalDelete, searchInclude: $searchInclude, searchRevInclude: $searchRevInclude, searchParam: $searchParam, typeElement: $typeElement, updateCreateElement: $updateCreateElement, conditionalCreateElement: $conditionalCreateElement, conditionalDeleteElement: $conditionalDeleteElement)';
   }
 
   @override
@@ -6340,6 +6373,9 @@ class _$_ConformanceResource implements _ConformanceResource {
             (identical(other.searchParam, searchParam) ||
                 const DeepCollectionEquality()
                     .equals(other.searchParam, searchParam)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
             (identical(other.updateCreateElement, updateCreateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.updateCreateElement, updateCreateElement)) &&
@@ -6373,6 +6409,7 @@ class _$_ConformanceResource implements _ConformanceResource {
       const DeepCollectionEquality().hash(searchInclude) ^
       const DeepCollectionEquality().hash(searchRevInclude) ^
       const DeepCollectionEquality().hash(searchParam) ^
+      const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(updateCreateElement) ^
       const DeepCollectionEquality().hash(conditionalCreateElement) ^
       const DeepCollectionEquality().hash(conditionalDeleteElement);
@@ -6414,6 +6451,8 @@ abstract class _ConformanceResource implements ConformanceResource {
       List<String> searchInclude,
       List<String> searchRevInclude,
       List<ConformanceSearchParam> searchParam,
+      @JsonKey(name: '_type')
+          Element typeElement,
       @JsonKey(name: '_updateCreate')
           Element updateCreateElement,
       @JsonKey(name: '_conditionalCreate')
@@ -6462,6 +6501,9 @@ abstract class _ConformanceResource implements ConformanceResource {
   List<String> get searchRevInclude;
   @override
   List<ConformanceSearchParam> get searchParam;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
   @override
   @JsonKey(name: '_updateCreate')
   Element get updateCreateElement;

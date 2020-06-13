@@ -468,6 +468,8 @@ _$_OrganizationContact _$_$_OrganizationContactFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     purpose: json['purpose'] == null
         ? null
         : CodeableConcept.fromJson(json['purpose'] as Map<String, dynamic>),
@@ -498,6 +500,7 @@ Map<String, dynamic> _$_$_OrganizationContactToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('purpose', instance.purpose?.toJson());
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());

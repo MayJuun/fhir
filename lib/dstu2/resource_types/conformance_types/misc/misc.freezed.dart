@@ -1533,13 +1533,16 @@ class _$ImplementationGuideDependencyTearOff {
           DependencyType type,
       @required
       @JsonKey(required: true)
-          FhirUri uri}) {
+          FhirUri uri,
+      @JsonKey(name: '_uri')
+          Element uriElement}) {
     return _ImplementationGuideDependency(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
       uri: uri,
+      uriElement: uriElement,
     );
   }
 }
@@ -1556,6 +1559,8 @@ mixin _$ImplementationGuideDependency {
   DependencyType get type;
   @JsonKey(required: true)
   FhirUri get uri;
+  @JsonKey(name: '_uri')
+  Element get uriElement;
 
   Map<String, dynamic> toJson();
   $ImplementationGuideDependencyCopyWith<ImplementationGuideDependency>
@@ -1575,9 +1580,12 @@ abstract class $ImplementationGuideDependencyCopyWith<$Res> {
       @JsonKey(required: true, unknownEnumValue: DependencyType.unknown)
           DependencyType type,
       @JsonKey(required: true)
-          FhirUri uri});
+          FhirUri uri,
+      @JsonKey(name: '_uri')
+          Element uriElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  $ElementCopyWith<$Res> get uriElement;
 }
 
 class _$ImplementationGuideDependencyCopyWithImpl<$Res>
@@ -1595,6 +1603,7 @@ class _$ImplementationGuideDependencyCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object uri = freezed,
+    Object uriElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -1606,6 +1615,8 @@ class _$ImplementationGuideDependencyCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as DependencyType,
       uri: uri == freezed ? _value.uri : uri as FhirUri,
+      uriElement:
+          uriElement == freezed ? _value.uriElement : uriElement as Element,
     ));
   }
 
@@ -1616,6 +1627,16 @@ class _$ImplementationGuideDependencyCopyWithImpl<$Res>
     }
     return $FhirExtensionCopyWith<$Res>(_value.modifierExtension, (value) {
       return _then(_value.copyWith(modifierExtension: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get uriElement {
+    if (_value.uriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.uriElement, (value) {
+      return _then(_value.copyWith(uriElement: value));
     });
   }
 }
@@ -1635,10 +1656,14 @@ abstract class _$ImplementationGuideDependencyCopyWith<$Res>
       @JsonKey(required: true, unknownEnumValue: DependencyType.unknown)
           DependencyType type,
       @JsonKey(required: true)
-          FhirUri uri});
+          FhirUri uri,
+      @JsonKey(name: '_uri')
+          Element uriElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
+  @override
+  $ElementCopyWith<$Res> get uriElement;
 }
 
 class __$ImplementationGuideDependencyCopyWithImpl<$Res>
@@ -1660,6 +1685,7 @@ class __$ImplementationGuideDependencyCopyWithImpl<$Res>
     Object modifierExtension = freezed,
     Object type = freezed,
     Object uri = freezed,
+    Object uriElement = freezed,
   }) {
     return _then(_ImplementationGuideDependency(
       id: id == freezed ? _value.id : id as Id,
@@ -1671,6 +1697,8 @@ class __$ImplementationGuideDependencyCopyWithImpl<$Res>
           : modifierExtension as FhirExtension,
       type: type == freezed ? _value.type : type as DependencyType,
       uri: uri == freezed ? _value.uri : uri as FhirUri,
+      uriElement:
+          uriElement == freezed ? _value.uriElement : uriElement as Element,
     ));
   }
 }
@@ -1688,7 +1716,9 @@ class _$_ImplementationGuideDependency
           this.type,
       @required
       @JsonKey(required: true)
-          this.uri})
+          this.uri,
+      @JsonKey(name: '_uri')
+          this.uriElement})
       : assert(type != null),
         assert(uri != null);
 
@@ -1709,10 +1739,13 @@ class _$_ImplementationGuideDependency
   @override
   @JsonKey(required: true)
   final FhirUri uri;
+  @override
+  @JsonKey(name: '_uri')
+  final Element uriElement;
 
   @override
   String toString() {
-    return 'ImplementationGuideDependency(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, uri: $uri)';
+    return 'ImplementationGuideDependency(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, uri: $uri, uriElement: $uriElement)';
   }
 
   @override
@@ -1730,7 +1763,10 @@ class _$_ImplementationGuideDependency
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.uri, uri) ||
-                const DeepCollectionEquality().equals(other.uri, uri)));
+                const DeepCollectionEquality().equals(other.uri, uri)) &&
+            (identical(other.uriElement, uriElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.uriElement, uriElement)));
   }
 
   @override
@@ -1740,7 +1776,8 @@ class _$_ImplementationGuideDependency
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(uri);
+      const DeepCollectionEquality().hash(uri) ^
+      const DeepCollectionEquality().hash(uriElement);
 
   @override
   _$ImplementationGuideDependencyCopyWith<_ImplementationGuideDependency>
@@ -1765,7 +1802,9 @@ abstract class _ImplementationGuideDependency
           DependencyType type,
       @required
       @JsonKey(required: true)
-          FhirUri uri}) = _$_ImplementationGuideDependency;
+          FhirUri uri,
+      @JsonKey(name: '_uri')
+          Element uriElement}) = _$_ImplementationGuideDependency;
 
   factory _ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideDependency.fromJson;
@@ -1783,6 +1822,9 @@ abstract class _ImplementationGuideDependency
   @override
   @JsonKey(required: true)
   FhirUri get uri;
+  @override
+  @JsonKey(name: '_uri')
+  Element get uriElement;
   @override
   _$ImplementationGuideDependencyCopyWith<_ImplementationGuideDependency>
       get copyWith;
@@ -2760,7 +2802,9 @@ class _$ImplementationGuideResourceTearOff {
       String acronym,
       FhirUri sourceUri,
       Reference sourceReference,
-      Reference exampleFor}) {
+      Reference exampleFor,
+      @JsonKey(name: '_acronym')
+          Element acronymElement}) {
     return _ImplementationGuideResource(
       id: id,
       extension_: extension_,
@@ -2772,6 +2816,7 @@ class _$ImplementationGuideResourceTearOff {
       sourceUri: sourceUri,
       sourceReference: sourceReference,
       exampleFor: exampleFor,
+      acronymElement: acronymElement,
     );
   }
 }
@@ -2792,6 +2837,8 @@ mixin _$ImplementationGuideResource {
   FhirUri get sourceUri;
   Reference get sourceReference;
   Reference get exampleFor;
+  @JsonKey(name: '_acronym')
+  Element get acronymElement;
 
   Map<String, dynamic> toJson();
   $ImplementationGuideResourceCopyWith<ImplementationGuideResource>
@@ -2815,11 +2862,14 @@ abstract class $ImplementationGuideResourceCopyWith<$Res> {
       String acronym,
       FhirUri sourceUri,
       Reference sourceReference,
-      Reference exampleFor});
+      Reference exampleFor,
+      @JsonKey(name: '_acronym')
+          Element acronymElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get sourceReference;
   $ReferenceCopyWith<$Res> get exampleFor;
+  $ElementCopyWith<$Res> get acronymElement;
 }
 
 class _$ImplementationGuideResourceCopyWithImpl<$Res>
@@ -2842,6 +2892,7 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
     Object sourceUri = freezed,
     Object sourceReference = freezed,
     Object exampleFor = freezed,
+    Object acronymElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -2862,6 +2913,9 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
           : sourceReference as Reference,
       exampleFor:
           exampleFor == freezed ? _value.exampleFor : exampleFor as Reference,
+      acronymElement: acronymElement == freezed
+          ? _value.acronymElement
+          : acronymElement as Element,
     ));
   }
 
@@ -2894,6 +2948,16 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
       return _then(_value.copyWith(exampleFor: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get acronymElement {
+    if (_value.acronymElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.acronymElement, (value) {
+      return _then(_value.copyWith(acronymElement: value));
+    });
+  }
 }
 
 abstract class _$ImplementationGuideResourceCopyWith<$Res>
@@ -2915,7 +2979,9 @@ abstract class _$ImplementationGuideResourceCopyWith<$Res>
       String acronym,
       FhirUri sourceUri,
       Reference sourceReference,
-      Reference exampleFor});
+      Reference exampleFor,
+      @JsonKey(name: '_acronym')
+          Element acronymElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -2923,6 +2989,8 @@ abstract class _$ImplementationGuideResourceCopyWith<$Res>
   $ReferenceCopyWith<$Res> get sourceReference;
   @override
   $ReferenceCopyWith<$Res> get exampleFor;
+  @override
+  $ElementCopyWith<$Res> get acronymElement;
 }
 
 class __$ImplementationGuideResourceCopyWithImpl<$Res>
@@ -2949,6 +3017,7 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
     Object sourceUri = freezed,
     Object sourceReference = freezed,
     Object exampleFor = freezed,
+    Object acronymElement = freezed,
   }) {
     return _then(_ImplementationGuideResource(
       id: id == freezed ? _value.id : id as Id,
@@ -2969,6 +3038,9 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
           : sourceReference as Reference,
       exampleFor:
           exampleFor == freezed ? _value.exampleFor : exampleFor as Reference,
+      acronymElement: acronymElement == freezed
+          ? _value.acronymElement
+          : acronymElement as Element,
     ));
   }
 }
@@ -2988,7 +3060,9 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
       this.acronym,
       this.sourceUri,
       this.sourceReference,
-      this.exampleFor})
+      this.exampleFor,
+      @JsonKey(name: '_acronym')
+          this.acronymElement})
       : assert(purpose != null);
 
   factory _$_ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
@@ -3016,10 +3090,13 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
   final Reference sourceReference;
   @override
   final Reference exampleFor;
+  @override
+  @JsonKey(name: '_acronym')
+  final Element acronymElement;
 
   @override
   String toString() {
-    return 'ImplementationGuideResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, purpose: $purpose, name: $name, description: $description, acronym: $acronym, sourceUri: $sourceUri, sourceReference: $sourceReference, exampleFor: $exampleFor)';
+    return 'ImplementationGuideResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, purpose: $purpose, name: $name, description: $description, acronym: $acronym, sourceUri: $sourceUri, sourceReference: $sourceReference, exampleFor: $exampleFor, acronymElement: $acronymElement)';
   }
 
   @override
@@ -3053,7 +3130,10 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
                     .equals(other.sourceReference, sourceReference)) &&
             (identical(other.exampleFor, exampleFor) ||
                 const DeepCollectionEquality()
-                    .equals(other.exampleFor, exampleFor)));
+                    .equals(other.exampleFor, exampleFor)) &&
+            (identical(other.acronymElement, acronymElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.acronymElement, acronymElement)));
   }
 
   @override
@@ -3068,7 +3148,8 @@ class _$_ImplementationGuideResource implements _ImplementationGuideResource {
       const DeepCollectionEquality().hash(acronym) ^
       const DeepCollectionEquality().hash(sourceUri) ^
       const DeepCollectionEquality().hash(sourceReference) ^
-      const DeepCollectionEquality().hash(exampleFor);
+      const DeepCollectionEquality().hash(exampleFor) ^
+      const DeepCollectionEquality().hash(acronymElement);
 
   @override
   _$ImplementationGuideResourceCopyWith<_ImplementationGuideResource>
@@ -3096,7 +3177,9 @@ abstract class _ImplementationGuideResource
       String acronym,
       FhirUri sourceUri,
       Reference sourceReference,
-      Reference exampleFor}) = _$_ImplementationGuideResource;
+      Reference exampleFor,
+      @JsonKey(name: '_acronym')
+          Element acronymElement}) = _$_ImplementationGuideResource;
 
   factory _ImplementationGuideResource.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideResource.fromJson;
@@ -3123,6 +3206,9 @@ abstract class _ImplementationGuideResource
   Reference get sourceReference;
   @override
   Reference get exampleFor;
+  @override
+  @JsonKey(name: '_acronym')
+  Element get acronymElement;
   @override
   _$ImplementationGuideResourceCopyWith<_ImplementationGuideResource>
       get copyWith;
@@ -6777,12 +6863,14 @@ class _$SetupActionTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       ActionOperation operation,
       @JsonKey(name: 'assert') ActionAssert assert_}) {
     return _SetupAction(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       operation: operation,
       assert_: assert_,
     );
@@ -6797,6 +6885,8 @@ mixin _$SetupAction {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   ActionOperation get operation;
   @JsonKey(name: 'assert')
   ActionAssert get assert_;
@@ -6813,6 +6903,7 @@ abstract class $SetupActionCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       ActionOperation operation,
       @JsonKey(name: 'assert') ActionAssert assert_});
 
@@ -6833,6 +6924,7 @@ class _$SetupActionCopyWithImpl<$Res> implements $SetupActionCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object operation = freezed,
     Object assert_ = freezed,
   }) {
@@ -6844,6 +6936,9 @@ class _$SetupActionCopyWithImpl<$Res> implements $SetupActionCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       operation: operation == freezed
           ? _value.operation
           : operation as ActionOperation,
@@ -6892,6 +6987,7 @@ abstract class _$SetupActionCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       ActionOperation operation,
       @JsonKey(name: 'assert') ActionAssert assert_});
 
@@ -6917,6 +7013,7 @@ class __$SetupActionCopyWithImpl<$Res> extends _$SetupActionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object operation = freezed,
     Object assert_ = freezed,
   }) {
@@ -6928,6 +7025,9 @@ class __$SetupActionCopyWithImpl<$Res> extends _$SetupActionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       operation: operation == freezed
           ? _value.operation
           : operation as ActionOperation,
@@ -6942,6 +7042,7 @@ class _$_SetupAction implements _SetupAction {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.operation,
       @JsonKey(name: 'assert') this.assert_});
 
@@ -6956,6 +7057,9 @@ class _$_SetupAction implements _SetupAction {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final ActionOperation operation;
   @override
   @JsonKey(name: 'assert')
@@ -6963,7 +7067,7 @@ class _$_SetupAction implements _SetupAction {
 
   @override
   String toString() {
-    return 'SetupAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, operation: $operation, assert_: $assert_)';
+    return 'SetupAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, operation: $operation, assert_: $assert_)';
   }
 
   @override
@@ -6978,6 +7082,9 @@ class _$_SetupAction implements _SetupAction {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.operation, operation) ||
                 const DeepCollectionEquality()
                     .equals(other.operation, operation)) &&
@@ -6991,6 +7098,7 @@ class _$_SetupAction implements _SetupAction {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(assert_);
 
@@ -7009,6 +7117,7 @@ abstract class _SetupAction implements SetupAction {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       ActionOperation operation,
       @JsonKey(name: 'assert') ActionAssert assert_}) = _$_SetupAction;
 
@@ -7022,6 +7131,9 @@ abstract class _SetupAction implements SetupAction {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   ActionOperation get operation;
   @override
@@ -7043,6 +7155,8 @@ class _$ActionOperationTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       Coding type,
       Code resource,
       String label,
@@ -7087,6 +7201,7 @@ class _$ActionOperationTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       type: type,
       resource: resource,
       label: label,
@@ -7125,6 +7240,8 @@ mixin _$ActionOperation {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   Coding get type;
   Code get resource;
   String get label;
@@ -7179,6 +7296,8 @@ abstract class $ActionOperationCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       Coding type,
       Code resource,
       String label,
@@ -7249,6 +7368,7 @@ class _$ActionOperationCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object type = freezed,
     Object resource = freezed,
     Object label = freezed,
@@ -7284,6 +7404,9 @@ class _$ActionOperationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       type: type == freezed ? _value.type : type as Coding,
       resource: resource == freezed ? _value.resource : resource as Code,
       label: label == freezed ? _value.label : label as String,
@@ -7496,6 +7619,8 @@ abstract class _$ActionOperationCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       Coding type,
       Code resource,
       String label,
@@ -7582,6 +7707,7 @@ class __$ActionOperationCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object type = freezed,
     Object resource = freezed,
     Object label = freezed,
@@ -7617,6 +7743,9 @@ class __$ActionOperationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       type: type == freezed ? _value.type : type as Coding,
       resource: resource == freezed ? _value.resource : resource as Code,
       label: label == freezed ? _value.label : label as String,
@@ -7684,6 +7813,7 @@ class _$_ActionOperation implements _ActionOperation {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.type,
       this.resource,
       this.label,
@@ -7721,6 +7851,9 @@ class _$_ActionOperation implements _ActionOperation {
   final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final Coding type;
   @override
@@ -7790,7 +7923,7 @@ class _$_ActionOperation implements _ActionOperation {
 
   @override
   String toString() {
-    return 'ActionOperation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, resource: $resource, label: $label, description: $description, accept: $accept, contentType: $contentType, destination: $destination, encodeRequestUrl: $encodeRequestUrl, params: $params, requestHeader: $requestHeader, responseId: $responseId, sourceId: $sourceId, targetId: $targetId, url: $url, resourceElement: $resourceElement, labelElement: $labelElement, descriptionElement: $descriptionElement, acceptElement: $acceptElement, contentTypeElement: $contentTypeElement, destinationElement: $destinationElement, encodeRequestUrlElement: $encodeRequestUrlElement, paramsElement: $paramsElement, responseIdElement: $responseIdElement, sourceIdElement: $sourceIdElement, targetIdElement: $targetIdElement, urlElement: $urlElement)';
+    return 'ActionOperation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, type: $type, resource: $resource, label: $label, description: $description, accept: $accept, contentType: $contentType, destination: $destination, encodeRequestUrl: $encodeRequestUrl, params: $params, requestHeader: $requestHeader, responseId: $responseId, sourceId: $sourceId, targetId: $targetId, url: $url, resourceElement: $resourceElement, labelElement: $labelElement, descriptionElement: $descriptionElement, acceptElement: $acceptElement, contentTypeElement: $contentTypeElement, destinationElement: $destinationElement, encodeRequestUrlElement: $encodeRequestUrlElement, paramsElement: $paramsElement, responseIdElement: $responseIdElement, sourceIdElement: $sourceIdElement, targetIdElement: $targetIdElement, urlElement: $urlElement)';
   }
 
   @override
@@ -7805,6 +7938,9 @@ class _$_ActionOperation implements _ActionOperation {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.resource, resource) ||
@@ -7861,10 +7997,8 @@ class _$_ActionOperation implements _ActionOperation {
                 const DeepCollectionEquality()
                     .equals(other.destinationElement, destinationElement)) &&
             (identical(other.encodeRequestUrlElement, encodeRequestUrlElement) ||
-                const DeepCollectionEquality().equals(
-                    other.encodeRequestUrlElement, encodeRequestUrlElement)) &&
-            (identical(other.paramsElement, paramsElement) ||
-                const DeepCollectionEquality().equals(other.paramsElement, paramsElement)) &&
+                const DeepCollectionEquality().equals(other.encodeRequestUrlElement, encodeRequestUrlElement)) &&
+            (identical(other.paramsElement, paramsElement) || const DeepCollectionEquality().equals(other.paramsElement, paramsElement)) &&
             (identical(other.responseIdElement, responseIdElement) || const DeepCollectionEquality().equals(other.responseIdElement, responseIdElement)) &&
             (identical(other.sourceIdElement, sourceIdElement) || const DeepCollectionEquality().equals(other.sourceIdElement, sourceIdElement)) &&
             (identical(other.targetIdElement, targetIdElement) || const DeepCollectionEquality().equals(other.targetIdElement, targetIdElement)) &&
@@ -7877,6 +8011,7 @@ class _$_ActionOperation implements _ActionOperation {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(resource) ^
       const DeepCollectionEquality().hash(label) ^
@@ -7920,6 +8055,8 @@ abstract class _ActionOperation implements ActionOperation {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       Coding type,
       Code resource,
       String label,
@@ -7971,6 +8108,9 @@ abstract class _ActionOperation implements ActionOperation {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   Coding get type;
   @override
@@ -10294,11 +10434,13 @@ class _$TeardownActionTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       ActionOperation operation}) {
     return _TeardownAction(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       operation: operation,
     );
   }
@@ -10312,6 +10454,8 @@ mixin _$TeardownAction {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   ActionOperation get operation;
 
   Map<String, dynamic> toJson();
@@ -10326,6 +10470,7 @@ abstract class $TeardownActionCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       ActionOperation operation});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -10345,6 +10490,7 @@ class _$TeardownActionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object operation = freezed,
   }) {
     return _then(_value.copyWith(
@@ -10355,6 +10501,9 @@ class _$TeardownActionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       operation: operation == freezed
           ? _value.operation
           : operation as ActionOperation,
@@ -10392,6 +10541,7 @@ abstract class _$TeardownActionCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       ActionOperation operation});
 
   @override
@@ -10415,6 +10565,7 @@ class __$TeardownActionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object operation = freezed,
   }) {
     return _then(_TeardownAction(
@@ -10425,6 +10576,9 @@ class __$TeardownActionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       operation: operation == freezed
           ? _value.operation
           : operation as ActionOperation,
@@ -10438,6 +10592,7 @@ class _$_TeardownAction implements _TeardownAction {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.operation});
 
   factory _$_TeardownAction.fromJson(Map<String, dynamic> json) =>
@@ -10451,11 +10606,14 @@ class _$_TeardownAction implements _TeardownAction {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final ActionOperation operation;
 
   @override
   String toString() {
-    return 'TeardownAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, operation: $operation)';
+    return 'TeardownAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, operation: $operation)';
   }
 
   @override
@@ -10470,6 +10628,9 @@ class _$_TeardownAction implements _TeardownAction {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.operation, operation) ||
                 const DeepCollectionEquality()
                     .equals(other.operation, operation)));
@@ -10481,6 +10642,7 @@ class _$_TeardownAction implements _TeardownAction {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(operation);
 
   @override
@@ -10498,6 +10660,7 @@ abstract class _TeardownAction implements TeardownAction {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       ActionOperation operation}) = _$_TeardownAction;
 
   factory _TeardownAction.fromJson(Map<String, dynamic> json) =
@@ -10510,6 +10673,9 @@ abstract class _TeardownAction implements TeardownAction {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   ActionOperation get operation;
   @override
