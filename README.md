@@ -82,8 +82,6 @@ I think it's the new compiling. It's actually great though, [json_serializable](
 
 | [ResourceTypes](https://www.hl7.org/fhir/resourcelist.html) |by Category| |||||
 |-----|:-----|-----|-----|-----|-----|-----|
-|
-|
 | **base** |
 || *Individuals* | *Entities1* | *Entities2* | *Workflow* | Management |
 || Group| Endpoing | BiologicallyDerivedProduct | Appointment | Encounter |
