@@ -3292,6 +3292,8 @@ class _$ObservationTearOff {
       List<ObservationReferenceRange> referenceRange,
       List<ObservationRelated> related,
       List<ObservationComponent> component,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -3348,6 +3350,7 @@ class _$ObservationTearOff {
       referenceRange: referenceRange,
       related: related,
       component: component,
+      idElement: idElement,
       implicitRulesElement: implicitRulesElement,
       languageElement: languageElement,
       statusElement: statusElement,
@@ -3407,6 +3410,8 @@ mixin _$Observation {
   List<ObservationReferenceRange> get referenceRange;
   List<ObservationRelated> get related;
   List<ObservationComponent> get component;
+  @JsonKey(name: '_id')
+  Element get idElement;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @JsonKey(name: '_language')
@@ -3476,6 +3481,8 @@ abstract class $ObservationCopyWith<$Res> {
       List<ObservationReferenceRange> referenceRange,
       List<ObservationRelated> related,
       List<ObservationComponent> component,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -3514,6 +3521,7 @@ abstract class $ObservationCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get method;
   $ReferenceCopyWith<$Res> get specimen;
   $ReferenceCopyWith<$Res> get device;
+  $ElementCopyWith<$Res> get idElement;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get statusElement;
@@ -3572,6 +3580,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
     Object referenceRange = freezed,
     Object related = freezed,
     Object component = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object statusElement = freezed,
@@ -3665,6 +3674,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       component: component == freezed
           ? _value.component
           : component as List<ObservationComponent>,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -3903,6 +3913,16 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
   }
 
   @override
+  $ElementCopyWith<$Res> get idElement {
+    if (_value.idElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.idElement, (value) {
+      return _then(_value.copyWith(idElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
@@ -4033,6 +4053,8 @@ abstract class _$ObservationCopyWith<$Res>
       List<ObservationReferenceRange> referenceRange,
       List<ObservationRelated> related,
       List<ObservationComponent> component,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -4092,6 +4114,8 @@ abstract class _$ObservationCopyWith<$Res>
   $ReferenceCopyWith<$Res> get specimen;
   @override
   $ReferenceCopyWith<$Res> get device;
+  @override
+  $ElementCopyWith<$Res> get idElement;
   @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
@@ -4160,6 +4184,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
     Object referenceRange = freezed,
     Object related = freezed,
     Object component = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object statusElement = freezed,
@@ -4253,6 +4278,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       component: component == freezed
           ? _value.component
           : component as List<ObservationComponent>,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -4329,6 +4355,8 @@ class _$_Observation implements _Observation {
       this.referenceRange,
       this.related,
       this.component,
+      @JsonKey(name: '_id')
+          this.idElement,
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
       @JsonKey(name: '_language')
@@ -4434,6 +4462,9 @@ class _$_Observation implements _Observation {
   @override
   final List<ObservationComponent> component;
   @override
+  @JsonKey(name: '_id')
+  final Element idElement;
+  @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
@@ -4460,7 +4491,7 @@ class _$_Observation implements _Observation {
 
   @override
   String toString() {
-    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, issued: $issued, performer: $performer, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueAttachment: $valueAttachment, valueTime: $valueTime, valueDateTime: $valueDateTime, valuePeriod: $valuePeriod, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, comments: $comments, bodySite: $bodySite, method: $method, specimen: $specimen, device: $device, referenceRange: $referenceRange, related: $related, component: $component, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, effectiveDateTimeElement: $effectiveDateTimeElement, issuedElement: $issuedElement, valueStringElement: $valueStringElement, valueTimeElement: $valueTimeElement, valueDateTimeElement: $valueDateTimeElement)';
+    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, issued: $issued, performer: $performer, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueAttachment: $valueAttachment, valueTime: $valueTime, valueDateTime: $valueDateTime, valuePeriod: $valuePeriod, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, comments: $comments, bodySite: $bodySite, method: $method, specimen: $specimen, device: $device, referenceRange: $referenceRange, related: $related, component: $component, idElement: $idElement, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, statusElement: $statusElement, effectiveDateTimeElement: $effectiveDateTimeElement, issuedElement: $issuedElement, valueStringElement: $valueStringElement, valueTimeElement: $valueTimeElement, valueDateTimeElement: $valueDateTimeElement)';
   }
 
   @override
@@ -4549,6 +4580,7 @@ class _$_Observation implements _Observation {
             (identical(other.referenceRange, referenceRange) || const DeepCollectionEquality().equals(other.referenceRange, referenceRange)) &&
             (identical(other.related, related) || const DeepCollectionEquality().equals(other.related, related)) &&
             (identical(other.component, component) || const DeepCollectionEquality().equals(other.component, component)) &&
+            (identical(other.idElement, idElement) || const DeepCollectionEquality().equals(other.idElement, idElement)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
             (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
@@ -4601,6 +4633,7 @@ class _$_Observation implements _Observation {
       const DeepCollectionEquality().hash(referenceRange) ^
       const DeepCollectionEquality().hash(related) ^
       const DeepCollectionEquality().hash(component) ^
+      const DeepCollectionEquality().hash(idElement) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(statusElement) ^
@@ -4667,6 +4700,8 @@ abstract class _Observation implements Observation {
       List<ObservationReferenceRange> referenceRange,
       List<ObservationRelated> related,
       List<ObservationComponent> component,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -4769,6 +4804,9 @@ abstract class _Observation implements Observation {
   List<ObservationRelated> get related;
   @override
   List<ObservationComponent> get component;
+  @override
+  @JsonKey(name: '_id')
+  Element get idElement;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;

@@ -1695,6 +1695,8 @@ class _$PatientTearOff {
       List<Reference> careProvider,
       Reference managingOrganization,
       List<PatientLink> link,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -1742,6 +1744,7 @@ class _$PatientTearOff {
       careProvider: careProvider,
       managingOrganization: managingOrganization,
       link: link,
+      idElement: idElement,
       implicitRulesElement: implicitRulesElement,
       languageElement: languageElement,
       activeElement: activeElement,
@@ -1790,6 +1793,8 @@ mixin _$Patient {
   List<Reference> get careProvider;
   Reference get managingOrganization;
   List<PatientLink> get link;
+  @JsonKey(name: '_id')
+  Element get idElement;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @JsonKey(name: '_language')
@@ -1848,6 +1853,8 @@ abstract class $PatientCopyWith<$Res> {
       List<Reference> careProvider,
       Reference managingOrganization,
       List<PatientLink> link,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -1872,6 +1879,7 @@ abstract class $PatientCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get maritalStatus;
   $PatientAnimalCopyWith<$Res> get animal;
   $ReferenceCopyWith<$Res> get managingOrganization;
+  $ElementCopyWith<$Res> get idElement;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get activeElement;
@@ -1920,6 +1928,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
     Object careProvider = freezed,
     Object managingOrganization = freezed,
     Object link = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object activeElement = freezed,
@@ -1988,6 +1997,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
           ? _value.managingOrganization
           : managingOrganization as Reference,
       link: link == freezed ? _value.link : link as List<PatientLink>,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -2065,6 +2075,16 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
     }
     return $ReferenceCopyWith<$Res>(_value.managingOrganization, (value) {
       return _then(_value.copyWith(managingOrganization: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get idElement {
+    if (_value.idElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.idElement, (value) {
+      return _then(_value.copyWith(idElement: value));
     });
   }
 
@@ -2195,6 +2215,8 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       List<Reference> careProvider,
       Reference managingOrganization,
       List<PatientLink> link,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -2224,6 +2246,8 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
   $PatientAnimalCopyWith<$Res> get animal;
   @override
   $ReferenceCopyWith<$Res> get managingOrganization;
+  @override
+  $ElementCopyWith<$Res> get idElement;
   @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
@@ -2282,6 +2306,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
     Object careProvider = freezed,
     Object managingOrganization = freezed,
     Object link = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object activeElement = freezed,
@@ -2350,6 +2375,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
           ? _value.managingOrganization
           : managingOrganization as Reference,
       link: link == freezed ? _value.link : link as List<PatientLink>,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -2415,6 +2441,8 @@ class _$_Patient implements _Patient {
       this.careProvider,
       this.managingOrganization,
       this.link,
+      @JsonKey(name: '_id')
+          this.idElement,
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
       @JsonKey(name: '_language')
@@ -2497,6 +2525,9 @@ class _$_Patient implements _Patient {
   @override
   final List<PatientLink> link;
   @override
+  @JsonKey(name: '_id')
+  final Element idElement;
+  @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
@@ -2526,7 +2557,7 @@ class _$_Patient implements _Patient {
 
   @override
   String toString() {
-    return 'Patient(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, deceasedBoolean: $deceasedBoolean, deceasedDateTime: $deceasedDateTime, address: $address, maritalStatus: $maritalStatus, multipleBirthBoolean: $multipleBirthBoolean, multipleBirthInteger: $multipleBirthInteger, photo: $photo, contact: $contact, animal: $animal, communication: $communication, careProvider: $careProvider, managingOrganization: $managingOrganization, link: $link, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, activeElement: $activeElement, genderElement: $genderElement, birthDateElement: $birthDateElement, deceasedBooleanElement: $deceasedBooleanElement, deceasedDateTimeElement: $deceasedDateTimeElement, multipleBirthBooleanElement: $multipleBirthBooleanElement, multipleBirthIntegerElement: $multipleBirthIntegerElement)';
+    return 'Patient(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, deceasedBoolean: $deceasedBoolean, deceasedDateTime: $deceasedDateTime, address: $address, maritalStatus: $maritalStatus, multipleBirthBoolean: $multipleBirthBoolean, multipleBirthInteger: $multipleBirthInteger, photo: $photo, contact: $contact, animal: $animal, communication: $communication, careProvider: $careProvider, managingOrganization: $managingOrganization, link: $link, idElement: $idElement, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, activeElement: $activeElement, genderElement: $genderElement, birthDateElement: $birthDateElement, deceasedBooleanElement: $deceasedBooleanElement, deceasedDateTimeElement: $deceasedDateTimeElement, multipleBirthBooleanElement: $multipleBirthBooleanElement, multipleBirthIntegerElement: $multipleBirthIntegerElement)';
   }
 
   @override
@@ -2603,6 +2634,7 @@ class _$_Patient implements _Patient {
             (identical(other.careProvider, careProvider) || const DeepCollectionEquality().equals(other.careProvider, careProvider)) &&
             (identical(other.managingOrganization, managingOrganization) || const DeepCollectionEquality().equals(other.managingOrganization, managingOrganization)) &&
             (identical(other.link, link) || const DeepCollectionEquality().equals(other.link, link)) &&
+            (identical(other.idElement, idElement) || const DeepCollectionEquality().equals(other.idElement, idElement)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
             (identical(other.activeElement, activeElement) || const DeepCollectionEquality().equals(other.activeElement, activeElement)) &&
@@ -2645,6 +2677,7 @@ class _$_Patient implements _Patient {
       const DeepCollectionEquality().hash(careProvider) ^
       const DeepCollectionEquality().hash(managingOrganization) ^
       const DeepCollectionEquality().hash(link) ^
+      const DeepCollectionEquality().hash(idElement) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(activeElement) ^
@@ -2698,6 +2731,8 @@ abstract class _Patient implements Patient {
       List<Reference> careProvider,
       Reference managingOrganization,
       List<PatientLink> link,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -2778,6 +2813,9 @@ abstract class _Patient implements Patient {
   Reference get managingOrganization;
   @override
   List<PatientLink> get link;
+  @override
+  @JsonKey(name: '_id')
+  Element get idElement;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;

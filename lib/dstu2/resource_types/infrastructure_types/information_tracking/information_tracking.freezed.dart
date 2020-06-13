@@ -5011,7 +5011,8 @@ class _$AuditEventParticipantTearOff {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<Coding> purposeOfUse}) {
+      List<Coding> purposeOfUse,
+      @JsonKey(name: '_name') Element nameElement}) {
     return _AuditEventParticipant(
       id: id,
       extension_: extension_,
@@ -5027,6 +5028,7 @@ class _$AuditEventParticipantTearOff {
       media: media,
       network: network,
       purposeOfUse: purposeOfUse,
+      nameElement: nameElement,
     );
   }
 }
@@ -5051,6 +5053,8 @@ mixin _$AuditEventParticipant {
   Coding get media;
   AuditEventNetwork get network;
   List<Coding> get purposeOfUse;
+  @JsonKey(name: '_name')
+  Element get nameElement;
 
   Map<String, dynamic> toJson();
   $AuditEventParticipantCopyWith<AuditEventParticipant> get copyWith;
@@ -5074,7 +5078,8 @@ abstract class $AuditEventParticipantCopyWith<$Res> {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<Coding> purposeOfUse});
+      List<Coding> purposeOfUse,
+      @JsonKey(name: '_name') Element nameElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $ReferenceCopyWith<$Res> get reference;
@@ -5082,6 +5087,7 @@ abstract class $AuditEventParticipantCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get location;
   $CodingCopyWith<$Res> get media;
   $AuditEventNetworkCopyWith<$Res> get network;
+  $ElementCopyWith<$Res> get nameElement;
 }
 
 class _$AuditEventParticipantCopyWithImpl<$Res>
@@ -5108,6 +5114,7 @@ class _$AuditEventParticipantCopyWithImpl<$Res>
     Object media = freezed,
     Object network = freezed,
     Object purposeOfUse = freezed,
+    Object nameElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -5132,6 +5139,8 @@ class _$AuditEventParticipantCopyWithImpl<$Res>
       purposeOfUse: purposeOfUse == freezed
           ? _value.purposeOfUse
           : purposeOfUse as List<Coding>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
     ));
   }
 
@@ -5194,6 +5203,16 @@ class _$AuditEventParticipantCopyWithImpl<$Res>
       return _then(_value.copyWith(network: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
 }
 
 abstract class _$AuditEventParticipantCopyWith<$Res>
@@ -5216,7 +5235,8 @@ abstract class _$AuditEventParticipantCopyWith<$Res>
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<Coding> purposeOfUse});
+      List<Coding> purposeOfUse,
+      @JsonKey(name: '_name') Element nameElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -5230,6 +5250,8 @@ abstract class _$AuditEventParticipantCopyWith<$Res>
   $CodingCopyWith<$Res> get media;
   @override
   $AuditEventNetworkCopyWith<$Res> get network;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
 }
 
 class __$AuditEventParticipantCopyWithImpl<$Res>
@@ -5258,6 +5280,7 @@ class __$AuditEventParticipantCopyWithImpl<$Res>
     Object media = freezed,
     Object network = freezed,
     Object purposeOfUse = freezed,
+    Object nameElement = freezed,
   }) {
     return _then(_AuditEventParticipant(
       id: id == freezed ? _value.id : id as Id,
@@ -5282,6 +5305,8 @@ class __$AuditEventParticipantCopyWithImpl<$Res>
       purposeOfUse: purposeOfUse == freezed
           ? _value.purposeOfUse
           : purposeOfUse as List<Coding>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
     ));
   }
 }
@@ -5302,7 +5327,8 @@ class _$_AuditEventParticipant implements _AuditEventParticipant {
       this.policy,
       this.media,
       this.network,
-      this.purposeOfUse})
+      this.purposeOfUse,
+      @JsonKey(name: '_name') this.nameElement})
       : assert(requestor != null);
 
   factory _$_AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
@@ -5338,10 +5364,13 @@ class _$_AuditEventParticipant implements _AuditEventParticipant {
   final AuditEventNetwork network;
   @override
   final List<Coding> purposeOfUse;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
 
   @override
   String toString() {
-    return 'AuditEventParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, role: $role, reference: $reference, userId: $userId, altId: $altId, name: $name, requestor: $requestor, location: $location, policy: $policy, media: $media, network: $network, purposeOfUse: $purposeOfUse)';
+    return 'AuditEventParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, role: $role, reference: $reference, userId: $userId, altId: $altId, name: $name, requestor: $requestor, location: $location, policy: $policy, media: $media, network: $network, purposeOfUse: $purposeOfUse, nameElement: $nameElement)';
   }
 
   @override
@@ -5382,7 +5411,10 @@ class _$_AuditEventParticipant implements _AuditEventParticipant {
                     .equals(other.network, network)) &&
             (identical(other.purposeOfUse, purposeOfUse) ||
                 const DeepCollectionEquality()
-                    .equals(other.purposeOfUse, purposeOfUse)));
+                    .equals(other.purposeOfUse, purposeOfUse)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)));
   }
 
   @override
@@ -5401,7 +5433,8 @@ class _$_AuditEventParticipant implements _AuditEventParticipant {
       const DeepCollectionEquality().hash(policy) ^
       const DeepCollectionEquality().hash(media) ^
       const DeepCollectionEquality().hash(network) ^
-      const DeepCollectionEquality().hash(purposeOfUse);
+      const DeepCollectionEquality().hash(purposeOfUse) ^
+      const DeepCollectionEquality().hash(nameElement);
 
   @override
   _$AuditEventParticipantCopyWith<_AuditEventParticipant> get copyWith =>
@@ -5429,7 +5462,8 @@ abstract class _AuditEventParticipant implements AuditEventParticipant {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<Coding> purposeOfUse}) = _$_AuditEventParticipant;
+      List<Coding> purposeOfUse,
+      @JsonKey(name: '_name') Element nameElement}) = _$_AuditEventParticipant;
 
   factory _AuditEventParticipant.fromJson(Map<String, dynamic> json) =
       _$_AuditEventParticipant.fromJson;
@@ -5464,6 +5498,9 @@ abstract class _AuditEventParticipant implements AuditEventParticipant {
   AuditEventNetwork get network;
   @override
   List<Coding> get purposeOfUse;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   _$AuditEventParticipantCopyWith<_AuditEventParticipant> get copyWith;
 }
@@ -5796,7 +5833,8 @@ class _$AuditEventObjectTearOff {
       String name,
       String description,
       Base64Binary query,
-      List<AuditEventDetail> detail}) {
+      List<AuditEventDetail> detail,
+      @JsonKey(name: '_query') Element queryElement}) {
     return _AuditEventObject(
       id: id,
       extension_: extension_,
@@ -5811,6 +5849,7 @@ class _$AuditEventObjectTearOff {
       description: description,
       query: query,
       detail: detail,
+      queryElement: queryElement,
     );
   }
 }
@@ -5833,6 +5872,8 @@ mixin _$AuditEventObject {
   String get description;
   Base64Binary get query;
   List<AuditEventDetail> get detail;
+  @JsonKey(name: '_query')
+  Element get queryElement;
 
   Map<String, dynamic> toJson();
   $AuditEventObjectCopyWith<AuditEventObject> get copyWith;
@@ -5855,7 +5896,8 @@ abstract class $AuditEventObjectCopyWith<$Res> {
       String name,
       String description,
       Base64Binary query,
-      List<AuditEventDetail> detail});
+      List<AuditEventDetail> detail,
+      @JsonKey(name: '_query') Element queryElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $IdentifierCopyWith<$Res> get identifier;
@@ -5863,6 +5905,7 @@ abstract class $AuditEventObjectCopyWith<$Res> {
   $CodingCopyWith<$Res> get type;
   $CodingCopyWith<$Res> get role;
   $CodingCopyWith<$Res> get lifecycle;
+  $ElementCopyWith<$Res> get queryElement;
 }
 
 class _$AuditEventObjectCopyWithImpl<$Res>
@@ -5888,6 +5931,7 @@ class _$AuditEventObjectCopyWithImpl<$Res>
     Object description = freezed,
     Object query = freezed,
     Object detail = freezed,
+    Object queryElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -5913,6 +5957,9 @@ class _$AuditEventObjectCopyWithImpl<$Res>
       query: query == freezed ? _value.query : query as Base64Binary,
       detail:
           detail == freezed ? _value.detail : detail as List<AuditEventDetail>,
+      queryElement: queryElement == freezed
+          ? _value.queryElement
+          : queryElement as Element,
     ));
   }
 
@@ -5975,6 +6022,16 @@ class _$AuditEventObjectCopyWithImpl<$Res>
       return _then(_value.copyWith(lifecycle: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get queryElement {
+    if (_value.queryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.queryElement, (value) {
+      return _then(_value.copyWith(queryElement: value));
+    });
+  }
 }
 
 abstract class _$AuditEventObjectCopyWith<$Res>
@@ -5996,7 +6053,8 @@ abstract class _$AuditEventObjectCopyWith<$Res>
       String name,
       String description,
       Base64Binary query,
-      List<AuditEventDetail> detail});
+      List<AuditEventDetail> detail,
+      @JsonKey(name: '_query') Element queryElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -6010,6 +6068,8 @@ abstract class _$AuditEventObjectCopyWith<$Res>
   $CodingCopyWith<$Res> get role;
   @override
   $CodingCopyWith<$Res> get lifecycle;
+  @override
+  $ElementCopyWith<$Res> get queryElement;
 }
 
 class __$AuditEventObjectCopyWithImpl<$Res>
@@ -6037,6 +6097,7 @@ class __$AuditEventObjectCopyWithImpl<$Res>
     Object description = freezed,
     Object query = freezed,
     Object detail = freezed,
+    Object queryElement = freezed,
   }) {
     return _then(_AuditEventObject(
       id: id == freezed ? _value.id : id as Id,
@@ -6062,6 +6123,9 @@ class __$AuditEventObjectCopyWithImpl<$Res>
       query: query == freezed ? _value.query : query as Base64Binary,
       detail:
           detail == freezed ? _value.detail : detail as List<AuditEventDetail>,
+      queryElement: queryElement == freezed
+          ? _value.queryElement
+          : queryElement as Element,
     ));
   }
 }
@@ -6081,7 +6145,8 @@ class _$_AuditEventObject implements _AuditEventObject {
       this.name,
       this.description,
       this.query,
-      this.detail});
+      this.detail,
+      @JsonKey(name: '_query') this.queryElement});
 
   factory _$_AuditEventObject.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventObjectFromJson(json);
@@ -6113,10 +6178,13 @@ class _$_AuditEventObject implements _AuditEventObject {
   final Base64Binary query;
   @override
   final List<AuditEventDetail> detail;
+  @override
+  @JsonKey(name: '_query')
+  final Element queryElement;
 
   @override
   String toString() {
-    return 'AuditEventObject(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, reference: $reference, type: $type, role: $role, lifecycle: $lifecycle, securityLabel: $securityLabel, name: $name, description: $description, query: $query, detail: $detail)';
+    return 'AuditEventObject(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, reference: $reference, type: $type, role: $role, lifecycle: $lifecycle, securityLabel: $securityLabel, name: $name, description: $description, query: $query, detail: $detail, queryElement: $queryElement)';
   }
 
   @override
@@ -6155,7 +6223,10 @@ class _$_AuditEventObject implements _AuditEventObject {
             (identical(other.query, query) ||
                 const DeepCollectionEquality().equals(other.query, query)) &&
             (identical(other.detail, detail) ||
-                const DeepCollectionEquality().equals(other.detail, detail)));
+                const DeepCollectionEquality().equals(other.detail, detail)) &&
+            (identical(other.queryElement, queryElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.queryElement, queryElement)));
   }
 
   @override
@@ -6173,7 +6244,8 @@ class _$_AuditEventObject implements _AuditEventObject {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(query) ^
-      const DeepCollectionEquality().hash(detail);
+      const DeepCollectionEquality().hash(detail) ^
+      const DeepCollectionEquality().hash(queryElement);
 
   @override
   _$AuditEventObjectCopyWith<_AuditEventObject> get copyWith =>
@@ -6199,7 +6271,8 @@ abstract class _AuditEventObject implements AuditEventObject {
       String name,
       String description,
       Base64Binary query,
-      List<AuditEventDetail> detail}) = _$_AuditEventObject;
+      List<AuditEventDetail> detail,
+      @JsonKey(name: '_query') Element queryElement}) = _$_AuditEventObject;
 
   factory _AuditEventObject.fromJson(Map<String, dynamic> json) =
       _$_AuditEventObject.fromJson;
@@ -6231,6 +6304,9 @@ abstract class _AuditEventObject implements AuditEventObject {
   Base64Binary get query;
   @override
   List<AuditEventDetail> get detail;
+  @override
+  @JsonKey(name: '_query')
+  Element get queryElement;
   @override
   _$AuditEventObjectCopyWith<_AuditEventObject> get copyWith;
 }

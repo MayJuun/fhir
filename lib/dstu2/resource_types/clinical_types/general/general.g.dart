@@ -1136,10 +1136,9 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    categoryElement: (json['_category'] as List)
-        ?.map((e) =>
-            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    categoryElement: json['_category'] == null
+        ? null
+        : Element.fromJson(json['_category'] as Map<String, dynamic>),
     criticalityElement: json['_criticality'] == null
         ? null
         : Element.fromJson(json['_criticality'] as Map<String, dynamic>),
@@ -1195,8 +1194,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull(
-      '_category', instance.categoryElement?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_category', instance.categoryElement?.toJson());
   writeNotNull('_criticality', instance.criticalityElement?.toJson());
   writeNotNull('_recordedDate', instance.recordedDateElement?.toJson());
   writeNotNull('_lastOccurrence', instance.lastOccurrenceElement?.toJson());
@@ -1292,6 +1290,8 @@ _$_ConditionEvidence _$_$_ConditionEvidenceFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1316,6 +1316,7 @@ Map<String, dynamic> _$_$_ConditionEvidenceToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
   return val;
@@ -1730,6 +1731,8 @@ _$_AllergyIntoleranceReaction _$_$_AllergyIntoleranceReactionFromJson(
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     substance: json['substance'] == null
         ? null
         : CodeableConcept.fromJson(json['substance'] as Map<String, dynamic>),
@@ -1763,6 +1766,9 @@ _$_AllergyIntoleranceReaction _$_$_AllergyIntoleranceReactionFromJson(
     severityElement: json['_severity'] == null
         ? null
         : Element.fromJson(json['_severity'] as Map<String, dynamic>),
+    certaintyElement: json['_certainty'] == null
+        ? null
+        : Element.fromJson(json['_certainty'] as Map<String, dynamic>),
   );
 }
 
@@ -1780,6 +1786,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceReactionToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('substance', instance.substance?.toJson());
   writeNotNull('certainty', _$ReactionCertaintyEnumMap[instance.certainty]);
   writeNotNull('manifestation',
@@ -1792,6 +1799,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceReactionToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('_onset', instance.onsetElement?.toJson());
   writeNotNull('_severity', instance.severityElement?.toJson());
+  writeNotNull('_certainty', instance.certaintyElement?.toJson());
   return val;
 }
 

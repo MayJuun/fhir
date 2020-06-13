@@ -871,6 +871,37 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
     defaultValueUriElement: json['_defaultValueUri'] == null
         ? null
         : Element.fromJson(json['_defaultValueUri'] as Map<String, dynamic>),
+    exampleBase64BinaryElement: json['_exampleBase64Binary'] == null
+        ? null
+        : Element.fromJson(
+            json['_exampleBase64Binary'] as Map<String, dynamic>),
+    exampleBooleanElement: json['_exampleBoolean'] == null
+        ? null
+        : Element.fromJson(json['_exampleBoolean'] as Map<String, dynamic>),
+    exampleCodeElement: json['_exampleCode'] == null
+        ? null
+        : Element.fromJson(json['_exampleCode'] as Map<String, dynamic>),
+    exampleDateElement: json['_exampleDate'] == null
+        ? null
+        : Element.fromJson(json['_exampleDate'] as Map<String, dynamic>),
+    exampleDateTimeElement: json['_exampleDateTime'] == null
+        ? null
+        : Element.fromJson(json['_exampleDateTime'] as Map<String, dynamic>),
+    exampleDecimalElement: json['_exampleDecimal'] == null
+        ? null
+        : Element.fromJson(json['_exampleDecimal'] as Map<String, dynamic>),
+    exampleInstantElement: json['_exampleInstant'] == null
+        ? null
+        : Element.fromJson(json['_exampleInstant'] as Map<String, dynamic>),
+    exampleIntegerElement: json['_exampleInteger'] == null
+        ? null
+        : Element.fromJson(json['_exampleInteger'] as Map<String, dynamic>),
+    exampleStringElement: json['_exampleString'] == null
+        ? null
+        : Element.fromJson(json['_exampleString'] as Map<String, dynamic>),
+    exampleUriElement: json['_exampleUri'] == null
+        ? null
+        : Element.fromJson(json['_exampleUri'] as Map<String, dynamic>),
     meaningWhenMissingElement: json['_meaningWhenMissing'] == null
         ? null
         : Element.fromJson(json['_meaningWhenMissing'] as Map<String, dynamic>),
@@ -1206,6 +1237,17 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull(
       '_defaultValueString', instance.defaultValueStringElement?.toJson());
   writeNotNull('_defaultValueUri', instance.defaultValueUriElement?.toJson());
+  writeNotNull(
+      '_exampleBase64Binary', instance.exampleBase64BinaryElement?.toJson());
+  writeNotNull('_exampleBoolean', instance.exampleBooleanElement?.toJson());
+  writeNotNull('_exampleCode', instance.exampleCodeElement?.toJson());
+  writeNotNull('_exampleDate', instance.exampleDateElement?.toJson());
+  writeNotNull('_exampleDateTime', instance.exampleDateTimeElement?.toJson());
+  writeNotNull('_exampleDecimal', instance.exampleDecimalElement?.toJson());
+  writeNotNull('_exampleInstant', instance.exampleInstantElement?.toJson());
+  writeNotNull('_exampleInteger', instance.exampleIntegerElement?.toJson());
+  writeNotNull('_exampleString', instance.exampleStringElement?.toJson());
+  writeNotNull('_exampleUri', instance.exampleUriElement?.toJson());
   writeNotNull(
       '_meaningWhenMissing', instance.meaningWhenMissingElement?.toJson());
   writeNotNull(

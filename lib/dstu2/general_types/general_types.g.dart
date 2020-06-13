@@ -381,6 +381,8 @@ _$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     authorReference: json['authorReference'] == null
         ? null
         : Reference.fromJson(json['authorReference'] as Map<String, dynamic>),
@@ -413,6 +415,7 @@ Map<String, dynamic> _$_$_AnnotationToJson(_$_Annotation instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('authorReference', instance.authorReference?.toJson());
   writeNotNull('authorString', instance.authorString);
   writeNotNull('time', instance.time?.toJson());
@@ -998,6 +1001,8 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     boundsQuantity: json['boundsQuantity'] == null
         ? null
         : Quantity.fromJson(json['boundsQuantity'] as Map<String, dynamic>),
@@ -1072,6 +1077,7 @@ Map<String, dynamic> _$_$_TimingRepeatToJson(_$_TimingRepeat instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('boundsQuantity', instance.boundsQuantity?.toJson());
   writeNotNull('boundsRange', instance.boundsRange?.toJson());
   writeNotNull('boundsPeriod', instance.boundsPeriod?.toJson());

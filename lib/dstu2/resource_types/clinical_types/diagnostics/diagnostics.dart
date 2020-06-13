@@ -187,6 +187,7 @@ abstract class Observation with _$Observation implements Resource {
     List<ObservationReferenceRange> referenceRange,
     List<ObservationRelated> related,
     List<ObservationComponent> component,
+    @JsonKey(name: '_id') Element idElement,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_status') Element statusElement,

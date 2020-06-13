@@ -850,6 +850,9 @@ _$_AuditEventParticipant _$_$_AuditEventParticipantFromJson(
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
   );
 }
 
@@ -879,6 +882,7 @@ Map<String, dynamic> _$_$_AuditEventParticipantToJson(
   writeNotNull('network', instance.network?.toJson());
   writeNotNull(
       'purposeOfUse', instance.purposeOfUse?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_name', instance.nameElement?.toJson());
   return val;
 }
 
@@ -970,6 +974,9 @@ _$_AuditEventObject _$_$_AuditEventObjectFromJson(Map<String, dynamic> json) {
             ? null
             : AuditEventDetail.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    queryElement: json['_query'] == null
+        ? null
+        : Element.fromJson(json['_query'] as Map<String, dynamic>),
   );
 }
 
@@ -997,6 +1004,7 @@ Map<String, dynamic> _$_$_AuditEventObjectToJson(_$_AuditEventObject instance) {
   writeNotNull('description', instance.description);
   writeNotNull('query', instance.query?.toJson());
   writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_query', instance.queryElement?.toJson());
   return val;
 }
 

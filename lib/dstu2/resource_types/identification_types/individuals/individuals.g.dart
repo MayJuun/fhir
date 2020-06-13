@@ -400,6 +400,9 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : PatientLink.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    idElement: json['_id'] == null
+        ? null
+        : Element.fromJson(json['_id'] as Map<String, dynamic>),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
@@ -475,6 +478,7 @@ Map<String, dynamic> _$_$_PatientToJson(_$_Patient instance) {
       'careProvider', instance.careProvider?.map((e) => e?.toJson())?.toList());
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_id', instance.idElement?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_active', instance.activeElement?.toJson());

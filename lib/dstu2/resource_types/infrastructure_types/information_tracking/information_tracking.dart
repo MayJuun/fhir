@@ -251,6 +251,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
     Coding media,
     AuditEventNetwork network,
     List<Coding> purposeOfUse,
+    @JsonKey(name: '_name') Element nameElement,
   }) = _AuditEventParticipant;
 
   factory AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
@@ -289,6 +290,7 @@ abstract class AuditEventObject with _$AuditEventObject {
     String description,
     Base64Binary query,
     List<AuditEventDetail> detail,
+    @JsonKey(name: '_query') Element queryElement,
   }) = _AuditEventObject;
 
   factory AuditEventObject.fromJson(Map<String, dynamic> json) =>

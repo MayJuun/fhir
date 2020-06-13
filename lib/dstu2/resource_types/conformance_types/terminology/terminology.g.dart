@@ -82,6 +82,9 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
     expansion: json['expansion'] == null
         ? null
         : ValueSetExpansion.fromJson(json['expansion'] as Map<String, dynamic>),
+    idElement: json['_id'] == null
+        ? null
+        : Element.fromJson(json['_id'] as Map<String, dynamic>),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
@@ -164,6 +167,7 @@ Map<String, dynamic> _$_$_ValueSetToJson(_$_ValueSet instance) {
   writeNotNull('codeSystem', instance.codeSystem?.toJson());
   writeNotNull('compose', instance.compose?.toJson());
   writeNotNull('expansion', instance.expansion?.toJson());
+  writeNotNull('_id', instance.idElement?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());

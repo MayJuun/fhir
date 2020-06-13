@@ -673,6 +673,9 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
             ? null
             : ObservationComponent.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    idElement: json['_id'] == null
+        ? null
+        : Element.fromJson(json['_id'] as Map<String, dynamic>),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
@@ -754,6 +757,7 @@ Map<String, dynamic> _$_$_ObservationToJson(_$_Observation instance) {
   writeNotNull('related', instance.related?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'component', instance.component?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_id', instance.idElement?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());

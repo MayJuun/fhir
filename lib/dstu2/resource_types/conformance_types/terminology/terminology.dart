@@ -40,6 +40,7 @@ abstract class ValueSet with _$ValueSet implements Resource {
     ValueSetCodeSystem codeSystem,
     ValueSetCompose compose,
     ValueSetExpansion expansion,
+    @JsonKey(name: '_id') Element idElement,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_url') Element urlElement,

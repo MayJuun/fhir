@@ -311,7 +311,7 @@ abstract class AllergyIntolerance
     @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_status') Element statusElement,
     @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_category') List<Element> categoryElement,
+    @JsonKey(name: '_category') Element categoryElement,
     @JsonKey(name: '_criticality') Element criticalityElement,
     @JsonKey(name: '_recordedDate') Element recordedDateElement,
     @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
@@ -342,6 +342,7 @@ abstract class ConditionEvidence with _$ConditionEvidence {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept code,
     List<Reference> detail,
   }) = _ConditionEvidence;
@@ -487,6 +488,7 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     FhirExtension modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     CodeableConcept substance,
     @JsonKey(unknownEnumValue: ReactionCertainty.unknown)
         ReactionCertainty certainty,
@@ -500,6 +502,7 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     @JsonKey(name: '_description') Element descriptionElement,
     @JsonKey(name: '_onset') Element onsetElement,
     @JsonKey(name: '_severity') Element severityElement,
+    @JsonKey(name: '_certainty') Element certaintyElement,
   }) = _AllergyIntoleranceReaction;
 
   factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>

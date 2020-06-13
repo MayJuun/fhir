@@ -6644,7 +6644,7 @@ class _$AllergyIntoleranceTearOff {
       @JsonKey(name: '_type')
           Element typeElement,
       @JsonKey(name: '_category')
-          List<Element> categoryElement,
+          Element categoryElement,
       @JsonKey(name: '_criticality')
           Element criticalityElement,
       @JsonKey(name: '_recordedDate')
@@ -6731,7 +6731,7 @@ mixin _$AllergyIntolerance {
   @JsonKey(name: '_type')
   Element get typeElement;
   @JsonKey(name: '_category')
-  List<Element> get categoryElement;
+  Element get categoryElement;
   @JsonKey(name: '_criticality')
   Element get criticalityElement;
   @JsonKey(name: '_recordedDate')
@@ -6788,7 +6788,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       @JsonKey(name: '_type')
           Element typeElement,
       @JsonKey(name: '_category')
-          List<Element> categoryElement,
+          Element categoryElement,
       @JsonKey(name: '_criticality')
           Element criticalityElement,
       @JsonKey(name: '_recordedDate')
@@ -6808,6 +6808,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get statusElement;
   $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get categoryElement;
   $ElementCopyWith<$Res> get criticalityElement;
   $ElementCopyWith<$Res> get recordedDateElement;
   $ElementCopyWith<$Res> get lastOccurrenceElement;
@@ -6917,7 +6918,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
           typeElement == freezed ? _value.typeElement : typeElement as Element,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as List<Element>,
+          : categoryElement as Element,
       criticalityElement: criticalityElement == freezed
           ? _value.criticalityElement
           : criticalityElement as Element,
@@ -7051,6 +7052,16 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get categoryElement {
+    if (_value.categoryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.categoryElement, (value) {
+      return _then(_value.copyWith(categoryElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get criticalityElement {
     if (_value.criticalityElement == null) {
       return null;
@@ -7128,7 +7139,7 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
       @JsonKey(name: '_type')
           Element typeElement,
       @JsonKey(name: '_category')
-          List<Element> categoryElement,
+          Element categoryElement,
       @JsonKey(name: '_criticality')
           Element criticalityElement,
       @JsonKey(name: '_recordedDate')
@@ -7160,6 +7171,8 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
   $ElementCopyWith<$Res> get statusElement;
   @override
   $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get categoryElement;
   @override
   $ElementCopyWith<$Res> get criticalityElement;
   @override
@@ -7274,7 +7287,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
           typeElement == freezed ? _value.typeElement : typeElement as Element,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as List<Element>,
+          : categoryElement as Element,
       criticalityElement: criticalityElement == freezed
           ? _value.criticalityElement
           : criticalityElement as Element,
@@ -7414,7 +7427,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   final Element typeElement;
   @override
   @JsonKey(name: '_category')
-  final List<Element> categoryElement;
+  final Element categoryElement;
   @override
   @JsonKey(name: '_criticality')
   final Element criticalityElement;
@@ -7598,7 +7611,7 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
       @JsonKey(name: '_type')
           Element typeElement,
       @JsonKey(name: '_category')
-          List<Element> categoryElement,
+          Element categoryElement,
       @JsonKey(name: '_criticality')
           Element criticalityElement,
       @JsonKey(name: '_recordedDate')
@@ -7677,7 +7690,7 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
   Element get typeElement;
   @override
   @JsonKey(name: '_category')
-  List<Element> get categoryElement;
+  Element get categoryElement;
   @override
   @JsonKey(name: '_criticality')
   Element get criticalityElement;
@@ -7980,12 +7993,14 @@ class _$ConditionEvidenceTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept code,
       List<Reference> detail}) {
     return _ConditionEvidence(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       code: code,
       detail: detail,
     );
@@ -8000,6 +8015,8 @@ mixin _$ConditionEvidence {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   CodeableConcept get code;
   List<Reference> get detail;
 
@@ -8015,6 +8032,7 @@ abstract class $ConditionEvidenceCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept code,
       List<Reference> detail});
 
@@ -8035,6 +8053,7 @@ class _$ConditionEvidenceCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object detail = freezed,
   }) {
@@ -8046,6 +8065,9 @@ class _$ConditionEvidenceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       detail: detail == freezed ? _value.detail : detail as List<Reference>,
     ));
@@ -8082,6 +8104,7 @@ abstract class _$ConditionEvidenceCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept code,
       List<Reference> detail});
 
@@ -8106,6 +8129,7 @@ class __$ConditionEvidenceCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object code = freezed,
     Object detail = freezed,
   }) {
@@ -8117,6 +8141,9 @@ class __$ConditionEvidenceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       detail: detail == freezed ? _value.detail : detail as List<Reference>,
     ));
@@ -8129,6 +8156,7 @@ class _$_ConditionEvidence implements _ConditionEvidence {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.code,
       this.detail});
 
@@ -8143,13 +8171,16 @@ class _$_ConditionEvidence implements _ConditionEvidence {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final CodeableConcept code;
   @override
   final List<Reference> detail;
 
   @override
   String toString() {
-    return 'ConditionEvidence(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, detail: $detail)';
+    return 'ConditionEvidence(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, code: $code, detail: $detail)';
   }
 
   @override
@@ -8164,6 +8195,9 @@ class _$_ConditionEvidence implements _ConditionEvidence {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.detail, detail) ||
@@ -8176,6 +8210,7 @@ class _$_ConditionEvidence implements _ConditionEvidence {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(detail);
 
@@ -8194,6 +8229,7 @@ abstract class _ConditionEvidence implements ConditionEvidence {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept code,
       List<Reference> detail}) = _$_ConditionEvidence;
 
@@ -8207,6 +8243,9 @@ abstract class _ConditionEvidence implements ConditionEvidence {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   CodeableConcept get code;
   @override
@@ -10849,6 +10888,8 @@ class _$AllergyIntoleranceReactionTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       CodeableConcept substance,
       @JsonKey(unknownEnumValue: ReactionCertainty.unknown)
           ReactionCertainty certainty,
@@ -10866,11 +10907,14 @@ class _$AllergyIntoleranceReactionTearOff {
       @JsonKey(name: '_onset')
           Element onsetElement,
       @JsonKey(name: '_severity')
-          Element severityElement}) {
+          Element severityElement,
+      @JsonKey(name: '_certainty')
+          Element certaintyElement}) {
     return _AllergyIntoleranceReaction(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       substance: substance,
       certainty: certainty,
       manifestation: manifestation,
@@ -10882,6 +10926,7 @@ class _$AllergyIntoleranceReactionTearOff {
       descriptionElement: descriptionElement,
       onsetElement: onsetElement,
       severityElement: severityElement,
+      certaintyElement: certaintyElement,
     );
   }
 }
@@ -10894,6 +10939,8 @@ mixin _$AllergyIntoleranceReaction {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   CodeableConcept get substance;
   @JsonKey(unknownEnumValue: ReactionCertainty.unknown)
   ReactionCertainty get certainty;
@@ -10911,6 +10958,8 @@ mixin _$AllergyIntoleranceReaction {
   Element get onsetElement;
   @JsonKey(name: '_severity')
   Element get severityElement;
+  @JsonKey(name: '_certainty')
+  Element get certaintyElement;
 
   Map<String, dynamic> toJson();
   $AllergyIntoleranceReactionCopyWith<AllergyIntoleranceReaction> get copyWith;
@@ -10925,6 +10974,8 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       CodeableConcept substance,
       @JsonKey(unknownEnumValue: ReactionCertainty.unknown)
           ReactionCertainty certainty,
@@ -10941,7 +10992,9 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       @JsonKey(name: '_onset')
           Element onsetElement,
       @JsonKey(name: '_severity')
-          Element severityElement});
+          Element severityElement,
+      @JsonKey(name: '_certainty')
+          Element certaintyElement});
 
   $FhirExtensionCopyWith<$Res> get modifierExtension;
   $CodeableConceptCopyWith<$Res> get substance;
@@ -10950,6 +11003,7 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
   $ElementCopyWith<$Res> get descriptionElement;
   $ElementCopyWith<$Res> get onsetElement;
   $ElementCopyWith<$Res> get severityElement;
+  $ElementCopyWith<$Res> get certaintyElement;
 }
 
 class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
@@ -10965,6 +11019,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object substance = freezed,
     Object certainty = freezed,
     Object manifestation = freezed,
@@ -10976,6 +11031,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object onsetElement = freezed,
     Object severityElement = freezed,
+    Object certaintyElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as Id,
@@ -10985,6 +11041,9 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       substance: substance == freezed
           ? _value.substance
           : substance as CodeableConcept,
@@ -11012,6 +11071,9 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement as Element,
+      certaintyElement: certaintyElement == freezed
+          ? _value.certaintyElement
+          : certaintyElement as Element,
     ));
   }
 
@@ -11084,6 +11146,16 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
       return _then(_value.copyWith(severityElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get certaintyElement {
+    if (_value.certaintyElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.certaintyElement, (value) {
+      return _then(_value.copyWith(certaintyElement: value));
+    });
+  }
 }
 
 abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
@@ -11098,6 +11170,8 @@ abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       CodeableConcept substance,
       @JsonKey(unknownEnumValue: ReactionCertainty.unknown)
           ReactionCertainty certainty,
@@ -11114,7 +11188,9 @@ abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
       @JsonKey(name: '_onset')
           Element onsetElement,
       @JsonKey(name: '_severity')
-          Element severityElement});
+          Element severityElement,
+      @JsonKey(name: '_certainty')
+          Element certaintyElement});
 
   @override
   $FhirExtensionCopyWith<$Res> get modifierExtension;
@@ -11130,6 +11206,8 @@ abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
   $ElementCopyWith<$Res> get onsetElement;
   @override
   $ElementCopyWith<$Res> get severityElement;
+  @override
+  $ElementCopyWith<$Res> get certaintyElement;
 }
 
 class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
@@ -11148,6 +11226,7 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object substance = freezed,
     Object certainty = freezed,
     Object manifestation = freezed,
@@ -11159,6 +11238,7 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
     Object descriptionElement = freezed,
     Object onsetElement = freezed,
     Object severityElement = freezed,
+    Object certaintyElement = freezed,
   }) {
     return _then(_AllergyIntoleranceReaction(
       id: id == freezed ? _value.id : id as Id,
@@ -11168,6 +11248,9 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       substance: substance == freezed
           ? _value.substance
           : substance as CodeableConcept,
@@ -11195,6 +11278,9 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement as Element,
+      certaintyElement: certaintyElement == freezed
+          ? _value.certaintyElement
+          : certaintyElement as Element,
     ));
   }
 }
@@ -11205,6 +11291,7 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.substance,
       @JsonKey(unknownEnumValue: ReactionCertainty.unknown) this.certainty,
       @required @JsonKey(required: true) this.manifestation,
@@ -11215,7 +11302,8 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
       this.note,
       @JsonKey(name: '_description') this.descriptionElement,
       @JsonKey(name: '_onset') this.onsetElement,
-      @JsonKey(name: '_severity') this.severityElement})
+      @JsonKey(name: '_severity') this.severityElement,
+      @JsonKey(name: '_certainty') this.certaintyElement})
       : assert(manifestation != null);
 
   factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
@@ -11228,6 +11316,9 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
   final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final CodeableConcept substance;
   @override
@@ -11256,10 +11347,13 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
   @override
   @JsonKey(name: '_severity')
   final Element severityElement;
+  @override
+  @JsonKey(name: '_certainty')
+  final Element certaintyElement;
 
   @override
   String toString() {
-    return 'AllergyIntoleranceReaction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, substance: $substance, certainty: $certainty, manifestation: $manifestation, description: $description, onset: $onset, severity: $severity, exposureRoute: $exposureRoute, note: $note, descriptionElement: $descriptionElement, onsetElement: $onsetElement, severityElement: $severityElement)';
+    return 'AllergyIntoleranceReaction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, substance: $substance, certainty: $certainty, manifestation: $manifestation, description: $description, onset: $onset, severity: $severity, exposureRoute: $exposureRoute, note: $note, descriptionElement: $descriptionElement, onsetElement: $onsetElement, severityElement: $severityElement, certaintyElement: $certaintyElement)';
   }
 
   @override
@@ -11274,6 +11368,9 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.substance, substance) ||
                 const DeepCollectionEquality()
                     .equals(other.substance, substance)) &&
@@ -11304,7 +11401,10 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
                     .equals(other.onsetElement, onsetElement)) &&
             (identical(other.severityElement, severityElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.severityElement, severityElement)));
+                    .equals(other.severityElement, severityElement)) &&
+            (identical(other.certaintyElement, certaintyElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.certaintyElement, certaintyElement)));
   }
 
   @override
@@ -11313,6 +11413,7 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(substance) ^
       const DeepCollectionEquality().hash(certainty) ^
       const DeepCollectionEquality().hash(manifestation) ^
@@ -11323,7 +11424,8 @@ class _$_AllergyIntoleranceReaction implements _AllergyIntoleranceReaction {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(onsetElement) ^
-      const DeepCollectionEquality().hash(severityElement);
+      const DeepCollectionEquality().hash(severityElement) ^
+      const DeepCollectionEquality().hash(certaintyElement);
 
   @override
   _$AllergyIntoleranceReactionCopyWith<_AllergyIntoleranceReaction>
@@ -11343,6 +11445,8 @@ abstract class _AllergyIntoleranceReaction
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       CodeableConcept substance,
       @JsonKey(unknownEnumValue: ReactionCertainty.unknown)
           ReactionCertainty certainty,
@@ -11360,7 +11464,9 @@ abstract class _AllergyIntoleranceReaction
       @JsonKey(name: '_onset')
           Element onsetElement,
       @JsonKey(name: '_severity')
-          Element severityElement}) = _$_AllergyIntoleranceReaction;
+          Element severityElement,
+      @JsonKey(name: '_certainty')
+          Element certaintyElement}) = _$_AllergyIntoleranceReaction;
 
   factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntoleranceReaction.fromJson;
@@ -11372,6 +11478,9 @@ abstract class _AllergyIntoleranceReaction
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   CodeableConcept get substance;
   @override
@@ -11400,6 +11509,9 @@ abstract class _AllergyIntoleranceReaction
   @override
   @JsonKey(name: '_severity')
   Element get severityElement;
+  @override
+  @JsonKey(name: '_certainty')
+  Element get certaintyElement;
   @override
   _$AllergyIntoleranceReactionCopyWith<_AllergyIntoleranceReaction>
       get copyWith;

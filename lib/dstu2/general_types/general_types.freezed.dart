@@ -2358,6 +2358,7 @@ class _$AnnotationTearOff {
   _Annotation call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Reference authorReference,
       String authorString,
       FhirDateTime time,
@@ -2368,6 +2369,7 @@ class _$AnnotationTearOff {
     return _Annotation(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       authorReference: authorReference,
       authorString: authorString,
       time: time,
@@ -2386,6 +2388,8 @@ mixin _$Annotation {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   Reference get authorReference;
   String get authorString;
   FhirDateTime get time;
@@ -2409,6 +2413,7 @@ abstract class $AnnotationCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Reference authorReference,
       String authorString,
       FhirDateTime time,
@@ -2434,6 +2439,7 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object authorReference = freezed,
     Object authorString = freezed,
     Object time = freezed,
@@ -2447,6 +2453,9 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       authorReference: authorReference == freezed
           ? _value.authorReference
           : authorReference as Reference,
@@ -2514,6 +2523,7 @@ abstract class _$AnnotationCopyWith<$Res> implements $AnnotationCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Reference authorReference,
       String authorString,
       FhirDateTime time,
@@ -2545,6 +2555,7 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object authorReference = freezed,
     Object authorString = freezed,
     Object time = freezed,
@@ -2558,6 +2569,9 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       authorReference: authorReference == freezed
           ? _value.authorReference
           : authorReference as Reference,
@@ -2582,6 +2596,7 @@ class _$_Annotation implements _Annotation {
   const _$_Annotation(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.authorReference,
       this.authorString,
       this.time,
@@ -2599,6 +2614,9 @@ class _$_Annotation implements _Annotation {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final Reference authorReference;
   @override
@@ -2620,7 +2638,7 @@ class _$_Annotation implements _Annotation {
 
   @override
   String toString() {
-    return 'Annotation(id: $id, extension_: $extension_, authorReference: $authorReference, authorString: $authorString, time: $time, text: $text, authorStringElement: $authorStringElement, timeElement: $timeElement, textElement: $textElement)';
+    return 'Annotation(id: $id, extension_: $extension_, fhirComments: $fhirComments, authorReference: $authorReference, authorString: $authorString, time: $time, text: $text, authorStringElement: $authorStringElement, timeElement: $timeElement, textElement: $textElement)';
   }
 
   @override
@@ -2632,6 +2650,9 @@ class _$_Annotation implements _Annotation {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.authorReference, authorReference) ||
                 const DeepCollectionEquality()
                     .equals(other.authorReference, authorReference)) &&
@@ -2658,6 +2679,7 @@ class _$_Annotation implements _Annotation {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(authorReference) ^
       const DeepCollectionEquality().hash(authorString) ^
       const DeepCollectionEquality().hash(time) ^
@@ -2680,6 +2702,7 @@ abstract class _Annotation implements Annotation {
   const factory _Annotation(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Reference authorReference,
       String authorString,
       FhirDateTime time,
@@ -2696,6 +2719,9 @@ abstract class _Annotation implements Annotation {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   Reference get authorReference;
   @override
@@ -6515,6 +6541,7 @@ class _$TimingRepeatTearOff {
   _TimingRepeat call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Quantity boundsQuantity,
       Range boundsRange,
       Period boundsPeriod,
@@ -6541,6 +6568,7 @@ class _$TimingRepeatTearOff {
     return _TimingRepeat(
       id: id,
       extension_: extension_,
+      fhirComments: fhirComments,
       boundsQuantity: boundsQuantity,
       boundsRange: boundsRange,
       boundsPeriod: boundsPeriod,
@@ -6575,6 +6603,8 @@ mixin _$TimingRepeat {
   Id get id;
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   Quantity get boundsQuantity;
   Range get boundsRange;
   Period get boundsPeriod;
@@ -6622,6 +6652,7 @@ abstract class $TimingRepeatCopyWith<$Res> {
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Quantity boundsQuantity,
       Range boundsRange,
       Period boundsPeriod,
@@ -6672,6 +6703,7 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object boundsQuantity = freezed,
     Object boundsRange = freezed,
     Object boundsPeriod = freezed,
@@ -6701,6 +6733,9 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       boundsQuantity: boundsQuantity == freezed
           ? _value.boundsQuantity
           : boundsQuantity as Quantity,
@@ -6898,6 +6933,7 @@ abstract class _$TimingRepeatCopyWith<$Res>
   $Res call(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Quantity boundsQuantity,
       Range boundsRange,
       Period boundsPeriod,
@@ -6963,6 +6999,7 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
   $Res call({
     Object id = freezed,
     Object extension_ = freezed,
+    Object fhirComments = freezed,
     Object boundsQuantity = freezed,
     Object boundsRange = freezed,
     Object boundsPeriod = freezed,
@@ -6992,6 +7029,9 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       boundsQuantity: boundsQuantity == freezed
           ? _value.boundsQuantity
           : boundsQuantity as Quantity,
@@ -7055,6 +7095,7 @@ class _$_TimingRepeat implements _TimingRepeat {
   const _$_TimingRepeat(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.boundsQuantity,
       this.boundsRange,
       this.boundsPeriod,
@@ -7087,6 +7128,9 @@ class _$_TimingRepeat implements _TimingRepeat {
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension> extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final Quantity boundsQuantity;
   @override
@@ -7148,7 +7192,7 @@ class _$_TimingRepeat implements _TimingRepeat {
 
   @override
   String toString() {
-    return 'TimingRepeat(id: $id, extension_: $extension_, boundsQuantity: $boundsQuantity, boundsRange: $boundsRange, boundsPeriod: $boundsPeriod, count: $count, duration: $duration, durationMax: $durationMax, durationUnits: $durationUnits, frequency: $frequency, frequencyMax: $frequencyMax, period: $period, periodMax: $periodMax, periodUnits: $periodUnits, when: $when, countElement: $countElement, durationElement: $durationElement, durationMaxElement: $durationMaxElement, durationUnitElement: $durationUnitElement, frequencyElement: $frequencyElement, frequencyMaxElement: $frequencyMaxElement, periodElement: $periodElement, periodMaxElement: $periodMaxElement, periodUnitElement: $periodUnitElement, whenElement: $whenElement)';
+    return 'TimingRepeat(id: $id, extension_: $extension_, fhirComments: $fhirComments, boundsQuantity: $boundsQuantity, boundsRange: $boundsRange, boundsPeriod: $boundsPeriod, count: $count, duration: $duration, durationMax: $durationMax, durationUnits: $durationUnits, frequency: $frequency, frequencyMax: $frequencyMax, period: $period, periodMax: $periodMax, periodUnits: $periodUnits, when: $when, countElement: $countElement, durationElement: $durationElement, durationMaxElement: $durationMaxElement, durationUnitElement: $durationUnitElement, frequencyElement: $frequencyElement, frequencyMaxElement: $frequencyMaxElement, periodElement: $periodElement, periodMaxElement: $periodMaxElement, periodUnitElement: $periodUnitElement, whenElement: $whenElement)';
   }
 
   @override
@@ -7160,6 +7204,9 @@ class _$_TimingRepeat implements _TimingRepeat {
             (identical(other.extension_, extension_) ||
                 const DeepCollectionEquality()
                     .equals(other.extension_, extension_)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.boundsQuantity, boundsQuantity) ||
                 const DeepCollectionEquality()
                     .equals(other.boundsQuantity, boundsQuantity)) &&
@@ -7218,10 +7265,8 @@ class _$_TimingRepeat implements _TimingRepeat {
                 const DeepCollectionEquality()
                     .equals(other.periodElement, periodElement)) &&
             (identical(other.periodMaxElement, periodMaxElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.periodMaxElement, periodMaxElement)) &&
-            (identical(other.periodUnitElement, periodUnitElement) ||
-                const DeepCollectionEquality().equals(other.periodUnitElement, periodUnitElement)) &&
+                const DeepCollectionEquality().equals(other.periodMaxElement, periodMaxElement)) &&
+            (identical(other.periodUnitElement, periodUnitElement) || const DeepCollectionEquality().equals(other.periodUnitElement, periodUnitElement)) &&
             (identical(other.whenElement, whenElement) || const DeepCollectionEquality().equals(other.whenElement, whenElement)));
   }
 
@@ -7230,6 +7275,7 @@ class _$_TimingRepeat implements _TimingRepeat {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(boundsQuantity) ^
       const DeepCollectionEquality().hash(boundsRange) ^
       const DeepCollectionEquality().hash(boundsPeriod) ^
@@ -7268,6 +7314,7 @@ abstract class _TimingRepeat implements TimingRepeat {
   const factory _TimingRepeat(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       Quantity boundsQuantity,
       Range boundsRange,
       Period boundsPeriod,
@@ -7300,6 +7347,9 @@ abstract class _TimingRepeat implements TimingRepeat {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   Quantity get boundsQuantity;
   @override

@@ -48,6 +48,8 @@ class _$ValueSetTearOff {
       ValueSetCodeSystem codeSystem,
       ValueSetCompose compose,
       ValueSetExpansion expansion,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -103,6 +105,7 @@ class _$ValueSetTearOff {
       codeSystem: codeSystem,
       compose: compose,
       expansion: expansion,
+      idElement: idElement,
       implicitRulesElement: implicitRulesElement,
       languageElement: languageElement,
       urlElement: urlElement,
@@ -155,6 +158,8 @@ mixin _$ValueSet {
   ValueSetCodeSystem get codeSystem;
   ValueSetCompose get compose;
   ValueSetExpansion get expansion;
+  @JsonKey(name: '_id')
+  Element get idElement;
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;
   @JsonKey(name: '_language')
@@ -221,6 +226,8 @@ abstract class $ValueSetCopyWith<$Res> {
       ValueSetCodeSystem codeSystem,
       ValueSetCompose compose,
       ValueSetExpansion expansion,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -255,6 +262,7 @@ abstract class $ValueSetCopyWith<$Res> {
   $ValueSetCodeSystemCopyWith<$Res> get codeSystem;
   $ValueSetComposeCopyWith<$Res> get compose;
   $ValueSetExpansionCopyWith<$Res> get expansion;
+  $ElementCopyWith<$Res> get idElement;
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $ElementCopyWith<$Res> get urlElement;
@@ -307,6 +315,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     Object codeSystem = freezed,
     Object compose = freezed,
     Object expansion = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object urlElement = freezed,
@@ -375,6 +384,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       expansion: expansion == freezed
           ? _value.expansion
           : expansion as ValueSetExpansion,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -481,6 +491,16 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     }
     return $ValueSetExpansionCopyWith<$Res>(_value.expansion, (value) {
       return _then(_value.copyWith(expansion: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get idElement {
+    if (_value.idElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.idElement, (value) {
+      return _then(_value.copyWith(idElement: value));
     });
   }
 
@@ -651,6 +671,8 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       ValueSetCodeSystem codeSystem,
       ValueSetCompose compose,
       ValueSetExpansion expansion,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -692,6 +714,8 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   $ValueSetComposeCopyWith<$Res> get compose;
   @override
   $ValueSetExpansionCopyWith<$Res> get expansion;
+  @override
+  $ElementCopyWith<$Res> get idElement;
   @override
   $ElementCopyWith<$Res> get implicitRulesElement;
   @override
@@ -758,6 +782,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
     Object codeSystem = freezed,
     Object compose = freezed,
     Object expansion = freezed,
+    Object idElement = freezed,
     Object implicitRulesElement = freezed,
     Object languageElement = freezed,
     Object urlElement = freezed,
@@ -826,6 +851,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       expansion: expansion == freezed
           ? _value.expansion
           : expansion as ValueSetExpansion,
+      idElement: idElement == freezed ? _value.idElement : idElement as Element,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement as Element,
@@ -901,6 +927,8 @@ class _$_ValueSet implements _ValueSet {
       this.codeSystem,
       this.compose,
       this.expansion,
+      @JsonKey(name: '_id')
+          this.idElement,
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
       @JsonKey(name: '_language')
@@ -992,6 +1020,9 @@ class _$_ValueSet implements _ValueSet {
   @override
   final ValueSetExpansion expansion;
   @override
+  @JsonKey(name: '_id')
+  final Element idElement;
+  @override
   @JsonKey(name: '_implicitRules')
   final Element implicitRulesElement;
   @override
@@ -1033,7 +1064,7 @@ class _$_ValueSet implements _ValueSet {
 
   @override
   String toString() {
-    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, lockedDate: $lockedDate, description: $description, useContext: $useContext, immutable: $immutable, requirements: $requirements, copyright: $copyright, extensible: $extensible, codeSystem: $codeSystem, compose: $compose, expansion: $expansion, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, descriptionElement: $descriptionElement, publisherElement: $publisherElement, immutableElement: $immutableElement, copyrightElement: $copyrightElement, lockedDateElement: $lockedDateElement)';
+    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, lockedDate: $lockedDate, description: $description, useContext: $useContext, immutable: $immutable, requirements: $requirements, copyright: $copyright, extensible: $extensible, codeSystem: $codeSystem, compose: $compose, expansion: $expansion, idElement: $idElement, implicitRulesElement: $implicitRulesElement, languageElement: $languageElement, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, descriptionElement: $descriptionElement, publisherElement: $publisherElement, immutableElement: $immutableElement, copyrightElement: $copyrightElement, lockedDateElement: $lockedDateElement)';
   }
 
   @override
@@ -1111,6 +1142,7 @@ class _$_ValueSet implements _ValueSet {
             (identical(other.codeSystem, codeSystem) || const DeepCollectionEquality().equals(other.codeSystem, codeSystem)) &&
             (identical(other.compose, compose) || const DeepCollectionEquality().equals(other.compose, compose)) &&
             (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)) &&
+            (identical(other.idElement, idElement) || const DeepCollectionEquality().equals(other.idElement, idElement)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) || const DeepCollectionEquality().equals(other.implicitRulesElement, implicitRulesElement)) &&
             (identical(other.languageElement, languageElement) || const DeepCollectionEquality().equals(other.languageElement, languageElement)) &&
             (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
@@ -1157,6 +1189,7 @@ class _$_ValueSet implements _ValueSet {
       const DeepCollectionEquality().hash(codeSystem) ^
       const DeepCollectionEquality().hash(compose) ^
       const DeepCollectionEquality().hash(expansion) ^
+      const DeepCollectionEquality().hash(idElement) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(urlElement) ^
@@ -1215,6 +1248,8 @@ abstract class _ValueSet implements ValueSet {
       ValueSetCodeSystem codeSystem,
       ValueSetCompose compose,
       ValueSetExpansion expansion,
+      @JsonKey(name: '_id')
+          Element idElement,
       @JsonKey(name: '_implicitRules')
           Element implicitRulesElement,
       @JsonKey(name: '_language')
@@ -1303,6 +1338,9 @@ abstract class _ValueSet implements ValueSet {
   ValueSetCompose get compose;
   @override
   ValueSetExpansion get expansion;
+  @override
+  @JsonKey(name: '_id')
+  Element get idElement;
   @override
   @JsonKey(name: '_implicitRules')
   Element get implicitRulesElement;

@@ -123,6 +123,7 @@ abstract class Annotation with _$Annotation {
   const factory Annotation({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Reference authorReference,
     String authorString,
     FhirDateTime time,
@@ -316,6 +317,7 @@ abstract class TimingRepeat with _$TimingRepeat {
   const factory TimingRepeat({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
     Quantity boundsQuantity,
     Range boundsRange,
     Period boundsPeriod,

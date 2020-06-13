@@ -6265,6 +6265,7 @@ class _$CarePlanActivityTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<Reference> actionResulting,
       List<Annotation> progress,
       Reference reference,
@@ -6273,6 +6274,7 @@ class _$CarePlanActivityTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       actionResulting: actionResulting,
       progress: progress,
       reference: reference,
@@ -6289,6 +6291,8 @@ mixin _$CarePlanActivity {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   List<Reference> get actionResulting;
   List<Annotation> get progress;
   Reference get reference;
@@ -6306,6 +6310,7 @@ abstract class $CarePlanActivityCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<Reference> actionResulting,
       List<Annotation> progress,
       Reference reference,
@@ -6329,6 +6334,7 @@ class _$CarePlanActivityCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object actionResulting = freezed,
     Object progress = freezed,
     Object reference = freezed,
@@ -6342,6 +6348,9 @@ class _$CarePlanActivityCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       actionResulting: actionResulting == freezed
           ? _value.actionResulting
           : actionResulting as List<Reference>,
@@ -6394,6 +6403,7 @@ abstract class _$CarePlanActivityCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<Reference> actionResulting,
       List<Annotation> progress,
       Reference reference,
@@ -6422,6 +6432,7 @@ class __$CarePlanActivityCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object actionResulting = freezed,
     Object progress = freezed,
     Object reference = freezed,
@@ -6435,6 +6446,9 @@ class __$CarePlanActivityCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       actionResulting: actionResulting == freezed
           ? _value.actionResulting
           : actionResulting as List<Reference>,
@@ -6453,6 +6467,7 @@ class _$_CarePlanActivity implements _CarePlanActivity {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.actionResulting,
       this.progress,
       this.reference,
@@ -6469,6 +6484,9 @@ class _$_CarePlanActivity implements _CarePlanActivity {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final List<Reference> actionResulting;
   @override
   final List<Annotation> progress;
@@ -6479,7 +6497,7 @@ class _$_CarePlanActivity implements _CarePlanActivity {
 
   @override
   String toString() {
-    return 'CarePlanActivity(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, actionResulting: $actionResulting, progress: $progress, reference: $reference, detail: $detail)';
+    return 'CarePlanActivity(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, actionResulting: $actionResulting, progress: $progress, reference: $reference, detail: $detail)';
   }
 
   @override
@@ -6494,6 +6512,9 @@ class _$_CarePlanActivity implements _CarePlanActivity {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.actionResulting, actionResulting) ||
                 const DeepCollectionEquality()
                     .equals(other.actionResulting, actionResulting)) &&
@@ -6513,6 +6534,7 @@ class _$_CarePlanActivity implements _CarePlanActivity {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(actionResulting) ^
       const DeepCollectionEquality().hash(progress) ^
       const DeepCollectionEquality().hash(reference) ^
@@ -6533,6 +6555,7 @@ abstract class _CarePlanActivity implements CarePlanActivity {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<Reference> actionResulting,
       List<Annotation> progress,
       Reference reference,
@@ -6548,6 +6571,9 @@ abstract class _CarePlanActivity implements CarePlanActivity {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   List<Reference> get actionResulting;
   @override
@@ -8295,6 +8321,7 @@ class _$CarePlanDetailTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
@@ -8320,6 +8347,7 @@ class _$CarePlanDetailTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       category: category,
       code: code,
       reasonCode: reasonCode,
@@ -8353,6 +8381,8 @@ mixin _$CarePlanDetail {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   CodeableConcept get category;
   CodeableConcept get code;
   List<CodeableConcept> get reasonCode;
@@ -8392,6 +8422,7 @@ abstract class $CarePlanDetailCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
@@ -8443,6 +8474,7 @@ class _$CarePlanDetailCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object category = freezed,
     Object code = freezed,
     Object reasonCode = freezed,
@@ -8473,6 +8505,9 @@ class _$CarePlanDetailCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -8677,6 +8712,7 @@ abstract class _$CarePlanDetailCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       CodeableConcept category,
       CodeableConcept code,
       List<CodeableConcept> reasonCode,
@@ -8744,6 +8780,7 @@ class __$CarePlanDetailCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object category = freezed,
     Object code = freezed,
     Object reasonCode = freezed,
@@ -8774,6 +8811,9 @@ class __$CarePlanDetailCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -8833,6 +8873,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.category,
       this.code,
       this.reasonCode,
@@ -8866,6 +8907,9 @@ class _$_CarePlanDetail implements _CarePlanDetail {
   final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   final CodeableConcept category;
   @override
@@ -8916,7 +8960,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
 
   @override
   String toString() {
-    return 'CarePlanDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, code: $code, reasonCode: $reasonCode, reasonReference: $reasonReference, goal: $goal, status: $status, statusReason: $statusReason, prohibited: $prohibited, scheduledTiming: $scheduledTiming, scheduledPeriod: $scheduledPeriod, scheduledString: $scheduledString, location: $location, performer: $performer, productCodeableConcept: $productCodeableConcept, productReference: $productReference, dailyAmount: $dailyAmount, quantity: $quantity, description: $description, statusElement: $statusElement, scheduledStringElement: $scheduledStringElement, descriptionElement: $descriptionElement)';
+    return 'CarePlanDetail(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, category: $category, code: $code, reasonCode: $reasonCode, reasonReference: $reasonReference, goal: $goal, status: $status, statusReason: $statusReason, prohibited: $prohibited, scheduledTiming: $scheduledTiming, scheduledPeriod: $scheduledPeriod, scheduledString: $scheduledString, location: $location, performer: $performer, productCodeableConcept: $productCodeableConcept, productReference: $productReference, dailyAmount: $dailyAmount, quantity: $quantity, description: $description, statusElement: $statusElement, scheduledStringElement: $scheduledStringElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -8931,6 +8975,9 @@ class _$_CarePlanDetail implements _CarePlanDetail {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.category, category) ||
                 const DeepCollectionEquality()
                     .equals(other.category, category)) &&
@@ -8986,8 +9033,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
                 const DeepCollectionEquality()
                     .equals(other.statusElement, statusElement)) &&
             (identical(other.scheduledStringElement, scheduledStringElement) ||
-                const DeepCollectionEquality().equals(
-                    other.scheduledStringElement, scheduledStringElement)) &&
+                const DeepCollectionEquality().equals(other.scheduledStringElement, scheduledStringElement)) &&
             (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)));
   }
 
@@ -8997,6 +9043,7 @@ class _$_CarePlanDetail implements _CarePlanDetail {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(reasonCode) ^
@@ -9034,6 +9081,7 @@ abstract class _CarePlanDetail implements CarePlanDetail {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           CodeableConcept category,
           CodeableConcept code,
           List<CodeableConcept> reasonCode,
@@ -9067,6 +9115,9 @@ abstract class _CarePlanDetail implements CarePlanDetail {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   CodeableConcept get category;
   @override

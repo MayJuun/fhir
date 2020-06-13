@@ -1100,6 +1100,8 @@ _$_CarePlanActivity _$_$_CarePlanActivityFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     actionResulting: (json['actionResulting'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -1130,6 +1132,7 @@ Map<String, dynamic> _$_$_CarePlanActivityToJson(_$_CarePlanActivity instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('actionResulting',
       instance.actionResulting?.map((e) => e?.toJson())?.toList());
   writeNotNull(
@@ -1417,6 +1420,8 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
         ? null
         : FhirExtension.fromJson(
             json['modifierExtension'] as Map<String, dynamic>),
+    fhirComments:
+        (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -1498,6 +1503,7 @@ Map<String, dynamic> _$_$_CarePlanDetailToJson(_$_CarePlanDetail instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
+  writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull(

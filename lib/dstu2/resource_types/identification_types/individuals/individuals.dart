@@ -107,6 +107,7 @@ abstract class Patient with _$Patient implements Resource {
     List<Reference> careProvider,
     Reference managingOrganization,
     List<PatientLink> link,
+    @JsonKey(name: '_id') Element idElement,
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     @JsonKey(name: '_language') Element languageElement,
     @JsonKey(name: '_active') Element activeElement,

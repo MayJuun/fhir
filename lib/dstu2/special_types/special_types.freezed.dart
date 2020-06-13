@@ -2335,6 +2335,26 @@ class _$ElementDefinitionTearOff {
           Element defaultValueStringElement,
       @JsonKey(name: '_defaultValueUri')
           Element defaultValueUriElement,
+      @JsonKey(name: '_exampleBase64Binary')
+          Element exampleBase64BinaryElement,
+      @JsonKey(name: '_exampleBoolean')
+          Element exampleBooleanElement,
+      @JsonKey(name: '_exampleCode')
+          Element exampleCodeElement,
+      @JsonKey(name: '_exampleDate')
+          Element exampleDateElement,
+      @JsonKey(name: '_exampleDateTime')
+          Element exampleDateTimeElement,
+      @JsonKey(name: '_exampleDecimal')
+          Element exampleDecimalElement,
+      @JsonKey(name: '_exampleInstant')
+          Element exampleInstantElement,
+      @JsonKey(name: '_exampleInteger')
+          Element exampleIntegerElement,
+      @JsonKey(name: '_exampleString')
+          Element exampleStringElement,
+      @JsonKey(name: '_exampleUri')
+          Element exampleUriElement,
       @JsonKey(name: '_meaningWhenMissing')
           Element meaningWhenMissingElement,
       @JsonKey(name: '_fixedBase64Binary')
@@ -2596,6 +2616,16 @@ class _$ElementDefinitionTearOff {
       defaultValueIntegerElement: defaultValueIntegerElement,
       defaultValueStringElement: defaultValueStringElement,
       defaultValueUriElement: defaultValueUriElement,
+      exampleBase64BinaryElement: exampleBase64BinaryElement,
+      exampleBooleanElement: exampleBooleanElement,
+      exampleCodeElement: exampleCodeElement,
+      exampleDateElement: exampleDateElement,
+      exampleDateTimeElement: exampleDateTimeElement,
+      exampleDecimalElement: exampleDecimalElement,
+      exampleInstantElement: exampleInstantElement,
+      exampleIntegerElement: exampleIntegerElement,
+      exampleStringElement: exampleStringElement,
+      exampleUriElement: exampleUriElement,
       meaningWhenMissingElement: meaningWhenMissingElement,
       fixedBase64BinaryElement: fixedBase64BinaryElement,
       fixedBooleanElement: fixedBooleanElement,
@@ -2847,6 +2877,26 @@ mixin _$ElementDefinition {
   Element get defaultValueStringElement;
   @JsonKey(name: '_defaultValueUri')
   Element get defaultValueUriElement;
+  @JsonKey(name: '_exampleBase64Binary')
+  Element get exampleBase64BinaryElement;
+  @JsonKey(name: '_exampleBoolean')
+  Element get exampleBooleanElement;
+  @JsonKey(name: '_exampleCode')
+  Element get exampleCodeElement;
+  @JsonKey(name: '_exampleDate')
+  Element get exampleDateElement;
+  @JsonKey(name: '_exampleDateTime')
+  Element get exampleDateTimeElement;
+  @JsonKey(name: '_exampleDecimal')
+  Element get exampleDecimalElement;
+  @JsonKey(name: '_exampleInstant')
+  Element get exampleInstantElement;
+  @JsonKey(name: '_exampleInteger')
+  Element get exampleIntegerElement;
+  @JsonKey(name: '_exampleString')
+  Element get exampleStringElement;
+  @JsonKey(name: '_exampleUri')
+  Element get exampleUriElement;
   @JsonKey(name: '_meaningWhenMissing')
   Element get meaningWhenMissingElement;
   @JsonKey(name: '_fixedBase64Binary')
@@ -3138,6 +3188,26 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element defaultValueStringElement,
       @JsonKey(name: '_defaultValueUri')
           Element defaultValueUriElement,
+      @JsonKey(name: '_exampleBase64Binary')
+          Element exampleBase64BinaryElement,
+      @JsonKey(name: '_exampleBoolean')
+          Element exampleBooleanElement,
+      @JsonKey(name: '_exampleCode')
+          Element exampleCodeElement,
+      @JsonKey(name: '_exampleDate')
+          Element exampleDateElement,
+      @JsonKey(name: '_exampleDateTime')
+          Element exampleDateTimeElement,
+      @JsonKey(name: '_exampleDecimal')
+          Element exampleDecimalElement,
+      @JsonKey(name: '_exampleInstant')
+          Element exampleInstantElement,
+      @JsonKey(name: '_exampleInteger')
+          Element exampleIntegerElement,
+      @JsonKey(name: '_exampleString')
+          Element exampleStringElement,
+      @JsonKey(name: '_exampleUri')
+          Element exampleUriElement,
       @JsonKey(name: '_meaningWhenMissing')
           Element meaningWhenMissingElement,
       @JsonKey(name: '_fixedBase64Binary')
@@ -3315,6 +3385,16 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res> get defaultValueIntegerElement;
   $ElementCopyWith<$Res> get defaultValueStringElement;
   $ElementCopyWith<$Res> get defaultValueUriElement;
+  $ElementCopyWith<$Res> get exampleBase64BinaryElement;
+  $ElementCopyWith<$Res> get exampleBooleanElement;
+  $ElementCopyWith<$Res> get exampleCodeElement;
+  $ElementCopyWith<$Res> get exampleDateElement;
+  $ElementCopyWith<$Res> get exampleDateTimeElement;
+  $ElementCopyWith<$Res> get exampleDecimalElement;
+  $ElementCopyWith<$Res> get exampleInstantElement;
+  $ElementCopyWith<$Res> get exampleIntegerElement;
+  $ElementCopyWith<$Res> get exampleStringElement;
+  $ElementCopyWith<$Res> get exampleUriElement;
   $ElementCopyWith<$Res> get meaningWhenMissingElement;
   $ElementCopyWith<$Res> get fixedBase64BinaryElement;
   $ElementCopyWith<$Res> get fixedBooleanElement;
@@ -3549,6 +3629,16 @@ class _$ElementDefinitionCopyWithImpl<$Res>
     Object defaultValueIntegerElement = freezed,
     Object defaultValueStringElement = freezed,
     Object defaultValueUriElement = freezed,
+    Object exampleBase64BinaryElement = freezed,
+    Object exampleBooleanElement = freezed,
+    Object exampleCodeElement = freezed,
+    Object exampleDateElement = freezed,
+    Object exampleDateTimeElement = freezed,
+    Object exampleDecimalElement = freezed,
+    Object exampleInstantElement = freezed,
+    Object exampleIntegerElement = freezed,
+    Object exampleStringElement = freezed,
+    Object exampleUriElement = freezed,
     Object meaningWhenMissingElement = freezed,
     Object fixedBase64BinaryElement = freezed,
     Object fixedBooleanElement = freezed,
@@ -4081,6 +4171,36 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       defaultValueUriElement: defaultValueUriElement == freezed
           ? _value.defaultValueUriElement
           : defaultValueUriElement as Element,
+      exampleBase64BinaryElement: exampleBase64BinaryElement == freezed
+          ? _value.exampleBase64BinaryElement
+          : exampleBase64BinaryElement as Element,
+      exampleBooleanElement: exampleBooleanElement == freezed
+          ? _value.exampleBooleanElement
+          : exampleBooleanElement as Element,
+      exampleCodeElement: exampleCodeElement == freezed
+          ? _value.exampleCodeElement
+          : exampleCodeElement as Element,
+      exampleDateElement: exampleDateElement == freezed
+          ? _value.exampleDateElement
+          : exampleDateElement as Element,
+      exampleDateTimeElement: exampleDateTimeElement == freezed
+          ? _value.exampleDateTimeElement
+          : exampleDateTimeElement as Element,
+      exampleDecimalElement: exampleDecimalElement == freezed
+          ? _value.exampleDecimalElement
+          : exampleDecimalElement as Element,
+      exampleInstantElement: exampleInstantElement == freezed
+          ? _value.exampleInstantElement
+          : exampleInstantElement as Element,
+      exampleIntegerElement: exampleIntegerElement == freezed
+          ? _value.exampleIntegerElement
+          : exampleIntegerElement as Element,
+      exampleStringElement: exampleStringElement == freezed
+          ? _value.exampleStringElement
+          : exampleStringElement as Element,
+      exampleUriElement: exampleUriElement == freezed
+          ? _value.exampleUriElement
+          : exampleUriElement as Element,
       meaningWhenMissingElement: meaningWhenMissingElement == freezed
           ? _value.meaningWhenMissingElement
           : meaningWhenMissingElement as Element,
@@ -5206,6 +5326,106 @@ class _$ElementDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res> get exampleBase64BinaryElement {
+    if (_value.exampleBase64BinaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleBase64BinaryElement, (value) {
+      return _then(_value.copyWith(exampleBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get exampleBooleanElement {
+    if (_value.exampleBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleBooleanElement, (value) {
+      return _then(_value.copyWith(exampleBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get exampleCodeElement {
+    if (_value.exampleCodeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleCodeElement, (value) {
+      return _then(_value.copyWith(exampleCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get exampleDateElement {
+    if (_value.exampleDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleDateElement, (value) {
+      return _then(_value.copyWith(exampleDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get exampleDateTimeElement {
+    if (_value.exampleDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleDateTimeElement, (value) {
+      return _then(_value.copyWith(exampleDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get exampleDecimalElement {
+    if (_value.exampleDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleDecimalElement, (value) {
+      return _then(_value.copyWith(exampleDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get exampleInstantElement {
+    if (_value.exampleInstantElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleInstantElement, (value) {
+      return _then(_value.copyWith(exampleInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get exampleIntegerElement {
+    if (_value.exampleIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleIntegerElement, (value) {
+      return _then(_value.copyWith(exampleIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get exampleStringElement {
+    if (_value.exampleStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleStringElement, (value) {
+      return _then(_value.copyWith(exampleStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get exampleUriElement {
+    if (_value.exampleUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.exampleUriElement, (value) {
+      return _then(_value.copyWith(exampleUriElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get meaningWhenMissingElement {
     if (_value.meaningWhenMissingElement == null) {
       return null;
@@ -5798,6 +6018,26 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element defaultValueStringElement,
       @JsonKey(name: '_defaultValueUri')
           Element defaultValueUriElement,
+      @JsonKey(name: '_exampleBase64Binary')
+          Element exampleBase64BinaryElement,
+      @JsonKey(name: '_exampleBoolean')
+          Element exampleBooleanElement,
+      @JsonKey(name: '_exampleCode')
+          Element exampleCodeElement,
+      @JsonKey(name: '_exampleDate')
+          Element exampleDateElement,
+      @JsonKey(name: '_exampleDateTime')
+          Element exampleDateTimeElement,
+      @JsonKey(name: '_exampleDecimal')
+          Element exampleDecimalElement,
+      @JsonKey(name: '_exampleInstant')
+          Element exampleInstantElement,
+      @JsonKey(name: '_exampleInteger')
+          Element exampleIntegerElement,
+      @JsonKey(name: '_exampleString')
+          Element exampleStringElement,
+      @JsonKey(name: '_exampleUri')
+          Element exampleUriElement,
       @JsonKey(name: '_meaningWhenMissing')
           Element meaningWhenMissingElement,
       @JsonKey(name: '_fixedBase64Binary')
@@ -6076,6 +6316,26 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get defaultValueUriElement;
   @override
+  $ElementCopyWith<$Res> get exampleBase64BinaryElement;
+  @override
+  $ElementCopyWith<$Res> get exampleBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get exampleCodeElement;
+  @override
+  $ElementCopyWith<$Res> get exampleDateElement;
+  @override
+  $ElementCopyWith<$Res> get exampleDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get exampleDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get exampleInstantElement;
+  @override
+  $ElementCopyWith<$Res> get exampleIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get exampleStringElement;
+  @override
+  $ElementCopyWith<$Res> get exampleUriElement;
+  @override
   $ElementCopyWith<$Res> get meaningWhenMissingElement;
   @override
   $ElementCopyWith<$Res> get fixedBase64BinaryElement;
@@ -6349,6 +6609,16 @@ class __$ElementDefinitionCopyWithImpl<$Res>
     Object defaultValueIntegerElement = freezed,
     Object defaultValueStringElement = freezed,
     Object defaultValueUriElement = freezed,
+    Object exampleBase64BinaryElement = freezed,
+    Object exampleBooleanElement = freezed,
+    Object exampleCodeElement = freezed,
+    Object exampleDateElement = freezed,
+    Object exampleDateTimeElement = freezed,
+    Object exampleDecimalElement = freezed,
+    Object exampleInstantElement = freezed,
+    Object exampleIntegerElement = freezed,
+    Object exampleStringElement = freezed,
+    Object exampleUriElement = freezed,
     Object meaningWhenMissingElement = freezed,
     Object fixedBase64BinaryElement = freezed,
     Object fixedBooleanElement = freezed,
@@ -6881,6 +7151,36 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       defaultValueUriElement: defaultValueUriElement == freezed
           ? _value.defaultValueUriElement
           : defaultValueUriElement as Element,
+      exampleBase64BinaryElement: exampleBase64BinaryElement == freezed
+          ? _value.exampleBase64BinaryElement
+          : exampleBase64BinaryElement as Element,
+      exampleBooleanElement: exampleBooleanElement == freezed
+          ? _value.exampleBooleanElement
+          : exampleBooleanElement as Element,
+      exampleCodeElement: exampleCodeElement == freezed
+          ? _value.exampleCodeElement
+          : exampleCodeElement as Element,
+      exampleDateElement: exampleDateElement == freezed
+          ? _value.exampleDateElement
+          : exampleDateElement as Element,
+      exampleDateTimeElement: exampleDateTimeElement == freezed
+          ? _value.exampleDateTimeElement
+          : exampleDateTimeElement as Element,
+      exampleDecimalElement: exampleDecimalElement == freezed
+          ? _value.exampleDecimalElement
+          : exampleDecimalElement as Element,
+      exampleInstantElement: exampleInstantElement == freezed
+          ? _value.exampleInstantElement
+          : exampleInstantElement as Element,
+      exampleIntegerElement: exampleIntegerElement == freezed
+          ? _value.exampleIntegerElement
+          : exampleIntegerElement as Element,
+      exampleStringElement: exampleStringElement == freezed
+          ? _value.exampleStringElement
+          : exampleStringElement as Element,
+      exampleUriElement: exampleUriElement == freezed
+          ? _value.exampleUriElement
+          : exampleUriElement as Element,
       meaningWhenMissingElement: meaningWhenMissingElement == freezed
           ? _value.meaningWhenMissingElement
           : meaningWhenMissingElement as Element,
@@ -7208,6 +7508,26 @@ class _$_ElementDefinition implements _ElementDefinition {
           this.defaultValueStringElement,
       @JsonKey(name: '_defaultValueUri')
           this.defaultValueUriElement,
+      @JsonKey(name: '_exampleBase64Binary')
+          this.exampleBase64BinaryElement,
+      @JsonKey(name: '_exampleBoolean')
+          this.exampleBooleanElement,
+      @JsonKey(name: '_exampleCode')
+          this.exampleCodeElement,
+      @JsonKey(name: '_exampleDate')
+          this.exampleDateElement,
+      @JsonKey(name: '_exampleDateTime')
+          this.exampleDateTimeElement,
+      @JsonKey(name: '_exampleDecimal')
+          this.exampleDecimalElement,
+      @JsonKey(name: '_exampleInstant')
+          this.exampleInstantElement,
+      @JsonKey(name: '_exampleInteger')
+          this.exampleIntegerElement,
+      @JsonKey(name: '_exampleString')
+          this.exampleStringElement,
+      @JsonKey(name: '_exampleUri')
+          this.exampleUriElement,
       @JsonKey(name: '_meaningWhenMissing')
           this.meaningWhenMissingElement,
       @JsonKey(name: '_fixedBase64Binary')
@@ -7679,6 +7999,36 @@ class _$_ElementDefinition implements _ElementDefinition {
   @JsonKey(name: '_defaultValueUri')
   final Element defaultValueUriElement;
   @override
+  @JsonKey(name: '_exampleBase64Binary')
+  final Element exampleBase64BinaryElement;
+  @override
+  @JsonKey(name: '_exampleBoolean')
+  final Element exampleBooleanElement;
+  @override
+  @JsonKey(name: '_exampleCode')
+  final Element exampleCodeElement;
+  @override
+  @JsonKey(name: '_exampleDate')
+  final Element exampleDateElement;
+  @override
+  @JsonKey(name: '_exampleDateTime')
+  final Element exampleDateTimeElement;
+  @override
+  @JsonKey(name: '_exampleDecimal')
+  final Element exampleDecimalElement;
+  @override
+  @JsonKey(name: '_exampleInstant')
+  final Element exampleInstantElement;
+  @override
+  @JsonKey(name: '_exampleInteger')
+  final Element exampleIntegerElement;
+  @override
+  @JsonKey(name: '_exampleString')
+  final Element exampleStringElement;
+  @override
+  @JsonKey(name: '_exampleUri')
+  final Element exampleUriElement;
+  @override
   @JsonKey(name: '_meaningWhenMissing')
   final Element meaningWhenMissingElement;
   @override
@@ -7795,7 +8145,7 @@ class _$_ElementDefinition implements _ElementDefinition {
 
   @override
   String toString() {
-    return 'ElementDefinition(id: $id, extension_: $extension_, path: $path, representation: $representation, name: $name, label: $label, code: $code, slicing: $slicing, short: $short, definition: $definition, comments: $comments, requirements: $requirements, alias: $alias, min: $min, max: $max, base: $base, type: $type, nameReference: $nameReference, defaultValueInteger: $defaultValueInteger, defaultValueDecimal: $defaultValueDecimal, defaultValueDateTime: $defaultValueDateTime, defaultValueDate: $defaultValueDate, defaultValueInstant: $defaultValueInstant, defaultValueString: $defaultValueString, defaultValueUri: $defaultValueUri, defaultValueBoolean: $defaultValueBoolean, defaultValueCode: $defaultValueCode, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueCoding: $defaultValueCoding, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueAttachment: $defaultValueAttachment, defaultValueIdentifier: $defaultValueIdentifier, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValuePeriod: $defaultValuePeriod, defaultValueRatio: $defaultValueRatio, defaultValueHumanName: $defaultValueHumanName, defaultValueAddress: $defaultValueAddress, defaultValueContactPoint: $defaultValueContactPoint, defaultValueSchedule: $defaultValueSchedule, defaultValueReference: $defaultValueReference, meaningWhenMissing: $meaningWhenMissing, fixedInteger: $fixedInteger, fixedDecimal: $fixedDecimal, fixedDateTime: $fixedDateTime, fixedDate: $fixedDate, fixedInstant: $fixedInstant, fixedString: $fixedString, fixedUri: $fixedUri, fixedBoolean: $fixedBoolean, fixedCode: $fixedCode, fixedBase64Binary: $fixedBase64Binary, fixedCoding: $fixedCoding, fixedCodeableConcept: $fixedCodeableConcept, fixedAttachment: $fixedAttachment, fixedIdentifier: $fixedIdentifier, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedPeriod: $fixedPeriod, fixedRatio: $fixedRatio, fixedHumanName: $fixedHumanName, fixedAddress: $fixedAddress, fixedContactPoint: $fixedContactPoint, fixedSchedule: $fixedSchedule, fixedReference: $fixedReference, patternInteger: $patternInteger, patternDecimal: $patternDecimal, patternDateTime: $patternDateTime, patternDate: $patternDate, patternInstant: $patternInstant, patternString: $patternString, patternUri: $patternUri, patternBoolean: $patternBoolean, patternCode: $patternCode, patternBase64Binary: $patternBase64Binary, patternCoding: $patternCoding, patternCodeableConcept: $patternCodeableConcept, patternAttachment: $patternAttachment, patternIdentifier: $patternIdentifier, patternQuantity: $patternQuantity, patternRange: $patternRange, patternPeriod: $patternPeriod, patternRatio: $patternRatio, patternHumanName: $patternHumanName, patternAddress: $patternAddress, patternContactPoint: $patternContactPoint, patternSchedule: $patternSchedule, patternReference: $patternReference, exampleInteger: $exampleInteger, exampleDecimal: $exampleDecimal, exampleDateTime: $exampleDateTime, exampleDate: $exampleDate, exampleInstant: $exampleInstant, exampleString: $exampleString, exampleUri: $exampleUri, exampleBoolean: $exampleBoolean, exampleCode: $exampleCode, exampleBase64Binary: $exampleBase64Binary, exampleCoding: $exampleCoding, exampleCodeableConcept: $exampleCodeableConcept, exampleAttachment: $exampleAttachment, exampleIdentifier: $exampleIdentifier, exampleQuantity: $exampleQuantity, exampleRange: $exampleRange, examplePeriod: $examplePeriod, exampleRatio: $exampleRatio, exampleHumanName: $exampleHumanName, exampleAddress: $exampleAddress, exampleContactPoint: $exampleContactPoint, exampleSchedule: $exampleSchedule, exampleReference: $exampleReference, minValueInteger: $minValueInteger, minValueDecimal: $minValueDecimal, minValueDateTime: $minValueDateTime, minValueDate: $minValueDate, minValueInstant: $minValueInstant, minValueString: $minValueString, minValueUri: $minValueUri, minValueBoolean: $minValueBoolean, minValueCode: $minValueCode, minValueBase64Binary: $minValueBase64Binary, minValueCoding: $minValueCoding, minValueCodeableConcept: $minValueCodeableConcept, minValueAttachment: $minValueAttachment, minValueIdentifier: $minValueIdentifier, minValueQuantity: $minValueQuantity, minValueRange: $minValueRange, minValuePeriod: $minValuePeriod, minValueRatio: $minValueRatio, minValueHumanName: $minValueHumanName, minValueAddress: $minValueAddress, minValueContactPoint: $minValueContactPoint, minValueSchedule: $minValueSchedule, minValueReference: $minValueReference, maxValueInteger: $maxValueInteger, maxValueDecimal: $maxValueDecimal, maxValueDateTime: $maxValueDateTime, maxValueDate: $maxValueDate, maxValueInstant: $maxValueInstant, maxValueString: $maxValueString, maxValueUri: $maxValueUri, maxValueBoolean: $maxValueBoolean, maxValueCode: $maxValueCode, maxValueBase64Binary: $maxValueBase64Binary, maxValueCoding: $maxValueCoding, maxValueCodeableConcept: $maxValueCodeableConcept, maxValueAttachment: $maxValueAttachment, maxValueIdentifier: $maxValueIdentifier, maxValueQuantity: $maxValueQuantity, maxValueRange: $maxValueRange, maxValuePeriod: $maxValuePeriod, maxValueRatio: $maxValueRatio, maxValueHumanName: $maxValueHumanName, maxValueAddress: $maxValueAddress, maxValueContactPoint: $maxValueContactPoint, maxValueSchedule: $maxValueSchedule, maxValueReference: $maxValueReference, maxLength: $maxLength, condition: $condition, constraint: $constraint, mustSupport: $mustSupport, isModifier: $isModifier, isSummary: $isSummary, binding: $binding, mapping: $mapping, representationElement: $representationElement, labelElement: $labelElement, shortElement: $shortElement, definitionElement: $definitionElement, commentElement: $commentElement, requirementsElement: $requirementsElement, aliasElement: $aliasElement, minElement: $minElement, maxElement: $maxElement, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueInstantElement: $defaultValueInstantElement, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueStringElement: $defaultValueStringElement, defaultValueUriElement: $defaultValueUriElement, meaningWhenMissingElement: $meaningWhenMissingElement, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBooleanElement: $fixedBooleanElement, fixedCodeElement: $fixedCodeElement, fixedDateElement: $fixedDateElement, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimalElement: $fixedDecimalElement, fixedInstantElement: $fixedInstantElement, fixedIntegerElement: $fixedIntegerElement, fixedStringElement: $fixedStringElement, fixedUriElement: $fixedUriElement, patternBase64BinaryElement: $patternBase64BinaryElement, patternBooleanElement: $patternBooleanElement, patternCodeElement: $patternCodeElement, patternDateElement: $patternDateElement, patternDateTimeElement: $patternDateTimeElement, patternDecimalElement: $patternDecimalElement, patternInstantElement: $patternInstantElement, patternIntegerElement: $patternIntegerElement, patternStringElement: $patternStringElement, patternUriElement: $patternUriElement, minValueDateElement: $minValueDateElement, minValueDateTimeElement: $minValueDateTimeElement, minValueInstantElement: $minValueInstantElement, minValueDecimalElement: $minValueDecimalElement, minValueIntegerElement: $minValueIntegerElement, minValueUnsignedIntElement: $minValueUnsignedIntElement, maxValueDateElement: $maxValueDateElement, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstantElement: $maxValueInstantElement, maxValueTimeElement: $maxValueTimeElement, maxValueDecimalElement: $maxValueDecimalElement, maxValueIntegerElement: $maxValueIntegerElement, maxLengthElement: $maxLengthElement, conditionElement: $conditionElement, mustSupportElement: $mustSupportElement, isModifierElement: $isModifierElement, isSummaryElement: $isSummaryElement)';
+    return 'ElementDefinition(id: $id, extension_: $extension_, path: $path, representation: $representation, name: $name, label: $label, code: $code, slicing: $slicing, short: $short, definition: $definition, comments: $comments, requirements: $requirements, alias: $alias, min: $min, max: $max, base: $base, type: $type, nameReference: $nameReference, defaultValueInteger: $defaultValueInteger, defaultValueDecimal: $defaultValueDecimal, defaultValueDateTime: $defaultValueDateTime, defaultValueDate: $defaultValueDate, defaultValueInstant: $defaultValueInstant, defaultValueString: $defaultValueString, defaultValueUri: $defaultValueUri, defaultValueBoolean: $defaultValueBoolean, defaultValueCode: $defaultValueCode, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueCoding: $defaultValueCoding, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueAttachment: $defaultValueAttachment, defaultValueIdentifier: $defaultValueIdentifier, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValuePeriod: $defaultValuePeriod, defaultValueRatio: $defaultValueRatio, defaultValueHumanName: $defaultValueHumanName, defaultValueAddress: $defaultValueAddress, defaultValueContactPoint: $defaultValueContactPoint, defaultValueSchedule: $defaultValueSchedule, defaultValueReference: $defaultValueReference, meaningWhenMissing: $meaningWhenMissing, fixedInteger: $fixedInteger, fixedDecimal: $fixedDecimal, fixedDateTime: $fixedDateTime, fixedDate: $fixedDate, fixedInstant: $fixedInstant, fixedString: $fixedString, fixedUri: $fixedUri, fixedBoolean: $fixedBoolean, fixedCode: $fixedCode, fixedBase64Binary: $fixedBase64Binary, fixedCoding: $fixedCoding, fixedCodeableConcept: $fixedCodeableConcept, fixedAttachment: $fixedAttachment, fixedIdentifier: $fixedIdentifier, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedPeriod: $fixedPeriod, fixedRatio: $fixedRatio, fixedHumanName: $fixedHumanName, fixedAddress: $fixedAddress, fixedContactPoint: $fixedContactPoint, fixedSchedule: $fixedSchedule, fixedReference: $fixedReference, patternInteger: $patternInteger, patternDecimal: $patternDecimal, patternDateTime: $patternDateTime, patternDate: $patternDate, patternInstant: $patternInstant, patternString: $patternString, patternUri: $patternUri, patternBoolean: $patternBoolean, patternCode: $patternCode, patternBase64Binary: $patternBase64Binary, patternCoding: $patternCoding, patternCodeableConcept: $patternCodeableConcept, patternAttachment: $patternAttachment, patternIdentifier: $patternIdentifier, patternQuantity: $patternQuantity, patternRange: $patternRange, patternPeriod: $patternPeriod, patternRatio: $patternRatio, patternHumanName: $patternHumanName, patternAddress: $patternAddress, patternContactPoint: $patternContactPoint, patternSchedule: $patternSchedule, patternReference: $patternReference, exampleInteger: $exampleInteger, exampleDecimal: $exampleDecimal, exampleDateTime: $exampleDateTime, exampleDate: $exampleDate, exampleInstant: $exampleInstant, exampleString: $exampleString, exampleUri: $exampleUri, exampleBoolean: $exampleBoolean, exampleCode: $exampleCode, exampleBase64Binary: $exampleBase64Binary, exampleCoding: $exampleCoding, exampleCodeableConcept: $exampleCodeableConcept, exampleAttachment: $exampleAttachment, exampleIdentifier: $exampleIdentifier, exampleQuantity: $exampleQuantity, exampleRange: $exampleRange, examplePeriod: $examplePeriod, exampleRatio: $exampleRatio, exampleHumanName: $exampleHumanName, exampleAddress: $exampleAddress, exampleContactPoint: $exampleContactPoint, exampleSchedule: $exampleSchedule, exampleReference: $exampleReference, minValueInteger: $minValueInteger, minValueDecimal: $minValueDecimal, minValueDateTime: $minValueDateTime, minValueDate: $minValueDate, minValueInstant: $minValueInstant, minValueString: $minValueString, minValueUri: $minValueUri, minValueBoolean: $minValueBoolean, minValueCode: $minValueCode, minValueBase64Binary: $minValueBase64Binary, minValueCoding: $minValueCoding, minValueCodeableConcept: $minValueCodeableConcept, minValueAttachment: $minValueAttachment, minValueIdentifier: $minValueIdentifier, minValueQuantity: $minValueQuantity, minValueRange: $minValueRange, minValuePeriod: $minValuePeriod, minValueRatio: $minValueRatio, minValueHumanName: $minValueHumanName, minValueAddress: $minValueAddress, minValueContactPoint: $minValueContactPoint, minValueSchedule: $minValueSchedule, minValueReference: $minValueReference, maxValueInteger: $maxValueInteger, maxValueDecimal: $maxValueDecimal, maxValueDateTime: $maxValueDateTime, maxValueDate: $maxValueDate, maxValueInstant: $maxValueInstant, maxValueString: $maxValueString, maxValueUri: $maxValueUri, maxValueBoolean: $maxValueBoolean, maxValueCode: $maxValueCode, maxValueBase64Binary: $maxValueBase64Binary, maxValueCoding: $maxValueCoding, maxValueCodeableConcept: $maxValueCodeableConcept, maxValueAttachment: $maxValueAttachment, maxValueIdentifier: $maxValueIdentifier, maxValueQuantity: $maxValueQuantity, maxValueRange: $maxValueRange, maxValuePeriod: $maxValuePeriod, maxValueRatio: $maxValueRatio, maxValueHumanName: $maxValueHumanName, maxValueAddress: $maxValueAddress, maxValueContactPoint: $maxValueContactPoint, maxValueSchedule: $maxValueSchedule, maxValueReference: $maxValueReference, maxLength: $maxLength, condition: $condition, constraint: $constraint, mustSupport: $mustSupport, isModifier: $isModifier, isSummary: $isSummary, binding: $binding, mapping: $mapping, representationElement: $representationElement, labelElement: $labelElement, shortElement: $shortElement, definitionElement: $definitionElement, commentElement: $commentElement, requirementsElement: $requirementsElement, aliasElement: $aliasElement, minElement: $minElement, maxElement: $maxElement, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueCodeElement: $defaultValueCodeElement, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueInstantElement: $defaultValueInstantElement, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueStringElement: $defaultValueStringElement, defaultValueUriElement: $defaultValueUriElement, exampleBase64BinaryElement: $exampleBase64BinaryElement, exampleBooleanElement: $exampleBooleanElement, exampleCodeElement: $exampleCodeElement, exampleDateElement: $exampleDateElement, exampleDateTimeElement: $exampleDateTimeElement, exampleDecimalElement: $exampleDecimalElement, exampleInstantElement: $exampleInstantElement, exampleIntegerElement: $exampleIntegerElement, exampleStringElement: $exampleStringElement, exampleUriElement: $exampleUriElement, meaningWhenMissingElement: $meaningWhenMissingElement, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedBooleanElement: $fixedBooleanElement, fixedCodeElement: $fixedCodeElement, fixedDateElement: $fixedDateElement, fixedDateTimeElement: $fixedDateTimeElement, fixedDecimalElement: $fixedDecimalElement, fixedInstantElement: $fixedInstantElement, fixedIntegerElement: $fixedIntegerElement, fixedStringElement: $fixedStringElement, fixedUriElement: $fixedUriElement, patternBase64BinaryElement: $patternBase64BinaryElement, patternBooleanElement: $patternBooleanElement, patternCodeElement: $patternCodeElement, patternDateElement: $patternDateElement, patternDateTimeElement: $patternDateTimeElement, patternDecimalElement: $patternDecimalElement, patternInstantElement: $patternInstantElement, patternIntegerElement: $patternIntegerElement, patternStringElement: $patternStringElement, patternUriElement: $patternUriElement, minValueDateElement: $minValueDateElement, minValueDateTimeElement: $minValueDateTimeElement, minValueInstantElement: $minValueInstantElement, minValueDecimalElement: $minValueDecimalElement, minValueIntegerElement: $minValueIntegerElement, minValueUnsignedIntElement: $minValueUnsignedIntElement, maxValueDateElement: $maxValueDateElement, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueInstantElement: $maxValueInstantElement, maxValueTimeElement: $maxValueTimeElement, maxValueDecimalElement: $maxValueDecimalElement, maxValueIntegerElement: $maxValueIntegerElement, maxLengthElement: $maxLengthElement, conditionElement: $conditionElement, mustSupportElement: $mustSupportElement, isModifierElement: $isModifierElement, isSummaryElement: $isSummaryElement)';
   }
 
   @override
@@ -8028,6 +8378,16 @@ class _$_ElementDefinition implements _ElementDefinition {
             (identical(other.defaultValueIntegerElement, defaultValueIntegerElement) || const DeepCollectionEquality().equals(other.defaultValueIntegerElement, defaultValueIntegerElement)) &&
             (identical(other.defaultValueStringElement, defaultValueStringElement) || const DeepCollectionEquality().equals(other.defaultValueStringElement, defaultValueStringElement)) &&
             (identical(other.defaultValueUriElement, defaultValueUriElement) || const DeepCollectionEquality().equals(other.defaultValueUriElement, defaultValueUriElement)) &&
+            (identical(other.exampleBase64BinaryElement, exampleBase64BinaryElement) || const DeepCollectionEquality().equals(other.exampleBase64BinaryElement, exampleBase64BinaryElement)) &&
+            (identical(other.exampleBooleanElement, exampleBooleanElement) || const DeepCollectionEquality().equals(other.exampleBooleanElement, exampleBooleanElement)) &&
+            (identical(other.exampleCodeElement, exampleCodeElement) || const DeepCollectionEquality().equals(other.exampleCodeElement, exampleCodeElement)) &&
+            (identical(other.exampleDateElement, exampleDateElement) || const DeepCollectionEquality().equals(other.exampleDateElement, exampleDateElement)) &&
+            (identical(other.exampleDateTimeElement, exampleDateTimeElement) || const DeepCollectionEquality().equals(other.exampleDateTimeElement, exampleDateTimeElement)) &&
+            (identical(other.exampleDecimalElement, exampleDecimalElement) || const DeepCollectionEquality().equals(other.exampleDecimalElement, exampleDecimalElement)) &&
+            (identical(other.exampleInstantElement, exampleInstantElement) || const DeepCollectionEquality().equals(other.exampleInstantElement, exampleInstantElement)) &&
+            (identical(other.exampleIntegerElement, exampleIntegerElement) || const DeepCollectionEquality().equals(other.exampleIntegerElement, exampleIntegerElement)) &&
+            (identical(other.exampleStringElement, exampleStringElement) || const DeepCollectionEquality().equals(other.exampleStringElement, exampleStringElement)) &&
+            (identical(other.exampleUriElement, exampleUriElement) || const DeepCollectionEquality().equals(other.exampleUriElement, exampleUriElement)) &&
             (identical(other.meaningWhenMissingElement, meaningWhenMissingElement) || const DeepCollectionEquality().equals(other.meaningWhenMissingElement, meaningWhenMissingElement)) &&
             (identical(other.fixedBase64BinaryElement, fixedBase64BinaryElement) || const DeepCollectionEquality().equals(other.fixedBase64BinaryElement, fixedBase64BinaryElement)) &&
             (identical(other.fixedBooleanElement, fixedBooleanElement) || const DeepCollectionEquality().equals(other.fixedBooleanElement, fixedBooleanElement)) &&
@@ -8255,6 +8615,16 @@ class _$_ElementDefinition implements _ElementDefinition {
       const DeepCollectionEquality().hash(defaultValueIntegerElement) ^
       const DeepCollectionEquality().hash(defaultValueStringElement) ^
       const DeepCollectionEquality().hash(defaultValueUriElement) ^
+      const DeepCollectionEquality().hash(exampleBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(exampleBooleanElement) ^
+      const DeepCollectionEquality().hash(exampleCodeElement) ^
+      const DeepCollectionEquality().hash(exampleDateElement) ^
+      const DeepCollectionEquality().hash(exampleDateTimeElement) ^
+      const DeepCollectionEquality().hash(exampleDecimalElement) ^
+      const DeepCollectionEquality().hash(exampleInstantElement) ^
+      const DeepCollectionEquality().hash(exampleIntegerElement) ^
+      const DeepCollectionEquality().hash(exampleStringElement) ^
+      const DeepCollectionEquality().hash(exampleUriElement) ^
       const DeepCollectionEquality().hash(meaningWhenMissingElement) ^
       const DeepCollectionEquality().hash(fixedBase64BinaryElement) ^
       const DeepCollectionEquality().hash(fixedBooleanElement) ^
@@ -8512,6 +8882,26 @@ abstract class _ElementDefinition implements ElementDefinition {
           Element defaultValueStringElement,
       @JsonKey(name: '_defaultValueUri')
           Element defaultValueUriElement,
+      @JsonKey(name: '_exampleBase64Binary')
+          Element exampleBase64BinaryElement,
+      @JsonKey(name: '_exampleBoolean')
+          Element exampleBooleanElement,
+      @JsonKey(name: '_exampleCode')
+          Element exampleCodeElement,
+      @JsonKey(name: '_exampleDate')
+          Element exampleDateElement,
+      @JsonKey(name: '_exampleDateTime')
+          Element exampleDateTimeElement,
+      @JsonKey(name: '_exampleDecimal')
+          Element exampleDecimalElement,
+      @JsonKey(name: '_exampleInstant')
+          Element exampleInstantElement,
+      @JsonKey(name: '_exampleInteger')
+          Element exampleIntegerElement,
+      @JsonKey(name: '_exampleString')
+          Element exampleStringElement,
+      @JsonKey(name: '_exampleUri')
+          Element exampleUriElement,
       @JsonKey(name: '_meaningWhenMissing')
           Element meaningWhenMissingElement,
       @JsonKey(name: '_fixedBase64Binary')
@@ -8981,6 +9371,36 @@ abstract class _ElementDefinition implements ElementDefinition {
   @override
   @JsonKey(name: '_defaultValueUri')
   Element get defaultValueUriElement;
+  @override
+  @JsonKey(name: '_exampleBase64Binary')
+  Element get exampleBase64BinaryElement;
+  @override
+  @JsonKey(name: '_exampleBoolean')
+  Element get exampleBooleanElement;
+  @override
+  @JsonKey(name: '_exampleCode')
+  Element get exampleCodeElement;
+  @override
+  @JsonKey(name: '_exampleDate')
+  Element get exampleDateElement;
+  @override
+  @JsonKey(name: '_exampleDateTime')
+  Element get exampleDateTimeElement;
+  @override
+  @JsonKey(name: '_exampleDecimal')
+  Element get exampleDecimalElement;
+  @override
+  @JsonKey(name: '_exampleInstant')
+  Element get exampleInstantElement;
+  @override
+  @JsonKey(name: '_exampleInteger')
+  Element get exampleIntegerElement;
+  @override
+  @JsonKey(name: '_exampleString')
+  Element get exampleStringElement;
+  @override
+  @JsonKey(name: '_exampleUri')
+  Element get exampleUriElement;
   @override
   @JsonKey(name: '_meaningWhenMissing')
   Element get meaningWhenMissingElement;

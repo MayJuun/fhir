@@ -2494,6 +2494,7 @@ class _$BundleLinkTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) String relation,
       @required @JsonKey(required: true) FhirUri url,
       @JsonKey(name: '_relation') Element relationElement,
@@ -2502,6 +2503,7 @@ class _$BundleLinkTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       relation: relation,
       url: url,
       relationElement: relationElement,
@@ -2518,6 +2520,8 @@ mixin _$BundleLink {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   String get relation;
   @JsonKey(required: true)
@@ -2539,6 +2543,7 @@ abstract class $BundleLinkCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) String relation,
       @JsonKey(required: true) FhirUri url,
       @JsonKey(name: '_relation') Element relationElement,
@@ -2561,6 +2566,7 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object relation = freezed,
     Object url = freezed,
     Object relationElement = freezed,
@@ -2574,6 +2580,9 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       relation: relation == freezed ? _value.relation : relation as String,
       url: url == freezed ? _value.url : url as FhirUri,
       relationElement: relationElement == freezed
@@ -2624,6 +2633,7 @@ abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) String relation,
       @JsonKey(required: true) FhirUri url,
       @JsonKey(name: '_relation') Element relationElement,
@@ -2651,6 +2661,7 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object relation = freezed,
     Object url = freezed,
     Object relationElement = freezed,
@@ -2664,6 +2675,9 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       relation: relation == freezed ? _value.relation : relation as String,
       url: url == freezed ? _value.url : url as FhirUri,
       relationElement: relationElement == freezed
@@ -2681,6 +2695,7 @@ class _$_BundleLink implements _BundleLink {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.relation,
       @required @JsonKey(required: true) this.url,
       @JsonKey(name: '_relation') this.relationElement,
@@ -2699,6 +2714,9 @@ class _$_BundleLink implements _BundleLink {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(required: true)
   final String relation;
   @override
@@ -2713,7 +2731,7 @@ class _$_BundleLink implements _BundleLink {
 
   @override
   String toString() {
-    return 'BundleLink(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, relation: $relation, url: $url, relationElement: $relationElement, urlElement: $urlElement)';
+    return 'BundleLink(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, relation: $relation, url: $url, relationElement: $relationElement, urlElement: $urlElement)';
   }
 
   @override
@@ -2728,6 +2746,9 @@ class _$_BundleLink implements _BundleLink {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.relation, relation) ||
                 const DeepCollectionEquality()
                     .equals(other.relation, relation)) &&
@@ -2747,6 +2768,7 @@ class _$_BundleLink implements _BundleLink {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(relation) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(relationElement) ^
@@ -2767,6 +2789,7 @@ abstract class _BundleLink implements BundleLink {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) String relation,
       @required @JsonKey(required: true) FhirUri url,
       @JsonKey(name: '_relation') Element relationElement,
@@ -2782,6 +2805,9 @@ abstract class _BundleLink implements BundleLink {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   String get relation;
@@ -2809,6 +2835,7 @@ class _$BundleEntryTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<BundleLink> link,
       FhirUri fullUrl,
       Resource resource,
@@ -2820,6 +2847,7 @@ class _$BundleEntryTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       link: link,
       fullUrl: fullUrl,
       resource: resource,
@@ -2839,6 +2867,8 @@ mixin _$BundleEntry {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   List<BundleLink> get link;
   FhirUri get fullUrl;
   Resource get resource;
@@ -2860,6 +2890,7 @@ abstract class $BundleEntryCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<BundleLink> link,
       FhirUri fullUrl,
       Resource resource,
@@ -2887,6 +2918,7 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object link = freezed,
     Object fullUrl = freezed,
     Object resource = freezed,
@@ -2903,6 +2935,9 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       link: link == freezed ? _value.link : link as List<BundleLink>,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri,
       resource: resource == freezed ? _value.resource : resource as Resource,
@@ -2977,6 +3012,7 @@ abstract class _$BundleEntryCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<BundleLink> link,
       FhirUri fullUrl,
       Resource resource,
@@ -3011,6 +3047,7 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object link = freezed,
     Object fullUrl = freezed,
     Object resource = freezed,
@@ -3027,6 +3064,9 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       link: link == freezed ? _value.link : link as List<BundleLink>,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri,
       resource: resource == freezed ? _value.resource : resource as Resource,
@@ -3047,6 +3087,7 @@ class _$_BundleEntry implements _BundleEntry {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.link,
       this.fullUrl,
       this.resource,
@@ -3066,6 +3107,9 @@ class _$_BundleEntry implements _BundleEntry {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   final List<BundleLink> link;
   @override
   final FhirUri fullUrl;
@@ -3083,7 +3127,7 @@ class _$_BundleEntry implements _BundleEntry {
 
   @override
   String toString() {
-    return 'BundleEntry(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, link: $link, fullUrl: $fullUrl, resource: $resource, search: $search, request: $request, response: $response, fullUrlElement: $fullUrlElement)';
+    return 'BundleEntry(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, link: $link, fullUrl: $fullUrl, resource: $resource, search: $search, request: $request, response: $response, fullUrlElement: $fullUrlElement)';
   }
 
   @override
@@ -3098,6 +3142,9 @@ class _$_BundleEntry implements _BundleEntry {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.link, link) ||
                 const DeepCollectionEquality().equals(other.link, link)) &&
             (identical(other.fullUrl, fullUrl) ||
@@ -3125,6 +3172,7 @@ class _$_BundleEntry implements _BundleEntry {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(link) ^
       const DeepCollectionEquality().hash(fullUrl) ^
       const DeepCollectionEquality().hash(resource) ^
@@ -3148,6 +3196,7 @@ abstract class _BundleEntry implements BundleEntry {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       List<BundleLink> link,
       FhirUri fullUrl,
       Resource resource,
@@ -3166,6 +3215,9 @@ abstract class _BundleEntry implements BundleEntry {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   List<BundleLink> get link;
   @override
@@ -3196,6 +3248,7 @@ class _$BundleSearchTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score,
       @JsonKey(name: '_mode') Element modeElement,
@@ -3204,6 +3257,7 @@ class _$BundleSearchTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       mode: mode,
       score: score,
       modeElement: modeElement,
@@ -3220,6 +3274,8 @@ mixin _$BundleSearch {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(unknownEnumValue: SearchMode.unknown)
   SearchMode get mode;
   Decimal get score;
@@ -3240,6 +3296,7 @@ abstract class $BundleSearchCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score,
       @JsonKey(name: '_mode') Element modeElement,
@@ -3262,6 +3319,7 @@ class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object mode = freezed,
     Object score = freezed,
     Object modeElement = freezed,
@@ -3275,6 +3333,9 @@ class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       mode: mode == freezed ? _value.mode : mode as SearchMode,
       score: score == freezed ? _value.score : score as Decimal,
       modeElement:
@@ -3326,6 +3387,7 @@ abstract class _$BundleSearchCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score,
       @JsonKey(name: '_mode') Element modeElement,
@@ -3353,6 +3415,7 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object mode = freezed,
     Object score = freezed,
     Object modeElement = freezed,
@@ -3366,6 +3429,9 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       mode: mode == freezed ? _value.mode : mode as SearchMode,
       score: score == freezed ? _value.score : score as Decimal,
       modeElement:
@@ -3383,6 +3449,7 @@ class _$_BundleSearch implements _BundleSearch {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @JsonKey(unknownEnumValue: SearchMode.unknown) this.mode,
       this.score,
       @JsonKey(name: '_mode') this.modeElement,
@@ -3399,6 +3466,9 @@ class _$_BundleSearch implements _BundleSearch {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(unknownEnumValue: SearchMode.unknown)
   final SearchMode mode;
   @override
@@ -3412,7 +3482,7 @@ class _$_BundleSearch implements _BundleSearch {
 
   @override
   String toString() {
-    return 'BundleSearch(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, mode: $mode, score: $score, modeElement: $modeElement, scoreElement: $scoreElement)';
+    return 'BundleSearch(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, mode: $mode, score: $score, modeElement: $modeElement, scoreElement: $scoreElement)';
   }
 
   @override
@@ -3427,6 +3497,9 @@ class _$_BundleSearch implements _BundleSearch {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.mode, mode) ||
                 const DeepCollectionEquality().equals(other.mode, mode)) &&
             (identical(other.score, score) ||
@@ -3445,6 +3518,7 @@ class _$_BundleSearch implements _BundleSearch {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(mode) ^
       const DeepCollectionEquality().hash(score) ^
       const DeepCollectionEquality().hash(modeElement) ^
@@ -3465,6 +3539,7 @@ abstract class _BundleSearch implements BundleSearch {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
       Decimal score,
       @JsonKey(name: '_mode') Element modeElement,
@@ -3480,6 +3555,9 @@ abstract class _BundleSearch implements BundleSearch {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(unknownEnumValue: SearchMode.unknown)
   SearchMode get mode;
@@ -3507,6 +3585,8 @@ class _$BundleRequestTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @required
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
           RequestMethod method,
@@ -3533,6 +3613,7 @@ class _$BundleRequestTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       method: method,
       url: url,
       ifNoneMatch: ifNoneMatch,
@@ -3557,6 +3638,8 @@ mixin _$BundleRequest {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
   RequestMethod get method;
   @JsonKey(required: true)
@@ -3591,6 +3674,8 @@ abstract class $BundleRequestCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
           RequestMethod method,
       @JsonKey(required: true)
@@ -3634,6 +3719,7 @@ class _$BundleRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object method = freezed,
     Object url = freezed,
     Object ifNoneMatch = freezed,
@@ -3655,6 +3741,9 @@ class _$BundleRequestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       method: method == freezed ? _value.method : method as RequestMethod,
       url: url == freezed ? _value.url : url as FhirUri,
       ifNoneMatch:
@@ -3767,6 +3856,8 @@ abstract class _$BundleRequestCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
           RequestMethod method,
       @JsonKey(required: true)
@@ -3819,6 +3910,7 @@ class __$BundleRequestCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object method = freezed,
     Object url = freezed,
     Object ifNoneMatch = freezed,
@@ -3840,6 +3932,9 @@ class __$BundleRequestCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       method: method == freezed ? _value.method : method as RequestMethod,
       url: url == freezed ? _value.url : url as FhirUri,
       ifNoneMatch:
@@ -3878,6 +3973,8 @@ class _$_BundleRequest implements _BundleRequest {
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          this.fhirComments,
       @required
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
           this.method,
@@ -3914,6 +4011,9 @@ class _$_BundleRequest implements _BundleRequest {
   @override
   final FhirExtension modifierExtension;
   @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
+  @override
   @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
   final RequestMethod method;
   @override
@@ -3948,7 +4048,7 @@ class _$_BundleRequest implements _BundleRequest {
 
   @override
   String toString() {
-    return 'BundleRequest(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, method: $method, url: $url, ifNoneMatch: $ifNoneMatch, ifModifiedSince: $ifModifiedSince, ifMatch: $ifMatch, ifNoneExist: $ifNoneExist, methodElement: $methodElement, urlElement: $urlElement, ifNoneMatchElement: $ifNoneMatchElement, ifModifiedSinceElement: $ifModifiedSinceElement, ifMatchElement: $ifMatchElement, ifNoneExistElement: $ifNoneExistElement)';
+    return 'BundleRequest(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, method: $method, url: $url, ifNoneMatch: $ifNoneMatch, ifModifiedSince: $ifModifiedSince, ifMatch: $ifMatch, ifNoneExist: $ifNoneExist, methodElement: $methodElement, urlElement: $urlElement, ifNoneMatchElement: $ifNoneMatchElement, ifModifiedSinceElement: $ifModifiedSinceElement, ifMatchElement: $ifMatchElement, ifNoneExistElement: $ifNoneExistElement)';
   }
 
   @override
@@ -3963,6 +4063,9 @@ class _$_BundleRequest implements _BundleRequest {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.method, method) ||
                 const DeepCollectionEquality().equals(other.method, method)) &&
             (identical(other.url, url) ||
@@ -4005,6 +4108,7 @@ class _$_BundleRequest implements _BundleRequest {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(method) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(ifNoneMatch) ^
@@ -4034,6 +4138,8 @@ abstract class _BundleRequest implements BundleRequest {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments')
+          List<String> fhirComments,
       @required
       @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
           RequestMethod method,
@@ -4067,6 +4173,9 @@ abstract class _BundleRequest implements BundleRequest {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true, unknownEnumValue: RequestMethod.unknown)
   RequestMethod get method;
@@ -4114,6 +4223,7 @@ class _$BundleResponseTearOff {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @required @JsonKey(required: true) String status,
       FhirUri location,
       String etag,
@@ -4126,6 +4236,7 @@ class _$BundleResponseTearOff {
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      fhirComments: fhirComments,
       status: status,
       location: location,
       etag: etag,
@@ -4146,6 +4257,8 @@ mixin _$BundleResponse {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   FhirExtension get modifierExtension;
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @JsonKey(required: true)
   String get status;
   FhirUri get location;
@@ -4172,6 +4285,7 @@ abstract class $BundleResponseCopyWith<$Res> {
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) String status,
       FhirUri location,
       String etag,
@@ -4201,6 +4315,7 @@ class _$BundleResponseCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object status = freezed,
     Object location = freezed,
     Object etag = freezed,
@@ -4218,6 +4333,9 @@ class _$BundleResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       status: status == freezed ? _value.status : status as String,
       location: location == freezed ? _value.location : location as FhirUri,
       etag: etag == freezed ? _value.etag : etag as String,
@@ -4299,6 +4417,7 @@ abstract class _$BundleResponseCopyWith<$Res>
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,
       FhirExtension modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String> fhirComments,
       @JsonKey(required: true) String status,
       FhirUri location,
       String etag,
@@ -4335,6 +4454,7 @@ class __$BundleResponseCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object modifierExtension = freezed,
+    Object fhirComments = freezed,
     Object status = freezed,
     Object location = freezed,
     Object etag = freezed,
@@ -4352,6 +4472,9 @@ class __$BundleResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension,
+      fhirComments: fhirComments == freezed
+          ? _value.fhirComments
+          : fhirComments as List<String>,
       status: status == freezed ? _value.status : status as String,
       location: location == freezed ? _value.location : location as FhirUri,
       etag: etag == freezed ? _value.etag : etag as String,
@@ -4379,6 +4502,7 @@ class _$_BundleResponse implements _BundleResponse {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       @required @JsonKey(required: true) this.status,
       this.location,
       this.etag,
@@ -4399,6 +4523,9 @@ class _$_BundleResponse implements _BundleResponse {
   final List<FhirExtension> extension_;
   @override
   final FhirExtension modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  final List<String> fhirComments;
   @override
   @JsonKey(required: true)
   final String status;
@@ -4423,7 +4550,7 @@ class _$_BundleResponse implements _BundleResponse {
 
   @override
   String toString() {
-    return 'BundleResponse(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, status: $status, location: $location, etag: $etag, lastModified: $lastModified, statusElement: $statusElement, locationElement: $locationElement, etagElement: $etagElement, lastModifiedElement: $lastModifiedElement)';
+    return 'BundleResponse(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, status: $status, location: $location, etag: $etag, lastModified: $lastModified, statusElement: $statusElement, locationElement: $locationElement, etagElement: $etagElement, lastModifiedElement: $lastModifiedElement)';
   }
 
   @override
@@ -4438,6 +4565,9 @@ class _$_BundleResponse implements _BundleResponse {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.fhirComments, fhirComments) ||
+                const DeepCollectionEquality()
+                    .equals(other.fhirComments, fhirComments)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.location, location) ||
@@ -4468,6 +4598,7 @@ class _$_BundleResponse implements _BundleResponse {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(etag) ^
@@ -4492,6 +4623,7 @@ abstract class _BundleResponse implements BundleResponse {
           {Id id,
           @JsonKey(name: 'extension') List<FhirExtension> extension_,
           FhirExtension modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String> fhirComments,
           @required @JsonKey(required: true) String status,
           FhirUri location,
           String etag,
@@ -4512,6 +4644,9 @@ abstract class _BundleResponse implements BundleResponse {
   List<FhirExtension> get extension_;
   @override
   FhirExtension get modifierExtension;
+  @override
+  @JsonKey(name: 'fhir_comments')
+  List<String> get fhirComments;
   @override
   @JsonKey(required: true)
   String get status;
