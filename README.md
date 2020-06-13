@@ -82,60 +82,60 @@ I think it's the new compiling. It's actually great though, [json_serializable](
 
 | [ResourceTypes](https://www.hl7.org/fhir/resourcelist.html) |by Category| |||||
 |-----|:-----|-----|-----|-----|-----|-----|
-|| **base** |
-|| *Individuals* | *Entities1* | *Entities2* | *Workflow* | Management |
-|| Group| Endpoing | BiologicallyDerivedProduct | Appointment | Encounter |
-|| Patient  | HealthcareService | Device | AppointmentResponse | EpisodeOfCare |
-|| Person | Location | DeviceMetric | Schedule | Flag |
-|| Practitioner | Organization | Substance | Slot | Library |
-|| PractitionerRole | OrganizationAffiliation || VerificationResult | List |
-|| RelatedPerson |
-|| **clinical** |
-|| *Summary* | *Diagnostics* | *Medications* | *CareProvision* | *RequestAndResponse* |
-|| AdverseEvent | BodyStructure | Immunization | CarePlan | Communication |
-|| AllergyIntolerance | DiagnosticReport | ImmunizationEvaluation | CareTeam | CommunicationRequest |
-|| ClinicalImpression | ImagingStudy | ImmunizationRecommendation | Goal | DeviceRequest |
-|| DetectedIssue | Media | Medication | NutritionOrder | DeviceUseStatement |
-|| FamilyMemberHistory | MolecularSequence | MedicationAdministration | RequestGroup | GuidanceResponse |
-|| Procedure | Observation | MedicationDispense | RiskAssessment | SupplyDelivery |
-|| | QuestionnaireResponse | MedicationKnowledge | VisionPrescription | SupplyRequest |
-|| | Specimen | MedicationRequest |
-|| | | MedicationStatement |
-|| **financial** |
-|| *Support* | *Billing* | *Payment* | *General* |
-|| Coverage | Claim | PaymentNotice | Account |
-|| CoverageEligibilityRequest | ClaimResponse | PaymentReconciliation | ChargeItem |
-|| CoverageEligibilityResponse | Invoice | | ChargeItemDefinition
-|| EnrollmentRequest | | | Contract |
-|| EnrollmentResponse | | | ExplanationOfBenefits |
-|| | | | InsurancePlan |
-|| **foundation** |
-|| *Conformance* | *Terminology* | *Security* | *Documents* | *Other* |
-|| CapabilityStatement | CodeSystem | AuditEvent | CatalogEntry | Basic |
-|| CompartmentDefinition | ConceptMap | Consent | Composition | Binary |
-|| ExampleScenario |  NamingSystem | Provenance | DocumentManifest | Bundle |
-|| GraphDefinition | TerminologyCapabilities | DocumentReference | | Linkage |
-|| ImplementationGuide | ValueSet | | | MessageHeader |
-|| MessageDefinition | | | | OperationOutcome |
-|| OperationDefinition | | | | Parameters |
-|| SearchParameter | | | | Subscription |
-|| StructureDefinition |
-|| StructureMap |
-|| **specialized** |
-|| *Public Health And Research* | *Definitional Artifacts* | *Evidence Based Medicine* | *Quality Reporting And Testing* | *Medication Definition* |
-|| ResearchStudy | ActivityDefinition | EffectEvidenceSynthesis | Measure | MedicinalProduct |
-|| ResearchSubject | DeviceDefinition | Evidence | MeasureReport | MedicinalProductAuthorization |
-|| | EventDefinition | EvidenceVariable | TestScript | MedicinalProductContraindication |
-|| | ObservationDefinition | ResearchDefinition | TestReport | MedicinalProductIndication |
-|| | PlanDefinition | ResearchElementDefinition || MedicinalProductIngredient |
-|| | Quesionnaire | RiskEvidenceSynthesis || MedicinalProductInteraction |
-|| | SpecimenDefinition ||| MedicinalProductManufactured |
-|| |||| MedicinalProductPackaged |
-|| |||| MedicinalProductPharmaceutical |
-|| |||| MedicinalProductUndesirableEffect |
-|| |||| SubstanceNucleicAcid |
-|| |||| SubstancePolymer |
-|| |||| SubstanceProtein |
-|| |||| SubstanceReferenceInformation |
-|| |||| SubstanceSpecification |
-|| |||| SubstanceSourceMaterial |
+| **base** |
+| *Individuals* | *Entities1* | *Entities2* | *Workflow* | Management |
+| Group| Endpoing | BiologicallyDerivedProduct | Appointment | Encounter |
+| Patient  | HealthcareService | Device | AppointmentResponse | EpisodeOfCare |
+| Person | Location | DeviceMetric | Schedule | Flag |
+| Practitioner | Organization | Substance | Slot | Library |
+| PractitionerRole | OrganizationAffiliation || VerificationResult | List |
+| RelatedPerson |
+| **clinical** |
+| *Summary* | *Diagnostics* | *Medications* | *CareProvision* | *RequestAndResponse* |
+| AdverseEvent | BodyStructure | Immunization | CarePlan | Communication |
+| AllergyIntolerance | DiagnosticReport | ImmunizationEvaluation | CareTeam | CommunicationRequest |
+| ClinicalImpression | ImagingStudy | ImmunizationRecommendation | Goal | DeviceRequest |
+| DetectedIssue | Media | Medication | NutritionOrder | DeviceUseStatement |
+| FamilyMemberHistory | MolecularSequence | MedicationAdministration | RequestGroup | GuidanceResponse |
+| Procedure | Observation | MedicationDispense | RiskAssessment | SupplyDelivery |
+| | QuestionnaireResponse | MedicationKnowledge | VisionPrescription | SupplyRequest |
+| | Specimen | MedicationRequest |
+| | | MedicationStatement |
+| **financial** |
+| *Support* | *Billing* | *Payment* | *General* |
+| Coverage | Claim | PaymentNotice | Account |
+| CoverageEligibilityRequest | ClaimResponse | PaymentReconciliation | ChargeItem |
+| CoverageEligibilityResponse | Invoice | | ChargeItemDefinition
+| EnrollmentRequest | | | Contract |
+| EnrollmentResponse | | | ExplanationOfBenefits |
+| | | | InsurancePlan |
+| **foundation** |
+| *Conformance* | *Terminology* | *Security* | *Documents* | *Other* |
+| CapabilityStatement | CodeSystem | AuditEvent | CatalogEntry | Basic |
+| CompartmentDefinition | ConceptMap | Consent | Composition | Binary |
+| ExampleScenario |  NamingSystem | Provenance | DocumentManifest | Bundle |
+| GraphDefinition | TerminologyCapabilities | DocumentReference | | Linkage |
+| ImplementationGuide | ValueSet | | | MessageHeader |
+| MessageDefinition | | | | OperationOutcome |
+| OperationDefinition | | | | Parameters |
+| SearchParameter | | | | Subscription |
+| StructureDefinition |
+| StructureMap |
+| **specialized** |
+| *Public Health And Research* | *Definitional Artifacts* | *Evidence Based Medicine* | *Quality Reporting And Testing* | *Medication Definition* |
+| ResearchStudy | ActivityDefinition | EffectEvidenceSynthesis | Measure | MedicinalProduct |
+| ResearchSubject | DeviceDefinition | Evidence | MeasureReport | MedicinalProductAuthorization |
+| | EventDefinition | EvidenceVariable | TestScript | MedicinalProductContraindication |
+| | ObservationDefinition | ResearchDefinition | TestReport | MedicinalProductIndication |
+| | PlanDefinition | ResearchElementDefinition || MedicinalProductIngredient |
+| | Quesionnaire | RiskEvidenceSynthesis || MedicinalProductInteraction |
+| | SpecimenDefinition ||| MedicinalProductManufactured |
+| |||| MedicinalProductPackaged |
+| |||| MedicinalProductPharmaceutical |
+| |||| MedicinalProductUndesirableEffect |
+| |||| SubstanceNucleicAcid |
+| |||| SubstancePolymer |
+| |||| SubstanceProtein |
+| |||| SubstanceReferenceInformation |
+| |||| SubstanceSpecification |
+| |||| SubstanceSourceMaterial |
