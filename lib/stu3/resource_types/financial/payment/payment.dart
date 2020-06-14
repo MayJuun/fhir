@@ -10,7 +10,16 @@ abstract class PaymentNotice with _$PaymentNotice implements Resource {
   const factory PaymentNotice({
     @JsonKey(required: true, defaultValue: 'PaymentNotice')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     Reference request,
@@ -36,7 +45,16 @@ abstract class PaymentReconciliation
   const factory PaymentReconciliation({
     @JsonKey(required: true, defaultValue: 'PaymentReconciliation')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     Period period,

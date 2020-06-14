@@ -14,7 +14,16 @@ abstract class ActivityDefinition
   const factory ActivityDefinition({
     @JsonKey(required: true, defaultValue: 'ActivityDefinition')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,
@@ -108,7 +117,16 @@ abstract class PlanDefinition with _$PlanDefinition implements Resource {
   const factory PlanDefinition({
     @JsonKey(required: true, defaultValue: 'PlanDefinition')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,
@@ -299,7 +317,16 @@ abstract class Questionnaire with _$Questionnaire implements Resource {
   const factory Questionnaire({
     @JsonKey(required: true, defaultValue: 'Questionnaire')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,
@@ -446,7 +473,16 @@ abstract class ServiceDefinition with _$ServiceDefinition implements Resource {
   const factory ServiceDefinition({
     @JsonKey(required: true, defaultValue: 'ServiceDefinition')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,

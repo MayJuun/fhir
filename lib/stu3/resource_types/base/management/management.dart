@@ -12,7 +12,16 @@ abstract class Encounter with _$Encounter implements Resource {
   const factory Encounter({
     @JsonKey(required: true, defaultValue: 'Encounter')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus status,
     List<EncounterStatusHistory> statusHistory,
@@ -119,7 +128,16 @@ abstract class EpisodeOfCare with _$EpisodeOfCare implements Resource {
   const factory EpisodeOfCare({
     @JsonKey(required: true, defaultValue: 'EpisodeOfCare')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
         EpisodeOfCareStatus status,
@@ -168,7 +186,16 @@ abstract class Flag with _$Flag implements Resource {
   const factory Flag({
     @JsonKey(required: true, defaultValue: 'Flag')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     CodeableConcept category,
@@ -187,7 +214,16 @@ abstract class Library with _$Library implements Resource {
   const factory Library({
     @JsonKey(required: true, defaultValue: 'Library')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,
@@ -238,7 +274,16 @@ abstract class List_ with _$List_ implements Resource {
   const factory List_({
     @JsonKey(required: true, defaultValue: 'List')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: ListStatus.unknown) ListStatus status,
     @JsonKey(unknownEnumValue: ListMode.unknown) ListMode mode,

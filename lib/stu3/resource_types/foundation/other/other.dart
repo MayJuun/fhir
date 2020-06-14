@@ -11,7 +11,16 @@ abstract class Basic with _$Basic implements Resource {
   const factory Basic({
     @JsonKey(required: true, defaultValue: 'Basic')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) CodeableConcept code,
     Reference subject,
@@ -27,7 +36,16 @@ abstract class Binary with _$Binary implements Resource {
   const factory Binary({
     @JsonKey(required: true, defaultValue: 'Binary')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Code contentType,
     Reference securityContext,
     String content,
@@ -42,7 +60,16 @@ abstract class Bundle with _$Bundle implements Resource {
   const factory Bundle({
     @JsonKey(required: true, defaultValue: 'Bundle')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: BundleType.unknown) BundleType type,
     UnsignedInt total,
@@ -136,7 +163,16 @@ abstract class Linkage with _$Linkage implements Resource {
   const factory Linkage({
     @JsonKey(required: true, defaultValue: 'Linkage')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Boolean active,
     Reference author,
     @JsonKey(required: true) List<LinkageItem> item,
@@ -162,7 +198,16 @@ abstract class Media with _$Media implements Resource {
   const factory Media({
     @JsonKey(required: true, defaultValue: 'Media')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
     @JsonKey(unknownEnumValue: MediaType.unknown) MediaType type,
@@ -197,7 +242,16 @@ abstract class MessageHeader with _$MessageHeader implements Resource {
   const factory MessageHeader({
     @JsonKey(required: true, defaultValue: 'MessageHeader')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) Coding event,
     List<MessageHeaderDestination> destination,
     Reference receiver,
@@ -264,7 +318,16 @@ abstract class OperationOutcome with _$OperationOutcome implements Resource {
   const factory OperationOutcome({
     @JsonKey(required: true, defaultValue: 'OperationOutcome')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
@@ -390,7 +453,16 @@ abstract class Subscription with _$Subscription implements Resource {
   const factory Subscription({
     @JsonKey(required: true, defaultValue: 'Subscription')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
         SubscriptionStatus status,
     List<ContactPoint> contact,

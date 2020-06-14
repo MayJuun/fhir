@@ -19,6 +19,15 @@ class _$TestReportTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -48,6 +57,14 @@ class _$TestReportTearOff {
           Element issuedElement}) {
     return _TestReport(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       name: name,
       status: status,
@@ -76,6 +93,15 @@ const $TestReport = _$TestReportTearOff();
 mixin _$TestReport {
   @JsonKey(required: true, defaultValue: 'TestReport')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   Identifier get identifier;
   String get name;
   @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -115,6 +141,15 @@ abstract class $TestReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'TestReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -143,6 +178,8 @@ abstract class $TestReportCopyWith<$Res> {
       @JsonKey(name: '_issued')
           Element issuedElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get testScript;
   $TestReportSetupCopyWith<$Res> get setup;
@@ -165,6 +202,14 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object name = freezed,
     Object status = freezed,
@@ -188,6 +233,21 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       name: name == freezed ? _value.name : name as String,
@@ -224,6 +284,26 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
           ? _value.issuedElement
           : issuedElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -335,6 +415,15 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'TestReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -363,6 +452,10 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       @JsonKey(name: '_issued')
           Element issuedElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
@@ -397,6 +490,14 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object name = freezed,
     Object status = freezed,
@@ -420,6 +521,21 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       name: name == freezed ? _value.name : name as String,
@@ -465,6 +581,15 @@ class _$_TestReport implements _TestReport {
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -500,6 +625,23 @@ class _$_TestReport implements _TestReport {
   @override
   @JsonKey(required: true, defaultValue: 'TestReport')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -548,7 +690,7 @@ class _$_TestReport implements _TestReport {
 
   @override
   String toString() {
-    return 'TestReport(resourceType: $resourceType, identifier: $identifier, name: $name, status: $status, testScript: $testScript, result: $result, score: $score, tester: $tester, issued: $issued, participant: $participant, setup: $setup, test: $test, teardown: $teardown, nameElement: $nameElement, statusElement: $statusElement, resultElement: $resultElement, scoreElement: $scoreElement, testerElement: $testerElement, issuedElement: $issuedElement)';
+    return 'TestReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, status: $status, testScript: $testScript, result: $result, score: $score, tester: $tester, issued: $issued, participant: $participant, setup: $setup, test: $test, teardown: $teardown, nameElement: $nameElement, statusElement: $statusElement, resultElement: $resultElement, scoreElement: $scoreElement, testerElement: $testerElement, issuedElement: $issuedElement)';
   }
 
   @override
@@ -558,6 +700,27 @@ class _$_TestReport implements _TestReport {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -610,6 +773,14 @@ class _$_TestReport implements _TestReport {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(status) ^
@@ -644,6 +815,15 @@ abstract class _TestReport implements TestReport {
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -678,6 +858,23 @@ abstract class _TestReport implements TestReport {
   @override
   @JsonKey(required: true, defaultValue: 'TestReport')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   Identifier get identifier;
   @override
@@ -2686,6 +2883,15 @@ class _$TestScriptTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -2737,6 +2943,14 @@ class _$TestScriptTearOff {
           Element copyrightElement}) {
     return _TestScript(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -2784,6 +2998,15 @@ const $TestScript = _$TestScriptTearOff();
 mixin _$TestScript {
   @JsonKey(required: true, defaultValue: 'TestScript')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   Identifier get identifier;
   String get version;
@@ -2844,6 +3067,14 @@ abstract class $TestScriptCopyWith<$Res> {
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'TestScript') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -2882,6 +3113,8 @@ abstract class $TestScriptCopyWith<$Res> {
       @JsonKey(name: '_purpose') Element purposeElement,
       @JsonKey(name: '_copyright') Element copyrightElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $TestScriptMetadataCopyWith<$Res> get metadata;
   $TestScriptSetupCopyWith<$Res> get setup;
@@ -2909,6 +3142,14 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -2951,6 +3192,21 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -3030,6 +3286,26 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
           ? _value.copyrightElement
           : copyrightElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -3190,6 +3466,14 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'TestScript') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -3228,6 +3512,10 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       @JsonKey(name: '_purpose') Element purposeElement,
       @JsonKey(name: '_copyright') Element copyrightElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
@@ -3272,6 +3560,14 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -3314,6 +3610,21 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -3402,6 +3713,15 @@ class _$_TestScript implements _TestScript {
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -3459,6 +3779,23 @@ class _$_TestScript implements _TestScript {
   @override
   @JsonKey(required: true, defaultValue: 'TestScript')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -3548,7 +3885,7 @@ class _$_TestScript implements _TestScript {
 
   @override
   String toString() {
-    return 'TestScript(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, origin: $origin, destination: $destination, metadata: $metadata, fixture: $fixture, profile: $profile, variable: $variable, rule: $rule, ruleset: $ruleset, setup: $setup, test: $test, teardown: $teardown, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement)';
+    return 'TestScript(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, origin: $origin, destination: $destination, metadata: $metadata, fixture: $fixture, profile: $profile, variable: $variable, rule: $rule, ruleset: $ruleset, setup: $setup, test: $test, teardown: $teardown, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement)';
   }
 
   @override
@@ -3558,6 +3895,27 @@ class _$_TestScript implements _TestScript {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -3603,27 +3961,14 @@ class _$_TestScript implements _TestScript {
             (identical(other.destination, destination) ||
                 const DeepCollectionEquality()
                     .equals(other.destination, destination)) &&
-            (identical(other.metadata, metadata) ||
-                const DeepCollectionEquality()
-                    .equals(other.metadata, metadata)) &&
-            (identical(other.fixture, fixture) ||
-                const DeepCollectionEquality()
-                    .equals(other.fixture, fixture)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality()
-                    .equals(other.profile, profile)) &&
-            (identical(other.variable, variable) ||
-                const DeepCollectionEquality()
-                    .equals(other.variable, variable)) &&
-            (identical(other.rule, rule) ||
-                const DeepCollectionEquality().equals(other.rule, rule)) &&
-            (identical(other.ruleset, ruleset) ||
-                const DeepCollectionEquality()
-                    .equals(other.ruleset, ruleset)) &&
-            (identical(other.setup, setup) ||
-                const DeepCollectionEquality().equals(other.setup, setup)) &&
-            (identical(other.test, test) ||
-                const DeepCollectionEquality().equals(other.test, test)) &&
+            (identical(other.metadata, metadata) || const DeepCollectionEquality().equals(other.metadata, metadata)) &&
+            (identical(other.fixture, fixture) || const DeepCollectionEquality().equals(other.fixture, fixture)) &&
+            (identical(other.profile, profile) || const DeepCollectionEquality().equals(other.profile, profile)) &&
+            (identical(other.variable, variable) || const DeepCollectionEquality().equals(other.variable, variable)) &&
+            (identical(other.rule, rule) || const DeepCollectionEquality().equals(other.rule, rule)) &&
+            (identical(other.ruleset, ruleset) || const DeepCollectionEquality().equals(other.ruleset, ruleset)) &&
+            (identical(other.setup, setup) || const DeepCollectionEquality().equals(other.setup, setup)) &&
+            (identical(other.test, test) || const DeepCollectionEquality().equals(other.test, test)) &&
             (identical(other.teardown, teardown) || const DeepCollectionEquality().equals(other.teardown, teardown)) &&
             (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
             (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
@@ -3642,6 +3987,14 @@ class _$_TestScript implements _TestScript {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -3695,6 +4048,15 @@ abstract class _TestScript implements TestScript {
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -3751,6 +4113,23 @@ abstract class _TestScript implements TestScript {
   @override
   @JsonKey(required: true, defaultValue: 'TestScript')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override

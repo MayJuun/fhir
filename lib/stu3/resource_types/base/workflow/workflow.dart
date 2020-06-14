@@ -11,7 +11,16 @@ abstract class Appointment with _$Appointment implements Resource {
   const factory Appointment({
     @JsonKey(required: true, defaultValue: 'Appointment')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
         AppointmentStatus status,
@@ -69,7 +78,16 @@ abstract class AppointmentResponse
   const factory AppointmentResponse({
     @JsonKey(required: true, defaultValue: 'AppointmentResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) Reference appointment,
     String start,
@@ -92,7 +110,16 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
   const factory ProcessRequest({
     @JsonKey(required: true, defaultValue: 'ProcessRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
@@ -136,7 +163,16 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
   const factory ProcessResponse({
     @JsonKey(required: true, defaultValue: 'ProcessResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     FhirDateTime created,
@@ -174,7 +210,16 @@ abstract class Schedule with _$Schedule implements Resource {
   const factory Schedule({
     @JsonKey(required: true, defaultValue: 'Schedule')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     CodeableConcept serviceCategory,
@@ -195,7 +240,16 @@ abstract class Slot with _$Slot implements Resource {
   const factory Slot({
     @JsonKey(required: true, defaultValue: 'Slot')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept serviceCategory,
     List<CodeableConcept> serviceType,
@@ -221,7 +275,16 @@ abstract class Task with _$Task implements Resource {
   const factory Task({
     @JsonKey(required: true, defaultValue: 'Task')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     String definitionUri,
     Reference definitionReference,

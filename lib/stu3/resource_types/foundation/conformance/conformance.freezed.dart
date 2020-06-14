@@ -19,6 +19,15 @@ class _$CapabilityStatementTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'CapabilityStatement')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -87,6 +96,14 @@ class _$CapabilityStatementTearOff {
           Element implementationGuideElement}) {
     return _CapabilityStatement(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       version: version,
       name: name,
@@ -142,6 +159,15 @@ const $CapabilityStatement = _$CapabilityStatementTearOff();
 mixin _$CapabilityStatement {
   @JsonKey(required: true, defaultValue: 'CapabilityStatement')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   String get version;
   String get name;
@@ -220,6 +246,15 @@ abstract class $CapabilityStatementCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'CapabilityStatement')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -287,6 +322,8 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       @JsonKey(name: '_implementationGuide')
           Element implementationGuideElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CapabilityStatementSoftwareCopyWith<$Res> get software;
   $CapabilityStatementImplementationCopyWith<$Res> get implementation;
   $ElementCopyWith<$Res> get urlElement;
@@ -320,6 +357,14 @@ class _$CapabilityStatementCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -370,6 +415,21 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -474,6 +534,26 @@ class _$CapabilityStatementCopyWithImpl<$Res>
           ? _value.implementationGuideElement
           : implementationGuideElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -687,6 +767,15 @@ abstract class _$CapabilityStatementCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'CapabilityStatement')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -755,6 +844,10 @@ abstract class _$CapabilityStatementCopyWith<$Res>
           Element implementationGuideElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $CapabilityStatementSoftwareCopyWith<$Res> get software;
   @override
   $CapabilityStatementImplementationCopyWith<$Res> get implementation;
@@ -809,6 +902,14 @@ class __$CapabilityStatementCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -859,6 +960,21 @@ class __$CapabilityStatementCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -972,6 +1088,15 @@ class _$_CapabilityStatement implements _CapabilityStatement {
       {@required
       @JsonKey(required: true, defaultValue: 'CapabilityStatement')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.version,
       this.name,
@@ -1046,6 +1171,23 @@ class _$_CapabilityStatement implements _CapabilityStatement {
   @override
   @JsonKey(required: true, defaultValue: 'CapabilityStatement')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -1160,7 +1302,7 @@ class _$_CapabilityStatement implements _CapabilityStatement {
 
   @override
   String toString() {
-    return 'CapabilityStatement(resourceType: $resourceType, url: $url, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, kind: $kind, instantiates: $instantiates, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, acceptUnknown: $acceptUnknown, format: $format, patchFormat: $patchFormat, implementationGuide: $implementationGuide, profile: $profile, rest: $rest, messaging: $messaging, document: $document, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, kindElement: $kindElement, instantiatesElement: $instantiatesElement, fhirVersionElement: $fhirVersionElement, acceptUnknownElement: $acceptUnknownElement, formatElement: $formatElement, patchFormatElement: $patchFormatElement, implementationGuideElement: $implementationGuideElement)';
+    return 'CapabilityStatement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, kind: $kind, instantiates: $instantiates, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, acceptUnknown: $acceptUnknown, format: $format, patchFormat: $patchFormat, implementationGuide: $implementationGuide, profile: $profile, rest: $rest, messaging: $messaging, document: $document, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, kindElement: $kindElement, instantiatesElement: $instantiatesElement, fhirVersionElement: $fhirVersionElement, acceptUnknownElement: $acceptUnknownElement, formatElement: $formatElement, patchFormatElement: $patchFormatElement, implementationGuideElement: $implementationGuideElement)';
   }
 
   @override
@@ -1170,6 +1312,27 @@ class _$_CapabilityStatement implements _CapabilityStatement {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.version, version) ||
@@ -1215,26 +1378,13 @@ class _$_CapabilityStatement implements _CapabilityStatement {
             (identical(other.software, software) ||
                 const DeepCollectionEquality()
                     .equals(other.software, software)) &&
-            (identical(other.implementation, implementation) ||
-                const DeepCollectionEquality()
-                    .equals(other.implementation, implementation)) &&
-            (identical(other.fhirVersion, fhirVersion) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirVersion, fhirVersion)) &&
-            (identical(other.acceptUnknown, acceptUnknown) ||
-                const DeepCollectionEquality()
-                    .equals(other.acceptUnknown, acceptUnknown)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.patchFormat, patchFormat) ||
-                const DeepCollectionEquality()
-                    .equals(other.patchFormat, patchFormat)) &&
-            (identical(other.implementationGuide, implementationGuide) ||
-                const DeepCollectionEquality()
-                    .equals(other.implementationGuide, implementationGuide)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality()
-                    .equals(other.profile, profile)) &&
+            (identical(other.implementation, implementation) || const DeepCollectionEquality().equals(other.implementation, implementation)) &&
+            (identical(other.fhirVersion, fhirVersion) || const DeepCollectionEquality().equals(other.fhirVersion, fhirVersion)) &&
+            (identical(other.acceptUnknown, acceptUnknown) || const DeepCollectionEquality().equals(other.acceptUnknown, acceptUnknown)) &&
+            (identical(other.format, format) || const DeepCollectionEquality().equals(other.format, format)) &&
+            (identical(other.patchFormat, patchFormat) || const DeepCollectionEquality().equals(other.patchFormat, patchFormat)) &&
+            (identical(other.implementationGuide, implementationGuide) || const DeepCollectionEquality().equals(other.implementationGuide, implementationGuide)) &&
+            (identical(other.profile, profile) || const DeepCollectionEquality().equals(other.profile, profile)) &&
             (identical(other.rest, rest) || const DeepCollectionEquality().equals(other.rest, rest)) &&
             (identical(other.messaging, messaging) || const DeepCollectionEquality().equals(other.messaging, messaging)) &&
             (identical(other.document, document) || const DeepCollectionEquality().equals(other.document, document)) &&
@@ -1262,6 +1412,14 @@ class _$_CapabilityStatement implements _CapabilityStatement {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(name) ^
@@ -1324,6 +1482,15 @@ abstract class _CapabilityStatement implements CapabilityStatement {
       {@required
       @JsonKey(required: true, defaultValue: 'CapabilityStatement')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -1397,6 +1564,23 @@ abstract class _CapabilityStatement implements CapabilityStatement {
   @override
   @JsonKey(required: true, defaultValue: 'CapabilityStatement')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -6689,6 +6873,15 @@ class _$CompartmentDefinitionTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String name,
       String title,
@@ -6730,6 +6923,14 @@ class _$CompartmentDefinitionTearOff {
           Element searchElement}) {
     return _CompartmentDefinition(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       name: name,
       title: title,
@@ -6766,6 +6967,15 @@ const $CompartmentDefinition = _$CompartmentDefinitionTearOff();
 mixin _$CompartmentDefinition {
   @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   String get name;
   String get title;
@@ -6817,6 +7027,15 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'CompartmentDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String name,
       String title,
@@ -6857,6 +7076,8 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       @JsonKey(name: '_search')
           Element searchElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get nameElement;
   $ElementCopyWith<$Res> get titleElement;
@@ -6881,6 +7102,14 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object name = freezed,
     Object title = freezed,
@@ -6912,6 +7141,21 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -6967,6 +7211,26 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
           ? _value.searchElement
           : searchElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -7089,6 +7353,15 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'CompartmentDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String name,
       String title,
@@ -7130,6 +7403,10 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
           Element searchElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $ElementCopyWith<$Res> get urlElement;
   @override
   $ElementCopyWith<$Res> get nameElement;
@@ -7166,6 +7443,14 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object name = freezed,
     Object title = freezed,
@@ -7197,6 +7482,21 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -7261,6 +7561,15 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.name,
       this.title,
@@ -7308,6 +7617,23 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -7376,7 +7702,7 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
 
   @override
   String toString() {
-    return 'CompartmentDefinition(resourceType: $resourceType, url: $url, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, purpose: $purpose, useContext: $useContext, jurisdiction: $jurisdiction, code: $code, search: $search, resource: $resource, urlElement: $urlElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, codeElement: $codeElement, searchElement: $searchElement)';
+    return 'CompartmentDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, purpose: $purpose, useContext: $useContext, jurisdiction: $jurisdiction, code: $code, search: $search, resource: $resource, urlElement: $urlElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, codeElement: $codeElement, searchElement: $searchElement)';
   }
 
   @override
@@ -7386,6 +7712,27 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.name, name) ||
@@ -7431,26 +7778,13 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
                 const DeepCollectionEquality()
                     .equals(other.nameElement, nameElement)) &&
             (identical(other.titleElement, titleElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisherElement, publisherElement)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.purposeElement, purposeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.purposeElement, purposeElement)) &&
+                const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
             (identical(other.codeElement, codeElement) || const DeepCollectionEquality().equals(other.codeElement, codeElement)) &&
             (identical(other.searchElement, searchElement) || const DeepCollectionEquality().equals(other.searchElement, searchElement)));
   }
@@ -7459,6 +7793,14 @@ class _$_CompartmentDefinition implements _CompartmentDefinition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(title) ^
@@ -7502,6 +7844,15 @@ abstract class _CompartmentDefinition implements CompartmentDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String name,
       String title,
@@ -7548,6 +7899,23 @@ abstract class _CompartmentDefinition implements CompartmentDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -7931,6 +8299,15 @@ class _$DataElementTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'DataElement')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -7972,6 +8349,14 @@ class _$DataElementTearOff {
           Element stringencyElement}) {
     return _DataElement(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -8008,6 +8393,15 @@ const $DataElement = _$DataElementTearOff();
 mixin _$DataElement {
   @JsonKey(required: true, defaultValue: 'DataElement')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   List<Identifier> get identifier;
   String get version;
@@ -8059,6 +8453,15 @@ abstract class $DataElementCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'DataElement')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -8099,6 +8502,8 @@ abstract class $DataElementCopyWith<$Res> {
       @JsonKey(name: '_stringency')
           Element stringencyElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get statusElement;
@@ -8121,6 +8526,14 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -8152,6 +8565,21 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -8211,6 +8639,26 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
           ? _value.stringencyElement
           : stringencyElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -8323,6 +8771,15 @@ abstract class _$DataElementCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'DataElement')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -8364,6 +8821,10 @@ abstract class _$DataElementCopyWith<$Res>
           Element stringencyElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $ElementCopyWith<$Res> get urlElement;
   @override
   $ElementCopyWith<$Res> get versionElement;
@@ -8397,6 +8858,14 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -8428,6 +8897,21 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -8496,6 +8980,15 @@ class _$_DataElement implements _DataElement {
       {@required
       @JsonKey(required: true, defaultValue: 'DataElement')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -8543,6 +9036,23 @@ class _$_DataElement implements _DataElement {
   @override
   @JsonKey(required: true, defaultValue: 'DataElement')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -8611,7 +9121,7 @@ class _$_DataElement implements _DataElement {
 
   @override
   String toString() {
-    return 'DataElement(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, status: $status, experimental: $experimental, date: $date, publisher: $publisher, name: $name, title: $title, contact: $contact, useContext: $useContext, jurisdiction: $jurisdiction, copyright: $copyright, stringency: $stringency, mapping: $mapping, element: $element, urlElement: $urlElement, versionElement: $versionElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, nameElement: $nameElement, titleElement: $titleElement, copyrightElement: $copyrightElement, stringencyElement: $stringencyElement)';
+    return 'DataElement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, status: $status, experimental: $experimental, date: $date, publisher: $publisher, name: $name, title: $title, contact: $contact, useContext: $useContext, jurisdiction: $jurisdiction, copyright: $copyright, stringency: $stringency, mapping: $mapping, element: $element, urlElement: $urlElement, versionElement: $versionElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, nameElement: $nameElement, titleElement: $titleElement, copyrightElement: $copyrightElement, stringencyElement: $stringencyElement)';
   }
 
   @override
@@ -8621,6 +9131,27 @@ class _$_DataElement implements _DataElement {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -8665,26 +9196,13 @@ class _$_DataElement implements _DataElement {
                 const DeepCollectionEquality()
                     .equals(other.element, element)) &&
             (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisherElement, publisherElement)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
+                const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
             (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
             (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
             (identical(other.stringencyElement, stringencyElement) || const DeepCollectionEquality().equals(other.stringencyElement, stringencyElement)));
@@ -8694,6 +9212,14 @@ class _$_DataElement implements _DataElement {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -8736,6 +9262,15 @@ abstract class _DataElement implements DataElement {
       {@required
       @JsonKey(required: true, defaultValue: 'DataElement')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -8782,6 +9317,23 @@ abstract class _DataElement implements DataElement {
   @override
   @JsonKey(required: true, defaultValue: 'DataElement')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -9206,6 +9758,15 @@ class _$GraphDefinitionTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'GraphDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -9246,6 +9807,14 @@ class _$GraphDefinitionTearOff {
           Element profileElement}) {
     return _GraphDefinition(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       version: version,
       name: name,
@@ -9282,6 +9851,15 @@ const $GraphDefinition = _$GraphDefinitionTearOff();
 mixin _$GraphDefinition {
   @JsonKey(required: true, defaultValue: 'GraphDefinition')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   String get version;
   String get name;
@@ -9332,6 +9910,15 @@ abstract class $GraphDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'GraphDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -9371,6 +9958,8 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       @JsonKey(name: '_profile')
           Element profileElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
@@ -9395,6 +9984,14 @@ class _$GraphDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -9426,6 +10023,21 @@ class _$GraphDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -9480,6 +10092,26 @@ class _$GraphDefinitionCopyWithImpl<$Res>
           ? _value.profileElement
           : profileElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -9602,6 +10234,15 @@ abstract class _$GraphDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'GraphDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -9642,6 +10283,10 @@ abstract class _$GraphDefinitionCopyWith<$Res>
           Element profileElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $ElementCopyWith<$Res> get urlElement;
   @override
   $ElementCopyWith<$Res> get versionElement;
@@ -9678,6 +10323,14 @@ class __$GraphDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -9709,6 +10362,21 @@ class __$GraphDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -9772,6 +10440,15 @@ class _$_GraphDefinition implements _GraphDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'GraphDefinition')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.version,
       this.name,
@@ -9818,6 +10495,23 @@ class _$_GraphDefinition implements _GraphDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'GraphDefinition')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -9885,7 +10579,7 @@ class _$_GraphDefinition implements _GraphDefinition {
 
   @override
   String toString() {
-    return 'GraphDefinition(resourceType: $resourceType, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, start: $start, profile: $profile, link: $link, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, startElement: $startElement, profileElement: $profileElement)';
+    return 'GraphDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, start: $start, profile: $profile, link: $link, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, startElement: $startElement, profileElement: $profileElement)';
   }
 
   @override
@@ -9895,6 +10589,27 @@ class _$_GraphDefinition implements _GraphDefinition {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.version, version) ||
@@ -9940,26 +10655,13 @@ class _$_GraphDefinition implements _GraphDefinition {
             (identical(other.versionElement, versionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisherElement, publisherElement)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.purposeElement, purposeElement) ||
-                const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
             (identical(other.startElement, startElement) || const DeepCollectionEquality().equals(other.startElement, startElement)) &&
             (identical(other.profileElement, profileElement) || const DeepCollectionEquality().equals(other.profileElement, profileElement)));
   }
@@ -9968,6 +10670,14 @@ class _$_GraphDefinition implements _GraphDefinition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(name) ^
@@ -10010,6 +10720,15 @@ abstract class _GraphDefinition implements GraphDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'GraphDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -10055,6 +10774,23 @@ abstract class _GraphDefinition implements GraphDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'GraphDefinition')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -11196,6 +11932,15 @@ class _$ImplementationGuideTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'ImplementationGuide')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -11239,6 +11984,14 @@ class _$ImplementationGuideTearOff {
           Element binaryElement}) {
     return _ImplementationGuide(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       version: version,
       name: name,
@@ -11278,6 +12031,15 @@ const $ImplementationGuide = _$ImplementationGuideTearOff();
 mixin _$ImplementationGuide {
   @JsonKey(required: true, defaultValue: 'ImplementationGuide')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   String get version;
   String get name;
@@ -11331,6 +12093,15 @@ abstract class $ImplementationGuideCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ImplementationGuide')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -11373,6 +12144,8 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       @JsonKey(name: '_binary')
           Element binaryElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ImplementationGuidePageCopyWith<$Res> get page;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
@@ -11398,6 +12171,14 @@ class _$ImplementationGuideCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -11432,6 +12213,21 @@ class _$ImplementationGuideCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -11496,6 +12292,26 @@ class _$ImplementationGuideCopyWithImpl<$Res>
           ? _value.binaryElement
           : binaryElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -11628,6 +12444,15 @@ abstract class _$ImplementationGuideCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ImplementationGuide')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -11671,6 +12496,10 @@ abstract class _$ImplementationGuideCopyWith<$Res>
           Element binaryElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $ImplementationGuidePageCopyWith<$Res> get page;
   @override
   $ElementCopyWith<$Res> get urlElement;
@@ -11709,6 +12538,14 @@ class __$ImplementationGuideCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -11743,6 +12580,21 @@ class __$ImplementationGuideCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -11816,6 +12668,15 @@ class _$_ImplementationGuide implements _ImplementationGuide {
       {@required
       @JsonKey(required: true, defaultValue: 'ImplementationGuide')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.version,
       this.name,
@@ -11865,6 +12726,23 @@ class _$_ImplementationGuide implements _ImplementationGuide {
   @override
   @JsonKey(required: true, defaultValue: 'ImplementationGuide')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -11938,7 +12816,7 @@ class _$_ImplementationGuide implements _ImplementationGuide {
 
   @override
   String toString() {
-    return 'ImplementationGuide(resourceType: $resourceType, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, copyright: $copyright, fhirVersion: $fhirVersion, dependency: $dependency, package: $package, global: $global, binary: $binary, page: $page, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, copyrightElement: $copyrightElement, fhirVersionElement: $fhirVersionElement, binaryElement: $binaryElement)';
+    return 'ImplementationGuide(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, copyright: $copyright, fhirVersion: $fhirVersion, dependency: $dependency, package: $package, global: $global, binary: $binary, page: $page, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, copyrightElement: $copyrightElement, fhirVersionElement: $fhirVersionElement, binaryElement: $binaryElement)';
   }
 
   @override
@@ -11948,6 +12826,27 @@ class _$_ImplementationGuide implements _ImplementationGuide {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.version, version) ||
@@ -11993,26 +12892,13 @@ class _$_ImplementationGuide implements _ImplementationGuide {
                 const DeepCollectionEquality().equals(other.global, global)) &&
             (identical(other.binary, binary) ||
                 const DeepCollectionEquality().equals(other.binary, binary)) &&
-            (identical(other.page, page) ||
-                const DeepCollectionEquality().equals(other.page, page)) &&
-            (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.dateElement, dateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)) &&
+            (identical(other.page, page) || const DeepCollectionEquality().equals(other.page, page)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
             (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
             (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
             (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
@@ -12024,6 +12910,14 @@ class _$_ImplementationGuide implements _ImplementationGuide {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(name) ^
@@ -12070,6 +12964,15 @@ abstract class _ImplementationGuide implements ImplementationGuide {
       {@required
       @JsonKey(required: true, defaultValue: 'ImplementationGuide')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -12118,6 +13021,23 @@ abstract class _ImplementationGuide implements ImplementationGuide {
   @override
   @JsonKey(required: true, defaultValue: 'ImplementationGuide')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -13893,6 +14813,15 @@ class _$MessageDefinitionTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'MessageDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -13946,6 +14875,14 @@ class _$MessageDefinitionTearOff {
           Element responseRequiredElement}) {
     return _MessageDefinition(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -13992,6 +14929,15 @@ const $MessageDefinition = _$MessageDefinitionTearOff();
 mixin _$MessageDefinition {
   @JsonKey(required: true, defaultValue: 'MessageDefinition')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   Identifier get identifier;
   String get version;
@@ -14055,6 +15001,15 @@ abstract class $MessageDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'MessageDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -14107,6 +15062,8 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       @JsonKey(name: '_responseRequired')
           Element responseRequiredElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get base;
   $CodingCopyWith<$Res> get event;
@@ -14136,6 +15093,14 @@ class _$MessageDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -14177,6 +15142,21 @@ class _$MessageDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -14253,6 +15233,26 @@ class _$MessageDefinitionCopyWithImpl<$Res>
           ? _value.responseRequiredElement
           : responseRequiredElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -14425,6 +15425,15 @@ abstract class _$MessageDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'MessageDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -14478,6 +15487,10 @@ abstract class _$MessageDefinitionCopyWith<$Res>
           Element responseRequiredElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
   $ReferenceCopyWith<$Res> get base;
@@ -14524,6 +15537,14 @@ class __$MessageDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -14565,6 +15586,21 @@ class __$MessageDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -14650,6 +15686,15 @@ class _$_MessageDefinition implements _MessageDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'MessageDefinition')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -14709,6 +15754,23 @@ class _$_MessageDefinition implements _MessageDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'MessageDefinition')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -14799,7 +15861,7 @@ class _$_MessageDefinition implements _MessageDefinition {
 
   @override
   String toString() {
-    return 'MessageDefinition(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, base: $base, parent: $parent, replaces: $replaces, event: $event, category: $category, focus: $focus, responseRequired: $responseRequired, allowedResponse: $allowedResponse, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, categoryElement: $categoryElement, responseRequiredElement: $responseRequiredElement)';
+    return 'MessageDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, base: $base, parent: $parent, replaces: $replaces, event: $event, category: $category, focus: $focus, responseRequired: $responseRequired, allowedResponse: $allowedResponse, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, categoryElement: $categoryElement, responseRequiredElement: $responseRequiredElement)';
   }
 
   @override
@@ -14809,6 +15871,27 @@ class _$_MessageDefinition implements _MessageDefinition {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -14854,27 +15937,14 @@ class _$_MessageDefinition implements _MessageDefinition {
             (identical(other.parent, parent) ||
                 const DeepCollectionEquality().equals(other.parent, parent)) &&
             (identical(other.replaces, replaces) ||
-                const DeepCollectionEquality()
-                    .equals(other.replaces, replaces)) &&
-            (identical(other.event, event) ||
-                const DeepCollectionEquality().equals(other.event, event)) &&
-            (identical(other.category, category) ||
-                const DeepCollectionEquality()
-                    .equals(other.category, category)) &&
-            (identical(other.focus, focus) ||
-                const DeepCollectionEquality().equals(other.focus, focus)) &&
-            (identical(other.responseRequired, responseRequired) ||
-                const DeepCollectionEquality()
-                    .equals(other.responseRequired, responseRequired)) &&
-            (identical(other.allowedResponse, allowedResponse) ||
-                const DeepCollectionEquality()
-                    .equals(other.allowedResponse, allowedResponse)) &&
-            (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
+                const DeepCollectionEquality().equals(other.replaces, replaces)) &&
+            (identical(other.event, event) || const DeepCollectionEquality().equals(other.event, event)) &&
+            (identical(other.category, category) || const DeepCollectionEquality().equals(other.category, category)) &&
+            (identical(other.focus, focus) || const DeepCollectionEquality().equals(other.focus, focus)) &&
+            (identical(other.responseRequired, responseRequired) || const DeepCollectionEquality().equals(other.responseRequired, responseRequired)) &&
+            (identical(other.allowedResponse, allowedResponse) || const DeepCollectionEquality().equals(other.allowedResponse, allowedResponse)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
             (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
             (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
             (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
@@ -14892,6 +15962,14 @@ class _$_MessageDefinition implements _MessageDefinition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -14944,6 +16022,15 @@ abstract class _MessageDefinition implements MessageDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'MessageDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -15002,6 +16089,23 @@ abstract class _MessageDefinition implements MessageDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'MessageDefinition')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -15643,6 +16747,15 @@ class _$OperationDefinitionTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'OperationDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -15704,6 +16817,14 @@ class _$OperationDefinitionTearOff {
           Element instanceElement}) {
     return _OperationDefinition(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       version: version,
       name: name,
@@ -15754,6 +16875,15 @@ const $OperationDefinition = _$OperationDefinitionTearOff();
 mixin _$OperationDefinition {
   @JsonKey(required: true, defaultValue: 'OperationDefinition')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   String get version;
   String get name;
@@ -15825,6 +16955,15 @@ abstract class $OperationDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'OperationDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -15885,6 +17024,8 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       @JsonKey(name: '_instance')
           Element instanceElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ReferenceCopyWith<$Res> get base;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
@@ -15916,6 +17057,14 @@ class _$OperationDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -15961,6 +17110,21 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -16043,6 +17207,26 @@ class _$OperationDefinitionCopyWithImpl<$Res>
           ? _value.instanceElement
           : instanceElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -16235,6 +17419,15 @@ abstract class _$OperationDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'OperationDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -16296,6 +17489,10 @@ abstract class _$OperationDefinitionCopyWith<$Res>
           Element instanceElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $ReferenceCopyWith<$Res> get base;
   @override
   $ElementCopyWith<$Res> get urlElement;
@@ -16346,6 +17543,14 @@ class __$OperationDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -16391,6 +17596,21 @@ class __$OperationDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -16482,6 +17702,15 @@ class _$_OperationDefinition implements _OperationDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'OperationDefinition')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.version,
       this.name,
@@ -16549,6 +17778,23 @@ class _$_OperationDefinition implements _OperationDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'OperationDefinition')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -16651,7 +17897,7 @@ class _$_OperationDefinition implements _OperationDefinition {
 
   @override
   String toString() {
-    return 'OperationDefinition(resourceType: $resourceType, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, idempotent: $idempotent, code: $code, comment: $comment, base: $base, resource: $resource, system: $system, type: $type, instance: $instance, parameter: $parameter, overload: $overload, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, kindElement: $kindElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, idempotentElement: $idempotentElement, codeElement: $codeElement, commentElement: $commentElement, resourceElement: $resourceElement, systemElement: $systemElement, typeElement: $typeElement, instanceElement: $instanceElement)';
+    return 'OperationDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, idempotent: $idempotent, code: $code, comment: $comment, base: $base, resource: $resource, system: $system, type: $type, instance: $instance, parameter: $parameter, overload: $overload, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, kindElement: $kindElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, idempotentElement: $idempotentElement, codeElement: $codeElement, commentElement: $commentElement, resourceElement: $resourceElement, systemElement: $systemElement, typeElement: $typeElement, instanceElement: $instanceElement)';
   }
 
   @override
@@ -16661,6 +17907,27 @@ class _$_OperationDefinition implements _OperationDefinition {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.version, version) ||
@@ -16706,27 +17973,14 @@ class _$_OperationDefinition implements _OperationDefinition {
             (identical(other.base, base) ||
                 const DeepCollectionEquality().equals(other.base, base)) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.system, system) ||
-                const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.instance, instance) ||
-                const DeepCollectionEquality()
-                    .equals(other.instance, instance)) &&
-            (identical(other.parameter, parameter) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameter, parameter)) &&
-            (identical(other.overload, overload) ||
-                const DeepCollectionEquality()
-                    .equals(other.overload, overload)) &&
-            (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
+                const DeepCollectionEquality().equals(other.resource, resource)) &&
+            (identical(other.system, system) || const DeepCollectionEquality().equals(other.system, system)) &&
+            (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.instance, instance) || const DeepCollectionEquality().equals(other.instance, instance)) &&
+            (identical(other.parameter, parameter) || const DeepCollectionEquality().equals(other.parameter, parameter)) &&
+            (identical(other.overload, overload) || const DeepCollectionEquality().equals(other.overload, overload)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
             (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
             (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
             (identical(other.kindElement, kindElement) || const DeepCollectionEquality().equals(other.kindElement, kindElement)) &&
@@ -16748,6 +18002,14 @@ class _$_OperationDefinition implements _OperationDefinition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(name) ^
@@ -16805,6 +18067,15 @@ abstract class _OperationDefinition implements OperationDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'OperationDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -16871,6 +18142,23 @@ abstract class _OperationDefinition implements OperationDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'OperationDefinition')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -18183,6 +19471,15 @@ class _$SearchParameterTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'SearchParameter')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -18252,6 +19549,14 @@ class _$SearchParameterTearOff {
           Element chainElement}) {
     return _SearchParameter(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       version: version,
       name: name,
@@ -18306,6 +19611,15 @@ const $SearchParameter = _$SearchParameterTearOff();
 mixin _$SearchParameter {
   @JsonKey(required: true, defaultValue: 'SearchParameter')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   String get version;
   String get name;
@@ -18385,6 +19699,15 @@ abstract class $SearchParameterCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'SearchParameter')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -18453,6 +19776,8 @@ abstract class $SearchParameterCopyWith<$Res> {
       @JsonKey(name: '_chain')
           Element chainElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
@@ -18486,6 +19811,14 @@ class _$SearchParameterCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -18535,6 +19868,21 @@ class _$SearchParameterCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -18632,6 +19980,26 @@ class _$SearchParameterCopyWithImpl<$Res>
           ? _value.chainElement
           : chainElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -18844,6 +20212,15 @@ abstract class _$SearchParameterCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'SearchParameter')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -18913,6 +20290,10 @@ abstract class _$SearchParameterCopyWith<$Res>
           Element chainElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $ElementCopyWith<$Res> get urlElement;
   @override
   $ElementCopyWith<$Res> get versionElement;
@@ -18967,6 +20348,14 @@ class __$SearchParameterCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object version = freezed,
     Object name = freezed,
@@ -19016,6 +20405,21 @@ class __$SearchParameterCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
@@ -19122,6 +20526,15 @@ class _$_SearchParameter implements _SearchParameter {
       {@required
       @JsonKey(required: true, defaultValue: 'SearchParameter')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.version,
       this.name,
@@ -19197,6 +20610,23 @@ class _$_SearchParameter implements _SearchParameter {
   @override
   @JsonKey(required: true, defaultValue: 'SearchParameter')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -19311,7 +20741,7 @@ class _$_SearchParameter implements _SearchParameter {
 
   @override
   String toString() {
-    return 'SearchParameter(resourceType: $resourceType, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, code: $code, base: $base, type: $type, derivedFrom: $derivedFrom, description: $description, expression: $expression, xpath: $xpath, xpathUsage: $xpathUsage, target: $target, comparator: $comparator, modifier: $modifier, chain: $chain, component: $component, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, purposeElement: $purposeElement, codeElement: $codeElement, baseElement: $baseElement, typeElement: $typeElement, derivedFromElement: $derivedFromElement, descriptionElement: $descriptionElement, expressionElement: $expressionElement, xpathElement: $xpathElement, xpathUsageElement: $xpathUsageElement, targetElement: $targetElement, comparatorElement: $comparatorElement, modifierElement: $modifierElement, chainElement: $chainElement)';
+    return 'SearchParameter(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, code: $code, base: $base, type: $type, derivedFrom: $derivedFrom, description: $description, expression: $expression, xpath: $xpath, xpathUsage: $xpathUsage, target: $target, comparator: $comparator, modifier: $modifier, chain: $chain, component: $component, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, purposeElement: $purposeElement, codeElement: $codeElement, baseElement: $baseElement, typeElement: $typeElement, derivedFromElement: $derivedFromElement, descriptionElement: $descriptionElement, expressionElement: $expressionElement, xpathElement: $xpathElement, xpathUsageElement: $xpathUsageElement, targetElement: $targetElement, comparatorElement: $comparatorElement, modifierElement: $modifierElement, chainElement: $chainElement)';
   }
 
   @override
@@ -19321,6 +20751,27 @@ class _$_SearchParameter implements _SearchParameter {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.version, version) ||
@@ -19367,27 +20818,14 @@ class _$_SearchParameter implements _SearchParameter {
                     .equals(other.expression, expression)) &&
             (identical(other.xpath, xpath) ||
                 const DeepCollectionEquality().equals(other.xpath, xpath)) &&
-            (identical(other.xpathUsage, xpathUsage) ||
-                const DeepCollectionEquality()
-                    .equals(other.xpathUsage, xpathUsage)) &&
-            (identical(other.target, target) ||
-                const DeepCollectionEquality().equals(other.target, target)) &&
-            (identical(other.comparator, comparator) ||
-                const DeepCollectionEquality()
-                    .equals(other.comparator, comparator)) &&
-            (identical(other.modifier, modifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifier, modifier)) &&
-            (identical(other.chain, chain) ||
-                const DeepCollectionEquality().equals(other.chain, chain)) &&
-            (identical(other.component, component) ||
-                const DeepCollectionEquality()
-                    .equals(other.component, component)) &&
-            (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.xpathUsage, xpathUsage) || const DeepCollectionEquality().equals(other.xpathUsage, xpathUsage)) &&
+            (identical(other.target, target) || const DeepCollectionEquality().equals(other.target, target)) &&
+            (identical(other.comparator, comparator) || const DeepCollectionEquality().equals(other.comparator, comparator)) &&
+            (identical(other.modifier, modifier) || const DeepCollectionEquality().equals(other.modifier, modifier)) &&
+            (identical(other.chain, chain) || const DeepCollectionEquality().equals(other.chain, chain)) &&
+            (identical(other.component, component) || const DeepCollectionEquality().equals(other.component, component)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
             (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
             (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
             (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
@@ -19412,6 +20850,14 @@ class _$_SearchParameter implements _SearchParameter {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(name) ^
@@ -19472,6 +20918,15 @@ abstract class _SearchParameter implements SearchParameter {
       {@required
       @JsonKey(required: true, defaultValue: 'SearchParameter')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       String version,
       String name,
@@ -19546,6 +21001,23 @@ abstract class _SearchParameter implements SearchParameter {
   @override
   @JsonKey(required: true, defaultValue: 'SearchParameter')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -19890,6 +21362,15 @@ class _$StructureDefinitionTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'StructureDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -19965,6 +21446,14 @@ class _$StructureDefinitionTearOff {
           Element derivationElement}) {
     return _StructureDefinition(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -20023,6 +21512,15 @@ const $StructureDefinition = _$StructureDefinitionTearOff();
 mixin _$StructureDefinition {
   @JsonKey(required: true, defaultValue: 'StructureDefinition')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   List<Identifier> get identifier;
   String get version;
@@ -20108,6 +21606,15 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'StructureDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -20182,6 +21689,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: '_derivation')
           Element derivationElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $StructureDefinitionSnapshotCopyWith<$Res> get snapshot;
   $StructureDefinitionDifferentialCopyWith<$Res> get differential;
   $ElementCopyWith<$Res> get urlElement;
@@ -20217,6 +21726,14 @@ class _$StructureDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -20270,6 +21787,21 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -20379,6 +21911,26 @@ class _$StructureDefinitionCopyWithImpl<$Res>
           ? _value.derivationElement
           : derivationElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -20612,6 +22164,15 @@ abstract class _$StructureDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'StructureDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -20687,6 +22248,10 @@ abstract class _$StructureDefinitionCopyWith<$Res>
           Element derivationElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $StructureDefinitionSnapshotCopyWith<$Res> get snapshot;
   @override
   $StructureDefinitionDifferentialCopyWith<$Res> get differential;
@@ -20745,6 +22310,14 @@ class __$StructureDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -20798,6 +22371,21 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -20916,6 +22504,15 @@ class _$_StructureDefinition implements _StructureDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'StructureDefinition')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -20997,6 +22594,23 @@ class _$_StructureDefinition implements _StructureDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'StructureDefinition')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -21121,7 +22735,7 @@ class _$_StructureDefinition implements _StructureDefinition {
 
   @override
   String toString() {
-    return 'StructureDefinition(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, keyword: $keyword, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, abstract_: $abstract_, contextType: $contextType, context: $context, contextInvariant: $contextInvariant, type: $type, baseDefinition: $baseDefinition, derivation: $derivation, snapshot: $snapshot, differential: $differential, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, fhirVersionElement: $fhirVersionElement, kindElement: $kindElement, abstractElement: $abstractElement, contextTypeElement: $contextTypeElement, contextElement: $contextElement, contextInvariantElement: $contextInvariantElement, typeElement: $typeElement, baseDefinitionElement: $baseDefinitionElement, derivationElement: $derivationElement)';
+    return 'StructureDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, keyword: $keyword, fhirVersion: $fhirVersion, mapping: $mapping, kind: $kind, abstract_: $abstract_, contextType: $contextType, context: $context, contextInvariant: $contextInvariant, type: $type, baseDefinition: $baseDefinition, derivation: $derivation, snapshot: $snapshot, differential: $differential, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, fhirVersionElement: $fhirVersionElement, kindElement: $kindElement, abstractElement: $abstractElement, contextTypeElement: $contextTypeElement, contextElement: $contextElement, contextInvariantElement: $contextInvariantElement, typeElement: $typeElement, baseDefinitionElement: $baseDefinitionElement, derivationElement: $derivationElement)';
   }
 
   @override
@@ -21131,6 +22745,27 @@ class _$_StructureDefinition implements _StructureDefinition {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -21175,27 +22810,14 @@ class _$_StructureDefinition implements _StructureDefinition {
                 const DeepCollectionEquality()
                     .equals(other.keyword, keyword)) &&
             (identical(other.fhirVersion, fhirVersion) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirVersion, fhirVersion)) &&
-            (identical(other.mapping, mapping) ||
-                const DeepCollectionEquality()
-                    .equals(other.mapping, mapping)) &&
-            (identical(other.kind, kind) ||
-                const DeepCollectionEquality().equals(other.kind, kind)) &&
-            (identical(other.abstract_, abstract_) ||
-                const DeepCollectionEquality()
-                    .equals(other.abstract_, abstract_)) &&
-            (identical(other.contextType, contextType) ||
-                const DeepCollectionEquality()
-                    .equals(other.contextType, contextType)) &&
-            (identical(other.context, context) ||
-                const DeepCollectionEquality()
-                    .equals(other.context, context)) &&
-            (identical(other.contextInvariant, contextInvariant) ||
-                const DeepCollectionEquality()
-                    .equals(other.contextInvariant, contextInvariant)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                const DeepCollectionEquality().equals(other.fhirVersion, fhirVersion)) &&
+            (identical(other.mapping, mapping) || const DeepCollectionEquality().equals(other.mapping, mapping)) &&
+            (identical(other.kind, kind) || const DeepCollectionEquality().equals(other.kind, kind)) &&
+            (identical(other.abstract_, abstract_) || const DeepCollectionEquality().equals(other.abstract_, abstract_)) &&
+            (identical(other.contextType, contextType) || const DeepCollectionEquality().equals(other.contextType, contextType)) &&
+            (identical(other.context, context) || const DeepCollectionEquality().equals(other.context, context)) &&
+            (identical(other.contextInvariant, contextInvariant) || const DeepCollectionEquality().equals(other.contextInvariant, contextInvariant)) &&
+            (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.baseDefinition, baseDefinition) || const DeepCollectionEquality().equals(other.baseDefinition, baseDefinition)) &&
             (identical(other.derivation, derivation) || const DeepCollectionEquality().equals(other.derivation, derivation)) &&
             (identical(other.snapshot, snapshot) || const DeepCollectionEquality().equals(other.snapshot, snapshot)) &&
@@ -21226,6 +22848,14 @@ class _$_StructureDefinition implements _StructureDefinition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -21291,6 +22921,15 @@ abstract class _StructureDefinition implements StructureDefinition {
       {@required
       @JsonKey(required: true, defaultValue: 'StructureDefinition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -21371,6 +23010,23 @@ abstract class _StructureDefinition implements StructureDefinition {
   @override
   @JsonKey(required: true, defaultValue: 'StructureDefinition')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -22153,6 +23809,15 @@ class _$StructureMapTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'StructureMap')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -22199,6 +23864,14 @@ class _$StructureMapTearOff {
           Element importElement}) {
     return _StructureMap(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -22239,6 +23912,15 @@ const $StructureMap = _$StructureMapTearOff();
 mixin _$StructureMap {
   @JsonKey(required: true, defaultValue: 'StructureMap')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   List<Identifier> get identifier;
   String get version;
@@ -22295,6 +23977,15 @@ abstract class $StructureMapCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'StructureMap')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -22340,6 +24031,8 @@ abstract class $StructureMapCopyWith<$Res> {
       @JsonKey(name: '_import')
           Element importElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
   $ElementCopyWith<$Res> get nameElement;
@@ -22364,6 +24057,14 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -22399,6 +24100,21 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -22463,6 +24179,26 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
           ? _value.importElement
           : importElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -22595,6 +24331,15 @@ abstract class _$StructureMapCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'StructureMap')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -22641,6 +24386,10 @@ abstract class _$StructureMapCopyWith<$Res>
           Element importElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $ElementCopyWith<$Res> get urlElement;
   @override
   $ElementCopyWith<$Res> get versionElement;
@@ -22678,6 +24427,14 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -22713,6 +24470,21 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -22786,6 +24558,15 @@ class _$_StructureMap implements _StructureMap {
       {@required
       @JsonKey(required: true, defaultValue: 'StructureMap')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -22838,6 +24619,23 @@ class _$_StructureMap implements _StructureMap {
   @override
   @JsonKey(required: true, defaultValue: 'StructureMap')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -22915,7 +24713,7 @@ class _$_StructureMap implements _StructureMap {
 
   @override
   String toString() {
-    return 'StructureMap(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, structure: $structure, import: $import, group: $group, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, importElement: $importElement)';
+    return 'StructureMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, structure: $structure, import: $import, group: $group, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, importElement: $importElement)';
   }
 
   @override
@@ -22925,6 +24723,27 @@ class _$_StructureMap implements _StructureMap {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -22970,26 +24789,13 @@ class _$_StructureMap implements _StructureMap {
                     .equals(other.structure, structure)) &&
             (identical(other.import, import) ||
                 const DeepCollectionEquality().equals(other.import, import)) &&
-            (identical(other.group, group) ||
-                const DeepCollectionEquality().equals(other.group, group)) &&
-            (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.titleElement, titleElement)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.experimentalElement, experimentalElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
             (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
             (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
@@ -23002,6 +24808,14 @@ class _$_StructureMap implements _StructureMap {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -23048,6 +24862,15 @@ abstract class _StructureMap implements StructureMap {
       {@required
       @JsonKey(required: true, defaultValue: 'StructureMap')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -23099,6 +24922,23 @@ abstract class _StructureMap implements StructureMap {
   @override
   @JsonKey(required: true, defaultValue: 'StructureMap')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override

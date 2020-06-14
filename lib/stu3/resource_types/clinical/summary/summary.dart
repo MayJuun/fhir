@@ -12,7 +12,16 @@ abstract class AdverseEvent with _$AdverseEvent implements Resource {
   const factory AdverseEvent({
     @JsonKey(required: true, defaultValue: 'AdverseEvent')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: AdverseEventCategory.unknown)
         AdverseEventCategory category,
@@ -63,7 +72,16 @@ abstract class AllergyIntolerance
   const factory AllergyIntolerance({
     @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: AllergyIntoleranceClinicalStatus.unknown)
         AllergyIntoleranceClinicalStatus clinicalStatus,
@@ -126,7 +144,16 @@ abstract class ClinicalImpression
   const factory ClinicalImpression({
     @JsonKey(required: true, defaultValue: 'ClinicalImpression')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
         ClinicalImpressionStatus status,
@@ -187,7 +214,16 @@ abstract class Condition with _$Condition implements Resource {
   const factory Condition({
     @JsonKey(required: true, defaultValue: 'Condition')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code clinicalStatus,
     @JsonKey(unknownEnumValue: ConditionVerificationStatus.unknown)
@@ -252,7 +288,16 @@ abstract class DetectedIssue with _$DetectedIssue implements Resource {
   const factory DetectedIssue({
     @JsonKey(required: true, defaultValue: 'DetectedIssue')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     Code status,
     CodeableConcept category,
@@ -294,7 +339,16 @@ abstract class FamilyMemberHistory
   const factory FamilyMemberHistory({
     @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
@@ -361,7 +415,16 @@ abstract class Procedure with _$Procedure implements Resource {
   const factory Procedure({
     @JsonKey(required: true, defaultValue: 'Procedure')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     List<Reference> basedOn,

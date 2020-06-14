@@ -12,7 +12,16 @@ abstract class Measure with _$Measure implements Resource {
   const factory Measure({
     @JsonKey(required: true, defaultValue: 'Measure')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,
@@ -142,7 +151,16 @@ abstract class MeasureReport with _$MeasureReport implements Resource {
   const factory MeasureReport({
     @JsonKey(required: true, defaultValue: 'MeasureReport')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
         MeasureReportStatus status,

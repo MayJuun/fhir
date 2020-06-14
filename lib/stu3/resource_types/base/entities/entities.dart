@@ -13,6 +13,14 @@ abstract class Device with _$Device implements Resource {
     @JsonKey(required: true, defaultValue: 'Device')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     DeviceUdi udi,
     @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
@@ -70,6 +78,14 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
     @JsonKey(required: true, defaultValue: 'DeviceComponent')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) Identifier identifier,
     @JsonKey(required: true) CodeableConcept type,
     String lastSystemChange,
@@ -108,6 +124,14 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
     @JsonKey(required: true, defaultValue: 'DeviceMetric')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) Identifier identifier,
     @JsonKey(required: true) CodeableConcept type,
     CodeableConcept unit,
@@ -149,6 +173,14 @@ abstract class Endpoint with _$Endpoint implements Resource {
     @JsonKey(required: true, defaultValue: 'Endpoint')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: EndpointStatus.unknown) EndpointStatus status,
     @JsonKey(required: true) Coding connectionType,
@@ -176,6 +208,14 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
     @JsonKey(required: true, defaultValue: 'HealthcareService')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     Reference providedBy,
@@ -249,6 +289,14 @@ abstract class Location with _$Location implements Resource {
     @JsonKey(required: true, defaultValue: 'Location')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
     Coding operationalStatus,
@@ -294,6 +342,14 @@ abstract class Organization with _$Organization implements Resource {
     @JsonKey(required: true, defaultValue: 'Organization')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     List<CodeableConcept> type,
@@ -330,6 +386,14 @@ abstract class Substance with _$Substance implements Resource {
     @JsonKey(required: true, defaultValue: 'Substance')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     List<CodeableConcept> category,

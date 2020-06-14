@@ -11,7 +11,16 @@ abstract class Communication with _$Communication implements Resource {
   const factory Communication({
     @JsonKey(required: true, defaultValue: 'Communication')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     List<Reference> basedOn,
@@ -60,7 +69,16 @@ abstract class CommunicationRequest
   const factory CommunicationRequest({
     @JsonKey(required: true, defaultValue: 'CommunicationRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
     List<Reference> replaces,
@@ -119,7 +137,16 @@ abstract class DeviceRequest with _$DeviceRequest implements Resource {
   const factory DeviceRequest({
     @JsonKey(required: true, defaultValue: 'DeviceRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     List<Reference> basedOn,
@@ -170,7 +197,16 @@ abstract class DeviceUseStatement
   const factory DeviceUseStatement({
     @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: StatementStatus.unknown) StatementStatus status,
     @JsonKey(required: true) Reference subject,
@@ -197,7 +233,16 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
   const factory SupplyDelivery({
     @JsonKey(required: true, defaultValue: 'SupplyDelivery')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     List<Reference> basedOn,
     List<Reference> partOf,
@@ -235,7 +280,16 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
   const factory SupplyRequest({
     @JsonKey(required: true, defaultValue: 'SupplyRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
         SupplyRequestStatus status,

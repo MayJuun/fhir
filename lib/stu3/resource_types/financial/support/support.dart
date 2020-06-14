@@ -10,7 +10,16 @@ abstract class Coverage with _$Coverage implements Resource {
   const factory Coverage({
     @JsonKey(required: true, defaultValue: 'Coverage')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     CodeableConcept type,
@@ -77,7 +86,16 @@ abstract class EligibilityRequest
   const factory EligibilityRequest({
     @JsonKey(required: true, defaultValue: 'EligibilityRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     CodeableConcept priority,
@@ -110,7 +128,16 @@ abstract class EligibilityResponse
   const factory EligibilityResponse({
     @JsonKey(required: true, defaultValue: 'EligibilityResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     FhirDateTime created,
@@ -199,7 +226,16 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
   const factory EnrollmentRequest({
     @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     FhirDateTime created,
@@ -222,7 +258,16 @@ abstract class EnrollmentResponse
   const factory EnrollmentResponse({
     @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     Reference request,

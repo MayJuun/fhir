@@ -12,7 +12,16 @@ abstract class Group with _$Group implements Resource {
   const factory Group({
     @JsonKey(required: true, defaultValue: 'Group')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
@@ -65,7 +74,16 @@ abstract class Patient with _$Patient implements Resource {
   const factory Patient({
     @JsonKey(required: true, defaultValue: 'Patient')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     List<HumanName> name,
@@ -151,7 +169,16 @@ abstract class Person with _$Person implements Resource {
   const factory Person({
     @JsonKey(required: true, defaultValue: 'Person')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<HumanName> name,
     List<ContactPoint> telecom,
@@ -186,7 +213,16 @@ abstract class Practitioner with _$Practitioner implements Resource {
   const factory Practitioner({
     @JsonKey(required: true, defaultValue: 'Practitioner')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     List<HumanName> name,
@@ -222,7 +258,16 @@ abstract class PractitionerRole with _$PractitionerRole implements Resource {
   const factory PractitionerRole({
     @JsonKey(required: true, defaultValue: 'PractitionerRole')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     Period period,
@@ -279,7 +324,16 @@ abstract class RelatedPerson with _$RelatedPerson implements Resource {
   const factory RelatedPerson({
     @JsonKey(required: true, defaultValue: 'RelatedPerson')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     @JsonKey(required: true) Reference patient,

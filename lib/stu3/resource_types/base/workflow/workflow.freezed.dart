@@ -19,6 +19,15 @@ class _$AppointmentTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Appointment')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
           AppointmentStatus status,
@@ -59,6 +68,14 @@ class _$AppointmentTearOff {
           Element commentElement}) {
     return _Appointment(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
       serviceCategory: serviceCategory,
@@ -97,6 +114,15 @@ const $Appointment = _$AppointmentTearOff();
 mixin _$Appointment {
   @JsonKey(required: true, defaultValue: 'Appointment')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
   AppointmentStatus get status;
@@ -147,6 +173,15 @@ abstract class $AppointmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Appointment')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
           AppointmentStatus status,
@@ -186,6 +221,8 @@ abstract class $AppointmentCopyWith<$Res> {
       @JsonKey(name: '_comment')
           Element commentElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get serviceCategory;
   $CodeableConceptCopyWith<$Res> get appointmentType;
   $ElementCopyWith<$Res> get statusElement;
@@ -208,6 +245,14 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object serviceCategory = freezed,
@@ -241,6 +286,21 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -309,6 +369,26 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
           ? _value.commentElement
           : commentElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -421,6 +501,15 @@ abstract class _$AppointmentCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Appointment')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
           AppointmentStatus status,
@@ -461,6 +550,10 @@ abstract class _$AppointmentCopyWith<$Res>
           Element commentElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $CodeableConceptCopyWith<$Res> get serviceCategory;
   @override
   $CodeableConceptCopyWith<$Res> get appointmentType;
@@ -494,6 +587,14 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object serviceCategory = freezed,
@@ -527,6 +628,21 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -604,6 +720,15 @@ class _$_Appointment implements _Appointment {
       {@required
       @JsonKey(required: true, defaultValue: 'Appointment')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
           this.status,
@@ -650,6 +775,23 @@ class _$_Appointment implements _Appointment {
   @override
   @JsonKey(required: true, defaultValue: 'Appointment')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -719,7 +861,7 @@ class _$_Appointment implements _Appointment {
 
   @override
   String toString() {
-    return 'Appointment(resourceType: $resourceType, identifier: $identifier, status: $status, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, reason: $reason, indication: $indication, priority: $priority, description: $description, supportingInformation: $supportingInformation, start: $start, end: $end, minutesDuration: $minutesDuration, slot: $slot, created: $created, comment: $comment, incomingReferral: $incomingReferral, participant: $participant, requestedPeriod: $requestedPeriod, statusElement: $statusElement, priorityElement: $priorityElement, descriptionElement: $descriptionElement, startElement: $startElement, endElement: $endElement, minutesDurationElement: $minutesDurationElement, createdElement: $createdElement, commentElement: $commentElement)';
+    return 'Appointment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, reason: $reason, indication: $indication, priority: $priority, description: $description, supportingInformation: $supportingInformation, start: $start, end: $end, minutesDuration: $minutesDuration, slot: $slot, created: $created, comment: $comment, incomingReferral: $incomingReferral, participant: $participant, requestedPeriod: $requestedPeriod, statusElement: $statusElement, priorityElement: $priorityElement, descriptionElement: $descriptionElement, startElement: $startElement, endElement: $endElement, minutesDurationElement: $minutesDurationElement, createdElement: $createdElement, commentElement: $commentElement)';
   }
 
   @override
@@ -729,6 +871,27 @@ class _$_Appointment implements _Appointment {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -773,26 +936,13 @@ class _$_Appointment implements _Appointment {
                 const DeepCollectionEquality()
                     .equals(other.created, created)) &&
             (identical(other.comment, comment) ||
-                const DeepCollectionEquality()
-                    .equals(other.comment, comment)) &&
-            (identical(other.incomingReferral, incomingReferral) ||
-                const DeepCollectionEquality()
-                    .equals(other.incomingReferral, incomingReferral)) &&
-            (identical(other.participant, participant) ||
-                const DeepCollectionEquality()
-                    .equals(other.participant, participant)) &&
-            (identical(other.requestedPeriod, requestedPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.requestedPeriod, requestedPeriod)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.priorityElement, priorityElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.priorityElement, priorityElement)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
+                const DeepCollectionEquality().equals(other.comment, comment)) &&
+            (identical(other.incomingReferral, incomingReferral) || const DeepCollectionEquality().equals(other.incomingReferral, incomingReferral)) &&
+            (identical(other.participant, participant) || const DeepCollectionEquality().equals(other.participant, participant)) &&
+            (identical(other.requestedPeriod, requestedPeriod) || const DeepCollectionEquality().equals(other.requestedPeriod, requestedPeriod)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.priorityElement, priorityElement) || const DeepCollectionEquality().equals(other.priorityElement, priorityElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
             (identical(other.startElement, startElement) || const DeepCollectionEquality().equals(other.startElement, startElement)) &&
             (identical(other.endElement, endElement) || const DeepCollectionEquality().equals(other.endElement, endElement)) &&
             (identical(other.minutesDurationElement, minutesDurationElement) || const DeepCollectionEquality().equals(other.minutesDurationElement, minutesDurationElement)) &&
@@ -804,6 +954,14 @@ class _$_Appointment implements _Appointment {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(serviceCategory) ^
@@ -848,6 +1006,15 @@ abstract class _Appointment implements Appointment {
       {@required
       @JsonKey(required: true, defaultValue: 'Appointment')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
           AppointmentStatus status,
@@ -893,6 +1060,23 @@ abstract class _Appointment implements Appointment {
   @override
   @JsonKey(required: true, defaultValue: 'Appointment')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -1287,6 +1471,15 @@ class _$AppointmentResponseTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'AppointmentResponse')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true)
           Reference appointment,
@@ -1306,6 +1499,14 @@ class _$AppointmentResponseTearOff {
           Element commentElement}) {
     return _AppointmentResponse(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       appointment: appointment,
       start: start,
@@ -1328,6 +1529,15 @@ const $AppointmentResponse = _$AppointmentResponseTearOff();
 mixin _$AppointmentResponse {
   @JsonKey(required: true, defaultValue: 'AppointmentResponse')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   @JsonKey(required: true)
   Reference get appointment;
@@ -1357,6 +1567,15 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'AppointmentResponse')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true)
           Reference appointment,
@@ -1375,6 +1594,8 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       @JsonKey(name: '_comment')
           Element commentElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ReferenceCopyWith<$Res> get appointment;
   $ReferenceCopyWith<$Res> get actor;
   $ElementCopyWith<$Res> get startElement;
@@ -1394,6 +1615,14 @@ class _$AppointmentResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object appointment = freezed,
     Object start = freezed,
@@ -1411,6 +1640,21 @@ class _$AppointmentResponseCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -1439,6 +1683,26 @@ class _$AppointmentResponseCopyWithImpl<$Res>
           ? _value.commentElement
           : commentElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -1511,6 +1775,15 @@ abstract class _$AppointmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'AppointmentResponse')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true)
           Reference appointment,
@@ -1529,6 +1802,10 @@ abstract class _$AppointmentResponseCopyWith<$Res>
       @JsonKey(name: '_comment')
           Element commentElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ReferenceCopyWith<$Res> get appointment;
   @override
@@ -1556,6 +1833,14 @@ class __$AppointmentResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object appointment = freezed,
     Object start = freezed,
@@ -1573,6 +1858,21 @@ class __$AppointmentResponseCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -1610,6 +1910,15 @@ class _$_AppointmentResponse implements _AppointmentResponse {
       {@required
       @JsonKey(required: true, defaultValue: 'AppointmentResponse')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       @JsonKey(required: true)
           this.appointment,
@@ -1635,6 +1944,23 @@ class _$_AppointmentResponse implements _AppointmentResponse {
   @override
   @JsonKey(required: true, defaultValue: 'AppointmentResponse')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -1667,7 +1993,7 @@ class _$_AppointmentResponse implements _AppointmentResponse {
 
   @override
   String toString() {
-    return 'AppointmentResponse(resourceType: $resourceType, identifier: $identifier, appointment: $appointment, start: $start, end: $end, participantType: $participantType, actor: $actor, participantStatus: $participantStatus, comment: $comment, startElement: $startElement, endElement: $endElement, participantStatusElement: $participantStatusElement, commentElement: $commentElement)';
+    return 'AppointmentResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, appointment: $appointment, start: $start, end: $end, participantType: $participantType, actor: $actor, participantStatus: $participantStatus, comment: $comment, startElement: $startElement, endElement: $endElement, participantStatusElement: $participantStatusElement, commentElement: $commentElement)';
   }
 
   @override
@@ -1677,6 +2003,27 @@ class _$_AppointmentResponse implements _AppointmentResponse {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -1718,6 +2065,14 @@ class _$_AppointmentResponse implements _AppointmentResponse {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(appointment) ^
       const DeepCollectionEquality().hash(start) ^
@@ -1747,6 +2102,15 @@ abstract class _AppointmentResponse implements AppointmentResponse {
       {@required
       @JsonKey(required: true, defaultValue: 'AppointmentResponse')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(required: true)
           Reference appointment,
@@ -1771,6 +2135,23 @@ abstract class _AppointmentResponse implements AppointmentResponse {
   @override
   @JsonKey(required: true, defaultValue: 'AppointmentResponse')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -1815,6 +2196,15 @@ class _$ProcessRequestTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessRequest')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
@@ -1847,6 +2237,14 @@ class _$ProcessRequestTearOff {
           Element excludeElement}) {
     return _ProcessRequest(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
       action: action,
@@ -1879,6 +2277,15 @@ const $ProcessRequest = _$ProcessRequestTearOff();
 mixin _$ProcessRequest {
   @JsonKey(required: true, defaultValue: 'ProcessRequest')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Code get status;
   @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
@@ -1921,6 +2328,15 @@ abstract class $ProcessRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ProcessRequest')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
@@ -1952,6 +2368,8 @@ abstract class $ProcessRequestCopyWith<$Res> {
       @JsonKey(name: '_exclude')
           Element excludeElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ReferenceCopyWith<$Res> get target;
   $ReferenceCopyWith<$Res> get provider;
   $ReferenceCopyWith<$Res> get organization;
@@ -1978,6 +2396,14 @@ class _$ProcessRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object action = freezed,
@@ -2005,6 +2431,21 @@ class _$ProcessRequestCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -2047,6 +2488,26 @@ class _$ProcessRequestCopyWithImpl<$Res>
           ? _value.excludeElement
           : excludeElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -2189,6 +2650,15 @@ abstract class _$ProcessRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ProcessRequest')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
@@ -2220,6 +2690,10 @@ abstract class _$ProcessRequestCopyWith<$Res>
       @JsonKey(name: '_exclude')
           Element excludeElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ReferenceCopyWith<$Res> get target;
   @override
@@ -2261,6 +2735,14 @@ class __$ProcessRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object action = freezed,
@@ -2288,6 +2770,21 @@ class __$ProcessRequestCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -2339,6 +2836,15 @@ class _$_ProcessRequest implements _ProcessRequest {
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessRequest')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.status,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
@@ -2377,6 +2883,23 @@ class _$_ProcessRequest implements _ProcessRequest {
   @override
   @JsonKey(required: true, defaultValue: 'ProcessRequest')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -2432,7 +2955,7 @@ class _$_ProcessRequest implements _ProcessRequest {
 
   @override
   String toString() {
-    return 'ProcessRequest(resourceType: $resourceType, identifier: $identifier, status: $status, action: $action, target: $target, created: $created, provider: $provider, organization: $organization, request: $request, response: $response, nullify: $nullify, reference: $reference, item: $item, include: $include, exclude: $exclude, period: $period, statusElement: $statusElement, actionElement: $actionElement, createdElement: $createdElement, nullifyElement: $nullifyElement, referenceElement: $referenceElement, includeElement: $includeElement, excludeElement: $excludeElement)';
+    return 'ProcessRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, action: $action, target: $target, created: $created, provider: $provider, organization: $organization, request: $request, response: $response, nullify: $nullify, reference: $reference, item: $item, include: $include, exclude: $exclude, period: $period, statusElement: $statusElement, actionElement: $actionElement, createdElement: $createdElement, nullifyElement: $nullifyElement, referenceElement: $referenceElement, includeElement: $includeElement, excludeElement: $excludeElement)';
   }
 
   @override
@@ -2442,6 +2965,27 @@ class _$_ProcessRequest implements _ProcessRequest {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -2486,29 +3030,26 @@ class _$_ProcessRequest implements _ProcessRequest {
                 const DeepCollectionEquality()
                     .equals(other.statusElement, statusElement)) &&
             (identical(other.actionElement, actionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.actionElement, actionElement)) &&
-            (identical(other.createdElement, createdElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdElement, createdElement)) &&
-            (identical(other.nullifyElement, nullifyElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nullifyElement, nullifyElement)) &&
-            (identical(other.referenceElement, referenceElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.referenceElement, referenceElement)) &&
-            (identical(other.includeElement, includeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.includeElement, includeElement)) &&
-            (identical(other.excludeElement, excludeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.excludeElement, excludeElement)));
+                const DeepCollectionEquality().equals(other.actionElement, actionElement)) &&
+            (identical(other.createdElement, createdElement) || const DeepCollectionEquality().equals(other.createdElement, createdElement)) &&
+            (identical(other.nullifyElement, nullifyElement) || const DeepCollectionEquality().equals(other.nullifyElement, nullifyElement)) &&
+            (identical(other.referenceElement, referenceElement) || const DeepCollectionEquality().equals(other.referenceElement, referenceElement)) &&
+            (identical(other.includeElement, includeElement) || const DeepCollectionEquality().equals(other.includeElement, includeElement)) &&
+            (identical(other.excludeElement, excludeElement) || const DeepCollectionEquality().equals(other.excludeElement, excludeElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(action) ^
@@ -2547,6 +3088,15 @@ abstract class _ProcessRequest implements ProcessRequest {
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessRequest')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
@@ -2584,6 +3134,23 @@ abstract class _ProcessRequest implements ProcessRequest {
   @override
   @JsonKey(required: true, defaultValue: 'ProcessRequest')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -2831,6 +3398,15 @@ class _$ProcessResponseTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessResponse')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
       FhirDateTime created,
@@ -2852,6 +3428,14 @@ class _$ProcessResponseTearOff {
           Element dispositionElement}) {
     return _ProcessResponse(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
       created: created,
@@ -2878,6 +3462,15 @@ const $ProcessResponse = _$ProcessResponseTearOff();
 mixin _$ProcessResponse {
   @JsonKey(required: true, defaultValue: 'ProcessResponse')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Code get status;
   FhirDateTime get created;
@@ -2909,6 +3502,15 @@ abstract class $ProcessResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ProcessResponse')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
       FhirDateTime created,
@@ -2929,6 +3531,8 @@ abstract class $ProcessResponseCopyWith<$Res> {
       @JsonKey(name: '_disposition')
           Element dispositionElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ReferenceCopyWith<$Res> get organization;
   $ReferenceCopyWith<$Res> get request;
   $CodeableConceptCopyWith<$Res> get outcome;
@@ -2951,6 +3555,14 @@ class _$ProcessResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object created = freezed,
@@ -2972,6 +3584,21 @@ class _$ProcessResponseCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -3008,6 +3635,26 @@ class _$ProcessResponseCopyWithImpl<$Res>
           ? _value.dispositionElement
           : dispositionElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -3110,6 +3757,15 @@ abstract class _$ProcessResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ProcessResponse')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
       FhirDateTime created,
@@ -3130,6 +3786,10 @@ abstract class _$ProcessResponseCopyWith<$Res>
       @JsonKey(name: '_disposition')
           Element dispositionElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ReferenceCopyWith<$Res> get organization;
   @override
@@ -3163,6 +3823,14 @@ class __$ProcessResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object created = freezed,
@@ -3184,6 +3852,21 @@ class __$ProcessResponseCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -3229,6 +3912,15 @@ class _$_ProcessResponse implements _ProcessResponse {
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessResponse')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.status,
       this.created,
@@ -3256,6 +3948,23 @@ class _$_ProcessResponse implements _ProcessResponse {
   @override
   @JsonKey(required: true, defaultValue: 'ProcessResponse')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -3294,7 +4003,7 @@ class _$_ProcessResponse implements _ProcessResponse {
 
   @override
   String toString() {
-    return 'ProcessResponse(resourceType: $resourceType, identifier: $identifier, status: $status, created: $created, organization: $organization, request: $request, outcome: $outcome, disposition: $disposition, requestProvider: $requestProvider, requestOrganization: $requestOrganization, form: $form, processNote: $processNote, error: $error, communicationRequest: $communicationRequest, statusElement: $statusElement, createdElement: $createdElement, dispositionElement: $dispositionElement)';
+    return 'ProcessResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, created: $created, organization: $organization, request: $request, outcome: $outcome, disposition: $disposition, requestProvider: $requestProvider, requestOrganization: $requestOrganization, form: $form, processNote: $processNote, error: $error, communicationRequest: $communicationRequest, statusElement: $statusElement, createdElement: $createdElement, dispositionElement: $dispositionElement)';
   }
 
   @override
@@ -3304,6 +4013,27 @@ class _$_ProcessResponse implements _ProcessResponse {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -3346,15 +4076,21 @@ class _$_ProcessResponse implements _ProcessResponse {
             (identical(other.createdElement, createdElement) ||
                 const DeepCollectionEquality()
                     .equals(other.createdElement, createdElement)) &&
-            (identical(other.dispositionElement, dispositionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dispositionElement, dispositionElement)));
+            (identical(other.dispositionElement, dispositionElement) || const DeepCollectionEquality().equals(other.dispositionElement, dispositionElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(created) ^
@@ -3387,6 +4123,15 @@ abstract class _ProcessResponse implements ProcessResponse {
       {@required
       @JsonKey(required: true, defaultValue: 'ProcessResponse')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
       FhirDateTime created,
@@ -3413,6 +4158,23 @@ abstract class _ProcessResponse implements ProcessResponse {
   @override
   @JsonKey(required: true, defaultValue: 'ProcessResponse')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -3671,6 +4433,15 @@ class _$ScheduleTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Schedule')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       CodeableConcept serviceCategory,
@@ -3686,6 +4457,14 @@ class _$ScheduleTearOff {
           Element commentElement}) {
     return _Schedule(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
       serviceCategory: serviceCategory,
@@ -3706,6 +4485,15 @@ const $Schedule = _$ScheduleTearOff();
 mixin _$Schedule {
   @JsonKey(required: true, defaultValue: 'Schedule')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Boolean get active;
   CodeableConcept get serviceCategory;
@@ -3729,6 +4517,14 @@ abstract class $ScheduleCopyWith<$Res> {
       _$ScheduleCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Schedule') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       CodeableConcept serviceCategory,
@@ -3740,6 +4536,8 @@ abstract class $ScheduleCopyWith<$Res> {
       @JsonKey(name: '_active') Element activeElement,
       @JsonKey(name: '_comment') Element commentElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get serviceCategory;
   $PeriodCopyWith<$Res> get planningHorizon;
   $ElementCopyWith<$Res> get activeElement;
@@ -3756,6 +4554,14 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object serviceCategory = freezed,
@@ -3771,6 +4577,21 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -3796,6 +4617,26 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
           ? _value.commentElement
           : commentElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -3845,6 +4686,14 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Schedule') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       CodeableConcept serviceCategory,
@@ -3856,6 +4705,10 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       @JsonKey(name: '_active') Element activeElement,
       @JsonKey(name: '_comment') Element commentElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $CodeableConceptCopyWith<$Res> get serviceCategory;
   @override
@@ -3877,6 +4730,14 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object serviceCategory = freezed,
@@ -3892,6 +4753,21 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -3926,6 +4802,15 @@ class _$_Schedule implements _Schedule {
       {@required
       @JsonKey(required: true, defaultValue: 'Schedule')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.active,
       this.serviceCategory,
@@ -3947,6 +4832,23 @@ class _$_Schedule implements _Schedule {
   @override
   @JsonKey(required: true, defaultValue: 'Schedule')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -3973,7 +4875,7 @@ class _$_Schedule implements _Schedule {
 
   @override
   String toString() {
-    return 'Schedule(resourceType: $resourceType, identifier: $identifier, active: $active, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, actor: $actor, planningHorizon: $planningHorizon, comment: $comment, activeElement: $activeElement, commentElement: $commentElement)';
+    return 'Schedule(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, actor: $actor, planningHorizon: $planningHorizon, comment: $comment, activeElement: $activeElement, commentElement: $commentElement)';
   }
 
   @override
@@ -3983,6 +4885,27 @@ class _$_Schedule implements _Schedule {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -4017,6 +4940,14 @@ class _$_Schedule implements _Schedule {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
       const DeepCollectionEquality().hash(serviceCategory) ^
@@ -4043,6 +4974,15 @@ abstract class _Schedule implements Schedule {
       {@required
       @JsonKey(required: true, defaultValue: 'Schedule')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       CodeableConcept serviceCategory,
@@ -4062,6 +5002,23 @@ abstract class _Schedule implements Schedule {
   @override
   @JsonKey(required: true, defaultValue: 'Schedule')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -4100,6 +5057,15 @@ class _$SlotTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Slot')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
@@ -4125,6 +5091,14 @@ class _$SlotTearOff {
           Element commentElement}) {
     return _Slot(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       serviceCategory: serviceCategory,
       serviceType: serviceType,
@@ -4151,6 +5125,15 @@ const $Slot = _$SlotTearOff();
 mixin _$Slot {
   @JsonKey(required: true, defaultValue: 'Slot')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   CodeableConcept get serviceCategory;
   List<CodeableConcept> get serviceType;
@@ -4184,6 +5167,14 @@ abstract class $SlotCopyWith<$Res> {
       _$SlotCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Slot') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
@@ -4201,6 +5192,8 @@ abstract class $SlotCopyWith<$Res> {
       @JsonKey(name: '_overbooked') Element overbookedElement,
       @JsonKey(name: '_comment') Element commentElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get serviceCategory;
   $CodeableConceptCopyWith<$Res> get appointmentType;
   $ReferenceCopyWith<$Res> get schedule;
@@ -4221,6 +5214,14 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object serviceCategory = freezed,
     Object serviceType = freezed,
@@ -4242,6 +5243,21 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -4279,6 +5295,26 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
           ? _value.commentElement
           : commentElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -4368,6 +5404,14 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Slot') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
@@ -4385,6 +5429,10 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       @JsonKey(name: '_overbooked') Element overbookedElement,
       @JsonKey(name: '_comment') Element commentElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $CodeableConceptCopyWith<$Res> get serviceCategory;
   @override
@@ -4414,6 +5462,14 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object serviceCategory = freezed,
     Object serviceType = freezed,
@@ -4435,6 +5491,21 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -4481,6 +5552,15 @@ class _$_Slot implements _Slot {
       {@required
       @JsonKey(required: true, defaultValue: 'Slot')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.serviceCategory,
       this.serviceType,
@@ -4512,6 +5592,23 @@ class _$_Slot implements _Slot {
   @override
   @JsonKey(required: true, defaultValue: 'Slot')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -4554,7 +5651,7 @@ class _$_Slot implements _Slot {
 
   @override
   String toString() {
-    return 'Slot(resourceType: $resourceType, identifier: $identifier, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, schedule: $schedule, status: $status, start: $start, end: $end, overbooked: $overbooked, comment: $comment, statusElement: $statusElement, startElement: $startElement, endElement: $endElement, overbookedElement: $overbookedElement, commentElement: $commentElement)';
+    return 'Slot(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, schedule: $schedule, status: $status, start: $start, end: $end, overbooked: $overbooked, comment: $comment, statusElement: $statusElement, startElement: $startElement, endElement: $endElement, overbookedElement: $overbookedElement, commentElement: $commentElement)';
   }
 
   @override
@@ -4564,6 +5661,27 @@ class _$_Slot implements _Slot {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -4607,14 +5725,21 @@ class _$_Slot implements _Slot {
                 const DeepCollectionEquality()
                     .equals(other.overbookedElement, overbookedElement)) &&
             (identical(other.commentElement, commentElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.commentElement, commentElement)));
+                const DeepCollectionEquality().equals(other.commentElement, commentElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(serviceCategory) ^
       const DeepCollectionEquality().hash(serviceType) ^
@@ -4647,6 +5772,15 @@ abstract class _Slot implements Slot {
       {@required
       @JsonKey(required: true, defaultValue: 'Slot')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
@@ -4676,6 +5810,23 @@ abstract class _Slot implements Slot {
   @override
   @JsonKey(required: true, defaultValue: 'Slot')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -4730,6 +5881,15 @@ class _$TaskTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Task')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String definitionUri,
       Reference definitionReference,
@@ -4776,6 +5936,14 @@ class _$TaskTearOff {
           Element lastModifiedElement}) {
     return _Task(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       definitionUri: definitionUri,
       definitionReference: definitionReference,
@@ -4821,6 +5989,15 @@ const $Task = _$TaskTearOff();
 mixin _$Task {
   @JsonKey(required: true, defaultValue: 'Task')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   String get definitionUri;
   Reference get definitionReference;
@@ -4875,6 +6052,14 @@ abstract class $TaskCopyWith<$Res> {
       _$TaskCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Task') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String definitionUri,
       Reference definitionReference,
@@ -4911,6 +6096,8 @@ abstract class $TaskCopyWith<$Res> {
       @JsonKey(name: '_authoredOn') Element authoredOnElement,
       @JsonKey(name: '_lastModified') Element lastModifiedElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ReferenceCopyWith<$Res> get definitionReference;
   $IdentifierCopyWith<$Res> get groupIdentifier;
   $CodeableConceptCopyWith<$Res> get statusReason;
@@ -4943,6 +6130,14 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object definitionUri = freezed,
     Object definitionReference = freezed,
@@ -4983,6 +6178,21 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -5059,6 +6269,26 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
           ? _value.lastModifiedElement
           : lastModifiedElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -5268,6 +6498,14 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Task') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String definitionUri,
       Reference definitionReference,
@@ -5304,6 +6542,10 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       @JsonKey(name: '_authoredOn') Element authoredOnElement,
       @JsonKey(name: '_lastModified') Element lastModifiedElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ReferenceCopyWith<$Res> get definitionReference;
   @override
@@ -5357,6 +6599,14 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object definitionUri = freezed,
     Object definitionReference = freezed,
@@ -5397,6 +6647,21 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -5482,6 +6747,15 @@ class _$_Task implements _Task {
       {@required
       @JsonKey(required: true, defaultValue: 'Task')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.definitionUri,
       this.definitionReference,
@@ -5534,6 +6808,23 @@ class _$_Task implements _Task {
   @override
   @JsonKey(required: true, defaultValue: 'Task')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -5616,7 +6907,7 @@ class _$_Task implements _Task {
 
   @override
   String toString() {
-    return 'Task(resourceType: $resourceType, identifier: $identifier, definitionUri: $definitionUri, definitionReference: $definitionReference, basedOn: $basedOn, groupIdentifier: $groupIdentifier, partOf: $partOf, status: $status, statusReason: $statusReason, businessStatus: $businessStatus, intent: $intent, priority: $priority, code: $code, description: $description, focus: $focus, for_: $for_, context: $context, executionPeriod: $executionPeriod, authoredOn: $authoredOn, lastModified: $lastModified, requester: $requester, performerType: $performerType, owner: $owner, reason: $reason, note: $note, relevantHistory: $relevantHistory, restriction: $restriction, input: $input, output: $output, definitionUriElement: $definitionUriElement, statusElement: $statusElement, intentElement: $intentElement, priorityElement: $priorityElement, descriptionElement: $descriptionElement, authoredOnElement: $authoredOnElement, lastModifiedElement: $lastModifiedElement)';
+    return 'Task(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, definitionUri: $definitionUri, definitionReference: $definitionReference, basedOn: $basedOn, groupIdentifier: $groupIdentifier, partOf: $partOf, status: $status, statusReason: $statusReason, businessStatus: $businessStatus, intent: $intent, priority: $priority, code: $code, description: $description, focus: $focus, for_: $for_, context: $context, executionPeriod: $executionPeriod, authoredOn: $authoredOn, lastModified: $lastModified, requester: $requester, performerType: $performerType, owner: $owner, reason: $reason, note: $note, relevantHistory: $relevantHistory, restriction: $restriction, input: $input, output: $output, definitionUriElement: $definitionUriElement, statusElement: $statusElement, intentElement: $intentElement, priorityElement: $priorityElement, descriptionElement: $descriptionElement, authoredOnElement: $authoredOnElement, lastModifiedElement: $lastModifiedElement)';
   }
 
   @override
@@ -5626,6 +6917,27 @@ class _$_Task implements _Task {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -5671,27 +6983,14 @@ class _$_Task implements _Task {
             (identical(other.executionPeriod, executionPeriod) ||
                 const DeepCollectionEquality()
                     .equals(other.executionPeriod, executionPeriod)) &&
-            (identical(other.authoredOn, authoredOn) ||
-                const DeepCollectionEquality()
-                    .equals(other.authoredOn, authoredOn)) &&
-            (identical(other.lastModified, lastModified) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastModified, lastModified)) &&
-            (identical(other.requester, requester) ||
-                const DeepCollectionEquality()
-                    .equals(other.requester, requester)) &&
-            (identical(other.performerType, performerType) ||
-                const DeepCollectionEquality()
-                    .equals(other.performerType, performerType)) &&
-            (identical(other.owner, owner) ||
-                const DeepCollectionEquality().equals(other.owner, owner)) &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)) &&
-            (identical(other.note, note) ||
-                const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.relevantHistory, relevantHistory) ||
-                const DeepCollectionEquality()
-                    .equals(other.relevantHistory, relevantHistory)) &&
+            (identical(other.authoredOn, authoredOn) || const DeepCollectionEquality().equals(other.authoredOn, authoredOn)) &&
+            (identical(other.lastModified, lastModified) || const DeepCollectionEquality().equals(other.lastModified, lastModified)) &&
+            (identical(other.requester, requester) || const DeepCollectionEquality().equals(other.requester, requester)) &&
+            (identical(other.performerType, performerType) || const DeepCollectionEquality().equals(other.performerType, performerType)) &&
+            (identical(other.owner, owner) || const DeepCollectionEquality().equals(other.owner, owner)) &&
+            (identical(other.reason, reason) || const DeepCollectionEquality().equals(other.reason, reason)) &&
+            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.relevantHistory, relevantHistory) || const DeepCollectionEquality().equals(other.relevantHistory, relevantHistory)) &&
             (identical(other.restriction, restriction) || const DeepCollectionEquality().equals(other.restriction, restriction)) &&
             (identical(other.input, input) || const DeepCollectionEquality().equals(other.input, input)) &&
             (identical(other.output, output) || const DeepCollectionEquality().equals(other.output, output)) &&
@@ -5708,6 +7007,14 @@ class _$_Task implements _Task {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(definitionUri) ^
       const DeepCollectionEquality().hash(definitionReference) ^
@@ -5759,6 +7066,15 @@ abstract class _Task implements Task {
       {@required
       @JsonKey(required: true, defaultValue: 'Task')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String definitionUri,
       Reference definitionReference,
@@ -5809,6 +7125,23 @@ abstract class _Task implements Task {
   @override
   @JsonKey(required: true, defaultValue: 'Task')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override

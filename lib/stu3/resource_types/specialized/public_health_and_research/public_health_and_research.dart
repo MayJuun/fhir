@@ -11,7 +11,16 @@ abstract class ResearchStudy with _$ResearchStudy implements Resource {
   const factory ResearchStudy({
     @JsonKey(required: true, defaultValue: 'ResearchStudy')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     String title,
     List<Reference> protocol,
@@ -59,7 +68,16 @@ abstract class ResearchSubject with _$ResearchSubject implements Resource {
   const factory ResearchSubject({
     @JsonKey(required: true, defaultValue: 'ResearchSubject')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
         ResearchSubjectStatus status,

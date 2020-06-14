@@ -19,6 +19,15 @@ class _$MeasureTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Measure')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -106,6 +115,14 @@ class _$MeasureTearOff {
           Element setElement}) {
     return _Measure(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -177,6 +194,15 @@ const $Measure = _$MeasureTearOff();
 mixin _$Measure {
   @JsonKey(required: true, defaultValue: 'Measure')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   List<Identifier> get identifier;
   String get version;
@@ -273,6 +299,15 @@ abstract class $MeasureCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Measure')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -359,6 +394,8 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: '_set')
           Element setElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $PeriodCopyWith<$Res> get effectivePeriod;
   $CodeableConceptCopyWith<$Res> get scoring;
   $CodeableConceptCopyWith<$Res> get compositeScoring;
@@ -397,6 +434,14 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -462,6 +507,21 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -601,6 +661,26 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       setElement:
           setElement == freezed ? _value.setElement : setElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -873,6 +953,15 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Measure')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -960,6 +1049,10 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
           Element setElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $PeriodCopyWith<$Res> get effectivePeriod;
   @override
   $CodeableConceptCopyWith<$Res> get scoring;
@@ -1024,6 +1117,14 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -1089,6 +1190,21 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -1237,6 +1353,15 @@ class _$_Measure implements _Measure {
       {@required
       @JsonKey(required: true, defaultValue: 'Measure')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -1330,6 +1455,23 @@ class _$_Measure implements _Measure {
   @override
   @JsonKey(required: true, defaultValue: 'Measure')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -1478,7 +1620,7 @@ class _$_Measure implements _Measure {
 
   @override
   String toString() {
-    return 'Measure(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, description: $description, purpose: $purpose, usage: $usage, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, relatedArtifact: $relatedArtifact, library: $library, disclaimer: $disclaimer, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, rateAggregation: $rateAggregation, rationale: $rationale, clinicalRecommendationStatement: $clinicalRecommendationStatement, improvementNotation: $improvementNotation, definition: $definition, guidance: $guidance, set_: $set_, group: $group, supplementalData: $supplementalData, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement, copyrightElement: $copyrightElement, disclaimerElement: $disclaimerElement, riskAdjustmentElement: $riskAdjustmentElement, rateAggregationElement: $rateAggregationElement, rationaleElement: $rationaleElement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotationElement: $improvementNotationElement, definitionElement: $definitionElement, guidanceElement: $guidanceElement, setElement: $setElement)';
+    return 'Measure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, description: $description, purpose: $purpose, usage: $usage, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, relatedArtifact: $relatedArtifact, library: $library, disclaimer: $disclaimer, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, rateAggregation: $rateAggregation, rationale: $rationale, clinicalRecommendationStatement: $clinicalRecommendationStatement, improvementNotation: $improvementNotation, definition: $definition, guidance: $guidance, set_: $set_, group: $group, supplementalData: $supplementalData, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement, copyrightElement: $copyrightElement, disclaimerElement: $disclaimerElement, riskAdjustmentElement: $riskAdjustmentElement, rateAggregationElement: $rateAggregationElement, rationaleElement: $rationaleElement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotationElement: $improvementNotationElement, definitionElement: $definitionElement, guidanceElement: $guidanceElement, setElement: $setElement)';
   }
 
   @override
@@ -1488,6 +1630,27 @@ class _$_Measure implements _Measure {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -1533,26 +1696,13 @@ class _$_Measure implements _Measure {
             (identical(other.jurisdiction, jurisdiction) ||
                 const DeepCollectionEquality()
                     .equals(other.jurisdiction, jurisdiction)) &&
-            (identical(other.topic, topic) ||
-                const DeepCollectionEquality().equals(other.topic, topic)) &&
-            (identical(other.contributor, contributor) ||
-                const DeepCollectionEquality()
-                    .equals(other.contributor, contributor)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.copyright, copyright) ||
-                const DeepCollectionEquality()
-                    .equals(other.copyright, copyright)) &&
-            (identical(other.relatedArtifact, relatedArtifact) ||
-                const DeepCollectionEquality()
-                    .equals(other.relatedArtifact, relatedArtifact)) &&
-            (identical(other.library, library) ||
-                const DeepCollectionEquality()
-                    .equals(other.library, library)) &&
-            (identical(other.disclaimer, disclaimer) ||
-                const DeepCollectionEquality()
-                    .equals(other.disclaimer, disclaimer)) &&
+            (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
+            (identical(other.contributor, contributor) || const DeepCollectionEquality().equals(other.contributor, contributor)) &&
+            (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
+            (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
+            (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
+            (identical(other.library, library) || const DeepCollectionEquality().equals(other.library, library)) &&
+            (identical(other.disclaimer, disclaimer) || const DeepCollectionEquality().equals(other.disclaimer, disclaimer)) &&
             (identical(other.scoring, scoring) || const DeepCollectionEquality().equals(other.scoring, scoring)) &&
             (identical(other.compositeScoring, compositeScoring) || const DeepCollectionEquality().equals(other.compositeScoring, compositeScoring)) &&
             (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
@@ -1595,6 +1745,14 @@ class _$_Measure implements _Measure {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -1672,6 +1830,15 @@ abstract class _Measure implements Measure {
       {@required
       @JsonKey(required: true, defaultValue: 'Measure')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -1763,6 +1930,23 @@ abstract class _Measure implements Measure {
   @override
   @JsonKey(required: true, defaultValue: 'Measure')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -3143,6 +3327,15 @@ class _$MeasureReportTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'MeasureReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
           MeasureReportStatus status,
@@ -3165,6 +3358,14 @@ class _$MeasureReportTearOff {
           Element dateElement}) {
     return _MeasureReport(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
       type: type,
@@ -3188,6 +3389,15 @@ const $MeasureReport = _$MeasureReportTearOff();
 mixin _$MeasureReport {
   @JsonKey(required: true, defaultValue: 'MeasureReport')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   Identifier get identifier;
   @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
   MeasureReportStatus get status;
@@ -3220,6 +3430,15 @@ abstract class $MeasureReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'MeasureReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
           MeasureReportStatus status,
@@ -3241,6 +3460,8 @@ abstract class $MeasureReportCopyWith<$Res> {
       @JsonKey(name: '_date')
           Element dateElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get measure;
   $ReferenceCopyWith<$Res> get patient;
@@ -3263,6 +3484,14 @@ class _$MeasureReportCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object type = freezed,
@@ -3281,6 +3510,21 @@ class _$MeasureReportCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       status: status == freezed ? _value.status : status as MeasureReportStatus,
@@ -3305,6 +3549,26 @@ class _$MeasureReportCopyWithImpl<$Res>
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -3407,6 +3671,15 @@ abstract class _$MeasureReportCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'MeasureReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
           MeasureReportStatus status,
@@ -3428,6 +3701,10 @@ abstract class _$MeasureReportCopyWith<$Res>
       @JsonKey(name: '_date')
           Element dateElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
@@ -3461,6 +3738,14 @@ class __$MeasureReportCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object type = freezed,
@@ -3479,6 +3764,21 @@ class __$MeasureReportCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       status: status == freezed ? _value.status : status as MeasureReportStatus,
@@ -3512,6 +3812,15 @@ class _$_MeasureReport implements _MeasureReport {
       {@required
       @JsonKey(required: true, defaultValue: 'MeasureReport')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
           this.status,
@@ -3540,6 +3849,23 @@ class _$_MeasureReport implements _MeasureReport {
   @override
   @JsonKey(required: true, defaultValue: 'MeasureReport')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -3576,7 +3902,7 @@ class _$_MeasureReport implements _MeasureReport {
 
   @override
   String toString() {
-    return 'MeasureReport(resourceType: $resourceType, identifier: $identifier, status: $status, type: $type, measure: $measure, patient: $patient, date: $date, reportingOrganization: $reportingOrganization, period: $period, group: $group, evaluatedResources: $evaluatedResources, statusElement: $statusElement, typeElement: $typeElement, dateElement: $dateElement)';
+    return 'MeasureReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, type: $type, measure: $measure, patient: $patient, date: $date, reportingOrganization: $reportingOrganization, period: $period, group: $group, evaluatedResources: $evaluatedResources, statusElement: $statusElement, typeElement: $typeElement, dateElement: $dateElement)';
   }
 
   @override
@@ -3586,6 +3912,27 @@ class _$_MeasureReport implements _MeasureReport {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -3626,6 +3973,14 @@ class _$_MeasureReport implements _MeasureReport {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(type) ^
@@ -3655,6 +4010,15 @@ abstract class _MeasureReport implements MeasureReport {
       {@required
       @JsonKey(required: true, defaultValue: 'MeasureReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
           MeasureReportStatus status,
@@ -3682,6 +4046,23 @@ abstract class _MeasureReport implements MeasureReport {
   @override
   @JsonKey(required: true, defaultValue: 'MeasureReport')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   Identifier get identifier;
   @override

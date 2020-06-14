@@ -19,6 +19,15 @@ class _$CodeSystemTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'CodeSystem')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -85,6 +94,14 @@ class _$CodeSystemTearOff {
           Element countElement}) {
     return _CodeSystem(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -138,6 +155,15 @@ const $CodeSystem = _$CodeSystemTearOff();
 mixin _$CodeSystem {
   @JsonKey(required: true, defaultValue: 'CodeSystem')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   Identifier get identifier;
   String get version;
@@ -214,6 +240,15 @@ abstract class $CodeSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'CodeSystem')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -279,6 +314,8 @@ abstract class $CodeSystemCopyWith<$Res> {
       @JsonKey(name: '_count')
           Element countElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get urlElement;
   $ElementCopyWith<$Res> get versionElement;
@@ -310,6 +347,14 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -358,6 +403,21 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -458,6 +518,26 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
           ? _value.countElement
           : countElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -659,6 +739,15 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'CodeSystem')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -725,6 +814,10 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
           Element countElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get urlElement;
@@ -776,6 +869,14 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -824,6 +925,21 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -933,6 +1049,15 @@ class _$_CodeSystem implements _CodeSystem {
       {@required
       @JsonKey(required: true, defaultValue: 'CodeSystem')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -1005,6 +1130,23 @@ class _$_CodeSystem implements _CodeSystem {
   @override
   @JsonKey(required: true, defaultValue: 'CodeSystem')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -1115,7 +1257,7 @@ class _$_CodeSystem implements _CodeSystem {
 
   @override
   String toString() {
-    return 'CodeSystem(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, caseSensitive: $caseSensitive, valueSet: $valueSet, hierarchyMeaning: $hierarchyMeaning, compositional: $compositional, versionNeeded: $versionNeeded, content: $content, count: $count, filter: $filter, property: $property, concept: $concept, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, caseSensitiveElement: $caseSensitiveElement, valueSetElement: $valueSetElement, hierarchyMeaningElement: $hierarchyMeaningElement, compositionalElement: $compositionalElement, versionNeededElement: $versionNeededElement, contentElement: $contentElement, countElement: $countElement)';
+    return 'CodeSystem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, caseSensitive: $caseSensitive, valueSet: $valueSet, hierarchyMeaning: $hierarchyMeaning, compositional: $compositional, versionNeeded: $versionNeeded, content: $content, count: $count, filter: $filter, property: $property, concept: $concept, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, caseSensitiveElement: $caseSensitiveElement, valueSetElement: $valueSetElement, hierarchyMeaningElement: $hierarchyMeaningElement, compositionalElement: $compositionalElement, versionNeededElement: $versionNeededElement, contentElement: $contentElement, countElement: $countElement)';
   }
 
   @override
@@ -1125,6 +1267,27 @@ class _$_CodeSystem implements _CodeSystem {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -1169,27 +1332,14 @@ class _$_CodeSystem implements _CodeSystem {
                 const DeepCollectionEquality()
                     .equals(other.caseSensitive, caseSensitive)) &&
             (identical(other.valueSet, valueSet) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueSet, valueSet)) &&
-            (identical(other.hierarchyMeaning, hierarchyMeaning) ||
-                const DeepCollectionEquality()
-                    .equals(other.hierarchyMeaning, hierarchyMeaning)) &&
-            (identical(other.compositional, compositional) ||
-                const DeepCollectionEquality()
-                    .equals(other.compositional, compositional)) &&
-            (identical(other.versionNeeded, versionNeeded) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionNeeded, versionNeeded)) &&
-            (identical(other.content, content) ||
-                const DeepCollectionEquality()
-                    .equals(other.content, content)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.filter, filter) ||
-                const DeepCollectionEquality().equals(other.filter, filter)) &&
-            (identical(other.property, property) ||
-                const DeepCollectionEquality()
-                    .equals(other.property, property)) &&
+                const DeepCollectionEquality().equals(other.valueSet, valueSet)) &&
+            (identical(other.hierarchyMeaning, hierarchyMeaning) || const DeepCollectionEquality().equals(other.hierarchyMeaning, hierarchyMeaning)) &&
+            (identical(other.compositional, compositional) || const DeepCollectionEquality().equals(other.compositional, compositional)) &&
+            (identical(other.versionNeeded, versionNeeded) || const DeepCollectionEquality().equals(other.versionNeeded, versionNeeded)) &&
+            (identical(other.content, content) || const DeepCollectionEquality().equals(other.content, content)) &&
+            (identical(other.count, count) || const DeepCollectionEquality().equals(other.count, count)) &&
+            (identical(other.filter, filter) || const DeepCollectionEquality().equals(other.filter, filter)) &&
+            (identical(other.property, property) || const DeepCollectionEquality().equals(other.property, property)) &&
             (identical(other.concept, concept) || const DeepCollectionEquality().equals(other.concept, concept)) &&
             (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
             (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
@@ -1215,6 +1365,14 @@ class _$_CodeSystem implements _CodeSystem {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -1274,6 +1432,15 @@ abstract class _CodeSystem implements CodeSystem {
       {@required
       @JsonKey(required: true, defaultValue: 'CodeSystem')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -1345,6 +1512,23 @@ abstract class _CodeSystem implements CodeSystem {
   @override
   @JsonKey(required: true, defaultValue: 'CodeSystem')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -3302,6 +3486,15 @@ class _$ConceptMapTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'ConceptMap')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -3351,6 +3544,14 @@ class _$ConceptMapTearOff {
           Element targetUriElement}) {
     return _ConceptMap(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -3394,6 +3595,15 @@ const $ConceptMap = _$ConceptMapTearOff();
 mixin _$ConceptMap {
   @JsonKey(required: true, defaultValue: 'ConceptMap')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   Identifier get identifier;
   String get version;
@@ -3452,6 +3662,14 @@ abstract class $ConceptMapCopyWith<$Res> {
       _$ConceptMapCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ConceptMap') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -3486,6 +3704,8 @@ abstract class $ConceptMapCopyWith<$Res> {
       @JsonKey(name: '_sourceUri') Element sourceUriElement,
       @JsonKey(name: '_targetUri') Element targetUriElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get sourceReference;
   $ReferenceCopyWith<$Res> get targetReference;
@@ -3514,6 +3734,14 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -3552,6 +3780,21 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -3622,6 +3865,26 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
           ? _value.targetUriElement
           : targetUriElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -3792,6 +4055,14 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ConceptMap') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -3826,6 +4097,10 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       @JsonKey(name: '_sourceUri') Element sourceUriElement,
       @JsonKey(name: '_targetUri') Element targetUriElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
@@ -3872,6 +4147,14 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -3910,6 +4193,21 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -3989,6 +4287,15 @@ class _$_ConceptMap implements _ConceptMap {
       {@required
       @JsonKey(required: true, defaultValue: 'ConceptMap')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -4044,6 +4351,23 @@ class _$_ConceptMap implements _ConceptMap {
   @override
   @JsonKey(required: true, defaultValue: 'ConceptMap')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -4127,7 +4451,7 @@ class _$_ConceptMap implements _ConceptMap {
 
   @override
   String toString() {
-    return 'ConceptMap(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, sourceUri: $sourceUri, sourceReference: $sourceReference, targetUri: $targetUri, targetReference: $targetReference, group: $group, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, sourceUriElement: $sourceUriElement, targetUriElement: $targetUriElement)';
+    return 'ConceptMap(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, sourceUri: $sourceUri, sourceReference: $sourceReference, targetUri: $targetUri, targetReference: $targetReference, group: $group, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, sourceUriElement: $sourceUriElement, targetUriElement: $targetUriElement)';
   }
 
   @override
@@ -4137,6 +4461,27 @@ class _$_ConceptMap implements _ConceptMap {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -4181,27 +4526,14 @@ class _$_ConceptMap implements _ConceptMap {
                 const DeepCollectionEquality()
                     .equals(other.sourceUri, sourceUri)) &&
             (identical(other.sourceReference, sourceReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceReference, sourceReference)) &&
-            (identical(other.targetUri, targetUri) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetUri, targetUri)) &&
-            (identical(other.targetReference, targetReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetReference, targetReference)) &&
-            (identical(other.group, group) ||
-                const DeepCollectionEquality().equals(other.group, group)) &&
-            (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) ||
-                const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+                const DeepCollectionEquality().equals(other.sourceReference, sourceReference)) &&
+            (identical(other.targetUri, targetUri) || const DeepCollectionEquality().equals(other.targetUri, targetUri)) &&
+            (identical(other.targetReference, targetReference) || const DeepCollectionEquality().equals(other.targetReference, targetReference)) &&
+            (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
             (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
             (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
@@ -4217,6 +4549,14 @@ class _$_ConceptMap implements _ConceptMap {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -4266,6 +4606,15 @@ abstract class _ConceptMap implements ConceptMap {
       {@required
       @JsonKey(required: true, defaultValue: 'ConceptMap')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -4320,6 +4669,23 @@ abstract class _ConceptMap implements ConceptMap {
   @override
   @JsonKey(required: true, defaultValue: 'ConceptMap')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -6193,6 +6559,15 @@ class _$ExpansionProfileTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'ExpansionProfile')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -6251,6 +6626,14 @@ class _$ExpansionProfileTearOff {
           Element limitedExpansionElement}) {
     return _ExpansionProfile(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -6300,6 +6683,15 @@ const $ExpansionProfile = _$ExpansionProfileTearOff();
 mixin _$ExpansionProfile {
   @JsonKey(required: true, defaultValue: 'ExpansionProfile')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   Identifier get identifier;
   String get version;
@@ -6368,6 +6760,15 @@ abstract class $ExpansionProfileCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ExpansionProfile')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -6425,6 +6826,8 @@ abstract class $ExpansionProfileCopyWith<$Res> {
       @JsonKey(name: '_limitedExpansion')
           Element limitedExpansionElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $ExpansionProfileExcludedSystemCopyWith<$Res> get excludedSystem;
   $ExpansionProfileDesignationCopyWith<$Res> get designation;
@@ -6457,6 +6860,14 @@ class _$ExpansionProfileCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -6501,6 +6912,21 @@ class _$ExpansionProfileCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -6600,6 +7026,26 @@ class _$ExpansionProfileCopyWithImpl<$Res>
           ? _value.limitedExpansionElement
           : limitedExpansionElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -6805,6 +7251,15 @@ abstract class _$ExpansionProfileCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ExpansionProfile')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -6863,6 +7318,10 @@ abstract class _$ExpansionProfileCopyWith<$Res>
           Element limitedExpansionElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
   $ExpansionProfileExcludedSystemCopyWith<$Res> get excludedSystem;
@@ -6915,6 +7374,14 @@ class __$ExpansionProfileCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -6959,6 +7426,21 @@ class __$ExpansionProfileCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -7067,6 +7549,15 @@ class _$_ExpansionProfile implements _ExpansionProfile {
       {@required
       @JsonKey(required: true, defaultValue: 'ExpansionProfile')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -7131,6 +7622,23 @@ class _$_ExpansionProfile implements _ExpansionProfile {
   @override
   @JsonKey(required: true, defaultValue: 'ExpansionProfile')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -7229,7 +7737,7 @@ class _$_ExpansionProfile implements _ExpansionProfile {
 
   @override
   String toString() {
-    return 'ExpansionProfile(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, fixedVersion: $fixedVersion, excludedSystem: $excludedSystem, includeDesignations: $includeDesignations, designation: $designation, includeDefinition: $includeDefinition, activeOnly: $activeOnly, excludeNested: $excludeNested, excludeNotForUI: $excludeNotForUI, excludePostCoordinated: $excludePostCoordinated, displayLanguage: $displayLanguage, limitedExpansion: $limitedExpansion, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, includeDesignationsElement: $includeDesignationsElement, includeDefinitionElement: $includeDefinitionElement, activeOnlyElement: $activeOnlyElement, excludeNestedElement: $excludeNestedElement, excludeNotForUIElement: $excludeNotForUIElement, excludePostCoordinatedElement: $excludePostCoordinatedElement, displayLanguageElement: $displayLanguageElement, limitedExpansionElement: $limitedExpansionElement)';
+    return 'ExpansionProfile(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, fixedVersion: $fixedVersion, excludedSystem: $excludedSystem, includeDesignations: $includeDesignations, designation: $designation, includeDefinition: $includeDefinition, activeOnly: $activeOnly, excludeNested: $excludeNested, excludeNotForUI: $excludeNotForUI, excludePostCoordinated: $excludePostCoordinated, displayLanguage: $displayLanguage, limitedExpansion: $limitedExpansion, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, includeDesignationsElement: $includeDesignationsElement, includeDefinitionElement: $includeDefinitionElement, activeOnlyElement: $activeOnlyElement, excludeNestedElement: $excludeNestedElement, excludeNotForUIElement: $excludeNotForUIElement, excludePostCoordinatedElement: $excludePostCoordinatedElement, displayLanguageElement: $displayLanguageElement, limitedExpansionElement: $limitedExpansionElement)';
   }
 
   @override
@@ -7239,6 +7747,27 @@ class _$_ExpansionProfile implements _ExpansionProfile {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -7283,24 +7812,12 @@ class _$_ExpansionProfile implements _ExpansionProfile {
             (identical(other.designation, designation) ||
                 const DeepCollectionEquality()
                     .equals(other.designation, designation)) &&
-            (identical(other.includeDefinition, includeDefinition) ||
-                const DeepCollectionEquality()
-                    .equals(other.includeDefinition, includeDefinition)) &&
-            (identical(other.activeOnly, activeOnly) ||
-                const DeepCollectionEquality()
-                    .equals(other.activeOnly, activeOnly)) &&
-            (identical(other.excludeNested, excludeNested) ||
-                const DeepCollectionEquality()
-                    .equals(other.excludeNested, excludeNested)) &&
-            (identical(other.excludeNotForUI, excludeNotForUI) ||
-                const DeepCollectionEquality()
-                    .equals(other.excludeNotForUI, excludeNotForUI)) &&
-            (identical(other.excludePostCoordinated, excludePostCoordinated) ||
-                const DeepCollectionEquality().equals(
-                    other.excludePostCoordinated, excludePostCoordinated)) &&
-            (identical(other.displayLanguage, displayLanguage) ||
-                const DeepCollectionEquality()
-                    .equals(other.displayLanguage, displayLanguage)) &&
+            (identical(other.includeDefinition, includeDefinition) || const DeepCollectionEquality().equals(other.includeDefinition, includeDefinition)) &&
+            (identical(other.activeOnly, activeOnly) || const DeepCollectionEquality().equals(other.activeOnly, activeOnly)) &&
+            (identical(other.excludeNested, excludeNested) || const DeepCollectionEquality().equals(other.excludeNested, excludeNested)) &&
+            (identical(other.excludeNotForUI, excludeNotForUI) || const DeepCollectionEquality().equals(other.excludeNotForUI, excludeNotForUI)) &&
+            (identical(other.excludePostCoordinated, excludePostCoordinated) || const DeepCollectionEquality().equals(other.excludePostCoordinated, excludePostCoordinated)) &&
+            (identical(other.displayLanguage, displayLanguage) || const DeepCollectionEquality().equals(other.displayLanguage, displayLanguage)) &&
             (identical(other.limitedExpansion, limitedExpansion) || const DeepCollectionEquality().equals(other.limitedExpansion, limitedExpansion)) &&
             (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
             (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
@@ -7324,6 +7841,14 @@ class _$_ExpansionProfile implements _ExpansionProfile {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -7379,6 +7904,15 @@ abstract class _ExpansionProfile implements ExpansionProfile {
       {@required
       @JsonKey(required: true, defaultValue: 'ExpansionProfile')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -7442,6 +7976,23 @@ abstract class _ExpansionProfile implements ExpansionProfile {
   @override
   @JsonKey(required: true, defaultValue: 'ExpansionProfile')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -9009,6 +9560,15 @@ class _$NamingSystemTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'NamingSystem')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String name,
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
@@ -9044,6 +9604,14 @@ class _$NamingSystemTearOff {
           Element usageElement}) {
     return _NamingSystem(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       name: name,
       status: status,
       kind: kind,
@@ -9076,6 +9644,15 @@ const $NamingSystem = _$NamingSystemTearOff();
 mixin _$NamingSystem {
   @JsonKey(required: true, defaultValue: 'NamingSystem')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get name;
   @JsonKey(unknownEnumValue: Status.unknown)
   Status get status;
@@ -9121,6 +9698,15 @@ abstract class $NamingSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'NamingSystem')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String name,
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
@@ -9155,6 +9741,8 @@ abstract class $NamingSystemCopyWith<$Res> {
       @JsonKey(name: '_usage')
           Element usageElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get replacedBy;
   $ElementCopyWith<$Res> get nameElement;
@@ -9177,6 +9765,14 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object name = freezed,
     Object status = freezed,
     Object kind = freezed,
@@ -9204,6 +9800,21 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
       status: status == freezed ? _value.status : status as Status,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
@@ -9250,6 +9861,26 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
           ? _value.usageElement
           : usageElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -9362,6 +9993,15 @@ abstract class _$NamingSystemCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'NamingSystem')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String name,
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
@@ -9397,6 +10037,10 @@ abstract class _$NamingSystemCopyWith<$Res>
           Element usageElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
   $ReferenceCopyWith<$Res> get replacedBy;
@@ -9430,6 +10074,14 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object name = freezed,
     Object status = freezed,
     Object kind = freezed,
@@ -9457,6 +10109,21 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       name: name == freezed ? _value.name : name as String,
       status: status == freezed ? _value.status : status as Status,
       kind: kind == freezed ? _value.kind : kind as NamingSystemKind,
@@ -9512,6 +10179,15 @@ class _$_NamingSystem implements _NamingSystem {
       {@required
       @JsonKey(required: true, defaultValue: 'NamingSystem')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.name,
       @JsonKey(unknownEnumValue: Status.unknown)
           this.status,
@@ -9553,6 +10229,23 @@ class _$_NamingSystem implements _NamingSystem {
   @override
   @JsonKey(required: true, defaultValue: 'NamingSystem')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String name;
   @override
@@ -9611,7 +10304,7 @@ class _$_NamingSystem implements _NamingSystem {
 
   @override
   String toString() {
-    return 'NamingSystem(resourceType: $resourceType, name: $name, status: $status, kind: $kind, date: $date, publisher: $publisher, contact: $contact, responsible: $responsible, type: $type, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, usage: $usage, uniqueId: $uniqueId, replacedBy: $replacedBy, nameElement: $nameElement, statusElement: $statusElement, kindElement: $kindElement, dateElement: $dateElement, publisherElement: $publisherElement, responsibleElement: $responsibleElement, descriptionElement: $descriptionElement, usageElement: $usageElement)';
+    return 'NamingSystem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, status: $status, kind: $kind, date: $date, publisher: $publisher, contact: $contact, responsible: $responsible, type: $type, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, usage: $usage, uniqueId: $uniqueId, replacedBy: $replacedBy, nameElement: $nameElement, statusElement: $statusElement, kindElement: $kindElement, dateElement: $dateElement, publisherElement: $publisherElement, responsibleElement: $responsibleElement, descriptionElement: $descriptionElement, usageElement: $usageElement)';
   }
 
   @override
@@ -9621,6 +10314,27 @@ class _$_NamingSystem implements _NamingSystem {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.status, status) ||
@@ -9666,27 +10380,25 @@ class _$_NamingSystem implements _NamingSystem {
             (identical(other.kindElement, kindElement) ||
                 const DeepCollectionEquality()
                     .equals(other.kindElement, kindElement)) &&
-            (identical(other.dateElement, dateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)) &&
-            (identical(other.publisherElement, publisherElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisherElement, publisherElement)) &&
-            (identical(other.responsibleElement, responsibleElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.responsibleElement, responsibleElement)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.usageElement, usageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.usageElement, usageElement)));
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.responsibleElement, responsibleElement) || const DeepCollectionEquality().equals(other.responsibleElement, responsibleElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(kind) ^
@@ -9725,6 +10437,15 @@ abstract class _NamingSystem implements NamingSystem {
       {@required
       @JsonKey(required: true, defaultValue: 'NamingSystem')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String name,
       @JsonKey(unknownEnumValue: Status.unknown)
           Status status,
@@ -9765,6 +10486,23 @@ abstract class _NamingSystem implements NamingSystem {
   @override
   @JsonKey(required: true, defaultValue: 'NamingSystem')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get name;
   @override
@@ -10216,6 +10954,15 @@ class _$ValueSetTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'ValueSet')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -10264,6 +11011,14 @@ class _$ValueSetTearOff {
           Element extensibleElement}) {
     return _ValueSet(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -10306,6 +11061,15 @@ const $ValueSet = _$ValueSetTearOff();
 mixin _$ValueSet {
   @JsonKey(required: true, defaultValue: 'ValueSet')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   List<Identifier> get identifier;
   String get version;
@@ -10362,6 +11126,14 @@ abstract class $ValueSetCopyWith<$Res> {
       _$ValueSetCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ValueSet') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -10395,6 +11167,8 @@ abstract class $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_copyright') Element copyrightElement,
       @JsonKey(name: '_extensible') Element extensibleElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ValueSetComposeCopyWith<$Res> get compose;
   $ValueSetExpansionCopyWith<$Res> get expansion;
   $ElementCopyWith<$Res> get urlElement;
@@ -10422,6 +11196,14 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -10459,6 +11241,21 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -10528,6 +11325,26 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
           ? _value.extensibleElement
           : extensibleElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -10687,6 +11504,14 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ValueSet') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -10720,6 +11545,10 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_copyright') Element copyrightElement,
       @JsonKey(name: '_extensible') Element extensibleElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ValueSetComposeCopyWith<$Res> get compose;
   @override
@@ -10763,6 +11592,14 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -10800,6 +11637,21 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier: identifier == freezed
           ? _value.identifier
@@ -10878,6 +11730,15 @@ class _$_ValueSet implements _ValueSet {
       {@required
       @JsonKey(required: true, defaultValue: 'ValueSet')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -10932,6 +11793,23 @@ class _$_ValueSet implements _ValueSet {
   @override
   @JsonKey(required: true, defaultValue: 'ValueSet')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -11013,7 +11891,7 @@ class _$_ValueSet implements _ValueSet {
 
   @override
   String toString() {
-    return 'ValueSet(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, immutable: $immutable, purpose: $purpose, copyright: $copyright, extensible: $extensible, compose: $compose, expansion: $expansion, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, immutableElement: $immutableElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, extensibleElement: $extensibleElement)';
+    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, immutable: $immutable, purpose: $purpose, copyright: $copyright, extensible: $extensible, compose: $compose, expansion: $expansion, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, immutableElement: $immutableElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement, extensibleElement: $extensibleElement)';
   }
 
   @override
@@ -11023,6 +11901,27 @@ class _$_ValueSet implements _ValueSet {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -11067,26 +11966,13 @@ class _$_ValueSet implements _ValueSet {
                 const DeepCollectionEquality()
                     .equals(other.copyright, copyright)) &&
             (identical(other.extensible, extensible) ||
-                const DeepCollectionEquality()
-                    .equals(other.extensible, extensible)) &&
-            (identical(other.compose, compose) ||
-                const DeepCollectionEquality()
-                    .equals(other.compose, compose)) &&
-            (identical(other.expansion, expansion) ||
-                const DeepCollectionEquality()
-                    .equals(other.expansion, expansion)) &&
-            (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
-            (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.titleElement, titleElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.titleElement, titleElement)) &&
+                const DeepCollectionEquality().equals(other.extensible, extensible)) &&
+            (identical(other.compose, compose) || const DeepCollectionEquality().equals(other.compose, compose)) &&
+            (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
             (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
             (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
             (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
@@ -11102,6 +11988,14 @@ class _$_ValueSet implements _ValueSet {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -11150,6 +12044,15 @@ abstract class _ValueSet implements ValueSet {
       {@required
       @JsonKey(required: true, defaultValue: 'ValueSet')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       List<Identifier> identifier,
       String version,
@@ -11202,6 +12105,23 @@ abstract class _ValueSet implements ValueSet {
   @override
   @JsonKey(required: true, defaultValue: 'ValueSet')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override

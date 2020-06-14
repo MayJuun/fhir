@@ -11,7 +11,16 @@ abstract class BodySite with _$BodySite implements Resource {
   const factory BodySite({
     @JsonKey(required: true, defaultValue: 'BodySite')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     CodeableConcept code,
@@ -31,7 +40,16 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
   const factory DiagnosticReport({
     @JsonKey(required: true, defaultValue: 'DiagnosticReport')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
     @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
@@ -86,7 +104,16 @@ abstract class ImagingManifest with _$ImagingManifest implements Resource {
   const factory ImagingManifest({
     @JsonKey(required: true, defaultValue: 'ImagingManifest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(required: true) Reference patient,
     FhirDateTime authoringTime,
@@ -142,7 +169,16 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
   const factory ImagingStudy({
     @JsonKey(required: true, defaultValue: 'ImagingStudy')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Oid uid,
     Identifier accession,
     List<Identifier> identifier,
@@ -220,7 +256,16 @@ abstract class Observation with _$Observation implements Resource {
   const factory Observation({
     @JsonKey(required: true, defaultValue: 'Observation')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
@@ -325,7 +370,16 @@ abstract class QuestionnaireResponse
   const factory QuestionnaireResponse({
     @JsonKey(required: true, defaultValue: 'QuestionnaireResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     List<Reference> basedOn,
     List<Reference> parent,
@@ -396,7 +450,16 @@ abstract class Sequence with _$Sequence implements Resource {
   const factory Sequence({
     @JsonKey(required: true, defaultValue: 'Sequence')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: SequenceType.unknown) SequenceType type,
     Integer coordinateSystem,
@@ -519,7 +582,16 @@ abstract class Specimen with _$Specimen implements Resource {
   const factory Specimen({
     @JsonKey(required: true, defaultValue: 'Specimen')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Identifier accessionIdentifier,
     @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,

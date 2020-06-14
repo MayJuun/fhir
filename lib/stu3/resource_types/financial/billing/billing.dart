@@ -11,7 +11,16 @@ abstract class Claim with _$Claim implements Resource {
   const factory Claim({
     @JsonKey(required: true, defaultValue: 'Claim')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     CodeableConcept type,
@@ -66,7 +75,16 @@ abstract class ClaimPayee with _$ClaimPayee {
     @JsonKey(required: true) CodeableConcept type,
     @JsonKey(required: true, defaultValue: 'ClaimPayee')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Reference party,
   }) = _ClaimPayee;
   factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
@@ -255,7 +273,16 @@ abstract class ClaimResponse with _$ClaimResponse implements Resource {
   const factory ClaimResponse({
     @JsonKey(required: true, defaultValue: 'ClaimResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     Reference patient,

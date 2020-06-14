@@ -12,7 +12,16 @@ abstract class TestReport with _$TestReport implements Resource {
   const factory TestReport({
     @JsonKey(required: true, defaultValue: 'TestReport')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     String name,
     @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -146,7 +155,16 @@ abstract class TestScript with _$TestScript implements Resource {
   const factory TestScript({
     @JsonKey(required: true, defaultValue: 'TestScript')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     Identifier identifier,
     String version,

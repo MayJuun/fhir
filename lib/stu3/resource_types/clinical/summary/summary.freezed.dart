@@ -19,6 +19,15 @@ class _$AdverseEventTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'AdverseEvent')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: AdverseEventCategory.unknown)
           AdverseEventCategory category,
@@ -44,6 +53,14 @@ class _$AdverseEventTearOff {
           Element descriptionElement}) {
     return _AdverseEvent(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       category: category,
       type: type,
@@ -73,6 +90,15 @@ const $AdverseEvent = _$AdverseEventTearOff();
 mixin _$AdverseEvent {
   @JsonKey(required: true, defaultValue: 'AdverseEvent')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   Identifier get identifier;
   @JsonKey(unknownEnumValue: AdverseEventCategory.unknown)
   AdverseEventCategory get category;
@@ -108,6 +134,15 @@ abstract class $AdverseEventCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'AdverseEvent')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: AdverseEventCategory.unknown)
           AdverseEventCategory category,
@@ -132,6 +167,8 @@ abstract class $AdverseEventCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element descriptionElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get subject;
@@ -155,6 +192,14 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object category = freezed,
     Object type = freezed,
@@ -179,6 +224,21 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       category: category == freezed
@@ -219,6 +279,26 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
           ? _value.descriptionElement
           : descriptionElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -341,6 +421,15 @@ abstract class _$AdverseEventCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'AdverseEvent')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: AdverseEventCategory.unknown)
           AdverseEventCategory category,
@@ -365,6 +454,10 @@ abstract class _$AdverseEventCopyWith<$Res>
       @JsonKey(name: '_description')
           Element descriptionElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
@@ -401,6 +494,14 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object category = freezed,
     Object type = freezed,
@@ -425,6 +526,21 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       category: category == freezed
@@ -474,6 +590,15 @@ class _$_AdverseEvent implements _AdverseEvent {
       {@required
       @JsonKey(required: true, defaultValue: 'AdverseEvent')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       @JsonKey(unknownEnumValue: AdverseEventCategory.unknown)
           this.category,
@@ -505,6 +630,23 @@ class _$_AdverseEvent implements _AdverseEvent {
   @override
   @JsonKey(required: true, defaultValue: 'AdverseEvent')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -550,7 +692,7 @@ class _$_AdverseEvent implements _AdverseEvent {
 
   @override
   String toString() {
-    return 'AdverseEvent(resourceType: $resourceType, identifier: $identifier, category: $category, type: $type, subject: $subject, date: $date, reaction: $reaction, location: $location, seriousness: $seriousness, outcome: $outcome, recorder: $recorder, eventParticipant: $eventParticipant, description: $description, suspectEntity: $suspectEntity, subjectMedicalHistory: $subjectMedicalHistory, referenceDocument: $referenceDocument, study: $study, categoryElement: $categoryElement, dateElement: $dateElement, descriptionElement: $descriptionElement)';
+    return 'AdverseEvent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, category: $category, type: $type, subject: $subject, date: $date, reaction: $reaction, location: $location, seriousness: $seriousness, outcome: $outcome, recorder: $recorder, eventParticipant: $eventParticipant, description: $description, suspectEntity: $suspectEntity, subjectMedicalHistory: $subjectMedicalHistory, referenceDocument: $referenceDocument, study: $study, categoryElement: $categoryElement, dateElement: $dateElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -560,6 +702,27 @@ class _$_AdverseEvent implements _AdverseEvent {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -601,25 +764,25 @@ class _$_AdverseEvent implements _AdverseEvent {
                 const DeepCollectionEquality().equals(
                     other.subjectMedicalHistory, subjectMedicalHistory)) &&
             (identical(other.referenceDocument, referenceDocument) ||
-                const DeepCollectionEquality()
-                    .equals(other.referenceDocument, referenceDocument)) &&
-            (identical(other.study, study) ||
-                const DeepCollectionEquality().equals(other.study, study)) &&
-            (identical(other.categoryElement, categoryElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.categoryElement, categoryElement)) &&
-            (identical(other.dateElement, dateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)));
+                const DeepCollectionEquality().equals(other.referenceDocument, referenceDocument)) &&
+            (identical(other.study, study) || const DeepCollectionEquality().equals(other.study, study)) &&
+            (identical(other.categoryElement, categoryElement) || const DeepCollectionEquality().equals(other.categoryElement, categoryElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(type) ^
@@ -655,6 +818,15 @@ abstract class _AdverseEvent implements AdverseEvent {
       {@required
       @JsonKey(required: true, defaultValue: 'AdverseEvent')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       @JsonKey(unknownEnumValue: AdverseEventCategory.unknown)
           AdverseEventCategory category,
@@ -685,6 +857,23 @@ abstract class _AdverseEvent implements AdverseEvent {
   @override
   @JsonKey(required: true, defaultValue: 'AdverseEvent')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   Identifier get identifier;
   @override
@@ -1197,6 +1386,15 @@ class _$AllergyIntoleranceTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: AllergyIntoleranceClinicalStatus.unknown)
           AllergyIntoleranceClinicalStatus clinicalStatus,
@@ -1241,6 +1439,14 @@ class _$AllergyIntoleranceTearOff {
           Element lastOccurrenceElement}) {
     return _AllergyIntolerance(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       clinicalStatus: clinicalStatus,
       verificationStatus: verificationStatus,
@@ -1279,6 +1485,15 @@ const $AllergyIntolerance = _$AllergyIntoleranceTearOff();
 mixin _$AllergyIntolerance {
   @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   @JsonKey(unknownEnumValue: AllergyIntoleranceClinicalStatus.unknown)
   AllergyIntoleranceClinicalStatus get clinicalStatus;
@@ -1333,6 +1548,15 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'AllergyIntolerance')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: AllergyIntoleranceClinicalStatus.unknown)
           AllergyIntoleranceClinicalStatus clinicalStatus,
@@ -1376,6 +1600,8 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       @JsonKey(name: '_lastOccurrence')
           Element lastOccurrenceElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get patient;
   $AgeCopyWith<$Res> get onsetAge;
@@ -1405,6 +1631,14 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object clinicalStatus = freezed,
     Object verificationStatus = freezed,
@@ -1438,6 +1672,21 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -1505,6 +1754,26 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
           ? _value.lastOccurrenceElement
           : lastOccurrenceElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -1677,6 +1946,15 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'AllergyIntolerance')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: AllergyIntoleranceClinicalStatus.unknown)
           AllergyIntoleranceClinicalStatus clinicalStatus,
@@ -1720,6 +1998,10 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
       @JsonKey(name: '_lastOccurrence')
           Element lastOccurrenceElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -1767,6 +2049,14 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object clinicalStatus = freezed,
     Object verificationStatus = freezed,
@@ -1800,6 +2090,21 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -1876,6 +2181,15 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
       {@required
       @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       @JsonKey(unknownEnumValue: AllergyIntoleranceClinicalStatus.unknown)
           this.clinicalStatus,
@@ -1926,6 +2240,23 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   @override
   @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -1999,7 +2330,7 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
 
   @override
   String toString() {
-    return 'AllergyIntolerance(resourceType: $resourceType, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, type: $type, category: $category, criticality: $criticality, code: $code, patient: $patient, onsetDateTime: $onsetDateTime, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, assertedDate: $assertedDate, recorder: $recorder, asserter: $asserter, lastOccurrence: $lastOccurrence, note: $note, reaction: $reaction, clinicalStatusElement: $clinicalStatusElement, verificationStatusElement: $verificationStatusElement, typeElement: $typeElement, categoryElement: $categoryElement, criticalityElement: $criticalityElement, onsetDateTimeElement: $onsetDateTimeElement, onsetStringElement: $onsetStringElement, assertedDateElement: $assertedDateElement, lastOccurrenceElement: $lastOccurrenceElement)';
+    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, type: $type, category: $category, criticality: $criticality, code: $code, patient: $patient, onsetDateTime: $onsetDateTime, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, assertedDate: $assertedDate, recorder: $recorder, asserter: $asserter, lastOccurrence: $lastOccurrence, note: $note, reaction: $reaction, clinicalStatusElement: $clinicalStatusElement, verificationStatusElement: $verificationStatusElement, typeElement: $typeElement, categoryElement: $categoryElement, criticalityElement: $criticalityElement, onsetDateTimeElement: $onsetDateTimeElement, onsetStringElement: $onsetStringElement, assertedDateElement: $assertedDateElement, lastOccurrenceElement: $lastOccurrenceElement)';
   }
 
   @override
@@ -2009,6 +2340,27 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -2052,24 +2404,12 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
             (identical(other.recorder, recorder) ||
                 const DeepCollectionEquality()
                     .equals(other.recorder, recorder)) &&
-            (identical(other.asserter, asserter) ||
-                const DeepCollectionEquality()
-                    .equals(other.asserter, asserter)) &&
-            (identical(other.lastOccurrence, lastOccurrence) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastOccurrence, lastOccurrence)) &&
-            (identical(other.note, note) ||
-                const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.reaction, reaction) ||
-                const DeepCollectionEquality()
-                    .equals(other.reaction, reaction)) &&
-            (identical(other.clinicalStatusElement, clinicalStatusElement) ||
-                const DeepCollectionEquality().equals(
-                    other.clinicalStatusElement, clinicalStatusElement)) &&
-            (identical(other.verificationStatusElement, verificationStatusElement) ||
-                const DeepCollectionEquality().equals(
-                    other.verificationStatusElement,
-                    verificationStatusElement)) &&
+            (identical(other.asserter, asserter) || const DeepCollectionEquality().equals(other.asserter, asserter)) &&
+            (identical(other.lastOccurrence, lastOccurrence) || const DeepCollectionEquality().equals(other.lastOccurrence, lastOccurrence)) &&
+            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.reaction, reaction) || const DeepCollectionEquality().equals(other.reaction, reaction)) &&
+            (identical(other.clinicalStatusElement, clinicalStatusElement) || const DeepCollectionEquality().equals(other.clinicalStatusElement, clinicalStatusElement)) &&
+            (identical(other.verificationStatusElement, verificationStatusElement) || const DeepCollectionEquality().equals(other.verificationStatusElement, verificationStatusElement)) &&
             (identical(other.typeElement, typeElement) || const DeepCollectionEquality().equals(other.typeElement, typeElement)) &&
             (identical(other.categoryElement, categoryElement) || const DeepCollectionEquality().equals(other.categoryElement, categoryElement)) &&
             (identical(other.criticalityElement, criticalityElement) || const DeepCollectionEquality().equals(other.criticalityElement, criticalityElement)) &&
@@ -2083,6 +2423,14 @@ class _$_AllergyIntolerance implements _AllergyIntolerance {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(clinicalStatus) ^
       const DeepCollectionEquality().hash(verificationStatus) ^
@@ -2127,6 +2475,15 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
       {@required
       @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: AllergyIntoleranceClinicalStatus.unknown)
           AllergyIntoleranceClinicalStatus clinicalStatus,
@@ -2176,6 +2533,23 @@ abstract class _AllergyIntolerance implements AllergyIntolerance {
   @override
   @JsonKey(required: true, defaultValue: 'AllergyIntolerance')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -2700,6 +3074,15 @@ class _$ClinicalImpressionTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'ClinicalImpression')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
           ClinicalImpressionStatus status,
@@ -2736,6 +3119,14 @@ class _$ClinicalImpressionTearOff {
           Element summaryElement}) {
     return _ClinicalImpression(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
       code: code,
@@ -2772,6 +3163,15 @@ const $ClinicalImpression = _$ClinicalImpressionTearOff();
 mixin _$ClinicalImpression {
   @JsonKey(required: true, defaultValue: 'ClinicalImpression')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
   ClinicalImpressionStatus get status;
@@ -2818,6 +3218,15 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ClinicalImpression')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
           ClinicalImpressionStatus status,
@@ -2853,6 +3262,8 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       @JsonKey(name: '_summary')
           Element summaryElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get context;
@@ -2878,6 +3289,14 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object code = freezed,
@@ -2909,6 +3328,21 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -2965,6 +3399,26 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
           ? _value.summaryElement
           : summaryElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -3097,6 +3551,15 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'ClinicalImpression')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
           ClinicalImpressionStatus status,
@@ -3132,6 +3595,10 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
       @JsonKey(name: '_summary')
           Element summaryElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -3171,6 +3638,14 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object code = freezed,
@@ -3202,6 +3677,21 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -3267,6 +3757,15 @@ class _$_ClinicalImpression implements _ClinicalImpression {
       {@required
       @JsonKey(required: true, defaultValue: 'ClinicalImpression')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
           this.status,
@@ -3309,6 +3808,23 @@ class _$_ClinicalImpression implements _ClinicalImpression {
   @override
   @JsonKey(required: true, defaultValue: 'ClinicalImpression')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -3372,7 +3888,7 @@ class _$_ClinicalImpression implements _ClinicalImpression {
 
   @override
   String toString() {
-    return 'ClinicalImpression(resourceType: $resourceType, identifier: $identifier, status: $status, code: $code, description: $description, subject: $subject, context: $context, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, date: $date, assessor: $assessor, previous: $previous, problem: $problem, investigation: $investigation, protocol: $protocol, summary: $summary, finding: $finding, prognosisCodeableConcept: $prognosisCodeableConcept, prognosisReference: $prognosisReference, action: $action, note: $note, statusElement: $statusElement, descriptionElement: $descriptionElement, effectiveDateTimeElement: $effectiveDateTimeElement, dateElement: $dateElement, protocolElement: $protocolElement, summaryElement: $summaryElement)';
+    return 'ClinicalImpression(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, code: $code, description: $description, subject: $subject, context: $context, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, date: $date, assessor: $assessor, previous: $previous, problem: $problem, investigation: $investigation, protocol: $protocol, summary: $summary, finding: $finding, prognosisCodeableConcept: $prognosisCodeableConcept, prognosisReference: $prognosisReference, action: $action, note: $note, statusElement: $statusElement, descriptionElement: $descriptionElement, effectiveDateTimeElement: $effectiveDateTimeElement, dateElement: $dateElement, protocolElement: $protocolElement, summaryElement: $summaryElement)';
   }
 
   @override
@@ -3382,6 +3898,27 @@ class _$_ClinicalImpression implements _ClinicalImpression {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -3425,25 +3962,13 @@ class _$_ClinicalImpression implements _ClinicalImpression {
                 const DeepCollectionEquality()
                     .equals(other.summary, summary)) &&
             (identical(other.finding, finding) ||
-                const DeepCollectionEquality()
-                    .equals(other.finding, finding)) &&
-            (identical(other.prognosisCodeableConcept, prognosisCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.prognosisCodeableConcept,
-                    prognosisCodeableConcept)) &&
-            (identical(other.prognosisReference, prognosisReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.prognosisReference, prognosisReference)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.note, note) ||
-                const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
+                const DeepCollectionEquality().equals(other.finding, finding)) &&
+            (identical(other.prognosisCodeableConcept, prognosisCodeableConcept) || const DeepCollectionEquality().equals(other.prognosisCodeableConcept, prognosisCodeableConcept)) &&
+            (identical(other.prognosisReference, prognosisReference) || const DeepCollectionEquality().equals(other.prognosisReference, prognosisReference)) &&
+            (identical(other.action, action) || const DeepCollectionEquality().equals(other.action, action)) &&
+            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
             (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) || const DeepCollectionEquality().equals(other.effectiveDateTimeElement, effectiveDateTimeElement)) &&
             (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
             (identical(other.protocolElement, protocolElement) || const DeepCollectionEquality().equals(other.protocolElement, protocolElement)) &&
@@ -3454,6 +3979,14 @@ class _$_ClinicalImpression implements _ClinicalImpression {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(code) ^
@@ -3496,6 +4029,15 @@ abstract class _ClinicalImpression implements ClinicalImpression {
       {@required
       @JsonKey(required: true, defaultValue: 'ClinicalImpression')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
           ClinicalImpressionStatus status,
@@ -3537,6 +4079,23 @@ abstract class _ClinicalImpression implements ClinicalImpression {
   @override
   @JsonKey(required: true, defaultValue: 'ClinicalImpression')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -4040,6 +4599,15 @@ class _$ConditionTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Condition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code clinicalStatus,
       @JsonKey(unknownEnumValue: ConditionVerificationStatus.unknown)
@@ -4085,6 +4653,14 @@ class _$ConditionTearOff {
           Element assertedDateElement}) {
     return _Condition(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       clinicalStatus: clinicalStatus,
       verificationStatus: verificationStatus,
@@ -4128,6 +4704,15 @@ const $Condition = _$ConditionTearOff();
 mixin _$Condition {
   @JsonKey(required: true, defaultValue: 'Condition')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Code get clinicalStatus;
   @JsonKey(unknownEnumValue: ConditionVerificationStatus.unknown)
@@ -4182,6 +4767,15 @@ abstract class $ConditionCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Condition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code clinicalStatus,
       @JsonKey(unknownEnumValue: ConditionVerificationStatus.unknown)
@@ -4226,6 +4820,8 @@ abstract class $ConditionCopyWith<$Res> {
       @JsonKey(name: '_assertedDate')
           Element assertedDateElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get severity;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
@@ -4258,6 +4854,14 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object clinicalStatus = freezed,
     Object verificationStatus = freezed,
@@ -4296,6 +4900,21 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -4377,6 +4996,26 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
           ? _value.assertedDateElement
           : assertedDateElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -4588,6 +5227,15 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Condition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code clinicalStatus,
       @JsonKey(unknownEnumValue: ConditionVerificationStatus.unknown)
@@ -4632,6 +5280,10 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       @JsonKey(name: '_assertedDate')
           Element assertedDateElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $CodeableConceptCopyWith<$Res> get severity;
   @override
@@ -4685,6 +5337,14 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object clinicalStatus = freezed,
     Object verificationStatus = freezed,
@@ -4723,6 +5383,21 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -4813,6 +5488,15 @@ class _$_Condition implements _Condition {
       {@required
       @JsonKey(required: true, defaultValue: 'Condition')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.clinicalStatus,
       @JsonKey(unknownEnumValue: ConditionVerificationStatus.unknown)
@@ -4864,6 +5548,23 @@ class _$_Condition implements _Condition {
   @override
   @JsonKey(required: true, defaultValue: 'Condition')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -4943,7 +5644,7 @@ class _$_Condition implements _Condition {
 
   @override
   String toString() {
-    return 'Condition(resourceType: $resourceType, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, category: $category, severity: $severity, code: $code, bodySite: $bodySite, subject: $subject, context: $context, onsetDateTime: $onsetDateTime, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, abatementDateTime: $abatementDateTime, abatementAge: $abatementAge, abatementBoolean: $abatementBoolean, abatementPeriod: $abatementPeriod, abatementRange: $abatementRange, abatementString: $abatementString, assertedDate: $assertedDate, asserter: $asserter, stage: $stage, evidence: $evidence, note: $note, clinicalStatusElement: $clinicalStatusElement, verificationStatusElement: $verificationStatusElement, onsetDateTimeElement: $onsetDateTimeElement, onsetStringElement: $onsetStringElement, abatementDateTimeElement: $abatementDateTimeElement, abatementBooleanElement: $abatementBooleanElement, abatementStringElement: $abatementStringElement, assertedDateElement: $assertedDateElement)';
+    return 'Condition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, category: $category, severity: $severity, code: $code, bodySite: $bodySite, subject: $subject, context: $context, onsetDateTime: $onsetDateTime, onsetAge: $onsetAge, onsetPeriod: $onsetPeriod, onsetRange: $onsetRange, onsetString: $onsetString, abatementDateTime: $abatementDateTime, abatementAge: $abatementAge, abatementBoolean: $abatementBoolean, abatementPeriod: $abatementPeriod, abatementRange: $abatementRange, abatementString: $abatementString, assertedDate: $assertedDate, asserter: $asserter, stage: $stage, evidence: $evidence, note: $note, clinicalStatusElement: $clinicalStatusElement, verificationStatusElement: $verificationStatusElement, onsetDateTimeElement: $onsetDateTimeElement, onsetStringElement: $onsetStringElement, abatementDateTimeElement: $abatementDateTimeElement, abatementBooleanElement: $abatementBooleanElement, abatementStringElement: $abatementStringElement, assertedDateElement: $assertedDateElement)';
   }
 
   @override
@@ -4953,6 +5654,27 @@ class _$_Condition implements _Condition {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -4995,26 +5717,13 @@ class _$_Condition implements _Condition {
                 const DeepCollectionEquality()
                     .equals(other.onsetString, onsetString)) &&
             (identical(other.abatementDateTime, abatementDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.abatementDateTime, abatementDateTime)) &&
-            (identical(other.abatementAge, abatementAge) ||
-                const DeepCollectionEquality()
-                    .equals(other.abatementAge, abatementAge)) &&
-            (identical(other.abatementBoolean, abatementBoolean) ||
-                const DeepCollectionEquality()
-                    .equals(other.abatementBoolean, abatementBoolean)) &&
-            (identical(other.abatementPeriod, abatementPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.abatementPeriod, abatementPeriod)) &&
-            (identical(other.abatementRange, abatementRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.abatementRange, abatementRange)) &&
-            (identical(other.abatementString, abatementString) ||
-                const DeepCollectionEquality()
-                    .equals(other.abatementString, abatementString)) &&
-            (identical(other.assertedDate, assertedDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.assertedDate, assertedDate)) &&
+                const DeepCollectionEquality().equals(other.abatementDateTime, abatementDateTime)) &&
+            (identical(other.abatementAge, abatementAge) || const DeepCollectionEquality().equals(other.abatementAge, abatementAge)) &&
+            (identical(other.abatementBoolean, abatementBoolean) || const DeepCollectionEquality().equals(other.abatementBoolean, abatementBoolean)) &&
+            (identical(other.abatementPeriod, abatementPeriod) || const DeepCollectionEquality().equals(other.abatementPeriod, abatementPeriod)) &&
+            (identical(other.abatementRange, abatementRange) || const DeepCollectionEquality().equals(other.abatementRange, abatementRange)) &&
+            (identical(other.abatementString, abatementString) || const DeepCollectionEquality().equals(other.abatementString, abatementString)) &&
+            (identical(other.assertedDate, assertedDate) || const DeepCollectionEquality().equals(other.assertedDate, assertedDate)) &&
             (identical(other.asserter, asserter) || const DeepCollectionEquality().equals(other.asserter, asserter)) &&
             (identical(other.stage, stage) || const DeepCollectionEquality().equals(other.stage, stage)) &&
             (identical(other.evidence, evidence) || const DeepCollectionEquality().equals(other.evidence, evidence)) &&
@@ -5033,6 +5742,14 @@ class _$_Condition implements _Condition {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(clinicalStatus) ^
       const DeepCollectionEquality().hash(verificationStatus) ^
@@ -5082,6 +5799,15 @@ abstract class _Condition implements Condition {
       {@required
       @JsonKey(required: true, defaultValue: 'Condition')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code clinicalStatus,
       @JsonKey(unknownEnumValue: ConditionVerificationStatus.unknown)
@@ -5132,6 +5858,23 @@ abstract class _Condition implements Condition {
   @override
   @JsonKey(required: true, defaultValue: 'Condition')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -5531,6 +6274,15 @@ class _$DetectedIssueTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'DetectedIssue')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       Code status,
       CodeableConcept category,
@@ -5555,6 +6307,14 @@ class _$DetectedIssueTearOff {
           Element referenceElement}) {
     return _DetectedIssue(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       status: status,
       category: category,
@@ -5581,6 +6341,15 @@ const $DetectedIssue = _$DetectedIssueTearOff();
 mixin _$DetectedIssue {
   @JsonKey(required: true, defaultValue: 'DetectedIssue')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   Identifier get identifier;
   Code get status;
   CodeableConcept get category;
@@ -5615,6 +6384,15 @@ abstract class $DetectedIssueCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'DetectedIssue')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       Code status,
       CodeableConcept category,
@@ -5638,6 +6416,8 @@ abstract class $DetectedIssueCopyWith<$Res> {
       @JsonKey(name: '_reference')
           Element referenceElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get category;
   $ReferenceCopyWith<$Res> get patient;
@@ -5660,6 +6440,14 @@ class _$DetectedIssueCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object category = freezed,
@@ -5681,6 +6469,21 @@ class _$DetectedIssueCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       status: status == freezed ? _value.status : status as Code,
@@ -5715,6 +6518,26 @@ class _$DetectedIssueCopyWithImpl<$Res>
           ? _value.referenceElement
           : referenceElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -5817,6 +6640,15 @@ abstract class _$DetectedIssueCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'DetectedIssue')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       Code status,
       CodeableConcept category,
@@ -5840,6 +6672,10 @@ abstract class _$DetectedIssueCopyWith<$Res>
       @JsonKey(name: '_reference')
           Element referenceElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
@@ -5873,6 +6709,14 @@ class __$DetectedIssueCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object status = freezed,
     Object category = freezed,
@@ -5894,6 +6738,21 @@ class __$DetectedIssueCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       status: status == freezed ? _value.status : status as Code,
@@ -5937,6 +6796,15 @@ class _$_DetectedIssue implements _DetectedIssue {
       {@required
       @JsonKey(required: true, defaultValue: 'DetectedIssue')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.status,
       this.category,
@@ -5967,6 +6835,23 @@ class _$_DetectedIssue implements _DetectedIssue {
   @override
   @JsonKey(required: true, defaultValue: 'DetectedIssue')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -6008,7 +6893,7 @@ class _$_DetectedIssue implements _DetectedIssue {
 
   @override
   String toString() {
-    return 'DetectedIssue(resourceType: $resourceType, identifier: $identifier, status: $status, category: $category, severity: $severity, patient: $patient, date: $date, author: $author, implicated: $implicated, detail: $detail, reference: $reference, mitigation: $mitigation, statusElement: $statusElement, severityElement: $severityElement, dateElement: $dateElement, detailElement: $detailElement, referenceElement: $referenceElement)';
+    return 'DetectedIssue(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, severity: $severity, patient: $patient, date: $date, author: $author, implicated: $implicated, detail: $detail, reference: $reference, mitigation: $mitigation, statusElement: $statusElement, severityElement: $severityElement, dateElement: $dateElement, detailElement: $detailElement, referenceElement: $referenceElement)';
   }
 
   @override
@@ -6018,6 +6903,27 @@ class _$_DetectedIssue implements _DetectedIssue {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -6068,6 +6974,14 @@ class _$_DetectedIssue implements _DetectedIssue {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(category) ^
@@ -6100,6 +7014,15 @@ abstract class _DetectedIssue implements DetectedIssue {
       {@required
       @JsonKey(required: true, defaultValue: 'DetectedIssue')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       Code status,
       CodeableConcept category,
@@ -6129,6 +7052,23 @@ abstract class _DetectedIssue implements DetectedIssue {
   @override
   @JsonKey(required: true, defaultValue: 'DetectedIssue')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   Identifier get identifier;
   @override
@@ -6423,6 +7363,15 @@ class _$FamilyMemberHistoryTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
@@ -6479,6 +7428,14 @@ class _$FamilyMemberHistoryTearOff {
           Element deceasedStringElement}) {
     return _FamilyMemberHistory(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       definition: definition,
       status: status,
@@ -6527,6 +7484,15 @@ const $FamilyMemberHistory = _$FamilyMemberHistoryTearOff();
 mixin _$FamilyMemberHistory {
   @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   List<Reference> get definition;
   @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
@@ -6593,6 +7559,15 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
@@ -6648,6 +7623,8 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       @JsonKey(name: '_deceasedString')
           Element deceasedStringElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get notDoneReason;
   $ReferenceCopyWith<$Res> get patient;
   $CodeableConceptCopyWith<$Res> get relationship;
@@ -6681,6 +7658,14 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object definition = freezed,
     Object status = freezed,
@@ -6724,6 +7709,21 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -6813,6 +7813,26 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
           ? _value.deceasedStringElement
           : deceasedStringElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -7025,6 +8045,15 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
@@ -7081,6 +8110,10 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
           Element deceasedStringElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $CodeableConceptCopyWith<$Res> get notDoneReason;
   @override
   $ReferenceCopyWith<$Res> get patient;
@@ -7135,6 +8168,14 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object definition = freezed,
     Object status = freezed,
@@ -7178,6 +8219,21 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -7276,6 +8332,15 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
       {@required
       @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.definition,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
@@ -7338,6 +8403,23 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
   @override
   @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -7433,7 +8515,7 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
 
   @override
   String toString() {
-    return 'FamilyMemberHistory(resourceType: $resourceType, identifier: $identifier, definition: $definition, status: $status, notDone: $notDone, notDoneReason: $notDoneReason, patient: $patient, date: $date, name: $name, relationship: $relationship, gender: $gender, bornPeriod: $bornPeriod, bornDate: $bornDate, bornString: $bornString, ageAge: $ageAge, ageRange: $ageRange, ageString: $ageString, estimatedAge: $estimatedAge, deceasedBoolean: $deceasedBoolean, deceasedAge: $deceasedAge, deceasedRange: $deceasedRange, deceasedDate: $deceasedDate, deceasedString: $deceasedString, reasonCode: $reasonCode, reasonReference: $reasonReference, note: $note, condition: $condition, statusElement: $statusElement, notDoneElement: $notDoneElement, dateElement: $dateElement, nameElement: $nameElement, genderElement: $genderElement, bornDateElement: $bornDateElement, bornStringElement: $bornStringElement, ageStringElement: $ageStringElement, estimatedAgeElement: $estimatedAgeElement, deceasedBooleanElement: $deceasedBooleanElement, deceasedDateElement: $deceasedDateElement, deceasedStringElement: $deceasedStringElement)';
+    return 'FamilyMemberHistory(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, definition: $definition, status: $status, notDone: $notDone, notDoneReason: $notDoneReason, patient: $patient, date: $date, name: $name, relationship: $relationship, gender: $gender, bornPeriod: $bornPeriod, bornDate: $bornDate, bornString: $bornString, ageAge: $ageAge, ageRange: $ageRange, ageString: $ageString, estimatedAge: $estimatedAge, deceasedBoolean: $deceasedBoolean, deceasedAge: $deceasedAge, deceasedRange: $deceasedRange, deceasedDate: $deceasedDate, deceasedString: $deceasedString, reasonCode: $reasonCode, reasonReference: $reasonReference, note: $note, condition: $condition, statusElement: $statusElement, notDoneElement: $notDoneElement, dateElement: $dateElement, nameElement: $nameElement, genderElement: $genderElement, bornDateElement: $bornDateElement, bornStringElement: $bornStringElement, ageStringElement: $ageStringElement, estimatedAgeElement: $estimatedAgeElement, deceasedBooleanElement: $deceasedBooleanElement, deceasedDateElement: $deceasedDateElement, deceasedStringElement: $deceasedStringElement)';
   }
 
   @override
@@ -7443,6 +8525,27 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -7487,26 +8590,13 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
                 const DeepCollectionEquality()
                     .equals(other.ageString, ageString)) &&
             (identical(other.estimatedAge, estimatedAge) ||
-                const DeepCollectionEquality()
-                    .equals(other.estimatedAge, estimatedAge)) &&
-            (identical(other.deceasedBoolean, deceasedBoolean) ||
-                const DeepCollectionEquality()
-                    .equals(other.deceasedBoolean, deceasedBoolean)) &&
-            (identical(other.deceasedAge, deceasedAge) ||
-                const DeepCollectionEquality()
-                    .equals(other.deceasedAge, deceasedAge)) &&
-            (identical(other.deceasedRange, deceasedRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.deceasedRange, deceasedRange)) &&
-            (identical(other.deceasedDate, deceasedDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.deceasedDate, deceasedDate)) &&
-            (identical(other.deceasedString, deceasedString) ||
-                const DeepCollectionEquality()
-                    .equals(other.deceasedString, deceasedString)) &&
-            (identical(other.reasonCode, reasonCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonCode, reasonCode)) &&
+                const DeepCollectionEquality().equals(other.estimatedAge, estimatedAge)) &&
+            (identical(other.deceasedBoolean, deceasedBoolean) || const DeepCollectionEquality().equals(other.deceasedBoolean, deceasedBoolean)) &&
+            (identical(other.deceasedAge, deceasedAge) || const DeepCollectionEquality().equals(other.deceasedAge, deceasedAge)) &&
+            (identical(other.deceasedRange, deceasedRange) || const DeepCollectionEquality().equals(other.deceasedRange, deceasedRange)) &&
+            (identical(other.deceasedDate, deceasedDate) || const DeepCollectionEquality().equals(other.deceasedDate, deceasedDate)) &&
+            (identical(other.deceasedString, deceasedString) || const DeepCollectionEquality().equals(other.deceasedString, deceasedString)) &&
+            (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
             (identical(other.reasonReference, reasonReference) || const DeepCollectionEquality().equals(other.reasonReference, reasonReference)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
             (identical(other.condition, condition) || const DeepCollectionEquality().equals(other.condition, condition)) &&
@@ -7528,6 +8618,14 @@ class _$_FamilyMemberHistory implements _FamilyMemberHistory {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(definition) ^
       const DeepCollectionEquality().hash(status) ^
@@ -7583,6 +8681,15 @@ abstract class _FamilyMemberHistory implements FamilyMemberHistory {
       {@required
       @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
@@ -7644,6 +8751,23 @@ abstract class _FamilyMemberHistory implements FamilyMemberHistory {
   @override
   @JsonKey(required: true, defaultValue: 'FamilyMemberHistory')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -8122,6 +9246,15 @@ class _$ProcedureTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Procedure')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       List<Reference> basedOn,
@@ -8158,6 +9291,14 @@ class _$ProcedureTearOff {
           Element performedDateTimeElement}) {
     return _Procedure(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       definition: definition,
       basedOn: basedOn,
@@ -8198,6 +9339,15 @@ const $Procedure = _$ProcedureTearOff();
 mixin _$Procedure {
   @JsonKey(required: true, defaultValue: 'Procedure')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   List<Reference> get definition;
   List<Reference> get basedOn;
@@ -8242,6 +9392,14 @@ abstract class $ProcedureCopyWith<$Res> {
       _$ProcedureCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Procedure') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       List<Reference> basedOn,
@@ -8273,6 +9431,8 @@ abstract class $ProcedureCopyWith<$Res> {
       @JsonKey(name: '_notDone') Element notDoneElement,
       @JsonKey(name: '_performedDateTime') Element performedDateTimeElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get notDoneReason;
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get code;
@@ -8296,6 +9456,14 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object definition = freezed,
     Object basedOn = freezed,
@@ -8331,6 +9499,21 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -8399,6 +9582,26 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
           ? _value.performedDateTimeElement
           : performedDateTimeElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -8519,6 +9722,14 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Procedure') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       List<Reference> basedOn,
@@ -8550,6 +9761,10 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       @JsonKey(name: '_notDone') Element notDoneElement,
       @JsonKey(name: '_performedDateTime') Element performedDateTimeElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $CodeableConceptCopyWith<$Res> get notDoneReason;
   @override
@@ -8585,6 +9800,14 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object definition = freezed,
     Object basedOn = freezed,
@@ -8620,6 +9843,21 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -8697,6 +9935,15 @@ class _$_Procedure implements _Procedure {
       {@required
       @JsonKey(required: true, defaultValue: 'Procedure')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.definition,
       this.basedOn,
@@ -8739,6 +9986,23 @@ class _$_Procedure implements _Procedure {
   @override
   @JsonKey(required: true, defaultValue: 'Procedure')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -8806,7 +10070,7 @@ class _$_Procedure implements _Procedure {
 
   @override
   String toString() {
-    return 'Procedure(resourceType: $resourceType, identifier: $identifier, definition: $definition, basedOn: $basedOn, partOf: $partOf, status: $status, notDone: $notDone, notDoneReason: $notDoneReason, category: $category, code: $code, subject: $subject, context: $context, performedDateTime: $performedDateTime, performedPeriod: $performedPeriod, performer: $performer, location: $location, reasonCode: $reasonCode, reasonReference: $reasonReference, bodySite: $bodySite, outcome: $outcome, report: $report, complication: $complication, complicationDetail: $complicationDetail, followUp: $followUp, note: $note, focalDevice: $focalDevice, usedReference: $usedReference, usedCode: $usedCode, statusElement: $statusElement, notDoneElement: $notDoneElement, performedDateTimeElement: $performedDateTimeElement)';
+    return 'Procedure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, definition: $definition, basedOn: $basedOn, partOf: $partOf, status: $status, notDone: $notDone, notDoneReason: $notDoneReason, category: $category, code: $code, subject: $subject, context: $context, performedDateTime: $performedDateTime, performedPeriod: $performedPeriod, performer: $performer, location: $location, reasonCode: $reasonCode, reasonReference: $reasonReference, bodySite: $bodySite, outcome: $outcome, report: $report, complication: $complication, complicationDetail: $complicationDetail, followUp: $followUp, note: $note, focalDevice: $focalDevice, usedReference: $usedReference, usedCode: $usedCode, statusElement: $statusElement, notDoneElement: $notDoneElement, performedDateTimeElement: $performedDateTimeElement)';
   }
 
   @override
@@ -8816,6 +10080,27 @@ class _$_Procedure implements _Procedure {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -8859,27 +10144,14 @@ class _$_Procedure implements _Procedure {
                 const DeepCollectionEquality()
                     .equals(other.location, location)) &&
             (identical(other.reasonCode, reasonCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonCode, reasonCode)) &&
-            (identical(other.reasonReference, reasonReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonReference, reasonReference)) &&
-            (identical(other.bodySite, bodySite) ||
-                const DeepCollectionEquality()
-                    .equals(other.bodySite, bodySite)) &&
-            (identical(other.outcome, outcome) ||
-                const DeepCollectionEquality()
-                    .equals(other.outcome, outcome)) &&
-            (identical(other.report, report) ||
-                const DeepCollectionEquality().equals(other.report, report)) &&
-            (identical(other.complication, complication) ||
-                const DeepCollectionEquality()
-                    .equals(other.complication, complication)) &&
-            (identical(other.complicationDetail, complicationDetail) ||
-                const DeepCollectionEquality()
-                    .equals(other.complicationDetail, complicationDetail)) &&
-            (identical(other.followUp, followUp) ||
-                const DeepCollectionEquality().equals(other.followUp, followUp)) &&
+                const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
+            (identical(other.reasonReference, reasonReference) || const DeepCollectionEquality().equals(other.reasonReference, reasonReference)) &&
+            (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
+            (identical(other.outcome, outcome) || const DeepCollectionEquality().equals(other.outcome, outcome)) &&
+            (identical(other.report, report) || const DeepCollectionEquality().equals(other.report, report)) &&
+            (identical(other.complication, complication) || const DeepCollectionEquality().equals(other.complication, complication)) &&
+            (identical(other.complicationDetail, complicationDetail) || const DeepCollectionEquality().equals(other.complicationDetail, complicationDetail)) &&
+            (identical(other.followUp, followUp) || const DeepCollectionEquality().equals(other.followUp, followUp)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
             (identical(other.focalDevice, focalDevice) || const DeepCollectionEquality().equals(other.focalDevice, focalDevice)) &&
             (identical(other.usedReference, usedReference) || const DeepCollectionEquality().equals(other.usedReference, usedReference)) &&
@@ -8893,6 +10165,14 @@ class _$_Procedure implements _Procedure {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(definition) ^
       const DeepCollectionEquality().hash(basedOn) ^
@@ -8939,6 +10219,15 @@ abstract class _Procedure implements Procedure {
       {@required
       @JsonKey(required: true, defaultValue: 'Procedure')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       List<Reference> basedOn,
@@ -8980,6 +10269,23 @@ abstract class _Procedure implements Procedure {
   @override
   @JsonKey(required: true, defaultValue: 'Procedure')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override

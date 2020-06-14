@@ -11,7 +11,16 @@ abstract class Composition with _$Composition implements Resource {
   const factory Composition({
     @JsonKey(required: true, defaultValue: 'Composition')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: CompositionStatus.unknown)
         CompositionStatus status,
@@ -96,7 +105,16 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
   const factory DocumentManifest({
     @JsonKey(required: true, defaultValue: 'DocumentManifest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: DocumentStatus.unknown) DocumentStatus status,
@@ -143,7 +161,16 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
   const factory DocumentReference({
     @JsonKey(required: true, defaultValue: 'DocumentReference')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: DocumentStatus.unknown) DocumentStatus status,

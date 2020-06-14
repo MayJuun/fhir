@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+
 import 'package:string_validator/string_validator.dart';
 
 import '../../lib/fhir_stu3.dart' as fhir_stu3;
@@ -10,10 +11,11 @@ void main() async {
   await File('./test/stu3/errors.txt').writeAsString('');
   var string = '';
   for (var file in await dir.list().toList()) {
+    // string += file.toString();
     var contents = await File(file.path).readAsString();
     var resource = fhir_stu3.Resource.fromJson(json.decode(contents));
     if (resource == null) {
-      print(file);
+      print('null file: $file');
     } else {
       string += await checkJsonEquality(
           json.decode(contents), resource.toJson(), file.toString(), 'input');
@@ -47,6 +49,7 @@ Future<String> checkJsonEquality(Map<String, dynamic> input,
             checkJsonEquality(input[k][j], output[k][j], file, source);
           }
         } else {
+          // print(input[k][j]);
           if (input[k][j] != output[k][j]) {
             if (isDate(input[k][j])) {
               if (DateTime.tryParse(input[k][j]) !=
@@ -64,6 +67,7 @@ Future<String> checkJsonEquality(Map<String, dynamic> input,
     } else {
       if (input[k].runtimeType.toString() == 'List<String>') {
         for (var x = 0; x < input[k].length; x++) {
+          // print(input[k][x]);
           if (input[k][x] != output[k][x]) {
             if (isDate(input[k][x])) {
               if (DateTime.tryParse(input[k][x]) !=
@@ -78,6 +82,7 @@ Future<String> checkJsonEquality(Map<String, dynamic> input,
           }
         }
       } else {
+        // print(input[k]);
         if (input[k] != output[k]) {
           if (isDate(input[k])) {
             if (DateTime.tryParse(input[k]) != DateTime.tryParse(output[k])) {

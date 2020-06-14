@@ -12,7 +12,16 @@ abstract class CodeSystem with _$CodeSystem implements Resource {
   const factory CodeSystem({
     @JsonKey(required: true, defaultValue: 'CodeSystem')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     Identifier identifier,
     String version,
@@ -151,7 +160,16 @@ abstract class ConceptMap with _$ConceptMap implements Resource {
   const factory ConceptMap({
     @JsonKey(required: true, defaultValue: 'ConceptMap')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     Identifier identifier,
     String version,
@@ -277,7 +295,16 @@ abstract class ExpansionProfile with _$ExpansionProfile implements Resource {
   const factory ExpansionProfile({
     @JsonKey(required: true, defaultValue: 'ExpansionProfile')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     Identifier identifier,
     String version,
@@ -408,7 +435,16 @@ abstract class NamingSystem with _$NamingSystem implements Resource {
   const factory NamingSystem({
     @JsonKey(required: true, defaultValue: 'NamingSystem')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String name,
     @JsonKey(unknownEnumValue: Status.unknown) Status status,
     @JsonKey(unknownEnumValue: NamingSystemKind.unknown) NamingSystemKind kind,
@@ -458,7 +494,16 @@ abstract class ValueSet with _$ValueSet implements Resource {
   const factory ValueSet({
     @JsonKey(required: true, defaultValue: 'ValueSet')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,

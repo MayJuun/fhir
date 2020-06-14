@@ -12,7 +12,16 @@ abstract class Immunization with _$Immunization implements Resource {
   const factory Immunization({
     @JsonKey(required: true, defaultValue: 'Immunization')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     Boolean notGiven,
@@ -106,7 +115,16 @@ abstract class ImmunizationRecommendation
   const factory ImmunizationRecommendation({
     @JsonKey(required: true, defaultValue: 'ImmunizationRecommendation')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) Reference patient,
     @JsonKey(required: true)
@@ -172,7 +190,16 @@ abstract class Medication with _$Medication implements Resource {
   const factory Medication({
     @JsonKey(required: true, defaultValue: 'Medication')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     CodeableConcept code,
     @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     Boolean isBrand,
@@ -244,7 +271,16 @@ abstract class MedicationAdministration
   const factory MedicationAdministration({
     @JsonKey(required: true, defaultValue: 'MedicationAdministration')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     List<Reference> partOf,
@@ -312,7 +348,16 @@ abstract class MedicationDispense
   const factory MedicationDispense({
     @JsonKey(required: true, defaultValue: 'MedicationDispense')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> partOf,
     @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
@@ -378,7 +423,16 @@ abstract class MedicationRequest with _$MedicationRequest implements Resource {
   const factory MedicationRequest({
     @JsonKey(required: true, defaultValue: 'MedicationRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     List<Reference> basedOn,
@@ -462,7 +516,16 @@ abstract class MedicationStatement
   const factory MedicationStatement({
     @JsonKey(required: true, defaultValue: 'MedicationStatement')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
     List<Reference> partOf,

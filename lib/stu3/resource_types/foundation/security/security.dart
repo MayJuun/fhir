@@ -11,7 +11,16 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
   const factory AuditEvent({
     @JsonKey(required: true, defaultValue: 'AuditEvent')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) Coding type,
     List<Coding> subtype,
     @JsonKey(unknownEnumValue: AuditEventAction.unknown)
@@ -118,7 +127,16 @@ abstract class Consent with _$Consent implements Resource {
   const factory Consent({
     @JsonKey(required: true, defaultValue: 'Consent')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus status,
     List<CodeableConcept> category,
@@ -225,7 +243,16 @@ abstract class Provenance with _$Provenance implements Resource {
   const factory Provenance({
     @JsonKey(required: true, defaultValue: 'Provenance')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) List<Reference> target,
     Period period,
     String recorded,

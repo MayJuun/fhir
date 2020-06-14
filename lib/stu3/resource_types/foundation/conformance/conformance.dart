@@ -15,6 +15,14 @@ abstract class CapabilityStatement
     @JsonKey(required: true, defaultValue: 'CapabilityStatement')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     String version,
     String name,
@@ -315,6 +323,14 @@ abstract class CompartmentDefinition
     @JsonKey(required: true, defaultValue: 'CompartmentDefinition')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     String name,
     String title,
@@ -368,6 +384,14 @@ abstract class DataElement with _$DataElement implements Resource {
     @JsonKey(required: true, defaultValue: 'DataElement')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,
@@ -422,6 +446,14 @@ abstract class GraphDefinition with _$GraphDefinition implements Resource {
     @JsonKey(required: true, defaultValue: 'GraphDefinition')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     String version,
     String name,
@@ -510,6 +542,14 @@ abstract class ImplementationGuide
     @JsonKey(required: true, defaultValue: 'ImplementationGuide')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     String version,
     String name,
@@ -628,6 +668,14 @@ abstract class MessageDefinition with _$MessageDefinition implements Resource {
     @JsonKey(required: true, defaultValue: 'MessageDefinition')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     Identifier identifier,
     String version,
@@ -705,6 +753,14 @@ abstract class OperationDefinition
     @JsonKey(required: true, defaultValue: 'OperationDefinition')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     String version,
     String name,
@@ -810,6 +866,14 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     @JsonKey(required: true, defaultValue: 'SearchParameter')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     String version,
     String name,
@@ -880,6 +944,14 @@ abstract class StructureDefinition
     @JsonKey(required: true, defaultValue: 'StructureDefinition')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,
@@ -977,6 +1049,14 @@ abstract class StructureMap with _$StructureMap implements Resource {
     @JsonKey(required: true, defaultValue: 'StructureMap')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,

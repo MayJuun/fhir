@@ -11,7 +11,16 @@ abstract class CarePlan with _$CarePlan implements Resource {
   const factory CarePlan({
     @JsonKey(required: true, defaultValue: 'CarePlan')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     List<Reference> basedOn,
@@ -92,7 +101,16 @@ abstract class CareTeam with _$CareTeam implements Resource {
   const factory CareTeam({
     @JsonKey(required: true, defaultValue: 'CareTeam')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
     List<CodeableConcept> category,
@@ -129,7 +147,16 @@ abstract class Goal with _$Goal implements Resource {
   const factory Goal({
     @JsonKey(required: true, defaultValue: 'Goal')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: GoalStatus.unknown) GoalStatus status,
     List<CodeableConcept> category,
@@ -174,7 +201,16 @@ abstract class NutritionOrder with _$NutritionOrder implements Resource {
   const factory NutritionOrder({
     @JsonKey(required: true, defaultValue: 'NutritionOrder')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: NutritionOrderStatus.unknown)
         NutritionOrderStatus status,
@@ -286,7 +322,16 @@ abstract class ProcedureRequest with _$ProcedureRequest implements Resource {
   const factory ProcedureRequest({
     @JsonKey(required: true, defaultValue: 'ProcedureRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     List<Reference> basedOn,
@@ -343,7 +388,16 @@ abstract class ReferralRequest with _$ReferralRequest implements Resource {
   const factory ReferralRequest({
     @JsonKey(required: true, defaultValue: 'ReferralRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     List<Reference> basedOn,
@@ -394,7 +448,16 @@ abstract class RequestGroup with _$RequestGroup implements Resource {
   const factory RequestGroup({
     @JsonKey(required: true, defaultValue: 'RequestGroup')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> definition,
     List<Reference> basedOn,
@@ -495,7 +558,16 @@ abstract class RiskAssessment with _$RiskAssessment implements Resource {
   const factory RiskAssessment({
     @JsonKey(required: true, defaultValue: 'RiskAssessment')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     Reference basedOn,
     Reference parent,
@@ -549,7 +621,16 @@ abstract class VisionPrescription
   const factory VisionPrescription({
     @JsonKey(required: true, defaultValue: 'VisionPrescription')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     Reference patient,

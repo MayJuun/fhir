@@ -12,7 +12,16 @@ abstract class Account with _$Account implements Resource {
   const factory Account({
     @JsonKey(required: true, defaultValue: 'Account')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     CodeableConcept type,
@@ -61,7 +70,16 @@ abstract class ChargeItem with _$ChargeItem implements Resource {
   const factory ChargeItem({
     @JsonKey(required: true, defaultValue: 'ChargeItem')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     List<String> definition,
     @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
@@ -114,7 +132,16 @@ abstract class Contract with _$Contract implements Resource {
   const factory Contract({
     @JsonKey(required: true, defaultValue: 'Contract')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     Code status,
     FhirDateTime issued,
@@ -277,7 +304,16 @@ abstract class ExplanationOfBenefit
   const factory ExplanationOfBenefit({
     @JsonKey(required: true, defaultValue: 'ExplanationOfBenefit')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
         ExplanationOfBenefitStatus status,
@@ -344,7 +380,16 @@ abstract class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
     CodeableConcept type,
     @JsonKey(required: true, defaultValue: 'ExplanationOfBenefitPayee')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Reference party,
   }) = _ExplanationOfBenefitPayee;
   factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
