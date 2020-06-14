@@ -1,6 +1,8 @@
-# ToDos
-1. Order of classes in files
-2. How to name subclasses (mostly for dstu2 & stu3)
+# Complete? - I think it actually functions close to how I'd like it to now. 
+
+# ToDos - not emergent or necessary
+1. Order of classes in files (just because I have some OCD tendencies).
+2. I have shortened subclass names of DSTU2. Should I have left the long original names?
 
 # FHIR
 A Dart/Flutter package for working with FHIR resources.
@@ -12,15 +14,16 @@ It contains packages for the 3 released FHIR versions:
 
 ## Validation
 ### R4
-  * All of the downloadable [HL7 Examples](https://www.hl7.org/fhir/examples-json.zip) have been run through the classes via [this script](https://github.com/Dokotela/fhir/blob/master/test/r4/validation.dart).
+  * All of the downloadable [R4 HL7 Examples](https://www.hl7.org/fhir/examples-json.zip) have been run through the classes via this [tester](https://github.com/Dokotela/fhir/blob/master/test/r4/validation.dart).
   * I've compared each field from the input to the output and output to input as Maps. This should have revealed if any fields were created or deleted. It also avoids issues with fields in a different order from input to output.
   * Known problems:
   1. There is an [Id field](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json) in the examples seems to be too long
   2. There is a [Base64Binary](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/binary-example.json) field that has padding which renders it invalid
   3. There's also [this file](https://github.com/Dokotela/fhir/blob/master/test/r4/r4_examples/package-min-ver.json) I have no idea what to do with.
 ### Stu3
-  * No formal validation done yet.
+  * All of the downloadable [STU3 HL7 Examples](https://hl7.org/fhir/STU3/examples-json.zip) have been run through this [tester](https://github.com/Dokotela/fhir/blob/master/test/stu3/validation.dart). Amazingly, it seemed to correctly run through all of them.
 ### Dstu2
+  * All of the downloadale [DSTU2 HL7 Examples](http://hl7.org/fhir/dstu2/validation-min.json.zip) have been run through this [tester](https://github.com/Dokotela/fhir/blob/master/test/dstu2/validation.dart).
   * [SearchParameter](https://www.hl7.org/fhir/DSTU2/searchparameter.html): at least according to this website, it does appear that the field "base" and "description" should be required. However, many, many of the examples that are provided on the website do not have those fields, so I have not made them mandatory.
   * [ElementDefinition](https://www.hl7.org/fhir/DSTU2/elementdefinition.html#ElementDefinition) It seems that in the type field, "code" is required, but if "_code" is present, this does not seem to be the case in the examples. I have therefore removed the requirement from the code field.
   * There are private fields in this FHIR version that appear to correlate to the private Element fields in R4. I cannot find these specifically stated anywhere, so I'm going to assume all R4 private fields are valid as long as there is a corresponding public field. A few of these should actually be lists. But if they are not in the examples, then I do not know which. So there are likely some that should be lists that I have not implemented as such.
