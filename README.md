@@ -1,4 +1,4 @@
-# Complete? - I think it actually functions close to how I'd like it to now. 
+# Close to ready for release. 
 
 # ToDos - not emergent or necessary
 1. Order of classes in files (just because I have some OCD tendencies).
