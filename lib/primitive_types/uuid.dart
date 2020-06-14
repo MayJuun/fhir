@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
-import 'primitiveFailures.dart';
-import 'primitiveObjects.dart';
+import 'primitive_failures.dart';
+import 'primitive_objects.dart';
 
 class Uuid extends PrimitiveObject<String> {
   @override

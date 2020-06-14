@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'primitiveFailures.freezed.dart';
+part 'primitive_failures.freezed.dart';
 
 @freezed
 abstract class PrimitiveFailure<T> with _$PrimitiveFailure<T> {

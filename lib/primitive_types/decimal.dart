@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
-import 'primitiveObjects.dart';
-import 'primitiveFailures.dart';
+import 'primitive_failures.dart';
+import 'primitive_objects.dart';
 
 class Decimal extends PrimitiveObject<double> {
   @override

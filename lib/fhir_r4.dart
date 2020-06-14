@@ -1,2 +1,2 @@
 export 'r4/resources.dart';
-export 'primitiveTypes/primitiveTypes.dart';
+export 'primitive_types/primitive_types.dart';

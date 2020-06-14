@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:string_validator/string_validator.dart';
 
-import 'primitiveFailures.dart';
+import 'primitive_failures.dart';
 
 @immutable
 abstract class PrimitiveObject<T> {
