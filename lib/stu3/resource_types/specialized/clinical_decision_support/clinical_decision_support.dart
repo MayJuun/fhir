@@ -12,6 +12,14 @@ abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
     @JsonKey(required: true, defaultValue: 'GuidanceResponse')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Id requestId,
     Identifier identifier,
     @JsonKey(required: true) Reference module,
@@ -28,6 +36,9 @@ abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
     Reference outputParameters,
     Reference result,
     List<DataRequirement> dataRequirement,
+    @JsonKey(name: '_requestId') Element requestIdElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
   }) = _GuidanceResponse;
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
@@ -37,12 +48,21 @@ abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
 abstract class Contributor with _$Contributor implements Resource {
   const factory Contributor({
     @JsonKey(defaultValue: 'Contributor') String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(unknownEnumValue: ContributorType.unknown, required: true)
     @required
         ContributorType type,
     @JsonKey(required: true) @required String name,
     List<ContactDetail> contact,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_name') Element nameElement,
   }) = _Contributor;
   factory Contributor.fromJson(Map<String, dynamic> json) =>
       _$ContributorFromJson(json);

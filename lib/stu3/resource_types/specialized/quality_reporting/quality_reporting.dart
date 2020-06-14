@@ -12,7 +12,16 @@ abstract class Measure with _$Measure implements Resource {
   const factory Measure({
     @JsonKey(required: true, defaultValue: 'Measure')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     String url,
     List<Identifier> identifier,
     String version,
@@ -47,9 +56,33 @@ abstract class Measure with _$Measure implements Resource {
     String improvementNotation,
     List<String> definition,
     String guidance,
-    String set,
+    @JsonKey(name: 'set') String set_,
     List<MeasureGroup> group,
     List<MeasureSupplementalData> supplementalData,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_usage') Element usageElement,
+    @JsonKey(name: '_approvalDate') Element approvalDateElement,
+    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_disclaimer') Element disclaimerElement,
+    @JsonKey(name: '_riskAdjustment') Element riskAdjustmentElement,
+    @JsonKey(name: '_rateAggregation') Element rateAggregationElement,
+    @JsonKey(name: '_rationale') Element rationaleElement,
+    @JsonKey(name: '_clinicalRecommendationStatement')
+        Element clinicalRecommendationStatementElement,
+    @JsonKey(name: '_improvementNotation') Element improvementNotationElement,
+    @JsonKey(name: '_definition') Element definitionElement,
+    @JsonKey(name: '_guidance') Element guidanceElement,
+    @JsonKey(name: '_set') Element setElement,
   }) = _Measure;
   factory Measure.fromJson(Map<String, dynamic> json) =>
       _$MeasureFromJson(json);
@@ -63,6 +96,8 @@ abstract class MeasureGroup with _$MeasureGroup {
     String description,
     List<MeasurePopulation> population,
     List<MeasureStratifier> stratifier,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _MeasureGroup;
   factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureGroupFromJson(json);
@@ -76,6 +111,9 @@ abstract class MeasurePopulation with _$MeasurePopulation {
     String name,
     String description,
     String criteria,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_criteria') Element criteriaElement,
   }) = _MeasurePopulation;
   factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasurePopulationFromJson(json);
@@ -87,6 +125,8 @@ abstract class MeasureStratifier with _$MeasureStratifier {
     Identifier identifier,
     String criteria,
     String path,
+    @JsonKey(name: '_criteria') Element criteriaElement,
+    @JsonKey(name: '_path') Element pathElement,
   }) = _MeasureStratifier;
   factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureStratifierFromJson(json);
@@ -99,6 +139,8 @@ abstract class MeasureSupplementalData with _$MeasureSupplementalData {
     List<CodeableConcept> usage,
     String criteria,
     String path,
+    @JsonKey(name: '_criteria') Element criteriaElement,
+    @JsonKey(name: '_path') Element pathElement,
   }) = _MeasureSupplementalData;
   factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$MeasureSupplementalDataFromJson(json);
@@ -109,7 +151,16 @@ abstract class MeasureReport with _$MeasureReport implements Resource {
   const factory MeasureReport({
     @JsonKey(required: true, defaultValue: 'MeasureReport')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
         MeasureReportStatus status,
@@ -122,6 +173,9 @@ abstract class MeasureReport with _$MeasureReport implements Resource {
     @JsonKey(required: true) Period period,
     List<MeasureReportGroup> group,
     Reference evaluatedResources,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _MeasureReport;
   factory MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportFromJson(json);
@@ -134,6 +188,7 @@ abstract class MeasureReportGroup with _$MeasureReportGroup {
     List<MeasureReportPopulation> population,
     Decimal measureScore,
     List<MeasureReportStratifier> stratifier,
+    @JsonKey(name: '_measureScore') Element measureScoreElement,
   }) = _MeasureReportGroup;
   factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportGroupFromJson(json);
@@ -146,6 +201,7 @@ abstract class MeasureReportPopulation with _$MeasureReportPopulation {
     CodeableConcept code,
     Integer count,
     Reference patients,
+    @JsonKey(name: '_count') Element countElement,
   }) = _MeasureReportPopulation;
   factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulationFromJson(json);
@@ -167,6 +223,8 @@ abstract class MeasureReportStratum with _$MeasureReportStratum {
     String value,
     List<MeasureReportPopulation1> population,
     Decimal measureScore,
+    @JsonKey(name: '_value') Element valueElement,
+    @JsonKey(name: '_measureScore') Element measureScoreElement,
   }) = _MeasureReportStratum;
   factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratumFromJson(json);
@@ -179,6 +237,7 @@ abstract class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
     CodeableConcept code,
     Integer count,
     Reference patients,
+    @JsonKey(name: '_count') Element countElement,
   }) = _MeasureReportPopulation1;
   factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulation1FromJson(json);

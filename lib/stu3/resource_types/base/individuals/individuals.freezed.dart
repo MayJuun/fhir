@@ -19,6 +19,15 @@ class _$GroupTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Group')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       @JsonKey(unknownEnumValue: GroupType.unknown)
@@ -28,9 +37,27 @@ class _$GroupTearOff {
       String name,
       UnsignedInt quantity,
       List<GroupCharacteristic> characteristic,
-      List<GroupMember> member}) {
+      List<GroupMember> member,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_actual')
+          Element actualElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_quantity')
+          Element quantityElement}) {
     return _Group(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
       type: type,
@@ -40,6 +67,11 @@ class _$GroupTearOff {
       quantity: quantity,
       characteristic: characteristic,
       member: member,
+      activeElement: activeElement,
+      typeElement: typeElement,
+      actualElement: actualElement,
+      nameElement: nameElement,
+      quantityElement: quantityElement,
     );
   }
 }
@@ -50,6 +82,15 @@ const $Group = _$GroupTearOff();
 mixin _$Group {
   @JsonKey(required: true, defaultValue: 'Group')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Boolean get active;
   @JsonKey(unknownEnumValue: GroupType.unknown)
@@ -60,6 +101,16 @@ mixin _$Group {
   UnsignedInt get quantity;
   List<GroupCharacteristic> get characteristic;
   List<GroupMember> get member;
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_actual')
+  Element get actualElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_quantity')
+  Element get quantityElement;
 
   Map<String, dynamic> toJson();
   $GroupCopyWith<Group> get copyWith;
@@ -70,6 +121,14 @@ abstract class $GroupCopyWith<$Res> {
       _$GroupCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Group') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
@@ -78,9 +137,21 @@ abstract class $GroupCopyWith<$Res> {
       String name,
       UnsignedInt quantity,
       List<GroupCharacteristic> characteristic,
-      List<GroupMember> member});
+      List<GroupMember> member,
+      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_actual') Element actualElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_quantity') Element quantityElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get code;
+  $ElementCopyWith<$Res> get activeElement;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get actualElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get quantityElement;
 }
 
 class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
@@ -93,6 +164,14 @@ class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object type = freezed,
@@ -102,11 +181,31 @@ class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
     Object quantity = freezed,
     Object characteristic = freezed,
     Object member = freezed,
+    Object activeElement = freezed,
+    Object typeElement = freezed,
+    Object actualElement = freezed,
+    Object nameElement = freezed,
+    Object quantityElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -120,7 +219,40 @@ class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
           ? _value.characteristic
           : characteristic as List<GroupCharacteristic>,
       member: member == freezed ? _value.member : member as List<GroupMember>,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      actualElement: actualElement == freezed
+          ? _value.actualElement
+          : actualElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      quantityElement: quantityElement == freezed
+          ? _value.quantityElement
+          : quantityElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -132,6 +264,56 @@ class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
       return _then(_value.copyWith(code: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get activeElement {
+    if (_value.activeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+      return _then(_value.copyWith(activeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get actualElement {
+    if (_value.actualElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.actualElement, (value) {
+      return _then(_value.copyWith(actualElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get quantityElement {
+    if (_value.quantityElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.quantityElement, (value) {
+      return _then(_value.copyWith(quantityElement: value));
+    });
+  }
 }
 
 abstract class _$GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
@@ -140,6 +322,14 @@ abstract class _$GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Group') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
@@ -148,10 +338,29 @@ abstract class _$GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       String name,
       UnsignedInt quantity,
       List<GroupCharacteristic> characteristic,
-      List<GroupMember> member});
+      List<GroupMember> member,
+      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_actual') Element actualElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_quantity') Element quantityElement});
 
   @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
   $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $ElementCopyWith<$Res> get activeElement;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get actualElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get quantityElement;
 }
 
 class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
@@ -165,6 +374,14 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object type = freezed,
@@ -174,11 +391,31 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
     Object quantity = freezed,
     Object characteristic = freezed,
     Object member = freezed,
+    Object activeElement = freezed,
+    Object typeElement = freezed,
+    Object actualElement = freezed,
+    Object nameElement = freezed,
+    Object quantityElement = freezed,
   }) {
     return _then(_Group(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -192,6 +429,19 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
           ? _value.characteristic
           : characteristic as List<GroupCharacteristic>,
       member: member == freezed ? _value.member : member as List<GroupMember>,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      actualElement: actualElement == freezed
+          ? _value.actualElement
+          : actualElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      quantityElement: quantityElement == freezed
+          ? _value.quantityElement
+          : quantityElement as Element,
     ));
   }
 }
@@ -202,6 +452,15 @@ class _$_Group implements _Group {
       {@required
       @JsonKey(required: true, defaultValue: 'Group')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.active,
       @JsonKey(unknownEnumValue: GroupType.unknown)
@@ -211,7 +470,17 @@ class _$_Group implements _Group {
       this.name,
       this.quantity,
       this.characteristic,
-      this.member})
+      this.member,
+      @JsonKey(name: '_active')
+          this.activeElement,
+      @JsonKey(name: '_type')
+          this.typeElement,
+      @JsonKey(name: '_actual')
+          this.actualElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_quantity')
+          this.quantityElement})
       : assert(resourceType != null);
 
   factory _$_Group.fromJson(Map<String, dynamic> json) =>
@@ -220,6 +489,23 @@ class _$_Group implements _Group {
   @override
   @JsonKey(required: true, defaultValue: 'Group')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -239,10 +525,25 @@ class _$_Group implements _Group {
   final List<GroupCharacteristic> characteristic;
   @override
   final List<GroupMember> member;
+  @override
+  @JsonKey(name: '_active')
+  final Element activeElement;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_actual')
+  final Element actualElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_quantity')
+  final Element quantityElement;
 
   @override
   String toString() {
-    return 'Group(resourceType: $resourceType, identifier: $identifier, active: $active, type: $type, actual: $actual, code: $code, name: $name, quantity: $quantity, characteristic: $characteristic, member: $member)';
+    return 'Group(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, type: $type, actual: $actual, code: $code, name: $name, quantity: $quantity, characteristic: $characteristic, member: $member, activeElement: $activeElement, typeElement: $typeElement, actualElement: $actualElement, nameElement: $nameElement, quantityElement: $quantityElement)';
   }
 
   @override
@@ -252,6 +553,27 @@ class _$_Group implements _Group {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -272,13 +594,36 @@ class _$_Group implements _Group {
                 const DeepCollectionEquality()
                     .equals(other.characteristic, characteristic)) &&
             (identical(other.member, member) ||
-                const DeepCollectionEquality().equals(other.member, member)));
+                const DeepCollectionEquality().equals(other.member, member)) &&
+            (identical(other.activeElement, activeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.activeElement, activeElement)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.actualElement, actualElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.actualElement, actualElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.quantityElement, quantityElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantityElement, quantityElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
       const DeepCollectionEquality().hash(type) ^
@@ -287,7 +632,12 @@ class _$_Group implements _Group {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(quantity) ^
       const DeepCollectionEquality().hash(characteristic) ^
-      const DeepCollectionEquality().hash(member);
+      const DeepCollectionEquality().hash(member) ^
+      const DeepCollectionEquality().hash(activeElement) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(actualElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(quantityElement);
 
   @override
   _$GroupCopyWith<_Group> get copyWith =>
@@ -304,6 +654,15 @@ abstract class _Group implements Group {
       {@required
       @JsonKey(required: true, defaultValue: 'Group')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       @JsonKey(unknownEnumValue: GroupType.unknown)
@@ -313,13 +672,40 @@ abstract class _Group implements Group {
       String name,
       UnsignedInt quantity,
       List<GroupCharacteristic> characteristic,
-      List<GroupMember> member}) = _$_Group;
+      List<GroupMember> member,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_actual')
+          Element actualElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_quantity')
+          Element quantityElement}) = _$_Group;
 
   factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
 
   @override
   @JsonKey(required: true, defaultValue: 'Group')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -340,6 +726,21 @@ abstract class _Group implements Group {
   @override
   List<GroupMember> get member;
   @override
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_actual')
+  Element get actualElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_quantity')
+  Element get quantityElement;
+  @override
   _$GroupCopyWith<_Group> get copyWith;
 }
 
@@ -357,7 +758,9 @@ class _$GroupCharacteristicTearOff {
       Quantity valueQuantity,
       Range valueRange,
       Boolean exclude,
-      Period period}) {
+      Period period,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_exclude') Element excludeElement}) {
     return _GroupCharacteristic(
       code: code,
       valueCodeableConcept: valueCodeableConcept,
@@ -366,6 +769,8 @@ class _$GroupCharacteristicTearOff {
       valueRange: valueRange,
       exclude: exclude,
       period: period,
+      valueBooleanElement: valueBooleanElement,
+      excludeElement: excludeElement,
     );
   }
 }
@@ -382,6 +787,10 @@ mixin _$GroupCharacteristic {
   Range get valueRange;
   Boolean get exclude;
   Period get period;
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @JsonKey(name: '_exclude')
+  Element get excludeElement;
 
   Map<String, dynamic> toJson();
   $GroupCharacteristicCopyWith<GroupCharacteristic> get copyWith;
@@ -398,13 +807,17 @@ abstract class $GroupCharacteristicCopyWith<$Res> {
       Quantity valueQuantity,
       Range valueRange,
       Boolean exclude,
-      Period period});
+      Period period,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_exclude') Element excludeElement});
 
   $CodeableConceptCopyWith<$Res> get code;
   $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
   $QuantityCopyWith<$Res> get valueQuantity;
   $RangeCopyWith<$Res> get valueRange;
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  $ElementCopyWith<$Res> get excludeElement;
 }
 
 class _$GroupCharacteristicCopyWithImpl<$Res>
@@ -424,6 +837,8 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
     Object valueRange = freezed,
     Object exclude = freezed,
     Object period = freezed,
+    Object valueBooleanElement = freezed,
+    Object excludeElement = freezed,
   }) {
     return _then(_value.copyWith(
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -440,6 +855,12 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
           valueRange == freezed ? _value.valueRange : valueRange as Range,
       exclude: exclude == freezed ? _value.exclude : exclude as Boolean,
       period: period == freezed ? _value.period : period as Period,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      excludeElement: excludeElement == freezed
+          ? _value.excludeElement
+          : excludeElement as Element,
     ));
   }
 
@@ -492,6 +913,26 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
       return _then(_value.copyWith(period: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get excludeElement {
+    if (_value.excludeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.excludeElement, (value) {
+      return _then(_value.copyWith(excludeElement: value));
+    });
+  }
 }
 
 abstract class _$GroupCharacteristicCopyWith<$Res>
@@ -507,7 +948,9 @@ abstract class _$GroupCharacteristicCopyWith<$Res>
       Quantity valueQuantity,
       Range valueRange,
       Boolean exclude,
-      Period period});
+      Period period,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_exclude') Element excludeElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get code;
@@ -519,6 +962,10 @@ abstract class _$GroupCharacteristicCopyWith<$Res>
   $RangeCopyWith<$Res> get valueRange;
   @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get excludeElement;
 }
 
 class __$GroupCharacteristicCopyWithImpl<$Res>
@@ -540,6 +987,8 @@ class __$GroupCharacteristicCopyWithImpl<$Res>
     Object valueRange = freezed,
     Object exclude = freezed,
     Object period = freezed,
+    Object valueBooleanElement = freezed,
+    Object excludeElement = freezed,
   }) {
     return _then(_GroupCharacteristic(
       code: code == freezed ? _value.code : code as CodeableConcept,
@@ -556,6 +1005,12 @@ class __$GroupCharacteristicCopyWithImpl<$Res>
           valueRange == freezed ? _value.valueRange : valueRange as Range,
       exclude: exclude == freezed ? _value.exclude : exclude as Boolean,
       period: period == freezed ? _value.period : period as Period,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      excludeElement: excludeElement == freezed
+          ? _value.excludeElement
+          : excludeElement as Element,
     ));
   }
 }
@@ -569,7 +1024,9 @@ class _$_GroupCharacteristic implements _GroupCharacteristic {
       this.valueQuantity,
       this.valueRange,
       this.exclude,
-      this.period});
+      this.period,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      @JsonKey(name: '_exclude') this.excludeElement});
 
   factory _$_GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$_$_GroupCharacteristicFromJson(json);
@@ -589,10 +1046,16 @@ class _$_GroupCharacteristic implements _GroupCharacteristic {
   final Boolean exclude;
   @override
   final Period period;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element valueBooleanElement;
+  @override
+  @JsonKey(name: '_exclude')
+  final Element excludeElement;
 
   @override
   String toString() {
-    return 'GroupCharacteristic(code: $code, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueQuantity: $valueQuantity, valueRange: $valueRange, exclude: $exclude, period: $period)';
+    return 'GroupCharacteristic(code: $code, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueQuantity: $valueQuantity, valueRange: $valueRange, exclude: $exclude, period: $period, valueBooleanElement: $valueBooleanElement, excludeElement: $excludeElement)';
   }
 
   @override
@@ -617,7 +1080,13 @@ class _$_GroupCharacteristic implements _GroupCharacteristic {
                 const DeepCollectionEquality()
                     .equals(other.exclude, exclude)) &&
             (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)));
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.excludeElement, excludeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.excludeElement, excludeElement)));
   }
 
   @override
@@ -629,7 +1098,9 @@ class _$_GroupCharacteristic implements _GroupCharacteristic {
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueRange) ^
       const DeepCollectionEquality().hash(exclude) ^
-      const DeepCollectionEquality().hash(period);
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(excludeElement);
 
   @override
   _$GroupCharacteristicCopyWith<_GroupCharacteristic> get copyWith =>
@@ -644,13 +1115,16 @@ class _$_GroupCharacteristic implements _GroupCharacteristic {
 
 abstract class _GroupCharacteristic implements GroupCharacteristic {
   const factory _GroupCharacteristic(
-      {@JsonKey(required: true) CodeableConcept code,
-      CodeableConcept valueCodeableConcept,
-      Boolean valueBoolean,
-      Quantity valueQuantity,
-      Range valueRange,
-      Boolean exclude,
-      Period period}) = _$_GroupCharacteristic;
+          {@JsonKey(required: true) CodeableConcept code,
+          CodeableConcept valueCodeableConcept,
+          Boolean valueBoolean,
+          Quantity valueQuantity,
+          Range valueRange,
+          Boolean exclude,
+          Period period,
+          @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          @JsonKey(name: '_exclude') Element excludeElement}) =
+      _$_GroupCharacteristic;
 
   factory _GroupCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_GroupCharacteristic.fromJson;
@@ -671,6 +1145,12 @@ abstract class _GroupCharacteristic implements GroupCharacteristic {
   @override
   Period get period;
   @override
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @override
+  @JsonKey(name: '_exclude')
+  Element get excludeElement;
+  @override
   _$GroupCharacteristicCopyWith<_GroupCharacteristic> get copyWith;
 }
 
@@ -684,11 +1164,13 @@ class _$GroupMemberTearOff {
   _GroupMember call(
       {@JsonKey(required: true) Reference entity,
       Period period,
-      Boolean inactive}) {
+      Boolean inactive,
+      @JsonKey(name: '_inactive') Element inactiveElement}) {
     return _GroupMember(
       entity: entity,
       period: period,
       inactive: inactive,
+      inactiveElement: inactiveElement,
     );
   }
 }
@@ -701,6 +1183,8 @@ mixin _$GroupMember {
   Reference get entity;
   Period get period;
   Boolean get inactive;
+  @JsonKey(name: '_inactive')
+  Element get inactiveElement;
 
   Map<String, dynamic> toJson();
   $GroupMemberCopyWith<GroupMember> get copyWith;
@@ -713,10 +1197,12 @@ abstract class $GroupMemberCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true) Reference entity,
       Period period,
-      Boolean inactive});
+      Boolean inactive,
+      @JsonKey(name: '_inactive') Element inactiveElement});
 
   $ReferenceCopyWith<$Res> get entity;
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get inactiveElement;
 }
 
 class _$GroupMemberCopyWithImpl<$Res> implements $GroupMemberCopyWith<$Res> {
@@ -731,11 +1217,15 @@ class _$GroupMemberCopyWithImpl<$Res> implements $GroupMemberCopyWith<$Res> {
     Object entity = freezed,
     Object period = freezed,
     Object inactive = freezed,
+    Object inactiveElement = freezed,
   }) {
     return _then(_value.copyWith(
       entity: entity == freezed ? _value.entity : entity as Reference,
       period: period == freezed ? _value.period : period as Period,
       inactive: inactive == freezed ? _value.inactive : inactive as Boolean,
+      inactiveElement: inactiveElement == freezed
+          ? _value.inactiveElement
+          : inactiveElement as Element,
     ));
   }
 
@@ -758,6 +1248,16 @@ class _$GroupMemberCopyWithImpl<$Res> implements $GroupMemberCopyWith<$Res> {
       return _then(_value.copyWith(period: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get inactiveElement {
+    if (_value.inactiveElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.inactiveElement, (value) {
+      return _then(_value.copyWith(inactiveElement: value));
+    });
+  }
 }
 
 abstract class _$GroupMemberCopyWith<$Res>
@@ -769,12 +1269,15 @@ abstract class _$GroupMemberCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true) Reference entity,
       Period period,
-      Boolean inactive});
+      Boolean inactive,
+      @JsonKey(name: '_inactive') Element inactiveElement});
 
   @override
   $ReferenceCopyWith<$Res> get entity;
   @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get inactiveElement;
 }
 
 class __$GroupMemberCopyWithImpl<$Res> extends _$GroupMemberCopyWithImpl<$Res>
@@ -791,11 +1294,15 @@ class __$GroupMemberCopyWithImpl<$Res> extends _$GroupMemberCopyWithImpl<$Res>
     Object entity = freezed,
     Object period = freezed,
     Object inactive = freezed,
+    Object inactiveElement = freezed,
   }) {
     return _then(_GroupMember(
       entity: entity == freezed ? _value.entity : entity as Reference,
       period: period == freezed ? _value.period : period as Period,
       inactive: inactive == freezed ? _value.inactive : inactive as Boolean,
+      inactiveElement: inactiveElement == freezed
+          ? _value.inactiveElement
+          : inactiveElement as Element,
     ));
   }
 }
@@ -803,7 +1310,10 @@ class __$GroupMemberCopyWithImpl<$Res> extends _$GroupMemberCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_GroupMember implements _GroupMember {
   const _$_GroupMember(
-      {@JsonKey(required: true) this.entity, this.period, this.inactive});
+      {@JsonKey(required: true) this.entity,
+      this.period,
+      this.inactive,
+      @JsonKey(name: '_inactive') this.inactiveElement});
 
   factory _$_GroupMember.fromJson(Map<String, dynamic> json) =>
       _$_$_GroupMemberFromJson(json);
@@ -815,10 +1325,13 @@ class _$_GroupMember implements _GroupMember {
   final Period period;
   @override
   final Boolean inactive;
+  @override
+  @JsonKey(name: '_inactive')
+  final Element inactiveElement;
 
   @override
   String toString() {
-    return 'GroupMember(entity: $entity, period: $period, inactive: $inactive)';
+    return 'GroupMember(entity: $entity, period: $period, inactive: $inactive, inactiveElement: $inactiveElement)';
   }
 
   @override
@@ -831,7 +1344,10 @@ class _$_GroupMember implements _GroupMember {
                 const DeepCollectionEquality().equals(other.period, period)) &&
             (identical(other.inactive, inactive) ||
                 const DeepCollectionEquality()
-                    .equals(other.inactive, inactive)));
+                    .equals(other.inactive, inactive)) &&
+            (identical(other.inactiveElement, inactiveElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.inactiveElement, inactiveElement)));
   }
 
   @override
@@ -839,7 +1355,8 @@ class _$_GroupMember implements _GroupMember {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(period) ^
-      const DeepCollectionEquality().hash(inactive);
+      const DeepCollectionEquality().hash(inactive) ^
+      const DeepCollectionEquality().hash(inactiveElement);
 
   @override
   _$GroupMemberCopyWith<_GroupMember> get copyWith =>
@@ -855,7 +1372,8 @@ abstract class _GroupMember implements GroupMember {
   const factory _GroupMember(
       {@JsonKey(required: true) Reference entity,
       Period period,
-      Boolean inactive}) = _$_GroupMember;
+      Boolean inactive,
+      @JsonKey(name: '_inactive') Element inactiveElement}) = _$_GroupMember;
 
   factory _GroupMember.fromJson(Map<String, dynamic> json) =
       _$_GroupMember.fromJson;
@@ -867,6 +1385,9 @@ abstract class _GroupMember implements GroupMember {
   Period get period;
   @override
   Boolean get inactive;
+  @override
+  @JsonKey(name: '_inactive')
+  Element get inactiveElement;
   @override
   _$GroupMemberCopyWith<_GroupMember> get copyWith;
 }
@@ -882,6 +1403,15 @@ class _$PatientTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Patient')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       List<HumanName> name,
@@ -901,9 +1431,31 @@ class _$PatientTearOff {
       List<PatientCommunication> communication,
       List<Reference> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link}) {
+      List<PatientLink> link,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
+      @JsonKey(name: '_deceasedBoolean')
+          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDateTime')
+          Element deceasedDateTimeElement,
+      @JsonKey(name: '_multipleBirthBoolean')
+          Element multipleBirthBooleanElement,
+      @JsonKey(name: '_multipleBirthInteger')
+          Element multipleBirthIntegerElement}) {
     return _Patient(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
       name: name,
@@ -923,6 +1475,13 @@ class _$PatientTearOff {
       generalPractitioner: generalPractitioner,
       managingOrganization: managingOrganization,
       link: link,
+      activeElement: activeElement,
+      genderElement: genderElement,
+      birthDateElement: birthDateElement,
+      deceasedBooleanElement: deceasedBooleanElement,
+      deceasedDateTimeElement: deceasedDateTimeElement,
+      multipleBirthBooleanElement: multipleBirthBooleanElement,
+      multipleBirthIntegerElement: multipleBirthIntegerElement,
     );
   }
 }
@@ -933,6 +1492,15 @@ const $Patient = _$PatientTearOff();
 mixin _$Patient {
   @JsonKey(required: true, defaultValue: 'Patient')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Boolean get active;
   List<HumanName> get name;
@@ -953,6 +1521,20 @@ mixin _$Patient {
   List<Reference> get generalPractitioner;
   Reference get managingOrganization;
   List<PatientLink> get link;
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @JsonKey(name: '_birthDate')
+  Element get birthDateElement;
+  @JsonKey(name: '_deceasedBoolean')
+  Element get deceasedBooleanElement;
+  @JsonKey(name: '_deceasedDateTime')
+  Element get deceasedDateTimeElement;
+  @JsonKey(name: '_multipleBirthBoolean')
+  Element get multipleBirthBooleanElement;
+  @JsonKey(name: '_multipleBirthInteger')
+  Element get multipleBirthIntegerElement;
 
   Map<String, dynamic> toJson();
   $PatientCopyWith<Patient> get copyWith;
@@ -962,12 +1544,23 @@ abstract class $PatientCopyWith<$Res> {
   factory $PatientCopyWith(Patient value, $Res Function(Patient) then) =
       _$PatientCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Patient') String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Patient')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
+      @JsonKey(unknownEnumValue: Gender.unknown)
+          Gender gender,
       Date birthDate,
       Boolean deceasedBoolean,
       FhirDateTime deceasedDateTime,
@@ -981,11 +1574,34 @@ abstract class $PatientCopyWith<$Res> {
       List<PatientCommunication> communication,
       List<Reference> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link});
+      List<PatientLink> link,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
+      @JsonKey(name: '_deceasedBoolean')
+          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDateTime')
+          Element deceasedDateTimeElement,
+      @JsonKey(name: '_multipleBirthBoolean')
+          Element multipleBirthBooleanElement,
+      @JsonKey(name: '_multipleBirthInteger')
+          Element multipleBirthIntegerElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $CodeableConceptCopyWith<$Res> get maritalStatus;
   $PatientAnimalCopyWith<$Res> get animal;
   $ReferenceCopyWith<$Res> get managingOrganization;
+  $ElementCopyWith<$Res> get activeElement;
+  $ElementCopyWith<$Res> get genderElement;
+  $ElementCopyWith<$Res> get birthDateElement;
+  $ElementCopyWith<$Res> get deceasedBooleanElement;
+  $ElementCopyWith<$Res> get deceasedDateTimeElement;
+  $ElementCopyWith<$Res> get multipleBirthBooleanElement;
+  $ElementCopyWith<$Res> get multipleBirthIntegerElement;
 }
 
 class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
@@ -998,6 +1614,14 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object name = freezed,
@@ -1017,11 +1641,33 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
     Object generalPractitioner = freezed,
     Object managingOrganization = freezed,
     Object link = freezed,
+    Object activeElement = freezed,
+    Object genderElement = freezed,
+    Object birthDateElement = freezed,
+    Object deceasedBooleanElement = freezed,
+    Object deceasedDateTimeElement = freezed,
+    Object multipleBirthBooleanElement = freezed,
+    Object multipleBirthIntegerElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -1061,7 +1707,48 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
           ? _value.managingOrganization
           : managingOrganization as Reference,
       link: link == freezed ? _value.link : link as List<PatientLink>,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      birthDateElement: birthDateElement == freezed
+          ? _value.birthDateElement
+          : birthDateElement as Element,
+      deceasedBooleanElement: deceasedBooleanElement == freezed
+          ? _value.deceasedBooleanElement
+          : deceasedBooleanElement as Element,
+      deceasedDateTimeElement: deceasedDateTimeElement == freezed
+          ? _value.deceasedDateTimeElement
+          : deceasedDateTimeElement as Element,
+      multipleBirthBooleanElement: multipleBirthBooleanElement == freezed
+          ? _value.multipleBirthBooleanElement
+          : multipleBirthBooleanElement as Element,
+      multipleBirthIntegerElement: multipleBirthIntegerElement == freezed
+          ? _value.multipleBirthIntegerElement
+          : multipleBirthIntegerElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -1093,6 +1780,76 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       return _then(_value.copyWith(managingOrganization: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get activeElement {
+    if (_value.activeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+      return _then(_value.copyWith(activeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get genderElement {
+    if (_value.genderElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.genderElement, (value) {
+      return _then(_value.copyWith(genderElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get birthDateElement {
+    if (_value.birthDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.birthDateElement, (value) {
+      return _then(_value.copyWith(birthDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get deceasedBooleanElement {
+    if (_value.deceasedBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.deceasedBooleanElement, (value) {
+      return _then(_value.copyWith(deceasedBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get deceasedDateTimeElement {
+    if (_value.deceasedDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.deceasedDateTimeElement, (value) {
+      return _then(_value.copyWith(deceasedDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get multipleBirthBooleanElement {
+    if (_value.multipleBirthBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.multipleBirthBooleanElement, (value) {
+      return _then(_value.copyWith(multipleBirthBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get multipleBirthIntegerElement {
+    if (_value.multipleBirthIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.multipleBirthIntegerElement, (value) {
+      return _then(_value.copyWith(multipleBirthIntegerElement: value));
+    });
+  }
 }
 
 abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
@@ -1100,12 +1857,23 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       __$PatientCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Patient') String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Patient')
+          String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       List<HumanName> name,
       List<ContactPoint> telecom,
-      @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
+      @JsonKey(unknownEnumValue: Gender.unknown)
+          Gender gender,
       Date birthDate,
       Boolean deceasedBoolean,
       FhirDateTime deceasedDateTime,
@@ -1119,14 +1887,46 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       List<PatientCommunication> communication,
       List<Reference> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link});
+      List<PatientLink> link,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
+      @JsonKey(name: '_deceasedBoolean')
+          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDateTime')
+          Element deceasedDateTimeElement,
+      @JsonKey(name: '_multipleBirthBoolean')
+          Element multipleBirthBooleanElement,
+      @JsonKey(name: '_multipleBirthInteger')
+          Element multipleBirthIntegerElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $CodeableConceptCopyWith<$Res> get maritalStatus;
   @override
   $PatientAnimalCopyWith<$Res> get animal;
   @override
   $ReferenceCopyWith<$Res> get managingOrganization;
+  @override
+  $ElementCopyWith<$Res> get activeElement;
+  @override
+  $ElementCopyWith<$Res> get genderElement;
+  @override
+  $ElementCopyWith<$Res> get birthDateElement;
+  @override
+  $ElementCopyWith<$Res> get deceasedBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get deceasedDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get multipleBirthBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get multipleBirthIntegerElement;
 }
 
 class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
@@ -1140,6 +1940,14 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object name = freezed,
@@ -1159,11 +1967,33 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
     Object generalPractitioner = freezed,
     Object managingOrganization = freezed,
     Object link = freezed,
+    Object activeElement = freezed,
+    Object genderElement = freezed,
+    Object birthDateElement = freezed,
+    Object deceasedBooleanElement = freezed,
+    Object deceasedDateTimeElement = freezed,
+    Object multipleBirthBooleanElement = freezed,
+    Object multipleBirthIntegerElement = freezed,
   }) {
     return _then(_Patient(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -1203,6 +2033,27 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
           ? _value.managingOrganization
           : managingOrganization as Reference,
       link: link == freezed ? _value.link : link as List<PatientLink>,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      birthDateElement: birthDateElement == freezed
+          ? _value.birthDateElement
+          : birthDateElement as Element,
+      deceasedBooleanElement: deceasedBooleanElement == freezed
+          ? _value.deceasedBooleanElement
+          : deceasedBooleanElement as Element,
+      deceasedDateTimeElement: deceasedDateTimeElement == freezed
+          ? _value.deceasedDateTimeElement
+          : deceasedDateTimeElement as Element,
+      multipleBirthBooleanElement: multipleBirthBooleanElement == freezed
+          ? _value.multipleBirthBooleanElement
+          : multipleBirthBooleanElement as Element,
+      multipleBirthIntegerElement: multipleBirthIntegerElement == freezed
+          ? _value.multipleBirthIntegerElement
+          : multipleBirthIntegerElement as Element,
     ));
   }
 }
@@ -1213,6 +2064,15 @@ class _$_Patient implements _Patient {
       {@required
       @JsonKey(required: true, defaultValue: 'Patient')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.active,
       this.name,
@@ -1232,7 +2092,21 @@ class _$_Patient implements _Patient {
       this.communication,
       this.generalPractitioner,
       this.managingOrganization,
-      this.link})
+      this.link,
+      @JsonKey(name: '_active')
+          this.activeElement,
+      @JsonKey(name: '_gender')
+          this.genderElement,
+      @JsonKey(name: '_birthDate')
+          this.birthDateElement,
+      @JsonKey(name: '_deceasedBoolean')
+          this.deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDateTime')
+          this.deceasedDateTimeElement,
+      @JsonKey(name: '_multipleBirthBoolean')
+          this.multipleBirthBooleanElement,
+      @JsonKey(name: '_multipleBirthInteger')
+          this.multipleBirthIntegerElement})
       : assert(resourceType != null);
 
   factory _$_Patient.fromJson(Map<String, dynamic> json) =>
@@ -1241,6 +2115,23 @@ class _$_Patient implements _Patient {
   @override
   @JsonKey(required: true, defaultValue: 'Patient')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -1280,10 +2171,31 @@ class _$_Patient implements _Patient {
   final Reference managingOrganization;
   @override
   final List<PatientLink> link;
+  @override
+  @JsonKey(name: '_active')
+  final Element activeElement;
+  @override
+  @JsonKey(name: '_gender')
+  final Element genderElement;
+  @override
+  @JsonKey(name: '_birthDate')
+  final Element birthDateElement;
+  @override
+  @JsonKey(name: '_deceasedBoolean')
+  final Element deceasedBooleanElement;
+  @override
+  @JsonKey(name: '_deceasedDateTime')
+  final Element deceasedDateTimeElement;
+  @override
+  @JsonKey(name: '_multipleBirthBoolean')
+  final Element multipleBirthBooleanElement;
+  @override
+  @JsonKey(name: '_multipleBirthInteger')
+  final Element multipleBirthIntegerElement;
 
   @override
   String toString() {
-    return 'Patient(resourceType: $resourceType, identifier: $identifier, active: $active, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, deceasedBoolean: $deceasedBoolean, deceasedDateTime: $deceasedDateTime, address: $address, maritalStatus: $maritalStatus, multipleBirthBoolean: $multipleBirthBoolean, multipleBirthInteger: $multipleBirthInteger, photo: $photo, contact: $contact, animal: $animal, communication: $communication, generalPractitioner: $generalPractitioner, managingOrganization: $managingOrganization, link: $link)';
+    return 'Patient(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, deceasedBoolean: $deceasedBoolean, deceasedDateTime: $deceasedDateTime, address: $address, maritalStatus: $maritalStatus, multipleBirthBoolean: $multipleBirthBoolean, multipleBirthInteger: $multipleBirthInteger, photo: $photo, contact: $contact, animal: $animal, communication: $communication, generalPractitioner: $generalPractitioner, managingOrganization: $managingOrganization, link: $link, activeElement: $activeElement, genderElement: $genderElement, birthDateElement: $birthDateElement, deceasedBooleanElement: $deceasedBooleanElement, deceasedDateTimeElement: $deceasedDateTimeElement, multipleBirthBooleanElement: $multipleBirthBooleanElement, multipleBirthIntegerElement: $multipleBirthIntegerElement)';
   }
 
   @override
@@ -1293,6 +2205,27 @@ class _$_Patient implements _Patient {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -1336,20 +2269,30 @@ class _$_Patient implements _Patient {
             (identical(other.communication, communication) ||
                 const DeepCollectionEquality()
                     .equals(other.communication, communication)) &&
-            (identical(other.generalPractitioner, generalPractitioner) ||
-                const DeepCollectionEquality()
-                    .equals(other.generalPractitioner, generalPractitioner)) &&
-            (identical(other.managingOrganization, managingOrganization) ||
-                const DeepCollectionEquality().equals(
-                    other.managingOrganization, managingOrganization)) &&
-            (identical(other.link, link) ||
-                const DeepCollectionEquality().equals(other.link, link)));
+            (identical(other.generalPractitioner, generalPractitioner) || const DeepCollectionEquality().equals(other.generalPractitioner, generalPractitioner)) &&
+            (identical(other.managingOrganization, managingOrganization) || const DeepCollectionEquality().equals(other.managingOrganization, managingOrganization)) &&
+            (identical(other.link, link) || const DeepCollectionEquality().equals(other.link, link)) &&
+            (identical(other.activeElement, activeElement) || const DeepCollectionEquality().equals(other.activeElement, activeElement)) &&
+            (identical(other.genderElement, genderElement) || const DeepCollectionEquality().equals(other.genderElement, genderElement)) &&
+            (identical(other.birthDateElement, birthDateElement) || const DeepCollectionEquality().equals(other.birthDateElement, birthDateElement)) &&
+            (identical(other.deceasedBooleanElement, deceasedBooleanElement) || const DeepCollectionEquality().equals(other.deceasedBooleanElement, deceasedBooleanElement)) &&
+            (identical(other.deceasedDateTimeElement, deceasedDateTimeElement) || const DeepCollectionEquality().equals(other.deceasedDateTimeElement, deceasedDateTimeElement)) &&
+            (identical(other.multipleBirthBooleanElement, multipleBirthBooleanElement) || const DeepCollectionEquality().equals(other.multipleBirthBooleanElement, multipleBirthBooleanElement)) &&
+            (identical(other.multipleBirthIntegerElement, multipleBirthIntegerElement) || const DeepCollectionEquality().equals(other.multipleBirthIntegerElement, multipleBirthIntegerElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
       const DeepCollectionEquality().hash(name) ^
@@ -1368,7 +2311,14 @@ class _$_Patient implements _Patient {
       const DeepCollectionEquality().hash(communication) ^
       const DeepCollectionEquality().hash(generalPractitioner) ^
       const DeepCollectionEquality().hash(managingOrganization) ^
-      const DeepCollectionEquality().hash(link);
+      const DeepCollectionEquality().hash(link) ^
+      const DeepCollectionEquality().hash(activeElement) ^
+      const DeepCollectionEquality().hash(genderElement) ^
+      const DeepCollectionEquality().hash(birthDateElement) ^
+      const DeepCollectionEquality().hash(deceasedBooleanElement) ^
+      const DeepCollectionEquality().hash(deceasedDateTimeElement) ^
+      const DeepCollectionEquality().hash(multipleBirthBooleanElement) ^
+      const DeepCollectionEquality().hash(multipleBirthIntegerElement);
 
   @override
   _$PatientCopyWith<_Patient> get copyWith =>
@@ -1385,6 +2335,15 @@ abstract class _Patient implements Patient {
       {@required
       @JsonKey(required: true, defaultValue: 'Patient')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       List<HumanName> name,
@@ -1404,13 +2363,44 @@ abstract class _Patient implements Patient {
       List<PatientCommunication> communication,
       List<Reference> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link}) = _$_Patient;
+      List<PatientLink> link,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
+      @JsonKey(name: '_deceasedBoolean')
+          Element deceasedBooleanElement,
+      @JsonKey(name: '_deceasedDateTime')
+          Element deceasedDateTimeElement,
+      @JsonKey(name: '_multipleBirthBoolean')
+          Element multipleBirthBooleanElement,
+      @JsonKey(name: '_multipleBirthInteger')
+          Element multipleBirthIntegerElement}) = _$_Patient;
 
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
   @override
   @JsonKey(required: true, defaultValue: 'Patient')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -1451,6 +2441,27 @@ abstract class _Patient implements Patient {
   @override
   List<PatientLink> get link;
   @override
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @override
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @override
+  @JsonKey(name: '_birthDate')
+  Element get birthDateElement;
+  @override
+  @JsonKey(name: '_deceasedBoolean')
+  Element get deceasedBooleanElement;
+  @override
+  @JsonKey(name: '_deceasedDateTime')
+  Element get deceasedDateTimeElement;
+  @override
+  @JsonKey(name: '_multipleBirthBoolean')
+  Element get multipleBirthBooleanElement;
+  @override
+  @JsonKey(name: '_multipleBirthInteger')
+  Element get multipleBirthIntegerElement;
+  @override
   _$PatientCopyWith<_Patient> get copyWith;
 }
 
@@ -1468,7 +2479,8 @@ class _$PatientContactTearOff {
       Address address,
       @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
       Reference organization,
-      Period period}) {
+      Period period,
+      @JsonKey(name: '_gender') Element genderElement}) {
     return _PatientContact(
       relationship: relationship,
       name: name,
@@ -1477,6 +2489,7 @@ class _$PatientContactTearOff {
       gender: gender,
       organization: organization,
       period: period,
+      genderElement: genderElement,
     );
   }
 }
@@ -1493,6 +2506,8 @@ mixin _$PatientContact {
   Gender get gender;
   Reference get organization;
   Period get period;
+  @JsonKey(name: '_gender')
+  Element get genderElement;
 
   Map<String, dynamic> toJson();
   $PatientContactCopyWith<PatientContact> get copyWith;
@@ -1509,12 +2524,14 @@ abstract class $PatientContactCopyWith<$Res> {
       Address address,
       @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
       Reference organization,
-      Period period});
+      Period period,
+      @JsonKey(name: '_gender') Element genderElement});
 
   $HumanNameCopyWith<$Res> get name;
   $AddressCopyWith<$Res> get address;
   $ReferenceCopyWith<$Res> get organization;
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get genderElement;
 }
 
 class _$PatientContactCopyWithImpl<$Res>
@@ -1534,6 +2551,7 @@ class _$PatientContactCopyWithImpl<$Res>
     Object gender = freezed,
     Object organization = freezed,
     Object period = freezed,
+    Object genderElement = freezed,
   }) {
     return _then(_value.copyWith(
       relationship: relationship == freezed
@@ -1548,6 +2566,9 @@ class _$PatientContactCopyWithImpl<$Res>
           ? _value.organization
           : organization as Reference,
       period: period == freezed ? _value.period : period as Period,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
     ));
   }
 
@@ -1590,6 +2611,16 @@ class _$PatientContactCopyWithImpl<$Res>
       return _then(_value.copyWith(period: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get genderElement {
+    if (_value.genderElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.genderElement, (value) {
+      return _then(_value.copyWith(genderElement: value));
+    });
+  }
 }
 
 abstract class _$PatientContactCopyWith<$Res>
@@ -1605,7 +2636,8 @@ abstract class _$PatientContactCopyWith<$Res>
       Address address,
       @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
       Reference organization,
-      Period period});
+      Period period,
+      @JsonKey(name: '_gender') Element genderElement});
 
   @override
   $HumanNameCopyWith<$Res> get name;
@@ -1615,6 +2647,8 @@ abstract class _$PatientContactCopyWith<$Res>
   $ReferenceCopyWith<$Res> get organization;
   @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get genderElement;
 }
 
 class __$PatientContactCopyWithImpl<$Res>
@@ -1636,6 +2670,7 @@ class __$PatientContactCopyWithImpl<$Res>
     Object gender = freezed,
     Object organization = freezed,
     Object period = freezed,
+    Object genderElement = freezed,
   }) {
     return _then(_PatientContact(
       relationship: relationship == freezed
@@ -1650,6 +2685,9 @@ class __$PatientContactCopyWithImpl<$Res>
           ? _value.organization
           : organization as Reference,
       period: period == freezed ? _value.period : period as Period,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
     ));
   }
 }
@@ -1663,7 +2701,8 @@ class _$_PatientContact implements _PatientContact {
       this.address,
       @JsonKey(unknownEnumValue: Gender.unknown) this.gender,
       this.organization,
-      this.period});
+      this.period,
+      @JsonKey(name: '_gender') this.genderElement});
 
   factory _$_PatientContact.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientContactFromJson(json);
@@ -1683,10 +2722,13 @@ class _$_PatientContact implements _PatientContact {
   final Reference organization;
   @override
   final Period period;
+  @override
+  @JsonKey(name: '_gender')
+  final Element genderElement;
 
   @override
   String toString() {
-    return 'PatientContact(relationship: $relationship, name: $name, telecom: $telecom, address: $address, gender: $gender, organization: $organization, period: $period)';
+    return 'PatientContact(relationship: $relationship, name: $name, telecom: $telecom, address: $address, gender: $gender, organization: $organization, period: $period, genderElement: $genderElement)';
   }
 
   @override
@@ -1710,7 +2752,10 @@ class _$_PatientContact implements _PatientContact {
                 const DeepCollectionEquality()
                     .equals(other.organization, organization)) &&
             (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)));
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.genderElement, genderElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.genderElement, genderElement)));
   }
 
   @override
@@ -1722,7 +2767,8 @@ class _$_PatientContact implements _PatientContact {
       const DeepCollectionEquality().hash(address) ^
       const DeepCollectionEquality().hash(gender) ^
       const DeepCollectionEquality().hash(organization) ^
-      const DeepCollectionEquality().hash(period);
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(genderElement);
 
   @override
   _$PatientContactCopyWith<_PatientContact> get copyWith =>
@@ -1742,7 +2788,8 @@ abstract class _PatientContact implements PatientContact {
       Address address,
       @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
       Reference organization,
-      Period period}) = _$_PatientContact;
+      Period period,
+      @JsonKey(name: '_gender') Element genderElement}) = _$_PatientContact;
 
   factory _PatientContact.fromJson(Map<String, dynamic> json) =
       _$_PatientContact.fromJson;
@@ -1762,6 +2809,9 @@ abstract class _PatientContact implements PatientContact {
   Reference get organization;
   @override
   Period get period;
+  @override
+  @JsonKey(name: '_gender')
+  Element get genderElement;
   @override
   _$PatientContactCopyWith<_PatientContact> get copyWith;
 }
@@ -1991,10 +3041,13 @@ class _$PatientCommunicationTearOff {
   const _$PatientCommunicationTearOff();
 
   _PatientCommunication call(
-      {@JsonKey(required: true) CodeableConcept language, Boolean preferred}) {
+      {@JsonKey(required: true) CodeableConcept language,
+      Boolean preferred,
+      @JsonKey(name: '_preferred') Element preferredElement}) {
     return _PatientCommunication(
       language: language,
       preferred: preferred,
+      preferredElement: preferredElement,
     );
   }
 }
@@ -2006,6 +3059,8 @@ mixin _$PatientCommunication {
   @JsonKey(required: true)
   CodeableConcept get language;
   Boolean get preferred;
+  @JsonKey(name: '_preferred')
+  Element get preferredElement;
 
   Map<String, dynamic> toJson();
   $PatientCommunicationCopyWith<PatientCommunication> get copyWith;
@@ -2016,9 +3071,12 @@ abstract class $PatientCommunicationCopyWith<$Res> {
           $Res Function(PatientCommunication) then) =
       _$PatientCommunicationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true) CodeableConcept language, Boolean preferred});
+      {@JsonKey(required: true) CodeableConcept language,
+      Boolean preferred,
+      @JsonKey(name: '_preferred') Element preferredElement});
 
   $CodeableConceptCopyWith<$Res> get language;
+  $ElementCopyWith<$Res> get preferredElement;
 }
 
 class _$PatientCommunicationCopyWithImpl<$Res>
@@ -2033,11 +3091,15 @@ class _$PatientCommunicationCopyWithImpl<$Res>
   $Res call({
     Object language = freezed,
     Object preferred = freezed,
+    Object preferredElement = freezed,
   }) {
     return _then(_value.copyWith(
       language:
           language == freezed ? _value.language : language as CodeableConcept,
       preferred: preferred == freezed ? _value.preferred : preferred as Boolean,
+      preferredElement: preferredElement == freezed
+          ? _value.preferredElement
+          : preferredElement as Element,
     ));
   }
 
@@ -2050,6 +3112,16 @@ class _$PatientCommunicationCopyWithImpl<$Res>
       return _then(_value.copyWith(language: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get preferredElement {
+    if (_value.preferredElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.preferredElement, (value) {
+      return _then(_value.copyWith(preferredElement: value));
+    });
+  }
 }
 
 abstract class _$PatientCommunicationCopyWith<$Res>
@@ -2059,10 +3131,14 @@ abstract class _$PatientCommunicationCopyWith<$Res>
       __$PatientCommunicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true) CodeableConcept language, Boolean preferred});
+      {@JsonKey(required: true) CodeableConcept language,
+      Boolean preferred,
+      @JsonKey(name: '_preferred') Element preferredElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get language;
+  @override
+  $ElementCopyWith<$Res> get preferredElement;
 }
 
 class __$PatientCommunicationCopyWithImpl<$Res>
@@ -2079,11 +3155,15 @@ class __$PatientCommunicationCopyWithImpl<$Res>
   $Res call({
     Object language = freezed,
     Object preferred = freezed,
+    Object preferredElement = freezed,
   }) {
     return _then(_PatientCommunication(
       language:
           language == freezed ? _value.language : language as CodeableConcept,
       preferred: preferred == freezed ? _value.preferred : preferred as Boolean,
+      preferredElement: preferredElement == freezed
+          ? _value.preferredElement
+          : preferredElement as Element,
     ));
   }
 }
@@ -2091,7 +3171,9 @@ class __$PatientCommunicationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PatientCommunication implements _PatientCommunication {
   const _$_PatientCommunication(
-      {@JsonKey(required: true) this.language, this.preferred});
+      {@JsonKey(required: true) this.language,
+      this.preferred,
+      @JsonKey(name: '_preferred') this.preferredElement});
 
   factory _$_PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientCommunicationFromJson(json);
@@ -2101,10 +3183,13 @@ class _$_PatientCommunication implements _PatientCommunication {
   final CodeableConcept language;
   @override
   final Boolean preferred;
+  @override
+  @JsonKey(name: '_preferred')
+  final Element preferredElement;
 
   @override
   String toString() {
-    return 'PatientCommunication(language: $language, preferred: $preferred)';
+    return 'PatientCommunication(language: $language, preferred: $preferred, preferredElement: $preferredElement)';
   }
 
   @override
@@ -2116,14 +3201,18 @@ class _$_PatientCommunication implements _PatientCommunication {
                     .equals(other.language, language)) &&
             (identical(other.preferred, preferred) ||
                 const DeepCollectionEquality()
-                    .equals(other.preferred, preferred)));
+                    .equals(other.preferred, preferred)) &&
+            (identical(other.preferredElement, preferredElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.preferredElement, preferredElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(preferred);
+      const DeepCollectionEquality().hash(preferred) ^
+      const DeepCollectionEquality().hash(preferredElement);
 
   @override
   _$PatientCommunicationCopyWith<_PatientCommunication> get copyWith =>
@@ -2138,8 +3227,10 @@ class _$_PatientCommunication implements _PatientCommunication {
 
 abstract class _PatientCommunication implements PatientCommunication {
   const factory _PatientCommunication(
-      {@JsonKey(required: true) CodeableConcept language,
-      Boolean preferred}) = _$_PatientCommunication;
+          {@JsonKey(required: true) CodeableConcept language,
+          Boolean preferred,
+          @JsonKey(name: '_preferred') Element preferredElement}) =
+      _$_PatientCommunication;
 
   factory _PatientCommunication.fromJson(Map<String, dynamic> json) =
       _$_PatientCommunication.fromJson;
@@ -2149,6 +3240,9 @@ abstract class _PatientCommunication implements PatientCommunication {
   CodeableConcept get language;
   @override
   Boolean get preferred;
+  @override
+  @JsonKey(name: '_preferred')
+  Element get preferredElement;
   @override
   _$PatientCommunicationCopyWith<_PatientCommunication> get copyWith;
 }
@@ -2161,13 +3255,13 @@ class _$PatientLinkTearOff {
   const _$PatientLinkTearOff();
 
   _PatientLink call(
-      {@JsonKey(required: true)
-          Reference other,
-      @JsonKey(unknownEnumValue: PatientLinkType.unknown)
-          PatientLinkType type}) {
+      {@JsonKey(required: true) Reference other,
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType type,
+      @JsonKey(name: '_type') Element typeElement}) {
     return _PatientLink(
       other: other,
       type: type,
+      typeElement: typeElement,
     );
   }
 }
@@ -2180,6 +3274,8 @@ mixin _$PatientLink {
   Reference get other;
   @JsonKey(unknownEnumValue: PatientLinkType.unknown)
   PatientLinkType get type;
+  @JsonKey(name: '_type')
+  Element get typeElement;
 
   Map<String, dynamic> toJson();
   $PatientLinkCopyWith<PatientLink> get copyWith;
@@ -2190,12 +3286,12 @@ abstract class $PatientLinkCopyWith<$Res> {
           PatientLink value, $Res Function(PatientLink) then) =
       _$PatientLinkCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true)
-          Reference other,
-      @JsonKey(unknownEnumValue: PatientLinkType.unknown)
-          PatientLinkType type});
+      {@JsonKey(required: true) Reference other,
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType type,
+      @JsonKey(name: '_type') Element typeElement});
 
   $ReferenceCopyWith<$Res> get other;
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class _$PatientLinkCopyWithImpl<$Res> implements $PatientLinkCopyWith<$Res> {
@@ -2209,10 +3305,13 @@ class _$PatientLinkCopyWithImpl<$Res> implements $PatientLinkCopyWith<$Res> {
   $Res call({
     Object other = freezed,
     Object type = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_value.copyWith(
       other: other == freezed ? _value.other : other as Reference,
       type: type == freezed ? _value.type : type as PatientLinkType,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
   }
 
@@ -2225,6 +3324,16 @@ class _$PatientLinkCopyWithImpl<$Res> implements $PatientLinkCopyWith<$Res> {
       return _then(_value.copyWith(other: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
 }
 
 abstract class _$PatientLinkCopyWith<$Res>
@@ -2234,13 +3343,14 @@ abstract class _$PatientLinkCopyWith<$Res>
       __$PatientLinkCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true)
-          Reference other,
-      @JsonKey(unknownEnumValue: PatientLinkType.unknown)
-          PatientLinkType type});
+      {@JsonKey(required: true) Reference other,
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType type,
+      @JsonKey(name: '_type') Element typeElement});
 
   @override
   $ReferenceCopyWith<$Res> get other;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
 }
 
 class __$PatientLinkCopyWithImpl<$Res> extends _$PatientLinkCopyWithImpl<$Res>
@@ -2256,10 +3366,13 @@ class __$PatientLinkCopyWithImpl<$Res> extends _$PatientLinkCopyWithImpl<$Res>
   $Res call({
     Object other = freezed,
     Object type = freezed,
+    Object typeElement = freezed,
   }) {
     return _then(_PatientLink(
       other: other == freezed ? _value.other : other as Reference,
       type: type == freezed ? _value.type : type as PatientLinkType,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
     ));
   }
 }
@@ -2268,7 +3381,8 @@ class __$PatientLinkCopyWithImpl<$Res> extends _$PatientLinkCopyWithImpl<$Res>
 class _$_PatientLink implements _PatientLink {
   const _$_PatientLink(
       {@JsonKey(required: true) this.other,
-      @JsonKey(unknownEnumValue: PatientLinkType.unknown) this.type});
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) this.type,
+      @JsonKey(name: '_type') this.typeElement});
 
   factory _$_PatientLink.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientLinkFromJson(json);
@@ -2279,10 +3393,13 @@ class _$_PatientLink implements _PatientLink {
   @override
   @JsonKey(unknownEnumValue: PatientLinkType.unknown)
   final PatientLinkType type;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
 
   @override
   String toString() {
-    return 'PatientLink(other: $other, type: $type)';
+    return 'PatientLink(other: $other, type: $type, typeElement: $typeElement)';
   }
 
   @override
@@ -2293,14 +3410,18 @@ class _$_PatientLink implements _PatientLink {
                 const DeepCollectionEquality()
                     .equals(other.other, this.other)) &&
             (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)));
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(other) ^
-      const DeepCollectionEquality().hash(type);
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(typeElement);
 
   @override
   _$PatientLinkCopyWith<_PatientLink> get copyWith =>
@@ -2314,10 +3435,9 @@ class _$_PatientLink implements _PatientLink {
 
 abstract class _PatientLink implements PatientLink {
   const factory _PatientLink(
-      {@JsonKey(required: true)
-          Reference other,
-      @JsonKey(unknownEnumValue: PatientLinkType.unknown)
-          PatientLinkType type}) = _$_PatientLink;
+      {@JsonKey(required: true) Reference other,
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType type,
+      @JsonKey(name: '_type') Element typeElement}) = _$_PatientLink;
 
   factory _PatientLink.fromJson(Map<String, dynamic> json) =
       _$_PatientLink.fromJson;
@@ -2328,6 +3448,9 @@ abstract class _PatientLink implements PatientLink {
   @override
   @JsonKey(unknownEnumValue: PatientLinkType.unknown)
   PatientLinkType get type;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
   @override
   _$PatientLinkCopyWith<_PatientLink> get copyWith;
 }
@@ -2343,6 +3466,15 @@ class _$PersonTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Person')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
@@ -2353,9 +3485,23 @@ class _$PersonTearOff {
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      List<PersonLink> link}) {
+      List<PersonLink> link,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
+      @JsonKey(name: '_active')
+          Element activeElement}) {
     return _Person(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       name: name,
       telecom: telecom,
@@ -2366,6 +3512,9 @@ class _$PersonTearOff {
       managingOrganization: managingOrganization,
       active: active,
       link: link,
+      genderElement: genderElement,
+      birthDateElement: birthDateElement,
+      activeElement: activeElement,
     );
   }
 }
@@ -2376,6 +3525,15 @@ const $Person = _$PersonTearOff();
 mixin _$Person {
   @JsonKey(required: true, defaultValue: 'Person')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   List<HumanName> get name;
   List<ContactPoint> get telecom;
@@ -2387,6 +3545,12 @@ mixin _$Person {
   Reference get managingOrganization;
   Boolean get active;
   List<PersonLink> get link;
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @JsonKey(name: '_birthDate')
+  Element get birthDateElement;
+  @JsonKey(name: '_active')
+  Element get activeElement;
 
   Map<String, dynamic> toJson();
   $PersonCopyWith<Person> get copyWith;
@@ -2397,6 +3561,14 @@ abstract class $PersonCopyWith<$Res> {
       _$PersonCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Person') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
@@ -2406,10 +3578,18 @@ abstract class $PersonCopyWith<$Res> {
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      List<PersonLink> link});
+      List<PersonLink> link,
+      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_active') Element activeElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $AttachmentCopyWith<$Res> get photo;
   $ReferenceCopyWith<$Res> get managingOrganization;
+  $ElementCopyWith<$Res> get genderElement;
+  $ElementCopyWith<$Res> get birthDateElement;
+  $ElementCopyWith<$Res> get activeElement;
 }
 
 class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
@@ -2422,6 +3602,14 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object name = freezed,
     Object telecom = freezed,
@@ -2432,11 +3620,29 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
     Object managingOrganization = freezed,
     Object active = freezed,
     Object link = freezed,
+    Object genderElement = freezed,
+    Object birthDateElement = freezed,
+    Object activeElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -2452,7 +3658,36 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
           : managingOrganization as Reference,
       active: active == freezed ? _value.active : active as Boolean,
       link: link == freezed ? _value.link : link as List<PersonLink>,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      birthDateElement: birthDateElement == freezed
+          ? _value.birthDateElement
+          : birthDateElement as Element,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -2474,6 +3709,36 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
       return _then(_value.copyWith(managingOrganization: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get genderElement {
+    if (_value.genderElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.genderElement, (value) {
+      return _then(_value.copyWith(genderElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get birthDateElement {
+    if (_value.birthDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.birthDateElement, (value) {
+      return _then(_value.copyWith(birthDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get activeElement {
+    if (_value.activeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+      return _then(_value.copyWith(activeElement: value));
+    });
+  }
 }
 
 abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
@@ -2482,6 +3747,14 @@ abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Person') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
@@ -2491,12 +3764,25 @@ abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      List<PersonLink> link});
+      List<PersonLink> link,
+      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_active') Element activeElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $AttachmentCopyWith<$Res> get photo;
   @override
   $ReferenceCopyWith<$Res> get managingOrganization;
+  @override
+  $ElementCopyWith<$Res> get genderElement;
+  @override
+  $ElementCopyWith<$Res> get birthDateElement;
+  @override
+  $ElementCopyWith<$Res> get activeElement;
 }
 
 class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
@@ -2510,6 +3796,14 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object name = freezed,
     Object telecom = freezed,
@@ -2520,11 +3814,29 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
     Object managingOrganization = freezed,
     Object active = freezed,
     Object link = freezed,
+    Object genderElement = freezed,
+    Object birthDateElement = freezed,
+    Object activeElement = freezed,
   }) {
     return _then(_Person(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -2540,6 +3852,15 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
           : managingOrganization as Reference,
       active: active == freezed ? _value.active : active as Boolean,
       link: link == freezed ? _value.link : link as List<PersonLink>,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      birthDateElement: birthDateElement == freezed
+          ? _value.birthDateElement
+          : birthDateElement as Element,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
     ));
   }
 }
@@ -2550,6 +3871,15 @@ class _$_Person implements _Person {
       {@required
       @JsonKey(required: true, defaultValue: 'Person')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.name,
       this.telecom,
@@ -2560,7 +3890,13 @@ class _$_Person implements _Person {
       this.photo,
       this.managingOrganization,
       this.active,
-      this.link})
+      this.link,
+      @JsonKey(name: '_gender')
+          this.genderElement,
+      @JsonKey(name: '_birthDate')
+          this.birthDateElement,
+      @JsonKey(name: '_active')
+          this.activeElement})
       : assert(resourceType != null);
 
   factory _$_Person.fromJson(Map<String, dynamic> json) =>
@@ -2569,6 +3905,23 @@ class _$_Person implements _Person {
   @override
   @JsonKey(required: true, defaultValue: 'Person')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -2590,10 +3943,19 @@ class _$_Person implements _Person {
   final Boolean active;
   @override
   final List<PersonLink> link;
+  @override
+  @JsonKey(name: '_gender')
+  final Element genderElement;
+  @override
+  @JsonKey(name: '_birthDate')
+  final Element birthDateElement;
+  @override
+  @JsonKey(name: '_active')
+  final Element activeElement;
 
   @override
   String toString() {
-    return 'Person(resourceType: $resourceType, identifier: $identifier, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, managingOrganization: $managingOrganization, active: $active, link: $link)';
+    return 'Person(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, managingOrganization: $managingOrganization, active: $active, link: $link, genderElement: $genderElement, birthDateElement: $birthDateElement, activeElement: $activeElement)';
   }
 
   @override
@@ -2603,6 +3965,27 @@ class _$_Person implements _Person {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -2627,13 +4010,30 @@ class _$_Person implements _Person {
             (identical(other.active, active) ||
                 const DeepCollectionEquality().equals(other.active, active)) &&
             (identical(other.link, link) ||
-                const DeepCollectionEquality().equals(other.link, link)));
+                const DeepCollectionEquality().equals(other.link, link)) &&
+            (identical(other.genderElement, genderElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.genderElement, genderElement)) &&
+            (identical(other.birthDateElement, birthDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.birthDateElement, birthDateElement)) &&
+            (identical(other.activeElement, activeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.activeElement, activeElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom) ^
@@ -2643,7 +4043,10 @@ class _$_Person implements _Person {
       const DeepCollectionEquality().hash(photo) ^
       const DeepCollectionEquality().hash(managingOrganization) ^
       const DeepCollectionEquality().hash(active) ^
-      const DeepCollectionEquality().hash(link);
+      const DeepCollectionEquality().hash(link) ^
+      const DeepCollectionEquality().hash(genderElement) ^
+      const DeepCollectionEquality().hash(birthDateElement) ^
+      const DeepCollectionEquality().hash(activeElement);
 
   @override
   _$PersonCopyWith<_Person> get copyWith =>
@@ -2660,6 +4063,15 @@ abstract class _Person implements Person {
       {@required
       @JsonKey(required: true, defaultValue: 'Person')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
@@ -2670,13 +4082,36 @@ abstract class _Person implements Person {
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      List<PersonLink> link}) = _$_Person;
+      List<PersonLink> link,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
+      @JsonKey(name: '_active')
+          Element activeElement}) = _$_Person;
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
   @override
   @JsonKey(required: true, defaultValue: 'Person')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -2699,6 +4134,15 @@ abstract class _Person implements Person {
   @override
   List<PersonLink> get link;
   @override
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @override
+  @JsonKey(name: '_birthDate')
+  Element get birthDateElement;
+  @override
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @override
   _$PersonCopyWith<_Person> get copyWith;
 }
 
@@ -2713,10 +4157,13 @@ class _$PersonLinkTearOff {
       {@JsonKey(required: true)
           Reference target,
       @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-          PersonLinkAssurance assurance}) {
+          PersonLinkAssurance assurance,
+      @JsonKey(name: '_assurance')
+          Element assuranceElement}) {
     return _PersonLink(
       target: target,
       assurance: assurance,
+      assuranceElement: assuranceElement,
     );
   }
 }
@@ -2729,6 +4176,8 @@ mixin _$PersonLink {
   Reference get target;
   @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
   PersonLinkAssurance get assurance;
+  @JsonKey(name: '_assurance')
+  Element get assuranceElement;
 
   Map<String, dynamic> toJson();
   $PersonLinkCopyWith<PersonLink> get copyWith;
@@ -2742,9 +4191,12 @@ abstract class $PersonLinkCopyWith<$Res> {
       {@JsonKey(required: true)
           Reference target,
       @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-          PersonLinkAssurance assurance});
+          PersonLinkAssurance assurance,
+      @JsonKey(name: '_assurance')
+          Element assuranceElement});
 
   $ReferenceCopyWith<$Res> get target;
+  $ElementCopyWith<$Res> get assuranceElement;
 }
 
 class _$PersonLinkCopyWithImpl<$Res> implements $PersonLinkCopyWith<$Res> {
@@ -2758,12 +4210,16 @@ class _$PersonLinkCopyWithImpl<$Res> implements $PersonLinkCopyWith<$Res> {
   $Res call({
     Object target = freezed,
     Object assurance = freezed,
+    Object assuranceElement = freezed,
   }) {
     return _then(_value.copyWith(
       target: target == freezed ? _value.target : target as Reference,
       assurance: assurance == freezed
           ? _value.assurance
           : assurance as PersonLinkAssurance,
+      assuranceElement: assuranceElement == freezed
+          ? _value.assuranceElement
+          : assuranceElement as Element,
     ));
   }
 
@@ -2774,6 +4230,16 @@ class _$PersonLinkCopyWithImpl<$Res> implements $PersonLinkCopyWith<$Res> {
     }
     return $ReferenceCopyWith<$Res>(_value.target, (value) {
       return _then(_value.copyWith(target: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get assuranceElement {
+    if (_value.assuranceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.assuranceElement, (value) {
+      return _then(_value.copyWith(assuranceElement: value));
     });
   }
 }
@@ -2787,10 +4253,14 @@ abstract class _$PersonLinkCopyWith<$Res> implements $PersonLinkCopyWith<$Res> {
       {@JsonKey(required: true)
           Reference target,
       @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-          PersonLinkAssurance assurance});
+          PersonLinkAssurance assurance,
+      @JsonKey(name: '_assurance')
+          Element assuranceElement});
 
   @override
   $ReferenceCopyWith<$Res> get target;
+  @override
+  $ElementCopyWith<$Res> get assuranceElement;
 }
 
 class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
@@ -2806,12 +4276,16 @@ class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
   $Res call({
     Object target = freezed,
     Object assurance = freezed,
+    Object assuranceElement = freezed,
   }) {
     return _then(_PersonLink(
       target: target == freezed ? _value.target : target as Reference,
       assurance: assurance == freezed
           ? _value.assurance
           : assurance as PersonLinkAssurance,
+      assuranceElement: assuranceElement == freezed
+          ? _value.assuranceElement
+          : assuranceElement as Element,
     ));
   }
 }
@@ -2820,7 +4294,8 @@ class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
 class _$_PersonLink implements _PersonLink {
   const _$_PersonLink(
       {@JsonKey(required: true) this.target,
-      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown) this.assurance});
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown) this.assurance,
+      @JsonKey(name: '_assurance') this.assuranceElement});
 
   factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonLinkFromJson(json);
@@ -2831,10 +4306,13 @@ class _$_PersonLink implements _PersonLink {
   @override
   @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
   final PersonLinkAssurance assurance;
+  @override
+  @JsonKey(name: '_assurance')
+  final Element assuranceElement;
 
   @override
   String toString() {
-    return 'PersonLink(target: $target, assurance: $assurance)';
+    return 'PersonLink(target: $target, assurance: $assurance, assuranceElement: $assuranceElement)';
   }
 
   @override
@@ -2845,14 +4323,18 @@ class _$_PersonLink implements _PersonLink {
                 const DeepCollectionEquality().equals(other.target, target)) &&
             (identical(other.assurance, assurance) ||
                 const DeepCollectionEquality()
-                    .equals(other.assurance, assurance)));
+                    .equals(other.assurance, assurance)) &&
+            (identical(other.assuranceElement, assuranceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.assuranceElement, assuranceElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(target) ^
-      const DeepCollectionEquality().hash(assurance);
+      const DeepCollectionEquality().hash(assurance) ^
+      const DeepCollectionEquality().hash(assuranceElement);
 
   @override
   _$PersonLinkCopyWith<_PersonLink> get copyWith =>
@@ -2869,7 +4351,9 @@ abstract class _PersonLink implements PersonLink {
       {@JsonKey(required: true)
           Reference target,
       @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-          PersonLinkAssurance assurance}) = _$_PersonLink;
+          PersonLinkAssurance assurance,
+      @JsonKey(name: '_assurance')
+          Element assuranceElement}) = _$_PersonLink;
 
   factory _PersonLink.fromJson(Map<String, dynamic> json) =
       _$_PersonLink.fromJson;
@@ -2880,6 +4364,9 @@ abstract class _PersonLink implements PersonLink {
   @override
   @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
   PersonLinkAssurance get assurance;
+  @override
+  @JsonKey(name: '_assurance')
+  Element get assuranceElement;
   @override
   _$PersonLinkCopyWith<_PersonLink> get copyWith;
 }
@@ -2895,6 +4382,15 @@ class _$PractitionerTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'Practitioner')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       List<HumanName> name,
@@ -2905,9 +4401,23 @@ class _$PractitionerTearOff {
       Date birthDate,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
-      List<CodeableConcept> communication}) {
+      List<CodeableConcept> communication,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement}) {
     return _Practitioner(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
       name: name,
@@ -2918,6 +4428,9 @@ class _$PractitionerTearOff {
       photo: photo,
       qualification: qualification,
       communication: communication,
+      activeElement: activeElement,
+      genderElement: genderElement,
+      birthDateElement: birthDateElement,
     );
   }
 }
@@ -2928,6 +4441,15 @@ const $Practitioner = _$PractitionerTearOff();
 mixin _$Practitioner {
   @JsonKey(required: true, defaultValue: 'Practitioner')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Boolean get active;
   List<HumanName> get name;
@@ -2939,6 +4461,12 @@ mixin _$Practitioner {
   List<Attachment> get photo;
   List<PractitionerQualification> get qualification;
   List<CodeableConcept> get communication;
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @JsonKey(name: '_birthDate')
+  Element get birthDateElement;
 
   Map<String, dynamic> toJson();
   $PractitionerCopyWith<Practitioner> get copyWith;
@@ -2951,6 +4479,15 @@ abstract class $PractitionerCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Practitioner')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       List<HumanName> name,
@@ -2961,7 +4498,19 @@ abstract class $PractitionerCopyWith<$Res> {
       Date birthDate,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
-      List<CodeableConcept> communication});
+      List<CodeableConcept> communication,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement});
+
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res> get activeElement;
+  $ElementCopyWith<$Res> get genderElement;
+  $ElementCopyWith<$Res> get birthDateElement;
 }
 
 class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
@@ -2974,6 +4523,14 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object name = freezed,
@@ -2984,11 +4541,29 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
     Object photo = freezed,
     Object qualification = freezed,
     Object communication = freezed,
+    Object activeElement = freezed,
+    Object genderElement = freezed,
+    Object birthDateElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -3006,7 +4581,66 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
       communication: communication == freezed
           ? _value.communication
           : communication as List<CodeableConcept>,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      birthDateElement: birthDateElement == freezed
+          ? _value.birthDateElement
+          : birthDateElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get activeElement {
+    if (_value.activeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+      return _then(_value.copyWith(activeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get genderElement {
+    if (_value.genderElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.genderElement, (value) {
+      return _then(_value.copyWith(genderElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get birthDateElement {
+    if (_value.birthDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.birthDateElement, (value) {
+      return _then(_value.copyWith(birthDateElement: value));
+    });
   }
 }
 
@@ -3019,6 +4653,15 @@ abstract class _$PractitionerCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'Practitioner')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       List<HumanName> name,
@@ -3029,7 +4672,24 @@ abstract class _$PractitionerCopyWith<$Res>
       Date birthDate,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
-      List<CodeableConcept> communication});
+      List<CodeableConcept> communication,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
+  @override
+  $ElementCopyWith<$Res> get activeElement;
+  @override
+  $ElementCopyWith<$Res> get genderElement;
+  @override
+  $ElementCopyWith<$Res> get birthDateElement;
 }
 
 class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
@@ -3044,6 +4704,14 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object name = freezed,
@@ -3054,11 +4722,29 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
     Object photo = freezed,
     Object qualification = freezed,
     Object communication = freezed,
+    Object activeElement = freezed,
+    Object genderElement = freezed,
+    Object birthDateElement = freezed,
   }) {
     return _then(_Practitioner(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -3076,6 +4762,15 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
       communication: communication == freezed
           ? _value.communication
           : communication as List<CodeableConcept>,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      birthDateElement: birthDateElement == freezed
+          ? _value.birthDateElement
+          : birthDateElement as Element,
     ));
   }
 }
@@ -3086,6 +4781,15 @@ class _$_Practitioner implements _Practitioner {
       {@required
       @JsonKey(required: true, defaultValue: 'Practitioner')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.active,
       this.name,
@@ -3096,7 +4800,13 @@ class _$_Practitioner implements _Practitioner {
       this.birthDate,
       this.photo,
       this.qualification,
-      this.communication})
+      this.communication,
+      @JsonKey(name: '_active')
+          this.activeElement,
+      @JsonKey(name: '_gender')
+          this.genderElement,
+      @JsonKey(name: '_birthDate')
+          this.birthDateElement})
       : assert(resourceType != null);
 
   factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
@@ -3105,6 +4815,23 @@ class _$_Practitioner implements _Practitioner {
   @override
   @JsonKey(required: true, defaultValue: 'Practitioner')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -3126,10 +4853,19 @@ class _$_Practitioner implements _Practitioner {
   final List<PractitionerQualification> qualification;
   @override
   final List<CodeableConcept> communication;
+  @override
+  @JsonKey(name: '_active')
+  final Element activeElement;
+  @override
+  @JsonKey(name: '_gender')
+  final Element genderElement;
+  @override
+  @JsonKey(name: '_birthDate')
+  final Element birthDateElement;
 
   @override
   String toString() {
-    return 'Practitioner(resourceType: $resourceType, identifier: $identifier, active: $active, name: $name, telecom: $telecom, address: $address, gender: $gender, birthDate: $birthDate, photo: $photo, qualification: $qualification, communication: $communication)';
+    return 'Practitioner(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, name: $name, telecom: $telecom, address: $address, gender: $gender, birthDate: $birthDate, photo: $photo, qualification: $qualification, communication: $communication, activeElement: $activeElement, genderElement: $genderElement, birthDateElement: $birthDateElement)';
   }
 
   @override
@@ -3139,6 +4875,27 @@ class _$_Practitioner implements _Practitioner {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -3164,13 +4921,30 @@ class _$_Practitioner implements _Practitioner {
                     .equals(other.qualification, qualification)) &&
             (identical(other.communication, communication) ||
                 const DeepCollectionEquality()
-                    .equals(other.communication, communication)));
+                    .equals(other.communication, communication)) &&
+            (identical(other.activeElement, activeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.activeElement, activeElement)) &&
+            (identical(other.genderElement, genderElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.genderElement, genderElement)) &&
+            (identical(other.birthDateElement, birthDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.birthDateElement, birthDateElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
       const DeepCollectionEquality().hash(name) ^
@@ -3180,7 +4954,10 @@ class _$_Practitioner implements _Practitioner {
       const DeepCollectionEquality().hash(birthDate) ^
       const DeepCollectionEquality().hash(photo) ^
       const DeepCollectionEquality().hash(qualification) ^
-      const DeepCollectionEquality().hash(communication);
+      const DeepCollectionEquality().hash(communication) ^
+      const DeepCollectionEquality().hash(activeElement) ^
+      const DeepCollectionEquality().hash(genderElement) ^
+      const DeepCollectionEquality().hash(birthDateElement);
 
   @override
   _$PractitionerCopyWith<_Practitioner> get copyWith =>
@@ -3197,6 +4974,15 @@ abstract class _Practitioner implements Practitioner {
       {@required
       @JsonKey(required: true, defaultValue: 'Practitioner')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       List<HumanName> name,
@@ -3207,7 +4993,13 @@ abstract class _Practitioner implements Practitioner {
       Date birthDate,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
-      List<CodeableConcept> communication}) = _$_Practitioner;
+      List<CodeableConcept> communication,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement}) = _$_Practitioner;
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
       _$_Practitioner.fromJson;
@@ -3215,6 +5007,23 @@ abstract class _Practitioner implements Practitioner {
   @override
   @JsonKey(required: true, defaultValue: 'Practitioner')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -3236,6 +5045,15 @@ abstract class _Practitioner implements Practitioner {
   List<PractitionerQualification> get qualification;
   @override
   List<CodeableConcept> get communication;
+  @override
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @override
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @override
+  @JsonKey(name: '_birthDate')
+  Element get birthDateElement;
   @override
   _$PractitionerCopyWith<_Practitioner> get copyWith;
 }
@@ -3491,6 +5309,15 @@ class _$PractitionerRoleTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'PractitionerRole')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       Period period,
@@ -3504,9 +5331,21 @@ class _$PractitionerRoleTearOff {
       List<PractitionerRoleAvailableTime> availableTime,
       List<PractitionerRoleNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint}) {
+      List<Reference> endpoint,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement}) {
     return _PractitionerRole(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
       period: period,
@@ -3521,6 +5360,8 @@ class _$PractitionerRoleTearOff {
       notAvailable: notAvailable,
       availabilityExceptions: availabilityExceptions,
       endpoint: endpoint,
+      activeElement: activeElement,
+      availabilityExceptionsElement: availabilityExceptionsElement,
     );
   }
 }
@@ -3531,6 +5372,15 @@ const $PractitionerRole = _$PractitionerRoleTearOff();
 mixin _$PractitionerRole {
   @JsonKey(required: true, defaultValue: 'PractitionerRole')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Boolean get active;
   Period get period;
@@ -3545,6 +5395,10 @@ mixin _$PractitionerRole {
   List<PractitionerRoleNotAvailable> get notAvailable;
   String get availabilityExceptions;
   List<Reference> get endpoint;
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @JsonKey(name: '_availabilityExceptions')
+  Element get availabilityExceptionsElement;
 
   Map<String, dynamic> toJson();
   $PractitionerRoleCopyWith<PractitionerRole> get copyWith;
@@ -3557,6 +5411,15 @@ abstract class $PractitionerRoleCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'PractitionerRole')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       Period period,
@@ -3570,11 +5433,19 @@ abstract class $PractitionerRoleCopyWith<$Res> {
       List<PractitionerRoleAvailableTime> availableTime,
       List<PractitionerRoleNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get practitioner;
   $ReferenceCopyWith<$Res> get organization;
+  $ElementCopyWith<$Res> get activeElement;
+  $ElementCopyWith<$Res> get availabilityExceptionsElement;
 }
 
 class _$PractitionerRoleCopyWithImpl<$Res>
@@ -3588,6 +5459,14 @@ class _$PractitionerRoleCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object period = freezed,
@@ -3602,11 +5481,28 @@ class _$PractitionerRoleCopyWithImpl<$Res>
     Object notAvailable = freezed,
     Object availabilityExceptions = freezed,
     Object endpoint = freezed,
+    Object activeElement = freezed,
+    Object availabilityExceptionsElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -3640,7 +5536,33 @@ class _$PractitionerRoleCopyWithImpl<$Res>
           : availabilityExceptions as String,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      availabilityExceptionsElement: availabilityExceptionsElement == freezed
+          ? _value.availabilityExceptionsElement
+          : availabilityExceptionsElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -3672,6 +5594,27 @@ class _$PractitionerRoleCopyWithImpl<$Res>
       return _then(_value.copyWith(organization: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get activeElement {
+    if (_value.activeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+      return _then(_value.copyWith(activeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get availabilityExceptionsElement {
+    if (_value.availabilityExceptionsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.availabilityExceptionsElement,
+        (value) {
+      return _then(_value.copyWith(availabilityExceptionsElement: value));
+    });
+  }
 }
 
 abstract class _$PractitionerRoleCopyWith<$Res>
@@ -3683,6 +5626,15 @@ abstract class _$PractitionerRoleCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'PractitionerRole')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       Period period,
@@ -3696,14 +5648,26 @@ abstract class _$PractitionerRoleCopyWith<$Res>
       List<PractitionerRoleAvailableTime> availableTime,
       List<PractitionerRoleNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint});
+      List<Reference> endpoint,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $PeriodCopyWith<$Res> get period;
   @override
   $ReferenceCopyWith<$Res> get practitioner;
   @override
   $ReferenceCopyWith<$Res> get organization;
+  @override
+  $ElementCopyWith<$Res> get activeElement;
+  @override
+  $ElementCopyWith<$Res> get availabilityExceptionsElement;
 }
 
 class __$PractitionerRoleCopyWithImpl<$Res>
@@ -3719,6 +5683,14 @@ class __$PractitionerRoleCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object period = freezed,
@@ -3733,11 +5705,28 @@ class __$PractitionerRoleCopyWithImpl<$Res>
     Object notAvailable = freezed,
     Object availabilityExceptions = freezed,
     Object endpoint = freezed,
+    Object activeElement = freezed,
+    Object availabilityExceptionsElement = freezed,
   }) {
     return _then(_PractitionerRole(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -3771,6 +5760,12 @@ class __$PractitionerRoleCopyWithImpl<$Res>
           : availabilityExceptions as String,
       endpoint:
           endpoint == freezed ? _value.endpoint : endpoint as List<Reference>,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      availabilityExceptionsElement: availabilityExceptionsElement == freezed
+          ? _value.availabilityExceptionsElement
+          : availabilityExceptionsElement as Element,
     ));
   }
 }
@@ -3781,6 +5776,15 @@ class _$_PractitionerRole implements _PractitionerRole {
       {@required
       @JsonKey(required: true, defaultValue: 'PractitionerRole')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.active,
       this.period,
@@ -3794,7 +5798,11 @@ class _$_PractitionerRole implements _PractitionerRole {
       this.availableTime,
       this.notAvailable,
       this.availabilityExceptions,
-      this.endpoint})
+      this.endpoint,
+      @JsonKey(name: '_active')
+          this.activeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          this.availabilityExceptionsElement})
       : assert(resourceType != null);
 
   factory _$_PractitionerRole.fromJson(Map<String, dynamic> json) =>
@@ -3803,6 +5811,23 @@ class _$_PractitionerRole implements _PractitionerRole {
   @override
   @JsonKey(required: true, defaultValue: 'PractitionerRole')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -3831,10 +5856,16 @@ class _$_PractitionerRole implements _PractitionerRole {
   final String availabilityExceptions;
   @override
   final List<Reference> endpoint;
+  @override
+  @JsonKey(name: '_active')
+  final Element activeElement;
+  @override
+  @JsonKey(name: '_availabilityExceptions')
+  final Element availabilityExceptionsElement;
 
   @override
   String toString() {
-    return 'PractitionerRole(resourceType: $resourceType, identifier: $identifier, active: $active, period: $period, practitioner: $practitioner, organization: $organization, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint)';
+    return 'PractitionerRole(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, period: $period, practitioner: $practitioner, organization: $organization, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, endpoint: $endpoint, activeElement: $activeElement, availabilityExceptionsElement: $availabilityExceptionsElement)';
   }
 
   @override
@@ -3844,6 +5875,27 @@ class _$_PractitionerRole implements _PractitionerRole {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -3882,13 +5934,25 @@ class _$_PractitionerRole implements _PractitionerRole {
                     other.availabilityExceptions, availabilityExceptions)) &&
             (identical(other.endpoint, endpoint) ||
                 const DeepCollectionEquality()
-                    .equals(other.endpoint, endpoint)));
+                    .equals(other.endpoint, endpoint)) &&
+            (identical(other.activeElement, activeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.activeElement, activeElement)) &&
+            (identical(other.availabilityExceptionsElement, availabilityExceptionsElement) || const DeepCollectionEquality().equals(other.availabilityExceptionsElement, availabilityExceptionsElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
       const DeepCollectionEquality().hash(period) ^
@@ -3902,7 +5966,9 @@ class _$_PractitionerRole implements _PractitionerRole {
       const DeepCollectionEquality().hash(availableTime) ^
       const DeepCollectionEquality().hash(notAvailable) ^
       const DeepCollectionEquality().hash(availabilityExceptions) ^
-      const DeepCollectionEquality().hash(endpoint);
+      const DeepCollectionEquality().hash(endpoint) ^
+      const DeepCollectionEquality().hash(activeElement) ^
+      const DeepCollectionEquality().hash(availabilityExceptionsElement);
 
   @override
   _$PractitionerRoleCopyWith<_PractitionerRole> get copyWith =>
@@ -3919,6 +5985,15 @@ abstract class _PractitionerRole implements PractitionerRole {
       {@required
       @JsonKey(required: true, defaultValue: 'PractitionerRole')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       Period period,
@@ -3932,7 +6007,11 @@ abstract class _PractitionerRole implements PractitionerRole {
       List<PractitionerRoleAvailableTime> availableTime,
       List<PractitionerRoleNotAvailable> notAvailable,
       String availabilityExceptions,
-      List<Reference> endpoint}) = _$_PractitionerRole;
+      List<Reference> endpoint,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_availabilityExceptions')
+          Element availabilityExceptionsElement}) = _$_PractitionerRole;
 
   factory _PractitionerRole.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRole.fromJson;
@@ -3940,6 +6019,23 @@ abstract class _PractitionerRole implements PractitionerRole {
   @override
   @JsonKey(required: true, defaultValue: 'PractitionerRole')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -3969,6 +6065,12 @@ abstract class _PractitionerRole implements PractitionerRole {
   @override
   List<Reference> get endpoint;
   @override
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @override
+  @JsonKey(name: '_availabilityExceptions')
+  Element get availabilityExceptionsElement;
+  @override
   _$PractitionerRoleCopyWith<_PractitionerRole> get copyWith;
 }
 
@@ -3984,12 +6086,20 @@ class _$PractitionerRoleAvailableTimeTearOff {
       {List<Code> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
-      Time availableEndTime}) {
+      Time availableEndTime,
+      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_allDay') Element allDayElement,
+      @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime') Element availableEndTimeElement}) {
     return _PractitionerRoleAvailableTime(
       daysOfWeek: daysOfWeek,
       allDay: allDay,
       availableStartTime: availableStartTime,
       availableEndTime: availableEndTime,
+      daysOfWeekElement: daysOfWeekElement,
+      allDayElement: allDayElement,
+      availableStartTimeElement: availableStartTimeElement,
+      availableEndTimeElement: availableEndTimeElement,
     );
   }
 }
@@ -4002,6 +6112,14 @@ mixin _$PractitionerRoleAvailableTime {
   Boolean get allDay;
   Time get availableStartTime;
   Time get availableEndTime;
+  @JsonKey(name: '_daysOfWeek')
+  Element get daysOfWeekElement;
+  @JsonKey(name: '_allDay')
+  Element get allDayElement;
+  @JsonKey(name: '_availableStartTime')
+  Element get availableStartTimeElement;
+  @JsonKey(name: '_availableEndTime')
+  Element get availableEndTimeElement;
 
   Map<String, dynamic> toJson();
   $PractitionerRoleAvailableTimeCopyWith<PractitionerRoleAvailableTime>
@@ -4017,7 +6135,16 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       {List<Code> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
-      Time availableEndTime});
+      Time availableEndTime,
+      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_allDay') Element allDayElement,
+      @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
+
+  $ElementCopyWith<$Res> get daysOfWeekElement;
+  $ElementCopyWith<$Res> get allDayElement;
+  $ElementCopyWith<$Res> get availableStartTimeElement;
+  $ElementCopyWith<$Res> get availableEndTimeElement;
 }
 
 class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
@@ -4034,6 +6161,10 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
     Object allDay = freezed,
     Object availableStartTime = freezed,
     Object availableEndTime = freezed,
+    Object daysOfWeekElement = freezed,
+    Object allDayElement = freezed,
+    Object availableStartTimeElement = freezed,
+    Object availableEndTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       daysOfWeek:
@@ -4045,7 +6176,59 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       availableEndTime: availableEndTime == freezed
           ? _value.availableEndTime
           : availableEndTime as Time,
+      daysOfWeekElement: daysOfWeekElement == freezed
+          ? _value.daysOfWeekElement
+          : daysOfWeekElement as Element,
+      allDayElement: allDayElement == freezed
+          ? _value.allDayElement
+          : allDayElement as Element,
+      availableStartTimeElement: availableStartTimeElement == freezed
+          ? _value.availableStartTimeElement
+          : availableStartTimeElement as Element,
+      availableEndTimeElement: availableEndTimeElement == freezed
+          ? _value.availableEndTimeElement
+          : availableEndTimeElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get daysOfWeekElement {
+    if (_value.daysOfWeekElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.daysOfWeekElement, (value) {
+      return _then(_value.copyWith(daysOfWeekElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get allDayElement {
+    if (_value.allDayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.allDayElement, (value) {
+      return _then(_value.copyWith(allDayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get availableStartTimeElement {
+    if (_value.availableStartTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.availableStartTimeElement, (value) {
+      return _then(_value.copyWith(availableStartTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get availableEndTimeElement {
+    if (_value.availableEndTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.availableEndTimeElement, (value) {
+      return _then(_value.copyWith(availableEndTimeElement: value));
+    });
   }
 }
 
@@ -4060,7 +6243,20 @@ abstract class _$PractitionerRoleAvailableTimeCopyWith<$Res>
       {List<Code> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
-      Time availableEndTime});
+      Time availableEndTime,
+      @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+      @JsonKey(name: '_allDay') Element allDayElement,
+      @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime') Element availableEndTimeElement});
+
+  @override
+  $ElementCopyWith<$Res> get daysOfWeekElement;
+  @override
+  $ElementCopyWith<$Res> get allDayElement;
+  @override
+  $ElementCopyWith<$Res> get availableStartTimeElement;
+  @override
+  $ElementCopyWith<$Res> get availableEndTimeElement;
 }
 
 class __$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
@@ -4081,6 +6277,10 @@ class __$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
     Object allDay = freezed,
     Object availableStartTime = freezed,
     Object availableEndTime = freezed,
+    Object daysOfWeekElement = freezed,
+    Object allDayElement = freezed,
+    Object availableStartTimeElement = freezed,
+    Object availableEndTimeElement = freezed,
   }) {
     return _then(_PractitionerRoleAvailableTime(
       daysOfWeek:
@@ -4092,6 +6292,18 @@ class __$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       availableEndTime: availableEndTime == freezed
           ? _value.availableEndTime
           : availableEndTime as Time,
+      daysOfWeekElement: daysOfWeekElement == freezed
+          ? _value.daysOfWeekElement
+          : daysOfWeekElement as Element,
+      allDayElement: allDayElement == freezed
+          ? _value.allDayElement
+          : allDayElement as Element,
+      availableStartTimeElement: availableStartTimeElement == freezed
+          ? _value.availableStartTimeElement
+          : availableStartTimeElement as Element,
+      availableEndTimeElement: availableEndTimeElement == freezed
+          ? _value.availableEndTimeElement
+          : availableEndTimeElement as Element,
     ));
   }
 }
@@ -4103,7 +6315,11 @@ class _$_PractitionerRoleAvailableTime
       {this.daysOfWeek,
       this.allDay,
       this.availableStartTime,
-      this.availableEndTime});
+      this.availableEndTime,
+      @JsonKey(name: '_daysOfWeek') this.daysOfWeekElement,
+      @JsonKey(name: '_allDay') this.allDayElement,
+      @JsonKey(name: '_availableStartTime') this.availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime') this.availableEndTimeElement});
 
   factory _$_PractitionerRoleAvailableTime.fromJson(
           Map<String, dynamic> json) =>
@@ -4117,10 +6333,22 @@ class _$_PractitionerRoleAvailableTime
   final Time availableStartTime;
   @override
   final Time availableEndTime;
+  @override
+  @JsonKey(name: '_daysOfWeek')
+  final Element daysOfWeekElement;
+  @override
+  @JsonKey(name: '_allDay')
+  final Element allDayElement;
+  @override
+  @JsonKey(name: '_availableStartTime')
+  final Element availableStartTimeElement;
+  @override
+  @JsonKey(name: '_availableEndTime')
+  final Element availableEndTimeElement;
 
   @override
   String toString() {
-    return 'PractitionerRoleAvailableTime(daysOfWeek: $daysOfWeek, allDay: $allDay, availableStartTime: $availableStartTime, availableEndTime: $availableEndTime)';
+    return 'PractitionerRoleAvailableTime(daysOfWeek: $daysOfWeek, allDay: $allDay, availableStartTime: $availableStartTime, availableEndTime: $availableEndTime, daysOfWeekElement: $daysOfWeekElement, allDayElement: $allDayElement, availableStartTimeElement: $availableStartTimeElement, availableEndTimeElement: $availableEndTimeElement)';
   }
 
   @override
@@ -4137,7 +6365,22 @@ class _$_PractitionerRoleAvailableTime
                     .equals(other.availableStartTime, availableStartTime)) &&
             (identical(other.availableEndTime, availableEndTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.availableEndTime, availableEndTime)));
+                    .equals(other.availableEndTime, availableEndTime)) &&
+            (identical(other.daysOfWeekElement, daysOfWeekElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.daysOfWeekElement, daysOfWeekElement)) &&
+            (identical(other.allDayElement, allDayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.allDayElement, allDayElement)) &&
+            (identical(other.availableStartTimeElement,
+                    availableStartTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.availableStartTimeElement,
+                    availableStartTimeElement)) &&
+            (identical(
+                    other.availableEndTimeElement, availableEndTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.availableEndTimeElement, availableEndTimeElement)));
   }
 
   @override
@@ -4146,7 +6389,11 @@ class _$_PractitionerRoleAvailableTime
       const DeepCollectionEquality().hash(daysOfWeek) ^
       const DeepCollectionEquality().hash(allDay) ^
       const DeepCollectionEquality().hash(availableStartTime) ^
-      const DeepCollectionEquality().hash(availableEndTime);
+      const DeepCollectionEquality().hash(availableEndTime) ^
+      const DeepCollectionEquality().hash(daysOfWeekElement) ^
+      const DeepCollectionEquality().hash(allDayElement) ^
+      const DeepCollectionEquality().hash(availableStartTimeElement) ^
+      const DeepCollectionEquality().hash(availableEndTimeElement);
 
   @override
   _$PractitionerRoleAvailableTimeCopyWith<_PractitionerRoleAvailableTime>
@@ -4165,7 +6412,15 @@ abstract class _PractitionerRoleAvailableTime
       {List<Code> daysOfWeek,
       Boolean allDay,
       Time availableStartTime,
-      Time availableEndTime}) = _$_PractitionerRoleAvailableTime;
+      Time availableEndTime,
+      @JsonKey(name: '_daysOfWeek')
+          Element daysOfWeekElement,
+      @JsonKey(name: '_allDay')
+          Element allDayElement,
+      @JsonKey(name: '_availableStartTime')
+          Element availableStartTimeElement,
+      @JsonKey(name: '_availableEndTime')
+          Element availableEndTimeElement}) = _$_PractitionerRoleAvailableTime;
 
   factory _PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRoleAvailableTime.fromJson;
@@ -4179,6 +6434,18 @@ abstract class _PractitionerRoleAvailableTime
   @override
   Time get availableEndTime;
   @override
+  @JsonKey(name: '_daysOfWeek')
+  Element get daysOfWeekElement;
+  @override
+  @JsonKey(name: '_allDay')
+  Element get allDayElement;
+  @override
+  @JsonKey(name: '_availableStartTime')
+  Element get availableStartTimeElement;
+  @override
+  @JsonKey(name: '_availableEndTime')
+  Element get availableEndTimeElement;
+  @override
   _$PractitionerRoleAvailableTimeCopyWith<_PractitionerRoleAvailableTime>
       get copyWith;
 }
@@ -4191,10 +6458,14 @@ PractitionerRoleNotAvailable _$PractitionerRoleNotAvailableFromJson(
 class _$PractitionerRoleNotAvailableTearOff {
   const _$PractitionerRoleNotAvailableTearOff();
 
-  _PractitionerRoleNotAvailable call({String description, Period during}) {
+  _PractitionerRoleNotAvailable call(
+      {String description,
+      Period during,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _PractitionerRoleNotAvailable(
       description: description,
       during: during,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -4205,6 +6476,8 @@ const $PractitionerRoleNotAvailable = _$PractitionerRoleNotAvailableTearOff();
 mixin _$PractitionerRoleNotAvailable {
   String get description;
   Period get during;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $PractitionerRoleNotAvailableCopyWith<PractitionerRoleNotAvailable>
@@ -4216,9 +6489,13 @@ abstract class $PractitionerRoleNotAvailableCopyWith<$Res> {
           PractitionerRoleNotAvailable value,
           $Res Function(PractitionerRoleNotAvailable) then) =
       _$PractitionerRoleNotAvailableCopyWithImpl<$Res>;
-  $Res call({String description, Period during});
+  $Res call(
+      {String description,
+      Period during,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   $PeriodCopyWith<$Res> get during;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$PractitionerRoleNotAvailableCopyWithImpl<$Res>
@@ -4233,11 +6510,15 @@ class _$PractitionerRoleNotAvailableCopyWithImpl<$Res>
   $Res call({
     Object description = freezed,
     Object during = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       description:
           description == freezed ? _value.description : description as String,
       during: during == freezed ? _value.during : during as Period,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 
@@ -4250,6 +6531,16 @@ class _$PractitionerRoleNotAvailableCopyWithImpl<$Res>
       return _then(_value.copyWith(during: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
 }
 
 abstract class _$PractitionerRoleNotAvailableCopyWith<$Res>
@@ -4259,10 +6550,15 @@ abstract class _$PractitionerRoleNotAvailableCopyWith<$Res>
           $Res Function(_PractitionerRoleNotAvailable) then) =
       __$PractitionerRoleNotAvailableCopyWithImpl<$Res>;
   @override
-  $Res call({String description, Period during});
+  $Res call(
+      {String description,
+      Period during,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   @override
   $PeriodCopyWith<$Res> get during;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$PractitionerRoleNotAvailableCopyWithImpl<$Res>
@@ -4281,18 +6577,25 @@ class __$PractitionerRoleNotAvailableCopyWithImpl<$Res>
   $Res call({
     Object description = freezed,
     Object during = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_PractitionerRoleNotAvailable(
       description:
           description == freezed ? _value.description : description as String,
       during: during == freezed ? _value.during : during as Period,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_PractitionerRoleNotAvailable implements _PractitionerRoleNotAvailable {
-  const _$_PractitionerRoleNotAvailable({this.description, this.during});
+  const _$_PractitionerRoleNotAvailable(
+      {this.description,
+      this.during,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerRoleNotAvailableFromJson(json);
@@ -4301,10 +6604,13 @@ class _$_PractitionerRoleNotAvailable implements _PractitionerRoleNotAvailable {
   final String description;
   @override
   final Period during;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'PractitionerRoleNotAvailable(description: $description, during: $during)';
+    return 'PractitionerRoleNotAvailable(description: $description, during: $during, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -4315,14 +6621,18 @@ class _$_PractitionerRoleNotAvailable implements _PractitionerRoleNotAvailable {
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
             (identical(other.during, during) ||
-                const DeepCollectionEquality().equals(other.during, during)));
+                const DeepCollectionEquality().equals(other.during, during)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(during);
+      const DeepCollectionEquality().hash(during) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$PractitionerRoleNotAvailableCopyWith<_PractitionerRoleNotAvailable>
@@ -4338,7 +6648,10 @@ class _$_PractitionerRoleNotAvailable implements _PractitionerRoleNotAvailable {
 abstract class _PractitionerRoleNotAvailable
     implements PractitionerRoleNotAvailable {
   const factory _PractitionerRoleNotAvailable(
-      {String description, Period during}) = _$_PractitionerRoleNotAvailable;
+          {String description,
+          Period during,
+          @JsonKey(name: '_description') Element descriptionElement}) =
+      _$_PractitionerRoleNotAvailable;
 
   factory _PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRoleNotAvailable.fromJson;
@@ -4347,6 +6660,9 @@ abstract class _PractitionerRoleNotAvailable
   String get description;
   @override
   Period get during;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   _$PractitionerRoleNotAvailableCopyWith<_PractitionerRoleNotAvailable>
       get copyWith;
@@ -4363,6 +6679,15 @@ class _$RelatedPersonTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'RelatedPerson')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       @JsonKey(required: true)
@@ -4375,9 +6700,23 @@ class _$RelatedPersonTearOff {
       Date birthDate,
       List<Address> address,
       List<Attachment> photo,
-      Period period}) {
+      Period period,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement}) {
     return _RelatedPerson(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       active: active,
       patient: patient,
@@ -4389,6 +6728,9 @@ class _$RelatedPersonTearOff {
       address: address,
       photo: photo,
       period: period,
+      activeElement: activeElement,
+      genderElement: genderElement,
+      birthDateElement: birthDateElement,
     );
   }
 }
@@ -4399,6 +6741,15 @@ const $RelatedPerson = _$RelatedPersonTearOff();
 mixin _$RelatedPerson {
   @JsonKey(required: true, defaultValue: 'RelatedPerson')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   List<Identifier> get identifier;
   Boolean get active;
   @JsonKey(required: true)
@@ -4412,6 +6763,12 @@ mixin _$RelatedPerson {
   List<Address> get address;
   List<Attachment> get photo;
   Period get period;
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @JsonKey(name: '_birthDate')
+  Element get birthDateElement;
 
   Map<String, dynamic> toJson();
   $RelatedPersonCopyWith<RelatedPerson> get copyWith;
@@ -4424,6 +6781,15 @@ abstract class $RelatedPersonCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'RelatedPerson')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       @JsonKey(required: true)
@@ -4436,11 +6802,22 @@ abstract class $RelatedPersonCopyWith<$Res> {
       Date birthDate,
       List<Address> address,
       List<Attachment> photo,
-      Period period});
+      Period period,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $ReferenceCopyWith<$Res> get patient;
   $CodeableConceptCopyWith<$Res> get relationship;
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get activeElement;
+  $ElementCopyWith<$Res> get genderElement;
+  $ElementCopyWith<$Res> get birthDateElement;
 }
 
 class _$RelatedPersonCopyWithImpl<$Res>
@@ -4454,6 +6831,14 @@ class _$RelatedPersonCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object patient = freezed,
@@ -4465,11 +6850,29 @@ class _$RelatedPersonCopyWithImpl<$Res>
     Object address = freezed,
     Object photo = freezed,
     Object period = freezed,
+    Object activeElement = freezed,
+    Object genderElement = freezed,
+    Object birthDateElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -4486,7 +6889,36 @@ class _$RelatedPersonCopyWithImpl<$Res>
       address: address == freezed ? _value.address : address as List<Address>,
       photo: photo == freezed ? _value.photo : photo as List<Attachment>,
       period: period == freezed ? _value.period : period as Period,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      birthDateElement: birthDateElement == freezed
+          ? _value.birthDateElement
+          : birthDateElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -4518,6 +6950,36 @@ class _$RelatedPersonCopyWithImpl<$Res>
       return _then(_value.copyWith(period: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get activeElement {
+    if (_value.activeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+      return _then(_value.copyWith(activeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get genderElement {
+    if (_value.genderElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.genderElement, (value) {
+      return _then(_value.copyWith(genderElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get birthDateElement {
+    if (_value.birthDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.birthDateElement, (value) {
+      return _then(_value.copyWith(birthDateElement: value));
+    });
+  }
 }
 
 abstract class _$RelatedPersonCopyWith<$Res>
@@ -4529,6 +6991,15 @@ abstract class _$RelatedPersonCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true, defaultValue: 'RelatedPerson')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       @JsonKey(required: true)
@@ -4541,14 +7012,30 @@ abstract class _$RelatedPersonCopyWith<$Res>
       Date birthDate,
       List<Address> address,
       List<Attachment> photo,
-      Period period});
+      Period period,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $ReferenceCopyWith<$Res> get patient;
   @override
   $CodeableConceptCopyWith<$Res> get relationship;
   @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get activeElement;
+  @override
+  $ElementCopyWith<$Res> get genderElement;
+  @override
+  $ElementCopyWith<$Res> get birthDateElement;
 }
 
 class __$RelatedPersonCopyWithImpl<$Res>
@@ -4564,6 +7051,14 @@ class __$RelatedPersonCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object active = freezed,
     Object patient = freezed,
@@ -4575,11 +7070,29 @@ class __$RelatedPersonCopyWithImpl<$Res>
     Object address = freezed,
     Object photo = freezed,
     Object period = freezed,
+    Object activeElement = freezed,
+    Object genderElement = freezed,
+    Object birthDateElement = freezed,
   }) {
     return _then(_RelatedPerson(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>,
@@ -4596,6 +7109,15 @@ class __$RelatedPersonCopyWithImpl<$Res>
       address: address == freezed ? _value.address : address as List<Address>,
       photo: photo == freezed ? _value.photo : photo as List<Attachment>,
       period: period == freezed ? _value.period : period as Period,
+      activeElement: activeElement == freezed
+          ? _value.activeElement
+          : activeElement as Element,
+      genderElement: genderElement == freezed
+          ? _value.genderElement
+          : genderElement as Element,
+      birthDateElement: birthDateElement == freezed
+          ? _value.birthDateElement
+          : birthDateElement as Element,
     ));
   }
 }
@@ -4606,6 +7128,15 @@ class _$_RelatedPerson implements _RelatedPerson {
       {@required
       @JsonKey(required: true, defaultValue: 'RelatedPerson')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.active,
       @JsonKey(required: true)
@@ -4618,7 +7149,13 @@ class _$_RelatedPerson implements _RelatedPerson {
       this.birthDate,
       this.address,
       this.photo,
-      this.period})
+      this.period,
+      @JsonKey(name: '_active')
+          this.activeElement,
+      @JsonKey(name: '_gender')
+          this.genderElement,
+      @JsonKey(name: '_birthDate')
+          this.birthDateElement})
       : assert(resourceType != null);
 
   factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
@@ -4627,6 +7164,23 @@ class _$_RelatedPerson implements _RelatedPerson {
   @override
   @JsonKey(required: true, defaultValue: 'RelatedPerson')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final List<Identifier> identifier;
   @override
@@ -4651,10 +7205,19 @@ class _$_RelatedPerson implements _RelatedPerson {
   final List<Attachment> photo;
   @override
   final Period period;
+  @override
+  @JsonKey(name: '_active')
+  final Element activeElement;
+  @override
+  @JsonKey(name: '_gender')
+  final Element genderElement;
+  @override
+  @JsonKey(name: '_birthDate')
+  final Element birthDateElement;
 
   @override
   String toString() {
-    return 'RelatedPerson(resourceType: $resourceType, identifier: $identifier, active: $active, patient: $patient, relationship: $relationship, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, period: $period)';
+    return 'RelatedPerson(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, patient: $patient, relationship: $relationship, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, photo: $photo, period: $period, activeElement: $activeElement, genderElement: $genderElement, birthDateElement: $birthDateElement)';
   }
 
   @override
@@ -4664,6 +7227,27 @@ class _$_RelatedPerson implements _RelatedPerson {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -4691,13 +7275,30 @@ class _$_RelatedPerson implements _RelatedPerson {
             (identical(other.photo, photo) ||
                 const DeepCollectionEquality().equals(other.photo, photo)) &&
             (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)));
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.activeElement, activeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.activeElement, activeElement)) &&
+            (identical(other.genderElement, genderElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.genderElement, genderElement)) &&
+            (identical(other.birthDateElement, birthDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.birthDateElement, birthDateElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(active) ^
       const DeepCollectionEquality().hash(patient) ^
@@ -4708,7 +7309,10 @@ class _$_RelatedPerson implements _RelatedPerson {
       const DeepCollectionEquality().hash(birthDate) ^
       const DeepCollectionEquality().hash(address) ^
       const DeepCollectionEquality().hash(photo) ^
-      const DeepCollectionEquality().hash(period);
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(activeElement) ^
+      const DeepCollectionEquality().hash(genderElement) ^
+      const DeepCollectionEquality().hash(birthDateElement);
 
   @override
   _$RelatedPersonCopyWith<_RelatedPerson> get copyWith =>
@@ -4725,6 +7329,15 @@ abstract class _RelatedPerson implements RelatedPerson {
       {@required
       @JsonKey(required: true, defaultValue: 'RelatedPerson')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
       @JsonKey(required: true)
@@ -4737,7 +7350,13 @@ abstract class _RelatedPerson implements RelatedPerson {
       Date birthDate,
       List<Address> address,
       List<Attachment> photo,
-      Period period}) = _$_RelatedPerson;
+      Period period,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement}) = _$_RelatedPerson;
 
   factory _RelatedPerson.fromJson(Map<String, dynamic> json) =
       _$_RelatedPerson.fromJson;
@@ -4745,6 +7364,23 @@ abstract class _RelatedPerson implements RelatedPerson {
   @override
   @JsonKey(required: true, defaultValue: 'RelatedPerson')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   List<Identifier> get identifier;
   @override
@@ -4769,6 +7405,15 @@ abstract class _RelatedPerson implements RelatedPerson {
   List<Attachment> get photo;
   @override
   Period get period;
+  @override
+  @JsonKey(name: '_active')
+  Element get activeElement;
+  @override
+  @JsonKey(name: '_gender')
+  Element get genderElement;
+  @override
+  @JsonKey(name: '_birthDate')
+  Element get birthDateElement;
   @override
   _$RelatedPersonCopyWith<_RelatedPerson> get copyWith;
 }

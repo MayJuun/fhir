@@ -11,7 +11,16 @@ abstract class ResearchStudy with _$ResearchStudy implements Resource {
   const factory ResearchStudy({
     @JsonKey(required: true, defaultValue: 'ResearchStudy')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     String title,
     List<Reference> protocol,
@@ -33,6 +42,9 @@ abstract class ResearchStudy with _$ResearchStudy implements Resource {
     CodeableConcept reasonStopped,
     List<Annotation> note,
     List<ResearchStudyArm> arm,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _ResearchStudy;
   factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyFromJson(json);
@@ -44,6 +56,8 @@ abstract class ResearchStudyArm with _$ResearchStudyArm {
     String name,
     CodeableConcept code,
     String description,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _ResearchStudyArm;
   factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyArmFromJson(json);
@@ -54,7 +68,16 @@ abstract class ResearchSubject with _$ResearchSubject implements Resource {
   const factory ResearchSubject({
     @JsonKey(required: true, defaultValue: 'ResearchSubject')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
         ResearchSubjectStatus status,
@@ -64,6 +87,9 @@ abstract class ResearchSubject with _$ResearchSubject implements Resource {
     String assignedArm,
     String actualArm,
     Reference consent,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_assignedArm') Element assignedArmElement,
+    @JsonKey(name: '_actualArm') Element actualArmElement,
   }) = _ResearchSubject;
   factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectFromJson(json);

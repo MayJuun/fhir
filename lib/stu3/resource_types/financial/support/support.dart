@@ -10,7 +10,16 @@ abstract class Coverage with _$Coverage implements Resource {
   const factory Coverage({
     @JsonKey(required: true, defaultValue: 'Coverage')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     CodeableConcept type,
@@ -27,6 +36,12 @@ abstract class Coverage with _$Coverage implements Resource {
     PositiveInt order,
     String network,
     List<Reference> contract,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+    @JsonKey(name: '_dependent') Element dependentElement,
+    @JsonKey(name: '_sequence') Element sequenceElement,
+    @JsonKey(name: '_order') Element orderElement,
+    @JsonKey(name: '_network') Element networkElement,
   }) = _Coverage;
   factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
@@ -47,6 +62,18 @@ abstract class CoverageGrouping with _$CoverageGrouping {
     String classDisplay,
     String subClass,
     String subClassDisplay,
+    @JsonKey(name: '_group') Element groupElement,
+    @JsonKey(name: '_groupDisplay') Element groupDisplayElement,
+    @JsonKey(name: '_subGroup') Element subGroupElement,
+    @JsonKey(name: '_subGroupDisplay') Element subGroupDisplayElement,
+    @JsonKey(name: '_plan') Element planElement,
+    @JsonKey(name: '_planDisplay') Element planDisplayElement,
+    @JsonKey(name: '_subPlan') Element subPlanElement,
+    @JsonKey(name: '_subPlanDisplay') Element subPlanDisplayElement,
+    @JsonKey(name: '_class') Element classElement,
+    @JsonKey(name: '_classDisplay') Element classDisplayElement,
+    @JsonKey(name: '_subClass') Element subClassElement,
+    @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement,
   }) = _CoverageGrouping;
   factory CoverageGrouping.fromJson(Map<String, dynamic> json) =>
       _$CoverageGroupingFromJson(json);
@@ -59,7 +86,16 @@ abstract class EligibilityRequest
   const factory EligibilityRequest({
     @JsonKey(required: true, defaultValue: 'EligibilityRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     CodeableConcept priority,
@@ -76,6 +112,10 @@ abstract class EligibilityRequest
     String businessArrangement,
     CodeableConcept benefitCategory,
     CodeableConcept benefitSubCategory,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_servicedDate') Element servicedDateElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
   }) = _EligibilityRequest;
   factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$EligibilityRequestFromJson(json);
@@ -88,7 +128,16 @@ abstract class EligibilityResponse
   const factory EligibilityResponse({
     @JsonKey(required: true, defaultValue: 'EligibilityResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     FhirDateTime created,
@@ -102,6 +151,10 @@ abstract class EligibilityResponse
     List<EligibilityResponseInsurance> insurance,
     CodeableConcept form,
     List<EligibilityResponseError> error,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
+    @JsonKey(name: '_inforce') Element inforceElement,
   }) = _EligibilityResponse;
   factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFromJson(json);
@@ -132,6 +185,9 @@ abstract class EligibilityResponseBenefitBalance
     CodeableConcept unit,
     CodeableConcept term,
     List<EligibilityResponseFinancial> financial,
+    @JsonKey(name: '_excluded') Element excludedElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _EligibilityResponseBenefitBalance;
   factory EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
@@ -148,6 +204,9 @@ abstract class EligibilityResponseFinancial
     Money allowedMoney,
     UnsignedInt usedUnsignedInt,
     Money usedMoney,
+    @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+    @JsonKey(name: '_allowedString') Element allowedStringElement,
+    @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
   }) = _EligibilityResponseFinancial;
   factory EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFinancialFromJson(json);
@@ -167,7 +226,16 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
   const factory EnrollmentRequest({
     @JsonKey(required: true, defaultValue: 'EnrollmentRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     FhirDateTime created,
@@ -176,6 +244,8 @@ abstract class EnrollmentRequest with _$EnrollmentRequest implements Resource {
     Reference organization,
     Reference subject,
     Reference coverage,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _EnrollmentRequest;
   factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentRequestFromJson(json);
@@ -188,7 +258,16 @@ abstract class EnrollmentResponse
   const factory EnrollmentResponse({
     @JsonKey(required: true, defaultValue: 'EnrollmentResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     Reference request,
@@ -198,6 +277,9 @@ abstract class EnrollmentResponse
     Reference organization,
     Reference requestProvider,
     Reference requestOrganization,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _EnrollmentResponse;
   factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentResponseFromJson(json);

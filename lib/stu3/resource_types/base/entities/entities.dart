@@ -13,6 +13,14 @@ abstract class Device with _$Device implements Resource {
     @JsonKey(required: true, defaultValue: 'Device')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     DeviceUdi udi,
     @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
@@ -30,6 +38,14 @@ abstract class Device with _$Device implements Resource {
     String url,
     List<Annotation> note,
     List<CodeableConcept> safety,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_lotNumber') Element lotNumberElement,
+    @JsonKey(name: '_manufacturer') Element manufacturerElement,
+    @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+    @JsonKey(name: '_expirationDate') Element expirationDateElement,
+    @JsonKey(name: '_model') Element modelElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_url') Element urlElement,
   }) = _Device;
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 }
@@ -44,6 +60,13 @@ abstract class DeviceUdi with _$DeviceUdi {
     String carrierAIDC,
     String issuer,
     @JsonKey(unknownEnumValue: UdiEntryType.unknown) UdiEntryType entryType,
+    @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_jurisdiction') Element jurisdictionElement,
+    @JsonKey(name: '_carrierHRF') Element carrierHRFElement,
+    @JsonKey(name: '_carrierAIDC') Element carrierAIDCElement,
+    @JsonKey(name: '_issuer') Element issuerElement,
+    @JsonKey(name: '_entryType') Element entryTypeElement,
   }) = _DeviceUdi;
   factory DeviceUdi.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiFromJson(json);
@@ -55,6 +78,14 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
     @JsonKey(required: true, defaultValue: 'DeviceComponent')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) Identifier identifier,
     @JsonKey(required: true) CodeableConcept type,
     String lastSystemChange,
@@ -66,6 +97,8 @@ abstract class DeviceComponent with _$DeviceComponent implements Resource {
         DeviceComponentMeasurementPrinciple measurementPrinciple,
     List<DeviceComponentProductionSpecification> productionSpecification,
     CodeableConcept languageCode,
+    @JsonKey(name: '_lastSystemChange') Element lastSystemChangeElement,
+    @JsonKey(name: '_measurementPrinciple') Element measurementPrincipleElement,
   }) = _DeviceComponent;
   factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$DeviceComponentFromJson(json);
@@ -78,6 +111,7 @@ abstract class DeviceComponentProductionSpecification
     CodeableConcept specType,
     Identifier componentId,
     String productionSpec,
+    @JsonKey(name: '_productionSpec') Element productionSpecElement,
   }) = _DeviceComponentProductionSpecification;
   factory DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
@@ -90,6 +124,14 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
     @JsonKey(required: true, defaultValue: 'DeviceMetric')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) Identifier identifier,
     @JsonKey(required: true) CodeableConcept type,
     CodeableConcept unit,
@@ -103,6 +145,9 @@ abstract class DeviceMetric with _$DeviceMetric implements Resource {
         DeviceMetricCategory category,
     Timing measurementPeriod,
     List<DeviceMetricCalibration> calibration,
+    @JsonKey(name: '_operationalStatus') Element operationalStatusElement,
+    @JsonKey(name: '_color') Element colorElement,
+    @JsonKey(name: '_category') Element categoryElement,
   }) = _DeviceMetric;
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
@@ -114,6 +159,9 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
     @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType type,
     @JsonKey(unknownEnumValue: CalibrationState.unknown) CalibrationState state,
     String time,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_state') Element stateElement,
+    @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
@@ -125,6 +173,14 @@ abstract class Endpoint with _$Endpoint implements Resource {
     @JsonKey(required: true, defaultValue: 'Endpoint')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: EndpointStatus.unknown) EndpointStatus status,
     @JsonKey(required: true) Coding connectionType,
@@ -136,6 +192,11 @@ abstract class Endpoint with _$Endpoint implements Resource {
     List<Code> payloadMimeType,
     String address,
     List<String> header,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_payloadMimeType') Element payloadMimeTypeElement,
+    @JsonKey(name: '_address') Element addressElement,
+    @JsonKey(name: '_header') Element headerElement,
   }) = _Endpoint;
   factory Endpoint.fromJson(Map<String, dynamic> json) =>
       _$EndpointFromJson(json);
@@ -147,6 +208,14 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
     @JsonKey(required: true, defaultValue: 'HealthcareService')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     Reference providedBy,
@@ -171,6 +240,15 @@ abstract class HealthcareService with _$HealthcareService implements Resource {
     List<HealthcareServiceNotAvailable> notAvailable,
     String availabilityExceptions,
     List<Reference> endpoint,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_extraDetails') Element extraDetailsElement,
+    @JsonKey(name: '_eligibilityNote') Element eligibilityNoteElement,
+    @JsonKey(name: '_programName') Element programNameElement,
+    @JsonKey(name: '_appointmentRequired') Element appointmentRequiredElement,
+    @JsonKey(name: '_availabilityExceptions')
+        Element availabilityExceptionsElement,
   }) = _HealthcareService;
   factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
@@ -184,6 +262,10 @@ abstract class HealthcareServiceAvailableTime
     Boolean allDay,
     Time availableStartTime,
     Time availableEndTime,
+    @JsonKey(name: '_daysOfWeek') Element daysOfWeekElement,
+    @JsonKey(name: '_allDay') Element allDayElement,
+    @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
+    @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
@@ -195,6 +277,7 @@ abstract class HealthcareServiceNotAvailable
   const factory HealthcareServiceNotAvailable({
     String description,
     Period during,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _HealthcareServiceNotAvailable;
   factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceNotAvailableFromJson(json);
@@ -206,6 +289,14 @@ abstract class Location with _$Location implements Resource {
     @JsonKey(required: true, defaultValue: 'Location')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
     Coding operationalStatus,
@@ -221,6 +312,11 @@ abstract class Location with _$Location implements Resource {
     Reference managingOrganization,
     Reference partOf,
     List<Reference> endpoint,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_alias') Element aliasElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _Location;
   factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
@@ -232,6 +328,9 @@ abstract class LocationPosition with _$LocationPosition {
     Decimal longitude,
     Decimal latitude,
     Decimal altitude,
+    @JsonKey(name: '_longitude') Element longitudeElement,
+    @JsonKey(name: '_latitude') Element latitudeElement,
+    @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
   factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
@@ -243,6 +342,14 @@ abstract class Organization with _$Organization implements Resource {
     @JsonKey(required: true, defaultValue: 'Organization')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     List<CodeableConcept> type,
@@ -253,6 +360,9 @@ abstract class Organization with _$Organization implements Resource {
     Reference partOf,
     List<OrganizationContact> contact,
     List<Reference> endpoint,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_alias') Element aliasElement,
   }) = _Organization;
   factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
@@ -276,6 +386,14 @@ abstract class Substance with _$Substance implements Resource {
     @JsonKey(required: true, defaultValue: 'Substance')
     @required
         String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: ActiveInactive.unknown) ActiveInactive status,
     List<CodeableConcept> category,
@@ -283,6 +401,8 @@ abstract class Substance with _$Substance implements Resource {
     String description,
     List<SubstanceInstance> instance,
     List<SubstanceIngredient> ingredient,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _Substance;
   factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
@@ -294,6 +414,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
     Identifier identifier,
     FhirDateTime expiry,
     Quantity quantity,
+    @JsonKey(name: '_expiry') Element expiryElement,
   }) = _SubstanceInstance;
   factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceInstanceFromJson(json);

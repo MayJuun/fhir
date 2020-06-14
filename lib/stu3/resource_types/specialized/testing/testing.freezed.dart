@@ -19,6 +19,15 @@ class _$TestReportTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -33,9 +42,29 @@ class _$TestReportTearOff {
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
-      TestReportTeardown teardown}) {
+      TestReportTeardown teardown,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_result')
+          Element resultElement,
+      @JsonKey(name: '_score')
+          Element scoreElement,
+      @JsonKey(name: '_tester')
+          Element testerElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement}) {
     return _TestReport(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       identifier: identifier,
       name: name,
       status: status,
@@ -48,6 +77,12 @@ class _$TestReportTearOff {
       setup: setup,
       test: test,
       teardown: teardown,
+      nameElement: nameElement,
+      statusElement: statusElement,
+      resultElement: resultElement,
+      scoreElement: scoreElement,
+      testerElement: testerElement,
+      issuedElement: issuedElement,
     );
   }
 }
@@ -58,6 +93,15 @@ const $TestReport = _$TestReportTearOff();
 mixin _$TestReport {
   @JsonKey(required: true, defaultValue: 'TestReport')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   Identifier get identifier;
   String get name;
   @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -73,6 +117,18 @@ mixin _$TestReport {
   TestReportSetup get setup;
   List<TestReportTest> get test;
   TestReportTeardown get teardown;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_result')
+  Element get resultElement;
+  @JsonKey(name: '_score')
+  Element get scoreElement;
+  @JsonKey(name: '_tester')
+  Element get testerElement;
+  @JsonKey(name: '_issued')
+  Element get issuedElement;
 
   Map<String, dynamic> toJson();
   $TestReportCopyWith<TestReport> get copyWith;
@@ -85,6 +141,15 @@ abstract class $TestReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'TestReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -99,12 +164,32 @@ abstract class $TestReportCopyWith<$Res> {
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
-      TestReportTeardown teardown});
+      TestReportTeardown teardown,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_result')
+          Element resultElement,
+      @JsonKey(name: '_score')
+          Element scoreElement,
+      @JsonKey(name: '_tester')
+          Element testerElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get testScript;
   $TestReportSetupCopyWith<$Res> get setup;
   $TestReportTeardownCopyWith<$Res> get teardown;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get resultElement;
+  $ElementCopyWith<$Res> get scoreElement;
+  $ElementCopyWith<$Res> get testerElement;
+  $ElementCopyWith<$Res> get issuedElement;
 }
 
 class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
@@ -117,6 +202,14 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object name = freezed,
     Object status = freezed,
@@ -129,11 +222,32 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
     Object setup = freezed,
     Object test = freezed,
     Object teardown = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object resultElement = freezed,
+    Object scoreElement = freezed,
+    Object testerElement = freezed,
+    Object issuedElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       name: name == freezed ? _value.name : name as String,
@@ -152,7 +266,44 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestReportTeardown,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      resultElement: resultElement == freezed
+          ? _value.resultElement
+          : resultElement as Element,
+      scoreElement: scoreElement == freezed
+          ? _value.scoreElement
+          : scoreElement as Element,
+      testerElement: testerElement == freezed
+          ? _value.testerElement
+          : testerElement as Element,
+      issuedElement: issuedElement == freezed
+          ? _value.issuedElement
+          : issuedElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -194,6 +345,66 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       return _then(_value.copyWith(teardown: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get resultElement {
+    if (_value.resultElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.resultElement, (value) {
+      return _then(_value.copyWith(resultElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get scoreElement {
+    if (_value.scoreElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.scoreElement, (value) {
+      return _then(_value.copyWith(scoreElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get testerElement {
+    if (_value.testerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.testerElement, (value) {
+      return _then(_value.copyWith(testerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get issuedElement {
+    if (_value.issuedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.issuedElement, (value) {
+      return _then(_value.copyWith(issuedElement: value));
+    });
+  }
 }
 
 abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
@@ -204,6 +415,15 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true, defaultValue: 'TestReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -218,8 +438,24 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
-      TestReportTeardown teardown});
+      TestReportTeardown teardown,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_result')
+          Element resultElement,
+      @JsonKey(name: '_score')
+          Element scoreElement,
+      @JsonKey(name: '_tester')
+          Element testerElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
@@ -228,6 +464,18 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
   $TestReportSetupCopyWith<$Res> get setup;
   @override
   $TestReportTeardownCopyWith<$Res> get teardown;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get resultElement;
+  @override
+  $ElementCopyWith<$Res> get scoreElement;
+  @override
+  $ElementCopyWith<$Res> get testerElement;
+  @override
+  $ElementCopyWith<$Res> get issuedElement;
 }
 
 class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
@@ -242,6 +490,14 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object identifier = freezed,
     Object name = freezed,
     Object status = freezed,
@@ -254,11 +510,32 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
     Object setup = freezed,
     Object test = freezed,
     Object teardown = freezed,
+    Object nameElement = freezed,
+    Object statusElement = freezed,
+    Object resultElement = freezed,
+    Object scoreElement = freezed,
+    Object testerElement = freezed,
+    Object issuedElement = freezed,
   }) {
     return _then(_TestReport(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       name: name == freezed ? _value.name : name as String,
@@ -277,6 +554,23 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestReportTeardown,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      resultElement: resultElement == freezed
+          ? _value.resultElement
+          : resultElement as Element,
+      scoreElement: scoreElement == freezed
+          ? _value.scoreElement
+          : scoreElement as Element,
+      testerElement: testerElement == freezed
+          ? _value.testerElement
+          : testerElement as Element,
+      issuedElement: issuedElement == freezed
+          ? _value.issuedElement
+          : issuedElement as Element,
     ));
   }
 }
@@ -287,6 +581,15 @@ class _$_TestReport implements _TestReport {
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -301,7 +604,19 @@ class _$_TestReport implements _TestReport {
       this.participant,
       this.setup,
       this.test,
-      this.teardown})
+      this.teardown,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_result')
+          this.resultElement,
+      @JsonKey(name: '_score')
+          this.scoreElement,
+      @JsonKey(name: '_tester')
+          this.testerElement,
+      @JsonKey(name: '_issued')
+          this.issuedElement})
       : assert(resourceType != null);
 
   factory _$_TestReport.fromJson(Map<String, dynamic> json) =>
@@ -310,6 +625,23 @@ class _$_TestReport implements _TestReport {
   @override
   @JsonKey(required: true, defaultValue: 'TestReport')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -337,10 +669,28 @@ class _$_TestReport implements _TestReport {
   final List<TestReportTest> test;
   @override
   final TestReportTeardown teardown;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_result')
+  final Element resultElement;
+  @override
+  @JsonKey(name: '_score')
+  final Element scoreElement;
+  @override
+  @JsonKey(name: '_tester')
+  final Element testerElement;
+  @override
+  @JsonKey(name: '_issued')
+  final Element issuedElement;
 
   @override
   String toString() {
-    return 'TestReport(resourceType: $resourceType, identifier: $identifier, name: $name, status: $status, testScript: $testScript, result: $result, score: $score, tester: $tester, issued: $issued, participant: $participant, setup: $setup, test: $test, teardown: $teardown)';
+    return 'TestReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, status: $status, testScript: $testScript, result: $result, score: $score, tester: $tester, issued: $issued, participant: $participant, setup: $setup, test: $test, teardown: $teardown, nameElement: $nameElement, statusElement: $statusElement, resultElement: $resultElement, scoreElement: $scoreElement, testerElement: $testerElement, issuedElement: $issuedElement)';
   }
 
   @override
@@ -350,6 +700,27 @@ class _$_TestReport implements _TestReport {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
@@ -377,13 +748,39 @@ class _$_TestReport implements _TestReport {
                 const DeepCollectionEquality().equals(other.test, test)) &&
             (identical(other.teardown, teardown) ||
                 const DeepCollectionEquality()
-                    .equals(other.teardown, teardown)));
+                    .equals(other.teardown, teardown)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.resultElement, resultElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.resultElement, resultElement)) &&
+            (identical(other.scoreElement, scoreElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.scoreElement, scoreElement)) &&
+            (identical(other.testerElement, testerElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.testerElement, testerElement)) &&
+            (identical(other.issuedElement, issuedElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.issuedElement, issuedElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(status) ^
@@ -395,7 +792,13 @@ class _$_TestReport implements _TestReport {
       const DeepCollectionEquality().hash(participant) ^
       const DeepCollectionEquality().hash(setup) ^
       const DeepCollectionEquality().hash(test) ^
-      const DeepCollectionEquality().hash(teardown);
+      const DeepCollectionEquality().hash(teardown) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(resultElement) ^
+      const DeepCollectionEquality().hash(scoreElement) ^
+      const DeepCollectionEquality().hash(testerElement) ^
+      const DeepCollectionEquality().hash(issuedElement);
 
   @override
   _$TestReportCopyWith<_TestReport> get copyWith =>
@@ -412,6 +815,15 @@ abstract class _TestReport implements TestReport {
       {@required
       @JsonKey(required: true, defaultValue: 'TestReport')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
       @JsonKey(unknownEnumValue: TestReportStatus.unknown)
@@ -426,7 +838,19 @@ abstract class _TestReport implements TestReport {
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
-      TestReportTeardown teardown}) = _$_TestReport;
+      TestReportTeardown teardown,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_result')
+          Element resultElement,
+      @JsonKey(name: '_score')
+          Element scoreElement,
+      @JsonKey(name: '_tester')
+          Element testerElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement}) = _$_TestReport;
 
   factory _TestReport.fromJson(Map<String, dynamic> json) =
       _$_TestReport.fromJson;
@@ -434,6 +858,23 @@ abstract class _TestReport implements TestReport {
   @override
   @JsonKey(required: true, defaultValue: 'TestReport')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   Identifier get identifier;
   @override
@@ -462,6 +903,24 @@ abstract class _TestReport implements TestReport {
   @override
   TestReportTeardown get teardown;
   @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_result')
+  Element get resultElement;
+  @override
+  @JsonKey(name: '_score')
+  Element get scoreElement;
+  @override
+  @JsonKey(name: '_tester')
+  Element get testerElement;
+  @override
+  @JsonKey(name: '_issued')
+  Element get issuedElement;
+  @override
   _$TestReportCopyWith<_TestReport> get copyWith;
 }
 
@@ -477,11 +936,20 @@ class _$TestReportParticipantTearOff {
       {@JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
           TestReportParticipantType type,
       String uri,
-      String display}) {
+      String display,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_uri')
+          Element uriElement,
+      @JsonKey(name: '_display')
+          Element displayElement}) {
     return _TestReportParticipant(
       type: type,
       uri: uri,
       display: display,
+      typeElement: typeElement,
+      uriElement: uriElement,
+      displayElement: displayElement,
     );
   }
 }
@@ -494,6 +962,12 @@ mixin _$TestReportParticipant {
   TestReportParticipantType get type;
   String get uri;
   String get display;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_uri')
+  Element get uriElement;
+  @JsonKey(name: '_display')
+  Element get displayElement;
 
   Map<String, dynamic> toJson();
   $TestReportParticipantCopyWith<TestReportParticipant> get copyWith;
@@ -507,7 +981,17 @@ abstract class $TestReportParticipantCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
           TestReportParticipantType type,
       String uri,
-      String display});
+      String display,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_uri')
+          Element uriElement,
+      @JsonKey(name: '_display')
+          Element displayElement});
+
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get uriElement;
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class _$TestReportParticipantCopyWithImpl<$Res>
@@ -523,12 +1007,52 @@ class _$TestReportParticipantCopyWithImpl<$Res>
     Object type = freezed,
     Object uri = freezed,
     Object display = freezed,
+    Object typeElement = freezed,
+    Object uriElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_value.copyWith(
       type: type == freezed ? _value.type : type as TestReportParticipantType,
       uri: uri == freezed ? _value.uri : uri as String,
       display: display == freezed ? _value.display : display as String,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      uriElement:
+          uriElement == freezed ? _value.uriElement : uriElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get uriElement {
+    if (_value.uriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.uriElement, (value) {
+      return _then(_value.copyWith(uriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get displayElement {
+    if (_value.displayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.displayElement, (value) {
+      return _then(_value.copyWith(displayElement: value));
+    });
   }
 }
 
@@ -542,7 +1066,20 @@ abstract class _$TestReportParticipantCopyWith<$Res>
       {@JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
           TestReportParticipantType type,
       String uri,
-      String display});
+      String display,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_uri')
+          Element uriElement,
+      @JsonKey(name: '_display')
+          Element displayElement});
+
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get uriElement;
+  @override
+  $ElementCopyWith<$Res> get displayElement;
 }
 
 class __$TestReportParticipantCopyWithImpl<$Res>
@@ -560,11 +1097,21 @@ class __$TestReportParticipantCopyWithImpl<$Res>
     Object type = freezed,
     Object uri = freezed,
     Object display = freezed,
+    Object typeElement = freezed,
+    Object uriElement = freezed,
+    Object displayElement = freezed,
   }) {
     return _then(_TestReportParticipant(
       type: type == freezed ? _value.type : type as TestReportParticipantType,
       uri: uri == freezed ? _value.uri : uri as String,
       display: display == freezed ? _value.display : display as String,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      uriElement:
+          uriElement == freezed ? _value.uriElement : uriElement as Element,
+      displayElement: displayElement == freezed
+          ? _value.displayElement
+          : displayElement as Element,
     ));
   }
 }
@@ -574,7 +1121,10 @@ class _$_TestReportParticipant implements _TestReportParticipant {
   const _$_TestReportParticipant(
       {@JsonKey(unknownEnumValue: TestReportParticipantType.unknown) this.type,
       this.uri,
-      this.display});
+      this.display,
+      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_uri') this.uriElement,
+      @JsonKey(name: '_display') this.displayElement});
 
   factory _$_TestReportParticipant.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportParticipantFromJson(json);
@@ -586,10 +1136,19 @@ class _$_TestReportParticipant implements _TestReportParticipant {
   final String uri;
   @override
   final String display;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_uri')
+  final Element uriElement;
+  @override
+  @JsonKey(name: '_display')
+  final Element displayElement;
 
   @override
   String toString() {
-    return 'TestReportParticipant(type: $type, uri: $uri, display: $display)';
+    return 'TestReportParticipant(type: $type, uri: $uri, display: $display, typeElement: $typeElement, uriElement: $uriElement, displayElement: $displayElement)';
   }
 
   @override
@@ -601,7 +1160,17 @@ class _$_TestReportParticipant implements _TestReportParticipant {
             (identical(other.uri, uri) ||
                 const DeepCollectionEquality().equals(other.uri, uri)) &&
             (identical(other.display, display) ||
-                const DeepCollectionEquality().equals(other.display, display)));
+                const DeepCollectionEquality()
+                    .equals(other.display, display)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.uriElement, uriElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.uriElement, uriElement)) &&
+            (identical(other.displayElement, displayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayElement, displayElement)));
   }
 
   @override
@@ -609,7 +1178,10 @@ class _$_TestReportParticipant implements _TestReportParticipant {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(uri) ^
-      const DeepCollectionEquality().hash(display);
+      const DeepCollectionEquality().hash(display) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(uriElement) ^
+      const DeepCollectionEquality().hash(displayElement);
 
   @override
   _$TestReportParticipantCopyWith<_TestReportParticipant> get copyWith =>
@@ -627,7 +1199,13 @@ abstract class _TestReportParticipant implements TestReportParticipant {
       {@JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
           TestReportParticipantType type,
       String uri,
-      String display}) = _$_TestReportParticipant;
+      String display,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_uri')
+          Element uriElement,
+      @JsonKey(name: '_display')
+          Element displayElement}) = _$_TestReportParticipant;
 
   factory _TestReportParticipant.fromJson(Map<String, dynamic> json) =
       _$_TestReportParticipant.fromJson;
@@ -639,6 +1217,15 @@ abstract class _TestReportParticipant implements TestReportParticipant {
   String get uri;
   @override
   String get display;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_uri')
+  Element get uriElement;
+  @override
+  @JsonKey(name: '_display')
+  Element get displayElement;
   @override
   _$TestReportParticipantCopyWith<_TestReportParticipant> get copyWith;
 }
@@ -976,11 +1563,17 @@ class _$TestReportOperationTearOff {
   _TestReportOperation call(
       {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
-      String detail}) {
+      String detail,
+      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_message') Element messageElement,
+      @JsonKey(name: '_detail') Element detailElement}) {
     return _TestReportOperation(
       result: result,
       message: message,
       detail: detail,
+      resultElement: resultElement,
+      messageElement: messageElement,
+      detailElement: detailElement,
     );
   }
 }
@@ -993,6 +1586,12 @@ mixin _$TestReportOperation {
   Result get result;
   String get message;
   String get detail;
+  @JsonKey(name: '_result')
+  Element get resultElement;
+  @JsonKey(name: '_message')
+  Element get messageElement;
+  @JsonKey(name: '_detail')
+  Element get detailElement;
 
   Map<String, dynamic> toJson();
   $TestReportOperationCopyWith<TestReportOperation> get copyWith;
@@ -1005,7 +1604,14 @@ abstract class $TestReportOperationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
-      String detail});
+      String detail,
+      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_message') Element messageElement,
+      @JsonKey(name: '_detail') Element detailElement});
+
+  $ElementCopyWith<$Res> get resultElement;
+  $ElementCopyWith<$Res> get messageElement;
+  $ElementCopyWith<$Res> get detailElement;
 }
 
 class _$TestReportOperationCopyWithImpl<$Res>
@@ -1021,12 +1627,54 @@ class _$TestReportOperationCopyWithImpl<$Res>
     Object result = freezed,
     Object message = freezed,
     Object detail = freezed,
+    Object resultElement = freezed,
+    Object messageElement = freezed,
+    Object detailElement = freezed,
   }) {
     return _then(_value.copyWith(
       result: result == freezed ? _value.result : result as Result,
       message: message == freezed ? _value.message : message as String,
       detail: detail == freezed ? _value.detail : detail as String,
+      resultElement: resultElement == freezed
+          ? _value.resultElement
+          : resultElement as Element,
+      messageElement: messageElement == freezed
+          ? _value.messageElement
+          : messageElement as Element,
+      detailElement: detailElement == freezed
+          ? _value.detailElement
+          : detailElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get resultElement {
+    if (_value.resultElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.resultElement, (value) {
+      return _then(_value.copyWith(resultElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get messageElement {
+    if (_value.messageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.messageElement, (value) {
+      return _then(_value.copyWith(messageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get detailElement {
+    if (_value.detailElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.detailElement, (value) {
+      return _then(_value.copyWith(detailElement: value));
+    });
   }
 }
 
@@ -1039,7 +1687,17 @@ abstract class _$TestReportOperationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
-      String detail});
+      String detail,
+      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_message') Element messageElement,
+      @JsonKey(name: '_detail') Element detailElement});
+
+  @override
+  $ElementCopyWith<$Res> get resultElement;
+  @override
+  $ElementCopyWith<$Res> get messageElement;
+  @override
+  $ElementCopyWith<$Res> get detailElement;
 }
 
 class __$TestReportOperationCopyWithImpl<$Res>
@@ -1057,11 +1715,23 @@ class __$TestReportOperationCopyWithImpl<$Res>
     Object result = freezed,
     Object message = freezed,
     Object detail = freezed,
+    Object resultElement = freezed,
+    Object messageElement = freezed,
+    Object detailElement = freezed,
   }) {
     return _then(_TestReportOperation(
       result: result == freezed ? _value.result : result as Result,
       message: message == freezed ? _value.message : message as String,
       detail: detail == freezed ? _value.detail : detail as String,
+      resultElement: resultElement == freezed
+          ? _value.resultElement
+          : resultElement as Element,
+      messageElement: messageElement == freezed
+          ? _value.messageElement
+          : messageElement as Element,
+      detailElement: detailElement == freezed
+          ? _value.detailElement
+          : detailElement as Element,
     ));
   }
 }
@@ -1071,7 +1741,10 @@ class _$_TestReportOperation implements _TestReportOperation {
   const _$_TestReportOperation(
       {@JsonKey(unknownEnumValue: Result.unknown) this.result,
       this.message,
-      this.detail});
+      this.detail,
+      @JsonKey(name: '_result') this.resultElement,
+      @JsonKey(name: '_message') this.messageElement,
+      @JsonKey(name: '_detail') this.detailElement});
 
   factory _$_TestReportOperation.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportOperationFromJson(json);
@@ -1083,10 +1756,19 @@ class _$_TestReportOperation implements _TestReportOperation {
   final String message;
   @override
   final String detail;
+  @override
+  @JsonKey(name: '_result')
+  final Element resultElement;
+  @override
+  @JsonKey(name: '_message')
+  final Element messageElement;
+  @override
+  @JsonKey(name: '_detail')
+  final Element detailElement;
 
   @override
   String toString() {
-    return 'TestReportOperation(result: $result, message: $message, detail: $detail)';
+    return 'TestReportOperation(result: $result, message: $message, detail: $detail, resultElement: $resultElement, messageElement: $messageElement, detailElement: $detailElement)';
   }
 
   @override
@@ -1099,7 +1781,16 @@ class _$_TestReportOperation implements _TestReportOperation {
                 const DeepCollectionEquality()
                     .equals(other.message, message)) &&
             (identical(other.detail, detail) ||
-                const DeepCollectionEquality().equals(other.detail, detail)));
+                const DeepCollectionEquality().equals(other.detail, detail)) &&
+            (identical(other.resultElement, resultElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.resultElement, resultElement)) &&
+            (identical(other.messageElement, messageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.messageElement, messageElement)) &&
+            (identical(other.detailElement, detailElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.detailElement, detailElement)));
   }
 
   @override
@@ -1107,7 +1798,10 @@ class _$_TestReportOperation implements _TestReportOperation {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(result) ^
       const DeepCollectionEquality().hash(message) ^
-      const DeepCollectionEquality().hash(detail);
+      const DeepCollectionEquality().hash(detail) ^
+      const DeepCollectionEquality().hash(resultElement) ^
+      const DeepCollectionEquality().hash(messageElement) ^
+      const DeepCollectionEquality().hash(detailElement);
 
   @override
   _$TestReportOperationCopyWith<_TestReportOperation> get copyWith =>
@@ -1122,9 +1816,13 @@ class _$_TestReportOperation implements _TestReportOperation {
 
 abstract class _TestReportOperation implements TestReportOperation {
   const factory _TestReportOperation(
-      {@JsonKey(unknownEnumValue: Result.unknown) Result result,
-      String message,
-      String detail}) = _$_TestReportOperation;
+          {@JsonKey(unknownEnumValue: Result.unknown) Result result,
+          String message,
+          String detail,
+          @JsonKey(name: '_result') Element resultElement,
+          @JsonKey(name: '_message') Element messageElement,
+          @JsonKey(name: '_detail') Element detailElement}) =
+      _$_TestReportOperation;
 
   factory _TestReportOperation.fromJson(Map<String, dynamic> json) =
       _$_TestReportOperation.fromJson;
@@ -1136,6 +1834,15 @@ abstract class _TestReportOperation implements TestReportOperation {
   String get message;
   @override
   String get detail;
+  @override
+  @JsonKey(name: '_result')
+  Element get resultElement;
+  @override
+  @JsonKey(name: '_message')
+  Element get messageElement;
+  @override
+  @JsonKey(name: '_detail')
+  Element get detailElement;
   @override
   _$TestReportOperationCopyWith<_TestReportOperation> get copyWith;
 }
@@ -1150,11 +1857,17 @@ class _$TestReportAssertTearOff {
   _TestReportAssert call(
       {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
-      String detail}) {
+      String detail,
+      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_message') Element messageElement,
+      @JsonKey(name: '_detail') Element detailElement}) {
     return _TestReportAssert(
       result: result,
       message: message,
       detail: detail,
+      resultElement: resultElement,
+      messageElement: messageElement,
+      detailElement: detailElement,
     );
   }
 }
@@ -1167,6 +1880,12 @@ mixin _$TestReportAssert {
   Result get result;
   String get message;
   String get detail;
+  @JsonKey(name: '_result')
+  Element get resultElement;
+  @JsonKey(name: '_message')
+  Element get messageElement;
+  @JsonKey(name: '_detail')
+  Element get detailElement;
 
   Map<String, dynamic> toJson();
   $TestReportAssertCopyWith<TestReportAssert> get copyWith;
@@ -1179,7 +1898,14 @@ abstract class $TestReportAssertCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
-      String detail});
+      String detail,
+      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_message') Element messageElement,
+      @JsonKey(name: '_detail') Element detailElement});
+
+  $ElementCopyWith<$Res> get resultElement;
+  $ElementCopyWith<$Res> get messageElement;
+  $ElementCopyWith<$Res> get detailElement;
 }
 
 class _$TestReportAssertCopyWithImpl<$Res>
@@ -1195,12 +1921,54 @@ class _$TestReportAssertCopyWithImpl<$Res>
     Object result = freezed,
     Object message = freezed,
     Object detail = freezed,
+    Object resultElement = freezed,
+    Object messageElement = freezed,
+    Object detailElement = freezed,
   }) {
     return _then(_value.copyWith(
       result: result == freezed ? _value.result : result as Result,
       message: message == freezed ? _value.message : message as String,
       detail: detail == freezed ? _value.detail : detail as String,
+      resultElement: resultElement == freezed
+          ? _value.resultElement
+          : resultElement as Element,
+      messageElement: messageElement == freezed
+          ? _value.messageElement
+          : messageElement as Element,
+      detailElement: detailElement == freezed
+          ? _value.detailElement
+          : detailElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get resultElement {
+    if (_value.resultElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.resultElement, (value) {
+      return _then(_value.copyWith(resultElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get messageElement {
+    if (_value.messageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.messageElement, (value) {
+      return _then(_value.copyWith(messageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get detailElement {
+    if (_value.detailElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.detailElement, (value) {
+      return _then(_value.copyWith(detailElement: value));
+    });
   }
 }
 
@@ -1213,7 +1981,17 @@ abstract class _$TestReportAssertCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
-      String detail});
+      String detail,
+      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_message') Element messageElement,
+      @JsonKey(name: '_detail') Element detailElement});
+
+  @override
+  $ElementCopyWith<$Res> get resultElement;
+  @override
+  $ElementCopyWith<$Res> get messageElement;
+  @override
+  $ElementCopyWith<$Res> get detailElement;
 }
 
 class __$TestReportAssertCopyWithImpl<$Res>
@@ -1231,11 +2009,23 @@ class __$TestReportAssertCopyWithImpl<$Res>
     Object result = freezed,
     Object message = freezed,
     Object detail = freezed,
+    Object resultElement = freezed,
+    Object messageElement = freezed,
+    Object detailElement = freezed,
   }) {
     return _then(_TestReportAssert(
       result: result == freezed ? _value.result : result as Result,
       message: message == freezed ? _value.message : message as String,
       detail: detail == freezed ? _value.detail : detail as String,
+      resultElement: resultElement == freezed
+          ? _value.resultElement
+          : resultElement as Element,
+      messageElement: messageElement == freezed
+          ? _value.messageElement
+          : messageElement as Element,
+      detailElement: detailElement == freezed
+          ? _value.detailElement
+          : detailElement as Element,
     ));
   }
 }
@@ -1245,7 +2035,10 @@ class _$_TestReportAssert implements _TestReportAssert {
   const _$_TestReportAssert(
       {@JsonKey(unknownEnumValue: Result.unknown) this.result,
       this.message,
-      this.detail});
+      this.detail,
+      @JsonKey(name: '_result') this.resultElement,
+      @JsonKey(name: '_message') this.messageElement,
+      @JsonKey(name: '_detail') this.detailElement});
 
   factory _$_TestReportAssert.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportAssertFromJson(json);
@@ -1257,10 +2050,19 @@ class _$_TestReportAssert implements _TestReportAssert {
   final String message;
   @override
   final String detail;
+  @override
+  @JsonKey(name: '_result')
+  final Element resultElement;
+  @override
+  @JsonKey(name: '_message')
+  final Element messageElement;
+  @override
+  @JsonKey(name: '_detail')
+  final Element detailElement;
 
   @override
   String toString() {
-    return 'TestReportAssert(result: $result, message: $message, detail: $detail)';
+    return 'TestReportAssert(result: $result, message: $message, detail: $detail, resultElement: $resultElement, messageElement: $messageElement, detailElement: $detailElement)';
   }
 
   @override
@@ -1273,7 +2075,16 @@ class _$_TestReportAssert implements _TestReportAssert {
                 const DeepCollectionEquality()
                     .equals(other.message, message)) &&
             (identical(other.detail, detail) ||
-                const DeepCollectionEquality().equals(other.detail, detail)));
+                const DeepCollectionEquality().equals(other.detail, detail)) &&
+            (identical(other.resultElement, resultElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.resultElement, resultElement)) &&
+            (identical(other.messageElement, messageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.messageElement, messageElement)) &&
+            (identical(other.detailElement, detailElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.detailElement, detailElement)));
   }
 
   @override
@@ -1281,7 +2092,10 @@ class _$_TestReportAssert implements _TestReportAssert {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(result) ^
       const DeepCollectionEquality().hash(message) ^
-      const DeepCollectionEquality().hash(detail);
+      const DeepCollectionEquality().hash(detail) ^
+      const DeepCollectionEquality().hash(resultElement) ^
+      const DeepCollectionEquality().hash(messageElement) ^
+      const DeepCollectionEquality().hash(detailElement);
 
   @override
   _$TestReportAssertCopyWith<_TestReportAssert> get copyWith =>
@@ -1297,7 +2111,10 @@ abstract class _TestReportAssert implements TestReportAssert {
   const factory _TestReportAssert(
       {@JsonKey(unknownEnumValue: Result.unknown) Result result,
       String message,
-      String detail}) = _$_TestReportAssert;
+      String detail,
+      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_message') Element messageElement,
+      @JsonKey(name: '_detail') Element detailElement}) = _$_TestReportAssert;
 
   factory _TestReportAssert.fromJson(Map<String, dynamic> json) =
       _$_TestReportAssert.fromJson;
@@ -1309,6 +2126,15 @@ abstract class _TestReportAssert implements TestReportAssert {
   String get message;
   @override
   String get detail;
+  @override
+  @JsonKey(name: '_result')
+  Element get resultElement;
+  @override
+  @JsonKey(name: '_message')
+  Element get messageElement;
+  @override
+  @JsonKey(name: '_detail')
+  Element get detailElement;
   @override
   _$TestReportAssertCopyWith<_TestReportAssert> get copyWith;
 }
@@ -1323,11 +2149,15 @@ class _$TestReportTestTearOff {
   _TestReportTest call(
       {String name,
       String description,
-      @JsonKey(required: true) List<TestReportAction1> action}) {
+      @JsonKey(required: true) List<TestReportAction1> action,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _TestReportTest(
       name: name,
       description: description,
       action: action,
+      nameElement: nameElement,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -1340,6 +2170,10 @@ mixin _$TestReportTest {
   String get description;
   @JsonKey(required: true)
   List<TestReportAction1> get action;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $TestReportTestCopyWith<TestReportTest> get copyWith;
@@ -1352,7 +2186,12 @@ abstract class $TestReportTestCopyWith<$Res> {
   $Res call(
       {String name,
       String description,
-      @JsonKey(required: true) List<TestReportAction1> action});
+      @JsonKey(required: true) List<TestReportAction1> action,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
+
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$TestReportTestCopyWithImpl<$Res>
@@ -1368,6 +2207,8 @@ class _$TestReportTestCopyWithImpl<$Res>
     Object name = freezed,
     Object description = freezed,
     Object action = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
@@ -1375,7 +2216,32 @@ class _$TestReportTestCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       action:
           action == freezed ? _value.action : action as List<TestReportAction1>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
   }
 }
 
@@ -1388,7 +2254,14 @@ abstract class _$TestReportTestCopyWith<$Res>
   $Res call(
       {String name,
       String description,
-      @JsonKey(required: true) List<TestReportAction1> action});
+      @JsonKey(required: true) List<TestReportAction1> action,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$TestReportTestCopyWithImpl<$Res>
@@ -1406,6 +2279,8 @@ class __$TestReportTestCopyWithImpl<$Res>
     Object name = freezed,
     Object description = freezed,
     Object action = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_TestReportTest(
       name: name == freezed ? _value.name : name as String,
@@ -1413,6 +2288,11 @@ class __$TestReportTestCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       action:
           action == freezed ? _value.action : action as List<TestReportAction1>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
@@ -1420,7 +2300,11 @@ class __$TestReportTestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestReportTest implements _TestReportTest {
   const _$_TestReportTest(
-      {this.name, this.description, @JsonKey(required: true) this.action});
+      {this.name,
+      this.description,
+      @JsonKey(required: true) this.action,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_TestReportTest.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportTestFromJson(json);
@@ -1432,10 +2316,16 @@ class _$_TestReportTest implements _TestReportTest {
   @override
   @JsonKey(required: true)
   final List<TestReportAction1> action;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'TestReportTest(name: $name, description: $description, action: $action)';
+    return 'TestReportTest(name: $name, description: $description, action: $action, nameElement: $nameElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -1448,7 +2338,13 @@ class _$_TestReportTest implements _TestReportTest {
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
             (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)));
+                const DeepCollectionEquality().equals(other.action, action)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
@@ -1456,7 +2352,9 @@ class _$_TestReportTest implements _TestReportTest {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(action);
+      const DeepCollectionEquality().hash(action) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$TestReportTestCopyWith<_TestReportTest> get copyWith =>
@@ -1472,7 +2370,9 @@ abstract class _TestReportTest implements TestReportTest {
   const factory _TestReportTest(
           {String name,
           String description,
-          @JsonKey(required: true) List<TestReportAction1> action}) =
+          @JsonKey(required: true) List<TestReportAction1> action,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_description') Element descriptionElement}) =
       _$_TestReportTest;
 
   factory _TestReportTest.fromJson(Map<String, dynamic> json) =
@@ -1485,6 +2385,12 @@ abstract class _TestReportTest implements TestReportTest {
   @override
   @JsonKey(required: true)
   List<TestReportAction1> get action;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   _$TestReportTestCopyWith<_TestReportTest> get copyWith;
 }
@@ -1977,6 +2883,15 @@ class _$TestScriptTearOff {
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -2003,9 +2918,39 @@ class _$TestScriptTearOff {
       List<TestScriptRuleset> ruleset,
       TestScriptSetup setup,
       List<TestScriptTest> test,
-      TestScriptTeardown teardown}) {
+      TestScriptTeardown teardown,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement}) {
     return _TestScript(
       resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
       url: url,
       identifier: identifier,
       version: version,
@@ -2032,6 +2977,17 @@ class _$TestScriptTearOff {
       setup: setup,
       test: test,
       teardown: teardown,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      titleElement: titleElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      purposeElement: purposeElement,
+      copyrightElement: copyrightElement,
     );
   }
 }
@@ -2042,6 +2998,15 @@ const $TestScript = _$TestScriptTearOff();
 mixin _$TestScript {
   @JsonKey(required: true, defaultValue: 'TestScript')
   String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<Resource> get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  List<FhirExtension> get modifierExtension;
   String get url;
   Identifier get identifier;
   String get version;
@@ -2069,6 +3034,28 @@ mixin _$TestScript {
   TestScriptSetup get setup;
   List<TestScriptTest> get test;
   TestScriptTeardown get teardown;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
 
   Map<String, dynamic> toJson();
   $TestScriptCopyWith<TestScript> get copyWith;
@@ -2080,6 +3067,14 @@ abstract class $TestScriptCopyWith<$Res> {
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'TestScript') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -2105,12 +3100,36 @@ abstract class $TestScriptCopyWith<$Res> {
       List<TestScriptRuleset> ruleset,
       TestScriptSetup setup,
       List<TestScriptTest> test,
-      TestScriptTeardown teardown});
+      TestScriptTeardown teardown,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_copyright') Element copyrightElement});
 
+  $MetaCopyWith<$Res> get meta;
+  $NarrativeCopyWith<$Res> get text;
   $IdentifierCopyWith<$Res> get identifier;
   $TestScriptMetadataCopyWith<$Res> get metadata;
   $TestScriptSetupCopyWith<$Res> get setup;
   $TestScriptTeardownCopyWith<$Res> get teardown;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get purposeElement;
+  $ElementCopyWith<$Res> get copyrightElement;
 }
 
 class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
@@ -2123,6 +3142,14 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -2149,11 +3176,37 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
     Object setup = freezed,
     Object test = freezed,
     Object teardown = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object copyrightElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -2202,7 +3255,57 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestScriptTeardown,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
     ));
+  }
+
+  @override
+  $MetaCopyWith<$Res> get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res> get text {
+    if (_value.text == null) {
+      return null;
+    }
+    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value));
+    });
   }
 
   @override
@@ -2244,6 +3347,116 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       return _then(_value.copyWith(teardown: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
 }
 
 abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
@@ -2253,6 +3466,14 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'TestScript') String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -2278,8 +3499,23 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       List<TestScriptRuleset> ruleset,
       TestScriptSetup setup,
       List<TestScriptTest> test,
-      TestScriptTeardown teardown});
+      TestScriptTeardown teardown,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_copyright') Element copyrightElement});
 
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $NarrativeCopyWith<$Res> get text;
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
@@ -2288,6 +3524,28 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
   $TestScriptSetupCopyWith<$Res> get setup;
   @override
   $TestScriptTeardownCopyWith<$Res> get teardown;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get purposeElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
 }
 
 class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
@@ -2302,6 +3560,14 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
   @override
   $Res call({
     Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension_ = freezed,
+    Object modifierExtension = freezed,
     Object url = freezed,
     Object identifier = freezed,
     Object version = freezed,
@@ -2328,11 +3594,37 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
     Object setup = freezed,
     Object test = freezed,
     Object teardown = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object copyrightElement = freezed,
   }) {
     return _then(_TestScript(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<Resource>,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<FhirExtension>,
       url: url == freezed ? _value.url : url as String,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
@@ -2381,6 +3673,36 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestScriptTeardown,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
     ));
   }
 }
@@ -2391,6 +3713,15 @@ class _$_TestScript implements _TestScript {
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')
           this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
@@ -2417,7 +3748,29 @@ class _$_TestScript implements _TestScript {
       this.ruleset,
       this.setup,
       this.test,
-      this.teardown})
+      this.teardown,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement})
       : assert(resourceType != null);
 
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
@@ -2426,6 +3779,23 @@ class _$_TestScript implements _TestScript {
   @override
   @JsonKey(required: true, defaultValue: 'TestScript')
   final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<Resource> contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension> extension_;
+  @override
+  final List<FhirExtension> modifierExtension;
   @override
   final String url;
   @override
@@ -2479,10 +3849,43 @@ class _$_TestScript implements _TestScript {
   final List<TestScriptTest> test;
   @override
   final TestScriptTeardown teardown;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
 
   @override
   String toString() {
-    return 'TestScript(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, origin: $origin, destination: $destination, metadata: $metadata, fixture: $fixture, profile: $profile, variable: $variable, rule: $rule, ruleset: $ruleset, setup: $setup, test: $test, teardown: $teardown)';
+    return 'TestScript(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, origin: $origin, destination: $destination, metadata: $metadata, fixture: $fixture, profile: $profile, variable: $variable, rule: $rule, ruleset: $ruleset, setup: $setup, test: $test, teardown: $teardown, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, copyrightElement: $copyrightElement)';
   }
 
   @override
@@ -2492,6 +3895,27 @@ class _$_TestScript implements _TestScript {
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.identifier, identifier) ||
@@ -2537,34 +3961,40 @@ class _$_TestScript implements _TestScript {
             (identical(other.destination, destination) ||
                 const DeepCollectionEquality()
                     .equals(other.destination, destination)) &&
-            (identical(other.metadata, metadata) ||
-                const DeepCollectionEquality()
-                    .equals(other.metadata, metadata)) &&
-            (identical(other.fixture, fixture) ||
-                const DeepCollectionEquality()
-                    .equals(other.fixture, fixture)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality()
-                    .equals(other.profile, profile)) &&
-            (identical(other.variable, variable) ||
-                const DeepCollectionEquality()
-                    .equals(other.variable, variable)) &&
-            (identical(other.rule, rule) ||
-                const DeepCollectionEquality().equals(other.rule, rule)) &&
-            (identical(other.ruleset, ruleset) ||
-                const DeepCollectionEquality()
-                    .equals(other.ruleset, ruleset)) &&
-            (identical(other.setup, setup) ||
-                const DeepCollectionEquality().equals(other.setup, setup)) &&
-            (identical(other.test, test) ||
-                const DeepCollectionEquality().equals(other.test, test)) &&
-            (identical(other.teardown, teardown) || const DeepCollectionEquality().equals(other.teardown, teardown)));
+            (identical(other.metadata, metadata) || const DeepCollectionEquality().equals(other.metadata, metadata)) &&
+            (identical(other.fixture, fixture) || const DeepCollectionEquality().equals(other.fixture, fixture)) &&
+            (identical(other.profile, profile) || const DeepCollectionEquality().equals(other.profile, profile)) &&
+            (identical(other.variable, variable) || const DeepCollectionEquality().equals(other.variable, variable)) &&
+            (identical(other.rule, rule) || const DeepCollectionEquality().equals(other.rule, rule)) &&
+            (identical(other.ruleset, ruleset) || const DeepCollectionEquality().equals(other.ruleset, ruleset)) &&
+            (identical(other.setup, setup) || const DeepCollectionEquality().equals(other.setup, setup)) &&
+            (identical(other.test, test) || const DeepCollectionEquality().equals(other.test, test)) &&
+            (identical(other.teardown, teardown) || const DeepCollectionEquality().equals(other.teardown, teardown)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
@@ -2590,7 +4020,18 @@ class _$_TestScript implements _TestScript {
       const DeepCollectionEquality().hash(ruleset) ^
       const DeepCollectionEquality().hash(setup) ^
       const DeepCollectionEquality().hash(test) ^
-      const DeepCollectionEquality().hash(teardown);
+      const DeepCollectionEquality().hash(teardown) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
+      const DeepCollectionEquality().hash(copyrightElement);
 
   @override
   _$TestScriptCopyWith<_TestScript> get copyWith =>
@@ -2607,6 +4048,15 @@ abstract class _TestScript implements TestScript {
       {@required
       @JsonKey(required: true, defaultValue: 'TestScript')
           String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
       String url,
       Identifier identifier,
       String version,
@@ -2633,7 +4083,29 @@ abstract class _TestScript implements TestScript {
       List<TestScriptRuleset> ruleset,
       TestScriptSetup setup,
       List<TestScriptTest> test,
-      TestScriptTeardown teardown}) = _$_TestScript;
+      TestScriptTeardown teardown,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement}) = _$_TestScript;
 
   factory _TestScript.fromJson(Map<String, dynamic> json) =
       _$_TestScript.fromJson;
@@ -2641,6 +4113,23 @@ abstract class _TestScript implements TestScript {
   @override
   @JsonKey(required: true, defaultValue: 'TestScript')
   String get resourceType;
+  @override
+  Id get id;
+  @override
+  Meta get meta;
+  @override
+  FhirUri get implicitRules;
+  @override
+  Code get language;
+  @override
+  Narrative get text;
+  @override
+  List<Resource> get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension> get extension_;
+  @override
+  List<FhirExtension> get modifierExtension;
   @override
   String get url;
   @override
@@ -2695,6 +4184,39 @@ abstract class _TestScript implements TestScript {
   @override
   TestScriptTeardown get teardown;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
   _$TestScriptCopyWith<_TestScript> get copyWith;
 }
 
@@ -2706,10 +4228,13 @@ class _$TestScriptOriginTearOff {
   const _$TestScriptOriginTearOff();
 
   _TestScriptOrigin call(
-      {Integer index, @JsonKey(required: true) Coding profile}) {
+      {Integer index,
+      @JsonKey(required: true) Coding profile,
+      @JsonKey(name: '_index') Element indexElement}) {
     return _TestScriptOrigin(
       index: index,
       profile: profile,
+      indexElement: indexElement,
     );
   }
 }
@@ -2721,6 +4246,8 @@ mixin _$TestScriptOrigin {
   Integer get index;
   @JsonKey(required: true)
   Coding get profile;
+  @JsonKey(name: '_index')
+  Element get indexElement;
 
   Map<String, dynamic> toJson();
   $TestScriptOriginCopyWith<TestScriptOrigin> get copyWith;
@@ -2730,9 +4257,13 @@ abstract class $TestScriptOriginCopyWith<$Res> {
   factory $TestScriptOriginCopyWith(
           TestScriptOrigin value, $Res Function(TestScriptOrigin) then) =
       _$TestScriptOriginCopyWithImpl<$Res>;
-  $Res call({Integer index, @JsonKey(required: true) Coding profile});
+  $Res call(
+      {Integer index,
+      @JsonKey(required: true) Coding profile,
+      @JsonKey(name: '_index') Element indexElement});
 
   $CodingCopyWith<$Res> get profile;
+  $ElementCopyWith<$Res> get indexElement;
 }
 
 class _$TestScriptOriginCopyWithImpl<$Res>
@@ -2747,10 +4278,14 @@ class _$TestScriptOriginCopyWithImpl<$Res>
   $Res call({
     Object index = freezed,
     Object profile = freezed,
+    Object indexElement = freezed,
   }) {
     return _then(_value.copyWith(
       index: index == freezed ? _value.index : index as Integer,
       profile: profile == freezed ? _value.profile : profile as Coding,
+      indexElement: indexElement == freezed
+          ? _value.indexElement
+          : indexElement as Element,
     ));
   }
 
@@ -2763,6 +4298,16 @@ class _$TestScriptOriginCopyWithImpl<$Res>
       return _then(_value.copyWith(profile: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get indexElement {
+    if (_value.indexElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.indexElement, (value) {
+      return _then(_value.copyWith(indexElement: value));
+    });
+  }
 }
 
 abstract class _$TestScriptOriginCopyWith<$Res>
@@ -2771,10 +4316,15 @@ abstract class _$TestScriptOriginCopyWith<$Res>
           _TestScriptOrigin value, $Res Function(_TestScriptOrigin) then) =
       __$TestScriptOriginCopyWithImpl<$Res>;
   @override
-  $Res call({Integer index, @JsonKey(required: true) Coding profile});
+  $Res call(
+      {Integer index,
+      @JsonKey(required: true) Coding profile,
+      @JsonKey(name: '_index') Element indexElement});
 
   @override
   $CodingCopyWith<$Res> get profile;
+  @override
+  $ElementCopyWith<$Res> get indexElement;
 }
 
 class __$TestScriptOriginCopyWithImpl<$Res>
@@ -2791,10 +4341,14 @@ class __$TestScriptOriginCopyWithImpl<$Res>
   $Res call({
     Object index = freezed,
     Object profile = freezed,
+    Object indexElement = freezed,
   }) {
     return _then(_TestScriptOrigin(
       index: index == freezed ? _value.index : index as Integer,
       profile: profile == freezed ? _value.profile : profile as Coding,
+      indexElement: indexElement == freezed
+          ? _value.indexElement
+          : indexElement as Element,
     ));
   }
 }
@@ -2802,7 +4356,9 @@ class __$TestScriptOriginCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScriptOrigin implements _TestScriptOrigin {
   const _$_TestScriptOrigin(
-      {this.index, @JsonKey(required: true) this.profile});
+      {this.index,
+      @JsonKey(required: true) this.profile,
+      @JsonKey(name: '_index') this.indexElement});
 
   factory _$_TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptOriginFromJson(json);
@@ -2812,10 +4368,13 @@ class _$_TestScriptOrigin implements _TestScriptOrigin {
   @override
   @JsonKey(required: true)
   final Coding profile;
+  @override
+  @JsonKey(name: '_index')
+  final Element indexElement;
 
   @override
   String toString() {
-    return 'TestScriptOrigin(index: $index, profile: $profile)';
+    return 'TestScriptOrigin(index: $index, profile: $profile, indexElement: $indexElement)';
   }
 
   @override
@@ -2825,14 +4384,19 @@ class _$_TestScriptOrigin implements _TestScriptOrigin {
             (identical(other.index, index) ||
                 const DeepCollectionEquality().equals(other.index, index)) &&
             (identical(other.profile, profile) ||
-                const DeepCollectionEquality().equals(other.profile, profile)));
+                const DeepCollectionEquality()
+                    .equals(other.profile, profile)) &&
+            (identical(other.indexElement, indexElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.indexElement, indexElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(index) ^
-      const DeepCollectionEquality().hash(profile);
+      const DeepCollectionEquality().hash(profile) ^
+      const DeepCollectionEquality().hash(indexElement);
 
   @override
   _$TestScriptOriginCopyWith<_TestScriptOrigin> get copyWith =>
@@ -2847,7 +4411,8 @@ class _$_TestScriptOrigin implements _TestScriptOrigin {
 abstract class _TestScriptOrigin implements TestScriptOrigin {
   const factory _TestScriptOrigin(
       {Integer index,
-      @JsonKey(required: true) Coding profile}) = _$_TestScriptOrigin;
+      @JsonKey(required: true) Coding profile,
+      @JsonKey(name: '_index') Element indexElement}) = _$_TestScriptOrigin;
 
   factory _TestScriptOrigin.fromJson(Map<String, dynamic> json) =
       _$_TestScriptOrigin.fromJson;
@@ -2857,6 +4422,9 @@ abstract class _TestScriptOrigin implements TestScriptOrigin {
   @override
   @JsonKey(required: true)
   Coding get profile;
+  @override
+  @JsonKey(name: '_index')
+  Element get indexElement;
   @override
   _$TestScriptOriginCopyWith<_TestScriptOrigin> get copyWith;
 }
@@ -2870,10 +4438,13 @@ class _$TestScriptDestinationTearOff {
   const _$TestScriptDestinationTearOff();
 
   _TestScriptDestination call(
-      {Integer index, @JsonKey(required: true) Coding profile}) {
+      {Integer index,
+      @JsonKey(required: true) Coding profile,
+      @JsonKey(name: '_index') Element indexElement}) {
     return _TestScriptDestination(
       index: index,
       profile: profile,
+      indexElement: indexElement,
     );
   }
 }
@@ -2885,6 +4456,8 @@ mixin _$TestScriptDestination {
   Integer get index;
   @JsonKey(required: true)
   Coding get profile;
+  @JsonKey(name: '_index')
+  Element get indexElement;
 
   Map<String, dynamic> toJson();
   $TestScriptDestinationCopyWith<TestScriptDestination> get copyWith;
@@ -2894,9 +4467,13 @@ abstract class $TestScriptDestinationCopyWith<$Res> {
   factory $TestScriptDestinationCopyWith(TestScriptDestination value,
           $Res Function(TestScriptDestination) then) =
       _$TestScriptDestinationCopyWithImpl<$Res>;
-  $Res call({Integer index, @JsonKey(required: true) Coding profile});
+  $Res call(
+      {Integer index,
+      @JsonKey(required: true) Coding profile,
+      @JsonKey(name: '_index') Element indexElement});
 
   $CodingCopyWith<$Res> get profile;
+  $ElementCopyWith<$Res> get indexElement;
 }
 
 class _$TestScriptDestinationCopyWithImpl<$Res>
@@ -2911,10 +4488,14 @@ class _$TestScriptDestinationCopyWithImpl<$Res>
   $Res call({
     Object index = freezed,
     Object profile = freezed,
+    Object indexElement = freezed,
   }) {
     return _then(_value.copyWith(
       index: index == freezed ? _value.index : index as Integer,
       profile: profile == freezed ? _value.profile : profile as Coding,
+      indexElement: indexElement == freezed
+          ? _value.indexElement
+          : indexElement as Element,
     ));
   }
 
@@ -2927,6 +4508,16 @@ class _$TestScriptDestinationCopyWithImpl<$Res>
       return _then(_value.copyWith(profile: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get indexElement {
+    if (_value.indexElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.indexElement, (value) {
+      return _then(_value.copyWith(indexElement: value));
+    });
+  }
 }
 
 abstract class _$TestScriptDestinationCopyWith<$Res>
@@ -2935,10 +4526,15 @@ abstract class _$TestScriptDestinationCopyWith<$Res>
           $Res Function(_TestScriptDestination) then) =
       __$TestScriptDestinationCopyWithImpl<$Res>;
   @override
-  $Res call({Integer index, @JsonKey(required: true) Coding profile});
+  $Res call(
+      {Integer index,
+      @JsonKey(required: true) Coding profile,
+      @JsonKey(name: '_index') Element indexElement});
 
   @override
   $CodingCopyWith<$Res> get profile;
+  @override
+  $ElementCopyWith<$Res> get indexElement;
 }
 
 class __$TestScriptDestinationCopyWithImpl<$Res>
@@ -2955,10 +4551,14 @@ class __$TestScriptDestinationCopyWithImpl<$Res>
   $Res call({
     Object index = freezed,
     Object profile = freezed,
+    Object indexElement = freezed,
   }) {
     return _then(_TestScriptDestination(
       index: index == freezed ? _value.index : index as Integer,
       profile: profile == freezed ? _value.profile : profile as Coding,
+      indexElement: indexElement == freezed
+          ? _value.indexElement
+          : indexElement as Element,
     ));
   }
 }
@@ -2966,7 +4566,9 @@ class __$TestScriptDestinationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScriptDestination implements _TestScriptDestination {
   const _$_TestScriptDestination(
-      {this.index, @JsonKey(required: true) this.profile});
+      {this.index,
+      @JsonKey(required: true) this.profile,
+      @JsonKey(name: '_index') this.indexElement});
 
   factory _$_TestScriptDestination.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptDestinationFromJson(json);
@@ -2976,10 +4578,13 @@ class _$_TestScriptDestination implements _TestScriptDestination {
   @override
   @JsonKey(required: true)
   final Coding profile;
+  @override
+  @JsonKey(name: '_index')
+  final Element indexElement;
 
   @override
   String toString() {
-    return 'TestScriptDestination(index: $index, profile: $profile)';
+    return 'TestScriptDestination(index: $index, profile: $profile, indexElement: $indexElement)';
   }
 
   @override
@@ -2989,14 +4594,19 @@ class _$_TestScriptDestination implements _TestScriptDestination {
             (identical(other.index, index) ||
                 const DeepCollectionEquality().equals(other.index, index)) &&
             (identical(other.profile, profile) ||
-                const DeepCollectionEquality().equals(other.profile, profile)));
+                const DeepCollectionEquality()
+                    .equals(other.profile, profile)) &&
+            (identical(other.indexElement, indexElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.indexElement, indexElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(index) ^
-      const DeepCollectionEquality().hash(profile);
+      const DeepCollectionEquality().hash(profile) ^
+      const DeepCollectionEquality().hash(indexElement);
 
   @override
   _$TestScriptDestinationCopyWith<_TestScriptDestination> get copyWith =>
@@ -3011,8 +4621,10 @@ class _$_TestScriptDestination implements _TestScriptDestination {
 
 abstract class _TestScriptDestination implements TestScriptDestination {
   const factory _TestScriptDestination(
-      {Integer index,
-      @JsonKey(required: true) Coding profile}) = _$_TestScriptDestination;
+          {Integer index,
+          @JsonKey(required: true) Coding profile,
+          @JsonKey(name: '_index') Element indexElement}) =
+      _$_TestScriptDestination;
 
   factory _TestScriptDestination.fromJson(Map<String, dynamic> json) =
       _$_TestScriptDestination.fromJson;
@@ -3022,6 +4634,9 @@ abstract class _TestScriptDestination implements TestScriptDestination {
   @override
   @JsonKey(required: true)
   Coding get profile;
+  @override
+  @JsonKey(name: '_index')
+  Element get indexElement;
   @override
   _$TestScriptDestinationCopyWith<_TestScriptDestination> get copyWith;
 }
@@ -3192,10 +4807,16 @@ TestScriptLink _$TestScriptLinkFromJson(Map<String, dynamic> json) {
 class _$TestScriptLinkTearOff {
   const _$TestScriptLinkTearOff();
 
-  _TestScriptLink call({String url, String description}) {
+  _TestScriptLink call(
+      {String url,
+      String description,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _TestScriptLink(
       url: url,
       description: description,
+      urlElement: urlElement,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -3206,6 +4827,10 @@ const $TestScriptLink = _$TestScriptLinkTearOff();
 mixin _$TestScriptLink {
   String get url;
   String get description;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $TestScriptLinkCopyWith<TestScriptLink> get copyWith;
@@ -3215,7 +4840,14 @@ abstract class $TestScriptLinkCopyWith<$Res> {
   factory $TestScriptLinkCopyWith(
           TestScriptLink value, $Res Function(TestScriptLink) then) =
       _$TestScriptLinkCopyWithImpl<$Res>;
-  $Res call({String url, String description});
+  $Res call(
+      {String url,
+      String description,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_description') Element descriptionElement});
+
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$TestScriptLinkCopyWithImpl<$Res>
@@ -3230,12 +4862,39 @@ class _$TestScriptLinkCopyWithImpl<$Res>
   $Res call({
     Object url = freezed,
     Object description = freezed,
+    Object urlElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       url: url == freezed ? _value.url : url as String,
       description:
           description == freezed ? _value.description : description as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
   }
 }
 
@@ -3245,7 +4904,16 @@ abstract class _$TestScriptLinkCopyWith<$Res>
           _TestScriptLink value, $Res Function(_TestScriptLink) then) =
       __$TestScriptLinkCopyWithImpl<$Res>;
   @override
-  $Res call({String url, String description});
+  $Res call(
+      {String url,
+      String description,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_description') Element descriptionElement});
+
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$TestScriptLinkCopyWithImpl<$Res>
@@ -3262,18 +4930,29 @@ class __$TestScriptLinkCopyWithImpl<$Res>
   $Res call({
     Object url = freezed,
     Object description = freezed,
+    Object urlElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_TestScriptLink(
       url: url == freezed ? _value.url : url as String,
       description:
           description == freezed ? _value.description : description as String,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptLink implements _TestScriptLink {
-  const _$_TestScriptLink({this.url, this.description});
+  const _$_TestScriptLink(
+      {this.url,
+      this.description,
+      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_TestScriptLink.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptLinkFromJson(json);
@@ -3282,10 +4961,16 @@ class _$_TestScriptLink implements _TestScriptLink {
   final String url;
   @override
   final String description;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'TestScriptLink(url: $url, description: $description)';
+    return 'TestScriptLink(url: $url, description: $description, urlElement: $urlElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -3296,14 +4981,22 @@ class _$_TestScriptLink implements _TestScriptLink {
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
-                    .equals(other.description, description)));
+                    .equals(other.description, description)) &&
+            (identical(other.urlElement, urlElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.urlElement, urlElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(description);
+      const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$TestScriptLinkCopyWith<_TestScriptLink> get copyWith =>
@@ -3316,7 +5009,11 @@ class _$_TestScriptLink implements _TestScriptLink {
 }
 
 abstract class _TestScriptLink implements TestScriptLink {
-  const factory _TestScriptLink({String url, String description}) =
+  const factory _TestScriptLink(
+          {String url,
+          String description,
+          @JsonKey(name: '_url') Element urlElement,
+          @JsonKey(name: '_description') Element descriptionElement}) =
       _$_TestScriptLink;
 
   factory _TestScriptLink.fromJson(Map<String, dynamic> json) =
@@ -3326,6 +5023,12 @@ abstract class _TestScriptLink implements TestScriptLink {
   String get url;
   @override
   String get description;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   _$TestScriptLinkCopyWith<_TestScriptLink> get copyWith;
 }
@@ -3344,7 +5047,13 @@ class _$TestScriptCapabilityTearOff {
       List<Integer> origin,
       Integer destination,
       List<String> link,
-      @JsonKey(required: true) Reference capabilities}) {
+      @JsonKey(required: true) Reference capabilities,
+      @JsonKey(name: '_required') Element requiredElement,
+      @JsonKey(name: '_validated') Element validatedElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_destination') Element destinationElement,
+      @JsonKey(name: '_link') Element linkElement}) {
     return _TestScriptCapability(
       required: required,
       validated: validated,
@@ -3353,6 +5062,12 @@ class _$TestScriptCapabilityTearOff {
       destination: destination,
       link: link,
       capabilities: capabilities,
+      requiredElement: requiredElement,
+      validatedElement: validatedElement,
+      descriptionElement: descriptionElement,
+      originElement: originElement,
+      destinationElement: destinationElement,
+      linkElement: linkElement,
     );
   }
 }
@@ -3369,6 +5084,18 @@ mixin _$TestScriptCapability {
   List<String> get link;
   @JsonKey(required: true)
   Reference get capabilities;
+  @JsonKey(name: '_required')
+  Element get requiredElement;
+  @JsonKey(name: '_validated')
+  Element get validatedElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_origin')
+  Element get originElement;
+  @JsonKey(name: '_destination')
+  Element get destinationElement;
+  @JsonKey(name: '_link')
+  Element get linkElement;
 
   Map<String, dynamic> toJson();
   $TestScriptCapabilityCopyWith<TestScriptCapability> get copyWith;
@@ -3385,9 +5112,21 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       List<Integer> origin,
       Integer destination,
       List<String> link,
-      @JsonKey(required: true) Reference capabilities});
+      @JsonKey(required: true) Reference capabilities,
+      @JsonKey(name: '_required') Element requiredElement,
+      @JsonKey(name: '_validated') Element validatedElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_destination') Element destinationElement,
+      @JsonKey(name: '_link') Element linkElement});
 
   $ReferenceCopyWith<$Res> get capabilities;
+  $ElementCopyWith<$Res> get requiredElement;
+  $ElementCopyWith<$Res> get validatedElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get originElement;
+  $ElementCopyWith<$Res> get destinationElement;
+  $ElementCopyWith<$Res> get linkElement;
 }
 
 class _$TestScriptCapabilityCopyWithImpl<$Res>
@@ -3407,6 +5146,12 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
     Object destination = freezed,
     Object link = freezed,
     Object capabilities = freezed,
+    Object requiredElement = freezed,
+    Object validatedElement = freezed,
+    Object descriptionElement = freezed,
+    Object originElement = freezed,
+    Object destinationElement = freezed,
+    Object linkElement = freezed,
   }) {
     return _then(_value.copyWith(
       required: required == freezed ? _value.required : required as Boolean,
@@ -3420,6 +5165,23 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities as Reference,
+      requiredElement: requiredElement == freezed
+          ? _value.requiredElement
+          : requiredElement as Element,
+      validatedElement: validatedElement == freezed
+          ? _value.validatedElement
+          : validatedElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      originElement: originElement == freezed
+          ? _value.originElement
+          : originElement as Element,
+      destinationElement: destinationElement == freezed
+          ? _value.destinationElement
+          : destinationElement as Element,
+      linkElement:
+          linkElement == freezed ? _value.linkElement : linkElement as Element,
     ));
   }
 
@@ -3430,6 +5192,66 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
     }
     return $ReferenceCopyWith<$Res>(_value.capabilities, (value) {
       return _then(_value.copyWith(capabilities: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requiredElement {
+    if (_value.requiredElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requiredElement, (value) {
+      return _then(_value.copyWith(requiredElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get validatedElement {
+    if (_value.validatedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.validatedElement, (value) {
+      return _then(_value.copyWith(validatedElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get originElement {
+    if (_value.originElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.originElement, (value) {
+      return _then(_value.copyWith(originElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get destinationElement {
+    if (_value.destinationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.destinationElement, (value) {
+      return _then(_value.copyWith(destinationElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get linkElement {
+    if (_value.linkElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.linkElement, (value) {
+      return _then(_value.copyWith(linkElement: value));
     });
   }
 }
@@ -3447,10 +5269,28 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
       List<Integer> origin,
       Integer destination,
       List<String> link,
-      @JsonKey(required: true) Reference capabilities});
+      @JsonKey(required: true) Reference capabilities,
+      @JsonKey(name: '_required') Element requiredElement,
+      @JsonKey(name: '_validated') Element validatedElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_destination') Element destinationElement,
+      @JsonKey(name: '_link') Element linkElement});
 
   @override
   $ReferenceCopyWith<$Res> get capabilities;
+  @override
+  $ElementCopyWith<$Res> get requiredElement;
+  @override
+  $ElementCopyWith<$Res> get validatedElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get originElement;
+  @override
+  $ElementCopyWith<$Res> get destinationElement;
+  @override
+  $ElementCopyWith<$Res> get linkElement;
 }
 
 class __$TestScriptCapabilityCopyWithImpl<$Res>
@@ -3472,6 +5312,12 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
     Object destination = freezed,
     Object link = freezed,
     Object capabilities = freezed,
+    Object requiredElement = freezed,
+    Object validatedElement = freezed,
+    Object descriptionElement = freezed,
+    Object originElement = freezed,
+    Object destinationElement = freezed,
+    Object linkElement = freezed,
   }) {
     return _then(_TestScriptCapability(
       required: required == freezed ? _value.required : required as Boolean,
@@ -3485,6 +5331,23 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities as Reference,
+      requiredElement: requiredElement == freezed
+          ? _value.requiredElement
+          : requiredElement as Element,
+      validatedElement: validatedElement == freezed
+          ? _value.validatedElement
+          : validatedElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      originElement: originElement == freezed
+          ? _value.originElement
+          : originElement as Element,
+      destinationElement: destinationElement == freezed
+          ? _value.destinationElement
+          : destinationElement as Element,
+      linkElement:
+          linkElement == freezed ? _value.linkElement : linkElement as Element,
     ));
   }
 }
@@ -3498,7 +5361,13 @@ class _$_TestScriptCapability implements _TestScriptCapability {
       this.origin,
       this.destination,
       this.link,
-      @JsonKey(required: true) this.capabilities});
+      @JsonKey(required: true) this.capabilities,
+      @JsonKey(name: '_required') this.requiredElement,
+      @JsonKey(name: '_validated') this.validatedElement,
+      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_origin') this.originElement,
+      @JsonKey(name: '_destination') this.destinationElement,
+      @JsonKey(name: '_link') this.linkElement});
 
   factory _$_TestScriptCapability.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptCapabilityFromJson(json);
@@ -3518,10 +5387,28 @@ class _$_TestScriptCapability implements _TestScriptCapability {
   @override
   @JsonKey(required: true)
   final Reference capabilities;
+  @override
+  @JsonKey(name: '_required')
+  final Element requiredElement;
+  @override
+  @JsonKey(name: '_validated')
+  final Element validatedElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_origin')
+  final Element originElement;
+  @override
+  @JsonKey(name: '_destination')
+  final Element destinationElement;
+  @override
+  @JsonKey(name: '_link')
+  final Element linkElement;
 
   @override
   String toString() {
-    return 'TestScriptCapability(required: $required, validated: $validated, description: $description, origin: $origin, destination: $destination, link: $link, capabilities: $capabilities)';
+    return 'TestScriptCapability(required: $required, validated: $validated, description: $description, origin: $origin, destination: $destination, link: $link, capabilities: $capabilities, requiredElement: $requiredElement, validatedElement: $validatedElement, descriptionElement: $descriptionElement, originElement: $originElement, destinationElement: $destinationElement, linkElement: $linkElement)';
   }
 
   @override
@@ -3546,7 +5433,25 @@ class _$_TestScriptCapability implements _TestScriptCapability {
                 const DeepCollectionEquality().equals(other.link, link)) &&
             (identical(other.capabilities, capabilities) ||
                 const DeepCollectionEquality()
-                    .equals(other.capabilities, capabilities)));
+                    .equals(other.capabilities, capabilities)) &&
+            (identical(other.requiredElement, requiredElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.requiredElement, requiredElement)) &&
+            (identical(other.validatedElement, validatedElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.validatedElement, validatedElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.originElement, originElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.originElement, originElement)) &&
+            (identical(other.destinationElement, destinationElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.destinationElement, destinationElement)) &&
+            (identical(other.linkElement, linkElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.linkElement, linkElement)));
   }
 
   @override
@@ -3558,7 +5463,13 @@ class _$_TestScriptCapability implements _TestScriptCapability {
       const DeepCollectionEquality().hash(origin) ^
       const DeepCollectionEquality().hash(destination) ^
       const DeepCollectionEquality().hash(link) ^
-      const DeepCollectionEquality().hash(capabilities);
+      const DeepCollectionEquality().hash(capabilities) ^
+      const DeepCollectionEquality().hash(requiredElement) ^
+      const DeepCollectionEquality().hash(validatedElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(originElement) ^
+      const DeepCollectionEquality().hash(destinationElement) ^
+      const DeepCollectionEquality().hash(linkElement);
 
   @override
   _$TestScriptCapabilityCopyWith<_TestScriptCapability> get copyWith =>
@@ -3573,14 +5484,19 @@ class _$_TestScriptCapability implements _TestScriptCapability {
 
 abstract class _TestScriptCapability implements TestScriptCapability {
   const factory _TestScriptCapability(
-          {Boolean required,
-          Boolean validated,
-          String description,
-          List<Integer> origin,
-          Integer destination,
-          List<String> link,
-          @JsonKey(required: true) Reference capabilities}) =
-      _$_TestScriptCapability;
+      {Boolean required,
+      Boolean validated,
+      String description,
+      List<Integer> origin,
+      Integer destination,
+      List<String> link,
+      @JsonKey(required: true) Reference capabilities,
+      @JsonKey(name: '_required') Element requiredElement,
+      @JsonKey(name: '_validated') Element validatedElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_destination') Element destinationElement,
+      @JsonKey(name: '_link') Element linkElement}) = _$_TestScriptCapability;
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
       _$_TestScriptCapability.fromJson;
@@ -3601,6 +5517,24 @@ abstract class _TestScriptCapability implements TestScriptCapability {
   @JsonKey(required: true)
   Reference get capabilities;
   @override
+  @JsonKey(name: '_required')
+  Element get requiredElement;
+  @override
+  @JsonKey(name: '_validated')
+  Element get validatedElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_origin')
+  Element get originElement;
+  @override
+  @JsonKey(name: '_destination')
+  Element get destinationElement;
+  @override
+  @JsonKey(name: '_link')
+  Element get linkElement;
+  @override
   _$TestScriptCapabilityCopyWith<_TestScriptCapability> get copyWith;
 }
 
@@ -3612,11 +5546,17 @@ class _$TestScriptFixtureTearOff {
   const _$TestScriptFixtureTearOff();
 
   _TestScriptFixture call(
-      {Boolean autocreate, Boolean autodelete, Reference resource}) {
+      {Boolean autocreate,
+      Boolean autodelete,
+      Reference resource,
+      @JsonKey(name: '_autocreate') Element autocreateElement,
+      @JsonKey(name: '_autodelete') Element autodeleteElement}) {
     return _TestScriptFixture(
       autocreate: autocreate,
       autodelete: autodelete,
       resource: resource,
+      autocreateElement: autocreateElement,
+      autodeleteElement: autodeleteElement,
     );
   }
 }
@@ -3628,6 +5568,10 @@ mixin _$TestScriptFixture {
   Boolean get autocreate;
   Boolean get autodelete;
   Reference get resource;
+  @JsonKey(name: '_autocreate')
+  Element get autocreateElement;
+  @JsonKey(name: '_autodelete')
+  Element get autodeleteElement;
 
   Map<String, dynamic> toJson();
   $TestScriptFixtureCopyWith<TestScriptFixture> get copyWith;
@@ -3637,9 +5581,16 @@ abstract class $TestScriptFixtureCopyWith<$Res> {
   factory $TestScriptFixtureCopyWith(
           TestScriptFixture value, $Res Function(TestScriptFixture) then) =
       _$TestScriptFixtureCopyWithImpl<$Res>;
-  $Res call({Boolean autocreate, Boolean autodelete, Reference resource});
+  $Res call(
+      {Boolean autocreate,
+      Boolean autodelete,
+      Reference resource,
+      @JsonKey(name: '_autocreate') Element autocreateElement,
+      @JsonKey(name: '_autodelete') Element autodeleteElement});
 
   $ReferenceCopyWith<$Res> get resource;
+  $ElementCopyWith<$Res> get autocreateElement;
+  $ElementCopyWith<$Res> get autodeleteElement;
 }
 
 class _$TestScriptFixtureCopyWithImpl<$Res>
@@ -3655,6 +5606,8 @@ class _$TestScriptFixtureCopyWithImpl<$Res>
     Object autocreate = freezed,
     Object autodelete = freezed,
     Object resource = freezed,
+    Object autocreateElement = freezed,
+    Object autodeleteElement = freezed,
   }) {
     return _then(_value.copyWith(
       autocreate:
@@ -3662,6 +5615,12 @@ class _$TestScriptFixtureCopyWithImpl<$Res>
       autodelete:
           autodelete == freezed ? _value.autodelete : autodelete as Boolean,
       resource: resource == freezed ? _value.resource : resource as Reference,
+      autocreateElement: autocreateElement == freezed
+          ? _value.autocreateElement
+          : autocreateElement as Element,
+      autodeleteElement: autodeleteElement == freezed
+          ? _value.autodeleteElement
+          : autodeleteElement as Element,
     ));
   }
 
@@ -3674,6 +5633,26 @@ class _$TestScriptFixtureCopyWithImpl<$Res>
       return _then(_value.copyWith(resource: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get autocreateElement {
+    if (_value.autocreateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.autocreateElement, (value) {
+      return _then(_value.copyWith(autocreateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get autodeleteElement {
+    if (_value.autodeleteElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.autodeleteElement, (value) {
+      return _then(_value.copyWith(autodeleteElement: value));
+    });
+  }
 }
 
 abstract class _$TestScriptFixtureCopyWith<$Res>
@@ -3682,10 +5661,19 @@ abstract class _$TestScriptFixtureCopyWith<$Res>
           _TestScriptFixture value, $Res Function(_TestScriptFixture) then) =
       __$TestScriptFixtureCopyWithImpl<$Res>;
   @override
-  $Res call({Boolean autocreate, Boolean autodelete, Reference resource});
+  $Res call(
+      {Boolean autocreate,
+      Boolean autodelete,
+      Reference resource,
+      @JsonKey(name: '_autocreate') Element autocreateElement,
+      @JsonKey(name: '_autodelete') Element autodeleteElement});
 
   @override
   $ReferenceCopyWith<$Res> get resource;
+  @override
+  $ElementCopyWith<$Res> get autocreateElement;
+  @override
+  $ElementCopyWith<$Res> get autodeleteElement;
 }
 
 class __$TestScriptFixtureCopyWithImpl<$Res>
@@ -3703,6 +5691,8 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
     Object autocreate = freezed,
     Object autodelete = freezed,
     Object resource = freezed,
+    Object autocreateElement = freezed,
+    Object autodeleteElement = freezed,
   }) {
     return _then(_TestScriptFixture(
       autocreate:
@@ -3710,13 +5700,24 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
       autodelete:
           autodelete == freezed ? _value.autodelete : autodelete as Boolean,
       resource: resource == freezed ? _value.resource : resource as Reference,
+      autocreateElement: autocreateElement == freezed
+          ? _value.autocreateElement
+          : autocreateElement as Element,
+      autodeleteElement: autodeleteElement == freezed
+          ? _value.autodeleteElement
+          : autodeleteElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptFixture implements _TestScriptFixture {
-  const _$_TestScriptFixture({this.autocreate, this.autodelete, this.resource});
+  const _$_TestScriptFixture(
+      {this.autocreate,
+      this.autodelete,
+      this.resource,
+      @JsonKey(name: '_autocreate') this.autocreateElement,
+      @JsonKey(name: '_autodelete') this.autodeleteElement});
 
   factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFixtureFromJson(json);
@@ -3727,10 +5728,16 @@ class _$_TestScriptFixture implements _TestScriptFixture {
   final Boolean autodelete;
   @override
   final Reference resource;
+  @override
+  @JsonKey(name: '_autocreate')
+  final Element autocreateElement;
+  @override
+  @JsonKey(name: '_autodelete')
+  final Element autodeleteElement;
 
   @override
   String toString() {
-    return 'TestScriptFixture(autocreate: $autocreate, autodelete: $autodelete, resource: $resource)';
+    return 'TestScriptFixture(autocreate: $autocreate, autodelete: $autodelete, resource: $resource, autocreateElement: $autocreateElement, autodeleteElement: $autodeleteElement)';
   }
 
   @override
@@ -3745,7 +5752,13 @@ class _$_TestScriptFixture implements _TestScriptFixture {
                     .equals(other.autodelete, autodelete)) &&
             (identical(other.resource, resource) ||
                 const DeepCollectionEquality()
-                    .equals(other.resource, resource)));
+                    .equals(other.resource, resource)) &&
+            (identical(other.autocreateElement, autocreateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.autocreateElement, autocreateElement)) &&
+            (identical(other.autodeleteElement, autodeleteElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.autodeleteElement, autodeleteElement)));
   }
 
   @override
@@ -3753,7 +5766,9 @@ class _$_TestScriptFixture implements _TestScriptFixture {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(autocreate) ^
       const DeepCollectionEquality().hash(autodelete) ^
-      const DeepCollectionEquality().hash(resource);
+      const DeepCollectionEquality().hash(resource) ^
+      const DeepCollectionEquality().hash(autocreateElement) ^
+      const DeepCollectionEquality().hash(autodeleteElement);
 
   @override
   _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith =>
@@ -3767,9 +5782,12 @@ class _$_TestScriptFixture implements _TestScriptFixture {
 
 abstract class _TestScriptFixture implements TestScriptFixture {
   const factory _TestScriptFixture(
-      {Boolean autocreate,
-      Boolean autodelete,
-      Reference resource}) = _$_TestScriptFixture;
+          {Boolean autocreate,
+          Boolean autodelete,
+          Reference resource,
+          @JsonKey(name: '_autocreate') Element autocreateElement,
+          @JsonKey(name: '_autodelete') Element autodeleteElement}) =
+      _$_TestScriptFixture;
 
   factory _TestScriptFixture.fromJson(Map<String, dynamic> json) =
       _$_TestScriptFixture.fromJson;
@@ -3780,6 +5798,12 @@ abstract class _TestScriptFixture implements TestScriptFixture {
   Boolean get autodelete;
   @override
   Reference get resource;
+  @override
+  @JsonKey(name: '_autocreate')
+  Element get autocreateElement;
+  @override
+  @JsonKey(name: '_autodelete')
+  Element get autodeleteElement;
   @override
   _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith;
 }
@@ -3799,7 +5823,15 @@ class _$TestScriptVariableTearOff {
       String headerField,
       String hint,
       String path,
-      Id sourceId}) {
+      Id sourceId,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_defaultValue') Element defaultValueElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_expression') Element expressionElement,
+      @JsonKey(name: '_headerField') Element headerFieldElement,
+      @JsonKey(name: '_hint') Element hintElement,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_sourceId') Element sourceIdElement}) {
     return _TestScriptVariable(
       name: name,
       defaultValue: defaultValue,
@@ -3809,6 +5841,14 @@ class _$TestScriptVariableTearOff {
       hint: hint,
       path: path,
       sourceId: sourceId,
+      nameElement: nameElement,
+      defaultValueElement: defaultValueElement,
+      descriptionElement: descriptionElement,
+      expressionElement: expressionElement,
+      headerFieldElement: headerFieldElement,
+      hintElement: hintElement,
+      pathElement: pathElement,
+      sourceIdElement: sourceIdElement,
     );
   }
 }
@@ -3825,6 +5865,22 @@ mixin _$TestScriptVariable {
   String get hint;
   String get path;
   Id get sourceId;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_defaultValue')
+  Element get defaultValueElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_expression')
+  Element get expressionElement;
+  @JsonKey(name: '_headerField')
+  Element get headerFieldElement;
+  @JsonKey(name: '_hint')
+  Element get hintElement;
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @JsonKey(name: '_sourceId')
+  Element get sourceIdElement;
 
   Map<String, dynamic> toJson();
   $TestScriptVariableCopyWith<TestScriptVariable> get copyWith;
@@ -3842,7 +5898,24 @@ abstract class $TestScriptVariableCopyWith<$Res> {
       String headerField,
       String hint,
       String path,
-      Id sourceId});
+      Id sourceId,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_defaultValue') Element defaultValueElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_expression') Element expressionElement,
+      @JsonKey(name: '_headerField') Element headerFieldElement,
+      @JsonKey(name: '_hint') Element hintElement,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_sourceId') Element sourceIdElement});
+
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get defaultValueElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get expressionElement;
+  $ElementCopyWith<$Res> get headerFieldElement;
+  $ElementCopyWith<$Res> get hintElement;
+  $ElementCopyWith<$Res> get pathElement;
+  $ElementCopyWith<$Res> get sourceIdElement;
 }
 
 class _$TestScriptVariableCopyWithImpl<$Res>
@@ -3863,6 +5936,14 @@ class _$TestScriptVariableCopyWithImpl<$Res>
     Object hint = freezed,
     Object path = freezed,
     Object sourceId = freezed,
+    Object nameElement = freezed,
+    Object defaultValueElement = freezed,
+    Object descriptionElement = freezed,
+    Object expressionElement = freezed,
+    Object headerFieldElement = freezed,
+    Object hintElement = freezed,
+    Object pathElement = freezed,
+    Object sourceIdElement = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
@@ -3878,7 +5959,108 @@ class _$TestScriptVariableCopyWithImpl<$Res>
       hint: hint == freezed ? _value.hint : hint as String,
       path: path == freezed ? _value.path : path as String,
       sourceId: sourceId == freezed ? _value.sourceId : sourceId as Id,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      defaultValueElement: defaultValueElement == freezed
+          ? _value.defaultValueElement
+          : defaultValueElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      expressionElement: expressionElement == freezed
+          ? _value.expressionElement
+          : expressionElement as Element,
+      headerFieldElement: headerFieldElement == freezed
+          ? _value.headerFieldElement
+          : headerFieldElement as Element,
+      hintElement:
+          hintElement == freezed ? _value.hintElement : hintElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      sourceIdElement: sourceIdElement == freezed
+          ? _value.sourceIdElement
+          : sourceIdElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get defaultValueElement {
+    if (_value.defaultValueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.defaultValueElement, (value) {
+      return _then(_value.copyWith(defaultValueElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get expressionElement {
+    if (_value.expressionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.expressionElement, (value) {
+      return _then(_value.copyWith(expressionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get headerFieldElement {
+    if (_value.headerFieldElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.headerFieldElement, (value) {
+      return _then(_value.copyWith(headerFieldElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get hintElement {
+    if (_value.hintElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.hintElement, (value) {
+      return _then(_value.copyWith(hintElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sourceIdElement {
+    if (_value.sourceIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sourceIdElement, (value) {
+      return _then(_value.copyWith(sourceIdElement: value));
+    });
   }
 }
 
@@ -3896,7 +6078,32 @@ abstract class _$TestScriptVariableCopyWith<$Res>
       String headerField,
       String hint,
       String path,
-      Id sourceId});
+      Id sourceId,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_defaultValue') Element defaultValueElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_expression') Element expressionElement,
+      @JsonKey(name: '_headerField') Element headerFieldElement,
+      @JsonKey(name: '_hint') Element hintElement,
+      @JsonKey(name: '_path') Element pathElement,
+      @JsonKey(name: '_sourceId') Element sourceIdElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get defaultValueElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get expressionElement;
+  @override
+  $ElementCopyWith<$Res> get headerFieldElement;
+  @override
+  $ElementCopyWith<$Res> get hintElement;
+  @override
+  $ElementCopyWith<$Res> get pathElement;
+  @override
+  $ElementCopyWith<$Res> get sourceIdElement;
 }
 
 class __$TestScriptVariableCopyWithImpl<$Res>
@@ -3919,6 +6126,14 @@ class __$TestScriptVariableCopyWithImpl<$Res>
     Object hint = freezed,
     Object path = freezed,
     Object sourceId = freezed,
+    Object nameElement = freezed,
+    Object defaultValueElement = freezed,
+    Object descriptionElement = freezed,
+    Object expressionElement = freezed,
+    Object headerFieldElement = freezed,
+    Object hintElement = freezed,
+    Object pathElement = freezed,
+    Object sourceIdElement = freezed,
   }) {
     return _then(_TestScriptVariable(
       name: name == freezed ? _value.name : name as String,
@@ -3934,6 +6149,27 @@ class __$TestScriptVariableCopyWithImpl<$Res>
       hint: hint == freezed ? _value.hint : hint as String,
       path: path == freezed ? _value.path : path as String,
       sourceId: sourceId == freezed ? _value.sourceId : sourceId as Id,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      defaultValueElement: defaultValueElement == freezed
+          ? _value.defaultValueElement
+          : defaultValueElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      expressionElement: expressionElement == freezed
+          ? _value.expressionElement
+          : expressionElement as Element,
+      headerFieldElement: headerFieldElement == freezed
+          ? _value.headerFieldElement
+          : headerFieldElement as Element,
+      hintElement:
+          hintElement == freezed ? _value.hintElement : hintElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      sourceIdElement: sourceIdElement == freezed
+          ? _value.sourceIdElement
+          : sourceIdElement as Element,
     ));
   }
 }
@@ -3948,7 +6184,15 @@ class _$_TestScriptVariable implements _TestScriptVariable {
       this.headerField,
       this.hint,
       this.path,
-      this.sourceId});
+      this.sourceId,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_defaultValue') this.defaultValueElement,
+      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_expression') this.expressionElement,
+      @JsonKey(name: '_headerField') this.headerFieldElement,
+      @JsonKey(name: '_hint') this.hintElement,
+      @JsonKey(name: '_path') this.pathElement,
+      @JsonKey(name: '_sourceId') this.sourceIdElement});
 
   factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptVariableFromJson(json);
@@ -3969,10 +6213,34 @@ class _$_TestScriptVariable implements _TestScriptVariable {
   final String path;
   @override
   final Id sourceId;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_defaultValue')
+  final Element defaultValueElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_expression')
+  final Element expressionElement;
+  @override
+  @JsonKey(name: '_headerField')
+  final Element headerFieldElement;
+  @override
+  @JsonKey(name: '_hint')
+  final Element hintElement;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
+  @override
+  @JsonKey(name: '_sourceId')
+  final Element sourceIdElement;
 
   @override
   String toString() {
-    return 'TestScriptVariable(name: $name, defaultValue: $defaultValue, description: $description, expression: $expression, headerField: $headerField, hint: $hint, path: $path, sourceId: $sourceId)';
+    return 'TestScriptVariable(name: $name, defaultValue: $defaultValue, description: $description, expression: $expression, headerField: $headerField, hint: $hint, path: $path, sourceId: $sourceId, nameElement: $nameElement, defaultValueElement: $defaultValueElement, descriptionElement: $descriptionElement, expressionElement: $expressionElement, headerFieldElement: $headerFieldElement, hintElement: $hintElement, pathElement: $pathElement, sourceIdElement: $sourceIdElement)';
   }
 
   @override
@@ -3999,7 +6267,31 @@ class _$_TestScriptVariable implements _TestScriptVariable {
                 const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.sourceId, sourceId) ||
                 const DeepCollectionEquality()
-                    .equals(other.sourceId, sourceId)));
+                    .equals(other.sourceId, sourceId)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.defaultValueElement, defaultValueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.defaultValueElement, defaultValueElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.expressionElement, expressionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.expressionElement, expressionElement)) &&
+            (identical(other.headerFieldElement, headerFieldElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.headerFieldElement, headerFieldElement)) &&
+            (identical(other.hintElement, hintElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.hintElement, hintElement)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)) &&
+            (identical(other.sourceIdElement, sourceIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sourceIdElement, sourceIdElement)));
   }
 
   @override
@@ -4012,7 +6304,15 @@ class _$_TestScriptVariable implements _TestScriptVariable {
       const DeepCollectionEquality().hash(headerField) ^
       const DeepCollectionEquality().hash(hint) ^
       const DeepCollectionEquality().hash(path) ^
-      const DeepCollectionEquality().hash(sourceId);
+      const DeepCollectionEquality().hash(sourceId) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(defaultValueElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(expressionElement) ^
+      const DeepCollectionEquality().hash(headerFieldElement) ^
+      const DeepCollectionEquality().hash(hintElement) ^
+      const DeepCollectionEquality().hash(pathElement) ^
+      const DeepCollectionEquality().hash(sourceIdElement);
 
   @override
   _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith =>
@@ -4026,14 +6326,23 @@ class _$_TestScriptVariable implements _TestScriptVariable {
 
 abstract class _TestScriptVariable implements TestScriptVariable {
   const factory _TestScriptVariable(
-      {String name,
-      String defaultValue,
-      String description,
-      String expression,
-      String headerField,
-      String hint,
-      String path,
-      Id sourceId}) = _$_TestScriptVariable;
+          {String name,
+          String defaultValue,
+          String description,
+          String expression,
+          String headerField,
+          String hint,
+          String path,
+          Id sourceId,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_defaultValue') Element defaultValueElement,
+          @JsonKey(name: '_description') Element descriptionElement,
+          @JsonKey(name: '_expression') Element expressionElement,
+          @JsonKey(name: '_headerField') Element headerFieldElement,
+          @JsonKey(name: '_hint') Element hintElement,
+          @JsonKey(name: '_path') Element pathElement,
+          @JsonKey(name: '_sourceId') Element sourceIdElement}) =
+      _$_TestScriptVariable;
 
   factory _TestScriptVariable.fromJson(Map<String, dynamic> json) =
       _$_TestScriptVariable.fromJson;
@@ -4054,6 +6363,30 @@ abstract class _TestScriptVariable implements TestScriptVariable {
   String get path;
   @override
   Id get sourceId;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_defaultValue')
+  Element get defaultValueElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_expression')
+  Element get expressionElement;
+  @override
+  @JsonKey(name: '_headerField')
+  Element get headerFieldElement;
+  @override
+  @JsonKey(name: '_hint')
+  Element get hintElement;
+  @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @override
+  @JsonKey(name: '_sourceId')
+  Element get sourceIdElement;
   @override
   _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith;
 }
@@ -4233,10 +6566,16 @@ TestScriptParam _$TestScriptParamFromJson(Map<String, dynamic> json) {
 class _$TestScriptParamTearOff {
   const _$TestScriptParamTearOff();
 
-  _TestScriptParam call({String name, String value}) {
+  _TestScriptParam call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement}) {
     return _TestScriptParam(
       name: name,
       value: value,
+      nameElement: nameElement,
+      valueElement: valueElement,
     );
   }
 }
@@ -4247,6 +6586,10 @@ const $TestScriptParam = _$TestScriptParamTearOff();
 mixin _$TestScriptParam {
   String get name;
   String get value;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_value')
+  Element get valueElement;
 
   Map<String, dynamic> toJson();
   $TestScriptParamCopyWith<TestScriptParam> get copyWith;
@@ -4256,7 +6599,14 @@ abstract class $TestScriptParamCopyWith<$Res> {
   factory $TestScriptParamCopyWith(
           TestScriptParam value, $Res Function(TestScriptParam) then) =
       _$TestScriptParamCopyWithImpl<$Res>;
-  $Res call({String name, String value});
+  $Res call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$TestScriptParamCopyWithImpl<$Res>
@@ -4271,11 +6621,38 @@ class _$TestScriptParamCopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object value = freezed,
+    Object nameElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
       value: value == freezed ? _value.value : value as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
   }
 }
 
@@ -4285,7 +6662,16 @@ abstract class _$TestScriptParamCopyWith<$Res>
           _TestScriptParam value, $Res Function(_TestScriptParam) then) =
       __$TestScriptParamCopyWithImpl<$Res>;
   @override
-  $Res call({String name, String value});
+  $Res call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$TestScriptParamCopyWithImpl<$Res>
@@ -4302,17 +6688,28 @@ class __$TestScriptParamCopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object value = freezed,
+    Object nameElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_TestScriptParam(
       name: name == freezed ? _value.name : name as String,
       value: value == freezed ? _value.value : value as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptParam implements _TestScriptParam {
-  const _$_TestScriptParam({this.name, this.value});
+  const _$_TestScriptParam(
+      {this.name,
+      this.value,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_value') this.valueElement});
 
   factory _$_TestScriptParam.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptParamFromJson(json);
@@ -4321,10 +6718,16 @@ class _$_TestScriptParam implements _TestScriptParam {
   final String name;
   @override
   final String value;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
 
   @override
   String toString() {
-    return 'TestScriptParam(name: $name, value: $value)';
+    return 'TestScriptParam(name: $name, value: $value, nameElement: $nameElement, valueElement: $valueElement)';
   }
 
   @override
@@ -4334,14 +6737,22 @@ class _$_TestScriptParam implements _TestScriptParam {
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(valueElement);
 
   @override
   _$TestScriptParamCopyWith<_TestScriptParam> get copyWith =>
@@ -4354,8 +6765,11 @@ class _$_TestScriptParam implements _TestScriptParam {
 }
 
 abstract class _TestScriptParam implements TestScriptParam {
-  const factory _TestScriptParam({String name, String value}) =
-      _$_TestScriptParam;
+  const factory _TestScriptParam(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement}) = _$_TestScriptParam;
 
   factory _TestScriptParam.fromJson(Map<String, dynamic> json) =
       _$_TestScriptParam.fromJson;
@@ -4364,6 +6778,12 @@ abstract class _TestScriptParam implements TestScriptParam {
   String get name;
   @override
   String get value;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
   @override
   _$TestScriptParamCopyWith<_TestScriptParam> get copyWith;
 }
@@ -4549,10 +6969,14 @@ TestScriptRule1 _$TestScriptRule1FromJson(Map<String, dynamic> json) {
 class _$TestScriptRule1TearOff {
   const _$TestScriptRule1TearOff();
 
-  _TestScriptRule1 call({Id ruleId, List<TestScriptParam1> param}) {
+  _TestScriptRule1 call(
+      {Id ruleId,
+      List<TestScriptParam1> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement}) {
     return _TestScriptRule1(
       ruleId: ruleId,
       param: param,
+      ruleIdElement: ruleIdElement,
     );
   }
 }
@@ -4563,6 +6987,8 @@ const $TestScriptRule1 = _$TestScriptRule1TearOff();
 mixin _$TestScriptRule1 {
   Id get ruleId;
   List<TestScriptParam1> get param;
+  @JsonKey(name: '_ruleId')
+  Element get ruleIdElement;
 
   Map<String, dynamic> toJson();
   $TestScriptRule1CopyWith<TestScriptRule1> get copyWith;
@@ -4572,7 +6998,12 @@ abstract class $TestScriptRule1CopyWith<$Res> {
   factory $TestScriptRule1CopyWith(
           TestScriptRule1 value, $Res Function(TestScriptRule1) then) =
       _$TestScriptRule1CopyWithImpl<$Res>;
-  $Res call({Id ruleId, List<TestScriptParam1> param});
+  $Res call(
+      {Id ruleId,
+      List<TestScriptParam1> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement});
+
+  $ElementCopyWith<$Res> get ruleIdElement;
 }
 
 class _$TestScriptRule1CopyWithImpl<$Res>
@@ -4587,11 +7018,25 @@ class _$TestScriptRule1CopyWithImpl<$Res>
   $Res call({
     Object ruleId = freezed,
     Object param = freezed,
+    Object ruleIdElement = freezed,
   }) {
     return _then(_value.copyWith(
       ruleId: ruleId == freezed ? _value.ruleId : ruleId as Id,
       param: param == freezed ? _value.param : param as List<TestScriptParam1>,
+      ruleIdElement: ruleIdElement == freezed
+          ? _value.ruleIdElement
+          : ruleIdElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get ruleIdElement {
+    if (_value.ruleIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.ruleIdElement, (value) {
+      return _then(_value.copyWith(ruleIdElement: value));
+    });
   }
 }
 
@@ -4601,7 +7046,13 @@ abstract class _$TestScriptRule1CopyWith<$Res>
           _TestScriptRule1 value, $Res Function(_TestScriptRule1) then) =
       __$TestScriptRule1CopyWithImpl<$Res>;
   @override
-  $Res call({Id ruleId, List<TestScriptParam1> param});
+  $Res call(
+      {Id ruleId,
+      List<TestScriptParam1> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement});
+
+  @override
+  $ElementCopyWith<$Res> get ruleIdElement;
 }
 
 class __$TestScriptRule1CopyWithImpl<$Res>
@@ -4618,17 +7069,22 @@ class __$TestScriptRule1CopyWithImpl<$Res>
   $Res call({
     Object ruleId = freezed,
     Object param = freezed,
+    Object ruleIdElement = freezed,
   }) {
     return _then(_TestScriptRule1(
       ruleId: ruleId == freezed ? _value.ruleId : ruleId as Id,
       param: param == freezed ? _value.param : param as List<TestScriptParam1>,
+      ruleIdElement: ruleIdElement == freezed
+          ? _value.ruleIdElement
+          : ruleIdElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptRule1 implements _TestScriptRule1 {
-  const _$_TestScriptRule1({this.ruleId, this.param});
+  const _$_TestScriptRule1(
+      {this.ruleId, this.param, @JsonKey(name: '_ruleId') this.ruleIdElement});
 
   factory _$_TestScriptRule1.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptRule1FromJson(json);
@@ -4637,10 +7093,13 @@ class _$_TestScriptRule1 implements _TestScriptRule1 {
   final Id ruleId;
   @override
   final List<TestScriptParam1> param;
+  @override
+  @JsonKey(name: '_ruleId')
+  final Element ruleIdElement;
 
   @override
   String toString() {
-    return 'TestScriptRule1(ruleId: $ruleId, param: $param)';
+    return 'TestScriptRule1(ruleId: $ruleId, param: $param, ruleIdElement: $ruleIdElement)';
   }
 
   @override
@@ -4650,14 +7109,18 @@ class _$_TestScriptRule1 implements _TestScriptRule1 {
             (identical(other.ruleId, ruleId) ||
                 const DeepCollectionEquality().equals(other.ruleId, ruleId)) &&
             (identical(other.param, param) ||
-                const DeepCollectionEquality().equals(other.param, param)));
+                const DeepCollectionEquality().equals(other.param, param)) &&
+            (identical(other.ruleIdElement, ruleIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.ruleIdElement, ruleIdElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(ruleId) ^
-      const DeepCollectionEquality().hash(param);
+      const DeepCollectionEquality().hash(param) ^
+      const DeepCollectionEquality().hash(ruleIdElement);
 
   @override
   _$TestScriptRule1CopyWith<_TestScriptRule1> get copyWith =>
@@ -4670,8 +7133,10 @@ class _$_TestScriptRule1 implements _TestScriptRule1 {
 }
 
 abstract class _TestScriptRule1 implements TestScriptRule1 {
-  const factory _TestScriptRule1({Id ruleId, List<TestScriptParam1> param}) =
-      _$_TestScriptRule1;
+  const factory _TestScriptRule1(
+      {Id ruleId,
+      List<TestScriptParam1> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement}) = _$_TestScriptRule1;
 
   factory _TestScriptRule1.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRule1.fromJson;
@@ -4680,6 +7145,9 @@ abstract class _TestScriptRule1 implements TestScriptRule1 {
   Id get ruleId;
   @override
   List<TestScriptParam1> get param;
+  @override
+  @JsonKey(name: '_ruleId')
+  Element get ruleIdElement;
   @override
   _$TestScriptRule1CopyWith<_TestScriptRule1> get copyWith;
 }
@@ -4691,10 +7159,16 @@ TestScriptParam1 _$TestScriptParam1FromJson(Map<String, dynamic> json) {
 class _$TestScriptParam1TearOff {
   const _$TestScriptParam1TearOff();
 
-  _TestScriptParam1 call({String name, String value}) {
+  _TestScriptParam1 call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement}) {
     return _TestScriptParam1(
       name: name,
       value: value,
+      nameElement: nameElement,
+      valueElement: valueElement,
     );
   }
 }
@@ -4705,6 +7179,10 @@ const $TestScriptParam1 = _$TestScriptParam1TearOff();
 mixin _$TestScriptParam1 {
   String get name;
   String get value;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_value')
+  Element get valueElement;
 
   Map<String, dynamic> toJson();
   $TestScriptParam1CopyWith<TestScriptParam1> get copyWith;
@@ -4714,7 +7192,14 @@ abstract class $TestScriptParam1CopyWith<$Res> {
   factory $TestScriptParam1CopyWith(
           TestScriptParam1 value, $Res Function(TestScriptParam1) then) =
       _$TestScriptParam1CopyWithImpl<$Res>;
-  $Res call({String name, String value});
+  $Res call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$TestScriptParam1CopyWithImpl<$Res>
@@ -4729,11 +7214,38 @@ class _$TestScriptParam1CopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object value = freezed,
+    Object nameElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
       value: value == freezed ? _value.value : value as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
   }
 }
 
@@ -4743,7 +7255,16 @@ abstract class _$TestScriptParam1CopyWith<$Res>
           _TestScriptParam1 value, $Res Function(_TestScriptParam1) then) =
       __$TestScriptParam1CopyWithImpl<$Res>;
   @override
-  $Res call({String name, String value});
+  $Res call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$TestScriptParam1CopyWithImpl<$Res>
@@ -4760,17 +7281,28 @@ class __$TestScriptParam1CopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object value = freezed,
+    Object nameElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_TestScriptParam1(
       name: name == freezed ? _value.name : name as String,
       value: value == freezed ? _value.value : value as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptParam1 implements _TestScriptParam1 {
-  const _$_TestScriptParam1({this.name, this.value});
+  const _$_TestScriptParam1(
+      {this.name,
+      this.value,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_value') this.valueElement});
 
   factory _$_TestScriptParam1.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptParam1FromJson(json);
@@ -4779,10 +7311,16 @@ class _$_TestScriptParam1 implements _TestScriptParam1 {
   final String name;
   @override
   final String value;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
 
   @override
   String toString() {
-    return 'TestScriptParam1(name: $name, value: $value)';
+    return 'TestScriptParam1(name: $name, value: $value, nameElement: $nameElement, valueElement: $valueElement)';
   }
 
   @override
@@ -4792,14 +7330,22 @@ class _$_TestScriptParam1 implements _TestScriptParam1 {
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(valueElement);
 
   @override
   _$TestScriptParam1CopyWith<_TestScriptParam1> get copyWith =>
@@ -4812,8 +7358,11 @@ class _$_TestScriptParam1 implements _TestScriptParam1 {
 }
 
 abstract class _TestScriptParam1 implements TestScriptParam1 {
-  const factory _TestScriptParam1({String name, String value}) =
-      _$_TestScriptParam1;
+  const factory _TestScriptParam1(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement}) = _$_TestScriptParam1;
 
   factory _TestScriptParam1.fromJson(Map<String, dynamic> json) =
       _$_TestScriptParam1.fromJson;
@@ -4822,6 +7371,12 @@ abstract class _TestScriptParam1 implements TestScriptParam1 {
   String get name;
   @override
   String get value;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
   @override
   _$TestScriptParam1CopyWith<_TestScriptParam1> get copyWith;
 }
@@ -5172,7 +7727,21 @@ class _$TestScriptOperationTearOff {
       Id responseId,
       Id sourceId,
       Id targetId,
-      String url}) {
+      String url,
+      @JsonKey(name: '_resource') Element resourceElement,
+      @JsonKey(name: '_label') Element labelElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_accept') Element acceptElement,
+      @JsonKey(name: '_contentType') Element contentTypeElement,
+      @JsonKey(name: '_destination') Element destinationElement,
+      @JsonKey(name: '_encodeRequestUrl') Element encodeRequestUrlElement,
+      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_params') Element paramsElement,
+      @JsonKey(name: '_requestId') Element requestIdElement,
+      @JsonKey(name: '_responseId') Element responseIdElement,
+      @JsonKey(name: '_sourceId') Element sourceIdElement,
+      @JsonKey(name: '_targetId') Element targetIdElement,
+      @JsonKey(name: '_url') Element urlElement}) {
     return _TestScriptOperation(
       type: type,
       resource: resource,
@@ -5190,6 +7759,20 @@ class _$TestScriptOperationTearOff {
       sourceId: sourceId,
       targetId: targetId,
       url: url,
+      resourceElement: resourceElement,
+      labelElement: labelElement,
+      descriptionElement: descriptionElement,
+      acceptElement: acceptElement,
+      contentTypeElement: contentTypeElement,
+      destinationElement: destinationElement,
+      encodeRequestUrlElement: encodeRequestUrlElement,
+      originElement: originElement,
+      paramsElement: paramsElement,
+      requestIdElement: requestIdElement,
+      responseIdElement: responseIdElement,
+      sourceIdElement: sourceIdElement,
+      targetIdElement: targetIdElement,
+      urlElement: urlElement,
     );
   }
 }
@@ -5216,6 +7799,34 @@ mixin _$TestScriptOperation {
   Id get sourceId;
   Id get targetId;
   String get url;
+  @JsonKey(name: '_resource')
+  Element get resourceElement;
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_accept')
+  Element get acceptElement;
+  @JsonKey(name: '_contentType')
+  Element get contentTypeElement;
+  @JsonKey(name: '_destination')
+  Element get destinationElement;
+  @JsonKey(name: '_encodeRequestUrl')
+  Element get encodeRequestUrlElement;
+  @JsonKey(name: '_origin')
+  Element get originElement;
+  @JsonKey(name: '_params')
+  Element get paramsElement;
+  @JsonKey(name: '_requestId')
+  Element get requestIdElement;
+  @JsonKey(name: '_responseId')
+  Element get responseIdElement;
+  @JsonKey(name: '_sourceId')
+  Element get sourceIdElement;
+  @JsonKey(name: '_targetId')
+  Element get targetIdElement;
+  @JsonKey(name: '_url')
+  Element get urlElement;
 
   Map<String, dynamic> toJson();
   $TestScriptOperationCopyWith<TestScriptOperation> get copyWith;
@@ -5241,9 +7852,37 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       Id responseId,
       Id sourceId,
       Id targetId,
-      String url});
+      String url,
+      @JsonKey(name: '_resource') Element resourceElement,
+      @JsonKey(name: '_label') Element labelElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_accept') Element acceptElement,
+      @JsonKey(name: '_contentType') Element contentTypeElement,
+      @JsonKey(name: '_destination') Element destinationElement,
+      @JsonKey(name: '_encodeRequestUrl') Element encodeRequestUrlElement,
+      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_params') Element paramsElement,
+      @JsonKey(name: '_requestId') Element requestIdElement,
+      @JsonKey(name: '_responseId') Element responseIdElement,
+      @JsonKey(name: '_sourceId') Element sourceIdElement,
+      @JsonKey(name: '_targetId') Element targetIdElement,
+      @JsonKey(name: '_url') Element urlElement});
 
   $CodingCopyWith<$Res> get type;
+  $ElementCopyWith<$Res> get resourceElement;
+  $ElementCopyWith<$Res> get labelElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get acceptElement;
+  $ElementCopyWith<$Res> get contentTypeElement;
+  $ElementCopyWith<$Res> get destinationElement;
+  $ElementCopyWith<$Res> get encodeRequestUrlElement;
+  $ElementCopyWith<$Res> get originElement;
+  $ElementCopyWith<$Res> get paramsElement;
+  $ElementCopyWith<$Res> get requestIdElement;
+  $ElementCopyWith<$Res> get responseIdElement;
+  $ElementCopyWith<$Res> get sourceIdElement;
+  $ElementCopyWith<$Res> get targetIdElement;
+  $ElementCopyWith<$Res> get urlElement;
 }
 
 class _$TestScriptOperationCopyWithImpl<$Res>
@@ -5272,6 +7911,20 @@ class _$TestScriptOperationCopyWithImpl<$Res>
     Object sourceId = freezed,
     Object targetId = freezed,
     Object url = freezed,
+    Object resourceElement = freezed,
+    Object labelElement = freezed,
+    Object descriptionElement = freezed,
+    Object acceptElement = freezed,
+    Object contentTypeElement = freezed,
+    Object destinationElement = freezed,
+    Object encodeRequestUrlElement = freezed,
+    Object originElement = freezed,
+    Object paramsElement = freezed,
+    Object requestIdElement = freezed,
+    Object responseIdElement = freezed,
+    Object sourceIdElement = freezed,
+    Object targetIdElement = freezed,
+    Object urlElement = freezed,
   }) {
     return _then(_value.copyWith(
       type: type == freezed ? _value.type : type as Coding,
@@ -5298,6 +7951,47 @@ class _$TestScriptOperationCopyWithImpl<$Res>
       sourceId: sourceId == freezed ? _value.sourceId : sourceId as Id,
       targetId: targetId == freezed ? _value.targetId : targetId as Id,
       url: url == freezed ? _value.url : url as String,
+      resourceElement: resourceElement == freezed
+          ? _value.resourceElement
+          : resourceElement as Element,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      acceptElement: acceptElement == freezed
+          ? _value.acceptElement
+          : acceptElement as Element,
+      contentTypeElement: contentTypeElement == freezed
+          ? _value.contentTypeElement
+          : contentTypeElement as Element,
+      destinationElement: destinationElement == freezed
+          ? _value.destinationElement
+          : destinationElement as Element,
+      encodeRequestUrlElement: encodeRequestUrlElement == freezed
+          ? _value.encodeRequestUrlElement
+          : encodeRequestUrlElement as Element,
+      originElement: originElement == freezed
+          ? _value.originElement
+          : originElement as Element,
+      paramsElement: paramsElement == freezed
+          ? _value.paramsElement
+          : paramsElement as Element,
+      requestIdElement: requestIdElement == freezed
+          ? _value.requestIdElement
+          : requestIdElement as Element,
+      responseIdElement: responseIdElement == freezed
+          ? _value.responseIdElement
+          : responseIdElement as Element,
+      sourceIdElement: sourceIdElement == freezed
+          ? _value.sourceIdElement
+          : sourceIdElement as Element,
+      targetIdElement: targetIdElement == freezed
+          ? _value.targetIdElement
+          : targetIdElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
     ));
   }
 
@@ -5308,6 +8002,146 @@ class _$TestScriptOperationCopyWithImpl<$Res>
     }
     return $CodingCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get resourceElement {
+    if (_value.resourceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.resourceElement, (value) {
+      return _then(_value.copyWith(resourceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get labelElement {
+    if (_value.labelElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.labelElement, (value) {
+      return _then(_value.copyWith(labelElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get acceptElement {
+    if (_value.acceptElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.acceptElement, (value) {
+      return _then(_value.copyWith(acceptElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get contentTypeElement {
+    if (_value.contentTypeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.contentTypeElement, (value) {
+      return _then(_value.copyWith(contentTypeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get destinationElement {
+    if (_value.destinationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.destinationElement, (value) {
+      return _then(_value.copyWith(destinationElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get encodeRequestUrlElement {
+    if (_value.encodeRequestUrlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.encodeRequestUrlElement, (value) {
+      return _then(_value.copyWith(encodeRequestUrlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get originElement {
+    if (_value.originElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.originElement, (value) {
+      return _then(_value.copyWith(originElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get paramsElement {
+    if (_value.paramsElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.paramsElement, (value) {
+      return _then(_value.copyWith(paramsElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requestIdElement {
+    if (_value.requestIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requestIdElement, (value) {
+      return _then(_value.copyWith(requestIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get responseIdElement {
+    if (_value.responseIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.responseIdElement, (value) {
+      return _then(_value.copyWith(responseIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sourceIdElement {
+    if (_value.sourceIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sourceIdElement, (value) {
+      return _then(_value.copyWith(sourceIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get targetIdElement {
+    if (_value.targetIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.targetIdElement, (value) {
+      return _then(_value.copyWith(targetIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
     });
   }
 }
@@ -5334,10 +8168,52 @@ abstract class _$TestScriptOperationCopyWith<$Res>
       Id responseId,
       Id sourceId,
       Id targetId,
-      String url});
+      String url,
+      @JsonKey(name: '_resource') Element resourceElement,
+      @JsonKey(name: '_label') Element labelElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_accept') Element acceptElement,
+      @JsonKey(name: '_contentType') Element contentTypeElement,
+      @JsonKey(name: '_destination') Element destinationElement,
+      @JsonKey(name: '_encodeRequestUrl') Element encodeRequestUrlElement,
+      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_params') Element paramsElement,
+      @JsonKey(name: '_requestId') Element requestIdElement,
+      @JsonKey(name: '_responseId') Element responseIdElement,
+      @JsonKey(name: '_sourceId') Element sourceIdElement,
+      @JsonKey(name: '_targetId') Element targetIdElement,
+      @JsonKey(name: '_url') Element urlElement});
 
   @override
   $CodingCopyWith<$Res> get type;
+  @override
+  $ElementCopyWith<$Res> get resourceElement;
+  @override
+  $ElementCopyWith<$Res> get labelElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get acceptElement;
+  @override
+  $ElementCopyWith<$Res> get contentTypeElement;
+  @override
+  $ElementCopyWith<$Res> get destinationElement;
+  @override
+  $ElementCopyWith<$Res> get encodeRequestUrlElement;
+  @override
+  $ElementCopyWith<$Res> get originElement;
+  @override
+  $ElementCopyWith<$Res> get paramsElement;
+  @override
+  $ElementCopyWith<$Res> get requestIdElement;
+  @override
+  $ElementCopyWith<$Res> get responseIdElement;
+  @override
+  $ElementCopyWith<$Res> get sourceIdElement;
+  @override
+  $ElementCopyWith<$Res> get targetIdElement;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
 }
 
 class __$TestScriptOperationCopyWithImpl<$Res>
@@ -5368,6 +8244,20 @@ class __$TestScriptOperationCopyWithImpl<$Res>
     Object sourceId = freezed,
     Object targetId = freezed,
     Object url = freezed,
+    Object resourceElement = freezed,
+    Object labelElement = freezed,
+    Object descriptionElement = freezed,
+    Object acceptElement = freezed,
+    Object contentTypeElement = freezed,
+    Object destinationElement = freezed,
+    Object encodeRequestUrlElement = freezed,
+    Object originElement = freezed,
+    Object paramsElement = freezed,
+    Object requestIdElement = freezed,
+    Object responseIdElement = freezed,
+    Object sourceIdElement = freezed,
+    Object targetIdElement = freezed,
+    Object urlElement = freezed,
   }) {
     return _then(_TestScriptOperation(
       type: type == freezed ? _value.type : type as Coding,
@@ -5394,6 +8284,47 @@ class __$TestScriptOperationCopyWithImpl<$Res>
       sourceId: sourceId == freezed ? _value.sourceId : sourceId as Id,
       targetId: targetId == freezed ? _value.targetId : targetId as Id,
       url: url == freezed ? _value.url : url as String,
+      resourceElement: resourceElement == freezed
+          ? _value.resourceElement
+          : resourceElement as Element,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      acceptElement: acceptElement == freezed
+          ? _value.acceptElement
+          : acceptElement as Element,
+      contentTypeElement: contentTypeElement == freezed
+          ? _value.contentTypeElement
+          : contentTypeElement as Element,
+      destinationElement: destinationElement == freezed
+          ? _value.destinationElement
+          : destinationElement as Element,
+      encodeRequestUrlElement: encodeRequestUrlElement == freezed
+          ? _value.encodeRequestUrlElement
+          : encodeRequestUrlElement as Element,
+      originElement: originElement == freezed
+          ? _value.originElement
+          : originElement as Element,
+      paramsElement: paramsElement == freezed
+          ? _value.paramsElement
+          : paramsElement as Element,
+      requestIdElement: requestIdElement == freezed
+          ? _value.requestIdElement
+          : requestIdElement as Element,
+      responseIdElement: responseIdElement == freezed
+          ? _value.responseIdElement
+          : responseIdElement as Element,
+      sourceIdElement: sourceIdElement == freezed
+          ? _value.sourceIdElement
+          : sourceIdElement as Element,
+      targetIdElement: targetIdElement == freezed
+          ? _value.targetIdElement
+          : targetIdElement as Element,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
     ));
   }
 }
@@ -5416,7 +8347,21 @@ class _$_TestScriptOperation implements _TestScriptOperation {
       this.responseId,
       this.sourceId,
       this.targetId,
-      this.url});
+      this.url,
+      @JsonKey(name: '_resource') this.resourceElement,
+      @JsonKey(name: '_label') this.labelElement,
+      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_accept') this.acceptElement,
+      @JsonKey(name: '_contentType') this.contentTypeElement,
+      @JsonKey(name: '_destination') this.destinationElement,
+      @JsonKey(name: '_encodeRequestUrl') this.encodeRequestUrlElement,
+      @JsonKey(name: '_origin') this.originElement,
+      @JsonKey(name: '_params') this.paramsElement,
+      @JsonKey(name: '_requestId') this.requestIdElement,
+      @JsonKey(name: '_responseId') this.responseIdElement,
+      @JsonKey(name: '_sourceId') this.sourceIdElement,
+      @JsonKey(name: '_targetId') this.targetIdElement,
+      @JsonKey(name: '_url') this.urlElement});
 
   factory _$_TestScriptOperation.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptOperationFromJson(json);
@@ -5455,10 +8400,52 @@ class _$_TestScriptOperation implements _TestScriptOperation {
   final Id targetId;
   @override
   final String url;
+  @override
+  @JsonKey(name: '_resource')
+  final Element resourceElement;
+  @override
+  @JsonKey(name: '_label')
+  final Element labelElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_accept')
+  final Element acceptElement;
+  @override
+  @JsonKey(name: '_contentType')
+  final Element contentTypeElement;
+  @override
+  @JsonKey(name: '_destination')
+  final Element destinationElement;
+  @override
+  @JsonKey(name: '_encodeRequestUrl')
+  final Element encodeRequestUrlElement;
+  @override
+  @JsonKey(name: '_origin')
+  final Element originElement;
+  @override
+  @JsonKey(name: '_params')
+  final Element paramsElement;
+  @override
+  @JsonKey(name: '_requestId')
+  final Element requestIdElement;
+  @override
+  @JsonKey(name: '_responseId')
+  final Element responseIdElement;
+  @override
+  @JsonKey(name: '_sourceId')
+  final Element sourceIdElement;
+  @override
+  @JsonKey(name: '_targetId')
+  final Element targetIdElement;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
 
   @override
   String toString() {
-    return 'TestScriptOperation(type: $type, resource: $resource, label: $label, description: $description, accept: $accept, contentType: $contentType, destination: $destination, encodeRequestUrl: $encodeRequestUrl, origin: $origin, params: $params, requestHeader: $requestHeader, requestId: $requestId, responseId: $responseId, sourceId: $sourceId, targetId: $targetId, url: $url)';
+    return 'TestScriptOperation(type: $type, resource: $resource, label: $label, description: $description, accept: $accept, contentType: $contentType, destination: $destination, encodeRequestUrl: $encodeRequestUrl, origin: $origin, params: $params, requestHeader: $requestHeader, requestId: $requestId, responseId: $responseId, sourceId: $sourceId, targetId: $targetId, url: $url, resourceElement: $resourceElement, labelElement: $labelElement, descriptionElement: $descriptionElement, acceptElement: $acceptElement, contentTypeElement: $contentTypeElement, destinationElement: $destinationElement, encodeRequestUrlElement: $encodeRequestUrlElement, originElement: $originElement, paramsElement: $paramsElement, requestIdElement: $requestIdElement, responseIdElement: $responseIdElement, sourceIdElement: $sourceIdElement, targetIdElement: $targetIdElement, urlElement: $urlElement)';
   }
 
   @override
@@ -5506,7 +8493,37 @@ class _$_TestScriptOperation implements _TestScriptOperation {
                 const DeepCollectionEquality()
                     .equals(other.targetId, targetId)) &&
             (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)));
+                const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.resourceElement, resourceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceElement, resourceElement)) &&
+            (identical(other.labelElement, labelElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.labelElement, labelElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.acceptElement, acceptElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.acceptElement, acceptElement)) &&
+            (identical(other.contentTypeElement, contentTypeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.contentTypeElement, contentTypeElement)) &&
+            (identical(other.destinationElement, destinationElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.destinationElement, destinationElement)) &&
+            (identical(other.encodeRequestUrlElement, encodeRequestUrlElement) ||
+                const DeepCollectionEquality().equals(
+                    other.encodeRequestUrlElement, encodeRequestUrlElement)) &&
+            (identical(other.originElement, originElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.originElement, originElement)) &&
+            (identical(other.paramsElement, paramsElement) || const DeepCollectionEquality().equals(other.paramsElement, paramsElement)) &&
+            (identical(other.requestIdElement, requestIdElement) || const DeepCollectionEquality().equals(other.requestIdElement, requestIdElement)) &&
+            (identical(other.responseIdElement, responseIdElement) || const DeepCollectionEquality().equals(other.responseIdElement, responseIdElement)) &&
+            (identical(other.sourceIdElement, sourceIdElement) || const DeepCollectionEquality().equals(other.sourceIdElement, sourceIdElement)) &&
+            (identical(other.targetIdElement, targetIdElement) || const DeepCollectionEquality().equals(other.targetIdElement, targetIdElement)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)));
   }
 
   @override
@@ -5527,7 +8544,21 @@ class _$_TestScriptOperation implements _TestScriptOperation {
       const DeepCollectionEquality().hash(responseId) ^
       const DeepCollectionEquality().hash(sourceId) ^
       const DeepCollectionEquality().hash(targetId) ^
-      const DeepCollectionEquality().hash(url);
+      const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(resourceElement) ^
+      const DeepCollectionEquality().hash(labelElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(acceptElement) ^
+      const DeepCollectionEquality().hash(contentTypeElement) ^
+      const DeepCollectionEquality().hash(destinationElement) ^
+      const DeepCollectionEquality().hash(encodeRequestUrlElement) ^
+      const DeepCollectionEquality().hash(originElement) ^
+      const DeepCollectionEquality().hash(paramsElement) ^
+      const DeepCollectionEquality().hash(requestIdElement) ^
+      const DeepCollectionEquality().hash(responseIdElement) ^
+      const DeepCollectionEquality().hash(sourceIdElement) ^
+      const DeepCollectionEquality().hash(targetIdElement) ^
+      const DeepCollectionEquality().hash(urlElement);
 
   @override
   _$TestScriptOperationCopyWith<_TestScriptOperation> get copyWith =>
@@ -5557,7 +8588,21 @@ abstract class _TestScriptOperation implements TestScriptOperation {
       Id responseId,
       Id sourceId,
       Id targetId,
-      String url}) = _$_TestScriptOperation;
+      String url,
+      @JsonKey(name: '_resource') Element resourceElement,
+      @JsonKey(name: '_label') Element labelElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_accept') Element acceptElement,
+      @JsonKey(name: '_contentType') Element contentTypeElement,
+      @JsonKey(name: '_destination') Element destinationElement,
+      @JsonKey(name: '_encodeRequestUrl') Element encodeRequestUrlElement,
+      @JsonKey(name: '_origin') Element originElement,
+      @JsonKey(name: '_params') Element paramsElement,
+      @JsonKey(name: '_requestId') Element requestIdElement,
+      @JsonKey(name: '_responseId') Element responseIdElement,
+      @JsonKey(name: '_sourceId') Element sourceIdElement,
+      @JsonKey(name: '_targetId') Element targetIdElement,
+      @JsonKey(name: '_url') Element urlElement}) = _$_TestScriptOperation;
 
   factory _TestScriptOperation.fromJson(Map<String, dynamic> json) =
       _$_TestScriptOperation.fromJson;
@@ -5597,6 +8642,48 @@ abstract class _TestScriptOperation implements TestScriptOperation {
   @override
   String get url;
   @override
+  @JsonKey(name: '_resource')
+  Element get resourceElement;
+  @override
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_accept')
+  Element get acceptElement;
+  @override
+  @JsonKey(name: '_contentType')
+  Element get contentTypeElement;
+  @override
+  @JsonKey(name: '_destination')
+  Element get destinationElement;
+  @override
+  @JsonKey(name: '_encodeRequestUrl')
+  Element get encodeRequestUrlElement;
+  @override
+  @JsonKey(name: '_origin')
+  Element get originElement;
+  @override
+  @JsonKey(name: '_params')
+  Element get paramsElement;
+  @override
+  @JsonKey(name: '_requestId')
+  Element get requestIdElement;
+  @override
+  @JsonKey(name: '_responseId')
+  Element get responseIdElement;
+  @override
+  @JsonKey(name: '_sourceId')
+  Element get sourceIdElement;
+  @override
+  @JsonKey(name: '_targetId')
+  Element get targetIdElement;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
   _$TestScriptOperationCopyWith<_TestScriptOperation> get copyWith;
 }
 
@@ -5608,10 +8695,16 @@ TestScriptRequestHeader _$TestScriptRequestHeaderFromJson(
 class _$TestScriptRequestHeaderTearOff {
   const _$TestScriptRequestHeaderTearOff();
 
-  _TestScriptRequestHeader call({String field, String value}) {
+  _TestScriptRequestHeader call(
+      {String field,
+      String value,
+      @JsonKey(name: '_field') Element fieldElement,
+      @JsonKey(name: '_value') Element valueElement}) {
     return _TestScriptRequestHeader(
       field: field,
       value: value,
+      fieldElement: fieldElement,
+      valueElement: valueElement,
     );
   }
 }
@@ -5622,6 +8715,10 @@ const $TestScriptRequestHeader = _$TestScriptRequestHeaderTearOff();
 mixin _$TestScriptRequestHeader {
   String get field;
   String get value;
+  @JsonKey(name: '_field')
+  Element get fieldElement;
+  @JsonKey(name: '_value')
+  Element get valueElement;
 
   Map<String, dynamic> toJson();
   $TestScriptRequestHeaderCopyWith<TestScriptRequestHeader> get copyWith;
@@ -5631,7 +8728,14 @@ abstract class $TestScriptRequestHeaderCopyWith<$Res> {
   factory $TestScriptRequestHeaderCopyWith(TestScriptRequestHeader value,
           $Res Function(TestScriptRequestHeader) then) =
       _$TestScriptRequestHeaderCopyWithImpl<$Res>;
-  $Res call({String field, String value});
+  $Res call(
+      {String field,
+      String value,
+      @JsonKey(name: '_field') Element fieldElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  $ElementCopyWith<$Res> get fieldElement;
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$TestScriptRequestHeaderCopyWithImpl<$Res>
@@ -5646,11 +8750,39 @@ class _$TestScriptRequestHeaderCopyWithImpl<$Res>
   $Res call({
     Object field = freezed,
     Object value = freezed,
+    Object fieldElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       field: field == freezed ? _value.field : field as String,
       value: value == freezed ? _value.value : value as String,
+      fieldElement: fieldElement == freezed
+          ? _value.fieldElement
+          : fieldElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get fieldElement {
+    if (_value.fieldElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.fieldElement, (value) {
+      return _then(_value.copyWith(fieldElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
   }
 }
 
@@ -5660,7 +8792,16 @@ abstract class _$TestScriptRequestHeaderCopyWith<$Res>
           $Res Function(_TestScriptRequestHeader) then) =
       __$TestScriptRequestHeaderCopyWithImpl<$Res>;
   @override
-  $Res call({String field, String value});
+  $Res call(
+      {String field,
+      String value,
+      @JsonKey(name: '_field') Element fieldElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  @override
+  $ElementCopyWith<$Res> get fieldElement;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$TestScriptRequestHeaderCopyWithImpl<$Res>
@@ -5678,17 +8819,29 @@ class __$TestScriptRequestHeaderCopyWithImpl<$Res>
   $Res call({
     Object field = freezed,
     Object value = freezed,
+    Object fieldElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_TestScriptRequestHeader(
       field: field == freezed ? _value.field : field as String,
       value: value == freezed ? _value.value : value as String,
+      fieldElement: fieldElement == freezed
+          ? _value.fieldElement
+          : fieldElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptRequestHeader implements _TestScriptRequestHeader {
-  const _$_TestScriptRequestHeader({this.field, this.value});
+  const _$_TestScriptRequestHeader(
+      {this.field,
+      this.value,
+      @JsonKey(name: '_field') this.fieldElement,
+      @JsonKey(name: '_value') this.valueElement});
 
   factory _$_TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptRequestHeaderFromJson(json);
@@ -5697,10 +8850,16 @@ class _$_TestScriptRequestHeader implements _TestScriptRequestHeader {
   final String field;
   @override
   final String value;
+  @override
+  @JsonKey(name: '_field')
+  final Element fieldElement;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
 
   @override
   String toString() {
-    return 'TestScriptRequestHeader(field: $field, value: $value)';
+    return 'TestScriptRequestHeader(field: $field, value: $value, fieldElement: $fieldElement, valueElement: $valueElement)';
   }
 
   @override
@@ -5710,14 +8869,22 @@ class _$_TestScriptRequestHeader implements _TestScriptRequestHeader {
             (identical(other.field, field) ||
                 const DeepCollectionEquality().equals(other.field, field)) &&
             (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.fieldElement, fieldElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.fieldElement, fieldElement)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(field) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(fieldElement) ^
+      const DeepCollectionEquality().hash(valueElement);
 
   @override
   _$TestScriptRequestHeaderCopyWith<_TestScriptRequestHeader> get copyWith =>
@@ -5731,7 +8898,11 @@ class _$_TestScriptRequestHeader implements _TestScriptRequestHeader {
 }
 
 abstract class _TestScriptRequestHeader implements TestScriptRequestHeader {
-  const factory _TestScriptRequestHeader({String field, String value}) =
+  const factory _TestScriptRequestHeader(
+          {String field,
+          String value,
+          @JsonKey(name: '_field') Element fieldElement,
+          @JsonKey(name: '_value') Element valueElement}) =
       _$_TestScriptRequestHeader;
 
   factory _TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =
@@ -5741,6 +8912,12 @@ abstract class _TestScriptRequestHeader implements TestScriptRequestHeader {
   String get field;
   @override
   String get value;
+  @override
+  @JsonKey(name: '_field')
+  Element get fieldElement;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
   @override
   _$TestScriptRequestHeaderCopyWith<_TestScriptRequestHeader> get copyWith;
 }
@@ -5781,7 +8958,51 @@ class _$TestScriptAssertTearOff {
       Id sourceId,
       Id validateProfileId,
       String value,
-      Boolean warningOnly}) {
+      Boolean warningOnly,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_direction')
+          Element directionElement,
+      @JsonKey(name: '_compareToSourceId')
+          Element compareToSourceIdElement,
+      @JsonKey(name: '_compareToSourceExpression')
+          Element compareToSourceExpressionElement,
+      @JsonKey(name: '_compareToSourcePath')
+          Element compareToSourcePathElement,
+      @JsonKey(name: '_contentType')
+          Element contentTypeElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_headerField')
+          Element headerFieldElement,
+      @JsonKey(name: '_minimumId')
+          Element minimumIdElement,
+      @JsonKey(name: '_navigationLinks')
+          Element navigationLinksElement,
+      @JsonKey(name: '_operator')
+          Element operatorElement,
+      @JsonKey(name: '_path')
+          Element pathElement,
+      @JsonKey(name: '_requestMethod')
+          Element requestMethodElement,
+      @JsonKey(name: '_requestURL')
+          Element requestURLElement,
+      @JsonKey(name: '_resource')
+          Element resourceElement,
+      @JsonKey(name: '_response')
+          Element responseElement,
+      @JsonKey(name: '_responseCode')
+          Element responseCodeElement,
+      @JsonKey(name: '_sourceId')
+          Element sourceIdElement,
+      @JsonKey(name: '_validateProfileId')
+          Element validateProfileIdElement,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(name: '_warningOnly')
+          Element warningOnlyElement}) {
     return _TestScriptAssert(
       label: label,
       description: description,
@@ -5807,6 +9028,28 @@ class _$TestScriptAssertTearOff {
       validateProfileId: validateProfileId,
       value: value,
       warningOnly: warningOnly,
+      labelElement: labelElement,
+      descriptionElement: descriptionElement,
+      directionElement: directionElement,
+      compareToSourceIdElement: compareToSourceIdElement,
+      compareToSourceExpressionElement: compareToSourceExpressionElement,
+      compareToSourcePathElement: compareToSourcePathElement,
+      contentTypeElement: contentTypeElement,
+      expressionElement: expressionElement,
+      headerFieldElement: headerFieldElement,
+      minimumIdElement: minimumIdElement,
+      navigationLinksElement: navigationLinksElement,
+      operatorElement: operatorElement,
+      pathElement: pathElement,
+      requestMethodElement: requestMethodElement,
+      requestURLElement: requestURLElement,
+      resourceElement: resourceElement,
+      responseElement: responseElement,
+      responseCodeElement: responseCodeElement,
+      sourceIdElement: sourceIdElement,
+      validateProfileIdElement: validateProfileIdElement,
+      valueElement: valueElement,
+      warningOnlyElement: warningOnlyElement,
     );
   }
 }
@@ -5844,6 +9087,50 @@ mixin _$TestScriptAssert {
   Id get validateProfileId;
   String get value;
   Boolean get warningOnly;
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_direction')
+  Element get directionElement;
+  @JsonKey(name: '_compareToSourceId')
+  Element get compareToSourceIdElement;
+  @JsonKey(name: '_compareToSourceExpression')
+  Element get compareToSourceExpressionElement;
+  @JsonKey(name: '_compareToSourcePath')
+  Element get compareToSourcePathElement;
+  @JsonKey(name: '_contentType')
+  Element get contentTypeElement;
+  @JsonKey(name: '_expression')
+  Element get expressionElement;
+  @JsonKey(name: '_headerField')
+  Element get headerFieldElement;
+  @JsonKey(name: '_minimumId')
+  Element get minimumIdElement;
+  @JsonKey(name: '_navigationLinks')
+  Element get navigationLinksElement;
+  @JsonKey(name: '_operator')
+  Element get operatorElement;
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @JsonKey(name: '_requestMethod')
+  Element get requestMethodElement;
+  @JsonKey(name: '_requestURL')
+  Element get requestURLElement;
+  @JsonKey(name: '_resource')
+  Element get resourceElement;
+  @JsonKey(name: '_response')
+  Element get responseElement;
+  @JsonKey(name: '_responseCode')
+  Element get responseCodeElement;
+  @JsonKey(name: '_sourceId')
+  Element get sourceIdElement;
+  @JsonKey(name: '_validateProfileId')
+  Element get validateProfileIdElement;
+  @JsonKey(name: '_value')
+  Element get valueElement;
+  @JsonKey(name: '_warningOnly')
+  Element get warningOnlyElement;
 
   Map<String, dynamic> toJson();
   $TestScriptAssertCopyWith<TestScriptAssert> get copyWith;
@@ -5882,10 +9169,76 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       Id sourceId,
       Id validateProfileId,
       String value,
-      Boolean warningOnly});
+      Boolean warningOnly,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_direction')
+          Element directionElement,
+      @JsonKey(name: '_compareToSourceId')
+          Element compareToSourceIdElement,
+      @JsonKey(name: '_compareToSourceExpression')
+          Element compareToSourceExpressionElement,
+      @JsonKey(name: '_compareToSourcePath')
+          Element compareToSourcePathElement,
+      @JsonKey(name: '_contentType')
+          Element contentTypeElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_headerField')
+          Element headerFieldElement,
+      @JsonKey(name: '_minimumId')
+          Element minimumIdElement,
+      @JsonKey(name: '_navigationLinks')
+          Element navigationLinksElement,
+      @JsonKey(name: '_operator')
+          Element operatorElement,
+      @JsonKey(name: '_path')
+          Element pathElement,
+      @JsonKey(name: '_requestMethod')
+          Element requestMethodElement,
+      @JsonKey(name: '_requestURL')
+          Element requestURLElement,
+      @JsonKey(name: '_resource')
+          Element resourceElement,
+      @JsonKey(name: '_response')
+          Element responseElement,
+      @JsonKey(name: '_responseCode')
+          Element responseCodeElement,
+      @JsonKey(name: '_sourceId')
+          Element sourceIdElement,
+      @JsonKey(name: '_validateProfileId')
+          Element validateProfileIdElement,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(name: '_warningOnly')
+          Element warningOnlyElement});
 
   $TestScriptRule2CopyWith<$Res> get rule;
   $TestScriptRuleset1CopyWith<$Res> get ruleset;
+  $ElementCopyWith<$Res> get labelElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get directionElement;
+  $ElementCopyWith<$Res> get compareToSourceIdElement;
+  $ElementCopyWith<$Res> get compareToSourceExpressionElement;
+  $ElementCopyWith<$Res> get compareToSourcePathElement;
+  $ElementCopyWith<$Res> get contentTypeElement;
+  $ElementCopyWith<$Res> get expressionElement;
+  $ElementCopyWith<$Res> get headerFieldElement;
+  $ElementCopyWith<$Res> get minimumIdElement;
+  $ElementCopyWith<$Res> get navigationLinksElement;
+  $ElementCopyWith<$Res> get operatorElement;
+  $ElementCopyWith<$Res> get pathElement;
+  $ElementCopyWith<$Res> get requestMethodElement;
+  $ElementCopyWith<$Res> get requestURLElement;
+  $ElementCopyWith<$Res> get resourceElement;
+  $ElementCopyWith<$Res> get responseElement;
+  $ElementCopyWith<$Res> get responseCodeElement;
+  $ElementCopyWith<$Res> get sourceIdElement;
+  $ElementCopyWith<$Res> get validateProfileIdElement;
+  $ElementCopyWith<$Res> get valueElement;
+  $ElementCopyWith<$Res> get warningOnlyElement;
 }
 
 class _$TestScriptAssertCopyWithImpl<$Res>
@@ -5922,6 +9275,28 @@ class _$TestScriptAssertCopyWithImpl<$Res>
     Object validateProfileId = freezed,
     Object value = freezed,
     Object warningOnly = freezed,
+    Object labelElement = freezed,
+    Object descriptionElement = freezed,
+    Object directionElement = freezed,
+    Object compareToSourceIdElement = freezed,
+    Object compareToSourceExpressionElement = freezed,
+    Object compareToSourcePathElement = freezed,
+    Object contentTypeElement = freezed,
+    Object expressionElement = freezed,
+    Object headerFieldElement = freezed,
+    Object minimumIdElement = freezed,
+    Object navigationLinksElement = freezed,
+    Object operatorElement = freezed,
+    Object pathElement = freezed,
+    Object requestMethodElement = freezed,
+    Object requestURLElement = freezed,
+    Object resourceElement = freezed,
+    Object responseElement = freezed,
+    Object responseCodeElement = freezed,
+    Object sourceIdElement = freezed,
+    Object validateProfileIdElement = freezed,
+    Object valueElement = freezed,
+    Object warningOnlyElement = freezed,
   }) {
     return _then(_value.copyWith(
       label: label == freezed ? _value.label : label as String,
@@ -5974,6 +9349,72 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       value: value == freezed ? _value.value : value as String,
       warningOnly:
           warningOnly == freezed ? _value.warningOnly : warningOnly as Boolean,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      directionElement: directionElement == freezed
+          ? _value.directionElement
+          : directionElement as Element,
+      compareToSourceIdElement: compareToSourceIdElement == freezed
+          ? _value.compareToSourceIdElement
+          : compareToSourceIdElement as Element,
+      compareToSourceExpressionElement:
+          compareToSourceExpressionElement == freezed
+              ? _value.compareToSourceExpressionElement
+              : compareToSourceExpressionElement as Element,
+      compareToSourcePathElement: compareToSourcePathElement == freezed
+          ? _value.compareToSourcePathElement
+          : compareToSourcePathElement as Element,
+      contentTypeElement: contentTypeElement == freezed
+          ? _value.contentTypeElement
+          : contentTypeElement as Element,
+      expressionElement: expressionElement == freezed
+          ? _value.expressionElement
+          : expressionElement as Element,
+      headerFieldElement: headerFieldElement == freezed
+          ? _value.headerFieldElement
+          : headerFieldElement as Element,
+      minimumIdElement: minimumIdElement == freezed
+          ? _value.minimumIdElement
+          : minimumIdElement as Element,
+      navigationLinksElement: navigationLinksElement == freezed
+          ? _value.navigationLinksElement
+          : navigationLinksElement as Element,
+      operatorElement: operatorElement == freezed
+          ? _value.operatorElement
+          : operatorElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      requestMethodElement: requestMethodElement == freezed
+          ? _value.requestMethodElement
+          : requestMethodElement as Element,
+      requestURLElement: requestURLElement == freezed
+          ? _value.requestURLElement
+          : requestURLElement as Element,
+      resourceElement: resourceElement == freezed
+          ? _value.resourceElement
+          : resourceElement as Element,
+      responseElement: responseElement == freezed
+          ? _value.responseElement
+          : responseElement as Element,
+      responseCodeElement: responseCodeElement == freezed
+          ? _value.responseCodeElement
+          : responseCodeElement as Element,
+      sourceIdElement: sourceIdElement == freezed
+          ? _value.sourceIdElement
+          : sourceIdElement as Element,
+      validateProfileIdElement: validateProfileIdElement == freezed
+          ? _value.validateProfileIdElement
+          : validateProfileIdElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
+      warningOnlyElement: warningOnlyElement == freezed
+          ? _value.warningOnlyElement
+          : warningOnlyElement as Element,
     ));
   }
 
@@ -5994,6 +9435,227 @@ class _$TestScriptAssertCopyWithImpl<$Res>
     }
     return $TestScriptRuleset1CopyWith<$Res>(_value.ruleset, (value) {
       return _then(_value.copyWith(ruleset: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get labelElement {
+    if (_value.labelElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.labelElement, (value) {
+      return _then(_value.copyWith(labelElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get directionElement {
+    if (_value.directionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.directionElement, (value) {
+      return _then(_value.copyWith(directionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get compareToSourceIdElement {
+    if (_value.compareToSourceIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.compareToSourceIdElement, (value) {
+      return _then(_value.copyWith(compareToSourceIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get compareToSourceExpressionElement {
+    if (_value.compareToSourceExpressionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.compareToSourceExpressionElement,
+        (value) {
+      return _then(_value.copyWith(compareToSourceExpressionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get compareToSourcePathElement {
+    if (_value.compareToSourcePathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.compareToSourcePathElement, (value) {
+      return _then(_value.copyWith(compareToSourcePathElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get contentTypeElement {
+    if (_value.contentTypeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.contentTypeElement, (value) {
+      return _then(_value.copyWith(contentTypeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get expressionElement {
+    if (_value.expressionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.expressionElement, (value) {
+      return _then(_value.copyWith(expressionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get headerFieldElement {
+    if (_value.headerFieldElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.headerFieldElement, (value) {
+      return _then(_value.copyWith(headerFieldElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get minimumIdElement {
+    if (_value.minimumIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.minimumIdElement, (value) {
+      return _then(_value.copyWith(minimumIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get navigationLinksElement {
+    if (_value.navigationLinksElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.navigationLinksElement, (value) {
+      return _then(_value.copyWith(navigationLinksElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get operatorElement {
+    if (_value.operatorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.operatorElement, (value) {
+      return _then(_value.copyWith(operatorElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requestMethodElement {
+    if (_value.requestMethodElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requestMethodElement, (value) {
+      return _then(_value.copyWith(requestMethodElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get requestURLElement {
+    if (_value.requestURLElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requestURLElement, (value) {
+      return _then(_value.copyWith(requestURLElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get resourceElement {
+    if (_value.resourceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.resourceElement, (value) {
+      return _then(_value.copyWith(resourceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get responseElement {
+    if (_value.responseElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.responseElement, (value) {
+      return _then(_value.copyWith(responseElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get responseCodeElement {
+    if (_value.responseCodeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.responseCodeElement, (value) {
+      return _then(_value.copyWith(responseCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sourceIdElement {
+    if (_value.sourceIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sourceIdElement, (value) {
+      return _then(_value.copyWith(sourceIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get validateProfileIdElement {
+    if (_value.validateProfileIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.validateProfileIdElement, (value) {
+      return _then(_value.copyWith(validateProfileIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get warningOnlyElement {
+    if (_value.warningOnlyElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.warningOnlyElement, (value) {
+      return _then(_value.copyWith(warningOnlyElement: value));
     });
   }
 }
@@ -6033,12 +9695,100 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       Id sourceId,
       Id validateProfileId,
       String value,
-      Boolean warningOnly});
+      Boolean warningOnly,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_direction')
+          Element directionElement,
+      @JsonKey(name: '_compareToSourceId')
+          Element compareToSourceIdElement,
+      @JsonKey(name: '_compareToSourceExpression')
+          Element compareToSourceExpressionElement,
+      @JsonKey(name: '_compareToSourcePath')
+          Element compareToSourcePathElement,
+      @JsonKey(name: '_contentType')
+          Element contentTypeElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_headerField')
+          Element headerFieldElement,
+      @JsonKey(name: '_minimumId')
+          Element minimumIdElement,
+      @JsonKey(name: '_navigationLinks')
+          Element navigationLinksElement,
+      @JsonKey(name: '_operator')
+          Element operatorElement,
+      @JsonKey(name: '_path')
+          Element pathElement,
+      @JsonKey(name: '_requestMethod')
+          Element requestMethodElement,
+      @JsonKey(name: '_requestURL')
+          Element requestURLElement,
+      @JsonKey(name: '_resource')
+          Element resourceElement,
+      @JsonKey(name: '_response')
+          Element responseElement,
+      @JsonKey(name: '_responseCode')
+          Element responseCodeElement,
+      @JsonKey(name: '_sourceId')
+          Element sourceIdElement,
+      @JsonKey(name: '_validateProfileId')
+          Element validateProfileIdElement,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(name: '_warningOnly')
+          Element warningOnlyElement});
 
   @override
   $TestScriptRule2CopyWith<$Res> get rule;
   @override
   $TestScriptRuleset1CopyWith<$Res> get ruleset;
+  @override
+  $ElementCopyWith<$Res> get labelElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get directionElement;
+  @override
+  $ElementCopyWith<$Res> get compareToSourceIdElement;
+  @override
+  $ElementCopyWith<$Res> get compareToSourceExpressionElement;
+  @override
+  $ElementCopyWith<$Res> get compareToSourcePathElement;
+  @override
+  $ElementCopyWith<$Res> get contentTypeElement;
+  @override
+  $ElementCopyWith<$Res> get expressionElement;
+  @override
+  $ElementCopyWith<$Res> get headerFieldElement;
+  @override
+  $ElementCopyWith<$Res> get minimumIdElement;
+  @override
+  $ElementCopyWith<$Res> get navigationLinksElement;
+  @override
+  $ElementCopyWith<$Res> get operatorElement;
+  @override
+  $ElementCopyWith<$Res> get pathElement;
+  @override
+  $ElementCopyWith<$Res> get requestMethodElement;
+  @override
+  $ElementCopyWith<$Res> get requestURLElement;
+  @override
+  $ElementCopyWith<$Res> get resourceElement;
+  @override
+  $ElementCopyWith<$Res> get responseElement;
+  @override
+  $ElementCopyWith<$Res> get responseCodeElement;
+  @override
+  $ElementCopyWith<$Res> get sourceIdElement;
+  @override
+  $ElementCopyWith<$Res> get validateProfileIdElement;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
+  @override
+  $ElementCopyWith<$Res> get warningOnlyElement;
 }
 
 class __$TestScriptAssertCopyWithImpl<$Res>
@@ -6077,6 +9827,28 @@ class __$TestScriptAssertCopyWithImpl<$Res>
     Object validateProfileId = freezed,
     Object value = freezed,
     Object warningOnly = freezed,
+    Object labelElement = freezed,
+    Object descriptionElement = freezed,
+    Object directionElement = freezed,
+    Object compareToSourceIdElement = freezed,
+    Object compareToSourceExpressionElement = freezed,
+    Object compareToSourcePathElement = freezed,
+    Object contentTypeElement = freezed,
+    Object expressionElement = freezed,
+    Object headerFieldElement = freezed,
+    Object minimumIdElement = freezed,
+    Object navigationLinksElement = freezed,
+    Object operatorElement = freezed,
+    Object pathElement = freezed,
+    Object requestMethodElement = freezed,
+    Object requestURLElement = freezed,
+    Object resourceElement = freezed,
+    Object responseElement = freezed,
+    Object responseCodeElement = freezed,
+    Object sourceIdElement = freezed,
+    Object validateProfileIdElement = freezed,
+    Object valueElement = freezed,
+    Object warningOnlyElement = freezed,
   }) {
     return _then(_TestScriptAssert(
       label: label == freezed ? _value.label : label as String,
@@ -6129,6 +9901,72 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       value: value == freezed ? _value.value : value as String,
       warningOnly:
           warningOnly == freezed ? _value.warningOnly : warningOnly as Boolean,
+      labelElement: labelElement == freezed
+          ? _value.labelElement
+          : labelElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      directionElement: directionElement == freezed
+          ? _value.directionElement
+          : directionElement as Element,
+      compareToSourceIdElement: compareToSourceIdElement == freezed
+          ? _value.compareToSourceIdElement
+          : compareToSourceIdElement as Element,
+      compareToSourceExpressionElement:
+          compareToSourceExpressionElement == freezed
+              ? _value.compareToSourceExpressionElement
+              : compareToSourceExpressionElement as Element,
+      compareToSourcePathElement: compareToSourcePathElement == freezed
+          ? _value.compareToSourcePathElement
+          : compareToSourcePathElement as Element,
+      contentTypeElement: contentTypeElement == freezed
+          ? _value.contentTypeElement
+          : contentTypeElement as Element,
+      expressionElement: expressionElement == freezed
+          ? _value.expressionElement
+          : expressionElement as Element,
+      headerFieldElement: headerFieldElement == freezed
+          ? _value.headerFieldElement
+          : headerFieldElement as Element,
+      minimumIdElement: minimumIdElement == freezed
+          ? _value.minimumIdElement
+          : minimumIdElement as Element,
+      navigationLinksElement: navigationLinksElement == freezed
+          ? _value.navigationLinksElement
+          : navigationLinksElement as Element,
+      operatorElement: operatorElement == freezed
+          ? _value.operatorElement
+          : operatorElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
+      requestMethodElement: requestMethodElement == freezed
+          ? _value.requestMethodElement
+          : requestMethodElement as Element,
+      requestURLElement: requestURLElement == freezed
+          ? _value.requestURLElement
+          : requestURLElement as Element,
+      resourceElement: resourceElement == freezed
+          ? _value.resourceElement
+          : resourceElement as Element,
+      responseElement: responseElement == freezed
+          ? _value.responseElement
+          : responseElement as Element,
+      responseCodeElement: responseCodeElement == freezed
+          ? _value.responseCodeElement
+          : responseCodeElement as Element,
+      sourceIdElement: sourceIdElement == freezed
+          ? _value.sourceIdElement
+          : sourceIdElement as Element,
+      validateProfileIdElement: validateProfileIdElement == freezed
+          ? _value.validateProfileIdElement
+          : validateProfileIdElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
+      warningOnlyElement: warningOnlyElement == freezed
+          ? _value.warningOnlyElement
+          : warningOnlyElement as Element,
     ));
   }
 }
@@ -6164,7 +10002,51 @@ class _$_TestScriptAssert implements _TestScriptAssert {
       this.sourceId,
       this.validateProfileId,
       this.value,
-      this.warningOnly});
+      this.warningOnly,
+      @JsonKey(name: '_label')
+          this.labelElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_direction')
+          this.directionElement,
+      @JsonKey(name: '_compareToSourceId')
+          this.compareToSourceIdElement,
+      @JsonKey(name: '_compareToSourceExpression')
+          this.compareToSourceExpressionElement,
+      @JsonKey(name: '_compareToSourcePath')
+          this.compareToSourcePathElement,
+      @JsonKey(name: '_contentType')
+          this.contentTypeElement,
+      @JsonKey(name: '_expression')
+          this.expressionElement,
+      @JsonKey(name: '_headerField')
+          this.headerFieldElement,
+      @JsonKey(name: '_minimumId')
+          this.minimumIdElement,
+      @JsonKey(name: '_navigationLinks')
+          this.navigationLinksElement,
+      @JsonKey(name: '_operator')
+          this.operatorElement,
+      @JsonKey(name: '_path')
+          this.pathElement,
+      @JsonKey(name: '_requestMethod')
+          this.requestMethodElement,
+      @JsonKey(name: '_requestURL')
+          this.requestURLElement,
+      @JsonKey(name: '_resource')
+          this.resourceElement,
+      @JsonKey(name: '_response')
+          this.responseElement,
+      @JsonKey(name: '_responseCode')
+          this.responseCodeElement,
+      @JsonKey(name: '_sourceId')
+          this.sourceIdElement,
+      @JsonKey(name: '_validateProfileId')
+          this.validateProfileIdElement,
+      @JsonKey(name: '_value')
+          this.valueElement,
+      @JsonKey(name: '_warningOnly')
+          this.warningOnlyElement});
 
   factory _$_TestScriptAssert.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptAssertFromJson(json);
@@ -6222,10 +10104,76 @@ class _$_TestScriptAssert implements _TestScriptAssert {
   final String value;
   @override
   final Boolean warningOnly;
+  @override
+  @JsonKey(name: '_label')
+  final Element labelElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_direction')
+  final Element directionElement;
+  @override
+  @JsonKey(name: '_compareToSourceId')
+  final Element compareToSourceIdElement;
+  @override
+  @JsonKey(name: '_compareToSourceExpression')
+  final Element compareToSourceExpressionElement;
+  @override
+  @JsonKey(name: '_compareToSourcePath')
+  final Element compareToSourcePathElement;
+  @override
+  @JsonKey(name: '_contentType')
+  final Element contentTypeElement;
+  @override
+  @JsonKey(name: '_expression')
+  final Element expressionElement;
+  @override
+  @JsonKey(name: '_headerField')
+  final Element headerFieldElement;
+  @override
+  @JsonKey(name: '_minimumId')
+  final Element minimumIdElement;
+  @override
+  @JsonKey(name: '_navigationLinks')
+  final Element navigationLinksElement;
+  @override
+  @JsonKey(name: '_operator')
+  final Element operatorElement;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
+  @override
+  @JsonKey(name: '_requestMethod')
+  final Element requestMethodElement;
+  @override
+  @JsonKey(name: '_requestURL')
+  final Element requestURLElement;
+  @override
+  @JsonKey(name: '_resource')
+  final Element resourceElement;
+  @override
+  @JsonKey(name: '_response')
+  final Element responseElement;
+  @override
+  @JsonKey(name: '_responseCode')
+  final Element responseCodeElement;
+  @override
+  @JsonKey(name: '_sourceId')
+  final Element sourceIdElement;
+  @override
+  @JsonKey(name: '_validateProfileId')
+  final Element validateProfileIdElement;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
+  @override
+  @JsonKey(name: '_warningOnly')
+  final Element warningOnlyElement;
 
   @override
   String toString() {
-    return 'TestScriptAssert(label: $label, description: $description, direction: $direction, compareToSourceId: $compareToSourceId, compareToSourceExpression: $compareToSourceExpression, compareToSourcePath: $compareToSourcePath, contentType: $contentType, expression: $expression, headerField: $headerField, minimumId: $minimumId, navigationLinks: $navigationLinks, operator_: $operator_, path: $path, requestMethod: $requestMethod, requestURL: $requestURL, resource: $resource, response: $response, responseCode: $responseCode, rule: $rule, ruleset: $ruleset, sourceId: $sourceId, validateProfileId: $validateProfileId, value: $value, warningOnly: $warningOnly)';
+    return 'TestScriptAssert(label: $label, description: $description, direction: $direction, compareToSourceId: $compareToSourceId, compareToSourceExpression: $compareToSourceExpression, compareToSourcePath: $compareToSourcePath, contentType: $contentType, expression: $expression, headerField: $headerField, minimumId: $minimumId, navigationLinks: $navigationLinks, operator_: $operator_, path: $path, requestMethod: $requestMethod, requestURL: $requestURL, resource: $resource, response: $response, responseCode: $responseCode, rule: $rule, ruleset: $ruleset, sourceId: $sourceId, validateProfileId: $validateProfileId, value: $value, warningOnly: $warningOnly, labelElement: $labelElement, descriptionElement: $descriptionElement, directionElement: $directionElement, compareToSourceIdElement: $compareToSourceIdElement, compareToSourceExpressionElement: $compareToSourceExpressionElement, compareToSourcePathElement: $compareToSourcePathElement, contentTypeElement: $contentTypeElement, expressionElement: $expressionElement, headerFieldElement: $headerFieldElement, minimumIdElement: $minimumIdElement, navigationLinksElement: $navigationLinksElement, operatorElement: $operatorElement, pathElement: $pathElement, requestMethodElement: $requestMethodElement, requestURLElement: $requestURLElement, resourceElement: $resourceElement, responseElement: $responseElement, responseCodeElement: $responseCodeElement, sourceIdElement: $sourceIdElement, validateProfileIdElement: $validateProfileIdElement, valueElement: $valueElement, warningOnlyElement: $warningOnlyElement)';
   }
 
   @override
@@ -6290,7 +10238,29 @@ class _$_TestScriptAssert implements _TestScriptAssert {
             (identical(other.sourceId, sourceId) || const DeepCollectionEquality().equals(other.sourceId, sourceId)) &&
             (identical(other.validateProfileId, validateProfileId) || const DeepCollectionEquality().equals(other.validateProfileId, validateProfileId)) &&
             (identical(other.value, value) || const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.warningOnly, warningOnly) || const DeepCollectionEquality().equals(other.warningOnly, warningOnly)));
+            (identical(other.warningOnly, warningOnly) || const DeepCollectionEquality().equals(other.warningOnly, warningOnly)) &&
+            (identical(other.labelElement, labelElement) || const DeepCollectionEquality().equals(other.labelElement, labelElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.directionElement, directionElement) || const DeepCollectionEquality().equals(other.directionElement, directionElement)) &&
+            (identical(other.compareToSourceIdElement, compareToSourceIdElement) || const DeepCollectionEquality().equals(other.compareToSourceIdElement, compareToSourceIdElement)) &&
+            (identical(other.compareToSourceExpressionElement, compareToSourceExpressionElement) || const DeepCollectionEquality().equals(other.compareToSourceExpressionElement, compareToSourceExpressionElement)) &&
+            (identical(other.compareToSourcePathElement, compareToSourcePathElement) || const DeepCollectionEquality().equals(other.compareToSourcePathElement, compareToSourcePathElement)) &&
+            (identical(other.contentTypeElement, contentTypeElement) || const DeepCollectionEquality().equals(other.contentTypeElement, contentTypeElement)) &&
+            (identical(other.expressionElement, expressionElement) || const DeepCollectionEquality().equals(other.expressionElement, expressionElement)) &&
+            (identical(other.headerFieldElement, headerFieldElement) || const DeepCollectionEquality().equals(other.headerFieldElement, headerFieldElement)) &&
+            (identical(other.minimumIdElement, minimumIdElement) || const DeepCollectionEquality().equals(other.minimumIdElement, minimumIdElement)) &&
+            (identical(other.navigationLinksElement, navigationLinksElement) || const DeepCollectionEquality().equals(other.navigationLinksElement, navigationLinksElement)) &&
+            (identical(other.operatorElement, operatorElement) || const DeepCollectionEquality().equals(other.operatorElement, operatorElement)) &&
+            (identical(other.pathElement, pathElement) || const DeepCollectionEquality().equals(other.pathElement, pathElement)) &&
+            (identical(other.requestMethodElement, requestMethodElement) || const DeepCollectionEquality().equals(other.requestMethodElement, requestMethodElement)) &&
+            (identical(other.requestURLElement, requestURLElement) || const DeepCollectionEquality().equals(other.requestURLElement, requestURLElement)) &&
+            (identical(other.resourceElement, resourceElement) || const DeepCollectionEquality().equals(other.resourceElement, resourceElement)) &&
+            (identical(other.responseElement, responseElement) || const DeepCollectionEquality().equals(other.responseElement, responseElement)) &&
+            (identical(other.responseCodeElement, responseCodeElement) || const DeepCollectionEquality().equals(other.responseCodeElement, responseCodeElement)) &&
+            (identical(other.sourceIdElement, sourceIdElement) || const DeepCollectionEquality().equals(other.sourceIdElement, sourceIdElement)) &&
+            (identical(other.validateProfileIdElement, validateProfileIdElement) || const DeepCollectionEquality().equals(other.validateProfileIdElement, validateProfileIdElement)) &&
+            (identical(other.valueElement, valueElement) || const DeepCollectionEquality().equals(other.valueElement, valueElement)) &&
+            (identical(other.warningOnlyElement, warningOnlyElement) || const DeepCollectionEquality().equals(other.warningOnlyElement, warningOnlyElement)));
   }
 
   @override
@@ -6319,7 +10289,29 @@ class _$_TestScriptAssert implements _TestScriptAssert {
       const DeepCollectionEquality().hash(sourceId) ^
       const DeepCollectionEquality().hash(validateProfileId) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(warningOnly);
+      const DeepCollectionEquality().hash(warningOnly) ^
+      const DeepCollectionEquality().hash(labelElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(directionElement) ^
+      const DeepCollectionEquality().hash(compareToSourceIdElement) ^
+      const DeepCollectionEquality().hash(compareToSourceExpressionElement) ^
+      const DeepCollectionEquality().hash(compareToSourcePathElement) ^
+      const DeepCollectionEquality().hash(contentTypeElement) ^
+      const DeepCollectionEquality().hash(expressionElement) ^
+      const DeepCollectionEquality().hash(headerFieldElement) ^
+      const DeepCollectionEquality().hash(minimumIdElement) ^
+      const DeepCollectionEquality().hash(navigationLinksElement) ^
+      const DeepCollectionEquality().hash(operatorElement) ^
+      const DeepCollectionEquality().hash(pathElement) ^
+      const DeepCollectionEquality().hash(requestMethodElement) ^
+      const DeepCollectionEquality().hash(requestURLElement) ^
+      const DeepCollectionEquality().hash(resourceElement) ^
+      const DeepCollectionEquality().hash(responseElement) ^
+      const DeepCollectionEquality().hash(responseCodeElement) ^
+      const DeepCollectionEquality().hash(sourceIdElement) ^
+      const DeepCollectionEquality().hash(validateProfileIdElement) ^
+      const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(warningOnlyElement);
 
   @override
   _$TestScriptAssertCopyWith<_TestScriptAssert> get copyWith =>
@@ -6361,7 +10353,51 @@ abstract class _TestScriptAssert implements TestScriptAssert {
       Id sourceId,
       Id validateProfileId,
       String value,
-      Boolean warningOnly}) = _$_TestScriptAssert;
+      Boolean warningOnly,
+      @JsonKey(name: '_label')
+          Element labelElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_direction')
+          Element directionElement,
+      @JsonKey(name: '_compareToSourceId')
+          Element compareToSourceIdElement,
+      @JsonKey(name: '_compareToSourceExpression')
+          Element compareToSourceExpressionElement,
+      @JsonKey(name: '_compareToSourcePath')
+          Element compareToSourcePathElement,
+      @JsonKey(name: '_contentType')
+          Element contentTypeElement,
+      @JsonKey(name: '_expression')
+          Element expressionElement,
+      @JsonKey(name: '_headerField')
+          Element headerFieldElement,
+      @JsonKey(name: '_minimumId')
+          Element minimumIdElement,
+      @JsonKey(name: '_navigationLinks')
+          Element navigationLinksElement,
+      @JsonKey(name: '_operator')
+          Element operatorElement,
+      @JsonKey(name: '_path')
+          Element pathElement,
+      @JsonKey(name: '_requestMethod')
+          Element requestMethodElement,
+      @JsonKey(name: '_requestURL')
+          Element requestURLElement,
+      @JsonKey(name: '_resource')
+          Element resourceElement,
+      @JsonKey(name: '_response')
+          Element responseElement,
+      @JsonKey(name: '_responseCode')
+          Element responseCodeElement,
+      @JsonKey(name: '_sourceId')
+          Element sourceIdElement,
+      @JsonKey(name: '_validateProfileId')
+          Element validateProfileIdElement,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(name: '_warningOnly')
+          Element warningOnlyElement}) = _$_TestScriptAssert;
 
   factory _TestScriptAssert.fromJson(Map<String, dynamic> json) =
       _$_TestScriptAssert.fromJson;
@@ -6420,6 +10456,72 @@ abstract class _TestScriptAssert implements TestScriptAssert {
   @override
   Boolean get warningOnly;
   @override
+  @JsonKey(name: '_label')
+  Element get labelElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_direction')
+  Element get directionElement;
+  @override
+  @JsonKey(name: '_compareToSourceId')
+  Element get compareToSourceIdElement;
+  @override
+  @JsonKey(name: '_compareToSourceExpression')
+  Element get compareToSourceExpressionElement;
+  @override
+  @JsonKey(name: '_compareToSourcePath')
+  Element get compareToSourcePathElement;
+  @override
+  @JsonKey(name: '_contentType')
+  Element get contentTypeElement;
+  @override
+  @JsonKey(name: '_expression')
+  Element get expressionElement;
+  @override
+  @JsonKey(name: '_headerField')
+  Element get headerFieldElement;
+  @override
+  @JsonKey(name: '_minimumId')
+  Element get minimumIdElement;
+  @override
+  @JsonKey(name: '_navigationLinks')
+  Element get navigationLinksElement;
+  @override
+  @JsonKey(name: '_operator')
+  Element get operatorElement;
+  @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
+  @override
+  @JsonKey(name: '_requestMethod')
+  Element get requestMethodElement;
+  @override
+  @JsonKey(name: '_requestURL')
+  Element get requestURLElement;
+  @override
+  @JsonKey(name: '_resource')
+  Element get resourceElement;
+  @override
+  @JsonKey(name: '_response')
+  Element get responseElement;
+  @override
+  @JsonKey(name: '_responseCode')
+  Element get responseCodeElement;
+  @override
+  @JsonKey(name: '_sourceId')
+  Element get sourceIdElement;
+  @override
+  @JsonKey(name: '_validateProfileId')
+  Element get validateProfileIdElement;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
+  @override
+  @JsonKey(name: '_warningOnly')
+  Element get warningOnlyElement;
+  @override
   _$TestScriptAssertCopyWith<_TestScriptAssert> get copyWith;
 }
 
@@ -6430,10 +10532,14 @@ TestScriptRule2 _$TestScriptRule2FromJson(Map<String, dynamic> json) {
 class _$TestScriptRule2TearOff {
   const _$TestScriptRule2TearOff();
 
-  _TestScriptRule2 call({Id ruleId, List<TestScriptParam2> param}) {
+  _TestScriptRule2 call(
+      {Id ruleId,
+      List<TestScriptParam2> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement}) {
     return _TestScriptRule2(
       ruleId: ruleId,
       param: param,
+      ruleIdElement: ruleIdElement,
     );
   }
 }
@@ -6444,6 +10550,8 @@ const $TestScriptRule2 = _$TestScriptRule2TearOff();
 mixin _$TestScriptRule2 {
   Id get ruleId;
   List<TestScriptParam2> get param;
+  @JsonKey(name: '_ruleId')
+  Element get ruleIdElement;
 
   Map<String, dynamic> toJson();
   $TestScriptRule2CopyWith<TestScriptRule2> get copyWith;
@@ -6453,7 +10561,12 @@ abstract class $TestScriptRule2CopyWith<$Res> {
   factory $TestScriptRule2CopyWith(
           TestScriptRule2 value, $Res Function(TestScriptRule2) then) =
       _$TestScriptRule2CopyWithImpl<$Res>;
-  $Res call({Id ruleId, List<TestScriptParam2> param});
+  $Res call(
+      {Id ruleId,
+      List<TestScriptParam2> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement});
+
+  $ElementCopyWith<$Res> get ruleIdElement;
 }
 
 class _$TestScriptRule2CopyWithImpl<$Res>
@@ -6468,11 +10581,25 @@ class _$TestScriptRule2CopyWithImpl<$Res>
   $Res call({
     Object ruleId = freezed,
     Object param = freezed,
+    Object ruleIdElement = freezed,
   }) {
     return _then(_value.copyWith(
       ruleId: ruleId == freezed ? _value.ruleId : ruleId as Id,
       param: param == freezed ? _value.param : param as List<TestScriptParam2>,
+      ruleIdElement: ruleIdElement == freezed
+          ? _value.ruleIdElement
+          : ruleIdElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get ruleIdElement {
+    if (_value.ruleIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.ruleIdElement, (value) {
+      return _then(_value.copyWith(ruleIdElement: value));
+    });
   }
 }
 
@@ -6482,7 +10609,13 @@ abstract class _$TestScriptRule2CopyWith<$Res>
           _TestScriptRule2 value, $Res Function(_TestScriptRule2) then) =
       __$TestScriptRule2CopyWithImpl<$Res>;
   @override
-  $Res call({Id ruleId, List<TestScriptParam2> param});
+  $Res call(
+      {Id ruleId,
+      List<TestScriptParam2> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement});
+
+  @override
+  $ElementCopyWith<$Res> get ruleIdElement;
 }
 
 class __$TestScriptRule2CopyWithImpl<$Res>
@@ -6499,17 +10632,22 @@ class __$TestScriptRule2CopyWithImpl<$Res>
   $Res call({
     Object ruleId = freezed,
     Object param = freezed,
+    Object ruleIdElement = freezed,
   }) {
     return _then(_TestScriptRule2(
       ruleId: ruleId == freezed ? _value.ruleId : ruleId as Id,
       param: param == freezed ? _value.param : param as List<TestScriptParam2>,
+      ruleIdElement: ruleIdElement == freezed
+          ? _value.ruleIdElement
+          : ruleIdElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptRule2 implements _TestScriptRule2 {
-  const _$_TestScriptRule2({this.ruleId, this.param});
+  const _$_TestScriptRule2(
+      {this.ruleId, this.param, @JsonKey(name: '_ruleId') this.ruleIdElement});
 
   factory _$_TestScriptRule2.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptRule2FromJson(json);
@@ -6518,10 +10656,13 @@ class _$_TestScriptRule2 implements _TestScriptRule2 {
   final Id ruleId;
   @override
   final List<TestScriptParam2> param;
+  @override
+  @JsonKey(name: '_ruleId')
+  final Element ruleIdElement;
 
   @override
   String toString() {
-    return 'TestScriptRule2(ruleId: $ruleId, param: $param)';
+    return 'TestScriptRule2(ruleId: $ruleId, param: $param, ruleIdElement: $ruleIdElement)';
   }
 
   @override
@@ -6531,14 +10672,18 @@ class _$_TestScriptRule2 implements _TestScriptRule2 {
             (identical(other.ruleId, ruleId) ||
                 const DeepCollectionEquality().equals(other.ruleId, ruleId)) &&
             (identical(other.param, param) ||
-                const DeepCollectionEquality().equals(other.param, param)));
+                const DeepCollectionEquality().equals(other.param, param)) &&
+            (identical(other.ruleIdElement, ruleIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.ruleIdElement, ruleIdElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(ruleId) ^
-      const DeepCollectionEquality().hash(param);
+      const DeepCollectionEquality().hash(param) ^
+      const DeepCollectionEquality().hash(ruleIdElement);
 
   @override
   _$TestScriptRule2CopyWith<_TestScriptRule2> get copyWith =>
@@ -6551,8 +10696,10 @@ class _$_TestScriptRule2 implements _TestScriptRule2 {
 }
 
 abstract class _TestScriptRule2 implements TestScriptRule2 {
-  const factory _TestScriptRule2({Id ruleId, List<TestScriptParam2> param}) =
-      _$_TestScriptRule2;
+  const factory _TestScriptRule2(
+      {Id ruleId,
+      List<TestScriptParam2> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement}) = _$_TestScriptRule2;
 
   factory _TestScriptRule2.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRule2.fromJson;
@@ -6561,6 +10708,9 @@ abstract class _TestScriptRule2 implements TestScriptRule2 {
   Id get ruleId;
   @override
   List<TestScriptParam2> get param;
+  @override
+  @JsonKey(name: '_ruleId')
+  Element get ruleIdElement;
   @override
   _$TestScriptRule2CopyWith<_TestScriptRule2> get copyWith;
 }
@@ -6572,10 +10722,16 @@ TestScriptParam2 _$TestScriptParam2FromJson(Map<String, dynamic> json) {
 class _$TestScriptParam2TearOff {
   const _$TestScriptParam2TearOff();
 
-  _TestScriptParam2 call({String name, String value}) {
+  _TestScriptParam2 call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement}) {
     return _TestScriptParam2(
       name: name,
       value: value,
+      nameElement: nameElement,
+      valueElement: valueElement,
     );
   }
 }
@@ -6586,6 +10742,10 @@ const $TestScriptParam2 = _$TestScriptParam2TearOff();
 mixin _$TestScriptParam2 {
   String get name;
   String get value;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_value')
+  Element get valueElement;
 
   Map<String, dynamic> toJson();
   $TestScriptParam2CopyWith<TestScriptParam2> get copyWith;
@@ -6595,7 +10755,14 @@ abstract class $TestScriptParam2CopyWith<$Res> {
   factory $TestScriptParam2CopyWith(
           TestScriptParam2 value, $Res Function(TestScriptParam2) then) =
       _$TestScriptParam2CopyWithImpl<$Res>;
-  $Res call({String name, String value});
+  $Res call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$TestScriptParam2CopyWithImpl<$Res>
@@ -6610,11 +10777,38 @@ class _$TestScriptParam2CopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object value = freezed,
+    Object nameElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
       value: value == freezed ? _value.value : value as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
   }
 }
 
@@ -6624,7 +10818,16 @@ abstract class _$TestScriptParam2CopyWith<$Res>
           _TestScriptParam2 value, $Res Function(_TestScriptParam2) then) =
       __$TestScriptParam2CopyWithImpl<$Res>;
   @override
-  $Res call({String name, String value});
+  $Res call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$TestScriptParam2CopyWithImpl<$Res>
@@ -6641,17 +10844,28 @@ class __$TestScriptParam2CopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object value = freezed,
+    Object nameElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_TestScriptParam2(
       name: name == freezed ? _value.name : name as String,
       value: value == freezed ? _value.value : value as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptParam2 implements _TestScriptParam2 {
-  const _$_TestScriptParam2({this.name, this.value});
+  const _$_TestScriptParam2(
+      {this.name,
+      this.value,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_value') this.valueElement});
 
   factory _$_TestScriptParam2.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptParam2FromJson(json);
@@ -6660,10 +10874,16 @@ class _$_TestScriptParam2 implements _TestScriptParam2 {
   final String name;
   @override
   final String value;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
 
   @override
   String toString() {
-    return 'TestScriptParam2(name: $name, value: $value)';
+    return 'TestScriptParam2(name: $name, value: $value, nameElement: $nameElement, valueElement: $valueElement)';
   }
 
   @override
@@ -6673,14 +10893,22 @@ class _$_TestScriptParam2 implements _TestScriptParam2 {
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(valueElement);
 
   @override
   _$TestScriptParam2CopyWith<_TestScriptParam2> get copyWith =>
@@ -6693,8 +10921,11 @@ class _$_TestScriptParam2 implements _TestScriptParam2 {
 }
 
 abstract class _TestScriptParam2 implements TestScriptParam2 {
-  const factory _TestScriptParam2({String name, String value}) =
-      _$_TestScriptParam2;
+  const factory _TestScriptParam2(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement}) = _$_TestScriptParam2;
 
   factory _TestScriptParam2.fromJson(Map<String, dynamic> json) =
       _$_TestScriptParam2.fromJson;
@@ -6703,6 +10934,12 @@ abstract class _TestScriptParam2 implements TestScriptParam2 {
   String get name;
   @override
   String get value;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
   @override
   _$TestScriptParam2CopyWith<_TestScriptParam2> get copyWith;
 }
@@ -6714,10 +10951,14 @@ TestScriptRuleset1 _$TestScriptRuleset1FromJson(Map<String, dynamic> json) {
 class _$TestScriptRuleset1TearOff {
   const _$TestScriptRuleset1TearOff();
 
-  _TestScriptRuleset1 call({Id rulesetId, List<TestScriptRule3> rule}) {
+  _TestScriptRuleset1 call(
+      {Id rulesetId,
+      List<TestScriptRule3> rule,
+      @JsonKey(name: '_rulesetId') Element rulesetIdElement}) {
     return _TestScriptRuleset1(
       rulesetId: rulesetId,
       rule: rule,
+      rulesetIdElement: rulesetIdElement,
     );
   }
 }
@@ -6728,6 +10969,8 @@ const $TestScriptRuleset1 = _$TestScriptRuleset1TearOff();
 mixin _$TestScriptRuleset1 {
   Id get rulesetId;
   List<TestScriptRule3> get rule;
+  @JsonKey(name: '_rulesetId')
+  Element get rulesetIdElement;
 
   Map<String, dynamic> toJson();
   $TestScriptRuleset1CopyWith<TestScriptRuleset1> get copyWith;
@@ -6737,7 +10980,12 @@ abstract class $TestScriptRuleset1CopyWith<$Res> {
   factory $TestScriptRuleset1CopyWith(
           TestScriptRuleset1 value, $Res Function(TestScriptRuleset1) then) =
       _$TestScriptRuleset1CopyWithImpl<$Res>;
-  $Res call({Id rulesetId, List<TestScriptRule3> rule});
+  $Res call(
+      {Id rulesetId,
+      List<TestScriptRule3> rule,
+      @JsonKey(name: '_rulesetId') Element rulesetIdElement});
+
+  $ElementCopyWith<$Res> get rulesetIdElement;
 }
 
 class _$TestScriptRuleset1CopyWithImpl<$Res>
@@ -6752,11 +11000,25 @@ class _$TestScriptRuleset1CopyWithImpl<$Res>
   $Res call({
     Object rulesetId = freezed,
     Object rule = freezed,
+    Object rulesetIdElement = freezed,
   }) {
     return _then(_value.copyWith(
       rulesetId: rulesetId == freezed ? _value.rulesetId : rulesetId as Id,
       rule: rule == freezed ? _value.rule : rule as List<TestScriptRule3>,
+      rulesetIdElement: rulesetIdElement == freezed
+          ? _value.rulesetIdElement
+          : rulesetIdElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get rulesetIdElement {
+    if (_value.rulesetIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.rulesetIdElement, (value) {
+      return _then(_value.copyWith(rulesetIdElement: value));
+    });
   }
 }
 
@@ -6766,7 +11028,13 @@ abstract class _$TestScriptRuleset1CopyWith<$Res>
           _TestScriptRuleset1 value, $Res Function(_TestScriptRuleset1) then) =
       __$TestScriptRuleset1CopyWithImpl<$Res>;
   @override
-  $Res call({Id rulesetId, List<TestScriptRule3> rule});
+  $Res call(
+      {Id rulesetId,
+      List<TestScriptRule3> rule,
+      @JsonKey(name: '_rulesetId') Element rulesetIdElement});
+
+  @override
+  $ElementCopyWith<$Res> get rulesetIdElement;
 }
 
 class __$TestScriptRuleset1CopyWithImpl<$Res>
@@ -6783,17 +11051,24 @@ class __$TestScriptRuleset1CopyWithImpl<$Res>
   $Res call({
     Object rulesetId = freezed,
     Object rule = freezed,
+    Object rulesetIdElement = freezed,
   }) {
     return _then(_TestScriptRuleset1(
       rulesetId: rulesetId == freezed ? _value.rulesetId : rulesetId as Id,
       rule: rule == freezed ? _value.rule : rule as List<TestScriptRule3>,
+      rulesetIdElement: rulesetIdElement == freezed
+          ? _value.rulesetIdElement
+          : rulesetIdElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptRuleset1 implements _TestScriptRuleset1 {
-  const _$_TestScriptRuleset1({this.rulesetId, this.rule});
+  const _$_TestScriptRuleset1(
+      {this.rulesetId,
+      this.rule,
+      @JsonKey(name: '_rulesetId') this.rulesetIdElement});
 
   factory _$_TestScriptRuleset1.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptRuleset1FromJson(json);
@@ -6802,10 +11077,13 @@ class _$_TestScriptRuleset1 implements _TestScriptRuleset1 {
   final Id rulesetId;
   @override
   final List<TestScriptRule3> rule;
+  @override
+  @JsonKey(name: '_rulesetId')
+  final Element rulesetIdElement;
 
   @override
   String toString() {
-    return 'TestScriptRuleset1(rulesetId: $rulesetId, rule: $rule)';
+    return 'TestScriptRuleset1(rulesetId: $rulesetId, rule: $rule, rulesetIdElement: $rulesetIdElement)';
   }
 
   @override
@@ -6816,14 +11094,18 @@ class _$_TestScriptRuleset1 implements _TestScriptRuleset1 {
                 const DeepCollectionEquality()
                     .equals(other.rulesetId, rulesetId)) &&
             (identical(other.rule, rule) ||
-                const DeepCollectionEquality().equals(other.rule, rule)));
+                const DeepCollectionEquality().equals(other.rule, rule)) &&
+            (identical(other.rulesetIdElement, rulesetIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.rulesetIdElement, rulesetIdElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(rulesetId) ^
-      const DeepCollectionEquality().hash(rule);
+      const DeepCollectionEquality().hash(rule) ^
+      const DeepCollectionEquality().hash(rulesetIdElement);
 
   @override
   _$TestScriptRuleset1CopyWith<_TestScriptRuleset1> get copyWith =>
@@ -6837,7 +11119,10 @@ class _$_TestScriptRuleset1 implements _TestScriptRuleset1 {
 
 abstract class _TestScriptRuleset1 implements TestScriptRuleset1 {
   const factory _TestScriptRuleset1(
-      {Id rulesetId, List<TestScriptRule3> rule}) = _$_TestScriptRuleset1;
+          {Id rulesetId,
+          List<TestScriptRule3> rule,
+          @JsonKey(name: '_rulesetId') Element rulesetIdElement}) =
+      _$_TestScriptRuleset1;
 
   factory _TestScriptRuleset1.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRuleset1.fromJson;
@@ -6846,6 +11131,9 @@ abstract class _TestScriptRuleset1 implements TestScriptRuleset1 {
   Id get rulesetId;
   @override
   List<TestScriptRule3> get rule;
+  @override
+  @JsonKey(name: '_rulesetId')
+  Element get rulesetIdElement;
   @override
   _$TestScriptRuleset1CopyWith<_TestScriptRuleset1> get copyWith;
 }
@@ -6857,10 +11145,14 @@ TestScriptRule3 _$TestScriptRule3FromJson(Map<String, dynamic> json) {
 class _$TestScriptRule3TearOff {
   const _$TestScriptRule3TearOff();
 
-  _TestScriptRule3 call({Id ruleId, List<TestScriptParam3> param}) {
+  _TestScriptRule3 call(
+      {Id ruleId,
+      List<TestScriptParam3> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement}) {
     return _TestScriptRule3(
       ruleId: ruleId,
       param: param,
+      ruleIdElement: ruleIdElement,
     );
   }
 }
@@ -6871,6 +11163,8 @@ const $TestScriptRule3 = _$TestScriptRule3TearOff();
 mixin _$TestScriptRule3 {
   Id get ruleId;
   List<TestScriptParam3> get param;
+  @JsonKey(name: '_ruleId')
+  Element get ruleIdElement;
 
   Map<String, dynamic> toJson();
   $TestScriptRule3CopyWith<TestScriptRule3> get copyWith;
@@ -6880,7 +11174,12 @@ abstract class $TestScriptRule3CopyWith<$Res> {
   factory $TestScriptRule3CopyWith(
           TestScriptRule3 value, $Res Function(TestScriptRule3) then) =
       _$TestScriptRule3CopyWithImpl<$Res>;
-  $Res call({Id ruleId, List<TestScriptParam3> param});
+  $Res call(
+      {Id ruleId,
+      List<TestScriptParam3> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement});
+
+  $ElementCopyWith<$Res> get ruleIdElement;
 }
 
 class _$TestScriptRule3CopyWithImpl<$Res>
@@ -6895,11 +11194,25 @@ class _$TestScriptRule3CopyWithImpl<$Res>
   $Res call({
     Object ruleId = freezed,
     Object param = freezed,
+    Object ruleIdElement = freezed,
   }) {
     return _then(_value.copyWith(
       ruleId: ruleId == freezed ? _value.ruleId : ruleId as Id,
       param: param == freezed ? _value.param : param as List<TestScriptParam3>,
+      ruleIdElement: ruleIdElement == freezed
+          ? _value.ruleIdElement
+          : ruleIdElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get ruleIdElement {
+    if (_value.ruleIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.ruleIdElement, (value) {
+      return _then(_value.copyWith(ruleIdElement: value));
+    });
   }
 }
 
@@ -6909,7 +11222,13 @@ abstract class _$TestScriptRule3CopyWith<$Res>
           _TestScriptRule3 value, $Res Function(_TestScriptRule3) then) =
       __$TestScriptRule3CopyWithImpl<$Res>;
   @override
-  $Res call({Id ruleId, List<TestScriptParam3> param});
+  $Res call(
+      {Id ruleId,
+      List<TestScriptParam3> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement});
+
+  @override
+  $ElementCopyWith<$Res> get ruleIdElement;
 }
 
 class __$TestScriptRule3CopyWithImpl<$Res>
@@ -6926,17 +11245,22 @@ class __$TestScriptRule3CopyWithImpl<$Res>
   $Res call({
     Object ruleId = freezed,
     Object param = freezed,
+    Object ruleIdElement = freezed,
   }) {
     return _then(_TestScriptRule3(
       ruleId: ruleId == freezed ? _value.ruleId : ruleId as Id,
       param: param == freezed ? _value.param : param as List<TestScriptParam3>,
+      ruleIdElement: ruleIdElement == freezed
+          ? _value.ruleIdElement
+          : ruleIdElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptRule3 implements _TestScriptRule3 {
-  const _$_TestScriptRule3({this.ruleId, this.param});
+  const _$_TestScriptRule3(
+      {this.ruleId, this.param, @JsonKey(name: '_ruleId') this.ruleIdElement});
 
   factory _$_TestScriptRule3.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptRule3FromJson(json);
@@ -6945,10 +11269,13 @@ class _$_TestScriptRule3 implements _TestScriptRule3 {
   final Id ruleId;
   @override
   final List<TestScriptParam3> param;
+  @override
+  @JsonKey(name: '_ruleId')
+  final Element ruleIdElement;
 
   @override
   String toString() {
-    return 'TestScriptRule3(ruleId: $ruleId, param: $param)';
+    return 'TestScriptRule3(ruleId: $ruleId, param: $param, ruleIdElement: $ruleIdElement)';
   }
 
   @override
@@ -6958,14 +11285,18 @@ class _$_TestScriptRule3 implements _TestScriptRule3 {
             (identical(other.ruleId, ruleId) ||
                 const DeepCollectionEquality().equals(other.ruleId, ruleId)) &&
             (identical(other.param, param) ||
-                const DeepCollectionEquality().equals(other.param, param)));
+                const DeepCollectionEquality().equals(other.param, param)) &&
+            (identical(other.ruleIdElement, ruleIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.ruleIdElement, ruleIdElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(ruleId) ^
-      const DeepCollectionEquality().hash(param);
+      const DeepCollectionEquality().hash(param) ^
+      const DeepCollectionEquality().hash(ruleIdElement);
 
   @override
   _$TestScriptRule3CopyWith<_TestScriptRule3> get copyWith =>
@@ -6978,8 +11309,10 @@ class _$_TestScriptRule3 implements _TestScriptRule3 {
 }
 
 abstract class _TestScriptRule3 implements TestScriptRule3 {
-  const factory _TestScriptRule3({Id ruleId, List<TestScriptParam3> param}) =
-      _$_TestScriptRule3;
+  const factory _TestScriptRule3(
+      {Id ruleId,
+      List<TestScriptParam3> param,
+      @JsonKey(name: '_ruleId') Element ruleIdElement}) = _$_TestScriptRule3;
 
   factory _TestScriptRule3.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRule3.fromJson;
@@ -6988,6 +11321,9 @@ abstract class _TestScriptRule3 implements TestScriptRule3 {
   Id get ruleId;
   @override
   List<TestScriptParam3> get param;
+  @override
+  @JsonKey(name: '_ruleId')
+  Element get ruleIdElement;
   @override
   _$TestScriptRule3CopyWith<_TestScriptRule3> get copyWith;
 }
@@ -6999,10 +11335,16 @@ TestScriptParam3 _$TestScriptParam3FromJson(Map<String, dynamic> json) {
 class _$TestScriptParam3TearOff {
   const _$TestScriptParam3TearOff();
 
-  _TestScriptParam3 call({String name, String value}) {
+  _TestScriptParam3 call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement}) {
     return _TestScriptParam3(
       name: name,
       value: value,
+      nameElement: nameElement,
+      valueElement: valueElement,
     );
   }
 }
@@ -7013,6 +11355,10 @@ const $TestScriptParam3 = _$TestScriptParam3TearOff();
 mixin _$TestScriptParam3 {
   String get name;
   String get value;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_value')
+  Element get valueElement;
 
   Map<String, dynamic> toJson();
   $TestScriptParam3CopyWith<TestScriptParam3> get copyWith;
@@ -7022,7 +11368,14 @@ abstract class $TestScriptParam3CopyWith<$Res> {
   factory $TestScriptParam3CopyWith(
           TestScriptParam3 value, $Res Function(TestScriptParam3) then) =
       _$TestScriptParam3CopyWithImpl<$Res>;
-  $Res call({String name, String value});
+  $Res call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$TestScriptParam3CopyWithImpl<$Res>
@@ -7037,11 +11390,38 @@ class _$TestScriptParam3CopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object value = freezed,
+    Object nameElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
       value: value == freezed ? _value.value : value as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
   }
 }
 
@@ -7051,7 +11431,16 @@ abstract class _$TestScriptParam3CopyWith<$Res>
           _TestScriptParam3 value, $Res Function(_TestScriptParam3) then) =
       __$TestScriptParam3CopyWithImpl<$Res>;
   @override
-  $Res call({String name, String value});
+  $Res call(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$TestScriptParam3CopyWithImpl<$Res>
@@ -7068,17 +11457,28 @@ class __$TestScriptParam3CopyWithImpl<$Res>
   $Res call({
     Object name = freezed,
     Object value = freezed,
+    Object nameElement = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_TestScriptParam3(
       name: name == freezed ? _value.name : name as String,
       value: value == freezed ? _value.value : value as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_TestScriptParam3 implements _TestScriptParam3 {
-  const _$_TestScriptParam3({this.name, this.value});
+  const _$_TestScriptParam3(
+      {this.name,
+      this.value,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_value') this.valueElement});
 
   factory _$_TestScriptParam3.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptParam3FromJson(json);
@@ -7087,10 +11487,16 @@ class _$_TestScriptParam3 implements _TestScriptParam3 {
   final String name;
   @override
   final String value;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
 
   @override
   String toString() {
-    return 'TestScriptParam3(name: $name, value: $value)';
+    return 'TestScriptParam3(name: $name, value: $value, nameElement: $nameElement, valueElement: $valueElement)';
   }
 
   @override
@@ -7100,14 +11506,22 @@ class _$_TestScriptParam3 implements _TestScriptParam3 {
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(valueElement);
 
   @override
   _$TestScriptParam3CopyWith<_TestScriptParam3> get copyWith =>
@@ -7120,8 +11534,11 @@ class _$_TestScriptParam3 implements _TestScriptParam3 {
 }
 
 abstract class _TestScriptParam3 implements TestScriptParam3 {
-  const factory _TestScriptParam3({String name, String value}) =
-      _$_TestScriptParam3;
+  const factory _TestScriptParam3(
+      {String name,
+      String value,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_value') Element valueElement}) = _$_TestScriptParam3;
 
   factory _TestScriptParam3.fromJson(Map<String, dynamic> json) =
       _$_TestScriptParam3.fromJson;
@@ -7130,6 +11547,12 @@ abstract class _TestScriptParam3 implements TestScriptParam3 {
   String get name;
   @override
   String get value;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
   @override
   _$TestScriptParam3CopyWith<_TestScriptParam3> get copyWith;
 }
@@ -7144,11 +11567,15 @@ class _$TestScriptTestTearOff {
   _TestScriptTest call(
       {String name,
       String description,
-      @JsonKey(required: true) List<TestScriptAction1> action}) {
+      @JsonKey(required: true) List<TestScriptAction1> action,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _TestScriptTest(
       name: name,
       description: description,
       action: action,
+      nameElement: nameElement,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -7161,6 +11588,10 @@ mixin _$TestScriptTest {
   String get description;
   @JsonKey(required: true)
   List<TestScriptAction1> get action;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $TestScriptTestCopyWith<TestScriptTest> get copyWith;
@@ -7173,7 +11604,12 @@ abstract class $TestScriptTestCopyWith<$Res> {
   $Res call(
       {String name,
       String description,
-      @JsonKey(required: true) List<TestScriptAction1> action});
+      @JsonKey(required: true) List<TestScriptAction1> action,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
+
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$TestScriptTestCopyWithImpl<$Res>
@@ -7189,6 +11625,8 @@ class _$TestScriptTestCopyWithImpl<$Res>
     Object name = freezed,
     Object description = freezed,
     Object action = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
@@ -7196,7 +11634,32 @@ class _$TestScriptTestCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       action:
           action == freezed ? _value.action : action as List<TestScriptAction1>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
   }
 }
 
@@ -7209,7 +11672,14 @@ abstract class _$TestScriptTestCopyWith<$Res>
   $Res call(
       {String name,
       String description,
-      @JsonKey(required: true) List<TestScriptAction1> action});
+      @JsonKey(required: true) List<TestScriptAction1> action,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
+
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$TestScriptTestCopyWithImpl<$Res>
@@ -7227,6 +11697,8 @@ class __$TestScriptTestCopyWithImpl<$Res>
     Object name = freezed,
     Object description = freezed,
     Object action = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_TestScriptTest(
       name: name == freezed ? _value.name : name as String,
@@ -7234,6 +11706,11 @@ class __$TestScriptTestCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       action:
           action == freezed ? _value.action : action as List<TestScriptAction1>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
@@ -7241,7 +11718,11 @@ class __$TestScriptTestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScriptTest implements _TestScriptTest {
   const _$_TestScriptTest(
-      {this.name, this.description, @JsonKey(required: true) this.action});
+      {this.name,
+      this.description,
+      @JsonKey(required: true) this.action,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptTestFromJson(json);
@@ -7253,10 +11734,16 @@ class _$_TestScriptTest implements _TestScriptTest {
   @override
   @JsonKey(required: true)
   final List<TestScriptAction1> action;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'TestScriptTest(name: $name, description: $description, action: $action)';
+    return 'TestScriptTest(name: $name, description: $description, action: $action, nameElement: $nameElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -7269,7 +11756,13 @@ class _$_TestScriptTest implements _TestScriptTest {
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
             (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)));
+                const DeepCollectionEquality().equals(other.action, action)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
@@ -7277,7 +11770,9 @@ class _$_TestScriptTest implements _TestScriptTest {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(action);
+      const DeepCollectionEquality().hash(action) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$TestScriptTestCopyWith<_TestScriptTest> get copyWith =>
@@ -7293,7 +11788,9 @@ abstract class _TestScriptTest implements TestScriptTest {
   const factory _TestScriptTest(
           {String name,
           String description,
-          @JsonKey(required: true) List<TestScriptAction1> action}) =
+          @JsonKey(required: true) List<TestScriptAction1> action,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_description') Element descriptionElement}) =
       _$_TestScriptTest;
 
   factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
@@ -7306,6 +11803,12 @@ abstract class _TestScriptTest implements TestScriptTest {
   @override
   @JsonKey(required: true)
   List<TestScriptAction1> get action;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   _$TestScriptTestCopyWith<_TestScriptTest> get copyWith;
 }

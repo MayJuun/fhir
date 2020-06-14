@@ -333,7 +333,25 @@ class _$FhirExtensionTearOff {
       UsageContext valueUsageContext,
       DataRequirement valueDataRequirement,
       ParameterDefinition valueParameterDefinition,
-      TriggerDefinition valueTriggerDefinition}) {
+      TriggerDefinition valueTriggerDefinition,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
+      @JsonKey(name: '_valueOid') Element valueOidElement,
+      @JsonKey(name: '_valueUuid') Element valueUuidElement,
+      @JsonKey(name: '_valueId') Element valueIdElement,
+      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement}) {
     return _FhirExtension(
       url: url,
       valueBoolean: valueBoolean,
@@ -389,6 +407,24 @@ class _$FhirExtensionTearOff {
       valueDataRequirement: valueDataRequirement,
       valueParameterDefinition: valueParameterDefinition,
       valueTriggerDefinition: valueTriggerDefinition,
+      urlElement: urlElement,
+      valueBooleanElement: valueBooleanElement,
+      valueIntegerElement: valueIntegerElement,
+      valueDecimalElement: valueDecimalElement,
+      valueBase64BinaryElement: valueBase64BinaryElement,
+      valueInstantElement: valueInstantElement,
+      valueStringElement: valueStringElement,
+      valueUriElement: valueUriElement,
+      valueDateElement: valueDateElement,
+      valueDateTimeElement: valueDateTimeElement,
+      valueTimeElement: valueTimeElement,
+      valueCodeElement: valueCodeElement,
+      valueOidElement: valueOidElement,
+      valueUuidElement: valueUuidElement,
+      valueIdElement: valueIdElement,
+      valueUnsignedIntElement: valueUnsignedIntElement,
+      valuePositiveIntElement: valuePositiveIntElement,
+      valueMarkdownElement: valueMarkdownElement,
     );
   }
 }
@@ -451,6 +487,42 @@ mixin _$FhirExtension {
   DataRequirement get valueDataRequirement;
   ParameterDefinition get valueParameterDefinition;
   TriggerDefinition get valueTriggerDefinition;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @JsonKey(name: '_valueBase64Binary')
+  Element get valueBase64BinaryElement;
+  @JsonKey(name: '_valueInstant')
+  Element get valueInstantElement;
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @JsonKey(name: '_valueCode')
+  Element get valueCodeElement;
+  @JsonKey(name: '_valueOid')
+  Element get valueOidElement;
+  @JsonKey(name: '_valueUuid')
+  Element get valueUuidElement;
+  @JsonKey(name: '_valueId')
+  Element get valueIdElement;
+  @JsonKey(name: '_valueUnsignedInt')
+  Element get valueUnsignedIntElement;
+  @JsonKey(name: '_valuePositiveInt')
+  Element get valuePositiveIntElement;
+  @JsonKey(name: '_valueMarkdown')
+  Element get valueMarkdownElement;
 
   Map<String, dynamic> toJson();
   $FhirExtensionCopyWith<FhirExtension> get copyWith;
@@ -514,7 +586,25 @@ abstract class $FhirExtensionCopyWith<$Res> {
       UsageContext valueUsageContext,
       DataRequirement valueDataRequirement,
       ParameterDefinition valueParameterDefinition,
-      TriggerDefinition valueTriggerDefinition});
+      TriggerDefinition valueTriggerDefinition,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
+      @JsonKey(name: '_valueOid') Element valueOidElement,
+      @JsonKey(name: '_valueUuid') Element valueUuidElement,
+      @JsonKey(name: '_valueId') Element valueIdElement,
+      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement});
 
   $ElementCopyWith<$Res> get valueElement;
   $BackboneElementCopyWith<$Res> get valueBackboneElement;
@@ -551,6 +641,24 @@ abstract class $FhirExtensionCopyWith<$Res> {
   $DataRequirementCopyWith<$Res> get valueDataRequirement;
   $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition;
   $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  $ElementCopyWith<$Res> get valueInstantElement;
+  $ElementCopyWith<$Res> get valueStringElement;
+  $ElementCopyWith<$Res> get valueUriElement;
+  $ElementCopyWith<$Res> get valueDateElement;
+  $ElementCopyWith<$Res> get valueDateTimeElement;
+  $ElementCopyWith<$Res> get valueTimeElement;
+  $ElementCopyWith<$Res> get valueCodeElement;
+  $ElementCopyWith<$Res> get valueOidElement;
+  $ElementCopyWith<$Res> get valueUuidElement;
+  $ElementCopyWith<$Res> get valueIdElement;
+  $ElementCopyWith<$Res> get valueUnsignedIntElement;
+  $ElementCopyWith<$Res> get valuePositiveIntElement;
+  $ElementCopyWith<$Res> get valueMarkdownElement;
 }
 
 class _$FhirExtensionCopyWithImpl<$Res>
@@ -617,6 +725,24 @@ class _$FhirExtensionCopyWithImpl<$Res>
     Object valueDataRequirement = freezed,
     Object valueParameterDefinition = freezed,
     Object valueTriggerDefinition = freezed,
+    Object urlElement = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueBase64BinaryElement = freezed,
+    Object valueInstantElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueUriElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueDateTimeElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueCodeElement = freezed,
+    Object valueOidElement = freezed,
+    Object valueUuidElement = freezed,
+    Object valueIdElement = freezed,
+    Object valueUnsignedIntElement = freezed,
+    Object valuePositiveIntElement = freezed,
+    Object valueMarkdownElement = freezed,
   }) {
     return _then(_value.copyWith(
       url: url == freezed ? _value.url : url as String,
@@ -752,6 +878,59 @@ class _$FhirExtensionCopyWithImpl<$Res>
       valueTriggerDefinition: valueTriggerDefinition == freezed
           ? _value.valueTriggerDefinition
           : valueTriggerDefinition as TriggerDefinition,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement as Element,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement as Element,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement as Element,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement as Element,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement as Element,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement as Element,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement as Element,
     ));
   }
 
@@ -1107,6 +1286,186 @@ class _$FhirExtensionCopyWithImpl<$Res>
       return _then(_value.copyWith(valueTriggerDefinition: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement {
+    if (_value.valueDecimalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement, (value) {
+      return _then(_value.copyWith(valueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueBase64BinaryElement {
+    if (_value.valueBase64BinaryElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement, (value) {
+      return _then(_value.copyWith(valueBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueInstantElement {
+    if (_value.valueInstantElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueInstantElement, (value) {
+      return _then(_value.copyWith(valueInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUriElement {
+    if (_value.valueUriElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUriElement, (value) {
+      return _then(_value.copyWith(valueUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateElement {
+    if (_value.valueDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateElement, (value) {
+      return _then(_value.copyWith(valueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement {
+    if (_value.valueDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement, (value) {
+      return _then(_value.copyWith(valueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement {
+    if (_value.valueTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueTimeElement, (value) {
+      return _then(_value.copyWith(valueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueCodeElement {
+    if (_value.valueCodeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueCodeElement, (value) {
+      return _then(_value.copyWith(valueCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueOidElement {
+    if (_value.valueOidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueOidElement, (value) {
+      return _then(_value.copyWith(valueOidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUuidElement {
+    if (_value.valueUuidElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUuidElement, (value) {
+      return _then(_value.copyWith(valueUuidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueIdElement {
+    if (_value.valueIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueIdElement, (value) {
+      return _then(_value.copyWith(valueIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueUnsignedIntElement {
+    if (_value.valueUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueUnsignedIntElement, (value) {
+      return _then(_value.copyWith(valueUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valuePositiveIntElement {
+    if (_value.valuePositiveIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valuePositiveIntElement, (value) {
+      return _then(_value.copyWith(valuePositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueMarkdownElement {
+    if (_value.valueMarkdownElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueMarkdownElement, (value) {
+      return _then(_value.copyWith(valueMarkdownElement: value));
+    });
+  }
 }
 
 abstract class _$FhirExtensionCopyWith<$Res>
@@ -1169,7 +1528,25 @@ abstract class _$FhirExtensionCopyWith<$Res>
       UsageContext valueUsageContext,
       DataRequirement valueDataRequirement,
       ParameterDefinition valueParameterDefinition,
-      TriggerDefinition valueTriggerDefinition});
+      TriggerDefinition valueTriggerDefinition,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+      @JsonKey(name: '_valueInstant') Element valueInstantElement,
+      @JsonKey(name: '_valueString') Element valueStringElement,
+      @JsonKey(name: '_valueUri') Element valueUriElement,
+      @JsonKey(name: '_valueDate') Element valueDateElement,
+      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+      @JsonKey(name: '_valueTime') Element valueTimeElement,
+      @JsonKey(name: '_valueCode') Element valueCodeElement,
+      @JsonKey(name: '_valueOid') Element valueOidElement,
+      @JsonKey(name: '_valueUuid') Element valueUuidElement,
+      @JsonKey(name: '_valueId') Element valueIdElement,
+      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement});
 
   @override
   $ElementCopyWith<$Res> get valueElement;
@@ -1241,6 +1618,42 @@ abstract class _$FhirExtensionCopyWith<$Res>
   $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition;
   @override
   $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res> get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res> get valueDecimalElement;
+  @override
+  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  @override
+  $ElementCopyWith<$Res> get valueInstantElement;
+  @override
+  $ElementCopyWith<$Res> get valueStringElement;
+  @override
+  $ElementCopyWith<$Res> get valueUriElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateElement;
+  @override
+  $ElementCopyWith<$Res> get valueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res> get valueTimeElement;
+  @override
+  $ElementCopyWith<$Res> get valueCodeElement;
+  @override
+  $ElementCopyWith<$Res> get valueOidElement;
+  @override
+  $ElementCopyWith<$Res> get valueUuidElement;
+  @override
+  $ElementCopyWith<$Res> get valueIdElement;
+  @override
+  $ElementCopyWith<$Res> get valueUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res> get valuePositiveIntElement;
+  @override
+  $ElementCopyWith<$Res> get valueMarkdownElement;
 }
 
 class __$FhirExtensionCopyWithImpl<$Res>
@@ -1309,6 +1722,24 @@ class __$FhirExtensionCopyWithImpl<$Res>
     Object valueDataRequirement = freezed,
     Object valueParameterDefinition = freezed,
     Object valueTriggerDefinition = freezed,
+    Object urlElement = freezed,
+    Object valueBooleanElement = freezed,
+    Object valueIntegerElement = freezed,
+    Object valueDecimalElement = freezed,
+    Object valueBase64BinaryElement = freezed,
+    Object valueInstantElement = freezed,
+    Object valueStringElement = freezed,
+    Object valueUriElement = freezed,
+    Object valueDateElement = freezed,
+    Object valueDateTimeElement = freezed,
+    Object valueTimeElement = freezed,
+    Object valueCodeElement = freezed,
+    Object valueOidElement = freezed,
+    Object valueUuidElement = freezed,
+    Object valueIdElement = freezed,
+    Object valueUnsignedIntElement = freezed,
+    Object valuePositiveIntElement = freezed,
+    Object valueMarkdownElement = freezed,
   }) {
     return _then(_FhirExtension(
       url: url == freezed ? _value.url : url as String,
@@ -1444,6 +1875,59 @@ class __$FhirExtensionCopyWithImpl<$Res>
       valueTriggerDefinition: valueTriggerDefinition == freezed
           ? _value.valueTriggerDefinition
           : valueTriggerDefinition as TriggerDefinition,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement as Element,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement as Element,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement as Element,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement as Element,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement as Element,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement as Element,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement as Element,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement as Element,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement as Element,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement as Element,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement as Element,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement as Element,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement as Element,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement as Element,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement as Element,
     ));
   }
 }
@@ -1504,7 +1988,25 @@ class _$_FhirExtension implements _FhirExtension {
       this.valueUsageContext,
       this.valueDataRequirement,
       this.valueParameterDefinition,
-      this.valueTriggerDefinition});
+      this.valueTriggerDefinition,
+      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+      @JsonKey(name: '_valueInstant') this.valueInstantElement,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      @JsonKey(name: '_valueUri') this.valueUriElement,
+      @JsonKey(name: '_valueDate') this.valueDateElement,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      @JsonKey(name: '_valueTime') this.valueTimeElement,
+      @JsonKey(name: '_valueCode') this.valueCodeElement,
+      @JsonKey(name: '_valueOid') this.valueOidElement,
+      @JsonKey(name: '_valueUuid') this.valueUuidElement,
+      @JsonKey(name: '_valueId') this.valueIdElement,
+      @JsonKey(name: '_valueUnsignedInt') this.valueUnsignedIntElement,
+      @JsonKey(name: '_valuePositiveInt') this.valuePositiveIntElement,
+      @JsonKey(name: '_valueMarkdown') this.valueMarkdownElement});
 
   factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$_$_FhirExtensionFromJson(json);
@@ -1617,10 +2119,64 @@ class _$_FhirExtension implements _FhirExtension {
   final ParameterDefinition valueParameterDefinition;
   @override
   final TriggerDefinition valueTriggerDefinition;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  final Element valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  final Element valueBase64BinaryElement;
+  @override
+  @JsonKey(name: '_valueInstant')
+  final Element valueInstantElement;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element valueStringElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  final Element valueUriElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  final Element valueDateElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  final Element valueDateTimeElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  final Element valueTimeElement;
+  @override
+  @JsonKey(name: '_valueCode')
+  final Element valueCodeElement;
+  @override
+  @JsonKey(name: '_valueOid')
+  final Element valueOidElement;
+  @override
+  @JsonKey(name: '_valueUuid')
+  final Element valueUuidElement;
+  @override
+  @JsonKey(name: '_valueId')
+  final Element valueIdElement;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  final Element valueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  final Element valuePositiveIntElement;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  final Element valueMarkdownElement;
 
   @override
   String toString() {
-    return 'FhirExtension(url: $url, valueBoolean: $valueBoolean, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueBase64Binary: $valueBase64Binary, valueInstant: $valueInstant, valueString: $valueString, valueUri: $valueUri, valueDate: $valueDate, valueDateTime: $valueDateTime, valueTime: $valueTime, valueCode: $valueCode, valueOid: $valueOid, valueUuid: $valueUuid, valueId: $valueId, valueUnsignedInt: $valueUnsignedInt, valuePositiveInt: $valuePositiveInt, valueMarkdown: $valueMarkdown, valueElement: $valueElement, valueExtension: $valueExtension, valueBackboneElement: $valueBackboneElement, valueNarrative: $valueNarrative, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueDuration: $valueDuration, valueSimpleQuantity: $valueSimpleQuantity, valueDistance: $valueDistance, valueCount: $valueCount, valueMoney: $valueMoney, valueAge: $valueAge, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueHumanName: $valueHumanName, valueAddress: $valueAddress, valueContactPoint: $valueContactPoint, valueTiming: $valueTiming, valueMeta: $valueMeta, valueElementDefinition: $valueElementDefinition, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDosage: $valueDosage, valueRelatedArtifact: $valueRelatedArtifact, valueUsageContext: $valueUsageContext, valueDataRequirement: $valueDataRequirement, valueParameterDefinition: $valueParameterDefinition, valueTriggerDefinition: $valueTriggerDefinition)';
+    return 'FhirExtension(url: $url, valueBoolean: $valueBoolean, valueInteger: $valueInteger, valueDecimal: $valueDecimal, valueBase64Binary: $valueBase64Binary, valueInstant: $valueInstant, valueString: $valueString, valueUri: $valueUri, valueDate: $valueDate, valueDateTime: $valueDateTime, valueTime: $valueTime, valueCode: $valueCode, valueOid: $valueOid, valueUuid: $valueUuid, valueId: $valueId, valueUnsignedInt: $valueUnsignedInt, valuePositiveInt: $valuePositiveInt, valueMarkdown: $valueMarkdown, valueElement: $valueElement, valueExtension: $valueExtension, valueBackboneElement: $valueBackboneElement, valueNarrative: $valueNarrative, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueDuration: $valueDuration, valueSimpleQuantity: $valueSimpleQuantity, valueDistance: $valueDistance, valueCount: $valueCount, valueMoney: $valueMoney, valueAge: $valueAge, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueHumanName: $valueHumanName, valueAddress: $valueAddress, valueContactPoint: $valueContactPoint, valueTiming: $valueTiming, valueMeta: $valueMeta, valueElementDefinition: $valueElementDefinition, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDosage: $valueDosage, valueRelatedArtifact: $valueRelatedArtifact, valueUsageContext: $valueUsageContext, valueDataRequirement: $valueDataRequirement, valueParameterDefinition: $valueParameterDefinition, valueTriggerDefinition: $valueTriggerDefinition, urlElement: $urlElement, valueBooleanElement: $valueBooleanElement, valueIntegerElement: $valueIntegerElement, valueDecimalElement: $valueDecimalElement, valueBase64BinaryElement: $valueBase64BinaryElement, valueInstantElement: $valueInstantElement, valueStringElement: $valueStringElement, valueUriElement: $valueUriElement, valueDateElement: $valueDateElement, valueDateTimeElement: $valueDateTimeElement, valueTimeElement: $valueTimeElement, valueCodeElement: $valueCodeElement, valueOidElement: $valueOidElement, valueUuidElement: $valueUuidElement, valueIdElement: $valueIdElement, valueUnsignedIntElement: $valueUnsignedIntElement, valuePositiveIntElement: $valuePositiveIntElement, valueMarkdownElement: $valueMarkdownElement)';
   }
 
   @override
@@ -1723,7 +2279,25 @@ class _$_FhirExtension implements _FhirExtension {
             (identical(other.valueUsageContext, valueUsageContext) || const DeepCollectionEquality().equals(other.valueUsageContext, valueUsageContext)) &&
             (identical(other.valueDataRequirement, valueDataRequirement) || const DeepCollectionEquality().equals(other.valueDataRequirement, valueDataRequirement)) &&
             (identical(other.valueParameterDefinition, valueParameterDefinition) || const DeepCollectionEquality().equals(other.valueParameterDefinition, valueParameterDefinition)) &&
-            (identical(other.valueTriggerDefinition, valueTriggerDefinition) || const DeepCollectionEquality().equals(other.valueTriggerDefinition, valueTriggerDefinition)));
+            (identical(other.valueTriggerDefinition, valueTriggerDefinition) || const DeepCollectionEquality().equals(other.valueTriggerDefinition, valueTriggerDefinition)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) || const DeepCollectionEquality().equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueIntegerElement, valueIntegerElement) || const DeepCollectionEquality().equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueDecimalElement, valueDecimalElement) || const DeepCollectionEquality().equals(other.valueDecimalElement, valueDecimalElement)) &&
+            (identical(other.valueBase64BinaryElement, valueBase64BinaryElement) || const DeepCollectionEquality().equals(other.valueBase64BinaryElement, valueBase64BinaryElement)) &&
+            (identical(other.valueInstantElement, valueInstantElement) || const DeepCollectionEquality().equals(other.valueInstantElement, valueInstantElement)) &&
+            (identical(other.valueStringElement, valueStringElement) || const DeepCollectionEquality().equals(other.valueStringElement, valueStringElement)) &&
+            (identical(other.valueUriElement, valueUriElement) || const DeepCollectionEquality().equals(other.valueUriElement, valueUriElement)) &&
+            (identical(other.valueDateElement, valueDateElement) || const DeepCollectionEquality().equals(other.valueDateElement, valueDateElement)) &&
+            (identical(other.valueDateTimeElement, valueDateTimeElement) || const DeepCollectionEquality().equals(other.valueDateTimeElement, valueDateTimeElement)) &&
+            (identical(other.valueTimeElement, valueTimeElement) || const DeepCollectionEquality().equals(other.valueTimeElement, valueTimeElement)) &&
+            (identical(other.valueCodeElement, valueCodeElement) || const DeepCollectionEquality().equals(other.valueCodeElement, valueCodeElement)) &&
+            (identical(other.valueOidElement, valueOidElement) || const DeepCollectionEquality().equals(other.valueOidElement, valueOidElement)) &&
+            (identical(other.valueUuidElement, valueUuidElement) || const DeepCollectionEquality().equals(other.valueUuidElement, valueUuidElement)) &&
+            (identical(other.valueIdElement, valueIdElement) || const DeepCollectionEquality().equals(other.valueIdElement, valueIdElement)) &&
+            (identical(other.valueUnsignedIntElement, valueUnsignedIntElement) || const DeepCollectionEquality().equals(other.valueUnsignedIntElement, valueUnsignedIntElement)) &&
+            (identical(other.valuePositiveIntElement, valuePositiveIntElement) || const DeepCollectionEquality().equals(other.valuePositiveIntElement, valuePositiveIntElement)) &&
+            (identical(other.valueMarkdownElement, valueMarkdownElement) || const DeepCollectionEquality().equals(other.valueMarkdownElement, valueMarkdownElement)));
   }
 
   @override
@@ -1782,7 +2356,25 @@ class _$_FhirExtension implements _FhirExtension {
       const DeepCollectionEquality().hash(valueUsageContext) ^
       const DeepCollectionEquality().hash(valueDataRequirement) ^
       const DeepCollectionEquality().hash(valueParameterDefinition) ^
-      const DeepCollectionEquality().hash(valueTriggerDefinition);
+      const DeepCollectionEquality().hash(valueTriggerDefinition) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueDecimalElement) ^
+      const DeepCollectionEquality().hash(valueBase64BinaryElement) ^
+      const DeepCollectionEquality().hash(valueInstantElement) ^
+      const DeepCollectionEquality().hash(valueStringElement) ^
+      const DeepCollectionEquality().hash(valueUriElement) ^
+      const DeepCollectionEquality().hash(valueDateElement) ^
+      const DeepCollectionEquality().hash(valueDateTimeElement) ^
+      const DeepCollectionEquality().hash(valueTimeElement) ^
+      const DeepCollectionEquality().hash(valueCodeElement) ^
+      const DeepCollectionEquality().hash(valueOidElement) ^
+      const DeepCollectionEquality().hash(valueUuidElement) ^
+      const DeepCollectionEquality().hash(valueIdElement) ^
+      const DeepCollectionEquality().hash(valueUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(valuePositiveIntElement) ^
+      const DeepCollectionEquality().hash(valueMarkdownElement);
 
   @override
   _$FhirExtensionCopyWith<_FhirExtension> get copyWith =>
@@ -1796,60 +2388,79 @@ class _$_FhirExtension implements _FhirExtension {
 
 abstract class _FhirExtension implements FhirExtension {
   const factory _FhirExtension(
-      {String url,
-      Boolean valueBoolean,
-      Integer valueInteger,
-      Decimal valueDecimal,
-      String valueBase64Binary,
-      String valueInstant,
-      String valueString,
-      String valueUri,
-      Date valueDate,
-      FhirDateTime valueDateTime,
-      Time valueTime,
-      Code valueCode,
-      Oid valueOid,
-      Uuid valueUuid,
-      Id valueId,
-      UnsignedInt valueUnsignedInt,
-      PositiveInt valuePositiveInt,
-      String valueMarkdown,
-      Element valueElement,
-      FhirExtension valueExtension,
-      BackboneElement valueBackboneElement,
-      Narrative valueNarrative,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      Identifier valueIdentifier,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      Quantity valueQuantity,
-      Duration valueDuration,
-      Quantity valueSimpleQuantity,
-      Distance valueDistance,
-      Count valueCount,
-      Money valueMoney,
-      Age valueAge,
-      Range valueRange,
-      Period valuePeriod,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      HumanName valueHumanName,
-      Address valueAddress,
-      ContactPoint valueContactPoint,
-      Timing valueTiming,
-      Meta valueMeta,
-      ElementDefinition valueElementDefinition,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      Dosage valueDosage,
-      RelatedArtifact valueRelatedArtifact,
-      UsageContext valueUsageContext,
-      DataRequirement valueDataRequirement,
-      ParameterDefinition valueParameterDefinition,
-      TriggerDefinition valueTriggerDefinition}) = _$_FhirExtension;
+          {String url,
+          Boolean valueBoolean,
+          Integer valueInteger,
+          Decimal valueDecimal,
+          String valueBase64Binary,
+          String valueInstant,
+          String valueString,
+          String valueUri,
+          Date valueDate,
+          FhirDateTime valueDateTime,
+          Time valueTime,
+          Code valueCode,
+          Oid valueOid,
+          Uuid valueUuid,
+          Id valueId,
+          UnsignedInt valueUnsignedInt,
+          PositiveInt valuePositiveInt,
+          String valueMarkdown,
+          Element valueElement,
+          FhirExtension valueExtension,
+          BackboneElement valueBackboneElement,
+          Narrative valueNarrative,
+          Annotation valueAnnotation,
+          Attachment valueAttachment,
+          Identifier valueIdentifier,
+          CodeableConcept valueCodeableConcept,
+          Coding valueCoding,
+          Quantity valueQuantity,
+          Duration valueDuration,
+          Quantity valueSimpleQuantity,
+          Distance valueDistance,
+          Count valueCount,
+          Money valueMoney,
+          Age valueAge,
+          Range valueRange,
+          Period valuePeriod,
+          Ratio valueRatio,
+          Reference valueReference,
+          SampledData valueSampledData,
+          Signature valueSignature,
+          HumanName valueHumanName,
+          Address valueAddress,
+          ContactPoint valueContactPoint,
+          Timing valueTiming,
+          Meta valueMeta,
+          ElementDefinition valueElementDefinition,
+          ContactDetail valueContactDetail,
+          Contributor valueContributor,
+          Dosage valueDosage,
+          RelatedArtifact valueRelatedArtifact,
+          UsageContext valueUsageContext,
+          DataRequirement valueDataRequirement,
+          ParameterDefinition valueParameterDefinition,
+          TriggerDefinition valueTriggerDefinition,
+          @JsonKey(name: '_url') Element urlElement,
+          @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+          @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+          @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+          @JsonKey(name: '_valueInstant') Element valueInstantElement,
+          @JsonKey(name: '_valueString') Element valueStringElement,
+          @JsonKey(name: '_valueUri') Element valueUriElement,
+          @JsonKey(name: '_valueDate') Element valueDateElement,
+          @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+          @JsonKey(name: '_valueTime') Element valueTimeElement,
+          @JsonKey(name: '_valueCode') Element valueCodeElement,
+          @JsonKey(name: '_valueOid') Element valueOidElement,
+          @JsonKey(name: '_valueUuid') Element valueUuidElement,
+          @JsonKey(name: '_valueId') Element valueIdElement,
+          @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+          @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+          @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement}) =
+      _$_FhirExtension;
 
   factory _FhirExtension.fromJson(Map<String, dynamic> json) =
       _$_FhirExtension.fromJson;
@@ -1962,6 +2573,60 @@ abstract class _FhirExtension implements FhirExtension {
   ParameterDefinition get valueParameterDefinition;
   @override
   TriggerDefinition get valueTriggerDefinition;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element get valueBooleanElement;
+  @override
+  @JsonKey(name: '_valueInteger')
+  Element get valueIntegerElement;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  Element get valueDecimalElement;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  Element get valueBase64BinaryElement;
+  @override
+  @JsonKey(name: '_valueInstant')
+  Element get valueInstantElement;
+  @override
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @override
+  @JsonKey(name: '_valueUri')
+  Element get valueUriElement;
+  @override
+  @JsonKey(name: '_valueDate')
+  Element get valueDateElement;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  Element get valueDateTimeElement;
+  @override
+  @JsonKey(name: '_valueTime')
+  Element get valueTimeElement;
+  @override
+  @JsonKey(name: '_valueCode')
+  Element get valueCodeElement;
+  @override
+  @JsonKey(name: '_valueOid')
+  Element get valueOidElement;
+  @override
+  @JsonKey(name: '_valueUuid')
+  Element get valueUuidElement;
+  @override
+  @JsonKey(name: '_valueId')
+  Element get valueIdElement;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  Element get valueUnsignedIntElement;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  Element get valuePositiveIntElement;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  Element get valueMarkdownElement;
   @override
   _$FhirExtensionCopyWith<_FhirExtension> get copyWith;
 }

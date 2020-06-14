@@ -12,6 +12,7 @@ abstract class ContactDetail with _$ContactDetail {
   const factory ContactDetail({
     String name,
     List<ContactPoint> telecom,
+    @JsonKey(name: '_name') Element nameElement,
   }) = _ContactDetail;
   factory ContactDetail.fromJson(Map<String, dynamic> json) =>
       _$ContactDetailFromJson(json);
@@ -27,6 +28,10 @@ abstract class RelatedArtifact with _$RelatedArtifact {
     String url,
     Attachment document,
     Reference resource,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_display') Element displayElement,
+    @JsonKey(name: '_citation') Element citationElement,
+    @JsonKey(name: '_url') Element urlElement,
   }) = _RelatedArtifact;
   factory RelatedArtifact.fromJson(Map<String, dynamic> json) =>
       _$RelatedArtifactFromJson(json);
@@ -52,6 +57,9 @@ abstract class DataRequirement with _$DataRequirement {
     List<String> mustSupport,
     List<DataRequirementCodeFilter> codeFilter,
     List<DataRequirementDateFilter> dateFilter,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_profile') Element profileElement,
+    @JsonKey(name: '_mustSupport') Element mustSupportElement,
   }) = _DataRequirement;
   factory DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementFromJson(json);
@@ -66,6 +74,9 @@ abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
     List<Code> valueCode,
     List<Coding> valueCoding,
     List<CodeableConcept> valueCodeableConcept,
+    @JsonKey(name: '_path') Element pathElement,
+    @JsonKey(name: '_valueSetString') Element valueSetStringElement,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
   }) = _DataRequirementCodeFilter;
   factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementCodeFilterFromJson(json);
@@ -78,6 +89,8 @@ abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
     FhirDateTime valueDateTime,
     Period valuePeriod,
     Duration valueDuration,
+    @JsonKey(name: '_path') Element pathElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _DataRequirementDateFilter;
   factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementDateFilterFromJson(json);
@@ -93,6 +106,12 @@ abstract class ParameterDefinition with _$ParameterDefinition {
     String documentation,
     Code type,
     Reference profile,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_use') Element useElement,
+    @JsonKey(name: '_min') Element minElement,
+    @JsonKey(name: '_max') Element maxElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _ParameterDefinition;
   factory ParameterDefinition.fromJson(Map<String, dynamic> json) =>
       _$ParameterDefinitionFromJson(json);
@@ -109,6 +128,10 @@ abstract class TriggerDefinition with _$TriggerDefinition {
     Date eventTimingDate,
     FhirDateTime eventTimingDateTime,
     DataRequirement eventData,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_eventName') Element eventNameElement,
+    @JsonKey(name: '_eventTimingDate') Element eventTimingDateElement,
+    @JsonKey(name: '_eventTimingDateTime') Element eventTimingDateTimeElement,
   }) = _TriggerDefinition;
   factory TriggerDefinition.fromJson(Map<String, dynamic> json) =>
       _$TriggerDefinitionFromJson(json);

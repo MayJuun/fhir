@@ -219,6 +219,60 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
         ? null
         : TriggerDefinition.fromJson(
             json['valueTriggerDefinition'] as Map<String, dynamic>),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    valueBooleanElement: json['_valueBoolean'] == null
+        ? null
+        : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    valueIntegerElement: json['_valueInteger'] == null
+        ? null
+        : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueDecimalElement: json['_valueDecimal'] == null
+        ? null
+        : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
+    valueBase64BinaryElement: json['_valueBase64Binary'] == null
+        ? null
+        : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
+    valueInstantElement: json['_valueInstant'] == null
+        ? null
+        : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
+    valueStringElement: json['_valueString'] == null
+        ? null
+        : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueUriElement: json['_valueUri'] == null
+        ? null
+        : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
+    valueDateElement: json['_valueDate'] == null
+        ? null
+        : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueDateTimeElement: json['_valueDateTime'] == null
+        ? null
+        : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+    valueTimeElement: json['_valueTime'] == null
+        ? null
+        : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+    valueCodeElement: json['_valueCode'] == null
+        ? null
+        : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
+    valueOidElement: json['_valueOid'] == null
+        ? null
+        : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),
+    valueUuidElement: json['_valueUuid'] == null
+        ? null
+        : Element.fromJson(json['_valueUuid'] as Map<String, dynamic>),
+    valueIdElement: json['_valueId'] == null
+        ? null
+        : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
+    valueUnsignedIntElement: json['_valueUnsignedInt'] == null
+        ? null
+        : Element.fromJson(json['_valueUnsignedInt'] as Map<String, dynamic>),
+    valuePositiveIntElement: json['_valuePositiveInt'] == null
+        ? null
+        : Element.fromJson(json['_valuePositiveInt'] as Map<String, dynamic>),
+    valueMarkdownElement: json['_valueMarkdown'] == null
+        ? null
+        : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),
   );
 }
 
@@ -288,5 +342,24 @@ Map<String, dynamic> _$_$_FhirExtensionToJson(_$_FhirExtension instance) {
       'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
   writeNotNull(
       'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
+  writeNotNull(
+      '_valueBase64Binary', instance.valueBase64BinaryElement?.toJson());
+  writeNotNull('_valueInstant', instance.valueInstantElement?.toJson());
+  writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('_valueUri', instance.valueUriElement?.toJson());
+  writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
+  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
+  writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
+  writeNotNull('_valueOid', instance.valueOidElement?.toJson());
+  writeNotNull('_valueUuid', instance.valueUuidElement?.toJson());
+  writeNotNull('_valueId', instance.valueIdElement?.toJson());
+  writeNotNull('_valueUnsignedInt', instance.valueUnsignedIntElement?.toJson());
+  writeNotNull('_valuePositiveInt', instance.valuePositiveIntElement?.toJson());
+  writeNotNull('_valueMarkdown', instance.valueMarkdownElement?.toJson());
   return val;
 }

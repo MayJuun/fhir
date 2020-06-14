@@ -11,7 +11,16 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
   const factory AuditEvent({
     @JsonKey(required: true, defaultValue: 'AuditEvent')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) Coding type,
     List<Coding> subtype,
     @JsonKey(unknownEnumValue: AuditEventAction.unknown)
@@ -24,6 +33,10 @@ abstract class AuditEvent with _$AuditEvent implements Resource {
     @JsonKey(required: true) List<AuditEventAgent> agent,
     @JsonKey(required: true) AuditEventSource source,
     List<AuditEventEntity> entity,
+    @JsonKey(name: '_action') Element actionElement,
+    @JsonKey(name: '_recorded') Element recordedElement,
+    @JsonKey(name: '_outcome') Element outcomeElement,
+    @JsonKey(name: '_outcomeDesc') Element outcomeDescElement,
   }) = _AuditEvent;
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
@@ -43,6 +56,10 @@ abstract class AuditEventAgent with _$AuditEventAgent {
     Coding media,
     AuditEventNetwork network,
     List<CodeableConcept> purposeOfUse,
+    @JsonKey(name: '_altId') Element altIdElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_requestor') Element requestorElement,
+    @JsonKey(name: '_policy') Element policyElement,
   }) = _AuditEventAgent;
   factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventAgentFromJson(json);
@@ -53,6 +70,8 @@ abstract class AuditEventNetwork with _$AuditEventNetwork {
   const factory AuditEventNetwork({
     String address,
     @JsonKey(unknownEnumValue: NetworkType.unknown) NetworkType type,
+    @JsonKey(name: '_address') Element addressElement,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _AuditEventNetwork;
   factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
       _$AuditEventNetworkFromJson(json);
@@ -64,6 +83,7 @@ abstract class AuditEventSource with _$AuditEventSource {
     String site,
     @JsonKey(required: true) Identifier identifier,
     List<Coding> type,
+    @JsonKey(name: '_site') Element siteElement,
   }) = _AuditEventSource;
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$AuditEventSourceFromJson(json);
@@ -82,6 +102,9 @@ abstract class AuditEventEntity with _$AuditEventEntity {
     String description,
     String query,
     List<AuditEventDetail> detail,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_query') Element queryElement,
   }) = _AuditEventEntity;
   factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEntityFromJson(json);
@@ -92,6 +115,8 @@ abstract class AuditEventDetail with _$AuditEventDetail {
   const factory AuditEventDetail({
     String type,
     String value,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_value') Element valueElement,
   }) = _AuditEventDetail;
   factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
       _$AuditEventDetailFromJson(json);
@@ -102,7 +127,16 @@ abstract class Consent with _$Consent implements Resource {
   const factory Consent({
     @JsonKey(required: true, defaultValue: 'Consent')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus status,
     List<CodeableConcept> category,
@@ -123,6 +157,9 @@ abstract class Consent with _$Consent implements Resource {
     Period dataPeriod,
     List<ConsentData> data,
     List<ConsentExcept> except,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_dateTime') Element dateTimeElement,
+    @JsonKey(name: '_policyRule') Element policyRuleElement,
   }) = _Consent;
   factory Consent.fromJson(Map<String, dynamic> json) =>
       _$ConsentFromJson(json);
@@ -143,6 +180,8 @@ abstract class ConsentPolicy with _$ConsentPolicy {
   const factory ConsentPolicy({
     String authority,
     String uri,
+    @JsonKey(name: '_authority') Element authorityElement,
+    @JsonKey(name: '_uri') Element uriElement,
   }) = _ConsentPolicy;
   factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
       _$ConsentPolicyFromJson(json);
@@ -153,6 +192,7 @@ abstract class ConsentData with _$ConsentData {
   const factory ConsentData({
     @JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
     @JsonKey(required: true) Reference reference,
+    @JsonKey(name: '_meaning') Element meaningElement,
   }) = _ConsentData;
   factory ConsentData.fromJson(Map<String, dynamic> json) =>
       _$ConsentDataFromJson(json);
@@ -171,6 +211,7 @@ abstract class ConsentExcept with _$ConsentExcept {
     List<Coding> code,
     Period dataPeriod,
     List<ConsentData1> data,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _ConsentExcept;
   factory ConsentExcept.fromJson(Map<String, dynamic> json) =>
       _$ConsentExceptFromJson(json);
@@ -191,6 +232,7 @@ abstract class ConsentData1 with _$ConsentData1 {
   const factory ConsentData1({
     @JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
     @JsonKey(required: true) Reference reference,
+    @JsonKey(name: '_meaning') Element meaningElement,
   }) = _ConsentData1;
   factory ConsentData1.fromJson(Map<String, dynamic> json) =>
       _$ConsentData1FromJson(json);
@@ -201,7 +243,16 @@ abstract class Provenance with _$Provenance implements Resource {
   const factory Provenance({
     @JsonKey(required: true, defaultValue: 'Provenance')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     @JsonKey(required: true) List<Reference> target,
     Period period,
     String recorded,
@@ -212,6 +263,8 @@ abstract class Provenance with _$Provenance implements Resource {
     @JsonKey(required: true) List<ProvenanceAgent> agent,
     List<ProvenanceEntity> entity,
     List<Signature> signature,
+    @JsonKey(name: '_recorded') Element recordedElement,
+    @JsonKey(name: '_policy') Element policyElement,
   }) = _Provenance;
   factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
@@ -226,6 +279,8 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
     String onBehalfOfUri,
     Reference onBehalfOfReference,
     CodeableConcept relatedAgentType,
+    @JsonKey(name: '_whoUri') Element whoUriElement,
+    @JsonKey(name: '_onBehalfOfUri') Element onBehalfOfUriElement,
   }) = _ProvenanceAgent;
   factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentFromJson(json);
@@ -239,6 +294,8 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     Reference whatReference,
     Identifier whatIdentifier,
     List<ProvenanceAgent> agent,
+    @JsonKey(name: '_role') Element roleElement,
+    @JsonKey(name: '_whatUri') Element whatUriElement,
   }) = _ProvenanceEntity;
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);

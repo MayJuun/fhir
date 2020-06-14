@@ -11,7 +11,16 @@ abstract class Appointment with _$Appointment implements Resource {
   const factory Appointment({
     @JsonKey(required: true, defaultValue: 'Appointment')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
         AppointmentStatus status,
@@ -33,6 +42,14 @@ abstract class Appointment with _$Appointment implements Resource {
     List<Reference> incomingReferral,
     @JsonKey(required: true) List<AppointmentParticipant> participant,
     List<Period> requestedPeriod,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_minutesDuration') Element minutesDurationElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _Appointment;
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
@@ -47,6 +64,8 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
         ParticipantRequired required_,
     @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
         ParticipantStatus status,
+    @JsonKey(name: '_required') Element requiredElement,
+    @JsonKey(name: '_status') Element statusElement,
   }) = _AppointmentParticipant;
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
@@ -59,7 +78,16 @@ abstract class AppointmentResponse
   const factory AppointmentResponse({
     @JsonKey(required: true, defaultValue: 'AppointmentResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(required: true) Reference appointment,
     String start,
@@ -68,6 +96,10 @@ abstract class AppointmentResponse
     Reference actor,
     Code participantStatus,
     String comment,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_participantStatus') Element participantStatusElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
@@ -78,7 +110,16 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
   const factory ProcessRequest({
     @JsonKey(required: true, defaultValue: 'ProcessRequest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
@@ -95,6 +136,13 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
     List<String> include,
     List<String> exclude,
     Period period,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_action') Element actionElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_nullify') Element nullifyElement,
+    @JsonKey(name: '_reference') Element referenceElement,
+    @JsonKey(name: '_include') Element includeElement,
+    @JsonKey(name: '_exclude') Element excludeElement,
   }) = _ProcessRequest;
   factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestFromJson(json);
@@ -104,6 +152,7 @@ abstract class ProcessRequest with _$ProcessRequest implements Resource {
 abstract class ProcessRequestItem with _$ProcessRequestItem {
   const factory ProcessRequestItem({
     Integer sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
   }) = _ProcessRequestItem;
   factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
@@ -114,7 +163,16 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
   const factory ProcessResponse({
     @JsonKey(required: true, defaultValue: 'ProcessResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Code status,
     FhirDateTime created,
@@ -128,6 +186,9 @@ abstract class ProcessResponse with _$ProcessResponse implements Resource {
     List<ProcessResponseProcessNote> processNote,
     List<CodeableConcept> error,
     List<Reference> communicationRequest,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
   }) = _ProcessResponse;
   factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseFromJson(json);
@@ -138,6 +199,7 @@ abstract class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
   const factory ProcessResponseProcessNote({
     CodeableConcept type,
     String text,
+    @JsonKey(name: '_text') Element textElement,
   }) = _ProcessResponseProcessNote;
   factory ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseProcessNoteFromJson(json);
@@ -148,7 +210,16 @@ abstract class Schedule with _$Schedule implements Resource {
   const factory Schedule({
     @JsonKey(required: true, defaultValue: 'Schedule')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     CodeableConcept serviceCategory,
@@ -157,6 +228,8 @@ abstract class Schedule with _$Schedule implements Resource {
     @JsonKey(required: true) List<Reference> actor,
     Period planningHorizon,
     String comment,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
@@ -167,7 +240,16 @@ abstract class Slot with _$Slot implements Resource {
   const factory Slot({
     @JsonKey(required: true, defaultValue: 'Slot')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     CodeableConcept serviceCategory,
     List<CodeableConcept> serviceType,
@@ -179,6 +261,11 @@ abstract class Slot with _$Slot implements Resource {
     String end,
     Boolean overbooked,
     String comment,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_overbooked') Element overbookedElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }
@@ -188,7 +275,16 @@ abstract class Task with _$Task implements Resource {
   const factory Task({
     @JsonKey(required: true, defaultValue: 'Task')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     String definitionUri,
     Reference definitionReference,
@@ -217,6 +313,13 @@ abstract class Task with _$Task implements Resource {
     TaskRestriction restriction,
     List<TaskInput> input,
     List<TaskOutput> output,
+    @JsonKey(name: '_definitionUri') Element definitionUriElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_intent') Element intentElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
+    @JsonKey(name: '_lastModified') Element lastModifiedElement,
   }) = _Task;
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }
@@ -237,6 +340,7 @@ abstract class TaskRestriction with _$TaskRestriction {
     PositiveInt repetitions,
     Period period,
     List<Reference> recipient,
+    @JsonKey(name: '_repetitions') Element repetitionsElement,
   }) = _TaskRestriction;
   factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$TaskRestrictionFromJson(json);
@@ -299,6 +403,23 @@ abstract class TaskInput with _$TaskInput {
     DataRequirement valueDataRequirement,
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    @JsonKey(name: '_valueOid') Element valueOidElement,
+    @JsonKey(name: '_valueUuid') Element valueUuidElement,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
   }) = _TaskInput;
   factory TaskInput.fromJson(Map<String, dynamic> json) =>
       _$TaskInputFromJson(json);
@@ -361,6 +482,23 @@ abstract class TaskOutput with _$TaskOutput {
     DataRequirement valueDataRequirement,
     ParameterDefinition valueParameterDefinition,
     TriggerDefinition valueTriggerDefinition,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    @JsonKey(name: '_valueOid') Element valueOidElement,
+    @JsonKey(name: '_valueUuid') Element valueUuidElement,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
   }) = _TaskOutput;
   factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);

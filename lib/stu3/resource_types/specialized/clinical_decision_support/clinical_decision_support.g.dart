@@ -10,6 +10,33 @@ _$_GuidanceResponse _$_$_GuidanceResponseFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['resourceType', 'module']);
   return _$_GuidanceResponse(
     resourceType: json['resourceType'] as String ?? 'GuidanceResponse',
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     requestId: json['requestId'] == null
         ? null
         : Id.fromJson(json['requestId'] as String),
@@ -60,6 +87,15 @@ _$_GuidanceResponse _$_$_GuidanceResponseFromJson(Map<String, dynamic> json) {
             ? null
             : DataRequirement.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    requestIdElement: json['_requestId'] == null
+        ? null
+        : Element.fromJson(json['_requestId'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
+        ? null
+        : Element.fromJson(json['_occurrenceDateTime'] as Map<String, dynamic>),
   );
 }
 
@@ -73,6 +109,17 @@ Map<String, dynamic> _$_$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   }
 
   writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('requestId', instance.requestId?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('module', instance.module?.toJson());
@@ -91,6 +138,10 @@ Map<String, dynamic> _$_$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   writeNotNull('result', instance.result?.toJson());
   writeNotNull('dataRequirement',
       instance.dataRequirement?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_requestId', instance.requestIdElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull(
+      '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   return val;
 }
 
@@ -140,7 +191,29 @@ _$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'name']);
   return _$_Contributor(
     resourceType: json['resourceType'] as String ?? 'Contributor',
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    meta: json['meta'] == null
+        ? null
+        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: (json['contained'] as List)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     extension_: (json['extension'] as List)
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) => e == null
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -153,6 +226,12 @@ _$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
             ? null
             : ContactDetail.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
   );
 }
 
@@ -166,11 +245,22 @@ Map<String, dynamic> _$_$_ContributorToJson(_$_Contributor instance) {
   }
 
   writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', _$ContributorTypeEnumMap[instance.type]);
   writeNotNull('name', instance.name);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
   return val;
 }
 

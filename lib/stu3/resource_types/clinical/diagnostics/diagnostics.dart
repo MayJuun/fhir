@@ -11,7 +11,16 @@ abstract class BodySite with _$BodySite implements Resource {
   const factory BodySite({
     @JsonKey(required: true, defaultValue: 'BodySite')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Boolean active,
     CodeableConcept code,
@@ -19,6 +28,8 @@ abstract class BodySite with _$BodySite implements Resource {
     String description,
     List<Attachment> image,
     @JsonKey(required: true) Reference patient,
+    @JsonKey(name: '_active') Element activeElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _BodySite;
   factory BodySite.fromJson(Map<String, dynamic> json) =>
       _$BodySiteFromJson(json);
@@ -29,7 +40,16 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
   const factory DiagnosticReport({
     @JsonKey(required: true, defaultValue: 'DiagnosticReport')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
     @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
@@ -49,6 +69,10 @@ abstract class DiagnosticReport with _$DiagnosticReport implements Resource {
     String conclusion,
     List<CodeableConcept> codedDiagnosis,
     List<Attachment> presentedForm,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_conclusion') Element conclusionElement,
   }) = _DiagnosticReport;
   factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportFromJson(json);
@@ -69,6 +93,7 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
   const factory DiagnosticReportImage({
     String comment,
     @JsonKey(required: true) Reference link,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _DiagnosticReportImage;
   factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportImageFromJson(json);
@@ -79,13 +104,24 @@ abstract class ImagingManifest with _$ImagingManifest implements Resource {
   const factory ImagingManifest({
     @JsonKey(required: true, defaultValue: 'ImagingManifest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(required: true) Reference patient,
     FhirDateTime authoringTime,
     Reference author,
     String description,
     @JsonKey(required: true) List<ImagingManifestStudy> study,
+    @JsonKey(name: '_authoringTime') Element authoringTimeElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _ImagingManifest;
   factory ImagingManifest.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestFromJson(json);
@@ -98,6 +134,7 @@ abstract class ImagingManifestStudy with _$ImagingManifestStudy {
     Reference imagingStudy,
     List<Reference> endpoint,
     @JsonKey(required: true) List<ImagingManifestSeries> series,
+    @JsonKey(name: '_uid') Element uidElement,
   }) = _ImagingManifestStudy;
   factory ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestStudyFromJson(json);
@@ -109,6 +146,7 @@ abstract class ImagingManifestSeries with _$ImagingManifestSeries {
     Oid uid,
     List<Reference> endpoint,
     @JsonKey(required: true) List<ImagingManifestInstance> instance,
+    @JsonKey(name: '_uid') Element uidElement,
   }) = _ImagingManifestSeries;
   factory ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestSeriesFromJson(json);
@@ -119,6 +157,8 @@ abstract class ImagingManifestInstance with _$ImagingManifestInstance {
   const factory ImagingManifestInstance({
     Oid sopClass,
     Oid uid,
+    @JsonKey(name: '_sopClass') Element sopClassElement,
+    @JsonKey(name: '_uid') Element uidElement,
   }) = _ImagingManifestInstance;
   factory ImagingManifestInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestInstanceFromJson(json);
@@ -129,7 +169,16 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
   const factory ImagingStudy({
     @JsonKey(required: true, defaultValue: 'ImagingStudy')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Oid uid,
     Identifier accession,
     List<Identifier> identifier,
@@ -149,6 +198,12 @@ abstract class ImagingStudy with _$ImagingStudy implements Resource {
     CodeableConcept reason,
     String description,
     List<ImagingStudySeries> series,
+    @JsonKey(name: '_uid') Element uidElement,
+    @JsonKey(name: '_availability') Element availabilityElement,
+    @JsonKey(name: '_started') Element startedElement,
+    @JsonKey(name: '_numberOfSeries') Element numberOfSeriesElement,
+    @JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _ImagingStudy;
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyFromJson(json);
@@ -169,6 +224,12 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     FhirDateTime started,
     List<Reference> performer,
     List<ImagingStudyInstance> instance,
+    @JsonKey(name: '_uid') Element uidElement,
+    @JsonKey(name: '_number') Element numberElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_numberOfInstances') Element numberOfInstancesElement,
+    @JsonKey(name: '_availability') Element availabilityElement,
+    @JsonKey(name: '_started') Element startedElement,
   }) = _ImagingStudySeries;
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesFromJson(json);
@@ -181,6 +242,10 @@ abstract class ImagingStudyInstance with _$ImagingStudyInstance {
     UnsignedInt number,
     Oid sopClass,
     String title,
+    @JsonKey(name: '_uid') Element uidElement,
+    @JsonKey(name: '_number') Element numberElement,
+    @JsonKey(name: '_sopClass') Element sopClassElement,
+    @JsonKey(name: '_title') Element titleElement,
   }) = _ImagingStudyInstance;
   factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyInstanceFromJson(json);
@@ -191,7 +256,16 @@ abstract class Observation with _$Observation implements Resource {
   const factory Observation({
     @JsonKey(required: true, defaultValue: 'Observation')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     List<Reference> basedOn,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
@@ -225,6 +299,14 @@ abstract class Observation with _$Observation implements Resource {
     List<ObservationReferenceRange> referenceRange,
     List<ObservationRelated> related,
     List<ObservationComponent> component,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
+    @JsonKey(name: '_issued') Element issuedElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _Observation;
   factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
@@ -239,6 +321,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
     List<CodeableConcept> appliesTo,
     Range age,
     String text,
+    @JsonKey(name: '_text') Element textElement,
   }) = _ObservationReferenceRange;
   factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$ObservationReferenceRangeFromJson(json);
@@ -249,6 +332,7 @@ abstract class ObservationRelated with _$ObservationRelated {
   const factory ObservationRelated({
     @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
     @JsonKey(required: true) Reference target,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _ObservationRelated;
   factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
       _$ObservationRelatedFromJson(json);
@@ -271,6 +355,9 @@ abstract class ObservationComponent with _$ObservationComponent {
     CodeableConcept dataAbsentReason,
     CodeableConcept interpretation,
     List<ObservationReferenceRange> referenceRange,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _ObservationComponent;
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
@@ -283,7 +370,16 @@ abstract class QuestionnaireResponse
   const factory QuestionnaireResponse({
     @JsonKey(required: true, defaultValue: 'QuestionnaireResponse')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     List<Reference> basedOn,
     List<Reference> parent,
@@ -296,6 +392,8 @@ abstract class QuestionnaireResponse
     Reference author,
     Reference source,
     List<QuestionnaireResponseItem> item,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_authored') Element authoredElement,
   }) = _QuestionnaireResponse;
   factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseFromJson(json);
@@ -310,6 +408,9 @@ abstract class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
     Reference subject,
     List<QuestionnaireResponseAnswer> answer,
     List<QuestionnaireResponseItem> item,
+    @JsonKey(name: '_linkId') Element linkIdElement,
+    @JsonKey(name: '_definition') Element definitionElement,
+    @JsonKey(name: '_text') Element textElement,
   }) = _QuestionnaireResponseItem;
   factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseItemFromJson(json);
@@ -331,6 +432,14 @@ abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
     Quantity valueQuantity,
     Reference valueReference,
     List<QuestionnaireResponseItem> item,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
   }) = _QuestionnaireResponseAnswer;
   factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseAnswerFromJson(json);
@@ -341,7 +450,16 @@ abstract class Sequence with _$Sequence implements Resource {
   const factory Sequence({
     @JsonKey(required: true, defaultValue: 'Sequence')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: SequenceType.unknown) SequenceType type,
     Integer coordinateSystem,
@@ -357,6 +475,10 @@ abstract class Sequence with _$Sequence implements Resource {
     Integer readCoverage,
     List<SequenceRepository> repository,
     List<Reference> pointer,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_coordinateSystem') Element coordinateSystemElement,
+    @JsonKey(name: '_observedSeq') Element observedSeqElement,
+    @JsonKey(name: '_readCoverage') Element readCoverageElement,
   }) = _Sequence;
   factory Sequence.fromJson(Map<String, dynamic> json) =>
       _$SequenceFromJson(json);
@@ -373,6 +495,11 @@ abstract class SequenceReferenceSeq with _$SequenceReferenceSeq {
     Integer strand,
     Integer windowStart,
     Integer windowEnd,
+    @JsonKey(name: '_genomeBuild') Element genomeBuildElement,
+    @JsonKey(name: '_referenceSeqString') Element referenceSeqStringElement,
+    @JsonKey(name: '_strand') Element strandElement,
+    @JsonKey(name: '_windowStart') Element windowStartElement,
+    @JsonKey(name: '_windowEnd') Element windowEndElement,
   }) = _SequenceReferenceSeq;
   factory SequenceReferenceSeq.fromJson(Map<String, dynamic> json) =>
       _$SequenceReferenceSeqFromJson(json);
@@ -387,6 +514,11 @@ abstract class SequenceVariant with _$SequenceVariant {
     String referenceAllele,
     String cigar,
     Reference variantPointer,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_observedAllele') Element observedAlleleElement,
+    @JsonKey(name: '_referenceAllele') Element referenceAlleleElement,
+    @JsonKey(name: '_cigar') Element cigarElement,
   }) = _SequenceVariant;
   factory SequenceVariant.fromJson(Map<String, dynamic> json) =>
       _$SequenceVariantFromJson(json);
@@ -409,6 +541,17 @@ abstract class SequenceQuality with _$SequenceQuality {
     Decimal precision,
     Decimal recall,
     Decimal fScore,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_truthTP') Element truthTPElement,
+    @JsonKey(name: '_queryTP') Element queryTPElement,
+    @JsonKey(name: '_truthFN') Element truthFNElement,
+    @JsonKey(name: '_queryFP') Element queryFPElement,
+    @JsonKey(name: '_gtFP') Element gtFPElement,
+    @JsonKey(name: '_precision') Element precisionElement,
+    @JsonKey(name: '_recall') Element recallElement,
+    @JsonKey(name: '_fScore') Element fScoreElement,
   }) = _SequenceQuality;
   factory SequenceQuality.fromJson(Map<String, dynamic> json) =>
       _$SequenceQualityFromJson(json);
@@ -423,6 +566,12 @@ abstract class SequenceRepository with _$SequenceRepository {
     String datasetId,
     String variantsetId,
     String readsetId,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_datasetId') Element datasetIdElement,
+    @JsonKey(name: '_variantsetId') Element variantsetIdElement,
+    @JsonKey(name: '_readsetId') Element readsetIdElement,
   }) = _SequenceRepository;
   factory SequenceRepository.fromJson(Map<String, dynamic> json) =>
       _$SequenceRepositoryFromJson(json);
@@ -433,7 +582,16 @@ abstract class Specimen with _$Specimen implements Resource {
   const factory Specimen({
     @JsonKey(required: true, defaultValue: 'Specimen')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     List<Identifier> identifier,
     Identifier accessionIdentifier,
     @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
@@ -446,6 +604,8 @@ abstract class Specimen with _$Specimen implements Resource {
     List<SpecimenProcessing> processing,
     List<SpecimenContainer> container,
     List<Annotation> note,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_receivedTime') Element receivedTimeElement,
   }) = _Specimen;
   factory Specimen.fromJson(Map<String, dynamic> json) =>
       _$SpecimenFromJson(json);
@@ -460,6 +620,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
     Quantity quantity,
     CodeableConcept method,
     CodeableConcept bodySite,
+    @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
   }) = _SpecimenCollection;
   factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
       _$SpecimenCollectionFromJson(json);
@@ -473,6 +634,8 @@ abstract class SpecimenProcessing with _$SpecimenProcessing {
     List<Reference> additive,
     FhirDateTime timeDateTime,
     Period timePeriod,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
   }) = _SpecimenProcessing;
   factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
       _$SpecimenProcessingFromJson(json);
@@ -488,6 +651,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
     Quantity specimenQuantity,
     CodeableConcept additiveCodeableConcept,
     Reference additiveReference,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _SpecimenContainer;
   factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$SpecimenContainerFromJson(json);

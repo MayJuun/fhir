@@ -11,7 +11,16 @@ abstract class Composition with _$Composition implements Resource {
   const factory Composition({
     @JsonKey(required: true, defaultValue: 'Composition')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier identifier,
     @JsonKey(unknownEnumValue: CompositionStatus.unknown)
         CompositionStatus status,
@@ -28,6 +37,10 @@ abstract class Composition with _$Composition implements Resource {
     List<CompositionRelatesTo> relatesTo,
     List<CompositionEvent> event,
     List<CompositionSection> section,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_date') Element dateElement,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_confidentiality') Element confidentialityElement,
   }) = _Composition;
   factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
@@ -39,6 +52,8 @@ abstract class CompositionAttester with _$CompositionAttester {
     List<AttesterMode> mode,
     FhirDateTime time,
     Reference party,
+@JsonKey(name: '_mode') Element modeElement,
+@JsonKey(name: '_time') Element timeElement,
   }) = _CompositionAttester;
   factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
@@ -50,6 +65,7 @@ abstract class CompositionRelatesTo with _$CompositionRelatesTo {
     Code code,
     Identifier targetIdentifier,
     Reference targetReference,
+@JsonKey(name: '_code') Element codeElement,
   }) = _CompositionRelatesTo;
   factory CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$CompositionRelatesToFromJson(json);
@@ -77,6 +93,8 @@ abstract class CompositionSection with _$CompositionSection {
     List<Reference> entry,
     CodeableConcept emptyReason,
     List<CompositionSection> section,
+@JsonKey(name: '_title') Element titleElement,
+@JsonKey(name: '_mode') Element modeElement,
   }) = _CompositionSection;
   factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
@@ -87,7 +105,16 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
   const factory DocumentManifest({
     @JsonKey(required: true, defaultValue: 'DocumentManifest')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: DocumentStatus.unknown) DocumentStatus status,
@@ -100,6 +127,10 @@ abstract class DocumentManifest with _$DocumentManifest implements Resource {
     String description,
     @JsonKey(required: true) List<DocumentManifestContent> content,
     List<DocumentManifestRelated> related,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_created') Element createdElement,
+@JsonKey(name: '_source') Element sourceElement,
+@JsonKey(name: '_description') Element descriptionElement,
   }) = _DocumentManifest;
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
@@ -130,7 +161,16 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
   const factory DocumentReference({
     @JsonKey(required: true, defaultValue: 'DocumentReference')
     @required
-        String resourceType,
+        String     resourceType,
+
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
     Identifier masterIdentifier,
     List<Identifier> identifier,
     @JsonKey(unknownEnumValue: DocumentStatus.unknown) DocumentStatus status,
@@ -148,6 +188,11 @@ abstract class DocumentReference with _$DocumentReference implements Resource {
     List<CodeableConcept> securityLabel,
     @JsonKey(required: true) List<DocumentReferenceContent> content,
     DocumentReferenceContext context,
+@JsonKey(name: '_status') Element statusElement,
+@JsonKey(name: '_docStatus') Element docStatusElement,
+@JsonKey(name: '_created') Element createdElement,
+@JsonKey(name: '_indexed') Element indexedElement,
+@JsonKey(name: '_description') Element descriptionElement,
   }) = _DocumentReference;
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
@@ -158,6 +203,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   const factory DocumentReferenceRelatesTo({
     @JsonKey(unknownEnumValue: RelatesToCode.unknown) RelatesToCode code,
     @JsonKey(required: true) Reference target,
+@JsonKey(name: '_code') Element codeElement,
   }) = _DocumentReferenceRelatesTo;
   factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatesToFromJson(json);
