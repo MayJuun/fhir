@@ -21,6 +21,9 @@ abstract class PaymentNotice with _$PaymentNotice implements Resource {
     Reference provider,
     Reference organization,
     CodeableConcept paymentStatus,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_statusDate') Element statusDateElement,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _PaymentNotice;
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
@@ -48,6 +51,9 @@ abstract class PaymentReconciliation
     CodeableConcept form,
     Money total,
     List<PaymentReconciliationProcessNote> processNote,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_created') Element createdElement,
+    @JsonKey(name: '_disposition') Element dispositionElement,
   }) = _PaymentReconciliation;
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
@@ -63,6 +69,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     Reference payee,
     Date date,
     Money amount,
+    @JsonKey(name: '_date') Element dateElement,
   }) = _PaymentReconciliationDetail;
   factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
@@ -74,6 +81,7 @@ abstract class PaymentReconciliationProcessNote
   const factory PaymentReconciliationProcessNote({
     CodeableConcept type,
     String text,
+    @JsonKey(name: '_text') Element textElement,
   }) = _PaymentReconciliationProcessNote;
   factory PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>

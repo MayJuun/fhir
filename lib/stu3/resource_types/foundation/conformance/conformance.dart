@@ -44,6 +44,24 @@ abstract class CapabilityStatement
     List<CapabilityStatementRest> rest,
     List<CapabilityStatementMessaging> messaging,
     List<CapabilityStatementDocument> document,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_kind') Element kindElement,
+    @JsonKey(name: '_instantiates') Element instantiatesElement,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
+    @JsonKey(name: '_format') Element formatElement,
+    @JsonKey(name: '_patchFormat') Element patchFormatElement,
+    @JsonKey(name: '_implementationGuide') Element implementationGuideElement,
   }) = _CapabilityStatement;
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
@@ -55,6 +73,9 @@ abstract class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
     String name,
     String version,
     FhirDateTime releaseDate,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_releaseDate') Element releaseDateElement,
   }) = _CapabilityStatementSoftware;
   factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSoftwareFromJson(json);
@@ -66,6 +87,8 @@ abstract class CapabilityStatementImplementation
   const factory CapabilityStatementImplementation({
     String description,
     String url,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_url') Element urlElement,
   }) = _CapabilityStatementImplementation;
   factory CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =>
@@ -83,6 +106,9 @@ abstract class CapabilityStatementRest with _$CapabilityStatementRest {
     List<CapabilityStatementSearchParam> searchParam,
     List<CapabilityStatementOperation> operation,
     List<String> compartment,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
+    @JsonKey(name: '_compartment') Element compartmentElement,
   }) = _CapabilityStatementRest;
   factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementRestFromJson(json);
@@ -95,6 +121,8 @@ abstract class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
     List<CodeableConcept> service,
     String description,
     List<CapabilityStatementCertificate> certificate,
+    @JsonKey(name: '_cors') Element corsElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _CapabilityStatementSecurity;
   factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSecurityFromJson(json);
@@ -106,6 +134,8 @@ abstract class CapabilityStatementCertificate
   const factory CapabilityStatementCertificate({
     Code type,
     String blob,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_blob') Element blobElement,
   }) = _CapabilityStatementCertificate;
   factory CapabilityStatementCertificate.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementCertificateFromJson(json);
@@ -132,6 +162,18 @@ abstract class CapabilityStatementResource with _$CapabilityStatementResource {
     List<String> searchInclude,
     List<String> searchRevInclude,
     List<CapabilityStatementSearchParam> searchParam,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
+    @JsonKey(name: '_versioning') Element versioningElement,
+    @JsonKey(name: '_readHistory') Element readHistoryElement,
+    @JsonKey(name: '_updateCreate') Element updateCreateElement,
+    @JsonKey(name: '_conditionalCreate') Element conditionalCreateElement,
+    @JsonKey(name: '_conditionalRead') Element conditionalReadElement,
+    @JsonKey(name: '_conditionalUpdate') Element conditionalUpdateElement,
+    @JsonKey(name: '_conditionalDelete') Element conditionalDeleteElement,
+    @JsonKey(name: '_referencePolicy') Element referencePolicyElement,
+    @JsonKey(name: '_searchInclude') Element searchIncludeElement,
+    @JsonKey(name: '_searchRevInclude') Element searchRevIncludeElement,
   }) = _CapabilityStatementResource;
   factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementResourceFromJson(json);
@@ -143,6 +185,8 @@ abstract class CapabilityStatementInteraction
   const factory CapabilityStatementInteraction({
     @JsonKey(unknownEnumValue: InteractionCode.unknown) InteractionCode code,
     String documentation,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementInteraction;
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteractionFromJson(json);
@@ -157,6 +201,10 @@ abstract class CapabilityStatementSearchParam
     @JsonKey(unknownEnumValue: ParameterSearchType.unknown)
         ParameterSearchType type,
     String documentation,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_definition') Element definitionElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementSearchParam;
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSearchParamFromJson(json);
@@ -168,6 +216,8 @@ abstract class CapabilityStatementInteraction1
   const factory CapabilityStatementInteraction1({
     @JsonKey(unknownEnumValue: Interaction1Code.unknown) Interaction1Code code,
     String documentation,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementInteraction1;
   factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteraction1FromJson(json);
@@ -179,6 +229,7 @@ abstract class CapabilityStatementOperation
   const factory CapabilityStatementOperation({
     String name,
     @JsonKey(required: true) Reference definition,
+    @JsonKey(name: '_name') Element nameElement,
   }) = _CapabilityStatementOperation;
   factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementOperationFromJson(json);
@@ -193,6 +244,8 @@ abstract class CapabilityStatementMessaging
     String documentation,
     List<CapabilityStatementSupportedMessage> supportedMessage,
     List<CapabilityStatementEvent> event,
+    @JsonKey(name: '_reliableCache') Element reliableCacheElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementMessaging;
   factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementMessagingFromJson(json);
@@ -203,6 +256,7 @@ abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   const factory CapabilityStatementEndpoint({
     @JsonKey(required: true) Coding protocol,
     String address,
+    @JsonKey(name: '_address') Element addressElement,
   }) = _CapabilityStatementEndpoint;
   factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEndpointFromJson(json);
@@ -214,6 +268,7 @@ abstract class CapabilityStatementSupportedMessage
   const factory CapabilityStatementSupportedMessage({
     @JsonKey(unknownEnumValue: Mode.unknown) Mode mode,
     @JsonKey(required: true) Reference definition,
+    @JsonKey(name: '_mode') Element modeElement,
   }) = _CapabilityStatementSupportedMessage;
   factory CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
@@ -230,6 +285,10 @@ abstract class CapabilityStatementEvent with _$CapabilityStatementEvent {
     @JsonKey(required: true) Reference request,
     @JsonKey(required: true) Reference response,
     String documentation,
+    @JsonKey(name: '_category') Element categoryElement,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_focus') Element focusElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementEvent;
   factory CapabilityStatementEvent.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEventFromJson(json);
@@ -241,6 +300,8 @@ abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
     @JsonKey(unknownEnumValue: DocumentMode.unknown) DocumentMode mode,
     String documentation,
     @JsonKey(required: true) Reference profile,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementDocument;
   factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementDocumentFromJson(json);
@@ -270,6 +331,17 @@ abstract class CompartmentDefinition
         CompartmentDefinitionCode code,
     Boolean search,
     List<CompartmentDefinitionResource> resource,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_search') Element searchElement,
   }) = _CompartmentDefinition;
   factory CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionFromJson(json);
@@ -282,6 +354,9 @@ abstract class CompartmentDefinitionResource
     Code code,
     List<String> param,
     String documentation,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_param') Element paramElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CompartmentDefinitionResource;
   factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionResourceFromJson(json);
@@ -310,6 +385,16 @@ abstract class DataElement with _$DataElement implements Resource {
         DataElementStringency stringency,
     List<DataElementMapping> mapping,
     @JsonKey(required: true) List<ElementDefinition> element,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_stringency') Element stringencyElement,
   }) = _DataElement;
   factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
@@ -322,6 +407,10 @@ abstract class DataElementMapping with _$DataElementMapping {
     String uri,
     String name,
     String comment,
+    @JsonKey(name: '_identity') Element identityElement,
+    @JsonKey(name: '_uri') Element uriElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _DataElementMapping;
   factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
@@ -348,6 +437,17 @@ abstract class GraphDefinition with _$GraphDefinition implements Resource {
     Code start,
     String profile,
     List<GraphDefinitionLink> link,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_start') Element startElement,
+    @JsonKey(name: '_profile') Element profileElement,
   }) = _GraphDefinition;
   factory GraphDefinition.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionFromJson(json);
@@ -362,6 +462,11 @@ abstract class GraphDefinitionLink with _$GraphDefinitionLink {
     String max,
     String description,
     @JsonKey(required: true) List<GraphDefinitionTarget> target,
+    @JsonKey(name: '_path') Element pathElement,
+    @JsonKey(name: '_sliceName') Element sliceNameElement,
+    @JsonKey(name: '_min') Element minElement,
+    @JsonKey(name: '_max') Element maxElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _GraphDefinitionLink;
   factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionLinkFromJson(json);
@@ -374,6 +479,8 @@ abstract class GraphDefinitionTarget with _$GraphDefinitionTarget {
     String profile,
     List<GraphDefinitionCompartment> compartment,
     List<GraphDefinitionLink> link,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_profile') Element profileElement,
   }) = _GraphDefinitionTarget;
   factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionTargetFromJson(json);
@@ -386,6 +493,10 @@ abstract class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
     @JsonKey(unknownEnumValue: CompartmentRule.unknown) CompartmentRule rule,
     String expression,
     String description,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_rule') Element ruleElement,
+    @JsonKey(name: '_expression') Element expressionElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _GraphDefinitionCompartment;
   factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionCompartmentFromJson(json);
@@ -417,6 +528,17 @@ abstract class ImplementationGuide
     List<ImplementationGuideGlobal> global,
     List<String> binary,
     ImplementationGuidePage page,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    @JsonKey(name: '_binary') Element binaryElement,
   }) = _ImplementationGuide;
   factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
@@ -428,6 +550,8 @@ abstract class ImplementationGuideDependency
   const factory ImplementationGuideDependency({
     @JsonKey(unknownEnumValue: DependencyType.unknown) DependencyType type,
     String uri,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_uri') Element uriElement,
   }) = _ImplementationGuideDependency;
   factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependencyFromJson(json);
@@ -439,6 +563,8 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
     String name,
     String description,
     @JsonKey(required: true) List<ImplementationGuideResource> resource,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
   }) = _ImplementationGuidePackage;
   factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
@@ -454,6 +580,11 @@ abstract class ImplementationGuideResource with _$ImplementationGuideResource {
     String sourceUri,
     Reference sourceReference,
     Reference exampleFor,
+    @JsonKey(name: '_example') Element exampleElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_acronym') Element acronymElement,
+    @JsonKey(name: '_sourceUri') Element sourceUriElement,
   }) = _ImplementationGuideResource;
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResourceFromJson(json);
@@ -464,6 +595,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   const factory ImplementationGuideGlobal({
     Code type,
     @JsonKey(required: true) Reference profile,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _ImplementationGuideGlobal;
   factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGlobalFromJson(json);
@@ -479,6 +611,12 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
     List<String> package,
     Code format,
     List<ImplementationGuidePage> page,
+    @JsonKey(name: '_source') Element sourceElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_kind') Element kindElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_package') Element packageElement,
+    @JsonKey(name: '_format') Element formatElement,
   }) = _ImplementationGuidePage;
   factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
@@ -513,6 +651,19 @@ abstract class MessageDefinition with _$MessageDefinition implements Resource {
     List<MessageDefinitionFocus> focus,
     Boolean responseRequired,
     List<MessageDefinitionAllowedResponse> allowedResponse,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_category') Element categoryElement,
+    @JsonKey(name: '_responseRequired') Element responseRequiredElement,
   }) = _MessageDefinition;
   factory MessageDefinition.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFromJson(json);
@@ -525,6 +676,9 @@ abstract class MessageDefinitionFocus with _$MessageDefinitionFocus {
     Reference profile,
     UnsignedInt min,
     String max,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_min') Element minElement,
+    @JsonKey(name: '_max') Element maxElement,
   }) = _MessageDefinitionFocus;
   factory MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFocusFromJson(json);
@@ -536,6 +690,7 @@ abstract class MessageDefinitionAllowedResponse
   const factory MessageDefinitionAllowedResponse({
     @JsonKey(required: true) Reference message,
     String situation,
+    @JsonKey(name: '_situation') Element situationElement,
   }) = _MessageDefinitionAllowedResponse;
   factory MessageDefinitionAllowedResponse.fromJson(
           Map<String, dynamic> json) =>
@@ -574,6 +729,23 @@ abstract class OperationDefinition
     Boolean instance,
     List<OperationDefinitionParameter> parameter,
     List<OperationDefinitionOverload> overload,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_kind') Element kindElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_idempotent') Element idempotentElement,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_comment') Element commentElement,
+    @JsonKey(name: '_resource') Element resourceElement,
+    @JsonKey(name: '_system') Element systemElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_instance') Element instanceElement,
   }) = _OperationDefinition;
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
@@ -594,6 +766,13 @@ abstract class OperationDefinitionParameter
     Reference profile,
     OperationDefinitionBinding binding,
     List<OperationDefinitionParameter> part,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_use') Element useElement,
+    @JsonKey(name: '_min') Element minElement,
+    @JsonKey(name: '_max') Element maxElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_searchType') Element searchTypeElement,
   }) = _OperationDefinitionParameter;
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
@@ -606,6 +785,8 @@ abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
         BindingStrength strength,
     String valueSetUri,
     Reference valueSetReference,
+    @JsonKey(name: '_strength') Element strengthElement,
+    @JsonKey(name: '_valueSetUri') Element valueSetUriElement,
   }) = _OperationDefinitionBinding;
   factory OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionBindingFromJson(json);
@@ -616,6 +797,8 @@ abstract class OperationDefinitionOverload with _$OperationDefinitionOverload {
   const factory OperationDefinitionOverload({
     List<String> parameterName,
     String comment,
+    @JsonKey(name: '_parameterName') Element parameterNameElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _OperationDefinitionOverload;
   factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionOverloadFromJson(json);
@@ -653,6 +836,26 @@ abstract class SearchParameter with _$SearchParameter implements Resource {
     List<SearchParameterModifier> modifier,
     List<String> chain,
     List<SearchParameterComponent> component,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_base') Element baseElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_derivedFrom') Element derivedFromElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_expression') Element expressionElement,
+    @JsonKey(name: '_xpath') Element xpathElement,
+    @JsonKey(name: '_xpathUsage') Element xpathUsageElement,
+    @JsonKey(name: '_target') Element targetElement,
+    @JsonKey(name: '_comparator') Element comparatorElement,
+    @JsonKey(name: '_modifier') Element modifierElement,
+    @JsonKey(name: '_chain') Element chainElement,
   }) = _SearchParameter;
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
@@ -663,6 +866,7 @@ abstract class SearchParameterComponent with _$SearchParameterComponent {
   const factory SearchParameterComponent({
     @JsonKey(required: true) Reference definition,
     String expression,
+    @JsonKey(name: '_expression') Element expressionElement,
   }) = _SearchParameterComponent;
   factory SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterComponentFromJson(json);
@@ -707,6 +911,26 @@ abstract class StructureDefinition
         StructureDefinitionDerivation derivation,
     StructureDefinitionSnapshot snapshot,
     StructureDefinitionDifferential differential,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    @JsonKey(name: '_kind') Element kindElement,
+    @JsonKey(name: '_abstract') Element abstractElement,
+    @JsonKey(name: '_contextType') Element contextTypeElement,
+    @JsonKey(name: '_context') Element contextElement,
+    @JsonKey(name: '_contextInvariant') Element contextInvariantElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_baseDefinition') Element baseDefinitionElement,
+    @JsonKey(name: '_derivation') Element derivationElement,
   }) = _StructureDefinition;
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
@@ -719,6 +943,10 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
     String uri,
     String name,
     String comment,
+    @JsonKey(name: '_identity') Element identityElement,
+    @JsonKey(name: '_uri') Element uriElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_comment') Element commentElement,
   }) = _StructureDefinitionMapping;
   factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
@@ -767,6 +995,18 @@ abstract class StructureMap with _$StructureMap implements Resource {
     List<StructureMapStructure> structure,
     List<String> import,
     @JsonKey(required: true) List<StructureMapGroup> group,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_title') Element titleElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_experimental') Element experimentalElement,
+    @JsonKey(name: '_date') Element dateElement,
+    @JsonKey(name: '_publisher') Element publisherElement,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @JsonKey(name: '_purpose') Element purposeElement,
+    @JsonKey(name: '_copyright') Element copyrightElement,
+    @JsonKey(name: '_import') Element importElement,
   }) = _StructureMap;
   factory StructureMap.fromJson(Map<String, dynamic> json) =>
       _$StructureMapFromJson(json);
@@ -779,6 +1019,10 @@ abstract class StructureMapStructure with _$StructureMapStructure {
     @JsonKey(unknownEnumValue: StructureMode.unknown) StructureMode mode,
     String alias,
     String documentation,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_alias') Element aliasElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapStructure;
   factory StructureMapStructure.fromJson(Map<String, dynamic> json) =>
       _$StructureMapStructureFromJson(json);
@@ -793,6 +1037,10 @@ abstract class StructureMapGroup with _$StructureMapGroup {
     String documentation,
     @JsonKey(required: true) List<StructureMapInput> input,
     @JsonKey(required: true) List<StructureMapRule> rule,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_extends') Element extendsElement,
+    @JsonKey(name: '_typeMode') Element typeModeElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapGroup;
   factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
       _$StructureMapGroupFromJson(json);
@@ -805,6 +1053,10 @@ abstract class StructureMapInput with _$StructureMapInput {
     String type,
     @JsonKey(unknownEnumValue: InputMode.unknown) InputMode mode,
     String documentation,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapInput;
   factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
       _$StructureMapInputFromJson(json);
@@ -819,6 +1071,8 @@ abstract class StructureMapRule with _$StructureMapRule {
     List<StructureMapRule> rule,
     List<StructureMapDependent> dependent,
     String documentation,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapRule;
   factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
       _$StructureMapRuleFromJson(json);
@@ -889,6 +1143,35 @@ abstract class StructureMapSource with _$StructureMapSource {
     Id variable,
     String condition,
     String check,
+    @JsonKey(name: '_context') Element contextElement,
+    @JsonKey(name: '_min') Element minElement,
+    @JsonKey(name: '_max') Element maxElement,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_defaultValueBoolean') Element defaultValueBooleanElement,
+    @JsonKey(name: '_defaultValueInteger') Element defaultValueIntegerElement,
+    @JsonKey(name: '_defaultValueDecimal') Element defaultValueDecimalElement,
+    @JsonKey(name: '_defaultValueBase64Binary')
+        Element defaultValueBase64BinaryElement,
+    @JsonKey(name: '_defaultValueInstant') Element defaultValueInstantElement,
+    @JsonKey(name: '_defaultValueString') Element defaultValueStringElement,
+    @JsonKey(name: '_defaultValueUri') Element defaultValueUriElement,
+    @JsonKey(name: '_defaultValueDate') Element defaultValueDateElement,
+    @JsonKey(name: '_defaultValueDateTime') Element defaultValueDateTimeElement,
+    @JsonKey(name: '_defaultValueTime') Element defaultValueTimeElement,
+    @JsonKey(name: '_defaultValueCode') Element defaultValueCodeElement,
+    @JsonKey(name: '_defaultValueOid') Element defaultValueOidElement,
+    @JsonKey(name: '_defaultValueUuid') Element defaultValueUuidElement,
+    @JsonKey(name: '_defaultValueId') Element defaultValueIdElement,
+    @JsonKey(name: '_defaultValueUnsignedInt')
+        Element defaultValueUnsignedIntElement,
+    @JsonKey(name: '_defaultValuePositiveInt')
+        Element defaultValuePositiveIntElement,
+    @JsonKey(name: '_defaultValueMarkdown') Element defaultValueMarkdownElement,
+    @JsonKey(name: '_element') Element elementElement,
+    @JsonKey(name: '_listMode') Element listModeElement,
+    @JsonKey(name: '_variable') Element variableElement,
+    @JsonKey(name: '_condition') Element conditionElement,
+    @JsonKey(name: '_check') Element checkElement,
   }) = _StructureMapSource;
   factory StructureMapSource.fromJson(Map<String, dynamic> json) =>
       _$StructureMapSourceFromJson(json);
@@ -907,6 +1190,13 @@ abstract class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(unknownEnumValue: TargetTransform.unknown)
         TargetTransform transform,
     List<StructureMapParameter> parameter,
+    @JsonKey(name: '_context') Element contextElement,
+    @JsonKey(name: '_contextType') Element contextTypeElement,
+    @JsonKey(name: '_element') Element elementElement,
+    @JsonKey(name: '_variable') Element variableElement,
+    @JsonKey(name: '_listMode') Element listModeElement,
+    @JsonKey(name: '_listRuleId') Element listRuleIdElement,
+    @JsonKey(name: '_transform') Element transformElement,
   }) = _StructureMapTarget;
   factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
       _$StructureMapTargetFromJson(json);
@@ -920,6 +1210,11 @@ abstract class StructureMapParameter with _$StructureMapParameter {
     Boolean valueBoolean,
     Integer valueInteger,
     Decimal valueDecimal,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
   }) = _StructureMapParameter;
   factory StructureMapParameter.fromJson(Map<String, dynamic> json) =>
       _$StructureMapParameterFromJson(json);
@@ -930,6 +1225,8 @@ abstract class StructureMapDependent with _$StructureMapDependent {
   const factory StructureMapDependent({
     Id name,
     List<String> variable,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_variable') Element variableElement,
   }) = _StructureMapDependent;
   factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
       _$StructureMapDependentFromJson(json);

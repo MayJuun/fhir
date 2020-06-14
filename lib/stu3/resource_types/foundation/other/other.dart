@@ -17,6 +17,7 @@ abstract class Basic with _$Basic implements Resource {
     Reference subject,
     Date created,
     Reference author,
+    @JsonKey(name: '_created') Element createdElement,
   }) = _Basic;
   factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 }
@@ -30,6 +31,8 @@ abstract class Binary with _$Binary implements Resource {
     Code contentType,
     Reference securityContext,
     String content,
+    @JsonKey(name: '_contentType') Element contentTypeElement,
+    @JsonKey(name: '_content') Element contentElement,
   }) = _Binary;
   factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 }
@@ -46,6 +49,8 @@ abstract class Bundle with _$Bundle implements Resource {
     List<BundleLink> link,
     List<BundleEntry> entry,
     Signature signature,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_total') Element totalElement,
   }) = _Bundle;
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 }
@@ -55,6 +60,8 @@ abstract class BundleLink with _$BundleLink {
   const factory BundleLink({
     String relation,
     String url,
+    @JsonKey(name: '_relation') Element relationElement,
+    @JsonKey(name: '_url') Element urlElement,
   }) = _BundleLink;
   factory BundleLink.fromJson(Map<String, dynamic> json) =>
       _$BundleLinkFromJson(json);
@@ -69,6 +76,7 @@ abstract class BundleEntry with _$BundleEntry {
     BundleSearch search,
     BundleRequest request,
     BundleResponse response,
+    @JsonKey(name: '_fullUrl') Element fullUrlElement,
   }) = _BundleEntry;
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
@@ -79,6 +87,8 @@ abstract class BundleSearch with _$BundleSearch {
   const factory BundleSearch({
     @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode mode,
     Decimal score,
+    @JsonKey(name: '_mode') Element modeElement,
+    @JsonKey(name: '_score') Element scoreElement,
   }) = _BundleSearch;
   factory BundleSearch.fromJson(Map<String, dynamic> json) =>
       _$BundleSearchFromJson(json);
@@ -93,6 +103,12 @@ abstract class BundleRequest with _$BundleRequest {
     String ifModifiedSince,
     String ifMatch,
     String ifNoneExist,
+    @JsonKey(name: '_method') Element methodElement,
+    @JsonKey(name: '_url') Element urlElement,
+    @JsonKey(name: '_ifNoneMatch') Element ifNoneMatchElement,
+    @JsonKey(name: '_ifModifiedSince') Element ifModifiedSinceElement,
+    @JsonKey(name: '_ifMatch') Element ifMatchElement,
+    @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
   }) = _BundleRequest;
   factory BundleRequest.fromJson(Map<String, dynamic> json) =>
       _$BundleRequestFromJson(json);
@@ -106,6 +122,10 @@ abstract class BundleResponse with _$BundleResponse {
     String etag,
     String lastModified,
     Resource outcome,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_location') Element locationElement,
+    @JsonKey(name: '_etag') Element etagElement,
+    @JsonKey(name: '_lastModified') Element lastModifiedElement,
   }) = _BundleResponse;
   factory BundleResponse.fromJson(Map<String, dynamic> json) =>
       _$BundleResponseFromJson(json);
@@ -120,6 +140,7 @@ abstract class Linkage with _$Linkage implements Resource {
     Boolean active,
     Reference author,
     @JsonKey(required: true) List<LinkageItem> item,
+    @JsonKey(name: '_active') Element activeElement,
   }) = _Linkage;
   factory Linkage.fromJson(Map<String, dynamic> json) =>
       _$LinkageFromJson(json);
@@ -130,6 +151,7 @@ abstract class LinkageItem with _$LinkageItem {
   const factory LinkageItem({
     @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType type,
     @JsonKey(required: true) Reference resource,
+    @JsonKey(name: '_type') Element typeElement,
   }) = _LinkageItem;
   factory LinkageItem.fromJson(Map<String, dynamic> json) =>
       _$LinkageItemFromJson(json);
@@ -160,6 +182,12 @@ abstract class Media with _$Media implements Resource {
     UnsignedInt duration,
     @JsonKey(required: true) Attachment content,
     List<Annotation> note,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_height') Element heightElement,
+    @JsonKey(name: '_width') Element widthElement,
+    @JsonKey(name: '_frames') Element framesElement,
+    @JsonKey(name: '_duration') Element durationElement,
   }) = _Media;
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
 }
@@ -182,6 +210,7 @@ abstract class MessageHeader with _$MessageHeader implements Resource {
     CodeableConcept reason,
     MessageHeaderResponse response,
     List<Reference> focus,
+    @JsonKey(name: '_timestamp') Element timestampElement,
   }) = _MessageHeader;
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderFromJson(json);
@@ -193,6 +222,8 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
     String name,
     Reference target,
     String endpoint,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderDestination;
   factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderDestinationFromJson(json);
@@ -206,6 +237,10 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
     String version,
     ContactPoint contact,
     String endpoint,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_software') Element softwareElement,
+    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderSource;
   factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderSourceFromJson(json);
@@ -217,6 +252,8 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
     Id identifier,
     @JsonKey(unknownEnumValue: ResponseCode.unknown) ResponseCode code,
     Reference details,
+    @JsonKey(name: '_identifier') Element identifierElement,
+    @JsonKey(name: '_code') Element codeElement,
   }) = _MessageHeaderResponse;
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
@@ -243,6 +280,11 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
     String diagnostics,
     List<String> location,
     List<String> expression,
+    @JsonKey(name: '_severity') Element severityElement,
+    @JsonKey(name: '_code') Element codeElement,
+    @JsonKey(name: '_diagnostics') Element diagnosticsElement,
+    @JsonKey(name: '_location') Element locationElement,
+    @JsonKey(name: '_expression') Element expressionElement,
   }) = _OperationOutcomeIssue;
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
@@ -320,6 +362,24 @@ abstract class ParametersParameter with _$ParametersParameter {
     TriggerDefinition valueTriggerDefinition,
     Resource resource,
     List<ParametersParameter> part,
+    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
+    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
+    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
+    @JsonKey(name: '_valueInstant') Element valueInstantElement,
+    @JsonKey(name: '_valueString') Element valueStringElement,
+    @JsonKey(name: '_valueUri') Element valueUriElement,
+    @JsonKey(name: '_valueDate') Element valueDateElement,
+    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
+    @JsonKey(name: '_valueTime') Element valueTimeElement,
+    @JsonKey(name: '_valueCode') Element valueCodeElement,
+    @JsonKey(name: '_valueOid') Element valueOidElement,
+    @JsonKey(name: '_valueUuid') Element valueUuidElement,
+    @JsonKey(name: '_valueId') Element valueIdElement,
+    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
+    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
+    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
   }) = _ParametersParameter;
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$ParametersParameterFromJson(json);
@@ -340,6 +400,11 @@ abstract class Subscription with _$Subscription implements Resource {
     String error,
     @JsonKey(required: true) SubscriptionChannel channel,
     List<Coding> tag,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_end') Element endElement,
+    @JsonKey(name: '_reason') Element reasonElement,
+    @JsonKey(name: '_criteria') Element criteriaElement,
+    @JsonKey(name: '_error') Element errorElement,
   }) = _Subscription;
   factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
@@ -352,6 +417,10 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
     String endpoint,
     String payload,
     List<String> header,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_endpoint') Element endpointElement,
+    @JsonKey(name: '_payload') Element payloadElement,
+    @JsonKey(name: '_header') Element headerElement,
   }) = _SubscriptionChannel;
   factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);

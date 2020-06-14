@@ -77,6 +77,30 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Period.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    priorityElement: json['_priority'] == null
+        ? null
+        : Element.fromJson(json['_priority'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    startElement: json['_start'] == null
+        ? null
+        : Element.fromJson(json['_start'] as Map<String, dynamic>),
+    endElement: json['_end'] == null
+        ? null
+        : Element.fromJson(json['_end'] as Map<String, dynamic>),
+    minutesDurationElement: json['_minutesDuration'] == null
+        ? null
+        : Element.fromJson(json['_minutesDuration'] as Map<String, dynamic>),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
+    commentElement: json['_comment'] == null
+        ? null
+        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
   );
 }
 
@@ -118,6 +142,14 @@ Map<String, dynamic> _$_$_AppointmentToJson(_$_Appointment instance) {
       'participant', instance.participant?.map((e) => e?.toJson())?.toList());
   writeNotNull('requestedPeriod',
       instance.requestedPeriod?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_priority', instance.priorityElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_start', instance.startElement?.toJson());
+  writeNotNull('_end', instance.endElement?.toJson());
+  writeNotNull('_minutesDuration', instance.minutesDurationElement?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
+  writeNotNull('_comment', instance.commentElement?.toJson());
   return val;
 }
 
@@ -181,6 +213,12 @@ _$_AppointmentParticipant _$_$_AppointmentParticipantFromJson(
         unknownValue: ParticipantRequired.unknown),
     status: _$enumDecodeNullable(_$ParticipantStatusEnumMap, json['status'],
         unknownValue: ParticipantStatus.unknown),
+    requiredElement: json['_required'] == null
+        ? null
+        : Element.fromJson(json['_required'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
   );
 }
 
@@ -198,6 +236,8 @@ Map<String, dynamic> _$_$_AppointmentParticipantToJson(
   writeNotNull('actor', instance.actor?.toJson());
   writeNotNull('required', _$ParticipantRequiredEnumMap[instance.required_]);
   writeNotNull('status', _$ParticipantStatusEnumMap[instance.status]);
+  writeNotNull('_required', instance.requiredElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
   return val;
 }
 
@@ -242,6 +282,18 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
         ? null
         : Code.fromJson(json['participantStatus'] as String),
     comment: json['comment'] as String,
+    startElement: json['_start'] == null
+        ? null
+        : Element.fromJson(json['_start'] as Map<String, dynamic>),
+    endElement: json['_end'] == null
+        ? null
+        : Element.fromJson(json['_end'] as Map<String, dynamic>),
+    participantStatusElement: json['_participantStatus'] == null
+        ? null
+        : Element.fromJson(json['_participantStatus'] as Map<String, dynamic>),
+    commentElement: json['_comment'] == null
+        ? null
+        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
   );
 }
 
@@ -266,6 +318,11 @@ Map<String, dynamic> _$_$_AppointmentResponseToJson(
   writeNotNull('actor', instance.actor?.toJson());
   writeNotNull('participantStatus', instance.participantStatus?.toJson());
   writeNotNull('comment', instance.comment);
+  writeNotNull('_start', instance.startElement?.toJson());
+  writeNotNull('_end', instance.endElement?.toJson());
+  writeNotNull(
+      '_participantStatus', instance.participantStatusElement?.toJson());
+  writeNotNull('_comment', instance.commentElement?.toJson());
   return val;
 }
 
@@ -311,6 +368,27 @@ _$_ProcessRequest _$_$_ProcessRequestFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    actionElement: json['_action'] == null
+        ? null
+        : Element.fromJson(json['_action'] as Map<String, dynamic>),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
+    nullifyElement: json['_nullify'] == null
+        ? null
+        : Element.fromJson(json['_nullify'] as Map<String, dynamic>),
+    referenceElement: json['_reference'] == null
+        ? null
+        : Element.fromJson(json['_reference'] as Map<String, dynamic>),
+    includeElement: json['_include'] == null
+        ? null
+        : Element.fromJson(json['_include'] as Map<String, dynamic>),
+    excludeElement: json['_exclude'] == null
+        ? null
+        : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
   );
 }
 
@@ -340,6 +418,13 @@ Map<String, dynamic> _$_$_ProcessRequestToJson(_$_ProcessRequest instance) {
   writeNotNull('include', instance.include);
   writeNotNull('exclude', instance.exclude);
   writeNotNull('period', instance.period?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_action', instance.actionElement?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
+  writeNotNull('_nullify', instance.nullifyElement?.toJson());
+  writeNotNull('_reference', instance.referenceElement?.toJson());
+  writeNotNull('_include', instance.includeElement?.toJson());
+  writeNotNull('_exclude', instance.excludeElement?.toJson());
   return val;
 }
 
@@ -357,6 +442,9 @@ _$_ProcessRequestItem _$_$_ProcessRequestItemFromJson(
     sequenceLinkId: json['sequenceLinkId'] == null
         ? null
         : Integer.fromJson(json['sequenceLinkId']),
+    sequenceLinkIdElement: json['_sequenceLinkId'] == null
+        ? null
+        : Element.fromJson(json['_sequenceLinkId'] as Map<String, dynamic>),
   );
 }
 
@@ -371,6 +459,7 @@ Map<String, dynamic> _$_$_ProcessRequestItemToJson(
   }
 
   writeNotNull('sequenceLinkId', instance.sequenceLinkId?.toJson());
+  writeNotNull('_sequenceLinkId', instance.sequenceLinkIdElement?.toJson());
   return val;
 }
 
@@ -421,6 +510,15 @@ _$_ProcessResponse _$_$_ProcessResponseFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
+    dispositionElement: json['_disposition'] == null
+        ? null
+        : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
   );
 }
 
@@ -450,6 +548,9 @@ Map<String, dynamic> _$_$_ProcessResponseToJson(_$_ProcessResponse instance) {
   writeNotNull('error', instance.error?.map((e) => e?.toJson())?.toList());
   writeNotNull('communicationRequest',
       instance.communicationRequest?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
+  writeNotNull('_disposition', instance.dispositionElement?.toJson());
   return val;
 }
 
@@ -460,6 +561,9 @@ _$_ProcessResponseProcessNote _$_$_ProcessResponseProcessNoteFromJson(
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     text: json['text'] as String,
+    textElement: json['_text'] == null
+        ? null
+        : Element.fromJson(json['_text'] as Map<String, dynamic>),
   );
 }
 
@@ -475,6 +579,7 @@ Map<String, dynamic> _$_$_ProcessResponseProcessNoteToJson(
 
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('text', instance.text);
+  writeNotNull('_text', instance.textElement?.toJson());
   return val;
 }
 
@@ -509,6 +614,12 @@ _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
         ? null
         : Period.fromJson(json['planningHorizon'] as Map<String, dynamic>),
     comment: json['comment'] as String,
+    activeElement: json['_active'] == null
+        ? null
+        : Element.fromJson(json['_active'] as Map<String, dynamic>),
+    commentElement: json['_comment'] == null
+        ? null
+        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
   );
 }
 
@@ -533,6 +644,8 @@ Map<String, dynamic> _$_$_ScheduleToJson(_$_Schedule instance) {
   writeNotNull('actor', instance.actor?.map((e) => e?.toJson())?.toList());
   writeNotNull('planningHorizon', instance.planningHorizon?.toJson());
   writeNotNull('comment', instance.comment);
+  writeNotNull('_active', instance.activeElement?.toJson());
+  writeNotNull('_comment', instance.commentElement?.toJson());
   return val;
 }
 
@@ -573,6 +686,21 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
         ? null
         : Boolean.fromJson(json['overbooked']),
     comment: json['comment'] as String,
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    startElement: json['_start'] == null
+        ? null
+        : Element.fromJson(json['_start'] as Map<String, dynamic>),
+    endElement: json['_end'] == null
+        ? null
+        : Element.fromJson(json['_end'] as Map<String, dynamic>),
+    overbookedElement: json['_overbooked'] == null
+        ? null
+        : Element.fromJson(json['_overbooked'] as Map<String, dynamic>),
+    commentElement: json['_comment'] == null
+        ? null
+        : Element.fromJson(json['_comment'] as Map<String, dynamic>),
   );
 }
 
@@ -600,6 +728,11 @@ Map<String, dynamic> _$_$_SlotToJson(_$_Slot instance) {
   writeNotNull('end', instance.end);
   writeNotNull('overbooked', instance.overbooked?.toJson());
   writeNotNull('comment', instance.comment);
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_start', instance.startElement?.toJson());
+  writeNotNull('_end', instance.endElement?.toJson());
+  writeNotNull('_overbooked', instance.overbookedElement?.toJson());
+  writeNotNull('_comment', instance.commentElement?.toJson());
   return val;
 }
 
@@ -706,6 +839,27 @@ _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : TaskOutput.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    definitionUriElement: json['_definitionUri'] == null
+        ? null
+        : Element.fromJson(json['_definitionUri'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    intentElement: json['_intent'] == null
+        ? null
+        : Element.fromJson(json['_intent'] as Map<String, dynamic>),
+    priorityElement: json['_priority'] == null
+        ? null
+        : Element.fromJson(json['_priority'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    authoredOnElement: json['_authoredOn'] == null
+        ? null
+        : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
+    lastModifiedElement: json['_lastModified'] == null
+        ? null
+        : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
   );
 }
 
@@ -750,6 +904,13 @@ Map<String, dynamic> _$_$_TaskToJson(_$_Task instance) {
   writeNotNull('restriction', instance.restriction?.toJson());
   writeNotNull('input', instance.input?.map((e) => e?.toJson())?.toList());
   writeNotNull('output', instance.output?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_definitionUri', instance.definitionUriElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_intent', instance.intentElement?.toJson());
+  writeNotNull('_priority', instance.priorityElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_authoredOn', instance.authoredOnElement?.toJson());
+  writeNotNull('_lastModified', instance.lastModifiedElement?.toJson());
   return val;
 }
 
@@ -807,6 +968,9 @@ _$_TaskRestriction _$_$_TaskRestrictionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    repetitionsElement: json['_repetitions'] == null
+        ? null
+        : Element.fromJson(json['_repetitions'] as Map<String, dynamic>),
   );
 }
 
@@ -823,6 +987,7 @@ Map<String, dynamic> _$_$_TaskRestrictionToJson(_$_TaskRestriction instance) {
   writeNotNull('period', instance.period?.toJson());
   writeNotNull(
       'recipient', instance.recipient?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_repetitions', instance.repetitionsElement?.toJson());
   return val;
 }
 
@@ -994,6 +1159,57 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         ? null
         : TriggerDefinition.fromJson(
             json['valueTriggerDefinition'] as Map<String, dynamic>),
+    valueBooleanElement: json['_valueBoolean'] == null
+        ? null
+        : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    valueIntegerElement: json['_valueInteger'] == null
+        ? null
+        : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueDecimalElement: json['_valueDecimal'] == null
+        ? null
+        : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
+    valueBase64BinaryElement: json['_valueBase64Binary'] == null
+        ? null
+        : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
+    valueInstantElement: json['_valueInstant'] == null
+        ? null
+        : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
+    valueStringElement: json['_valueString'] == null
+        ? null
+        : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueUriElement: json['_valueUri'] == null
+        ? null
+        : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
+    valueDateElement: json['_valueDate'] == null
+        ? null
+        : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueDateTimeElement: json['_valueDateTime'] == null
+        ? null
+        : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+    valueTimeElement: json['_valueTime'] == null
+        ? null
+        : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+    valueCodeElement: json['_valueCode'] == null
+        ? null
+        : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
+    valueOidElement: json['_valueOid'] == null
+        ? null
+        : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),
+    valueUuidElement: json['_valueUuid'] == null
+        ? null
+        : Element.fromJson(json['_valueUuid'] as Map<String, dynamic>),
+    valueIdElement: json['_valueId'] == null
+        ? null
+        : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
+    valueUnsignedIntElement: json['_valueUnsignedInt'] == null
+        ? null
+        : Element.fromJson(json['_valueUnsignedInt'] as Map<String, dynamic>),
+    valuePositiveIntElement: json['_valuePositiveInt'] == null
+        ? null
+        : Element.fromJson(json['_valuePositiveInt'] as Map<String, dynamic>),
+    valueMarkdownElement: json['_valueMarkdown'] == null
+        ? null
+        : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),
   );
 }
 
@@ -1063,6 +1279,24 @@ Map<String, dynamic> _$_$_TaskInputToJson(_$_TaskInput instance) {
       'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
   writeNotNull(
       'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
+  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
+  writeNotNull(
+      '_valueBase64Binary', instance.valueBase64BinaryElement?.toJson());
+  writeNotNull('_valueInstant', instance.valueInstantElement?.toJson());
+  writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('_valueUri', instance.valueUriElement?.toJson());
+  writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
+  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
+  writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
+  writeNotNull('_valueOid', instance.valueOidElement?.toJson());
+  writeNotNull('_valueUuid', instance.valueUuidElement?.toJson());
+  writeNotNull('_valueId', instance.valueIdElement?.toJson());
+  writeNotNull('_valueUnsignedInt', instance.valueUnsignedIntElement?.toJson());
+  writeNotNull('_valuePositiveInt', instance.valuePositiveIntElement?.toJson());
+  writeNotNull('_valueMarkdown', instance.valueMarkdownElement?.toJson());
   return val;
 }
 
@@ -1234,6 +1468,57 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         ? null
         : TriggerDefinition.fromJson(
             json['valueTriggerDefinition'] as Map<String, dynamic>),
+    valueBooleanElement: json['_valueBoolean'] == null
+        ? null
+        : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+    valueIntegerElement: json['_valueInteger'] == null
+        ? null
+        : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+    valueDecimalElement: json['_valueDecimal'] == null
+        ? null
+        : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
+    valueBase64BinaryElement: json['_valueBase64Binary'] == null
+        ? null
+        : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
+    valueInstantElement: json['_valueInstant'] == null
+        ? null
+        : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
+    valueStringElement: json['_valueString'] == null
+        ? null
+        : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+    valueUriElement: json['_valueUri'] == null
+        ? null
+        : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
+    valueDateElement: json['_valueDate'] == null
+        ? null
+        : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+    valueDateTimeElement: json['_valueDateTime'] == null
+        ? null
+        : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+    valueTimeElement: json['_valueTime'] == null
+        ? null
+        : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+    valueCodeElement: json['_valueCode'] == null
+        ? null
+        : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
+    valueOidElement: json['_valueOid'] == null
+        ? null
+        : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),
+    valueUuidElement: json['_valueUuid'] == null
+        ? null
+        : Element.fromJson(json['_valueUuid'] as Map<String, dynamic>),
+    valueIdElement: json['_valueId'] == null
+        ? null
+        : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
+    valueUnsignedIntElement: json['_valueUnsignedInt'] == null
+        ? null
+        : Element.fromJson(json['_valueUnsignedInt'] as Map<String, dynamic>),
+    valuePositiveIntElement: json['_valuePositiveInt'] == null
+        ? null
+        : Element.fromJson(json['_valuePositiveInt'] as Map<String, dynamic>),
+    valueMarkdownElement: json['_valueMarkdown'] == null
+        ? null
+        : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),
   );
 }
 
@@ -1303,5 +1588,23 @@ Map<String, dynamic> _$_$_TaskOutputToJson(_$_TaskOutput instance) {
       'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
   writeNotNull(
       'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
+  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
+  writeNotNull(
+      '_valueBase64Binary', instance.valueBase64BinaryElement?.toJson());
+  writeNotNull('_valueInstant', instance.valueInstantElement?.toJson());
+  writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('_valueUri', instance.valueUriElement?.toJson());
+  writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
+  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
+  writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
+  writeNotNull('_valueOid', instance.valueOidElement?.toJson());
+  writeNotNull('_valueUuid', instance.valueUuidElement?.toJson());
+  writeNotNull('_valueId', instance.valueIdElement?.toJson());
+  writeNotNull('_valueUnsignedInt', instance.valueUnsignedIntElement?.toJson());
+  writeNotNull('_valuePositiveInt', instance.valuePositiveIntElement?.toJson());
+  writeNotNull('_valueMarkdown', instance.valueMarkdownElement?.toJson());
   return val;
 }

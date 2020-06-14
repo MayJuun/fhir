@@ -32,6 +32,10 @@ abstract class Communication with _$Communication implements Resource {
     List<Reference> reasonReference,
     List<CommunicationPayload> payload,
     List<Annotation> note,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_notDone') Element notDoneElement,
+    @JsonKey(name: '_sent') Element sentElement,
+    @JsonKey(name: '_received') Element receivedElement,
   }) = _Communication;
   factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
@@ -43,6 +47,7 @@ abstract class CommunicationPayload with _$CommunicationPayload {
     String contentString,
     Attachment contentAttachment,
     Reference contentReference,
+    @JsonKey(name: '_contentString') Element contentStringElement,
   }) = _CommunicationPayload;
   factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationPayloadFromJson(json);
@@ -77,6 +82,10 @@ abstract class CommunicationRequest
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<Annotation> note,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _CommunicationRequest;
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
@@ -88,6 +97,7 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
     String contentString,
     Attachment contentAttachment,
     Reference contentReference,
+    @JsonKey(name: '_contentString') Element contentStringElement,
   }) = _CommunicationRequestPayload;
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
@@ -134,6 +144,10 @@ abstract class DeviceRequest with _$DeviceRequest implements Resource {
     List<Reference> supportingInfo,
     List<Annotation> note,
     List<Reference> relevantHistory,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _DeviceRequest;
   factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestFromJson(json);
@@ -170,6 +184,9 @@ abstract class DeviceUseStatement
     List<CodeableConcept> indication,
     CodeableConcept bodySite,
     List<Annotation> note,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
+    @JsonKey(name: '_recordedOn') Element recordedOnElement,
   }) = _DeviceUseStatement;
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
@@ -195,6 +212,8 @@ abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
     Reference supplier,
     Reference destination,
     List<Reference> receiver,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
   }) = _SupplyDelivery;
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
@@ -233,6 +252,10 @@ abstract class SupplyRequest with _$SupplyRequest implements Resource {
     Reference reasonReference,
     Reference deliverFrom,
     Reference deliverTo,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_priority') Element priorityElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+    @JsonKey(name: '_authoredOn') Element authoredOnElement,
   }) = _SupplyRequest;
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);

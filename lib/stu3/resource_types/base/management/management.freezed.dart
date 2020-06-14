@@ -41,7 +41,9 @@ class _$EncounterTearOff {
       EncounterHospitalization hospitalization,
       List<EncounterLocation> location,
       Reference serviceProvider,
-      Reference partOf}) {
+      Reference partOf,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _Encounter(
       resourceType: resourceType,
       identifier: identifier,
@@ -65,6 +67,7 @@ class _$EncounterTearOff {
       location: location,
       serviceProvider: serviceProvider,
       partOf: partOf,
+      statusElement: statusElement,
     );
   }
 }
@@ -98,6 +101,8 @@ mixin _$Encounter {
   List<EncounterLocation> get location;
   Reference get serviceProvider;
   Reference get partOf;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $EncounterCopyWith<Encounter> get copyWith;
@@ -131,7 +136,9 @@ abstract class $EncounterCopyWith<$Res> {
       EncounterHospitalization hospitalization,
       List<EncounterLocation> location,
       Reference serviceProvider,
-      Reference partOf});
+      Reference partOf,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   $CodingCopyWith<$Res> get class_;
   $CodeableConceptCopyWith<$Res> get priority;
@@ -142,6 +149,7 @@ abstract class $EncounterCopyWith<$Res> {
   $EncounterHospitalizationCopyWith<$Res> get hospitalization;
   $ReferenceCopyWith<$Res> get serviceProvider;
   $ReferenceCopyWith<$Res> get partOf;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
@@ -175,6 +183,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
     Object location = freezed,
     Object serviceProvider = freezed,
     Object partOf = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -225,6 +234,9 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
           ? _value.serviceProvider
           : serviceProvider as Reference,
       partOf: partOf == freezed ? _value.partOf : partOf as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -318,6 +330,16 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       return _then(_value.copyWith(partOf: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
 }
 
 abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
@@ -350,7 +372,9 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       EncounterHospitalization hospitalization,
       List<EncounterLocation> location,
       Reference serviceProvider,
-      Reference partOf});
+      Reference partOf,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   @override
   $CodingCopyWith<$Res> get class_;
@@ -370,6 +394,8 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get serviceProvider;
   @override
   $ReferenceCopyWith<$Res> get partOf;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
@@ -404,6 +430,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
     Object location = freezed,
     Object serviceProvider = freezed,
     Object partOf = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_Encounter(
       resourceType: resourceType == freezed
@@ -454,6 +481,9 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
           ? _value.serviceProvider
           : serviceProvider as Reference,
       partOf: partOf == freezed ? _value.partOf : partOf as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -486,7 +516,9 @@ class _$_Encounter implements _Encounter {
       this.hospitalization,
       this.location,
       this.serviceProvider,
-      this.partOf})
+      this.partOf,
+      @JsonKey(name: '_status')
+          this.statusElement})
       : assert(resourceType != null);
 
   factory _$_Encounter.fromJson(Map<String, dynamic> json) =>
@@ -539,10 +571,13 @@ class _$_Encounter implements _Encounter {
   final Reference serviceProvider;
   @override
   final Reference partOf;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'Encounter(resourceType: $resourceType, identifier: $identifier, status: $status, statusHistory: $statusHistory, class_: $class_, classHistory: $classHistory, type: $type, priority: $priority, subject: $subject, episodeOfCare: $episodeOfCare, incomingReferral: $incomingReferral, participant: $participant, appointment: $appointment, period: $period, length: $length, reason: $reason, diagnosis: $diagnosis, account: $account, hospitalization: $hospitalization, location: $location, serviceProvider: $serviceProvider, partOf: $partOf)';
+    return 'Encounter(resourceType: $resourceType, identifier: $identifier, status: $status, statusHistory: $statusHistory, class_: $class_, classHistory: $classHistory, type: $type, priority: $priority, subject: $subject, episodeOfCare: $episodeOfCare, incomingReferral: $incomingReferral, participant: $participant, appointment: $appointment, period: $period, length: $length, reason: $reason, diagnosis: $diagnosis, account: $account, hospitalization: $hospitalization, location: $location, serviceProvider: $serviceProvider, partOf: $partOf, statusElement: $statusElement)';
   }
 
   @override
@@ -607,7 +642,10 @@ class _$_Encounter implements _Encounter {
                 const DeepCollectionEquality()
                     .equals(other.serviceProvider, serviceProvider)) &&
             (identical(other.partOf, partOf) ||
-                const DeepCollectionEquality().equals(other.partOf, partOf)));
+                const DeepCollectionEquality().equals(other.partOf, partOf)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)));
   }
 
   @override
@@ -634,7 +672,8 @@ class _$_Encounter implements _Encounter {
       const DeepCollectionEquality().hash(hospitalization) ^
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(serviceProvider) ^
-      const DeepCollectionEquality().hash(partOf);
+      const DeepCollectionEquality().hash(partOf) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$EncounterCopyWith<_Encounter> get copyWith =>
@@ -673,7 +712,9 @@ abstract class _Encounter implements Encounter {
       EncounterHospitalization hospitalization,
       List<EncounterLocation> location,
       Reference serviceProvider,
-      Reference partOf}) = _$_Encounter;
+      Reference partOf,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_Encounter;
 
   factory _Encounter.fromJson(Map<String, dynamic> json) =
       _$_Encounter.fromJson;
@@ -726,6 +767,9 @@ abstract class _Encounter implements Encounter {
   @override
   Reference get partOf;
   @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
   _$EncounterCopyWith<_Encounter> get copyWith;
 }
 
@@ -741,10 +785,13 @@ class _$EncounterStatusHistoryTearOff {
       {@JsonKey(unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
       @JsonKey(required: true)
-          Period period}) {
+          Period period,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _EncounterStatusHistory(
       status: status,
       period: period,
+      statusElement: statusElement,
     );
   }
 }
@@ -757,6 +804,8 @@ mixin _$EncounterStatusHistory {
   EncounterStatus get status;
   @JsonKey(required: true)
   Period get period;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $EncounterStatusHistoryCopyWith<EncounterStatusHistory> get copyWith;
@@ -770,9 +819,12 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
       @JsonKey(required: true)
-          Period period});
+          Period period,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$EncounterStatusHistoryCopyWithImpl<$Res>
@@ -787,10 +839,14 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
   $Res call({
     Object status = freezed,
     Object period = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       status: status == freezed ? _value.status : status as EncounterStatus,
       period: period == freezed ? _value.period : period as Period,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -801,6 +857,16 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
     }
     return $PeriodCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
     });
   }
 }
@@ -815,10 +881,14 @@ abstract class _$EncounterStatusHistoryCopyWith<$Res>
       {@JsonKey(unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
       @JsonKey(required: true)
-          Period period});
+          Period period,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$EncounterStatusHistoryCopyWithImpl<$Res>
@@ -835,10 +905,14 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
   $Res call({
     Object status = freezed,
     Object period = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_EncounterStatusHistory(
       status: status == freezed ? _value.status : status as EncounterStatus,
       period: period == freezed ? _value.period : period as Period,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -847,7 +921,8 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
 class _$_EncounterStatusHistory implements _EncounterStatusHistory {
   const _$_EncounterStatusHistory(
       {@JsonKey(unknownEnumValue: EncounterStatus.unknown) this.status,
-      @JsonKey(required: true) this.period});
+      @JsonKey(required: true) this.period,
+      @JsonKey(name: '_status') this.statusElement});
 
   factory _$_EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$_$_EncounterStatusHistoryFromJson(json);
@@ -858,10 +933,13 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
   @override
   @JsonKey(required: true)
   final Period period;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'EncounterStatusHistory(status: $status, period: $period)';
+    return 'EncounterStatusHistory(status: $status, period: $period, statusElement: $statusElement)';
   }
 
   @override
@@ -871,14 +949,18 @@ class _$_EncounterStatusHistory implements _EncounterStatusHistory {
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)));
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(period);
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$EncounterStatusHistoryCopyWith<_EncounterStatusHistory> get copyWith =>
@@ -896,7 +978,9 @@ abstract class _EncounterStatusHistory implements EncounterStatusHistory {
       {@JsonKey(unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
       @JsonKey(required: true)
-          Period period}) = _$_EncounterStatusHistory;
+          Period period,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_EncounterStatusHistory;
 
   factory _EncounterStatusHistory.fromJson(Map<String, dynamic> json) =
       _$_EncounterStatusHistory.fromJson;
@@ -907,6 +991,9 @@ abstract class _EncounterStatusHistory implements EncounterStatusHistory {
   @override
   @JsonKey(required: true)
   Period get period;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   _$EncounterStatusHistoryCopyWith<_EncounterStatusHistory> get copyWith;
 }
@@ -1298,11 +1385,13 @@ class _$EncounterDiagnosisTearOff {
   _EncounterDiagnosis call(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
-      PositiveInt rank}) {
+      PositiveInt rank,
+      @JsonKey(name: '_rank') Element rankElement}) {
     return _EncounterDiagnosis(
       condition: condition,
       role: role,
       rank: rank,
+      rankElement: rankElement,
     );
   }
 }
@@ -1315,6 +1404,8 @@ mixin _$EncounterDiagnosis {
   Reference get condition;
   CodeableConcept get role;
   PositiveInt get rank;
+  @JsonKey(name: '_rank')
+  Element get rankElement;
 
   Map<String, dynamic> toJson();
   $EncounterDiagnosisCopyWith<EncounterDiagnosis> get copyWith;
@@ -1327,10 +1418,12 @@ abstract class $EncounterDiagnosisCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
-      PositiveInt rank});
+      PositiveInt rank,
+      @JsonKey(name: '_rank') Element rankElement});
 
   $ReferenceCopyWith<$Res> get condition;
   $CodeableConceptCopyWith<$Res> get role;
+  $ElementCopyWith<$Res> get rankElement;
 }
 
 class _$EncounterDiagnosisCopyWithImpl<$Res>
@@ -1346,12 +1439,15 @@ class _$EncounterDiagnosisCopyWithImpl<$Res>
     Object condition = freezed,
     Object role = freezed,
     Object rank = freezed,
+    Object rankElement = freezed,
   }) {
     return _then(_value.copyWith(
       condition:
           condition == freezed ? _value.condition : condition as Reference,
       role: role == freezed ? _value.role : role as CodeableConcept,
       rank: rank == freezed ? _value.rank : rank as PositiveInt,
+      rankElement:
+          rankElement == freezed ? _value.rankElement : rankElement as Element,
     ));
   }
 
@@ -1374,6 +1470,16 @@ class _$EncounterDiagnosisCopyWithImpl<$Res>
       return _then(_value.copyWith(role: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get rankElement {
+    if (_value.rankElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.rankElement, (value) {
+      return _then(_value.copyWith(rankElement: value));
+    });
+  }
 }
 
 abstract class _$EncounterDiagnosisCopyWith<$Res>
@@ -1385,12 +1491,15 @@ abstract class _$EncounterDiagnosisCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
-      PositiveInt rank});
+      PositiveInt rank,
+      @JsonKey(name: '_rank') Element rankElement});
 
   @override
   $ReferenceCopyWith<$Res> get condition;
   @override
   $CodeableConceptCopyWith<$Res> get role;
+  @override
+  $ElementCopyWith<$Res> get rankElement;
 }
 
 class __$EncounterDiagnosisCopyWithImpl<$Res>
@@ -1408,12 +1517,15 @@ class __$EncounterDiagnosisCopyWithImpl<$Res>
     Object condition = freezed,
     Object role = freezed,
     Object rank = freezed,
+    Object rankElement = freezed,
   }) {
     return _then(_EncounterDiagnosis(
       condition:
           condition == freezed ? _value.condition : condition as Reference,
       role: role == freezed ? _value.role : role as CodeableConcept,
       rank: rank == freezed ? _value.rank : rank as PositiveInt,
+      rankElement:
+          rankElement == freezed ? _value.rankElement : rankElement as Element,
     ));
   }
 }
@@ -1421,7 +1533,10 @@ class __$EncounterDiagnosisCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EncounterDiagnosis implements _EncounterDiagnosis {
   const _$_EncounterDiagnosis(
-      {@JsonKey(required: true) this.condition, this.role, this.rank});
+      {@JsonKey(required: true) this.condition,
+      this.role,
+      this.rank,
+      @JsonKey(name: '_rank') this.rankElement});
 
   factory _$_EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$_$_EncounterDiagnosisFromJson(json);
@@ -1433,10 +1548,13 @@ class _$_EncounterDiagnosis implements _EncounterDiagnosis {
   final CodeableConcept role;
   @override
   final PositiveInt rank;
+  @override
+  @JsonKey(name: '_rank')
+  final Element rankElement;
 
   @override
   String toString() {
-    return 'EncounterDiagnosis(condition: $condition, role: $role, rank: $rank)';
+    return 'EncounterDiagnosis(condition: $condition, role: $role, rank: $rank, rankElement: $rankElement)';
   }
 
   @override
@@ -1449,7 +1567,10 @@ class _$_EncounterDiagnosis implements _EncounterDiagnosis {
             (identical(other.role, role) ||
                 const DeepCollectionEquality().equals(other.role, role)) &&
             (identical(other.rank, rank) ||
-                const DeepCollectionEquality().equals(other.rank, rank)));
+                const DeepCollectionEquality().equals(other.rank, rank)) &&
+            (identical(other.rankElement, rankElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.rankElement, rankElement)));
   }
 
   @override
@@ -1457,7 +1578,8 @@ class _$_EncounterDiagnosis implements _EncounterDiagnosis {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(condition) ^
       const DeepCollectionEquality().hash(role) ^
-      const DeepCollectionEquality().hash(rank);
+      const DeepCollectionEquality().hash(rank) ^
+      const DeepCollectionEquality().hash(rankElement);
 
   @override
   _$EncounterDiagnosisCopyWith<_EncounterDiagnosis> get copyWith =>
@@ -1473,7 +1595,8 @@ abstract class _EncounterDiagnosis implements EncounterDiagnosis {
   const factory _EncounterDiagnosis(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
-      PositiveInt rank}) = _$_EncounterDiagnosis;
+      PositiveInt rank,
+      @JsonKey(name: '_rank') Element rankElement}) = _$_EncounterDiagnosis;
 
   factory _EncounterDiagnosis.fromJson(Map<String, dynamic> json) =
       _$_EncounterDiagnosis.fromJson;
@@ -1485,6 +1608,9 @@ abstract class _EncounterDiagnosis implements EncounterDiagnosis {
   CodeableConcept get role;
   @override
   PositiveInt get rank;
+  @override
+  @JsonKey(name: '_rank')
+  Element get rankElement;
   @override
   _$EncounterDiagnosisCopyWith<_EncounterDiagnosis> get copyWith;
 }
@@ -1901,11 +2027,14 @@ class _$EncounterLocationTearOff {
           Reference location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
           EncounterLocationStatus status,
-      Period period}) {
+      Period period,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _EncounterLocation(
       location: location,
       status: status,
       period: period,
+      statusElement: statusElement,
     );
   }
 }
@@ -1919,6 +2048,8 @@ mixin _$EncounterLocation {
   @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
   EncounterLocationStatus get status;
   Period get period;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $EncounterLocationCopyWith<EncounterLocation> get copyWith;
@@ -1933,10 +2064,13 @@ abstract class $EncounterLocationCopyWith<$Res> {
           Reference location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
           EncounterLocationStatus status,
-      Period period});
+      Period period,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   $ReferenceCopyWith<$Res> get location;
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$EncounterLocationCopyWithImpl<$Res>
@@ -1952,12 +2086,16 @@ class _$EncounterLocationCopyWithImpl<$Res>
     Object location = freezed,
     Object status = freezed,
     Object period = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       location: location == freezed ? _value.location : location as Reference,
       status:
           status == freezed ? _value.status : status as EncounterLocationStatus,
       period: period == freezed ? _value.period : period as Period,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -1980,6 +2118,16 @@ class _$EncounterLocationCopyWithImpl<$Res>
       return _then(_value.copyWith(period: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
 }
 
 abstract class _$EncounterLocationCopyWith<$Res>
@@ -1993,12 +2141,16 @@ abstract class _$EncounterLocationCopyWith<$Res>
           Reference location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
           EncounterLocationStatus status,
-      Period period});
+      Period period,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   @override
   $ReferenceCopyWith<$Res> get location;
   @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$EncounterLocationCopyWithImpl<$Res>
@@ -2016,12 +2168,16 @@ class __$EncounterLocationCopyWithImpl<$Res>
     Object location = freezed,
     Object status = freezed,
     Object period = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_EncounterLocation(
       location: location == freezed ? _value.location : location as Reference,
       status:
           status == freezed ? _value.status : status as EncounterLocationStatus,
       period: period == freezed ? _value.period : period as Period,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -2031,7 +2187,8 @@ class _$_EncounterLocation implements _EncounterLocation {
   const _$_EncounterLocation(
       {@JsonKey(required: true) this.location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown) this.status,
-      this.period});
+      this.period,
+      @JsonKey(name: '_status') this.statusElement});
 
   factory _$_EncounterLocation.fromJson(Map<String, dynamic> json) =>
       _$_$_EncounterLocationFromJson(json);
@@ -2044,10 +2201,13 @@ class _$_EncounterLocation implements _EncounterLocation {
   final EncounterLocationStatus status;
   @override
   final Period period;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'EncounterLocation(location: $location, status: $status, period: $period)';
+    return 'EncounterLocation(location: $location, status: $status, period: $period, statusElement: $statusElement)';
   }
 
   @override
@@ -2060,7 +2220,10 @@ class _$_EncounterLocation implements _EncounterLocation {
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)));
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)));
   }
 
   @override
@@ -2068,7 +2231,8 @@ class _$_EncounterLocation implements _EncounterLocation {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(period);
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$EncounterLocationCopyWith<_EncounterLocation> get copyWith =>
@@ -2086,7 +2250,9 @@ abstract class _EncounterLocation implements EncounterLocation {
           Reference location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
           EncounterLocationStatus status,
-      Period period}) = _$_EncounterLocation;
+      Period period,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_EncounterLocation;
 
   factory _EncounterLocation.fromJson(Map<String, dynamic> json) =
       _$_EncounterLocation.fromJson;
@@ -2099,6 +2265,9 @@ abstract class _EncounterLocation implements EncounterLocation {
   EncounterLocationStatus get status;
   @override
   Period get period;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   _$EncounterLocationCopyWith<_EncounterLocation> get copyWith;
 }
@@ -2127,7 +2296,9 @@ class _$EpisodeOfCareTearOff {
       List<Reference> referralRequest,
       Reference careManager,
       List<Reference> team,
-      List<Reference> account}) {
+      List<Reference> account,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _EpisodeOfCare(
       resourceType: resourceType,
       identifier: identifier,
@@ -2142,6 +2313,7 @@ class _$EpisodeOfCareTearOff {
       careManager: careManager,
       team: team,
       account: account,
+      statusElement: statusElement,
     );
   }
 }
@@ -2166,6 +2338,8 @@ mixin _$EpisodeOfCare {
   Reference get careManager;
   List<Reference> get team;
   List<Reference> get account;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $EpisodeOfCareCopyWith<EpisodeOfCare> get copyWith;
@@ -2191,12 +2365,15 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       List<Reference> referralRequest,
       Reference careManager,
       List<Reference> team,
-      List<Reference> account});
+      List<Reference> account,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res> get managingOrganization;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get careManager;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$EpisodeOfCareCopyWithImpl<$Res>
@@ -2222,6 +2399,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
     Object careManager = freezed,
     Object team = freezed,
     Object account = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -2251,6 +2429,9 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
           : careManager as Reference,
       team: team == freezed ? _value.team : team as List<Reference>,
       account: account == freezed ? _value.account : account as List<Reference>,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -2293,6 +2474,16 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
       return _then(_value.copyWith(careManager: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
 }
 
 abstract class _$EpisodeOfCareCopyWith<$Res>
@@ -2317,7 +2508,9 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       List<Reference> referralRequest,
       Reference careManager,
       List<Reference> team,
-      List<Reference> account});
+      List<Reference> account,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   @override
   $ReferenceCopyWith<$Res> get patient;
@@ -2327,6 +2520,8 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
   $PeriodCopyWith<$Res> get period;
   @override
   $ReferenceCopyWith<$Res> get careManager;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$EpisodeOfCareCopyWithImpl<$Res>
@@ -2354,6 +2549,7 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
     Object careManager = freezed,
     Object team = freezed,
     Object account = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_EpisodeOfCare(
       resourceType: resourceType == freezed
@@ -2383,6 +2579,9 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
           : careManager as Reference,
       team: team == freezed ? _value.team : team as List<Reference>,
       account: account == freezed ? _value.account : account as List<Reference>,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -2406,7 +2605,9 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
       this.referralRequest,
       this.careManager,
       this.team,
-      this.account})
+      this.account,
+      @JsonKey(name: '_status')
+          this.statusElement})
       : assert(resourceType != null);
 
   factory _$_EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
@@ -2441,10 +2642,13 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
   final List<Reference> team;
   @override
   final List<Reference> account;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'EpisodeOfCare(resourceType: $resourceType, identifier: $identifier, status: $status, statusHistory: $statusHistory, type: $type, diagnosis: $diagnosis, patient: $patient, managingOrganization: $managingOrganization, period: $period, referralRequest: $referralRequest, careManager: $careManager, team: $team, account: $account)';
+    return 'EpisodeOfCare(resourceType: $resourceType, identifier: $identifier, status: $status, statusHistory: $statusHistory, type: $type, diagnosis: $diagnosis, patient: $patient, managingOrganization: $managingOrganization, period: $period, referralRequest: $referralRequest, careManager: $careManager, team: $team, account: $account, statusElement: $statusElement)';
   }
 
   @override
@@ -2484,7 +2688,11 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
             (identical(other.team, team) ||
                 const DeepCollectionEquality().equals(other.team, team)) &&
             (identical(other.account, account) ||
-                const DeepCollectionEquality().equals(other.account, account)));
+                const DeepCollectionEquality()
+                    .equals(other.account, account)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)));
   }
 
   @override
@@ -2502,7 +2710,8 @@ class _$_EpisodeOfCare implements _EpisodeOfCare {
       const DeepCollectionEquality().hash(referralRequest) ^
       const DeepCollectionEquality().hash(careManager) ^
       const DeepCollectionEquality().hash(team) ^
-      const DeepCollectionEquality().hash(account);
+      const DeepCollectionEquality().hash(account) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$EpisodeOfCareCopyWith<_EpisodeOfCare> get copyWith =>
@@ -2532,7 +2741,9 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
       List<Reference> referralRequest,
       Reference careManager,
       List<Reference> team,
-      List<Reference> account}) = _$_EpisodeOfCare;
+      List<Reference> account,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_EpisodeOfCare;
 
   factory _EpisodeOfCare.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCare.fromJson;
@@ -2567,6 +2778,9 @@ abstract class _EpisodeOfCare implements EpisodeOfCare {
   @override
   List<Reference> get account;
   @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
   _$EpisodeOfCareCopyWith<_EpisodeOfCare> get copyWith;
 }
 
@@ -2582,10 +2796,13 @@ class _$EpisodeOfCareStatusHistoryTearOff {
       {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
       @JsonKey(required: true)
-          Period period}) {
+          Period period,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _EpisodeOfCareStatusHistory(
       status: status,
       period: period,
+      statusElement: statusElement,
     );
   }
 }
@@ -2598,6 +2815,8 @@ mixin _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatus get status;
   @JsonKey(required: true)
   Period get period;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $EpisodeOfCareStatusHistoryCopyWith<EpisodeOfCareStatusHistory> get copyWith;
@@ -2611,9 +2830,12 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
       {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
       @JsonKey(required: true)
-          Period period});
+          Period period,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
@@ -2628,10 +2850,14 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
   $Res call({
     Object status = freezed,
     Object period = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       period: period == freezed ? _value.period : period as Period,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -2642,6 +2868,16 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
     }
     return $PeriodCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
     });
   }
 }
@@ -2657,10 +2893,14 @@ abstract class _$EpisodeOfCareStatusHistoryCopyWith<$Res>
       {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
       @JsonKey(required: true)
-          Period period});
+          Period period,
+      @JsonKey(name: '_status')
+          Element statusElement});
 
   @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
@@ -2678,10 +2918,14 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
   $Res call({
     Object status = freezed,
     Object period = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_EpisodeOfCareStatusHistory(
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       period: period == freezed ? _value.period : period as Period,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -2690,7 +2934,8 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
 class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
   const _$_EpisodeOfCareStatusHistory(
       {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown) this.status,
-      @JsonKey(required: true) this.period});
+      @JsonKey(required: true) this.period,
+      @JsonKey(name: '_status') this.statusElement});
 
   factory _$_EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$_$_EpisodeOfCareStatusHistoryFromJson(json);
@@ -2701,10 +2946,13 @@ class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
   @override
   @JsonKey(required: true)
   final Period period;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'EpisodeOfCareStatusHistory(status: $status, period: $period)';
+    return 'EpisodeOfCareStatusHistory(status: $status, period: $period, statusElement: $statusElement)';
   }
 
   @override
@@ -2714,14 +2962,18 @@ class _$_EpisodeOfCareStatusHistory implements _EpisodeOfCareStatusHistory {
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)));
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(period);
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$EpisodeOfCareStatusHistoryCopyWith<_EpisodeOfCareStatusHistory>
@@ -2740,7 +2992,9 @@ abstract class _EpisodeOfCareStatusHistory
       {@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
       @JsonKey(required: true)
-          Period period}) = _$_EpisodeOfCareStatusHistory;
+          Period period,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_EpisodeOfCareStatusHistory;
 
   factory _EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCareStatusHistory.fromJson;
@@ -2751,6 +3005,9 @@ abstract class _EpisodeOfCareStatusHistory
   @override
   @JsonKey(required: true)
   Period get period;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   _$EpisodeOfCareStatusHistoryCopyWith<_EpisodeOfCareStatusHistory>
       get copyWith;
@@ -2767,11 +3024,13 @@ class _$EpisodeOfCareDiagnosisTearOff {
   _EpisodeOfCareDiagnosis call(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
-      PositiveInt rank}) {
+      PositiveInt rank,
+      @JsonKey(name: '_rank') Element rankElement}) {
     return _EpisodeOfCareDiagnosis(
       condition: condition,
       role: role,
       rank: rank,
+      rankElement: rankElement,
     );
   }
 }
@@ -2784,6 +3043,8 @@ mixin _$EpisodeOfCareDiagnosis {
   Reference get condition;
   CodeableConcept get role;
   PositiveInt get rank;
+  @JsonKey(name: '_rank')
+  Element get rankElement;
 
   Map<String, dynamic> toJson();
   $EpisodeOfCareDiagnosisCopyWith<EpisodeOfCareDiagnosis> get copyWith;
@@ -2796,10 +3057,12 @@ abstract class $EpisodeOfCareDiagnosisCopyWith<$Res> {
   $Res call(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
-      PositiveInt rank});
+      PositiveInt rank,
+      @JsonKey(name: '_rank') Element rankElement});
 
   $ReferenceCopyWith<$Res> get condition;
   $CodeableConceptCopyWith<$Res> get role;
+  $ElementCopyWith<$Res> get rankElement;
 }
 
 class _$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
@@ -2815,12 +3078,15 @@ class _$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
     Object condition = freezed,
     Object role = freezed,
     Object rank = freezed,
+    Object rankElement = freezed,
   }) {
     return _then(_value.copyWith(
       condition:
           condition == freezed ? _value.condition : condition as Reference,
       role: role == freezed ? _value.role : role as CodeableConcept,
       rank: rank == freezed ? _value.rank : rank as PositiveInt,
+      rankElement:
+          rankElement == freezed ? _value.rankElement : rankElement as Element,
     ));
   }
 
@@ -2843,6 +3109,16 @@ class _$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
       return _then(_value.copyWith(role: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get rankElement {
+    if (_value.rankElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.rankElement, (value) {
+      return _then(_value.copyWith(rankElement: value));
+    });
+  }
 }
 
 abstract class _$EpisodeOfCareDiagnosisCopyWith<$Res>
@@ -2854,12 +3130,15 @@ abstract class _$EpisodeOfCareDiagnosisCopyWith<$Res>
   $Res call(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
-      PositiveInt rank});
+      PositiveInt rank,
+      @JsonKey(name: '_rank') Element rankElement});
 
   @override
   $ReferenceCopyWith<$Res> get condition;
   @override
   $CodeableConceptCopyWith<$Res> get role;
+  @override
+  $ElementCopyWith<$Res> get rankElement;
 }
 
 class __$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
@@ -2877,12 +3156,15 @@ class __$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
     Object condition = freezed,
     Object role = freezed,
     Object rank = freezed,
+    Object rankElement = freezed,
   }) {
     return _then(_EpisodeOfCareDiagnosis(
       condition:
           condition == freezed ? _value.condition : condition as Reference,
       role: role == freezed ? _value.role : role as CodeableConcept,
       rank: rank == freezed ? _value.rank : rank as PositiveInt,
+      rankElement:
+          rankElement == freezed ? _value.rankElement : rankElement as Element,
     ));
   }
 }
@@ -2890,7 +3172,10 @@ class __$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EpisodeOfCareDiagnosis implements _EpisodeOfCareDiagnosis {
   const _$_EpisodeOfCareDiagnosis(
-      {@JsonKey(required: true) this.condition, this.role, this.rank});
+      {@JsonKey(required: true) this.condition,
+      this.role,
+      this.rank,
+      @JsonKey(name: '_rank') this.rankElement});
 
   factory _$_EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$_$_EpisodeOfCareDiagnosisFromJson(json);
@@ -2902,10 +3187,13 @@ class _$_EpisodeOfCareDiagnosis implements _EpisodeOfCareDiagnosis {
   final CodeableConcept role;
   @override
   final PositiveInt rank;
+  @override
+  @JsonKey(name: '_rank')
+  final Element rankElement;
 
   @override
   String toString() {
-    return 'EpisodeOfCareDiagnosis(condition: $condition, role: $role, rank: $rank)';
+    return 'EpisodeOfCareDiagnosis(condition: $condition, role: $role, rank: $rank, rankElement: $rankElement)';
   }
 
   @override
@@ -2918,7 +3206,10 @@ class _$_EpisodeOfCareDiagnosis implements _EpisodeOfCareDiagnosis {
             (identical(other.role, role) ||
                 const DeepCollectionEquality().equals(other.role, role)) &&
             (identical(other.rank, rank) ||
-                const DeepCollectionEquality().equals(other.rank, rank)));
+                const DeepCollectionEquality().equals(other.rank, rank)) &&
+            (identical(other.rankElement, rankElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.rankElement, rankElement)));
   }
 
   @override
@@ -2926,7 +3217,8 @@ class _$_EpisodeOfCareDiagnosis implements _EpisodeOfCareDiagnosis {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(condition) ^
       const DeepCollectionEquality().hash(role) ^
-      const DeepCollectionEquality().hash(rank);
+      const DeepCollectionEquality().hash(rank) ^
+      const DeepCollectionEquality().hash(rankElement);
 
   @override
   _$EpisodeOfCareDiagnosisCopyWith<_EpisodeOfCareDiagnosis> get copyWith =>
@@ -2943,7 +3235,8 @@ abstract class _EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
   const factory _EpisodeOfCareDiagnosis(
       {@JsonKey(required: true) Reference condition,
       CodeableConcept role,
-      PositiveInt rank}) = _$_EpisodeOfCareDiagnosis;
+      PositiveInt rank,
+      @JsonKey(name: '_rank') Element rankElement}) = _$_EpisodeOfCareDiagnosis;
 
   factory _EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCareDiagnosis.fromJson;
@@ -2955,6 +3248,9 @@ abstract class _EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
   CodeableConcept get role;
   @override
   PositiveInt get rank;
+  @override
+  @JsonKey(name: '_rank')
+  Element get rankElement;
   @override
   _$EpisodeOfCareDiagnosisCopyWith<_EpisodeOfCareDiagnosis> get copyWith;
 }
@@ -2980,7 +3276,9 @@ class _$FlagTearOff {
           Reference subject,
       Period period,
       Reference encounter,
-      Reference author}) {
+      Reference author,
+      @JsonKey(name: '_status')
+          Element statusElement}) {
     return _Flag(
       resourceType: resourceType,
       identifier: identifier,
@@ -2991,6 +3289,7 @@ class _$FlagTearOff {
       period: period,
       encounter: encounter,
       author: author,
+      statusElement: statusElement,
     );
   }
 }
@@ -3012,6 +3311,8 @@ mixin _$Flag {
   Period get period;
   Reference get encounter;
   Reference get author;
+  @JsonKey(name: '_status')
+  Element get statusElement;
 
   Map<String, dynamic> toJson();
   $FlagCopyWith<Flag> get copyWith;
@@ -3029,7 +3330,8 @@ abstract class $FlagCopyWith<$Res> {
       @JsonKey(required: true) Reference subject,
       Period period,
       Reference encounter,
-      Reference author});
+      Reference author,
+      @JsonKey(name: '_status') Element statusElement});
 
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get code;
@@ -3037,6 +3339,7 @@ abstract class $FlagCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get encounter;
   $ReferenceCopyWith<$Res> get author;
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
@@ -3057,6 +3360,7 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
     Object period = freezed,
     Object encounter = freezed,
     Object author = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -3074,6 +3378,9 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
       author: author == freezed ? _value.author : author as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 
@@ -3136,6 +3443,16 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
       return _then(_value.copyWith(author: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
 }
 
 abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
@@ -3151,7 +3468,8 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       @JsonKey(required: true) Reference subject,
       Period period,
       Reference encounter,
-      Reference author});
+      Reference author,
+      @JsonKey(name: '_status') Element statusElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get category;
@@ -3165,6 +3483,8 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get encounter;
   @override
   $ReferenceCopyWith<$Res> get author;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
 }
 
 class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
@@ -3186,6 +3506,7 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
     Object period = freezed,
     Object encounter = freezed,
     Object author = freezed,
+    Object statusElement = freezed,
   }) {
     return _then(_Flag(
       resourceType: resourceType == freezed
@@ -3203,6 +3524,9 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
       author: author == freezed ? _value.author : author as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
     ));
   }
 }
@@ -3223,7 +3547,9 @@ class _$_Flag implements _Flag {
           this.subject,
       this.period,
       this.encounter,
-      this.author})
+      this.author,
+      @JsonKey(name: '_status')
+          this.statusElement})
       : assert(resourceType != null);
 
   factory _$_Flag.fromJson(Map<String, dynamic> json) =>
@@ -3251,10 +3577,13 @@ class _$_Flag implements _Flag {
   final Reference encounter;
   @override
   final Reference author;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
 
   @override
   String toString() {
-    return 'Flag(resourceType: $resourceType, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, period: $period, encounter: $encounter, author: $author)';
+    return 'Flag(resourceType: $resourceType, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, period: $period, encounter: $encounter, author: $author, statusElement: $statusElement)';
   }
 
   @override
@@ -3283,7 +3612,10 @@ class _$_Flag implements _Flag {
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
             (identical(other.author, author) ||
-                const DeepCollectionEquality().equals(other.author, author)));
+                const DeepCollectionEquality().equals(other.author, author)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)));
   }
 
   @override
@@ -3297,7 +3629,8 @@ class _$_Flag implements _Flag {
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(author);
+      const DeepCollectionEquality().hash(author) ^
+      const DeepCollectionEquality().hash(statusElement);
 
   @override
   _$FlagCopyWith<_Flag> get copyWith =>
@@ -3324,7 +3657,9 @@ abstract class _Flag implements Flag {
           Reference subject,
       Period period,
       Reference encounter,
-      Reference author}) = _$_Flag;
+      Reference author,
+      @JsonKey(name: '_status')
+          Element statusElement}) = _$_Flag;
 
   factory _Flag.fromJson(Map<String, dynamic> json) = _$_Flag.fromJson;
 
@@ -3350,6 +3685,9 @@ abstract class _Flag implements Flag {
   Reference get encounter;
   @override
   Reference get author;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
   @override
   _$FlagCopyWith<_Flag> get copyWith;
 }
@@ -3392,7 +3730,35 @@ class _$LibraryTearOff {
       List<RelatedArtifact> relatedArtifact,
       List<ParameterDefinition> parameter,
       List<DataRequirement> dataRequirement,
-      List<Attachment> content}) {
+      List<Attachment> content,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement}) {
     return _Library(
       resourceType: resourceType,
       url: url,
@@ -3421,6 +3787,20 @@ class _$LibraryTearOff {
       parameter: parameter,
       dataRequirement: dataRequirement,
       content: content,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      titleElement: titleElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      purposeElement: purposeElement,
+      usageElement: usageElement,
+      approvalDateElement: approvalDateElement,
+      lastReviewDateElement: lastReviewDateElement,
+      copyrightElement: copyrightElement,
     );
   }
 }
@@ -3459,6 +3839,34 @@ mixin _$Library {
   List<ParameterDefinition> get parameter;
   List<DataRequirement> get dataRequirement;
   List<Attachment> get content;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
 
   Map<String, dynamic> toJson();
   $LibraryCopyWith<Library> get copyWith;
@@ -3494,10 +3902,38 @@ abstract class $LibraryCopyWith<$Res> {
       List<RelatedArtifact> relatedArtifact,
       List<ParameterDefinition> parameter,
       List<DataRequirement> dataRequirement,
-      List<Attachment> content});
+      List<Attachment> content,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_usage') Element usageElement,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+      @JsonKey(name: '_copyright') Element copyrightElement});
 
   $CodeableConceptCopyWith<$Res> get type;
   $PeriodCopyWith<$Res> get effectivePeriod;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get purposeElement;
+  $ElementCopyWith<$Res> get usageElement;
+  $ElementCopyWith<$Res> get approvalDateElement;
+  $ElementCopyWith<$Res> get lastReviewDateElement;
+  $ElementCopyWith<$Res> get copyrightElement;
 }
 
 class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
@@ -3536,6 +3972,20 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
     Object parameter = freezed,
     Object dataRequirement = freezed,
     Object content = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
+    Object copyrightElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -3591,6 +4041,45 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
           : dataRequirement as List<DataRequirement>,
       content:
           content == freezed ? _value.content : content as List<Attachment>,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
     ));
   }
 
@@ -3611,6 +4100,146 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
     }
     return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
       return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get usageElement {
+    if (_value.usageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.usageElement, (value) {
+      return _then(_value.copyWith(usageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.approvalDateElement, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
     });
   }
 }
@@ -3646,12 +4275,54 @@ abstract class _$LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       List<RelatedArtifact> relatedArtifact,
       List<ParameterDefinition> parameter,
       List<DataRequirement> dataRequirement,
-      List<Attachment> content});
+      List<Attachment> content,
+      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_usage') Element usageElement,
+      @JsonKey(name: '_approvalDate') Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+      @JsonKey(name: '_copyright') Element copyrightElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
   $PeriodCopyWith<$Res> get effectivePeriod;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get purposeElement;
+  @override
+  $ElementCopyWith<$Res> get usageElement;
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
 }
 
 class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
@@ -3691,6 +4362,20 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
     Object parameter = freezed,
     Object dataRequirement = freezed,
     Object content = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
+    Object copyrightElement = freezed,
   }) {
     return _then(_Library(
       resourceType: resourceType == freezed
@@ -3746,6 +4431,45 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
           : dataRequirement as List<DataRequirement>,
       content:
           content == freezed ? _value.content : content as List<Attachment>,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
     ));
   }
 }
@@ -3783,7 +4507,35 @@ class _$_Library implements _Library {
       this.relatedArtifact,
       this.parameter,
       this.dataRequirement,
-      this.content})
+      this.content,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      @JsonKey(name: '_usage')
+          this.usageElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement})
       : assert(resourceType != null);
 
   factory _$_Library.fromJson(Map<String, dynamic> json) =>
@@ -3846,10 +4598,52 @@ class _$_Library implements _Library {
   final List<DataRequirement> dataRequirement;
   @override
   final List<Attachment> content;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  final Element usageElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
 
   @override
   String toString() {
-    return 'Library(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, type: $type, date: $date, publisher: $publisher, description: $description, purpose: $purpose, usage: $usage, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, relatedArtifact: $relatedArtifact, parameter: $parameter, dataRequirement: $dataRequirement, content: $content)';
+    return 'Library(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, type: $type, date: $date, publisher: $publisher, description: $description, purpose: $purpose, usage: $usage, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, relatedArtifact: $relatedArtifact, parameter: $parameter, dataRequirement: $dataRequirement, content: $content, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement, copyrightElement: $copyrightElement)';
   }
 
   @override
@@ -3925,7 +4719,21 @@ class _$_Library implements _Library {
                     .equals(other.parameter, parameter)) &&
             (identical(other.dataRequirement, dataRequirement) ||
                 const DeepCollectionEquality().equals(other.dataRequirement, dataRequirement)) &&
-            (identical(other.content, content) || const DeepCollectionEquality().equals(other.content, content)));
+            (identical(other.content, content) || const DeepCollectionEquality().equals(other.content, content)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)));
   }
 
   @override
@@ -3957,7 +4765,21 @@ class _$_Library implements _Library {
       const DeepCollectionEquality().hash(relatedArtifact) ^
       const DeepCollectionEquality().hash(parameter) ^
       const DeepCollectionEquality().hash(dataRequirement) ^
-      const DeepCollectionEquality().hash(content);
+      const DeepCollectionEquality().hash(content) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
+      const DeepCollectionEquality().hash(usageElement) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement) ^
+      const DeepCollectionEquality().hash(copyrightElement);
 
   @override
   _$LibraryCopyWith<_Library> get copyWith =>
@@ -4001,7 +4823,35 @@ abstract class _Library implements Library {
       List<RelatedArtifact> relatedArtifact,
       List<ParameterDefinition> parameter,
       List<DataRequirement> dataRequirement,
-      List<Attachment> content}) = _$_Library;
+      List<Attachment> content,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement}) = _$_Library;
 
   factory _Library.fromJson(Map<String, dynamic> json) = _$_Library.fromJson;
 
@@ -4063,17 +4913,59 @@ abstract class _Library implements Library {
   @override
   List<Attachment> get content;
   @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
   _$LibraryCopyWith<_Library> get copyWith;
 }
 
-Lists _$ListsFromJson(Map<String, dynamic> json) {
-  return _Lists.fromJson(json);
+List_ _$List_FromJson(Map<String, dynamic> json) {
+  return _List_.fromJson(json);
 }
 
-class _$ListsTearOff {
-  const _$ListsTearOff();
+class _$List_TearOff {
+  const _$List_TearOff();
 
-  _Lists call(
+  _List_ call(
       {@required
       @JsonKey(required: true, defaultValue: 'List')
           String resourceType,
@@ -4091,8 +4983,16 @@ class _$ListsTearOff {
       CodeableConcept orderedBy,
       List<Annotation> note,
       List<ListEntry> entry,
-      CodeableConcept emptyReason}) {
-    return _Lists(
+      CodeableConcept emptyReason,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_mode')
+          Element modeElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_date')
+          Element dateElement}) {
+    return _List_(
       resourceType: resourceType,
       identifier: identifier,
       status: status,
@@ -4107,14 +5007,18 @@ class _$ListsTearOff {
       note: note,
       entry: entry,
       emptyReason: emptyReason,
+      statusElement: statusElement,
+      modeElement: modeElement,
+      titleElement: titleElement,
+      dateElement: dateElement,
     );
   }
 }
 
 // ignore: unused_element
-const $Lists = _$ListsTearOff();
+const $List_ = _$List_TearOff();
 
-mixin _$Lists {
+mixin _$List_ {
   @JsonKey(required: true, defaultValue: 'List')
   String get resourceType;
   List<Identifier> get identifier;
@@ -4132,14 +5036,22 @@ mixin _$Lists {
   List<Annotation> get note;
   List<ListEntry> get entry;
   CodeableConcept get emptyReason;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_mode')
+  Element get modeElement;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
 
   Map<String, dynamic> toJson();
-  $ListsCopyWith<Lists> get copyWith;
+  $List_CopyWith<List_> get copyWith;
 }
 
-abstract class $ListsCopyWith<$Res> {
-  factory $ListsCopyWith(Lists value, $Res Function(Lists) then) =
-      _$ListsCopyWithImpl<$Res>;
+abstract class $List_CopyWith<$Res> {
+  factory $List_CopyWith(List_ value, $Res Function(List_) then) =
+      _$List_CopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(required: true, defaultValue: 'List') String resourceType,
       List<Identifier> identifier,
@@ -4154,7 +5066,11 @@ abstract class $ListsCopyWith<$Res> {
       CodeableConcept orderedBy,
       List<Annotation> note,
       List<ListEntry> entry,
-      CodeableConcept emptyReason});
+      CodeableConcept emptyReason,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_mode') Element modeElement,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_date') Element dateElement});
 
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
@@ -4162,14 +5078,18 @@ abstract class $ListsCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get source;
   $CodeableConceptCopyWith<$Res> get orderedBy;
   $CodeableConceptCopyWith<$Res> get emptyReason;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get modeElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get dateElement;
 }
 
-class _$ListsCopyWithImpl<$Res> implements $ListsCopyWith<$Res> {
-  _$ListsCopyWithImpl(this._value, this._then);
+class _$List_CopyWithImpl<$Res> implements $List_CopyWith<$Res> {
+  _$List_CopyWithImpl(this._value, this._then);
 
-  final Lists _value;
+  final List_ _value;
   // ignore: unused_field
-  final $Res Function(Lists) _then;
+  final $Res Function(List_) _then;
 
   @override
   $Res call({
@@ -4187,6 +5107,10 @@ class _$ListsCopyWithImpl<$Res> implements $ListsCopyWith<$Res> {
     Object note = freezed,
     Object entry = freezed,
     Object emptyReason = freezed,
+    Object statusElement = freezed,
+    Object modeElement = freezed,
+    Object titleElement = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -4212,6 +5136,16 @@ class _$ListsCopyWithImpl<$Res> implements $ListsCopyWith<$Res> {
       emptyReason: emptyReason == freezed
           ? _value.emptyReason
           : emptyReason as CodeableConcept,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      modeElement:
+          modeElement == freezed ? _value.modeElement : modeElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 
@@ -4274,11 +5208,51 @@ class _$ListsCopyWithImpl<$Res> implements $ListsCopyWith<$Res> {
       return _then(_value.copyWith(emptyReason: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get modeElement {
+    if (_value.modeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.modeElement, (value) {
+      return _then(_value.copyWith(modeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
 }
 
-abstract class _$ListsCopyWith<$Res> implements $ListsCopyWith<$Res> {
-  factory _$ListsCopyWith(_Lists value, $Res Function(_Lists) then) =
-      __$ListsCopyWithImpl<$Res>;
+abstract class _$List_CopyWith<$Res> implements $List_CopyWith<$Res> {
+  factory _$List_CopyWith(_List_ value, $Res Function(_List_) then) =
+      __$List_CopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(required: true, defaultValue: 'List') String resourceType,
@@ -4294,7 +5268,11 @@ abstract class _$ListsCopyWith<$Res> implements $ListsCopyWith<$Res> {
       CodeableConcept orderedBy,
       List<Annotation> note,
       List<ListEntry> entry,
-      CodeableConcept emptyReason});
+      CodeableConcept emptyReason,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_mode') Element modeElement,
+      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_date') Element dateElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get code;
@@ -4308,15 +5286,23 @@ abstract class _$ListsCopyWith<$Res> implements $ListsCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get orderedBy;
   @override
   $CodeableConceptCopyWith<$Res> get emptyReason;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get modeElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
 }
 
-class __$ListsCopyWithImpl<$Res> extends _$ListsCopyWithImpl<$Res>
-    implements _$ListsCopyWith<$Res> {
-  __$ListsCopyWithImpl(_Lists _value, $Res Function(_Lists) _then)
-      : super(_value, (v) => _then(v as _Lists));
+class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
+    implements _$List_CopyWith<$Res> {
+  __$List_CopyWithImpl(_List_ _value, $Res Function(_List_) _then)
+      : super(_value, (v) => _then(v as _List_));
 
   @override
-  _Lists get _value => super._value as _Lists;
+  _List_ get _value => super._value as _List_;
 
   @override
   $Res call({
@@ -4334,8 +5320,12 @@ class __$ListsCopyWithImpl<$Res> extends _$ListsCopyWithImpl<$Res>
     Object note = freezed,
     Object entry = freezed,
     Object emptyReason = freezed,
+    Object statusElement = freezed,
+    Object modeElement = freezed,
+    Object titleElement = freezed,
+    Object dateElement = freezed,
   }) {
-    return _then(_Lists(
+    return _then(_List_(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as String,
@@ -4359,13 +5349,23 @@ class __$ListsCopyWithImpl<$Res> extends _$ListsCopyWithImpl<$Res>
       emptyReason: emptyReason == freezed
           ? _value.emptyReason
           : emptyReason as CodeableConcept,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      modeElement:
+          modeElement == freezed ? _value.modeElement : modeElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_Lists implements _Lists {
-  const _$_Lists(
+class _$_List_ implements _List_ {
+  const _$_List_(
       {@required
       @JsonKey(required: true, defaultValue: 'List')
           this.resourceType,
@@ -4383,11 +5383,19 @@ class _$_Lists implements _Lists {
       this.orderedBy,
       this.note,
       this.entry,
-      this.emptyReason})
+      this.emptyReason,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_mode')
+          this.modeElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_date')
+          this.dateElement})
       : assert(resourceType != null);
 
-  factory _$_Lists.fromJson(Map<String, dynamic> json) =>
-      _$_$_ListsFromJson(json);
+  factory _$_List_.fromJson(Map<String, dynamic> json) =>
+      _$_$_List_FromJson(json);
 
   @override
   @JsonKey(required: true, defaultValue: 'List')
@@ -4420,16 +5428,28 @@ class _$_Lists implements _Lists {
   final List<ListEntry> entry;
   @override
   final CodeableConcept emptyReason;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_mode')
+  final Element modeElement;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
 
   @override
   String toString() {
-    return 'Lists(resourceType: $resourceType, identifier: $identifier, status: $status, mode: $mode, title: $title, code: $code, subject: $subject, encounter: $encounter, date: $date, source: $source, orderedBy: $orderedBy, note: $note, entry: $entry, emptyReason: $emptyReason)';
+    return 'List_(resourceType: $resourceType, identifier: $identifier, status: $status, mode: $mode, title: $title, code: $code, subject: $subject, encounter: $encounter, date: $date, source: $source, orderedBy: $orderedBy, note: $note, entry: $entry, emptyReason: $emptyReason, statusElement: $statusElement, modeElement: $modeElement, titleElement: $titleElement, dateElement: $dateElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Lists &&
+        (other is _List_ &&
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
@@ -4463,7 +5483,19 @@ class _$_Lists implements _Lists {
                 const DeepCollectionEquality().equals(other.entry, entry)) &&
             (identical(other.emptyReason, emptyReason) ||
                 const DeepCollectionEquality()
-                    .equals(other.emptyReason, emptyReason)));
+                    .equals(other.emptyReason, emptyReason)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.modeElement, modeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.modeElement, modeElement)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateElement, dateElement)));
   }
 
   @override
@@ -4482,20 +5514,24 @@ class _$_Lists implements _Lists {
       const DeepCollectionEquality().hash(orderedBy) ^
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(entry) ^
-      const DeepCollectionEquality().hash(emptyReason);
+      const DeepCollectionEquality().hash(emptyReason) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(modeElement) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(dateElement);
 
   @override
-  _$ListsCopyWith<_Lists> get copyWith =>
-      __$ListsCopyWithImpl<_Lists>(this, _$identity);
+  _$List_CopyWith<_List_> get copyWith =>
+      __$List_CopyWithImpl<_List_>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ListsToJson(this);
+    return _$_$_List_ToJson(this);
   }
 }
 
-abstract class _Lists implements Lists {
-  const factory _Lists(
+abstract class _List_ implements List_ {
+  const factory _List_(
       {@required
       @JsonKey(required: true, defaultValue: 'List')
           String resourceType,
@@ -4513,9 +5549,17 @@ abstract class _Lists implements Lists {
       CodeableConcept orderedBy,
       List<Annotation> note,
       List<ListEntry> entry,
-      CodeableConcept emptyReason}) = _$_Lists;
+      CodeableConcept emptyReason,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_mode')
+          Element modeElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_date')
+          Element dateElement}) = _$_List_;
 
-  factory _Lists.fromJson(Map<String, dynamic> json) = _$_Lists.fromJson;
+  factory _List_.fromJson(Map<String, dynamic> json) = _$_List_.fromJson;
 
   @override
   @JsonKey(required: true, defaultValue: 'List')
@@ -4549,7 +5593,19 @@ abstract class _Lists implements Lists {
   @override
   CodeableConcept get emptyReason;
   @override
-  _$ListsCopyWith<_Lists> get copyWith;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_mode')
+  Element get modeElement;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  _$List_CopyWith<_List_> get copyWith;
 }
 
 ListEntry _$ListEntryFromJson(Map<String, dynamic> json) {
@@ -4563,12 +5619,16 @@ class _$ListEntryTearOff {
       {CodeableConcept flag,
       Boolean deleted,
       FhirDateTime date,
-      @JsonKey(required: true) Reference item}) {
+      @JsonKey(required: true) Reference item,
+      @JsonKey(name: '_deleted') Element deletedElement,
+      @JsonKey(name: '_date') Element dateElement}) {
     return _ListEntry(
       flag: flag,
       deleted: deleted,
       date: date,
       item: item,
+      deletedElement: deletedElement,
+      dateElement: dateElement,
     );
   }
 }
@@ -4582,6 +5642,10 @@ mixin _$ListEntry {
   FhirDateTime get date;
   @JsonKey(required: true)
   Reference get item;
+  @JsonKey(name: '_deleted')
+  Element get deletedElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
 
   Map<String, dynamic> toJson();
   $ListEntryCopyWith<ListEntry> get copyWith;
@@ -4594,10 +5658,14 @@ abstract class $ListEntryCopyWith<$Res> {
       {CodeableConcept flag,
       Boolean deleted,
       FhirDateTime date,
-      @JsonKey(required: true) Reference item});
+      @JsonKey(required: true) Reference item,
+      @JsonKey(name: '_deleted') Element deletedElement,
+      @JsonKey(name: '_date') Element dateElement});
 
   $CodeableConceptCopyWith<$Res> get flag;
   $ReferenceCopyWith<$Res> get item;
+  $ElementCopyWith<$Res> get deletedElement;
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class _$ListEntryCopyWithImpl<$Res> implements $ListEntryCopyWith<$Res> {
@@ -4613,12 +5681,19 @@ class _$ListEntryCopyWithImpl<$Res> implements $ListEntryCopyWith<$Res> {
     Object deleted = freezed,
     Object date = freezed,
     Object item = freezed,
+    Object deletedElement = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_value.copyWith(
       flag: flag == freezed ? _value.flag : flag as CodeableConcept,
       deleted: deleted == freezed ? _value.deleted : deleted as Boolean,
       date: date == freezed ? _value.date : date as FhirDateTime,
       item: item == freezed ? _value.item : item as Reference,
+      deletedElement: deletedElement == freezed
+          ? _value.deletedElement
+          : deletedElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 
@@ -4641,6 +5716,26 @@ class _$ListEntryCopyWithImpl<$Res> implements $ListEntryCopyWith<$Res> {
       return _then(_value.copyWith(item: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get deletedElement {
+    if (_value.deletedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.deletedElement, (value) {
+      return _then(_value.copyWith(deletedElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
 }
 
 abstract class _$ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
@@ -4652,12 +5747,18 @@ abstract class _$ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
       {CodeableConcept flag,
       Boolean deleted,
       FhirDateTime date,
-      @JsonKey(required: true) Reference item});
+      @JsonKey(required: true) Reference item,
+      @JsonKey(name: '_deleted') Element deletedElement,
+      @JsonKey(name: '_date') Element dateElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get flag;
   @override
   $ReferenceCopyWith<$Res> get item;
+  @override
+  $ElementCopyWith<$Res> get deletedElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
@@ -4674,12 +5775,19 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
     Object deleted = freezed,
     Object date = freezed,
     Object item = freezed,
+    Object deletedElement = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_ListEntry(
       flag: flag == freezed ? _value.flag : flag as CodeableConcept,
       deleted: deleted == freezed ? _value.deleted : deleted as Boolean,
       date: date == freezed ? _value.date : date as FhirDateTime,
       item: item == freezed ? _value.item : item as Reference,
+      deletedElement: deletedElement == freezed
+          ? _value.deletedElement
+          : deletedElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 }
@@ -4687,7 +5795,12 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ListEntry implements _ListEntry {
   const _$_ListEntry(
-      {this.flag, this.deleted, this.date, @JsonKey(required: true) this.item});
+      {this.flag,
+      this.deleted,
+      this.date,
+      @JsonKey(required: true) this.item,
+      @JsonKey(name: '_deleted') this.deletedElement,
+      @JsonKey(name: '_date') this.dateElement});
 
   factory _$_ListEntry.fromJson(Map<String, dynamic> json) =>
       _$_$_ListEntryFromJson(json);
@@ -4701,10 +5814,16 @@ class _$_ListEntry implements _ListEntry {
   @override
   @JsonKey(required: true)
   final Reference item;
+  @override
+  @JsonKey(name: '_deleted')
+  final Element deletedElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
 
   @override
   String toString() {
-    return 'ListEntry(flag: $flag, deleted: $deleted, date: $date, item: $item)';
+    return 'ListEntry(flag: $flag, deleted: $deleted, date: $date, item: $item, deletedElement: $deletedElement, dateElement: $dateElement)';
   }
 
   @override
@@ -4719,7 +5838,13 @@ class _$_ListEntry implements _ListEntry {
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
             (identical(other.item, item) ||
-                const DeepCollectionEquality().equals(other.item, item)));
+                const DeepCollectionEquality().equals(other.item, item)) &&
+            (identical(other.deletedElement, deletedElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.deletedElement, deletedElement)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateElement, dateElement)));
   }
 
   @override
@@ -4728,7 +5853,9 @@ class _$_ListEntry implements _ListEntry {
       const DeepCollectionEquality().hash(flag) ^
       const DeepCollectionEquality().hash(deleted) ^
       const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(item);
+      const DeepCollectionEquality().hash(item) ^
+      const DeepCollectionEquality().hash(deletedElement) ^
+      const DeepCollectionEquality().hash(dateElement);
 
   @override
   _$ListEntryCopyWith<_ListEntry> get copyWith =>
@@ -4745,7 +5872,9 @@ abstract class _ListEntry implements ListEntry {
       {CodeableConcept flag,
       Boolean deleted,
       FhirDateTime date,
-      @JsonKey(required: true) Reference item}) = _$_ListEntry;
+      @JsonKey(required: true) Reference item,
+      @JsonKey(name: '_deleted') Element deletedElement,
+      @JsonKey(name: '_date') Element dateElement}) = _$_ListEntry;
 
   factory _ListEntry.fromJson(Map<String, dynamic> json) =
       _$_ListEntry.fromJson;
@@ -4759,6 +5888,12 @@ abstract class _ListEntry implements ListEntry {
   @override
   @JsonKey(required: true)
   Reference get item;
+  @override
+  @JsonKey(name: '_deleted')
+  Element get deletedElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
   @override
   _$ListEntryCopyWith<_ListEntry> get copyWith;
 }

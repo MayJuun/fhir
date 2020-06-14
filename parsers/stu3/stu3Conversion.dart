@@ -7,80 +7,110 @@ void main() async {
   //location of fhir schema
   var file = File('./parsers/stu3/fhir.schema.stu3.json');
   var contents = await file.readAsString();
-  var text;
   var newObj;
   var require = <String>[];
   var isRequired;
 
   Map schema = json.decode(contents);
+  String text = '';
   for (var obj in schema['definitions'].keys) {
     if (obj != 'ResourceList' && obj != 'Element') {
-      var enums = <List<String>>[];
-      newObj = obj.replaceAll('_', '');
-      text = '@freezed\nabstract class $newObj with _\$$newObj '
-          '${domainTypes(obj.toLowerCase()) ? 'implements Resource' : ''}{'
-          '\nconst factory $newObj ({\n';
-      print(text);
-      if (schema['definitions'][obj]['allOf'][1].keys.contains('required')) {
-        schema['definitions'][obj]['allOf'][1]['required']
-            .forEach((type) => require.add(type));
-      }
+      text += '$obj\n';
       schema['definitions'][obj]['allOf'][1]['properties'].forEach((k, v) {
-        if (k[0] != '_') {
-          isRequired = require.contains(k);
-          if (k == 'resourceType') {
-            text += "@JsonKey(required: true, defaultValue: '$newObj') "
-                '@required String resourceType,\n';
-          } else if (v.keys.contains('enum')) {
-            var enumName = obj.split('_').length == 1
-                ? obj + k[0].toUpperCase() + k.substring(1, k.length)
-                : obj.split('_')[obj.split('_').length - 2] +
-                    obj.split('_')[obj.split('_').length - 1];
-            enums.add(<String>[]);
-            enums[enums.length - 1].add(enumName);
-            v['enum']
-                .forEach((enummed) => enums[enums.length - 1].add(enummed));
-            text +=
-                """${isRequired ? "@JsonKey(required: true, unknownEnumValue: $enumName.unknown) @required ') " : '@JsonKey(unknownEnumValue: $enumName.unknown) '}""";
-            if (v['type'] == 'array') {
-              text += "List<${whatType(v['items']['type'])}> $k,\n";
-            } else {
-              text += "${whatType(v['type'])} $k,\n";
-            }
-          } else if (v['type'] == 'array') {
-            if (v['items'].keys.contains('pattern')) {
-              text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
-              text += "List<${whatPattern(v['items']['pattern'])}> $k,\n";
-            } else if (v['items'].keys.contains('\$ref')) {
-              text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
-              text +=
-                  "List<${whatType(v['items']['\$ref'].split('/').last)}> $k,\n";
-            } else {
-              text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
-              text += "List<${whatType(v['items']['type'])}> $k,\n";
-            }
-          } else if (v.keys.contains('pattern')) {
-            text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
-            text += "${whatPattern(v['pattern'])} $k,\n";
-          } else if (v.keys.contains('\$ref')) {
-            text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
-            text += "${whatType(v['\$ref'].split('/').last)} $k,\n";
-          } else {
-            text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
-            text += "${whatType(v['type'])} $k,\n";
-          }
+        if (k[0] == '_') {
+          text +=
+              "@JsonKey(name: '$k') Element ${k.substring(1, k.length)}Element,\n";
         }
       });
-      text +=
-          '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) =>'
-          ' _\$${newObj}FromJson(json);}\n\n';
-      // await writeFile(text, obj);
-      await writeEnums(enums, obj);
-      text = '';
-      require = <String>[];
     }
+
+    await File('./parsers/stu3/private.dart').writeAsString(text);
+    // schema['definitions'][obj]['allOf'][0].forEach((key, value) {
+    //   if (key.contains('_')) {
+    //     print(key);
+    //   }
+    // });
+    // print(schema['definitions'][obj]['allOf'][0].keys);
+    // if(schema['definitions'][obj]['allOf'].length > 1){
+    //   print(schema['definitions'][obj]['allOf'][1].keys);
+    // }
+
+    // if (schema['definitions'][obj]['allOf'].length > 1) {
+    //   schema['definitions'][obj]['allOf'][1].forEach((key, value) {
+    //     if (key[0] == '_') {
+    //       print(key);
+    //     }
+    //   });
+    // }
   }
 }
+
+//       var enums = <List<String>>[];
+//       newObj = obj.replaceAll('_', '');
+//       text = '@freezed\nabstract class $newObj with _\$$newObj '
+//           '${domainTypes(obj.toLowerCase()) ? 'implements Resource' : ''}{'
+//           '\nconst factory $newObj ({\n';
+//       print(text);
+//       if (schema['definitions'][obj]['allOf'][1].keys.contains('required')) {
+//         schema['definitions'][obj]['allOf'][1]['required']
+//             .forEach((type) => require.add(type));
+//       }
+//       schema['definitions'][obj]['allOf'][1]['properties'].forEach((k, v) {
+//         if (k[0] != '_') {
+//           isRequired = require.contains(k);
+//           if (k == 'resourceType') {
+//             text += "@JsonKey(required: true, defaultValue: '$newObj') "
+//                 '@required String resourceType,\n';
+//           } else if (v.keys.contains('enum')) {
+//             var enumName = obj.split('_').length == 1
+//                 ? obj + k[0].toUpperCase() + k.substring(1, k.length)
+//                 : obj.split('_')[obj.split('_').length - 2] +
+//                     obj.split('_')[obj.split('_').length - 1];
+//             enums.add(<String>[]);
+//             enums[enums.length - 1].add(enumName);
+//             v['enum']
+//                 .forEach((enummed) => enums[enums.length - 1].add(enummed));
+//             text +=
+//                 """${isRequired ? "@JsonKey(required: true, unknownEnumValue: $enumName.unknown) @required ') " : '@JsonKey(unknownEnumValue: $enumName.unknown) '}""";
+//             if (v['type'] == 'array') {
+//               text += "List<${whatType(v['items']['type'])}> $k,\n";
+//             } else {
+//               text += "${whatType(v['type'])} $k,\n";
+//             }
+//           } else if (v['type'] == 'array') {
+//             if (v['items'].keys.contains('pattern')) {
+//               text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+//               text += "List<${whatPattern(v['items']['pattern'])}> $k,\n";
+//             } else if (v['items'].keys.contains('\$ref')) {
+//               text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+//               text +=
+//                   "List<${whatType(v['items']['\$ref'].split('/').last)}> $k,\n";
+//             } else {
+//               text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+//               text += "List<${whatType(v['items']['type'])}> $k,\n";
+//             }
+//           } else if (v.keys.contains('pattern')) {
+//             text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+//             text += "${whatPattern(v['pattern'])} $k,\n";
+//           } else if (v.keys.contains('\$ref')) {
+//             text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+//             text += "${whatType(v['\$ref'].split('/').last)} $k,\n";
+//           } else {
+//             text += "${isRequired ? '@JsonKey(required: true) ' : ''}";
+//             text += "${whatType(v['type'])} $k,\n";
+//           }
+//         }
+//       });
+//       text +=
+//           '}) = _$newObj;\nfactory $newObj.fromJson(Map<String, dynamic> json) =>'
+//           ' _\$${newObj}FromJson(json);}\n\n';
+//       // await writeFile(text, obj);
+//       await writeEnums(enums, obj);
+//       text = '';
+//       require = <String>[];
+//     }
+//   }
+// }
 
 Future<void> writeFile(String text, String obj) async {
   var fileName = getFileName(obj);

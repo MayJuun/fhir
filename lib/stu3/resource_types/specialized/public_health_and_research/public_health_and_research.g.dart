@@ -87,6 +87,15 @@ _$_ResearchStudy _$_$_ResearchStudyFromJson(Map<String, dynamic> json) {
             ? null
             : ResearchStudyArm.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    titleElement: json['_title'] == null
+        ? null
+        : Element.fromJson(json['_title'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
   );
 }
 
@@ -127,6 +136,9 @@ Map<String, dynamic> _$_$_ResearchStudyToJson(_$_ResearchStudy instance) {
   writeNotNull('reasonStopped', instance.reasonStopped?.toJson());
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   writeNotNull('arm', instance.arm?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_title', instance.titleElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
   return val;
 }
 
@@ -179,6 +191,12 @@ _$_ResearchStudyArm _$_$_ResearchStudyArmFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     description: json['description'] as String,
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
   );
 }
 
@@ -194,6 +212,8 @@ Map<String, dynamic> _$_$_ResearchStudyArmToJson(_$_ResearchStudyArm instance) {
   writeNotNull('name', instance.name);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('description', instance.description);
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
   return val;
 }
 
@@ -220,6 +240,15 @@ _$_ResearchSubject _$_$_ResearchSubjectFromJson(Map<String, dynamic> json) {
     consent: json['consent'] == null
         ? null
         : Reference.fromJson(json['consent'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    assignedArmElement: json['_assignedArm'] == null
+        ? null
+        : Element.fromJson(json['_assignedArm'] as Map<String, dynamic>),
+    actualArmElement: json['_actualArm'] == null
+        ? null
+        : Element.fromJson(json['_actualArm'] as Map<String, dynamic>),
   );
 }
 
@@ -241,6 +270,9 @@ Map<String, dynamic> _$_$_ResearchSubjectToJson(_$_ResearchSubject instance) {
   writeNotNull('assignedArm', instance.assignedArm);
   writeNotNull('actualArm', instance.actualArm);
   writeNotNull('consent', instance.consent?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_assignedArm', instance.assignedArmElement?.toJson());
+  writeNotNull('_actualArm', instance.actualArmElement?.toJson());
   return val;
 }
 

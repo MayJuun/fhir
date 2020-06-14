@@ -34,7 +34,19 @@ class _$CoverageTearOff {
       String sequence,
       PositiveInt order,
       String network,
-      List<Reference> contract}) {
+      List<Reference> contract,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
+      @JsonKey(name: '_network')
+          Element networkElement}) {
     return _Coverage(
       resourceType: resourceType,
       identifier: identifier,
@@ -53,6 +65,12 @@ class _$CoverageTearOff {
       order: order,
       network: network,
       contract: contract,
+      statusElement: statusElement,
+      subscriberIdElement: subscriberIdElement,
+      dependentElement: dependentElement,
+      sequenceElement: sequenceElement,
+      orderElement: orderElement,
+      networkElement: networkElement,
     );
   }
 }
@@ -79,6 +97,18 @@ mixin _$Coverage {
   PositiveInt get order;
   String get network;
   List<Reference> get contract;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_subscriberId')
+  Element get subscriberIdElement;
+  @JsonKey(name: '_dependent')
+  Element get dependentElement;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_order')
+  Element get orderElement;
+  @JsonKey(name: '_network')
+  Element get networkElement;
 
   Map<String, dynamic> toJson();
   $CoverageCopyWith<Coverage> get copyWith;
@@ -104,7 +134,13 @@ abstract class $CoverageCopyWith<$Res> {
       String sequence,
       PositiveInt order,
       String network,
-      List<Reference> contract});
+      List<Reference> contract,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_network') Element networkElement});
 
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get policyHolder;
@@ -113,6 +149,12 @@ abstract class $CoverageCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get relationship;
   $PeriodCopyWith<$Res> get period;
   $CoverageGroupingCopyWith<$Res> get grouping;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get subscriberIdElement;
+  $ElementCopyWith<$Res> get dependentElement;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get orderElement;
+  $ElementCopyWith<$Res> get networkElement;
 }
 
 class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
@@ -141,6 +183,12 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
     Object order = freezed,
     Object network = freezed,
     Object contract = freezed,
+    Object statusElement = freezed,
+    Object subscriberIdElement = freezed,
+    Object dependentElement = freezed,
+    Object sequenceElement = freezed,
+    Object orderElement = freezed,
+    Object networkElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -175,6 +223,24 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
       network: network == freezed ? _value.network : network as String,
       contract:
           contract == freezed ? _value.contract : contract as List<Reference>,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      subscriberIdElement: subscriberIdElement == freezed
+          ? _value.subscriberIdElement
+          : subscriberIdElement as Element,
+      dependentElement: dependentElement == freezed
+          ? _value.dependentElement
+          : dependentElement as Element,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      orderElement: orderElement == freezed
+          ? _value.orderElement
+          : orderElement as Element,
+      networkElement: networkElement == freezed
+          ? _value.networkElement
+          : networkElement as Element,
     ));
   }
 
@@ -247,6 +313,66 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
       return _then(_value.copyWith(grouping: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subscriberIdElement {
+    if (_value.subscriberIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subscriberIdElement, (value) {
+      return _then(_value.copyWith(subscriberIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dependentElement {
+    if (_value.dependentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dependentElement, (value) {
+      return _then(_value.copyWith(dependentElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get orderElement {
+    if (_value.orderElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.orderElement, (value) {
+      return _then(_value.copyWith(orderElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get networkElement {
+    if (_value.networkElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.networkElement, (value) {
+      return _then(_value.copyWith(networkElement: value));
+    });
+  }
 }
 
 abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
@@ -270,7 +396,13 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       String sequence,
       PositiveInt order,
       String network,
-      List<Reference> contract});
+      List<Reference> contract,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_network') Element networkElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -286,6 +418,18 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $PeriodCopyWith<$Res> get period;
   @override
   $CoverageGroupingCopyWith<$Res> get grouping;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get subscriberIdElement;
+  @override
+  $ElementCopyWith<$Res> get dependentElement;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get orderElement;
+  @override
+  $ElementCopyWith<$Res> get networkElement;
 }
 
 class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
@@ -315,6 +459,12 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
     Object order = freezed,
     Object network = freezed,
     Object contract = freezed,
+    Object statusElement = freezed,
+    Object subscriberIdElement = freezed,
+    Object dependentElement = freezed,
+    Object sequenceElement = freezed,
+    Object orderElement = freezed,
+    Object networkElement = freezed,
   }) {
     return _then(_Coverage(
       resourceType: resourceType == freezed
@@ -349,6 +499,24 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
       network: network == freezed ? _value.network : network as String,
       contract:
           contract == freezed ? _value.contract : contract as List<Reference>,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      subscriberIdElement: subscriberIdElement == freezed
+          ? _value.subscriberIdElement
+          : subscriberIdElement as Element,
+      dependentElement: dependentElement == freezed
+          ? _value.dependentElement
+          : dependentElement as Element,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      orderElement: orderElement == freezed
+          ? _value.orderElement
+          : orderElement as Element,
+      networkElement: networkElement == freezed
+          ? _value.networkElement
+          : networkElement as Element,
     ));
   }
 }
@@ -374,7 +542,19 @@ class _$_Coverage implements _Coverage {
       this.sequence,
       this.order,
       this.network,
-      this.contract})
+      this.contract,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_subscriberId')
+          this.subscriberIdElement,
+      @JsonKey(name: '_dependent')
+          this.dependentElement,
+      @JsonKey(name: '_sequence')
+          this.sequenceElement,
+      @JsonKey(name: '_order')
+          this.orderElement,
+      @JsonKey(name: '_network')
+          this.networkElement})
       : assert(resourceType != null);
 
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
@@ -415,10 +595,28 @@ class _$_Coverage implements _Coverage {
   final String network;
   @override
   final List<Reference> contract;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_subscriberId')
+  final Element subscriberIdElement;
+  @override
+  @JsonKey(name: '_dependent')
+  final Element dependentElement;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_order')
+  final Element orderElement;
+  @override
+  @JsonKey(name: '_network')
+  final Element networkElement;
 
   @override
   String toString() {
-    return 'Coverage(resourceType: $resourceType, identifier: $identifier, status: $status, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, beneficiary: $beneficiary, relationship: $relationship, period: $period, payor: $payor, grouping: $grouping, dependent: $dependent, sequence: $sequence, order: $order, network: $network, contract: $contract)';
+    return 'Coverage(resourceType: $resourceType, identifier: $identifier, status: $status, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, beneficiary: $beneficiary, relationship: $relationship, period: $period, payor: $payor, grouping: $grouping, dependent: $dependent, sequence: $sequence, order: $order, network: $network, contract: $contract, statusElement: $statusElement, subscriberIdElement: $subscriberIdElement, dependentElement: $dependentElement, sequenceElement: $sequenceElement, orderElement: $orderElement, networkElement: $networkElement)';
   }
 
   @override
@@ -470,7 +668,25 @@ class _$_Coverage implements _Coverage {
                     .equals(other.network, network)) &&
             (identical(other.contract, contract) ||
                 const DeepCollectionEquality()
-                    .equals(other.contract, contract)));
+                    .equals(other.contract, contract)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.subscriberIdElement, subscriberIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.subscriberIdElement, subscriberIdElement)) &&
+            (identical(other.dependentElement, dependentElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dependentElement, dependentElement)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.orderElement, orderElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.orderElement, orderElement)) &&
+            (identical(other.networkElement, networkElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.networkElement, networkElement)));
   }
 
   @override
@@ -492,7 +708,13 @@ class _$_Coverage implements _Coverage {
       const DeepCollectionEquality().hash(sequence) ^
       const DeepCollectionEquality().hash(order) ^
       const DeepCollectionEquality().hash(network) ^
-      const DeepCollectionEquality().hash(contract);
+      const DeepCollectionEquality().hash(contract) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(subscriberIdElement) ^
+      const DeepCollectionEquality().hash(dependentElement) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(orderElement) ^
+      const DeepCollectionEquality().hash(networkElement);
 
   @override
   _$CoverageCopyWith<_Coverage> get copyWith =>
@@ -524,7 +746,19 @@ abstract class _Coverage implements Coverage {
       String sequence,
       PositiveInt order,
       String network,
-      List<Reference> contract}) = _$_Coverage;
+      List<Reference> contract,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
+      @JsonKey(name: '_network')
+          Element networkElement}) = _$_Coverage;
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
@@ -564,6 +798,24 @@ abstract class _Coverage implements Coverage {
   @override
   List<Reference> get contract;
   @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_subscriberId')
+  Element get subscriberIdElement;
+  @override
+  @JsonKey(name: '_dependent')
+  Element get dependentElement;
+  @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_order')
+  Element get orderElement;
+  @override
+  @JsonKey(name: '_network')
+  Element get networkElement;
+  @override
   _$CoverageCopyWith<_Coverage> get copyWith;
 }
 
@@ -586,7 +838,19 @@ class _$CoverageGroupingTearOff {
       @JsonKey(name: 'class') String class_,
       String classDisplay,
       String subClass,
-      String subClassDisplay}) {
+      String subClassDisplay,
+      @JsonKey(name: '_group') Element groupElement,
+      @JsonKey(name: '_groupDisplay') Element groupDisplayElement,
+      @JsonKey(name: '_subGroup') Element subGroupElement,
+      @JsonKey(name: '_subGroupDisplay') Element subGroupDisplayElement,
+      @JsonKey(name: '_plan') Element planElement,
+      @JsonKey(name: '_planDisplay') Element planDisplayElement,
+      @JsonKey(name: '_subPlan') Element subPlanElement,
+      @JsonKey(name: '_subPlanDisplay') Element subPlanDisplayElement,
+      @JsonKey(name: '_class') Element classElement,
+      @JsonKey(name: '_classDisplay') Element classDisplayElement,
+      @JsonKey(name: '_subClass') Element subClassElement,
+      @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement}) {
     return _CoverageGrouping(
       group: group,
       groupDisplay: groupDisplay,
@@ -600,6 +864,18 @@ class _$CoverageGroupingTearOff {
       classDisplay: classDisplay,
       subClass: subClass,
       subClassDisplay: subClassDisplay,
+      groupElement: groupElement,
+      groupDisplayElement: groupDisplayElement,
+      subGroupElement: subGroupElement,
+      subGroupDisplayElement: subGroupDisplayElement,
+      planElement: planElement,
+      planDisplayElement: planDisplayElement,
+      subPlanElement: subPlanElement,
+      subPlanDisplayElement: subPlanDisplayElement,
+      classElement: classElement,
+      classDisplayElement: classDisplayElement,
+      subClassElement: subClassElement,
+      subClassDisplayElement: subClassDisplayElement,
     );
   }
 }
@@ -621,6 +897,30 @@ mixin _$CoverageGrouping {
   String get classDisplay;
   String get subClass;
   String get subClassDisplay;
+  @JsonKey(name: '_group')
+  Element get groupElement;
+  @JsonKey(name: '_groupDisplay')
+  Element get groupDisplayElement;
+  @JsonKey(name: '_subGroup')
+  Element get subGroupElement;
+  @JsonKey(name: '_subGroupDisplay')
+  Element get subGroupDisplayElement;
+  @JsonKey(name: '_plan')
+  Element get planElement;
+  @JsonKey(name: '_planDisplay')
+  Element get planDisplayElement;
+  @JsonKey(name: '_subPlan')
+  Element get subPlanElement;
+  @JsonKey(name: '_subPlanDisplay')
+  Element get subPlanDisplayElement;
+  @JsonKey(name: '_class')
+  Element get classElement;
+  @JsonKey(name: '_classDisplay')
+  Element get classDisplayElement;
+  @JsonKey(name: '_subClass')
+  Element get subClassElement;
+  @JsonKey(name: '_subClassDisplay')
+  Element get subClassDisplayElement;
 
   Map<String, dynamic> toJson();
   $CoverageGroupingCopyWith<CoverageGrouping> get copyWith;
@@ -642,7 +942,32 @@ abstract class $CoverageGroupingCopyWith<$Res> {
       @JsonKey(name: 'class') String class_,
       String classDisplay,
       String subClass,
-      String subClassDisplay});
+      String subClassDisplay,
+      @JsonKey(name: '_group') Element groupElement,
+      @JsonKey(name: '_groupDisplay') Element groupDisplayElement,
+      @JsonKey(name: '_subGroup') Element subGroupElement,
+      @JsonKey(name: '_subGroupDisplay') Element subGroupDisplayElement,
+      @JsonKey(name: '_plan') Element planElement,
+      @JsonKey(name: '_planDisplay') Element planDisplayElement,
+      @JsonKey(name: '_subPlan') Element subPlanElement,
+      @JsonKey(name: '_subPlanDisplay') Element subPlanDisplayElement,
+      @JsonKey(name: '_class') Element classElement,
+      @JsonKey(name: '_classDisplay') Element classDisplayElement,
+      @JsonKey(name: '_subClass') Element subClassElement,
+      @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement});
+
+  $ElementCopyWith<$Res> get groupElement;
+  $ElementCopyWith<$Res> get groupDisplayElement;
+  $ElementCopyWith<$Res> get subGroupElement;
+  $ElementCopyWith<$Res> get subGroupDisplayElement;
+  $ElementCopyWith<$Res> get planElement;
+  $ElementCopyWith<$Res> get planDisplayElement;
+  $ElementCopyWith<$Res> get subPlanElement;
+  $ElementCopyWith<$Res> get subPlanDisplayElement;
+  $ElementCopyWith<$Res> get classElement;
+  $ElementCopyWith<$Res> get classDisplayElement;
+  $ElementCopyWith<$Res> get subClassElement;
+  $ElementCopyWith<$Res> get subClassDisplayElement;
 }
 
 class _$CoverageGroupingCopyWithImpl<$Res>
@@ -667,6 +992,18 @@ class _$CoverageGroupingCopyWithImpl<$Res>
     Object classDisplay = freezed,
     Object subClass = freezed,
     Object subClassDisplay = freezed,
+    Object groupElement = freezed,
+    Object groupDisplayElement = freezed,
+    Object subGroupElement = freezed,
+    Object subGroupDisplayElement = freezed,
+    Object planElement = freezed,
+    Object planDisplayElement = freezed,
+    Object subPlanElement = freezed,
+    Object subPlanDisplayElement = freezed,
+    Object classElement = freezed,
+    Object classDisplayElement = freezed,
+    Object subClassElement = freezed,
+    Object subClassDisplayElement = freezed,
   }) {
     return _then(_value.copyWith(
       group: group == freezed ? _value.group : group as String,
@@ -692,7 +1029,162 @@ class _$CoverageGroupingCopyWithImpl<$Res>
       subClassDisplay: subClassDisplay == freezed
           ? _value.subClassDisplay
           : subClassDisplay as String,
+      groupElement: groupElement == freezed
+          ? _value.groupElement
+          : groupElement as Element,
+      groupDisplayElement: groupDisplayElement == freezed
+          ? _value.groupDisplayElement
+          : groupDisplayElement as Element,
+      subGroupElement: subGroupElement == freezed
+          ? _value.subGroupElement
+          : subGroupElement as Element,
+      subGroupDisplayElement: subGroupDisplayElement == freezed
+          ? _value.subGroupDisplayElement
+          : subGroupDisplayElement as Element,
+      planElement:
+          planElement == freezed ? _value.planElement : planElement as Element,
+      planDisplayElement: planDisplayElement == freezed
+          ? _value.planDisplayElement
+          : planDisplayElement as Element,
+      subPlanElement: subPlanElement == freezed
+          ? _value.subPlanElement
+          : subPlanElement as Element,
+      subPlanDisplayElement: subPlanDisplayElement == freezed
+          ? _value.subPlanDisplayElement
+          : subPlanDisplayElement as Element,
+      classElement: classElement == freezed
+          ? _value.classElement
+          : classElement as Element,
+      classDisplayElement: classDisplayElement == freezed
+          ? _value.classDisplayElement
+          : classDisplayElement as Element,
+      subClassElement: subClassElement == freezed
+          ? _value.subClassElement
+          : subClassElement as Element,
+      subClassDisplayElement: subClassDisplayElement == freezed
+          ? _value.subClassDisplayElement
+          : subClassDisplayElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get groupElement {
+    if (_value.groupElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.groupElement, (value) {
+      return _then(_value.copyWith(groupElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get groupDisplayElement {
+    if (_value.groupDisplayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.groupDisplayElement, (value) {
+      return _then(_value.copyWith(groupDisplayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subGroupElement {
+    if (_value.subGroupElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subGroupElement, (value) {
+      return _then(_value.copyWith(subGroupElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subGroupDisplayElement {
+    if (_value.subGroupDisplayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subGroupDisplayElement, (value) {
+      return _then(_value.copyWith(subGroupDisplayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get planElement {
+    if (_value.planElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.planElement, (value) {
+      return _then(_value.copyWith(planElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get planDisplayElement {
+    if (_value.planDisplayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.planDisplayElement, (value) {
+      return _then(_value.copyWith(planDisplayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subPlanElement {
+    if (_value.subPlanElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subPlanElement, (value) {
+      return _then(_value.copyWith(subPlanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subPlanDisplayElement {
+    if (_value.subPlanDisplayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subPlanDisplayElement, (value) {
+      return _then(_value.copyWith(subPlanDisplayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get classElement {
+    if (_value.classElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.classElement, (value) {
+      return _then(_value.copyWith(classElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get classDisplayElement {
+    if (_value.classDisplayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.classDisplayElement, (value) {
+      return _then(_value.copyWith(classDisplayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subClassElement {
+    if (_value.subClassElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subClassElement, (value) {
+      return _then(_value.copyWith(subClassElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subClassDisplayElement {
+    if (_value.subClassDisplayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subClassDisplayElement, (value) {
+      return _then(_value.copyWith(subClassDisplayElement: value));
+    });
   }
 }
 
@@ -714,7 +1206,44 @@ abstract class _$CoverageGroupingCopyWith<$Res>
       @JsonKey(name: 'class') String class_,
       String classDisplay,
       String subClass,
-      String subClassDisplay});
+      String subClassDisplay,
+      @JsonKey(name: '_group') Element groupElement,
+      @JsonKey(name: '_groupDisplay') Element groupDisplayElement,
+      @JsonKey(name: '_subGroup') Element subGroupElement,
+      @JsonKey(name: '_subGroupDisplay') Element subGroupDisplayElement,
+      @JsonKey(name: '_plan') Element planElement,
+      @JsonKey(name: '_planDisplay') Element planDisplayElement,
+      @JsonKey(name: '_subPlan') Element subPlanElement,
+      @JsonKey(name: '_subPlanDisplay') Element subPlanDisplayElement,
+      @JsonKey(name: '_class') Element classElement,
+      @JsonKey(name: '_classDisplay') Element classDisplayElement,
+      @JsonKey(name: '_subClass') Element subClassElement,
+      @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement});
+
+  @override
+  $ElementCopyWith<$Res> get groupElement;
+  @override
+  $ElementCopyWith<$Res> get groupDisplayElement;
+  @override
+  $ElementCopyWith<$Res> get subGroupElement;
+  @override
+  $ElementCopyWith<$Res> get subGroupDisplayElement;
+  @override
+  $ElementCopyWith<$Res> get planElement;
+  @override
+  $ElementCopyWith<$Res> get planDisplayElement;
+  @override
+  $ElementCopyWith<$Res> get subPlanElement;
+  @override
+  $ElementCopyWith<$Res> get subPlanDisplayElement;
+  @override
+  $ElementCopyWith<$Res> get classElement;
+  @override
+  $ElementCopyWith<$Res> get classDisplayElement;
+  @override
+  $ElementCopyWith<$Res> get subClassElement;
+  @override
+  $ElementCopyWith<$Res> get subClassDisplayElement;
 }
 
 class __$CoverageGroupingCopyWithImpl<$Res>
@@ -741,6 +1270,18 @@ class __$CoverageGroupingCopyWithImpl<$Res>
     Object classDisplay = freezed,
     Object subClass = freezed,
     Object subClassDisplay = freezed,
+    Object groupElement = freezed,
+    Object groupDisplayElement = freezed,
+    Object subGroupElement = freezed,
+    Object subGroupDisplayElement = freezed,
+    Object planElement = freezed,
+    Object planDisplayElement = freezed,
+    Object subPlanElement = freezed,
+    Object subPlanDisplayElement = freezed,
+    Object classElement = freezed,
+    Object classDisplayElement = freezed,
+    Object subClassElement = freezed,
+    Object subClassDisplayElement = freezed,
   }) {
     return _then(_CoverageGrouping(
       group: group == freezed ? _value.group : group as String,
@@ -766,6 +1307,41 @@ class __$CoverageGroupingCopyWithImpl<$Res>
       subClassDisplay: subClassDisplay == freezed
           ? _value.subClassDisplay
           : subClassDisplay as String,
+      groupElement: groupElement == freezed
+          ? _value.groupElement
+          : groupElement as Element,
+      groupDisplayElement: groupDisplayElement == freezed
+          ? _value.groupDisplayElement
+          : groupDisplayElement as Element,
+      subGroupElement: subGroupElement == freezed
+          ? _value.subGroupElement
+          : subGroupElement as Element,
+      subGroupDisplayElement: subGroupDisplayElement == freezed
+          ? _value.subGroupDisplayElement
+          : subGroupDisplayElement as Element,
+      planElement:
+          planElement == freezed ? _value.planElement : planElement as Element,
+      planDisplayElement: planDisplayElement == freezed
+          ? _value.planDisplayElement
+          : planDisplayElement as Element,
+      subPlanElement: subPlanElement == freezed
+          ? _value.subPlanElement
+          : subPlanElement as Element,
+      subPlanDisplayElement: subPlanDisplayElement == freezed
+          ? _value.subPlanDisplayElement
+          : subPlanDisplayElement as Element,
+      classElement: classElement == freezed
+          ? _value.classElement
+          : classElement as Element,
+      classDisplayElement: classDisplayElement == freezed
+          ? _value.classDisplayElement
+          : classDisplayElement as Element,
+      subClassElement: subClassElement == freezed
+          ? _value.subClassElement
+          : subClassElement as Element,
+      subClassDisplayElement: subClassDisplayElement == freezed
+          ? _value.subClassDisplayElement
+          : subClassDisplayElement as Element,
     ));
   }
 }
@@ -784,7 +1360,19 @@ class _$_CoverageGrouping implements _CoverageGrouping {
       @JsonKey(name: 'class') this.class_,
       this.classDisplay,
       this.subClass,
-      this.subClassDisplay});
+      this.subClassDisplay,
+      @JsonKey(name: '_group') this.groupElement,
+      @JsonKey(name: '_groupDisplay') this.groupDisplayElement,
+      @JsonKey(name: '_subGroup') this.subGroupElement,
+      @JsonKey(name: '_subGroupDisplay') this.subGroupDisplayElement,
+      @JsonKey(name: '_plan') this.planElement,
+      @JsonKey(name: '_planDisplay') this.planDisplayElement,
+      @JsonKey(name: '_subPlan') this.subPlanElement,
+      @JsonKey(name: '_subPlanDisplay') this.subPlanDisplayElement,
+      @JsonKey(name: '_class') this.classElement,
+      @JsonKey(name: '_classDisplay') this.classDisplayElement,
+      @JsonKey(name: '_subClass') this.subClassElement,
+      @JsonKey(name: '_subClassDisplay') this.subClassDisplayElement});
 
   factory _$_CoverageGrouping.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageGroupingFromJson(json);
@@ -814,10 +1402,46 @@ class _$_CoverageGrouping implements _CoverageGrouping {
   final String subClass;
   @override
   final String subClassDisplay;
+  @override
+  @JsonKey(name: '_group')
+  final Element groupElement;
+  @override
+  @JsonKey(name: '_groupDisplay')
+  final Element groupDisplayElement;
+  @override
+  @JsonKey(name: '_subGroup')
+  final Element subGroupElement;
+  @override
+  @JsonKey(name: '_subGroupDisplay')
+  final Element subGroupDisplayElement;
+  @override
+  @JsonKey(name: '_plan')
+  final Element planElement;
+  @override
+  @JsonKey(name: '_planDisplay')
+  final Element planDisplayElement;
+  @override
+  @JsonKey(name: '_subPlan')
+  final Element subPlanElement;
+  @override
+  @JsonKey(name: '_subPlanDisplay')
+  final Element subPlanDisplayElement;
+  @override
+  @JsonKey(name: '_class')
+  final Element classElement;
+  @override
+  @JsonKey(name: '_classDisplay')
+  final Element classDisplayElement;
+  @override
+  @JsonKey(name: '_subClass')
+  final Element subClassElement;
+  @override
+  @JsonKey(name: '_subClassDisplay')
+  final Element subClassDisplayElement;
 
   @override
   String toString() {
-    return 'CoverageGrouping(group: $group, groupDisplay: $groupDisplay, subGroup: $subGroup, subGroupDisplay: $subGroupDisplay, plan: $plan, planDisplay: $planDisplay, subPlan: $subPlan, subPlanDisplay: $subPlanDisplay, class_: $class_, classDisplay: $classDisplay, subClass: $subClass, subClassDisplay: $subClassDisplay)';
+    return 'CoverageGrouping(group: $group, groupDisplay: $groupDisplay, subGroup: $subGroup, subGroupDisplay: $subGroupDisplay, plan: $plan, planDisplay: $planDisplay, subPlan: $subPlan, subPlanDisplay: $subPlanDisplay, class_: $class_, classDisplay: $classDisplay, subClass: $subClass, subClassDisplay: $subClassDisplay, groupElement: $groupElement, groupDisplayElement: $groupDisplayElement, subGroupElement: $subGroupElement, subGroupDisplayElement: $subGroupDisplayElement, planElement: $planElement, planDisplayElement: $planDisplayElement, subPlanElement: $subPlanElement, subPlanDisplayElement: $subPlanDisplayElement, classElement: $classElement, classDisplayElement: $classDisplayElement, subClassElement: $subClassElement, subClassDisplayElement: $subClassDisplayElement)';
   }
 
   @override
@@ -856,7 +1480,40 @@ class _$_CoverageGrouping implements _CoverageGrouping {
                     .equals(other.subClass, subClass)) &&
             (identical(other.subClassDisplay, subClassDisplay) ||
                 const DeepCollectionEquality()
-                    .equals(other.subClassDisplay, subClassDisplay)));
+                    .equals(other.subClassDisplay, subClassDisplay)) &&
+            (identical(other.groupElement, groupElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.groupElement, groupElement)) &&
+            (identical(other.groupDisplayElement, groupDisplayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.groupDisplayElement, groupDisplayElement)) &&
+            (identical(other.subGroupElement, subGroupElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.subGroupElement, subGroupElement)) &&
+            (identical(other.subGroupDisplayElement, subGroupDisplayElement) ||
+                const DeepCollectionEquality().equals(
+                    other.subGroupDisplayElement, subGroupDisplayElement)) &&
+            (identical(other.planElement, planElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.planElement, planElement)) &&
+            (identical(other.planDisplayElement, planDisplayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.planDisplayElement, planDisplayElement)) &&
+            (identical(other.subPlanElement, subPlanElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.subPlanElement, subPlanElement)) &&
+            (identical(other.subPlanDisplayElement, subPlanDisplayElement) ||
+                const DeepCollectionEquality().equals(
+                    other.subPlanDisplayElement, subPlanDisplayElement)) &&
+            (identical(other.classElement, classElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.classElement, classElement)) &&
+            (identical(other.classDisplayElement, classDisplayElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.classDisplayElement, classDisplayElement)) &&
+            (identical(other.subClassElement, subClassElement) ||
+                const DeepCollectionEquality().equals(other.subClassElement, subClassElement)) &&
+            (identical(other.subClassDisplayElement, subClassDisplayElement) || const DeepCollectionEquality().equals(other.subClassDisplayElement, subClassDisplayElement)));
   }
 
   @override
@@ -873,7 +1530,19 @@ class _$_CoverageGrouping implements _CoverageGrouping {
       const DeepCollectionEquality().hash(class_) ^
       const DeepCollectionEquality().hash(classDisplay) ^
       const DeepCollectionEquality().hash(subClass) ^
-      const DeepCollectionEquality().hash(subClassDisplay);
+      const DeepCollectionEquality().hash(subClassDisplay) ^
+      const DeepCollectionEquality().hash(groupElement) ^
+      const DeepCollectionEquality().hash(groupDisplayElement) ^
+      const DeepCollectionEquality().hash(subGroupElement) ^
+      const DeepCollectionEquality().hash(subGroupDisplayElement) ^
+      const DeepCollectionEquality().hash(planElement) ^
+      const DeepCollectionEquality().hash(planDisplayElement) ^
+      const DeepCollectionEquality().hash(subPlanElement) ^
+      const DeepCollectionEquality().hash(subPlanDisplayElement) ^
+      const DeepCollectionEquality().hash(classElement) ^
+      const DeepCollectionEquality().hash(classDisplayElement) ^
+      const DeepCollectionEquality().hash(subClassElement) ^
+      const DeepCollectionEquality().hash(subClassDisplayElement);
 
   @override
   _$CoverageGroupingCopyWith<_CoverageGrouping> get copyWith =>
@@ -887,18 +1556,31 @@ class _$_CoverageGrouping implements _CoverageGrouping {
 
 abstract class _CoverageGrouping implements CoverageGrouping {
   const factory _CoverageGrouping(
-      {String group,
-      String groupDisplay,
-      String subGroup,
-      String subGroupDisplay,
-      String plan,
-      String planDisplay,
-      String subPlan,
-      String subPlanDisplay,
-      @JsonKey(name: 'class') String class_,
-      String classDisplay,
-      String subClass,
-      String subClassDisplay}) = _$_CoverageGrouping;
+          {String group,
+          String groupDisplay,
+          String subGroup,
+          String subGroupDisplay,
+          String plan,
+          String planDisplay,
+          String subPlan,
+          String subPlanDisplay,
+          @JsonKey(name: 'class') String class_,
+          String classDisplay,
+          String subClass,
+          String subClassDisplay,
+          @JsonKey(name: '_group') Element groupElement,
+          @JsonKey(name: '_groupDisplay') Element groupDisplayElement,
+          @JsonKey(name: '_subGroup') Element subGroupElement,
+          @JsonKey(name: '_subGroupDisplay') Element subGroupDisplayElement,
+          @JsonKey(name: '_plan') Element planElement,
+          @JsonKey(name: '_planDisplay') Element planDisplayElement,
+          @JsonKey(name: '_subPlan') Element subPlanElement,
+          @JsonKey(name: '_subPlanDisplay') Element subPlanDisplayElement,
+          @JsonKey(name: '_class') Element classElement,
+          @JsonKey(name: '_classDisplay') Element classDisplayElement,
+          @JsonKey(name: '_subClass') Element subClassElement,
+          @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement}) =
+      _$_CoverageGrouping;
 
   factory _CoverageGrouping.fromJson(Map<String, dynamic> json) =
       _$_CoverageGrouping.fromJson;
@@ -929,6 +1611,42 @@ abstract class _CoverageGrouping implements CoverageGrouping {
   @override
   String get subClassDisplay;
   @override
+  @JsonKey(name: '_group')
+  Element get groupElement;
+  @override
+  @JsonKey(name: '_groupDisplay')
+  Element get groupDisplayElement;
+  @override
+  @JsonKey(name: '_subGroup')
+  Element get subGroupElement;
+  @override
+  @JsonKey(name: '_subGroupDisplay')
+  Element get subGroupDisplayElement;
+  @override
+  @JsonKey(name: '_plan')
+  Element get planElement;
+  @override
+  @JsonKey(name: '_planDisplay')
+  Element get planDisplayElement;
+  @override
+  @JsonKey(name: '_subPlan')
+  Element get subPlanElement;
+  @override
+  @JsonKey(name: '_subPlanDisplay')
+  Element get subPlanDisplayElement;
+  @override
+  @JsonKey(name: '_class')
+  Element get classElement;
+  @override
+  @JsonKey(name: '_classDisplay')
+  Element get classDisplayElement;
+  @override
+  @JsonKey(name: '_subClass')
+  Element get subClassElement;
+  @override
+  @JsonKey(name: '_subClassDisplay')
+  Element get subClassDisplayElement;
+  @override
   _$CoverageGroupingCopyWith<_CoverageGrouping> get copyWith;
 }
 
@@ -958,7 +1676,15 @@ class _$EligibilityRequestTearOff {
       Reference coverage,
       String businessArrangement,
       CodeableConcept benefitCategory,
-      CodeableConcept benefitSubCategory}) {
+      CodeableConcept benefitSubCategory,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement}) {
     return _EligibilityRequest(
       resourceType: resourceType,
       identifier: identifier,
@@ -977,6 +1703,10 @@ class _$EligibilityRequestTearOff {
       businessArrangement: businessArrangement,
       benefitCategory: benefitCategory,
       benefitSubCategory: benefitSubCategory,
+      statusElement: statusElement,
+      servicedDateElement: servicedDateElement,
+      createdElement: createdElement,
+      businessArrangementElement: businessArrangementElement,
     );
   }
 }
@@ -1003,6 +1733,14 @@ mixin _$EligibilityRequest {
   String get businessArrangement;
   CodeableConcept get benefitCategory;
   CodeableConcept get benefitSubCategory;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_servicedDate')
+  Element get servicedDateElement;
+  @JsonKey(name: '_created')
+  Element get createdElement;
+  @JsonKey(name: '_businessArrangement')
+  Element get businessArrangementElement;
 
   Map<String, dynamic> toJson();
   $EligibilityRequestCopyWith<EligibilityRequest> get copyWith;
@@ -1030,7 +1768,15 @@ abstract class $EligibilityRequestCopyWith<$Res> {
       Reference coverage,
       String businessArrangement,
       CodeableConcept benefitCategory,
-      CodeableConcept benefitSubCategory});
+      CodeableConcept benefitSubCategory,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement});
 
   $CodeableConceptCopyWith<$Res> get priority;
   $ReferenceCopyWith<$Res> get patient;
@@ -1043,6 +1789,10 @@ abstract class $EligibilityRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get coverage;
   $CodeableConceptCopyWith<$Res> get benefitCategory;
   $CodeableConceptCopyWith<$Res> get benefitSubCategory;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get servicedDateElement;
+  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res> get businessArrangementElement;
 }
 
 class _$EligibilityRequestCopyWithImpl<$Res>
@@ -1072,6 +1822,10 @@ class _$EligibilityRequestCopyWithImpl<$Res>
     Object businessArrangement = freezed,
     Object benefitCategory = freezed,
     Object benefitSubCategory = freezed,
+    Object statusElement = freezed,
+    Object servicedDateElement = freezed,
+    Object createdElement = freezed,
+    Object businessArrangementElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -1107,6 +1861,18 @@ class _$EligibilityRequestCopyWithImpl<$Res>
       benefitSubCategory: benefitSubCategory == freezed
           ? _value.benefitSubCategory
           : benefitSubCategory as CodeableConcept,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      servicedDateElement: servicedDateElement == freezed
+          ? _value.servicedDateElement
+          : servicedDateElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
+      businessArrangementElement: businessArrangementElement == freezed
+          ? _value.businessArrangementElement
+          : businessArrangementElement as Element,
     ));
   }
 
@@ -1219,6 +1985,46 @@ class _$EligibilityRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(benefitSubCategory: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get servicedDateElement {
+    if (_value.servicedDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.servicedDateElement, (value) {
+      return _then(_value.copyWith(servicedDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get businessArrangementElement {
+    if (_value.businessArrangementElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.businessArrangementElement, (value) {
+      return _then(_value.copyWith(businessArrangementElement: value));
+    });
+  }
 }
 
 abstract class _$EligibilityRequestCopyWith<$Res>
@@ -1245,7 +2051,15 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       Reference coverage,
       String businessArrangement,
       CodeableConcept benefitCategory,
-      CodeableConcept benefitSubCategory});
+      CodeableConcept benefitSubCategory,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get priority;
@@ -1269,6 +2083,14 @@ abstract class _$EligibilityRequestCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get benefitCategory;
   @override
   $CodeableConceptCopyWith<$Res> get benefitSubCategory;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get servicedDateElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
+  @override
+  $ElementCopyWith<$Res> get businessArrangementElement;
 }
 
 class __$EligibilityRequestCopyWithImpl<$Res>
@@ -1300,6 +2122,10 @@ class __$EligibilityRequestCopyWithImpl<$Res>
     Object businessArrangement = freezed,
     Object benefitCategory = freezed,
     Object benefitSubCategory = freezed,
+    Object statusElement = freezed,
+    Object servicedDateElement = freezed,
+    Object createdElement = freezed,
+    Object businessArrangementElement = freezed,
   }) {
     return _then(_EligibilityRequest(
       resourceType: resourceType == freezed
@@ -1335,6 +2161,18 @@ class __$EligibilityRequestCopyWithImpl<$Res>
       benefitSubCategory: benefitSubCategory == freezed
           ? _value.benefitSubCategory
           : benefitSubCategory as CodeableConcept,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      servicedDateElement: servicedDateElement == freezed
+          ? _value.servicedDateElement
+          : servicedDateElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
+      businessArrangementElement: businessArrangementElement == freezed
+          ? _value.businessArrangementElement
+          : businessArrangementElement as Element,
     ));
   }
 }
@@ -1360,7 +2198,15 @@ class _$_EligibilityRequest implements _EligibilityRequest {
       this.coverage,
       this.businessArrangement,
       this.benefitCategory,
-      this.benefitSubCategory})
+      this.benefitSubCategory,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_servicedDate')
+          this.servicedDateElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
+      @JsonKey(name: '_businessArrangement')
+          this.businessArrangementElement})
       : assert(resourceType != null);
 
   factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
@@ -1401,10 +2247,22 @@ class _$_EligibilityRequest implements _EligibilityRequest {
   final CodeableConcept benefitCategory;
   @override
   final CodeableConcept benefitSubCategory;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_servicedDate')
+  final Element servicedDateElement;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
+  @override
+  @JsonKey(name: '_businessArrangement')
+  final Element businessArrangementElement;
 
   @override
   String toString() {
-    return 'EligibilityRequest(resourceType: $resourceType, identifier: $identifier, status: $status, priority: $priority, patient: $patient, servicedDate: $servicedDate, servicedPeriod: $servicedPeriod, created: $created, enterer: $enterer, provider: $provider, organization: $organization, insurer: $insurer, facility: $facility, coverage: $coverage, businessArrangement: $businessArrangement, benefitCategory: $benefitCategory, benefitSubCategory: $benefitSubCategory)';
+    return 'EligibilityRequest(resourceType: $resourceType, identifier: $identifier, status: $status, priority: $priority, patient: $patient, servicedDate: $servicedDate, servicedPeriod: $servicedPeriod, created: $created, enterer: $enterer, provider: $provider, organization: $organization, insurer: $insurer, facility: $facility, coverage: $coverage, businessArrangement: $businessArrangement, benefitCategory: $benefitCategory, benefitSubCategory: $benefitSubCategory, statusElement: $statusElement, servicedDateElement: $servicedDateElement, createdElement: $createdElement, businessArrangementElement: $businessArrangementElement)';
   }
 
   @override
@@ -1460,7 +2318,20 @@ class _$_EligibilityRequest implements _EligibilityRequest {
                     .equals(other.benefitCategory, benefitCategory)) &&
             (identical(other.benefitSubCategory, benefitSubCategory) ||
                 const DeepCollectionEquality()
-                    .equals(other.benefitSubCategory, benefitSubCategory)));
+                    .equals(other.benefitSubCategory, benefitSubCategory)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.servicedDateElement, servicedDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.servicedDateElement, servicedDateElement)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)) &&
+            (identical(other.businessArrangementElement, businessArrangementElement) ||
+                const DeepCollectionEquality().equals(
+                    other.businessArrangementElement,
+                    businessArrangementElement)));
   }
 
   @override
@@ -1482,7 +2353,11 @@ class _$_EligibilityRequest implements _EligibilityRequest {
       const DeepCollectionEquality().hash(coverage) ^
       const DeepCollectionEquality().hash(businessArrangement) ^
       const DeepCollectionEquality().hash(benefitCategory) ^
-      const DeepCollectionEquality().hash(benefitSubCategory);
+      const DeepCollectionEquality().hash(benefitSubCategory) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(servicedDateElement) ^
+      const DeepCollectionEquality().hash(createdElement) ^
+      const DeepCollectionEquality().hash(businessArrangementElement);
 
   @override
   _$EligibilityRequestCopyWith<_EligibilityRequest> get copyWith =>
@@ -1514,7 +2389,15 @@ abstract class _EligibilityRequest implements EligibilityRequest {
       Reference coverage,
       String businessArrangement,
       CodeableConcept benefitCategory,
-      CodeableConcept benefitSubCategory}) = _$_EligibilityRequest;
+      CodeableConcept benefitSubCategory,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement}) = _$_EligibilityRequest;
 
   factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$_EligibilityRequest.fromJson;
@@ -1555,6 +2438,18 @@ abstract class _EligibilityRequest implements EligibilityRequest {
   @override
   CodeableConcept get benefitSubCategory;
   @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_servicedDate')
+  Element get servicedDateElement;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
+  @override
+  @JsonKey(name: '_businessArrangement')
+  Element get businessArrangementElement;
+  @override
   _$EligibilityRequestCopyWith<_EligibilityRequest> get copyWith;
 }
 
@@ -1581,7 +2476,15 @@ class _$EligibilityResponseTearOff {
       Boolean inforce,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
-      List<EligibilityResponseError> error}) {
+      List<EligibilityResponseError> error,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
+      @JsonKey(name: '_inforce')
+          Element inforceElement}) {
     return _EligibilityResponse(
       resourceType: resourceType,
       identifier: identifier,
@@ -1597,6 +2500,10 @@ class _$EligibilityResponseTearOff {
       insurance: insurance,
       form: form,
       error: error,
+      statusElement: statusElement,
+      createdElement: createdElement,
+      dispositionElement: dispositionElement,
+      inforceElement: inforceElement,
     );
   }
 }
@@ -1620,6 +2527,14 @@ mixin _$EligibilityResponse {
   List<EligibilityResponseInsurance> get insurance;
   CodeableConcept get form;
   List<EligibilityResponseError> get error;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_created')
+  Element get createdElement;
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
+  @JsonKey(name: '_inforce')
+  Element get inforceElement;
 
   Map<String, dynamic> toJson();
   $EligibilityResponseCopyWith<EligibilityResponse> get copyWith;
@@ -1644,7 +2559,15 @@ abstract class $EligibilityResponseCopyWith<$Res> {
       Boolean inforce,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
-      List<EligibilityResponseError> error});
+      List<EligibilityResponseError> error,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
+      @JsonKey(name: '_inforce')
+          Element inforceElement});
 
   $ReferenceCopyWith<$Res> get requestProvider;
   $ReferenceCopyWith<$Res> get requestOrganization;
@@ -1652,6 +2575,10 @@ abstract class $EligibilityResponseCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get outcome;
   $ReferenceCopyWith<$Res> get insurer;
   $CodeableConceptCopyWith<$Res> get form;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res> get dispositionElement;
+  $ElementCopyWith<$Res> get inforceElement;
 }
 
 class _$EligibilityResponseCopyWithImpl<$Res>
@@ -1678,6 +2605,10 @@ class _$EligibilityResponseCopyWithImpl<$Res>
     Object insurance = freezed,
     Object form = freezed,
     Object error = freezed,
+    Object statusElement = freezed,
+    Object createdElement = freezed,
+    Object dispositionElement = freezed,
+    Object inforceElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -1707,6 +2638,18 @@ class _$EligibilityResponseCopyWithImpl<$Res>
       error: error == freezed
           ? _value.error
           : error as List<EligibilityResponseError>,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
+      inforceElement: inforceElement == freezed
+          ? _value.inforceElement
+          : inforceElement as Element,
     ));
   }
 
@@ -1769,6 +2712,46 @@ class _$EligibilityResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(form: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dispositionElement {
+    if (_value.dispositionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+      return _then(_value.copyWith(dispositionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get inforceElement {
+    if (_value.inforceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.inforceElement, (value) {
+      return _then(_value.copyWith(inforceElement: value));
+    });
+  }
 }
 
 abstract class _$EligibilityResponseCopyWith<$Res>
@@ -1792,7 +2775,15 @@ abstract class _$EligibilityResponseCopyWith<$Res>
       Boolean inforce,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
-      List<EligibilityResponseError> error});
+      List<EligibilityResponseError> error,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
+      @JsonKey(name: '_inforce')
+          Element inforceElement});
 
   @override
   $ReferenceCopyWith<$Res> get requestProvider;
@@ -1806,6 +2797,14 @@ abstract class _$EligibilityResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get insurer;
   @override
   $CodeableConceptCopyWith<$Res> get form;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
+  @override
+  $ElementCopyWith<$Res> get dispositionElement;
+  @override
+  $ElementCopyWith<$Res> get inforceElement;
 }
 
 class __$EligibilityResponseCopyWithImpl<$Res>
@@ -1834,6 +2833,10 @@ class __$EligibilityResponseCopyWithImpl<$Res>
     Object insurance = freezed,
     Object form = freezed,
     Object error = freezed,
+    Object statusElement = freezed,
+    Object createdElement = freezed,
+    Object dispositionElement = freezed,
+    Object inforceElement = freezed,
   }) {
     return _then(_EligibilityResponse(
       resourceType: resourceType == freezed
@@ -1863,6 +2866,18 @@ class __$EligibilityResponseCopyWithImpl<$Res>
       error: error == freezed
           ? _value.error
           : error as List<EligibilityResponseError>,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
+      inforceElement: inforceElement == freezed
+          ? _value.inforceElement
+          : inforceElement as Element,
     ));
   }
 }
@@ -1885,7 +2900,15 @@ class _$_EligibilityResponse implements _EligibilityResponse {
       this.inforce,
       this.insurance,
       this.form,
-      this.error})
+      this.error,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
+      @JsonKey(name: '_inforce')
+          this.inforceElement})
       : assert(resourceType != null);
 
   factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
@@ -1920,10 +2943,22 @@ class _$_EligibilityResponse implements _EligibilityResponse {
   final CodeableConcept form;
   @override
   final List<EligibilityResponseError> error;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
+  @override
+  @JsonKey(name: '_disposition')
+  final Element dispositionElement;
+  @override
+  @JsonKey(name: '_inforce')
+  final Element inforceElement;
 
   @override
   String toString() {
-    return 'EligibilityResponse(resourceType: $resourceType, identifier: $identifier, status: $status, created: $created, requestProvider: $requestProvider, requestOrganization: $requestOrganization, request: $request, outcome: $outcome, disposition: $disposition, insurer: $insurer, inforce: $inforce, insurance: $insurance, form: $form, error: $error)';
+    return 'EligibilityResponse(resourceType: $resourceType, identifier: $identifier, status: $status, created: $created, requestProvider: $requestProvider, requestOrganization: $requestOrganization, request: $request, outcome: $outcome, disposition: $disposition, insurer: $insurer, inforce: $inforce, insurance: $insurance, form: $form, error: $error, statusElement: $statusElement, createdElement: $createdElement, dispositionElement: $dispositionElement, inforceElement: $inforceElement)';
   }
 
   @override
@@ -1968,7 +3003,19 @@ class _$_EligibilityResponse implements _EligibilityResponse {
             (identical(other.form, form) ||
                 const DeepCollectionEquality().equals(other.form, form)) &&
             (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+                const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)) &&
+            (identical(other.dispositionElement, dispositionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dispositionElement, dispositionElement)) &&
+            (identical(other.inforceElement, inforceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.inforceElement, inforceElement)));
   }
 
   @override
@@ -1987,7 +3034,11 @@ class _$_EligibilityResponse implements _EligibilityResponse {
       const DeepCollectionEquality().hash(inforce) ^
       const DeepCollectionEquality().hash(insurance) ^
       const DeepCollectionEquality().hash(form) ^
-      const DeepCollectionEquality().hash(error);
+      const DeepCollectionEquality().hash(error) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(createdElement) ^
+      const DeepCollectionEquality().hash(dispositionElement) ^
+      const DeepCollectionEquality().hash(inforceElement);
 
   @override
   _$EligibilityResponseCopyWith<_EligibilityResponse> get copyWith =>
@@ -2017,7 +3068,15 @@ abstract class _EligibilityResponse implements EligibilityResponse {
       Boolean inforce,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
-      List<EligibilityResponseError> error}) = _$_EligibilityResponse;
+      List<EligibilityResponseError> error,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
+      @JsonKey(name: '_inforce')
+          Element inforceElement}) = _$_EligibilityResponse;
 
   factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponse.fromJson;
@@ -2051,6 +3110,18 @@ abstract class _EligibilityResponse implements EligibilityResponse {
   CodeableConcept get form;
   @override
   List<EligibilityResponseError> get error;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
+  @override
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
+  @override
+  @JsonKey(name: '_inforce')
+  Element get inforceElement;
   @override
   _$EligibilityResponseCopyWith<_EligibilityResponse> get copyWith;
 }
@@ -2284,7 +3355,10 @@ class _$EligibilityResponseBenefitBalanceTearOff {
       CodeableConcept network,
       CodeableConcept unit,
       CodeableConcept term,
-      List<EligibilityResponseFinancial> financial}) {
+      List<EligibilityResponseFinancial> financial,
+      @JsonKey(name: '_excluded') Element excludedElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _EligibilityResponseBenefitBalance(
       category: category,
       subCategory: subCategory,
@@ -2295,6 +3369,9 @@ class _$EligibilityResponseBenefitBalanceTearOff {
       unit: unit,
       term: term,
       financial: financial,
+      excludedElement: excludedElement,
+      nameElement: nameElement,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -2314,6 +3391,12 @@ mixin _$EligibilityResponseBenefitBalance {
   CodeableConcept get unit;
   CodeableConcept get term;
   List<EligibilityResponseFinancial> get financial;
+  @JsonKey(name: '_excluded')
+  Element get excludedElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $EligibilityResponseBenefitBalanceCopyWith<EligibilityResponseBenefitBalance>
@@ -2334,13 +3417,19 @@ abstract class $EligibilityResponseBenefitBalanceCopyWith<$Res> {
       CodeableConcept network,
       CodeableConcept unit,
       CodeableConcept term,
-      List<EligibilityResponseFinancial> financial});
+      List<EligibilityResponseFinancial> financial,
+      @JsonKey(name: '_excluded') Element excludedElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get subCategory;
   $CodeableConceptCopyWith<$Res> get network;
   $CodeableConceptCopyWith<$Res> get unit;
   $CodeableConceptCopyWith<$Res> get term;
+  $ElementCopyWith<$Res> get excludedElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
@@ -2362,6 +3451,9 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
     Object unit = freezed,
     Object term = freezed,
     Object financial = freezed,
+    Object excludedElement = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       category:
@@ -2379,6 +3471,14 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
       financial: financial == freezed
           ? _value.financial
           : financial as List<EligibilityResponseFinancial>,
+      excludedElement: excludedElement == freezed
+          ? _value.excludedElement
+          : excludedElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 
@@ -2431,6 +3531,36 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
       return _then(_value.copyWith(term: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get excludedElement {
+    if (_value.excludedElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.excludedElement, (value) {
+      return _then(_value.copyWith(excludedElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
 }
 
 abstract class _$EligibilityResponseBenefitBalanceCopyWith<$Res>
@@ -2449,7 +3579,10 @@ abstract class _$EligibilityResponseBenefitBalanceCopyWith<$Res>
       CodeableConcept network,
       CodeableConcept unit,
       CodeableConcept term,
-      List<EligibilityResponseFinancial> financial});
+      List<EligibilityResponseFinancial> financial,
+      @JsonKey(name: '_excluded') Element excludedElement,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get category;
@@ -2461,6 +3594,12 @@ abstract class _$EligibilityResponseBenefitBalanceCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get unit;
   @override
   $CodeableConceptCopyWith<$Res> get term;
+  @override
+  $ElementCopyWith<$Res> get excludedElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
@@ -2486,6 +3625,9 @@ class __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
     Object unit = freezed,
     Object term = freezed,
     Object financial = freezed,
+    Object excludedElement = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_EligibilityResponseBenefitBalance(
       category:
@@ -2503,6 +3645,14 @@ class __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
       financial: financial == freezed
           ? _value.financial
           : financial as List<EligibilityResponseFinancial>,
+      excludedElement: excludedElement == freezed
+          ? _value.excludedElement
+          : excludedElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
@@ -2519,7 +3669,10 @@ class _$_EligibilityResponseBenefitBalance
       this.network,
       this.unit,
       this.term,
-      this.financial});
+      this.financial,
+      @JsonKey(name: '_excluded') this.excludedElement,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
@@ -2544,10 +3697,19 @@ class _$_EligibilityResponseBenefitBalance
   final CodeableConcept term;
   @override
   final List<EligibilityResponseFinancial> financial;
+  @override
+  @JsonKey(name: '_excluded')
+  final Element excludedElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'EligibilityResponseBenefitBalance(category: $category, subCategory: $subCategory, excluded: $excluded, name: $name, description: $description, network: $network, unit: $unit, term: $term, financial: $financial)';
+    return 'EligibilityResponseBenefitBalance(category: $category, subCategory: $subCategory, excluded: $excluded, name: $name, description: $description, network: $network, unit: $unit, term: $term, financial: $financial, excludedElement: $excludedElement, nameElement: $nameElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -2577,7 +3739,16 @@ class _$_EligibilityResponseBenefitBalance
                 const DeepCollectionEquality().equals(other.term, term)) &&
             (identical(other.financial, financial) ||
                 const DeepCollectionEquality()
-                    .equals(other.financial, financial)));
+                    .equals(other.financial, financial)) &&
+            (identical(other.excludedElement, excludedElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.excludedElement, excludedElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
@@ -2591,7 +3762,10 @@ class _$_EligibilityResponseBenefitBalance
       const DeepCollectionEquality().hash(network) ^
       const DeepCollectionEquality().hash(unit) ^
       const DeepCollectionEquality().hash(term) ^
-      const DeepCollectionEquality().hash(financial);
+      const DeepCollectionEquality().hash(financial) ^
+      const DeepCollectionEquality().hash(excludedElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$EligibilityResponseBenefitBalanceCopyWith<
@@ -2616,7 +3790,10 @@ abstract class _EligibilityResponseBenefitBalance
           CodeableConcept network,
           CodeableConcept unit,
           CodeableConcept term,
-          List<EligibilityResponseFinancial> financial}) =
+          List<EligibilityResponseFinancial> financial,
+          @JsonKey(name: '_excluded') Element excludedElement,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_description') Element descriptionElement}) =
       _$_EligibilityResponseBenefitBalance;
 
   factory _EligibilityResponseBenefitBalance.fromJson(
@@ -2643,6 +3820,15 @@ abstract class _EligibilityResponseBenefitBalance
   @override
   List<EligibilityResponseFinancial> get financial;
   @override
+  @JsonKey(name: '_excluded')
+  Element get excludedElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
   _$EligibilityResponseBenefitBalanceCopyWith<
       _EligibilityResponseBenefitBalance> get copyWith;
 }
@@ -2661,7 +3847,10 @@ class _$EligibilityResponseFinancialTearOff {
       String allowedString,
       Money allowedMoney,
       UnsignedInt usedUnsignedInt,
-      Money usedMoney}) {
+      Money usedMoney,
+      @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      @JsonKey(name: '_allowedString') Element allowedStringElement,
+      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement}) {
     return _EligibilityResponseFinancial(
       type: type,
       allowedUnsignedInt: allowedUnsignedInt,
@@ -2669,6 +3858,9 @@ class _$EligibilityResponseFinancialTearOff {
       allowedMoney: allowedMoney,
       usedUnsignedInt: usedUnsignedInt,
       usedMoney: usedMoney,
+      allowedUnsignedIntElement: allowedUnsignedIntElement,
+      allowedStringElement: allowedStringElement,
+      usedUnsignedIntElement: usedUnsignedIntElement,
     );
   }
 }
@@ -2684,6 +3876,12 @@ mixin _$EligibilityResponseFinancial {
   Money get allowedMoney;
   UnsignedInt get usedUnsignedInt;
   Money get usedMoney;
+  @JsonKey(name: '_allowedUnsignedInt')
+  Element get allowedUnsignedIntElement;
+  @JsonKey(name: '_allowedString')
+  Element get allowedStringElement;
+  @JsonKey(name: '_usedUnsignedInt')
+  Element get usedUnsignedIntElement;
 
   Map<String, dynamic> toJson();
   $EligibilityResponseFinancialCopyWith<EligibilityResponseFinancial>
@@ -2701,11 +3899,17 @@ abstract class $EligibilityResponseFinancialCopyWith<$Res> {
       String allowedString,
       Money allowedMoney,
       UnsignedInt usedUnsignedInt,
-      Money usedMoney});
+      Money usedMoney,
+      @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      @JsonKey(name: '_allowedString') Element allowedStringElement,
+      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement});
 
   $CodeableConceptCopyWith<$Res> get type;
   $MoneyCopyWith<$Res> get allowedMoney;
   $MoneyCopyWith<$Res> get usedMoney;
+  $ElementCopyWith<$Res> get allowedUnsignedIntElement;
+  $ElementCopyWith<$Res> get allowedStringElement;
+  $ElementCopyWith<$Res> get usedUnsignedIntElement;
 }
 
 class _$EligibilityResponseFinancialCopyWithImpl<$Res>
@@ -2724,6 +3928,9 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res>
     Object allowedMoney = freezed,
     Object usedUnsignedInt = freezed,
     Object usedMoney = freezed,
+    Object allowedUnsignedIntElement = freezed,
+    Object allowedStringElement = freezed,
+    Object usedUnsignedIntElement = freezed,
   }) {
     return _then(_value.copyWith(
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -2739,6 +3946,15 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res>
           ? _value.usedUnsignedInt
           : usedUnsignedInt as UnsignedInt,
       usedMoney: usedMoney == freezed ? _value.usedMoney : usedMoney as Money,
+      allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
+          ? _value.allowedUnsignedIntElement
+          : allowedUnsignedIntElement as Element,
+      allowedStringElement: allowedStringElement == freezed
+          ? _value.allowedStringElement
+          : allowedStringElement as Element,
+      usedUnsignedIntElement: usedUnsignedIntElement == freezed
+          ? _value.usedUnsignedIntElement
+          : usedUnsignedIntElement as Element,
     ));
   }
 
@@ -2771,6 +3987,36 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res>
       return _then(_value.copyWith(usedMoney: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get allowedUnsignedIntElement {
+    if (_value.allowedUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.allowedUnsignedIntElement, (value) {
+      return _then(_value.copyWith(allowedUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get allowedStringElement {
+    if (_value.allowedStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.allowedStringElement, (value) {
+      return _then(_value.copyWith(allowedStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get usedUnsignedIntElement {
+    if (_value.usedUnsignedIntElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.usedUnsignedIntElement, (value) {
+      return _then(_value.copyWith(usedUnsignedIntElement: value));
+    });
+  }
 }
 
 abstract class _$EligibilityResponseFinancialCopyWith<$Res>
@@ -2786,7 +4032,10 @@ abstract class _$EligibilityResponseFinancialCopyWith<$Res>
       String allowedString,
       Money allowedMoney,
       UnsignedInt usedUnsignedInt,
-      Money usedMoney});
+      Money usedMoney,
+      @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
+      @JsonKey(name: '_allowedString') Element allowedStringElement,
+      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -2794,6 +4043,12 @@ abstract class _$EligibilityResponseFinancialCopyWith<$Res>
   $MoneyCopyWith<$Res> get allowedMoney;
   @override
   $MoneyCopyWith<$Res> get usedMoney;
+  @override
+  $ElementCopyWith<$Res> get allowedUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res> get allowedStringElement;
+  @override
+  $ElementCopyWith<$Res> get usedUnsignedIntElement;
 }
 
 class __$EligibilityResponseFinancialCopyWithImpl<$Res>
@@ -2816,6 +4071,9 @@ class __$EligibilityResponseFinancialCopyWithImpl<$Res>
     Object allowedMoney = freezed,
     Object usedUnsignedInt = freezed,
     Object usedMoney = freezed,
+    Object allowedUnsignedIntElement = freezed,
+    Object allowedStringElement = freezed,
+    Object usedUnsignedIntElement = freezed,
   }) {
     return _then(_EligibilityResponseFinancial(
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -2831,6 +4089,15 @@ class __$EligibilityResponseFinancialCopyWithImpl<$Res>
           ? _value.usedUnsignedInt
           : usedUnsignedInt as UnsignedInt,
       usedMoney: usedMoney == freezed ? _value.usedMoney : usedMoney as Money,
+      allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
+          ? _value.allowedUnsignedIntElement
+          : allowedUnsignedIntElement as Element,
+      allowedStringElement: allowedStringElement == freezed
+          ? _value.allowedStringElement
+          : allowedStringElement as Element,
+      usedUnsignedIntElement: usedUnsignedIntElement == freezed
+          ? _value.usedUnsignedIntElement
+          : usedUnsignedIntElement as Element,
     ));
   }
 }
@@ -2843,7 +4110,10 @@ class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
       this.allowedString,
       this.allowedMoney,
       this.usedUnsignedInt,
-      this.usedMoney});
+      this.usedMoney,
+      @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
+      @JsonKey(name: '_allowedString') this.allowedStringElement,
+      @JsonKey(name: '_usedUnsignedInt') this.usedUnsignedIntElement});
 
   factory _$_EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseFinancialFromJson(json);
@@ -2861,10 +4131,19 @@ class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
   final UnsignedInt usedUnsignedInt;
   @override
   final Money usedMoney;
+  @override
+  @JsonKey(name: '_allowedUnsignedInt')
+  final Element allowedUnsignedIntElement;
+  @override
+  @JsonKey(name: '_allowedString')
+  final Element allowedStringElement;
+  @override
+  @JsonKey(name: '_usedUnsignedInt')
+  final Element usedUnsignedIntElement;
 
   @override
   String toString() {
-    return 'EligibilityResponseFinancial(type: $type, allowedUnsignedInt: $allowedUnsignedInt, allowedString: $allowedString, allowedMoney: $allowedMoney, usedUnsignedInt: $usedUnsignedInt, usedMoney: $usedMoney)';
+    return 'EligibilityResponseFinancial(type: $type, allowedUnsignedInt: $allowedUnsignedInt, allowedString: $allowedString, allowedMoney: $allowedMoney, usedUnsignedInt: $usedUnsignedInt, usedMoney: $usedMoney, allowedUnsignedIntElement: $allowedUnsignedIntElement, allowedStringElement: $allowedStringElement, usedUnsignedIntElement: $usedUnsignedIntElement)';
   }
 
   @override
@@ -2887,7 +4166,18 @@ class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
                     .equals(other.usedUnsignedInt, usedUnsignedInt)) &&
             (identical(other.usedMoney, usedMoney) ||
                 const DeepCollectionEquality()
-                    .equals(other.usedMoney, usedMoney)));
+                    .equals(other.usedMoney, usedMoney)) &&
+            (identical(other.allowedUnsignedIntElement,
+                    allowedUnsignedIntElement) ||
+                const DeepCollectionEquality().equals(
+                    other.allowedUnsignedIntElement,
+                    allowedUnsignedIntElement)) &&
+            (identical(other.allowedStringElement, allowedStringElement) ||
+                const DeepCollectionEquality().equals(
+                    other.allowedStringElement, allowedStringElement)) &&
+            (identical(other.usedUnsignedIntElement, usedUnsignedIntElement) ||
+                const DeepCollectionEquality().equals(
+                    other.usedUnsignedIntElement, usedUnsignedIntElement)));
   }
 
   @override
@@ -2898,7 +4188,10 @@ class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
       const DeepCollectionEquality().hash(allowedString) ^
       const DeepCollectionEquality().hash(allowedMoney) ^
       const DeepCollectionEquality().hash(usedUnsignedInt) ^
-      const DeepCollectionEquality().hash(usedMoney);
+      const DeepCollectionEquality().hash(usedMoney) ^
+      const DeepCollectionEquality().hash(allowedUnsignedIntElement) ^
+      const DeepCollectionEquality().hash(allowedStringElement) ^
+      const DeepCollectionEquality().hash(usedUnsignedIntElement);
 
   @override
   _$EligibilityResponseFinancialCopyWith<_EligibilityResponseFinancial>
@@ -2914,12 +4207,19 @@ class _$_EligibilityResponseFinancial implements _EligibilityResponseFinancial {
 abstract class _EligibilityResponseFinancial
     implements EligibilityResponseFinancial {
   const factory _EligibilityResponseFinancial(
-      {@JsonKey(required: true) CodeableConcept type,
+      {@JsonKey(required: true)
+          CodeableConcept type,
       UnsignedInt allowedUnsignedInt,
       String allowedString,
       Money allowedMoney,
       UnsignedInt usedUnsignedInt,
-      Money usedMoney}) = _$_EligibilityResponseFinancial;
+      Money usedMoney,
+      @JsonKey(name: '_allowedUnsignedInt')
+          Element allowedUnsignedIntElement,
+      @JsonKey(name: '_allowedString')
+          Element allowedStringElement,
+      @JsonKey(name: '_usedUnsignedInt')
+          Element usedUnsignedIntElement}) = _$_EligibilityResponseFinancial;
 
   factory _EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponseFinancial.fromJson;
@@ -2937,6 +4237,15 @@ abstract class _EligibilityResponseFinancial
   UnsignedInt get usedUnsignedInt;
   @override
   Money get usedMoney;
+  @override
+  @JsonKey(name: '_allowedUnsignedInt')
+  Element get allowedUnsignedIntElement;
+  @override
+  @JsonKey(name: '_allowedString')
+  Element get allowedStringElement;
+  @override
+  @JsonKey(name: '_usedUnsignedInt')
+  Element get usedUnsignedIntElement;
   @override
   _$EligibilityResponseFinancialCopyWith<_EligibilityResponseFinancial>
       get copyWith;
@@ -3111,7 +4420,11 @@ class _$EnrollmentRequestTearOff {
       Reference provider,
       Reference organization,
       Reference subject,
-      Reference coverage}) {
+      Reference coverage,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) {
     return _EnrollmentRequest(
       resourceType: resourceType,
       identifier: identifier,
@@ -3122,6 +4435,8 @@ class _$EnrollmentRequestTearOff {
       organization: organization,
       subject: subject,
       coverage: coverage,
+      statusElement: statusElement,
+      createdElement: createdElement,
     );
   }
 }
@@ -3140,6 +4455,10 @@ mixin _$EnrollmentRequest {
   Reference get organization;
   Reference get subject;
   Reference get coverage;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_created')
+  Element get createdElement;
 
   Map<String, dynamic> toJson();
   $EnrollmentRequestCopyWith<EnrollmentRequest> get copyWith;
@@ -3159,13 +4478,19 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       Reference provider,
       Reference organization,
       Reference subject,
-      Reference coverage});
+      Reference coverage,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement});
 
   $ReferenceCopyWith<$Res> get insurer;
   $ReferenceCopyWith<$Res> get provider;
   $ReferenceCopyWith<$Res> get organization;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get coverage;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get createdElement;
 }
 
 class _$EnrollmentRequestCopyWithImpl<$Res>
@@ -3187,6 +4512,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
     Object organization = freezed,
     Object subject = freezed,
     Object coverage = freezed,
+    Object statusElement = freezed,
+    Object createdElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -3204,6 +4531,12 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
           : organization as Reference,
       subject: subject == freezed ? _value.subject : subject as Reference,
       coverage: coverage == freezed ? _value.coverage : coverage as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
     ));
   }
 
@@ -3256,6 +4589,26 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(coverage: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
+    });
+  }
 }
 
 abstract class _$EnrollmentRequestCopyWith<$Res>
@@ -3274,7 +4627,11 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       Reference provider,
       Reference organization,
       Reference subject,
-      Reference coverage});
+      Reference coverage,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement});
 
   @override
   $ReferenceCopyWith<$Res> get insurer;
@@ -3286,6 +4643,10 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res> get coverage;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
 }
 
 class __$EnrollmentRequestCopyWithImpl<$Res>
@@ -3309,6 +4670,8 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
     Object organization = freezed,
     Object subject = freezed,
     Object coverage = freezed,
+    Object statusElement = freezed,
+    Object createdElement = freezed,
   }) {
     return _then(_EnrollmentRequest(
       resourceType: resourceType == freezed
@@ -3326,6 +4689,12 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
           : organization as Reference,
       subject: subject == freezed ? _value.subject : subject as Reference,
       coverage: coverage == freezed ? _value.coverage : coverage as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
     ));
   }
 }
@@ -3343,7 +4712,11 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
       this.provider,
       this.organization,
       this.subject,
-      this.coverage})
+      this.coverage,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_created')
+          this.createdElement})
       : assert(resourceType != null);
 
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
@@ -3368,10 +4741,16 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
   final Reference subject;
   @override
   final Reference coverage;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
 
   @override
   String toString() {
-    return 'EnrollmentRequest(resourceType: $resourceType, identifier: $identifier, status: $status, created: $created, insurer: $insurer, provider: $provider, organization: $organization, subject: $subject, coverage: $coverage)';
+    return 'EnrollmentRequest(resourceType: $resourceType, identifier: $identifier, status: $status, created: $created, insurer: $insurer, provider: $provider, organization: $organization, subject: $subject, coverage: $coverage, statusElement: $statusElement, createdElement: $createdElement)';
   }
 
   @override
@@ -3403,7 +4782,13 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
                     .equals(other.subject, subject)) &&
             (identical(other.coverage, coverage) ||
                 const DeepCollectionEquality()
-                    .equals(other.coverage, coverage)));
+                    .equals(other.coverage, coverage)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)));
   }
 
   @override
@@ -3417,7 +4802,9 @@ class _$_EnrollmentRequest implements _EnrollmentRequest {
       const DeepCollectionEquality().hash(provider) ^
       const DeepCollectionEquality().hash(organization) ^
       const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(coverage);
+      const DeepCollectionEquality().hash(coverage) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(createdElement);
 
   @override
   _$EnrollmentRequestCopyWith<_EnrollmentRequest> get copyWith =>
@@ -3441,7 +4828,11 @@ abstract class _EnrollmentRequest implements EnrollmentRequest {
       Reference provider,
       Reference organization,
       Reference subject,
-      Reference coverage}) = _$_EnrollmentRequest;
+      Reference coverage,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) = _$_EnrollmentRequest;
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
@@ -3466,6 +4857,12 @@ abstract class _EnrollmentRequest implements EnrollmentRequest {
   @override
   Reference get coverage;
   @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
+  @override
   _$EnrollmentRequestCopyWith<_EnrollmentRequest> get copyWith;
 }
 
@@ -3488,7 +4885,13 @@ class _$EnrollmentResponseTearOff {
       FhirDateTime created,
       Reference organization,
       Reference requestProvider,
-      Reference requestOrganization}) {
+      Reference requestOrganization,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) {
     return _EnrollmentResponse(
       resourceType: resourceType,
       identifier: identifier,
@@ -3500,6 +4903,9 @@ class _$EnrollmentResponseTearOff {
       organization: organization,
       requestProvider: requestProvider,
       requestOrganization: requestOrganization,
+      statusElement: statusElement,
+      dispositionElement: dispositionElement,
+      createdElement: createdElement,
     );
   }
 }
@@ -3519,6 +4925,12 @@ mixin _$EnrollmentResponse {
   Reference get organization;
   Reference get requestProvider;
   Reference get requestOrganization;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
+  @JsonKey(name: '_created')
+  Element get createdElement;
 
   Map<String, dynamic> toJson();
   $EnrollmentResponseCopyWith<EnrollmentResponse> get copyWith;
@@ -3539,13 +4951,22 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       FhirDateTime created,
       Reference organization,
       Reference requestProvider,
-      Reference requestOrganization});
+      Reference requestOrganization,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
+      @JsonKey(name: '_created')
+          Element createdElement});
 
   $ReferenceCopyWith<$Res> get request;
   $CodeableConceptCopyWith<$Res> get outcome;
   $ReferenceCopyWith<$Res> get organization;
   $ReferenceCopyWith<$Res> get requestProvider;
   $ReferenceCopyWith<$Res> get requestOrganization;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get dispositionElement;
+  $ElementCopyWith<$Res> get createdElement;
 }
 
 class _$EnrollmentResponseCopyWithImpl<$Res>
@@ -3568,6 +4989,9 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
     Object organization = freezed,
     Object requestProvider = freezed,
     Object requestOrganization = freezed,
+    Object statusElement = freezed,
+    Object dispositionElement = freezed,
+    Object createdElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -3591,6 +5015,15 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       requestOrganization: requestOrganization == freezed
           ? _value.requestOrganization
           : requestOrganization as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
     ));
   }
 
@@ -3643,6 +5076,36 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(requestOrganization: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dispositionElement {
+    if (_value.dispositionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+      return _then(_value.copyWith(dispositionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
+    });
+  }
 }
 
 abstract class _$EnrollmentResponseCopyWith<$Res>
@@ -3662,7 +5125,13 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       FhirDateTime created,
       Reference organization,
       Reference requestProvider,
-      Reference requestOrganization});
+      Reference requestOrganization,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
+      @JsonKey(name: '_created')
+          Element createdElement});
 
   @override
   $ReferenceCopyWith<$Res> get request;
@@ -3674,6 +5143,12 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get requestProvider;
   @override
   $ReferenceCopyWith<$Res> get requestOrganization;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get dispositionElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
 }
 
 class __$EnrollmentResponseCopyWithImpl<$Res>
@@ -3698,6 +5173,9 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
     Object organization = freezed,
     Object requestProvider = freezed,
     Object requestOrganization = freezed,
+    Object statusElement = freezed,
+    Object dispositionElement = freezed,
+    Object createdElement = freezed,
   }) {
     return _then(_EnrollmentResponse(
       resourceType: resourceType == freezed
@@ -3721,6 +5199,15 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
       requestOrganization: requestOrganization == freezed
           ? _value.requestOrganization
           : requestOrganization as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
     ));
   }
 }
@@ -3739,7 +5226,13 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
       this.created,
       this.organization,
       this.requestProvider,
-      this.requestOrganization})
+      this.requestOrganization,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
+      @JsonKey(name: '_created')
+          this.createdElement})
       : assert(resourceType != null);
 
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
@@ -3766,10 +5259,19 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
   final Reference requestProvider;
   @override
   final Reference requestOrganization;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_disposition')
+  final Element dispositionElement;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
 
   @override
   String toString() {
-    return 'EnrollmentResponse(resourceType: $resourceType, identifier: $identifier, status: $status, request: $request, outcome: $outcome, disposition: $disposition, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization)';
+    return 'EnrollmentResponse(resourceType: $resourceType, identifier: $identifier, status: $status, request: $request, outcome: $outcome, disposition: $disposition, created: $created, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization, statusElement: $statusElement, dispositionElement: $dispositionElement, createdElement: $createdElement)';
   }
 
   @override
@@ -3804,7 +5306,16 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
                     .equals(other.requestProvider, requestProvider)) &&
             (identical(other.requestOrganization, requestOrganization) ||
                 const DeepCollectionEquality()
-                    .equals(other.requestOrganization, requestOrganization)));
+                    .equals(other.requestOrganization, requestOrganization)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.dispositionElement, dispositionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dispositionElement, dispositionElement)) &&
+            (identical(other.createdElement, createdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdElement, createdElement)));
   }
 
   @override
@@ -3819,7 +5330,10 @@ class _$_EnrollmentResponse implements _EnrollmentResponse {
       const DeepCollectionEquality().hash(created) ^
       const DeepCollectionEquality().hash(organization) ^
       const DeepCollectionEquality().hash(requestProvider) ^
-      const DeepCollectionEquality().hash(requestOrganization);
+      const DeepCollectionEquality().hash(requestOrganization) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(dispositionElement) ^
+      const DeepCollectionEquality().hash(createdElement);
 
   @override
   _$EnrollmentResponseCopyWith<_EnrollmentResponse> get copyWith =>
@@ -3844,7 +5358,13 @@ abstract class _EnrollmentResponse implements EnrollmentResponse {
       FhirDateTime created,
       Reference organization,
       Reference requestProvider,
-      Reference requestOrganization}) = _$_EnrollmentResponse;
+      Reference requestOrganization,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) = _$_EnrollmentResponse;
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentResponse.fromJson;
@@ -3870,6 +5390,15 @@ abstract class _EnrollmentResponse implements EnrollmentResponse {
   Reference get requestProvider;
   @override
   Reference get requestOrganization;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
   @override
   _$EnrollmentResponseCopyWith<_EnrollmentResponse> get copyWith;
 }

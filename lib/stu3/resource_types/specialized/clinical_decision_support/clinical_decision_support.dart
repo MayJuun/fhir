@@ -28,6 +28,9 @@ abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
     Reference outputParameters,
     Reference result,
     List<DataRequirement> dataRequirement,
+    @JsonKey(name: '_requestId') Element requestIdElement,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
   }) = _GuidanceResponse;
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
@@ -43,6 +46,8 @@ abstract class Contributor with _$Contributor implements Resource {
         ContributorType type,
     @JsonKey(required: true) @required String name,
     List<ContactDetail> contact,
+    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_name') Element nameElement,
   }) = _Contributor;
   factory Contributor.fromJson(Map<String, dynamic> json) =>
       _$ContributorFromJson(json);

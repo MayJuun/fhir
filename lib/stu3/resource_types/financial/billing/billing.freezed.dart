@@ -49,7 +49,13 @@ class _$ClaimTearOff {
       Period employmentImpacted,
       Period hospitalization,
       List<ClaimItem> item,
-      Money total}) {
+      Money total,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_use')
+          Element useElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) {
     return _Claim(
       resourceType: resourceType,
       identifier: identifier,
@@ -82,6 +88,9 @@ class _$ClaimTearOff {
       hospitalization: hospitalization,
       item: item,
       total: total,
+      statusElement: statusElement,
+      useElement: useElement,
+      createdElement: createdElement,
     );
   }
 }
@@ -123,6 +132,12 @@ mixin _$Claim {
   Period get hospitalization;
   List<ClaimItem> get item;
   Money get total;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_use')
+  Element get useElement;
+  @JsonKey(name: '_created')
+  Element get createdElement;
 
   Map<String, dynamic> toJson();
   $ClaimCopyWith<Claim> get copyWith;
@@ -162,7 +177,10 @@ abstract class $ClaimCopyWith<$Res> {
       Period employmentImpacted,
       Period hospitalization,
       List<ClaimItem> item,
-      Money total});
+      Money total,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_created') Element createdElement});
 
   $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res> get patient;
@@ -182,6 +200,9 @@ abstract class $ClaimCopyWith<$Res> {
   $PeriodCopyWith<$Res> get employmentImpacted;
   $PeriodCopyWith<$Res> get hospitalization;
   $MoneyCopyWith<$Res> get total;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get useElement;
+  $ElementCopyWith<$Res> get createdElement;
 }
 
 class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
@@ -224,6 +245,9 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
     Object hospitalization = freezed,
     Object item = freezed,
     Object total = freezed,
+    Object statusElement = freezed,
+    Object useElement = freezed,
+    Object createdElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -290,6 +314,14 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
           : hospitalization as Period,
       item: item == freezed ? _value.item : item as List<ClaimItem>,
       total: total == freezed ? _value.total : total as Money,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      useElement:
+          useElement == freezed ? _value.useElement : useElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
     ));
   }
 
@@ -472,6 +504,36 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       return _then(_value.copyWith(total: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get useElement {
+    if (_value.useElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.useElement, (value) {
+      return _then(_value.copyWith(useElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
@@ -509,7 +571,10 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       Period employmentImpacted,
       Period hospitalization,
       List<ClaimItem> item,
-      Money total});
+      Money total,
+      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_created') Element createdElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -547,6 +612,12 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   $PeriodCopyWith<$Res> get hospitalization;
   @override
   $MoneyCopyWith<$Res> get total;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get useElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
 }
 
 class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
@@ -590,6 +661,9 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
     Object hospitalization = freezed,
     Object item = freezed,
     Object total = freezed,
+    Object statusElement = freezed,
+    Object useElement = freezed,
+    Object createdElement = freezed,
   }) {
     return _then(_Claim(
       resourceType: resourceType == freezed
@@ -656,6 +730,14 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
           : hospitalization as Period,
       item: item == freezed ? _value.item : item as List<ClaimItem>,
       total: total == freezed ? _value.total : total as Money,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      useElement:
+          useElement == freezed ? _value.useElement : useElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
     ));
   }
 }
@@ -696,7 +778,13 @@ class _$_Claim implements _Claim {
       this.employmentImpacted,
       this.hospitalization,
       this.item,
-      this.total})
+      this.total,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_use')
+          this.useElement,
+      @JsonKey(name: '_created')
+          this.createdElement})
       : assert(resourceType != null);
 
   factory _$_Claim.fromJson(Map<String, dynamic> json) =>
@@ -766,10 +854,19 @@ class _$_Claim implements _Claim {
   final List<ClaimItem> item;
   @override
   final Money total;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_use')
+  final Element useElement;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
 
   @override
   String toString() {
-    return 'Claim(resourceType: $resourceType, identifier: $identifier, status: $status, type: $type, subType: $subType, use: $use, patient: $patient, billablePeriod: $billablePeriod, created: $created, enterer: $enterer, insurer: $insurer, provider: $provider, organization: $organization, priority: $priority, fundsReserve: $fundsReserve, related: $related, prescription: $prescription, originalPrescription: $originalPrescription, payee: $payee, referral: $referral, facility: $facility, careTeam: $careTeam, information: $information, diagnosis: $diagnosis, procedure: $procedure, insurance: $insurance, accident: $accident, employmentImpacted: $employmentImpacted, hospitalization: $hospitalization, item: $item, total: $total)';
+    return 'Claim(resourceType: $resourceType, identifier: $identifier, status: $status, type: $type, subType: $subType, use: $use, patient: $patient, billablePeriod: $billablePeriod, created: $created, enterer: $enterer, insurer: $insurer, provider: $provider, organization: $organization, priority: $priority, fundsReserve: $fundsReserve, related: $related, prescription: $prescription, originalPrescription: $originalPrescription, payee: $payee, referral: $referral, facility: $facility, careTeam: $careTeam, information: $information, diagnosis: $diagnosis, procedure: $procedure, insurance: $insurance, accident: $accident, employmentImpacted: $employmentImpacted, hospitalization: $hospitalization, item: $item, total: $total, statusElement: $statusElement, useElement: $useElement, createdElement: $createdElement)';
   }
 
   @override
@@ -849,7 +946,10 @@ class _$_Claim implements _Claim {
             (identical(other.employmentImpacted, employmentImpacted) || const DeepCollectionEquality().equals(other.employmentImpacted, employmentImpacted)) &&
             (identical(other.hospitalization, hospitalization) || const DeepCollectionEquality().equals(other.hospitalization, hospitalization)) &&
             (identical(other.item, item) || const DeepCollectionEquality().equals(other.item, item)) &&
-            (identical(other.total, total) || const DeepCollectionEquality().equals(other.total, total)));
+            (identical(other.total, total) || const DeepCollectionEquality().equals(other.total, total)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.useElement, useElement) || const DeepCollectionEquality().equals(other.useElement, useElement)) &&
+            (identical(other.createdElement, createdElement) || const DeepCollectionEquality().equals(other.createdElement, createdElement)));
   }
 
   @override
@@ -885,7 +985,10 @@ class _$_Claim implements _Claim {
       const DeepCollectionEquality().hash(employmentImpacted) ^
       const DeepCollectionEquality().hash(hospitalization) ^
       const DeepCollectionEquality().hash(item) ^
-      const DeepCollectionEquality().hash(total);
+      const DeepCollectionEquality().hash(total) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(useElement) ^
+      const DeepCollectionEquality().hash(createdElement);
 
   @override
   _$ClaimCopyWith<_Claim> get copyWith =>
@@ -932,7 +1035,13 @@ abstract class _Claim implements Claim {
       Period employmentImpacted,
       Period hospitalization,
       List<ClaimItem> item,
-      Money total}) = _$_Claim;
+      Money total,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_use')
+          Element useElement,
+      @JsonKey(name: '_created')
+          Element createdElement}) = _$_Claim;
 
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
 
@@ -1000,6 +1109,15 @@ abstract class _Claim implements Claim {
   List<ClaimItem> get item;
   @override
   Money get total;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_use')
+  Element get useElement;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
   @override
   _$ClaimCopyWith<_Claim> get copyWith;
 }
@@ -1438,13 +1556,17 @@ class _$ClaimCareTeamTearOff {
       @JsonKey(required: true) Reference provider,
       Boolean responsible,
       CodeableConcept role,
-      CodeableConcept qualification}) {
+      CodeableConcept qualification,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_responsible') Element responsibleElement}) {
     return _ClaimCareTeam(
       sequence: sequence,
       provider: provider,
       responsible: responsible,
       role: role,
       qualification: qualification,
+      sequenceElement: sequenceElement,
+      responsibleElement: responsibleElement,
     );
   }
 }
@@ -1459,6 +1581,10 @@ mixin _$ClaimCareTeam {
   Boolean get responsible;
   CodeableConcept get role;
   CodeableConcept get qualification;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_responsible')
+  Element get responsibleElement;
 
   Map<String, dynamic> toJson();
   $ClaimCareTeamCopyWith<ClaimCareTeam> get copyWith;
@@ -1473,11 +1599,15 @@ abstract class $ClaimCareTeamCopyWith<$Res> {
       @JsonKey(required: true) Reference provider,
       Boolean responsible,
       CodeableConcept role,
-      CodeableConcept qualification});
+      CodeableConcept qualification,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_responsible') Element responsibleElement});
 
   $ReferenceCopyWith<$Res> get provider;
   $CodeableConceptCopyWith<$Res> get role;
   $CodeableConceptCopyWith<$Res> get qualification;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get responsibleElement;
 }
 
 class _$ClaimCareTeamCopyWithImpl<$Res>
@@ -1495,6 +1625,8 @@ class _$ClaimCareTeamCopyWithImpl<$Res>
     Object responsible = freezed,
     Object role = freezed,
     Object qualification = freezed,
+    Object sequenceElement = freezed,
+    Object responsibleElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -1505,6 +1637,12 @@ class _$ClaimCareTeamCopyWithImpl<$Res>
       qualification: qualification == freezed
           ? _value.qualification
           : qualification as CodeableConcept,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      responsibleElement: responsibleElement == freezed
+          ? _value.responsibleElement
+          : responsibleElement as Element,
     ));
   }
 
@@ -1537,6 +1675,26 @@ class _$ClaimCareTeamCopyWithImpl<$Res>
       return _then(_value.copyWith(qualification: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get responsibleElement {
+    if (_value.responsibleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.responsibleElement, (value) {
+      return _then(_value.copyWith(responsibleElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimCareTeamCopyWith<$Res>
@@ -1550,7 +1708,9 @@ abstract class _$ClaimCareTeamCopyWith<$Res>
       @JsonKey(required: true) Reference provider,
       Boolean responsible,
       CodeableConcept role,
-      CodeableConcept qualification});
+      CodeableConcept qualification,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_responsible') Element responsibleElement});
 
   @override
   $ReferenceCopyWith<$Res> get provider;
@@ -1558,6 +1718,10 @@ abstract class _$ClaimCareTeamCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get role;
   @override
   $CodeableConceptCopyWith<$Res> get qualification;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get responsibleElement;
 }
 
 class __$ClaimCareTeamCopyWithImpl<$Res>
@@ -1577,6 +1741,8 @@ class __$ClaimCareTeamCopyWithImpl<$Res>
     Object responsible = freezed,
     Object role = freezed,
     Object qualification = freezed,
+    Object sequenceElement = freezed,
+    Object responsibleElement = freezed,
   }) {
     return _then(_ClaimCareTeam(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -1587,6 +1753,12 @@ class __$ClaimCareTeamCopyWithImpl<$Res>
       qualification: qualification == freezed
           ? _value.qualification
           : qualification as CodeableConcept,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      responsibleElement: responsibleElement == freezed
+          ? _value.responsibleElement
+          : responsibleElement as Element,
     ));
   }
 }
@@ -1598,7 +1770,9 @@ class _$_ClaimCareTeam implements _ClaimCareTeam {
       @JsonKey(required: true) this.provider,
       this.responsible,
       this.role,
-      this.qualification});
+      this.qualification,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_responsible') this.responsibleElement});
 
   factory _$_ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimCareTeamFromJson(json);
@@ -1614,10 +1788,16 @@ class _$_ClaimCareTeam implements _ClaimCareTeam {
   final CodeableConcept role;
   @override
   final CodeableConcept qualification;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_responsible')
+  final Element responsibleElement;
 
   @override
   String toString() {
-    return 'ClaimCareTeam(sequence: $sequence, provider: $provider, responsible: $responsible, role: $role, qualification: $qualification)';
+    return 'ClaimCareTeam(sequence: $sequence, provider: $provider, responsible: $responsible, role: $role, qualification: $qualification, sequenceElement: $sequenceElement, responsibleElement: $responsibleElement)';
   }
 
   @override
@@ -1637,7 +1817,13 @@ class _$_ClaimCareTeam implements _ClaimCareTeam {
                 const DeepCollectionEquality().equals(other.role, role)) &&
             (identical(other.qualification, qualification) ||
                 const DeepCollectionEquality()
-                    .equals(other.qualification, qualification)));
+                    .equals(other.qualification, qualification)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.responsibleElement, responsibleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.responsibleElement, responsibleElement)));
   }
 
   @override
@@ -1647,7 +1833,9 @@ class _$_ClaimCareTeam implements _ClaimCareTeam {
       const DeepCollectionEquality().hash(provider) ^
       const DeepCollectionEquality().hash(responsible) ^
       const DeepCollectionEquality().hash(role) ^
-      const DeepCollectionEquality().hash(qualification);
+      const DeepCollectionEquality().hash(qualification) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(responsibleElement);
 
   @override
   _$ClaimCareTeamCopyWith<_ClaimCareTeam> get copyWith =>
@@ -1661,11 +1849,14 @@ class _$_ClaimCareTeam implements _ClaimCareTeam {
 
 abstract class _ClaimCareTeam implements ClaimCareTeam {
   const factory _ClaimCareTeam(
-      {PositiveInt sequence,
-      @JsonKey(required: true) Reference provider,
-      Boolean responsible,
-      CodeableConcept role,
-      CodeableConcept qualification}) = _$_ClaimCareTeam;
+          {PositiveInt sequence,
+          @JsonKey(required: true) Reference provider,
+          Boolean responsible,
+          CodeableConcept role,
+          CodeableConcept qualification,
+          @JsonKey(name: '_sequence') Element sequenceElement,
+          @JsonKey(name: '_responsible') Element responsibleElement}) =
+      _$_ClaimCareTeam;
 
   factory _ClaimCareTeam.fromJson(Map<String, dynamic> json) =
       _$_ClaimCareTeam.fromJson;
@@ -1681,6 +1872,12 @@ abstract class _ClaimCareTeam implements ClaimCareTeam {
   CodeableConcept get role;
   @override
   CodeableConcept get qualification;
+  @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_responsible')
+  Element get responsibleElement;
   @override
   _$ClaimCareTeamCopyWith<_ClaimCareTeam> get copyWith;
 }
@@ -1702,7 +1899,10 @@ class _$ClaimInformationTearOff {
       Quantity valueQuantity,
       Attachment valueAttachment,
       Reference valueReference,
-      CodeableConcept reason}) {
+      CodeableConcept reason,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_timingDate') Element timingDateElement,
+      @JsonKey(name: '_valueString') Element valueStringElement}) {
     return _ClaimInformation(
       sequence: sequence,
       category: category,
@@ -1714,6 +1914,9 @@ class _$ClaimInformationTearOff {
       valueAttachment: valueAttachment,
       valueReference: valueReference,
       reason: reason,
+      sequenceElement: sequenceElement,
+      timingDateElement: timingDateElement,
+      valueStringElement: valueStringElement,
     );
   }
 }
@@ -1733,6 +1936,12 @@ mixin _$ClaimInformation {
   Attachment get valueAttachment;
   Reference get valueReference;
   CodeableConcept get reason;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_timingDate')
+  Element get timingDateElement;
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
 
   Map<String, dynamic> toJson();
   $ClaimInformationCopyWith<ClaimInformation> get copyWith;
@@ -1752,7 +1961,10 @@ abstract class $ClaimInformationCopyWith<$Res> {
       Quantity valueQuantity,
       Attachment valueAttachment,
       Reference valueReference,
-      CodeableConcept reason});
+      CodeableConcept reason,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_timingDate') Element timingDateElement,
+      @JsonKey(name: '_valueString') Element valueStringElement});
 
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get code;
@@ -1761,6 +1973,9 @@ abstract class $ClaimInformationCopyWith<$Res> {
   $AttachmentCopyWith<$Res> get valueAttachment;
   $ReferenceCopyWith<$Res> get valueReference;
   $CodeableConceptCopyWith<$Res> get reason;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get timingDateElement;
+  $ElementCopyWith<$Res> get valueStringElement;
 }
 
 class _$ClaimInformationCopyWithImpl<$Res>
@@ -1783,6 +1998,9 @@ class _$ClaimInformationCopyWithImpl<$Res>
     Object valueAttachment = freezed,
     Object valueReference = freezed,
     Object reason = freezed,
+    Object sequenceElement = freezed,
+    Object timingDateElement = freezed,
+    Object valueStringElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -1806,6 +2024,15 @@ class _$ClaimInformationCopyWithImpl<$Res>
           ? _value.valueReference
           : valueReference as Reference,
       reason: reason == freezed ? _value.reason : reason as CodeableConcept,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      timingDateElement: timingDateElement == freezed
+          ? _value.timingDateElement
+          : timingDateElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
     ));
   }
 
@@ -1878,6 +2105,36 @@ class _$ClaimInformationCopyWithImpl<$Res>
       return _then(_value.copyWith(reason: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timingDateElement {
+    if (_value.timingDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timingDateElement, (value) {
+      return _then(_value.copyWith(timingDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimInformationCopyWith<$Res>
@@ -1896,7 +2153,10 @@ abstract class _$ClaimInformationCopyWith<$Res>
       Quantity valueQuantity,
       Attachment valueAttachment,
       Reference valueReference,
-      CodeableConcept reason});
+      CodeableConcept reason,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_timingDate') Element timingDateElement,
+      @JsonKey(name: '_valueString') Element valueStringElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get category;
@@ -1912,6 +2172,12 @@ abstract class _$ClaimInformationCopyWith<$Res>
   $ReferenceCopyWith<$Res> get valueReference;
   @override
   $CodeableConceptCopyWith<$Res> get reason;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get timingDateElement;
+  @override
+  $ElementCopyWith<$Res> get valueStringElement;
 }
 
 class __$ClaimInformationCopyWithImpl<$Res>
@@ -1936,6 +2202,9 @@ class __$ClaimInformationCopyWithImpl<$Res>
     Object valueAttachment = freezed,
     Object valueReference = freezed,
     Object reason = freezed,
+    Object sequenceElement = freezed,
+    Object timingDateElement = freezed,
+    Object valueStringElement = freezed,
   }) {
     return _then(_ClaimInformation(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -1959,6 +2228,15 @@ class __$ClaimInformationCopyWithImpl<$Res>
           ? _value.valueReference
           : valueReference as Reference,
       reason: reason == freezed ? _value.reason : reason as CodeableConcept,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      timingDateElement: timingDateElement == freezed
+          ? _value.timingDateElement
+          : timingDateElement as Element,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement as Element,
     ));
   }
 }
@@ -1975,7 +2253,10 @@ class _$_ClaimInformation implements _ClaimInformation {
       this.valueQuantity,
       this.valueAttachment,
       this.valueReference,
-      this.reason});
+      this.reason,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_timingDate') this.timingDateElement,
+      @JsonKey(name: '_valueString') this.valueStringElement});
 
   factory _$_ClaimInformation.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimInformationFromJson(json);
@@ -2001,10 +2282,19 @@ class _$_ClaimInformation implements _ClaimInformation {
   final Reference valueReference;
   @override
   final CodeableConcept reason;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_timingDate')
+  final Element timingDateElement;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element valueStringElement;
 
   @override
   String toString() {
-    return 'ClaimInformation(sequence: $sequence, category: $category, code: $code, timingDate: $timingDate, timingPeriod: $timingPeriod, valueString: $valueString, valueQuantity: $valueQuantity, valueAttachment: $valueAttachment, valueReference: $valueReference, reason: $reason)';
+    return 'ClaimInformation(sequence: $sequence, category: $category, code: $code, timingDate: $timingDate, timingPeriod: $timingPeriod, valueString: $valueString, valueQuantity: $valueQuantity, valueAttachment: $valueAttachment, valueReference: $valueReference, reason: $reason, sequenceElement: $sequenceElement, timingDateElement: $timingDateElement, valueStringElement: $valueStringElement)';
   }
 
   @override
@@ -2038,7 +2328,16 @@ class _$_ClaimInformation implements _ClaimInformation {
                 const DeepCollectionEquality()
                     .equals(other.valueReference, valueReference)) &&
             (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)));
+                const DeepCollectionEquality().equals(other.reason, reason)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.timingDateElement, timingDateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.timingDateElement, timingDateElement)) &&
+            (identical(other.valueStringElement, valueStringElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueStringElement, valueStringElement)));
   }
 
   @override
@@ -2053,7 +2352,10 @@ class _$_ClaimInformation implements _ClaimInformation {
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueAttachment) ^
       const DeepCollectionEquality().hash(valueReference) ^
-      const DeepCollectionEquality().hash(reason);
+      const DeepCollectionEquality().hash(reason) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(timingDateElement) ^
+      const DeepCollectionEquality().hash(valueStringElement);
 
   @override
   _$ClaimInformationCopyWith<_ClaimInformation> get copyWith =>
@@ -2067,16 +2369,20 @@ class _$_ClaimInformation implements _ClaimInformation {
 
 abstract class _ClaimInformation implements ClaimInformation {
   const factory _ClaimInformation(
-      {PositiveInt sequence,
-      @JsonKey(required: true) CodeableConcept category,
-      CodeableConcept code,
-      Date timingDate,
-      Period timingPeriod,
-      String valueString,
-      Quantity valueQuantity,
-      Attachment valueAttachment,
-      Reference valueReference,
-      CodeableConcept reason}) = _$_ClaimInformation;
+          {PositiveInt sequence,
+          @JsonKey(required: true) CodeableConcept category,
+          CodeableConcept code,
+          Date timingDate,
+          Period timingPeriod,
+          String valueString,
+          Quantity valueQuantity,
+          Attachment valueAttachment,
+          Reference valueReference,
+          CodeableConcept reason,
+          @JsonKey(name: '_sequence') Element sequenceElement,
+          @JsonKey(name: '_timingDate') Element timingDateElement,
+          @JsonKey(name: '_valueString') Element valueStringElement}) =
+      _$_ClaimInformation;
 
   factory _ClaimInformation.fromJson(Map<String, dynamic> json) =
       _$_ClaimInformation.fromJson;
@@ -2103,6 +2409,15 @@ abstract class _ClaimInformation implements ClaimInformation {
   @override
   CodeableConcept get reason;
   @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_timingDate')
+  Element get timingDateElement;
+  @override
+  @JsonKey(name: '_valueString')
+  Element get valueStringElement;
+  @override
   _$ClaimInformationCopyWith<_ClaimInformation> get copyWith;
 }
 
@@ -2118,13 +2433,15 @@ class _$ClaimDiagnosisTearOff {
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference,
       List<CodeableConcept> type,
-      CodeableConcept packageCode}) {
+      CodeableConcept packageCode,
+      @JsonKey(name: '_sequence') Element sequenceElement}) {
     return _ClaimDiagnosis(
       sequence: sequence,
       diagnosisCodeableConcept: diagnosisCodeableConcept,
       diagnosisReference: diagnosisReference,
       type: type,
       packageCode: packageCode,
+      sequenceElement: sequenceElement,
     );
   }
 }
@@ -2138,6 +2455,8 @@ mixin _$ClaimDiagnosis {
   Reference get diagnosisReference;
   List<CodeableConcept> get type;
   CodeableConcept get packageCode;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
 
   Map<String, dynamic> toJson();
   $ClaimDiagnosisCopyWith<ClaimDiagnosis> get copyWith;
@@ -2152,11 +2471,13 @@ abstract class $ClaimDiagnosisCopyWith<$Res> {
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference,
       List<CodeableConcept> type,
-      CodeableConcept packageCode});
+      CodeableConcept packageCode,
+      @JsonKey(name: '_sequence') Element sequenceElement});
 
   $CodeableConceptCopyWith<$Res> get diagnosisCodeableConcept;
   $ReferenceCopyWith<$Res> get diagnosisReference;
   $CodeableConceptCopyWith<$Res> get packageCode;
+  $ElementCopyWith<$Res> get sequenceElement;
 }
 
 class _$ClaimDiagnosisCopyWithImpl<$Res>
@@ -2174,6 +2495,7 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
     Object diagnosisReference = freezed,
     Object type = freezed,
     Object packageCode = freezed,
+    Object sequenceElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -2187,6 +2509,9 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
       packageCode: packageCode == freezed
           ? _value.packageCode
           : packageCode as CodeableConcept,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
     ));
   }
 
@@ -2220,6 +2545,16 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
       return _then(_value.copyWith(packageCode: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimDiagnosisCopyWith<$Res>
@@ -2233,7 +2568,8 @@ abstract class _$ClaimDiagnosisCopyWith<$Res>
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference,
       List<CodeableConcept> type,
-      CodeableConcept packageCode});
+      CodeableConcept packageCode,
+      @JsonKey(name: '_sequence') Element sequenceElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get diagnosisCodeableConcept;
@@ -2241,6 +2577,8 @@ abstract class _$ClaimDiagnosisCopyWith<$Res>
   $ReferenceCopyWith<$Res> get diagnosisReference;
   @override
   $CodeableConceptCopyWith<$Res> get packageCode;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
 }
 
 class __$ClaimDiagnosisCopyWithImpl<$Res>
@@ -2260,6 +2598,7 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
     Object diagnosisReference = freezed,
     Object type = freezed,
     Object packageCode = freezed,
+    Object sequenceElement = freezed,
   }) {
     return _then(_ClaimDiagnosis(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -2273,6 +2612,9 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
       packageCode: packageCode == freezed
           ? _value.packageCode
           : packageCode as CodeableConcept,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
     ));
   }
 }
@@ -2284,7 +2626,8 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
       this.diagnosisCodeableConcept,
       this.diagnosisReference,
       this.type,
-      this.packageCode});
+      this.packageCode,
+      @JsonKey(name: '_sequence') this.sequenceElement});
 
   factory _$_ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimDiagnosisFromJson(json);
@@ -2299,10 +2642,13 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
   final List<CodeableConcept> type;
   @override
   final CodeableConcept packageCode;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
 
   @override
   String toString() {
-    return 'ClaimDiagnosis(sequence: $sequence, diagnosisCodeableConcept: $diagnosisCodeableConcept, diagnosisReference: $diagnosisReference, type: $type, packageCode: $packageCode)';
+    return 'ClaimDiagnosis(sequence: $sequence, diagnosisCodeableConcept: $diagnosisCodeableConcept, diagnosisReference: $diagnosisReference, type: $type, packageCode: $packageCode, sequenceElement: $sequenceElement)';
   }
 
   @override
@@ -2324,7 +2670,10 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.packageCode, packageCode) ||
                 const DeepCollectionEquality()
-                    .equals(other.packageCode, packageCode)));
+                    .equals(other.packageCode, packageCode)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)));
   }
 
   @override
@@ -2334,7 +2683,8 @@ class _$_ClaimDiagnosis implements _ClaimDiagnosis {
       const DeepCollectionEquality().hash(diagnosisCodeableConcept) ^
       const DeepCollectionEquality().hash(diagnosisReference) ^
       const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(packageCode);
+      const DeepCollectionEquality().hash(packageCode) ^
+      const DeepCollectionEquality().hash(sequenceElement);
 
   @override
   _$ClaimDiagnosisCopyWith<_ClaimDiagnosis> get copyWith =>
@@ -2352,7 +2702,8 @@ abstract class _ClaimDiagnosis implements ClaimDiagnosis {
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference,
       List<CodeableConcept> type,
-      CodeableConcept packageCode}) = _$_ClaimDiagnosis;
+      CodeableConcept packageCode,
+      @JsonKey(name: '_sequence') Element sequenceElement}) = _$_ClaimDiagnosis;
 
   factory _ClaimDiagnosis.fromJson(Map<String, dynamic> json) =
       _$_ClaimDiagnosis.fromJson;
@@ -2368,6 +2719,9 @@ abstract class _ClaimDiagnosis implements ClaimDiagnosis {
   @override
   CodeableConcept get packageCode;
   @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
   _$ClaimDiagnosisCopyWith<_ClaimDiagnosis> get copyWith;
 }
 
@@ -2382,12 +2736,16 @@ class _$ClaimProcedureTearOff {
       {PositiveInt sequence,
       FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
-      Reference procedureReference}) {
+      Reference procedureReference,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_date') Element dateElement}) {
     return _ClaimProcedure(
       sequence: sequence,
       date: date,
       procedureCodeableConcept: procedureCodeableConcept,
       procedureReference: procedureReference,
+      sequenceElement: sequenceElement,
+      dateElement: dateElement,
     );
   }
 }
@@ -2400,6 +2758,10 @@ mixin _$ClaimProcedure {
   FhirDateTime get date;
   CodeableConcept get procedureCodeableConcept;
   Reference get procedureReference;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
 
   Map<String, dynamic> toJson();
   $ClaimProcedureCopyWith<ClaimProcedure> get copyWith;
@@ -2413,10 +2775,14 @@ abstract class $ClaimProcedureCopyWith<$Res> {
       {PositiveInt sequence,
       FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
-      Reference procedureReference});
+      Reference procedureReference,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_date') Element dateElement});
 
   $CodeableConceptCopyWith<$Res> get procedureCodeableConcept;
   $ReferenceCopyWith<$Res> get procedureReference;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class _$ClaimProcedureCopyWithImpl<$Res>
@@ -2433,6 +2799,8 @@ class _$ClaimProcedureCopyWithImpl<$Res>
     Object date = freezed,
     Object procedureCodeableConcept = freezed,
     Object procedureReference = freezed,
+    Object sequenceElement = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -2443,6 +2811,11 @@ class _$ClaimProcedureCopyWithImpl<$Res>
       procedureReference: procedureReference == freezed
           ? _value.procedureReference
           : procedureReference as Reference,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 
@@ -2466,6 +2839,26 @@ class _$ClaimProcedureCopyWithImpl<$Res>
       return _then(_value.copyWith(procedureReference: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimProcedureCopyWith<$Res>
@@ -2478,12 +2871,18 @@ abstract class _$ClaimProcedureCopyWith<$Res>
       {PositiveInt sequence,
       FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
-      Reference procedureReference});
+      Reference procedureReference,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_date') Element dateElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get procedureCodeableConcept;
   @override
   $ReferenceCopyWith<$Res> get procedureReference;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class __$ClaimProcedureCopyWithImpl<$Res>
@@ -2502,6 +2901,8 @@ class __$ClaimProcedureCopyWithImpl<$Res>
     Object date = freezed,
     Object procedureCodeableConcept = freezed,
     Object procedureReference = freezed,
+    Object sequenceElement = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_ClaimProcedure(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -2512,6 +2913,11 @@ class __$ClaimProcedureCopyWithImpl<$Res>
       procedureReference: procedureReference == freezed
           ? _value.procedureReference
           : procedureReference as Reference,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 }
@@ -2522,7 +2928,9 @@ class _$_ClaimProcedure implements _ClaimProcedure {
       {this.sequence,
       this.date,
       this.procedureCodeableConcept,
-      this.procedureReference});
+      this.procedureReference,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_date') this.dateElement});
 
   factory _$_ClaimProcedure.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimProcedureFromJson(json);
@@ -2535,10 +2943,16 @@ class _$_ClaimProcedure implements _ClaimProcedure {
   final CodeableConcept procedureCodeableConcept;
   @override
   final Reference procedureReference;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
 
   @override
   String toString() {
-    return 'ClaimProcedure(sequence: $sequence, date: $date, procedureCodeableConcept: $procedureCodeableConcept, procedureReference: $procedureReference)';
+    return 'ClaimProcedure(sequence: $sequence, date: $date, procedureCodeableConcept: $procedureCodeableConcept, procedureReference: $procedureReference, sequenceElement: $sequenceElement, dateElement: $dateElement)';
   }
 
   @override
@@ -2557,7 +2971,13 @@ class _$_ClaimProcedure implements _ClaimProcedure {
                     procedureCodeableConcept)) &&
             (identical(other.procedureReference, procedureReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.procedureReference, procedureReference)));
+                    .equals(other.procedureReference, procedureReference)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateElement, dateElement)));
   }
 
   @override
@@ -2566,7 +2986,9 @@ class _$_ClaimProcedure implements _ClaimProcedure {
       const DeepCollectionEquality().hash(sequence) ^
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(procedureCodeableConcept) ^
-      const DeepCollectionEquality().hash(procedureReference);
+      const DeepCollectionEquality().hash(procedureReference) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(dateElement);
 
   @override
   _$ClaimProcedureCopyWith<_ClaimProcedure> get copyWith =>
@@ -2583,7 +3005,9 @@ abstract class _ClaimProcedure implements ClaimProcedure {
       {PositiveInt sequence,
       FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
-      Reference procedureReference}) = _$_ClaimProcedure;
+      Reference procedureReference,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_date') Element dateElement}) = _$_ClaimProcedure;
 
   factory _ClaimProcedure.fromJson(Map<String, dynamic> json) =
       _$_ClaimProcedure.fromJson;
@@ -2596,6 +3020,12 @@ abstract class _ClaimProcedure implements ClaimProcedure {
   CodeableConcept get procedureCodeableConcept;
   @override
   Reference get procedureReference;
+  @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
   @override
   _$ClaimProcedureCopyWith<_ClaimProcedure> get copyWith;
 }
@@ -2613,7 +3043,11 @@ class _$ClaimInsuranceTearOff {
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       List<String> preAuthRef,
-      Reference claimResponse}) {
+      Reference claimResponse,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_focal') Element focalElement,
+      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_preAuthRef') Element preAuthRefElement}) {
     return _ClaimInsurance(
       sequence: sequence,
       focal: focal,
@@ -2621,6 +3055,10 @@ class _$ClaimInsuranceTearOff {
       businessArrangement: businessArrangement,
       preAuthRef: preAuthRef,
       claimResponse: claimResponse,
+      sequenceElement: sequenceElement,
+      focalElement: focalElement,
+      businessArrangementElement: businessArrangementElement,
+      preAuthRefElement: preAuthRefElement,
     );
   }
 }
@@ -2636,6 +3074,14 @@ mixin _$ClaimInsurance {
   String get businessArrangement;
   List<String> get preAuthRef;
   Reference get claimResponse;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_focal')
+  Element get focalElement;
+  @JsonKey(name: '_businessArrangement')
+  Element get businessArrangementElement;
+  @JsonKey(name: '_preAuthRef')
+  Element get preAuthRefElement;
 
   Map<String, dynamic> toJson();
   $ClaimInsuranceCopyWith<ClaimInsurance> get copyWith;
@@ -2651,10 +3097,18 @@ abstract class $ClaimInsuranceCopyWith<$Res> {
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       List<String> preAuthRef,
-      Reference claimResponse});
+      Reference claimResponse,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_focal') Element focalElement,
+      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_preAuthRef') Element preAuthRefElement});
 
   $ReferenceCopyWith<$Res> get coverage;
   $ReferenceCopyWith<$Res> get claimResponse;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get focalElement;
+  $ElementCopyWith<$Res> get businessArrangementElement;
+  $ElementCopyWith<$Res> get preAuthRefElement;
 }
 
 class _$ClaimInsuranceCopyWithImpl<$Res>
@@ -2673,6 +3127,10 @@ class _$ClaimInsuranceCopyWithImpl<$Res>
     Object businessArrangement = freezed,
     Object preAuthRef = freezed,
     Object claimResponse = freezed,
+    Object sequenceElement = freezed,
+    Object focalElement = freezed,
+    Object businessArrangementElement = freezed,
+    Object preAuthRefElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -2687,6 +3145,18 @@ class _$ClaimInsuranceCopyWithImpl<$Res>
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      focalElement: focalElement == freezed
+          ? _value.focalElement
+          : focalElement as Element,
+      businessArrangementElement: businessArrangementElement == freezed
+          ? _value.businessArrangementElement
+          : businessArrangementElement as Element,
+      preAuthRefElement: preAuthRefElement == freezed
+          ? _value.preAuthRefElement
+          : preAuthRefElement as Element,
     ));
   }
 
@@ -2709,6 +3179,46 @@ class _$ClaimInsuranceCopyWithImpl<$Res>
       return _then(_value.copyWith(claimResponse: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get focalElement {
+    if (_value.focalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.focalElement, (value) {
+      return _then(_value.copyWith(focalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get businessArrangementElement {
+    if (_value.businessArrangementElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.businessArrangementElement, (value) {
+      return _then(_value.copyWith(businessArrangementElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get preAuthRefElement {
+    if (_value.preAuthRefElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.preAuthRefElement, (value) {
+      return _then(_value.copyWith(preAuthRefElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimInsuranceCopyWith<$Res>
@@ -2723,12 +3233,24 @@ abstract class _$ClaimInsuranceCopyWith<$Res>
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       List<String> preAuthRef,
-      Reference claimResponse});
+      Reference claimResponse,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_focal') Element focalElement,
+      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_preAuthRef') Element preAuthRefElement});
 
   @override
   $ReferenceCopyWith<$Res> get coverage;
   @override
   $ReferenceCopyWith<$Res> get claimResponse;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get focalElement;
+  @override
+  $ElementCopyWith<$Res> get businessArrangementElement;
+  @override
+  $ElementCopyWith<$Res> get preAuthRefElement;
 }
 
 class __$ClaimInsuranceCopyWithImpl<$Res>
@@ -2749,6 +3271,10 @@ class __$ClaimInsuranceCopyWithImpl<$Res>
     Object businessArrangement = freezed,
     Object preAuthRef = freezed,
     Object claimResponse = freezed,
+    Object sequenceElement = freezed,
+    Object focalElement = freezed,
+    Object businessArrangementElement = freezed,
+    Object preAuthRefElement = freezed,
   }) {
     return _then(_ClaimInsurance(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -2763,6 +3289,18 @@ class __$ClaimInsuranceCopyWithImpl<$Res>
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      focalElement: focalElement == freezed
+          ? _value.focalElement
+          : focalElement as Element,
+      businessArrangementElement: businessArrangementElement == freezed
+          ? _value.businessArrangementElement
+          : businessArrangementElement as Element,
+      preAuthRefElement: preAuthRefElement == freezed
+          ? _value.preAuthRefElement
+          : preAuthRefElement as Element,
     ));
   }
 }
@@ -2775,7 +3313,11 @@ class _$_ClaimInsurance implements _ClaimInsurance {
       @JsonKey(required: true) this.coverage,
       this.businessArrangement,
       this.preAuthRef,
-      this.claimResponse});
+      this.claimResponse,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_focal') this.focalElement,
+      @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
+      @JsonKey(name: '_preAuthRef') this.preAuthRefElement});
 
   factory _$_ClaimInsurance.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimInsuranceFromJson(json);
@@ -2793,10 +3335,22 @@ class _$_ClaimInsurance implements _ClaimInsurance {
   final List<String> preAuthRef;
   @override
   final Reference claimResponse;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_focal')
+  final Element focalElement;
+  @override
+  @JsonKey(name: '_businessArrangement')
+  final Element businessArrangementElement;
+  @override
+  @JsonKey(name: '_preAuthRef')
+  final Element preAuthRefElement;
 
   @override
   String toString() {
-    return 'ClaimInsurance(sequence: $sequence, focal: $focal, coverage: $coverage, businessArrangement: $businessArrangement, preAuthRef: $preAuthRef, claimResponse: $claimResponse)';
+    return 'ClaimInsurance(sequence: $sequence, focal: $focal, coverage: $coverage, businessArrangement: $businessArrangement, preAuthRef: $preAuthRef, claimResponse: $claimResponse, sequenceElement: $sequenceElement, focalElement: $focalElement, businessArrangementElement: $businessArrangementElement, preAuthRefElement: $preAuthRefElement)';
   }
 
   @override
@@ -2819,7 +3373,21 @@ class _$_ClaimInsurance implements _ClaimInsurance {
                     .equals(other.preAuthRef, preAuthRef)) &&
             (identical(other.claimResponse, claimResponse) ||
                 const DeepCollectionEquality()
-                    .equals(other.claimResponse, claimResponse)));
+                    .equals(other.claimResponse, claimResponse)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.focalElement, focalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.focalElement, focalElement)) &&
+            (identical(other.businessArrangementElement,
+                    businessArrangementElement) ||
+                const DeepCollectionEquality().equals(
+                    other.businessArrangementElement,
+                    businessArrangementElement)) &&
+            (identical(other.preAuthRefElement, preAuthRefElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.preAuthRefElement, preAuthRefElement)));
   }
 
   @override
@@ -2830,7 +3398,11 @@ class _$_ClaimInsurance implements _ClaimInsurance {
       const DeepCollectionEquality().hash(coverage) ^
       const DeepCollectionEquality().hash(businessArrangement) ^
       const DeepCollectionEquality().hash(preAuthRef) ^
-      const DeepCollectionEquality().hash(claimResponse);
+      const DeepCollectionEquality().hash(claimResponse) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(focalElement) ^
+      const DeepCollectionEquality().hash(businessArrangementElement) ^
+      const DeepCollectionEquality().hash(preAuthRefElement);
 
   @override
   _$ClaimInsuranceCopyWith<_ClaimInsurance> get copyWith =>
@@ -2846,10 +3418,19 @@ abstract class _ClaimInsurance implements ClaimInsurance {
   const factory _ClaimInsurance(
       {PositiveInt sequence,
       Boolean focal,
-      @JsonKey(required: true) Reference coverage,
+      @JsonKey(required: true)
+          Reference coverage,
       String businessArrangement,
       List<String> preAuthRef,
-      Reference claimResponse}) = _$_ClaimInsurance;
+      Reference claimResponse,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
+      @JsonKey(name: '_focal')
+          Element focalElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement,
+      @JsonKey(name: '_preAuthRef')
+          Element preAuthRefElement}) = _$_ClaimInsurance;
 
   factory _ClaimInsurance.fromJson(Map<String, dynamic> json) =
       _$_ClaimInsurance.fromJson;
@@ -2868,6 +3449,18 @@ abstract class _ClaimInsurance implements ClaimInsurance {
   @override
   Reference get claimResponse;
   @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_focal')
+  Element get focalElement;
+  @override
+  @JsonKey(name: '_businessArrangement')
+  Element get businessArrangementElement;
+  @override
+  @JsonKey(name: '_preAuthRef')
+  Element get preAuthRefElement;
+  @override
   _$ClaimInsuranceCopyWith<_ClaimInsurance> get copyWith;
 }
 
@@ -2882,12 +3475,14 @@ class _$ClaimAccidentTearOff {
       {Date date,
       CodeableConcept type,
       Address locationAddress,
-      Reference locationReference}) {
+      Reference locationReference,
+      @JsonKey(name: '_date') Element dateElement}) {
     return _ClaimAccident(
       date: date,
       type: type,
       locationAddress: locationAddress,
       locationReference: locationReference,
+      dateElement: dateElement,
     );
   }
 }
@@ -2900,6 +3495,8 @@ mixin _$ClaimAccident {
   CodeableConcept get type;
   Address get locationAddress;
   Reference get locationReference;
+  @JsonKey(name: '_date')
+  Element get dateElement;
 
   Map<String, dynamic> toJson();
   $ClaimAccidentCopyWith<ClaimAccident> get copyWith;
@@ -2913,11 +3510,13 @@ abstract class $ClaimAccidentCopyWith<$Res> {
       {Date date,
       CodeableConcept type,
       Address locationAddress,
-      Reference locationReference});
+      Reference locationReference,
+      @JsonKey(name: '_date') Element dateElement});
 
   $CodeableConceptCopyWith<$Res> get type;
   $AddressCopyWith<$Res> get locationAddress;
   $ReferenceCopyWith<$Res> get locationReference;
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class _$ClaimAccidentCopyWithImpl<$Res>
@@ -2934,6 +3533,7 @@ class _$ClaimAccidentCopyWithImpl<$Res>
     Object type = freezed,
     Object locationAddress = freezed,
     Object locationReference = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_value.copyWith(
       date: date == freezed ? _value.date : date as Date,
@@ -2944,6 +3544,8 @@ class _$ClaimAccidentCopyWithImpl<$Res>
       locationReference: locationReference == freezed
           ? _value.locationReference
           : locationReference as Reference,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 
@@ -2976,6 +3578,16 @@ class _$ClaimAccidentCopyWithImpl<$Res>
       return _then(_value.copyWith(locationReference: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimAccidentCopyWith<$Res>
@@ -2988,7 +3600,8 @@ abstract class _$ClaimAccidentCopyWith<$Res>
       {Date date,
       CodeableConcept type,
       Address locationAddress,
-      Reference locationReference});
+      Reference locationReference,
+      @JsonKey(name: '_date') Element dateElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -2996,6 +3609,8 @@ abstract class _$ClaimAccidentCopyWith<$Res>
   $AddressCopyWith<$Res> get locationAddress;
   @override
   $ReferenceCopyWith<$Res> get locationReference;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class __$ClaimAccidentCopyWithImpl<$Res>
@@ -3014,6 +3629,7 @@ class __$ClaimAccidentCopyWithImpl<$Res>
     Object type = freezed,
     Object locationAddress = freezed,
     Object locationReference = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_ClaimAccident(
       date: date == freezed ? _value.date : date as Date,
@@ -3024,6 +3640,8 @@ class __$ClaimAccidentCopyWithImpl<$Res>
       locationReference: locationReference == freezed
           ? _value.locationReference
           : locationReference as Reference,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 }
@@ -3031,7 +3649,11 @@ class __$ClaimAccidentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClaimAccident implements _ClaimAccident {
   const _$_ClaimAccident(
-      {this.date, this.type, this.locationAddress, this.locationReference});
+      {this.date,
+      this.type,
+      this.locationAddress,
+      this.locationReference,
+      @JsonKey(name: '_date') this.dateElement});
 
   factory _$_ClaimAccident.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimAccidentFromJson(json);
@@ -3044,10 +3666,13 @@ class _$_ClaimAccident implements _ClaimAccident {
   final Address locationAddress;
   @override
   final Reference locationReference;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
 
   @override
   String toString() {
-    return 'ClaimAccident(date: $date, type: $type, locationAddress: $locationAddress, locationReference: $locationReference)';
+    return 'ClaimAccident(date: $date, type: $type, locationAddress: $locationAddress, locationReference: $locationReference, dateElement: $dateElement)';
   }
 
   @override
@@ -3063,7 +3688,10 @@ class _$_ClaimAccident implements _ClaimAccident {
                     .equals(other.locationAddress, locationAddress)) &&
             (identical(other.locationReference, locationReference) ||
                 const DeepCollectionEquality()
-                    .equals(other.locationReference, locationReference)));
+                    .equals(other.locationReference, locationReference)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateElement, dateElement)));
   }
 
   @override
@@ -3072,7 +3700,8 @@ class _$_ClaimAccident implements _ClaimAccident {
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(locationAddress) ^
-      const DeepCollectionEquality().hash(locationReference);
+      const DeepCollectionEquality().hash(locationReference) ^
+      const DeepCollectionEquality().hash(dateElement);
 
   @override
   _$ClaimAccidentCopyWith<_ClaimAccident> get copyWith =>
@@ -3089,7 +3718,8 @@ abstract class _ClaimAccident implements ClaimAccident {
       {Date date,
       CodeableConcept type,
       Address locationAddress,
-      Reference locationReference}) = _$_ClaimAccident;
+      Reference locationReference,
+      @JsonKey(name: '_date') Element dateElement}) = _$_ClaimAccident;
 
   factory _ClaimAccident.fromJson(Map<String, dynamic> json) =
       _$_ClaimAccident.fromJson;
@@ -3102,6 +3732,9 @@ abstract class _ClaimAccident implements ClaimAccident {
   Address get locationAddress;
   @override
   Reference get locationReference;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
   @override
   _$ClaimAccidentCopyWith<_ClaimAccident> get copyWith;
 }
@@ -3137,7 +3770,14 @@ class _$ClaimItemTearOff {
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<Reference> encounter,
-      List<ClaimDetail> detail}) {
+      List<ClaimDetail> detail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_careTeamLinkId') Element careTeamLinkIdElement,
+      @JsonKey(name: '_diagnosisLinkId') Element diagnosisLinkIdElement,
+      @JsonKey(name: '_procedureLinkId') Element procedureLinkIdElement,
+      @JsonKey(name: '_informationLinkId') Element informationLinkIdElement,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_factor') Element factorElement}) {
     return _ClaimItem(
       sequence: sequence,
       careTeamLinkId: careTeamLinkId,
@@ -3163,6 +3803,13 @@ class _$ClaimItemTearOff {
       subSite: subSite,
       encounter: encounter,
       detail: detail,
+      sequenceElement: sequenceElement,
+      careTeamLinkIdElement: careTeamLinkIdElement,
+      diagnosisLinkIdElement: diagnosisLinkIdElement,
+      procedureLinkIdElement: procedureLinkIdElement,
+      informationLinkIdElement: informationLinkIdElement,
+      servicedDateElement: servicedDateElement,
+      factorElement: factorElement,
     );
   }
 }
@@ -3195,6 +3842,20 @@ mixin _$ClaimItem {
   List<CodeableConcept> get subSite;
   List<Reference> get encounter;
   List<ClaimDetail> get detail;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_careTeamLinkId')
+  Element get careTeamLinkIdElement;
+  @JsonKey(name: '_diagnosisLinkId')
+  Element get diagnosisLinkIdElement;
+  @JsonKey(name: '_procedureLinkId')
+  Element get procedureLinkIdElement;
+  @JsonKey(name: '_informationLinkId')
+  Element get informationLinkIdElement;
+  @JsonKey(name: '_servicedDate')
+  Element get servicedDateElement;
+  @JsonKey(name: '_factor')
+  Element get factorElement;
 
   Map<String, dynamic> toJson();
   $ClaimItemCopyWith<ClaimItem> get copyWith;
@@ -3227,7 +3888,14 @@ abstract class $ClaimItemCopyWith<$Res> {
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<Reference> encounter,
-      List<ClaimDetail> detail});
+      List<ClaimDetail> detail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_careTeamLinkId') Element careTeamLinkIdElement,
+      @JsonKey(name: '_diagnosisLinkId') Element diagnosisLinkIdElement,
+      @JsonKey(name: '_procedureLinkId') Element procedureLinkIdElement,
+      @JsonKey(name: '_informationLinkId') Element informationLinkIdElement,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   $CodeableConceptCopyWith<$Res> get revenue;
   $CodeableConceptCopyWith<$Res> get category;
@@ -3240,6 +3908,13 @@ abstract class $ClaimItemCopyWith<$Res> {
   $MoneyCopyWith<$Res> get unitPrice;
   $MoneyCopyWith<$Res> get net;
   $CodeableConceptCopyWith<$Res> get bodySite;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get careTeamLinkIdElement;
+  $ElementCopyWith<$Res> get diagnosisLinkIdElement;
+  $ElementCopyWith<$Res> get procedureLinkIdElement;
+  $ElementCopyWith<$Res> get informationLinkIdElement;
+  $ElementCopyWith<$Res> get servicedDateElement;
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
@@ -3275,6 +3950,13 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
     Object subSite = freezed,
     Object encounter = freezed,
     Object detail = freezed,
+    Object sequenceElement = freezed,
+    Object careTeamLinkIdElement = freezed,
+    Object diagnosisLinkIdElement = freezed,
+    Object procedureLinkIdElement = freezed,
+    Object informationLinkIdElement = freezed,
+    Object servicedDateElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -3328,6 +4010,27 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
           ? _value.encounter
           : encounter as List<Reference>,
       detail: detail == freezed ? _value.detail : detail as List<ClaimDetail>,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      careTeamLinkIdElement: careTeamLinkIdElement == freezed
+          ? _value.careTeamLinkIdElement
+          : careTeamLinkIdElement as Element,
+      diagnosisLinkIdElement: diagnosisLinkIdElement == freezed
+          ? _value.diagnosisLinkIdElement
+          : diagnosisLinkIdElement as Element,
+      procedureLinkIdElement: procedureLinkIdElement == freezed
+          ? _value.procedureLinkIdElement
+          : procedureLinkIdElement as Element,
+      informationLinkIdElement: informationLinkIdElement == freezed
+          ? _value.informationLinkIdElement
+          : informationLinkIdElement as Element,
+      servicedDateElement: servicedDateElement == freezed
+          ? _value.servicedDateElement
+          : servicedDateElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 
@@ -3441,6 +4144,76 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
       return _then(_value.copyWith(bodySite: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get careTeamLinkIdElement {
+    if (_value.careTeamLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.careTeamLinkIdElement, (value) {
+      return _then(_value.copyWith(careTeamLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get diagnosisLinkIdElement {
+    if (_value.diagnosisLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.diagnosisLinkIdElement, (value) {
+      return _then(_value.copyWith(diagnosisLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get procedureLinkIdElement {
+    if (_value.procedureLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.procedureLinkIdElement, (value) {
+      return _then(_value.copyWith(procedureLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get informationLinkIdElement {
+    if (_value.informationLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.informationLinkIdElement, (value) {
+      return _then(_value.copyWith(informationLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get servicedDateElement {
+    if (_value.servicedDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.servicedDateElement, (value) {
+      return _then(_value.copyWith(servicedDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get factorElement {
+    if (_value.factorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.factorElement, (value) {
+      return _then(_value.copyWith(factorElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
@@ -3472,7 +4245,14 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<Reference> encounter,
-      List<ClaimDetail> detail});
+      List<ClaimDetail> detail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_careTeamLinkId') Element careTeamLinkIdElement,
+      @JsonKey(name: '_diagnosisLinkId') Element diagnosisLinkIdElement,
+      @JsonKey(name: '_procedureLinkId') Element procedureLinkIdElement,
+      @JsonKey(name: '_informationLinkId') Element informationLinkIdElement,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get revenue;
@@ -3496,6 +4276,20 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
   $MoneyCopyWith<$Res> get net;
   @override
   $CodeableConceptCopyWith<$Res> get bodySite;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get careTeamLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get diagnosisLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get procedureLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get informationLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get servicedDateElement;
+  @override
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
@@ -3532,6 +4326,13 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
     Object subSite = freezed,
     Object encounter = freezed,
     Object detail = freezed,
+    Object sequenceElement = freezed,
+    Object careTeamLinkIdElement = freezed,
+    Object diagnosisLinkIdElement = freezed,
+    Object procedureLinkIdElement = freezed,
+    Object informationLinkIdElement = freezed,
+    Object servicedDateElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_ClaimItem(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -3585,6 +4386,27 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
           ? _value.encounter
           : encounter as List<Reference>,
       detail: detail == freezed ? _value.detail : detail as List<ClaimDetail>,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      careTeamLinkIdElement: careTeamLinkIdElement == freezed
+          ? _value.careTeamLinkIdElement
+          : careTeamLinkIdElement as Element,
+      diagnosisLinkIdElement: diagnosisLinkIdElement == freezed
+          ? _value.diagnosisLinkIdElement
+          : diagnosisLinkIdElement as Element,
+      procedureLinkIdElement: procedureLinkIdElement == freezed
+          ? _value.procedureLinkIdElement
+          : procedureLinkIdElement as Element,
+      informationLinkIdElement: informationLinkIdElement == freezed
+          ? _value.informationLinkIdElement
+          : informationLinkIdElement as Element,
+      servicedDateElement: servicedDateElement == freezed
+          ? _value.servicedDateElement
+          : servicedDateElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 }
@@ -3615,7 +4437,14 @@ class _$_ClaimItem implements _ClaimItem {
       this.bodySite,
       this.subSite,
       this.encounter,
-      this.detail});
+      this.detail,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_careTeamLinkId') this.careTeamLinkIdElement,
+      @JsonKey(name: '_diagnosisLinkId') this.diagnosisLinkIdElement,
+      @JsonKey(name: '_procedureLinkId') this.procedureLinkIdElement,
+      @JsonKey(name: '_informationLinkId') this.informationLinkIdElement,
+      @JsonKey(name: '_servicedDate') this.servicedDateElement,
+      @JsonKey(name: '_factor') this.factorElement});
 
   factory _$_ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimItemFromJson(json);
@@ -3668,10 +4497,31 @@ class _$_ClaimItem implements _ClaimItem {
   final List<Reference> encounter;
   @override
   final List<ClaimDetail> detail;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_careTeamLinkId')
+  final Element careTeamLinkIdElement;
+  @override
+  @JsonKey(name: '_diagnosisLinkId')
+  final Element diagnosisLinkIdElement;
+  @override
+  @JsonKey(name: '_procedureLinkId')
+  final Element procedureLinkIdElement;
+  @override
+  @JsonKey(name: '_informationLinkId')
+  final Element informationLinkIdElement;
+  @override
+  @JsonKey(name: '_servicedDate')
+  final Element servicedDateElement;
+  @override
+  @JsonKey(name: '_factor')
+  final Element factorElement;
 
   @override
   String toString() {
-    return 'ClaimItem(sequence: $sequence, careTeamLinkId: $careTeamLinkId, diagnosisLinkId: $diagnosisLinkId, procedureLinkId: $procedureLinkId, informationLinkId: $informationLinkId, revenue: $revenue, category: $category, service: $service, modifier: $modifier, programCode: $programCode, servicedDate: $servicedDate, servicedPeriod: $servicedPeriod, locationCodeableConcept: $locationCodeableConcept, locationAddress: $locationAddress, locationReference: $locationReference, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, net: $net, udi: $udi, bodySite: $bodySite, subSite: $subSite, encounter: $encounter, detail: $detail)';
+    return 'ClaimItem(sequence: $sequence, careTeamLinkId: $careTeamLinkId, diagnosisLinkId: $diagnosisLinkId, procedureLinkId: $procedureLinkId, informationLinkId: $informationLinkId, revenue: $revenue, category: $category, service: $service, modifier: $modifier, programCode: $programCode, servicedDate: $servicedDate, servicedPeriod: $servicedPeriod, locationCodeableConcept: $locationCodeableConcept, locationAddress: $locationAddress, locationReference: $locationReference, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, net: $net, udi: $udi, bodySite: $bodySite, subSite: $subSite, encounter: $encounter, detail: $detail, sequenceElement: $sequenceElement, careTeamLinkIdElement: $careTeamLinkIdElement, diagnosisLinkIdElement: $diagnosisLinkIdElement, procedureLinkIdElement: $procedureLinkIdElement, informationLinkIdElement: $informationLinkIdElement, servicedDateElement: $servicedDateElement, factorElement: $factorElement)';
   }
 
   @override
@@ -3741,7 +4591,14 @@ class _$_ClaimItem implements _ClaimItem {
             (identical(other.subSite, subSite) ||
                 const DeepCollectionEquality().equals(other.subSite, subSite)) &&
             (identical(other.encounter, encounter) || const DeepCollectionEquality().equals(other.encounter, encounter)) &&
-            (identical(other.detail, detail) || const DeepCollectionEquality().equals(other.detail, detail)));
+            (identical(other.detail, detail) || const DeepCollectionEquality().equals(other.detail, detail)) &&
+            (identical(other.sequenceElement, sequenceElement) || const DeepCollectionEquality().equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.careTeamLinkIdElement, careTeamLinkIdElement) || const DeepCollectionEquality().equals(other.careTeamLinkIdElement, careTeamLinkIdElement)) &&
+            (identical(other.diagnosisLinkIdElement, diagnosisLinkIdElement) || const DeepCollectionEquality().equals(other.diagnosisLinkIdElement, diagnosisLinkIdElement)) &&
+            (identical(other.procedureLinkIdElement, procedureLinkIdElement) || const DeepCollectionEquality().equals(other.procedureLinkIdElement, procedureLinkIdElement)) &&
+            (identical(other.informationLinkIdElement, informationLinkIdElement) || const DeepCollectionEquality().equals(other.informationLinkIdElement, informationLinkIdElement)) &&
+            (identical(other.servicedDateElement, servicedDateElement) || const DeepCollectionEquality().equals(other.servicedDateElement, servicedDateElement)) &&
+            (identical(other.factorElement, factorElement) || const DeepCollectionEquality().equals(other.factorElement, factorElement)));
   }
 
   @override
@@ -3770,7 +4627,14 @@ class _$_ClaimItem implements _ClaimItem {
       const DeepCollectionEquality().hash(bodySite) ^
       const DeepCollectionEquality().hash(subSite) ^
       const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(detail);
+      const DeepCollectionEquality().hash(detail) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(careTeamLinkIdElement) ^
+      const DeepCollectionEquality().hash(diagnosisLinkIdElement) ^
+      const DeepCollectionEquality().hash(procedureLinkIdElement) ^
+      const DeepCollectionEquality().hash(informationLinkIdElement) ^
+      const DeepCollectionEquality().hash(servicedDateElement) ^
+      const DeepCollectionEquality().hash(factorElement);
 
   @override
   _$ClaimItemCopyWith<_ClaimItem> get copyWith =>
@@ -3807,7 +4671,14 @@ abstract class _ClaimItem implements ClaimItem {
       CodeableConcept bodySite,
       List<CodeableConcept> subSite,
       List<Reference> encounter,
-      List<ClaimDetail> detail}) = _$_ClaimItem;
+      List<ClaimDetail> detail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_careTeamLinkId') Element careTeamLinkIdElement,
+      @JsonKey(name: '_diagnosisLinkId') Element diagnosisLinkIdElement,
+      @JsonKey(name: '_procedureLinkId') Element procedureLinkIdElement,
+      @JsonKey(name: '_informationLinkId') Element informationLinkIdElement,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_factor') Element factorElement}) = _$_ClaimItem;
 
   factory _ClaimItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimItem.fromJson;
@@ -3861,6 +4732,27 @@ abstract class _ClaimItem implements ClaimItem {
   @override
   List<ClaimDetail> get detail;
   @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_careTeamLinkId')
+  Element get careTeamLinkIdElement;
+  @override
+  @JsonKey(name: '_diagnosisLinkId')
+  Element get diagnosisLinkIdElement;
+  @override
+  @JsonKey(name: '_procedureLinkId')
+  Element get procedureLinkIdElement;
+  @override
+  @JsonKey(name: '_informationLinkId')
+  Element get informationLinkIdElement;
+  @override
+  @JsonKey(name: '_servicedDate')
+  Element get servicedDateElement;
+  @override
+  @JsonKey(name: '_factor')
+  Element get factorElement;
+  @override
   _$ClaimItemCopyWith<_ClaimItem> get copyWith;
 }
 
@@ -3883,7 +4775,9 @@ class _$ClaimDetailTearOff {
       Decimal factor,
       Money net,
       List<Reference> udi,
-      List<ClaimSubDetail> subDetail}) {
+      List<ClaimSubDetail> subDetail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement}) {
     return _ClaimDetail(
       sequence: sequence,
       revenue: revenue,
@@ -3897,6 +4791,8 @@ class _$ClaimDetailTearOff {
       net: net,
       udi: udi,
       subDetail: subDetail,
+      sequenceElement: sequenceElement,
+      factorElement: factorElement,
     );
   }
 }
@@ -3917,6 +4813,10 @@ mixin _$ClaimDetail {
   Money get net;
   List<Reference> get udi;
   List<ClaimSubDetail> get subDetail;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_factor')
+  Element get factorElement;
 
   Map<String, dynamic> toJson();
   $ClaimDetailCopyWith<ClaimDetail> get copyWith;
@@ -3938,7 +4838,9 @@ abstract class $ClaimDetailCopyWith<$Res> {
       Decimal factor,
       Money net,
       List<Reference> udi,
-      List<ClaimSubDetail> subDetail});
+      List<ClaimSubDetail> subDetail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   $CodeableConceptCopyWith<$Res> get revenue;
   $CodeableConceptCopyWith<$Res> get category;
@@ -3946,6 +4848,8 @@ abstract class $ClaimDetailCopyWith<$Res> {
   $QuantityCopyWith<$Res> get quantity;
   $MoneyCopyWith<$Res> get unitPrice;
   $MoneyCopyWith<$Res> get net;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
@@ -3969,6 +4873,8 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
     Object net = freezed,
     Object udi = freezed,
     Object subDetail = freezed,
+    Object sequenceElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -3990,6 +4896,12 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
       subDetail: subDetail == freezed
           ? _value.subDetail
           : subDetail as List<ClaimSubDetail>,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 
@@ -4052,6 +4964,26 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
       return _then(_value.copyWith(net: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get factorElement {
+    if (_value.factorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.factorElement, (value) {
+      return _then(_value.copyWith(factorElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimDetailCopyWith<$Res>
@@ -4072,7 +5004,9 @@ abstract class _$ClaimDetailCopyWith<$Res>
       Decimal factor,
       Money net,
       List<Reference> udi,
-      List<ClaimSubDetail> subDetail});
+      List<ClaimSubDetail> subDetail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get revenue;
@@ -4086,6 +5020,10 @@ abstract class _$ClaimDetailCopyWith<$Res>
   $MoneyCopyWith<$Res> get unitPrice;
   @override
   $MoneyCopyWith<$Res> get net;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
@@ -4111,6 +5049,8 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
     Object net = freezed,
     Object udi = freezed,
     Object subDetail = freezed,
+    Object sequenceElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_ClaimDetail(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -4132,6 +5072,12 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
       subDetail: subDetail == freezed
           ? _value.subDetail
           : subDetail as List<ClaimSubDetail>,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 }
@@ -4150,7 +5096,9 @@ class _$_ClaimDetail implements _ClaimDetail {
       this.factor,
       this.net,
       this.udi,
-      this.subDetail});
+      this.subDetail,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_factor') this.factorElement});
 
   factory _$_ClaimDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimDetailFromJson(json);
@@ -4179,10 +5127,16 @@ class _$_ClaimDetail implements _ClaimDetail {
   final List<Reference> udi;
   @override
   final List<ClaimSubDetail> subDetail;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_factor')
+  final Element factorElement;
 
   @override
   String toString() {
-    return 'ClaimDetail(sequence: $sequence, revenue: $revenue, category: $category, service: $service, modifier: $modifier, programCode: $programCode, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, net: $net, udi: $udi, subDetail: $subDetail)';
+    return 'ClaimDetail(sequence: $sequence, revenue: $revenue, category: $category, service: $service, modifier: $modifier, programCode: $programCode, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, net: $net, udi: $udi, subDetail: $subDetail, sequenceElement: $sequenceElement, factorElement: $factorElement)';
   }
 
   @override
@@ -4221,7 +5175,13 @@ class _$_ClaimDetail implements _ClaimDetail {
                 const DeepCollectionEquality().equals(other.udi, udi)) &&
             (identical(other.subDetail, subDetail) ||
                 const DeepCollectionEquality()
-                    .equals(other.subDetail, subDetail)));
+                    .equals(other.subDetail, subDetail)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.factorElement, factorElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.factorElement, factorElement)));
   }
 
   @override
@@ -4238,7 +5198,9 @@ class _$_ClaimDetail implements _ClaimDetail {
       const DeepCollectionEquality().hash(factor) ^
       const DeepCollectionEquality().hash(net) ^
       const DeepCollectionEquality().hash(udi) ^
-      const DeepCollectionEquality().hash(subDetail);
+      const DeepCollectionEquality().hash(subDetail) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(factorElement);
 
   @override
   _$ClaimDetailCopyWith<_ClaimDetail> get copyWith =>
@@ -4263,7 +5225,9 @@ abstract class _ClaimDetail implements ClaimDetail {
       Decimal factor,
       Money net,
       List<Reference> udi,
-      List<ClaimSubDetail> subDetail}) = _$_ClaimDetail;
+      List<ClaimSubDetail> subDetail,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement}) = _$_ClaimDetail;
 
   factory _ClaimDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimDetail.fromJson;
@@ -4293,6 +5257,12 @@ abstract class _ClaimDetail implements ClaimDetail {
   @override
   List<ClaimSubDetail> get subDetail;
   @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_factor')
+  Element get factorElement;
+  @override
   _$ClaimDetailCopyWith<_ClaimDetail> get copyWith;
 }
 
@@ -4314,7 +5284,9 @@ class _$ClaimSubDetailTearOff {
       Money unitPrice,
       Decimal factor,
       Money net,
-      List<Reference> udi}) {
+      List<Reference> udi,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement}) {
     return _ClaimSubDetail(
       sequence: sequence,
       revenue: revenue,
@@ -4327,6 +5299,8 @@ class _$ClaimSubDetailTearOff {
       factor: factor,
       net: net,
       udi: udi,
+      sequenceElement: sequenceElement,
+      factorElement: factorElement,
     );
   }
 }
@@ -4346,6 +5320,10 @@ mixin _$ClaimSubDetail {
   Decimal get factor;
   Money get net;
   List<Reference> get udi;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_factor')
+  Element get factorElement;
 
   Map<String, dynamic> toJson();
   $ClaimSubDetailCopyWith<ClaimSubDetail> get copyWith;
@@ -4366,7 +5344,9 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
       Money unitPrice,
       Decimal factor,
       Money net,
-      List<Reference> udi});
+      List<Reference> udi,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   $CodeableConceptCopyWith<$Res> get revenue;
   $CodeableConceptCopyWith<$Res> get category;
@@ -4374,6 +5354,8 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
   $QuantityCopyWith<$Res> get quantity;
   $MoneyCopyWith<$Res> get unitPrice;
   $MoneyCopyWith<$Res> get net;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class _$ClaimSubDetailCopyWithImpl<$Res>
@@ -4397,6 +5379,8 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
     Object factor = freezed,
     Object net = freezed,
     Object udi = freezed,
+    Object sequenceElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -4415,6 +5399,12 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
       factor: factor == freezed ? _value.factor : factor as Decimal,
       net: net == freezed ? _value.net : net as Money,
       udi: udi == freezed ? _value.udi : udi as List<Reference>,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 
@@ -4477,6 +5467,26 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
       return _then(_value.copyWith(net: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get factorElement {
+    if (_value.factorElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.factorElement, (value) {
+      return _then(_value.copyWith(factorElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimSubDetailCopyWith<$Res>
@@ -4496,7 +5506,9 @@ abstract class _$ClaimSubDetailCopyWith<$Res>
       Money unitPrice,
       Decimal factor,
       Money net,
-      List<Reference> udi});
+      List<Reference> udi,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get revenue;
@@ -4510,6 +5522,10 @@ abstract class _$ClaimSubDetailCopyWith<$Res>
   $MoneyCopyWith<$Res> get unitPrice;
   @override
   $MoneyCopyWith<$Res> get net;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get factorElement;
 }
 
 class __$ClaimSubDetailCopyWithImpl<$Res>
@@ -4535,6 +5551,8 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
     Object factor = freezed,
     Object net = freezed,
     Object udi = freezed,
+    Object sequenceElement = freezed,
+    Object factorElement = freezed,
   }) {
     return _then(_ClaimSubDetail(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -4553,6 +5571,12 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
       factor: factor == freezed ? _value.factor : factor as Decimal,
       net: net == freezed ? _value.net : net as Money,
       udi: udi == freezed ? _value.udi : udi as List<Reference>,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      factorElement: factorElement == freezed
+          ? _value.factorElement
+          : factorElement as Element,
     ));
   }
 }
@@ -4570,7 +5594,9 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
       this.unitPrice,
       this.factor,
       this.net,
-      this.udi});
+      this.udi,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_factor') this.factorElement});
 
   factory _$_ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimSubDetailFromJson(json);
@@ -4597,10 +5623,16 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
   final Money net;
   @override
   final List<Reference> udi;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_factor')
+  final Element factorElement;
 
   @override
   String toString() {
-    return 'ClaimSubDetail(sequence: $sequence, revenue: $revenue, category: $category, service: $service, modifier: $modifier, programCode: $programCode, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, net: $net, udi: $udi)';
+    return 'ClaimSubDetail(sequence: $sequence, revenue: $revenue, category: $category, service: $service, modifier: $modifier, programCode: $programCode, quantity: $quantity, unitPrice: $unitPrice, factor: $factor, net: $net, udi: $udi, sequenceElement: $sequenceElement, factorElement: $factorElement)';
   }
 
   @override
@@ -4636,7 +5668,13 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
             (identical(other.net, net) ||
                 const DeepCollectionEquality().equals(other.net, net)) &&
             (identical(other.udi, udi) ||
-                const DeepCollectionEquality().equals(other.udi, udi)));
+                const DeepCollectionEquality().equals(other.udi, udi)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.factorElement, factorElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.factorElement, factorElement)));
   }
 
   @override
@@ -4652,7 +5690,9 @@ class _$_ClaimSubDetail implements _ClaimSubDetail {
       const DeepCollectionEquality().hash(unitPrice) ^
       const DeepCollectionEquality().hash(factor) ^
       const DeepCollectionEquality().hash(net) ^
-      const DeepCollectionEquality().hash(udi);
+      const DeepCollectionEquality().hash(udi) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(factorElement);
 
   @override
   _$ClaimSubDetailCopyWith<_ClaimSubDetail> get copyWith =>
@@ -4676,7 +5716,9 @@ abstract class _ClaimSubDetail implements ClaimSubDetail {
       Money unitPrice,
       Decimal factor,
       Money net,
-      List<Reference> udi}) = _$_ClaimSubDetail;
+      List<Reference> udi,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_factor') Element factorElement}) = _$_ClaimSubDetail;
 
   factory _ClaimSubDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimSubDetail.fromJson;
@@ -4703,6 +5745,12 @@ abstract class _ClaimSubDetail implements ClaimSubDetail {
   Money get net;
   @override
   List<Reference> get udi;
+  @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_factor')
+  Element get factorElement;
   @override
   _$ClaimSubDetailCopyWith<_ClaimSubDetail> get copyWith;
 }
@@ -4740,7 +5788,13 @@ class _$ClaimResponseTearOff {
       CodeableConcept form,
       List<ClaimResponseProcessNote> processNote,
       List<Reference> communicationRequest,
-      List<ClaimResponseInsurance> insurance}) {
+      List<ClaimResponseInsurance> insurance,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement}) {
     return _ClaimResponse(
       resourceType: resourceType,
       identifier: identifier,
@@ -4766,6 +5820,9 @@ class _$ClaimResponseTearOff {
       processNote: processNote,
       communicationRequest: communicationRequest,
       insurance: insurance,
+      statusElement: statusElement,
+      createdElement: createdElement,
+      dispositionElement: dispositionElement,
     );
   }
 }
@@ -4799,6 +5856,12 @@ mixin _$ClaimResponse {
   List<ClaimResponseProcessNote> get processNote;
   List<Reference> get communicationRequest;
   List<ClaimResponseInsurance> get insurance;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_created')
+  Element get createdElement;
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseCopyWith<ClaimResponse> get copyWith;
@@ -4833,7 +5896,13 @@ abstract class $ClaimResponseCopyWith<$Res> {
       CodeableConcept form,
       List<ClaimResponseProcessNote> processNote,
       List<Reference> communicationRequest,
-      List<ClaimResponseInsurance> insurance});
+      List<ClaimResponseInsurance> insurance,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement});
 
   $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res> get insurer;
@@ -4848,6 +5917,9 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $ClaimResponsePaymentCopyWith<$Res> get payment;
   $CodingCopyWith<$Res> get reserved;
   $CodeableConceptCopyWith<$Res> get form;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res> get dispositionElement;
 }
 
 class _$ClaimResponseCopyWithImpl<$Res>
@@ -4884,6 +5956,9 @@ class _$ClaimResponseCopyWithImpl<$Res>
     Object processNote = freezed,
     Object communicationRequest = freezed,
     Object insurance = freezed,
+    Object statusElement = freezed,
+    Object createdElement = freezed,
+    Object dispositionElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -4934,6 +6009,15 @@ class _$ClaimResponseCopyWithImpl<$Res>
       insurance: insurance == freezed
           ? _value.insurance
           : insurance as List<ClaimResponseInsurance>,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
     ));
   }
 
@@ -5066,6 +6150,36 @@ class _$ClaimResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(form: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get createdElement {
+    if (_value.createdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+      return _then(_value.copyWith(createdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dispositionElement {
+    if (_value.dispositionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+      return _then(_value.copyWith(dispositionElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseCopyWith<$Res>
@@ -5099,7 +6213,13 @@ abstract class _$ClaimResponseCopyWith<$Res>
       CodeableConcept form,
       List<ClaimResponseProcessNote> processNote,
       List<Reference> communicationRequest,
-      List<ClaimResponseInsurance> insurance});
+      List<ClaimResponseInsurance> insurance,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement});
 
   @override
   $ReferenceCopyWith<$Res> get patient;
@@ -5127,6 +6247,12 @@ abstract class _$ClaimResponseCopyWith<$Res>
   $CodingCopyWith<$Res> get reserved;
   @override
   $CodeableConceptCopyWith<$Res> get form;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get createdElement;
+  @override
+  $ElementCopyWith<$Res> get dispositionElement;
 }
 
 class __$ClaimResponseCopyWithImpl<$Res>
@@ -5165,6 +6291,9 @@ class __$ClaimResponseCopyWithImpl<$Res>
     Object processNote = freezed,
     Object communicationRequest = freezed,
     Object insurance = freezed,
+    Object statusElement = freezed,
+    Object createdElement = freezed,
+    Object dispositionElement = freezed,
   }) {
     return _then(_ClaimResponse(
       resourceType: resourceType == freezed
@@ -5215,6 +6344,15 @@ class __$ClaimResponseCopyWithImpl<$Res>
       insurance: insurance == freezed
           ? _value.insurance
           : insurance as List<ClaimResponseInsurance>,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      createdElement: createdElement == freezed
+          ? _value.createdElement
+          : createdElement as Element,
+      dispositionElement: dispositionElement == freezed
+          ? _value.dispositionElement
+          : dispositionElement as Element,
     ));
   }
 }
@@ -5247,7 +6385,13 @@ class _$_ClaimResponse implements _ClaimResponse {
       this.form,
       this.processNote,
       this.communicationRequest,
-      this.insurance})
+      this.insurance,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement})
       : assert(resourceType != null);
 
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
@@ -5302,10 +6446,19 @@ class _$_ClaimResponse implements _ClaimResponse {
   final List<Reference> communicationRequest;
   @override
   final List<ClaimResponseInsurance> insurance;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_created')
+  final Element createdElement;
+  @override
+  @JsonKey(name: '_disposition')
+  final Element dispositionElement;
 
   @override
   String toString() {
-    return 'ClaimResponse(resourceType: $resourceType, identifier: $identifier, status: $status, patient: $patient, created: $created, insurer: $insurer, requestProvider: $requestProvider, requestOrganization: $requestOrganization, request: $request, outcome: $outcome, disposition: $disposition, payeeType: $payeeType, item: $item, addItem: $addItem, error: $error, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, payment: $payment, reserved: $reserved, form: $form, processNote: $processNote, communicationRequest: $communicationRequest, insurance: $insurance)';
+    return 'ClaimResponse(resourceType: $resourceType, identifier: $identifier, status: $status, patient: $patient, created: $created, insurer: $insurer, requestProvider: $requestProvider, requestOrganization: $requestOrganization, request: $request, outcome: $outcome, disposition: $disposition, payeeType: $payeeType, item: $item, addItem: $addItem, error: $error, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, payment: $payment, reserved: $reserved, form: $form, processNote: $processNote, communicationRequest: $communicationRequest, insurance: $insurance, statusElement: $statusElement, createdElement: $createdElement, dispositionElement: $dispositionElement)';
   }
 
   @override
@@ -5378,7 +6531,10 @@ class _$_ClaimResponse implements _ClaimResponse {
                 const DeepCollectionEquality().equals(
                     other.communicationRequest, communicationRequest)) &&
             (identical(other.insurance, insurance) ||
-                const DeepCollectionEquality().equals(other.insurance, insurance)));
+                const DeepCollectionEquality().equals(other.insurance, insurance)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.createdElement, createdElement) || const DeepCollectionEquality().equals(other.createdElement, createdElement)) &&
+            (identical(other.dispositionElement, dispositionElement) || const DeepCollectionEquality().equals(other.dispositionElement, dispositionElement)));
   }
 
   @override
@@ -5407,7 +6563,10 @@ class _$_ClaimResponse implements _ClaimResponse {
       const DeepCollectionEquality().hash(form) ^
       const DeepCollectionEquality().hash(processNote) ^
       const DeepCollectionEquality().hash(communicationRequest) ^
-      const DeepCollectionEquality().hash(insurance);
+      const DeepCollectionEquality().hash(insurance) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(createdElement) ^
+      const DeepCollectionEquality().hash(dispositionElement);
 
   @override
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith =>
@@ -5446,7 +6605,13 @@ abstract class _ClaimResponse implements ClaimResponse {
       CodeableConcept form,
       List<ClaimResponseProcessNote> processNote,
       List<Reference> communicationRequest,
-      List<ClaimResponseInsurance> insurance}) = _$_ClaimResponse;
+      List<ClaimResponseInsurance> insurance,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement}) = _$_ClaimResponse;
 
   factory _ClaimResponse.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponse.fromJson;
@@ -5501,6 +6666,15 @@ abstract class _ClaimResponse implements ClaimResponse {
   @override
   List<ClaimResponseInsurance> get insurance;
   @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_created')
+  Element get createdElement;
+  @override
+  @JsonKey(name: '_disposition')
+  Element get dispositionElement;
+  @override
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith;
 }
 
@@ -5515,12 +6689,16 @@ class _$ClaimResponseItemTearOff {
       {PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail> detail}) {
+      List<ClaimResponseDetail> detail,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement}) {
     return _ClaimResponseItem(
       sequenceLinkId: sequenceLinkId,
       noteNumber: noteNumber,
       adjudication: adjudication,
       detail: detail,
+      sequenceLinkIdElement: sequenceLinkIdElement,
+      noteNumberElement: noteNumberElement,
     );
   }
 }
@@ -5533,6 +6711,10 @@ mixin _$ClaimResponseItem {
   List<PositiveInt> get noteNumber;
   List<ClaimResponseAdjudication> get adjudication;
   List<ClaimResponseDetail> get detail;
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseItemCopyWith<ClaimResponseItem> get copyWith;
@@ -5546,7 +6728,12 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       {PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail> detail});
+      List<ClaimResponseDetail> detail,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
+
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ClaimResponseItemCopyWithImpl<$Res>
@@ -5563,6 +6750,8 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
     Object noteNumber = freezed,
     Object adjudication = freezed,
     Object detail = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequenceLinkId: sequenceLinkId == freezed
@@ -5577,7 +6766,33 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
       detail: detail == freezed
           ? _value.detail
           : detail as List<ClaimResponseDetail>,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement {
+    if (_value.sequenceLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceLinkIdElement, (value) {
+      return _then(_value.copyWith(sequenceLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement {
+    if (_value.noteNumberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
+      return _then(_value.copyWith(noteNumberElement: value));
+    });
   }
 }
 
@@ -5591,7 +6806,14 @@ abstract class _$ClaimResponseItemCopyWith<$Res>
       {PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail> detail});
+      List<ClaimResponseDetail> detail,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
+
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ClaimResponseItemCopyWithImpl<$Res>
@@ -5610,6 +6832,8 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
     Object noteNumber = freezed,
     Object adjudication = freezed,
     Object detail = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_ClaimResponseItem(
       sequenceLinkId: sequenceLinkId == freezed
@@ -5624,6 +6848,12 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
       detail: detail == freezed
           ? _value.detail
           : detail as List<ClaimResponseDetail>,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
   }
 }
@@ -5631,7 +6861,12 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClaimResponseItem implements _ClaimResponseItem {
   const _$_ClaimResponseItem(
-      {this.sequenceLinkId, this.noteNumber, this.adjudication, this.detail});
+      {this.sequenceLinkId,
+      this.noteNumber,
+      this.adjudication,
+      this.detail,
+      @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement});
 
   factory _$_ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseItemFromJson(json);
@@ -5644,10 +6879,16 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
   final List<ClaimResponseAdjudication> adjudication;
   @override
   final List<ClaimResponseDetail> detail;
+  @override
+  @JsonKey(name: '_sequenceLinkId')
+  final Element sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_noteNumber')
+  final Element noteNumberElement;
 
   @override
   String toString() {
-    return 'ClaimResponseItem(sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication, detail: $detail)';
+    return 'ClaimResponseItem(sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication, detail: $detail, sequenceLinkIdElement: $sequenceLinkIdElement, noteNumberElement: $noteNumberElement)';
   }
 
   @override
@@ -5664,7 +6905,13 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
                 const DeepCollectionEquality()
                     .equals(other.adjudication, adjudication)) &&
             (identical(other.detail, detail) ||
-                const DeepCollectionEquality().equals(other.detail, detail)));
+                const DeepCollectionEquality().equals(other.detail, detail)) &&
+            (identical(other.sequenceLinkIdElement, sequenceLinkIdElement) ||
+                const DeepCollectionEquality().equals(
+                    other.sequenceLinkIdElement, sequenceLinkIdElement)) &&
+            (identical(other.noteNumberElement, noteNumberElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.noteNumberElement, noteNumberElement)));
   }
 
   @override
@@ -5673,7 +6920,9 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
       const DeepCollectionEquality().hash(sequenceLinkId) ^
       const DeepCollectionEquality().hash(noteNumber) ^
       const DeepCollectionEquality().hash(adjudication) ^
-      const DeepCollectionEquality().hash(detail);
+      const DeepCollectionEquality().hash(detail) ^
+      const DeepCollectionEquality().hash(sequenceLinkIdElement) ^
+      const DeepCollectionEquality().hash(noteNumberElement);
 
   @override
   _$ClaimResponseItemCopyWith<_ClaimResponseItem> get copyWith =>
@@ -5687,10 +6936,13 @@ class _$_ClaimResponseItem implements _ClaimResponseItem {
 
 abstract class _ClaimResponseItem implements ClaimResponseItem {
   const factory _ClaimResponseItem(
-      {PositiveInt sequenceLinkId,
-      List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail> detail}) = _$_ClaimResponseItem;
+          {PositiveInt sequenceLinkId,
+          List<PositiveInt> noteNumber,
+          List<ClaimResponseAdjudication> adjudication,
+          List<ClaimResponseDetail> detail,
+          @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+          @JsonKey(name: '_noteNumber') Element noteNumberElement}) =
+      _$_ClaimResponseItem;
 
   factory _ClaimResponseItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseItem.fromJson;
@@ -5703,6 +6955,12 @@ abstract class _ClaimResponseItem implements ClaimResponseItem {
   List<ClaimResponseAdjudication> get adjudication;
   @override
   List<ClaimResponseDetail> get detail;
+  @override
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
   @override
   _$ClaimResponseItemCopyWith<_ClaimResponseItem> get copyWith;
 }
@@ -5719,12 +6977,14 @@ class _$ClaimResponseAdjudicationTearOff {
       {@JsonKey(required: true) CodeableConcept category,
       CodeableConcept reason,
       Money amount,
-      Decimal value}) {
+      Decimal value,
+      @JsonKey(name: '_value') Element valueElement}) {
     return _ClaimResponseAdjudication(
       category: category,
       reason: reason,
       amount: amount,
       value: value,
+      valueElement: valueElement,
     );
   }
 }
@@ -5738,6 +6998,8 @@ mixin _$ClaimResponseAdjudication {
   CodeableConcept get reason;
   Money get amount;
   Decimal get value;
+  @JsonKey(name: '_value')
+  Element get valueElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseAdjudicationCopyWith<ClaimResponseAdjudication> get copyWith;
@@ -5751,11 +7013,13 @@ abstract class $ClaimResponseAdjudicationCopyWith<$Res> {
       {@JsonKey(required: true) CodeableConcept category,
       CodeableConcept reason,
       Money amount,
-      Decimal value});
+      Decimal value,
+      @JsonKey(name: '_value') Element valueElement});
 
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get reason;
   $MoneyCopyWith<$Res> get amount;
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
@@ -5772,6 +7036,7 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
     Object reason = freezed,
     Object amount = freezed,
     Object value = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       category:
@@ -5779,6 +7044,9 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
       reason: reason == freezed ? _value.reason : reason as CodeableConcept,
       amount: amount == freezed ? _value.amount : amount as Money,
       value: value == freezed ? _value.value : value as Decimal,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 
@@ -5811,6 +7079,16 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
       return _then(_value.copyWith(amount: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseAdjudicationCopyWith<$Res>
@@ -5823,7 +7101,8 @@ abstract class _$ClaimResponseAdjudicationCopyWith<$Res>
       {@JsonKey(required: true) CodeableConcept category,
       CodeableConcept reason,
       Money amount,
-      Decimal value});
+      Decimal value,
+      @JsonKey(name: '_value') Element valueElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get category;
@@ -5831,6 +7110,8 @@ abstract class _$ClaimResponseAdjudicationCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get reason;
   @override
   $MoneyCopyWith<$Res> get amount;
+  @override
+  $ElementCopyWith<$Res> get valueElement;
 }
 
 class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
@@ -5850,6 +7131,7 @@ class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
     Object reason = freezed,
     Object amount = freezed,
     Object value = freezed,
+    Object valueElement = freezed,
   }) {
     return _then(_ClaimResponseAdjudication(
       category:
@@ -5857,6 +7139,9 @@ class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
       reason: reason == freezed ? _value.reason : reason as CodeableConcept,
       amount: amount == freezed ? _value.amount : amount as Money,
       value: value == freezed ? _value.value : value as Decimal,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
     ));
   }
 }
@@ -5867,7 +7152,8 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
       {@JsonKey(required: true) this.category,
       this.reason,
       this.amount,
-      this.value});
+      this.value,
+      @JsonKey(name: '_value') this.valueElement});
 
   factory _$_ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseAdjudicationFromJson(json);
@@ -5881,10 +7167,13 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
   final Money amount;
   @override
   final Decimal value;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
 
   @override
   String toString() {
-    return 'ClaimResponseAdjudication(category: $category, reason: $reason, amount: $amount, value: $value)';
+    return 'ClaimResponseAdjudication(category: $category, reason: $reason, amount: $amount, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -5899,7 +7188,10 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
             (identical(other.amount, amount) ||
                 const DeepCollectionEquality().equals(other.amount, amount)) &&
             (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)));
   }
 
   @override
@@ -5908,7 +7200,8 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(amount) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(valueElement);
 
   @override
   _$ClaimResponseAdjudicationCopyWith<_ClaimResponseAdjudication>
@@ -5924,10 +7217,12 @@ class _$_ClaimResponseAdjudication implements _ClaimResponseAdjudication {
 
 abstract class _ClaimResponseAdjudication implements ClaimResponseAdjudication {
   const factory _ClaimResponseAdjudication(
-      {@JsonKey(required: true) CodeableConcept category,
-      CodeableConcept reason,
-      Money amount,
-      Decimal value}) = _$_ClaimResponseAdjudication;
+          {@JsonKey(required: true) CodeableConcept category,
+          CodeableConcept reason,
+          Money amount,
+          Decimal value,
+          @JsonKey(name: '_value') Element valueElement}) =
+      _$_ClaimResponseAdjudication;
 
   factory _ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseAdjudication.fromJson;
@@ -5941,6 +7236,9 @@ abstract class _ClaimResponseAdjudication implements ClaimResponseAdjudication {
   Money get amount;
   @override
   Decimal get value;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
   @override
   _$ClaimResponseAdjudicationCopyWith<_ClaimResponseAdjudication> get copyWith;
 }
@@ -5956,12 +7254,16 @@ class _$ClaimResponseDetailTearOff {
       {PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail> subDetail}) {
+      List<ClaimResponseSubDetail> subDetail,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement}) {
     return _ClaimResponseDetail(
       sequenceLinkId: sequenceLinkId,
       noteNumber: noteNumber,
       adjudication: adjudication,
       subDetail: subDetail,
+      sequenceLinkIdElement: sequenceLinkIdElement,
+      noteNumberElement: noteNumberElement,
     );
   }
 }
@@ -5974,6 +7276,10 @@ mixin _$ClaimResponseDetail {
   List<PositiveInt> get noteNumber;
   List<ClaimResponseAdjudication> get adjudication;
   List<ClaimResponseSubDetail> get subDetail;
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseDetailCopyWith<ClaimResponseDetail> get copyWith;
@@ -5987,7 +7293,12 @@ abstract class $ClaimResponseDetailCopyWith<$Res> {
       {PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail> subDetail});
+      List<ClaimResponseSubDetail> subDetail,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
+
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ClaimResponseDetailCopyWithImpl<$Res>
@@ -6004,6 +7315,8 @@ class _$ClaimResponseDetailCopyWithImpl<$Res>
     Object noteNumber = freezed,
     Object adjudication = freezed,
     Object subDetail = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequenceLinkId: sequenceLinkId == freezed
@@ -6018,7 +7331,33 @@ class _$ClaimResponseDetailCopyWithImpl<$Res>
       subDetail: subDetail == freezed
           ? _value.subDetail
           : subDetail as List<ClaimResponseSubDetail>,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement {
+    if (_value.sequenceLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceLinkIdElement, (value) {
+      return _then(_value.copyWith(sequenceLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement {
+    if (_value.noteNumberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
+      return _then(_value.copyWith(noteNumberElement: value));
+    });
   }
 }
 
@@ -6032,7 +7371,14 @@ abstract class _$ClaimResponseDetailCopyWith<$Res>
       {PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail> subDetail});
+      List<ClaimResponseSubDetail> subDetail,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
+
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ClaimResponseDetailCopyWithImpl<$Res>
@@ -6051,6 +7397,8 @@ class __$ClaimResponseDetailCopyWithImpl<$Res>
     Object noteNumber = freezed,
     Object adjudication = freezed,
     Object subDetail = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_ClaimResponseDetail(
       sequenceLinkId: sequenceLinkId == freezed
@@ -6065,6 +7413,12 @@ class __$ClaimResponseDetailCopyWithImpl<$Res>
       subDetail: subDetail == freezed
           ? _value.subDetail
           : subDetail as List<ClaimResponseSubDetail>,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
   }
 }
@@ -6075,7 +7429,9 @@ class _$_ClaimResponseDetail implements _ClaimResponseDetail {
       {this.sequenceLinkId,
       this.noteNumber,
       this.adjudication,
-      this.subDetail});
+      this.subDetail,
+      @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement});
 
   factory _$_ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseDetailFromJson(json);
@@ -6088,10 +7444,16 @@ class _$_ClaimResponseDetail implements _ClaimResponseDetail {
   final List<ClaimResponseAdjudication> adjudication;
   @override
   final List<ClaimResponseSubDetail> subDetail;
+  @override
+  @JsonKey(name: '_sequenceLinkId')
+  final Element sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_noteNumber')
+  final Element noteNumberElement;
 
   @override
   String toString() {
-    return 'ClaimResponseDetail(sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication, subDetail: $subDetail)';
+    return 'ClaimResponseDetail(sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication, subDetail: $subDetail, sequenceLinkIdElement: $sequenceLinkIdElement, noteNumberElement: $noteNumberElement)';
   }
 
   @override
@@ -6109,7 +7471,13 @@ class _$_ClaimResponseDetail implements _ClaimResponseDetail {
                     .equals(other.adjudication, adjudication)) &&
             (identical(other.subDetail, subDetail) ||
                 const DeepCollectionEquality()
-                    .equals(other.subDetail, subDetail)));
+                    .equals(other.subDetail, subDetail)) &&
+            (identical(other.sequenceLinkIdElement, sequenceLinkIdElement) ||
+                const DeepCollectionEquality().equals(
+                    other.sequenceLinkIdElement, sequenceLinkIdElement)) &&
+            (identical(other.noteNumberElement, noteNumberElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.noteNumberElement, noteNumberElement)));
   }
 
   @override
@@ -6118,7 +7486,9 @@ class _$_ClaimResponseDetail implements _ClaimResponseDetail {
       const DeepCollectionEquality().hash(sequenceLinkId) ^
       const DeepCollectionEquality().hash(noteNumber) ^
       const DeepCollectionEquality().hash(adjudication) ^
-      const DeepCollectionEquality().hash(subDetail);
+      const DeepCollectionEquality().hash(subDetail) ^
+      const DeepCollectionEquality().hash(sequenceLinkIdElement) ^
+      const DeepCollectionEquality().hash(noteNumberElement);
 
   @override
   _$ClaimResponseDetailCopyWith<_ClaimResponseDetail> get copyWith =>
@@ -6133,10 +7503,13 @@ class _$_ClaimResponseDetail implements _ClaimResponseDetail {
 
 abstract class _ClaimResponseDetail implements ClaimResponseDetail {
   const factory _ClaimResponseDetail(
-      {PositiveInt sequenceLinkId,
-      List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail> subDetail}) = _$_ClaimResponseDetail;
+          {PositiveInt sequenceLinkId,
+          List<PositiveInt> noteNumber,
+          List<ClaimResponseAdjudication> adjudication,
+          List<ClaimResponseSubDetail> subDetail,
+          @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+          @JsonKey(name: '_noteNumber') Element noteNumberElement}) =
+      _$_ClaimResponseDetail;
 
   factory _ClaimResponseDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseDetail.fromJson;
@@ -6149,6 +7522,12 @@ abstract class _ClaimResponseDetail implements ClaimResponseDetail {
   List<ClaimResponseAdjudication> get adjudication;
   @override
   List<ClaimResponseSubDetail> get subDetail;
+  @override
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
   @override
   _$ClaimResponseDetailCopyWith<_ClaimResponseDetail> get copyWith;
 }
@@ -6164,11 +7543,15 @@ class _$ClaimResponseSubDetailTearOff {
   _ClaimResponseSubDetail call(
       {PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication}) {
+      List<ClaimResponseAdjudication> adjudication,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement}) {
     return _ClaimResponseSubDetail(
       sequenceLinkId: sequenceLinkId,
       noteNumber: noteNumber,
       adjudication: adjudication,
+      sequenceLinkIdElement: sequenceLinkIdElement,
+      noteNumberElement: noteNumberElement,
     );
   }
 }
@@ -6180,6 +7563,10 @@ mixin _$ClaimResponseSubDetail {
   PositiveInt get sequenceLinkId;
   List<PositiveInt> get noteNumber;
   List<ClaimResponseAdjudication> get adjudication;
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseSubDetailCopyWith<ClaimResponseSubDetail> get copyWith;
@@ -6192,7 +7579,12 @@ abstract class $ClaimResponseSubDetailCopyWith<$Res> {
   $Res call(
       {PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication});
+      List<ClaimResponseAdjudication> adjudication,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
+
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ClaimResponseSubDetailCopyWithImpl<$Res>
@@ -6208,6 +7600,8 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res>
     Object sequenceLinkId = freezed,
     Object noteNumber = freezed,
     Object adjudication = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequenceLinkId: sequenceLinkId == freezed
@@ -6219,7 +7613,33 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res>
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ClaimResponseAdjudication>,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement {
+    if (_value.sequenceLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceLinkIdElement, (value) {
+      return _then(_value.copyWith(sequenceLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement {
+    if (_value.noteNumberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
+      return _then(_value.copyWith(noteNumberElement: value));
+    });
   }
 }
 
@@ -6232,7 +7652,14 @@ abstract class _$ClaimResponseSubDetailCopyWith<$Res>
   $Res call(
       {PositiveInt sequenceLinkId,
       List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication});
+      List<ClaimResponseAdjudication> adjudication,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
+
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ClaimResponseSubDetailCopyWithImpl<$Res>
@@ -6250,6 +7677,8 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
     Object sequenceLinkId = freezed,
     Object noteNumber = freezed,
     Object adjudication = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_ClaimResponseSubDetail(
       sequenceLinkId: sequenceLinkId == freezed
@@ -6261,6 +7690,12 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ClaimResponseAdjudication>,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
   }
 }
@@ -6268,7 +7703,11 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
   const _$_ClaimResponseSubDetail(
-      {this.sequenceLinkId, this.noteNumber, this.adjudication});
+      {this.sequenceLinkId,
+      this.noteNumber,
+      this.adjudication,
+      @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement});
 
   factory _$_ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseSubDetailFromJson(json);
@@ -6279,10 +7718,16 @@ class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
   final List<PositiveInt> noteNumber;
   @override
   final List<ClaimResponseAdjudication> adjudication;
+  @override
+  @JsonKey(name: '_sequenceLinkId')
+  final Element sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_noteNumber')
+  final Element noteNumberElement;
 
   @override
   String toString() {
-    return 'ClaimResponseSubDetail(sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication)';
+    return 'ClaimResponseSubDetail(sequenceLinkId: $sequenceLinkId, noteNumber: $noteNumber, adjudication: $adjudication, sequenceLinkIdElement: $sequenceLinkIdElement, noteNumberElement: $noteNumberElement)';
   }
 
   @override
@@ -6297,7 +7742,13 @@ class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
                     .equals(other.noteNumber, noteNumber)) &&
             (identical(other.adjudication, adjudication) ||
                 const DeepCollectionEquality()
-                    .equals(other.adjudication, adjudication)));
+                    .equals(other.adjudication, adjudication)) &&
+            (identical(other.sequenceLinkIdElement, sequenceLinkIdElement) ||
+                const DeepCollectionEquality().equals(
+                    other.sequenceLinkIdElement, sequenceLinkIdElement)) &&
+            (identical(other.noteNumberElement, noteNumberElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.noteNumberElement, noteNumberElement)));
   }
 
   @override
@@ -6305,7 +7756,9 @@ class _$_ClaimResponseSubDetail implements _ClaimResponseSubDetail {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(sequenceLinkId) ^
       const DeepCollectionEquality().hash(noteNumber) ^
-      const DeepCollectionEquality().hash(adjudication);
+      const DeepCollectionEquality().hash(adjudication) ^
+      const DeepCollectionEquality().hash(sequenceLinkIdElement) ^
+      const DeepCollectionEquality().hash(noteNumberElement);
 
   @override
   _$ClaimResponseSubDetailCopyWith<_ClaimResponseSubDetail> get copyWith =>
@@ -6322,7 +7775,9 @@ abstract class _ClaimResponseSubDetail implements ClaimResponseSubDetail {
   const factory _ClaimResponseSubDetail(
           {PositiveInt sequenceLinkId,
           List<PositiveInt> noteNumber,
-          List<ClaimResponseAdjudication> adjudication}) =
+          List<ClaimResponseAdjudication> adjudication,
+          @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+          @JsonKey(name: '_noteNumber') Element noteNumberElement}) =
       _$_ClaimResponseSubDetail;
 
   factory _ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =
@@ -6334,6 +7789,12 @@ abstract class _ClaimResponseSubDetail implements ClaimResponseSubDetail {
   List<PositiveInt> get noteNumber;
   @override
   List<ClaimResponseAdjudication> get adjudication;
+  @override
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
   @override
   _$ClaimResponseSubDetailCopyWith<_ClaimResponseSubDetail> get copyWith;
 }
@@ -6354,7 +7815,9 @@ class _$ClaimResponseAddItemTearOff {
       Money fee,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail1> detail}) {
+      List<ClaimResponseDetail1> detail,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement}) {
     return _ClaimResponseAddItem(
       sequenceLinkId: sequenceLinkId,
       revenue: revenue,
@@ -6365,6 +7828,8 @@ class _$ClaimResponseAddItemTearOff {
       noteNumber: noteNumber,
       adjudication: adjudication,
       detail: detail,
+      sequenceLinkIdElement: sequenceLinkIdElement,
+      noteNumberElement: noteNumberElement,
     );
   }
 }
@@ -6382,6 +7847,10 @@ mixin _$ClaimResponseAddItem {
   List<PositiveInt> get noteNumber;
   List<ClaimResponseAdjudication> get adjudication;
   List<ClaimResponseDetail1> get detail;
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseAddItemCopyWith<ClaimResponseAddItem> get copyWith;
@@ -6400,12 +7869,16 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       Money fee,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail1> detail});
+      List<ClaimResponseDetail1> detail,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
 
   $CodeableConceptCopyWith<$Res> get revenue;
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get service;
   $MoneyCopyWith<$Res> get fee;
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ClaimResponseAddItemCopyWithImpl<$Res>
@@ -6427,6 +7900,8 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
     Object noteNumber = freezed,
     Object adjudication = freezed,
     Object detail = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequenceLinkId: sequenceLinkId == freezed
@@ -6449,6 +7924,12 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
       detail: detail == freezed
           ? _value.detail
           : detail as List<ClaimResponseDetail1>,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
   }
 
@@ -6491,6 +7972,26 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
       return _then(_value.copyWith(fee: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement {
+    if (_value.sequenceLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceLinkIdElement, (value) {
+      return _then(_value.copyWith(sequenceLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement {
+    if (_value.noteNumberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
+      return _then(_value.copyWith(noteNumberElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseAddItemCopyWith<$Res>
@@ -6508,7 +8009,9 @@ abstract class _$ClaimResponseAddItemCopyWith<$Res>
       Money fee,
       List<PositiveInt> noteNumber,
       List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail1> detail});
+      List<ClaimResponseDetail1> detail,
+      @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get revenue;
@@ -6518,6 +8021,10 @@ abstract class _$ClaimResponseAddItemCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get service;
   @override
   $MoneyCopyWith<$Res> get fee;
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ClaimResponseAddItemCopyWithImpl<$Res>
@@ -6541,6 +8048,8 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
     Object noteNumber = freezed,
     Object adjudication = freezed,
     Object detail = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_ClaimResponseAddItem(
       sequenceLinkId: sequenceLinkId == freezed
@@ -6563,6 +8072,12 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
       detail: detail == freezed
           ? _value.detail
           : detail as List<ClaimResponseDetail1>,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
   }
 }
@@ -6578,7 +8093,9 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
       this.fee,
       this.noteNumber,
       this.adjudication,
-      this.detail});
+      this.detail,
+      @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement});
 
   factory _$_ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseAddItemFromJson(json);
@@ -6601,10 +8118,16 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
   final List<ClaimResponseAdjudication> adjudication;
   @override
   final List<ClaimResponseDetail1> detail;
+  @override
+  @JsonKey(name: '_sequenceLinkId')
+  final Element sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_noteNumber')
+  final Element noteNumberElement;
 
   @override
   String toString() {
-    return 'ClaimResponseAddItem(sequenceLinkId: $sequenceLinkId, revenue: $revenue, category: $category, service: $service, modifier: $modifier, fee: $fee, noteNumber: $noteNumber, adjudication: $adjudication, detail: $detail)';
+    return 'ClaimResponseAddItem(sequenceLinkId: $sequenceLinkId, revenue: $revenue, category: $category, service: $service, modifier: $modifier, fee: $fee, noteNumber: $noteNumber, adjudication: $adjudication, detail: $detail, sequenceLinkIdElement: $sequenceLinkIdElement, noteNumberElement: $noteNumberElement)';
   }
 
   @override
@@ -6635,7 +8158,13 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
                 const DeepCollectionEquality()
                     .equals(other.adjudication, adjudication)) &&
             (identical(other.detail, detail) ||
-                const DeepCollectionEquality().equals(other.detail, detail)));
+                const DeepCollectionEquality().equals(other.detail, detail)) &&
+            (identical(other.sequenceLinkIdElement, sequenceLinkIdElement) ||
+                const DeepCollectionEquality().equals(
+                    other.sequenceLinkIdElement, sequenceLinkIdElement)) &&
+            (identical(other.noteNumberElement, noteNumberElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.noteNumberElement, noteNumberElement)));
   }
 
   @override
@@ -6649,7 +8178,9 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
       const DeepCollectionEquality().hash(fee) ^
       const DeepCollectionEquality().hash(noteNumber) ^
       const DeepCollectionEquality().hash(adjudication) ^
-      const DeepCollectionEquality().hash(detail);
+      const DeepCollectionEquality().hash(detail) ^
+      const DeepCollectionEquality().hash(sequenceLinkIdElement) ^
+      const DeepCollectionEquality().hash(noteNumberElement);
 
   @override
   _$ClaimResponseAddItemCopyWith<_ClaimResponseAddItem> get copyWith =>
@@ -6664,15 +8195,18 @@ class _$_ClaimResponseAddItem implements _ClaimResponseAddItem {
 
 abstract class _ClaimResponseAddItem implements ClaimResponseAddItem {
   const factory _ClaimResponseAddItem(
-      {List<PositiveInt> sequenceLinkId,
-      CodeableConcept revenue,
-      CodeableConcept category,
-      CodeableConcept service,
-      List<CodeableConcept> modifier,
-      Money fee,
-      List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail1> detail}) = _$_ClaimResponseAddItem;
+          {List<PositiveInt> sequenceLinkId,
+          CodeableConcept revenue,
+          CodeableConcept category,
+          CodeableConcept service,
+          List<CodeableConcept> modifier,
+          Money fee,
+          List<PositiveInt> noteNumber,
+          List<ClaimResponseAdjudication> adjudication,
+          List<ClaimResponseDetail1> detail,
+          @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
+          @JsonKey(name: '_noteNumber') Element noteNumberElement}) =
+      _$_ClaimResponseAddItem;
 
   factory _ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseAddItem.fromJson;
@@ -6696,6 +8230,12 @@ abstract class _ClaimResponseAddItem implements ClaimResponseAddItem {
   @override
   List<ClaimResponseDetail1> get detail;
   @override
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
+  @override
   _$ClaimResponseAddItemCopyWith<_ClaimResponseAddItem> get copyWith;
 }
 
@@ -6713,7 +8253,8 @@ class _$ClaimResponseDetail1TearOff {
       List<CodeableConcept> modifier,
       Money fee,
       List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication}) {
+      List<ClaimResponseAdjudication> adjudication,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement}) {
     return _ClaimResponseDetail1(
       revenue: revenue,
       category: category,
@@ -6722,6 +8263,7 @@ class _$ClaimResponseDetail1TearOff {
       fee: fee,
       noteNumber: noteNumber,
       adjudication: adjudication,
+      noteNumberElement: noteNumberElement,
     );
   }
 }
@@ -6737,6 +8279,8 @@ mixin _$ClaimResponseDetail1 {
   Money get fee;
   List<PositiveInt> get noteNumber;
   List<ClaimResponseAdjudication> get adjudication;
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseDetail1CopyWith<ClaimResponseDetail1> get copyWith;
@@ -6753,12 +8297,14 @@ abstract class $ClaimResponseDetail1CopyWith<$Res> {
       List<CodeableConcept> modifier,
       Money fee,
       List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication});
+      List<ClaimResponseAdjudication> adjudication,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
 
   $CodeableConceptCopyWith<$Res> get revenue;
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res> get service;
   $MoneyCopyWith<$Res> get fee;
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class _$ClaimResponseDetail1CopyWithImpl<$Res>
@@ -6778,6 +8324,7 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res>
     Object fee = freezed,
     Object noteNumber = freezed,
     Object adjudication = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_value.copyWith(
       revenue: revenue == freezed ? _value.revenue : revenue as CodeableConcept,
@@ -6794,6 +8341,9 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res>
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ClaimResponseAdjudication>,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
   }
 
@@ -6836,6 +8386,16 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res>
       return _then(_value.copyWith(fee: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement {
+    if (_value.noteNumberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.noteNumberElement, (value) {
+      return _then(_value.copyWith(noteNumberElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseDetail1CopyWith<$Res>
@@ -6851,7 +8411,8 @@ abstract class _$ClaimResponseDetail1CopyWith<$Res>
       List<CodeableConcept> modifier,
       Money fee,
       List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication});
+      List<ClaimResponseAdjudication> adjudication,
+      @JsonKey(name: '_noteNumber') Element noteNumberElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get revenue;
@@ -6861,6 +8422,8 @@ abstract class _$ClaimResponseDetail1CopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get service;
   @override
   $MoneyCopyWith<$Res> get fee;
+  @override
+  $ElementCopyWith<$Res> get noteNumberElement;
 }
 
 class __$ClaimResponseDetail1CopyWithImpl<$Res>
@@ -6882,6 +8445,7 @@ class __$ClaimResponseDetail1CopyWithImpl<$Res>
     Object fee = freezed,
     Object noteNumber = freezed,
     Object adjudication = freezed,
+    Object noteNumberElement = freezed,
   }) {
     return _then(_ClaimResponseDetail1(
       revenue: revenue == freezed ? _value.revenue : revenue as CodeableConcept,
@@ -6898,6 +8462,9 @@ class __$ClaimResponseDetail1CopyWithImpl<$Res>
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication as List<ClaimResponseAdjudication>,
+      noteNumberElement: noteNumberElement == freezed
+          ? _value.noteNumberElement
+          : noteNumberElement as Element,
     ));
   }
 }
@@ -6911,7 +8478,8 @@ class _$_ClaimResponseDetail1 implements _ClaimResponseDetail1 {
       this.modifier,
       this.fee,
       this.noteNumber,
-      this.adjudication});
+      this.adjudication,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement});
 
   factory _$_ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseDetail1FromJson(json);
@@ -6930,10 +8498,13 @@ class _$_ClaimResponseDetail1 implements _ClaimResponseDetail1 {
   final List<PositiveInt> noteNumber;
   @override
   final List<ClaimResponseAdjudication> adjudication;
+  @override
+  @JsonKey(name: '_noteNumber')
+  final Element noteNumberElement;
 
   @override
   String toString() {
-    return 'ClaimResponseDetail1(revenue: $revenue, category: $category, service: $service, modifier: $modifier, fee: $fee, noteNumber: $noteNumber, adjudication: $adjudication)';
+    return 'ClaimResponseDetail1(revenue: $revenue, category: $category, service: $service, modifier: $modifier, fee: $fee, noteNumber: $noteNumber, adjudication: $adjudication, noteNumberElement: $noteNumberElement)';
   }
 
   @override
@@ -6959,7 +8530,10 @@ class _$_ClaimResponseDetail1 implements _ClaimResponseDetail1 {
                     .equals(other.noteNumber, noteNumber)) &&
             (identical(other.adjudication, adjudication) ||
                 const DeepCollectionEquality()
-                    .equals(other.adjudication, adjudication)));
+                    .equals(other.adjudication, adjudication)) &&
+            (identical(other.noteNumberElement, noteNumberElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.noteNumberElement, noteNumberElement)));
   }
 
   @override
@@ -6971,7 +8545,8 @@ class _$_ClaimResponseDetail1 implements _ClaimResponseDetail1 {
       const DeepCollectionEquality().hash(modifier) ^
       const DeepCollectionEquality().hash(fee) ^
       const DeepCollectionEquality().hash(noteNumber) ^
-      const DeepCollectionEquality().hash(adjudication);
+      const DeepCollectionEquality().hash(adjudication) ^
+      const DeepCollectionEquality().hash(noteNumberElement);
 
   @override
   _$ClaimResponseDetail1CopyWith<_ClaimResponseDetail1> get copyWith =>
@@ -6986,13 +8561,15 @@ class _$_ClaimResponseDetail1 implements _ClaimResponseDetail1 {
 
 abstract class _ClaimResponseDetail1 implements ClaimResponseDetail1 {
   const factory _ClaimResponseDetail1(
-      {CodeableConcept revenue,
-      CodeableConcept category,
-      CodeableConcept service,
-      List<CodeableConcept> modifier,
-      Money fee,
-      List<PositiveInt> noteNumber,
-      List<ClaimResponseAdjudication> adjudication}) = _$_ClaimResponseDetail1;
+          {CodeableConcept revenue,
+          CodeableConcept category,
+          CodeableConcept service,
+          List<CodeableConcept> modifier,
+          Money fee,
+          List<PositiveInt> noteNumber,
+          List<ClaimResponseAdjudication> adjudication,
+          @JsonKey(name: '_noteNumber') Element noteNumberElement}) =
+      _$_ClaimResponseDetail1;
 
   factory _ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseDetail1.fromJson;
@@ -7012,6 +8589,9 @@ abstract class _ClaimResponseDetail1 implements ClaimResponseDetail1 {
   @override
   List<ClaimResponseAdjudication> get adjudication;
   @override
+  @JsonKey(name: '_noteNumber')
+  Element get noteNumberElement;
+  @override
   _$ClaimResponseDetail1CopyWith<_ClaimResponseDetail1> get copyWith;
 }
 
@@ -7026,12 +8606,22 @@ class _$ClaimResponseErrorTearOff {
       {PositiveInt sequenceLinkId,
       PositiveInt detailSequenceLinkId,
       PositiveInt subdetailSequenceLinkId,
-      @JsonKey(required: true) CodeableConcept code}) {
+      @JsonKey(required: true)
+          CodeableConcept code,
+      @JsonKey(name: '_sequenceLinkId')
+          Element sequenceLinkIdElement,
+      @JsonKey(name: '_detailSequenceLinkId')
+          Element detailSequenceLinkIdElement,
+      @JsonKey(name: '_subdetailSequenceLinkId')
+          Element subdetailSequenceLinkIdElement}) {
     return _ClaimResponseError(
       sequenceLinkId: sequenceLinkId,
       detailSequenceLinkId: detailSequenceLinkId,
       subdetailSequenceLinkId: subdetailSequenceLinkId,
       code: code,
+      sequenceLinkIdElement: sequenceLinkIdElement,
+      detailSequenceLinkIdElement: detailSequenceLinkIdElement,
+      subdetailSequenceLinkIdElement: subdetailSequenceLinkIdElement,
     );
   }
 }
@@ -7045,6 +8635,12 @@ mixin _$ClaimResponseError {
   PositiveInt get subdetailSequenceLinkId;
   @JsonKey(required: true)
   CodeableConcept get code;
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @JsonKey(name: '_detailSequenceLinkId')
+  Element get detailSequenceLinkIdElement;
+  @JsonKey(name: '_subdetailSequenceLinkId')
+  Element get subdetailSequenceLinkIdElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseErrorCopyWith<ClaimResponseError> get copyWith;
@@ -7058,9 +8654,19 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
       {PositiveInt sequenceLinkId,
       PositiveInt detailSequenceLinkId,
       PositiveInt subdetailSequenceLinkId,
-      @JsonKey(required: true) CodeableConcept code});
+      @JsonKey(required: true)
+          CodeableConcept code,
+      @JsonKey(name: '_sequenceLinkId')
+          Element sequenceLinkIdElement,
+      @JsonKey(name: '_detailSequenceLinkId')
+          Element detailSequenceLinkIdElement,
+      @JsonKey(name: '_subdetailSequenceLinkId')
+          Element subdetailSequenceLinkIdElement});
 
   $CodeableConceptCopyWith<$Res> get code;
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  $ElementCopyWith<$Res> get detailSequenceLinkIdElement;
+  $ElementCopyWith<$Res> get subdetailSequenceLinkIdElement;
 }
 
 class _$ClaimResponseErrorCopyWithImpl<$Res>
@@ -7077,6 +8683,9 @@ class _$ClaimResponseErrorCopyWithImpl<$Res>
     Object detailSequenceLinkId = freezed,
     Object subdetailSequenceLinkId = freezed,
     Object code = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object detailSequenceLinkIdElement = freezed,
+    Object subdetailSequenceLinkIdElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequenceLinkId: sequenceLinkId == freezed
@@ -7089,6 +8698,15 @@ class _$ClaimResponseErrorCopyWithImpl<$Res>
           ? _value.subdetailSequenceLinkId
           : subdetailSequenceLinkId as PositiveInt,
       code: code == freezed ? _value.code : code as CodeableConcept,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      detailSequenceLinkIdElement: detailSequenceLinkIdElement == freezed
+          ? _value.detailSequenceLinkIdElement
+          : detailSequenceLinkIdElement as Element,
+      subdetailSequenceLinkIdElement: subdetailSequenceLinkIdElement == freezed
+          ? _value.subdetailSequenceLinkIdElement
+          : subdetailSequenceLinkIdElement as Element,
     ));
   }
 
@@ -7099,6 +8717,37 @@ class _$ClaimResponseErrorCopyWithImpl<$Res>
     }
     return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement {
+    if (_value.sequenceLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceLinkIdElement, (value) {
+      return _then(_value.copyWith(sequenceLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get detailSequenceLinkIdElement {
+    if (_value.detailSequenceLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.detailSequenceLinkIdElement, (value) {
+      return _then(_value.copyWith(detailSequenceLinkIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get subdetailSequenceLinkIdElement {
+    if (_value.subdetailSequenceLinkIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.subdetailSequenceLinkIdElement,
+        (value) {
+      return _then(_value.copyWith(subdetailSequenceLinkIdElement: value));
     });
   }
 }
@@ -7113,10 +8762,23 @@ abstract class _$ClaimResponseErrorCopyWith<$Res>
       {PositiveInt sequenceLinkId,
       PositiveInt detailSequenceLinkId,
       PositiveInt subdetailSequenceLinkId,
-      @JsonKey(required: true) CodeableConcept code});
+      @JsonKey(required: true)
+          CodeableConcept code,
+      @JsonKey(name: '_sequenceLinkId')
+          Element sequenceLinkIdElement,
+      @JsonKey(name: '_detailSequenceLinkId')
+          Element detailSequenceLinkIdElement,
+      @JsonKey(name: '_subdetailSequenceLinkId')
+          Element subdetailSequenceLinkIdElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $ElementCopyWith<$Res> get sequenceLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get detailSequenceLinkIdElement;
+  @override
+  $ElementCopyWith<$Res> get subdetailSequenceLinkIdElement;
 }
 
 class __$ClaimResponseErrorCopyWithImpl<$Res>
@@ -7135,6 +8797,9 @@ class __$ClaimResponseErrorCopyWithImpl<$Res>
     Object detailSequenceLinkId = freezed,
     Object subdetailSequenceLinkId = freezed,
     Object code = freezed,
+    Object sequenceLinkIdElement = freezed,
+    Object detailSequenceLinkIdElement = freezed,
+    Object subdetailSequenceLinkIdElement = freezed,
   }) {
     return _then(_ClaimResponseError(
       sequenceLinkId: sequenceLinkId == freezed
@@ -7147,6 +8812,15 @@ class __$ClaimResponseErrorCopyWithImpl<$Res>
           ? _value.subdetailSequenceLinkId
           : subdetailSequenceLinkId as PositiveInt,
       code: code == freezed ? _value.code : code as CodeableConcept,
+      sequenceLinkIdElement: sequenceLinkIdElement == freezed
+          ? _value.sequenceLinkIdElement
+          : sequenceLinkIdElement as Element,
+      detailSequenceLinkIdElement: detailSequenceLinkIdElement == freezed
+          ? _value.detailSequenceLinkIdElement
+          : detailSequenceLinkIdElement as Element,
+      subdetailSequenceLinkIdElement: subdetailSequenceLinkIdElement == freezed
+          ? _value.subdetailSequenceLinkIdElement
+          : subdetailSequenceLinkIdElement as Element,
     ));
   }
 }
@@ -7157,7 +8831,14 @@ class _$_ClaimResponseError implements _ClaimResponseError {
       {this.sequenceLinkId,
       this.detailSequenceLinkId,
       this.subdetailSequenceLinkId,
-      @JsonKey(required: true) this.code});
+      @JsonKey(required: true)
+          this.code,
+      @JsonKey(name: '_sequenceLinkId')
+          this.sequenceLinkIdElement,
+      @JsonKey(name: '_detailSequenceLinkId')
+          this.detailSequenceLinkIdElement,
+      @JsonKey(name: '_subdetailSequenceLinkId')
+          this.subdetailSequenceLinkIdElement});
 
   factory _$_ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseErrorFromJson(json);
@@ -7171,10 +8852,19 @@ class _$_ClaimResponseError implements _ClaimResponseError {
   @override
   @JsonKey(required: true)
   final CodeableConcept code;
+  @override
+  @JsonKey(name: '_sequenceLinkId')
+  final Element sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_detailSequenceLinkId')
+  final Element detailSequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_subdetailSequenceLinkId')
+  final Element subdetailSequenceLinkIdElement;
 
   @override
   String toString() {
-    return 'ClaimResponseError(sequenceLinkId: $sequenceLinkId, detailSequenceLinkId: $detailSequenceLinkId, subdetailSequenceLinkId: $subdetailSequenceLinkId, code: $code)';
+    return 'ClaimResponseError(sequenceLinkId: $sequenceLinkId, detailSequenceLinkId: $detailSequenceLinkId, subdetailSequenceLinkId: $subdetailSequenceLinkId, code: $code, sequenceLinkIdElement: $sequenceLinkIdElement, detailSequenceLinkIdElement: $detailSequenceLinkIdElement, subdetailSequenceLinkIdElement: $subdetailSequenceLinkIdElement)';
   }
 
   @override
@@ -7192,7 +8882,20 @@ class _$_ClaimResponseError implements _ClaimResponseError {
                 const DeepCollectionEquality().equals(
                     other.subdetailSequenceLinkId, subdetailSequenceLinkId)) &&
             (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)));
+                const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.sequenceLinkIdElement, sequenceLinkIdElement) ||
+                const DeepCollectionEquality().equals(
+                    other.sequenceLinkIdElement, sequenceLinkIdElement)) &&
+            (identical(other.detailSequenceLinkIdElement,
+                    detailSequenceLinkIdElement) ||
+                const DeepCollectionEquality().equals(
+                    other.detailSequenceLinkIdElement,
+                    detailSequenceLinkIdElement)) &&
+            (identical(other.subdetailSequenceLinkIdElement,
+                    subdetailSequenceLinkIdElement) ||
+                const DeepCollectionEquality().equals(
+                    other.subdetailSequenceLinkIdElement,
+                    subdetailSequenceLinkIdElement)));
   }
 
   @override
@@ -7201,7 +8904,10 @@ class _$_ClaimResponseError implements _ClaimResponseError {
       const DeepCollectionEquality().hash(sequenceLinkId) ^
       const DeepCollectionEquality().hash(detailSequenceLinkId) ^
       const DeepCollectionEquality().hash(subdetailSequenceLinkId) ^
-      const DeepCollectionEquality().hash(code);
+      const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(sequenceLinkIdElement) ^
+      const DeepCollectionEquality().hash(detailSequenceLinkIdElement) ^
+      const DeepCollectionEquality().hash(subdetailSequenceLinkIdElement);
 
   @override
   _$ClaimResponseErrorCopyWith<_ClaimResponseError> get copyWith =>
@@ -7218,7 +8924,14 @@ abstract class _ClaimResponseError implements ClaimResponseError {
       {PositiveInt sequenceLinkId,
       PositiveInt detailSequenceLinkId,
       PositiveInt subdetailSequenceLinkId,
-      @JsonKey(required: true) CodeableConcept code}) = _$_ClaimResponseError;
+      @JsonKey(required: true)
+          CodeableConcept code,
+      @JsonKey(name: '_sequenceLinkId')
+          Element sequenceLinkIdElement,
+      @JsonKey(name: '_detailSequenceLinkId')
+          Element detailSequenceLinkIdElement,
+      @JsonKey(name: '_subdetailSequenceLinkId')
+          Element subdetailSequenceLinkIdElement}) = _$_ClaimResponseError;
 
   factory _ClaimResponseError.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseError.fromJson;
@@ -7232,6 +8945,15 @@ abstract class _ClaimResponseError implements ClaimResponseError {
   @override
   @JsonKey(required: true)
   CodeableConcept get code;
+  @override
+  @JsonKey(name: '_sequenceLinkId')
+  Element get sequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_detailSequenceLinkId')
+  Element get detailSequenceLinkIdElement;
+  @override
+  @JsonKey(name: '_subdetailSequenceLinkId')
+  Element get subdetailSequenceLinkIdElement;
   @override
   _$ClaimResponseErrorCopyWith<_ClaimResponseError> get copyWith;
 }
@@ -7249,7 +8971,8 @@ class _$ClaimResponsePaymentTearOff {
       CodeableConcept adjustmentReason,
       Date date,
       Money amount,
-      Identifier identifier}) {
+      Identifier identifier,
+      @JsonKey(name: '_date') Element dateElement}) {
     return _ClaimResponsePayment(
       type: type,
       adjustment: adjustment,
@@ -7257,6 +8980,7 @@ class _$ClaimResponsePaymentTearOff {
       date: date,
       amount: amount,
       identifier: identifier,
+      dateElement: dateElement,
     );
   }
 }
@@ -7271,6 +8995,8 @@ mixin _$ClaimResponsePayment {
   Date get date;
   Money get amount;
   Identifier get identifier;
+  @JsonKey(name: '_date')
+  Element get dateElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponsePaymentCopyWith<ClaimResponsePayment> get copyWith;
@@ -7286,13 +9012,15 @@ abstract class $ClaimResponsePaymentCopyWith<$Res> {
       CodeableConcept adjustmentReason,
       Date date,
       Money amount,
-      Identifier identifier});
+      Identifier identifier,
+      @JsonKey(name: '_date') Element dateElement});
 
   $CodeableConceptCopyWith<$Res> get type;
   $MoneyCopyWith<$Res> get adjustment;
   $CodeableConceptCopyWith<$Res> get adjustmentReason;
   $MoneyCopyWith<$Res> get amount;
   $IdentifierCopyWith<$Res> get identifier;
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class _$ClaimResponsePaymentCopyWithImpl<$Res>
@@ -7311,6 +9039,7 @@ class _$ClaimResponsePaymentCopyWithImpl<$Res>
     Object date = freezed,
     Object amount = freezed,
     Object identifier = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_value.copyWith(
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -7323,6 +9052,8 @@ class _$ClaimResponsePaymentCopyWithImpl<$Res>
       amount: amount == freezed ? _value.amount : amount as Money,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 
@@ -7375,6 +9106,16 @@ class _$ClaimResponsePaymentCopyWithImpl<$Res>
       return _then(_value.copyWith(identifier: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponsePaymentCopyWith<$Res>
@@ -7389,7 +9130,8 @@ abstract class _$ClaimResponsePaymentCopyWith<$Res>
       CodeableConcept adjustmentReason,
       Date date,
       Money amount,
-      Identifier identifier});
+      Identifier identifier,
+      @JsonKey(name: '_date') Element dateElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -7401,6 +9143,8 @@ abstract class _$ClaimResponsePaymentCopyWith<$Res>
   $MoneyCopyWith<$Res> get amount;
   @override
   $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class __$ClaimResponsePaymentCopyWithImpl<$Res>
@@ -7421,6 +9165,7 @@ class __$ClaimResponsePaymentCopyWithImpl<$Res>
     Object date = freezed,
     Object amount = freezed,
     Object identifier = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_ClaimResponsePayment(
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -7433,6 +9178,8 @@ class __$ClaimResponsePaymentCopyWithImpl<$Res>
       amount: amount == freezed ? _value.amount : amount as Money,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 }
@@ -7445,7 +9192,8 @@ class _$_ClaimResponsePayment implements _ClaimResponsePayment {
       this.adjustmentReason,
       this.date,
       this.amount,
-      this.identifier});
+      this.identifier,
+      @JsonKey(name: '_date') this.dateElement});
 
   factory _$_ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponsePaymentFromJson(json);
@@ -7462,10 +9210,13 @@ class _$_ClaimResponsePayment implements _ClaimResponsePayment {
   final Money amount;
   @override
   final Identifier identifier;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
 
   @override
   String toString() {
-    return 'ClaimResponsePayment(type: $type, adjustment: $adjustment, adjustmentReason: $adjustmentReason, date: $date, amount: $amount, identifier: $identifier)';
+    return 'ClaimResponsePayment(type: $type, adjustment: $adjustment, adjustmentReason: $adjustmentReason, date: $date, amount: $amount, identifier: $identifier, dateElement: $dateElement)';
   }
 
   @override
@@ -7486,7 +9237,10 @@ class _$_ClaimResponsePayment implements _ClaimResponsePayment {
                 const DeepCollectionEquality().equals(other.amount, amount)) &&
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)));
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateElement, dateElement)));
   }
 
   @override
@@ -7497,7 +9251,8 @@ class _$_ClaimResponsePayment implements _ClaimResponsePayment {
       const DeepCollectionEquality().hash(adjustmentReason) ^
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(amount) ^
-      const DeepCollectionEquality().hash(identifier);
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(dateElement);
 
   @override
   _$ClaimResponsePaymentCopyWith<_ClaimResponsePayment> get copyWith =>
@@ -7517,7 +9272,8 @@ abstract class _ClaimResponsePayment implements ClaimResponsePayment {
       CodeableConcept adjustmentReason,
       Date date,
       Money amount,
-      Identifier identifier}) = _$_ClaimResponsePayment;
+      Identifier identifier,
+      @JsonKey(name: '_date') Element dateElement}) = _$_ClaimResponsePayment;
 
   factory _ClaimResponsePayment.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponsePayment.fromJson;
@@ -7535,6 +9291,9 @@ abstract class _ClaimResponsePayment implements ClaimResponsePayment {
   @override
   Identifier get identifier;
   @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
   _$ClaimResponsePaymentCopyWith<_ClaimResponsePayment> get copyWith;
 }
 
@@ -7550,12 +9309,16 @@ class _$ClaimResponseProcessNoteTearOff {
       {PositiveInt number,
       CodeableConcept type,
       String text,
-      CodeableConcept language}) {
+      CodeableConcept language,
+      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_text') Element textElement}) {
     return _ClaimResponseProcessNote(
       number: number,
       type: type,
       text: text,
       language: language,
+      numberElement: numberElement,
+      textElement: textElement,
     );
   }
 }
@@ -7568,6 +9331,10 @@ mixin _$ClaimResponseProcessNote {
   CodeableConcept get type;
   String get text;
   CodeableConcept get language;
+  @JsonKey(name: '_number')
+  Element get numberElement;
+  @JsonKey(name: '_text')
+  Element get textElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseProcessNoteCopyWith<ClaimResponseProcessNote> get copyWith;
@@ -7581,10 +9348,14 @@ abstract class $ClaimResponseProcessNoteCopyWith<$Res> {
       {PositiveInt number,
       CodeableConcept type,
       String text,
-      CodeableConcept language});
+      CodeableConcept language,
+      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_text') Element textElement});
 
   $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res> get language;
+  $ElementCopyWith<$Res> get numberElement;
+  $ElementCopyWith<$Res> get textElement;
 }
 
 class _$ClaimResponseProcessNoteCopyWithImpl<$Res>
@@ -7601,6 +9372,8 @@ class _$ClaimResponseProcessNoteCopyWithImpl<$Res>
     Object type = freezed,
     Object text = freezed,
     Object language = freezed,
+    Object numberElement = freezed,
+    Object textElement = freezed,
   }) {
     return _then(_value.copyWith(
       number: number == freezed ? _value.number : number as PositiveInt,
@@ -7608,6 +9381,11 @@ class _$ClaimResponseProcessNoteCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as String,
       language:
           language == freezed ? _value.language : language as CodeableConcept,
+      numberElement: numberElement == freezed
+          ? _value.numberElement
+          : numberElement as Element,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
     ));
   }
 
@@ -7630,6 +9408,26 @@ class _$ClaimResponseProcessNoteCopyWithImpl<$Res>
       return _then(_value.copyWith(language: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get numberElement {
+    if (_value.numberElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.numberElement, (value) {
+      return _then(_value.copyWith(numberElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get textElement {
+    if (_value.textElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.textElement, (value) {
+      return _then(_value.copyWith(textElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseProcessNoteCopyWith<$Res>
@@ -7642,12 +9440,18 @@ abstract class _$ClaimResponseProcessNoteCopyWith<$Res>
       {PositiveInt number,
       CodeableConcept type,
       String text,
-      CodeableConcept language});
+      CodeableConcept language,
+      @JsonKey(name: '_number') Element numberElement,
+      @JsonKey(name: '_text') Element textElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res> get language;
+  @override
+  $ElementCopyWith<$Res> get numberElement;
+  @override
+  $ElementCopyWith<$Res> get textElement;
 }
 
 class __$ClaimResponseProcessNoteCopyWithImpl<$Res>
@@ -7667,6 +9471,8 @@ class __$ClaimResponseProcessNoteCopyWithImpl<$Res>
     Object type = freezed,
     Object text = freezed,
     Object language = freezed,
+    Object numberElement = freezed,
+    Object textElement = freezed,
   }) {
     return _then(_ClaimResponseProcessNote(
       number: number == freezed ? _value.number : number as PositiveInt,
@@ -7674,6 +9480,11 @@ class __$ClaimResponseProcessNoteCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as String,
       language:
           language == freezed ? _value.language : language as CodeableConcept,
+      numberElement: numberElement == freezed
+          ? _value.numberElement
+          : numberElement as Element,
+      textElement:
+          textElement == freezed ? _value.textElement : textElement as Element,
     ));
   }
 }
@@ -7681,7 +9492,12 @@ class __$ClaimResponseProcessNoteCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClaimResponseProcessNote implements _ClaimResponseProcessNote {
   const _$_ClaimResponseProcessNote(
-      {this.number, this.type, this.text, this.language});
+      {this.number,
+      this.type,
+      this.text,
+      this.language,
+      @JsonKey(name: '_number') this.numberElement,
+      @JsonKey(name: '_text') this.textElement});
 
   factory _$_ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseProcessNoteFromJson(json);
@@ -7694,10 +9510,16 @@ class _$_ClaimResponseProcessNote implements _ClaimResponseProcessNote {
   final String text;
   @override
   final CodeableConcept language;
+  @override
+  @JsonKey(name: '_number')
+  final Element numberElement;
+  @override
+  @JsonKey(name: '_text')
+  final Element textElement;
 
   @override
   String toString() {
-    return 'ClaimResponseProcessNote(number: $number, type: $type, text: $text, language: $language)';
+    return 'ClaimResponseProcessNote(number: $number, type: $type, text: $text, language: $language, numberElement: $numberElement, textElement: $textElement)';
   }
 
   @override
@@ -7712,7 +9534,13 @@ class _$_ClaimResponseProcessNote implements _ClaimResponseProcessNote {
                 const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
-                    .equals(other.language, language)));
+                    .equals(other.language, language)) &&
+            (identical(other.numberElement, numberElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.numberElement, numberElement)) &&
+            (identical(other.textElement, textElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.textElement, textElement)));
   }
 
   @override
@@ -7721,7 +9549,9 @@ class _$_ClaimResponseProcessNote implements _ClaimResponseProcessNote {
       const DeepCollectionEquality().hash(number) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(language);
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(numberElement) ^
+      const DeepCollectionEquality().hash(textElement);
 
   @override
   _$ClaimResponseProcessNoteCopyWith<_ClaimResponseProcessNote> get copyWith =>
@@ -7736,10 +9566,13 @@ class _$_ClaimResponseProcessNote implements _ClaimResponseProcessNote {
 
 abstract class _ClaimResponseProcessNote implements ClaimResponseProcessNote {
   const factory _ClaimResponseProcessNote(
-      {PositiveInt number,
-      CodeableConcept type,
-      String text,
-      CodeableConcept language}) = _$_ClaimResponseProcessNote;
+          {PositiveInt number,
+          CodeableConcept type,
+          String text,
+          CodeableConcept language,
+          @JsonKey(name: '_number') Element numberElement,
+          @JsonKey(name: '_text') Element textElement}) =
+      _$_ClaimResponseProcessNote;
 
   factory _ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseProcessNote.fromJson;
@@ -7752,6 +9585,12 @@ abstract class _ClaimResponseProcessNote implements ClaimResponseProcessNote {
   String get text;
   @override
   CodeableConcept get language;
+  @override
+  @JsonKey(name: '_number')
+  Element get numberElement;
+  @override
+  @JsonKey(name: '_text')
+  Element get textElement;
   @override
   _$ClaimResponseProcessNoteCopyWith<_ClaimResponseProcessNote> get copyWith;
 }
@@ -7770,7 +9609,11 @@ class _$ClaimResponseInsuranceTearOff {
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       List<String> preAuthRef,
-      Reference claimResponse}) {
+      Reference claimResponse,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_focal') Element focalElement,
+      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_preAuthRef') Element preAuthRefElement}) {
     return _ClaimResponseInsurance(
       sequence: sequence,
       focal: focal,
@@ -7778,6 +9621,10 @@ class _$ClaimResponseInsuranceTearOff {
       businessArrangement: businessArrangement,
       preAuthRef: preAuthRef,
       claimResponse: claimResponse,
+      sequenceElement: sequenceElement,
+      focalElement: focalElement,
+      businessArrangementElement: businessArrangementElement,
+      preAuthRefElement: preAuthRefElement,
     );
   }
 }
@@ -7793,6 +9640,14 @@ mixin _$ClaimResponseInsurance {
   String get businessArrangement;
   List<String> get preAuthRef;
   Reference get claimResponse;
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @JsonKey(name: '_focal')
+  Element get focalElement;
+  @JsonKey(name: '_businessArrangement')
+  Element get businessArrangementElement;
+  @JsonKey(name: '_preAuthRef')
+  Element get preAuthRefElement;
 
   Map<String, dynamic> toJson();
   $ClaimResponseInsuranceCopyWith<ClaimResponseInsurance> get copyWith;
@@ -7808,10 +9663,18 @@ abstract class $ClaimResponseInsuranceCopyWith<$Res> {
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       List<String> preAuthRef,
-      Reference claimResponse});
+      Reference claimResponse,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_focal') Element focalElement,
+      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_preAuthRef') Element preAuthRefElement});
 
   $ReferenceCopyWith<$Res> get coverage;
   $ReferenceCopyWith<$Res> get claimResponse;
+  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res> get focalElement;
+  $ElementCopyWith<$Res> get businessArrangementElement;
+  $ElementCopyWith<$Res> get preAuthRefElement;
 }
 
 class _$ClaimResponseInsuranceCopyWithImpl<$Res>
@@ -7830,6 +9693,10 @@ class _$ClaimResponseInsuranceCopyWithImpl<$Res>
     Object businessArrangement = freezed,
     Object preAuthRef = freezed,
     Object claimResponse = freezed,
+    Object sequenceElement = freezed,
+    Object focalElement = freezed,
+    Object businessArrangementElement = freezed,
+    Object preAuthRefElement = freezed,
   }) {
     return _then(_value.copyWith(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -7844,6 +9711,18 @@ class _$ClaimResponseInsuranceCopyWithImpl<$Res>
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      focalElement: focalElement == freezed
+          ? _value.focalElement
+          : focalElement as Element,
+      businessArrangementElement: businessArrangementElement == freezed
+          ? _value.businessArrangementElement
+          : businessArrangementElement as Element,
+      preAuthRefElement: preAuthRefElement == freezed
+          ? _value.preAuthRefElement
+          : preAuthRefElement as Element,
     ));
   }
 
@@ -7866,6 +9745,46 @@ class _$ClaimResponseInsuranceCopyWithImpl<$Res>
       return _then(_value.copyWith(claimResponse: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get sequenceElement {
+    if (_value.sequenceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+      return _then(_value.copyWith(sequenceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get focalElement {
+    if (_value.focalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.focalElement, (value) {
+      return _then(_value.copyWith(focalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get businessArrangementElement {
+    if (_value.businessArrangementElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.businessArrangementElement, (value) {
+      return _then(_value.copyWith(businessArrangementElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get preAuthRefElement {
+    if (_value.preAuthRefElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.preAuthRefElement, (value) {
+      return _then(_value.copyWith(preAuthRefElement: value));
+    });
+  }
 }
 
 abstract class _$ClaimResponseInsuranceCopyWith<$Res>
@@ -7880,12 +9799,24 @@ abstract class _$ClaimResponseInsuranceCopyWith<$Res>
       @JsonKey(required: true) Reference coverage,
       String businessArrangement,
       List<String> preAuthRef,
-      Reference claimResponse});
+      Reference claimResponse,
+      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_focal') Element focalElement,
+      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_preAuthRef') Element preAuthRefElement});
 
   @override
   $ReferenceCopyWith<$Res> get coverage;
   @override
   $ReferenceCopyWith<$Res> get claimResponse;
+  @override
+  $ElementCopyWith<$Res> get sequenceElement;
+  @override
+  $ElementCopyWith<$Res> get focalElement;
+  @override
+  $ElementCopyWith<$Res> get businessArrangementElement;
+  @override
+  $ElementCopyWith<$Res> get preAuthRefElement;
 }
 
 class __$ClaimResponseInsuranceCopyWithImpl<$Res>
@@ -7906,6 +9837,10 @@ class __$ClaimResponseInsuranceCopyWithImpl<$Res>
     Object businessArrangement = freezed,
     Object preAuthRef = freezed,
     Object claimResponse = freezed,
+    Object sequenceElement = freezed,
+    Object focalElement = freezed,
+    Object businessArrangementElement = freezed,
+    Object preAuthRefElement = freezed,
   }) {
     return _then(_ClaimResponseInsurance(
       sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
@@ -7920,6 +9855,18 @@ class __$ClaimResponseInsuranceCopyWithImpl<$Res>
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference,
+      sequenceElement: sequenceElement == freezed
+          ? _value.sequenceElement
+          : sequenceElement as Element,
+      focalElement: focalElement == freezed
+          ? _value.focalElement
+          : focalElement as Element,
+      businessArrangementElement: businessArrangementElement == freezed
+          ? _value.businessArrangementElement
+          : businessArrangementElement as Element,
+      preAuthRefElement: preAuthRefElement == freezed
+          ? _value.preAuthRefElement
+          : preAuthRefElement as Element,
     ));
   }
 }
@@ -7932,7 +9879,11 @@ class _$_ClaimResponseInsurance implements _ClaimResponseInsurance {
       @JsonKey(required: true) this.coverage,
       this.businessArrangement,
       this.preAuthRef,
-      this.claimResponse});
+      this.claimResponse,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_focal') this.focalElement,
+      @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
+      @JsonKey(name: '_preAuthRef') this.preAuthRefElement});
 
   factory _$_ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseInsuranceFromJson(json);
@@ -7950,10 +9901,22 @@ class _$_ClaimResponseInsurance implements _ClaimResponseInsurance {
   final List<String> preAuthRef;
   @override
   final Reference claimResponse;
+  @override
+  @JsonKey(name: '_sequence')
+  final Element sequenceElement;
+  @override
+  @JsonKey(name: '_focal')
+  final Element focalElement;
+  @override
+  @JsonKey(name: '_businessArrangement')
+  final Element businessArrangementElement;
+  @override
+  @JsonKey(name: '_preAuthRef')
+  final Element preAuthRefElement;
 
   @override
   String toString() {
-    return 'ClaimResponseInsurance(sequence: $sequence, focal: $focal, coverage: $coverage, businessArrangement: $businessArrangement, preAuthRef: $preAuthRef, claimResponse: $claimResponse)';
+    return 'ClaimResponseInsurance(sequence: $sequence, focal: $focal, coverage: $coverage, businessArrangement: $businessArrangement, preAuthRef: $preAuthRef, claimResponse: $claimResponse, sequenceElement: $sequenceElement, focalElement: $focalElement, businessArrangementElement: $businessArrangementElement, preAuthRefElement: $preAuthRefElement)';
   }
 
   @override
@@ -7976,7 +9939,21 @@ class _$_ClaimResponseInsurance implements _ClaimResponseInsurance {
                     .equals(other.preAuthRef, preAuthRef)) &&
             (identical(other.claimResponse, claimResponse) ||
                 const DeepCollectionEquality()
-                    .equals(other.claimResponse, claimResponse)));
+                    .equals(other.claimResponse, claimResponse)) &&
+            (identical(other.sequenceElement, sequenceElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.sequenceElement, sequenceElement)) &&
+            (identical(other.focalElement, focalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.focalElement, focalElement)) &&
+            (identical(other.businessArrangementElement,
+                    businessArrangementElement) ||
+                const DeepCollectionEquality().equals(
+                    other.businessArrangementElement,
+                    businessArrangementElement)) &&
+            (identical(other.preAuthRefElement, preAuthRefElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.preAuthRefElement, preAuthRefElement)));
   }
 
   @override
@@ -7987,7 +9964,11 @@ class _$_ClaimResponseInsurance implements _ClaimResponseInsurance {
       const DeepCollectionEquality().hash(coverage) ^
       const DeepCollectionEquality().hash(businessArrangement) ^
       const DeepCollectionEquality().hash(preAuthRef) ^
-      const DeepCollectionEquality().hash(claimResponse);
+      const DeepCollectionEquality().hash(claimResponse) ^
+      const DeepCollectionEquality().hash(sequenceElement) ^
+      const DeepCollectionEquality().hash(focalElement) ^
+      const DeepCollectionEquality().hash(businessArrangementElement) ^
+      const DeepCollectionEquality().hash(preAuthRefElement);
 
   @override
   _$ClaimResponseInsuranceCopyWith<_ClaimResponseInsurance> get copyWith =>
@@ -8004,10 +9985,19 @@ abstract class _ClaimResponseInsurance implements ClaimResponseInsurance {
   const factory _ClaimResponseInsurance(
       {PositiveInt sequence,
       Boolean focal,
-      @JsonKey(required: true) Reference coverage,
+      @JsonKey(required: true)
+          Reference coverage,
       String businessArrangement,
       List<String> preAuthRef,
-      Reference claimResponse}) = _$_ClaimResponseInsurance;
+      Reference claimResponse,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
+      @JsonKey(name: '_focal')
+          Element focalElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement,
+      @JsonKey(name: '_preAuthRef')
+          Element preAuthRefElement}) = _$_ClaimResponseInsurance;
 
   factory _ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseInsurance.fromJson;
@@ -8025,6 +10015,18 @@ abstract class _ClaimResponseInsurance implements ClaimResponseInsurance {
   List<String> get preAuthRef;
   @override
   Reference get claimResponse;
+  @override
+  @JsonKey(name: '_sequence')
+  Element get sequenceElement;
+  @override
+  @JsonKey(name: '_focal')
+  Element get focalElement;
+  @override
+  @JsonKey(name: '_businessArrangement')
+  Element get businessArrangementElement;
+  @override
+  @JsonKey(name: '_preAuthRef')
+  Element get preAuthRefElement;
   @override
   _$ClaimResponseInsuranceCopyWith<_ClaimResponseInsurance> get copyWith;
 }

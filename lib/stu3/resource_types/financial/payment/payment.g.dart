@@ -41,6 +41,15 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['paymentStatus'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    statusDateElement: json['_statusDate'] == null
+        ? null
+        : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
   );
 }
 
@@ -65,6 +74,9 @@ Map<String, dynamic> _$_$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   writeNotNull('provider', instance.provider?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('paymentStatus', instance.paymentStatus?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_statusDate', instance.statusDateElement?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
   return val;
 }
 
@@ -119,6 +131,15 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
             : PaymentReconciliationProcessNote.fromJson(
                 e as Map<String, dynamic>))
         ?.toList(),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    createdElement: json['_created'] == null
+        ? null
+        : Element.fromJson(json['_created'] as Map<String, dynamic>),
+    dispositionElement: json['_disposition'] == null
+        ? null
+        : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
   );
 }
 
@@ -149,6 +170,9 @@ Map<String, dynamic> _$_$_PaymentReconciliationToJson(
   writeNotNull('total', instance.total?.toJson());
   writeNotNull(
       'processNote', instance.processNote?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_created', instance.createdElement?.toJson());
+  writeNotNull('_disposition', instance.dispositionElement?.toJson());
   return val;
 }
 
@@ -175,6 +199,9 @@ _$_PaymentReconciliationDetail _$_$_PaymentReconciliationDetailFromJson(
     amount: json['amount'] == null
         ? null
         : Money.fromJson(json['amount'] as Map<String, dynamic>),
+    dateElement: json['_date'] == null
+        ? null
+        : Element.fromJson(json['_date'] as Map<String, dynamic>),
   );
 }
 
@@ -195,6 +222,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationDetailToJson(
   writeNotNull('payee', instance.payee?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
   return val;
 }
 
@@ -205,6 +233,9 @@ _$_PaymentReconciliationProcessNote
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     text: json['text'] as String,
+    textElement: json['_text'] == null
+        ? null
+        : Element.fromJson(json['_text'] as Map<String, dynamic>),
   );
 }
 
@@ -220,5 +251,6 @@ Map<String, dynamic> _$_$_PaymentReconciliationProcessNoteToJson(
 
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('text', instance.text);
+  writeNotNull('_text', instance.textElement?.toJson());
   return val;
 }

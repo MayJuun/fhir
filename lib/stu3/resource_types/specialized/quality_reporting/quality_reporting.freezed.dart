@@ -54,9 +54,56 @@ class _$MeasureTearOff {
       String improvementNotation,
       List<String> definition,
       String guidance,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       List<MeasureGroup> group,
-      List<MeasureSupplementalData> supplementalData}) {
+      List<MeasureSupplementalData> supplementalData,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_disclaimer')
+          Element disclaimerElement,
+      @JsonKey(name: '_riskAdjustment')
+          Element riskAdjustmentElement,
+      @JsonKey(name: '_rateAggregation')
+          Element rateAggregationElement,
+      @JsonKey(name: '_rationale')
+          Element rationaleElement,
+      @JsonKey(name: '_clinicalRecommendationStatement')
+          Element clinicalRecommendationStatementElement,
+      @JsonKey(name: '_improvementNotation')
+          Element improvementNotationElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_guidance')
+          Element guidanceElement,
+      @JsonKey(name: '_set')
+          Element setElement}) {
     return _Measure(
       resourceType: resourceType,
       url: url,
@@ -93,9 +140,33 @@ class _$MeasureTearOff {
       improvementNotation: improvementNotation,
       definition: definition,
       guidance: guidance,
-      set: set,
+      set_: set_,
       group: group,
       supplementalData: supplementalData,
+      urlElement: urlElement,
+      versionElement: versionElement,
+      nameElement: nameElement,
+      titleElement: titleElement,
+      statusElement: statusElement,
+      experimentalElement: experimentalElement,
+      dateElement: dateElement,
+      publisherElement: publisherElement,
+      descriptionElement: descriptionElement,
+      purposeElement: purposeElement,
+      usageElement: usageElement,
+      approvalDateElement: approvalDateElement,
+      lastReviewDateElement: lastReviewDateElement,
+      copyrightElement: copyrightElement,
+      disclaimerElement: disclaimerElement,
+      riskAdjustmentElement: riskAdjustmentElement,
+      rateAggregationElement: rateAggregationElement,
+      rationaleElement: rationaleElement,
+      clinicalRecommendationStatementElement:
+          clinicalRecommendationStatementElement,
+      improvementNotationElement: improvementNotationElement,
+      definitionElement: definitionElement,
+      guidanceElement: guidanceElement,
+      setElement: setElement,
     );
   }
 }
@@ -141,9 +212,56 @@ mixin _$Measure {
   String get improvementNotation;
   List<String> get definition;
   String get guidance;
-  String get set;
+  @JsonKey(name: 'set')
+  String get set_;
   List<MeasureGroup> get group;
   List<MeasureSupplementalData> get supplementalData;
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @JsonKey(name: '_disclaimer')
+  Element get disclaimerElement;
+  @JsonKey(name: '_riskAdjustment')
+  Element get riskAdjustmentElement;
+  @JsonKey(name: '_rateAggregation')
+  Element get rateAggregationElement;
+  @JsonKey(name: '_rationale')
+  Element get rationaleElement;
+  @JsonKey(name: '_clinicalRecommendationStatement')
+  Element get clinicalRecommendationStatementElement;
+  @JsonKey(name: '_improvementNotation')
+  Element get improvementNotationElement;
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
+  @JsonKey(name: '_guidance')
+  Element get guidanceElement;
+  @JsonKey(name: '_set')
+  Element get setElement;
 
   Map<String, dynamic> toJson();
   $MeasureCopyWith<Measure> get copyWith;
@@ -153,13 +271,15 @@ abstract class $MeasureCopyWith<$Res> {
   factory $MeasureCopyWith(Measure value, $Res Function(Measure) then) =
       _$MeasureCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Measure') String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Measure')
+          String resourceType,
       String url,
       List<Identifier> identifier,
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown) Status status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       FhirDateTime date,
       String publisher,
@@ -188,13 +308,83 @@ abstract class $MeasureCopyWith<$Res> {
       String improvementNotation,
       List<String> definition,
       String guidance,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       List<MeasureGroup> group,
-      List<MeasureSupplementalData> supplementalData});
+      List<MeasureSupplementalData> supplementalData,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_disclaimer')
+          Element disclaimerElement,
+      @JsonKey(name: '_riskAdjustment')
+          Element riskAdjustmentElement,
+      @JsonKey(name: '_rateAggregation')
+          Element rateAggregationElement,
+      @JsonKey(name: '_rationale')
+          Element rationaleElement,
+      @JsonKey(name: '_clinicalRecommendationStatement')
+          Element clinicalRecommendationStatementElement,
+      @JsonKey(name: '_improvementNotation')
+          Element improvementNotationElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_guidance')
+          Element guidanceElement,
+      @JsonKey(name: '_set')
+          Element setElement});
 
   $PeriodCopyWith<$Res> get effectivePeriod;
   $CodeableConceptCopyWith<$Res> get scoring;
   $CodeableConceptCopyWith<$Res> get compositeScoring;
+  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get experimentalElement;
+  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res> get publisherElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get purposeElement;
+  $ElementCopyWith<$Res> get usageElement;
+  $ElementCopyWith<$Res> get approvalDateElement;
+  $ElementCopyWith<$Res> get lastReviewDateElement;
+  $ElementCopyWith<$Res> get copyrightElement;
+  $ElementCopyWith<$Res> get disclaimerElement;
+  $ElementCopyWith<$Res> get riskAdjustmentElement;
+  $ElementCopyWith<$Res> get rateAggregationElement;
+  $ElementCopyWith<$Res> get rationaleElement;
+  $ElementCopyWith<$Res> get clinicalRecommendationStatementElement;
+  $ElementCopyWith<$Res> get improvementNotationElement;
+  $ElementCopyWith<$Res> get definitionElement;
+  $ElementCopyWith<$Res> get guidanceElement;
+  $ElementCopyWith<$Res> get setElement;
 }
 
 class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
@@ -241,9 +431,32 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
     Object improvementNotation = freezed,
     Object definition = freezed,
     Object guidance = freezed,
-    Object set = freezed,
+    Object set_ = freezed,
     Object group = freezed,
     Object supplementalData = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
+    Object copyrightElement = freezed,
+    Object disclaimerElement = freezed,
+    Object riskAdjustmentElement = freezed,
+    Object rateAggregationElement = freezed,
+    Object rationaleElement = freezed,
+    Object clinicalRecommendationStatementElement = freezed,
+    Object improvementNotationElement = freezed,
+    Object definitionElement = freezed,
+    Object guidanceElement = freezed,
+    Object setElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -316,11 +529,77 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           ? _value.definition
           : definition as List<String>,
       guidance: guidance == freezed ? _value.guidance : guidance as String,
-      set: set == freezed ? _value.set : set as String,
+      set_: set_ == freezed ? _value.set_ : set_ as String,
       group: group == freezed ? _value.group : group as List<MeasureGroup>,
       supplementalData: supplementalData == freezed
           ? _value.supplementalData
           : supplementalData as List<MeasureSupplementalData>,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      disclaimerElement: disclaimerElement == freezed
+          ? _value.disclaimerElement
+          : disclaimerElement as Element,
+      riskAdjustmentElement: riskAdjustmentElement == freezed
+          ? _value.riskAdjustmentElement
+          : riskAdjustmentElement as Element,
+      rateAggregationElement: rateAggregationElement == freezed
+          ? _value.rateAggregationElement
+          : rateAggregationElement as Element,
+      rationaleElement: rationaleElement == freezed
+          ? _value.rationaleElement
+          : rationaleElement as Element,
+      clinicalRecommendationStatementElement:
+          clinicalRecommendationStatementElement == freezed
+              ? _value.clinicalRecommendationStatementElement
+              : clinicalRecommendationStatementElement as Element,
+      improvementNotationElement: improvementNotationElement == freezed
+          ? _value.improvementNotationElement
+          : improvementNotationElement as Element,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
+      guidanceElement: guidanceElement == freezed
+          ? _value.guidanceElement
+          : guidanceElement as Element,
+      setElement:
+          setElement == freezed ? _value.setElement : setElement as Element,
     ));
   }
 
@@ -353,6 +632,238 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       return _then(_value.copyWith(compositeScoring: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get urlElement {
+    if (_value.urlElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+      return _then(_value.copyWith(urlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get versionElement {
+    if (_value.versionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+      return _then(_value.copyWith(versionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get experimentalElement {
+    if (_value.experimentalElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.experimentalElement, (value) {
+      return _then(_value.copyWith(experimentalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get publisherElement {
+    if (_value.publisherElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.publisherElement, (value) {
+      return _then(_value.copyWith(publisherElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.purposeElement, (value) {
+      return _then(_value.copyWith(purposeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get usageElement {
+    if (_value.usageElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.usageElement, (value) {
+      return _then(_value.copyWith(usageElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement {
+    if (_value.approvalDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.approvalDateElement, (value) {
+      return _then(_value.copyWith(approvalDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement {
+    if (_value.lastReviewDateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lastReviewDateElement, (value) {
+      return _then(_value.copyWith(lastReviewDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.copyrightElement, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get disclaimerElement {
+    if (_value.disclaimerElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.disclaimerElement, (value) {
+      return _then(_value.copyWith(disclaimerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get riskAdjustmentElement {
+    if (_value.riskAdjustmentElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.riskAdjustmentElement, (value) {
+      return _then(_value.copyWith(riskAdjustmentElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get rateAggregationElement {
+    if (_value.rateAggregationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.rateAggregationElement, (value) {
+      return _then(_value.copyWith(rateAggregationElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get rationaleElement {
+    if (_value.rationaleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.rationaleElement, (value) {
+      return _then(_value.copyWith(rationaleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get clinicalRecommendationStatementElement {
+    if (_value.clinicalRecommendationStatementElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.clinicalRecommendationStatementElement,
+        (value) {
+      return _then(
+          _value.copyWith(clinicalRecommendationStatementElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get improvementNotationElement {
+    if (_value.improvementNotationElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.improvementNotationElement, (value) {
+      return _then(_value.copyWith(improvementNotationElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get definitionElement {
+    if (_value.definitionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.definitionElement, (value) {
+      return _then(_value.copyWith(definitionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get guidanceElement {
+    if (_value.guidanceElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.guidanceElement, (value) {
+      return _then(_value.copyWith(guidanceElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get setElement {
+    if (_value.setElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.setElement, (value) {
+      return _then(_value.copyWith(setElement: value));
+    });
+  }
 }
 
 abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
@@ -360,13 +871,15 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       __$MeasureCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(required: true, defaultValue: 'Measure') String resourceType,
+      {@JsonKey(required: true, defaultValue: 'Measure')
+          String resourceType,
       String url,
       List<Identifier> identifier,
       String version,
       String name,
       String title,
-      @JsonKey(unknownEnumValue: Status.unknown) Status status,
+      @JsonKey(unknownEnumValue: Status.unknown)
+          Status status,
       Boolean experimental,
       FhirDateTime date,
       String publisher,
@@ -395,9 +908,56 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String improvementNotation,
       List<String> definition,
       String guidance,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       List<MeasureGroup> group,
-      List<MeasureSupplementalData> supplementalData});
+      List<MeasureSupplementalData> supplementalData,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_disclaimer')
+          Element disclaimerElement,
+      @JsonKey(name: '_riskAdjustment')
+          Element riskAdjustmentElement,
+      @JsonKey(name: '_rateAggregation')
+          Element rateAggregationElement,
+      @JsonKey(name: '_rationale')
+          Element rationaleElement,
+      @JsonKey(name: '_clinicalRecommendationStatement')
+          Element clinicalRecommendationStatementElement,
+      @JsonKey(name: '_improvementNotation')
+          Element improvementNotationElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_guidance')
+          Element guidanceElement,
+      @JsonKey(name: '_set')
+          Element setElement});
 
   @override
   $PeriodCopyWith<$Res> get effectivePeriod;
@@ -405,6 +965,52 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res> get scoring;
   @override
   $CodeableConceptCopyWith<$Res> get compositeScoring;
+  @override
+  $ElementCopyWith<$Res> get urlElement;
+  @override
+  $ElementCopyWith<$Res> get versionElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get experimentalElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
+  @override
+  $ElementCopyWith<$Res> get publisherElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get purposeElement;
+  @override
+  $ElementCopyWith<$Res> get usageElement;
+  @override
+  $ElementCopyWith<$Res> get approvalDateElement;
+  @override
+  $ElementCopyWith<$Res> get lastReviewDateElement;
+  @override
+  $ElementCopyWith<$Res> get copyrightElement;
+  @override
+  $ElementCopyWith<$Res> get disclaimerElement;
+  @override
+  $ElementCopyWith<$Res> get riskAdjustmentElement;
+  @override
+  $ElementCopyWith<$Res> get rateAggregationElement;
+  @override
+  $ElementCopyWith<$Res> get rationaleElement;
+  @override
+  $ElementCopyWith<$Res> get clinicalRecommendationStatementElement;
+  @override
+  $ElementCopyWith<$Res> get improvementNotationElement;
+  @override
+  $ElementCopyWith<$Res> get definitionElement;
+  @override
+  $ElementCopyWith<$Res> get guidanceElement;
+  @override
+  $ElementCopyWith<$Res> get setElement;
 }
 
 class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
@@ -452,9 +1058,32 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
     Object improvementNotation = freezed,
     Object definition = freezed,
     Object guidance = freezed,
-    Object set = freezed,
+    Object set_ = freezed,
     Object group = freezed,
     Object supplementalData = freezed,
+    Object urlElement = freezed,
+    Object versionElement = freezed,
+    Object nameElement = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object experimentalElement = freezed,
+    Object dateElement = freezed,
+    Object publisherElement = freezed,
+    Object descriptionElement = freezed,
+    Object purposeElement = freezed,
+    Object usageElement = freezed,
+    Object approvalDateElement = freezed,
+    Object lastReviewDateElement = freezed,
+    Object copyrightElement = freezed,
+    Object disclaimerElement = freezed,
+    Object riskAdjustmentElement = freezed,
+    Object rateAggregationElement = freezed,
+    Object rationaleElement = freezed,
+    Object clinicalRecommendationStatementElement = freezed,
+    Object improvementNotationElement = freezed,
+    Object definitionElement = freezed,
+    Object guidanceElement = freezed,
+    Object setElement = freezed,
   }) {
     return _then(_Measure(
       resourceType: resourceType == freezed
@@ -527,11 +1156,77 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           ? _value.definition
           : definition as List<String>,
       guidance: guidance == freezed ? _value.guidance : guidance as String,
-      set: set == freezed ? _value.set : set as String,
+      set_: set_ == freezed ? _value.set_ : set_ as String,
       group: group == freezed ? _value.group : group as List<MeasureGroup>,
       supplementalData: supplementalData == freezed
           ? _value.supplementalData
           : supplementalData as List<MeasureSupplementalData>,
+      urlElement:
+          urlElement == freezed ? _value.urlElement : urlElement as Element,
+      versionElement: versionElement == freezed
+          ? _value.versionElement
+          : versionElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      experimentalElement: experimentalElement == freezed
+          ? _value.experimentalElement
+          : experimentalElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
+      publisherElement: publisherElement == freezed
+          ? _value.publisherElement
+          : publisherElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement as Element,
+      approvalDateElement: approvalDateElement == freezed
+          ? _value.approvalDateElement
+          : approvalDateElement as Element,
+      lastReviewDateElement: lastReviewDateElement == freezed
+          ? _value.lastReviewDateElement
+          : lastReviewDateElement as Element,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement as Element,
+      disclaimerElement: disclaimerElement == freezed
+          ? _value.disclaimerElement
+          : disclaimerElement as Element,
+      riskAdjustmentElement: riskAdjustmentElement == freezed
+          ? _value.riskAdjustmentElement
+          : riskAdjustmentElement as Element,
+      rateAggregationElement: rateAggregationElement == freezed
+          ? _value.rateAggregationElement
+          : rateAggregationElement as Element,
+      rationaleElement: rationaleElement == freezed
+          ? _value.rationaleElement
+          : rationaleElement as Element,
+      clinicalRecommendationStatementElement:
+          clinicalRecommendationStatementElement == freezed
+              ? _value.clinicalRecommendationStatementElement
+              : clinicalRecommendationStatementElement as Element,
+      improvementNotationElement: improvementNotationElement == freezed
+          ? _value.improvementNotationElement
+          : improvementNotationElement as Element,
+      definitionElement: definitionElement == freezed
+          ? _value.definitionElement
+          : definitionElement as Element,
+      guidanceElement: guidanceElement == freezed
+          ? _value.guidanceElement
+          : guidanceElement as Element,
+      setElement:
+          setElement == freezed ? _value.setElement : setElement as Element,
     ));
   }
 }
@@ -577,9 +1272,56 @@ class _$_Measure implements _Measure {
       this.improvementNotation,
       this.definition,
       this.guidance,
-      this.set,
+      @JsonKey(name: 'set')
+          this.set_,
       this.group,
-      this.supplementalData})
+      this.supplementalData,
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      @JsonKey(name: '_usage')
+          this.usageElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      @JsonKey(name: '_disclaimer')
+          this.disclaimerElement,
+      @JsonKey(name: '_riskAdjustment')
+          this.riskAdjustmentElement,
+      @JsonKey(name: '_rateAggregation')
+          this.rateAggregationElement,
+      @JsonKey(name: '_rationale')
+          this.rationaleElement,
+      @JsonKey(name: '_clinicalRecommendationStatement')
+          this.clinicalRecommendationStatementElement,
+      @JsonKey(name: '_improvementNotation')
+          this.improvementNotationElement,
+      @JsonKey(name: '_definition')
+          this.definitionElement,
+      @JsonKey(name: '_guidance')
+          this.guidanceElement,
+      @JsonKey(name: '_set')
+          this.setElement})
       : assert(resourceType != null);
 
   factory _$_Measure.fromJson(Map<String, dynamic> json) =>
@@ -658,15 +1400,85 @@ class _$_Measure implements _Measure {
   @override
   final String guidance;
   @override
-  final String set;
+  @JsonKey(name: 'set')
+  final String set_;
   @override
   final List<MeasureGroup> group;
   @override
   final List<MeasureSupplementalData> supplementalData;
+  @override
+  @JsonKey(name: '_url')
+  final Element urlElement;
+  @override
+  @JsonKey(name: '_version')
+  final Element versionElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  final Element experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  final Element publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  final Element usageElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  final Element approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  final Element lastReviewDateElement;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element copyrightElement;
+  @override
+  @JsonKey(name: '_disclaimer')
+  final Element disclaimerElement;
+  @override
+  @JsonKey(name: '_riskAdjustment')
+  final Element riskAdjustmentElement;
+  @override
+  @JsonKey(name: '_rateAggregation')
+  final Element rateAggregationElement;
+  @override
+  @JsonKey(name: '_rationale')
+  final Element rationaleElement;
+  @override
+  @JsonKey(name: '_clinicalRecommendationStatement')
+  final Element clinicalRecommendationStatementElement;
+  @override
+  @JsonKey(name: '_improvementNotation')
+  final Element improvementNotationElement;
+  @override
+  @JsonKey(name: '_definition')
+  final Element definitionElement;
+  @override
+  @JsonKey(name: '_guidance')
+  final Element guidanceElement;
+  @override
+  @JsonKey(name: '_set')
+  final Element setElement;
 
   @override
   String toString() {
-    return 'Measure(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, description: $description, purpose: $purpose, usage: $usage, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, relatedArtifact: $relatedArtifact, library: $library, disclaimer: $disclaimer, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, rateAggregation: $rateAggregation, rationale: $rationale, clinicalRecommendationStatement: $clinicalRecommendationStatement, improvementNotation: $improvementNotation, definition: $definition, guidance: $guidance, set: $set, group: $group, supplementalData: $supplementalData)';
+    return 'Measure(resourceType: $resourceType, url: $url, identifier: $identifier, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, description: $description, purpose: $purpose, usage: $usage, approvalDate: $approvalDate, lastReviewDate: $lastReviewDate, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, relatedArtifact: $relatedArtifact, library: $library, disclaimer: $disclaimer, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, rateAggregation: $rateAggregation, rationale: $rationale, clinicalRecommendationStatement: $clinicalRecommendationStatement, improvementNotation: $improvementNotation, definition: $definition, guidance: $guidance, set_: $set_, group: $group, supplementalData: $supplementalData, urlElement: $urlElement, versionElement: $versionElement, nameElement: $nameElement, titleElement: $titleElement, statusElement: $statusElement, experimentalElement: $experimentalElement, dateElement: $dateElement, publisherElement: $publisherElement, descriptionElement: $descriptionElement, purposeElement: $purposeElement, usageElement: $usageElement, approvalDateElement: $approvalDateElement, lastReviewDateElement: $lastReviewDateElement, copyrightElement: $copyrightElement, disclaimerElement: $disclaimerElement, riskAdjustmentElement: $riskAdjustmentElement, rateAggregationElement: $rateAggregationElement, rationaleElement: $rationaleElement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotationElement: $improvementNotationElement, definitionElement: $definitionElement, guidanceElement: $guidanceElement, setElement: $setElement)';
   }
 
   @override
@@ -751,9 +1563,32 @@ class _$_Measure implements _Measure {
             (identical(other.improvementNotation, improvementNotation) || const DeepCollectionEquality().equals(other.improvementNotation, improvementNotation)) &&
             (identical(other.definition, definition) || const DeepCollectionEquality().equals(other.definition, definition)) &&
             (identical(other.guidance, guidance) || const DeepCollectionEquality().equals(other.guidance, guidance)) &&
-            (identical(other.set, set) || const DeepCollectionEquality().equals(other.set, set)) &&
+            (identical(other.set_, set_) || const DeepCollectionEquality().equals(other.set_, set_)) &&
             (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)) &&
-            (identical(other.supplementalData, supplementalData) || const DeepCollectionEquality().equals(other.supplementalData, supplementalData)));
+            (identical(other.supplementalData, supplementalData) || const DeepCollectionEquality().equals(other.supplementalData, supplementalData)) &&
+            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)) &&
+            (identical(other.versionElement, versionElement) || const DeepCollectionEquality().equals(other.versionElement, versionElement)) &&
+            (identical(other.nameElement, nameElement) || const DeepCollectionEquality().equals(other.nameElement, nameElement)) &&
+            (identical(other.titleElement, titleElement) || const DeepCollectionEquality().equals(other.titleElement, titleElement)) &&
+            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
+            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+            (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
+            (identical(other.approvalDateElement, approvalDateElement) || const DeepCollectionEquality().equals(other.approvalDateElement, approvalDateElement)) &&
+            (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
+            (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
+            (identical(other.disclaimerElement, disclaimerElement) || const DeepCollectionEquality().equals(other.disclaimerElement, disclaimerElement)) &&
+            (identical(other.riskAdjustmentElement, riskAdjustmentElement) || const DeepCollectionEquality().equals(other.riskAdjustmentElement, riskAdjustmentElement)) &&
+            (identical(other.rateAggregationElement, rateAggregationElement) || const DeepCollectionEquality().equals(other.rateAggregationElement, rateAggregationElement)) &&
+            (identical(other.rationaleElement, rationaleElement) || const DeepCollectionEquality().equals(other.rationaleElement, rationaleElement)) &&
+            (identical(other.clinicalRecommendationStatementElement, clinicalRecommendationStatementElement) || const DeepCollectionEquality().equals(other.clinicalRecommendationStatementElement, clinicalRecommendationStatementElement)) &&
+            (identical(other.improvementNotationElement, improvementNotationElement) || const DeepCollectionEquality().equals(other.improvementNotationElement, improvementNotationElement)) &&
+            (identical(other.definitionElement, definitionElement) || const DeepCollectionEquality().equals(other.definitionElement, definitionElement)) &&
+            (identical(other.guidanceElement, guidanceElement) || const DeepCollectionEquality().equals(other.guidanceElement, guidanceElement)) &&
+            (identical(other.setElement, setElement) || const DeepCollectionEquality().equals(other.setElement, setElement)));
   }
 
   @override
@@ -794,9 +1629,33 @@ class _$_Measure implements _Measure {
       const DeepCollectionEquality().hash(improvementNotation) ^
       const DeepCollectionEquality().hash(definition) ^
       const DeepCollectionEquality().hash(guidance) ^
-      const DeepCollectionEquality().hash(set) ^
+      const DeepCollectionEquality().hash(set_) ^
       const DeepCollectionEquality().hash(group) ^
-      const DeepCollectionEquality().hash(supplementalData);
+      const DeepCollectionEquality().hash(supplementalData) ^
+      const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(experimentalElement) ^
+      const DeepCollectionEquality().hash(dateElement) ^
+      const DeepCollectionEquality().hash(publisherElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
+      const DeepCollectionEquality().hash(usageElement) ^
+      const DeepCollectionEquality().hash(approvalDateElement) ^
+      const DeepCollectionEquality().hash(lastReviewDateElement) ^
+      const DeepCollectionEquality().hash(copyrightElement) ^
+      const DeepCollectionEquality().hash(disclaimerElement) ^
+      const DeepCollectionEquality().hash(riskAdjustmentElement) ^
+      const DeepCollectionEquality().hash(rateAggregationElement) ^
+      const DeepCollectionEquality().hash(rationaleElement) ^
+      const DeepCollectionEquality()
+          .hash(clinicalRecommendationStatementElement) ^
+      const DeepCollectionEquality().hash(improvementNotationElement) ^
+      const DeepCollectionEquality().hash(definitionElement) ^
+      const DeepCollectionEquality().hash(guidanceElement) ^
+      const DeepCollectionEquality().hash(setElement);
 
   @override
   _$MeasureCopyWith<_Measure> get copyWith =>
@@ -848,9 +1707,56 @@ abstract class _Measure implements Measure {
       String improvementNotation,
       List<String> definition,
       String guidance,
-      String set,
+      @JsonKey(name: 'set')
+          String set_,
       List<MeasureGroup> group,
-      List<MeasureSupplementalData> supplementalData}) = _$_Measure;
+      List<MeasureSupplementalData> supplementalData,
+      @JsonKey(name: '_url')
+          Element urlElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
+      @JsonKey(name: '_usage')
+          Element usageElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
+      @JsonKey(name: '_disclaimer')
+          Element disclaimerElement,
+      @JsonKey(name: '_riskAdjustment')
+          Element riskAdjustmentElement,
+      @JsonKey(name: '_rateAggregation')
+          Element rateAggregationElement,
+      @JsonKey(name: '_rationale')
+          Element rationaleElement,
+      @JsonKey(name: '_clinicalRecommendationStatement')
+          Element clinicalRecommendationStatementElement,
+      @JsonKey(name: '_improvementNotation')
+          Element improvementNotationElement,
+      @JsonKey(name: '_definition')
+          Element definitionElement,
+      @JsonKey(name: '_guidance')
+          Element guidanceElement,
+      @JsonKey(name: '_set')
+          Element setElement}) = _$_Measure;
 
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
@@ -927,11 +1833,81 @@ abstract class _Measure implements Measure {
   @override
   String get guidance;
   @override
-  String get set;
+  @JsonKey(name: 'set')
+  String get set_;
   @override
   List<MeasureGroup> get group;
   @override
   List<MeasureSupplementalData> get supplementalData;
+  @override
+  @JsonKey(name: '_url')
+  Element get urlElement;
+  @override
+  @JsonKey(name: '_version')
+  Element get versionElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_experimental')
+  Element get experimentalElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
+  @JsonKey(name: '_publisher')
+  Element get publisherElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_purpose')
+  Element get purposeElement;
+  @override
+  @JsonKey(name: '_usage')
+  Element get usageElement;
+  @override
+  @JsonKey(name: '_approvalDate')
+  Element get approvalDateElement;
+  @override
+  @JsonKey(name: '_lastReviewDate')
+  Element get lastReviewDateElement;
+  @override
+  @JsonKey(name: '_copyright')
+  Element get copyrightElement;
+  @override
+  @JsonKey(name: '_disclaimer')
+  Element get disclaimerElement;
+  @override
+  @JsonKey(name: '_riskAdjustment')
+  Element get riskAdjustmentElement;
+  @override
+  @JsonKey(name: '_rateAggregation')
+  Element get rateAggregationElement;
+  @override
+  @JsonKey(name: '_rationale')
+  Element get rationaleElement;
+  @override
+  @JsonKey(name: '_clinicalRecommendationStatement')
+  Element get clinicalRecommendationStatementElement;
+  @override
+  @JsonKey(name: '_improvementNotation')
+  Element get improvementNotationElement;
+  @override
+  @JsonKey(name: '_definition')
+  Element get definitionElement;
+  @override
+  @JsonKey(name: '_guidance')
+  Element get guidanceElement;
+  @override
+  @JsonKey(name: '_set')
+  Element get setElement;
   @override
   _$MeasureCopyWith<_Measure> get copyWith;
 }
@@ -948,13 +1924,17 @@ class _$MeasureGroupTearOff {
       String name,
       String description,
       List<MeasurePopulation> population,
-      List<MeasureStratifier> stratifier}) {
+      List<MeasureStratifier> stratifier,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _MeasureGroup(
       identifier: identifier,
       name: name,
       description: description,
       population: population,
       stratifier: stratifier,
+      nameElement: nameElement,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -969,6 +1949,10 @@ mixin _$MeasureGroup {
   String get description;
   List<MeasurePopulation> get population;
   List<MeasureStratifier> get stratifier;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $MeasureGroupCopyWith<MeasureGroup> get copyWith;
@@ -983,9 +1967,13 @@ abstract class $MeasureGroupCopyWith<$Res> {
       String name,
       String description,
       List<MeasurePopulation> population,
-      List<MeasureStratifier> stratifier});
+      List<MeasureStratifier> stratifier,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   $IdentifierCopyWith<$Res> get identifier;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
@@ -1002,6 +1990,8 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
     Object description = freezed,
     Object population = freezed,
     Object stratifier = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       identifier:
@@ -1015,6 +2005,11 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
       stratifier: stratifier == freezed
           ? _value.stratifier
           : stratifier as List<MeasureStratifier>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 
@@ -1025,6 +2020,26 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
     }
     return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
       return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
     });
   }
 }
@@ -1040,10 +2055,16 @@ abstract class _$MeasureGroupCopyWith<$Res>
       String name,
       String description,
       List<MeasurePopulation> population,
-      List<MeasureStratifier> stratifier});
+      List<MeasureStratifier> stratifier,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
@@ -1062,6 +2083,8 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
     Object description = freezed,
     Object population = freezed,
     Object stratifier = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_MeasureGroup(
       identifier:
@@ -1075,6 +2098,11 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
       stratifier: stratifier == freezed
           ? _value.stratifier
           : stratifier as List<MeasureStratifier>,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
@@ -1086,7 +2114,9 @@ class _$_MeasureGroup implements _MeasureGroup {
       this.name,
       this.description,
       this.population,
-      this.stratifier});
+      this.stratifier,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_MeasureGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureGroupFromJson(json);
@@ -1102,10 +2132,16 @@ class _$_MeasureGroup implements _MeasureGroup {
   final List<MeasurePopulation> population;
   @override
   final List<MeasureStratifier> stratifier;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'MeasureGroup(identifier: $identifier, name: $name, description: $description, population: $population, stratifier: $stratifier)';
+    return 'MeasureGroup(identifier: $identifier, name: $name, description: $description, population: $population, stratifier: $stratifier, nameElement: $nameElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -1125,7 +2161,13 @@ class _$_MeasureGroup implements _MeasureGroup {
                     .equals(other.population, population)) &&
             (identical(other.stratifier, stratifier) ||
                 const DeepCollectionEquality()
-                    .equals(other.stratifier, stratifier)));
+                    .equals(other.stratifier, stratifier)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
@@ -1135,7 +2177,9 @@ class _$_MeasureGroup implements _MeasureGroup {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(population) ^
-      const DeepCollectionEquality().hash(stratifier);
+      const DeepCollectionEquality().hash(stratifier) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$MeasureGroupCopyWith<_MeasureGroup> get copyWith =>
@@ -1149,11 +2193,14 @@ class _$_MeasureGroup implements _MeasureGroup {
 
 abstract class _MeasureGroup implements MeasureGroup {
   const factory _MeasureGroup(
-      {@JsonKey(required: true) Identifier identifier,
-      String name,
-      String description,
-      List<MeasurePopulation> population,
-      List<MeasureStratifier> stratifier}) = _$_MeasureGroup;
+          {@JsonKey(required: true) Identifier identifier,
+          String name,
+          String description,
+          List<MeasurePopulation> population,
+          List<MeasureStratifier> stratifier,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_description') Element descriptionElement}) =
+      _$_MeasureGroup;
 
   factory _MeasureGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureGroup.fromJson;
@@ -1170,6 +2217,12 @@ abstract class _MeasureGroup implements MeasureGroup {
   @override
   List<MeasureStratifier> get stratifier;
   @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
   _$MeasureGroupCopyWith<_MeasureGroup> get copyWith;
 }
 
@@ -1185,13 +2238,19 @@ class _$MeasurePopulationTearOff {
       CodeableConcept code,
       String name,
       String description,
-      String criteria}) {
+      String criteria,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_criteria') Element criteriaElement}) {
     return _MeasurePopulation(
       identifier: identifier,
       code: code,
       name: name,
       description: description,
       criteria: criteria,
+      nameElement: nameElement,
+      descriptionElement: descriptionElement,
+      criteriaElement: criteriaElement,
     );
   }
 }
@@ -1205,6 +2264,12 @@ mixin _$MeasurePopulation {
   String get name;
   String get description;
   String get criteria;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @JsonKey(name: '_criteria')
+  Element get criteriaElement;
 
   Map<String, dynamic> toJson();
   $MeasurePopulationCopyWith<MeasurePopulation> get copyWith;
@@ -1219,10 +2284,16 @@ abstract class $MeasurePopulationCopyWith<$Res> {
       CodeableConcept code,
       String name,
       String description,
-      String criteria});
+      String criteria,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_criteria') Element criteriaElement});
 
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get code;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res> get criteriaElement;
 }
 
 class _$MeasurePopulationCopyWithImpl<$Res>
@@ -1240,6 +2311,9 @@ class _$MeasurePopulationCopyWithImpl<$Res>
     Object name = freezed,
     Object description = freezed,
     Object criteria = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
+    Object criteriaElement = freezed,
   }) {
     return _then(_value.copyWith(
       identifier:
@@ -1249,6 +2323,14 @@ class _$MeasurePopulationCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      criteriaElement: criteriaElement == freezed
+          ? _value.criteriaElement
+          : criteriaElement as Element,
     ));
   }
 
@@ -1271,6 +2353,36 @@ class _$MeasurePopulationCopyWithImpl<$Res>
       return _then(_value.copyWith(code: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get criteriaElement {
+    if (_value.criteriaElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.criteriaElement, (value) {
+      return _then(_value.copyWith(criteriaElement: value));
+    });
+  }
 }
 
 abstract class _$MeasurePopulationCopyWith<$Res>
@@ -1284,12 +2396,21 @@ abstract class _$MeasurePopulationCopyWith<$Res>
       CodeableConcept code,
       String name,
       String description,
-      String criteria});
+      String criteria,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_criteria') Element criteriaElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
+  @override
+  $ElementCopyWith<$Res> get criteriaElement;
 }
 
 class __$MeasurePopulationCopyWithImpl<$Res>
@@ -1309,6 +2430,9 @@ class __$MeasurePopulationCopyWithImpl<$Res>
     Object name = freezed,
     Object description = freezed,
     Object criteria = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
+    Object criteriaElement = freezed,
   }) {
     return _then(_MeasurePopulation(
       identifier:
@@ -1318,6 +2442,14 @@ class __$MeasurePopulationCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
+      criteriaElement: criteriaElement == freezed
+          ? _value.criteriaElement
+          : criteriaElement as Element,
     ));
   }
 }
@@ -1325,7 +2457,14 @@ class __$MeasurePopulationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MeasurePopulation implements _MeasurePopulation {
   const _$_MeasurePopulation(
-      {this.identifier, this.code, this.name, this.description, this.criteria});
+      {this.identifier,
+      this.code,
+      this.name,
+      this.description,
+      this.criteria,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_criteria') this.criteriaElement});
 
   factory _$_MeasurePopulation.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasurePopulationFromJson(json);
@@ -1340,10 +2479,19 @@ class _$_MeasurePopulation implements _MeasurePopulation {
   final String description;
   @override
   final String criteria;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
+  @override
+  @JsonKey(name: '_criteria')
+  final Element criteriaElement;
 
   @override
   String toString() {
-    return 'MeasurePopulation(identifier: $identifier, code: $code, name: $name, description: $description, criteria: $criteria)';
+    return 'MeasurePopulation(identifier: $identifier, code: $code, name: $name, description: $description, criteria: $criteria, nameElement: $nameElement, descriptionElement: $descriptionElement, criteriaElement: $criteriaElement)';
   }
 
   @override
@@ -1362,7 +2510,16 @@ class _$_MeasurePopulation implements _MeasurePopulation {
                     .equals(other.description, description)) &&
             (identical(other.criteria, criteria) ||
                 const DeepCollectionEquality()
-                    .equals(other.criteria, criteria)));
+                    .equals(other.criteria, criteria)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.criteriaElement, criteriaElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.criteriaElement, criteriaElement)));
   }
 
   @override
@@ -1372,7 +2529,10 @@ class _$_MeasurePopulation implements _MeasurePopulation {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(criteria);
+      const DeepCollectionEquality().hash(criteria) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(criteriaElement);
 
   @override
   _$MeasurePopulationCopyWith<_MeasurePopulation> get copyWith =>
@@ -1386,11 +2546,15 @@ class _$_MeasurePopulation implements _MeasurePopulation {
 
 abstract class _MeasurePopulation implements MeasurePopulation {
   const factory _MeasurePopulation(
-      {Identifier identifier,
-      CodeableConcept code,
-      String name,
-      String description,
-      String criteria}) = _$_MeasurePopulation;
+          {Identifier identifier,
+          CodeableConcept code,
+          String name,
+          String description,
+          String criteria,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_description') Element descriptionElement,
+          @JsonKey(name: '_criteria') Element criteriaElement}) =
+      _$_MeasurePopulation;
 
   factory _MeasurePopulation.fromJson(Map<String, dynamic> json) =
       _$_MeasurePopulation.fromJson;
@@ -1406,6 +2570,15 @@ abstract class _MeasurePopulation implements MeasurePopulation {
   @override
   String get criteria;
   @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
+  @JsonKey(name: '_criteria')
+  Element get criteriaElement;
+  @override
   _$MeasurePopulationCopyWith<_MeasurePopulation> get copyWith;
 }
 
@@ -1417,11 +2590,17 @@ class _$MeasureStratifierTearOff {
   const _$MeasureStratifierTearOff();
 
   _MeasureStratifier call(
-      {Identifier identifier, String criteria, String path}) {
+      {Identifier identifier,
+      String criteria,
+      String path,
+      @JsonKey(name: '_criteria') Element criteriaElement,
+      @JsonKey(name: '_path') Element pathElement}) {
     return _MeasureStratifier(
       identifier: identifier,
       criteria: criteria,
       path: path,
+      criteriaElement: criteriaElement,
+      pathElement: pathElement,
     );
   }
 }
@@ -1433,6 +2612,10 @@ mixin _$MeasureStratifier {
   Identifier get identifier;
   String get criteria;
   String get path;
+  @JsonKey(name: '_criteria')
+  Element get criteriaElement;
+  @JsonKey(name: '_path')
+  Element get pathElement;
 
   Map<String, dynamic> toJson();
   $MeasureStratifierCopyWith<MeasureStratifier> get copyWith;
@@ -1442,9 +2625,16 @@ abstract class $MeasureStratifierCopyWith<$Res> {
   factory $MeasureStratifierCopyWith(
           MeasureStratifier value, $Res Function(MeasureStratifier) then) =
       _$MeasureStratifierCopyWithImpl<$Res>;
-  $Res call({Identifier identifier, String criteria, String path});
+  $Res call(
+      {Identifier identifier,
+      String criteria,
+      String path,
+      @JsonKey(name: '_criteria') Element criteriaElement,
+      @JsonKey(name: '_path') Element pathElement});
 
   $IdentifierCopyWith<$Res> get identifier;
+  $ElementCopyWith<$Res> get criteriaElement;
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class _$MeasureStratifierCopyWithImpl<$Res>
@@ -1460,12 +2650,19 @@ class _$MeasureStratifierCopyWithImpl<$Res>
     Object identifier = freezed,
     Object criteria = freezed,
     Object path = freezed,
+    Object criteriaElement = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_value.copyWith(
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
       path: path == freezed ? _value.path : path as String,
+      criteriaElement: criteriaElement == freezed
+          ? _value.criteriaElement
+          : criteriaElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
   }
 
@@ -1478,6 +2675,26 @@ class _$MeasureStratifierCopyWithImpl<$Res>
       return _then(_value.copyWith(identifier: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get criteriaElement {
+    if (_value.criteriaElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.criteriaElement, (value) {
+      return _then(_value.copyWith(criteriaElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
+    });
+  }
 }
 
 abstract class _$MeasureStratifierCopyWith<$Res>
@@ -1486,10 +2703,19 @@ abstract class _$MeasureStratifierCopyWith<$Res>
           _MeasureStratifier value, $Res Function(_MeasureStratifier) then) =
       __$MeasureStratifierCopyWithImpl<$Res>;
   @override
-  $Res call({Identifier identifier, String criteria, String path});
+  $Res call(
+      {Identifier identifier,
+      String criteria,
+      String path,
+      @JsonKey(name: '_criteria') Element criteriaElement,
+      @JsonKey(name: '_path') Element pathElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ElementCopyWith<$Res> get criteriaElement;
+  @override
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class __$MeasureStratifierCopyWithImpl<$Res>
@@ -1507,19 +2733,31 @@ class __$MeasureStratifierCopyWithImpl<$Res>
     Object identifier = freezed,
     Object criteria = freezed,
     Object path = freezed,
+    Object criteriaElement = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_MeasureStratifier(
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
       path: path == freezed ? _value.path : path as String,
+      criteriaElement: criteriaElement == freezed
+          ? _value.criteriaElement
+          : criteriaElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_MeasureStratifier implements _MeasureStratifier {
-  const _$_MeasureStratifier({this.identifier, this.criteria, this.path});
+  const _$_MeasureStratifier(
+      {this.identifier,
+      this.criteria,
+      this.path,
+      @JsonKey(name: '_criteria') this.criteriaElement,
+      @JsonKey(name: '_path') this.pathElement});
 
   factory _$_MeasureStratifier.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureStratifierFromJson(json);
@@ -1530,10 +2768,16 @@ class _$_MeasureStratifier implements _MeasureStratifier {
   final String criteria;
   @override
   final String path;
+  @override
+  @JsonKey(name: '_criteria')
+  final Element criteriaElement;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
 
   @override
   String toString() {
-    return 'MeasureStratifier(identifier: $identifier, criteria: $criteria, path: $path)';
+    return 'MeasureStratifier(identifier: $identifier, criteria: $criteria, path: $path, criteriaElement: $criteriaElement, pathElement: $pathElement)';
   }
 
   @override
@@ -1547,7 +2791,13 @@ class _$_MeasureStratifier implements _MeasureStratifier {
                 const DeepCollectionEquality()
                     .equals(other.criteria, criteria)) &&
             (identical(other.path, path) ||
-                const DeepCollectionEquality().equals(other.path, path)));
+                const DeepCollectionEquality().equals(other.path, path)) &&
+            (identical(other.criteriaElement, criteriaElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.criteriaElement, criteriaElement)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)));
   }
 
   @override
@@ -1555,7 +2805,9 @@ class _$_MeasureStratifier implements _MeasureStratifier {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(criteria) ^
-      const DeepCollectionEquality().hash(path);
+      const DeepCollectionEquality().hash(path) ^
+      const DeepCollectionEquality().hash(criteriaElement) ^
+      const DeepCollectionEquality().hash(pathElement);
 
   @override
   _$MeasureStratifierCopyWith<_MeasureStratifier> get copyWith =>
@@ -1571,7 +2823,9 @@ abstract class _MeasureStratifier implements MeasureStratifier {
   const factory _MeasureStratifier(
       {Identifier identifier,
       String criteria,
-      String path}) = _$_MeasureStratifier;
+      String path,
+      @JsonKey(name: '_criteria') Element criteriaElement,
+      @JsonKey(name: '_path') Element pathElement}) = _$_MeasureStratifier;
 
   factory _MeasureStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureStratifier.fromJson;
@@ -1582,6 +2836,12 @@ abstract class _MeasureStratifier implements MeasureStratifier {
   String get criteria;
   @override
   String get path;
+  @override
+  @JsonKey(name: '_criteria')
+  Element get criteriaElement;
+  @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
   @override
   _$MeasureStratifierCopyWith<_MeasureStratifier> get copyWith;
 }
@@ -1598,12 +2858,16 @@ class _$MeasureSupplementalDataTearOff {
       {Identifier identifier,
       List<CodeableConcept> usage,
       String criteria,
-      String path}) {
+      String path,
+      @JsonKey(name: '_criteria') Element criteriaElement,
+      @JsonKey(name: '_path') Element pathElement}) {
     return _MeasureSupplementalData(
       identifier: identifier,
       usage: usage,
       criteria: criteria,
       path: path,
+      criteriaElement: criteriaElement,
+      pathElement: pathElement,
     );
   }
 }
@@ -1616,6 +2880,10 @@ mixin _$MeasureSupplementalData {
   List<CodeableConcept> get usage;
   String get criteria;
   String get path;
+  @JsonKey(name: '_criteria')
+  Element get criteriaElement;
+  @JsonKey(name: '_path')
+  Element get pathElement;
 
   Map<String, dynamic> toJson();
   $MeasureSupplementalDataCopyWith<MeasureSupplementalData> get copyWith;
@@ -1629,9 +2897,13 @@ abstract class $MeasureSupplementalDataCopyWith<$Res> {
       {Identifier identifier,
       List<CodeableConcept> usage,
       String criteria,
-      String path});
+      String path,
+      @JsonKey(name: '_criteria') Element criteriaElement,
+      @JsonKey(name: '_path') Element pathElement});
 
   $IdentifierCopyWith<$Res> get identifier;
+  $ElementCopyWith<$Res> get criteriaElement;
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class _$MeasureSupplementalDataCopyWithImpl<$Res>
@@ -1648,6 +2920,8 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res>
     Object usage = freezed,
     Object criteria = freezed,
     Object path = freezed,
+    Object criteriaElement = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_value.copyWith(
       identifier:
@@ -1655,6 +2929,11 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res>
       usage: usage == freezed ? _value.usage : usage as List<CodeableConcept>,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
       path: path == freezed ? _value.path : path as String,
+      criteriaElement: criteriaElement == freezed
+          ? _value.criteriaElement
+          : criteriaElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
   }
 
@@ -1665,6 +2944,26 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res>
     }
     return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
       return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get criteriaElement {
+    if (_value.criteriaElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.criteriaElement, (value) {
+      return _then(_value.copyWith(criteriaElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get pathElement {
+    if (_value.pathElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+      return _then(_value.copyWith(pathElement: value));
     });
   }
 }
@@ -1679,10 +2978,16 @@ abstract class _$MeasureSupplementalDataCopyWith<$Res>
       {Identifier identifier,
       List<CodeableConcept> usage,
       String criteria,
-      String path});
+      String path,
+      @JsonKey(name: '_criteria') Element criteriaElement,
+      @JsonKey(name: '_path') Element pathElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ElementCopyWith<$Res> get criteriaElement;
+  @override
+  $ElementCopyWith<$Res> get pathElement;
 }
 
 class __$MeasureSupplementalDataCopyWithImpl<$Res>
@@ -1702,6 +3007,8 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
     Object usage = freezed,
     Object criteria = freezed,
     Object path = freezed,
+    Object criteriaElement = freezed,
+    Object pathElement = freezed,
   }) {
     return _then(_MeasureSupplementalData(
       identifier:
@@ -1709,6 +3016,11 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
       usage: usage == freezed ? _value.usage : usage as List<CodeableConcept>,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
       path: path == freezed ? _value.path : path as String,
+      criteriaElement: criteriaElement == freezed
+          ? _value.criteriaElement
+          : criteriaElement as Element,
+      pathElement:
+          pathElement == freezed ? _value.pathElement : pathElement as Element,
     ));
   }
 }
@@ -1716,7 +3028,12 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MeasureSupplementalData implements _MeasureSupplementalData {
   const _$_MeasureSupplementalData(
-      {this.identifier, this.usage, this.criteria, this.path});
+      {this.identifier,
+      this.usage,
+      this.criteria,
+      this.path,
+      @JsonKey(name: '_criteria') this.criteriaElement,
+      @JsonKey(name: '_path') this.pathElement});
 
   factory _$_MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureSupplementalDataFromJson(json);
@@ -1729,10 +3046,16 @@ class _$_MeasureSupplementalData implements _MeasureSupplementalData {
   final String criteria;
   @override
   final String path;
+  @override
+  @JsonKey(name: '_criteria')
+  final Element criteriaElement;
+  @override
+  @JsonKey(name: '_path')
+  final Element pathElement;
 
   @override
   String toString() {
-    return 'MeasureSupplementalData(identifier: $identifier, usage: $usage, criteria: $criteria, path: $path)';
+    return 'MeasureSupplementalData(identifier: $identifier, usage: $usage, criteria: $criteria, path: $path, criteriaElement: $criteriaElement, pathElement: $pathElement)';
   }
 
   @override
@@ -1748,7 +3071,13 @@ class _$_MeasureSupplementalData implements _MeasureSupplementalData {
                 const DeepCollectionEquality()
                     .equals(other.criteria, criteria)) &&
             (identical(other.path, path) ||
-                const DeepCollectionEquality().equals(other.path, path)));
+                const DeepCollectionEquality().equals(other.path, path)) &&
+            (identical(other.criteriaElement, criteriaElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.criteriaElement, criteriaElement)) &&
+            (identical(other.pathElement, pathElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.pathElement, pathElement)));
   }
 
   @override
@@ -1757,7 +3086,9 @@ class _$_MeasureSupplementalData implements _MeasureSupplementalData {
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(usage) ^
       const DeepCollectionEquality().hash(criteria) ^
-      const DeepCollectionEquality().hash(path);
+      const DeepCollectionEquality().hash(path) ^
+      const DeepCollectionEquality().hash(criteriaElement) ^
+      const DeepCollectionEquality().hash(pathElement);
 
   @override
   _$MeasureSupplementalDataCopyWith<_MeasureSupplementalData> get copyWith =>
@@ -1772,10 +3103,13 @@ class _$_MeasureSupplementalData implements _MeasureSupplementalData {
 
 abstract class _MeasureSupplementalData implements MeasureSupplementalData {
   const factory _MeasureSupplementalData(
-      {Identifier identifier,
-      List<CodeableConcept> usage,
-      String criteria,
-      String path}) = _$_MeasureSupplementalData;
+          {Identifier identifier,
+          List<CodeableConcept> usage,
+          String criteria,
+          String path,
+          @JsonKey(name: '_criteria') Element criteriaElement,
+          @JsonKey(name: '_path') Element pathElement}) =
+      _$_MeasureSupplementalData;
 
   factory _MeasureSupplementalData.fromJson(Map<String, dynamic> json) =
       _$_MeasureSupplementalData.fromJson;
@@ -1788,6 +3122,12 @@ abstract class _MeasureSupplementalData implements MeasureSupplementalData {
   String get criteria;
   @override
   String get path;
+  @override
+  @JsonKey(name: '_criteria')
+  Element get criteriaElement;
+  @override
+  @JsonKey(name: '_path')
+  Element get pathElement;
   @override
   _$MeasureSupplementalDataCopyWith<_MeasureSupplementalData> get copyWith;
 }
@@ -1816,7 +3156,13 @@ class _$MeasureReportTearOff {
       @JsonKey(required: true)
           Period period,
       List<MeasureReportGroup> group,
-      Reference evaluatedResources}) {
+      Reference evaluatedResources,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_date')
+          Element dateElement}) {
     return _MeasureReport(
       resourceType: resourceType,
       identifier: identifier,
@@ -1829,6 +3175,9 @@ class _$MeasureReportTearOff {
       period: period,
       group: group,
       evaluatedResources: evaluatedResources,
+      statusElement: statusElement,
+      typeElement: typeElement,
+      dateElement: dateElement,
     );
   }
 }
@@ -1853,6 +3202,12 @@ mixin _$MeasureReport {
   Period get period;
   List<MeasureReportGroup> get group;
   Reference get evaluatedResources;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_date')
+  Element get dateElement;
 
   Map<String, dynamic> toJson();
   $MeasureReportCopyWith<MeasureReport> get copyWith;
@@ -1878,7 +3233,13 @@ abstract class $MeasureReportCopyWith<$Res> {
       @JsonKey(required: true)
           Period period,
       List<MeasureReportGroup> group,
-      Reference evaluatedResources});
+      Reference evaluatedResources,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_date')
+          Element dateElement});
 
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get measure;
@@ -1886,6 +3247,9 @@ abstract class $MeasureReportCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get reportingOrganization;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get evaluatedResources;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class _$MeasureReportCopyWithImpl<$Res>
@@ -1909,6 +3273,9 @@ class _$MeasureReportCopyWithImpl<$Res>
     Object period = freezed,
     Object group = freezed,
     Object evaluatedResources = freezed,
+    Object statusElement = freezed,
+    Object typeElement = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -1930,6 +3297,13 @@ class _$MeasureReportCopyWithImpl<$Res>
       evaluatedResources: evaluatedResources == freezed
           ? _value.evaluatedResources
           : evaluatedResources as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 
@@ -1992,6 +3366,36 @@ class _$MeasureReportCopyWithImpl<$Res>
       return _then(_value.copyWith(evaluatedResources: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get dateElement {
+    if (_value.dateElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+      return _then(_value.copyWith(dateElement: value));
+    });
+  }
 }
 
 abstract class _$MeasureReportCopyWith<$Res>
@@ -2016,7 +3420,13 @@ abstract class _$MeasureReportCopyWith<$Res>
       @JsonKey(required: true)
           Period period,
       List<MeasureReportGroup> group,
-      Reference evaluatedResources});
+      Reference evaluatedResources,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_date')
+          Element dateElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -2030,6 +3440,12 @@ abstract class _$MeasureReportCopyWith<$Res>
   $PeriodCopyWith<$Res> get period;
   @override
   $ReferenceCopyWith<$Res> get evaluatedResources;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get dateElement;
 }
 
 class __$MeasureReportCopyWithImpl<$Res>
@@ -2055,6 +3471,9 @@ class __$MeasureReportCopyWithImpl<$Res>
     Object period = freezed,
     Object group = freezed,
     Object evaluatedResources = freezed,
+    Object statusElement = freezed,
+    Object typeElement = freezed,
+    Object dateElement = freezed,
   }) {
     return _then(_MeasureReport(
       resourceType: resourceType == freezed
@@ -2076,6 +3495,13 @@ class __$MeasureReportCopyWithImpl<$Res>
       evaluatedResources: evaluatedResources == freezed
           ? _value.evaluatedResources
           : evaluatedResources as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      dateElement:
+          dateElement == freezed ? _value.dateElement : dateElement as Element,
     ));
   }
 }
@@ -2099,7 +3525,13 @@ class _$_MeasureReport implements _MeasureReport {
       @JsonKey(required: true)
           this.period,
       this.group,
-      this.evaluatedResources})
+      this.evaluatedResources,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_type')
+          this.typeElement,
+      @JsonKey(name: '_date')
+          this.dateElement})
       : assert(resourceType != null);
 
   factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
@@ -2132,10 +3564,19 @@ class _$_MeasureReport implements _MeasureReport {
   final List<MeasureReportGroup> group;
   @override
   final Reference evaluatedResources;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_date')
+  final Element dateElement;
 
   @override
   String toString() {
-    return 'MeasureReport(resourceType: $resourceType, identifier: $identifier, status: $status, type: $type, measure: $measure, patient: $patient, date: $date, reportingOrganization: $reportingOrganization, period: $period, group: $group, evaluatedResources: $evaluatedResources)';
+    return 'MeasureReport(resourceType: $resourceType, identifier: $identifier, status: $status, type: $type, measure: $measure, patient: $patient, date: $date, reportingOrganization: $reportingOrganization, period: $period, group: $group, evaluatedResources: $evaluatedResources, statusElement: $statusElement, typeElement: $typeElement, dateElement: $dateElement)';
   }
 
   @override
@@ -2169,7 +3610,16 @@ class _$_MeasureReport implements _MeasureReport {
                 const DeepCollectionEquality().equals(other.group, group)) &&
             (identical(other.evaluatedResources, evaluatedResources) ||
                 const DeepCollectionEquality()
-                    .equals(other.evaluatedResources, evaluatedResources)));
+                    .equals(other.evaluatedResources, evaluatedResources)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.dateElement, dateElement)));
   }
 
   @override
@@ -2185,7 +3635,10 @@ class _$_MeasureReport implements _MeasureReport {
       const DeepCollectionEquality().hash(reportingOrganization) ^
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(group) ^
-      const DeepCollectionEquality().hash(evaluatedResources);
+      const DeepCollectionEquality().hash(evaluatedResources) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(dateElement);
 
   @override
   _$MeasureReportCopyWith<_MeasureReport> get copyWith =>
@@ -2215,7 +3668,13 @@ abstract class _MeasureReport implements MeasureReport {
       @JsonKey(required: true)
           Period period,
       List<MeasureReportGroup> group,
-      Reference evaluatedResources}) = _$_MeasureReport;
+      Reference evaluatedResources,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_date')
+          Element dateElement}) = _$_MeasureReport;
 
   factory _MeasureReport.fromJson(Map<String, dynamic> json) =
       _$_MeasureReport.fromJson;
@@ -2248,6 +3707,15 @@ abstract class _MeasureReport implements MeasureReport {
   @override
   Reference get evaluatedResources;
   @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_date')
+  Element get dateElement;
+  @override
   _$MeasureReportCopyWith<_MeasureReport> get copyWith;
 }
 
@@ -2262,12 +3730,14 @@ class _$MeasureReportGroupTearOff {
       {@JsonKey(required: true) Identifier identifier,
       List<MeasureReportPopulation> population,
       Decimal measureScore,
-      List<MeasureReportStratifier> stratifier}) {
+      List<MeasureReportStratifier> stratifier,
+      @JsonKey(name: '_measureScore') Element measureScoreElement}) {
     return _MeasureReportGroup(
       identifier: identifier,
       population: population,
       measureScore: measureScore,
       stratifier: stratifier,
+      measureScoreElement: measureScoreElement,
     );
   }
 }
@@ -2281,6 +3751,8 @@ mixin _$MeasureReportGroup {
   List<MeasureReportPopulation> get population;
   Decimal get measureScore;
   List<MeasureReportStratifier> get stratifier;
+  @JsonKey(name: '_measureScore')
+  Element get measureScoreElement;
 
   Map<String, dynamic> toJson();
   $MeasureReportGroupCopyWith<MeasureReportGroup> get copyWith;
@@ -2294,9 +3766,11 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
       {@JsonKey(required: true) Identifier identifier,
       List<MeasureReportPopulation> population,
       Decimal measureScore,
-      List<MeasureReportStratifier> stratifier});
+      List<MeasureReportStratifier> stratifier,
+      @JsonKey(name: '_measureScore') Element measureScoreElement});
 
   $IdentifierCopyWith<$Res> get identifier;
+  $ElementCopyWith<$Res> get measureScoreElement;
 }
 
 class _$MeasureReportGroupCopyWithImpl<$Res>
@@ -2313,6 +3787,7 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
     Object population = freezed,
     Object measureScore = freezed,
     Object stratifier = freezed,
+    Object measureScoreElement = freezed,
   }) {
     return _then(_value.copyWith(
       identifier:
@@ -2326,6 +3801,9 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
       stratifier: stratifier == freezed
           ? _value.stratifier
           : stratifier as List<MeasureReportStratifier>,
+      measureScoreElement: measureScoreElement == freezed
+          ? _value.measureScoreElement
+          : measureScoreElement as Element,
     ));
   }
 
@@ -2336,6 +3814,16 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
     }
     return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
       return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get measureScoreElement {
+    if (_value.measureScoreElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.measureScoreElement, (value) {
+      return _then(_value.copyWith(measureScoreElement: value));
     });
   }
 }
@@ -2350,10 +3838,13 @@ abstract class _$MeasureReportGroupCopyWith<$Res>
       {@JsonKey(required: true) Identifier identifier,
       List<MeasureReportPopulation> population,
       Decimal measureScore,
-      List<MeasureReportStratifier> stratifier});
+      List<MeasureReportStratifier> stratifier,
+      @JsonKey(name: '_measureScore') Element measureScoreElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $ElementCopyWith<$Res> get measureScoreElement;
 }
 
 class __$MeasureReportGroupCopyWithImpl<$Res>
@@ -2372,6 +3863,7 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
     Object population = freezed,
     Object measureScore = freezed,
     Object stratifier = freezed,
+    Object measureScoreElement = freezed,
   }) {
     return _then(_MeasureReportGroup(
       identifier:
@@ -2385,6 +3877,9 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
       stratifier: stratifier == freezed
           ? _value.stratifier
           : stratifier as List<MeasureReportStratifier>,
+      measureScoreElement: measureScoreElement == freezed
+          ? _value.measureScoreElement
+          : measureScoreElement as Element,
     ));
   }
 }
@@ -2395,7 +3890,8 @@ class _$_MeasureReportGroup implements _MeasureReportGroup {
       {@JsonKey(required: true) this.identifier,
       this.population,
       this.measureScore,
-      this.stratifier});
+      this.stratifier,
+      @JsonKey(name: '_measureScore') this.measureScoreElement});
 
   factory _$_MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportGroupFromJson(json);
@@ -2409,10 +3905,13 @@ class _$_MeasureReportGroup implements _MeasureReportGroup {
   final Decimal measureScore;
   @override
   final List<MeasureReportStratifier> stratifier;
+  @override
+  @JsonKey(name: '_measureScore')
+  final Element measureScoreElement;
 
   @override
   String toString() {
-    return 'MeasureReportGroup(identifier: $identifier, population: $population, measureScore: $measureScore, stratifier: $stratifier)';
+    return 'MeasureReportGroup(identifier: $identifier, population: $population, measureScore: $measureScore, stratifier: $stratifier, measureScoreElement: $measureScoreElement)';
   }
 
   @override
@@ -2430,7 +3929,10 @@ class _$_MeasureReportGroup implements _MeasureReportGroup {
                     .equals(other.measureScore, measureScore)) &&
             (identical(other.stratifier, stratifier) ||
                 const DeepCollectionEquality()
-                    .equals(other.stratifier, stratifier)));
+                    .equals(other.stratifier, stratifier)) &&
+            (identical(other.measureScoreElement, measureScoreElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.measureScoreElement, measureScoreElement)));
   }
 
   @override
@@ -2439,7 +3941,8 @@ class _$_MeasureReportGroup implements _MeasureReportGroup {
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(population) ^
       const DeepCollectionEquality().hash(measureScore) ^
-      const DeepCollectionEquality().hash(stratifier);
+      const DeepCollectionEquality().hash(stratifier) ^
+      const DeepCollectionEquality().hash(measureScoreElement);
 
   @override
   _$MeasureReportGroupCopyWith<_MeasureReportGroup> get copyWith =>
@@ -2453,10 +3956,12 @@ class _$_MeasureReportGroup implements _MeasureReportGroup {
 
 abstract class _MeasureReportGroup implements MeasureReportGroup {
   const factory _MeasureReportGroup(
-      {@JsonKey(required: true) Identifier identifier,
-      List<MeasureReportPopulation> population,
-      Decimal measureScore,
-      List<MeasureReportStratifier> stratifier}) = _$_MeasureReportGroup;
+          {@JsonKey(required: true) Identifier identifier,
+          List<MeasureReportPopulation> population,
+          Decimal measureScore,
+          List<MeasureReportStratifier> stratifier,
+          @JsonKey(name: '_measureScore') Element measureScoreElement}) =
+      _$_MeasureReportGroup;
 
   factory _MeasureReportGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportGroup.fromJson;
@@ -2470,6 +3975,9 @@ abstract class _MeasureReportGroup implements MeasureReportGroup {
   Decimal get measureScore;
   @override
   List<MeasureReportStratifier> get stratifier;
+  @override
+  @JsonKey(name: '_measureScore')
+  Element get measureScoreElement;
   @override
   _$MeasureReportGroupCopyWith<_MeasureReportGroup> get copyWith;
 }
@@ -2486,12 +3994,14 @@ class _$MeasureReportPopulationTearOff {
       {Identifier identifier,
       CodeableConcept code,
       Integer count,
-      Reference patients}) {
+      Reference patients,
+      @JsonKey(name: '_count') Element countElement}) {
     return _MeasureReportPopulation(
       identifier: identifier,
       code: code,
       count: count,
       patients: patients,
+      countElement: countElement,
     );
   }
 }
@@ -2504,6 +4014,8 @@ mixin _$MeasureReportPopulation {
   CodeableConcept get code;
   Integer get count;
   Reference get patients;
+  @JsonKey(name: '_count')
+  Element get countElement;
 
   Map<String, dynamic> toJson();
   $MeasureReportPopulationCopyWith<MeasureReportPopulation> get copyWith;
@@ -2517,11 +4029,13 @@ abstract class $MeasureReportPopulationCopyWith<$Res> {
       {Identifier identifier,
       CodeableConcept code,
       Integer count,
-      Reference patients});
+      Reference patients,
+      @JsonKey(name: '_count') Element countElement});
 
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get patients;
+  $ElementCopyWith<$Res> get countElement;
 }
 
 class _$MeasureReportPopulationCopyWithImpl<$Res>
@@ -2538,6 +4052,7 @@ class _$MeasureReportPopulationCopyWithImpl<$Res>
     Object code = freezed,
     Object count = freezed,
     Object patients = freezed,
+    Object countElement = freezed,
   }) {
     return _then(_value.copyWith(
       identifier:
@@ -2545,6 +4060,9 @@ class _$MeasureReportPopulationCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as CodeableConcept,
       count: count == freezed ? _value.count : count as Integer,
       patients: patients == freezed ? _value.patients : patients as Reference,
+      countElement: countElement == freezed
+          ? _value.countElement
+          : countElement as Element,
     ));
   }
 
@@ -2577,6 +4095,16 @@ class _$MeasureReportPopulationCopyWithImpl<$Res>
       return _then(_value.copyWith(patients: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get countElement {
+    if (_value.countElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.countElement, (value) {
+      return _then(_value.copyWith(countElement: value));
+    });
+  }
 }
 
 abstract class _$MeasureReportPopulationCopyWith<$Res>
@@ -2589,7 +4117,8 @@ abstract class _$MeasureReportPopulationCopyWith<$Res>
       {Identifier identifier,
       CodeableConcept code,
       Integer count,
-      Reference patients});
+      Reference patients,
+      @JsonKey(name: '_count') Element countElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -2597,6 +4126,8 @@ abstract class _$MeasureReportPopulationCopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get code;
   @override
   $ReferenceCopyWith<$Res> get patients;
+  @override
+  $ElementCopyWith<$Res> get countElement;
 }
 
 class __$MeasureReportPopulationCopyWithImpl<$Res>
@@ -2616,6 +4147,7 @@ class __$MeasureReportPopulationCopyWithImpl<$Res>
     Object code = freezed,
     Object count = freezed,
     Object patients = freezed,
+    Object countElement = freezed,
   }) {
     return _then(_MeasureReportPopulation(
       identifier:
@@ -2623,6 +4155,9 @@ class __$MeasureReportPopulationCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as CodeableConcept,
       count: count == freezed ? _value.count : count as Integer,
       patients: patients == freezed ? _value.patients : patients as Reference,
+      countElement: countElement == freezed
+          ? _value.countElement
+          : countElement as Element,
     ));
   }
 }
@@ -2630,7 +4165,11 @@ class __$MeasureReportPopulationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MeasureReportPopulation implements _MeasureReportPopulation {
   const _$_MeasureReportPopulation(
-      {this.identifier, this.code, this.count, this.patients});
+      {this.identifier,
+      this.code,
+      this.count,
+      this.patients,
+      @JsonKey(name: '_count') this.countElement});
 
   factory _$_MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportPopulationFromJson(json);
@@ -2643,10 +4182,13 @@ class _$_MeasureReportPopulation implements _MeasureReportPopulation {
   final Integer count;
   @override
   final Reference patients;
+  @override
+  @JsonKey(name: '_count')
+  final Element countElement;
 
   @override
   String toString() {
-    return 'MeasureReportPopulation(identifier: $identifier, code: $code, count: $count, patients: $patients)';
+    return 'MeasureReportPopulation(identifier: $identifier, code: $code, count: $count, patients: $patients, countElement: $countElement)';
   }
 
   @override
@@ -2662,7 +4204,10 @@ class _$_MeasureReportPopulation implements _MeasureReportPopulation {
                 const DeepCollectionEquality().equals(other.count, count)) &&
             (identical(other.patients, patients) ||
                 const DeepCollectionEquality()
-                    .equals(other.patients, patients)));
+                    .equals(other.patients, patients)) &&
+            (identical(other.countElement, countElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.countElement, countElement)));
   }
 
   @override
@@ -2671,7 +4216,8 @@ class _$_MeasureReportPopulation implements _MeasureReportPopulation {
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(patients);
+      const DeepCollectionEquality().hash(patients) ^
+      const DeepCollectionEquality().hash(countElement);
 
   @override
   _$MeasureReportPopulationCopyWith<_MeasureReportPopulation> get copyWith =>
@@ -2686,10 +4232,12 @@ class _$_MeasureReportPopulation implements _MeasureReportPopulation {
 
 abstract class _MeasureReportPopulation implements MeasureReportPopulation {
   const factory _MeasureReportPopulation(
-      {Identifier identifier,
-      CodeableConcept code,
-      Integer count,
-      Reference patients}) = _$_MeasureReportPopulation;
+          {Identifier identifier,
+          CodeableConcept code,
+          Integer count,
+          Reference patients,
+          @JsonKey(name: '_count') Element countElement}) =
+      _$_MeasureReportPopulation;
 
   factory _MeasureReportPopulation.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportPopulation.fromJson;
@@ -2702,6 +4250,9 @@ abstract class _MeasureReportPopulation implements MeasureReportPopulation {
   Integer get count;
   @override
   Reference get patients;
+  @override
+  @JsonKey(name: '_count')
+  Element get countElement;
   @override
   _$MeasureReportPopulationCopyWith<_MeasureReportPopulation> get copyWith;
 }
@@ -2885,11 +4436,15 @@ class _$MeasureReportStratumTearOff {
   _MeasureReportStratum call(
       {String value,
       List<MeasureReportPopulation1> population,
-      Decimal measureScore}) {
+      Decimal measureScore,
+      @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: '_measureScore') Element measureScoreElement}) {
     return _MeasureReportStratum(
       value: value,
       population: population,
       measureScore: measureScore,
+      valueElement: valueElement,
+      measureScoreElement: measureScoreElement,
     );
   }
 }
@@ -2901,6 +4456,10 @@ mixin _$MeasureReportStratum {
   String get value;
   List<MeasureReportPopulation1> get population;
   Decimal get measureScore;
+  @JsonKey(name: '_value')
+  Element get valueElement;
+  @JsonKey(name: '_measureScore')
+  Element get measureScoreElement;
 
   Map<String, dynamic> toJson();
   $MeasureReportStratumCopyWith<MeasureReportStratum> get copyWith;
@@ -2913,7 +4472,12 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
   $Res call(
       {String value,
       List<MeasureReportPopulation1> population,
-      Decimal measureScore});
+      Decimal measureScore,
+      @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: '_measureScore') Element measureScoreElement});
+
+  $ElementCopyWith<$Res> get valueElement;
+  $ElementCopyWith<$Res> get measureScoreElement;
 }
 
 class _$MeasureReportStratumCopyWithImpl<$Res>
@@ -2929,6 +4493,8 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
     Object value = freezed,
     Object population = freezed,
     Object measureScore = freezed,
+    Object valueElement = freezed,
+    Object measureScoreElement = freezed,
   }) {
     return _then(_value.copyWith(
       value: value == freezed ? _value.value : value as String,
@@ -2938,7 +4504,33 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Decimal,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
+      measureScoreElement: measureScoreElement == freezed
+          ? _value.measureScoreElement
+          : measureScoreElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+      return _then(_value.copyWith(valueElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get measureScoreElement {
+    if (_value.measureScoreElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.measureScoreElement, (value) {
+      return _then(_value.copyWith(measureScoreElement: value));
+    });
   }
 }
 
@@ -2951,7 +4543,14 @@ abstract class _$MeasureReportStratumCopyWith<$Res>
   $Res call(
       {String value,
       List<MeasureReportPopulation1> population,
-      Decimal measureScore});
+      Decimal measureScore,
+      @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: '_measureScore') Element measureScoreElement});
+
+  @override
+  $ElementCopyWith<$Res> get valueElement;
+  @override
+  $ElementCopyWith<$Res> get measureScoreElement;
 }
 
 class __$MeasureReportStratumCopyWithImpl<$Res>
@@ -2969,6 +4568,8 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
     Object value = freezed,
     Object population = freezed,
     Object measureScore = freezed,
+    Object valueElement = freezed,
+    Object measureScoreElement = freezed,
   }) {
     return _then(_MeasureReportStratum(
       value: value == freezed ? _value.value : value as String,
@@ -2978,6 +4579,12 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Decimal,
+      valueElement: valueElement == freezed
+          ? _value.valueElement
+          : valueElement as Element,
+      measureScoreElement: measureScoreElement == freezed
+          ? _value.measureScoreElement
+          : measureScoreElement as Element,
     ));
   }
 }
@@ -2985,7 +4592,11 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MeasureReportStratum implements _MeasureReportStratum {
   const _$_MeasureReportStratum(
-      {this.value, this.population, this.measureScore});
+      {this.value,
+      this.population,
+      this.measureScore,
+      @JsonKey(name: '_value') this.valueElement,
+      @JsonKey(name: '_measureScore') this.measureScoreElement});
 
   factory _$_MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportStratumFromJson(json);
@@ -2996,10 +4607,16 @@ class _$_MeasureReportStratum implements _MeasureReportStratum {
   final List<MeasureReportPopulation1> population;
   @override
   final Decimal measureScore;
+  @override
+  @JsonKey(name: '_value')
+  final Element valueElement;
+  @override
+  @JsonKey(name: '_measureScore')
+  final Element measureScoreElement;
 
   @override
   String toString() {
-    return 'MeasureReportStratum(value: $value, population: $population, measureScore: $measureScore)';
+    return 'MeasureReportStratum(value: $value, population: $population, measureScore: $measureScore, valueElement: $valueElement, measureScoreElement: $measureScoreElement)';
   }
 
   @override
@@ -3013,7 +4630,13 @@ class _$_MeasureReportStratum implements _MeasureReportStratum {
                     .equals(other.population, population)) &&
             (identical(other.measureScore, measureScore) ||
                 const DeepCollectionEquality()
-                    .equals(other.measureScore, measureScore)));
+                    .equals(other.measureScore, measureScore)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)) &&
+            (identical(other.measureScoreElement, measureScoreElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.measureScoreElement, measureScoreElement)));
   }
 
   @override
@@ -3021,7 +4644,9 @@ class _$_MeasureReportStratum implements _MeasureReportStratum {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(population) ^
-      const DeepCollectionEquality().hash(measureScore);
+      const DeepCollectionEquality().hash(measureScore) ^
+      const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(measureScoreElement);
 
   @override
   _$MeasureReportStratumCopyWith<_MeasureReportStratum> get copyWith =>
@@ -3036,9 +4661,12 @@ class _$_MeasureReportStratum implements _MeasureReportStratum {
 
 abstract class _MeasureReportStratum implements MeasureReportStratum {
   const factory _MeasureReportStratum(
-      {String value,
-      List<MeasureReportPopulation1> population,
-      Decimal measureScore}) = _$_MeasureReportStratum;
+          {String value,
+          List<MeasureReportPopulation1> population,
+          Decimal measureScore,
+          @JsonKey(name: '_value') Element valueElement,
+          @JsonKey(name: '_measureScore') Element measureScoreElement}) =
+      _$_MeasureReportStratum;
 
   factory _MeasureReportStratum.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportStratum.fromJson;
@@ -3049,6 +4677,12 @@ abstract class _MeasureReportStratum implements MeasureReportStratum {
   List<MeasureReportPopulation1> get population;
   @override
   Decimal get measureScore;
+  @override
+  @JsonKey(name: '_value')
+  Element get valueElement;
+  @override
+  @JsonKey(name: '_measureScore')
+  Element get measureScoreElement;
   @override
   _$MeasureReportStratumCopyWith<_MeasureReportStratum> get copyWith;
 }
@@ -3065,12 +4699,14 @@ class _$MeasureReportPopulation1TearOff {
       {Identifier identifier,
       CodeableConcept code,
       Integer count,
-      Reference patients}) {
+      Reference patients,
+      @JsonKey(name: '_count') Element countElement}) {
     return _MeasureReportPopulation1(
       identifier: identifier,
       code: code,
       count: count,
       patients: patients,
+      countElement: countElement,
     );
   }
 }
@@ -3083,6 +4719,8 @@ mixin _$MeasureReportPopulation1 {
   CodeableConcept get code;
   Integer get count;
   Reference get patients;
+  @JsonKey(name: '_count')
+  Element get countElement;
 
   Map<String, dynamic> toJson();
   $MeasureReportPopulation1CopyWith<MeasureReportPopulation1> get copyWith;
@@ -3096,11 +4734,13 @@ abstract class $MeasureReportPopulation1CopyWith<$Res> {
       {Identifier identifier,
       CodeableConcept code,
       Integer count,
-      Reference patients});
+      Reference patients,
+      @JsonKey(name: '_count') Element countElement});
 
   $IdentifierCopyWith<$Res> get identifier;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get patients;
+  $ElementCopyWith<$Res> get countElement;
 }
 
 class _$MeasureReportPopulation1CopyWithImpl<$Res>
@@ -3117,6 +4757,7 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res>
     Object code = freezed,
     Object count = freezed,
     Object patients = freezed,
+    Object countElement = freezed,
   }) {
     return _then(_value.copyWith(
       identifier:
@@ -3124,6 +4765,9 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as CodeableConcept,
       count: count == freezed ? _value.count : count as Integer,
       patients: patients == freezed ? _value.patients : patients as Reference,
+      countElement: countElement == freezed
+          ? _value.countElement
+          : countElement as Element,
     ));
   }
 
@@ -3156,6 +4800,16 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res>
       return _then(_value.copyWith(patients: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get countElement {
+    if (_value.countElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.countElement, (value) {
+      return _then(_value.copyWith(countElement: value));
+    });
+  }
 }
 
 abstract class _$MeasureReportPopulation1CopyWith<$Res>
@@ -3168,7 +4822,8 @@ abstract class _$MeasureReportPopulation1CopyWith<$Res>
       {Identifier identifier,
       CodeableConcept code,
       Integer count,
-      Reference patients});
+      Reference patients,
+      @JsonKey(name: '_count') Element countElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -3176,6 +4831,8 @@ abstract class _$MeasureReportPopulation1CopyWith<$Res>
   $CodeableConceptCopyWith<$Res> get code;
   @override
   $ReferenceCopyWith<$Res> get patients;
+  @override
+  $ElementCopyWith<$Res> get countElement;
 }
 
 class __$MeasureReportPopulation1CopyWithImpl<$Res>
@@ -3195,6 +4852,7 @@ class __$MeasureReportPopulation1CopyWithImpl<$Res>
     Object code = freezed,
     Object count = freezed,
     Object patients = freezed,
+    Object countElement = freezed,
   }) {
     return _then(_MeasureReportPopulation1(
       identifier:
@@ -3202,6 +4860,9 @@ class __$MeasureReportPopulation1CopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as CodeableConcept,
       count: count == freezed ? _value.count : count as Integer,
       patients: patients == freezed ? _value.patients : patients as Reference,
+      countElement: countElement == freezed
+          ? _value.countElement
+          : countElement as Element,
     ));
   }
 }
@@ -3209,7 +4870,11 @@ class __$MeasureReportPopulation1CopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MeasureReportPopulation1 implements _MeasureReportPopulation1 {
   const _$_MeasureReportPopulation1(
-      {this.identifier, this.code, this.count, this.patients});
+      {this.identifier,
+      this.code,
+      this.count,
+      this.patients,
+      @JsonKey(name: '_count') this.countElement});
 
   factory _$_MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportPopulation1FromJson(json);
@@ -3222,10 +4887,13 @@ class _$_MeasureReportPopulation1 implements _MeasureReportPopulation1 {
   final Integer count;
   @override
   final Reference patients;
+  @override
+  @JsonKey(name: '_count')
+  final Element countElement;
 
   @override
   String toString() {
-    return 'MeasureReportPopulation1(identifier: $identifier, code: $code, count: $count, patients: $patients)';
+    return 'MeasureReportPopulation1(identifier: $identifier, code: $code, count: $count, patients: $patients, countElement: $countElement)';
   }
 
   @override
@@ -3241,7 +4909,10 @@ class _$_MeasureReportPopulation1 implements _MeasureReportPopulation1 {
                 const DeepCollectionEquality().equals(other.count, count)) &&
             (identical(other.patients, patients) ||
                 const DeepCollectionEquality()
-                    .equals(other.patients, patients)));
+                    .equals(other.patients, patients)) &&
+            (identical(other.countElement, countElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.countElement, countElement)));
   }
 
   @override
@@ -3250,7 +4921,8 @@ class _$_MeasureReportPopulation1 implements _MeasureReportPopulation1 {
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(patients);
+      const DeepCollectionEquality().hash(patients) ^
+      const DeepCollectionEquality().hash(countElement);
 
   @override
   _$MeasureReportPopulation1CopyWith<_MeasureReportPopulation1> get copyWith =>
@@ -3265,10 +4937,12 @@ class _$_MeasureReportPopulation1 implements _MeasureReportPopulation1 {
 
 abstract class _MeasureReportPopulation1 implements MeasureReportPopulation1 {
   const factory _MeasureReportPopulation1(
-      {Identifier identifier,
-      CodeableConcept code,
-      Integer count,
-      Reference patients}) = _$_MeasureReportPopulation1;
+          {Identifier identifier,
+          CodeableConcept code,
+          Integer count,
+          Reference patients,
+          @JsonKey(name: '_count') Element countElement}) =
+      _$_MeasureReportPopulation1;
 
   factory _MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportPopulation1.fromJson;
@@ -3281,6 +4955,9 @@ abstract class _MeasureReportPopulation1 implements MeasureReportPopulation1 {
   Integer get count;
   @override
   Reference get patients;
+  @override
+  @JsonKey(name: '_count')
+  Element get countElement;
   @override
   _$MeasureReportPopulation1CopyWith<_MeasureReportPopulation1> get copyWith;
 }

@@ -39,7 +39,13 @@ class _$ResearchStudyTearOff {
       List<Reference> site,
       CodeableConcept reasonStopped,
       List<Annotation> note,
-      List<ResearchStudyArm> arm}) {
+      List<ResearchStudyArm> arm,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement}) {
     return _ResearchStudy(
       resourceType: resourceType,
       identifier: identifier,
@@ -62,6 +68,9 @@ class _$ResearchStudyTearOff {
       reasonStopped: reasonStopped,
       note: note,
       arm: arm,
+      titleElement: titleElement,
+      statusElement: statusElement,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -93,6 +102,12 @@ mixin _$ResearchStudy {
   CodeableConcept get reasonStopped;
   List<Annotation> get note;
   List<ResearchStudyArm> get arm;
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $ResearchStudyCopyWith<ResearchStudy> get copyWith;
@@ -125,12 +140,21 @@ abstract class $ResearchStudyCopyWith<$Res> {
       List<Reference> site,
       CodeableConcept reasonStopped,
       List<Annotation> note,
-      List<ResearchStudyArm> arm});
+      List<ResearchStudyArm> arm,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement});
 
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get sponsor;
   $ReferenceCopyWith<$Res> get principalInvestigator;
   $CodeableConceptCopyWith<$Res> get reasonStopped;
+  $ElementCopyWith<$Res> get titleElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$ResearchStudyCopyWithImpl<$Res>
@@ -164,6 +188,9 @@ class _$ResearchStudyCopyWithImpl<$Res>
     Object reasonStopped = freezed,
     Object note = freezed,
     Object arm = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -208,6 +235,15 @@ class _$ResearchStudyCopyWithImpl<$Res>
           : reasonStopped as CodeableConcept,
       note: note == freezed ? _value.note : note as List<Annotation>,
       arm: arm == freezed ? _value.arm : arm as List<ResearchStudyArm>,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 
@@ -250,6 +286,36 @@ class _$ResearchStudyCopyWithImpl<$Res>
       return _then(_value.copyWith(reasonStopped: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get titleElement {
+    if (_value.titleElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.titleElement, (value) {
+      return _then(_value.copyWith(titleElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
 }
 
 abstract class _$ResearchStudyCopyWith<$Res>
@@ -281,7 +347,13 @@ abstract class _$ResearchStudyCopyWith<$Res>
       List<Reference> site,
       CodeableConcept reasonStopped,
       List<Annotation> note,
-      List<ResearchStudyArm> arm});
+      List<ResearchStudyArm> arm,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement});
 
   @override
   $PeriodCopyWith<$Res> get period;
@@ -291,6 +363,12 @@ abstract class _$ResearchStudyCopyWith<$Res>
   $ReferenceCopyWith<$Res> get principalInvestigator;
   @override
   $CodeableConceptCopyWith<$Res> get reasonStopped;
+  @override
+  $ElementCopyWith<$Res> get titleElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$ResearchStudyCopyWithImpl<$Res>
@@ -326,6 +404,9 @@ class __$ResearchStudyCopyWithImpl<$Res>
     Object reasonStopped = freezed,
     Object note = freezed,
     Object arm = freezed,
+    Object titleElement = freezed,
+    Object statusElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_ResearchStudy(
       resourceType: resourceType == freezed
@@ -370,6 +451,15 @@ class __$ResearchStudyCopyWithImpl<$Res>
           : reasonStopped as CodeableConcept,
       note: note == freezed ? _value.note : note as List<Annotation>,
       arm: arm == freezed ? _value.arm : arm as List<ResearchStudyArm>,
+      titleElement: titleElement == freezed
+          ? _value.titleElement
+          : titleElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
@@ -400,7 +490,13 @@ class _$_ResearchStudy implements _ResearchStudy {
       this.site,
       this.reasonStopped,
       this.note,
-      this.arm})
+      this.arm,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement})
       : assert(resourceType != null);
 
   factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
@@ -450,10 +546,19 @@ class _$_ResearchStudy implements _ResearchStudy {
   final List<Annotation> note;
   @override
   final List<ResearchStudyArm> arm;
+  @override
+  @JsonKey(name: '_title')
+  final Element titleElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'ResearchStudy(resourceType: $resourceType, identifier: $identifier, title: $title, protocol: $protocol, partOf: $partOf, status: $status, category: $category, focus: $focus, contact: $contact, relatedArtifact: $relatedArtifact, keyword: $keyword, jurisdiction: $jurisdiction, description: $description, enrollment: $enrollment, period: $period, sponsor: $sponsor, principalInvestigator: $principalInvestigator, site: $site, reasonStopped: $reasonStopped, note: $note, arm: $arm)';
+    return 'ResearchStudy(resourceType: $resourceType, identifier: $identifier, title: $title, protocol: $protocol, partOf: $partOf, status: $status, category: $category, focus: $focus, contact: $contact, relatedArtifact: $relatedArtifact, keyword: $keyword, jurisdiction: $jurisdiction, description: $description, enrollment: $enrollment, period: $period, sponsor: $sponsor, principalInvestigator: $principalInvestigator, site: $site, reasonStopped: $reasonStopped, note: $note, arm: $arm, titleElement: $titleElement, statusElement: $statusElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -514,7 +619,16 @@ class _$_ResearchStudy implements _ResearchStudy {
             (identical(other.note, note) ||
                 const DeepCollectionEquality().equals(other.note, note)) &&
             (identical(other.arm, arm) ||
-                const DeepCollectionEquality().equals(other.arm, arm)));
+                const DeepCollectionEquality().equals(other.arm, arm)) &&
+            (identical(other.titleElement, titleElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.titleElement, titleElement)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
@@ -540,7 +654,10 @@ class _$_ResearchStudy implements _ResearchStudy {
       const DeepCollectionEquality().hash(site) ^
       const DeepCollectionEquality().hash(reasonStopped) ^
       const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(arm);
+      const DeepCollectionEquality().hash(arm) ^
+      const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$ResearchStudyCopyWith<_ResearchStudy> get copyWith =>
@@ -577,7 +694,13 @@ abstract class _ResearchStudy implements ResearchStudy {
       List<Reference> site,
       CodeableConcept reasonStopped,
       List<Annotation> note,
-      List<ResearchStudyArm> arm}) = _$_ResearchStudy;
+      List<ResearchStudyArm> arm,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement}) = _$_ResearchStudy;
 
   factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudy.fromJson;
@@ -627,6 +750,15 @@ abstract class _ResearchStudy implements ResearchStudy {
   @override
   List<ResearchStudyArm> get arm;
   @override
+  @JsonKey(name: '_title')
+  Element get titleElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
+  @override
   _$ResearchStudyCopyWith<_ResearchStudy> get copyWith;
 }
 
@@ -638,11 +770,17 @@ class _$ResearchStudyArmTearOff {
   const _$ResearchStudyArmTearOff();
 
   _ResearchStudyArm call(
-      {String name, CodeableConcept code, String description}) {
+      {String name,
+      CodeableConcept code,
+      String description,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement}) {
     return _ResearchStudyArm(
       name: name,
       code: code,
       description: description,
+      nameElement: nameElement,
+      descriptionElement: descriptionElement,
     );
   }
 }
@@ -654,6 +792,10 @@ mixin _$ResearchStudyArm {
   String get name;
   CodeableConcept get code;
   String get description;
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
 
   Map<String, dynamic> toJson();
   $ResearchStudyArmCopyWith<ResearchStudyArm> get copyWith;
@@ -663,9 +805,16 @@ abstract class $ResearchStudyArmCopyWith<$Res> {
   factory $ResearchStudyArmCopyWith(
           ResearchStudyArm value, $Res Function(ResearchStudyArm) then) =
       _$ResearchStudyArmCopyWithImpl<$Res>;
-  $Res call({String name, CodeableConcept code, String description});
+  $Res call(
+      {String name,
+      CodeableConcept code,
+      String description,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   $CodeableConceptCopyWith<$Res> get code;
+  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class _$ResearchStudyArmCopyWithImpl<$Res>
@@ -681,12 +830,19 @@ class _$ResearchStudyArmCopyWithImpl<$Res>
     Object name = freezed,
     Object code = freezed,
     Object description = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
       code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 
@@ -699,6 +855,26 @@ class _$ResearchStudyArmCopyWithImpl<$Res>
       return _then(_value.copyWith(code: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
 }
 
 abstract class _$ResearchStudyArmCopyWith<$Res>
@@ -707,10 +883,19 @@ abstract class _$ResearchStudyArmCopyWith<$Res>
           _ResearchStudyArm value, $Res Function(_ResearchStudyArm) then) =
       __$ResearchStudyArmCopyWithImpl<$Res>;
   @override
-  $Res call({String name, CodeableConcept code, String description});
+  $Res call(
+      {String name,
+      CodeableConcept code,
+      String description,
+      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_description') Element descriptionElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
+  @override
+  $ElementCopyWith<$Res> get descriptionElement;
 }
 
 class __$ResearchStudyArmCopyWithImpl<$Res>
@@ -728,19 +913,31 @@ class __$ResearchStudyArmCopyWithImpl<$Res>
     Object name = freezed,
     Object code = freezed,
     Object description = freezed,
+    Object nameElement = freezed,
+    Object descriptionElement = freezed,
   }) {
     return _then(_ResearchStudyArm(
       name: name == freezed ? _value.name : name as String,
       code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement as Element,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_ResearchStudyArm implements _ResearchStudyArm {
-  const _$_ResearchStudyArm({this.name, this.code, this.description});
+  const _$_ResearchStudyArm(
+      {this.name,
+      this.code,
+      this.description,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_description') this.descriptionElement});
 
   factory _$_ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchStudyArmFromJson(json);
@@ -751,10 +948,16 @@ class _$_ResearchStudyArm implements _ResearchStudyArm {
   final CodeableConcept code;
   @override
   final String description;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
+  @override
+  @JsonKey(name: '_description')
+  final Element descriptionElement;
 
   @override
   String toString() {
-    return 'ResearchStudyArm(name: $name, code: $code, description: $description)';
+    return 'ResearchStudyArm(name: $name, code: $code, description: $description, nameElement: $nameElement, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -767,7 +970,13 @@ class _$_ResearchStudyArm implements _ResearchStudyArm {
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
-                    .equals(other.description, description)));
+                    .equals(other.description, description)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.descriptionElement, descriptionElement)));
   }
 
   @override
@@ -775,7 +984,9 @@ class _$_ResearchStudyArm implements _ResearchStudyArm {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(description);
+      const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(nameElement) ^
+      const DeepCollectionEquality().hash(descriptionElement);
 
   @override
   _$ResearchStudyArmCopyWith<_ResearchStudyArm> get copyWith =>
@@ -789,9 +1000,12 @@ class _$_ResearchStudyArm implements _ResearchStudyArm {
 
 abstract class _ResearchStudyArm implements ResearchStudyArm {
   const factory _ResearchStudyArm(
-      {String name,
-      CodeableConcept code,
-      String description}) = _$_ResearchStudyArm;
+          {String name,
+          CodeableConcept code,
+          String description,
+          @JsonKey(name: '_name') Element nameElement,
+          @JsonKey(name: '_description') Element descriptionElement}) =
+      _$_ResearchStudyArm;
 
   factory _ResearchStudyArm.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyArm.fromJson;
@@ -802,6 +1016,12 @@ abstract class _ResearchStudyArm implements ResearchStudyArm {
   CodeableConcept get code;
   @override
   String get description;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
+  @override
+  @JsonKey(name: '_description')
+  Element get descriptionElement;
   @override
   _$ResearchStudyArmCopyWith<_ResearchStudyArm> get copyWith;
 }
@@ -827,7 +1047,13 @@ class _$ResearchSubjectTearOff {
           Reference individual,
       String assignedArm,
       String actualArm,
-      Reference consent}) {
+      Reference consent,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_assignedArm')
+          Element assignedArmElement,
+      @JsonKey(name: '_actualArm')
+          Element actualArmElement}) {
     return _ResearchSubject(
       resourceType: resourceType,
       identifier: identifier,
@@ -838,6 +1064,9 @@ class _$ResearchSubjectTearOff {
       assignedArm: assignedArm,
       actualArm: actualArm,
       consent: consent,
+      statusElement: statusElement,
+      assignedArmElement: assignedArmElement,
+      actualArmElement: actualArmElement,
     );
   }
 }
@@ -859,6 +1088,12 @@ mixin _$ResearchSubject {
   String get assignedArm;
   String get actualArm;
   Reference get consent;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_assignedArm')
+  Element get assignedArmElement;
+  @JsonKey(name: '_actualArm')
+  Element get actualArmElement;
 
   Map<String, dynamic> toJson();
   $ResearchSubjectCopyWith<ResearchSubject> get copyWith;
@@ -881,13 +1116,22 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           Reference individual,
       String assignedArm,
       String actualArm,
-      Reference consent});
+      Reference consent,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_assignedArm')
+          Element assignedArmElement,
+      @JsonKey(name: '_actualArm')
+          Element actualArmElement});
 
   $IdentifierCopyWith<$Res> get identifier;
   $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res> get study;
   $ReferenceCopyWith<$Res> get individual;
   $ReferenceCopyWith<$Res> get consent;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get assignedArmElement;
+  $ElementCopyWith<$Res> get actualArmElement;
 }
 
 class _$ResearchSubjectCopyWithImpl<$Res>
@@ -909,6 +1153,9 @@ class _$ResearchSubjectCopyWithImpl<$Res>
     Object assignedArm = freezed,
     Object actualArm = freezed,
     Object consent = freezed,
+    Object statusElement = freezed,
+    Object assignedArmElement = freezed,
+    Object actualArmElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -926,6 +1173,15 @@ class _$ResearchSubjectCopyWithImpl<$Res>
           assignedArm == freezed ? _value.assignedArm : assignedArm as String,
       actualArm: actualArm == freezed ? _value.actualArm : actualArm as String,
       consent: consent == freezed ? _value.consent : consent as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      assignedArmElement: assignedArmElement == freezed
+          ? _value.assignedArmElement
+          : assignedArmElement as Element,
+      actualArmElement: actualArmElement == freezed
+          ? _value.actualArmElement
+          : actualArmElement as Element,
     ));
   }
 
@@ -978,6 +1234,36 @@ class _$ResearchSubjectCopyWithImpl<$Res>
       return _then(_value.copyWith(consent: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get assignedArmElement {
+    if (_value.assignedArmElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.assignedArmElement, (value) {
+      return _then(_value.copyWith(assignedArmElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get actualArmElement {
+    if (_value.actualArmElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.actualArmElement, (value) {
+      return _then(_value.copyWith(actualArmElement: value));
+    });
+  }
 }
 
 abstract class _$ResearchSubjectCopyWith<$Res>
@@ -999,7 +1285,13 @@ abstract class _$ResearchSubjectCopyWith<$Res>
           Reference individual,
       String assignedArm,
       String actualArm,
-      Reference consent});
+      Reference consent,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_assignedArm')
+          Element assignedArmElement,
+      @JsonKey(name: '_actualArm')
+          Element actualArmElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -1011,6 +1303,12 @@ abstract class _$ResearchSubjectCopyWith<$Res>
   $ReferenceCopyWith<$Res> get individual;
   @override
   $ReferenceCopyWith<$Res> get consent;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get assignedArmElement;
+  @override
+  $ElementCopyWith<$Res> get actualArmElement;
 }
 
 class __$ResearchSubjectCopyWithImpl<$Res>
@@ -1034,6 +1332,9 @@ class __$ResearchSubjectCopyWithImpl<$Res>
     Object assignedArm = freezed,
     Object actualArm = freezed,
     Object consent = freezed,
+    Object statusElement = freezed,
+    Object assignedArmElement = freezed,
+    Object actualArmElement = freezed,
   }) {
     return _then(_ResearchSubject(
       resourceType: resourceType == freezed
@@ -1051,6 +1352,15 @@ class __$ResearchSubjectCopyWithImpl<$Res>
           assignedArm == freezed ? _value.assignedArm : assignedArm as String,
       actualArm: actualArm == freezed ? _value.actualArm : actualArm as String,
       consent: consent == freezed ? _value.consent : consent as Reference,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      assignedArmElement: assignedArmElement == freezed
+          ? _value.assignedArmElement
+          : assignedArmElement as Element,
+      actualArmElement: actualArmElement == freezed
+          ? _value.actualArmElement
+          : actualArmElement as Element,
     ));
   }
 }
@@ -1071,7 +1381,13 @@ class _$_ResearchSubject implements _ResearchSubject {
           this.individual,
       this.assignedArm,
       this.actualArm,
-      this.consent})
+      this.consent,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_assignedArm')
+          this.assignedArmElement,
+      @JsonKey(name: '_actualArm')
+          this.actualArmElement})
       : assert(resourceType != null);
 
   factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
@@ -1099,10 +1415,19 @@ class _$_ResearchSubject implements _ResearchSubject {
   final String actualArm;
   @override
   final Reference consent;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_assignedArm')
+  final Element assignedArmElement;
+  @override
+  @JsonKey(name: '_actualArm')
+  final Element actualArmElement;
 
   @override
   String toString() {
-    return 'ResearchSubject(resourceType: $resourceType, identifier: $identifier, status: $status, period: $period, study: $study, individual: $individual, assignedArm: $assignedArm, actualArm: $actualArm, consent: $consent)';
+    return 'ResearchSubject(resourceType: $resourceType, identifier: $identifier, status: $status, period: $period, study: $study, individual: $individual, assignedArm: $assignedArm, actualArm: $actualArm, consent: $consent, statusElement: $statusElement, assignedArmElement: $assignedArmElement, actualArmElement: $actualArmElement)';
   }
 
   @override
@@ -1131,7 +1456,17 @@ class _$_ResearchSubject implements _ResearchSubject {
                 const DeepCollectionEquality()
                     .equals(other.actualArm, actualArm)) &&
             (identical(other.consent, consent) ||
-                const DeepCollectionEquality().equals(other.consent, consent)));
+                const DeepCollectionEquality()
+                    .equals(other.consent, consent)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.assignedArmElement, assignedArmElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.assignedArmElement, assignedArmElement)) &&
+            (identical(other.actualArmElement, actualArmElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.actualArmElement, actualArmElement)));
   }
 
   @override
@@ -1145,7 +1480,10 @@ class _$_ResearchSubject implements _ResearchSubject {
       const DeepCollectionEquality().hash(individual) ^
       const DeepCollectionEquality().hash(assignedArm) ^
       const DeepCollectionEquality().hash(actualArm) ^
-      const DeepCollectionEquality().hash(consent);
+      const DeepCollectionEquality().hash(consent) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(assignedArmElement) ^
+      const DeepCollectionEquality().hash(actualArmElement);
 
   @override
   _$ResearchSubjectCopyWith<_ResearchSubject> get copyWith =>
@@ -1172,7 +1510,13 @@ abstract class _ResearchSubject implements ResearchSubject {
           Reference individual,
       String assignedArm,
       String actualArm,
-      Reference consent}) = _$_ResearchSubject;
+      Reference consent,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_assignedArm')
+          Element assignedArmElement,
+      @JsonKey(name: '_actualArm')
+          Element actualArmElement}) = _$_ResearchSubject;
 
   factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
       _$_ResearchSubject.fromJson;
@@ -1199,6 +1543,15 @@ abstract class _ResearchSubject implements ResearchSubject {
   String get actualArm;
   @override
   Reference get consent;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_assignedArm')
+  Element get assignedArmElement;
+  @override
+  @JsonKey(name: '_actualArm')
+  Element get actualArmElement;
   @override
   _$ResearchSubjectCopyWith<_ResearchSubject> get copyWith;
 }

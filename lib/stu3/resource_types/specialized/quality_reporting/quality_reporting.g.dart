@@ -93,7 +93,7 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
     improvementNotation: json['improvementNotation'] as String,
     definition: (json['definition'] as List)?.map((e) => e as String)?.toList(),
     guidance: json['guidance'] as String,
-    set: json['set'] as String,
+    set_: json['set'] as String,
     group: (json['group'] as List)
         ?.map((e) =>
             e == null ? null : MeasureGroup.fromJson(e as Map<String, dynamic>))
@@ -103,6 +103,78 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
             ? null
             : MeasureSupplementalData.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    urlElement: json['_url'] == null
+        ? null
+        : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    versionElement: json['_version'] == null
+        ? null
+        : Element.fromJson(json['_version'] as Map<String, dynamic>),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    titleElement: json['_title'] == null
+        ? null
+        : Element.fromJson(json['_title'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    experimentalElement: json['_experimental'] == null
+        ? null
+        : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
+    dateElement: json['_date'] == null
+        ? null
+        : Element.fromJson(json['_date'] as Map<String, dynamic>),
+    publisherElement: json['_publisher'] == null
+        ? null
+        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    purposeElement: json['_purpose'] == null
+        ? null
+        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+    usageElement: json['_usage'] == null
+        ? null
+        : Element.fromJson(json['_usage'] as Map<String, dynamic>),
+    approvalDateElement: json['_approvalDate'] == null
+        ? null
+        : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
+    lastReviewDateElement: json['_lastReviewDate'] == null
+        ? null
+        : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
+    copyrightElement: json['_copyright'] == null
+        ? null
+        : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+    disclaimerElement: json['_disclaimer'] == null
+        ? null
+        : Element.fromJson(json['_disclaimer'] as Map<String, dynamic>),
+    riskAdjustmentElement: json['_riskAdjustment'] == null
+        ? null
+        : Element.fromJson(json['_riskAdjustment'] as Map<String, dynamic>),
+    rateAggregationElement: json['_rateAggregation'] == null
+        ? null
+        : Element.fromJson(json['_rateAggregation'] as Map<String, dynamic>),
+    rationaleElement: json['_rationale'] == null
+        ? null
+        : Element.fromJson(json['_rationale'] as Map<String, dynamic>),
+    clinicalRecommendationStatementElement:
+        json['_clinicalRecommendationStatement'] == null
+            ? null
+            : Element.fromJson(json['_clinicalRecommendationStatement']
+                as Map<String, dynamic>),
+    improvementNotationElement: json['_improvementNotation'] == null
+        ? null
+        : Element.fromJson(
+            json['_improvementNotation'] as Map<String, dynamic>),
+    definitionElement: json['_definition'] == null
+        ? null
+        : Element.fromJson(json['_definition'] as Map<String, dynamic>),
+    guidanceElement: json['_guidance'] == null
+        ? null
+        : Element.fromJson(json['_guidance'] as Map<String, dynamic>),
+    setElement: json['_set'] == null
+        ? null
+        : Element.fromJson(json['_set'] as Map<String, dynamic>),
   );
 }
 
@@ -156,10 +228,35 @@ Map<String, dynamic> _$_$_MeasureToJson(_$_Measure instance) {
   writeNotNull('improvementNotation', instance.improvementNotation);
   writeNotNull('definition', instance.definition);
   writeNotNull('guidance', instance.guidance);
-  writeNotNull('set', instance.set);
+  writeNotNull('set', instance.set_);
   writeNotNull('group', instance.group?.map((e) => e?.toJson())?.toList());
   writeNotNull('supplementalData',
       instance.supplementalData?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_url', instance.urlElement?.toJson());
+  writeNotNull('_version', instance.versionElement?.toJson());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_title', instance.titleElement?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_experimental', instance.experimentalElement?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
+  writeNotNull('_publisher', instance.publisherElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_purpose', instance.purposeElement?.toJson());
+  writeNotNull('_usage', instance.usageElement?.toJson());
+  writeNotNull('_approvalDate', instance.approvalDateElement?.toJson());
+  writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
+  writeNotNull('_copyright', instance.copyrightElement?.toJson());
+  writeNotNull('_disclaimer', instance.disclaimerElement?.toJson());
+  writeNotNull('_riskAdjustment', instance.riskAdjustmentElement?.toJson());
+  writeNotNull('_rateAggregation', instance.rateAggregationElement?.toJson());
+  writeNotNull('_rationale', instance.rationaleElement?.toJson());
+  writeNotNull('_clinicalRecommendationStatement',
+      instance.clinicalRecommendationStatementElement?.toJson());
+  writeNotNull(
+      '_improvementNotation', instance.improvementNotationElement?.toJson());
+  writeNotNull('_definition', instance.definitionElement?.toJson());
+  writeNotNull('_guidance', instance.guidanceElement?.toJson());
+  writeNotNull('_set', instance.setElement?.toJson());
   return val;
 }
 
@@ -220,6 +317,12 @@ _$_MeasureGroup _$_$_MeasureGroupFromJson(Map<String, dynamic> json) {
             ? null
             : MeasureStratifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
   );
 }
 
@@ -239,6 +342,8 @@ Map<String, dynamic> _$_$_MeasureGroupToJson(_$_MeasureGroup instance) {
       'population', instance.population?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'stratifier', instance.stratifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
   return val;
 }
 
@@ -253,6 +358,15 @@ _$_MeasurePopulation _$_$_MeasurePopulationFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     description: json['description'] as String,
     criteria: json['criteria'] as String,
+    nameElement: json['_name'] == null
+        ? null
+        : Element.fromJson(json['_name'] as Map<String, dynamic>),
+    descriptionElement: json['_description'] == null
+        ? null
+        : Element.fromJson(json['_description'] as Map<String, dynamic>),
+    criteriaElement: json['_criteria'] == null
+        ? null
+        : Element.fromJson(json['_criteria'] as Map<String, dynamic>),
   );
 }
 
@@ -271,6 +385,9 @@ Map<String, dynamic> _$_$_MeasurePopulationToJson(
   writeNotNull('name', instance.name);
   writeNotNull('description', instance.description);
   writeNotNull('criteria', instance.criteria);
+  writeNotNull('_name', instance.nameElement?.toJson());
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('_criteria', instance.criteriaElement?.toJson());
   return val;
 }
 
@@ -281,6 +398,12 @@ _$_MeasureStratifier _$_$_MeasureStratifierFromJson(Map<String, dynamic> json) {
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     criteria: json['criteria'] as String,
     path: json['path'] as String,
+    criteriaElement: json['_criteria'] == null
+        ? null
+        : Element.fromJson(json['_criteria'] as Map<String, dynamic>),
+    pathElement: json['_path'] == null
+        ? null
+        : Element.fromJson(json['_path'] as Map<String, dynamic>),
   );
 }
 
@@ -297,6 +420,8 @@ Map<String, dynamic> _$_$_MeasureStratifierToJson(
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('criteria', instance.criteria);
   writeNotNull('path', instance.path);
+  writeNotNull('_criteria', instance.criteriaElement?.toJson());
+  writeNotNull('_path', instance.pathElement?.toJson());
   return val;
 }
 
@@ -313,6 +438,12 @@ _$_MeasureSupplementalData _$_$_MeasureSupplementalDataFromJson(
         ?.toList(),
     criteria: json['criteria'] as String,
     path: json['path'] as String,
+    criteriaElement: json['_criteria'] == null
+        ? null
+        : Element.fromJson(json['_criteria'] as Map<String, dynamic>),
+    pathElement: json['_path'] == null
+        ? null
+        : Element.fromJson(json['_path'] as Map<String, dynamic>),
   );
 }
 
@@ -330,6 +461,8 @@ Map<String, dynamic> _$_$_MeasureSupplementalDataToJson(
   writeNotNull('usage', instance.usage?.map((e) => e?.toJson())?.toList());
   writeNotNull('criteria', instance.criteria);
   writeNotNull('path', instance.path);
+  writeNotNull('_criteria', instance.criteriaElement?.toJson());
+  writeNotNull('_path', instance.pathElement?.toJson());
   return val;
 }
 
@@ -369,6 +502,15 @@ _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(
             json['evaluatedResources'] as Map<String, dynamic>),
+    statusElement: json['_status'] == null
+        ? null
+        : Element.fromJson(json['_status'] as Map<String, dynamic>),
+    typeElement: json['_type'] == null
+        ? null
+        : Element.fromJson(json['_type'] as Map<String, dynamic>),
+    dateElement: json['_date'] == null
+        ? null
+        : Element.fromJson(json['_date'] as Map<String, dynamic>),
   );
 }
 
@@ -393,6 +535,9 @@ Map<String, dynamic> _$_$_MeasureReportToJson(_$_MeasureReport instance) {
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('group', instance.group?.map((e) => e?.toJson())?.toList());
   writeNotNull('evaluatedResources', instance.evaluatedResources?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
   return val;
 }
 
@@ -430,6 +575,9 @@ _$_MeasureReportGroup _$_$_MeasureReportGroupFromJson(
             ? null
             : MeasureReportStratifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    measureScoreElement: json['_measureScore'] == null
+        ? null
+        : Element.fromJson(json['_measureScore'] as Map<String, dynamic>),
   );
 }
 
@@ -449,6 +597,7 @@ Map<String, dynamic> _$_$_MeasureReportGroupToJson(
   writeNotNull('measureScore', instance.measureScore?.toJson());
   writeNotNull(
       'stratifier', instance.stratifier?.map((e) => e?.toJson())?.toList());
+  writeNotNull('_measureScore', instance.measureScoreElement?.toJson());
   return val;
 }
 
@@ -465,6 +614,9 @@ _$_MeasureReportPopulation _$_$_MeasureReportPopulationFromJson(
     patients: json['patients'] == null
         ? null
         : Reference.fromJson(json['patients'] as Map<String, dynamic>),
+    countElement: json['_count'] == null
+        ? null
+        : Element.fromJson(json['_count'] as Map<String, dynamic>),
   );
 }
 
@@ -482,6 +634,7 @@ Map<String, dynamic> _$_$_MeasureReportPopulationToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('count', instance.count?.toJson());
   writeNotNull('patients', instance.patients?.toJson());
+  writeNotNull('_count', instance.countElement?.toJson());
   return val;
 }
 
@@ -526,6 +679,12 @@ _$_MeasureReportStratum _$_$_MeasureReportStratumFromJson(
     measureScore: json['measureScore'] == null
         ? null
         : Decimal.fromJson(json['measureScore']),
+    valueElement: json['_value'] == null
+        ? null
+        : Element.fromJson(json['_value'] as Map<String, dynamic>),
+    measureScoreElement: json['_measureScore'] == null
+        ? null
+        : Element.fromJson(json['_measureScore'] as Map<String, dynamic>),
   );
 }
 
@@ -543,6 +702,8 @@ Map<String, dynamic> _$_$_MeasureReportStratumToJson(
   writeNotNull(
       'population', instance.population?.map((e) => e?.toJson())?.toList());
   writeNotNull('measureScore', instance.measureScore?.toJson());
+  writeNotNull('_value', instance.valueElement?.toJson());
+  writeNotNull('_measureScore', instance.measureScoreElement?.toJson());
   return val;
 }
 
@@ -559,6 +720,9 @@ _$_MeasureReportPopulation1 _$_$_MeasureReportPopulation1FromJson(
     patients: json['patients'] == null
         ? null
         : Reference.fromJson(json['patients'] as Map<String, dynamic>),
+    countElement: json['_count'] == null
+        ? null
+        : Element.fromJson(json['_count'] as Map<String, dynamic>),
   );
 }
 
@@ -576,5 +740,6 @@ Map<String, dynamic> _$_$_MeasureReportPopulation1ToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('count', instance.count?.toJson());
   writeNotNull('patients', instance.patients?.toJson());
+  writeNotNull('_count', instance.countElement?.toJson());
   return val;
 }

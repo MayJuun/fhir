@@ -35,7 +35,13 @@ class _$GuidanceResponseTearOff {
       List<Reference> evaluationMessage,
       Reference outputParameters,
       Reference result,
-      List<DataRequirement> dataRequirement}) {
+      List<DataRequirement> dataRequirement,
+      @JsonKey(name: '_requestId')
+          Element requestIdElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement}) {
     return _GuidanceResponse(
       resourceType: resourceType,
       requestId: requestId,
@@ -53,6 +59,9 @@ class _$GuidanceResponseTearOff {
       outputParameters: outputParameters,
       result: result,
       dataRequirement: dataRequirement,
+      requestIdElement: requestIdElement,
+      statusElement: statusElement,
+      occurrenceDateTimeElement: occurrenceDateTimeElement,
     );
   }
 }
@@ -80,6 +89,12 @@ mixin _$GuidanceResponse {
   Reference get outputParameters;
   Reference get result;
   List<DataRequirement> get dataRequirement;
+  @JsonKey(name: '_requestId')
+  Element get requestIdElement;
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @JsonKey(name: '_occurrenceDateTime')
+  Element get occurrenceDateTimeElement;
 
   Map<String, dynamic> toJson();
   $GuidanceResponseCopyWith<GuidanceResponse> get copyWith;
@@ -108,7 +123,13 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       List<Reference> evaluationMessage,
       Reference outputParameters,
       Reference result,
-      List<DataRequirement> dataRequirement});
+      List<DataRequirement> dataRequirement,
+      @JsonKey(name: '_requestId')
+          Element requestIdElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement});
 
   $IdentifierCopyWith<$Res> get identifier;
   $ReferenceCopyWith<$Res> get module;
@@ -119,6 +140,9 @@ abstract class $GuidanceResponseCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get reasonReference;
   $ReferenceCopyWith<$Res> get outputParameters;
   $ReferenceCopyWith<$Res> get result;
+  $ElementCopyWith<$Res> get requestIdElement;
+  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res> get occurrenceDateTimeElement;
 }
 
 class _$GuidanceResponseCopyWithImpl<$Res>
@@ -147,6 +171,9 @@ class _$GuidanceResponseCopyWithImpl<$Res>
     Object outputParameters = freezed,
     Object result = freezed,
     Object dataRequirement = freezed,
+    Object requestIdElement = freezed,
+    Object statusElement = freezed,
+    Object occurrenceDateTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -182,6 +209,15 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
           : dataRequirement as List<DataRequirement>,
+      requestIdElement: requestIdElement == freezed
+          ? _value.requestIdElement
+          : requestIdElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+          ? _value.occurrenceDateTimeElement
+          : occurrenceDateTimeElement as Element,
     ));
   }
 
@@ -275,6 +311,36 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       return _then(_value.copyWith(result: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get requestIdElement {
+    if (_value.requestIdElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.requestIdElement, (value) {
+      return _then(_value.copyWith(requestIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get occurrenceDateTimeElement {
+    if (_value.occurrenceDateTimeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.occurrenceDateTimeElement, (value) {
+      return _then(_value.copyWith(occurrenceDateTimeElement: value));
+    });
+  }
 }
 
 abstract class _$GuidanceResponseCopyWith<$Res>
@@ -302,7 +368,13 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       List<Reference> evaluationMessage,
       Reference outputParameters,
       Reference result,
-      List<DataRequirement> dataRequirement});
+      List<DataRequirement> dataRequirement,
+      @JsonKey(name: '_requestId')
+          Element requestIdElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -322,6 +394,12 @@ abstract class _$GuidanceResponseCopyWith<$Res>
   $ReferenceCopyWith<$Res> get outputParameters;
   @override
   $ReferenceCopyWith<$Res> get result;
+  @override
+  $ElementCopyWith<$Res> get requestIdElement;
+  @override
+  $ElementCopyWith<$Res> get statusElement;
+  @override
+  $ElementCopyWith<$Res> get occurrenceDateTimeElement;
 }
 
 class __$GuidanceResponseCopyWithImpl<$Res>
@@ -352,6 +430,9 @@ class __$GuidanceResponseCopyWithImpl<$Res>
     Object outputParameters = freezed,
     Object result = freezed,
     Object dataRequirement = freezed,
+    Object requestIdElement = freezed,
+    Object statusElement = freezed,
+    Object occurrenceDateTimeElement = freezed,
   }) {
     return _then(_GuidanceResponse(
       resourceType: resourceType == freezed
@@ -387,6 +468,15 @@ class __$GuidanceResponseCopyWithImpl<$Res>
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
           : dataRequirement as List<DataRequirement>,
+      requestIdElement: requestIdElement == freezed
+          ? _value.requestIdElement
+          : requestIdElement as Element,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement as Element,
+      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+          ? _value.occurrenceDateTimeElement
+          : occurrenceDateTimeElement as Element,
     ));
   }
 }
@@ -413,7 +503,13 @@ class _$_GuidanceResponse implements _GuidanceResponse {
       this.evaluationMessage,
       this.outputParameters,
       this.result,
-      this.dataRequirement})
+      this.dataRequirement,
+      @JsonKey(name: '_requestId')
+          this.requestIdElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          this.occurrenceDateTimeElement})
       : assert(resourceType != null);
 
   factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
@@ -454,10 +550,19 @@ class _$_GuidanceResponse implements _GuidanceResponse {
   final Reference result;
   @override
   final List<DataRequirement> dataRequirement;
+  @override
+  @JsonKey(name: '_requestId')
+  final Element requestIdElement;
+  @override
+  @JsonKey(name: '_status')
+  final Element statusElement;
+  @override
+  @JsonKey(name: '_occurrenceDateTime')
+  final Element occurrenceDateTimeElement;
 
   @override
   String toString() {
-    return 'GuidanceResponse(resourceType: $resourceType, requestId: $requestId, identifier: $identifier, module: $module, status: $status, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, performer: $performer, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, evaluationMessage: $evaluationMessage, outputParameters: $outputParameters, result: $result, dataRequirement: $dataRequirement)';
+    return 'GuidanceResponse(resourceType: $resourceType, requestId: $requestId, identifier: $identifier, module: $module, status: $status, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, performer: $performer, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, evaluationMessage: $evaluationMessage, outputParameters: $outputParameters, result: $result, dataRequirement: $dataRequirement, requestIdElement: $requestIdElement, statusElement: $statusElement, occurrenceDateTimeElement: $occurrenceDateTimeElement)';
   }
 
   @override
@@ -507,7 +612,18 @@ class _$_GuidanceResponse implements _GuidanceResponse {
                 const DeepCollectionEquality().equals(other.result, result)) &&
             (identical(other.dataRequirement, dataRequirement) ||
                 const DeepCollectionEquality()
-                    .equals(other.dataRequirement, dataRequirement)));
+                    .equals(other.dataRequirement, dataRequirement)) &&
+            (identical(other.requestIdElement, requestIdElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.requestIdElement, requestIdElement)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.occurrenceDateTimeElement,
+                    occurrenceDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.occurrenceDateTimeElement,
+                    occurrenceDateTimeElement)));
   }
 
   @override
@@ -528,7 +644,10 @@ class _$_GuidanceResponse implements _GuidanceResponse {
       const DeepCollectionEquality().hash(evaluationMessage) ^
       const DeepCollectionEquality().hash(outputParameters) ^
       const DeepCollectionEquality().hash(result) ^
-      const DeepCollectionEquality().hash(dataRequirement);
+      const DeepCollectionEquality().hash(dataRequirement) ^
+      const DeepCollectionEquality().hash(requestIdElement) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(occurrenceDateTimeElement);
 
   @override
   _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith =>
@@ -561,7 +680,13 @@ abstract class _GuidanceResponse implements GuidanceResponse {
       List<Reference> evaluationMessage,
       Reference outputParameters,
       Reference result,
-      List<DataRequirement> dataRequirement}) = _$_GuidanceResponse;
+      List<DataRequirement> dataRequirement,
+      @JsonKey(name: '_requestId')
+          Element requestIdElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement}) = _$_GuidanceResponse;
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
       _$_GuidanceResponse.fromJson;
@@ -602,6 +727,15 @@ abstract class _GuidanceResponse implements GuidanceResponse {
   @override
   List<DataRequirement> get dataRequirement;
   @override
+  @JsonKey(name: '_requestId')
+  Element get requestIdElement;
+  @override
+  @JsonKey(name: '_status')
+  Element get statusElement;
+  @override
+  @JsonKey(name: '_occurrenceDateTime')
+  Element get occurrenceDateTimeElement;
+  @override
   _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith;
 }
 
@@ -623,13 +757,19 @@ class _$ContributorTearOff {
       @required
       @JsonKey(required: true)
           String name,
-      List<ContactDetail> contact}) {
+      List<ContactDetail> contact,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_name')
+          Element nameElement}) {
     return _Contributor(
       resourceType: resourceType,
       extension_: extension_,
       type: type,
       name: name,
       contact: contact,
+      typeElement: typeElement,
+      nameElement: nameElement,
     );
   }
 }
@@ -647,6 +787,10 @@ mixin _$Contributor {
   @JsonKey(required: true)
   String get name;
   List<ContactDetail> get contact;
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @JsonKey(name: '_name')
+  Element get nameElement;
 
   Map<String, dynamic> toJson();
   $ContributorCopyWith<Contributor> get copyWith;
@@ -665,7 +809,14 @@ abstract class $ContributorCopyWith<$Res> {
           ContributorType type,
       @JsonKey(required: true)
           String name,
-      List<ContactDetail> contact});
+      List<ContactDetail> contact,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_name')
+          Element nameElement});
+
+  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res> get nameElement;
 }
 
 class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
@@ -682,6 +833,8 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
     Object type = freezed,
     Object name = freezed,
     Object contact = freezed,
+    Object typeElement = freezed,
+    Object nameElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -694,7 +847,31 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
       name: name == freezed ? _value.name : name as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get typeElement {
+    if (_value.typeElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+      return _then(_value.copyWith(typeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
   }
 }
 
@@ -713,7 +890,16 @@ abstract class _$ContributorCopyWith<$Res>
           ContributorType type,
       @JsonKey(required: true)
           String name,
-      List<ContactDetail> contact});
+      List<ContactDetail> contact,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_name')
+          Element nameElement});
+
+  @override
+  $ElementCopyWith<$Res> get typeElement;
+  @override
+  $ElementCopyWith<$Res> get nameElement;
 }
 
 class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
@@ -732,6 +918,8 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
     Object type = freezed,
     Object name = freezed,
     Object contact = freezed,
+    Object typeElement = freezed,
+    Object nameElement = freezed,
   }) {
     return _then(_Contributor(
       resourceType: resourceType == freezed
@@ -744,6 +932,10 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       contact:
           contact == freezed ? _value.contact : contact as List<ContactDetail>,
+      typeElement:
+          typeElement == freezed ? _value.typeElement : typeElement as Element,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element,
     ));
   }
 }
@@ -761,7 +953,11 @@ class _$_Contributor implements _Contributor {
       @required
       @JsonKey(required: true)
           this.name,
-      this.contact})
+      this.contact,
+      @JsonKey(name: '_type')
+          this.typeElement,
+      @JsonKey(name: '_name')
+          this.nameElement})
       : assert(type != null),
         assert(name != null);
 
@@ -782,10 +978,16 @@ class _$_Contributor implements _Contributor {
   final String name;
   @override
   final List<ContactDetail> contact;
+  @override
+  @JsonKey(name: '_type')
+  final Element typeElement;
+  @override
+  @JsonKey(name: '_name')
+  final Element nameElement;
 
   @override
   String toString() {
-    return 'Contributor(resourceType: $resourceType, extension_: $extension_, type: $type, name: $name, contact: $contact)';
+    return 'Contributor(resourceType: $resourceType, extension_: $extension_, type: $type, name: $name, contact: $contact, typeElement: $typeElement, nameElement: $nameElement)';
   }
 
   @override
@@ -803,7 +1005,14 @@ class _$_Contributor implements _Contributor {
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.contact, contact) ||
-                const DeepCollectionEquality().equals(other.contact, contact)));
+                const DeepCollectionEquality()
+                    .equals(other.contact, contact)) &&
+            (identical(other.typeElement, typeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.typeElement, typeElement)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)));
   }
 
   @override
@@ -813,7 +1022,9 @@ class _$_Contributor implements _Contributor {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(contact);
+      const DeepCollectionEquality().hash(contact) ^
+      const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(nameElement);
 
   @override
   _$ContributorCopyWith<_Contributor> get copyWith =>
@@ -837,7 +1048,11 @@ abstract class _Contributor implements Contributor {
       @required
       @JsonKey(required: true)
           String name,
-      List<ContactDetail> contact}) = _$_Contributor;
+      List<ContactDetail> contact,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @JsonKey(name: '_name')
+          Element nameElement}) = _$_Contributor;
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
       _$_Contributor.fromJson;
@@ -856,6 +1071,12 @@ abstract class _Contributor implements Contributor {
   String get name;
   @override
   List<ContactDetail> get contact;
+  @override
+  @JsonKey(name: '_type')
+  Element get typeElement;
+  @override
+  @JsonKey(name: '_name')
+  Element get nameElement;
   @override
   _$ContributorCopyWith<_Contributor> get copyWith;
 }
