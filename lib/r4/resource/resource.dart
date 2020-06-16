@@ -6,7 +6,7 @@ part 'resource.g.dart';
 
 @JsonSerializable()
 class Resource {
-  dynamic toJson() => this.toJson();
+  Map<String, dynamic> toJson() => this.toJson();
 
   static Resource fromJson(Map<String, dynamic> json) {
     switch (json['resourceType']) {
