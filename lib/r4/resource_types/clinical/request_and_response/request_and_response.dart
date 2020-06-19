@@ -1,405 +1,376 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../../../../fhir_r4.dart';
-import 'request_and_response.enums.dart';
-
-part 'request_and_response.freezed.dart';
-part 'request_and_response.g.dart';
-
 @freezed
-abstract class Communication with _$Communication implements Resource {
-  const factory Communication({
-    @JsonKey(required: true, defaultValue: 'Communication')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Canonical> instantiatesCanonical,
-    List<FhirUri> instantiatesUri,
-    List<Reference> basedOn,
-    List<Reference> partOf,
-    List<Reference> inResponseTo,
-    Code status,
-    CodeableConcept statusReason,
-    List<CodeableConcept> category,
-    Code priority,
-    List<CodeableConcept> medium,
-    Reference subject,
-    CodeableConcept topic,
-    List<Reference> about,
-    Reference encounter,
-    FhirDateTime sent,
-    FhirDateTime received,
-    List<Reference> recipient,
-    Reference sender,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<CommunicationPayload> payload,
-    List<Annotation> note,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_sent') Element sentElement,
-    @JsonKey(name: '_received') Element receivedElement,
-  }) = _Communication;
-  factory Communication.fromJson(Map<String, dynamic> json) =>
-      _$CommunicationFromJson(json);
+abstract class Communication implements Communication, Resource {
+factoryCommunication({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+instantiatesCanonical instantiatesCanonical,
+instantiatesUri instantiatesUri,
+_instantiatesUri _instantiatesUri,
+basedOn basedOn,
+partOf partOf,
+inResponseTo inResponseTo,
+status status,
+_status _status,
+statusReason statusReason,
+category category,
+priority priority,
+_priority _priority,
+medium medium,
+subject subject,
+topic topic,
+about about,
+encounter encounter,
+sent sent,
+_sent _sent,
+received received,
+_received _received,
+recipient recipient,
+sender sender,
+reasonCode reasonCode,
+reasonReference reasonReference,
+payload payload,
+note note,
+}) = _Communication
+
+ factory Communication.fromJson(Map<String,dynamic> json) => _$CommunicationFromJson(json);
 }
 
 @freezed
-abstract class CommunicationPayload with _$CommunicationPayload {
-  const factory CommunicationPayload({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String contentString,
-    Attachment contentAttachment,
-    Reference contentReference,
-    @JsonKey(name: '_contentString') Element contentStringElement,
-  }) = _CommunicationPayload;
-  factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
-      _$CommunicationPayloadFromJson(json);
+abstract class CommunicationPayload implements CommunicationPayload, Resource {
+factoryCommunicationPayload({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+contentString contentString,
+_contentString _contentString,
+contentAttachment contentAttachment,
+contentReference contentReference,
+}) = _CommunicationPayload
+
+ factory CommunicationPayload.fromJson(Map<String,dynamic> json) => _$CommunicationPayloadFromJson(json);
 }
 
 @freezed
-abstract class CommunicationRequest
-    with _$CommunicationRequest
-    implements Resource {
-  const factory CommunicationRequest({
-    @JsonKey(required: true, defaultValue: 'CommunicationRequest')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Reference> basedOn,
-    List<Reference> replaces,
-    Identifier groupIdentifier,
-    Code status,
-    CodeableConcept statusReason,
-    List<CodeableConcept> category,
-    Code priority,
-    Boolean doNotPerform,
-    List<CodeableConcept> medium,
-    Reference subject,
-    List<Reference> about,
-    Reference encounter,
-    List<CommunicationRequestPayload> payload,
-    FhirDateTime occurrenceDateTime,
-    Period occurrencePeriod,
-    FhirDateTime authoredOn,
-    Reference requester,
-    List<Reference> recipient,
-    Reference sender,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<Annotation> note,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
-  }) = _CommunicationRequest;
-  factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
-      _$CommunicationRequestFromJson(json);
+abstract class CommunicationRequest implements CommunicationRequest, Resource {
+factoryCommunicationRequest({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+basedOn basedOn,
+replaces replaces,
+groupIdentifier groupIdentifier,
+status status,
+_status _status,
+statusReason statusReason,
+category category,
+priority priority,
+_priority _priority,
+doNotPerform doNotPerform,
+_doNotPerform _doNotPerform,
+medium medium,
+subject subject,
+about about,
+encounter encounter,
+payload payload,
+occurrenceDateTime occurrenceDateTime,
+_occurrenceDateTime _occurrenceDateTime,
+occurrencePeriod occurrencePeriod,
+authoredOn authoredOn,
+_authoredOn _authoredOn,
+requester requester,
+recipient recipient,
+sender sender,
+reasonCode reasonCode,
+reasonReference reasonReference,
+note note,
+}) = _CommunicationRequest
+
+ factory CommunicationRequest.fromJson(Map<String,dynamic> json) => _$CommunicationRequestFromJson(json);
 }
 
 @freezed
-abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
-  const factory CommunicationRequestPayload({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String contentString,
-    Attachment contentAttachment,
-    Reference contentReference,
-    @JsonKey(name: '_contentString') Element contentStringElement,
-  }) = _CommunicationRequestPayload;
-  factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
-      _$CommunicationRequestPayloadFromJson(json);
+abstract class CommunicationRequestPayload implements CommunicationRequestPayload, Resource {
+factoryCommunicationRequestPayload({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+contentString contentString,
+_contentString _contentString,
+contentAttachment contentAttachment,
+contentReference contentReference,
+}) = _CommunicationRequestPayload
+
+ factory CommunicationRequestPayload.fromJson(Map<String,dynamic> json) => _$CommunicationRequestPayloadFromJson(json);
 }
 
 @freezed
-abstract class DeviceRequest with _$DeviceRequest implements Resource {
-  const factory DeviceRequest({
-    @JsonKey(required: true, defaultValue: 'DeviceRequest')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Canonical> instantiatesCanonical,
-    List<FhirUri> instantiatesUri,
-    List<Reference> basedOn,
-    List<Reference> priorRequest,
-    Identifier groupIdentifier,
-    Code status,
-    Code intent,
-    Code priority,
-    Reference codeReference,
-    CodeableConcept codeCodeableConcept,
-    List<DeviceRequestParameter> parameter,
-    @JsonKey(required: true) @required Reference subject,
-    Reference encounter,
-    FhirDateTime occurrenceDateTime,
-    Period occurrencePeriod,
-    Timing occurrenceTiming,
-    FhirDateTime authoredOn,
-    Reference requester,
-    CodeableConcept performerType,
-    Reference performer,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<Reference> insurance,
-    List<Reference> supportingInfo,
-    List<Annotation> note,
-    List<Reference> relevantHistory,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_intent') Element intentElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
-  }) = _DeviceRequest;
-  factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
-      _$DeviceRequestFromJson(json);
+abstract class DeviceRequest implements DeviceRequest, Resource {
+factoryDeviceRequest({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+instantiatesCanonical instantiatesCanonical,
+instantiatesUri instantiatesUri,
+_instantiatesUri _instantiatesUri,
+basedOn basedOn,
+priorRequest priorRequest,
+groupIdentifier groupIdentifier,
+status status,
+_status _status,
+intent intent,
+_intent _intent,
+priority priority,
+_priority _priority,
+codeReference codeReference,
+codeCodeableConcept codeCodeableConcept,
+parameter parameter,
+subject subject,
+encounter encounter,
+occurrenceDateTime occurrenceDateTime,
+_occurrenceDateTime _occurrenceDateTime,
+occurrencePeriod occurrencePeriod,
+occurrenceTiming occurrenceTiming,
+authoredOn authoredOn,
+_authoredOn _authoredOn,
+requester requester,
+performerType performerType,
+performer performer,
+reasonCode reasonCode,
+reasonReference reasonReference,
+insurance insurance,
+supportingInfo supportingInfo,
+note note,
+relevantHistory relevantHistory,
+}) = _DeviceRequest
+
+ factory DeviceRequest.fromJson(Map<String,dynamic> json) => _$DeviceRequestFromJson(json);
 }
 
 @freezed
-abstract class DeviceRequestParameter with _$DeviceRequestParameter {
-  const factory DeviceRequestParameter({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    CodeableConcept valueCodeableConcept,
-    Quantity valueQuantity,
-    Range valueRange,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-  }) = _DeviceRequestParameter;
-  factory DeviceRequestParameter.fromJson(Map<String, dynamic> json) =>
-      _$DeviceRequestParameterFromJson(json);
+abstract class DeviceRequestParameter implements DeviceRequestParameter, Resource {
+factoryDeviceRequestParameter({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+valueCodeableConcept valueCodeableConcept,
+valueQuantity valueQuantity,
+valueRange valueRange,
+valueBoolean valueBoolean,
+_valueBoolean _valueBoolean,
+}) = _DeviceRequestParameter
+
+ factory DeviceRequestParameter.fromJson(Map<String,dynamic> json) => _$DeviceRequestParameterFromJson(json);
 }
 
 @freezed
-abstract class DeviceUseStatement
-    with _$DeviceUseStatement
-    implements Resource {
-  const factory DeviceUseStatement({
-    @JsonKey(required: true, defaultValue: 'DeviceUseStatement')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Reference> basedOn,
-    @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-        DeviceUseStatementStatus status,
-    @JsonKey(required: true) @required Reference subject,
-    List<Reference> derivedFrom,
-    Timing timingTiming,
-    Period timingPeriod,
-    FhirDateTime timingDateTime,
-    FhirDateTime recordedOn,
-    Reference source,
-    @JsonKey(required: true) @required Reference device,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    CodeableConcept bodySite,
-    List<Annotation> note,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-    @JsonKey(name: '_recordedOn') Element recordedOnElement,
-  }) = _DeviceUseStatement;
-  factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
-      _$DeviceUseStatementFromJson(json);
+abstract class DeviceUseStatement implements DeviceUseStatement, Resource {
+factoryDeviceUseStatement({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+basedOn basedOn,
+status status,
+_status _status,
+subject subject,
+derivedFrom derivedFrom,
+timingTiming timingTiming,
+timingPeriod timingPeriod,
+timingDateTime timingDateTime,
+_timingDateTime _timingDateTime,
+recordedOn recordedOn,
+_recordedOn _recordedOn,
+source source,
+device device,
+reasonCode reasonCode,
+reasonReference reasonReference,
+bodySite bodySite,
+note note,
+}) = _DeviceUseStatement
+
+ factory DeviceUseStatement.fromJson(Map<String,dynamic> json) => _$DeviceUseStatementFromJson(json);
 }
 
 @freezed
-abstract class GuidanceResponse with _$GuidanceResponse implements Resource {
-  const factory GuidanceResponse({
-    @JsonKey(required: true, defaultValue: 'GuidanceResponse')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier requestIdentifier,
-    List<Identifier> identifier,
-    FhirUri moduleUri,
-    Canonical moduleCanonical,
-    CodeableConcept moduleCodeableConcept,
-    @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-        GuidanceResponseStatus status,
-    Reference subject,
-    Reference encounter,
-    FhirDateTime occurrenceDateTime,
-    Reference performer,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<Annotation> note,
-    List<Reference> evaluationMessage,
-    Reference outputParameters,
-    Reference result,
-    List<DataRequirement> dataRequirement,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_moduleUri') Element moduleUriElement,
-    @JsonKey(name: '_moduleCanonical') Element moduleCanonicalElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-  }) = _GuidanceResponse;
-  factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
-      _$GuidanceResponseFromJson(json);
+abstract class GuidanceResponse implements GuidanceResponse, Resource {
+factoryGuidanceResponse({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+requestIdentifier requestIdentifier,
+identifier identifier,
+moduleUri moduleUri,
+_moduleUri _moduleUri,
+moduleCanonical moduleCanonical,
+_moduleCanonical _moduleCanonical,
+moduleCodeableConcept moduleCodeableConcept,
+status status,
+_status _status,
+subject subject,
+encounter encounter,
+occurrenceDateTime occurrenceDateTime,
+_occurrenceDateTime _occurrenceDateTime,
+performer performer,
+reasonCode reasonCode,
+reasonReference reasonReference,
+note note,
+evaluationMessage evaluationMessage,
+outputParameters outputParameters,
+result result,
+dataRequirement dataRequirement,
+}) = _GuidanceResponse
+
+ factory GuidanceResponse.fromJson(Map<String,dynamic> json) => _$GuidanceResponseFromJson(json);
 }
 
 @freezed
-abstract class SupplyDelivery with _$SupplyDelivery implements Resource {
-  const factory SupplyDelivery({
-    @JsonKey(required: true, defaultValue: 'SupplyDelivery')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Reference> basedOn,
-    List<Reference> partOf,
-    @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-        SupplyDeliveryStatus status,
-    Reference patient,
-    CodeableConcept type,
-    SupplyDeliverySuppliedItem suppliedItem,
-    FhirDateTime occurrenceDateTime,
-    Period occurrencePeriod,
-    Timing occurrenceTiming,
-    Reference supplier,
-    Reference destination,
-    List<Reference> receiver,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-  }) = _SupplyDelivery;
-  factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
-      _$SupplyDeliveryFromJson(json);
+abstract class SupplyDelivery implements SupplyDelivery, Resource {
+factorySupplyDelivery({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+basedOn basedOn,
+partOf partOf,
+status status,
+_status _status,
+patient patient,
+type type,
+suppliedItem suppliedItem,
+occurrenceDateTime occurrenceDateTime,
+_occurrenceDateTime _occurrenceDateTime,
+occurrencePeriod occurrencePeriod,
+occurrenceTiming occurrenceTiming,
+supplier supplier,
+destination destination,
+receiver receiver,
+}) = _SupplyDelivery
+
+ factory SupplyDelivery.fromJson(Map<String,dynamic> json) => _$SupplyDeliveryFromJson(json);
 }
 
 @freezed
-abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
-  const factory SupplyDeliverySuppliedItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity quantity,
-    CodeableConcept itemCodeableConcept,
-    Reference itemReference,
-  }) = _SupplyDeliverySuppliedItem;
-  factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
-      _$SupplyDeliverySuppliedItemFromJson(json);
+abstract class SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem, Resource {
+factorySupplyDeliverySuppliedItem({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+quantity quantity,
+itemCodeableConcept itemCodeableConcept,
+itemReference itemReference,
+}) = _SupplyDeliverySuppliedItem
+
+ factory SupplyDeliverySuppliedItem.fromJson(Map<String,dynamic> json) => _$SupplyDeliverySuppliedItemFromJson(json);
 }
 
 @freezed
-abstract class SupplyRequest with _$SupplyRequest implements Resource {
-  const factory SupplyRequest({
-    @JsonKey(required: true, defaultValue: 'SupplyRequest')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-        SupplyRequestStatus status,
-    CodeableConcept category,
-    Code priority,
-    CodeableConcept itemCodeableConcept,
-    Reference itemReference,
-    @JsonKey(required: true) @required Quantity quantity,
-    List<SupplyRequestParameter> parameter,
-    FhirDateTime occurrenceDateTime,
-    Period occurrencePeriod,
-    Timing occurrenceTiming,
-    FhirDateTime authoredOn,
-    Reference requester,
-    List<Reference> supplier,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    Reference deliverFrom,
-    Reference deliverTo,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
-  }) = _SupplyRequest;
-  factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
-      _$SupplyRequestFromJson(json);
+abstract class SupplyRequest implements SupplyRequest, Resource {
+factorySupplyRequest({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+status status,
+_status _status,
+category category,
+priority priority,
+_priority _priority,
+itemCodeableConcept itemCodeableConcept,
+itemReference itemReference,
+quantity quantity,
+parameter parameter,
+occurrenceDateTime occurrenceDateTime,
+_occurrenceDateTime _occurrenceDateTime,
+occurrencePeriod occurrencePeriod,
+occurrenceTiming occurrenceTiming,
+authoredOn authoredOn,
+_authoredOn _authoredOn,
+requester requester,
+supplier supplier,
+reasonCode reasonCode,
+reasonReference reasonReference,
+deliverFrom deliverFrom,
+deliverTo deliverTo,
+}) = _SupplyRequest
+
+ factory SupplyRequest.fromJson(Map<String,dynamic> json) => _$SupplyRequestFromJson(json);
 }
 
 @freezed
-abstract class SupplyRequestParameter with _$SupplyRequestParameter {
-  const factory SupplyRequestParameter({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    CodeableConcept valueCodeableConcept,
-    Quantity valueQuantity,
-    Range valueRange,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-  }) = _SupplyRequestParameter;
-  factory SupplyRequestParameter.fromJson(Map<String, dynamic> json) =>
-      _$SupplyRequestParameterFromJson(json);
+abstract class SupplyRequestParameter implements SupplyRequestParameter, Resource {
+factorySupplyRequestParameter({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+valueCodeableConcept valueCodeableConcept,
+valueQuantity valueQuantity,
+valueRange valueRange,
+valueBoolean valueBoolean,
+_valueBoolean _valueBoolean,
+}) = _SupplyRequestParameter
+
+ factory SupplyRequestParameter.fromJson(Map<String,dynamic> json) => _$SupplyRequestParameterFromJson(json);
 }
+

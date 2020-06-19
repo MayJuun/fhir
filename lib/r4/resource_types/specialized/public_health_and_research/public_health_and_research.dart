@@ -1,119 +1,106 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../../../../fhir_r4.dart';
-import 'public_health_and_research.enums.dart';
-
-part 'public_health_and_research.freezed.dart';
-part 'public_health_and_research.g.dart';
-
 @freezed
-abstract class ResearchStudy with _$ResearchStudy implements Resource {
-  const factory ResearchStudy({
-    @JsonKey(required: true, defaultValue: 'ResearchStudy')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    String title,
-    List<Reference> protocol,
-    List<Reference> partOf,
-    @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-        ResearchStudyStatus status,
-    CodeableConcept primaryPurposeType,
-    CodeableConcept phase,
-    List<CodeableConcept> category,
-    List<CodeableConcept> focus,
-    List<CodeableConcept> condition,
-    List<ContactDetail> contact,
-    List<RelatedArtifact> relatedArtifact,
-    List<CodeableConcept> keyword,
-    List<CodeableConcept> location,
-    Markdown description,
-    List<Reference> enrollment,
-    Period period,
-    Reference sponsor,
-    Reference principalInvestigator,
-    List<Reference> site,
-    CodeableConcept reasonStopped,
-    List<Annotation> note,
-    List<ResearchStudyArm> arm,
-    List<ResearchStudyObjective> objective,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _ResearchStudy;
-  factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
-      _$ResearchStudyFromJson(json);
+abstract class ResearchStudy implements ResearchStudy, Resource {
+factoryResearchStudy({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+title title,
+_title _title,
+protocol protocol,
+partOf partOf,
+status status,
+_status _status,
+primaryPurposeType primaryPurposeType,
+phase phase,
+category category,
+focus focus,
+condition condition,
+contact contact,
+relatedArtifact relatedArtifact,
+keyword keyword,
+location location,
+description description,
+_description _description,
+enrollment enrollment,
+period period,
+sponsor sponsor,
+principalInvestigator principalInvestigator,
+site site,
+reasonStopped reasonStopped,
+note note,
+arm arm,
+objective objective,
+}) = _ResearchStudy
+
+ factory ResearchStudy.fromJson(Map<String,dynamic> json) => _$ResearchStudyFromJson(json);
 }
 
 @freezed
-abstract class ResearchStudyArm with _$ResearchStudyArm {
-  const factory ResearchStudyArm({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    CodeableConcept type,
-    String description,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _ResearchStudyArm;
-  factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
-      _$ResearchStudyArmFromJson(json);
+abstract class ResearchStudyArm implements ResearchStudyArm, Resource {
+factoryResearchStudyArm({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+name name,
+_name _name,
+type type,
+description description,
+_description _description,
+}) = _ResearchStudyArm
+
+ factory ResearchStudyArm.fromJson(Map<String,dynamic> json) => _$ResearchStudyArmFromJson(json);
 }
 
 @freezed
-abstract class ResearchStudyObjective with _$ResearchStudyObjective {
-  const factory ResearchStudyObjective({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    CodeableConcept type,
-    @JsonKey(name: '_name') Element nameElement,
-  }) = _ResearchStudyObjective;
-  factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
-      _$ResearchStudyObjectiveFromJson(json);
+abstract class ResearchStudyObjective implements ResearchStudyObjective, Resource {
+factoryResearchStudyObjective({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+name name,
+_name _name,
+type type,
+}) = _ResearchStudyObjective
+
+ factory ResearchStudyObjective.fromJson(Map<String,dynamic> json) => _$ResearchStudyObjectiveFromJson(json);
 }
 
 @freezed
-abstract class ResearchSubject with _$ResearchSubject implements Resource {
-  const factory ResearchSubject({
-    @JsonKey(required: true, defaultValue: 'ResearchSubject')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-        ResearchSubjectStatus status,
-    Period period,
-    @JsonKey(required: true) @required Reference study,
-    @JsonKey(required: true) @required Reference individual,
-    String assignedArm,
-    String actualArm,
-    Reference consent,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_assignedArm') Element assignedArmElement,
-    @JsonKey(name: '_actualArm') Element actualArmElement,
-  }) = _ResearchSubject;
-  factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
-      _$ResearchSubjectFromJson(json);
+abstract class ResearchSubject implements ResearchSubject, Resource {
+factoryResearchSubject({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+status status,
+_status _status,
+period period,
+study study,
+individual individual,
+assignedArm assignedArm,
+_assignedArm _assignedArm,
+actualArm actualArm,
+_actualArm _actualArm,
+consent consent,
+}) = _ResearchSubject
+
+ factory ResearchSubject.fromJson(Map<String,dynamic> json) => _$ResearchSubjectFromJson(json);
 }
+

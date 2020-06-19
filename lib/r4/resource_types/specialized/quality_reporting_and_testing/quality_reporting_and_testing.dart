@@ -1,839 +1,814 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../../../../fhir_r4.dart';
-import '../../resource_types.enums.dart';
-import 'quality_reporting_and_testing.enums.dart';
-
-part 'quality_reporting_and_testing.freezed.dart';
-part 'quality_reporting_and_testing.g.dart';
-
 @freezed
-abstract class Measure with _$Measure implements Resource {
-  const factory Measure({
-    @JsonKey(required: true, defaultValue: 'Measure')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    List<Identifier> identifier,
-    String version,
-    String name,
-    String title,
-    String subtitle,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
-    Boolean experimental,
-    CodeableConcept subjectCodeableConcept,
-    Reference subjectReference,
-    FhirDateTime date,
-    String publisher,
-    List<ContactDetail> contact,
-    Markdown description,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    String usage,
-    Markdown copyright,
-    Date approvalDate,
-    Date lastReviewDate,
-    Period effectivePeriod,
-    List<CodeableConcept> topic,
-    List<ContactDetail> author,
-    List<ContactDetail> editor,
-    List<ContactDetail> reviewer,
-    List<ContactDetail> endorser,
-    List<RelatedArtifact> relatedArtifact,
-    List<Canonical> library,
-    Markdown disclaimer,
-    CodeableConcept scoring,
-    CodeableConcept compositeScoring,
-    List<CodeableConcept> type,
-    String riskAdjustment,
-    String rateAggregation,
-    Markdown rationale,
-    Markdown clinicalRecommendationStatement,
-    CodeableConcept improvementNotation,
-    List<Markdown> definition,
-    Markdown guidance,
-    List<MeasureGroup> group,
-    List<MeasureSupplementalData> supplementalData,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_subtitle') Element subtitleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_usage') Element usageElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-    @JsonKey(name: '_disclaimer') Element disclaimerElement,
-    @JsonKey(name: '_riskAdjustment') Element riskAdjustmentElement,
-    @JsonKey(name: '_rateAggregation') Element rateAggregationElement,
-    @JsonKey(name: '_rationale') Element rationaleElement,
-    @JsonKey(name: '_clinicalRecommendationStatement')
-        Element clinicalRecommendationStatementElement,
-    @JsonKey(name: '_definition') List<Element> definitionElement,
-    @JsonKey(name: '_guidance') Element guidanceElement,
-  }) = _Measure;
-  factory Measure.fromJson(Map<String, dynamic> json) =>
-      _$MeasureFromJson(json);
+abstract class Measure implements Measure, Resource {
+factoryMeasure({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+url url,
+_url _url,
+identifier identifier,
+version version,
+_version _version,
+name name,
+_name _name,
+title title,
+_title _title,
+subtitle subtitle,
+_subtitle _subtitle,
+status status,
+_status _status,
+experimental experimental,
+_experimental _experimental,
+subjectCodeableConcept subjectCodeableConcept,
+subjectReference subjectReference,
+date date,
+_date _date,
+publisher publisher,
+_publisher _publisher,
+contact contact,
+description description,
+_description _description,
+useContext useContext,
+jurisdiction jurisdiction,
+purpose purpose,
+_purpose _purpose,
+usage usage,
+_usage _usage,
+copyright copyright,
+_copyright _copyright,
+approvalDate approvalDate,
+_approvalDate _approvalDate,
+lastReviewDate lastReviewDate,
+_lastReviewDate _lastReviewDate,
+effectivePeriod effectivePeriod,
+topic topic,
+author author,
+editor editor,
+reviewer reviewer,
+endorser endorser,
+relatedArtifact relatedArtifact,
+library library,
+disclaimer disclaimer,
+_disclaimer _disclaimer,
+scoring scoring,
+compositeScoring compositeScoring,
+type type,
+riskAdjustment riskAdjustment,
+_riskAdjustment _riskAdjustment,
+rateAggregation rateAggregation,
+_rateAggregation _rateAggregation,
+rationale rationale,
+_rationale _rationale,
+clinicalRecommendationStatement clinicalRecommendationStatement,
+_clinicalRecommendationStatement _clinicalRecommendationStatement,
+improvementNotation improvementNotation,
+definition definition,
+_definition _definition,
+guidance guidance,
+_guidance _guidance,
+group group,
+supplementalData supplementalData,
+}) = _Measure
+
+ factory Measure.fromJson(Map<String,dynamic> json) => _$MeasureFromJson(json);
 }
 
 @freezed
-abstract class MeasureGroup with _$MeasureGroup {
-  const factory MeasureGroup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    String description,
-    List<MeasurePopulation> population,
-    List<MeasureStratifier> stratifier,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _MeasureGroup;
-  factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
-      _$MeasureGroupFromJson(json);
+abstract class MeasureGroup implements MeasureGroup, Resource {
+factoryMeasureGroup({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+description description,
+_description _description,
+population population,
+stratifier stratifier,
+}) = _MeasureGroup
+
+ factory MeasureGroup.fromJson(Map<String,dynamic> json) => _$MeasureGroupFromJson(json);
 }
 
 @freezed
-abstract class MeasurePopulation with _$MeasurePopulation {
-  const factory MeasurePopulation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    String description,
-    @JsonKey(required: true) @required Expression criteria,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _MeasurePopulation;
-  factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
-      _$MeasurePopulationFromJson(json);
+abstract class MeasurePopulation implements MeasurePopulation, Resource {
+factoryMeasurePopulation({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+description description,
+_description _description,
+criteria criteria,
+}) = _MeasurePopulation
+
+ factory MeasurePopulation.fromJson(Map<String,dynamic> json) => _$MeasurePopulationFromJson(json);
 }
 
 @freezed
-abstract class MeasureStratifier with _$MeasureStratifier {
-  const factory MeasureStratifier({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    String description,
-    Expression criteria,
-    List<MeasureComponent> component,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _MeasureStratifier;
-  factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
-      _$MeasureStratifierFromJson(json);
+abstract class MeasureStratifier implements MeasureStratifier, Resource {
+factoryMeasureStratifier({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+description description,
+_description _description,
+criteria criteria,
+component component,
+}) = _MeasureStratifier
+
+ factory MeasureStratifier.fromJson(Map<String,dynamic> json) => _$MeasureStratifierFromJson(json);
 }
 
 @freezed
-abstract class MeasureComponent with _$MeasureComponent {
-  const factory MeasureComponent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    String description,
-    @JsonKey(required: true) @required Expression criteria,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _MeasureComponent;
-  factory MeasureComponent.fromJson(Map<String, dynamic> json) =>
-      _$MeasureComponentFromJson(json);
+abstract class MeasureComponent implements MeasureComponent, Resource {
+factoryMeasureComponent({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+description description,
+_description _description,
+criteria criteria,
+}) = _MeasureComponent
+
+ factory MeasureComponent.fromJson(Map<String,dynamic> json) => _$MeasureComponentFromJson(json);
 }
 
 @freezed
-abstract class MeasureSupplementalData with _$MeasureSupplementalData {
-  const factory MeasureSupplementalData({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    List<CodeableConcept> usage,
-    String description,
-    @JsonKey(required: true) @required Expression criteria,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _MeasureSupplementalData;
-  factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
-      _$MeasureSupplementalDataFromJson(json);
+abstract class MeasureSupplementalData implements MeasureSupplementalData, Resource {
+factoryMeasureSupplementalData({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+usage usage,
+description description,
+_description _description,
+criteria criteria,
+}) = _MeasureSupplementalData
+
+ factory MeasureSupplementalData.fromJson(Map<String,dynamic> json) => _$MeasureSupplementalDataFromJson(json);
 }
 
 @freezed
-abstract class MeasureReport with _$MeasureReport implements Resource {
-  const factory MeasureReport({
-    @JsonKey(required: true, defaultValue: 'MeasureReport')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-        MeasureReportStatus status,
-    @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-        MeasureReportType type,
-    @JsonKey(required: true) @required Canonical measure,
-    Reference subject,
-    FhirDateTime date,
-    Reference reporter,
-    @JsonKey(required: true) @required Period period,
-    CodeableConcept improvementNotation,
-    List<MeasureReportGroup> group,
-    List<Reference> evaluatedResource,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_date') Element dateElement,
-  }) = _MeasureReport;
-  factory MeasureReport.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReportFromJson(json);
+abstract class MeasureReport implements MeasureReport, Resource {
+factoryMeasureReport({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+status status,
+_status _status,
+type type,
+_type _type,
+measure measure,
+subject subject,
+date date,
+_date _date,
+reporter reporter,
+period period,
+improvementNotation improvementNotation,
+group group,
+evaluatedResource evaluatedResource,
+}) = _MeasureReport
+
+ factory MeasureReport.fromJson(Map<String,dynamic> json) => _$MeasureReportFromJson(json);
 }
 
 @freezed
-abstract class MeasureReportGroup with _$MeasureReportGroup {
-  const factory MeasureReportGroup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    List<MeasureReportPopulation> population,
-    Quantity measureScore,
-    List<MeasureReportStratifier> stratifier,
-  }) = _MeasureReportGroup;
-  factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReportGroupFromJson(json);
+abstract class MeasureReportGroup implements MeasureReportGroup, Resource {
+factoryMeasureReportGroup({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+population population,
+measureScore measureScore,
+stratifier stratifier,
+}) = _MeasureReportGroup
+
+ factory MeasureReportGroup.fromJson(Map<String,dynamic> json) => _$MeasureReportGroupFromJson(json);
 }
 
 @freezed
-abstract class MeasureReportPopulation with _$MeasureReportPopulation {
-  const factory MeasureReportPopulation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    Integer count,
-    Reference subjectResults,
-    @JsonKey(name: '_count') Element countElement,
-  }) = _MeasureReportPopulation;
-  factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReportPopulationFromJson(json);
+abstract class MeasureReportPopulation implements MeasureReportPopulation, Resource {
+factoryMeasureReportPopulation({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+count count,
+_count _count,
+subjectResults subjectResults,
+}) = _MeasureReportPopulation
+
+ factory MeasureReportPopulation.fromJson(Map<String,dynamic> json) => _$MeasureReportPopulationFromJson(json);
 }
 
 @freezed
-abstract class MeasureReportStratifier with _$MeasureReportStratifier {
-  const factory MeasureReportStratifier({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> code,
-    List<MeasureReportStratum> stratum,
-  }) = _MeasureReportStratifier;
-  factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReportStratifierFromJson(json);
+abstract class MeasureReportStratifier implements MeasureReportStratifier, Resource {
+factoryMeasureReportStratifier({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+stratum stratum,
+}) = _MeasureReportStratifier
+
+ factory MeasureReportStratifier.fromJson(Map<String,dynamic> json) => _$MeasureReportStratifierFromJson(json);
 }
 
 @freezed
-abstract class MeasureReportStratum with _$MeasureReportStratum {
-  const factory MeasureReportStratum({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept value,
-    List<MeasureReportComponent> component,
-    List<MeasureReportPopulation1> population,
-    Quantity measureScore,
-  }) = _MeasureReportStratum;
-  factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReportStratumFromJson(json);
+abstract class MeasureReportStratum implements MeasureReportStratum, Resource {
+factoryMeasureReportStratum({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+value value,
+component component,
+population population,
+measureScore measureScore,
+}) = _MeasureReportStratum
+
+ factory MeasureReportStratum.fromJson(Map<String,dynamic> json) => _$MeasureReportStratumFromJson(json);
 }
 
 @freezed
-abstract class MeasureReportComponent with _$MeasureReportComponent {
-  const factory MeasureReportComponent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept code,
-    @JsonKey(required: true) @required CodeableConcept value,
-  }) = _MeasureReportComponent;
-  factory MeasureReportComponent.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReportComponentFromJson(json);
+abstract class MeasureReportComponent implements MeasureReportComponent, Resource {
+factoryMeasureReportComponent({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+value value,
+}) = _MeasureReportComponent
+
+ factory MeasureReportComponent.fromJson(Map<String,dynamic> json) => _$MeasureReportComponentFromJson(json);
 }
 
 @freezed
-abstract class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
-  const factory MeasureReportPopulation1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    Integer count,
-    Reference subjectResults,
-    @JsonKey(name: '_count') Element countElement,
-  }) = _MeasureReportPopulation1;
-  factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReportPopulation1FromJson(json);
+abstract class MeasureReportPopulation1 implements MeasureReportPopulation1, Resource {
+factoryMeasureReportPopulation1({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+code code,
+count count,
+_count _count,
+subjectResults subjectResults,
+}) = _MeasureReportPopulation1
+
+ factory MeasureReportPopulation1.fromJson(Map<String,dynamic> json) => _$MeasureReportPopulation1FromJson(json);
 }
 
 @freezed
-abstract class TestReport with _$TestReport implements Resource {
-  const factory TestReport({
-    @JsonKey(required: true, defaultValue: 'TestReport')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    String name,
-    @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-        TestReportStatus status,
-    @JsonKey(required: true) @required Reference testScript,
-    @JsonKey(unknownEnumValue: TestReportResult.unknown)
-        TestReportResult result,
-    Decimal score,
-    String tester,
-    FhirDateTime issued,
-    List<TestReportParticipant> participant,
-    TestReportSetup setup,
-    List<TestReportTest> test,
-    TestReportTeardown teardown,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_result') Element resultElement,
-    @JsonKey(name: '_score') Element scoreElement,
-    @JsonKey(name: '_tester') Element testerElement,
-    @JsonKey(name: '_issued') Element issuedElement,
-  }) = _TestReport;
-  factory TestReport.fromJson(Map<String, dynamic> json) =>
-      _$TestReportFromJson(json);
+abstract class TestReport implements TestReport, Resource {
+factoryTestReport({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+name name,
+_name _name,
+status status,
+_status _status,
+testScript testScript,
+result result,
+_result _result,
+score score,
+_score _score,
+tester tester,
+_tester _tester,
+issued issued,
+_issued _issued,
+participant participant,
+setup setup,
+test test,
+teardown teardown,
+}) = _TestReport
+
+ factory TestReport.fromJson(Map<String,dynamic> json) => _$TestReportFromJson(json);
 }
 
 @freezed
-abstract class TestReportParticipant with _$TestReportParticipant {
-  const factory TestReportParticipant({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-        TestReportParticipantType type,
-    FhirUri uri,
-    String display,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_uri') Element uriElement,
-    @JsonKey(name: '_display') Element displayElement,
-  }) = _TestReportParticipant;
-  factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
-      _$TestReportParticipantFromJson(json);
+abstract class TestReportParticipant implements TestReportParticipant, Resource {
+factoryTestReportParticipant({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+_type _type,
+uri uri,
+_uri _uri,
+display display,
+_display _display,
+}) = _TestReportParticipant
+
+ factory TestReportParticipant.fromJson(Map<String,dynamic> json) => _$TestReportParticipantFromJson(json);
 }
 
 @freezed
-abstract class TestReportSetup with _$TestReportSetup {
-  const factory TestReportSetup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required List<TestReportAction> action,
-  }) = _TestReportSetup;
-  factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
-      _$TestReportSetupFromJson(json);
+abstract class TestReportSetup implements TestReportSetup, Resource {
+factoryTestReportSetup({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+action action,
+}) = _TestReportSetup
+
+ factory TestReportSetup.fromJson(Map<String,dynamic> json) => _$TestReportSetupFromJson(json);
 }
 
 @freezed
-abstract class TestReportAction with _$TestReportAction {
-  const factory TestReportAction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    TestReportOperation operation,
-    @JsonKey(name: 'assert') TestReportAssert assert_,
-  }) = _TestReportAction;
-  factory TestReportAction.fromJson(Map<String, dynamic> json) =>
-      _$TestReportActionFromJson(json);
+abstract class TestReportAction implements TestReportAction, Resource {
+factoryTestReportAction({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+operation operation,
+assert assert,
+}) = _TestReportAction
+
+ factory TestReportAction.fromJson(Map<String,dynamic> json) => _$TestReportActionFromJson(json);
 }
 
 @freezed
-abstract class TestReportOperation with _$TestReportOperation {
-  const factory TestReportOperation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: OperationResult.unknown) OperationResult result,
-    Markdown message,
-    FhirUri detail,
-    @JsonKey(name: '_result') Element resultElement,
-    @JsonKey(name: '_message') Element messageElement,
-    @JsonKey(name: '_detail') Element detailElement,
-  }) = _TestReportOperation;
-  factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
-      _$TestReportOperationFromJson(json);
+abstract class TestReportOperation implements TestReportOperation, Resource {
+factoryTestReportOperation({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+result result,
+_result _result,
+message message,
+_message _message,
+detail detail,
+_detail _detail,
+}) = _TestReportOperation
+
+ factory TestReportOperation.fromJson(Map<String,dynamic> json) => _$TestReportOperationFromJson(json);
 }
 
 @freezed
-abstract class TestReportAssert with _$TestReportAssert {
-  const factory TestReportAssert({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: OperationResult.unknown) OperationResult result,
-    Markdown message,
-    String detail,
-    @JsonKey(name: '_result') Element resultElement,
-    @JsonKey(name: '_message') Element messageElement,
-    @JsonKey(name: '_detail') Element detailElement,
-  }) = _TestReportAssert;
-  factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
-      _$TestReportAssertFromJson(json);
+abstract class TestReportAssert implements TestReportAssert, Resource {
+factoryTestReportAssert({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+result result,
+_result _result,
+message message,
+_message _message,
+detail detail,
+_detail _detail,
+}) = _TestReportAssert
+
+ factory TestReportAssert.fromJson(Map<String,dynamic> json) => _$TestReportAssertFromJson(json);
 }
 
 @freezed
-abstract class TestReportTest with _$TestReportTest {
-  const factory TestReportTest({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    String description,
-    @JsonKey(required: true) @required List<TestReportAction1> action,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _TestReportTest;
-  factory TestReportTest.fromJson(Map<String, dynamic> json) =>
-      _$TestReportTestFromJson(json);
+abstract class TestReportTest implements TestReportTest, Resource {
+factoryTestReportTest({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+name name,
+_name _name,
+description description,
+_description _description,
+action action,
+}) = _TestReportTest
+
+ factory TestReportTest.fromJson(Map<String,dynamic> json) => _$TestReportTestFromJson(json);
 }
 
 @freezed
-abstract class TestReportAction1 with _$TestReportAction1 {
-  const factory TestReportAction1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    TestReportOperation operation,
-    @JsonKey(name: 'assert') TestReportAssert assert_,
-  }) = _TestReportAction1;
-  factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
-      _$TestReportAction1FromJson(json);
+abstract class TestReportAction1 implements TestReportAction1, Resource {
+factoryTestReportAction1({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+operation operation,
+assert assert,
+}) = _TestReportAction1
+
+ factory TestReportAction1.fromJson(Map<String,dynamic> json) => _$TestReportAction1FromJson(json);
 }
 
 @freezed
-abstract class TestReportTeardown with _$TestReportTeardown {
-  const factory TestReportTeardown({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required List<TestReportAction2> action,
-  }) = _TestReportTeardown;
-  factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
-      _$TestReportTeardownFromJson(json);
+abstract class TestReportTeardown implements TestReportTeardown, Resource {
+factoryTestReportTeardown({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+action action,
+}) = _TestReportTeardown
+
+ factory TestReportTeardown.fromJson(Map<String,dynamic> json) => _$TestReportTeardownFromJson(json);
 }
 
 @freezed
-abstract class TestReportAction2 with _$TestReportAction2 {
-  const factory TestReportAction2({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required TestReportOperation operation,
-  }) = _TestReportAction2;
-  factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
-      _$TestReportAction2FromJson(json);
+abstract class TestReportAction2 implements TestReportAction2, Resource {
+factoryTestReportAction2({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+operation operation,
+}) = _TestReportAction2
+
+ factory TestReportAction2.fromJson(Map<String,dynamic> json) => _$TestReportAction2FromJson(json);
 }
 
 @freezed
-abstract class TestScript with _$TestScript implements Resource {
-  const factory TestScript({
-    @JsonKey(required: true, defaultValue: 'TestScript')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    Identifier identifier,
-    String version,
-    String name,
-    String title,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
-    Boolean experimental,
-    FhirDateTime date,
-    String publisher,
-    List<ContactDetail> contact,
-    Markdown description,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    Markdown copyright,
-    List<TestScriptOrigin> origin,
-    List<TestScriptDestination> destination,
-    TestScriptMetadata metadata,
-    List<TestScriptFixture> fixture,
-    List<Reference> profile,
-    List<TestScriptVariable> variable,
-    TestScriptSetup setup,
-    List<TestScriptTest> test,
-    TestScriptTeardown teardown,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-  }) = _TestScript;
-  factory TestScript.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptFromJson(json);
+abstract class TestScript implements TestScript, Resource {
+factoryTestScript({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+url url,
+_url _url,
+identifier identifier,
+version version,
+_version _version,
+name name,
+_name _name,
+title title,
+_title _title,
+status status,
+_status _status,
+experimental experimental,
+_experimental _experimental,
+date date,
+_date _date,
+publisher publisher,
+_publisher _publisher,
+contact contact,
+description description,
+_description _description,
+useContext useContext,
+jurisdiction jurisdiction,
+purpose purpose,
+_purpose _purpose,
+copyright copyright,
+_copyright _copyright,
+origin origin,
+destination destination,
+metadata metadata,
+fixture fixture,
+profile profile,
+variable variable,
+setup setup,
+test test,
+teardown teardown,
+}) = _TestScript
+
+ factory TestScript.fromJson(Map<String,dynamic> json) => _$TestScriptFromJson(json);
 }
 
 @freezed
-abstract class TestScriptOrigin with _$TestScriptOrigin {
-  const factory TestScriptOrigin({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Integer index,
-    @JsonKey(required: true) @required Coding profile,
-    @JsonKey(name: '_index') Element indexElement,
-  }) = _TestScriptOrigin;
-  factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptOriginFromJson(json);
+abstract class TestScriptOrigin implements TestScriptOrigin, Resource {
+factoryTestScriptOrigin({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+index index,
+_index _index,
+profile profile,
+}) = _TestScriptOrigin
+
+ factory TestScriptOrigin.fromJson(Map<String,dynamic> json) => _$TestScriptOriginFromJson(json);
 }
 
 @freezed
-abstract class TestScriptDestination with _$TestScriptDestination {
-  const factory TestScriptDestination({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Integer index,
-    @JsonKey(required: true) @required Coding profile,
-    @JsonKey(name: '_index') Element indexElement,
-  }) = _TestScriptDestination;
-  factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptDestinationFromJson(json);
+abstract class TestScriptDestination implements TestScriptDestination, Resource {
+factoryTestScriptDestination({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+index index,
+_index _index,
+profile profile,
+}) = _TestScriptDestination
+
+ factory TestScriptDestination.fromJson(Map<String,dynamic> json) => _$TestScriptDestinationFromJson(json);
 }
 
 @freezed
-abstract class TestScriptMetadata with _$TestScriptMetadata {
-  const factory TestScriptMetadata({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<TestScriptLink> link,
-    @JsonKey(required: true) @required List<TestScriptCapability> capability,
-  }) = _TestScriptMetadata;
-  factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptMetadataFromJson(json);
+abstract class TestScriptMetadata implements TestScriptMetadata, Resource {
+factoryTestScriptMetadata({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+link link,
+capability capability,
+}) = _TestScriptMetadata
+
+ factory TestScriptMetadata.fromJson(Map<String,dynamic> json) => _$TestScriptMetadataFromJson(json);
 }
 
 @freezed
-abstract class TestScriptLink with _$TestScriptLink {
-  const factory TestScriptLink({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    String description,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _TestScriptLink;
-  factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptLinkFromJson(json);
+abstract class TestScriptLink implements TestScriptLink, Resource {
+factoryTestScriptLink({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+url url,
+_url _url,
+description description,
+_description _description,
+}) = _TestScriptLink
+
+ factory TestScriptLink.fromJson(Map<String,dynamic> json) => _$TestScriptLinkFromJson(json);
 }
 
 @freezed
-abstract class TestScriptCapability with _$TestScriptCapability {
-  const factory TestScriptCapability({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'required') Boolean required_,
-    Boolean validated,
-    String description,
-    List<Integer> origin,
-    Integer destination,
-    List<FhirUri> link,
-    @JsonKey(required: true) @required Canonical capabilities,
-    @JsonKey(name: '_required') Element requiredElement,
-    @JsonKey(name: '_validated') Element validatedElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_origin') List<Element> originElement,
-    @JsonKey(name: '_destination') Element destinationElement,
-    @JsonKey(name: '_link') List<Element> linkElement,
-  }) = _TestScriptCapability;
-  factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptCapabilityFromJson(json);
+abstract class TestScriptCapability implements TestScriptCapability, Resource {
+factoryTestScriptCapability({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+required required,
+_required _required,
+validated validated,
+_validated _validated,
+description description,
+_description _description,
+origin origin,
+_origin _origin,
+destination destination,
+_destination _destination,
+link link,
+_link _link,
+capabilities capabilities,
+}) = _TestScriptCapability
+
+ factory TestScriptCapability.fromJson(Map<String,dynamic> json) => _$TestScriptCapabilityFromJson(json);
 }
 
 @freezed
-abstract class TestScriptFixture with _$TestScriptFixture {
-  const factory TestScriptFixture({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean autocreate,
-    Boolean autodelete,
-    Reference resource,
-    @JsonKey(name: '_autocreate') Element autocreateElement,
-    @JsonKey(name: '_autodelete') Element autodeleteElement,
-  }) = _TestScriptFixture;
-  factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptFixtureFromJson(json);
+abstract class TestScriptFixture implements TestScriptFixture, Resource {
+factoryTestScriptFixture({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+autocreate autocreate,
+_autocreate _autocreate,
+autodelete autodelete,
+_autodelete _autodelete,
+resource resource,
+}) = _TestScriptFixture
+
+ factory TestScriptFixture.fromJson(Map<String,dynamic> json) => _$TestScriptFixtureFromJson(json);
 }
 
 @freezed
-abstract class TestScriptVariable with _$TestScriptVariable {
-  const factory TestScriptVariable({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    String defaultValue,
-    String description,
-    String expression,
-    String headerField,
-    String hint,
-    String path,
-    Id sourceId,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_defaultValue') Element defaultValueElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_expression') Element expressionElement,
-    @JsonKey(name: '_headerField') Element headerFieldElement,
-    @JsonKey(name: '_hint') Element hintElement,
-    @JsonKey(name: '_path') Element pathElement,
-    @JsonKey(name: '_sourceId') Element sourceIdElement,
-  }) = _TestScriptVariable;
-  factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptVariableFromJson(json);
+abstract class TestScriptVariable implements TestScriptVariable, Resource {
+factoryTestScriptVariable({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+name name,
+_name _name,
+defaultValue defaultValue,
+_defaultValue _defaultValue,
+description description,
+_description _description,
+expression expression,
+_expression _expression,
+headerField headerField,
+_headerField _headerField,
+hint hint,
+_hint _hint,
+path path,
+_path _path,
+sourceId sourceId,
+_sourceId _sourceId,
+}) = _TestScriptVariable
+
+ factory TestScriptVariable.fromJson(Map<String,dynamic> json) => _$TestScriptVariableFromJson(json);
 }
 
 @freezed
-abstract class TestScriptSetup with _$TestScriptSetup {
-  const factory TestScriptSetup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required List<TestScriptAction> action,
-  }) = _TestScriptSetup;
-  factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptSetupFromJson(json);
+abstract class TestScriptSetup implements TestScriptSetup, Resource {
+factoryTestScriptSetup({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+action action,
+}) = _TestScriptSetup
+
+ factory TestScriptSetup.fromJson(Map<String,dynamic> json) => _$TestScriptSetupFromJson(json);
 }
 
 @freezed
-abstract class TestScriptAction with _$TestScriptAction {
-  const factory TestScriptAction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    TestScriptOperation operation,
-    @JsonKey(name: 'assert') TestScriptAssert assert_,
-  }) = _TestScriptAction;
-  factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptActionFromJson(json);
+abstract class TestScriptAction implements TestScriptAction, Resource {
+factoryTestScriptAction({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+operation operation,
+assert assert,
+}) = _TestScriptAction
+
+ factory TestScriptAction.fromJson(Map<String,dynamic> json) => _$TestScriptActionFromJson(json);
 }
 
 @freezed
-abstract class TestScriptOperation with _$TestScriptOperation {
-  const factory TestScriptOperation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Coding type,
-    Code resource,
-    String label,
-    String description,
-    Code accept,
-    Code contentType,
-    Integer destination,
-    Boolean encodeRequestUrl,
-    @JsonKey(unknownEnumValue: OperationMethod.unknown) OperationMethod method,
-    Integer origin,
-    String params,
-    List<TestScriptRequestHeader> requestHeader,
-    Id requestId,
-    Id responseId,
-    Id sourceId,
-    Id targetId,
-    String url,
-    @JsonKey(name: '_resource') Element resourceElement,
-    @JsonKey(name: '_label') Element labelElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_accept') Element acceptElement,
-    @JsonKey(name: '_contentType') Element contentTypeElement,
-    @JsonKey(name: '_destination') Element destinationElement,
-    @JsonKey(name: '_encodeRequestUrl') Element encodeRequestUrlElement,
-    @JsonKey(name: '_method') Element methodElement,
-    @JsonKey(name: '_origin') Element originElement,
-    @JsonKey(name: '_params') Element paramsElement,
-    @JsonKey(name: '_requestId') Element requestIdElement,
-    @JsonKey(name: '_responseId') Element responseIdElement,
-    @JsonKey(name: '_sourceId') Element sourceIdElement,
-    @JsonKey(name: '_targetId') Element targetIdElement,
-    @JsonKey(name: '_url') Element urlElement,
-  }) = _TestScriptOperation;
-  factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptOperationFromJson(json);
+abstract class TestScriptOperation implements TestScriptOperation, Resource {
+factoryTestScriptOperation({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+resource resource,
+_resource _resource,
+label label,
+_label _label,
+description description,
+_description _description,
+accept accept,
+_accept _accept,
+contentType contentType,
+_contentType _contentType,
+destination destination,
+_destination _destination,
+encodeRequestUrl encodeRequestUrl,
+_encodeRequestUrl _encodeRequestUrl,
+method method,
+_method _method,
+origin origin,
+_origin _origin,
+params params,
+_params _params,
+requestHeader requestHeader,
+requestId requestId,
+_requestId _requestId,
+responseId responseId,
+_responseId _responseId,
+sourceId sourceId,
+_sourceId _sourceId,
+targetId targetId,
+_targetId _targetId,
+url url,
+_url _url,
+}) = _TestScriptOperation
+
+ factory TestScriptOperation.fromJson(Map<String,dynamic> json) => _$TestScriptOperationFromJson(json);
 }
 
 @freezed
-abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
-  const factory TestScriptRequestHeader({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String field,
-    String value,
-    @JsonKey(name: '_field') Element fieldElement,
-    @JsonKey(name: '_value') Element valueElement,
-  }) = _TestScriptRequestHeader;
-  factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptRequestHeaderFromJson(json);
+abstract class TestScriptRequestHeader implements TestScriptRequestHeader, Resource {
+factoryTestScriptRequestHeader({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+field field,
+_field _field,
+value value,
+_value _value,
+}) = _TestScriptRequestHeader
+
+ factory TestScriptRequestHeader.fromJson(Map<String,dynamic> json) => _$TestScriptRequestHeaderFromJson(json);
 }
 
 @freezed
-abstract class TestScriptAssert with _$TestScriptAssert {
-  const factory TestScriptAssert({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String label,
-    String description,
-    @JsonKey(unknownEnumValue: AssertDirection.unknown)
-        AssertDirection direction,
-    String compareToSourceId,
-    String compareToSourceExpression,
-    String compareToSourcePath,
-    Code contentType,
-    String expression,
-    String headerField,
-    String minimumId,
-    Boolean navigationLinks,
-    @JsonKey(unknownEnumValue: AssertOperator.unknown) AssertOperator operator,
-    String path,
-    @JsonKey(unknownEnumValue: OperationMethod.unknown)
-        OperationMethod requestMethod,
-    String requestURL,
-    Code resource,
-    @JsonKey(unknownEnumValue: AssertResponse.unknown) AssertResponse response,
-    String responseCode,
-    Id sourceId,
-    Id validateProfileId,
-    String value,
-    Boolean warningOnly,
-    @JsonKey(name: '_label') Element labelElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_direction') Element directionElement,
-    @JsonKey(name: '_compareToSourceId') Element compareToSourceIdElement,
-    @JsonKey(name: '_compareToSourceExpression')
-        Element compareToSourceExpressionElement,
-    @JsonKey(name: '_compareToSourcePath') Element compareToSourcePathElement,
-    @JsonKey(name: '_contentType') Element contentTypeElement,
-    @JsonKey(name: '_expression') Element expressionElement,
-    @JsonKey(name: '_headerField') Element headerFieldElement,
-    @JsonKey(name: '_minimumId') Element minimumIdElement,
-    @JsonKey(name: '_navigationLinks') Element navigationLinksElement,
-    @JsonKey(name: '_operator') Element operatorElement,
-    @JsonKey(name: '_path') Element pathElement,
-    @JsonKey(name: '_requestMethod') Element requestMethodElement,
-    @JsonKey(name: '_requestURL') Element requestURLElement,
-    @JsonKey(name: '_resource') Element resourceElement,
-    @JsonKey(name: '_response') Element responseElement,
-    @JsonKey(name: '_responseCode') Element responseCodeElement,
-    @JsonKey(name: '_sourceId') Element sourceIdElement,
-    @JsonKey(name: '_validateProfileId') Element validateProfileIdElement,
-    @JsonKey(name: '_value') Element valueElement,
-    @JsonKey(name: '_warningOnly') Element warningOnlyElement,
-  }) = _TestScriptAssert;
-  factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptAssertFromJson(json);
+abstract class TestScriptAssert implements TestScriptAssert, Resource {
+factoryTestScriptAssert({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+label label,
+_label _label,
+description description,
+_description _description,
+direction direction,
+_direction _direction,
+compareToSourceId compareToSourceId,
+_compareToSourceId _compareToSourceId,
+compareToSourceExpression compareToSourceExpression,
+_compareToSourceExpression _compareToSourceExpression,
+compareToSourcePath compareToSourcePath,
+_compareToSourcePath _compareToSourcePath,
+contentType contentType,
+_contentType _contentType,
+expression expression,
+_expression _expression,
+headerField headerField,
+_headerField _headerField,
+minimumId minimumId,
+_minimumId _minimumId,
+navigationLinks navigationLinks,
+_navigationLinks _navigationLinks,
+operator operator,
+_operator _operator,
+path path,
+_path _path,
+requestMethod requestMethod,
+_requestMethod _requestMethod,
+requestURL requestURL,
+_requestURL _requestURL,
+resource resource,
+_resource _resource,
+response response,
+_response _response,
+responseCode responseCode,
+_responseCode _responseCode,
+sourceId sourceId,
+_sourceId _sourceId,
+validateProfileId validateProfileId,
+_validateProfileId _validateProfileId,
+value value,
+_value _value,
+warningOnly warningOnly,
+_warningOnly _warningOnly,
+}) = _TestScriptAssert
+
+ factory TestScriptAssert.fromJson(Map<String,dynamic> json) => _$TestScriptAssertFromJson(json);
 }
 
 @freezed
-abstract class TestScriptTest with _$TestScriptTest {
-  const factory TestScriptTest({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    String description,
-    @JsonKey(required: true) @required List<TestScriptAction1> action,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-  }) = _TestScriptTest;
-  factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptTestFromJson(json);
+abstract class TestScriptTest implements TestScriptTest, Resource {
+factoryTestScriptTest({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+name name,
+_name _name,
+description description,
+_description _description,
+action action,
+}) = _TestScriptTest
+
+ factory TestScriptTest.fromJson(Map<String,dynamic> json) => _$TestScriptTestFromJson(json);
 }
 
 @freezed
-abstract class TestScriptAction1 with _$TestScriptAction1 {
-  const factory TestScriptAction1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    TestScriptOperation operation,
-    @JsonKey(name: 'assert') TestScriptAssert assert_,
-  }) = _TestScriptAction1;
-  factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptAction1FromJson(json);
+abstract class TestScriptAction1 implements TestScriptAction1, Resource {
+factoryTestScriptAction1({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+operation operation,
+assert assert,
+}) = _TestScriptAction1
+
+ factory TestScriptAction1.fromJson(Map<String,dynamic> json) => _$TestScriptAction1FromJson(json);
 }
 
 @freezed
-abstract class TestScriptTeardown with _$TestScriptTeardown {
-  const factory TestScriptTeardown({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required List<TestScriptAction2> action,
-  }) = _TestScriptTeardown;
-  factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptTeardownFromJson(json);
+abstract class TestScriptTeardown implements TestScriptTeardown, Resource {
+factoryTestScriptTeardown({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+action action,
+}) = _TestScriptTeardown
+
+ factory TestScriptTeardown.fromJson(Map<String,dynamic> json) => _$TestScriptTeardownFromJson(json);
 }
 
 @freezed
-abstract class TestScriptAction2 with _$TestScriptAction2 {
-  const factory TestScriptAction2({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required TestScriptOperation operation,
-  }) = _TestScriptAction2;
-  factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptAction2FromJson(json);
+abstract class TestScriptAction2 implements TestScriptAction2, Resource {
+factoryTestScriptAction2({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+operation operation,
+}) = _TestScriptAction2
+
+ factory TestScriptAction2.fromJson(Map<String,dynamic> json) => _$TestScriptAction2FromJson(json);
 }
+

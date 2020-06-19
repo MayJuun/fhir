@@ -7,99 +7,106 @@ void main() async {
   //location of fhir schema
   var file = File('./parsers/r4/fhir.schema.r4.json');
   var contents = await file.readAsString();
-
-  var index;
-
-  var cgen = <String>[];
-  var cmeta = <String>[];
-  var cspecial = <String>[];
-  var cdraft = <String>[];
-  var cconformance = <String>[];
-  var cterminology = <String>[];
-  var csecurity = <String>[];
-  var cdocuments = <String>[];
-  var cother = <String>[];
-  var cindividuals = <String>[];
-  var centities1 = <String>[];
-  var centities2 = <String>[];
-  var cworkflow = <String>[];
-  var cmanagement = <String>[];
-  var csummary = <String>[];
-  var cdiagnostics = <String>[];
-  var cmedications = <String>[];
-  var ccareprovision = <String>[];
-  var crequestresponse = <String>[];
-  var csupport = <String>[];
-  var cbilling = <String>[];
-  var cpayment = <String>[];
-  var cgeneral = <String>[];
-  var cpublichealth = <String>[];
-  var cdefinitional = <String>[];
-  var cebm = <String>[];
-  var cquality = <String>[];
-  var cmedicationdefinition = <String>[];
-
-  var stringList = [
-    cgen,
-    cmeta,
-    cspecial,
-    cdraft,
-    cconformance,
-    cterminology,
-    csecurity,
-    cdocuments,
-    cother,
-    cindividuals,
-    centities1,
-    centities2,
-    cworkflow,
-    cmanagement,
-    csummary,
-    cdiagnostics,
-    cmedications,
-    ccareprovision,
-    crequestresponse,
-    csupport,
-    cbilling,
-    cpayment,
-    cgeneral,
-    cpublichealth,
-    cdefinitional,
-    cebm,
-    cquality,
-    cmedicationdefinition,
-  ];
+  var type = '';
+  var data = '';
 
   Map schema = json.decode(contents);
   for (var obj in schema['definitions'].keys) {
     if (schema['definitions'][obj].keys.contains('properties')) {
-      index = classList.indexWhere(
-          (element) => element.contains(obj.split('_')[0].toLowerCase()));
-      if (index != -1) {
-        stringList[index].add(obj);
+      var name = obj.split('_')[0].toLowerCase();
+      type = getType(name);
+      if (type != 'other') {
+        data = '@freezed\nabstract class ${obj.replaceAll('_', '')} '
+            'implements _\$${obj.replaceAll('_', '')}, Resource {\nfactory'
+            '${obj.replaceAll('_', '')}({\n';
         for (var field in schema['definitions'][obj]['properties'].keys) {
-          if (field[0] == '_' &&
-              schema['definitions'][obj]['properties'][field]
-                  .keys
-                  .contains('type')) {
-            stringList[index].add(field);
-          }
+          data += '$field $field,\n';
         }
       }
+      data += '}) = _${obj.replaceAll('_', '')};\n\n'
+          ' factory ${obj.replaceAll('_', '')}.fromJson(Map<String,dynamic> json)'
+          ' => _\$${obj.replaceAll('_', '')}FromJson(json);\n}\n\n';
+    }
+    if (type != '' && type != 'other') {
+      var fileData = (await File('./lib/r4/$type').readAsString()) + data;
+      // await File('./lib/r4/$type').writeAsString(fileData);
+      await File('./lib/r4/$type').writeAsString('');
     }
   }
-  var fileString = '';
-  for (var i = 0; i < stringList.length; i++) {
-    stringList[i].forEach((element) async {
-      if (element[0] != '_') {
-        fileString += element + '\n';
-      } else {
-        fileString +=
-            "@JsonKey(name: '$element') List<Element> ${element.replaceAll('_', '')}Element,\n";
-      }
-    });
-  }
-  await File('./parsers/r4/privateFields.dart').writeAsString(fileString);
+}
+
+String getType(String name) {
+  if (draftTypes.contains(name)) return 'draft_types/draft_types.dart';
+  if (generalTypes.contains(name)) return 'general_types/general_types.dart';
+  if (metadataTypes.contains(name)) return 'metadata_types/metadata_types.dart';
+  if (specialTypes.contains(name)) return 'special_types/special_types.dart';
+  if (resourceTypes.contains(name)) return getResourceType(name);
+  return 'other';
+}
+
+String getResourceType(String name) {
+  if (groupBase.contains(name)) return baseType(name);
+  if (groupClinical.contains(name)) return clinicalType(name);
+  if (groupFinancial.contains(name)) return financialType(name);
+  if (groupFoundation.contains(name)) return foundationType(name);
+  return specializedType(name);
+}
+
+String baseType(String name) {
+  if (entities1.contains(name))
+    return 'resource_types/base/entities1/entities1.dart';
+  if (entities2.contains(name))
+    return 'resource_types/base/entities2/entities2.dart';
+  if (individuals.contains(name))
+    return 'resource_types/base/individuals/individuals.dart';
+  if (management.contains(name))
+    return 'resource_types/base/management/management.dart';
+  return 'resource_types/base/workflow/workflow.dart';
+}
+
+String clinicalType(String name) {
+  if (care_provision.contains(name))
+    return 'resource_types/clinical/care_provision/care_provision.dart';
+  if (diagnostics.contains(name))
+    return 'resource_types/clinical/diagnostics/diagnostics.dart';
+  if (medications.contains(name))
+    return 'resource_types/clinical/medications/medications.dart';
+  if (request_and_response.contains(name))
+    return 'resource_types/clinical/request_and_response/request_and_response.dart';
+  return 'resource_types/clinical/summary/summary.dart';
+}
+
+String financialType(String name) {
+  if (billing.contains(name))
+    return 'resource_types/financial/billing/billing.dart';
+  if (general.contains(name))
+    return 'resource_types/financial/general/general.dart';
+  if (payment.contains(name))
+    return 'resource_types/financial/payment/payment.dart';
+  return 'resource_types/financial/support/support.dart';
+}
+
+String foundationType(String name) {
+  if (conformance.contains(name))
+    return 'resource_types/foundation/conformance/conformance.dart';
+  if (documents.contains(name))
+    return 'resource_types/foundation/documents/documents.dart';
+  if (other.contains(name)) return 'resource_types/foundation/other/other.dart';
+  if (security.contains(name))
+    return 'resource_types/foundation/security/security.dart';
+  return 'resource_types/foundation/terminology/terminology.dart';
+}
+
+String specializedType(String name) {
+  if (definitional_artifacts.contains(name))
+    return 'resource_types/specialized/definitional_artifacts/definitional_artifacts.dart';
+  if (evidence_based_medicine.contains(name))
+    return 'resource_types/specialized/evidence_based_medicine/evidence_based_medicine.dart';
+  if (medication_definition.contains(name))
+    return 'resource_types/specialized/medication_definition/medication_definition.dart';
+  if (public_health_and_research.contains(name))
+    return 'resource_types/specialized/public_health_and_research/public_health_and_research.dart';
+  return 'resource_types/specialized/quality_reporting_and_testing/quality_reporting_and_testing.dart';
 }
 
 // void main() async {

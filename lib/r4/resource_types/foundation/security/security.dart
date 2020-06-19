@@ -1,324 +1,309 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../../../../fhir_r4.dart';
-import 'security.enums.dart';
-
-part 'security.freezed.dart';
-part 'security.g.dart';
-
 @freezed
-abstract class AuditEvent with _$AuditEvent implements Resource {
-  const factory AuditEvent({
-    @JsonKey(required: true, defaultValue: 'AuditEvent')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Coding type,
-    List<Coding> subtype,
-    @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-        AuditEventAction action,
-    Period period,
-    Instant recorded,
-    @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-        AuditEventOutcome outcome,
-    String outcomeDesc,
-    List<CodeableConcept> purposeOfEvent,
-    @JsonKey(required: true) @required List<AuditEventAgent> agent,
-    @JsonKey(required: true) @required AuditEventSource source,
-    List<AuditEventEntity> entity,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_action') Element actionElement,
-    @JsonKey(name: '_recorded') Element recordedElement,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    @JsonKey(name: '_outcomeDesc') Element outcomeDescElement,
-  }) = _AuditEvent;
-  factory AuditEvent.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventFromJson(json);
+abstract class AuditEvent implements AuditEvent, Resource {
+factoryAuditEvent({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+subtype subtype,
+action action,
+_action _action,
+period period,
+recorded recorded,
+_recorded _recorded,
+outcome outcome,
+_outcome _outcome,
+outcomeDesc outcomeDesc,
+_outcomeDesc _outcomeDesc,
+purposeOfEvent purposeOfEvent,
+agent agent,
+source source,
+entity entity,
+}) = _AuditEvent
+
+ factory AuditEvent.fromJson(Map<String,dynamic> json) => _$AuditEventFromJson(json);
 }
 
 @freezed
-abstract class AuditEventAgent with _$AuditEventAgent {
-  const factory AuditEventAgent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    List<CodeableConcept> role,
-    Reference who,
-    String altId,
-    String name,
-    Boolean requestor,
-    Reference location,
-    List<FhirUri> policy,
-    Coding media,
-    AuditEventNetwork network,
-    List<CodeableConcept> purposeOfUse,
-    @JsonKey(name: '_altId') Element altIdElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_requestor') Element requestorElement,
-    @JsonKey(name: '_policy') List<Element> policyElement,
-  }) = _AuditEventAgent;
-  factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventAgentFromJson(json);
+abstract class AuditEventAgent implements AuditEventAgent, Resource {
+factoryAuditEventAgent({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+role role,
+who who,
+altId altId,
+_altId _altId,
+name name,
+_name _name,
+requestor requestor,
+_requestor _requestor,
+location location,
+policy policy,
+_policy _policy,
+media media,
+network network,
+purposeOfUse purposeOfUse,
+}) = _AuditEventAgent
+
+ factory AuditEventAgent.fromJson(Map<String,dynamic> json) => _$AuditEventAgentFromJson(json);
 }
 
 @freezed
-abstract class AuditEventNetwork with _$AuditEventNetwork {
-  const factory AuditEventNetwork({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String address,
-    @JsonKey(unknownEnumValue: NetworkType.unknown) NetworkType type,
-    @JsonKey(name: '_address') Element addressElement,
-    @JsonKey(name: '_type') Element typeElement,
-  }) = _AuditEventNetwork;
-  factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventNetworkFromJson(json);
+abstract class AuditEventNetwork implements AuditEventNetwork, Resource {
+factoryAuditEventNetwork({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+address address,
+_address _address,
+type type,
+_type _type,
+}) = _AuditEventNetwork
+
+ factory AuditEventNetwork.fromJson(Map<String,dynamic> json) => _$AuditEventNetworkFromJson(json);
 }
 
 @freezed
-abstract class AuditEventSource with _$AuditEventSource {
-  const factory AuditEventSource({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String site,
-    @JsonKey(required: true) @required Reference observer,
-    List<Coding> type,
-    @JsonKey(name: '_site') Element siteElement,
-  }) = _AuditEventSource;
-  factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventSourceFromJson(json);
+abstract class AuditEventSource implements AuditEventSource, Resource {
+factoryAuditEventSource({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+site site,
+_site _site,
+observer observer,
+type type,
+}) = _AuditEventSource
+
+ factory AuditEventSource.fromJson(Map<String,dynamic> json) => _$AuditEventSourceFromJson(json);
 }
 
 @freezed
-abstract class AuditEventEntity with _$AuditEventEntity {
-  const factory AuditEventEntity({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference what,
-    Coding type,
-    Coding role,
-    Coding lifecycle,
-    List<Coding> securityLabel,
-    String name,
-    String description,
-    Base64Binary query,
-    List<AuditEventDetail> detail,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_query') Element queryElement,
-  }) = _AuditEventEntity;
-  factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventEntityFromJson(json);
+abstract class AuditEventEntity implements AuditEventEntity, Resource {
+factoryAuditEventEntity({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+what what,
+type type,
+role role,
+lifecycle lifecycle,
+securityLabel securityLabel,
+name name,
+_name _name,
+description description,
+_description _description,
+query query,
+_query _query,
+detail detail,
+}) = _AuditEventEntity
+
+ factory AuditEventEntity.fromJson(Map<String,dynamic> json) => _$AuditEventEntityFromJson(json);
 }
 
 @freezed
-abstract class AuditEventDetail with _$AuditEventDetail {
-  const factory AuditEventDetail({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String type,
-    String valueString,
-    Base64Binary valueBase64Binary,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-  }) = _AuditEventDetail;
-  factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventDetailFromJson(json);
+abstract class AuditEventDetail implements AuditEventDetail, Resource {
+factoryAuditEventDetail({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+_type _type,
+valueString valueString,
+_valueString _valueString,
+valueBase64Binary valueBase64Binary,
+_valueBase64Binary _valueBase64Binary,
+}) = _AuditEventDetail
+
+ factory AuditEventDetail.fromJson(Map<String,dynamic> json) => _$AuditEventDetailFromJson(json);
 }
 
 @freezed
-abstract class Consent with _$Consent implements Resource {
-  const factory Consent({
-    @JsonKey(required: true, defaultValue: 'Consent')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus status,
-    @JsonKey(required: true) @required CodeableConcept scope,
-    @JsonKey(required: true) @required List<CodeableConcept> category,
-    Reference patient,
-    FhirDateTime dateTime,
-    List<Reference> performer,
-    List<Reference> organization,
-    Attachment sourceAttachment,
-    Reference sourceReference,
-    List<ConsentPolicy> policy,
-    CodeableConcept policyRule,
-    List<ConsentVerification> verification,
-    ConsentProvision provision,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_dateTime') Element dateTimeElement,
-  }) = _Consent;
-  factory Consent.fromJson(Map<String, dynamic> json) =>
-      _$ConsentFromJson(json);
+abstract class Consent implements Consent, Resource {
+factoryConsent({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+status status,
+_status _status,
+scope scope,
+category category,
+patient patient,
+dateTime dateTime,
+_dateTime _dateTime,
+performer performer,
+organization organization,
+sourceAttachment sourceAttachment,
+sourceReference sourceReference,
+policy policy,
+policyRule policyRule,
+verification verification,
+provision provision,
+}) = _Consent
+
+ factory Consent.fromJson(Map<String,dynamic> json) => _$ConsentFromJson(json);
 }
 
 @freezed
-abstract class ConsentPolicy with _$ConsentPolicy {
-  const factory ConsentPolicy({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri authority,
-    FhirUri uri,
-    @JsonKey(name: '_authority') Element authorityElement,
-    @JsonKey(name: '_uri') Element uriElement,
-  }) = _ConsentPolicy;
-  factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
-      _$ConsentPolicyFromJson(json);
+abstract class ConsentPolicy implements ConsentPolicy, Resource {
+factoryConsentPolicy({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+authority authority,
+_authority _authority,
+uri uri,
+_uri _uri,
+}) = _ConsentPolicy
+
+ factory ConsentPolicy.fromJson(Map<String,dynamic> json) => _$ConsentPolicyFromJson(json);
 }
 
 @freezed
-abstract class ConsentVerification with _$ConsentVerification {
-  const factory ConsentVerification({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean verified,
-    Reference verifiedWith,
-    FhirDateTime verificationDate,
-    @JsonKey(name: '_verified') Element verifiedElement,
-    @JsonKey(name: '_verificationDate') Element verificationDateElement,
-  }) = _ConsentVerification;
-  factory ConsentVerification.fromJson(Map<String, dynamic> json) =>
-      _$ConsentVerificationFromJson(json);
+abstract class ConsentVerification implements ConsentVerification, Resource {
+factoryConsentVerification({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+verified verified,
+_verified _verified,
+verifiedWith verifiedWith,
+verificationDate verificationDate,
+_verificationDate _verificationDate,
+}) = _ConsentVerification
+
+ factory ConsentVerification.fromJson(Map<String,dynamic> json) => _$ConsentVerificationFromJson(json);
 }
 
 @freezed
-abstract class ConsentProvision with _$ConsentProvision {
-  const factory ConsentProvision({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: ProvisionType.unknown) ProvisionType type,
-    Period period,
-    List<ConsentActor> actor,
-    List<CodeableConcept> action,
-    List<Coding> securityLabel,
-    List<Coding> purpose,
-    @JsonKey(name: 'class') List<Coding> class_,
-    List<CodeableConcept> code,
-    Period dataPeriod,
-    List<ConsentData> data,
-    List<ConsentProvision> provision,
-    @JsonKey(name: '_type') Element typeElement,
-  }) = _ConsentProvision;
-  factory ConsentProvision.fromJson(Map<String, dynamic> json) =>
-      _$ConsentProvisionFromJson(json);
+abstract class ConsentProvision implements ConsentProvision, Resource {
+factoryConsentProvision({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+_type _type,
+period period,
+actor actor,
+action action,
+securityLabel securityLabel,
+purpose purpose,
+class class,
+code code,
+dataPeriod dataPeriod,
+data data,
+provision provision,
+}) = _ConsentProvision
+
+ factory ConsentProvision.fromJson(Map<String,dynamic> json) => _$ConsentProvisionFromJson(json);
 }
 
 @freezed
-abstract class ConsentActor with _$ConsentActor {
-  const factory ConsentActor({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept role,
-    @JsonKey(required: true) @required Reference reference,
-  }) = _ConsentActor;
-  factory ConsentActor.fromJson(Map<String, dynamic> json) =>
-      _$ConsentActorFromJson(json);
+abstract class ConsentActor implements ConsentActor, Resource {
+factoryConsentActor({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+role role,
+reference reference,
+}) = _ConsentActor
+
+ factory ConsentActor.fromJson(Map<String,dynamic> json) => _$ConsentActorFromJson(json);
 }
 
 @freezed
-abstract class ConsentData with _$ConsentData {
-  const factory ConsentData({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: DataMeaning.unknown) DataMeaning meaning,
-    @JsonKey(required: true) @required Reference reference,
-    @JsonKey(name: '_meaning') Element meaningElement,
-  }) = _ConsentData;
-  factory ConsentData.fromJson(Map<String, dynamic> json) =>
-      _$ConsentDataFromJson(json);
+abstract class ConsentData implements ConsentData, Resource {
+factoryConsentData({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+meaning meaning,
+_meaning _meaning,
+reference reference,
+}) = _ConsentData
+
+ factory ConsentData.fromJson(Map<String,dynamic> json) => _$ConsentDataFromJson(json);
 }
 
 @freezed
-abstract class Provenance with _$Provenance implements Resource {
-  const factory Provenance({
-    @JsonKey(required: true, defaultValue: 'Provenance')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required List<Reference> target,
-    Period occurredPeriod,
-    FhirDateTime occurredDateTime,
-    Instant recorded,
-    List<FhirUri> policy,
-    Reference location,
-    List<CodeableConcept> reason,
-    CodeableConcept activity,
-    @JsonKey(required: true) @required List<ProvenanceAgent> agent,
-    List<ProvenanceEntity> entity,
-    List<Signature> signature,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
-    @JsonKey(name: '_recorded') Element recordedElement,
-    @JsonKey(name: '_policy') List<Element> policyElement,
-  }) = _Provenance;
-  factory Provenance.fromJson(Map<String, dynamic> json) =>
-      _$ProvenanceFromJson(json);
+abstract class Provenance implements Provenance, Resource {
+factoryProvenance({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+target target,
+occurredPeriod occurredPeriod,
+occurredDateTime occurredDateTime,
+_occurredDateTime _occurredDateTime,
+recorded recorded,
+_recorded _recorded,
+policy policy,
+_policy _policy,
+location location,
+reason reason,
+activity activity,
+agent agent,
+entity entity,
+signature signature,
+}) = _Provenance
+
+ factory Provenance.fromJson(Map<String,dynamic> json) => _$ProvenanceFromJson(json);
 }
 
 @freezed
-abstract class ProvenanceAgent with _$ProvenanceAgent {
-  const factory ProvenanceAgent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    List<CodeableConcept> role,
-    @JsonKey(required: true) @required Reference who,
-    Reference onBehalfOf,
-  }) = _ProvenanceAgent;
-  factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
-      _$ProvenanceAgentFromJson(json);
+abstract class ProvenanceAgent implements ProvenanceAgent, Resource {
+factoryProvenanceAgent({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+role role,
+who who,
+onBehalfOf onBehalfOf,
+}) = _ProvenanceAgent
+
+ factory ProvenanceAgent.fromJson(Map<String,dynamic> json) => _$ProvenanceAgentFromJson(json);
 }
 
 @freezed
-abstract class ProvenanceEntity with _$ProvenanceEntity {
-  const factory ProvenanceEntity({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: EntityRole.unknown) EntityRole role,
-    @JsonKey(required: true) @required Reference what,
-    List<ProvenanceAgent> agent,
-    @JsonKey(name: '_role') Element roleElement,
-  }) = _ProvenanceEntity;
-  factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
-      _$ProvenanceEntityFromJson(json);
+abstract class ProvenanceEntity implements ProvenanceEntity, Resource {
+factoryProvenanceEntity({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+role role,
+_role _role,
+what what,
+agent agent,
+}) = _ProvenanceEntity
+
+ factory ProvenanceEntity.fromJson(Map<String,dynamic> json) => _$ProvenanceEntityFromJson(json);
 }
+

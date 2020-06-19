@@ -1,941 +1,890 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../../../../fhir_r4.dart';
-import '../../resource_types.enums.dart';
-import 'definitional_artifacts.enums.dart';
-
-part 'definitional_artifacts.freezed.dart';
-part 'definitional_artifacts.g.dart';
-
 @freezed
-abstract class ActivityDefinition
-    with _$ActivityDefinition
-    implements Resource {
-  const factory ActivityDefinition({
-    @JsonKey(required: true, defaultValue: 'ActivityDefinition')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    List<Identifier> identifier,
-    String version,
-    String name,
-    String title,
-    String subtitle,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
-    Boolean experimental,
-    CodeableConcept subjectCodeableConcept,
-    Reference subjectReference,
-    FhirDateTime date,
-    String publisher,
-    List<ContactDetail> contact,
-    Markdown description,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    String usage,
-    Markdown copyright,
-    Date approvalDate,
-    Date lastReviewDate,
-    Period effectivePeriod,
-    List<CodeableConcept> topic,
-    List<ContactDetail> author,
-    List<ContactDetail> editor,
-    List<ContactDetail> reviewer,
-    List<ContactDetail> endorser,
-    List<RelatedArtifact> relatedArtifact,
-    List<Canonical> library,
-    Code kind,
-    Canonical profile,
-    CodeableConcept code,
-    Code intent,
-    Code priority,
-    Boolean doNotPerform,
-    Timing timingTiming,
-    FhirDateTime timingDateTime,
-    Age timingAge,
-    Period timingPeriod,
-    Range timingRange,
-    Duration timingDuration,
-    Reference location,
-    List<ActivityDefinitionParticipant> participant,
-    Reference productReference,
-    CodeableConcept productCodeableConcept,
-    Quantity quantity,
-    List<Dosage> dosage,
-    List<CodeableConcept> bodySite,
-    List<Reference> specimenRequirement,
-    List<Reference> observationRequirement,
-    List<Reference> observationResultRequirement,
-    Canonical transform,
-    List<ActivityDefinitionDynamicValue> dynamicValue,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_subtitle') Element subtitleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_usage') Element usageElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-    @JsonKey(name: '_kind') Element kindElement,
-    @JsonKey(name: '_intent') Element intentElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
-    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-  }) = _ActivityDefinition;
-  factory ActivityDefinition.fromJson(Map<String, dynamic> json) =>
-      _$ActivityDefinitionFromJson(json);
+abstract class ActivityDefinition implements ActivityDefinition, Resource {
+factoryActivityDefinition({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+url url,
+_url _url,
+identifier identifier,
+version version,
+_version _version,
+name name,
+_name _name,
+title title,
+_title _title,
+subtitle subtitle,
+_subtitle _subtitle,
+status status,
+_status _status,
+experimental experimental,
+_experimental _experimental,
+subjectCodeableConcept subjectCodeableConcept,
+subjectReference subjectReference,
+date date,
+_date _date,
+publisher publisher,
+_publisher _publisher,
+contact contact,
+description description,
+_description _description,
+useContext useContext,
+jurisdiction jurisdiction,
+purpose purpose,
+_purpose _purpose,
+usage usage,
+_usage _usage,
+copyright copyright,
+_copyright _copyright,
+approvalDate approvalDate,
+_approvalDate _approvalDate,
+lastReviewDate lastReviewDate,
+_lastReviewDate _lastReviewDate,
+effectivePeriod effectivePeriod,
+topic topic,
+author author,
+editor editor,
+reviewer reviewer,
+endorser endorser,
+relatedArtifact relatedArtifact,
+library library,
+kind kind,
+_kind _kind,
+profile profile,
+code code,
+intent intent,
+_intent _intent,
+priority priority,
+_priority _priority,
+doNotPerform doNotPerform,
+_doNotPerform _doNotPerform,
+timingTiming timingTiming,
+timingDateTime timingDateTime,
+_timingDateTime _timingDateTime,
+timingAge timingAge,
+timingPeriod timingPeriod,
+timingRange timingRange,
+timingDuration timingDuration,
+location location,
+participant participant,
+productReference productReference,
+productCodeableConcept productCodeableConcept,
+quantity quantity,
+dosage dosage,
+bodySite bodySite,
+specimenRequirement specimenRequirement,
+observationRequirement observationRequirement,
+observationResultRequirement observationResultRequirement,
+transform transform,
+dynamicValue dynamicValue,
+}) = _ActivityDefinition
+
+ factory ActivityDefinition.fromJson(Map<String,dynamic> json) => _$ActivityDefinitionFromJson(json);
 }
 
 @freezed
-abstract class ActivityDefinitionParticipant
-    with _$ActivityDefinitionParticipant {
-  const factory ActivityDefinitionParticipant({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Code type,
-    CodeableConcept role,
-    @JsonKey(name: '_type') Element typeElement,
-  }) = _ActivityDefinitionParticipant;
-  factory ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
-      _$ActivityDefinitionParticipantFromJson(json);
+abstract class ActivityDefinitionParticipant implements ActivityDefinitionParticipant, Resource {
+factoryActivityDefinitionParticipant({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+_type _type,
+role role,
+}) = _ActivityDefinitionParticipant
+
+ factory ActivityDefinitionParticipant.fromJson(Map<String,dynamic> json) => _$ActivityDefinitionParticipantFromJson(json);
 }
 
 @freezed
-abstract class ActivityDefinitionDynamicValue
-    with _$ActivityDefinitionDynamicValue {
-  const factory ActivityDefinitionDynamicValue({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String path,
-    @JsonKey(required: true) @required Expression expression,
-    @JsonKey(name: '_path') Element pathElement,
-  }) = _ActivityDefinitionDynamicValue;
-  factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
-      _$ActivityDefinitionDynamicValueFromJson(json);
+abstract class ActivityDefinitionDynamicValue implements ActivityDefinitionDynamicValue, Resource {
+factoryActivityDefinitionDynamicValue({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+path path,
+_path _path,
+expression expression,
+}) = _ActivityDefinitionDynamicValue
+
+ factory ActivityDefinitionDynamicValue.fromJson(Map<String,dynamic> json) => _$ActivityDefinitionDynamicValueFromJson(json);
 }
 
 @freezed
-abstract class DeviceDefinition with _$DeviceDefinition implements Resource {
-  const factory DeviceDefinition({
-    @JsonKey(required: true, defaultValue: 'DeviceDefinition')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
-    String manufacturerString,
-    Reference manufacturerReference,
-    List<DeviceDefinitionDeviceName> deviceName,
-    String modelNumber,
-    CodeableConcept type,
-    List<DeviceDefinitionSpecialization> specialization,
-    List<String> version,
-    List<CodeableConcept> safety,
-    List<ProductShelfLife> shelfLifeStorage,
-    ProdCharacteristic physicalCharacteristics,
-    List<CodeableConcept> languageCode,
-    List<DeviceDefinitionCapability> capability,
-    List<DeviceDefinitionProperty> property,
-    Reference owner,
-    List<ContactPoint> contact,
-    FhirUri url,
-    FhirUri onlineInformation,
-    List<Annotation> note,
-    Quantity quantity,
-    Reference parentDevice,
-    List<DeviceDefinitionMaterial> material,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_manufacturerString') Element manufacturerStringElement,
-    @JsonKey(name: '_modelNumber') Element modelNumberElement,
-    @JsonKey(name: '_version') List<Element> versionElement,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_onlineInformation') Element onlineInformationElement,
-  }) = _DeviceDefinition;
-  factory DeviceDefinition.fromJson(Map<String, dynamic> json) =>
-      _$DeviceDefinitionFromJson(json);
+abstract class DeviceDefinition implements DeviceDefinition, Resource {
+factoryDeviceDefinition({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+udiDeviceIdentifier udiDeviceIdentifier,
+manufacturerString manufacturerString,
+_manufacturerString _manufacturerString,
+manufacturerReference manufacturerReference,
+deviceName deviceName,
+modelNumber modelNumber,
+_modelNumber _modelNumber,
+type type,
+specialization specialization,
+version version,
+_version _version,
+safety safety,
+shelfLifeStorage shelfLifeStorage,
+physicalCharacteristics physicalCharacteristics,
+languageCode languageCode,
+capability capability,
+property property,
+owner owner,
+contact contact,
+url url,
+_url _url,
+onlineInformation onlineInformation,
+_onlineInformation _onlineInformation,
+note note,
+quantity quantity,
+parentDevice parentDevice,
+material material,
+}) = _DeviceDefinition
+
+ factory DeviceDefinition.fromJson(Map<String,dynamic> json) => _$DeviceDefinitionFromJson(json);
 }
 
 @freezed
-abstract class DeviceDefinitionUdiDeviceIdentifier
-    with _$DeviceDefinitionUdiDeviceIdentifier {
-  const factory DeviceDefinitionUdiDeviceIdentifier({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String deviceIdentifier,
-    FhirUri issuer,
-    FhirUri jurisdiction,
-    @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
-    @JsonKey(name: '_issuer') Element issuerElement,
-    @JsonKey(name: '_jurisdiction') Element jurisdictionElement,
-  }) = _DeviceDefinitionUdiDeviceIdentifier;
-  factory DeviceDefinitionUdiDeviceIdentifier.fromJson(
-          Map<String, dynamic> json) =>
-      _$DeviceDefinitionUdiDeviceIdentifierFromJson(json);
+abstract class DeviceDefinitionUdiDeviceIdentifier implements DeviceDefinitionUdiDeviceIdentifier, Resource {
+factoryDeviceDefinitionUdiDeviceIdentifier({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+deviceIdentifier deviceIdentifier,
+_deviceIdentifier _deviceIdentifier,
+issuer issuer,
+_issuer _issuer,
+jurisdiction jurisdiction,
+_jurisdiction _jurisdiction,
+}) = _DeviceDefinitionUdiDeviceIdentifier
+
+ factory DeviceDefinitionUdiDeviceIdentifier.fromJson(Map<String,dynamic> json) => _$DeviceDefinitionUdiDeviceIdentifierFromJson(json);
 }
 
 @freezed
-abstract class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
-  const factory DeviceDefinitionDeviceName({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(unknownEnumValue: DeviceNameType.unknown) DeviceNameType type,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_type') Element typeElement,
-  }) = _DeviceDefinitionDeviceName;
-  factory DeviceDefinitionDeviceName.fromJson(Map<String, dynamic> json) =>
-      _$DeviceDefinitionDeviceNameFromJson(json);
+abstract class DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName, Resource {
+factoryDeviceDefinitionDeviceName({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+name name,
+_name _name,
+type type,
+_type _type,
+}) = _DeviceDefinitionDeviceName
+
+ factory DeviceDefinitionDeviceName.fromJson(Map<String,dynamic> json) => _$DeviceDefinitionDeviceNameFromJson(json);
 }
 
 @freezed
-abstract class DeviceDefinitionSpecialization
-    with _$DeviceDefinitionSpecialization {
-  const factory DeviceDefinitionSpecialization({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String systemType,
-    String version,
-    @JsonKey(name: '_systemType') Element systemTypeElement,
-    @JsonKey(name: '_version') Element versionElement,
-  }) = _DeviceDefinitionSpecialization;
-  factory DeviceDefinitionSpecialization.fromJson(Map<String, dynamic> json) =>
-      _$DeviceDefinitionSpecializationFromJson(json);
+abstract class DeviceDefinitionSpecialization implements DeviceDefinitionSpecialization, Resource {
+factoryDeviceDefinitionSpecialization({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+systemType systemType,
+_systemType _systemType,
+version version,
+_version _version,
+}) = _DeviceDefinitionSpecialization
+
+ factory DeviceDefinitionSpecialization.fromJson(Map<String,dynamic> json) => _$DeviceDefinitionSpecializationFromJson(json);
 }
 
 @freezed
-abstract class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
-  const factory DeviceDefinitionCapability({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept type,
-    List<CodeableConcept> description,
-  }) = _DeviceDefinitionCapability;
-  factory DeviceDefinitionCapability.fromJson(Map<String, dynamic> json) =>
-      _$DeviceDefinitionCapabilityFromJson(json);
+abstract class DeviceDefinitionCapability implements DeviceDefinitionCapability, Resource {
+factoryDeviceDefinitionCapability({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+description description,
+}) = _DeviceDefinitionCapability
+
+ factory DeviceDefinitionCapability.fromJson(Map<String,dynamic> json) => _$DeviceDefinitionCapabilityFromJson(json);
 }
 
 @freezed
-abstract class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
-  const factory DeviceDefinitionProperty({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept type,
-    List<Quantity> valueQuantity,
-    List<CodeableConcept> valueCode,
-  }) = _DeviceDefinitionProperty;
-  factory DeviceDefinitionProperty.fromJson(Map<String, dynamic> json) =>
-      _$DeviceDefinitionPropertyFromJson(json);
+abstract class DeviceDefinitionProperty implements DeviceDefinitionProperty, Resource {
+factoryDeviceDefinitionProperty({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+valueQuantity valueQuantity,
+valueCode valueCode,
+}) = _DeviceDefinitionProperty
+
+ factory DeviceDefinitionProperty.fromJson(Map<String,dynamic> json) => _$DeviceDefinitionPropertyFromJson(json);
 }
 
 @freezed
-abstract class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
-  const factory DeviceDefinitionMaterial({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept substance,
-    Boolean alternate,
-    Boolean allergenicIndicator,
-    @JsonKey(name: '_alternate') Element alternateElement,
-    @JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
-  }) = _DeviceDefinitionMaterial;
-  factory DeviceDefinitionMaterial.fromJson(Map<String, dynamic> json) =>
-      _$DeviceDefinitionMaterialFromJson(json);
+abstract class DeviceDefinitionMaterial implements DeviceDefinitionMaterial, Resource {
+factoryDeviceDefinitionMaterial({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+substance substance,
+alternate alternate,
+_alternate _alternate,
+allergenicIndicator allergenicIndicator,
+_allergenicIndicator _allergenicIndicator,
+}) = _DeviceDefinitionMaterial
+
+ factory DeviceDefinitionMaterial.fromJson(Map<String,dynamic> json) => _$DeviceDefinitionMaterialFromJson(json);
 }
 
 @freezed
-abstract class EventDefinition with _$EventDefinition implements Resource {
-  const factory EventDefinition({
-    @JsonKey(required: true, defaultValue: 'EventDefinition')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    List<Identifier> identifier,
-    String version,
-    String name,
-    String title,
-    String subtitle,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
-    Boolean experimental,
-    CodeableConcept subjectCodeableConcept,
-    Reference subjectReference,
-    FhirDateTime date,
-    String publisher,
-    List<ContactDetail> contact,
-    Markdown description,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    String usage,
-    Markdown copyright,
-    Date approvalDate,
-    Date lastReviewDate,
-    Period effectivePeriod,
-    List<CodeableConcept> topic,
-    List<ContactDetail> author,
-    List<ContactDetail> editor,
-    List<ContactDetail> reviewer,
-    List<ContactDetail> endorser,
-    List<RelatedArtifact> relatedArtifact,
-    @JsonKey(required: true) @required List<TriggerDefinition> trigger,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_subtitle') Element subtitleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_usage') Element usageElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-  }) = _EventDefinition;
-  factory EventDefinition.fromJson(Map<String, dynamic> json) =>
-      _$EventDefinitionFromJson(json);
+abstract class EventDefinition implements EventDefinition, Resource {
+factoryEventDefinition({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+url url,
+_url _url,
+identifier identifier,
+version version,
+_version _version,
+name name,
+_name _name,
+title title,
+_title _title,
+subtitle subtitle,
+_subtitle _subtitle,
+status status,
+_status _status,
+experimental experimental,
+_experimental _experimental,
+subjectCodeableConcept subjectCodeableConcept,
+subjectReference subjectReference,
+date date,
+_date _date,
+publisher publisher,
+_publisher _publisher,
+contact contact,
+description description,
+_description _description,
+useContext useContext,
+jurisdiction jurisdiction,
+purpose purpose,
+_purpose _purpose,
+usage usage,
+_usage _usage,
+copyright copyright,
+_copyright _copyright,
+approvalDate approvalDate,
+_approvalDate _approvalDate,
+lastReviewDate lastReviewDate,
+_lastReviewDate _lastReviewDate,
+effectivePeriod effectivePeriod,
+topic topic,
+author author,
+editor editor,
+reviewer reviewer,
+endorser endorser,
+relatedArtifact relatedArtifact,
+trigger trigger,
+}) = _EventDefinition
+
+ factory EventDefinition.fromJson(Map<String,dynamic> json) => _$EventDefinitionFromJson(json);
 }
 
 @freezed
-abstract class ObservationDefinition
-    with _$ObservationDefinition
-    implements Resource {
-  const factory ObservationDefinition({
-    @JsonKey(required: true, defaultValue: 'ObservationDefinition')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> category,
-    @JsonKey(required: true) @required CodeableConcept code,
-    List<Identifier> identifier,
-    List<ObservationDefinitionPermittedDataType> permittedDataType,
-    Boolean multipleResultsAllowed,
-    CodeableConcept method,
-    String preferredReportName,
-    ObservationDefinitionQuantitativeDetails quantitativeDetails,
-    List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
-    Reference validCodedValueSet,
-    Reference normalCodedValueSet,
-    Reference abnormalCodedValueSet,
-    Reference criticalCodedValueSet,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_permittedDataType') List<Element> permittedDataTypeElement,
-    @JsonKey(name: '_multipleResultsAllowed')
-        Element multipleResultsAllowedElement,
-    @JsonKey(name: '_preferredReportName') Element preferredReportNameElement,
-  }) = _ObservationDefinition;
-  factory ObservationDefinition.fromJson(Map<String, dynamic> json) =>
-      _$ObservationDefinitionFromJson(json);
+abstract class ObservationDefinition implements ObservationDefinition, Resource {
+factoryObservationDefinition({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+category category,
+code code,
+identifier identifier,
+permittedDataType permittedDataType,
+_permittedDataType _permittedDataType,
+multipleResultsAllowed multipleResultsAllowed,
+_multipleResultsAllowed _multipleResultsAllowed,
+method method,
+preferredReportName preferredReportName,
+_preferredReportName _preferredReportName,
+quantitativeDetails quantitativeDetails,
+qualifiedInterval qualifiedInterval,
+validCodedValueSet validCodedValueSet,
+normalCodedValueSet normalCodedValueSet,
+abnormalCodedValueSet abnormalCodedValueSet,
+criticalCodedValueSet criticalCodedValueSet,
+}) = _ObservationDefinition
+
+ factory ObservationDefinition.fromJson(Map<String,dynamic> json) => _$ObservationDefinitionFromJson(json);
 }
 
 @freezed
-abstract class ObservationDefinitionQuantitativeDetails
-    with _$ObservationDefinitionQuantitativeDetails {
-  const factory ObservationDefinitionQuantitativeDetails({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept customaryUnit,
-    CodeableConcept unit,
-    Decimal conversionFactor,
-    Integer decimalPrecision,
-    @JsonKey(name: '_conversionFactor') Element conversionFactorElement,
-    @JsonKey(name: '_decimalPrecision') Element decimalPrecisionElement,
-  }) = _ObservationDefinitionQuantitativeDetails;
-  factory ObservationDefinitionQuantitativeDetails.fromJson(
-          Map<String, dynamic> json) =>
-      _$ObservationDefinitionQuantitativeDetailsFromJson(json);
+abstract class ObservationDefinitionQuantitativeDetails implements ObservationDefinitionQuantitativeDetails, Resource {
+factoryObservationDefinitionQuantitativeDetails({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+customaryUnit customaryUnit,
+unit unit,
+conversionFactor conversionFactor,
+_conversionFactor _conversionFactor,
+decimalPrecision decimalPrecision,
+_decimalPrecision _decimalPrecision,
+}) = _ObservationDefinitionQuantitativeDetails
+
+ factory ObservationDefinitionQuantitativeDetails.fromJson(Map<String,dynamic> json) => _$ObservationDefinitionQuantitativeDetailsFromJson(json);
 }
 
 @freezed
-abstract class ObservationDefinitionQualifiedInterval
-    with _$ObservationDefinitionQualifiedInterval {
-  const factory ObservationDefinitionQualifiedInterval({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: QualifiedIntervalCategory.unknown)
-        QualifiedIntervalCategory category,
-    Range range,
-    CodeableConcept context,
-    List<CodeableConcept> appliesTo,
-    @JsonKey(unknownEnumValue: Gender.unknown) Gender gender,
-    Range age,
-    Range gestationalAge,
-    String condition,
-    @JsonKey(name: '_category') Element categoryElement,
-    @JsonKey(name: '_gender') Element genderElement,
-    @JsonKey(name: '_condition') Element conditionElement,
-  }) = _ObservationDefinitionQualifiedInterval;
-  factory ObservationDefinitionQualifiedInterval.fromJson(
-          Map<String, dynamic> json) =>
-      _$ObservationDefinitionQualifiedIntervalFromJson(json);
+abstract class ObservationDefinitionQualifiedInterval implements ObservationDefinitionQualifiedInterval, Resource {
+factoryObservationDefinitionQualifiedInterval({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+category category,
+_category _category,
+range range,
+context context,
+appliesTo appliesTo,
+gender gender,
+_gender _gender,
+age age,
+gestationalAge gestationalAge,
+condition condition,
+_condition _condition,
+}) = _ObservationDefinitionQualifiedInterval
+
+ factory ObservationDefinitionQualifiedInterval.fromJson(Map<String,dynamic> json) => _$ObservationDefinitionQualifiedIntervalFromJson(json);
 }
 
 @freezed
-abstract class PlanDefinition with _$PlanDefinition implements Resource {
-  const factory PlanDefinition({
-    @JsonKey(required: true, defaultValue: 'PlanDefinition')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    List<Identifier> identifier,
-    String version,
-    String name,
-    String title,
-    String subtitle,
-    CodeableConcept type,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
-    Boolean experimental,
-    CodeableConcept subjectCodeableConcept,
-    Reference subjectReference,
-    FhirDateTime date,
-    String publisher,
-    List<ContactDetail> contact,
-    Markdown description,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    String usage,
-    Markdown copyright,
-    Date approvalDate,
-    Date lastReviewDate,
-    Period effectivePeriod,
-    List<CodeableConcept> topic,
-    List<ContactDetail> author,
-    List<ContactDetail> editor,
-    List<ContactDetail> reviewer,
-    List<ContactDetail> endorser,
-    List<RelatedArtifact> relatedArtifact,
-    List<Canonical> library,
-    List<PlanDefinitionGoal> goal,
-    List<PlanDefinitionAction> action,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_subtitle') Element subtitleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_usage') Element usageElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-  }) = _PlanDefinition;
-  factory PlanDefinition.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinitionFromJson(json);
+abstract class PlanDefinition implements PlanDefinition, Resource {
+factoryPlanDefinition({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+url url,
+_url _url,
+identifier identifier,
+version version,
+_version _version,
+name name,
+_name _name,
+title title,
+_title _title,
+subtitle subtitle,
+_subtitle _subtitle,
+type type,
+status status,
+_status _status,
+experimental experimental,
+_experimental _experimental,
+subjectCodeableConcept subjectCodeableConcept,
+subjectReference subjectReference,
+date date,
+_date _date,
+publisher publisher,
+_publisher _publisher,
+contact contact,
+description description,
+_description _description,
+useContext useContext,
+jurisdiction jurisdiction,
+purpose purpose,
+_purpose _purpose,
+usage usage,
+_usage _usage,
+copyright copyright,
+_copyright _copyright,
+approvalDate approvalDate,
+_approvalDate _approvalDate,
+lastReviewDate lastReviewDate,
+_lastReviewDate _lastReviewDate,
+effectivePeriod effectivePeriod,
+topic topic,
+author author,
+editor editor,
+reviewer reviewer,
+endorser endorser,
+relatedArtifact relatedArtifact,
+library library,
+goal goal,
+action action,
+}) = _PlanDefinition
+
+ factory PlanDefinition.fromJson(Map<String,dynamic> json) => _$PlanDefinitionFromJson(json);
 }
 
 @freezed
-abstract class PlanDefinitionGoal with _$PlanDefinitionGoal {
-  const factory PlanDefinitionGoal({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept category,
-    @JsonKey(required: true) @required CodeableConcept description,
-    CodeableConcept priority,
-    CodeableConcept start,
-    List<CodeableConcept> addresses,
-    List<RelatedArtifact> documentation,
-    List<PlanDefinitionTarget> target,
-  }) = _PlanDefinitionGoal;
-  factory PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinitionGoalFromJson(json);
+abstract class PlanDefinitionGoal implements PlanDefinitionGoal, Resource {
+factoryPlanDefinitionGoal({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+category category,
+description description,
+priority priority,
+start start,
+addresses addresses,
+documentation documentation,
+target target,
+}) = _PlanDefinitionGoal
+
+ factory PlanDefinitionGoal.fromJson(Map<String,dynamic> json) => _$PlanDefinitionGoalFromJson(json);
 }
 
 @freezed
-abstract class PlanDefinitionTarget with _$PlanDefinitionTarget {
-  const factory PlanDefinitionTarget({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept measure,
-    Quantity detailQuantity,
-    Range detailRange,
-    CodeableConcept detailCodeableConcept,
-    Duration due,
-  }) = _PlanDefinitionTarget;
-  factory PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinitionTargetFromJson(json);
+abstract class PlanDefinitionTarget implements PlanDefinitionTarget, Resource {
+factoryPlanDefinitionTarget({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+measure measure,
+detailQuantity detailQuantity,
+detailRange detailRange,
+detailCodeableConcept detailCodeableConcept,
+due due,
+}) = _PlanDefinitionTarget
+
+ factory PlanDefinitionTarget.fromJson(Map<String,dynamic> json) => _$PlanDefinitionTargetFromJson(json);
 }
 
 @freezed
-abstract class PlanDefinitionAction with _$PlanDefinitionAction {
-  const factory PlanDefinitionAction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String prefix,
-    String title,
-    String description,
-    String textEquivalent,
-    Code priority,
-    List<CodeableConcept> code,
-    List<CodeableConcept> reason,
-    List<RelatedArtifact> documentation,
-    List<Id> goalId,
-    CodeableConcept subjectCodeableConcept,
-    Reference subjectReference,
-    List<TriggerDefinition> trigger,
-    List<PlanDefinitionCondition> condition,
-    List<DataRequirement> input,
-    List<DataRequirement> output,
-    List<PlanDefinitionRelatedAction> relatedAction,
-    FhirDateTime timingDateTime,
-    Age timingAge,
-    Period timingPeriod,
-    Duration timingDuration,
-    Range timingRange,
-    Timing timingTiming,
-    List<PlanDefinitionParticipant> participant,
-    CodeableConcept type,
-    @JsonKey(unknownEnumValue: ActionGroupingBehavior.unknown)
-        ActionGroupingBehavior groupingBehavior,
-    @JsonKey(unknownEnumValue: ActionSelectionBehavior.unknown)
-        ActionSelectionBehavior selectionBehavior,
-    @JsonKey(unknownEnumValue: ActionRequiredBehavior.unknown)
-        ActionRequiredBehavior requiredBehavior,
-    @JsonKey(unknownEnumValue: ActionPrecheckBehavior.unknown)
-        ActionPrecheckBehavior precheckBehavior,
-    @JsonKey(unknownEnumValue: ActionCardinalityBehavior.unknown)
-        ActionCardinalityBehavior cardinalityBehavior,
-    Canonical definitionCanonical,
-    FhirUri definitionUri,
-    Canonical transform,
-    List<PlanDefinitionDynamicValue> dynamicValue,
-    List<PlanDefinitionAction> action,
-    @JsonKey(name: '_prefix') Element prefixElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_textEquivalent') Element textEquivalentElement,
-    @JsonKey(name: '_priority') Element priorityElement,
-    @JsonKey(name: '_goalId') List<Element> goalIdElement,
-    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-    @JsonKey(name: '_groupingBehavior') Element groupingBehaviorElement,
-    @JsonKey(name: '_selectionBehavior') Element selectionBehaviorElement,
-    @JsonKey(name: '_requiredBehavior') Element requiredBehaviorElement,
-    @JsonKey(name: '_precheckBehavior') Element precheckBehaviorElement,
-    @JsonKey(name: '_cardinalityBehavior') Element cardinalityBehaviorElement,
-    @JsonKey(name: '_definitionCanonical') Element definitionCanonicalElement,
-    @JsonKey(name: '_definitionUri') Element definitionUriElement,
-  }) = _PlanDefinitionAction;
-  factory PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinitionActionFromJson(json);
+abstract class PlanDefinitionAction implements PlanDefinitionAction, Resource {
+factoryPlanDefinitionAction({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+prefix prefix,
+_prefix _prefix,
+title title,
+_title _title,
+description description,
+_description _description,
+textEquivalent textEquivalent,
+_textEquivalent _textEquivalent,
+priority priority,
+_priority _priority,
+code code,
+reason reason,
+documentation documentation,
+goalId goalId,
+_goalId _goalId,
+subjectCodeableConcept subjectCodeableConcept,
+subjectReference subjectReference,
+trigger trigger,
+condition condition,
+input input,
+output output,
+relatedAction relatedAction,
+timingDateTime timingDateTime,
+_timingDateTime _timingDateTime,
+timingAge timingAge,
+timingPeriod timingPeriod,
+timingDuration timingDuration,
+timingRange timingRange,
+timingTiming timingTiming,
+participant participant,
+type type,
+groupingBehavior groupingBehavior,
+_groupingBehavior _groupingBehavior,
+selectionBehavior selectionBehavior,
+_selectionBehavior _selectionBehavior,
+requiredBehavior requiredBehavior,
+_requiredBehavior _requiredBehavior,
+precheckBehavior precheckBehavior,
+_precheckBehavior _precheckBehavior,
+cardinalityBehavior cardinalityBehavior,
+_cardinalityBehavior _cardinalityBehavior,
+definitionCanonical definitionCanonical,
+_definitionCanonical _definitionCanonical,
+definitionUri definitionUri,
+_definitionUri _definitionUri,
+transform transform,
+dynamicValue dynamicValue,
+action action,
+}) = _PlanDefinitionAction
+
+ factory PlanDefinitionAction.fromJson(Map<String,dynamic> json) => _$PlanDefinitionActionFromJson(json);
 }
 
 @freezed
-abstract class PlanDefinitionCondition with _$PlanDefinitionCondition {
-  const factory PlanDefinitionCondition({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: ConditionKind.unknown) ConditionKind kind,
-    Expression expression,
-    @JsonKey(name: '_kind') Element kindElement,
-  }) = _PlanDefinitionCondition;
-  factory PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinitionConditionFromJson(json);
+abstract class PlanDefinitionCondition implements PlanDefinitionCondition, Resource {
+factoryPlanDefinitionCondition({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+kind kind,
+_kind _kind,
+expression expression,
+}) = _PlanDefinitionCondition
+
+ factory PlanDefinitionCondition.fromJson(Map<String,dynamic> json) => _$PlanDefinitionConditionFromJson(json);
 }
 
 @freezed
-abstract class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
-  const factory PlanDefinitionRelatedAction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Id actionId,
-    @JsonKey(unknownEnumValue: RelatedActionRelationship.unknown)
-        RelatedActionRelationship relationship,
-    Duration offsetDuration,
-    Range offsetRange,
-    @JsonKey(name: '_actionId') Element actionIdElement,
-    @JsonKey(name: '_relationship') Element relationshipElement,
-  }) = _PlanDefinitionRelatedAction;
-  factory PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinitionRelatedActionFromJson(json);
+abstract class PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction, Resource {
+factoryPlanDefinitionRelatedAction({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+actionId actionId,
+_actionId _actionId,
+relationship relationship,
+_relationship _relationship,
+offsetDuration offsetDuration,
+offsetRange offsetRange,
+}) = _PlanDefinitionRelatedAction
+
+ factory PlanDefinitionRelatedAction.fromJson(Map<String,dynamic> json) => _$PlanDefinitionRelatedActionFromJson(json);
 }
 
 @freezed
-abstract class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
-  const factory PlanDefinitionParticipant({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-        PlanDefinitionParticipantType type,
-    CodeableConcept role,
-    @JsonKey(name: '_type') Element typeElement,
-  }) = _PlanDefinitionParticipant;
-  factory PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinitionParticipantFromJson(json);
+abstract class PlanDefinitionParticipant implements PlanDefinitionParticipant, Resource {
+factoryPlanDefinitionParticipant({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+type type,
+_type _type,
+role role,
+}) = _PlanDefinitionParticipant
+
+ factory PlanDefinitionParticipant.fromJson(Map<String,dynamic> json) => _$PlanDefinitionParticipantFromJson(json);
 }
 
 @freezed
-abstract class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
-  const factory PlanDefinitionDynamicValue({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String path,
-    Expression expression,
-    @JsonKey(name: '_path') Element pathElement,
-  }) = _PlanDefinitionDynamicValue;
-  factory PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinitionDynamicValueFromJson(json);
+abstract class PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue, Resource {
+factoryPlanDefinitionDynamicValue({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+path path,
+_path _path,
+expression expression,
+}) = _PlanDefinitionDynamicValue
+
+ factory PlanDefinitionDynamicValue.fromJson(Map<String,dynamic> json) => _$PlanDefinitionDynamicValueFromJson(json);
 }
 
 @freezed
-abstract class Questionnaire with _$Questionnaire implements Resource {
-  const factory Questionnaire({
-    @JsonKey(required: true, defaultValue: 'Questionnaire')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    List<Identifier> identifier,
-    String version,
-    String name,
-    String title,
-    List<Canonical> derivedFrom,
-    @JsonKey(unknownEnumValue: Status.unknown) Status status,
-    Boolean experimental,
-    List<Code> subjectType,
-    FhirDateTime date,
-    String publisher,
-    List<ContactDetail> contact,
-    Markdown description,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    Markdown copyright,
-    Date approvalDate,
-    Date lastReviewDate,
-    Period effectivePeriod,
-    List<Coding> code,
-    List<QuestionnaireItem> item,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_url') Element urlElement,
-    @JsonKey(name: '_version') Element versionElement,
-    @JsonKey(name: '_name') Element nameElement,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @JsonKey(name: '_subjectType') List<Element> subjectTypeElement,
-    @JsonKey(name: '_date') Element dateElement,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-  }) = _Questionnaire;
-  factory Questionnaire.fromJson(Map<String, dynamic> json) =>
-      _$QuestionnaireFromJson(json);
+abstract class Questionnaire implements Questionnaire, Resource {
+factoryQuestionnaire({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+url url,
+_url _url,
+identifier identifier,
+version version,
+_version _version,
+name name,
+_name _name,
+title title,
+_title _title,
+derivedFrom derivedFrom,
+status status,
+_status _status,
+experimental experimental,
+_experimental _experimental,
+subjectType subjectType,
+_subjectType _subjectType,
+date date,
+_date _date,
+publisher publisher,
+_publisher _publisher,
+contact contact,
+description description,
+_description _description,
+useContext useContext,
+jurisdiction jurisdiction,
+purpose purpose,
+_purpose _purpose,
+copyright copyright,
+_copyright _copyright,
+approvalDate approvalDate,
+_approvalDate _approvalDate,
+lastReviewDate lastReviewDate,
+_lastReviewDate _lastReviewDate,
+effectivePeriod effectivePeriod,
+code code,
+item item,
+}) = _Questionnaire
+
+ factory Questionnaire.fromJson(Map<String,dynamic> json) => _$QuestionnaireFromJson(json);
 }
 
 @freezed
-abstract class QuestionnaireItem with _$QuestionnaireItem {
-  const factory QuestionnaireItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String linkId,
-    FhirUri definition,
-    List<Coding> code,
-    String prefix,
-    String text,
-    @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-        QuestionnaireItemType type,
-    List<QuestionnaireEnableWhen> enableWhen,
-    @JsonKey(unknownEnumValue: ItemEnableBehavior.unknown)
-        ItemEnableBehavior enableBehavior,
-    Boolean required,
-    Boolean repeats,
-    Boolean readOnly,
-    Integer maxLength,
-    Canonical answerValueSet,
-    List<QuestionnaireAnswerOption> answerOption,
-    List<QuestionnaireInitial> initial,
-    List<QuestionnaireItem> item,
-    @JsonKey(name: '_linkId') Element linkIdElement,
-    @JsonKey(name: '_definition') Element definitionElement,
-    @JsonKey(name: '_prefix') Element prefixElement,
-    @JsonKey(name: '_text') Element textElement,
-    @JsonKey(name: '_type') Element typeElement,
-    @JsonKey(name: '_enableBehavior') Element enableBehaviorElement,
-    @JsonKey(name: '_required') Element requiredElement,
-    @JsonKey(name: '_repeats') Element repeatsElement,
-    @JsonKey(name: '_readOnly') Element readOnlyElement,
-    @JsonKey(name: '_maxLength') Element maxLengthElement,
-  }) = _QuestionnaireItem;
-  factory QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
-      _$QuestionnaireItemFromJson(json);
+abstract class QuestionnaireItem implements QuestionnaireItem, Resource {
+factoryQuestionnaireItem({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+linkId linkId,
+_linkId _linkId,
+definition definition,
+_definition _definition,
+code code,
+prefix prefix,
+_prefix _prefix,
+text text,
+_text _text,
+type type,
+_type _type,
+enableWhen enableWhen,
+enableBehavior enableBehavior,
+_enableBehavior _enableBehavior,
+required required,
+_required _required,
+repeats repeats,
+_repeats _repeats,
+readOnly readOnly,
+_readOnly _readOnly,
+maxLength maxLength,
+_maxLength _maxLength,
+answerValueSet answerValueSet,
+answerOption answerOption,
+initial initial,
+item item,
+}) = _QuestionnaireItem
+
+ factory QuestionnaireItem.fromJson(Map<String,dynamic> json) => _$QuestionnaireItemFromJson(json);
 }
 
 @freezed
-abstract class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
-  const factory QuestionnaireEnableWhen({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String question,
-    @JsonKey(unknownEnumValue: EnableWhenOperator.unknown)
-        EnableWhenOperator operator,
-    Boolean answerBoolean,
-    Decimal answerDecimal,
-    Integer answerInteger,
-    Date answerDate,
-    FhirDateTime answerDateTime,
-    Time answerTime,
-    String answerString,
-    Coding answerCoding,
-    Quantity answerQuantity,
-    Reference answerReference,
-    @JsonKey(name: '_question') Element questionElement,
-    @JsonKey(name: '_operator') Element operatorElement,
-    @JsonKey(name: '_answerBoolean') Element answerBooleanElement,
-    @JsonKey(name: '_answerDecimal') Element answerDecimalElement,
-    @JsonKey(name: '_answerInteger') Element answerIntegerElement,
-    @JsonKey(name: '_answerDate') Element answerDateElement,
-    @JsonKey(name: '_answerDateTime') Element answerDateTimeElement,
-    @JsonKey(name: '_answerTime') Element answerTimeElement,
-    @JsonKey(name: '_answerString') Element answerStringElement,
-  }) = _QuestionnaireEnableWhen;
-  factory QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
-      _$QuestionnaireEnableWhenFromJson(json);
+abstract class QuestionnaireEnableWhen implements QuestionnaireEnableWhen, Resource {
+factoryQuestionnaireEnableWhen({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+question question,
+_question _question,
+operator operator,
+_operator _operator,
+answerBoolean answerBoolean,
+_answerBoolean _answerBoolean,
+answerDecimal answerDecimal,
+_answerDecimal _answerDecimal,
+answerInteger answerInteger,
+_answerInteger _answerInteger,
+answerDate answerDate,
+_answerDate _answerDate,
+answerDateTime answerDateTime,
+_answerDateTime _answerDateTime,
+answerTime answerTime,
+_answerTime _answerTime,
+answerString answerString,
+_answerString _answerString,
+answerCoding answerCoding,
+answerQuantity answerQuantity,
+answerReference answerReference,
+}) = _QuestionnaireEnableWhen
+
+ factory QuestionnaireEnableWhen.fromJson(Map<String,dynamic> json) => _$QuestionnaireEnableWhenFromJson(json);
 }
 
 @freezed
-abstract class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
-  const factory QuestionnaireAnswerOption({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Integer valueInteger,
-    Date valueDate,
-    Time valueTime,
-    String valueString,
-    Coding valueCoding,
-    Reference valueReference,
-    Boolean initialSelected,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    @JsonKey(name: '_initialSelected') Element initialSelectedElement,
-  }) = _QuestionnaireAnswerOption;
-  factory QuestionnaireAnswerOption.fromJson(Map<String, dynamic> json) =>
-      _$QuestionnaireAnswerOptionFromJson(json);
+abstract class QuestionnaireAnswerOption implements QuestionnaireAnswerOption, Resource {
+factoryQuestionnaireAnswerOption({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+valueInteger valueInteger,
+_valueInteger _valueInteger,
+valueDate valueDate,
+_valueDate _valueDate,
+valueTime valueTime,
+_valueTime _valueTime,
+valueString valueString,
+_valueString _valueString,
+valueCoding valueCoding,
+valueReference valueReference,
+initialSelected initialSelected,
+_initialSelected _initialSelected,
+}) = _QuestionnaireAnswerOption
+
+ factory QuestionnaireAnswerOption.fromJson(Map<String,dynamic> json) => _$QuestionnaireAnswerOptionFromJson(json);
 }
 
 @freezed
-abstract class QuestionnaireInitial with _$QuestionnaireInitial {
-  const factory QuestionnaireInitial({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean valueBoolean,
-    Decimal valueDecimal,
-    Integer valueInteger,
-    Date valueDate,
-    FhirDateTime valueDateTime,
-    Time valueTime,
-    String valueString,
-    FhirUri valueUri,
-    Attachment valueAttachment,
-    Coding valueCoding,
-    Quantity valueQuantity,
-    Reference valueReference,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-  }) = _QuestionnaireInitial;
-  factory QuestionnaireInitial.fromJson(Map<String, dynamic> json) =>
-      _$QuestionnaireInitialFromJson(json);
+abstract class QuestionnaireInitial implements QuestionnaireInitial, Resource {
+factoryQuestionnaireInitial({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+valueBoolean valueBoolean,
+_valueBoolean _valueBoolean,
+valueDecimal valueDecimal,
+_valueDecimal _valueDecimal,
+valueInteger valueInteger,
+_valueInteger _valueInteger,
+valueDate valueDate,
+_valueDate _valueDate,
+valueDateTime valueDateTime,
+_valueDateTime _valueDateTime,
+valueTime valueTime,
+_valueTime _valueTime,
+valueString valueString,
+_valueString _valueString,
+valueUri valueUri,
+_valueUri _valueUri,
+valueAttachment valueAttachment,
+valueCoding valueCoding,
+valueQuantity valueQuantity,
+valueReference valueReference,
+}) = _QuestionnaireInitial
+
+ factory QuestionnaireInitial.fromJson(Map<String,dynamic> json) => _$QuestionnaireInitialFromJson(json);
 }
 
 @freezed
-abstract class SpecimenDefinition
-    with _$SpecimenDefinition
-    implements Resource {
-  const factory SpecimenDefinition({
-    @JsonKey(required: true, defaultValue: 'SpecimenDefinition')
-    @required
-        String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    CodeableConcept typeCollected,
-    List<CodeableConcept> patientPreparation,
-    String timeAspect,
-    List<CodeableConcept> collection,
-    List<SpecimenDefinitionTypeTested> typeTested,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    @JsonKey(name: '_language') Element languageElement,
-    @JsonKey(name: '_timeAspect') Element timeAspectElement,
-  }) = _SpecimenDefinition;
-  factory SpecimenDefinition.fromJson(Map<String, dynamic> json) =>
-      _$SpecimenDefinitionFromJson(json);
+abstract class SpecimenDefinition implements SpecimenDefinition, Resource {
+factorySpecimenDefinition({
+resourceType resourceType,
+id id,
+meta meta,
+implicitRules implicitRules,
+_implicitRules _implicitRules,
+language language,
+_language _language,
+text text,
+contained contained,
+extension extension,
+modifierExtension modifierExtension,
+identifier identifier,
+typeCollected typeCollected,
+patientPreparation patientPreparation,
+timeAspect timeAspect,
+_timeAspect _timeAspect,
+collection collection,
+typeTested typeTested,
+}) = _SpecimenDefinition
+
+ factory SpecimenDefinition.fromJson(Map<String,dynamic> json) => _$SpecimenDefinitionFromJson(json);
 }
 
 @freezed
-abstract class SpecimenDefinitionTypeTested
-    with _$SpecimenDefinitionTypeTested {
-  const factory SpecimenDefinitionTypeTested({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean isDerived,
-    CodeableConcept type,
-    @JsonKey(unknownEnumValue: TypeTestedPreference.unknown)
-        TypeTestedPreference preference,
-    SpecimenDefinitionContainer container,
-    String requirement,
-    Duration retentionTime,
-    List<CodeableConcept> rejectionCriterion,
-    List<SpecimenDefinitionHandling> handling,
-    @JsonKey(name: '_isDerived') Element isDerivedElement,
-    @JsonKey(name: '_preference') Element preferenceElement,
-    @JsonKey(name: '_requirement') Element requirementElement,
-  }) = _SpecimenDefinitionTypeTested;
-  factory SpecimenDefinitionTypeTested.fromJson(Map<String, dynamic> json) =>
-      _$SpecimenDefinitionTypeTestedFromJson(json);
+abstract class SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested, Resource {
+factorySpecimenDefinitionTypeTested({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+isDerived isDerived,
+_isDerived _isDerived,
+type type,
+preference preference,
+_preference _preference,
+container container,
+requirement requirement,
+_requirement _requirement,
+retentionTime retentionTime,
+rejectionCriterion rejectionCriterion,
+handling handling,
+}) = _SpecimenDefinitionTypeTested
+
+ factory SpecimenDefinitionTypeTested.fromJson(Map<String,dynamic> json) => _$SpecimenDefinitionTypeTestedFromJson(json);
 }
 
 @freezed
-abstract class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
-  const factory SpecimenDefinitionContainer({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept material,
-    CodeableConcept type,
-    CodeableConcept cap,
-    String description,
-    Quantity capacity,
-    Quantity minimumVolumeQuantity,
-    String minimumVolumeString,
-    List<SpecimenDefinitionAdditive> additive,
-    String preparation,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(name: '_minimumVolumeString') Element minimumVolumeStringElement,
-    @JsonKey(name: '_preparation') Element preparationElement,
-  }) = _SpecimenDefinitionContainer;
-  factory SpecimenDefinitionContainer.fromJson(Map<String, dynamic> json) =>
-      _$SpecimenDefinitionContainerFromJson(json);
+abstract class SpecimenDefinitionContainer implements SpecimenDefinitionContainer, Resource {
+factorySpecimenDefinitionContainer({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+material material,
+type type,
+cap cap,
+description description,
+_description _description,
+capacity capacity,
+minimumVolumeQuantity minimumVolumeQuantity,
+minimumVolumeString minimumVolumeString,
+_minimumVolumeString _minimumVolumeString,
+additive additive,
+preparation preparation,
+_preparation _preparation,
+}) = _SpecimenDefinitionContainer
+
+ factory SpecimenDefinitionContainer.fromJson(Map<String,dynamic> json) => _$SpecimenDefinitionContainerFromJson(json);
 }
 
 @freezed
-abstract class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
-  const factory SpecimenDefinitionAdditive({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept additiveCodeableConcept,
-    Reference additiveReference,
-  }) = _SpecimenDefinitionAdditive;
-  factory SpecimenDefinitionAdditive.fromJson(Map<String, dynamic> json) =>
-      _$SpecimenDefinitionAdditiveFromJson(json);
+abstract class SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive, Resource {
+factorySpecimenDefinitionAdditive({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+additiveCodeableConcept additiveCodeableConcept,
+additiveReference additiveReference,
+}) = _SpecimenDefinitionAdditive
+
+ factory SpecimenDefinitionAdditive.fromJson(Map<String,dynamic> json) => _$SpecimenDefinitionAdditiveFromJson(json);
 }
 
 @freezed
-abstract class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
-  const factory SpecimenDefinitionHandling({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept temperatureQualifier,
-    Range temperatureRange,
-    Duration maxDuration,
-    String instruction,
-    @JsonKey(name: '_instruction') Element instructionElement,
-  }) = _SpecimenDefinitionHandling;
-  factory SpecimenDefinitionHandling.fromJson(Map<String, dynamic> json) =>
-      _$SpecimenDefinitionHandlingFromJson(json);
+abstract class SpecimenDefinitionHandling implements SpecimenDefinitionHandling, Resource {
+factorySpecimenDefinitionHandling({
+id id,
+extension extension,
+modifierExtension modifierExtension,
+temperatureQualifier temperatureQualifier,
+temperatureRange temperatureRange,
+maxDuration maxDuration,
+instruction instruction,
+_instruction _instruction,
+}) = _SpecimenDefinitionHandling
+
+ factory SpecimenDefinitionHandling.fromJson(Map<String,dynamic> json) => _$SpecimenDefinitionHandlingFromJson(json);
 }
+
