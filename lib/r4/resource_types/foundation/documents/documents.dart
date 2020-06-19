@@ -1,287 +1,308 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '../../../../fhir_r4.dart';
+
+part 'documents.freezed.dart';
+part 'documents.g.dart';
+
 @freezed
-abstract class CatalogEntry implements CatalogEntry, Resource {
-factoryCatalogEntry({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-type type,
-orderable orderable,
-_orderable _orderable,
-referencedItem referencedItem,
-additionalIdentifier additionalIdentifier,
-classification classification,
-status status,
-_status _status,
-validityPeriod validityPeriod,
-validTo validTo,
-_validTo _validTo,
-lastUpdated lastUpdated,
-_lastUpdated _lastUpdated,
-additionalCharacteristic additionalCharacteristic,
-additionalClassification additionalClassification,
-relatedEntry relatedEntry,
-}) = _CatalogEntry
+abstract class CatalogEntry implements _$CatalogEntry , Resource {
+CatalogEntry._();
+factory CatalogEntry({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  CodeableConcept type,
+  Boolean orderable,
+  @JsonKey(name: '_orderable')   Element orderableElement,
+  @required Reference referencedItem,
+  List<Identifier> additionalIdentifier,
+  List<CodeableConcept> classification,
+@JsonKey(unknownEnumValue: CatalogEntryStatus.unknown) CatalogEntryStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  Period validityPeriod,
+  FhirDateTime validTo,
+  @JsonKey(name: '_validTo')   Element validToElement,
+  FhirDateTime lastUpdated,
+  @JsonKey(name: '_lastUpdated')   Element lastUpdatedElement,
+  List<CodeableConcept> additionalCharacteristic,
+  List<CodeableConcept> additionalClassification,
+  List<CatalogEntryRelatedEntry> relatedEntry,
+}) = _CatalogEntry;
 
  factory CatalogEntry.fromJson(Map<String,dynamic> json) => _$CatalogEntryFromJson(json);
 }
 
 @freezed
-abstract class CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry, Resource {
-factoryCatalogEntryRelatedEntry({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-relationtype relationtype,
-_relationtype _relationtype,
-item item,
-}) = _CatalogEntryRelatedEntry
+abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry  {
+CatalogEntryRelatedEntry._();
+factory CatalogEntryRelatedEntry({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+@JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown) CatalogEntryRelatedEntryRelationtype relationtype,
+  @JsonKey(name: '_relationtype')   Element relationtypeElement,
+  @required Reference item,
+}) = _CatalogEntryRelatedEntry;
 
  factory CatalogEntryRelatedEntry.fromJson(Map<String,dynamic> json) => _$CatalogEntryRelatedEntryFromJson(json);
 }
 
 @freezed
-abstract class Composition implements Composition, Resource {
-factoryComposition({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-type type,
-category category,
-subject subject,
-encounter encounter,
-date date,
-_date _date,
-author author,
-title title,
-_title _title,
-confidentiality confidentiality,
-_confidentiality _confidentiality,
-attester attester,
-custodian custodian,
-relatesTo relatesTo,
-event event,
-section section,
-}) = _Composition
+abstract class Composition implements _$Composition , Resource {
+Composition._();
+factory Composition({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Identifier identifier,
+@JsonKey(unknownEnumValue: CompositionStatus.unknown) CompositionStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  @required CodeableConcept type,
+  List<CodeableConcept> category,
+  Reference subject,
+  Reference encounter,
+  FhirDateTime date,
+  @JsonKey(name: '_date')   Element dateElement,
+  @required List<Reference> author,
+  String title,
+  @JsonKey(name: '_title')   Element titleElement,
+  Code confidentiality,
+  @JsonKey(name: '_confidentiality')   Element confidentialityElement,
+  List<CompositionAttester> attester,
+  Reference custodian,
+  List<CompositionRelatesTo> relatesTo,
+  List<CompositionEvent> event,
+  List<CompositionSection> section,
+}) = _Composition;
 
  factory Composition.fromJson(Map<String,dynamic> json) => _$CompositionFromJson(json);
 }
 
 @freezed
-abstract class CompositionAttester implements CompositionAttester, Resource {
-factoryCompositionAttester({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-mode mode,
-_mode _mode,
-time time,
-_time _time,
-party party,
-}) = _CompositionAttester
+abstract class CompositionAttester implements _$CompositionAttester  {
+CompositionAttester._();
+factory CompositionAttester({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+@JsonKey(unknownEnumValue: CompositionAttesterMode.unknown) CompositionAttesterMode mode,
+  @JsonKey(name: '_mode')  Element modeElement,
+ FhirDateTime time,
+  @JsonKey(name: '_time')  Element timeElement,
+ Reference party,
+}) = _CompositionAttester;
 
  factory CompositionAttester.fromJson(Map<String,dynamic> json) => _$CompositionAttesterFromJson(json);
 }
 
 @freezed
-abstract class CompositionRelatesTo implements CompositionRelatesTo, Resource {
-factoryCompositionRelatesTo({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-code code,
-_code _code,
-targetIdentifier targetIdentifier,
-targetReference targetReference,
-}) = _CompositionRelatesTo
+abstract class CompositionRelatesTo implements _$CompositionRelatesTo  {
+CompositionRelatesTo._();
+factory CompositionRelatesTo({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Code code,
+  @JsonKey(name: '_code')  Element codeElement,
+ Identifier targetIdentifier,
+ Reference targetReference,
+}) = _CompositionRelatesTo;
 
  factory CompositionRelatesTo.fromJson(Map<String,dynamic> json) => _$CompositionRelatesToFromJson(json);
 }
 
 @freezed
-abstract class CompositionEvent implements CompositionEvent, Resource {
-factoryCompositionEvent({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-code code,
-period period,
-detail detail,
-}) = _CompositionEvent
+abstract class CompositionEvent implements _$CompositionEvent  {
+CompositionEvent._();
+factory CompositionEvent({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ List<CodeableConcept> code,
+ Period period,
+ List<Reference> detail,
+}) = _CompositionEvent;
 
  factory CompositionEvent.fromJson(Map<String,dynamic> json) => _$CompositionEventFromJson(json);
 }
 
 @freezed
-abstract class CompositionSection implements CompositionSection, Resource {
-factoryCompositionSection({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-title title,
-_title _title,
-code code,
-author author,
-focus focus,
-text text,
-mode mode,
-_mode _mode,
-orderedBy orderedBy,
-entry entry,
-emptyReason emptyReason,
-section section,
-}) = _CompositionSection
+abstract class CompositionSection implements _$CompositionSection  {
+CompositionSection._();
+factory CompositionSection({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ String title,
+  @JsonKey(name: '_title')  Element titleElement,
+ CodeableConcept code,
+ List<Reference> author,
+ Reference focus,
+ Narrative text,
+ Code mode,
+  @JsonKey(name: '_mode')  Element modeElement,
+ CodeableConcept orderedBy,
+ List<Reference> entry,
+ CodeableConcept emptyReason,
+ List<CompositionSection> section,
+}) = _CompositionSection;
 
  factory CompositionSection.fromJson(Map<String,dynamic> json) => _$CompositionSectionFromJson(json);
 }
 
 @freezed
-abstract class DocumentManifest implements DocumentManifest, Resource {
-factoryDocumentManifest({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-masterIdentifier masterIdentifier,
-identifier identifier,
-status status,
-_status _status,
-type type,
-subject subject,
-created created,
-_created _created,
-author author,
-recipient recipient,
-source source,
-_source _source,
-description description,
-_description _description,
-content content,
-related related,
-}) = _DocumentManifest
+abstract class DocumentManifest implements _$DocumentManifest , Resource {
+DocumentManifest._();
+factory DocumentManifest({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Identifier masterIdentifier,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: DocumentManifestStatus.unknown) DocumentManifestStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  CodeableConcept type,
+  Reference subject,
+  FhirDateTime created,
+  @JsonKey(name: '_created')   Element createdElement,
+  List<Reference> author,
+  List<Reference> recipient,
+  FhirUri source,
+  @JsonKey(name: '_source')   Element sourceElement,
+  String description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  @required List<Reference> content,
+  List<DocumentManifestRelated> related,
+}) = _DocumentManifest;
 
  factory DocumentManifest.fromJson(Map<String,dynamic> json) => _$DocumentManifestFromJson(json);
 }
 
 @freezed
-abstract class DocumentManifestRelated implements DocumentManifestRelated, Resource {
-factoryDocumentManifestRelated({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-ref ref,
-}) = _DocumentManifestRelated
+abstract class DocumentManifestRelated implements _$DocumentManifestRelated  {
+DocumentManifestRelated._();
+factory DocumentManifestRelated({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Identifier identifier,
+ Reference ref,
+}) = _DocumentManifestRelated;
 
  factory DocumentManifestRelated.fromJson(Map<String,dynamic> json) => _$DocumentManifestRelatedFromJson(json);
 }
 
 @freezed
-abstract class DocumentReference implements DocumentReference, Resource {
-factoryDocumentReference({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-masterIdentifier masterIdentifier,
-identifier identifier,
-status status,
-_status _status,
-docStatus docStatus,
-_docStatus _docStatus,
-type type,
-category category,
-subject subject,
-date date,
-_date _date,
-author author,
-authenticator authenticator,
-custodian custodian,
-relatesTo relatesTo,
-description description,
-_description _description,
-securityLabel securityLabel,
-content content,
-context context,
-}) = _DocumentReference
+abstract class DocumentReference implements _$DocumentReference , Resource {
+DocumentReference._();
+factory DocumentReference({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Identifier masterIdentifier,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown) DocumentReferenceStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  Code docStatus,
+  @JsonKey(name: '_docStatus')   Element docStatusElement,
+  CodeableConcept type,
+  List<CodeableConcept> category,
+  Reference subject,
+  Instant date,
+  @JsonKey(name: '_date')   Element dateElement,
+  List<Reference> author,
+  Reference authenticator,
+  Reference custodian,
+  List<DocumentReferenceRelatesTo> relatesTo,
+  String description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  List<CodeableConcept> securityLabel,
+  @required List<DocumentReferenceContent> content,
+  DocumentReferenceContext context,
+}) = _DocumentReference;
 
  factory DocumentReference.fromJson(Map<String,dynamic> json) => _$DocumentReferenceFromJson(json);
 }
 
 @freezed
-abstract class DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo, Resource {
-factoryDocumentReferenceRelatesTo({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-code code,
-_code _code,
-target target,
-}) = _DocumentReferenceRelatesTo
+abstract class DocumentReferenceRelatesTo implements _$DocumentReferenceRelatesTo  {
+DocumentReferenceRelatesTo._();
+factory DocumentReferenceRelatesTo({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+@JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown) DocumentReferenceRelatesToCode code,
+  @JsonKey(name: '_code')   Element codeElement,
+  @required Reference target,
+}) = _DocumentReferenceRelatesTo;
 
  factory DocumentReferenceRelatesTo.fromJson(Map<String,dynamic> json) => _$DocumentReferenceRelatesToFromJson(json);
 }
 
 @freezed
-abstract class DocumentReferenceContent implements DocumentReferenceContent, Resource {
-factoryDocumentReferenceContent({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-attachment attachment,
-format format,
-}) = _DocumentReferenceContent
+abstract class DocumentReferenceContent implements _$DocumentReferenceContent  {
+DocumentReferenceContent._();
+factory DocumentReferenceContent({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required Attachment attachment,
+  Coding format,
+}) = _DocumentReferenceContent;
 
  factory DocumentReferenceContent.fromJson(Map<String,dynamic> json) => _$DocumentReferenceContentFromJson(json);
 }
 
 @freezed
-abstract class DocumentReferenceContext implements DocumentReferenceContext, Resource {
-factoryDocumentReferenceContext({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-encounter encounter,
-event event,
-period period,
-facilityType facilityType,
-practiceSetting practiceSetting,
-sourcePatientInfo sourcePatientInfo,
-related related,
-}) = _DocumentReferenceContext
+abstract class DocumentReferenceContext implements _$DocumentReferenceContext  {
+DocumentReferenceContext._();
+factory DocumentReferenceContext({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ List<Reference> encounter,
+ List<CodeableConcept> event,
+ Period period,
+ CodeableConcept facilityType,
+ CodeableConcept practiceSetting,
+ Reference sourcePatientInfo,
+ List<Reference> related,
+}) = _DocumentReferenceContext;
 
  factory DocumentReferenceContext.fromJson(Map<String,dynamic> json) => _$DocumentReferenceContextFromJson(json);
 }

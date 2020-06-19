@@ -1,109 +1,121 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '../../../../fhir_r4.dart';
+
+part 'payment.freezed.dart';
+part 'payment.g.dart';
+
 @freezed
-abstract class PaymentNotice implements PaymentNotice, Resource {
-factoryPaymentNotice({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-request request,
-response response,
-created created,
-_created _created,
-provider provider,
-payment payment,
-paymentDate paymentDate,
-_paymentDate _paymentDate,
-payee payee,
-recipient recipient,
-amount amount,
-paymentStatus paymentStatus,
-}) = _PaymentNotice
+abstract class PaymentNotice implements _$PaymentNotice , Resource {
+PaymentNotice._();
+factory PaymentNotice({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  Code status,
+  @JsonKey(name: '_status')   Element statusElement,
+  Reference request,
+  Reference response,
+  FhirDateTime created,
+  @JsonKey(name: '_created')   Element createdElement,
+  Reference provider,
+  @required Reference payment,
+  Date paymentDate,
+  @JsonKey(name: '_paymentDate')   Element paymentDateElement,
+  Reference payee,
+  @required Reference recipient,
+  @required Money amount,
+  CodeableConcept paymentStatus,
+}) = _PaymentNotice;
 
  factory PaymentNotice.fromJson(Map<String,dynamic> json) => _$PaymentNoticeFromJson(json);
 }
 
 @freezed
-abstract class PaymentReconciliation implements PaymentReconciliation, Resource {
-factoryPaymentReconciliation({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-period period,
-created created,
-_created _created,
-paymentIssuer paymentIssuer,
-request request,
-requestor requestor,
-outcome outcome,
-_outcome _outcome,
-disposition disposition,
-_disposition _disposition,
-paymentDate paymentDate,
-_paymentDate _paymentDate,
-paymentAmount paymentAmount,
-paymentIdentifier paymentIdentifier,
-detail detail,
-formCode formCode,
-processNote processNote,
-}) = _PaymentReconciliation
+abstract class PaymentReconciliation implements _$PaymentReconciliation , Resource {
+PaymentReconciliation._();
+factory PaymentReconciliation({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  Code status,
+  @JsonKey(name: '_status')   Element statusElement,
+  Period period,
+  FhirDateTime created,
+  @JsonKey(name: '_created')   Element createdElement,
+  Reference paymentIssuer,
+  Reference request,
+  Reference requestor,
+@JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown) PaymentReconciliationOutcome outcome,
+  @JsonKey(name: '_outcome')   Element outcomeElement,
+  String disposition,
+  @JsonKey(name: '_disposition')   Element dispositionElement,
+  Date paymentDate,
+  @JsonKey(name: '_paymentDate')   Element paymentDateElement,
+  @required Money paymentAmount,
+  Identifier paymentIdentifier,
+  List<PaymentReconciliationDetail> detail,
+  CodeableConcept formCode,
+  List<PaymentReconciliationProcessNote> processNote,
+}) = _PaymentReconciliation;
 
  factory PaymentReconciliation.fromJson(Map<String,dynamic> json) => _$PaymentReconciliationFromJson(json);
 }
 
 @freezed
-abstract class PaymentReconciliationDetail implements PaymentReconciliationDetail, Resource {
-factoryPaymentReconciliationDetail({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-predecessor predecessor,
-type type,
-request request,
-submitter submitter,
-response response,
-date date,
-_date _date,
-responsible responsible,
-payee payee,
-amount amount,
-}) = _PaymentReconciliationDetail
+abstract class PaymentReconciliationDetail implements _$PaymentReconciliationDetail  {
+PaymentReconciliationDetail._();
+factory PaymentReconciliationDetail({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Identifier identifier,
+  Identifier predecessor,
+  @required CodeableConcept type,
+  Reference request,
+  Reference submitter,
+  Reference response,
+  Date date,
+  @JsonKey(name: '_date')   Element dateElement,
+  Reference responsible,
+  Reference payee,
+  Money amount,
+}) = _PaymentReconciliationDetail;
 
  factory PaymentReconciliationDetail.fromJson(Map<String,dynamic> json) => _$PaymentReconciliationDetailFromJson(json);
 }
 
 @freezed
-abstract class PaymentReconciliationProcessNote implements PaymentReconciliationProcessNote, Resource {
-factoryPaymentReconciliationProcessNote({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-_type _type,
-text text,
-_text _text,
-}) = _PaymentReconciliationProcessNote
+abstract class PaymentReconciliationProcessNote implements _$PaymentReconciliationProcessNote  {
+PaymentReconciliationProcessNote._();
+factory PaymentReconciliationProcessNote({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+@JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown) PaymentReconciliationProcessNoteType type,
+  @JsonKey(name: '_type')  Element typeElement,
+ String text,
+  @JsonKey(name: '_text')  Element textElement,
+}) = _PaymentReconciliationProcessNote;
 
  factory PaymentReconciliationProcessNote.fromJson(Map<String,dynamic> json) => _$PaymentReconciliationProcessNoteFromJson(json);
 }

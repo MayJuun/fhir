@@ -1,4 +1,5 @@
-export 'resource/resource.dart';
+export 'backbone/resource.dart';
+export 'backbone/element.dart';
 export 'draft_types/draft_types.dart';
 export 'general_types/general_types.dart';
 export 'general_types/general_types.enums.dart';

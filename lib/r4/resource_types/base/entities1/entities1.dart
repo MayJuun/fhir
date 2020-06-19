@@ -1,287 +1,307 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '../../../../fhir_r4.dart';
+
+import 'entities1.enums.dart';
+part 'entities1.freezed.dart';
+part 'entities1.g.dart';
+
 @freezed
-abstract class Endpoint implements Endpoint, Resource {
-factoryEndpoint({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-connectionType connectionType,
-name name,
-_name _name,
-managingOrganization managingOrganization,
-contact contact,
-period period,
-payloadType payloadType,
-payloadMimeType payloadMimeType,
-_payloadMimeType _payloadMimeType,
-address address,
-_address _address,
-header header,
-_header _header,
-}) = _Endpoint
+abstract class Endpoint implements _$Endpoint , Resource {
+Endpoint._();
+factory Endpoint({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: EndpointStatus.unknown) EndpointStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  @required Coding connectionType,
+  String name,
+  @JsonKey(name: '_name')   Element nameElement,
+  Reference managingOrganization,
+  List<ContactPoint> contact,
+  Period period,
+  @required List<CodeableConcept> payloadType,
+  List<Code> payloadMimeType,
+  @JsonKey(name: '_payloadMimeType')   Element payloadMimeTypeElement,
+  FhirUrl address,
+  @JsonKey(name: '_address')   Element addressElement,
+  List<String> header,
+  @JsonKey(name: '_header')   Element headerElement,
+}) = _Endpoint;
 
  factory Endpoint.fromJson(Map<String,dynamic> json) => _$EndpointFromJson(json);
 }
 
 @freezed
-abstract class HealthcareService implements HealthcareService, Resource {
-factoryHealthcareService({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-active active,
-_active _active,
-providedBy providedBy,
-category category,
-type type,
-specialty specialty,
-location location,
-name name,
-_name _name,
-comment comment,
-_comment _comment,
-extraDetails extraDetails,
-_extraDetails _extraDetails,
-photo photo,
-telecom telecom,
-coverageArea coverageArea,
-serviceProvisionCode serviceProvisionCode,
-eligibility eligibility,
-program program,
-characteristic characteristic,
-communication communication,
-referralMethod referralMethod,
-appointmentRequired appointmentRequired,
-_appointmentRequired _appointmentRequired,
-availableTime availableTime,
-notAvailable notAvailable,
-availabilityExceptions availabilityExceptions,
-_availabilityExceptions _availabilityExceptions,
-endpoint endpoint,
-}) = _HealthcareService
+abstract class HealthcareService implements _$HealthcareService , Resource {
+HealthcareService._();
+factory HealthcareService({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  Boolean active,
+  @JsonKey(name: '_active')   Element activeElement,
+  Reference providedBy,
+  List<CodeableConcept> category,
+  List<CodeableConcept> type,
+  List<CodeableConcept> specialty,
+  List<Reference> location,
+  String name,
+  @JsonKey(name: '_name')   Element nameElement,
+  String comment,
+  @JsonKey(name: '_comment')   Element commentElement,
+  Markdown extraDetails,
+  @JsonKey(name: '_extraDetails')   Element extraDetailsElement,
+  Attachment photo,
+  List<ContactPoint> telecom,
+  List<Reference> coverageArea,
+  List<CodeableConcept> serviceProvisionCode,
+  List<HealthcareServiceEligibility> eligibility,
+  List<CodeableConcept> program,
+  List<CodeableConcept> characteristic,
+  List<CodeableConcept> communication,
+  List<CodeableConcept> referralMethod,
+  Boolean appointmentRequired,
+  @JsonKey(name: '_appointmentRequired')   Element appointmentRequiredElement,
+  List<HealthcareServiceAvailableTime> availableTime,
+  List<HealthcareServiceNotAvailable> notAvailable,
+  String availabilityExceptions,
+  @JsonKey(name: '_availabilityExceptions')   Element availabilityExceptionsElement,
+  List<Reference> endpoint,
+}) = _HealthcareService;
 
  factory HealthcareService.fromJson(Map<String,dynamic> json) => _$HealthcareServiceFromJson(json);
 }
 
 @freezed
-abstract class HealthcareServiceEligibility implements HealthcareServiceEligibility, Resource {
-factoryHealthcareServiceEligibility({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-code code,
-comment comment,
-_comment _comment,
-}) = _HealthcareServiceEligibility
+abstract class HealthcareServiceEligibility implements _$HealthcareServiceEligibility  {
+HealthcareServiceEligibility._();
+factory HealthcareServiceEligibility({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept code,
+ Markdown comment,
+  @JsonKey(name: '_comment')  Element commentElement,
+}) = _HealthcareServiceEligibility;
 
  factory HealthcareServiceEligibility.fromJson(Map<String,dynamic> json) => _$HealthcareServiceEligibilityFromJson(json);
 }
 
 @freezed
-abstract class HealthcareServiceAvailableTime implements HealthcareServiceAvailableTime, Resource {
-factoryHealthcareServiceAvailableTime({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-daysOfWeek daysOfWeek,
-_daysOfWeek _daysOfWeek,
-allDay allDay,
-_allDay _allDay,
-availableStartTime availableStartTime,
-_availableStartTime _availableStartTime,
-availableEndTime availableEndTime,
-_availableEndTime _availableEndTime,
-}) = _HealthcareServiceAvailableTime
+abstract class HealthcareServiceAvailableTime implements _$HealthcareServiceAvailableTime  {
+HealthcareServiceAvailableTime._();
+factory HealthcareServiceAvailableTime({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+List<HealthcareServiceAvailableTimeDaysOfWeek> daysOfWeek,
+  @JsonKey(name: '_daysOfWeek')  Element daysOfWeekElement,
+ Boolean allDay,
+  @JsonKey(name: '_allDay')  Element allDayElement,
+ Time availableStartTime,
+  @JsonKey(name: '_availableStartTime')  Element availableStartTimeElement,
+ Time availableEndTime,
+  @JsonKey(name: '_availableEndTime')  Element availableEndTimeElement,
+}) = _HealthcareServiceAvailableTime;
 
  factory HealthcareServiceAvailableTime.fromJson(Map<String,dynamic> json) => _$HealthcareServiceAvailableTimeFromJson(json);
 }
 
 @freezed
-abstract class HealthcareServiceNotAvailable implements HealthcareServiceNotAvailable, Resource {
-factoryHealthcareServiceNotAvailable({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-description description,
-_description _description,
-during during,
-}) = _HealthcareServiceNotAvailable
+abstract class HealthcareServiceNotAvailable implements _$HealthcareServiceNotAvailable  {
+HealthcareServiceNotAvailable._();
+factory HealthcareServiceNotAvailable({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ String description,
+  @JsonKey(name: '_description')  Element descriptionElement,
+ Period during,
+}) = _HealthcareServiceNotAvailable;
 
  factory HealthcareServiceNotAvailable.fromJson(Map<String,dynamic> json) => _$HealthcareServiceNotAvailableFromJson(json);
 }
 
 @freezed
-abstract class Location implements Location, Resource {
-factoryLocation({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-operationalStatus operationalStatus,
-name name,
-_name _name,
-alias alias,
-_alias _alias,
-description description,
-_description _description,
-mode mode,
-_mode _mode,
-type type,
-telecom telecom,
-address address,
-physicalType physicalType,
-position position,
-managingOrganization managingOrganization,
-partOf partOf,
-hoursOfOperation hoursOfOperation,
-availabilityExceptions availabilityExceptions,
-_availabilityExceptions _availabilityExceptions,
-endpoint endpoint,
-}) = _Location
+abstract class Location implements _$Location , Resource {
+Location._();
+factory Location({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  Coding operationalStatus,
+  String name,
+  @JsonKey(name: '_name')   Element nameElement,
+  List<String> alias,
+  @JsonKey(name: '_alias')   Element aliasElement,
+  String description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+@JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode mode,
+  @JsonKey(name: '_mode')   Element modeElement,
+  List<CodeableConcept> type,
+  List<ContactPoint> telecom,
+  Address address,
+  CodeableConcept physicalType,
+  LocationPosition position,
+  Reference managingOrganization,
+  Reference partOf,
+  List<LocationHoursOfOperation> hoursOfOperation,
+  String availabilityExceptions,
+  @JsonKey(name: '_availabilityExceptions')   Element availabilityExceptionsElement,
+  List<Reference> endpoint,
+}) = _Location;
 
  factory Location.fromJson(Map<String,dynamic> json) => _$LocationFromJson(json);
 }
 
 @freezed
-abstract class LocationPosition implements LocationPosition, Resource {
-factoryLocationPosition({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-longitude longitude,
-_longitude _longitude,
-latitude latitude,
-_latitude _latitude,
-altitude altitude,
-_altitude _altitude,
-}) = _LocationPosition
+abstract class LocationPosition implements _$LocationPosition  {
+LocationPosition._();
+factory LocationPosition({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Decimal longitude,
+  @JsonKey(name: '_longitude')  Element longitudeElement,
+ Decimal latitude,
+  @JsonKey(name: '_latitude')  Element latitudeElement,
+ Decimal altitude,
+  @JsonKey(name: '_altitude')  Element altitudeElement,
+}) = _LocationPosition;
 
  factory LocationPosition.fromJson(Map<String,dynamic> json) => _$LocationPositionFromJson(json);
 }
 
 @freezed
-abstract class LocationHoursOfOperation implements LocationHoursOfOperation, Resource {
-factoryLocationHoursOfOperation({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-daysOfWeek daysOfWeek,
-_daysOfWeek _daysOfWeek,
-allDay allDay,
-_allDay _allDay,
-openingTime openingTime,
-_openingTime _openingTime,
-closingTime closingTime,
-_closingTime _closingTime,
-}) = _LocationHoursOfOperation
+abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation  {
+LocationHoursOfOperation._();
+factory LocationHoursOfOperation({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ List<Code> daysOfWeek,
+  @JsonKey(name: '_daysOfWeek')  Element daysOfWeekElement,
+ Boolean allDay,
+  @JsonKey(name: '_allDay')  Element allDayElement,
+ Time openingTime,
+  @JsonKey(name: '_openingTime')  Element openingTimeElement,
+ Time closingTime,
+  @JsonKey(name: '_closingTime')  Element closingTimeElement,
+}) = _LocationHoursOfOperation;
 
  factory LocationHoursOfOperation.fromJson(Map<String,dynamic> json) => _$LocationHoursOfOperationFromJson(json);
 }
 
 @freezed
-abstract class Organization implements Organization, Resource {
-factoryOrganization({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-active active,
-_active _active,
-type type,
-name name,
-_name _name,
-alias alias,
-_alias _alias,
-telecom telecom,
-address address,
-partOf partOf,
-contact contact,
-endpoint endpoint,
-}) = _Organization
+abstract class Organization implements _$Organization , Resource {
+Organization._();
+factory Organization({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  Boolean active,
+  @JsonKey(name: '_active')   Element activeElement,
+  List<CodeableConcept> type,
+  String name,
+  @JsonKey(name: '_name')   Element nameElement,
+  List<String> alias,
+  @JsonKey(name: '_alias')   Element aliasElement,
+  List<ContactPoint> telecom,
+  List<Address> address,
+  Reference partOf,
+  List<OrganizationContact> contact,
+  List<Reference> endpoint,
+}) = _Organization;
 
  factory Organization.fromJson(Map<String,dynamic> json) => _$OrganizationFromJson(json);
 }
 
 @freezed
-abstract class OrganizationContact implements OrganizationContact, Resource {
-factoryOrganizationContact({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-purpose purpose,
-name name,
-telecom telecom,
-address address,
-}) = _OrganizationContact
+abstract class OrganizationContact implements _$OrganizationContact  {
+OrganizationContact._();
+factory OrganizationContact({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept purpose,
+ HumanName name,
+ List<ContactPoint> telecom,
+ Address address,
+}) = _OrganizationContact;
 
  factory OrganizationContact.fromJson(Map<String,dynamic> json) => _$OrganizationContactFromJson(json);
 }
 
 @freezed
-abstract class OrganizationAffiliation implements OrganizationAffiliation, Resource {
-factoryOrganizationAffiliation({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-active active,
-_active _active,
-period period,
-organization organization,
-participatingOrganization participatingOrganization,
-network network,
-code code,
-specialty specialty,
-location location,
-healthcareService healthcareService,
-telecom telecom,
-endpoint endpoint,
-}) = _OrganizationAffiliation
+abstract class OrganizationAffiliation implements _$OrganizationAffiliation , Resource {
+OrganizationAffiliation._();
+factory OrganizationAffiliation({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  Boolean active,
+  @JsonKey(name: '_active')   Element activeElement,
+  Period period,
+  Reference organization,
+  Reference participatingOrganization,
+  List<Reference> network,
+  List<CodeableConcept> code,
+  List<CodeableConcept> specialty,
+  List<Reference> location,
+  List<Reference> healthcareService,
+  List<ContactPoint> telecom,
+  List<Reference> endpoint,
+}) = _OrganizationAffiliation;
 
  factory OrganizationAffiliation.fromJson(Map<String,dynamic> json) => _$OrganizationAffiliationFromJson(json);
 }

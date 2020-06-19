@@ -1,105 +1,117 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '../../../../fhir_r4.dart';
+
+part 'public_health_and_research.freezed.dart';
+part 'public_health_and_research.g.dart';
+
 @freezed
-abstract class ResearchStudy implements ResearchStudy, Resource {
-factoryResearchStudy({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-title title,
-_title _title,
-protocol protocol,
-partOf partOf,
-status status,
-_status _status,
-primaryPurposeType primaryPurposeType,
-phase phase,
-category category,
-focus focus,
-condition condition,
-contact contact,
-relatedArtifact relatedArtifact,
-keyword keyword,
-location location,
-description description,
-_description _description,
-enrollment enrollment,
-period period,
-sponsor sponsor,
-principalInvestigator principalInvestigator,
-site site,
-reasonStopped reasonStopped,
-note note,
-arm arm,
-objective objective,
-}) = _ResearchStudy
+abstract class ResearchStudy implements _$ResearchStudy , Resource {
+ResearchStudy._();
+factory ResearchStudy({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  String title,
+  @JsonKey(name: '_title')   Element titleElement,
+  List<Reference> protocol,
+  List<Reference> partOf,
+@JsonKey(unknownEnumValue: ResearchStudyStatus.unknown) ResearchStudyStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  CodeableConcept primaryPurposeType,
+  CodeableConcept phase,
+  List<CodeableConcept> category,
+  List<CodeableConcept> focus,
+  List<CodeableConcept> condition,
+  List<ContactDetail> contact,
+  List<RelatedArtifact> relatedArtifact,
+  List<CodeableConcept> keyword,
+  List<CodeableConcept> location,
+  Markdown description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  List<Reference> enrollment,
+  Period period,
+  Reference sponsor,
+  Reference principalInvestigator,
+  List<Reference> site,
+  CodeableConcept reasonStopped,
+  List<Annotation> note,
+  List<ResearchStudyArm> arm,
+  List<ResearchStudyObjective> objective,
+}) = _ResearchStudy;
 
  factory ResearchStudy.fromJson(Map<String,dynamic> json) => _$ResearchStudyFromJson(json);
 }
 
 @freezed
-abstract class ResearchStudyArm implements ResearchStudyArm, Resource {
-factoryResearchStudyArm({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-name name,
-_name _name,
-type type,
-description description,
-_description _description,
-}) = _ResearchStudyArm
+abstract class ResearchStudyArm implements _$ResearchStudyArm  {
+ResearchStudyArm._();
+factory ResearchStudyArm({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ String name,
+  @JsonKey(name: '_name')  Element nameElement,
+ CodeableConcept type,
+ String description,
+  @JsonKey(name: '_description')  Element descriptionElement,
+}) = _ResearchStudyArm;
 
  factory ResearchStudyArm.fromJson(Map<String,dynamic> json) => _$ResearchStudyArmFromJson(json);
 }
 
 @freezed
-abstract class ResearchStudyObjective implements ResearchStudyObjective, Resource {
-factoryResearchStudyObjective({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-name name,
-_name _name,
-type type,
-}) = _ResearchStudyObjective
+abstract class ResearchStudyObjective implements _$ResearchStudyObjective  {
+ResearchStudyObjective._();
+factory ResearchStudyObjective({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ String name,
+  @JsonKey(name: '_name')  Element nameElement,
+ CodeableConcept type,
+}) = _ResearchStudyObjective;
 
  factory ResearchStudyObjective.fromJson(Map<String,dynamic> json) => _$ResearchStudyObjectiveFromJson(json);
 }
 
 @freezed
-abstract class ResearchSubject implements ResearchSubject, Resource {
-factoryResearchSubject({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-period period,
-study study,
-individual individual,
-assignedArm assignedArm,
-_assignedArm _assignedArm,
-actualArm actualArm,
-_actualArm _actualArm,
-consent consent,
-}) = _ResearchSubject
+abstract class ResearchSubject implements _$ResearchSubject , Resource {
+ResearchSubject._();
+factory ResearchSubject({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown) ResearchSubjectStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  Period period,
+  @required Reference study,
+  @required Reference individual,
+  String assignedArm,
+  @JsonKey(name: '_assignedArm')   Element assignedArmElement,
+  String actualArm,
+  @JsonKey(name: '_actualArm')   Element actualArmElement,
+  Reference consent,
+}) = _ResearchSubject;
 
  factory ResearchSubject.fromJson(Map<String,dynamic> json) => _$ResearchSubjectFromJson(json);
 }

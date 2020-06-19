@@ -1,746 +1,781 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '../../../../fhir_r4.dart';
+
+part 'diagnostics.freezed.dart';
+part 'diagnostics.g.dart';
+
 @freezed
-abstract class BodyStructure implements BodyStructure, Resource {
-factoryBodyStructure({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-active active,
-_active _active,
-morphology morphology,
-location location,
-locationQualifier locationQualifier,
-description description,
-_description _description,
-image image,
-patient patient,
-}) = _BodyStructure
+abstract class BodyStructure implements _$BodyStructure , Resource {
+BodyStructure._();
+factory BodyStructure({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  Boolean active,
+  @JsonKey(name: '_active')   Element activeElement,
+  CodeableConcept morphology,
+  CodeableConcept location,
+  List<CodeableConcept> locationQualifier,
+  String description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  List<Attachment> image,
+  @required Reference patient,
+}) = _BodyStructure;
 
  factory BodyStructure.fromJson(Map<String,dynamic> json) => _$BodyStructureFromJson(json);
 }
 
 @freezed
-abstract class DiagnosticReport implements DiagnosticReport, Resource {
-factoryDiagnosticReport({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-basedOn basedOn,
-status status,
-_status _status,
-category category,
-code code,
-subject subject,
-encounter encounter,
-effectiveDateTime effectiveDateTime,
-_effectiveDateTime _effectiveDateTime,
-effectivePeriod effectivePeriod,
-issued issued,
-_issued _issued,
-performer performer,
-resultsInterpreter resultsInterpreter,
-specimen specimen,
-result result,
-imagingStudy imagingStudy,
-media media,
-conclusion conclusion,
-_conclusion _conclusion,
-conclusionCode conclusionCode,
-presentedForm presentedForm,
-}) = _DiagnosticReport
+abstract class DiagnosticReport implements _$DiagnosticReport , Resource {
+DiagnosticReport._();
+factory DiagnosticReport({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  List<Reference> basedOn,
+@JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown) DiagnosticReportStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  List<CodeableConcept> category,
+  @required CodeableConcept code,
+  Reference subject,
+  Reference encounter,
+  FhirDateTime effectiveDateTime,
+  @JsonKey(name: '_effectiveDateTime')   Element effectiveDateTimeElement,
+  Period effectivePeriod,
+  Instant issued,
+  @JsonKey(name: '_issued')   Element issuedElement,
+  List<Reference> performer,
+  List<Reference> resultsInterpreter,
+  List<Reference> specimen,
+  List<Reference> result,
+  List<Reference> imagingStudy,
+  List<DiagnosticReportMedia> media,
+  String conclusion,
+  @JsonKey(name: '_conclusion')   Element conclusionElement,
+  List<CodeableConcept> conclusionCode,
+  List<Attachment> presentedForm,
+}) = _DiagnosticReport;
 
  factory DiagnosticReport.fromJson(Map<String,dynamic> json) => _$DiagnosticReportFromJson(json);
 }
 
 @freezed
-abstract class DiagnosticReportMedia implements DiagnosticReportMedia, Resource {
-factoryDiagnosticReportMedia({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-comment comment,
-_comment _comment,
-link link,
-}) = _DiagnosticReportMedia
+abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia  {
+DiagnosticReportMedia._();
+factory DiagnosticReportMedia({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  String comment,
+  @JsonKey(name: '_comment')   Element commentElement,
+  @required Reference link,
+}) = _DiagnosticReportMedia;
 
  factory DiagnosticReportMedia.fromJson(Map<String,dynamic> json) => _$DiagnosticReportMediaFromJson(json);
 }
 
 @freezed
-abstract class ImagingStudy implements ImagingStudy, Resource {
-factoryImagingStudy({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-modality modality,
-subject subject,
-encounter encounter,
-started started,
-_started _started,
-basedOn basedOn,
-referrer referrer,
-interpreter interpreter,
-endpoint endpoint,
-numberOfSeries numberOfSeries,
-_numberOfSeries _numberOfSeries,
-numberOfInstances numberOfInstances,
-_numberOfInstances _numberOfInstances,
-procedureReference procedureReference,
-procedureCode procedureCode,
-location location,
-reasonCode reasonCode,
-reasonReference reasonReference,
-note note,
-description description,
-_description _description,
-series series,
-}) = _ImagingStudy
+abstract class ImagingStudy implements _$ImagingStudy , Resource {
+ImagingStudy._();
+factory ImagingStudy({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: ImagingStudyStatus.unknown) ImagingStudyStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  List<Coding> modality,
+  @required Reference subject,
+  Reference encounter,
+  FhirDateTime started,
+  @JsonKey(name: '_started')   Element startedElement,
+  List<Reference> basedOn,
+  Reference referrer,
+  List<Reference> interpreter,
+  List<Reference> endpoint,
+  UnsignedInt numberOfSeries,
+  @JsonKey(name: '_numberOfSeries')   Element numberOfSeriesElement,
+  UnsignedInt numberOfInstances,
+  @JsonKey(name: '_numberOfInstances')   Element numberOfInstancesElement,
+  Reference procedureReference,
+  List<CodeableConcept> procedureCode,
+  Reference location,
+  List<CodeableConcept> reasonCode,
+  List<Reference> reasonReference,
+  List<Annotation> note,
+  String description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  List<ImagingStudySeries> series,
+}) = _ImagingStudy;
 
  factory ImagingStudy.fromJson(Map<String,dynamic> json) => _$ImagingStudyFromJson(json);
 }
 
 @freezed
-abstract class ImagingStudySeries implements ImagingStudySeries, Resource {
-factoryImagingStudySeries({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-uid uid,
-_uid _uid,
-number number,
-_number _number,
-modality modality,
-description description,
-_description _description,
-numberOfInstances numberOfInstances,
-_numberOfInstances _numberOfInstances,
-endpoint endpoint,
-bodySite bodySite,
-laterality laterality,
-specimen specimen,
-started started,
-_started _started,
-performer performer,
-instance instance,
-}) = _ImagingStudySeries
+abstract class ImagingStudySeries implements _$ImagingStudySeries  {
+ImagingStudySeries._();
+factory ImagingStudySeries({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Id uid,
+  @JsonKey(name: '_uid')   Element uidElement,
+  UnsignedInt number,
+  @JsonKey(name: '_number')   Element numberElement,
+  @required Coding modality,
+  String description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  UnsignedInt numberOfInstances,
+  @JsonKey(name: '_numberOfInstances')   Element numberOfInstancesElement,
+  List<Reference> endpoint,
+  Coding bodySite,
+  Coding laterality,
+  List<Reference> specimen,
+  FhirDateTime started,
+  @JsonKey(name: '_started')   Element startedElement,
+  List<ImagingStudyPerformer> performer,
+  List<ImagingStudyInstance> instance,
+}) = _ImagingStudySeries;
 
  factory ImagingStudySeries.fromJson(Map<String,dynamic> json) => _$ImagingStudySeriesFromJson(json);
 }
 
 @freezed
-abstract class ImagingStudyPerformer implements ImagingStudyPerformer, Resource {
-factoryImagingStudyPerformer({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-function function,
-actor actor,
-}) = _ImagingStudyPerformer
+abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer  {
+ImagingStudyPerformer._();
+factory ImagingStudyPerformer({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  CodeableConcept function,
+  @required Reference actor,
+}) = _ImagingStudyPerformer;
 
  factory ImagingStudyPerformer.fromJson(Map<String,dynamic> json) => _$ImagingStudyPerformerFromJson(json);
 }
 
 @freezed
-abstract class ImagingStudyInstance implements ImagingStudyInstance, Resource {
-factoryImagingStudyInstance({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-uid uid,
-_uid _uid,
-sopClass sopClass,
-number number,
-_number _number,
-title title,
-_title _title,
-}) = _ImagingStudyInstance
+abstract class ImagingStudyInstance implements _$ImagingStudyInstance  {
+ImagingStudyInstance._();
+factory ImagingStudyInstance({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Id uid,
+  @JsonKey(name: '_uid')   Element uidElement,
+  @required Coding sopClass,
+  UnsignedInt number,
+  @JsonKey(name: '_number')   Element numberElement,
+  String title,
+  @JsonKey(name: '_title')   Element titleElement,
+}) = _ImagingStudyInstance;
 
  factory ImagingStudyInstance.fromJson(Map<String,dynamic> json) => _$ImagingStudyInstanceFromJson(json);
 }
 
 @freezed
-abstract class Media implements Media, Resource {
-factoryMedia({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-basedOn basedOn,
-partOf partOf,
-status status,
-_status _status,
-type type,
-modality modality,
-view view,
-subject subject,
-encounter encounter,
-createdDateTime createdDateTime,
-_createdDateTime _createdDateTime,
-createdPeriod createdPeriod,
-issued issued,
-_issued _issued,
-operator operator,
-reasonCode reasonCode,
-bodySite bodySite,
-deviceName deviceName,
-_deviceName _deviceName,
-device device,
-height height,
-_height _height,
-width width,
-_width _width,
-frames frames,
-_frames _frames,
-duration duration,
-_duration _duration,
-content content,
-note note,
-}) = _Media
+abstract class Media implements _$Media , Resource {
+Media._();
+factory Media({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  List<Reference> basedOn,
+  List<Reference> partOf,
+  Code status,
+  @JsonKey(name: '_status')   Element statusElement,
+  CodeableConcept type,
+  CodeableConcept modality,
+  CodeableConcept view,
+  Reference subject,
+  Reference encounter,
+  FhirDateTime createdDateTime,
+  @JsonKey(name: '_createdDateTime')   Element createdDateTimeElement,
+  Period createdPeriod,
+  Instant issued,
+  @JsonKey(name: '_issued')   Element issuedElement,
+  Reference operator,
+  List<CodeableConcept> reasonCode,
+  CodeableConcept bodySite,
+  String deviceName,
+  @JsonKey(name: '_deviceName')   Element deviceNameElement,
+  Reference device,
+  PositiveInt height,
+  @JsonKey(name: '_height')   Element heightElement,
+  PositiveInt width,
+  @JsonKey(name: '_width')   Element widthElement,
+  PositiveInt frames,
+  @JsonKey(name: '_frames')   Element framesElement,
+  Decimal duration,
+  @JsonKey(name: '_duration')   Element durationElement,
+  @required Attachment content,
+  List<Annotation> note,
+}) = _Media;
 
  factory Media.fromJson(Map<String,dynamic> json) => _$MediaFromJson(json);
 }
 
 @freezed
-abstract class MolecularSequence implements MolecularSequence, Resource {
-factoryMolecularSequence({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-type type,
-_type _type,
-coordinateSystem coordinateSystem,
-_coordinateSystem _coordinateSystem,
-patient patient,
-specimen specimen,
-device device,
-performer performer,
-quantity quantity,
-referenceSeq referenceSeq,
-variant variant,
-observedSeq observedSeq,
-_observedSeq _observedSeq,
-quality quality,
-readCoverage readCoverage,
-_readCoverage _readCoverage,
-repository repository,
-pointer pointer,
-structureVariant structureVariant,
-}) = _MolecularSequence
+abstract class MolecularSequence implements _$MolecularSequence , Resource {
+MolecularSequence._();
+factory MolecularSequence({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: MolecularSequenceType.unknown) MolecularSequenceType type,
+  @JsonKey(name: '_type')   Element typeElement,
+  Integer coordinateSystem,
+  @JsonKey(name: '_coordinateSystem')   Element coordinateSystemElement,
+  Reference patient,
+  Reference specimen,
+  Reference device,
+  Reference performer,
+  Quantity quantity,
+  MolecularSequenceReferenceSeq referenceSeq,
+  List<MolecularSequenceVariant> variant,
+  String observedSeq,
+  @JsonKey(name: '_observedSeq')   Element observedSeqElement,
+  List<MolecularSequenceQuality> quality,
+  Integer readCoverage,
+  @JsonKey(name: '_readCoverage')   Element readCoverageElement,
+  List<MolecularSequenceRepository> repository,
+  List<Reference> pointer,
+  List<MolecularSequenceStructureVariant> structureVariant,
+}) = _MolecularSequence;
 
  factory MolecularSequence.fromJson(Map<String,dynamic> json) => _$MolecularSequenceFromJson(json);
 }
 
 @freezed
-abstract class MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq, Resource {
-factoryMolecularSequenceReferenceSeq({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-chromosome chromosome,
-genomeBuild genomeBuild,
-_genomeBuild _genomeBuild,
-orientation orientation,
-_orientation _orientation,
-referenceSeqId referenceSeqId,
-referenceSeqPointer referenceSeqPointer,
-referenceSeqString referenceSeqString,
-_referenceSeqString _referenceSeqString,
-strand strand,
-_strand _strand,
-windowStart windowStart,
-_windowStart _windowStart,
-windowEnd windowEnd,
-_windowEnd _windowEnd,
-}) = _MolecularSequenceReferenceSeq
+abstract class MolecularSequenceReferenceSeq implements _$MolecularSequenceReferenceSeq  {
+MolecularSequenceReferenceSeq._();
+factory MolecularSequenceReferenceSeq({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept chromosome,
+ String genomeBuild,
+  @JsonKey(name: '_genomeBuild')  Element genomeBuildElement,
+@JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown) MolecularSequenceReferenceSeqOrientation orientation,
+  @JsonKey(name: '_orientation')  Element orientationElement,
+ CodeableConcept referenceSeqId,
+ Reference referenceSeqPointer,
+ String referenceSeqString,
+  @JsonKey(name: '_referenceSeqString')  Element referenceSeqStringElement,
+@JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown) MolecularSequenceReferenceSeqStrand strand,
+  @JsonKey(name: '_strand')  Element strandElement,
+ Integer windowStart,
+  @JsonKey(name: '_windowStart')  Element windowStartElement,
+ Integer windowEnd,
+  @JsonKey(name: '_windowEnd')  Element windowEndElement,
+}) = _MolecularSequenceReferenceSeq;
 
  factory MolecularSequenceReferenceSeq.fromJson(Map<String,dynamic> json) => _$MolecularSequenceReferenceSeqFromJson(json);
 }
 
 @freezed
-abstract class MolecularSequenceVariant implements MolecularSequenceVariant, Resource {
-factoryMolecularSequenceVariant({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-start start,
-_start _start,
-end end,
-_end _end,
-observedAllele observedAllele,
-_observedAllele _observedAllele,
-referenceAllele referenceAllele,
-_referenceAllele _referenceAllele,
-cigar cigar,
-_cigar _cigar,
-variantPointer variantPointer,
-}) = _MolecularSequenceVariant
+abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant  {
+MolecularSequenceVariant._();
+factory MolecularSequenceVariant({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Integer start,
+  @JsonKey(name: '_start')  Element startElement,
+ Integer end,
+  @JsonKey(name: '_end')  Element endElement,
+ String observedAllele,
+  @JsonKey(name: '_observedAllele')  Element observedAlleleElement,
+ String referenceAllele,
+  @JsonKey(name: '_referenceAllele')  Element referenceAlleleElement,
+ String cigar,
+  @JsonKey(name: '_cigar')  Element cigarElement,
+ Reference variantPointer,
+}) = _MolecularSequenceVariant;
 
  factory MolecularSequenceVariant.fromJson(Map<String,dynamic> json) => _$MolecularSequenceVariantFromJson(json);
 }
 
 @freezed
-abstract class MolecularSequenceQuality implements MolecularSequenceQuality, Resource {
-factoryMolecularSequenceQuality({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-_type _type,
-standardSequence standardSequence,
-start start,
-_start _start,
-end end,
-_end _end,
-score score,
-method method,
-truthTP truthTP,
-_truthTP _truthTP,
-queryTP queryTP,
-_queryTP _queryTP,
-truthFN truthFN,
-_truthFN _truthFN,
-queryFP queryFP,
-_queryFP _queryFP,
-gtFP gtFP,
-_gtFP _gtFP,
-precision precision,
-_precision _precision,
-recall recall,
-_recall _recall,
-fScore fScore,
-_fScore _fScore,
-roc roc,
-}) = _MolecularSequenceQuality
+abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality  {
+MolecularSequenceQuality._();
+factory MolecularSequenceQuality({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+@JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown) MolecularSequenceQualityType type,
+  @JsonKey(name: '_type')  Element typeElement,
+ CodeableConcept standardSequence,
+ Integer start,
+  @JsonKey(name: '_start')  Element startElement,
+ Integer end,
+  @JsonKey(name: '_end')  Element endElement,
+ Quantity score,
+ CodeableConcept method,
+ Decimal truthTP,
+  @JsonKey(name: '_truthTP')  Element truthTPElement,
+ Decimal queryTP,
+  @JsonKey(name: '_queryTP')  Element queryTPElement,
+ Decimal truthFN,
+  @JsonKey(name: '_truthFN')  Element truthFNElement,
+ Decimal queryFP,
+  @JsonKey(name: '_queryFP')  Element queryFPElement,
+ Decimal gtFP,
+  @JsonKey(name: '_gtFP')  Element gtFPElement,
+ Decimal precision,
+  @JsonKey(name: '_precision')  Element precisionElement,
+ Decimal recall,
+  @JsonKey(name: '_recall')  Element recallElement,
+ Decimal fScore,
+  @JsonKey(name: '_fScore')  Element fScoreElement,
+ MolecularSequenceRoc roc,
+}) = _MolecularSequenceQuality;
 
  factory MolecularSequenceQuality.fromJson(Map<String,dynamic> json) => _$MolecularSequenceQualityFromJson(json);
 }
 
 @freezed
-abstract class MolecularSequenceRoc implements MolecularSequenceRoc, Resource {
-factoryMolecularSequenceRoc({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-score score,
-_score _score,
-numTP numTP,
-_numTP _numTP,
-numFP numFP,
-_numFP _numFP,
-numFN numFN,
-_numFN _numFN,
-precision precision,
-_precision _precision,
-sensitivity sensitivity,
-_sensitivity _sensitivity,
-fMeasure fMeasure,
-_fMeasure _fMeasure,
-}) = _MolecularSequenceRoc
+abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc  {
+MolecularSequenceRoc._();
+factory MolecularSequenceRoc({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ List<Integer> score,
+  @JsonKey(name: '_score')  Element scoreElement,
+ List<Integer> numTP,
+  @JsonKey(name: '_numTP')  Element numTPElement,
+ List<Integer> numFP,
+  @JsonKey(name: '_numFP')  Element numFPElement,
+ List<Integer> numFN,
+  @JsonKey(name: '_numFN')  Element numFNElement,
+ List<Decimal> precision,
+  @JsonKey(name: '_precision')  Element precisionElement,
+ List<Decimal> sensitivity,
+  @JsonKey(name: '_sensitivity')  Element sensitivityElement,
+ List<Decimal> fMeasure,
+  @JsonKey(name: '_fMeasure')  Element fMeasureElement,
+}) = _MolecularSequenceRoc;
 
  factory MolecularSequenceRoc.fromJson(Map<String,dynamic> json) => _$MolecularSequenceRocFromJson(json);
 }
 
 @freezed
-abstract class MolecularSequenceRepository implements MolecularSequenceRepository, Resource {
-factoryMolecularSequenceRepository({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-_type _type,
-url url,
-_url _url,
-name name,
-_name _name,
-datasetId datasetId,
-_datasetId _datasetId,
-variantsetId variantsetId,
-_variantsetId _variantsetId,
-readsetId readsetId,
-_readsetId _readsetId,
-}) = _MolecularSequenceRepository
+abstract class MolecularSequenceRepository implements _$MolecularSequenceRepository  {
+MolecularSequenceRepository._();
+factory MolecularSequenceRepository({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+@JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown) MolecularSequenceRepositoryType type,
+  @JsonKey(name: '_type')  Element typeElement,
+ FhirUri url,
+  @JsonKey(name: '_url')  Element urlElement,
+ String name,
+  @JsonKey(name: '_name')  Element nameElement,
+ String datasetId,
+  @JsonKey(name: '_datasetId')  Element datasetIdElement,
+ String variantsetId,
+  @JsonKey(name: '_variantsetId')  Element variantsetIdElement,
+ String readsetId,
+  @JsonKey(name: '_readsetId')  Element readsetIdElement,
+}) = _MolecularSequenceRepository;
 
  factory MolecularSequenceRepository.fromJson(Map<String,dynamic> json) => _$MolecularSequenceRepositoryFromJson(json);
 }
 
 @freezed
-abstract class MolecularSequenceStructureVariant implements MolecularSequenceStructureVariant, Resource {
-factoryMolecularSequenceStructureVariant({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-variantType variantType,
-exact exact,
-_exact _exact,
-length length,
-_length _length,
-outer outer,
-inner inner,
-}) = _MolecularSequenceStructureVariant
+abstract class MolecularSequenceStructureVariant implements _$MolecularSequenceStructureVariant  {
+MolecularSequenceStructureVariant._();
+factory MolecularSequenceStructureVariant({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept variantType,
+ Boolean exact,
+  @JsonKey(name: '_exact')  Element exactElement,
+ Integer length,
+  @JsonKey(name: '_length')  Element lengthElement,
+ MolecularSequenceOuter outer,
+ MolecularSequenceInner inner,
+}) = _MolecularSequenceStructureVariant;
 
  factory MolecularSequenceStructureVariant.fromJson(Map<String,dynamic> json) => _$MolecularSequenceStructureVariantFromJson(json);
 }
 
 @freezed
-abstract class MolecularSequenceOuter implements MolecularSequenceOuter, Resource {
-factoryMolecularSequenceOuter({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-start start,
-_start _start,
-end end,
-_end _end,
-}) = _MolecularSequenceOuter
+abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter  {
+MolecularSequenceOuter._();
+factory MolecularSequenceOuter({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Integer start,
+  @JsonKey(name: '_start')  Element startElement,
+ Integer end,
+  @JsonKey(name: '_end')  Element endElement,
+}) = _MolecularSequenceOuter;
 
  factory MolecularSequenceOuter.fromJson(Map<String,dynamic> json) => _$MolecularSequenceOuterFromJson(json);
 }
 
 @freezed
-abstract class MolecularSequenceInner implements MolecularSequenceInner, Resource {
-factoryMolecularSequenceInner({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-start start,
-_start _start,
-end end,
-_end _end,
-}) = _MolecularSequenceInner
+abstract class MolecularSequenceInner implements _$MolecularSequenceInner  {
+MolecularSequenceInner._();
+factory MolecularSequenceInner({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Integer start,
+  @JsonKey(name: '_start')  Element startElement,
+ Integer end,
+  @JsonKey(name: '_end')  Element endElement,
+}) = _MolecularSequenceInner;
 
  factory MolecularSequenceInner.fromJson(Map<String,dynamic> json) => _$MolecularSequenceInnerFromJson(json);
 }
 
 @freezed
-abstract class Observation implements Observation, Resource {
-factoryObservation({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-basedOn basedOn,
-partOf partOf,
-status status,
-_status _status,
-category category,
-code code,
-subject subject,
-focus focus,
-encounter encounter,
-effectiveDateTime effectiveDateTime,
-_effectiveDateTime _effectiveDateTime,
-effectivePeriod effectivePeriod,
-effectiveTiming effectiveTiming,
-effectiveInstant effectiveInstant,
-_effectiveInstant _effectiveInstant,
-issued issued,
-_issued _issued,
-performer performer,
-valueQuantity valueQuantity,
-valueCodeableConcept valueCodeableConcept,
-valueString valueString,
-_valueString _valueString,
-valueBoolean valueBoolean,
-_valueBoolean _valueBoolean,
-valueInteger valueInteger,
-_valueInteger _valueInteger,
-valueRange valueRange,
-valueRatio valueRatio,
-valueSampledData valueSampledData,
-valueTime valueTime,
-_valueTime _valueTime,
-valueDateTime valueDateTime,
-_valueDateTime _valueDateTime,
-valuePeriod valuePeriod,
-dataAbsentReason dataAbsentReason,
-interpretation interpretation,
-note note,
-bodySite bodySite,
-method method,
-specimen specimen,
-device device,
-referenceRange referenceRange,
-hasMember hasMember,
-derivedFrom derivedFrom,
-component component,
-}) = _Observation
+abstract class Observation implements _$Observation , Resource {
+Observation._();
+factory Observation({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  List<Reference> basedOn,
+  List<Reference> partOf,
+@JsonKey(unknownEnumValue: ObservationStatus.unknown) ObservationStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  List<CodeableConcept> category,
+  @required CodeableConcept code,
+  Reference subject,
+  List<Reference> focus,
+  Reference encounter,
+  FhirDateTime effectiveDateTime,
+  @JsonKey(name: '_effectiveDateTime')   Element effectiveDateTimeElement,
+  Period effectivePeriod,
+  Timing effectiveTiming,
+  Instant effectiveInstant,
+  @JsonKey(name: '_effectiveInstant')   Element effectiveInstantElement,
+  Instant issued,
+  @JsonKey(name: '_issued')   Element issuedElement,
+  List<Reference> performer,
+  Quantity valueQuantity,
+  CodeableConcept valueCodeableConcept,
+  String valueString,
+  @JsonKey(name: '_valueString')   Element valueStringElement,
+  Boolean valueBoolean,
+  @JsonKey(name: '_valueBoolean')   Element valueBooleanElement,
+  Integer valueInteger,
+  @JsonKey(name: '_valueInteger')   Element valueIntegerElement,
+  Range valueRange,
+  Ratio valueRatio,
+  SampledData valueSampledData,
+  Time valueTime,
+  @JsonKey(name: '_valueTime')   Element valueTimeElement,
+  FhirDateTime valueDateTime,
+  @JsonKey(name: '_valueDateTime')   Element valueDateTimeElement,
+  Period valuePeriod,
+  CodeableConcept dataAbsentReason,
+  List<CodeableConcept> interpretation,
+  List<Annotation> note,
+  CodeableConcept bodySite,
+  CodeableConcept method,
+  Reference specimen,
+  Reference device,
+  List<ObservationReferenceRange> referenceRange,
+  List<Reference> hasMember,
+  List<Reference> derivedFrom,
+  List<ObservationComponent> component,
+}) = _Observation;
 
  factory Observation.fromJson(Map<String,dynamic> json) => _$ObservationFromJson(json);
 }
 
 @freezed
-abstract class ObservationReferenceRange implements ObservationReferenceRange, Resource {
-factoryObservationReferenceRange({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-low low,
-high high,
-type type,
-appliesTo appliesTo,
-age age,
-text text,
-_text _text,
-}) = _ObservationReferenceRange
+abstract class ObservationReferenceRange implements _$ObservationReferenceRange  {
+ObservationReferenceRange._();
+factory ObservationReferenceRange({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Quantity low,
+ Quantity high,
+ CodeableConcept type,
+ List<CodeableConcept> appliesTo,
+ Range age,
+ String text,
+  @JsonKey(name: '_text')  Element textElement,
+}) = _ObservationReferenceRange;
 
  factory ObservationReferenceRange.fromJson(Map<String,dynamic> json) => _$ObservationReferenceRangeFromJson(json);
 }
 
 @freezed
-abstract class ObservationComponent implements ObservationComponent, Resource {
-factoryObservationComponent({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-code code,
-valueQuantity valueQuantity,
-valueCodeableConcept valueCodeableConcept,
-valueString valueString,
-_valueString _valueString,
-valueBoolean valueBoolean,
-_valueBoolean _valueBoolean,
-valueInteger valueInteger,
-_valueInteger _valueInteger,
-valueRange valueRange,
-valueRatio valueRatio,
-valueSampledData valueSampledData,
-valueTime valueTime,
-_valueTime _valueTime,
-valueDateTime valueDateTime,
-_valueDateTime _valueDateTime,
-valuePeriod valuePeriod,
-dataAbsentReason dataAbsentReason,
-interpretation interpretation,
-referenceRange referenceRange,
-}) = _ObservationComponent
+abstract class ObservationComponent implements _$ObservationComponent  {
+ObservationComponent._();
+factory ObservationComponent({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept code,
+  Quantity valueQuantity,
+  CodeableConcept valueCodeableConcept,
+  String valueString,
+  @JsonKey(name: '_valueString')   Element valueStringElement,
+  Boolean valueBoolean,
+  @JsonKey(name: '_valueBoolean')   Element valueBooleanElement,
+  Integer valueInteger,
+  @JsonKey(name: '_valueInteger')   Element valueIntegerElement,
+  Range valueRange,
+  Ratio valueRatio,
+  SampledData valueSampledData,
+  Time valueTime,
+  @JsonKey(name: '_valueTime')   Element valueTimeElement,
+  FhirDateTime valueDateTime,
+  @JsonKey(name: '_valueDateTime')   Element valueDateTimeElement,
+  Period valuePeriod,
+  CodeableConcept dataAbsentReason,
+  List<CodeableConcept> interpretation,
+  List<ObservationReferenceRange> referenceRange,
+}) = _ObservationComponent;
 
  factory ObservationComponent.fromJson(Map<String,dynamic> json) => _$ObservationComponentFromJson(json);
 }
 
 @freezed
-abstract class QuestionnaireResponse implements QuestionnaireResponse, Resource {
-factoryQuestionnaireResponse({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-basedOn basedOn,
-partOf partOf,
-questionnaire questionnaire,
-status status,
-_status _status,
-subject subject,
-encounter encounter,
-authored authored,
-_authored _authored,
-author author,
-source source,
-item item,
-}) = _QuestionnaireResponse
+abstract class QuestionnaireResponse implements _$QuestionnaireResponse , Resource {
+QuestionnaireResponse._();
+factory QuestionnaireResponse({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Identifier identifier,
+  List<Reference> basedOn,
+  List<Reference> partOf,
+  Canonical questionnaire,
+@JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown) QuestionnaireResponseStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  Reference subject,
+  Reference encounter,
+  FhirDateTime authored,
+  @JsonKey(name: '_authored')   Element authoredElement,
+  Reference author,
+  Reference source,
+  List<QuestionnaireResponseItem> item,
+}) = _QuestionnaireResponse;
 
  factory QuestionnaireResponse.fromJson(Map<String,dynamic> json) => _$QuestionnaireResponseFromJson(json);
 }
 
 @freezed
-abstract class QuestionnaireResponseItem implements QuestionnaireResponseItem, Resource {
-factoryQuestionnaireResponseItem({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-linkId linkId,
-_linkId _linkId,
-definition definition,
-_definition _definition,
-text text,
-_text _text,
-answer answer,
-item item,
-}) = _QuestionnaireResponseItem
+abstract class QuestionnaireResponseItem implements _$QuestionnaireResponseItem  {
+QuestionnaireResponseItem._();
+factory QuestionnaireResponseItem({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ String linkId,
+  @JsonKey(name: '_linkId')  Element linkIdElement,
+ FhirUri definition,
+  @JsonKey(name: '_definition')  Element definitionElement,
+ String text,
+  @JsonKey(name: '_text')  Element textElement,
+ List<QuestionnaireResponseAnswer> answer,
+ List<QuestionnaireResponseItem> item,
+}) = _QuestionnaireResponseItem;
 
  factory QuestionnaireResponseItem.fromJson(Map<String,dynamic> json) => _$QuestionnaireResponseItemFromJson(json);
 }
 
 @freezed
-abstract class QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer, Resource {
-factoryQuestionnaireResponseAnswer({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-valueBoolean valueBoolean,
-_valueBoolean _valueBoolean,
-valueDecimal valueDecimal,
-_valueDecimal _valueDecimal,
-valueInteger valueInteger,
-_valueInteger _valueInteger,
-valueDate valueDate,
-_valueDate _valueDate,
-valueDateTime valueDateTime,
-_valueDateTime _valueDateTime,
-valueTime valueTime,
-_valueTime _valueTime,
-valueString valueString,
-_valueString _valueString,
-valueUri valueUri,
-_valueUri _valueUri,
-valueAttachment valueAttachment,
-valueCoding valueCoding,
-valueQuantity valueQuantity,
-valueReference valueReference,
-item item,
-}) = _QuestionnaireResponseAnswer
+abstract class QuestionnaireResponseAnswer implements _$QuestionnaireResponseAnswer  {
+QuestionnaireResponseAnswer._();
+factory QuestionnaireResponseAnswer({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Boolean valueBoolean,
+  @JsonKey(name: '_valueBoolean')  Element valueBooleanElement,
+ Decimal valueDecimal,
+  @JsonKey(name: '_valueDecimal')  Element valueDecimalElement,
+ Integer valueInteger,
+  @JsonKey(name: '_valueInteger')  Element valueIntegerElement,
+ Date valueDate,
+  @JsonKey(name: '_valueDate')  Element valueDateElement,
+ FhirDateTime valueDateTime,
+  @JsonKey(name: '_valueDateTime')  Element valueDateTimeElement,
+ Time valueTime,
+  @JsonKey(name: '_valueTime')  Element valueTimeElement,
+ String valueString,
+  @JsonKey(name: '_valueString')  Element valueStringElement,
+ FhirUri valueUri,
+  @JsonKey(name: '_valueUri')  Element valueUriElement,
+ Attachment valueAttachment,
+ Coding valueCoding,
+ Quantity valueQuantity,
+ Reference valueReference,
+ List<QuestionnaireResponseItem> item,
+}) = _QuestionnaireResponseAnswer;
 
  factory QuestionnaireResponseAnswer.fromJson(Map<String,dynamic> json) => _$QuestionnaireResponseAnswerFromJson(json);
 }
 
 @freezed
-abstract class Specimen implements Specimen, Resource {
-factorySpecimen({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-accessionIdentifier accessionIdentifier,
-status status,
-_status _status,
-type type,
-subject subject,
-receivedTime receivedTime,
-_receivedTime _receivedTime,
-parent parent,
-request request,
-collection collection,
-processing processing,
-container container,
-condition condition,
-note note,
-}) = _Specimen
+abstract class Specimen implements _$Specimen , Resource {
+Specimen._();
+factory Specimen({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  Identifier accessionIdentifier,
+@JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  CodeableConcept type,
+  Reference subject,
+  FhirDateTime receivedTime,
+  @JsonKey(name: '_receivedTime')   Element receivedTimeElement,
+  List<Reference> parent,
+  List<Reference> request,
+  SpecimenCollection collection,
+  List<SpecimenProcessing> processing,
+  List<SpecimenContainer> container,
+  List<CodeableConcept> condition,
+  List<Annotation> note,
+}) = _Specimen;
 
  factory Specimen.fromJson(Map<String,dynamic> json) => _$SpecimenFromJson(json);
 }
 
 @freezed
-abstract class SpecimenCollection implements SpecimenCollection, Resource {
-factorySpecimenCollection({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-collector collector,
-collectedDateTime collectedDateTime,
-_collectedDateTime _collectedDateTime,
-collectedPeriod collectedPeriod,
-duration duration,
-quantity quantity,
-method method,
-bodySite bodySite,
-fastingStatusCodeableConcept fastingStatusCodeableConcept,
-fastingStatusDuration fastingStatusDuration,
-}) = _SpecimenCollection
+abstract class SpecimenCollection implements _$SpecimenCollection  {
+SpecimenCollection._();
+factory SpecimenCollection({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Reference collector,
+ FhirDateTime collectedDateTime,
+  @JsonKey(name: '_collectedDateTime')  Element collectedDateTimeElement,
+ Period collectedPeriod,
+ Duration duration,
+ Quantity quantity,
+ CodeableConcept method,
+ CodeableConcept bodySite,
+ CodeableConcept fastingStatusCodeableConcept,
+ Duration fastingStatusDuration,
+}) = _SpecimenCollection;
 
  factory SpecimenCollection.fromJson(Map<String,dynamic> json) => _$SpecimenCollectionFromJson(json);
 }
 
 @freezed
-abstract class SpecimenProcessing implements SpecimenProcessing, Resource {
-factorySpecimenProcessing({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-description description,
-_description _description,
-procedure procedure,
-additive additive,
-timeDateTime timeDateTime,
-_timeDateTime _timeDateTime,
-timePeriod timePeriod,
-}) = _SpecimenProcessing
+abstract class SpecimenProcessing implements _$SpecimenProcessing  {
+SpecimenProcessing._();
+factory SpecimenProcessing({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ String description,
+  @JsonKey(name: '_description')  Element descriptionElement,
+ CodeableConcept procedure,
+ List<Reference> additive,
+ FhirDateTime timeDateTime,
+  @JsonKey(name: '_timeDateTime')  Element timeDateTimeElement,
+ Period timePeriod,
+}) = _SpecimenProcessing;
 
  factory SpecimenProcessing.fromJson(Map<String,dynamic> json) => _$SpecimenProcessingFromJson(json);
 }
 
 @freezed
-abstract class SpecimenContainer implements SpecimenContainer, Resource {
-factorySpecimenContainer({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-description description,
-_description _description,
-type type,
-capacity capacity,
-specimenQuantity specimenQuantity,
-additiveCodeableConcept additiveCodeableConcept,
-additiveReference additiveReference,
-}) = _SpecimenContainer
+abstract class SpecimenContainer implements _$SpecimenContainer  {
+SpecimenContainer._();
+factory SpecimenContainer({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ List<Identifier> identifier,
+ String description,
+  @JsonKey(name: '_description')  Element descriptionElement,
+ CodeableConcept type,
+ Quantity capacity,
+ Quantity specimenQuantity,
+ CodeableConcept additiveCodeableConcept,
+ Reference additiveReference,
+}) = _SpecimenContainer;
 
  factory SpecimenContainer.fromJson(Map<String,dynamic> json) => _$SpecimenContainerFromJson(json);
 }

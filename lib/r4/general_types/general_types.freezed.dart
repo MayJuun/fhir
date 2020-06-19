@@ -16,24 +16,24 @@ class _$AnnotationTearOff {
   const _$AnnotationTearOff();
 
   _Annotation call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Reference authorReference,
-      String authorString,
-      FhirDateTime time,
-      Markdown text,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Reference authorReference,
+      @JsonKey(name: extension) String authorString,
       @JsonKey(name: '_authorString') Element authorStringElement,
+      @JsonKey(name: extension) FhirDateTime time,
       @JsonKey(name: '_time') Element timeElement,
+      @JsonKey(name: extension) Markdown text,
       @JsonKey(name: '_text') Element textElement}) {
     return _Annotation(
       id: id,
       extension_: extension_,
       authorReference: authorReference,
       authorString: authorString,
-      time: time,
-      text: text,
       authorStringElement: authorStringElement,
+      time: time,
       timeElement: timeElement,
+      text: text,
       textElement: textElement,
     );
   }
@@ -43,17 +43,22 @@ class _$AnnotationTearOff {
 const $Annotation = _$AnnotationTearOff();
 
 mixin _$Annotation {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Reference get authorReference;
+  @JsonKey(name: extension)
   String get authorString;
-  FhirDateTime get time;
-  Markdown get text;
   @JsonKey(name: '_authorString')
   Element get authorStringElement;
+  @JsonKey(name: extension)
+  FhirDateTime get time;
   @JsonKey(name: '_time')
   Element get timeElement;
+  @JsonKey(name: extension)
+  Markdown get text;
   @JsonKey(name: '_text')
   Element get textElement;
 
@@ -66,14 +71,14 @@ abstract class $AnnotationCopyWith<$Res> {
           Annotation value, $Res Function(Annotation) then) =
       _$AnnotationCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Reference authorReference,
-      String authorString,
-      FhirDateTime time,
-      Markdown text,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Reference authorReference,
+      @JsonKey(name: extension) String authorString,
       @JsonKey(name: '_authorString') Element authorStringElement,
+      @JsonKey(name: extension) FhirDateTime time,
       @JsonKey(name: '_time') Element timeElement,
+      @JsonKey(name: extension) Markdown text,
       @JsonKey(name: '_text') Element textElement});
 
   $ReferenceCopyWith<$Res> get authorReference;
@@ -95,10 +100,10 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
     Object extension_ = freezed,
     Object authorReference = freezed,
     Object authorString = freezed,
-    Object time = freezed,
-    Object text = freezed,
     Object authorStringElement = freezed,
+    Object time = freezed,
     Object timeElement = freezed,
+    Object text = freezed,
     Object textElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -112,13 +117,13 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
       authorString: authorString == freezed
           ? _value.authorString
           : authorString as String,
-      time: time == freezed ? _value.time : time as FhirDateTime,
-      text: text == freezed ? _value.text : text as Markdown,
       authorStringElement: authorStringElement == freezed
           ? _value.authorStringElement
           : authorStringElement as Element,
+      time: time == freezed ? _value.time : time as FhirDateTime,
       timeElement:
           timeElement == freezed ? _value.timeElement : timeElement as Element,
+      text: text == freezed ? _value.text : text as Markdown,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element,
     ));
@@ -171,14 +176,14 @@ abstract class _$AnnotationCopyWith<$Res> implements $AnnotationCopyWith<$Res> {
       __$AnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Reference authorReference,
-      String authorString,
-      FhirDateTime time,
-      Markdown text,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Reference authorReference,
+      @JsonKey(name: extension) String authorString,
       @JsonKey(name: '_authorString') Element authorStringElement,
+      @JsonKey(name: extension) FhirDateTime time,
       @JsonKey(name: '_time') Element timeElement,
+      @JsonKey(name: extension) Markdown text,
       @JsonKey(name: '_text') Element textElement});
 
   @override
@@ -206,10 +211,10 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object authorReference = freezed,
     Object authorString = freezed,
-    Object time = freezed,
-    Object text = freezed,
     Object authorStringElement = freezed,
+    Object time = freezed,
     Object timeElement = freezed,
+    Object text = freezed,
     Object textElement = freezed,
   }) {
     return _then(_Annotation(
@@ -223,13 +228,13 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
       authorString: authorString == freezed
           ? _value.authorString
           : authorString as String,
-      time: time == freezed ? _value.time : time as FhirDateTime,
-      text: text == freezed ? _value.text : text as Markdown,
       authorStringElement: authorStringElement == freezed
           ? _value.authorStringElement
           : authorStringElement as Element,
+      time: time == freezed ? _value.time : time as FhirDateTime,
       timeElement:
           timeElement == freezed ? _value.timeElement : timeElement as Element,
+      text: text == freezed ? _value.text : text as Markdown,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element,
     ));
@@ -237,47 +242,53 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Annotation implements _Annotation {
-  const _$_Annotation(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.authorReference,
-      this.authorString,
-      this.time,
-      this.text,
+class _$_Annotation extends _Annotation {
+  _$_Annotation(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.authorReference,
+      @JsonKey(name: extension) this.authorString,
       @JsonKey(name: '_authorString') this.authorStringElement,
+      @JsonKey(name: extension) this.time,
       @JsonKey(name: '_time') this.timeElement,
-      @JsonKey(name: '_text') this.textElement});
+      @JsonKey(name: extension) this.text,
+      @JsonKey(name: '_text') this.textElement})
+      : super._();
 
   factory _$_Annotation.fromJson(Map<String, dynamic> json) =>
       _$_$_AnnotationFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Reference authorReference;
   @override
+  @JsonKey(name: extension)
   final String authorString;
-  @override
-  final FhirDateTime time;
-  @override
-  final Markdown text;
   @override
   @JsonKey(name: '_authorString')
   final Element authorStringElement;
   @override
+  @JsonKey(name: extension)
+  final FhirDateTime time;
+  @override
   @JsonKey(name: '_time')
   final Element timeElement;
+  @override
+  @JsonKey(name: extension)
+  final Markdown text;
   @override
   @JsonKey(name: '_text')
   final Element textElement;
 
   @override
   String toString() {
-    return 'Annotation(id: $id, extension_: $extension_, authorReference: $authorReference, authorString: $authorString, time: $time, text: $text, authorStringElement: $authorStringElement, timeElement: $timeElement, textElement: $textElement)';
+    return 'Annotation(id: $id, extension_: $extension_, authorReference: $authorReference, authorString: $authorString, authorStringElement: $authorStringElement, time: $time, timeElement: $timeElement, text: $text, textElement: $textElement)';
   }
 
   @override
@@ -295,16 +306,16 @@ class _$_Annotation implements _Annotation {
             (identical(other.authorString, authorString) ||
                 const DeepCollectionEquality()
                     .equals(other.authorString, authorString)) &&
-            (identical(other.time, time) ||
-                const DeepCollectionEquality().equals(other.time, time)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.authorStringElement, authorStringElement) ||
                 const DeepCollectionEquality()
                     .equals(other.authorStringElement, authorStringElement)) &&
+            (identical(other.time, time) ||
+                const DeepCollectionEquality().equals(other.time, time)) &&
             (identical(other.timeElement, timeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.timeElement, timeElement)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.textElement, textElement) ||
                 const DeepCollectionEquality()
                     .equals(other.textElement, textElement)));
@@ -317,10 +328,10 @@ class _$_Annotation implements _Annotation {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(authorReference) ^
       const DeepCollectionEquality().hash(authorString) ^
-      const DeepCollectionEquality().hash(time) ^
-      const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(authorStringElement) ^
+      const DeepCollectionEquality().hash(time) ^
       const DeepCollectionEquality().hash(timeElement) ^
+      const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
   @override
@@ -333,40 +344,46 @@ class _$_Annotation implements _Annotation {
   }
 }
 
-abstract class _Annotation implements Annotation {
-  const factory _Annotation(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Reference authorReference,
-      String authorString,
-      FhirDateTime time,
-      Markdown text,
+abstract class _Annotation extends Annotation {
+  _Annotation._() : super._();
+  factory _Annotation(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Reference authorReference,
+      @JsonKey(name: extension) String authorString,
       @JsonKey(name: '_authorString') Element authorStringElement,
+      @JsonKey(name: extension) FhirDateTime time,
       @JsonKey(name: '_time') Element timeElement,
+      @JsonKey(name: extension) Markdown text,
       @JsonKey(name: '_text') Element textElement}) = _$_Annotation;
 
   factory _Annotation.fromJson(Map<String, dynamic> json) =
       _$_Annotation.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Reference get authorReference;
   @override
+  @JsonKey(name: extension)
   String get authorString;
-  @override
-  FhirDateTime get time;
-  @override
-  Markdown get text;
   @override
   @JsonKey(name: '_authorString')
   Element get authorStringElement;
   @override
+  @JsonKey(name: extension)
+  FhirDateTime get time;
+  @override
   @JsonKey(name: '_time')
   Element get timeElement;
+  @override
+  @JsonKey(name: extension)
+  Markdown get text;
   @override
   @JsonKey(name: '_text')
   Element get textElement;
@@ -382,42 +399,42 @@ class _$AttachmentTearOff {
   const _$AttachmentTearOff();
 
   _Attachment call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Code contentType,
-      Code language,
-      Base64Binary data,
-      FhirUrl url,
-      UnsignedInt size,
-      Base64Binary hash,
-      String title,
-      FhirDateTime creation,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Code contentType,
       @JsonKey(name: '_contentType') Element contentTypeElement,
+      @JsonKey(name: extension) Code language,
       @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: extension) Base64Binary data,
       @JsonKey(name: '_data') Element dataElement,
+      @JsonKey(name: extension) FhirUrl url,
       @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: extension) UnsignedInt size,
       @JsonKey(name: '_size') Element sizeElement,
+      @JsonKey(name: extension) Base64Binary hash,
       @JsonKey(name: '_hash') Element hashElement,
+      @JsonKey(name: extension) String title,
       @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: extension) FhirDateTime creation,
       @JsonKey(name: '_creation') Element creationElement}) {
     return _Attachment(
       id: id,
       extension_: extension_,
       contentType: contentType,
-      language: language,
-      data: data,
-      url: url,
-      size: size,
-      hash: hash,
-      title: title,
-      creation: creation,
       contentTypeElement: contentTypeElement,
+      language: language,
       languageElement: languageElement,
+      data: data,
       dataElement: dataElement,
+      url: url,
       urlElement: urlElement,
+      size: size,
       sizeElement: sizeElement,
+      hash: hash,
       hashElement: hashElement,
+      title: title,
       titleElement: titleElement,
+      creation: creation,
       creationElement: creationElement,
     );
   }
@@ -427,31 +444,40 @@ class _$AttachmentTearOff {
 const $Attachment = _$AttachmentTearOff();
 
 mixin _$Attachment {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Code get contentType;
-  Code get language;
-  Base64Binary get data;
-  FhirUrl get url;
-  UnsignedInt get size;
-  Base64Binary get hash;
-  String get title;
-  FhirDateTime get creation;
   @JsonKey(name: '_contentType')
   Element get contentTypeElement;
+  @JsonKey(name: extension)
+  Code get language;
   @JsonKey(name: '_language')
   Element get languageElement;
+  @JsonKey(name: extension)
+  Base64Binary get data;
   @JsonKey(name: '_data')
   Element get dataElement;
+  @JsonKey(name: extension)
+  FhirUrl get url;
   @JsonKey(name: '_url')
   Element get urlElement;
+  @JsonKey(name: extension)
+  UnsignedInt get size;
   @JsonKey(name: '_size')
   Element get sizeElement;
+  @JsonKey(name: extension)
+  Base64Binary get hash;
   @JsonKey(name: '_hash')
   Element get hashElement;
+  @JsonKey(name: extension)
+  String get title;
   @JsonKey(name: '_title')
   Element get titleElement;
+  @JsonKey(name: extension)
+  FhirDateTime get creation;
   @JsonKey(name: '_creation')
   Element get creationElement;
 
@@ -464,23 +490,23 @@ abstract class $AttachmentCopyWith<$Res> {
           Attachment value, $Res Function(Attachment) then) =
       _$AttachmentCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Code contentType,
-      Code language,
-      Base64Binary data,
-      FhirUrl url,
-      UnsignedInt size,
-      Base64Binary hash,
-      String title,
-      FhirDateTime creation,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Code contentType,
       @JsonKey(name: '_contentType') Element contentTypeElement,
+      @JsonKey(name: extension) Code language,
       @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: extension) Base64Binary data,
       @JsonKey(name: '_data') Element dataElement,
+      @JsonKey(name: extension) FhirUrl url,
       @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: extension) UnsignedInt size,
       @JsonKey(name: '_size') Element sizeElement,
+      @JsonKey(name: extension) Base64Binary hash,
       @JsonKey(name: '_hash') Element hashElement,
+      @JsonKey(name: extension) String title,
       @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: extension) FhirDateTime creation,
       @JsonKey(name: '_creation') Element creationElement});
 
   $ElementCopyWith<$Res> get contentTypeElement;
@@ -505,20 +531,20 @@ class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object contentType = freezed,
-    Object language = freezed,
-    Object data = freezed,
-    Object url = freezed,
-    Object size = freezed,
-    Object hash = freezed,
-    Object title = freezed,
-    Object creation = freezed,
     Object contentTypeElement = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
+    Object data = freezed,
     Object dataElement = freezed,
+    Object url = freezed,
     Object urlElement = freezed,
+    Object size = freezed,
     Object sizeElement = freezed,
+    Object hash = freezed,
     Object hashElement = freezed,
+    Object title = freezed,
     Object titleElement = freezed,
+    Object creation = freezed,
     Object creationElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -528,31 +554,31 @@ class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
           : extension_ as List<FhirExtension>,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code,
-      language: language == freezed ? _value.language : language as Code,
-      data: data == freezed ? _value.data : data as Base64Binary,
-      url: url == freezed ? _value.url : url as FhirUrl,
-      size: size == freezed ? _value.size : size as UnsignedInt,
-      hash: hash == freezed ? _value.hash : hash as Base64Binary,
-      title: title == freezed ? _value.title : title as String,
-      creation:
-          creation == freezed ? _value.creation : creation as FhirDateTime,
       contentTypeElement: contentTypeElement == freezed
           ? _value.contentTypeElement
           : contentTypeElement as Element,
+      language: language == freezed ? _value.language : language as Code,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      data: data == freezed ? _value.data : data as Base64Binary,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
+      url: url == freezed ? _value.url : url as FhirUrl,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
+      size: size == freezed ? _value.size : size as UnsignedInt,
       sizeElement:
           sizeElement == freezed ? _value.sizeElement : sizeElement as Element,
+      hash: hash == freezed ? _value.hash : hash as Base64Binary,
       hashElement:
           hashElement == freezed ? _value.hashElement : hashElement as Element,
+      title: title == freezed ? _value.title : title as String,
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element,
+      creation:
+          creation == freezed ? _value.creation : creation as FhirDateTime,
       creationElement: creationElement == freezed
           ? _value.creationElement
           : creationElement as Element,
@@ -646,23 +672,23 @@ abstract class _$AttachmentCopyWith<$Res> implements $AttachmentCopyWith<$Res> {
       __$AttachmentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Code contentType,
-      Code language,
-      Base64Binary data,
-      FhirUrl url,
-      UnsignedInt size,
-      Base64Binary hash,
-      String title,
-      FhirDateTime creation,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Code contentType,
       @JsonKey(name: '_contentType') Element contentTypeElement,
+      @JsonKey(name: extension) Code language,
       @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: extension) Base64Binary data,
       @JsonKey(name: '_data') Element dataElement,
+      @JsonKey(name: extension) FhirUrl url,
       @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: extension) UnsignedInt size,
       @JsonKey(name: '_size') Element sizeElement,
+      @JsonKey(name: extension) Base64Binary hash,
       @JsonKey(name: '_hash') Element hashElement,
+      @JsonKey(name: extension) String title,
       @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: extension) FhirDateTime creation,
       @JsonKey(name: '_creation') Element creationElement});
 
   @override
@@ -697,20 +723,20 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object contentType = freezed,
-    Object language = freezed,
-    Object data = freezed,
-    Object url = freezed,
-    Object size = freezed,
-    Object hash = freezed,
-    Object title = freezed,
-    Object creation = freezed,
     Object contentTypeElement = freezed,
+    Object language = freezed,
     Object languageElement = freezed,
+    Object data = freezed,
     Object dataElement = freezed,
+    Object url = freezed,
     Object urlElement = freezed,
+    Object size = freezed,
     Object sizeElement = freezed,
+    Object hash = freezed,
     Object hashElement = freezed,
+    Object title = freezed,
     Object titleElement = freezed,
+    Object creation = freezed,
     Object creationElement = freezed,
   }) {
     return _then(_Attachment(
@@ -720,31 +746,31 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code,
-      language: language == freezed ? _value.language : language as Code,
-      data: data == freezed ? _value.data : data as Base64Binary,
-      url: url == freezed ? _value.url : url as FhirUrl,
-      size: size == freezed ? _value.size : size as UnsignedInt,
-      hash: hash == freezed ? _value.hash : hash as Base64Binary,
-      title: title == freezed ? _value.title : title as String,
-      creation:
-          creation == freezed ? _value.creation : creation as FhirDateTime,
       contentTypeElement: contentTypeElement == freezed
           ? _value.contentTypeElement
           : contentTypeElement as Element,
+      language: language == freezed ? _value.language : language as Code,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element,
+      data: data == freezed ? _value.data : data as Base64Binary,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
+      url: url == freezed ? _value.url : url as FhirUrl,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element,
+      size: size == freezed ? _value.size : size as UnsignedInt,
       sizeElement:
           sizeElement == freezed ? _value.sizeElement : sizeElement as Element,
+      hash: hash == freezed ? _value.hash : hash as Base64Binary,
       hashElement:
           hashElement == freezed ? _value.hashElement : hashElement as Element,
+      title: title == freezed ? _value.title : title as String,
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element,
+      creation:
+          creation == freezed ? _value.creation : creation as FhirDateTime,
       creationElement: creationElement == freezed
           ? _value.creationElement
           : creationElement as Element,
@@ -753,79 +779,89 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Attachment implements _Attachment {
-  const _$_Attachment(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.contentType,
-      this.language,
-      this.data,
-      this.url,
-      this.size,
-      this.hash,
-      this.title,
-      this.creation,
+class _$_Attachment extends _Attachment {
+  _$_Attachment(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.contentType,
       @JsonKey(name: '_contentType') this.contentTypeElement,
+      @JsonKey(name: extension) this.language,
       @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: extension) this.data,
       @JsonKey(name: '_data') this.dataElement,
+      @JsonKey(name: extension) this.url,
       @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: extension) this.size,
       @JsonKey(name: '_size') this.sizeElement,
+      @JsonKey(name: extension) this.hash,
       @JsonKey(name: '_hash') this.hashElement,
+      @JsonKey(name: extension) this.title,
       @JsonKey(name: '_title') this.titleElement,
-      @JsonKey(name: '_creation') this.creationElement});
+      @JsonKey(name: extension) this.creation,
+      @JsonKey(name: '_creation') this.creationElement})
+      : super._();
 
   factory _$_Attachment.fromJson(Map<String, dynamic> json) =>
       _$_$_AttachmentFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Code contentType;
-  @override
-  final Code language;
-  @override
-  final Base64Binary data;
-  @override
-  final FhirUrl url;
-  @override
-  final UnsignedInt size;
-  @override
-  final Base64Binary hash;
-  @override
-  final String title;
-  @override
-  final FhirDateTime creation;
   @override
   @JsonKey(name: '_contentType')
   final Element contentTypeElement;
   @override
+  @JsonKey(name: extension)
+  final Code language;
+  @override
   @JsonKey(name: '_language')
   final Element languageElement;
+  @override
+  @JsonKey(name: extension)
+  final Base64Binary data;
   @override
   @JsonKey(name: '_data')
   final Element dataElement;
   @override
+  @JsonKey(name: extension)
+  final FhirUrl url;
+  @override
   @JsonKey(name: '_url')
   final Element urlElement;
+  @override
+  @JsonKey(name: extension)
+  final UnsignedInt size;
   @override
   @JsonKey(name: '_size')
   final Element sizeElement;
   @override
+  @JsonKey(name: extension)
+  final Base64Binary hash;
+  @override
   @JsonKey(name: '_hash')
   final Element hashElement;
   @override
+  @JsonKey(name: extension)
+  final String title;
+  @override
   @JsonKey(name: '_title')
   final Element titleElement;
+  @override
+  @JsonKey(name: extension)
+  final FhirDateTime creation;
   @override
   @JsonKey(name: '_creation')
   final Element creationElement;
 
   @override
   String toString() {
-    return 'Attachment(id: $id, extension_: $extension_, contentType: $contentType, language: $language, data: $data, url: $url, size: $size, hash: $hash, title: $title, creation: $creation, contentTypeElement: $contentTypeElement, languageElement: $languageElement, dataElement: $dataElement, urlElement: $urlElement, sizeElement: $sizeElement, hashElement: $hashElement, titleElement: $titleElement, creationElement: $creationElement)';
+    return 'Attachment(id: $id, extension_: $extension_, contentType: $contentType, contentTypeElement: $contentTypeElement, language: $language, languageElement: $languageElement, data: $data, dataElement: $dataElement, url: $url, urlElement: $urlElement, size: $size, sizeElement: $sizeElement, hash: $hash, hashElement: $hashElement, title: $title, titleElement: $titleElement, creation: $creation, creationElement: $creationElement)';
   }
 
   @override
@@ -840,43 +876,43 @@ class _$_Attachment implements _Attachment {
             (identical(other.contentType, contentType) ||
                 const DeepCollectionEquality()
                     .equals(other.contentType, contentType)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.data, data) ||
-                const DeepCollectionEquality().equals(other.data, data)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
-            (identical(other.size, size) ||
-                const DeepCollectionEquality().equals(other.size, size)) &&
-            (identical(other.hash, hash) ||
-                const DeepCollectionEquality().equals(other.hash, hash)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.creation, creation) ||
-                const DeepCollectionEquality()
-                    .equals(other.creation, creation)) &&
             (identical(other.contentTypeElement, contentTypeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.contentTypeElement, contentTypeElement)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
             (identical(other.languageElement, languageElement) ||
                 const DeepCollectionEquality()
                     .equals(other.languageElement, languageElement)) &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)) &&
             (identical(other.dataElement, dataElement) ||
                 const DeepCollectionEquality()
                     .equals(other.dataElement, dataElement)) &&
+            (identical(other.url, url) ||
+                const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.urlElement, urlElement) ||
                 const DeepCollectionEquality()
                     .equals(other.urlElement, urlElement)) &&
+            (identical(other.size, size) ||
+                const DeepCollectionEquality().equals(other.size, size)) &&
             (identical(other.sizeElement, sizeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.sizeElement, sizeElement)) &&
+            (identical(other.hash, hash) ||
+                const DeepCollectionEquality().equals(other.hash, hash)) &&
             (identical(other.hashElement, hashElement) ||
                 const DeepCollectionEquality()
                     .equals(other.hashElement, hashElement)) &&
+            (identical(other.title, title) ||
+                const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.titleElement, titleElement) ||
                 const DeepCollectionEquality()
                     .equals(other.titleElement, titleElement)) &&
+            (identical(other.creation, creation) ||
+                const DeepCollectionEquality()
+                    .equals(other.creation, creation)) &&
             (identical(other.creationElement, creationElement) ||
                 const DeepCollectionEquality()
                     .equals(other.creationElement, creationElement)));
@@ -888,20 +924,20 @@ class _$_Attachment implements _Attachment {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(contentType) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(data) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(size) ^
-      const DeepCollectionEquality().hash(hash) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(creation) ^
       const DeepCollectionEquality().hash(contentTypeElement) ^
+      const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(dataElement) ^
+      const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(urlElement) ^
+      const DeepCollectionEquality().hash(size) ^
       const DeepCollectionEquality().hash(sizeElement) ^
+      const DeepCollectionEquality().hash(hash) ^
       const DeepCollectionEquality().hash(hashElement) ^
+      const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(titleElement) ^
+      const DeepCollectionEquality().hash(creation) ^
       const DeepCollectionEquality().hash(creationElement);
 
   @override
@@ -914,72 +950,82 @@ class _$_Attachment implements _Attachment {
   }
 }
 
-abstract class _Attachment implements Attachment {
-  const factory _Attachment(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Code contentType,
-      Code language,
-      Base64Binary data,
-      FhirUrl url,
-      UnsignedInt size,
-      Base64Binary hash,
-      String title,
-      FhirDateTime creation,
+abstract class _Attachment extends Attachment {
+  _Attachment._() : super._();
+  factory _Attachment(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Code contentType,
       @JsonKey(name: '_contentType') Element contentTypeElement,
+      @JsonKey(name: extension) Code language,
       @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: extension) Base64Binary data,
       @JsonKey(name: '_data') Element dataElement,
+      @JsonKey(name: extension) FhirUrl url,
       @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: extension) UnsignedInt size,
       @JsonKey(name: '_size') Element sizeElement,
+      @JsonKey(name: extension) Base64Binary hash,
       @JsonKey(name: '_hash') Element hashElement,
+      @JsonKey(name: extension) String title,
       @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: extension) FhirDateTime creation,
       @JsonKey(name: '_creation') Element creationElement}) = _$_Attachment;
 
   factory _Attachment.fromJson(Map<String, dynamic> json) =
       _$_Attachment.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Code get contentType;
-  @override
-  Code get language;
-  @override
-  Base64Binary get data;
-  @override
-  FhirUrl get url;
-  @override
-  UnsignedInt get size;
-  @override
-  Base64Binary get hash;
-  @override
-  String get title;
-  @override
-  FhirDateTime get creation;
   @override
   @JsonKey(name: '_contentType')
   Element get contentTypeElement;
   @override
+  @JsonKey(name: extension)
+  Code get language;
+  @override
   @JsonKey(name: '_language')
   Element get languageElement;
+  @override
+  @JsonKey(name: extension)
+  Base64Binary get data;
   @override
   @JsonKey(name: '_data')
   Element get dataElement;
   @override
+  @JsonKey(name: extension)
+  FhirUrl get url;
+  @override
   @JsonKey(name: '_url')
   Element get urlElement;
+  @override
+  @JsonKey(name: extension)
+  UnsignedInt get size;
   @override
   @JsonKey(name: '_size')
   Element get sizeElement;
   @override
+  @JsonKey(name: extension)
+  Base64Binary get hash;
+  @override
   @JsonKey(name: '_hash')
   Element get hashElement;
   @override
+  @JsonKey(name: extension)
+  String get title;
+  @override
   @JsonKey(name: '_title')
   Element get titleElement;
+  @override
+  @JsonKey(name: extension)
+  FhirDateTime get creation;
   @override
   @JsonKey(name: '_creation')
   Element get creationElement;
@@ -995,29 +1041,29 @@ class _$IdentifierTearOff {
   const _$IdentifierTearOff();
 
   _Identifier call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
-      CodeableConcept type,
-      FhirUri system,
-      String value,
-      Period period,
-      Reference assigner,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: extension) CodeableConcept type,
+      @JsonKey(name: extension) FhirUri system,
       @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_value') Element valueElement}) {
+      @JsonKey(name: extension) String value,
+      @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: extension) Period period,
+      @JsonKey(name: extension) Reference assigner}) {
     return _Identifier(
       id: id,
       extension_: extension_,
       use: use,
+      useElement: useElement,
       type: type,
       system: system,
+      systemElement: systemElement,
       value: value,
+      valueElement: valueElement,
       period: period,
       assigner: assigner,
-      useElement: useElement,
-      systemElement: systemElement,
-      valueElement: valueElement,
     );
   }
 }
@@ -1026,22 +1072,28 @@ class _$IdentifierTearOff {
 const $Identifier = _$IdentifierTearOff();
 
 mixin _$Identifier {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @JsonKey(unknownEnumValue: IdentifierUse.unknown)
   IdentifierUse get use;
-  CodeableConcept get type;
-  FhirUri get system;
-  String get value;
-  Period get period;
-  Reference get assigner;
   @JsonKey(name: '_use')
   Element get useElement;
+  @JsonKey(name: extension)
+  CodeableConcept get type;
+  @JsonKey(name: extension)
+  FhirUri get system;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: extension)
+  String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
+  @JsonKey(name: extension)
+  Period get period;
+  @JsonKey(name: extension)
+  Reference get assigner;
 
   Map<String, dynamic> toJson();
   $IdentifierCopyWith<Identifier> get copyWith;
@@ -1052,24 +1104,24 @@ abstract class $IdentifierCopyWith<$Res> {
           Identifier value, $Res Function(Identifier) then) =
       _$IdentifierCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
-      CodeableConcept type,
-      FhirUri system,
-      String value,
-      Period period,
-      Reference assigner,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: extension) CodeableConcept type,
+      @JsonKey(name: extension) FhirUri system,
       @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_value') Element valueElement});
+      @JsonKey(name: extension) String value,
+      @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: extension) Period period,
+      @JsonKey(name: extension) Reference assigner});
 
-  $CodeableConceptCopyWith<$Res> get type;
-  $PeriodCopyWith<$Res> get period;
-  $ReferenceCopyWith<$Res> get assigner;
   $ElementCopyWith<$Res> get useElement;
+  $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res> get systemElement;
   $ElementCopyWith<$Res> get valueElement;
+  $PeriodCopyWith<$Res> get period;
+  $ReferenceCopyWith<$Res> get assigner;
 }
 
 class _$IdentifierCopyWithImpl<$Res> implements $IdentifierCopyWith<$Res> {
@@ -1084,14 +1136,14 @@ class _$IdentifierCopyWithImpl<$Res> implements $IdentifierCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object use = freezed,
+    Object useElement = freezed,
     Object type = freezed,
     Object system = freezed,
+    Object systemElement = freezed,
     Object value = freezed,
+    Object valueElement = freezed,
     Object period = freezed,
     Object assigner = freezed,
-    Object useElement = freezed,
-    Object systemElement = freezed,
-    Object valueElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1099,50 +1151,20 @@ class _$IdentifierCopyWithImpl<$Res> implements $IdentifierCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       use: use == freezed ? _value.use : use as IdentifierUse,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      system: system == freezed ? _value.system : system as FhirUri,
-      value: value == freezed ? _value.value : value as String,
-      period: period == freezed ? _value.period : period as Period,
-      assigner: assigner == freezed ? _value.assigner : assigner as Reference,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      period: period == freezed ? _value.period : period as Period,
+      assigner: assigner == freezed ? _value.assigner : assigner as Reference,
     ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
-    });
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get period {
-    if (_value.period == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
-      return _then(_value.copyWith(period: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res> get assigner {
-    if (_value.assigner == null) {
-      return null;
-    }
-    return $ReferenceCopyWith<$Res>(_value.assigner, (value) {
-      return _then(_value.copyWith(assigner: value));
-    });
   }
 
   @override
@@ -1152,6 +1174,16 @@ class _$IdentifierCopyWithImpl<$Res> implements $IdentifierCopyWith<$Res> {
     }
     return $ElementCopyWith<$Res>(_value.useElement, (value) {
       return _then(_value.copyWith(useElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
     });
   }
 
@@ -1174,6 +1206,26 @@ class _$IdentifierCopyWithImpl<$Res> implements $IdentifierCopyWith<$Res> {
       return _then(_value.copyWith(valueElement: value));
     });
   }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get assigner {
+    if (_value.assigner == null) {
+      return null;
+    }
+    return $ReferenceCopyWith<$Res>(_value.assigner, (value) {
+      return _then(_value.copyWith(assigner: value));
+    });
+  }
 }
 
 abstract class _$IdentifierCopyWith<$Res> implements $IdentifierCopyWith<$Res> {
@@ -1182,30 +1234,30 @@ abstract class _$IdentifierCopyWith<$Res> implements $IdentifierCopyWith<$Res> {
       __$IdentifierCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
-      CodeableConcept type,
-      FhirUri system,
-      String value,
-      Period period,
-      Reference assigner,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: extension) CodeableConcept type,
+      @JsonKey(name: extension) FhirUri system,
       @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_value') Element valueElement});
+      @JsonKey(name: extension) String value,
+      @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: extension) Period period,
+      @JsonKey(name: extension) Reference assigner});
 
   @override
-  $CodeableConceptCopyWith<$Res> get type;
-  @override
-  $PeriodCopyWith<$Res> get period;
-  @override
-  $ReferenceCopyWith<$Res> get assigner;
-  @override
   $ElementCopyWith<$Res> get useElement;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $ElementCopyWith<$Res> get systemElement;
   @override
   $ElementCopyWith<$Res> get valueElement;
+  @override
+  $PeriodCopyWith<$Res> get period;
+  @override
+  $ReferenceCopyWith<$Res> get assigner;
 }
 
 class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
@@ -1222,14 +1274,14 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object use = freezed,
+    Object useElement = freezed,
     Object type = freezed,
     Object system = freezed,
+    Object systemElement = freezed,
     Object value = freezed,
+    Object valueElement = freezed,
     Object period = freezed,
     Object assigner = freezed,
-    Object useElement = freezed,
-    Object systemElement = freezed,
-    Object valueElement = freezed,
   }) {
     return _then(_Identifier(
       id: id == freezed ? _value.id : id as String,
@@ -1237,72 +1289,79 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       use: use == freezed ? _value.use : use as IdentifierUse,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      system: system == freezed ? _value.system : system as FhirUri,
-      value: value == freezed ? _value.value : value as String,
-      period: period == freezed ? _value.period : period as Period,
-      assigner: assigner == freezed ? _value.assigner : assigner as Reference,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      period: period == freezed ? _value.period : period as Period,
+      assigner: assigner == freezed ? _value.assigner : assigner as Reference,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_Identifier implements _Identifier {
-  const _$_Identifier(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+class _$_Identifier extends _Identifier {
+  _$_Identifier(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) this.use,
-      this.type,
-      this.system,
-      this.value,
-      this.period,
-      this.assigner,
       @JsonKey(name: '_use') this.useElement,
+      @JsonKey(name: extension) this.type,
+      @JsonKey(name: extension) this.system,
       @JsonKey(name: '_system') this.systemElement,
-      @JsonKey(name: '_value') this.valueElement});
+      @JsonKey(name: extension) this.value,
+      @JsonKey(name: '_value') this.valueElement,
+      @JsonKey(name: extension) this.period,
+      @JsonKey(name: extension) this.assigner})
+      : super._();
 
   factory _$_Identifier.fromJson(Map<String, dynamic> json) =>
       _$_$_IdentifierFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
   @JsonKey(unknownEnumValue: IdentifierUse.unknown)
   final IdentifierUse use;
   @override
-  final CodeableConcept type;
-  @override
-  final FhirUri system;
-  @override
-  final String value;
-  @override
-  final Period period;
-  @override
-  final Reference assigner;
-  @override
   @JsonKey(name: '_use')
   final Element useElement;
+  @override
+  @JsonKey(name: extension)
+  final CodeableConcept type;
+  @override
+  @JsonKey(name: extension)
+  final FhirUri system;
   @override
   @JsonKey(name: '_system')
   final Element systemElement;
   @override
+  @JsonKey(name: extension)
+  final String value;
+  @override
   @JsonKey(name: '_value')
   final Element valueElement;
+  @override
+  @JsonKey(name: extension)
+  final Period period;
+  @override
+  @JsonKey(name: extension)
+  final Reference assigner;
 
   @override
   String toString() {
-    return 'Identifier(id: $id, extension_: $extension_, use: $use, type: $type, system: $system, value: $value, period: $period, assigner: $assigner, useElement: $useElement, systemElement: $systemElement, valueElement: $valueElement)';
+    return 'Identifier(id: $id, extension_: $extension_, use: $use, useElement: $useElement, type: $type, system: $system, systemElement: $systemElement, value: $value, valueElement: $valueElement, period: $period, assigner: $assigner)';
   }
 
   @override
@@ -1316,26 +1375,26 @@ class _$_Identifier implements _Identifier {
                     .equals(other.extension_, extension_)) &&
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
+            (identical(other.useElement, useElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.useElement, useElement)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
+            (identical(other.systemElement, systemElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.systemElement, systemElement)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.valueElement, valueElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueElement, valueElement)) &&
             (identical(other.period, period) ||
                 const DeepCollectionEquality().equals(other.period, period)) &&
             (identical(other.assigner, assigner) ||
                 const DeepCollectionEquality()
-                    .equals(other.assigner, assigner)) &&
-            (identical(other.useElement, useElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.useElement, useElement)) &&
-            (identical(other.systemElement, systemElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.systemElement, systemElement)) &&
-            (identical(other.valueElement, valueElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueElement, valueElement)));
+                    .equals(other.assigner, assigner)));
   }
 
   @override
@@ -1344,14 +1403,14 @@ class _$_Identifier implements _Identifier {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(use) ^
+      const DeepCollectionEquality().hash(useElement) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(period) ^
-      const DeepCollectionEquality().hash(assigner) ^
-      const DeepCollectionEquality().hash(useElement) ^
       const DeepCollectionEquality().hash(systemElement) ^
-      const DeepCollectionEquality().hash(valueElement);
+      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(assigner);
 
   @override
   _$IdentifierCopyWith<_Identifier> get copyWith =>
@@ -1363,50 +1422,57 @@ class _$_Identifier implements _Identifier {
   }
 }
 
-abstract class _Identifier implements Identifier {
-  const factory _Identifier(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+abstract class _Identifier extends Identifier {
+  _Identifier._() : super._();
+  factory _Identifier(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse use,
-      CodeableConcept type,
-      FhirUri system,
-      String value,
-      Period period,
-      Reference assigner,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: extension) CodeableConcept type,
+      @JsonKey(name: extension) FhirUri system,
       @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_value') Element valueElement}) = _$_Identifier;
+      @JsonKey(name: extension) String value,
+      @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: extension) Period period,
+      @JsonKey(name: extension) Reference assigner}) = _$_Identifier;
 
   factory _Identifier.fromJson(Map<String, dynamic> json) =
       _$_Identifier.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
   @JsonKey(unknownEnumValue: IdentifierUse.unknown)
   IdentifierUse get use;
   @override
-  CodeableConcept get type;
-  @override
-  FhirUri get system;
-  @override
-  String get value;
-  @override
-  Period get period;
-  @override
-  Reference get assigner;
-  @override
   @JsonKey(name: '_use')
   Element get useElement;
+  @override
+  @JsonKey(name: extension)
+  CodeableConcept get type;
+  @override
+  @JsonKey(name: extension)
+  FhirUri get system;
   @override
   @JsonKey(name: '_system')
   Element get systemElement;
   @override
+  @JsonKey(name: extension)
+  String get value;
+  @override
   @JsonKey(name: '_value')
   Element get valueElement;
+  @override
+  @JsonKey(name: extension)
+  Period get period;
+  @override
+  @JsonKey(name: extension)
+  Reference get assigner;
   @override
   _$IdentifierCopyWith<_Identifier> get copyWith;
 }
@@ -1419,10 +1485,10 @@ class _$CodeableConceptTearOff {
   const _$CodeableConceptTearOff();
 
   _CodeableConcept call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<Coding> coding,
-      String text,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<Coding> coding,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement}) {
     return _CodeableConcept(
       id: id,
@@ -1438,10 +1504,13 @@ class _$CodeableConceptTearOff {
 const $CodeableConcept = _$CodeableConceptTearOff();
 
 mixin _$CodeableConcept {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   List<Coding> get coding;
+  @JsonKey(name: extension)
   String get text;
   @JsonKey(name: '_text')
   Element get textElement;
@@ -1455,10 +1524,10 @@ abstract class $CodeableConceptCopyWith<$Res> {
           CodeableConcept value, $Res Function(CodeableConcept) then) =
       _$CodeableConceptCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<Coding> coding,
-      String text,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<Coding> coding,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement});
 
   $ElementCopyWith<$Res> get textElement;
@@ -1510,10 +1579,10 @@ abstract class _$CodeableConceptCopyWith<$Res>
       __$CodeableConceptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<Coding> coding,
-      String text,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<Coding> coding,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement});
 
   @override
@@ -1552,25 +1621,29 @@ class __$CodeableConceptCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_CodeableConcept implements _CodeableConcept {
-  const _$_CodeableConcept(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.coding,
-      this.text,
-      @JsonKey(name: '_text') this.textElement});
+class _$_CodeableConcept extends _CodeableConcept {
+  _$_CodeableConcept(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.coding,
+      @JsonKey(name: extension) this.text,
+      @JsonKey(name: '_text') this.textElement})
+      : super._();
 
   factory _$_CodeableConcept.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeableConceptFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final List<Coding> coding;
   @override
+  @JsonKey(name: extension)
   final String text;
   @override
   @JsonKey(name: '_text')
@@ -1618,25 +1691,29 @@ class _$_CodeableConcept implements _CodeableConcept {
   }
 }
 
-abstract class _CodeableConcept implements CodeableConcept {
-  const factory _CodeableConcept(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<Coding> coding,
-      String text,
+abstract class _CodeableConcept extends CodeableConcept {
+  _CodeableConcept._() : super._();
+  factory _CodeableConcept(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<Coding> coding,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement}) = _$_CodeableConcept;
 
   factory _CodeableConcept.fromJson(Map<String, dynamic> json) =
       _$_CodeableConcept.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   List<Coding> get coding;
   @override
+  @JsonKey(name: extension)
   String get text;
   @override
   @JsonKey(name: '_text')
@@ -1653,30 +1730,30 @@ class _$CodingTearOff {
   const _$CodingTearOff();
 
   _Coding call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirUri system,
-      String version,
-      Code code,
-      String display,
-      Boolean userSelected,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) FhirUri system,
       @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: extension) String version,
       @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: extension) Code code,
       @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: extension) String display,
       @JsonKey(name: '_display') Element displayElement,
+      @JsonKey(name: extension) Boolean userSelected,
       @JsonKey(name: '_userSelected') Element userSelectedElement}) {
     return _Coding(
       id: id,
       extension_: extension_,
       system: system,
-      version: version,
-      code: code,
-      display: display,
-      userSelected: userSelected,
       systemElement: systemElement,
+      version: version,
       versionElement: versionElement,
+      code: code,
       codeElement: codeElement,
+      display: display,
       displayElement: displayElement,
+      userSelected: userSelected,
       userSelectedElement: userSelectedElement,
     );
   }
@@ -1686,22 +1763,28 @@ class _$CodingTearOff {
 const $Coding = _$CodingTearOff();
 
 mixin _$Coding {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   FhirUri get system;
-  String get version;
-  Code get code;
-  String get display;
-  Boolean get userSelected;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: extension)
+  String get version;
   @JsonKey(name: '_version')
   Element get versionElement;
+  @JsonKey(name: extension)
+  Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
+  @JsonKey(name: extension)
+  String get display;
   @JsonKey(name: '_display')
   Element get displayElement;
+  @JsonKey(name: extension)
+  Boolean get userSelected;
   @JsonKey(name: '_userSelected')
   Element get userSelectedElement;
 
@@ -1713,17 +1796,17 @@ abstract class $CodingCopyWith<$Res> {
   factory $CodingCopyWith(Coding value, $Res Function(Coding) then) =
       _$CodingCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirUri system,
-      String version,
-      Code code,
-      String display,
-      Boolean userSelected,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) FhirUri system,
       @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: extension) String version,
       @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: extension) Code code,
       @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: extension) String display,
       @JsonKey(name: '_display') Element displayElement,
+      @JsonKey(name: extension) Boolean userSelected,
       @JsonKey(name: '_userSelected') Element userSelectedElement});
 
   $ElementCopyWith<$Res> get systemElement;
@@ -1745,14 +1828,14 @@ class _$CodingCopyWithImpl<$Res> implements $CodingCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object system = freezed,
-    Object version = freezed,
-    Object code = freezed,
-    Object display = freezed,
-    Object userSelected = freezed,
     Object systemElement = freezed,
+    Object version = freezed,
     Object versionElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
+    Object userSelected = freezed,
     Object userSelectedElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1761,23 +1844,23 @@ class _$CodingCopyWithImpl<$Res> implements $CodingCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       system: system == freezed ? _value.system : system as FhirUri,
-      version: version == freezed ? _value.version : version as String,
-      code: code == freezed ? _value.code : code as Code,
-      display: display == freezed ? _value.display : display as String,
-      userSelected: userSelected == freezed
-          ? _value.userSelected
-          : userSelected as Boolean,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      version: version == freezed ? _value.version : version as String,
       versionElement: versionElement == freezed
           ? _value.versionElement
           : versionElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
+      userSelected: userSelected == freezed
+          ? _value.userSelected
+          : userSelected as Boolean,
       userSelectedElement: userSelectedElement == freezed
           ? _value.userSelectedElement
           : userSelectedElement as Element,
@@ -1840,17 +1923,17 @@ abstract class _$CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
       __$CodingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirUri system,
-      String version,
-      Code code,
-      String display,
-      Boolean userSelected,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) FhirUri system,
       @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: extension) String version,
       @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: extension) Code code,
       @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: extension) String display,
       @JsonKey(name: '_display') Element displayElement,
+      @JsonKey(name: extension) Boolean userSelected,
       @JsonKey(name: '_userSelected') Element userSelectedElement});
 
   @override
@@ -1878,14 +1961,14 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object system = freezed,
-    Object version = freezed,
-    Object code = freezed,
-    Object display = freezed,
-    Object userSelected = freezed,
     Object systemElement = freezed,
+    Object version = freezed,
     Object versionElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
+    Object display = freezed,
     Object displayElement = freezed,
+    Object userSelected = freezed,
     Object userSelectedElement = freezed,
   }) {
     return _then(_Coding(
@@ -1894,23 +1977,23 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       system: system == freezed ? _value.system : system as FhirUri,
-      version: version == freezed ? _value.version : version as String,
-      code: code == freezed ? _value.code : code as Code,
-      display: display == freezed ? _value.display : display as String,
-      userSelected: userSelected == freezed
-          ? _value.userSelected
-          : userSelected as Boolean,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      version: version == freezed ? _value.version : version as String,
       versionElement: versionElement == freezed
           ? _value.versionElement
           : versionElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
+      display: display == freezed ? _value.display : display as String,
       displayElement: displayElement == freezed
           ? _value.displayElement
           : displayElement as Element,
+      userSelected: userSelected == freezed
+          ? _value.userSelected
+          : userSelected as Boolean,
       userSelectedElement: userSelectedElement == freezed
           ? _value.userSelectedElement
           : userSelectedElement as Element,
@@ -1919,58 +2002,65 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Coding implements _Coding {
-  const _$_Coding(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.system,
-      this.version,
-      this.code,
-      this.display,
-      this.userSelected,
+class _$_Coding extends _Coding {
+  _$_Coding(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.system,
       @JsonKey(name: '_system') this.systemElement,
+      @JsonKey(name: extension) this.version,
       @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: extension) this.code,
       @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(name: extension) this.display,
       @JsonKey(name: '_display') this.displayElement,
-      @JsonKey(name: '_userSelected') this.userSelectedElement});
+      @JsonKey(name: extension) this.userSelected,
+      @JsonKey(name: '_userSelected') this.userSelectedElement})
+      : super._();
 
   factory _$_Coding.fromJson(Map<String, dynamic> json) =>
       _$_$_CodingFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final FhirUri system;
-  @override
-  final String version;
-  @override
-  final Code code;
-  @override
-  final String display;
-  @override
-  final Boolean userSelected;
   @override
   @JsonKey(name: '_system')
   final Element systemElement;
   @override
+  @JsonKey(name: extension)
+  final String version;
+  @override
   @JsonKey(name: '_version')
   final Element versionElement;
+  @override
+  @JsonKey(name: extension)
+  final Code code;
   @override
   @JsonKey(name: '_code')
   final Element codeElement;
   @override
+  @JsonKey(name: extension)
+  final String display;
+  @override
   @JsonKey(name: '_display')
   final Element displayElement;
+  @override
+  @JsonKey(name: extension)
+  final Boolean userSelected;
   @override
   @JsonKey(name: '_userSelected')
   final Element userSelectedElement;
 
   @override
   String toString() {
-    return 'Coding(id: $id, extension_: $extension_, system: $system, version: $version, code: $code, display: $display, userSelected: $userSelected, systemElement: $systemElement, versionElement: $versionElement, codeElement: $codeElement, displayElement: $displayElement, userSelectedElement: $userSelectedElement)';
+    return 'Coding(id: $id, extension_: $extension_, system: $system, systemElement: $systemElement, version: $version, versionElement: $versionElement, code: $code, codeElement: $codeElement, display: $display, displayElement: $displayElement, userSelected: $userSelected, userSelectedElement: $userSelectedElement)';
   }
 
   @override
@@ -1984,29 +2074,29 @@ class _$_Coding implements _Coding {
                     .equals(other.extension_, extension_)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.display, display) ||
-                const DeepCollectionEquality()
-                    .equals(other.display, display)) &&
-            (identical(other.userSelected, userSelected) ||
-                const DeepCollectionEquality()
-                    .equals(other.userSelected, userSelected)) &&
             (identical(other.systemElement, systemElement) ||
                 const DeepCollectionEquality()
                     .equals(other.systemElement, systemElement)) &&
+            (identical(other.version, version) ||
+                const DeepCollectionEquality()
+                    .equals(other.version, version)) &&
             (identical(other.versionElement, versionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.versionElement, versionElement)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)) &&
+            (identical(other.display, display) ||
+                const DeepCollectionEquality()
+                    .equals(other.display, display)) &&
             (identical(other.displayElement, displayElement) ||
                 const DeepCollectionEquality()
                     .equals(other.displayElement, displayElement)) &&
+            (identical(other.userSelected, userSelected) ||
+                const DeepCollectionEquality()
+                    .equals(other.userSelected, userSelected)) &&
             (identical(other.userSelectedElement, userSelectedElement) ||
                 const DeepCollectionEquality()
                     .equals(other.userSelectedElement, userSelectedElement)));
@@ -2018,14 +2108,14 @@ class _$_Coding implements _Coding {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(userSelected) ^
       const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
+      const DeepCollectionEquality().hash(display) ^
       const DeepCollectionEquality().hash(displayElement) ^
+      const DeepCollectionEquality().hash(userSelected) ^
       const DeepCollectionEquality().hash(userSelectedElement);
 
   @override
@@ -2038,50 +2128,57 @@ class _$_Coding implements _Coding {
   }
 }
 
-abstract class _Coding implements Coding {
-  const factory _Coding(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirUri system,
-      String version,
-      Code code,
-      String display,
-      Boolean userSelected,
+abstract class _Coding extends Coding {
+  _Coding._() : super._();
+  factory _Coding(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) FhirUri system,
       @JsonKey(name: '_system') Element systemElement,
+      @JsonKey(name: extension) String version,
       @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: extension) Code code,
       @JsonKey(name: '_code') Element codeElement,
+      @JsonKey(name: extension) String display,
       @JsonKey(name: '_display') Element displayElement,
+      @JsonKey(name: extension) Boolean userSelected,
       @JsonKey(name: '_userSelected') Element userSelectedElement}) = _$_Coding;
 
   factory _Coding.fromJson(Map<String, dynamic> json) = _$_Coding.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   FhirUri get system;
-  @override
-  String get version;
-  @override
-  Code get code;
-  @override
-  String get display;
-  @override
-  Boolean get userSelected;
   @override
   @JsonKey(name: '_system')
   Element get systemElement;
   @override
+  @JsonKey(name: extension)
+  String get version;
+  @override
   @JsonKey(name: '_version')
   Element get versionElement;
+  @override
+  @JsonKey(name: extension)
+  Code get code;
   @override
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  @JsonKey(name: extension)
+  String get display;
+  @override
   @JsonKey(name: '_display')
   Element get displayElement;
+  @override
+  @JsonKey(name: extension)
+  Boolean get userSelected;
   @override
   @JsonKey(name: '_userSelected')
   Element get userSelectedElement;
@@ -2097,30 +2194,42 @@ class _$QuantityTearOff {
   const _$QuantityTearOff();
 
   _Quantity call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) {
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: QuantityComparator.unknown)
+          QuantityComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) {
     return _Quantity(
       id: id,
       extension_: extension_,
       value: value,
-      comparator: comparator,
-      unit: unit,
-      system: system,
-      code: code,
       valueElement: valueElement,
+      comparator: comparator,
       comparatorElement: comparatorElement,
+      unit: unit,
       unitElement: unitElement,
+      system: system,
       systemElement: systemElement,
+      code: code,
       codeElement: codeElement,
     );
   }
@@ -2130,23 +2239,28 @@ class _$QuantityTearOff {
 const $Quantity = _$QuantityTearOff();
 
 mixin _$Quantity {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Decimal get value;
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  String get unit;
-  FhirUri get system;
-  Code get code;
   @JsonKey(name: '_value')
   Element get valueElement;
+  @JsonKey(unknownEnumValue: QuantityComparator.unknown)
+  QuantityComparator get comparator;
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @JsonKey(name: extension)
+  String get unit;
   @JsonKey(name: '_unit')
   Element get unitElement;
+  @JsonKey(name: extension)
+  FhirUri get system;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: extension)
+  Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
 
@@ -2158,18 +2272,30 @@ abstract class $QuantityCopyWith<$Res> {
   factory $QuantityCopyWith(Quantity value, $Res Function(Quantity) then) =
       _$QuantityCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: QuantityComparator.unknown)
+          QuantityComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   $ElementCopyWith<$Res> get valueElement;
   $ElementCopyWith<$Res> get comparatorElement;
@@ -2190,14 +2316,14 @@ class _$QuantityCopyWithImpl<$Res> implements $QuantityCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2206,22 +2332,23 @@ class _$QuantityCopyWithImpl<$Res> implements $QuantityCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as QuantityComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -2283,18 +2410,30 @@ abstract class _$QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
       __$QuantityCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: QuantityComparator.unknown)
+          QuantityComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   @override
   $ElementCopyWith<$Res> get valueElement;
@@ -2321,14 +2460,14 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_Quantity(
@@ -2337,22 +2476,23 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as QuantityComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -2360,59 +2500,65 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Quantity implements _Quantity {
-  const _$_Quantity(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
-      this.unit,
-      this.system,
-      this.code,
+class _$_Quantity extends _Quantity {
+  _$_Quantity(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.value,
       @JsonKey(name: '_value') this.valueElement,
+      @JsonKey(unknownEnumValue: QuantityComparator.unknown) this.comparator,
       @JsonKey(name: '_comparator') this.comparatorElement,
+      @JsonKey(name: extension) this.unit,
       @JsonKey(name: '_unit') this.unitElement,
+      @JsonKey(name: extension) this.system,
       @JsonKey(name: '_system') this.systemElement,
-      @JsonKey(name: '_code') this.codeElement});
+      @JsonKey(name: extension) this.code,
+      @JsonKey(name: '_code') this.codeElement})
+      : super._();
 
   factory _$_Quantity.fromJson(Map<String, dynamic> json) =>
       _$_$_QuantityFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Decimal value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  final Comparator comparator;
-  @override
-  final String unit;
-  @override
-  final FhirUri system;
-  @override
-  final Code code;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
   @override
+  @JsonKey(unknownEnumValue: QuantityComparator.unknown)
+  final QuantityComparator comparator;
+  @override
   @JsonKey(name: '_comparator')
   final Element comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  final String unit;
   @override
   @JsonKey(name: '_unit')
   final Element unitElement;
   @override
+  @JsonKey(name: extension)
+  final FhirUri system;
+  @override
   @JsonKey(name: '_system')
   final Element systemElement;
+  @override
+  @JsonKey(name: extension)
+  final Code code;
   @override
   @JsonKey(name: '_code')
   final Element codeElement;
 
   @override
   String toString() {
-    return 'Quantity(id: $id, extension_: $extension_, value: $value, comparator: $comparator, unit: $unit, system: $system, code: $code, valueElement: $valueElement, comparatorElement: $comparatorElement, unitElement: $unitElement, systemElement: $systemElement, codeElement: $codeElement)';
+    return 'Quantity(id: $id, extension_: $extension_, value: $value, valueElement: $valueElement, comparator: $comparator, comparatorElement: $comparatorElement, unit: $unit, unitElement: $unitElement, system: $system, systemElement: $systemElement, code: $code, codeElement: $codeElement)';
   }
 
   @override
@@ -2426,27 +2572,27 @@ class _$_Quantity implements _Quantity {
                     .equals(other.extension_, extension_)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.comparator, comparator) ||
-                const DeepCollectionEquality()
-                    .equals(other.comparator, comparator)) &&
-            (identical(other.unit, unit) ||
-                const DeepCollectionEquality().equals(other.unit, unit)) &&
-            (identical(other.system, system) ||
-                const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)) &&
+            (identical(other.comparator, comparator) ||
+                const DeepCollectionEquality()
+                    .equals(other.comparator, comparator)) &&
             (identical(other.comparatorElement, comparatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.comparatorElement, comparatorElement)) &&
+            (identical(other.unit, unit) ||
+                const DeepCollectionEquality().equals(other.unit, unit)) &&
             (identical(other.unitElement, unitElement) ||
                 const DeepCollectionEquality()
                     .equals(other.unitElement, unitElement)) &&
+            (identical(other.system, system) ||
+                const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.systemElement, systemElement) ||
                 const DeepCollectionEquality()
                     .equals(other.systemElement, systemElement)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)));
@@ -2458,14 +2604,14 @@ class _$_Quantity implements _Quantity {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(comparator) ^
-      const DeepCollectionEquality().hash(unit) ^
-      const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(comparator) ^
       const DeepCollectionEquality().hash(comparatorElement) ^
+      const DeepCollectionEquality().hash(unit) ^
       const DeepCollectionEquality().hash(unitElement) ^
+      const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
   @override
@@ -2478,51 +2624,69 @@ class _$_Quantity implements _Quantity {
   }
 }
 
-abstract class _Quantity implements Quantity {
-  const factory _Quantity(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) = _$_Quantity;
+abstract class _Quantity extends Quantity {
+  _Quantity._() : super._();
+  factory _Quantity(
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: QuantityComparator.unknown)
+          QuantityComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) = _$_Quantity;
 
   factory _Quantity.fromJson(Map<String, dynamic> json) = _$_Quantity.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Decimal get value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  @override
-  String get unit;
-  @override
-  FhirUri get system;
-  @override
-  Code get code;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(unknownEnumValue: QuantityComparator.unknown)
+  QuantityComparator get comparator;
+  @override
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  String get unit;
   @override
   @JsonKey(name: '_unit')
   Element get unitElement;
   @override
+  @JsonKey(name: extension)
+  FhirUri get system;
+  @override
   @JsonKey(name: '_system')
   Element get systemElement;
+  @override
+  @JsonKey(name: extension)
+  Code get code;
   @override
   @JsonKey(name: '_code')
   Element get codeElement;
@@ -2538,30 +2702,42 @@ class _$DurationTearOff {
   const _$DurationTearOff();
 
   _Duration call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) {
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: DurationComparator.unknown)
+          DurationComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) {
     return _Duration(
       id: id,
       extension_: extension_,
       value: value,
-      comparator: comparator,
-      unit: unit,
-      system: system,
-      code: code,
       valueElement: valueElement,
+      comparator: comparator,
       comparatorElement: comparatorElement,
+      unit: unit,
       unitElement: unitElement,
+      system: system,
       systemElement: systemElement,
+      code: code,
       codeElement: codeElement,
     );
   }
@@ -2571,23 +2747,28 @@ class _$DurationTearOff {
 const $Duration = _$DurationTearOff();
 
 mixin _$Duration {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Decimal get value;
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  String get unit;
-  FhirUri get system;
-  Code get code;
   @JsonKey(name: '_value')
   Element get valueElement;
+  @JsonKey(unknownEnumValue: DurationComparator.unknown)
+  DurationComparator get comparator;
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @JsonKey(name: extension)
+  String get unit;
   @JsonKey(name: '_unit')
   Element get unitElement;
+  @JsonKey(name: extension)
+  FhirUri get system;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: extension)
+  Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
 
@@ -2599,18 +2780,30 @@ abstract class $DurationCopyWith<$Res> {
   factory $DurationCopyWith(Duration value, $Res Function(Duration) then) =
       _$DurationCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: DurationComparator.unknown)
+          DurationComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   $ElementCopyWith<$Res> get valueElement;
   $ElementCopyWith<$Res> get comparatorElement;
@@ -2631,14 +2824,14 @@ class _$DurationCopyWithImpl<$Res> implements $DurationCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2647,22 +2840,23 @@ class _$DurationCopyWithImpl<$Res> implements $DurationCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as DurationComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -2724,18 +2918,30 @@ abstract class _$DurationCopyWith<$Res> implements $DurationCopyWith<$Res> {
       __$DurationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: DurationComparator.unknown)
+          DurationComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   @override
   $ElementCopyWith<$Res> get valueElement;
@@ -2762,14 +2968,14 @@ class __$DurationCopyWithImpl<$Res> extends _$DurationCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_Duration(
@@ -2778,22 +2984,23 @@ class __$DurationCopyWithImpl<$Res> extends _$DurationCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as DurationComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -2801,59 +3008,65 @@ class __$DurationCopyWithImpl<$Res> extends _$DurationCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Duration implements _Duration {
-  const _$_Duration(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
-      this.unit,
-      this.system,
-      this.code,
+class _$_Duration extends _Duration {
+  _$_Duration(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.value,
       @JsonKey(name: '_value') this.valueElement,
+      @JsonKey(unknownEnumValue: DurationComparator.unknown) this.comparator,
       @JsonKey(name: '_comparator') this.comparatorElement,
+      @JsonKey(name: extension) this.unit,
       @JsonKey(name: '_unit') this.unitElement,
+      @JsonKey(name: extension) this.system,
       @JsonKey(name: '_system') this.systemElement,
-      @JsonKey(name: '_code') this.codeElement});
+      @JsonKey(name: extension) this.code,
+      @JsonKey(name: '_code') this.codeElement})
+      : super._();
 
   factory _$_Duration.fromJson(Map<String, dynamic> json) =>
       _$_$_DurationFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Decimal value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  final Comparator comparator;
-  @override
-  final String unit;
-  @override
-  final FhirUri system;
-  @override
-  final Code code;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
   @override
+  @JsonKey(unknownEnumValue: DurationComparator.unknown)
+  final DurationComparator comparator;
+  @override
   @JsonKey(name: '_comparator')
   final Element comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  final String unit;
   @override
   @JsonKey(name: '_unit')
   final Element unitElement;
   @override
+  @JsonKey(name: extension)
+  final FhirUri system;
+  @override
   @JsonKey(name: '_system')
   final Element systemElement;
+  @override
+  @JsonKey(name: extension)
+  final Code code;
   @override
   @JsonKey(name: '_code')
   final Element codeElement;
 
   @override
   String toString() {
-    return 'Duration(id: $id, extension_: $extension_, value: $value, comparator: $comparator, unit: $unit, system: $system, code: $code, valueElement: $valueElement, comparatorElement: $comparatorElement, unitElement: $unitElement, systemElement: $systemElement, codeElement: $codeElement)';
+    return 'Duration(id: $id, extension_: $extension_, value: $value, valueElement: $valueElement, comparator: $comparator, comparatorElement: $comparatorElement, unit: $unit, unitElement: $unitElement, system: $system, systemElement: $systemElement, code: $code, codeElement: $codeElement)';
   }
 
   @override
@@ -2867,27 +3080,27 @@ class _$_Duration implements _Duration {
                     .equals(other.extension_, extension_)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.comparator, comparator) ||
-                const DeepCollectionEquality()
-                    .equals(other.comparator, comparator)) &&
-            (identical(other.unit, unit) ||
-                const DeepCollectionEquality().equals(other.unit, unit)) &&
-            (identical(other.system, system) ||
-                const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)) &&
+            (identical(other.comparator, comparator) ||
+                const DeepCollectionEquality()
+                    .equals(other.comparator, comparator)) &&
             (identical(other.comparatorElement, comparatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.comparatorElement, comparatorElement)) &&
+            (identical(other.unit, unit) ||
+                const DeepCollectionEquality().equals(other.unit, unit)) &&
             (identical(other.unitElement, unitElement) ||
                 const DeepCollectionEquality()
                     .equals(other.unitElement, unitElement)) &&
+            (identical(other.system, system) ||
+                const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.systemElement, systemElement) ||
                 const DeepCollectionEquality()
                     .equals(other.systemElement, systemElement)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)));
@@ -2899,14 +3112,14 @@ class _$_Duration implements _Duration {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(comparator) ^
-      const DeepCollectionEquality().hash(unit) ^
-      const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(comparator) ^
       const DeepCollectionEquality().hash(comparatorElement) ^
+      const DeepCollectionEquality().hash(unit) ^
       const DeepCollectionEquality().hash(unitElement) ^
+      const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
   @override
@@ -2919,51 +3132,69 @@ class _$_Duration implements _Duration {
   }
 }
 
-abstract class _Duration implements Duration {
-  const factory _Duration(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) = _$_Duration;
+abstract class _Duration extends Duration {
+  _Duration._() : super._();
+  factory _Duration(
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: DurationComparator.unknown)
+          DurationComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) = _$_Duration;
 
   factory _Duration.fromJson(Map<String, dynamic> json) = _$_Duration.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Decimal get value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  @override
-  String get unit;
-  @override
-  FhirUri get system;
-  @override
-  Code get code;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(unknownEnumValue: DurationComparator.unknown)
+  DurationComparator get comparator;
+  @override
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  String get unit;
   @override
   @JsonKey(name: '_unit')
   Element get unitElement;
   @override
+  @JsonKey(name: extension)
+  FhirUri get system;
+  @override
   @JsonKey(name: '_system')
   Element get systemElement;
+  @override
+  @JsonKey(name: extension)
+  Code get code;
   @override
   @JsonKey(name: '_code')
   Element get codeElement;
@@ -2979,30 +3210,42 @@ class _$DistanceTearOff {
   const _$DistanceTearOff();
 
   _Distance call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) {
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: DistanceComparator.unknown)
+          DistanceComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) {
     return _Distance(
       id: id,
       extension_: extension_,
       value: value,
-      comparator: comparator,
-      unit: unit,
-      system: system,
-      code: code,
       valueElement: valueElement,
+      comparator: comparator,
       comparatorElement: comparatorElement,
+      unit: unit,
       unitElement: unitElement,
+      system: system,
       systemElement: systemElement,
+      code: code,
       codeElement: codeElement,
     );
   }
@@ -3012,23 +3255,28 @@ class _$DistanceTearOff {
 const $Distance = _$DistanceTearOff();
 
 mixin _$Distance {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Decimal get value;
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  String get unit;
-  FhirUri get system;
-  Code get code;
   @JsonKey(name: '_value')
   Element get valueElement;
+  @JsonKey(unknownEnumValue: DistanceComparator.unknown)
+  DistanceComparator get comparator;
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @JsonKey(name: extension)
+  String get unit;
   @JsonKey(name: '_unit')
   Element get unitElement;
+  @JsonKey(name: extension)
+  FhirUri get system;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: extension)
+  Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
 
@@ -3040,18 +3288,30 @@ abstract class $DistanceCopyWith<$Res> {
   factory $DistanceCopyWith(Distance value, $Res Function(Distance) then) =
       _$DistanceCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: DistanceComparator.unknown)
+          DistanceComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   $ElementCopyWith<$Res> get valueElement;
   $ElementCopyWith<$Res> get comparatorElement;
@@ -3072,14 +3332,14 @@ class _$DistanceCopyWithImpl<$Res> implements $DistanceCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3088,22 +3348,23 @@ class _$DistanceCopyWithImpl<$Res> implements $DistanceCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as DistanceComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -3165,18 +3426,30 @@ abstract class _$DistanceCopyWith<$Res> implements $DistanceCopyWith<$Res> {
       __$DistanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: DistanceComparator.unknown)
+          DistanceComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   @override
   $ElementCopyWith<$Res> get valueElement;
@@ -3203,14 +3476,14 @@ class __$DistanceCopyWithImpl<$Res> extends _$DistanceCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_Distance(
@@ -3219,22 +3492,23 @@ class __$DistanceCopyWithImpl<$Res> extends _$DistanceCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as DistanceComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -3242,59 +3516,65 @@ class __$DistanceCopyWithImpl<$Res> extends _$DistanceCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Distance implements _Distance {
-  const _$_Distance(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
-      this.unit,
-      this.system,
-      this.code,
+class _$_Distance extends _Distance {
+  _$_Distance(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.value,
       @JsonKey(name: '_value') this.valueElement,
+      @JsonKey(unknownEnumValue: DistanceComparator.unknown) this.comparator,
       @JsonKey(name: '_comparator') this.comparatorElement,
+      @JsonKey(name: extension) this.unit,
       @JsonKey(name: '_unit') this.unitElement,
+      @JsonKey(name: extension) this.system,
       @JsonKey(name: '_system') this.systemElement,
-      @JsonKey(name: '_code') this.codeElement});
+      @JsonKey(name: extension) this.code,
+      @JsonKey(name: '_code') this.codeElement})
+      : super._();
 
   factory _$_Distance.fromJson(Map<String, dynamic> json) =>
       _$_$_DistanceFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Decimal value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  final Comparator comparator;
-  @override
-  final String unit;
-  @override
-  final FhirUri system;
-  @override
-  final Code code;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
   @override
+  @JsonKey(unknownEnumValue: DistanceComparator.unknown)
+  final DistanceComparator comparator;
+  @override
   @JsonKey(name: '_comparator')
   final Element comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  final String unit;
   @override
   @JsonKey(name: '_unit')
   final Element unitElement;
   @override
+  @JsonKey(name: extension)
+  final FhirUri system;
+  @override
   @JsonKey(name: '_system')
   final Element systemElement;
+  @override
+  @JsonKey(name: extension)
+  final Code code;
   @override
   @JsonKey(name: '_code')
   final Element codeElement;
 
   @override
   String toString() {
-    return 'Distance(id: $id, extension_: $extension_, value: $value, comparator: $comparator, unit: $unit, system: $system, code: $code, valueElement: $valueElement, comparatorElement: $comparatorElement, unitElement: $unitElement, systemElement: $systemElement, codeElement: $codeElement)';
+    return 'Distance(id: $id, extension_: $extension_, value: $value, valueElement: $valueElement, comparator: $comparator, comparatorElement: $comparatorElement, unit: $unit, unitElement: $unitElement, system: $system, systemElement: $systemElement, code: $code, codeElement: $codeElement)';
   }
 
   @override
@@ -3308,27 +3588,27 @@ class _$_Distance implements _Distance {
                     .equals(other.extension_, extension_)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.comparator, comparator) ||
-                const DeepCollectionEquality()
-                    .equals(other.comparator, comparator)) &&
-            (identical(other.unit, unit) ||
-                const DeepCollectionEquality().equals(other.unit, unit)) &&
-            (identical(other.system, system) ||
-                const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)) &&
+            (identical(other.comparator, comparator) ||
+                const DeepCollectionEquality()
+                    .equals(other.comparator, comparator)) &&
             (identical(other.comparatorElement, comparatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.comparatorElement, comparatorElement)) &&
+            (identical(other.unit, unit) ||
+                const DeepCollectionEquality().equals(other.unit, unit)) &&
             (identical(other.unitElement, unitElement) ||
                 const DeepCollectionEquality()
                     .equals(other.unitElement, unitElement)) &&
+            (identical(other.system, system) ||
+                const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.systemElement, systemElement) ||
                 const DeepCollectionEquality()
                     .equals(other.systemElement, systemElement)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)));
@@ -3340,14 +3620,14 @@ class _$_Distance implements _Distance {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(comparator) ^
-      const DeepCollectionEquality().hash(unit) ^
-      const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(comparator) ^
       const DeepCollectionEquality().hash(comparatorElement) ^
+      const DeepCollectionEquality().hash(unit) ^
       const DeepCollectionEquality().hash(unitElement) ^
+      const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
   @override
@@ -3360,51 +3640,69 @@ class _$_Distance implements _Distance {
   }
 }
 
-abstract class _Distance implements Distance {
-  const factory _Distance(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) = _$_Distance;
+abstract class _Distance extends Distance {
+  _Distance._() : super._();
+  factory _Distance(
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: DistanceComparator.unknown)
+          DistanceComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) = _$_Distance;
 
   factory _Distance.fromJson(Map<String, dynamic> json) = _$_Distance.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Decimal get value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  @override
-  String get unit;
-  @override
-  FhirUri get system;
-  @override
-  Code get code;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(unknownEnumValue: DistanceComparator.unknown)
+  DistanceComparator get comparator;
+  @override
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  String get unit;
   @override
   @JsonKey(name: '_unit')
   Element get unitElement;
   @override
+  @JsonKey(name: extension)
+  FhirUri get system;
+  @override
   @JsonKey(name: '_system')
   Element get systemElement;
+  @override
+  @JsonKey(name: extension)
+  Code get code;
   @override
   @JsonKey(name: '_code')
   Element get codeElement;
@@ -3420,30 +3718,42 @@ class _$CountTearOff {
   const _$CountTearOff();
 
   _Count call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) {
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: CountComparator.unknown)
+          CountComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) {
     return _Count(
       id: id,
       extension_: extension_,
       value: value,
-      comparator: comparator,
-      unit: unit,
-      system: system,
-      code: code,
       valueElement: valueElement,
+      comparator: comparator,
       comparatorElement: comparatorElement,
+      unit: unit,
       unitElement: unitElement,
+      system: system,
       systemElement: systemElement,
+      code: code,
       codeElement: codeElement,
     );
   }
@@ -3453,23 +3763,28 @@ class _$CountTearOff {
 const $Count = _$CountTearOff();
 
 mixin _$Count {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Decimal get value;
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  String get unit;
-  FhirUri get system;
-  Code get code;
   @JsonKey(name: '_value')
   Element get valueElement;
+  @JsonKey(unknownEnumValue: CountComparator.unknown)
+  CountComparator get comparator;
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @JsonKey(name: extension)
+  String get unit;
   @JsonKey(name: '_unit')
   Element get unitElement;
+  @JsonKey(name: extension)
+  FhirUri get system;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: extension)
+  Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
 
@@ -3481,18 +3796,30 @@ abstract class $CountCopyWith<$Res> {
   factory $CountCopyWith(Count value, $Res Function(Count) then) =
       _$CountCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: CountComparator.unknown)
+          CountComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   $ElementCopyWith<$Res> get valueElement;
   $ElementCopyWith<$Res> get comparatorElement;
@@ -3513,14 +3840,14 @@ class _$CountCopyWithImpl<$Res> implements $CountCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3529,22 +3856,23 @@ class _$CountCopyWithImpl<$Res> implements $CountCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as CountComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -3606,18 +3934,30 @@ abstract class _$CountCopyWith<$Res> implements $CountCopyWith<$Res> {
       __$CountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: CountComparator.unknown)
+          CountComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   @override
   $ElementCopyWith<$Res> get valueElement;
@@ -3644,14 +3984,14 @@ class __$CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_Count(
@@ -3660,22 +4000,23 @@ class __$CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as CountComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -3683,59 +4024,65 @@ class __$CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Count implements _Count {
-  const _$_Count(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
-      this.unit,
-      this.system,
-      this.code,
+class _$_Count extends _Count {
+  _$_Count(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.value,
       @JsonKey(name: '_value') this.valueElement,
+      @JsonKey(unknownEnumValue: CountComparator.unknown) this.comparator,
       @JsonKey(name: '_comparator') this.comparatorElement,
+      @JsonKey(name: extension) this.unit,
       @JsonKey(name: '_unit') this.unitElement,
+      @JsonKey(name: extension) this.system,
       @JsonKey(name: '_system') this.systemElement,
-      @JsonKey(name: '_code') this.codeElement});
+      @JsonKey(name: extension) this.code,
+      @JsonKey(name: '_code') this.codeElement})
+      : super._();
 
   factory _$_Count.fromJson(Map<String, dynamic> json) =>
       _$_$_CountFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Decimal value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  final Comparator comparator;
-  @override
-  final String unit;
-  @override
-  final FhirUri system;
-  @override
-  final Code code;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
   @override
+  @JsonKey(unknownEnumValue: CountComparator.unknown)
+  final CountComparator comparator;
+  @override
   @JsonKey(name: '_comparator')
   final Element comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  final String unit;
   @override
   @JsonKey(name: '_unit')
   final Element unitElement;
   @override
+  @JsonKey(name: extension)
+  final FhirUri system;
+  @override
   @JsonKey(name: '_system')
   final Element systemElement;
+  @override
+  @JsonKey(name: extension)
+  final Code code;
   @override
   @JsonKey(name: '_code')
   final Element codeElement;
 
   @override
   String toString() {
-    return 'Count(id: $id, extension_: $extension_, value: $value, comparator: $comparator, unit: $unit, system: $system, code: $code, valueElement: $valueElement, comparatorElement: $comparatorElement, unitElement: $unitElement, systemElement: $systemElement, codeElement: $codeElement)';
+    return 'Count(id: $id, extension_: $extension_, value: $value, valueElement: $valueElement, comparator: $comparator, comparatorElement: $comparatorElement, unit: $unit, unitElement: $unitElement, system: $system, systemElement: $systemElement, code: $code, codeElement: $codeElement)';
   }
 
   @override
@@ -3749,27 +4096,27 @@ class _$_Count implements _Count {
                     .equals(other.extension_, extension_)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.comparator, comparator) ||
-                const DeepCollectionEquality()
-                    .equals(other.comparator, comparator)) &&
-            (identical(other.unit, unit) ||
-                const DeepCollectionEquality().equals(other.unit, unit)) &&
-            (identical(other.system, system) ||
-                const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)) &&
+            (identical(other.comparator, comparator) ||
+                const DeepCollectionEquality()
+                    .equals(other.comparator, comparator)) &&
             (identical(other.comparatorElement, comparatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.comparatorElement, comparatorElement)) &&
+            (identical(other.unit, unit) ||
+                const DeepCollectionEquality().equals(other.unit, unit)) &&
             (identical(other.unitElement, unitElement) ||
                 const DeepCollectionEquality()
                     .equals(other.unitElement, unitElement)) &&
+            (identical(other.system, system) ||
+                const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.systemElement, systemElement) ||
                 const DeepCollectionEquality()
                     .equals(other.systemElement, systemElement)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)));
@@ -3781,14 +4128,14 @@ class _$_Count implements _Count {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(comparator) ^
-      const DeepCollectionEquality().hash(unit) ^
-      const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(comparator) ^
       const DeepCollectionEquality().hash(comparatorElement) ^
+      const DeepCollectionEquality().hash(unit) ^
       const DeepCollectionEquality().hash(unitElement) ^
+      const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
   @override
@@ -3801,51 +4148,69 @@ class _$_Count implements _Count {
   }
 }
 
-abstract class _Count implements Count {
-  const factory _Count(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) = _$_Count;
+abstract class _Count extends Count {
+  _Count._() : super._();
+  factory _Count(
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: CountComparator.unknown)
+          CountComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) = _$_Count;
 
   factory _Count.fromJson(Map<String, dynamic> json) = _$_Count.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Decimal get value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  @override
-  String get unit;
-  @override
-  FhirUri get system;
-  @override
-  Code get code;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(unknownEnumValue: CountComparator.unknown)
+  CountComparator get comparator;
+  @override
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  String get unit;
   @override
   @JsonKey(name: '_unit')
   Element get unitElement;
   @override
+  @JsonKey(name: extension)
+  FhirUri get system;
+  @override
   @JsonKey(name: '_system')
   Element get systemElement;
+  @override
+  @JsonKey(name: extension)
+  Code get code;
   @override
   @JsonKey(name: '_code')
   Element get codeElement;
@@ -3861,18 +4226,18 @@ class _$MoneyTearOff {
   const _$MoneyTearOff();
 
   _Money call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      Code currency,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Decimal value,
       @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: extension) Code currency,
       @JsonKey(name: '_currency') Element currencyElement}) {
     return _Money(
       id: id,
       extension_: extension_,
       value: value,
-      currency: currency,
       valueElement: valueElement,
+      currency: currency,
       currencyElement: currencyElement,
     );
   }
@@ -3882,13 +4247,16 @@ class _$MoneyTearOff {
 const $Money = _$MoneyTearOff();
 
 mixin _$Money {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Decimal get value;
-  Code get currency;
   @JsonKey(name: '_value')
   Element get valueElement;
+  @JsonKey(name: extension)
+  Code get currency;
   @JsonKey(name: '_currency')
   Element get currencyElement;
 
@@ -3900,11 +4268,11 @@ abstract class $MoneyCopyWith<$Res> {
   factory $MoneyCopyWith(Money value, $Res Function(Money) then) =
       _$MoneyCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      Code currency,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Decimal value,
       @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: extension) Code currency,
       @JsonKey(name: '_currency') Element currencyElement});
 
   $ElementCopyWith<$Res> get valueElement;
@@ -3923,8 +4291,8 @@ class _$MoneyCopyWithImpl<$Res> implements $MoneyCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object currency = freezed,
     Object valueElement = freezed,
+    Object currency = freezed,
     Object currencyElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3933,10 +4301,10 @@ class _$MoneyCopyWithImpl<$Res> implements $MoneyCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      currency: currency == freezed ? _value.currency : currency as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      currency: currency == freezed ? _value.currency : currency as Code,
       currencyElement: currencyElement == freezed
           ? _value.currencyElement
           : currencyElement as Element,
@@ -3969,11 +4337,11 @@ abstract class _$MoneyCopyWith<$Res> implements $MoneyCopyWith<$Res> {
       __$MoneyCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      Code currency,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Decimal value,
       @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: extension) Code currency,
       @JsonKey(name: '_currency') Element currencyElement});
 
   @override
@@ -3995,8 +4363,8 @@ class __$MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object currency = freezed,
     Object valueElement = freezed,
+    Object currency = freezed,
     Object currencyElement = freezed,
   }) {
     return _then(_Money(
@@ -4005,10 +4373,10 @@ class __$MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      currency: currency == freezed ? _value.currency : currency as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      currency: currency == freezed ? _value.currency : currency as Code,
       currencyElement: currencyElement == freezed
           ? _value.currencyElement
           : currencyElement as Element,
@@ -4017,37 +4385,41 @@ class __$MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Money implements _Money {
-  const _$_Money(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.value,
-      this.currency,
+class _$_Money extends _Money {
+  _$_Money(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.value,
       @JsonKey(name: '_value') this.valueElement,
-      @JsonKey(name: '_currency') this.currencyElement});
+      @JsonKey(name: extension) this.currency,
+      @JsonKey(name: '_currency') this.currencyElement})
+      : super._();
 
   factory _$_Money.fromJson(Map<String, dynamic> json) =>
       _$_$_MoneyFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Decimal value;
-  @override
-  final Code currency;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
+  @override
+  @JsonKey(name: extension)
+  final Code currency;
   @override
   @JsonKey(name: '_currency')
   final Element currencyElement;
 
   @override
   String toString() {
-    return 'Money(id: $id, extension_: $extension_, value: $value, currency: $currency, valueElement: $valueElement, currencyElement: $currencyElement)';
+    return 'Money(id: $id, extension_: $extension_, value: $value, valueElement: $valueElement, currency: $currency, currencyElement: $currencyElement)';
   }
 
   @override
@@ -4061,12 +4433,12 @@ class _$_Money implements _Money {
                     .equals(other.extension_, extension_)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.currency, currency) ||
-                const DeepCollectionEquality()
-                    .equals(other.currency, currency)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)) &&
+            (identical(other.currency, currency) ||
+                const DeepCollectionEquality()
+                    .equals(other.currency, currency)) &&
             (identical(other.currencyElement, currencyElement) ||
                 const DeepCollectionEquality()
                     .equals(other.currencyElement, currencyElement)));
@@ -4078,8 +4450,8 @@ class _$_Money implements _Money {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(currency) ^
       const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(currency) ^
       const DeepCollectionEquality().hash(currencyElement);
 
   @override
@@ -4092,29 +4464,33 @@ class _$_Money implements _Money {
   }
 }
 
-abstract class _Money implements Money {
-  const factory _Money(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      Code currency,
+abstract class _Money extends Money {
+  _Money._() : super._();
+  factory _Money(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Decimal value,
       @JsonKey(name: '_value') Element valueElement,
+      @JsonKey(name: extension) Code currency,
       @JsonKey(name: '_currency') Element currencyElement}) = _$_Money;
 
   factory _Money.fromJson(Map<String, dynamic> json) = _$_Money.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Decimal get value;
-  @override
-  Code get currency;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
+  @override
+  @JsonKey(name: extension)
+  Code get currency;
   @override
   @JsonKey(name: '_currency')
   Element get currencyElement;
@@ -4130,30 +4506,42 @@ class _$AgeTearOff {
   const _$AgeTearOff();
 
   _Age call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) {
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: AgeComparator.unknown)
+          AgeComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) {
     return _Age(
       id: id,
       extension_: extension_,
       value: value,
-      comparator: comparator,
-      unit: unit,
-      system: system,
-      code: code,
       valueElement: valueElement,
+      comparator: comparator,
       comparatorElement: comparatorElement,
+      unit: unit,
       unitElement: unitElement,
+      system: system,
       systemElement: systemElement,
+      code: code,
       codeElement: codeElement,
     );
   }
@@ -4163,23 +4551,28 @@ class _$AgeTearOff {
 const $Age = _$AgeTearOff();
 
 mixin _$Age {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Decimal get value;
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  String get unit;
-  FhirUri get system;
-  Code get code;
   @JsonKey(name: '_value')
   Element get valueElement;
+  @JsonKey(unknownEnumValue: AgeComparator.unknown)
+  AgeComparator get comparator;
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @JsonKey(name: extension)
+  String get unit;
   @JsonKey(name: '_unit')
   Element get unitElement;
+  @JsonKey(name: extension)
+  FhirUri get system;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: extension)
+  Code get code;
   @JsonKey(name: '_code')
   Element get codeElement;
 
@@ -4191,18 +4584,30 @@ abstract class $AgeCopyWith<$Res> {
   factory $AgeCopyWith(Age value, $Res Function(Age) then) =
       _$AgeCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: AgeComparator.unknown)
+          AgeComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   $ElementCopyWith<$Res> get valueElement;
   $ElementCopyWith<$Res> get comparatorElement;
@@ -4223,14 +4628,14 @@ class _$AgeCopyWithImpl<$Res> implements $AgeCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -4239,22 +4644,23 @@ class _$AgeCopyWithImpl<$Res> implements $AgeCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as AgeComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -4316,18 +4722,30 @@ abstract class _$AgeCopyWith<$Res> implements $AgeCopyWith<$Res> {
       __$AgeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement});
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: AgeComparator.unknown)
+          AgeComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement});
 
   @override
   $ElementCopyWith<$Res> get valueElement;
@@ -4354,14 +4772,14 @@ class __$AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object value = freezed,
-    Object comparator = freezed,
-    Object unit = freezed,
-    Object system = freezed,
-    Object code = freezed,
     Object valueElement = freezed,
+    Object comparator = freezed,
     Object comparatorElement = freezed,
+    Object unit = freezed,
     Object unitElement = freezed,
+    Object system = freezed,
     Object systemElement = freezed,
+    Object code = freezed,
     Object codeElement = freezed,
   }) {
     return _then(_Age(
@@ -4370,22 +4788,23 @@ class __$AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       value: value == freezed ? _value.value : value as Decimal,
-      comparator:
-          comparator == freezed ? _value.comparator : comparator as Comparator,
-      unit: unit == freezed ? _value.unit : unit as String,
-      system: system == freezed ? _value.system : system as FhirUri,
-      code: code == freezed ? _value.code : code as Code,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      comparator: comparator == freezed
+          ? _value.comparator
+          : comparator as AgeComparator,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
           : comparatorElement as Element,
+      unit: unit == freezed ? _value.unit : unit as String,
       unitElement:
           unitElement == freezed ? _value.unitElement : unitElement as Element,
+      system: system == freezed ? _value.system : system as FhirUri,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      code: code == freezed ? _value.code : code as Code,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element,
     ));
@@ -4393,58 +4812,64 @@ class __$AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Age implements _Age {
-  const _$_Age(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) this.comparator,
-      this.unit,
-      this.system,
-      this.code,
+class _$_Age extends _Age {
+  _$_Age(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.value,
       @JsonKey(name: '_value') this.valueElement,
+      @JsonKey(unknownEnumValue: AgeComparator.unknown) this.comparator,
       @JsonKey(name: '_comparator') this.comparatorElement,
+      @JsonKey(name: extension) this.unit,
       @JsonKey(name: '_unit') this.unitElement,
+      @JsonKey(name: extension) this.system,
       @JsonKey(name: '_system') this.systemElement,
-      @JsonKey(name: '_code') this.codeElement});
+      @JsonKey(name: extension) this.code,
+      @JsonKey(name: '_code') this.codeElement})
+      : super._();
 
   factory _$_Age.fromJson(Map<String, dynamic> json) => _$_$_AgeFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Decimal value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  final Comparator comparator;
-  @override
-  final String unit;
-  @override
-  final FhirUri system;
-  @override
-  final Code code;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
   @override
+  @JsonKey(unknownEnumValue: AgeComparator.unknown)
+  final AgeComparator comparator;
+  @override
   @JsonKey(name: '_comparator')
   final Element comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  final String unit;
   @override
   @JsonKey(name: '_unit')
   final Element unitElement;
   @override
+  @JsonKey(name: extension)
+  final FhirUri system;
+  @override
   @JsonKey(name: '_system')
   final Element systemElement;
+  @override
+  @JsonKey(name: extension)
+  final Code code;
   @override
   @JsonKey(name: '_code')
   final Element codeElement;
 
   @override
   String toString() {
-    return 'Age(id: $id, extension_: $extension_, value: $value, comparator: $comparator, unit: $unit, system: $system, code: $code, valueElement: $valueElement, comparatorElement: $comparatorElement, unitElement: $unitElement, systemElement: $systemElement, codeElement: $codeElement)';
+    return 'Age(id: $id, extension_: $extension_, value: $value, valueElement: $valueElement, comparator: $comparator, comparatorElement: $comparatorElement, unit: $unit, unitElement: $unitElement, system: $system, systemElement: $systemElement, code: $code, codeElement: $codeElement)';
   }
 
   @override
@@ -4458,27 +4883,27 @@ class _$_Age implements _Age {
                     .equals(other.extension_, extension_)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.comparator, comparator) ||
-                const DeepCollectionEquality()
-                    .equals(other.comparator, comparator)) &&
-            (identical(other.unit, unit) ||
-                const DeepCollectionEquality().equals(other.unit, unit)) &&
-            (identical(other.system, system) ||
-                const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)) &&
+            (identical(other.comparator, comparator) ||
+                const DeepCollectionEquality()
+                    .equals(other.comparator, comparator)) &&
             (identical(other.comparatorElement, comparatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.comparatorElement, comparatorElement)) &&
+            (identical(other.unit, unit) ||
+                const DeepCollectionEquality().equals(other.unit, unit)) &&
             (identical(other.unitElement, unitElement) ||
                 const DeepCollectionEquality()
                     .equals(other.unitElement, unitElement)) &&
+            (identical(other.system, system) ||
+                const DeepCollectionEquality().equals(other.system, system)) &&
             (identical(other.systemElement, systemElement) ||
                 const DeepCollectionEquality()
                     .equals(other.systemElement, systemElement)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.codeElement, codeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.codeElement, codeElement)));
@@ -4490,14 +4915,14 @@ class _$_Age implements _Age {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(comparator) ^
-      const DeepCollectionEquality().hash(unit) ^
-      const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(comparator) ^
       const DeepCollectionEquality().hash(comparatorElement) ^
+      const DeepCollectionEquality().hash(unit) ^
       const DeepCollectionEquality().hash(unitElement) ^
+      const DeepCollectionEquality().hash(system) ^
       const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
   @override
@@ -4510,51 +4935,69 @@ class _$_Age implements _Age {
   }
 }
 
-abstract class _Age implements Age {
-  const factory _Age(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Decimal value,
-      @JsonKey(unknownEnumValue: Comparator.unknown) Comparator comparator,
-      String unit,
-      FhirUri system,
-      Code code,
-      @JsonKey(name: '_value') Element valueElement,
-      @JsonKey(name: '_comparator') Element comparatorElement,
-      @JsonKey(name: '_unit') Element unitElement,
-      @JsonKey(name: '_system') Element systemElement,
-      @JsonKey(name: '_code') Element codeElement}) = _$_Age;
+abstract class _Age extends Age {
+  _Age._() : super._();
+  factory _Age(
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
+          List<FhirExtension> extension_,
+      @JsonKey(name: extension)
+          Decimal value,
+      @JsonKey(name: '_value')
+          Element valueElement,
+      @JsonKey(unknownEnumValue: AgeComparator.unknown)
+          AgeComparator comparator,
+      @JsonKey(name: '_comparator')
+          Element comparatorElement,
+      @JsonKey(name: extension)
+          String unit,
+      @JsonKey(name: '_unit')
+          Element unitElement,
+      @JsonKey(name: extension)
+          FhirUri system,
+      @JsonKey(name: '_system')
+          Element systemElement,
+      @JsonKey(name: extension)
+          Code code,
+      @JsonKey(name: '_code')
+          Element codeElement}) = _$_Age;
 
   factory _Age.fromJson(Map<String, dynamic> json) = _$_Age.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Decimal get value;
-  @override
-  @JsonKey(unknownEnumValue: Comparator.unknown)
-  Comparator get comparator;
-  @override
-  String get unit;
-  @override
-  FhirUri get system;
-  @override
-  Code get code;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(unknownEnumValue: AgeComparator.unknown)
+  AgeComparator get comparator;
+  @override
   @JsonKey(name: '_comparator')
   Element get comparatorElement;
+  @override
+  @JsonKey(name: extension)
+  String get unit;
   @override
   @JsonKey(name: '_unit')
   Element get unitElement;
   @override
+  @JsonKey(name: extension)
+  FhirUri get system;
+  @override
   @JsonKey(name: '_system')
   Element get systemElement;
+  @override
+  @JsonKey(name: extension)
+  Code get code;
   @override
   @JsonKey(name: '_code')
   Element get codeElement;
@@ -4570,10 +5013,10 @@ class _$RangeTearOff {
   const _$RangeTearOff();
 
   _Range call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Quantity low,
-      Quantity high}) {
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity low,
+      @JsonKey(name: extension) Quantity high}) {
     return _Range(
       id: id,
       extension_: extension_,
@@ -4587,10 +5030,13 @@ class _$RangeTearOff {
 const $Range = _$RangeTearOff();
 
 mixin _$Range {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Quantity get low;
+  @JsonKey(name: extension)
   Quantity get high;
 
   Map<String, dynamic> toJson();
@@ -4601,10 +5047,10 @@ abstract class $RangeCopyWith<$Res> {
   factory $RangeCopyWith(Range value, $Res Function(Range) then) =
       _$RangeCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Quantity low,
-      Quantity high});
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity low,
+      @JsonKey(name: extension) Quantity high});
 
   $QuantityCopyWith<$Res> get low;
   $QuantityCopyWith<$Res> get high;
@@ -4660,10 +5106,10 @@ abstract class _$RangeCopyWith<$Res> implements $RangeCopyWith<$Res> {
       __$RangeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Quantity low,
-      Quantity high});
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity low,
+      @JsonKey(name: extension) Quantity high});
 
   @override
   $QuantityCopyWith<$Res> get low;
@@ -4698,24 +5144,28 @@ class __$RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Range implements _Range {
-  const _$_Range(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.low,
-      this.high});
+class _$_Range extends _Range {
+  _$_Range(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.low,
+      @JsonKey(name: extension) this.high})
+      : super._();
 
   factory _$_Range.fromJson(Map<String, dynamic> json) =>
       _$_$_RangeFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Quantity low;
   @override
+  @JsonKey(name: extension)
   final Quantity high;
 
   @override
@@ -4756,23 +5206,27 @@ class _$_Range implements _Range {
   }
 }
 
-abstract class _Range implements Range {
-  const factory _Range(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Quantity low,
-      Quantity high}) = _$_Range;
+abstract class _Range extends Range {
+  _Range._() : super._();
+  factory _Range(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity low,
+      @JsonKey(name: extension) Quantity high}) = _$_Range;
 
   factory _Range.fromJson(Map<String, dynamic> json) = _$_Range.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Quantity get low;
   @override
+  @JsonKey(name: extension)
   Quantity get high;
   @override
   _$RangeCopyWith<_Range> get copyWith;
@@ -4786,18 +5240,18 @@ class _$PeriodTearOff {
   const _$PeriodTearOff();
 
   _Period call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirDateTime start,
-      FhirDateTime end,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) FhirDateTime start,
       @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: extension) FhirDateTime end,
       @JsonKey(name: '_end') Element endElement}) {
     return _Period(
       id: id,
       extension_: extension_,
       start: start,
-      end: end,
       startElement: startElement,
+      end: end,
       endElement: endElement,
     );
   }
@@ -4807,13 +5261,16 @@ class _$PeriodTearOff {
 const $Period = _$PeriodTearOff();
 
 mixin _$Period {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   FhirDateTime get start;
-  FhirDateTime get end;
   @JsonKey(name: '_start')
   Element get startElement;
+  @JsonKey(name: extension)
+  FhirDateTime get end;
   @JsonKey(name: '_end')
   Element get endElement;
 
@@ -4825,11 +5282,11 @@ abstract class $PeriodCopyWith<$Res> {
   factory $PeriodCopyWith(Period value, $Res Function(Period) then) =
       _$PeriodCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirDateTime start,
-      FhirDateTime end,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) FhirDateTime start,
       @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: extension) FhirDateTime end,
       @JsonKey(name: '_end') Element endElement});
 
   $ElementCopyWith<$Res> get startElement;
@@ -4848,8 +5305,8 @@ class _$PeriodCopyWithImpl<$Res> implements $PeriodCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object start = freezed,
-    Object end = freezed,
     Object startElement = freezed,
+    Object end = freezed,
     Object endElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -4858,10 +5315,10 @@ class _$PeriodCopyWithImpl<$Res> implements $PeriodCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       start: start == freezed ? _value.start : start as FhirDateTime,
-      end: end == freezed ? _value.end : end as FhirDateTime,
       startElement: startElement == freezed
           ? _value.startElement
           : startElement as Element,
+      end: end == freezed ? _value.end : end as FhirDateTime,
       endElement:
           endElement == freezed ? _value.endElement : endElement as Element,
     ));
@@ -4893,11 +5350,11 @@ abstract class _$PeriodCopyWith<$Res> implements $PeriodCopyWith<$Res> {
       __$PeriodCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirDateTime start,
-      FhirDateTime end,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) FhirDateTime start,
       @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: extension) FhirDateTime end,
       @JsonKey(name: '_end') Element endElement});
 
   @override
@@ -4919,8 +5376,8 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object start = freezed,
-    Object end = freezed,
     Object startElement = freezed,
+    Object end = freezed,
     Object endElement = freezed,
   }) {
     return _then(_Period(
@@ -4929,10 +5386,10 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       start: start == freezed ? _value.start : start as FhirDateTime,
-      end: end == freezed ? _value.end : end as FhirDateTime,
       startElement: startElement == freezed
           ? _value.startElement
           : startElement as Element,
+      end: end == freezed ? _value.end : end as FhirDateTime,
       endElement:
           endElement == freezed ? _value.endElement : endElement as Element,
     ));
@@ -4940,37 +5397,41 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Period implements _Period {
-  const _$_Period(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.start,
-      this.end,
+class _$_Period extends _Period {
+  _$_Period(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.start,
       @JsonKey(name: '_start') this.startElement,
-      @JsonKey(name: '_end') this.endElement});
+      @JsonKey(name: extension) this.end,
+      @JsonKey(name: '_end') this.endElement})
+      : super._();
 
   factory _$_Period.fromJson(Map<String, dynamic> json) =>
       _$_$_PeriodFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final FhirDateTime start;
-  @override
-  final FhirDateTime end;
   @override
   @JsonKey(name: '_start')
   final Element startElement;
+  @override
+  @JsonKey(name: extension)
+  final FhirDateTime end;
   @override
   @JsonKey(name: '_end')
   final Element endElement;
 
   @override
   String toString() {
-    return 'Period(id: $id, extension_: $extension_, start: $start, end: $end, startElement: $startElement, endElement: $endElement)';
+    return 'Period(id: $id, extension_: $extension_, start: $start, startElement: $startElement, end: $end, endElement: $endElement)';
   }
 
   @override
@@ -4984,11 +5445,11 @@ class _$_Period implements _Period {
                     .equals(other.extension_, extension_)) &&
             (identical(other.start, start) ||
                 const DeepCollectionEquality().equals(other.start, start)) &&
-            (identical(other.end, end) ||
-                const DeepCollectionEquality().equals(other.end, end)) &&
             (identical(other.startElement, startElement) ||
                 const DeepCollectionEquality()
                     .equals(other.startElement, startElement)) &&
+            (identical(other.end, end) ||
+                const DeepCollectionEquality().equals(other.end, end)) &&
             (identical(other.endElement, endElement) ||
                 const DeepCollectionEquality()
                     .equals(other.endElement, endElement)));
@@ -5000,8 +5461,8 @@ class _$_Period implements _Period {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(start) ^
-      const DeepCollectionEquality().hash(end) ^
       const DeepCollectionEquality().hash(startElement) ^
+      const DeepCollectionEquality().hash(end) ^
       const DeepCollectionEquality().hash(endElement);
 
   @override
@@ -5014,29 +5475,33 @@ class _$_Period implements _Period {
   }
 }
 
-abstract class _Period implements Period {
-  const factory _Period(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      FhirDateTime start,
-      FhirDateTime end,
+abstract class _Period extends Period {
+  _Period._() : super._();
+  factory _Period(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) FhirDateTime start,
       @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: extension) FhirDateTime end,
       @JsonKey(name: '_end') Element endElement}) = _$_Period;
 
   factory _Period.fromJson(Map<String, dynamic> json) = _$_Period.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   FhirDateTime get start;
-  @override
-  FhirDateTime get end;
   @override
   @JsonKey(name: '_start')
   Element get startElement;
+  @override
+  @JsonKey(name: extension)
+  FhirDateTime get end;
   @override
   @JsonKey(name: '_end')
   Element get endElement;
@@ -5052,10 +5517,10 @@ class _$RatioTearOff {
   const _$RatioTearOff();
 
   _Ratio call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Quantity numerator,
-      Quantity denominator}) {
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity numerator,
+      @JsonKey(name: extension) Quantity denominator}) {
     return _Ratio(
       id: id,
       extension_: extension_,
@@ -5069,10 +5534,13 @@ class _$RatioTearOff {
 const $Ratio = _$RatioTearOff();
 
 mixin _$Ratio {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   Quantity get numerator;
+  @JsonKey(name: extension)
   Quantity get denominator;
 
   Map<String, dynamic> toJson();
@@ -5083,10 +5551,10 @@ abstract class $RatioCopyWith<$Res> {
   factory $RatioCopyWith(Ratio value, $Res Function(Ratio) then) =
       _$RatioCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Quantity numerator,
-      Quantity denominator});
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity numerator,
+      @JsonKey(name: extension) Quantity denominator});
 
   $QuantityCopyWith<$Res> get numerator;
   $QuantityCopyWith<$Res> get denominator;
@@ -5144,10 +5612,10 @@ abstract class _$RatioCopyWith<$Res> implements $RatioCopyWith<$Res> {
       __$RatioCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Quantity numerator,
-      Quantity denominator});
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity numerator,
+      @JsonKey(name: extension) Quantity denominator});
 
   @override
   $QuantityCopyWith<$Res> get numerator;
@@ -5184,24 +5652,28 @@ class __$RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Ratio implements _Ratio {
-  const _$_Ratio(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.numerator,
-      this.denominator});
+class _$_Ratio extends _Ratio {
+  _$_Ratio(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.numerator,
+      @JsonKey(name: extension) this.denominator})
+      : super._();
 
   factory _$_Ratio.fromJson(Map<String, dynamic> json) =>
       _$_$_RatioFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final Quantity numerator;
   @override
+  @JsonKey(name: extension)
   final Quantity denominator;
 
   @override
@@ -5244,23 +5716,27 @@ class _$_Ratio implements _Ratio {
   }
 }
 
-abstract class _Ratio implements Ratio {
-  const factory _Ratio(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      Quantity numerator,
-      Quantity denominator}) = _$_Ratio;
+abstract class _Ratio extends Ratio {
+  _Ratio._() : super._();
+  factory _Ratio(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity numerator,
+      @JsonKey(name: extension) Quantity denominator}) = _$_Ratio;
 
   factory _Ratio.fromJson(Map<String, dynamic> json) = _$_Ratio.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   Quantity get numerator;
   @override
+  @JsonKey(name: extension)
   Quantity get denominator;
   @override
   _$RatioCopyWith<_Ratio> get copyWith;
@@ -5274,36 +5750,36 @@ class _$SampledDataTearOff {
   const _$SampledDataTearOff();
 
   _SampledData call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @required @JsonKey(required: true) Quantity origin,
-      Decimal period,
-      Decimal factor,
-      Decimal lowerLimit,
-      Decimal upperLimit,
-      PositiveInt dimensions,
-      String data,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @required @JsonKey(name: extension) Quantity origin,
+      @JsonKey(name: extension) Decimal period,
       @JsonKey(name: '_period') Element periodElement,
+      @JsonKey(name: extension) Decimal factor,
       @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: extension) Decimal lowerLimit,
       @JsonKey(name: '_lowerLimit') Element lowerLimitElement,
+      @JsonKey(name: extension) Decimal upperLimit,
       @JsonKey(name: '_upperLimit') Element upperLimitElement,
+      @JsonKey(name: extension) PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element dimensionsElement,
+      @JsonKey(name: extension) String data,
       @JsonKey(name: '_data') Element dataElement}) {
     return _SampledData(
       id: id,
       extension_: extension_,
       origin: origin,
       period: period,
-      factor: factor,
-      lowerLimit: lowerLimit,
-      upperLimit: upperLimit,
-      dimensions: dimensions,
-      data: data,
       periodElement: periodElement,
+      factor: factor,
       factorElement: factorElement,
+      lowerLimit: lowerLimit,
       lowerLimitElement: lowerLimitElement,
+      upperLimit: upperLimit,
       upperLimitElement: upperLimitElement,
+      dimensions: dimensions,
       dimensionsElement: dimensionsElement,
+      data: data,
       dataElement: dataElement,
     );
   }
@@ -5313,27 +5789,34 @@ class _$SampledDataTearOff {
 const $SampledData = _$SampledDataTearOff();
 
 mixin _$SampledData {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
-  @JsonKey(required: true)
+  @JsonKey(name: extension)
   Quantity get origin;
+  @JsonKey(name: extension)
   Decimal get period;
-  Decimal get factor;
-  Decimal get lowerLimit;
-  Decimal get upperLimit;
-  PositiveInt get dimensions;
-  String get data;
   @JsonKey(name: '_period')
   Element get periodElement;
+  @JsonKey(name: extension)
+  Decimal get factor;
   @JsonKey(name: '_factor')
   Element get factorElement;
+  @JsonKey(name: extension)
+  Decimal get lowerLimit;
   @JsonKey(name: '_lowerLimit')
   Element get lowerLimitElement;
+  @JsonKey(name: extension)
+  Decimal get upperLimit;
   @JsonKey(name: '_upperLimit')
   Element get upperLimitElement;
+  @JsonKey(name: extension)
+  PositiveInt get dimensions;
   @JsonKey(name: '_dimensions')
   Element get dimensionsElement;
+  @JsonKey(name: extension)
+  String get data;
   @JsonKey(name: '_data')
   Element get dataElement;
 
@@ -5346,20 +5829,20 @@ abstract class $SampledDataCopyWith<$Res> {
           SampledData value, $Res Function(SampledData) then) =
       _$SampledDataCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(required: true) Quantity origin,
-      Decimal period,
-      Decimal factor,
-      Decimal lowerLimit,
-      Decimal upperLimit,
-      PositiveInt dimensions,
-      String data,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity origin,
+      @JsonKey(name: extension) Decimal period,
       @JsonKey(name: '_period') Element periodElement,
+      @JsonKey(name: extension) Decimal factor,
       @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: extension) Decimal lowerLimit,
       @JsonKey(name: '_lowerLimit') Element lowerLimitElement,
+      @JsonKey(name: extension) Decimal upperLimit,
       @JsonKey(name: '_upperLimit') Element upperLimitElement,
+      @JsonKey(name: extension) PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element dimensionsElement,
+      @JsonKey(name: extension) String data,
       @JsonKey(name: '_data') Element dataElement});
 
   $QuantityCopyWith<$Res> get origin;
@@ -5384,16 +5867,16 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
     Object extension_ = freezed,
     Object origin = freezed,
     Object period = freezed,
-    Object factor = freezed,
-    Object lowerLimit = freezed,
-    Object upperLimit = freezed,
-    Object dimensions = freezed,
-    Object data = freezed,
     Object periodElement = freezed,
+    Object factor = freezed,
     Object factorElement = freezed,
+    Object lowerLimit = freezed,
     Object lowerLimitElement = freezed,
+    Object upperLimit = freezed,
     Object upperLimitElement = freezed,
+    Object dimensions = freezed,
     Object dimensionsElement = freezed,
+    Object data = freezed,
     Object dataElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -5403,29 +5886,29 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
           : extension_ as List<FhirExtension>,
       origin: origin == freezed ? _value.origin : origin as Quantity,
       period: period == freezed ? _value.period : period as Decimal,
-      factor: factor == freezed ? _value.factor : factor as Decimal,
-      lowerLimit:
-          lowerLimit == freezed ? _value.lowerLimit : lowerLimit as Decimal,
-      upperLimit:
-          upperLimit == freezed ? _value.upperLimit : upperLimit as Decimal,
-      dimensions:
-          dimensions == freezed ? _value.dimensions : dimensions as PositiveInt,
-      data: data == freezed ? _value.data : data as String,
       periodElement: periodElement == freezed
           ? _value.periodElement
           : periodElement as Element,
+      factor: factor == freezed ? _value.factor : factor as Decimal,
       factorElement: factorElement == freezed
           ? _value.factorElement
           : factorElement as Element,
+      lowerLimit:
+          lowerLimit == freezed ? _value.lowerLimit : lowerLimit as Decimal,
       lowerLimitElement: lowerLimitElement == freezed
           ? _value.lowerLimitElement
           : lowerLimitElement as Element,
+      upperLimit:
+          upperLimit == freezed ? _value.upperLimit : upperLimit as Decimal,
       upperLimitElement: upperLimitElement == freezed
           ? _value.upperLimitElement
           : upperLimitElement as Element,
+      dimensions:
+          dimensions == freezed ? _value.dimensions : dimensions as PositiveInt,
       dimensionsElement: dimensionsElement == freezed
           ? _value.dimensionsElement
           : dimensionsElement as Element,
+      data: data == freezed ? _value.data : data as String,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
     ));
@@ -5509,20 +5992,20 @@ abstract class _$SampledDataCopyWith<$Res>
       __$SampledDataCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(required: true) Quantity origin,
-      Decimal period,
-      Decimal factor,
-      Decimal lowerLimit,
-      Decimal upperLimit,
-      PositiveInt dimensions,
-      String data,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) Quantity origin,
+      @JsonKey(name: extension) Decimal period,
       @JsonKey(name: '_period') Element periodElement,
+      @JsonKey(name: extension) Decimal factor,
       @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: extension) Decimal lowerLimit,
       @JsonKey(name: '_lowerLimit') Element lowerLimitElement,
+      @JsonKey(name: extension) Decimal upperLimit,
       @JsonKey(name: '_upperLimit') Element upperLimitElement,
+      @JsonKey(name: extension) PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element dimensionsElement,
+      @JsonKey(name: extension) String data,
       @JsonKey(name: '_data') Element dataElement});
 
   @override
@@ -5556,16 +6039,16 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object origin = freezed,
     Object period = freezed,
-    Object factor = freezed,
-    Object lowerLimit = freezed,
-    Object upperLimit = freezed,
-    Object dimensions = freezed,
-    Object data = freezed,
     Object periodElement = freezed,
+    Object factor = freezed,
     Object factorElement = freezed,
+    Object lowerLimit = freezed,
     Object lowerLimitElement = freezed,
+    Object upperLimit = freezed,
     Object upperLimitElement = freezed,
+    Object dimensions = freezed,
     Object dimensionsElement = freezed,
+    Object data = freezed,
     Object dataElement = freezed,
   }) {
     return _then(_SampledData(
@@ -5575,29 +6058,29 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       origin: origin == freezed ? _value.origin : origin as Quantity,
       period: period == freezed ? _value.period : period as Decimal,
-      factor: factor == freezed ? _value.factor : factor as Decimal,
-      lowerLimit:
-          lowerLimit == freezed ? _value.lowerLimit : lowerLimit as Decimal,
-      upperLimit:
-          upperLimit == freezed ? _value.upperLimit : upperLimit as Decimal,
-      dimensions:
-          dimensions == freezed ? _value.dimensions : dimensions as PositiveInt,
-      data: data == freezed ? _value.data : data as String,
       periodElement: periodElement == freezed
           ? _value.periodElement
           : periodElement as Element,
+      factor: factor == freezed ? _value.factor : factor as Decimal,
       factorElement: factorElement == freezed
           ? _value.factorElement
           : factorElement as Element,
+      lowerLimit:
+          lowerLimit == freezed ? _value.lowerLimit : lowerLimit as Decimal,
       lowerLimitElement: lowerLimitElement == freezed
           ? _value.lowerLimitElement
           : lowerLimitElement as Element,
+      upperLimit:
+          upperLimit == freezed ? _value.upperLimit : upperLimit as Decimal,
       upperLimitElement: upperLimitElement == freezed
           ? _value.upperLimitElement
           : upperLimitElement as Element,
+      dimensions:
+          dimensions == freezed ? _value.dimensions : dimensions as PositiveInt,
       dimensionsElement: dimensionsElement == freezed
           ? _value.dimensionsElement
           : dimensionsElement as Element,
+      data: data == freezed ? _value.data : data as String,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
     ));
@@ -5605,70 +6088,78 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_SampledData implements _SampledData {
-  const _$_SampledData(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      @required @JsonKey(required: true) this.origin,
-      this.period,
-      this.factor,
-      this.lowerLimit,
-      this.upperLimit,
-      this.dimensions,
-      this.data,
+class _$_SampledData extends _SampledData {
+  _$_SampledData(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @required @JsonKey(name: extension) this.origin,
+      @JsonKey(name: extension) this.period,
       @JsonKey(name: '_period') this.periodElement,
+      @JsonKey(name: extension) this.factor,
       @JsonKey(name: '_factor') this.factorElement,
+      @JsonKey(name: extension) this.lowerLimit,
       @JsonKey(name: '_lowerLimit') this.lowerLimitElement,
+      @JsonKey(name: extension) this.upperLimit,
       @JsonKey(name: '_upperLimit') this.upperLimitElement,
+      @JsonKey(name: extension) this.dimensions,
       @JsonKey(name: '_dimensions') this.dimensionsElement,
+      @JsonKey(name: extension) this.data,
       @JsonKey(name: '_data') this.dataElement})
-      : assert(origin != null);
+      : assert(origin != null),
+        super._();
 
   factory _$_SampledData.fromJson(Map<String, dynamic> json) =>
       _$_$_SampledDataFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(required: true)
+  @JsonKey(name: extension)
   final Quantity origin;
   @override
+  @JsonKey(name: extension)
   final Decimal period;
-  @override
-  final Decimal factor;
-  @override
-  final Decimal lowerLimit;
-  @override
-  final Decimal upperLimit;
-  @override
-  final PositiveInt dimensions;
-  @override
-  final String data;
   @override
   @JsonKey(name: '_period')
   final Element periodElement;
   @override
+  @JsonKey(name: extension)
+  final Decimal factor;
+  @override
   @JsonKey(name: '_factor')
   final Element factorElement;
+  @override
+  @JsonKey(name: extension)
+  final Decimal lowerLimit;
   @override
   @JsonKey(name: '_lowerLimit')
   final Element lowerLimitElement;
   @override
+  @JsonKey(name: extension)
+  final Decimal upperLimit;
+  @override
   @JsonKey(name: '_upperLimit')
   final Element upperLimitElement;
   @override
+  @JsonKey(name: extension)
+  final PositiveInt dimensions;
+  @override
   @JsonKey(name: '_dimensions')
   final Element dimensionsElement;
+  @override
+  @JsonKey(name: extension)
+  final String data;
   @override
   @JsonKey(name: '_data')
   final Element dataElement;
 
   @override
   String toString() {
-    return 'SampledData(id: $id, extension_: $extension_, origin: $origin, period: $period, factor: $factor, lowerLimit: $lowerLimit, upperLimit: $upperLimit, dimensions: $dimensions, data: $data, periodElement: $periodElement, factorElement: $factorElement, lowerLimitElement: $lowerLimitElement, upperLimitElement: $upperLimitElement, dimensionsElement: $dimensionsElement, dataElement: $dataElement)';
+    return 'SampledData(id: $id, extension_: $extension_, origin: $origin, period: $period, periodElement: $periodElement, factor: $factor, factorElement: $factorElement, lowerLimit: $lowerLimit, lowerLimitElement: $lowerLimitElement, upperLimit: $upperLimit, upperLimitElement: $upperLimitElement, dimensions: $dimensions, dimensionsElement: $dimensionsElement, data: $data, dataElement: $dataElement)';
   }
 
   @override
@@ -5684,34 +6175,34 @@ class _$_SampledData implements _SampledData {
                 const DeepCollectionEquality().equals(other.origin, origin)) &&
             (identical(other.period, period) ||
                 const DeepCollectionEquality().equals(other.period, period)) &&
-            (identical(other.factor, factor) ||
-                const DeepCollectionEquality().equals(other.factor, factor)) &&
-            (identical(other.lowerLimit, lowerLimit) ||
-                const DeepCollectionEquality()
-                    .equals(other.lowerLimit, lowerLimit)) &&
-            (identical(other.upperLimit, upperLimit) ||
-                const DeepCollectionEquality()
-                    .equals(other.upperLimit, upperLimit)) &&
-            (identical(other.dimensions, dimensions) ||
-                const DeepCollectionEquality()
-                    .equals(other.dimensions, dimensions)) &&
-            (identical(other.data, data) ||
-                const DeepCollectionEquality().equals(other.data, data)) &&
             (identical(other.periodElement, periodElement) ||
                 const DeepCollectionEquality()
                     .equals(other.periodElement, periodElement)) &&
+            (identical(other.factor, factor) ||
+                const DeepCollectionEquality().equals(other.factor, factor)) &&
             (identical(other.factorElement, factorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.factorElement, factorElement)) &&
+            (identical(other.lowerLimit, lowerLimit) ||
+                const DeepCollectionEquality()
+                    .equals(other.lowerLimit, lowerLimit)) &&
             (identical(other.lowerLimitElement, lowerLimitElement) ||
                 const DeepCollectionEquality()
                     .equals(other.lowerLimitElement, lowerLimitElement)) &&
+            (identical(other.upperLimit, upperLimit) ||
+                const DeepCollectionEquality()
+                    .equals(other.upperLimit, upperLimit)) &&
             (identical(other.upperLimitElement, upperLimitElement) ||
                 const DeepCollectionEquality()
                     .equals(other.upperLimitElement, upperLimitElement)) &&
+            (identical(other.dimensions, dimensions) ||
+                const DeepCollectionEquality()
+                    .equals(other.dimensions, dimensions)) &&
             (identical(other.dimensionsElement, dimensionsElement) ||
                 const DeepCollectionEquality()
                     .equals(other.dimensionsElement, dimensionsElement)) &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)) &&
             (identical(other.dataElement, dataElement) ||
                 const DeepCollectionEquality()
                     .equals(other.dataElement, dataElement)));
@@ -5724,16 +6215,16 @@ class _$_SampledData implements _SampledData {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(origin) ^
       const DeepCollectionEquality().hash(period) ^
-      const DeepCollectionEquality().hash(factor) ^
-      const DeepCollectionEquality().hash(lowerLimit) ^
-      const DeepCollectionEquality().hash(upperLimit) ^
-      const DeepCollectionEquality().hash(dimensions) ^
-      const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(periodElement) ^
+      const DeepCollectionEquality().hash(factor) ^
       const DeepCollectionEquality().hash(factorElement) ^
+      const DeepCollectionEquality().hash(lowerLimit) ^
       const DeepCollectionEquality().hash(lowerLimitElement) ^
+      const DeepCollectionEquality().hash(upperLimit) ^
       const DeepCollectionEquality().hash(upperLimitElement) ^
+      const DeepCollectionEquality().hash(dimensions) ^
       const DeepCollectionEquality().hash(dimensionsElement) ^
+      const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(dataElement);
 
   @override
@@ -5746,62 +6237,70 @@ class _$_SampledData implements _SampledData {
   }
 }
 
-abstract class _SampledData implements SampledData {
-  const factory _SampledData(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @required @JsonKey(required: true) Quantity origin,
-      Decimal period,
-      Decimal factor,
-      Decimal lowerLimit,
-      Decimal upperLimit,
-      PositiveInt dimensions,
-      String data,
+abstract class _SampledData extends SampledData {
+  _SampledData._() : super._();
+  factory _SampledData(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @required @JsonKey(name: extension) Quantity origin,
+      @JsonKey(name: extension) Decimal period,
       @JsonKey(name: '_period') Element periodElement,
+      @JsonKey(name: extension) Decimal factor,
       @JsonKey(name: '_factor') Element factorElement,
+      @JsonKey(name: extension) Decimal lowerLimit,
       @JsonKey(name: '_lowerLimit') Element lowerLimitElement,
+      @JsonKey(name: extension) Decimal upperLimit,
       @JsonKey(name: '_upperLimit') Element upperLimitElement,
+      @JsonKey(name: extension) PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element dimensionsElement,
+      @JsonKey(name: extension) String data,
       @JsonKey(name: '_data') Element dataElement}) = _$_SampledData;
 
   factory _SampledData.fromJson(Map<String, dynamic> json) =
       _$_SampledData.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(required: true)
+  @JsonKey(name: extension)
   Quantity get origin;
   @override
+  @JsonKey(name: extension)
   Decimal get period;
-  @override
-  Decimal get factor;
-  @override
-  Decimal get lowerLimit;
-  @override
-  Decimal get upperLimit;
-  @override
-  PositiveInt get dimensions;
-  @override
-  String get data;
   @override
   @JsonKey(name: '_period')
   Element get periodElement;
   @override
+  @JsonKey(name: extension)
+  Decimal get factor;
+  @override
   @JsonKey(name: '_factor')
   Element get factorElement;
+  @override
+  @JsonKey(name: extension)
+  Decimal get lowerLimit;
   @override
   @JsonKey(name: '_lowerLimit')
   Element get lowerLimitElement;
   @override
+  @JsonKey(name: extension)
+  Decimal get upperLimit;
+  @override
   @JsonKey(name: '_upperLimit')
   Element get upperLimitElement;
   @override
+  @JsonKey(name: extension)
+  PositiveInt get dimensions;
+  @override
   @JsonKey(name: '_dimensions')
   Element get dimensionsElement;
+  @override
+  @JsonKey(name: extension)
+  String get data;
   @override
   @JsonKey(name: '_data')
   Element get dataElement;
@@ -5817,32 +6316,32 @@ class _$SignatureTearOff {
   const _$SignatureTearOff();
 
   _Signature call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @required @JsonKey(required: true) List<Coding> type,
-      Instant when,
-      @required @JsonKey(required: true) Reference who,
-      Reference onBehalfOf,
-      Code targetFormat,
-      Code sigFormat,
-      Base64Binary data,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @required @JsonKey(name: extension) List<Coding> type,
+      @JsonKey(name: extension) Instant when,
       @JsonKey(name: '_when') Element whenElement,
+      @required @JsonKey(name: extension) Reference who,
+      @JsonKey(name: extension) Reference onBehalfOf,
+      @JsonKey(name: extension) Code targetFormat,
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
+      @JsonKey(name: extension) Code sigFormat,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
+      @JsonKey(name: extension) Base64Binary data,
       @JsonKey(name: '_data') Element dataElement}) {
     return _Signature(
       id: id,
       extension_: extension_,
       type: type,
       when: when,
+      whenElement: whenElement,
       who: who,
       onBehalfOf: onBehalfOf,
       targetFormat: targetFormat,
-      sigFormat: sigFormat,
-      data: data,
-      whenElement: whenElement,
       targetFormatElement: targetFormatElement,
+      sigFormat: sigFormat,
       sigFormatElement: sigFormatElement,
+      data: data,
       dataElement: dataElement,
     );
   }
@@ -5852,24 +6351,30 @@ class _$SignatureTearOff {
 const $Signature = _$SignatureTearOff();
 
 mixin _$Signature {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
-  @JsonKey(required: true)
+  @JsonKey(name: extension)
   List<Coding> get type;
+  @JsonKey(name: extension)
   Instant get when;
-  @JsonKey(required: true)
-  Reference get who;
-  Reference get onBehalfOf;
-  Code get targetFormat;
-  Code get sigFormat;
-  Base64Binary get data;
   @JsonKey(name: '_when')
   Element get whenElement;
+  @JsonKey(name: extension)
+  Reference get who;
+  @JsonKey(name: extension)
+  Reference get onBehalfOf;
+  @JsonKey(name: extension)
+  Code get targetFormat;
   @JsonKey(name: '_targetFormat')
   Element get targetFormatElement;
+  @JsonKey(name: extension)
+  Code get sigFormat;
   @JsonKey(name: '_sigFormat')
   Element get sigFormatElement;
+  @JsonKey(name: extension)
+  Base64Binary get data;
   @JsonKey(name: '_data')
   Element get dataElement;
 
@@ -5881,23 +6386,23 @@ abstract class $SignatureCopyWith<$Res> {
   factory $SignatureCopyWith(Signature value, $Res Function(Signature) then) =
       _$SignatureCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(required: true) List<Coding> type,
-      Instant when,
-      @JsonKey(required: true) Reference who,
-      Reference onBehalfOf,
-      Code targetFormat,
-      Code sigFormat,
-      Base64Binary data,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<Coding> type,
+      @JsonKey(name: extension) Instant when,
       @JsonKey(name: '_when') Element whenElement,
+      @JsonKey(name: extension) Reference who,
+      @JsonKey(name: extension) Reference onBehalfOf,
+      @JsonKey(name: extension) Code targetFormat,
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
+      @JsonKey(name: extension) Code sigFormat,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
+      @JsonKey(name: extension) Base64Binary data,
       @JsonKey(name: '_data') Element dataElement});
 
+  $ElementCopyWith<$Res> get whenElement;
   $ReferenceCopyWith<$Res> get who;
   $ReferenceCopyWith<$Res> get onBehalfOf;
-  $ElementCopyWith<$Res> get whenElement;
   $ElementCopyWith<$Res> get targetFormatElement;
   $ElementCopyWith<$Res> get sigFormatElement;
   $ElementCopyWith<$Res> get dataElement;
@@ -5916,14 +6421,14 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
     Object extension_ = freezed,
     Object type = freezed,
     Object when = freezed,
+    Object whenElement = freezed,
     Object who = freezed,
     Object onBehalfOf = freezed,
     Object targetFormat = freezed,
-    Object sigFormat = freezed,
-    Object data = freezed,
-    Object whenElement = freezed,
     Object targetFormatElement = freezed,
+    Object sigFormat = freezed,
     Object sigFormatElement = freezed,
+    Object data = freezed,
     Object dataElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -5933,24 +6438,34 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
           : extension_ as List<FhirExtension>,
       type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant,
+      whenElement:
+          whenElement == freezed ? _value.whenElement : whenElement as Element,
       who: who == freezed ? _value.who : who as Reference,
       onBehalfOf:
           onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference,
       targetFormat:
           targetFormat == freezed ? _value.targetFormat : targetFormat as Code,
-      sigFormat: sigFormat == freezed ? _value.sigFormat : sigFormat as Code,
-      data: data == freezed ? _value.data : data as Base64Binary,
-      whenElement:
-          whenElement == freezed ? _value.whenElement : whenElement as Element,
       targetFormatElement: targetFormatElement == freezed
           ? _value.targetFormatElement
           : targetFormatElement as Element,
+      sigFormat: sigFormat == freezed ? _value.sigFormat : sigFormat as Code,
       sigFormatElement: sigFormatElement == freezed
           ? _value.sigFormatElement
           : sigFormatElement as Element,
+      data: data == freezed ? _value.data : data as Base64Binary,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get whenElement {
+    if (_value.whenElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.whenElement, (value) {
+      return _then(_value.copyWith(whenElement: value));
+    });
   }
 
   @override
@@ -5970,16 +6485,6 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
     }
     return $ReferenceCopyWith<$Res>(_value.onBehalfOf, (value) {
       return _then(_value.copyWith(onBehalfOf: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res> get whenElement {
-    if (_value.whenElement == null) {
-      return null;
-    }
-    return $ElementCopyWith<$Res>(_value.whenElement, (value) {
-      return _then(_value.copyWith(whenElement: value));
     });
   }
 
@@ -6020,26 +6525,26 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
       __$SignatureCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(required: true) List<Coding> type,
-      Instant when,
-      @JsonKey(required: true) Reference who,
-      Reference onBehalfOf,
-      Code targetFormat,
-      Code sigFormat,
-      Base64Binary data,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<Coding> type,
+      @JsonKey(name: extension) Instant when,
       @JsonKey(name: '_when') Element whenElement,
+      @JsonKey(name: extension) Reference who,
+      @JsonKey(name: extension) Reference onBehalfOf,
+      @JsonKey(name: extension) Code targetFormat,
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
+      @JsonKey(name: extension) Code sigFormat,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
+      @JsonKey(name: extension) Base64Binary data,
       @JsonKey(name: '_data') Element dataElement});
 
+  @override
+  $ElementCopyWith<$Res> get whenElement;
   @override
   $ReferenceCopyWith<$Res> get who;
   @override
   $ReferenceCopyWith<$Res> get onBehalfOf;
-  @override
-  $ElementCopyWith<$Res> get whenElement;
   @override
   $ElementCopyWith<$Res> get targetFormatElement;
   @override
@@ -6062,14 +6567,14 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object type = freezed,
     Object when = freezed,
+    Object whenElement = freezed,
     Object who = freezed,
     Object onBehalfOf = freezed,
     Object targetFormat = freezed,
-    Object sigFormat = freezed,
-    Object data = freezed,
-    Object whenElement = freezed,
     Object targetFormatElement = freezed,
+    Object sigFormat = freezed,
     Object sigFormatElement = freezed,
+    Object data = freezed,
     Object dataElement = freezed,
   }) {
     return _then(_Signature(
@@ -6079,21 +6584,21 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
           : extension_ as List<FhirExtension>,
       type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant,
+      whenElement:
+          whenElement == freezed ? _value.whenElement : whenElement as Element,
       who: who == freezed ? _value.who : who as Reference,
       onBehalfOf:
           onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference,
       targetFormat:
           targetFormat == freezed ? _value.targetFormat : targetFormat as Code,
-      sigFormat: sigFormat == freezed ? _value.sigFormat : sigFormat as Code,
-      data: data == freezed ? _value.data : data as Base64Binary,
-      whenElement:
-          whenElement == freezed ? _value.whenElement : whenElement as Element,
       targetFormatElement: targetFormatElement == freezed
           ? _value.targetFormatElement
           : targetFormatElement as Element,
+      sigFormat: sigFormat == freezed ? _value.sigFormat : sigFormat as Code,
       sigFormatElement: sigFormatElement == freezed
           ? _value.sigFormatElement
           : sigFormatElement as Element,
+      data: data == freezed ? _value.data : data as Base64Binary,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element,
     ));
@@ -6101,64 +6606,71 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Signature implements _Signature {
-  const _$_Signature(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      @required @JsonKey(required: true) this.type,
-      this.when,
-      @required @JsonKey(required: true) this.who,
-      this.onBehalfOf,
-      this.targetFormat,
-      this.sigFormat,
-      this.data,
+class _$_Signature extends _Signature {
+  _$_Signature(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @required @JsonKey(name: extension) this.type,
+      @JsonKey(name: extension) this.when,
       @JsonKey(name: '_when') this.whenElement,
+      @required @JsonKey(name: extension) this.who,
+      @JsonKey(name: extension) this.onBehalfOf,
+      @JsonKey(name: extension) this.targetFormat,
       @JsonKey(name: '_targetFormat') this.targetFormatElement,
+      @JsonKey(name: extension) this.sigFormat,
       @JsonKey(name: '_sigFormat') this.sigFormatElement,
+      @JsonKey(name: extension) this.data,
       @JsonKey(name: '_data') this.dataElement})
       : assert(type != null),
-        assert(who != null);
+        assert(who != null),
+        super._();
 
   factory _$_Signature.fromJson(Map<String, dynamic> json) =>
       _$_$_SignatureFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
-  @JsonKey(required: true)
+  @JsonKey(name: extension)
   final List<Coding> type;
   @override
+  @JsonKey(name: extension)
   final Instant when;
-  @override
-  @JsonKey(required: true)
-  final Reference who;
-  @override
-  final Reference onBehalfOf;
-  @override
-  final Code targetFormat;
-  @override
-  final Code sigFormat;
-  @override
-  final Base64Binary data;
   @override
   @JsonKey(name: '_when')
   final Element whenElement;
   @override
+  @JsonKey(name: extension)
+  final Reference who;
+  @override
+  @JsonKey(name: extension)
+  final Reference onBehalfOf;
+  @override
+  @JsonKey(name: extension)
+  final Code targetFormat;
+  @override
   @JsonKey(name: '_targetFormat')
   final Element targetFormatElement;
   @override
+  @JsonKey(name: extension)
+  final Code sigFormat;
+  @override
   @JsonKey(name: '_sigFormat')
   final Element sigFormatElement;
+  @override
+  @JsonKey(name: extension)
+  final Base64Binary data;
   @override
   @JsonKey(name: '_data')
   final Element dataElement;
 
   @override
   String toString() {
-    return 'Signature(id: $id, extension_: $extension_, type: $type, when: $when, who: $who, onBehalfOf: $onBehalfOf, targetFormat: $targetFormat, sigFormat: $sigFormat, data: $data, whenElement: $whenElement, targetFormatElement: $targetFormatElement, sigFormatElement: $sigFormatElement, dataElement: $dataElement)';
+    return 'Signature(id: $id, extension_: $extension_, type: $type, when: $when, whenElement: $whenElement, who: $who, onBehalfOf: $onBehalfOf, targetFormat: $targetFormat, targetFormatElement: $targetFormatElement, sigFormat: $sigFormat, sigFormatElement: $sigFormatElement, data: $data, dataElement: $dataElement)';
   }
 
   @override
@@ -6174,6 +6686,9 @@ class _$_Signature implements _Signature {
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.when, when) ||
                 const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.whenElement, whenElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.whenElement, whenElement)) &&
             (identical(other.who, who) ||
                 const DeepCollectionEquality().equals(other.who, who)) &&
             (identical(other.onBehalfOf, onBehalfOf) ||
@@ -6182,20 +6697,17 @@ class _$_Signature implements _Signature {
             (identical(other.targetFormat, targetFormat) ||
                 const DeepCollectionEquality()
                     .equals(other.targetFormat, targetFormat)) &&
-            (identical(other.sigFormat, sigFormat) ||
-                const DeepCollectionEquality()
-                    .equals(other.sigFormat, sigFormat)) &&
-            (identical(other.data, data) ||
-                const DeepCollectionEquality().equals(other.data, data)) &&
-            (identical(other.whenElement, whenElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.whenElement, whenElement)) &&
             (identical(other.targetFormatElement, targetFormatElement) ||
                 const DeepCollectionEquality()
                     .equals(other.targetFormatElement, targetFormatElement)) &&
+            (identical(other.sigFormat, sigFormat) ||
+                const DeepCollectionEquality()
+                    .equals(other.sigFormat, sigFormat)) &&
             (identical(other.sigFormatElement, sigFormatElement) ||
                 const DeepCollectionEquality()
                     .equals(other.sigFormatElement, sigFormatElement)) &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)) &&
             (identical(other.dataElement, dataElement) ||
                 const DeepCollectionEquality()
                     .equals(other.dataElement, dataElement)));
@@ -6208,14 +6720,14 @@ class _$_Signature implements _Signature {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(whenElement) ^
       const DeepCollectionEquality().hash(who) ^
       const DeepCollectionEquality().hash(onBehalfOf) ^
       const DeepCollectionEquality().hash(targetFormat) ^
-      const DeepCollectionEquality().hash(sigFormat) ^
-      const DeepCollectionEquality().hash(data) ^
-      const DeepCollectionEquality().hash(whenElement) ^
       const DeepCollectionEquality().hash(targetFormatElement) ^
+      const DeepCollectionEquality().hash(sigFormat) ^
       const DeepCollectionEquality().hash(sigFormatElement) ^
+      const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(dataElement);
 
   @override
@@ -6228,55 +6740,62 @@ class _$_Signature implements _Signature {
   }
 }
 
-abstract class _Signature implements Signature {
-  const factory _Signature(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @required @JsonKey(required: true) List<Coding> type,
-      Instant when,
-      @required @JsonKey(required: true) Reference who,
-      Reference onBehalfOf,
-      Code targetFormat,
-      Code sigFormat,
-      Base64Binary data,
+abstract class _Signature extends Signature {
+  _Signature._() : super._();
+  factory _Signature(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @required @JsonKey(name: extension) List<Coding> type,
+      @JsonKey(name: extension) Instant when,
       @JsonKey(name: '_when') Element whenElement,
+      @required @JsonKey(name: extension) Reference who,
+      @JsonKey(name: extension) Reference onBehalfOf,
+      @JsonKey(name: extension) Code targetFormat,
       @JsonKey(name: '_targetFormat') Element targetFormatElement,
+      @JsonKey(name: extension) Code sigFormat,
       @JsonKey(name: '_sigFormat') Element sigFormatElement,
+      @JsonKey(name: extension) Base64Binary data,
       @JsonKey(name: '_data') Element dataElement}) = _$_Signature;
 
   factory _Signature.fromJson(Map<String, dynamic> json) =
       _$_Signature.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
-  @JsonKey(required: true)
+  @JsonKey(name: extension)
   List<Coding> get type;
   @override
+  @JsonKey(name: extension)
   Instant get when;
-  @override
-  @JsonKey(required: true)
-  Reference get who;
-  @override
-  Reference get onBehalfOf;
-  @override
-  Code get targetFormat;
-  @override
-  Code get sigFormat;
-  @override
-  Base64Binary get data;
   @override
   @JsonKey(name: '_when')
   Element get whenElement;
   @override
+  @JsonKey(name: extension)
+  Reference get who;
+  @override
+  @JsonKey(name: extension)
+  Reference get onBehalfOf;
+  @override
+  @JsonKey(name: extension)
+  Code get targetFormat;
+  @override
   @JsonKey(name: '_targetFormat')
   Element get targetFormatElement;
   @override
+  @JsonKey(name: extension)
+  Code get sigFormat;
+  @override
   @JsonKey(name: '_sigFormat')
   Element get sigFormatElement;
+  @override
+  @JsonKey(name: extension)
+  Base64Binary get data;
   @override
   @JsonKey(name: '_data')
   Element get dataElement;
@@ -6292,37 +6811,37 @@ class _$HumanNameTearOff {
   const _$HumanNameTearOff();
 
   _HumanName call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
-      String text,
-      String family,
-      List<String> given,
-      List<String> prefix,
-      List<String> suffix,
-      Period period,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: extension) String family,
       @JsonKey(name: '_family') Element familyElement,
-      @JsonKey(name: '_given') List<Element> givenElement,
-      @JsonKey(name: '_prefix') List<Element> prefixElement,
-      @JsonKey(name: '_suffix') List<Element> suffixElement}) {
+      @JsonKey(name: extension) List<String> given,
+      @JsonKey(name: '_given') Element givenElement,
+      @JsonKey(name: extension) List<String> prefix,
+      @JsonKey(name: '_prefix') Element prefixElement,
+      @JsonKey(name: extension) List<String> suffix,
+      @JsonKey(name: '_suffix') Element suffixElement,
+      @JsonKey(name: extension) Period period}) {
     return _HumanName(
       id: id,
       extension_: extension_,
       use: use,
-      text: text,
-      family: family,
-      given: given,
-      prefix: prefix,
-      suffix: suffix,
-      period: period,
       useElement: useElement,
+      text: text,
       textElement: textElement,
+      family: family,
       familyElement: familyElement,
+      given: given,
       givenElement: givenElement,
+      prefix: prefix,
       prefixElement: prefixElement,
+      suffix: suffix,
       suffixElement: suffixElement,
+      period: period,
     );
   }
 }
@@ -6331,29 +6850,36 @@ class _$HumanNameTearOff {
 const $HumanName = _$HumanNameTearOff();
 
 mixin _$HumanName {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   HumanNameUse get use;
-  String get text;
-  String get family;
-  List<String> get given;
-  List<String> get prefix;
-  List<String> get suffix;
-  Period get period;
   @JsonKey(name: '_use')
   Element get useElement;
+  @JsonKey(name: extension)
+  String get text;
   @JsonKey(name: '_text')
   Element get textElement;
+  @JsonKey(name: extension)
+  String get family;
   @JsonKey(name: '_family')
   Element get familyElement;
+  @JsonKey(name: extension)
+  List<String> get given;
   @JsonKey(name: '_given')
-  List<Element> get givenElement;
+  Element get givenElement;
+  @JsonKey(name: extension)
+  List<String> get prefix;
   @JsonKey(name: '_prefix')
-  List<Element> get prefixElement;
+  Element get prefixElement;
+  @JsonKey(name: extension)
+  List<String> get suffix;
   @JsonKey(name: '_suffix')
-  List<Element> get suffixElement;
+  Element get suffixElement;
+  @JsonKey(name: extension)
+  Period get period;
 
   Map<String, dynamic> toJson();
   $HumanNameCopyWith<HumanName> get copyWith;
@@ -6363,26 +6889,29 @@ abstract class $HumanNameCopyWith<$Res> {
   factory $HumanNameCopyWith(HumanName value, $Res Function(HumanName) then) =
       _$HumanNameCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
-      String text,
-      String family,
-      List<String> given,
-      List<String> prefix,
-      List<String> suffix,
-      Period period,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: extension) String family,
       @JsonKey(name: '_family') Element familyElement,
-      @JsonKey(name: '_given') List<Element> givenElement,
-      @JsonKey(name: '_prefix') List<Element> prefixElement,
-      @JsonKey(name: '_suffix') List<Element> suffixElement});
+      @JsonKey(name: extension) List<String> given,
+      @JsonKey(name: '_given') Element givenElement,
+      @JsonKey(name: extension) List<String> prefix,
+      @JsonKey(name: '_prefix') Element prefixElement,
+      @JsonKey(name: extension) List<String> suffix,
+      @JsonKey(name: '_suffix') Element suffixElement,
+      @JsonKey(name: extension) Period period});
 
-  $PeriodCopyWith<$Res> get period;
   $ElementCopyWith<$Res> get useElement;
   $ElementCopyWith<$Res> get textElement;
   $ElementCopyWith<$Res> get familyElement;
+  $ElementCopyWith<$Res> get givenElement;
+  $ElementCopyWith<$Res> get prefixElement;
+  $ElementCopyWith<$Res> get suffixElement;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
@@ -6397,18 +6926,18 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object use = freezed,
-    Object text = freezed,
-    Object family = freezed,
-    Object given = freezed,
-    Object prefix = freezed,
-    Object suffix = freezed,
-    Object period = freezed,
     Object useElement = freezed,
+    Object text = freezed,
     Object textElement = freezed,
+    Object family = freezed,
     Object familyElement = freezed,
+    Object given = freezed,
     Object givenElement = freezed,
+    Object prefix = freezed,
     Object prefixElement = freezed,
+    Object suffix = freezed,
     Object suffixElement = freezed,
+    Object period = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -6416,39 +6945,29 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       use: use == freezed ? _value.use : use as HumanNameUse,
-      text: text == freezed ? _value.text : text as String,
-      family: family == freezed ? _value.family : family as String,
-      given: given == freezed ? _value.given : given as List<String>,
-      prefix: prefix == freezed ? _value.prefix : prefix as List<String>,
-      suffix: suffix == freezed ? _value.suffix : suffix as List<String>,
-      period: period == freezed ? _value.period : period as Period,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element,
+      text: text == freezed ? _value.text : text as String,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element,
+      family: family == freezed ? _value.family : family as String,
       familyElement: familyElement == freezed
           ? _value.familyElement
           : familyElement as Element,
+      given: given == freezed ? _value.given : given as List<String>,
       givenElement: givenElement == freezed
           ? _value.givenElement
-          : givenElement as List<Element>,
+          : givenElement as Element,
+      prefix: prefix == freezed ? _value.prefix : prefix as List<String>,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
-          : prefixElement as List<Element>,
+          : prefixElement as Element,
+      suffix: suffix == freezed ? _value.suffix : suffix as List<String>,
       suffixElement: suffixElement == freezed
           ? _value.suffixElement
-          : suffixElement as List<Element>,
+          : suffixElement as Element,
+      period: period == freezed ? _value.period : period as Period,
     ));
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get period {
-    if (_value.period == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
-      return _then(_value.copyWith(period: value));
-    });
   }
 
   @override
@@ -6480,6 +6999,46 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
       return _then(_value.copyWith(familyElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res> get givenElement {
+    if (_value.givenElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.givenElement, (value) {
+      return _then(_value.copyWith(givenElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get prefixElement {
+    if (_value.prefixElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.prefixElement, (value) {
+      return _then(_value.copyWith(prefixElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get suffixElement {
+    if (_value.suffixElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.suffixElement, (value) {
+      return _then(_value.copyWith(suffixElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
 }
 
 abstract class _$HumanNameCopyWith<$Res> implements $HumanNameCopyWith<$Res> {
@@ -6488,30 +7047,36 @@ abstract class _$HumanNameCopyWith<$Res> implements $HumanNameCopyWith<$Res> {
       __$HumanNameCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
-      String text,
-      String family,
-      List<String> given,
-      List<String> prefix,
-      List<String> suffix,
-      Period period,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: extension) String family,
       @JsonKey(name: '_family') Element familyElement,
-      @JsonKey(name: '_given') List<Element> givenElement,
-      @JsonKey(name: '_prefix') List<Element> prefixElement,
-      @JsonKey(name: '_suffix') List<Element> suffixElement});
+      @JsonKey(name: extension) List<String> given,
+      @JsonKey(name: '_given') Element givenElement,
+      @JsonKey(name: extension) List<String> prefix,
+      @JsonKey(name: '_prefix') Element prefixElement,
+      @JsonKey(name: extension) List<String> suffix,
+      @JsonKey(name: '_suffix') Element suffixElement,
+      @JsonKey(name: extension) Period period});
 
-  @override
-  $PeriodCopyWith<$Res> get period;
   @override
   $ElementCopyWith<$Res> get useElement;
   @override
   $ElementCopyWith<$Res> get textElement;
   @override
   $ElementCopyWith<$Res> get familyElement;
+  @override
+  $ElementCopyWith<$Res> get givenElement;
+  @override
+  $ElementCopyWith<$Res> get prefixElement;
+  @override
+  $ElementCopyWith<$Res> get suffixElement;
+  @override
+  $PeriodCopyWith<$Res> get period;
 }
 
 class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
@@ -6527,18 +7092,18 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object use = freezed,
-    Object text = freezed,
-    Object family = freezed,
-    Object given = freezed,
-    Object prefix = freezed,
-    Object suffix = freezed,
-    Object period = freezed,
     Object useElement = freezed,
+    Object text = freezed,
     Object textElement = freezed,
+    Object family = freezed,
     Object familyElement = freezed,
+    Object given = freezed,
     Object givenElement = freezed,
+    Object prefix = freezed,
     Object prefixElement = freezed,
+    Object suffix = freezed,
     Object suffixElement = freezed,
+    Object period = freezed,
   }) {
     return _then(_HumanName(
       id: id == freezed ? _value.id : id as String,
@@ -6546,96 +7111,104 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       use: use == freezed ? _value.use : use as HumanNameUse,
-      text: text == freezed ? _value.text : text as String,
-      family: family == freezed ? _value.family : family as String,
-      given: given == freezed ? _value.given : given as List<String>,
-      prefix: prefix == freezed ? _value.prefix : prefix as List<String>,
-      suffix: suffix == freezed ? _value.suffix : suffix as List<String>,
-      period: period == freezed ? _value.period : period as Period,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element,
+      text: text == freezed ? _value.text : text as String,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element,
+      family: family == freezed ? _value.family : family as String,
       familyElement: familyElement == freezed
           ? _value.familyElement
           : familyElement as Element,
+      given: given == freezed ? _value.given : given as List<String>,
       givenElement: givenElement == freezed
           ? _value.givenElement
-          : givenElement as List<Element>,
+          : givenElement as Element,
+      prefix: prefix == freezed ? _value.prefix : prefix as List<String>,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
-          : prefixElement as List<Element>,
+          : prefixElement as Element,
+      suffix: suffix == freezed ? _value.suffix : suffix as List<String>,
       suffixElement: suffixElement == freezed
           ? _value.suffixElement
-          : suffixElement as List<Element>,
+          : suffixElement as Element,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_HumanName implements _HumanName {
-  const _$_HumanName(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+class _$_HumanName extends _HumanName {
+  _$_HumanName(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
       @JsonKey(unknownEnumValue: HumanNameUse.unknown) this.use,
-      this.text,
-      this.family,
-      this.given,
-      this.prefix,
-      this.suffix,
-      this.period,
       @JsonKey(name: '_use') this.useElement,
+      @JsonKey(name: extension) this.text,
       @JsonKey(name: '_text') this.textElement,
+      @JsonKey(name: extension) this.family,
       @JsonKey(name: '_family') this.familyElement,
+      @JsonKey(name: extension) this.given,
       @JsonKey(name: '_given') this.givenElement,
+      @JsonKey(name: extension) this.prefix,
       @JsonKey(name: '_prefix') this.prefixElement,
-      @JsonKey(name: '_suffix') this.suffixElement});
+      @JsonKey(name: extension) this.suffix,
+      @JsonKey(name: '_suffix') this.suffixElement,
+      @JsonKey(name: extension) this.period})
+      : super._();
 
   factory _$_HumanName.fromJson(Map<String, dynamic> json) =>
       _$_$_HumanNameFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
   @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   final HumanNameUse use;
   @override
-  final String text;
-  @override
-  final String family;
-  @override
-  final List<String> given;
-  @override
-  final List<String> prefix;
-  @override
-  final List<String> suffix;
-  @override
-  final Period period;
-  @override
   @JsonKey(name: '_use')
   final Element useElement;
+  @override
+  @JsonKey(name: extension)
+  final String text;
   @override
   @JsonKey(name: '_text')
   final Element textElement;
   @override
+  @JsonKey(name: extension)
+  final String family;
+  @override
   @JsonKey(name: '_family')
   final Element familyElement;
   @override
+  @JsonKey(name: extension)
+  final List<String> given;
+  @override
   @JsonKey(name: '_given')
-  final List<Element> givenElement;
+  final Element givenElement;
+  @override
+  @JsonKey(name: extension)
+  final List<String> prefix;
   @override
   @JsonKey(name: '_prefix')
-  final List<Element> prefixElement;
+  final Element prefixElement;
+  @override
+  @JsonKey(name: extension)
+  final List<String> suffix;
   @override
   @JsonKey(name: '_suffix')
-  final List<Element> suffixElement;
+  final Element suffixElement;
+  @override
+  @JsonKey(name: extension)
+  final Period period;
 
   @override
   String toString() {
-    return 'HumanName(id: $id, extension_: $extension_, use: $use, text: $text, family: $family, given: $given, prefix: $prefix, suffix: $suffix, period: $period, useElement: $useElement, textElement: $textElement, familyElement: $familyElement, givenElement: $givenElement, prefixElement: $prefixElement, suffixElement: $suffixElement)';
+    return 'HumanName(id: $id, extension_: $extension_, use: $use, useElement: $useElement, text: $text, textElement: $textElement, family: $family, familyElement: $familyElement, given: $given, givenElement: $givenElement, prefix: $prefix, prefixElement: $prefixElement, suffix: $suffix, suffixElement: $suffixElement, period: $period)';
   }
 
   @override
@@ -6649,36 +7222,36 @@ class _$_HumanName implements _HumanName {
                     .equals(other.extension_, extension_)) &&
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.family, family) ||
-                const DeepCollectionEquality().equals(other.family, family)) &&
-            (identical(other.given, given) ||
-                const DeepCollectionEquality().equals(other.given, given)) &&
-            (identical(other.prefix, prefix) ||
-                const DeepCollectionEquality().equals(other.prefix, prefix)) &&
-            (identical(other.suffix, suffix) ||
-                const DeepCollectionEquality().equals(other.suffix, suffix)) &&
-            (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)) &&
             (identical(other.useElement, useElement) ||
                 const DeepCollectionEquality()
                     .equals(other.useElement, useElement)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.textElement, textElement) ||
                 const DeepCollectionEquality()
                     .equals(other.textElement, textElement)) &&
+            (identical(other.family, family) ||
+                const DeepCollectionEquality().equals(other.family, family)) &&
             (identical(other.familyElement, familyElement) ||
                 const DeepCollectionEquality()
                     .equals(other.familyElement, familyElement)) &&
+            (identical(other.given, given) ||
+                const DeepCollectionEquality().equals(other.given, given)) &&
             (identical(other.givenElement, givenElement) ||
                 const DeepCollectionEquality()
                     .equals(other.givenElement, givenElement)) &&
+            (identical(other.prefix, prefix) ||
+                const DeepCollectionEquality().equals(other.prefix, prefix)) &&
             (identical(other.prefixElement, prefixElement) ||
                 const DeepCollectionEquality()
                     .equals(other.prefixElement, prefixElement)) &&
+            (identical(other.suffix, suffix) ||
+                const DeepCollectionEquality().equals(other.suffix, suffix)) &&
             (identical(other.suffixElement, suffixElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.suffixElement, suffixElement)));
+                    .equals(other.suffixElement, suffixElement)) &&
+            (identical(other.period, period) ||
+                const DeepCollectionEquality().equals(other.period, period)));
   }
 
   @override
@@ -6687,18 +7260,18 @@ class _$_HumanName implements _HumanName {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(use) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(family) ^
-      const DeepCollectionEquality().hash(given) ^
-      const DeepCollectionEquality().hash(prefix) ^
-      const DeepCollectionEquality().hash(suffix) ^
-      const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(useElement) ^
+      const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement) ^
+      const DeepCollectionEquality().hash(family) ^
       const DeepCollectionEquality().hash(familyElement) ^
+      const DeepCollectionEquality().hash(given) ^
       const DeepCollectionEquality().hash(givenElement) ^
+      const DeepCollectionEquality().hash(prefix) ^
       const DeepCollectionEquality().hash(prefixElement) ^
-      const DeepCollectionEquality().hash(suffixElement);
+      const DeepCollectionEquality().hash(suffix) ^
+      const DeepCollectionEquality().hash(suffixElement) ^
+      const DeepCollectionEquality().hash(period);
 
   @override
   _$HumanNameCopyWith<_HumanName> get copyWith =>
@@ -6710,65 +7283,73 @@ class _$_HumanName implements _HumanName {
   }
 }
 
-abstract class _HumanName implements HumanName {
-  const factory _HumanName(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+abstract class _HumanName extends HumanName {
+  _HumanName._() : super._();
+  factory _HumanName(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse use,
-      String text,
-      String family,
-      List<String> given,
-      List<String> prefix,
-      List<String> suffix,
-      Period period,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement,
+      @JsonKey(name: extension) String family,
       @JsonKey(name: '_family') Element familyElement,
-      @JsonKey(name: '_given') List<Element> givenElement,
-      @JsonKey(name: '_prefix') List<Element> prefixElement,
-      @JsonKey(name: '_suffix') List<Element> suffixElement}) = _$_HumanName;
+      @JsonKey(name: extension) List<String> given,
+      @JsonKey(name: '_given') Element givenElement,
+      @JsonKey(name: extension) List<String> prefix,
+      @JsonKey(name: '_prefix') Element prefixElement,
+      @JsonKey(name: extension) List<String> suffix,
+      @JsonKey(name: '_suffix') Element suffixElement,
+      @JsonKey(name: extension) Period period}) = _$_HumanName;
 
   factory _HumanName.fromJson(Map<String, dynamic> json) =
       _$_HumanName.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
   @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   HumanNameUse get use;
   @override
-  String get text;
-  @override
-  String get family;
-  @override
-  List<String> get given;
-  @override
-  List<String> get prefix;
-  @override
-  List<String> get suffix;
-  @override
-  Period get period;
-  @override
   @JsonKey(name: '_use')
   Element get useElement;
+  @override
+  @JsonKey(name: extension)
+  String get text;
   @override
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(name: extension)
+  String get family;
+  @override
   @JsonKey(name: '_family')
   Element get familyElement;
   @override
+  @JsonKey(name: extension)
+  List<String> get given;
+  @override
   @JsonKey(name: '_given')
-  List<Element> get givenElement;
+  Element get givenElement;
+  @override
+  @JsonKey(name: extension)
+  List<String> get prefix;
   @override
   @JsonKey(name: '_prefix')
-  List<Element> get prefixElement;
+  Element get prefixElement;
+  @override
+  @JsonKey(name: extension)
+  List<String> get suffix;
   @override
   @JsonKey(name: '_suffix')
-  List<Element> get suffixElement;
+  Element get suffixElement;
+  @override
+  @JsonKey(name: extension)
+  Period get period;
   @override
   _$HumanNameCopyWith<_HumanName> get copyWith;
 }
@@ -6781,49 +7362,49 @@ class _$AddressTearOff {
   const _$AddressTearOff();
 
   _Address call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
-      @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
-      String text,
-      List<String> line,
-      String city,
-      String district,
-      String state,
-      String postalCode,
-      String country,
-      Period period,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement,
-      @JsonKey(name: '_line') List<Element> lineElement,
+      @JsonKey(name: extension) List<String> line,
+      @JsonKey(name: '_line') Element lineElement,
+      @JsonKey(name: extension) String city,
       @JsonKey(name: '_city') Element cityElement,
+      @JsonKey(name: extension) String district,
       @JsonKey(name: '_district') Element districtElement,
+      @JsonKey(name: extension) String state,
       @JsonKey(name: '_state') Element stateElement,
+      @JsonKey(name: extension) String postalCode,
       @JsonKey(name: '_postalCode') Element postalCodeElement,
-      @JsonKey(name: '_country') Element countryElement}) {
+      @JsonKey(name: extension) String country,
+      @JsonKey(name: '_country') Element countryElement,
+      @JsonKey(name: extension) Period period}) {
     return _Address(
       id: id,
       extension_: extension_,
       use: use,
-      type: type,
-      text: text,
-      line: line,
-      city: city,
-      district: district,
-      state: state,
-      postalCode: postalCode,
-      country: country,
-      period: period,
       useElement: useElement,
+      type: type,
       typeElement: typeElement,
+      text: text,
       textElement: textElement,
+      line: line,
       lineElement: lineElement,
+      city: city,
       cityElement: cityElement,
+      district: district,
       districtElement: districtElement,
+      state: state,
       stateElement: stateElement,
+      postalCode: postalCode,
       postalCodeElement: postalCodeElement,
+      country: country,
       countryElement: countryElement,
+      period: period,
     );
   }
 }
@@ -6832,39 +7413,48 @@ class _$AddressTearOff {
 const $Address = _$AddressTearOff();
 
 mixin _$Address {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   AddressUse get use;
-  @JsonKey(unknownEnumValue: AddressType.unknown)
-  AddressType get type;
-  String get text;
-  List<String> get line;
-  String get city;
-  String get district;
-  String get state;
-  String get postalCode;
-  String get country;
-  Period get period;
   @JsonKey(name: '_use')
   Element get useElement;
+  @JsonKey(unknownEnumValue: AddressType.unknown)
+  AddressType get type;
   @JsonKey(name: '_type')
   Element get typeElement;
+  @JsonKey(name: extension)
+  String get text;
   @JsonKey(name: '_text')
   Element get textElement;
+  @JsonKey(name: extension)
+  List<String> get line;
   @JsonKey(name: '_line')
-  List<Element> get lineElement;
+  Element get lineElement;
+  @JsonKey(name: extension)
+  String get city;
   @JsonKey(name: '_city')
   Element get cityElement;
+  @JsonKey(name: extension)
+  String get district;
   @JsonKey(name: '_district')
   Element get districtElement;
+  @JsonKey(name: extension)
+  String get state;
   @JsonKey(name: '_state')
   Element get stateElement;
+  @JsonKey(name: extension)
+  String get postalCode;
   @JsonKey(name: '_postalCode')
   Element get postalCodeElement;
+  @JsonKey(name: extension)
+  String get country;
   @JsonKey(name: '_country')
   Element get countryElement;
+  @JsonKey(name: extension)
+  Period get period;
 
   Map<String, dynamic> toJson();
   $AddressCopyWith<Address> get copyWith;
@@ -6874,37 +7464,38 @@ abstract class $AddressCopyWith<$Res> {
   factory $AddressCopyWith(Address value, $Res Function(Address) then) =
       _$AddressCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
-      @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
-      String text,
-      List<String> line,
-      String city,
-      String district,
-      String state,
-      String postalCode,
-      String country,
-      Period period,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement,
-      @JsonKey(name: '_line') List<Element> lineElement,
+      @JsonKey(name: extension) List<String> line,
+      @JsonKey(name: '_line') Element lineElement,
+      @JsonKey(name: extension) String city,
       @JsonKey(name: '_city') Element cityElement,
+      @JsonKey(name: extension) String district,
       @JsonKey(name: '_district') Element districtElement,
+      @JsonKey(name: extension) String state,
       @JsonKey(name: '_state') Element stateElement,
+      @JsonKey(name: extension) String postalCode,
       @JsonKey(name: '_postalCode') Element postalCodeElement,
-      @JsonKey(name: '_country') Element countryElement});
+      @JsonKey(name: extension) String country,
+      @JsonKey(name: '_country') Element countryElement,
+      @JsonKey(name: extension) Period period});
 
-  $PeriodCopyWith<$Res> get period;
   $ElementCopyWith<$Res> get useElement;
   $ElementCopyWith<$Res> get typeElement;
   $ElementCopyWith<$Res> get textElement;
+  $ElementCopyWith<$Res> get lineElement;
   $ElementCopyWith<$Res> get cityElement;
   $ElementCopyWith<$Res> get districtElement;
   $ElementCopyWith<$Res> get stateElement;
   $ElementCopyWith<$Res> get postalCodeElement;
   $ElementCopyWith<$Res> get countryElement;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
@@ -6919,24 +7510,24 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object use = freezed,
-    Object type = freezed,
-    Object text = freezed,
-    Object line = freezed,
-    Object city = freezed,
-    Object district = freezed,
-    Object state = freezed,
-    Object postalCode = freezed,
-    Object country = freezed,
-    Object period = freezed,
     Object useElement = freezed,
+    Object type = freezed,
     Object typeElement = freezed,
+    Object text = freezed,
     Object textElement = freezed,
+    Object line = freezed,
     Object lineElement = freezed,
+    Object city = freezed,
     Object cityElement = freezed,
+    Object district = freezed,
     Object districtElement = freezed,
+    Object state = freezed,
     Object stateElement = freezed,
+    Object postalCode = freezed,
     Object postalCodeElement = freezed,
+    Object country = freezed,
     Object countryElement = freezed,
+    Object period = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -6944,50 +7535,39 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       use: use == freezed ? _value.use : use as AddressUse,
-      type: type == freezed ? _value.type : type as AddressType,
-      text: text == freezed ? _value.text : text as String,
-      line: line == freezed ? _value.line : line as List<String>,
-      city: city == freezed ? _value.city : city as String,
-      district: district == freezed ? _value.district : district as String,
-      state: state == freezed ? _value.state : state as String,
-      postalCode:
-          postalCode == freezed ? _value.postalCode : postalCode as String,
-      country: country == freezed ? _value.country : country as String,
-      period: period == freezed ? _value.period : period as Period,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element,
+      type: type == freezed ? _value.type : type as AddressType,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      text: text == freezed ? _value.text : text as String,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element,
-      lineElement: lineElement == freezed
-          ? _value.lineElement
-          : lineElement as List<Element>,
+      line: line == freezed ? _value.line : line as List<String>,
+      lineElement:
+          lineElement == freezed ? _value.lineElement : lineElement as Element,
+      city: city == freezed ? _value.city : city as String,
       cityElement:
           cityElement == freezed ? _value.cityElement : cityElement as Element,
+      district: district == freezed ? _value.district : district as String,
       districtElement: districtElement == freezed
           ? _value.districtElement
           : districtElement as Element,
+      state: state == freezed ? _value.state : state as String,
       stateElement: stateElement == freezed
           ? _value.stateElement
           : stateElement as Element,
+      postalCode:
+          postalCode == freezed ? _value.postalCode : postalCode as String,
       postalCodeElement: postalCodeElement == freezed
           ? _value.postalCodeElement
           : postalCodeElement as Element,
+      country: country == freezed ? _value.country : country as String,
       countryElement: countryElement == freezed
           ? _value.countryElement
           : countryElement as Element,
+      period: period == freezed ? _value.period : period as Period,
     ));
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get period {
-    if (_value.period == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
-      return _then(_value.copyWith(period: value));
-    });
   }
 
   @override
@@ -7017,6 +7597,16 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
     }
     return $ElementCopyWith<$Res>(_value.textElement, (value) {
       return _then(_value.copyWith(textElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get lineElement {
+    if (_value.lineElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.lineElement, (value) {
+      return _then(_value.copyWith(lineElement: value));
     });
   }
 
@@ -7069,6 +7659,16 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
       return _then(_value.copyWith(countryElement: value));
     });
   }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
 }
 
 abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
@@ -7076,36 +7676,36 @@ abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
       __$AddressCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
-      @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
-      String text,
-      List<String> line,
-      String city,
-      String district,
-      String state,
-      String postalCode,
-      String country,
-      Period period,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement,
-      @JsonKey(name: '_line') List<Element> lineElement,
+      @JsonKey(name: extension) List<String> line,
+      @JsonKey(name: '_line') Element lineElement,
+      @JsonKey(name: extension) String city,
       @JsonKey(name: '_city') Element cityElement,
+      @JsonKey(name: extension) String district,
       @JsonKey(name: '_district') Element districtElement,
+      @JsonKey(name: extension) String state,
       @JsonKey(name: '_state') Element stateElement,
+      @JsonKey(name: extension) String postalCode,
       @JsonKey(name: '_postalCode') Element postalCodeElement,
-      @JsonKey(name: '_country') Element countryElement});
+      @JsonKey(name: extension) String country,
+      @JsonKey(name: '_country') Element countryElement,
+      @JsonKey(name: extension) Period period});
 
-  @override
-  $PeriodCopyWith<$Res> get period;
   @override
   $ElementCopyWith<$Res> get useElement;
   @override
   $ElementCopyWith<$Res> get typeElement;
   @override
   $ElementCopyWith<$Res> get textElement;
+  @override
+  $ElementCopyWith<$Res> get lineElement;
   @override
   $ElementCopyWith<$Res> get cityElement;
   @override
@@ -7116,6 +7716,8 @@ abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
   $ElementCopyWith<$Res> get postalCodeElement;
   @override
   $ElementCopyWith<$Res> get countryElement;
+  @override
+  $PeriodCopyWith<$Res> get period;
 }
 
 class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
@@ -7131,24 +7733,24 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object use = freezed,
-    Object type = freezed,
-    Object text = freezed,
-    Object line = freezed,
-    Object city = freezed,
-    Object district = freezed,
-    Object state = freezed,
-    Object postalCode = freezed,
-    Object country = freezed,
-    Object period = freezed,
     Object useElement = freezed,
+    Object type = freezed,
     Object typeElement = freezed,
+    Object text = freezed,
     Object textElement = freezed,
+    Object line = freezed,
     Object lineElement = freezed,
+    Object city = freezed,
     Object cityElement = freezed,
+    Object district = freezed,
     Object districtElement = freezed,
+    Object state = freezed,
     Object stateElement = freezed,
+    Object postalCode = freezed,
     Object postalCodeElement = freezed,
+    Object country = freezed,
     Object countryElement = freezed,
+    Object period = freezed,
   }) {
     return _then(_Address(
       id: id == freezed ? _value.id : id as String,
@@ -7156,129 +7758,138 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       use: use == freezed ? _value.use : use as AddressUse,
-      type: type == freezed ? _value.type : type as AddressType,
-      text: text == freezed ? _value.text : text as String,
-      line: line == freezed ? _value.line : line as List<String>,
-      city: city == freezed ? _value.city : city as String,
-      district: district == freezed ? _value.district : district as String,
-      state: state == freezed ? _value.state : state as String,
-      postalCode:
-          postalCode == freezed ? _value.postalCode : postalCode as String,
-      country: country == freezed ? _value.country : country as String,
-      period: period == freezed ? _value.period : period as Period,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element,
+      type: type == freezed ? _value.type : type as AddressType,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element,
+      text: text == freezed ? _value.text : text as String,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element,
-      lineElement: lineElement == freezed
-          ? _value.lineElement
-          : lineElement as List<Element>,
+      line: line == freezed ? _value.line : line as List<String>,
+      lineElement:
+          lineElement == freezed ? _value.lineElement : lineElement as Element,
+      city: city == freezed ? _value.city : city as String,
       cityElement:
           cityElement == freezed ? _value.cityElement : cityElement as Element,
+      district: district == freezed ? _value.district : district as String,
       districtElement: districtElement == freezed
           ? _value.districtElement
           : districtElement as Element,
+      state: state == freezed ? _value.state : state as String,
       stateElement: stateElement == freezed
           ? _value.stateElement
           : stateElement as Element,
+      postalCode:
+          postalCode == freezed ? _value.postalCode : postalCode as String,
       postalCodeElement: postalCodeElement == freezed
           ? _value.postalCodeElement
           : postalCodeElement as Element,
+      country: country == freezed ? _value.country : country as String,
       countryElement: countryElement == freezed
           ? _value.countryElement
           : countryElement as Element,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_Address implements _Address {
-  const _$_Address(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+class _$_Address extends _Address {
+  _$_Address(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
       @JsonKey(unknownEnumValue: AddressUse.unknown) this.use,
-      @JsonKey(unknownEnumValue: AddressType.unknown) this.type,
-      this.text,
-      this.line,
-      this.city,
-      this.district,
-      this.state,
-      this.postalCode,
-      this.country,
-      this.period,
       @JsonKey(name: '_use') this.useElement,
+      @JsonKey(unknownEnumValue: AddressType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: extension) this.text,
       @JsonKey(name: '_text') this.textElement,
+      @JsonKey(name: extension) this.line,
       @JsonKey(name: '_line') this.lineElement,
+      @JsonKey(name: extension) this.city,
       @JsonKey(name: '_city') this.cityElement,
+      @JsonKey(name: extension) this.district,
       @JsonKey(name: '_district') this.districtElement,
+      @JsonKey(name: extension) this.state,
       @JsonKey(name: '_state') this.stateElement,
+      @JsonKey(name: extension) this.postalCode,
       @JsonKey(name: '_postalCode') this.postalCodeElement,
-      @JsonKey(name: '_country') this.countryElement});
+      @JsonKey(name: extension) this.country,
+      @JsonKey(name: '_country') this.countryElement,
+      @JsonKey(name: extension) this.period})
+      : super._();
 
   factory _$_Address.fromJson(Map<String, dynamic> json) =>
       _$_$_AddressFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   final AddressUse use;
   @override
-  @JsonKey(unknownEnumValue: AddressType.unknown)
-  final AddressType type;
-  @override
-  final String text;
-  @override
-  final List<String> line;
-  @override
-  final String city;
-  @override
-  final String district;
-  @override
-  final String state;
-  @override
-  final String postalCode;
-  @override
-  final String country;
-  @override
-  final Period period;
-  @override
   @JsonKey(name: '_use')
   final Element useElement;
+  @override
+  @JsonKey(unknownEnumValue: AddressType.unknown)
+  final AddressType type;
   @override
   @JsonKey(name: '_type')
   final Element typeElement;
   @override
+  @JsonKey(name: extension)
+  final String text;
+  @override
   @JsonKey(name: '_text')
   final Element textElement;
   @override
+  @JsonKey(name: extension)
+  final List<String> line;
+  @override
   @JsonKey(name: '_line')
-  final List<Element> lineElement;
+  final Element lineElement;
+  @override
+  @JsonKey(name: extension)
+  final String city;
   @override
   @JsonKey(name: '_city')
   final Element cityElement;
   @override
+  @JsonKey(name: extension)
+  final String district;
+  @override
   @JsonKey(name: '_district')
   final Element districtElement;
+  @override
+  @JsonKey(name: extension)
+  final String state;
   @override
   @JsonKey(name: '_state')
   final Element stateElement;
   @override
+  @JsonKey(name: extension)
+  final String postalCode;
+  @override
   @JsonKey(name: '_postalCode')
   final Element postalCodeElement;
   @override
+  @JsonKey(name: extension)
+  final String country;
+  @override
   @JsonKey(name: '_country')
   final Element countryElement;
+  @override
+  @JsonKey(name: extension)
+  final Period period;
 
   @override
   String toString() {
-    return 'Address(id: $id, extension_: $extension_, use: $use, type: $type, text: $text, line: $line, city: $city, district: $district, state: $state, postalCode: $postalCode, country: $country, period: $period, useElement: $useElement, typeElement: $typeElement, textElement: $textElement, lineElement: $lineElement, cityElement: $cityElement, districtElement: $districtElement, stateElement: $stateElement, postalCodeElement: $postalCodeElement, countryElement: $countryElement)';
+    return 'Address(id: $id, extension_: $extension_, use: $use, useElement: $useElement, type: $type, typeElement: $typeElement, text: $text, textElement: $textElement, line: $line, lineElement: $lineElement, city: $city, cityElement: $cityElement, district: $district, districtElement: $districtElement, state: $state, stateElement: $stateElement, postalCode: $postalCode, postalCodeElement: $postalCodeElement, country: $country, countryElement: $countryElement, period: $period)';
   }
 
   @override
@@ -7292,54 +7903,54 @@ class _$_Address implements _Address {
                     .equals(other.extension_, extension_)) &&
             (identical(other.use, use) ||
                 const DeepCollectionEquality().equals(other.use, use)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.line, line) ||
-                const DeepCollectionEquality().equals(other.line, line)) &&
-            (identical(other.city, city) ||
-                const DeepCollectionEquality().equals(other.city, city)) &&
-            (identical(other.district, district) ||
-                const DeepCollectionEquality()
-                    .equals(other.district, district)) &&
-            (identical(other.state, state) ||
-                const DeepCollectionEquality().equals(other.state, state)) &&
-            (identical(other.postalCode, postalCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.postalCode, postalCode)) &&
-            (identical(other.country, country) ||
-                const DeepCollectionEquality()
-                    .equals(other.country, country)) &&
-            (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)) &&
             (identical(other.useElement, useElement) ||
                 const DeepCollectionEquality()
                     .equals(other.useElement, useElement)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.typeElement, typeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.typeElement, typeElement)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.textElement, textElement) ||
                 const DeepCollectionEquality()
                     .equals(other.textElement, textElement)) &&
+            (identical(other.line, line) ||
+                const DeepCollectionEquality().equals(other.line, line)) &&
             (identical(other.lineElement, lineElement) ||
                 const DeepCollectionEquality()
                     .equals(other.lineElement, lineElement)) &&
+            (identical(other.city, city) ||
+                const DeepCollectionEquality().equals(other.city, city)) &&
             (identical(other.cityElement, cityElement) ||
                 const DeepCollectionEquality()
                     .equals(other.cityElement, cityElement)) &&
+            (identical(other.district, district) ||
+                const DeepCollectionEquality()
+                    .equals(other.district, district)) &&
             (identical(other.districtElement, districtElement) ||
                 const DeepCollectionEquality()
                     .equals(other.districtElement, districtElement)) &&
+            (identical(other.state, state) ||
+                const DeepCollectionEquality().equals(other.state, state)) &&
             (identical(other.stateElement, stateElement) ||
                 const DeepCollectionEquality()
                     .equals(other.stateElement, stateElement)) &&
+            (identical(other.postalCode, postalCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.postalCode, postalCode)) &&
             (identical(other.postalCodeElement, postalCodeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.postalCodeElement, postalCodeElement)) &&
+            (identical(other.country, country) ||
+                const DeepCollectionEquality()
+                    .equals(other.country, country)) &&
             (identical(other.countryElement, countryElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.countryElement, countryElement)));
+                    .equals(other.countryElement, countryElement)) &&
+            (identical(other.period, period) ||
+                const DeepCollectionEquality().equals(other.period, period)));
   }
 
   @override
@@ -7348,24 +7959,24 @@ class _$_Address implements _Address {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(use) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(line) ^
-      const DeepCollectionEquality().hash(city) ^
-      const DeepCollectionEquality().hash(district) ^
-      const DeepCollectionEquality().hash(state) ^
-      const DeepCollectionEquality().hash(postalCode) ^
-      const DeepCollectionEquality().hash(country) ^
-      const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(useElement) ^
+      const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement) ^
+      const DeepCollectionEquality().hash(line) ^
       const DeepCollectionEquality().hash(lineElement) ^
+      const DeepCollectionEquality().hash(city) ^
       const DeepCollectionEquality().hash(cityElement) ^
+      const DeepCollectionEquality().hash(district) ^
       const DeepCollectionEquality().hash(districtElement) ^
+      const DeepCollectionEquality().hash(state) ^
       const DeepCollectionEquality().hash(stateElement) ^
+      const DeepCollectionEquality().hash(postalCode) ^
       const DeepCollectionEquality().hash(postalCodeElement) ^
-      const DeepCollectionEquality().hash(countryElement);
+      const DeepCollectionEquality().hash(country) ^
+      const DeepCollectionEquality().hash(countryElement) ^
+      const DeepCollectionEquality().hash(period);
 
   @override
   _$AddressCopyWith<_Address> get copyWith =>
@@ -7377,86 +7988,96 @@ class _$_Address implements _Address {
   }
 }
 
-abstract class _Address implements Address {
-  const factory _Address(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+abstract class _Address extends Address {
+  _Address._() : super._();
+  factory _Address(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
-      @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
-      String text,
-      List<String> line,
-      String city,
-      String district,
-      String state,
-      String postalCode,
-      String country,
-      Period period,
       @JsonKey(name: '_use') Element useElement,
+      @JsonKey(unknownEnumValue: AddressType.unknown) AddressType type,
       @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: extension) String text,
       @JsonKey(name: '_text') Element textElement,
-      @JsonKey(name: '_line') List<Element> lineElement,
+      @JsonKey(name: extension) List<String> line,
+      @JsonKey(name: '_line') Element lineElement,
+      @JsonKey(name: extension) String city,
       @JsonKey(name: '_city') Element cityElement,
+      @JsonKey(name: extension) String district,
       @JsonKey(name: '_district') Element districtElement,
+      @JsonKey(name: extension) String state,
       @JsonKey(name: '_state') Element stateElement,
+      @JsonKey(name: extension) String postalCode,
       @JsonKey(name: '_postalCode') Element postalCodeElement,
-      @JsonKey(name: '_country') Element countryElement}) = _$_Address;
+      @JsonKey(name: extension) String country,
+      @JsonKey(name: '_country') Element countryElement,
+      @JsonKey(name: extension) Period period}) = _$_Address;
 
   factory _Address.fromJson(Map<String, dynamic> json) = _$_Address.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   AddressUse get use;
   @override
-  @JsonKey(unknownEnumValue: AddressType.unknown)
-  AddressType get type;
-  @override
-  String get text;
-  @override
-  List<String> get line;
-  @override
-  String get city;
-  @override
-  String get district;
-  @override
-  String get state;
-  @override
-  String get postalCode;
-  @override
-  String get country;
-  @override
-  Period get period;
-  @override
   @JsonKey(name: '_use')
   Element get useElement;
+  @override
+  @JsonKey(unknownEnumValue: AddressType.unknown)
+  AddressType get type;
   @override
   @JsonKey(name: '_type')
   Element get typeElement;
   @override
+  @JsonKey(name: extension)
+  String get text;
+  @override
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(name: extension)
+  List<String> get line;
+  @override
   @JsonKey(name: '_line')
-  List<Element> get lineElement;
+  Element get lineElement;
+  @override
+  @JsonKey(name: extension)
+  String get city;
   @override
   @JsonKey(name: '_city')
   Element get cityElement;
   @override
+  @JsonKey(name: extension)
+  String get district;
+  @override
   @JsonKey(name: '_district')
   Element get districtElement;
+  @override
+  @JsonKey(name: extension)
+  String get state;
   @override
   @JsonKey(name: '_state')
   Element get stateElement;
   @override
+  @JsonKey(name: extension)
+  String get postalCode;
+  @override
   @JsonKey(name: '_postalCode')
   Element get postalCodeElement;
   @override
+  @JsonKey(name: extension)
+  String get country;
+  @override
   @JsonKey(name: '_country')
   Element get countryElement;
+  @override
+  @JsonKey(name: extension)
+  Period get period;
   @override
   _$AddressCopyWith<_Address> get copyWith;
 }
@@ -7469,36 +8090,40 @@ class _$ContactPointTearOff {
   const _$ContactPointTearOff();
 
   _ContactPoint call(
-      {String id,
-      @JsonKey(name: 'extension')
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
           List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem system,
-      String value,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          ContactPointUse use,
-      PositiveInt rank,
-      Period period,
       @JsonKey(name: '_system')
           Element systemElement,
+      @JsonKey(name: extension)
+          String value,
       @JsonKey(name: '_value')
           Element valueElement,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+          ContactPointUse use,
       @JsonKey(name: '_use')
           Element useElement,
+      @JsonKey(name: extension)
+          PositiveInt rank,
       @JsonKey(name: '_rank')
-          Element rankElement}) {
+          Element rankElement,
+      @JsonKey(name: extension)
+          Period period}) {
     return _ContactPoint(
       id: id,
       extension_: extension_,
       system: system,
-      value: value,
-      use: use,
-      rank: rank,
-      period: period,
       systemElement: systemElement,
+      value: value,
       valueElement: valueElement,
+      use: use,
       useElement: useElement,
+      rank: rank,
       rankElement: rankElement,
+      period: period,
     );
   }
 }
@@ -7507,24 +8132,28 @@ class _$ContactPointTearOff {
 const $ContactPoint = _$ContactPointTearOff();
 
 mixin _$ContactPoint {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   ContactPointSystem get system;
-  String get value;
-  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-  ContactPointUse get use;
-  PositiveInt get rank;
-  Period get period;
   @JsonKey(name: '_system')
   Element get systemElement;
+  @JsonKey(name: extension)
+  String get value;
   @JsonKey(name: '_value')
   Element get valueElement;
+  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+  ContactPointUse get use;
   @JsonKey(name: '_use')
   Element get useElement;
+  @JsonKey(name: extension)
+  PositiveInt get rank;
   @JsonKey(name: '_rank')
   Element get rankElement;
+  @JsonKey(name: extension)
+  Period get period;
 
   Map<String, dynamic> toJson();
   $ContactPointCopyWith<ContactPoint> get copyWith;
@@ -7535,30 +8164,34 @@ abstract class $ContactPointCopyWith<$Res> {
           ContactPoint value, $Res Function(ContactPoint) then) =
       _$ContactPointCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension')
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
           List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem system,
-      String value,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          ContactPointUse use,
-      PositiveInt rank,
-      Period period,
       @JsonKey(name: '_system')
           Element systemElement,
+      @JsonKey(name: extension)
+          String value,
       @JsonKey(name: '_value')
           Element valueElement,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+          ContactPointUse use,
       @JsonKey(name: '_use')
           Element useElement,
+      @JsonKey(name: extension)
+          PositiveInt rank,
       @JsonKey(name: '_rank')
-          Element rankElement});
+          Element rankElement,
+      @JsonKey(name: extension)
+          Period period});
 
-  $PeriodCopyWith<$Res> get period;
   $ElementCopyWith<$Res> get systemElement;
   $ElementCopyWith<$Res> get valueElement;
   $ElementCopyWith<$Res> get useElement;
   $ElementCopyWith<$Res> get rankElement;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
@@ -7573,14 +8206,14 @@ class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
     Object id = freezed,
     Object extension_ = freezed,
     Object system = freezed,
-    Object value = freezed,
-    Object use = freezed,
-    Object rank = freezed,
-    Object period = freezed,
     Object systemElement = freezed,
+    Object value = freezed,
     Object valueElement = freezed,
+    Object use = freezed,
     Object useElement = freezed,
+    Object rank = freezed,
     Object rankElement = freezed,
+    Object period = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -7588,31 +8221,21 @@ class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       system: system == freezed ? _value.system : system as ContactPointSystem,
-      value: value == freezed ? _value.value : value as String,
-      use: use == freezed ? _value.use : use as ContactPointUse,
-      rank: rank == freezed ? _value.rank : rank as PositiveInt,
-      period: period == freezed ? _value.period : period as Period,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      use: use == freezed ? _value.use : use as ContactPointUse,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element,
+      rank: rank == freezed ? _value.rank : rank as PositiveInt,
       rankElement:
           rankElement == freezed ? _value.rankElement : rankElement as Element,
+      period: period == freezed ? _value.period : period as Period,
     ));
-  }
-
-  @override
-  $PeriodCopyWith<$Res> get period {
-    if (_value.period == null) {
-      return null;
-    }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
-      return _then(_value.copyWith(period: value));
-    });
   }
 
   @override
@@ -7654,6 +8277,16 @@ class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
       return _then(_value.copyWith(rankElement: value));
     });
   }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
 }
 
 abstract class _$ContactPointCopyWith<$Res>
@@ -7663,27 +8296,29 @@ abstract class _$ContactPointCopyWith<$Res>
       __$ContactPointCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension')
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
           List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem system,
-      String value,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          ContactPointUse use,
-      PositiveInt rank,
-      Period period,
       @JsonKey(name: '_system')
           Element systemElement,
+      @JsonKey(name: extension)
+          String value,
       @JsonKey(name: '_value')
           Element valueElement,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+          ContactPointUse use,
       @JsonKey(name: '_use')
           Element useElement,
+      @JsonKey(name: extension)
+          PositiveInt rank,
       @JsonKey(name: '_rank')
-          Element rankElement});
+          Element rankElement,
+      @JsonKey(name: extension)
+          Period period});
 
-  @override
-  $PeriodCopyWith<$Res> get period;
   @override
   $ElementCopyWith<$Res> get systemElement;
   @override
@@ -7692,6 +8327,8 @@ abstract class _$ContactPointCopyWith<$Res>
   $ElementCopyWith<$Res> get useElement;
   @override
   $ElementCopyWith<$Res> get rankElement;
+  @override
+  $PeriodCopyWith<$Res> get period;
 }
 
 class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
@@ -7708,14 +8345,14 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
     Object id = freezed,
     Object extension_ = freezed,
     Object system = freezed,
-    Object value = freezed,
-    Object use = freezed,
-    Object rank = freezed,
-    Object period = freezed,
     Object systemElement = freezed,
+    Object value = freezed,
     Object valueElement = freezed,
+    Object use = freezed,
     Object useElement = freezed,
+    Object rank = freezed,
     Object rankElement = freezed,
+    Object period = freezed,
   }) {
     return _then(_ContactPoint(
       id: id == freezed ? _value.id : id as String,
@@ -7723,75 +8360,80 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ as List<FhirExtension>,
       system: system == freezed ? _value.system : system as ContactPointSystem,
-      value: value == freezed ? _value.value : value as String,
-      use: use == freezed ? _value.use : use as ContactPointUse,
-      rank: rank == freezed ? _value.rank : rank as PositiveInt,
-      period: period == freezed ? _value.period : period as Period,
       systemElement: systemElement == freezed
           ? _value.systemElement
           : systemElement as Element,
+      value: value == freezed ? _value.value : value as String,
       valueElement: valueElement == freezed
           ? _value.valueElement
           : valueElement as Element,
+      use: use == freezed ? _value.use : use as ContactPointUse,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element,
+      rank: rank == freezed ? _value.rank : rank as PositiveInt,
       rankElement:
           rankElement == freezed ? _value.rankElement : rankElement as Element,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_ContactPoint implements _ContactPoint {
-  const _$_ContactPoint(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+class _$_ContactPoint extends _ContactPoint {
+  _$_ContactPoint(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown) this.system,
-      this.value,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown) this.use,
-      this.rank,
-      this.period,
       @JsonKey(name: '_system') this.systemElement,
+      @JsonKey(name: extension) this.value,
       @JsonKey(name: '_value') this.valueElement,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown) this.use,
       @JsonKey(name: '_use') this.useElement,
-      @JsonKey(name: '_rank') this.rankElement});
+      @JsonKey(name: extension) this.rank,
+      @JsonKey(name: '_rank') this.rankElement,
+      @JsonKey(name: extension) this.period})
+      : super._();
 
   factory _$_ContactPoint.fromJson(Map<String, dynamic> json) =>
       _$_$_ContactPointFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   final ContactPointSystem system;
   @override
-  final String value;
-  @override
-  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-  final ContactPointUse use;
-  @override
-  final PositiveInt rank;
-  @override
-  final Period period;
-  @override
   @JsonKey(name: '_system')
   final Element systemElement;
+  @override
+  @JsonKey(name: extension)
+  final String value;
   @override
   @JsonKey(name: '_value')
   final Element valueElement;
   @override
+  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+  final ContactPointUse use;
+  @override
   @JsonKey(name: '_use')
   final Element useElement;
   @override
+  @JsonKey(name: extension)
+  final PositiveInt rank;
+  @override
   @JsonKey(name: '_rank')
   final Element rankElement;
+  @override
+  @JsonKey(name: extension)
+  final Period period;
 
   @override
   String toString() {
-    return 'ContactPoint(id: $id, extension_: $extension_, system: $system, value: $value, use: $use, rank: $rank, period: $period, systemElement: $systemElement, valueElement: $valueElement, useElement: $useElement, rankElement: $rankElement)';
+    return 'ContactPoint(id: $id, extension_: $extension_, system: $system, systemElement: $systemElement, value: $value, valueElement: $valueElement, use: $use, useElement: $useElement, rank: $rank, rankElement: $rankElement, period: $period)';
   }
 
   @override
@@ -7805,26 +8447,26 @@ class _$_ContactPoint implements _ContactPoint {
                     .equals(other.extension_, extension_)) &&
             (identical(other.system, system) ||
                 const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.use, use) ||
-                const DeepCollectionEquality().equals(other.use, use)) &&
-            (identical(other.rank, rank) ||
-                const DeepCollectionEquality().equals(other.rank, rank)) &&
-            (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)) &&
             (identical(other.systemElement, systemElement) ||
                 const DeepCollectionEquality()
                     .equals(other.systemElement, systemElement)) &&
+            (identical(other.value, value) ||
+                const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.valueElement, valueElement) ||
                 const DeepCollectionEquality()
                     .equals(other.valueElement, valueElement)) &&
+            (identical(other.use, use) ||
+                const DeepCollectionEquality().equals(other.use, use)) &&
             (identical(other.useElement, useElement) ||
                 const DeepCollectionEquality()
                     .equals(other.useElement, useElement)) &&
+            (identical(other.rank, rank) ||
+                const DeepCollectionEquality().equals(other.rank, rank)) &&
             (identical(other.rankElement, rankElement) ||
                 const DeepCollectionEquality()
-                    .equals(other.rankElement, rankElement)));
+                    .equals(other.rankElement, rankElement)) &&
+            (identical(other.period, period) ||
+                const DeepCollectionEquality().equals(other.period, period)));
   }
 
   @override
@@ -7833,14 +8475,14 @@ class _$_ContactPoint implements _ContactPoint {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(use) ^
-      const DeepCollectionEquality().hash(rank) ^
-      const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(systemElement) ^
+      const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement) ^
+      const DeepCollectionEquality().hash(use) ^
       const DeepCollectionEquality().hash(useElement) ^
-      const DeepCollectionEquality().hash(rankElement);
+      const DeepCollectionEquality().hash(rank) ^
+      const DeepCollectionEquality().hash(rankElement) ^
+      const DeepCollectionEquality().hash(period);
 
   @override
   _$ContactPointCopyWith<_ContactPoint> get copyWith =>
@@ -7852,59 +8494,68 @@ class _$_ContactPoint implements _ContactPoint {
   }
 }
 
-abstract class _ContactPoint implements ContactPoint {
-  const factory _ContactPoint(
-      {String id,
-      @JsonKey(name: 'extension')
+abstract class _ContactPoint extends ContactPoint {
+  _ContactPoint._() : super._();
+  factory _ContactPoint(
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
           List<FhirExtension> extension_,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem system,
-      String value,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          ContactPointUse use,
-      PositiveInt rank,
-      Period period,
       @JsonKey(name: '_system')
           Element systemElement,
+      @JsonKey(name: extension)
+          String value,
       @JsonKey(name: '_value')
           Element valueElement,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+          ContactPointUse use,
       @JsonKey(name: '_use')
           Element useElement,
+      @JsonKey(name: extension)
+          PositiveInt rank,
       @JsonKey(name: '_rank')
-          Element rankElement}) = _$_ContactPoint;
+          Element rankElement,
+      @JsonKey(name: extension)
+          Period period}) = _$_ContactPoint;
 
   factory _ContactPoint.fromJson(Map<String, dynamic> json) =
       _$_ContactPoint.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   ContactPointSystem get system;
   @override
-  String get value;
-  @override
-  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-  ContactPointUse get use;
-  @override
-  PositiveInt get rank;
-  @override
-  Period get period;
-  @override
   @JsonKey(name: '_system')
   Element get systemElement;
+  @override
+  @JsonKey(name: extension)
+  String get value;
   @override
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+  ContactPointUse get use;
+  @override
   @JsonKey(name: '_use')
   Element get useElement;
   @override
+  @JsonKey(name: extension)
+  PositiveInt get rank;
+  @override
   @JsonKey(name: '_rank')
   Element get rankElement;
+  @override
+  @JsonKey(name: extension)
+  Period get period;
   @override
   _$ContactPointCopyWith<_ContactPoint> get copyWith;
 }
@@ -7917,21 +8568,21 @@ class _$TimingTearOff {
   const _$TimingTearOff();
 
   _Timing call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<FhirDateTime> event,
-      TimingRepeat repeat,
-      CodeableConcept code,
-      @JsonKey(name: '_event') List<Element> eventElement}) {
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
+      @JsonKey(name: extension) List<FhirDateTime> event,
+      @JsonKey(name: '_event') Element eventElement,
+      @JsonKey(name: extension) TimingRepeat repeat,
+      @JsonKey(name: extension) CodeableConcept code}) {
     return _Timing(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       event: event,
+      eventElement: eventElement,
       repeat: repeat,
       code: code,
-      eventElement: eventElement,
     );
   }
 }
@@ -7940,15 +8591,20 @@ class _$TimingTearOff {
 const $Timing = _$TimingTearOff();
 
 mixin _$Timing {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
+  @JsonKey(name: extension)
   List<FhirDateTime> get event;
-  TimingRepeat get repeat;
-  CodeableConcept get code;
   @JsonKey(name: '_event')
-  List<Element> get eventElement;
+  Element get eventElement;
+  @JsonKey(name: extension)
+  TimingRepeat get repeat;
+  @JsonKey(name: extension)
+  CodeableConcept get code;
 
   Map<String, dynamic> toJson();
   $TimingCopyWith<Timing> get copyWith;
@@ -7958,14 +8614,15 @@ abstract class $TimingCopyWith<$Res> {
   factory $TimingCopyWith(Timing value, $Res Function(Timing) then) =
       _$TimingCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<FhirDateTime> event,
-      TimingRepeat repeat,
-      CodeableConcept code,
-      @JsonKey(name: '_event') List<Element> eventElement});
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
+      @JsonKey(name: extension) List<FhirDateTime> event,
+      @JsonKey(name: '_event') Element eventElement,
+      @JsonKey(name: extension) TimingRepeat repeat,
+      @JsonKey(name: extension) CodeableConcept code});
 
+  $ElementCopyWith<$Res> get eventElement;
   $TimingRepeatCopyWith<$Res> get repeat;
   $CodeableConceptCopyWith<$Res> get code;
 }
@@ -7983,9 +8640,9 @@ class _$TimingCopyWithImpl<$Res> implements $TimingCopyWith<$Res> {
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object event = freezed,
+    Object eventElement = freezed,
     Object repeat = freezed,
     Object code = freezed,
-    Object eventElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -7996,12 +8653,22 @@ class _$TimingCopyWithImpl<$Res> implements $TimingCopyWith<$Res> {
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       event: event == freezed ? _value.event : event as List<FhirDateTime>,
-      repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat,
-      code: code == freezed ? _value.code : code as CodeableConcept,
       eventElement: eventElement == freezed
           ? _value.eventElement
-          : eventElement as List<Element>,
+          : eventElement as Element,
+      repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat,
+      code: code == freezed ? _value.code : code as CodeableConcept,
     ));
+  }
+
+  @override
+  $ElementCopyWith<$Res> get eventElement {
+    if (_value.eventElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.eventElement, (value) {
+      return _then(_value.copyWith(eventElement: value));
+    });
   }
 
   @override
@@ -8030,14 +8697,16 @@ abstract class _$TimingCopyWith<$Res> implements $TimingCopyWith<$Res> {
       __$TimingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<FhirDateTime> event,
-      TimingRepeat repeat,
-      CodeableConcept code,
-      @JsonKey(name: '_event') List<Element> eventElement});
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
+      @JsonKey(name: extension) List<FhirDateTime> event,
+      @JsonKey(name: '_event') Element eventElement,
+      @JsonKey(name: extension) TimingRepeat repeat,
+      @JsonKey(name: extension) CodeableConcept code});
 
+  @override
+  $ElementCopyWith<$Res> get eventElement;
   @override
   $TimingRepeatCopyWith<$Res> get repeat;
   @override
@@ -8058,9 +8727,9 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
     Object extension_ = freezed,
     Object modifierExtension = freezed,
     Object event = freezed,
+    Object eventElement = freezed,
     Object repeat = freezed,
     Object code = freezed,
-    Object eventElement = freezed,
   }) {
     return _then(_Timing(
       id: id == freezed ? _value.id : id as String,
@@ -8071,49 +8740,55 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
       event: event == freezed ? _value.event : event as List<FhirDateTime>,
-      repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat,
-      code: code == freezed ? _value.code : code as CodeableConcept,
       eventElement: eventElement == freezed
           ? _value.eventElement
-          : eventElement as List<Element>,
+          : eventElement as Element,
+      repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat,
+      code: code == freezed ? _value.code : code as CodeableConcept,
     ));
   }
 }
 
 @JsonSerializable()
-class _$_Timing implements _Timing {
-  const _$_Timing(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.event,
-      this.repeat,
-      this.code,
-      @JsonKey(name: '_event') this.eventElement});
+class _$_Timing extends _Timing {
+  _$_Timing(
+      {@JsonKey(name: extension) this.id,
+      @JsonKey(name: extension) this.extension_,
+      @JsonKey(name: extension) this.modifierExtension,
+      @JsonKey(name: extension) this.event,
+      @JsonKey(name: '_event') this.eventElement,
+      @JsonKey(name: extension) this.repeat,
+      @JsonKey(name: extension) this.code})
+      : super._();
 
   factory _$_Timing.fromJson(Map<String, dynamic> json) =>
       _$_$_TimingFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
+  @JsonKey(name: extension)
   final List<FhirDateTime> event;
   @override
+  @JsonKey(name: '_event')
+  final Element eventElement;
+  @override
+  @JsonKey(name: extension)
   final TimingRepeat repeat;
   @override
+  @JsonKey(name: extension)
   final CodeableConcept code;
-  @override
-  @JsonKey(name: '_event')
-  final List<Element> eventElement;
 
   @override
   String toString() {
-    return 'Timing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, event: $event, repeat: $repeat, code: $code, eventElement: $eventElement)';
+    return 'Timing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, event: $event, eventElement: $eventElement, repeat: $repeat, code: $code)';
   }
 
   @override
@@ -8130,13 +8805,13 @@ class _$_Timing implements _Timing {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.event, event) ||
                 const DeepCollectionEquality().equals(other.event, event)) &&
+            (identical(other.eventElement, eventElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.eventElement, eventElement)) &&
             (identical(other.repeat, repeat) ||
                 const DeepCollectionEquality().equals(other.repeat, repeat)) &&
             (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.eventElement, eventElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.eventElement, eventElement)));
+                const DeepCollectionEquality().equals(other.code, code)));
   }
 
   @override
@@ -8146,9 +8821,9 @@ class _$_Timing implements _Timing {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(event) ^
+      const DeepCollectionEquality().hash(eventElement) ^
       const DeepCollectionEquality().hash(repeat) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(eventElement);
+      const DeepCollectionEquality().hash(code);
 
   @override
   _$TimingCopyWith<_Timing> get copyWith =>
@@ -8160,34 +8835,40 @@ class _$_Timing implements _Timing {
   }
 }
 
-abstract class _Timing implements Timing {
-  const factory _Timing(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<FhirDateTime> event,
-      TimingRepeat repeat,
-      CodeableConcept code,
-      @JsonKey(name: '_event') List<Element> eventElement}) = _$_Timing;
+abstract class _Timing extends Timing {
+  _Timing._() : super._();
+  factory _Timing(
+      {@JsonKey(name: extension) String id,
+      @JsonKey(name: extension) List<FhirExtension> extension_,
+      @JsonKey(name: extension) List<FhirExtension> modifierExtension,
+      @JsonKey(name: extension) List<FhirDateTime> event,
+      @JsonKey(name: '_event') Element eventElement,
+      @JsonKey(name: extension) TimingRepeat repeat,
+      @JsonKey(name: extension) CodeableConcept code}) = _$_Timing;
 
   factory _Timing.fromJson(Map<String, dynamic> json) = _$_Timing.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
+  @JsonKey(name: extension)
   List<FhirDateTime> get event;
   @override
+  @JsonKey(name: '_event')
+  Element get eventElement;
+  @override
+  @JsonKey(name: extension)
   TimingRepeat get repeat;
   @override
+  @JsonKey(name: extension)
   CodeableConcept get code;
-  @override
-  @JsonKey(name: '_event')
-  List<Element> get eventElement;
   @override
   _$TimingCopyWith<_Timing> get copyWith;
 }
@@ -8200,55 +8881,72 @@ class _$TimingRepeatTearOff {
   const _$TimingRepeatTearOff();
 
   _TimingRepeat call(
-      {String id,
-      @JsonKey(name: 'extension')
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
           List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Duration boundsDuration,
-      Range boundsRange,
-      Period boundsPeriod,
-      PositiveInt count,
-      PositiveInt countMax,
-      Decimal duration,
-      Decimal durationMax,
-      @JsonKey(unknownEnumValue: RepeatDurationUnit.unknown)
-          RepeatDurationUnit durationUnit,
-      PositiveInt frequency,
-      PositiveInt frequencyMax,
-      Decimal period,
-      Decimal periodMax,
-      @JsonKey(unknownEnumValue: RepeatPeriodUnit.unknown)
-          RepeatPeriodUnit periodUnit,
-      List<Code> dayOfWeek,
-      List<Time> timeOfDay,
-      List<RepeatWhen> when,
-      UnsignedInt offset,
+      @JsonKey(name: extension)
+          List<FhirExtension> modifierExtension,
+      @JsonKey(name: extension)
+          Duration boundsDuration,
+      @JsonKey(name: extension)
+          Range boundsRange,
+      @JsonKey(name: extension)
+          Period boundsPeriod,
+      @JsonKey(name: extension)
+          PositiveInt count,
       @JsonKey(name: '_count')
           Element countElement,
+      @JsonKey(name: extension)
+          PositiveInt countMax,
       @JsonKey(name: '_countMax')
           Element countMaxElement,
+      @JsonKey(name: extension)
+          Decimal duration,
       @JsonKey(name: '_duration')
           Element durationElement,
+      @JsonKey(name: extension)
+          Decimal durationMax,
       @JsonKey(name: '_durationMax')
           Element durationMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
+          TimingRepeatDurationUnit durationUnit,
       @JsonKey(name: '_durationUnit')
           Element durationUnitElement,
+      @JsonKey(name: extension)
+          PositiveInt frequency,
       @JsonKey(name: '_frequency')
           Element frequencyElement,
+      @JsonKey(name: extension)
+          PositiveInt frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element frequencyMaxElement,
+      @JsonKey(name: extension)
+          Decimal period,
       @JsonKey(name: '_period')
           Element periodElement,
+      @JsonKey(name: extension)
+          Decimal periodMax,
       @JsonKey(name: '_periodMax')
           Element periodMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
+          TimingRepeatPeriodUnit periodUnit,
       @JsonKey(name: '_periodUnit')
           Element periodUnitElement,
+      @JsonKey(name: extension)
+          List<Code> dayOfWeek,
       @JsonKey(name: '_dayOfWeek')
-          List<Element> dayOfWeekElement,
+          Element dayOfWeekElement,
+      @JsonKey(name: extension)
+          List<Time> timeOfDay,
       @JsonKey(name: '_timeOfDay')
-          List<Element> timeOfDayElement,
+          Element timeOfDayElement,
+      @JsonKey(name: extension)
+          List<TimingRepeatWhen> when,
       @JsonKey(name: '_when')
-          List<Element> whenElement,
+          Element whenElement,
+      @JsonKey(name: extension)
+          UnsignedInt offset,
       @JsonKey(name: '_offset')
           Element offsetElement}) {
     return _TimingRepeat(
@@ -8259,32 +8957,32 @@ class _$TimingRepeatTearOff {
       boundsRange: boundsRange,
       boundsPeriod: boundsPeriod,
       count: count,
-      countMax: countMax,
-      duration: duration,
-      durationMax: durationMax,
-      durationUnit: durationUnit,
-      frequency: frequency,
-      frequencyMax: frequencyMax,
-      period: period,
-      periodMax: periodMax,
-      periodUnit: periodUnit,
-      dayOfWeek: dayOfWeek,
-      timeOfDay: timeOfDay,
-      when: when,
-      offset: offset,
       countElement: countElement,
+      countMax: countMax,
       countMaxElement: countMaxElement,
+      duration: duration,
       durationElement: durationElement,
+      durationMax: durationMax,
       durationMaxElement: durationMaxElement,
+      durationUnit: durationUnit,
       durationUnitElement: durationUnitElement,
+      frequency: frequency,
       frequencyElement: frequencyElement,
+      frequencyMax: frequencyMax,
       frequencyMaxElement: frequencyMaxElement,
+      period: period,
       periodElement: periodElement,
+      periodMax: periodMax,
       periodMaxElement: periodMaxElement,
+      periodUnit: periodUnit,
       periodUnitElement: periodUnitElement,
+      dayOfWeek: dayOfWeek,
       dayOfWeekElement: dayOfWeekElement,
+      timeOfDay: timeOfDay,
       timeOfDayElement: timeOfDayElement,
+      when: when,
       whenElement: whenElement,
+      offset: offset,
       offsetElement: offsetElement,
     );
   }
@@ -8294,55 +8992,72 @@ class _$TimingRepeatTearOff {
 const $TimingRepeat = _$TimingRepeatTearOff();
 
 mixin _$TimingRepeat {
+  @JsonKey(name: extension)
   String get id;
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
+  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
+  @JsonKey(name: extension)
   Duration get boundsDuration;
+  @JsonKey(name: extension)
   Range get boundsRange;
+  @JsonKey(name: extension)
   Period get boundsPeriod;
+  @JsonKey(name: extension)
   PositiveInt get count;
-  PositiveInt get countMax;
-  Decimal get duration;
-  Decimal get durationMax;
-  @JsonKey(unknownEnumValue: RepeatDurationUnit.unknown)
-  RepeatDurationUnit get durationUnit;
-  PositiveInt get frequency;
-  PositiveInt get frequencyMax;
-  Decimal get period;
-  Decimal get periodMax;
-  @JsonKey(unknownEnumValue: RepeatPeriodUnit.unknown)
-  RepeatPeriodUnit get periodUnit;
-  List<Code> get dayOfWeek;
-  List<Time> get timeOfDay;
-  List<RepeatWhen> get when;
-  UnsignedInt get offset;
   @JsonKey(name: '_count')
   Element get countElement;
+  @JsonKey(name: extension)
+  PositiveInt get countMax;
   @JsonKey(name: '_countMax')
   Element get countMaxElement;
+  @JsonKey(name: extension)
+  Decimal get duration;
   @JsonKey(name: '_duration')
   Element get durationElement;
+  @JsonKey(name: extension)
+  Decimal get durationMax;
   @JsonKey(name: '_durationMax')
   Element get durationMaxElement;
+  @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
+  TimingRepeatDurationUnit get durationUnit;
   @JsonKey(name: '_durationUnit')
   Element get durationUnitElement;
+  @JsonKey(name: extension)
+  PositiveInt get frequency;
   @JsonKey(name: '_frequency')
   Element get frequencyElement;
+  @JsonKey(name: extension)
+  PositiveInt get frequencyMax;
   @JsonKey(name: '_frequencyMax')
   Element get frequencyMaxElement;
+  @JsonKey(name: extension)
+  Decimal get period;
   @JsonKey(name: '_period')
   Element get periodElement;
+  @JsonKey(name: extension)
+  Decimal get periodMax;
   @JsonKey(name: '_periodMax')
   Element get periodMaxElement;
+  @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
+  TimingRepeatPeriodUnit get periodUnit;
   @JsonKey(name: '_periodUnit')
   Element get periodUnitElement;
+  @JsonKey(name: extension)
+  List<Code> get dayOfWeek;
   @JsonKey(name: '_dayOfWeek')
-  List<Element> get dayOfWeekElement;
+  Element get dayOfWeekElement;
+  @JsonKey(name: extension)
+  List<Time> get timeOfDay;
   @JsonKey(name: '_timeOfDay')
-  List<Element> get timeOfDayElement;
+  Element get timeOfDayElement;
+  @JsonKey(name: extension)
+  List<TimingRepeatWhen> get when;
   @JsonKey(name: '_when')
-  List<Element> get whenElement;
+  Element get whenElement;
+  @JsonKey(name: extension)
+  UnsignedInt get offset;
   @JsonKey(name: '_offset')
   Element get offsetElement;
 
@@ -8355,55 +9070,72 @@ abstract class $TimingRepeatCopyWith<$Res> {
           TimingRepeat value, $Res Function(TimingRepeat) then) =
       _$TimingRepeatCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension')
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
           List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Duration boundsDuration,
-      Range boundsRange,
-      Period boundsPeriod,
-      PositiveInt count,
-      PositiveInt countMax,
-      Decimal duration,
-      Decimal durationMax,
-      @JsonKey(unknownEnumValue: RepeatDurationUnit.unknown)
-          RepeatDurationUnit durationUnit,
-      PositiveInt frequency,
-      PositiveInt frequencyMax,
-      Decimal period,
-      Decimal periodMax,
-      @JsonKey(unknownEnumValue: RepeatPeriodUnit.unknown)
-          RepeatPeriodUnit periodUnit,
-      List<Code> dayOfWeek,
-      List<Time> timeOfDay,
-      List<RepeatWhen> when,
-      UnsignedInt offset,
+      @JsonKey(name: extension)
+          List<FhirExtension> modifierExtension,
+      @JsonKey(name: extension)
+          Duration boundsDuration,
+      @JsonKey(name: extension)
+          Range boundsRange,
+      @JsonKey(name: extension)
+          Period boundsPeriod,
+      @JsonKey(name: extension)
+          PositiveInt count,
       @JsonKey(name: '_count')
           Element countElement,
+      @JsonKey(name: extension)
+          PositiveInt countMax,
       @JsonKey(name: '_countMax')
           Element countMaxElement,
+      @JsonKey(name: extension)
+          Decimal duration,
       @JsonKey(name: '_duration')
           Element durationElement,
+      @JsonKey(name: extension)
+          Decimal durationMax,
       @JsonKey(name: '_durationMax')
           Element durationMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
+          TimingRepeatDurationUnit durationUnit,
       @JsonKey(name: '_durationUnit')
           Element durationUnitElement,
+      @JsonKey(name: extension)
+          PositiveInt frequency,
       @JsonKey(name: '_frequency')
           Element frequencyElement,
+      @JsonKey(name: extension)
+          PositiveInt frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element frequencyMaxElement,
+      @JsonKey(name: extension)
+          Decimal period,
       @JsonKey(name: '_period')
           Element periodElement,
+      @JsonKey(name: extension)
+          Decimal periodMax,
       @JsonKey(name: '_periodMax')
           Element periodMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
+          TimingRepeatPeriodUnit periodUnit,
       @JsonKey(name: '_periodUnit')
           Element periodUnitElement,
+      @JsonKey(name: extension)
+          List<Code> dayOfWeek,
       @JsonKey(name: '_dayOfWeek')
-          List<Element> dayOfWeekElement,
+          Element dayOfWeekElement,
+      @JsonKey(name: extension)
+          List<Time> timeOfDay,
       @JsonKey(name: '_timeOfDay')
-          List<Element> timeOfDayElement,
+          Element timeOfDayElement,
+      @JsonKey(name: extension)
+          List<TimingRepeatWhen> when,
       @JsonKey(name: '_when')
-          List<Element> whenElement,
+          Element whenElement,
+      @JsonKey(name: extension)
+          UnsignedInt offset,
       @JsonKey(name: '_offset')
           Element offsetElement});
 
@@ -8420,6 +9152,9 @@ abstract class $TimingRepeatCopyWith<$Res> {
   $ElementCopyWith<$Res> get periodElement;
   $ElementCopyWith<$Res> get periodMaxElement;
   $ElementCopyWith<$Res> get periodUnitElement;
+  $ElementCopyWith<$Res> get dayOfWeekElement;
+  $ElementCopyWith<$Res> get timeOfDayElement;
+  $ElementCopyWith<$Res> get whenElement;
   $ElementCopyWith<$Res> get offsetElement;
 }
 
@@ -8439,32 +9174,32 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
     Object boundsRange = freezed,
     Object boundsPeriod = freezed,
     Object count = freezed,
-    Object countMax = freezed,
-    Object duration = freezed,
-    Object durationMax = freezed,
-    Object durationUnit = freezed,
-    Object frequency = freezed,
-    Object frequencyMax = freezed,
-    Object period = freezed,
-    Object periodMax = freezed,
-    Object periodUnit = freezed,
-    Object dayOfWeek = freezed,
-    Object timeOfDay = freezed,
-    Object when = freezed,
-    Object offset = freezed,
     Object countElement = freezed,
+    Object countMax = freezed,
     Object countMaxElement = freezed,
+    Object duration = freezed,
     Object durationElement = freezed,
+    Object durationMax = freezed,
     Object durationMaxElement = freezed,
+    Object durationUnit = freezed,
     Object durationUnitElement = freezed,
+    Object frequency = freezed,
     Object frequencyElement = freezed,
+    Object frequencyMax = freezed,
     Object frequencyMaxElement = freezed,
+    Object period = freezed,
     Object periodElement = freezed,
+    Object periodMax = freezed,
     Object periodMaxElement = freezed,
+    Object periodUnit = freezed,
     Object periodUnitElement = freezed,
+    Object dayOfWeek = freezed,
     Object dayOfWeekElement = freezed,
+    Object timeOfDay = freezed,
     Object timeOfDayElement = freezed,
+    Object when = freezed,
     Object whenElement = freezed,
+    Object offset = freezed,
     Object offsetElement = freezed,
   }) {
     return _then(_value.copyWith(
@@ -8484,68 +9219,67 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
           ? _value.boundsPeriod
           : boundsPeriod as Period,
       count: count == freezed ? _value.count : count as PositiveInt,
-      countMax: countMax == freezed ? _value.countMax : countMax as PositiveInt,
-      duration: duration == freezed ? _value.duration : duration as Decimal,
-      durationMax:
-          durationMax == freezed ? _value.durationMax : durationMax as Decimal,
-      durationUnit: durationUnit == freezed
-          ? _value.durationUnit
-          : durationUnit as RepeatDurationUnit,
-      frequency:
-          frequency == freezed ? _value.frequency : frequency as PositiveInt,
-      frequencyMax: frequencyMax == freezed
-          ? _value.frequencyMax
-          : frequencyMax as PositiveInt,
-      period: period == freezed ? _value.period : period as Decimal,
-      periodMax: periodMax == freezed ? _value.periodMax : periodMax as Decimal,
-      periodUnit: periodUnit == freezed
-          ? _value.periodUnit
-          : periodUnit as RepeatPeriodUnit,
-      dayOfWeek:
-          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code>,
-      timeOfDay:
-          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>,
-      when: when == freezed ? _value.when : when as List<RepeatWhen>,
-      offset: offset == freezed ? _value.offset : offset as UnsignedInt,
       countElement: countElement == freezed
           ? _value.countElement
           : countElement as Element,
+      countMax: countMax == freezed ? _value.countMax : countMax as PositiveInt,
       countMaxElement: countMaxElement == freezed
           ? _value.countMaxElement
           : countMaxElement as Element,
+      duration: duration == freezed ? _value.duration : duration as Decimal,
       durationElement: durationElement == freezed
           ? _value.durationElement
           : durationElement as Element,
+      durationMax:
+          durationMax == freezed ? _value.durationMax : durationMax as Decimal,
       durationMaxElement: durationMaxElement == freezed
           ? _value.durationMaxElement
           : durationMaxElement as Element,
+      durationUnit: durationUnit == freezed
+          ? _value.durationUnit
+          : durationUnit as TimingRepeatDurationUnit,
       durationUnitElement: durationUnitElement == freezed
           ? _value.durationUnitElement
           : durationUnitElement as Element,
+      frequency:
+          frequency == freezed ? _value.frequency : frequency as PositiveInt,
       frequencyElement: frequencyElement == freezed
           ? _value.frequencyElement
           : frequencyElement as Element,
+      frequencyMax: frequencyMax == freezed
+          ? _value.frequencyMax
+          : frequencyMax as PositiveInt,
       frequencyMaxElement: frequencyMaxElement == freezed
           ? _value.frequencyMaxElement
           : frequencyMaxElement as Element,
+      period: period == freezed ? _value.period : period as Decimal,
       periodElement: periodElement == freezed
           ? _value.periodElement
           : periodElement as Element,
+      periodMax: periodMax == freezed ? _value.periodMax : periodMax as Decimal,
       periodMaxElement: periodMaxElement == freezed
           ? _value.periodMaxElement
           : periodMaxElement as Element,
+      periodUnit: periodUnit == freezed
+          ? _value.periodUnit
+          : periodUnit as TimingRepeatPeriodUnit,
       periodUnitElement: periodUnitElement == freezed
           ? _value.periodUnitElement
           : periodUnitElement as Element,
+      dayOfWeek:
+          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code>,
       dayOfWeekElement: dayOfWeekElement == freezed
           ? _value.dayOfWeekElement
-          : dayOfWeekElement as List<Element>,
+          : dayOfWeekElement as Element,
+      timeOfDay:
+          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>,
       timeOfDayElement: timeOfDayElement == freezed
           ? _value.timeOfDayElement
-          : timeOfDayElement as List<Element>,
-      whenElement: whenElement == freezed
-          ? _value.whenElement
-          : whenElement as List<Element>,
+          : timeOfDayElement as Element,
+      when: when == freezed ? _value.when : when as List<TimingRepeatWhen>,
+      whenElement:
+          whenElement == freezed ? _value.whenElement : whenElement as Element,
+      offset: offset == freezed ? _value.offset : offset as UnsignedInt,
       offsetElement: offsetElement == freezed
           ? _value.offsetElement
           : offsetElement as Element,
@@ -8683,6 +9417,36 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
   }
 
   @override
+  $ElementCopyWith<$Res> get dayOfWeekElement {
+    if (_value.dayOfWeekElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.dayOfWeekElement, (value) {
+      return _then(_value.copyWith(dayOfWeekElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get timeOfDayElement {
+    if (_value.timeOfDayElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.timeOfDayElement, (value) {
+      return _then(_value.copyWith(timeOfDayElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res> get whenElement {
+    if (_value.whenElement == null) {
+      return null;
+    }
+    return $ElementCopyWith<$Res>(_value.whenElement, (value) {
+      return _then(_value.copyWith(whenElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res> get offsetElement {
     if (_value.offsetElement == null) {
       return null;
@@ -8700,55 +9464,72 @@ abstract class _$TimingRepeatCopyWith<$Res>
       __$TimingRepeatCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension')
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
           List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Duration boundsDuration,
-      Range boundsRange,
-      Period boundsPeriod,
-      PositiveInt count,
-      PositiveInt countMax,
-      Decimal duration,
-      Decimal durationMax,
-      @JsonKey(unknownEnumValue: RepeatDurationUnit.unknown)
-          RepeatDurationUnit durationUnit,
-      PositiveInt frequency,
-      PositiveInt frequencyMax,
-      Decimal period,
-      Decimal periodMax,
-      @JsonKey(unknownEnumValue: RepeatPeriodUnit.unknown)
-          RepeatPeriodUnit periodUnit,
-      List<Code> dayOfWeek,
-      List<Time> timeOfDay,
-      List<RepeatWhen> when,
-      UnsignedInt offset,
+      @JsonKey(name: extension)
+          List<FhirExtension> modifierExtension,
+      @JsonKey(name: extension)
+          Duration boundsDuration,
+      @JsonKey(name: extension)
+          Range boundsRange,
+      @JsonKey(name: extension)
+          Period boundsPeriod,
+      @JsonKey(name: extension)
+          PositiveInt count,
       @JsonKey(name: '_count')
           Element countElement,
+      @JsonKey(name: extension)
+          PositiveInt countMax,
       @JsonKey(name: '_countMax')
           Element countMaxElement,
+      @JsonKey(name: extension)
+          Decimal duration,
       @JsonKey(name: '_duration')
           Element durationElement,
+      @JsonKey(name: extension)
+          Decimal durationMax,
       @JsonKey(name: '_durationMax')
           Element durationMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
+          TimingRepeatDurationUnit durationUnit,
       @JsonKey(name: '_durationUnit')
           Element durationUnitElement,
+      @JsonKey(name: extension)
+          PositiveInt frequency,
       @JsonKey(name: '_frequency')
           Element frequencyElement,
+      @JsonKey(name: extension)
+          PositiveInt frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element frequencyMaxElement,
+      @JsonKey(name: extension)
+          Decimal period,
       @JsonKey(name: '_period')
           Element periodElement,
+      @JsonKey(name: extension)
+          Decimal periodMax,
       @JsonKey(name: '_periodMax')
           Element periodMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
+          TimingRepeatPeriodUnit periodUnit,
       @JsonKey(name: '_periodUnit')
           Element periodUnitElement,
+      @JsonKey(name: extension)
+          List<Code> dayOfWeek,
       @JsonKey(name: '_dayOfWeek')
-          List<Element> dayOfWeekElement,
+          Element dayOfWeekElement,
+      @JsonKey(name: extension)
+          List<Time> timeOfDay,
       @JsonKey(name: '_timeOfDay')
-          List<Element> timeOfDayElement,
+          Element timeOfDayElement,
+      @JsonKey(name: extension)
+          List<TimingRepeatWhen> when,
       @JsonKey(name: '_when')
-          List<Element> whenElement,
+          Element whenElement,
+      @JsonKey(name: extension)
+          UnsignedInt offset,
       @JsonKey(name: '_offset')
           Element offsetElement});
 
@@ -8779,6 +9560,12 @@ abstract class _$TimingRepeatCopyWith<$Res>
   @override
   $ElementCopyWith<$Res> get periodUnitElement;
   @override
+  $ElementCopyWith<$Res> get dayOfWeekElement;
+  @override
+  $ElementCopyWith<$Res> get timeOfDayElement;
+  @override
+  $ElementCopyWith<$Res> get whenElement;
+  @override
   $ElementCopyWith<$Res> get offsetElement;
 }
 
@@ -8800,32 +9587,32 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
     Object boundsRange = freezed,
     Object boundsPeriod = freezed,
     Object count = freezed,
-    Object countMax = freezed,
-    Object duration = freezed,
-    Object durationMax = freezed,
-    Object durationUnit = freezed,
-    Object frequency = freezed,
-    Object frequencyMax = freezed,
-    Object period = freezed,
-    Object periodMax = freezed,
-    Object periodUnit = freezed,
-    Object dayOfWeek = freezed,
-    Object timeOfDay = freezed,
-    Object when = freezed,
-    Object offset = freezed,
     Object countElement = freezed,
+    Object countMax = freezed,
     Object countMaxElement = freezed,
+    Object duration = freezed,
     Object durationElement = freezed,
+    Object durationMax = freezed,
     Object durationMaxElement = freezed,
+    Object durationUnit = freezed,
     Object durationUnitElement = freezed,
+    Object frequency = freezed,
     Object frequencyElement = freezed,
+    Object frequencyMax = freezed,
     Object frequencyMaxElement = freezed,
+    Object period = freezed,
     Object periodElement = freezed,
+    Object periodMax = freezed,
     Object periodMaxElement = freezed,
+    Object periodUnit = freezed,
     Object periodUnitElement = freezed,
+    Object dayOfWeek = freezed,
     Object dayOfWeekElement = freezed,
+    Object timeOfDay = freezed,
     Object timeOfDayElement = freezed,
+    Object when = freezed,
     Object whenElement = freezed,
+    Object offset = freezed,
     Object offsetElement = freezed,
   }) {
     return _then(_TimingRepeat(
@@ -8845,68 +9632,67 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
           ? _value.boundsPeriod
           : boundsPeriod as Period,
       count: count == freezed ? _value.count : count as PositiveInt,
-      countMax: countMax == freezed ? _value.countMax : countMax as PositiveInt,
-      duration: duration == freezed ? _value.duration : duration as Decimal,
-      durationMax:
-          durationMax == freezed ? _value.durationMax : durationMax as Decimal,
-      durationUnit: durationUnit == freezed
-          ? _value.durationUnit
-          : durationUnit as RepeatDurationUnit,
-      frequency:
-          frequency == freezed ? _value.frequency : frequency as PositiveInt,
-      frequencyMax: frequencyMax == freezed
-          ? _value.frequencyMax
-          : frequencyMax as PositiveInt,
-      period: period == freezed ? _value.period : period as Decimal,
-      periodMax: periodMax == freezed ? _value.periodMax : periodMax as Decimal,
-      periodUnit: periodUnit == freezed
-          ? _value.periodUnit
-          : periodUnit as RepeatPeriodUnit,
-      dayOfWeek:
-          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code>,
-      timeOfDay:
-          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>,
-      when: when == freezed ? _value.when : when as List<RepeatWhen>,
-      offset: offset == freezed ? _value.offset : offset as UnsignedInt,
       countElement: countElement == freezed
           ? _value.countElement
           : countElement as Element,
+      countMax: countMax == freezed ? _value.countMax : countMax as PositiveInt,
       countMaxElement: countMaxElement == freezed
           ? _value.countMaxElement
           : countMaxElement as Element,
+      duration: duration == freezed ? _value.duration : duration as Decimal,
       durationElement: durationElement == freezed
           ? _value.durationElement
           : durationElement as Element,
+      durationMax:
+          durationMax == freezed ? _value.durationMax : durationMax as Decimal,
       durationMaxElement: durationMaxElement == freezed
           ? _value.durationMaxElement
           : durationMaxElement as Element,
+      durationUnit: durationUnit == freezed
+          ? _value.durationUnit
+          : durationUnit as TimingRepeatDurationUnit,
       durationUnitElement: durationUnitElement == freezed
           ? _value.durationUnitElement
           : durationUnitElement as Element,
+      frequency:
+          frequency == freezed ? _value.frequency : frequency as PositiveInt,
       frequencyElement: frequencyElement == freezed
           ? _value.frequencyElement
           : frequencyElement as Element,
+      frequencyMax: frequencyMax == freezed
+          ? _value.frequencyMax
+          : frequencyMax as PositiveInt,
       frequencyMaxElement: frequencyMaxElement == freezed
           ? _value.frequencyMaxElement
           : frequencyMaxElement as Element,
+      period: period == freezed ? _value.period : period as Decimal,
       periodElement: periodElement == freezed
           ? _value.periodElement
           : periodElement as Element,
+      periodMax: periodMax == freezed ? _value.periodMax : periodMax as Decimal,
       periodMaxElement: periodMaxElement == freezed
           ? _value.periodMaxElement
           : periodMaxElement as Element,
+      periodUnit: periodUnit == freezed
+          ? _value.periodUnit
+          : periodUnit as TimingRepeatPeriodUnit,
       periodUnitElement: periodUnitElement == freezed
           ? _value.periodUnitElement
           : periodUnitElement as Element,
+      dayOfWeek:
+          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code>,
       dayOfWeekElement: dayOfWeekElement == freezed
           ? _value.dayOfWeekElement
-          : dayOfWeekElement as List<Element>,
+          : dayOfWeekElement as Element,
+      timeOfDay:
+          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>,
       timeOfDayElement: timeOfDayElement == freezed
           ? _value.timeOfDayElement
-          : timeOfDayElement as List<Element>,
-      whenElement: whenElement == freezed
-          ? _value.whenElement
-          : whenElement as List<Element>,
+          : timeOfDayElement as Element,
+      when: when == freezed ? _value.when : when as List<TimingRepeatWhen>,
+      whenElement:
+          whenElement == freezed ? _value.whenElement : whenElement as Element,
+      offset: offset == freezed ? _value.offset : offset as UnsignedInt,
       offsetElement: offsetElement == freezed
           ? _value.offsetElement
           : offsetElement as Element,
@@ -8915,135 +9701,187 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_TimingRepeat implements _TimingRepeat {
-  const _$_TimingRepeat(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.boundsDuration,
-      this.boundsRange,
-      this.boundsPeriod,
-      this.count,
-      this.countMax,
-      this.duration,
-      this.durationMax,
-      @JsonKey(unknownEnumValue: RepeatDurationUnit.unknown) this.durationUnit,
-      this.frequency,
-      this.frequencyMax,
-      this.period,
-      this.periodMax,
-      @JsonKey(unknownEnumValue: RepeatPeriodUnit.unknown) this.periodUnit,
-      this.dayOfWeek,
-      this.timeOfDay,
-      this.when,
-      this.offset,
-      @JsonKey(name: '_count') this.countElement,
-      @JsonKey(name: '_countMax') this.countMaxElement,
-      @JsonKey(name: '_duration') this.durationElement,
-      @JsonKey(name: '_durationMax') this.durationMaxElement,
-      @JsonKey(name: '_durationUnit') this.durationUnitElement,
-      @JsonKey(name: '_frequency') this.frequencyElement,
-      @JsonKey(name: '_frequencyMax') this.frequencyMaxElement,
-      @JsonKey(name: '_period') this.periodElement,
-      @JsonKey(name: '_periodMax') this.periodMaxElement,
-      @JsonKey(name: '_periodUnit') this.periodUnitElement,
-      @JsonKey(name: '_dayOfWeek') this.dayOfWeekElement,
-      @JsonKey(name: '_timeOfDay') this.timeOfDayElement,
-      @JsonKey(name: '_when') this.whenElement,
-      @JsonKey(name: '_offset') this.offsetElement});
+class _$_TimingRepeat extends _TimingRepeat {
+  _$_TimingRepeat(
+      {@JsonKey(name: extension)
+          this.id,
+      @JsonKey(name: extension)
+          this.extension_,
+      @JsonKey(name: extension)
+          this.modifierExtension,
+      @JsonKey(name: extension)
+          this.boundsDuration,
+      @JsonKey(name: extension)
+          this.boundsRange,
+      @JsonKey(name: extension)
+          this.boundsPeriod,
+      @JsonKey(name: extension)
+          this.count,
+      @JsonKey(name: '_count')
+          this.countElement,
+      @JsonKey(name: extension)
+          this.countMax,
+      @JsonKey(name: '_countMax')
+          this.countMaxElement,
+      @JsonKey(name: extension)
+          this.duration,
+      @JsonKey(name: '_duration')
+          this.durationElement,
+      @JsonKey(name: extension)
+          this.durationMax,
+      @JsonKey(name: '_durationMax')
+          this.durationMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
+          this.durationUnit,
+      @JsonKey(name: '_durationUnit')
+          this.durationUnitElement,
+      @JsonKey(name: extension)
+          this.frequency,
+      @JsonKey(name: '_frequency')
+          this.frequencyElement,
+      @JsonKey(name: extension)
+          this.frequencyMax,
+      @JsonKey(name: '_frequencyMax')
+          this.frequencyMaxElement,
+      @JsonKey(name: extension)
+          this.period,
+      @JsonKey(name: '_period')
+          this.periodElement,
+      @JsonKey(name: extension)
+          this.periodMax,
+      @JsonKey(name: '_periodMax')
+          this.periodMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
+          this.periodUnit,
+      @JsonKey(name: '_periodUnit')
+          this.periodUnitElement,
+      @JsonKey(name: extension)
+          this.dayOfWeek,
+      @JsonKey(name: '_dayOfWeek')
+          this.dayOfWeekElement,
+      @JsonKey(name: extension)
+          this.timeOfDay,
+      @JsonKey(name: '_timeOfDay')
+          this.timeOfDayElement,
+      @JsonKey(name: extension)
+          this.when,
+      @JsonKey(name: '_when')
+          this.whenElement,
+      @JsonKey(name: extension)
+          this.offset,
+      @JsonKey(name: '_offset')
+          this.offsetElement})
+      : super._();
 
   factory _$_TimingRepeat.fromJson(Map<String, dynamic> json) =>
       _$_$_TimingRepeatFromJson(json);
 
   @override
+  @JsonKey(name: extension)
   final String id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   final List<FhirExtension> extension_;
   @override
+  @JsonKey(name: extension)
   final List<FhirExtension> modifierExtension;
   @override
+  @JsonKey(name: extension)
   final Duration boundsDuration;
   @override
+  @JsonKey(name: extension)
   final Range boundsRange;
   @override
+  @JsonKey(name: extension)
   final Period boundsPeriod;
   @override
+  @JsonKey(name: extension)
   final PositiveInt count;
-  @override
-  final PositiveInt countMax;
-  @override
-  final Decimal duration;
-  @override
-  final Decimal durationMax;
-  @override
-  @JsonKey(unknownEnumValue: RepeatDurationUnit.unknown)
-  final RepeatDurationUnit durationUnit;
-  @override
-  final PositiveInt frequency;
-  @override
-  final PositiveInt frequencyMax;
-  @override
-  final Decimal period;
-  @override
-  final Decimal periodMax;
-  @override
-  @JsonKey(unknownEnumValue: RepeatPeriodUnit.unknown)
-  final RepeatPeriodUnit periodUnit;
-  @override
-  final List<Code> dayOfWeek;
-  @override
-  final List<Time> timeOfDay;
-  @override
-  final List<RepeatWhen> when;
-  @override
-  final UnsignedInt offset;
   @override
   @JsonKey(name: '_count')
   final Element countElement;
   @override
+  @JsonKey(name: extension)
+  final PositiveInt countMax;
+  @override
   @JsonKey(name: '_countMax')
   final Element countMaxElement;
+  @override
+  @JsonKey(name: extension)
+  final Decimal duration;
   @override
   @JsonKey(name: '_duration')
   final Element durationElement;
   @override
+  @JsonKey(name: extension)
+  final Decimal durationMax;
+  @override
   @JsonKey(name: '_durationMax')
   final Element durationMaxElement;
+  @override
+  @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
+  final TimingRepeatDurationUnit durationUnit;
   @override
   @JsonKey(name: '_durationUnit')
   final Element durationUnitElement;
   @override
+  @JsonKey(name: extension)
+  final PositiveInt frequency;
+  @override
   @JsonKey(name: '_frequency')
   final Element frequencyElement;
+  @override
+  @JsonKey(name: extension)
+  final PositiveInt frequencyMax;
   @override
   @JsonKey(name: '_frequencyMax')
   final Element frequencyMaxElement;
   @override
+  @JsonKey(name: extension)
+  final Decimal period;
+  @override
   @JsonKey(name: '_period')
   final Element periodElement;
+  @override
+  @JsonKey(name: extension)
+  final Decimal periodMax;
   @override
   @JsonKey(name: '_periodMax')
   final Element periodMaxElement;
   @override
+  @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
+  final TimingRepeatPeriodUnit periodUnit;
+  @override
   @JsonKey(name: '_periodUnit')
   final Element periodUnitElement;
   @override
+  @JsonKey(name: extension)
+  final List<Code> dayOfWeek;
+  @override
   @JsonKey(name: '_dayOfWeek')
-  final List<Element> dayOfWeekElement;
+  final Element dayOfWeekElement;
+  @override
+  @JsonKey(name: extension)
+  final List<Time> timeOfDay;
   @override
   @JsonKey(name: '_timeOfDay')
-  final List<Element> timeOfDayElement;
+  final Element timeOfDayElement;
+  @override
+  @JsonKey(name: extension)
+  final List<TimingRepeatWhen> when;
   @override
   @JsonKey(name: '_when')
-  final List<Element> whenElement;
+  final Element whenElement;
+  @override
+  @JsonKey(name: extension)
+  final UnsignedInt offset;
   @override
   @JsonKey(name: '_offset')
   final Element offsetElement;
 
   @override
   String toString() {
-    return 'TimingRepeat(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, boundsDuration: $boundsDuration, boundsRange: $boundsRange, boundsPeriod: $boundsPeriod, count: $count, countMax: $countMax, duration: $duration, durationMax: $durationMax, durationUnit: $durationUnit, frequency: $frequency, frequencyMax: $frequencyMax, period: $period, periodMax: $periodMax, periodUnit: $periodUnit, dayOfWeek: $dayOfWeek, timeOfDay: $timeOfDay, when: $when, offset: $offset, countElement: $countElement, countMaxElement: $countMaxElement, durationElement: $durationElement, durationMaxElement: $durationMaxElement, durationUnitElement: $durationUnitElement, frequencyElement: $frequencyElement, frequencyMaxElement: $frequencyMaxElement, periodElement: $periodElement, periodMaxElement: $periodMaxElement, periodUnitElement: $periodUnitElement, dayOfWeekElement: $dayOfWeekElement, timeOfDayElement: $timeOfDayElement, whenElement: $whenElement, offsetElement: $offsetElement)';
+    return 'TimingRepeat(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, boundsDuration: $boundsDuration, boundsRange: $boundsRange, boundsPeriod: $boundsPeriod, count: $count, countElement: $countElement, countMax: $countMax, countMaxElement: $countMaxElement, duration: $duration, durationElement: $durationElement, durationMax: $durationMax, durationMaxElement: $durationMaxElement, durationUnit: $durationUnit, durationUnitElement: $durationUnitElement, frequency: $frequency, frequencyElement: $frequencyElement, frequencyMax: $frequencyMax, frequencyMaxElement: $frequencyMaxElement, period: $period, periodElement: $periodElement, periodMax: $periodMax, periodMaxElement: $periodMaxElement, periodUnit: $periodUnit, periodUnitElement: $periodUnitElement, dayOfWeek: $dayOfWeek, dayOfWeekElement: $dayOfWeekElement, timeOfDay: $timeOfDay, timeOfDayElement: $timeOfDayElement, when: $when, whenElement: $whenElement, offset: $offset, offsetElement: $offsetElement)';
   }
 
   @override
@@ -9069,63 +9907,63 @@ class _$_TimingRepeat implements _TimingRepeat {
                     .equals(other.boundsPeriod, boundsPeriod)) &&
             (identical(other.count, count) ||
                 const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.countMax, countMax) ||
-                const DeepCollectionEquality()
-                    .equals(other.countMax, countMax)) &&
-            (identical(other.duration, duration) ||
-                const DeepCollectionEquality()
-                    .equals(other.duration, duration)) &&
-            (identical(other.durationMax, durationMax) ||
-                const DeepCollectionEquality()
-                    .equals(other.durationMax, durationMax)) &&
-            (identical(other.durationUnit, durationUnit) ||
-                const DeepCollectionEquality()
-                    .equals(other.durationUnit, durationUnit)) &&
-            (identical(other.frequency, frequency) ||
-                const DeepCollectionEquality()
-                    .equals(other.frequency, frequency)) &&
-            (identical(other.frequencyMax, frequencyMax) ||
-                const DeepCollectionEquality()
-                    .equals(other.frequencyMax, frequencyMax)) &&
-            (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)) &&
-            (identical(other.periodMax, periodMax) ||
-                const DeepCollectionEquality()
-                    .equals(other.periodMax, periodMax)) &&
-            (identical(other.periodUnit, periodUnit) ||
-                const DeepCollectionEquality()
-                    .equals(other.periodUnit, periodUnit)) &&
-            (identical(other.dayOfWeek, dayOfWeek) ||
-                const DeepCollectionEquality()
-                    .equals(other.dayOfWeek, dayOfWeek)) &&
-            (identical(other.timeOfDay, timeOfDay) ||
-                const DeepCollectionEquality()
-                    .equals(other.timeOfDay, timeOfDay)) &&
-            (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)) &&
-            (identical(other.offset, offset) ||
-                const DeepCollectionEquality().equals(other.offset, offset)) &&
             (identical(other.countElement, countElement) ||
                 const DeepCollectionEquality()
                     .equals(other.countElement, countElement)) &&
+            (identical(other.countMax, countMax) ||
+                const DeepCollectionEquality()
+                    .equals(other.countMax, countMax)) &&
             (identical(other.countMaxElement, countMaxElement) ||
                 const DeepCollectionEquality()
                     .equals(other.countMaxElement, countMaxElement)) &&
+            (identical(other.duration, duration) ||
+                const DeepCollectionEquality()
+                    .equals(other.duration, duration)) &&
             (identical(other.durationElement, durationElement) ||
                 const DeepCollectionEquality()
                     .equals(other.durationElement, durationElement)) &&
+            (identical(other.durationMax, durationMax) ||
+                const DeepCollectionEquality()
+                    .equals(other.durationMax, durationMax)) &&
             (identical(other.durationMaxElement, durationMaxElement) ||
                 const DeepCollectionEquality()
                     .equals(other.durationMaxElement, durationMaxElement)) &&
-            (identical(other.durationUnitElement, durationUnitElement) || const DeepCollectionEquality().equals(other.durationUnitElement, durationUnitElement)) &&
-            (identical(other.frequencyElement, frequencyElement) || const DeepCollectionEquality().equals(other.frequencyElement, frequencyElement)) &&
-            (identical(other.frequencyMaxElement, frequencyMaxElement) || const DeepCollectionEquality().equals(other.frequencyMaxElement, frequencyMaxElement)) &&
-            (identical(other.periodElement, periodElement) || const DeepCollectionEquality().equals(other.periodElement, periodElement)) &&
+            (identical(other.durationUnit, durationUnit) ||
+                const DeepCollectionEquality()
+                    .equals(other.durationUnit, durationUnit)) &&
+            (identical(other.durationUnitElement, durationUnitElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.durationUnitElement, durationUnitElement)) &&
+            (identical(other.frequency, frequency) ||
+                const DeepCollectionEquality()
+                    .equals(other.frequency, frequency)) &&
+            (identical(other.frequencyElement, frequencyElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.frequencyElement, frequencyElement)) &&
+            (identical(other.frequencyMax, frequencyMax) ||
+                const DeepCollectionEquality()
+                    .equals(other.frequencyMax, frequencyMax)) &&
+            (identical(other.frequencyMaxElement, frequencyMaxElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.frequencyMaxElement, frequencyMaxElement)) &&
+            (identical(other.period, period) ||
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.periodElement, periodElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.periodElement, periodElement)) &&
+            (identical(other.periodMax, periodMax) ||
+                const DeepCollectionEquality()
+                    .equals(other.periodMax, periodMax)) &&
             (identical(other.periodMaxElement, periodMaxElement) || const DeepCollectionEquality().equals(other.periodMaxElement, periodMaxElement)) &&
+            (identical(other.periodUnit, periodUnit) || const DeepCollectionEquality().equals(other.periodUnit, periodUnit)) &&
             (identical(other.periodUnitElement, periodUnitElement) || const DeepCollectionEquality().equals(other.periodUnitElement, periodUnitElement)) &&
+            (identical(other.dayOfWeek, dayOfWeek) || const DeepCollectionEquality().equals(other.dayOfWeek, dayOfWeek)) &&
             (identical(other.dayOfWeekElement, dayOfWeekElement) || const DeepCollectionEquality().equals(other.dayOfWeekElement, dayOfWeekElement)) &&
+            (identical(other.timeOfDay, timeOfDay) || const DeepCollectionEquality().equals(other.timeOfDay, timeOfDay)) &&
             (identical(other.timeOfDayElement, timeOfDayElement) || const DeepCollectionEquality().equals(other.timeOfDayElement, timeOfDayElement)) &&
+            (identical(other.when, when) || const DeepCollectionEquality().equals(other.when, when)) &&
             (identical(other.whenElement, whenElement) || const DeepCollectionEquality().equals(other.whenElement, whenElement)) &&
+            (identical(other.offset, offset) || const DeepCollectionEquality().equals(other.offset, offset)) &&
             (identical(other.offsetElement, offsetElement) || const DeepCollectionEquality().equals(other.offsetElement, offsetElement)));
   }
 
@@ -9139,32 +9977,32 @@ class _$_TimingRepeat implements _TimingRepeat {
       const DeepCollectionEquality().hash(boundsRange) ^
       const DeepCollectionEquality().hash(boundsPeriod) ^
       const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(countMax) ^
-      const DeepCollectionEquality().hash(duration) ^
-      const DeepCollectionEquality().hash(durationMax) ^
-      const DeepCollectionEquality().hash(durationUnit) ^
-      const DeepCollectionEquality().hash(frequency) ^
-      const DeepCollectionEquality().hash(frequencyMax) ^
-      const DeepCollectionEquality().hash(period) ^
-      const DeepCollectionEquality().hash(periodMax) ^
-      const DeepCollectionEquality().hash(periodUnit) ^
-      const DeepCollectionEquality().hash(dayOfWeek) ^
-      const DeepCollectionEquality().hash(timeOfDay) ^
-      const DeepCollectionEquality().hash(when) ^
-      const DeepCollectionEquality().hash(offset) ^
       const DeepCollectionEquality().hash(countElement) ^
+      const DeepCollectionEquality().hash(countMax) ^
       const DeepCollectionEquality().hash(countMaxElement) ^
+      const DeepCollectionEquality().hash(duration) ^
       const DeepCollectionEquality().hash(durationElement) ^
+      const DeepCollectionEquality().hash(durationMax) ^
       const DeepCollectionEquality().hash(durationMaxElement) ^
+      const DeepCollectionEquality().hash(durationUnit) ^
       const DeepCollectionEquality().hash(durationUnitElement) ^
+      const DeepCollectionEquality().hash(frequency) ^
       const DeepCollectionEquality().hash(frequencyElement) ^
+      const DeepCollectionEquality().hash(frequencyMax) ^
       const DeepCollectionEquality().hash(frequencyMaxElement) ^
+      const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(periodElement) ^
+      const DeepCollectionEquality().hash(periodMax) ^
       const DeepCollectionEquality().hash(periodMaxElement) ^
+      const DeepCollectionEquality().hash(periodUnit) ^
       const DeepCollectionEquality().hash(periodUnitElement) ^
+      const DeepCollectionEquality().hash(dayOfWeek) ^
       const DeepCollectionEquality().hash(dayOfWeekElement) ^
+      const DeepCollectionEquality().hash(timeOfDay) ^
       const DeepCollectionEquality().hash(timeOfDayElement) ^
+      const DeepCollectionEquality().hash(when) ^
       const DeepCollectionEquality().hash(whenElement) ^
+      const DeepCollectionEquality().hash(offset) ^
       const DeepCollectionEquality().hash(offsetElement);
 
   @override
@@ -9177,57 +10015,75 @@ class _$_TimingRepeat implements _TimingRepeat {
   }
 }
 
-abstract class _TimingRepeat implements TimingRepeat {
-  const factory _TimingRepeat(
-      {String id,
-      @JsonKey(name: 'extension')
+abstract class _TimingRepeat extends TimingRepeat {
+  _TimingRepeat._() : super._();
+  factory _TimingRepeat(
+      {@JsonKey(name: extension)
+          String id,
+      @JsonKey(name: extension)
           List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Duration boundsDuration,
-      Range boundsRange,
-      Period boundsPeriod,
-      PositiveInt count,
-      PositiveInt countMax,
-      Decimal duration,
-      Decimal durationMax,
-      @JsonKey(unknownEnumValue: RepeatDurationUnit.unknown)
-          RepeatDurationUnit durationUnit,
-      PositiveInt frequency,
-      PositiveInt frequencyMax,
-      Decimal period,
-      Decimal periodMax,
-      @JsonKey(unknownEnumValue: RepeatPeriodUnit.unknown)
-          RepeatPeriodUnit periodUnit,
-      List<Code> dayOfWeek,
-      List<Time> timeOfDay,
-      List<RepeatWhen> when,
-      UnsignedInt offset,
+      @JsonKey(name: extension)
+          List<FhirExtension> modifierExtension,
+      @JsonKey(name: extension)
+          Duration boundsDuration,
+      @JsonKey(name: extension)
+          Range boundsRange,
+      @JsonKey(name: extension)
+          Period boundsPeriod,
+      @JsonKey(name: extension)
+          PositiveInt count,
       @JsonKey(name: '_count')
           Element countElement,
+      @JsonKey(name: extension)
+          PositiveInt countMax,
       @JsonKey(name: '_countMax')
           Element countMaxElement,
+      @JsonKey(name: extension)
+          Decimal duration,
       @JsonKey(name: '_duration')
           Element durationElement,
+      @JsonKey(name: extension)
+          Decimal durationMax,
       @JsonKey(name: '_durationMax')
           Element durationMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
+          TimingRepeatDurationUnit durationUnit,
       @JsonKey(name: '_durationUnit')
           Element durationUnitElement,
+      @JsonKey(name: extension)
+          PositiveInt frequency,
       @JsonKey(name: '_frequency')
           Element frequencyElement,
+      @JsonKey(name: extension)
+          PositiveInt frequencyMax,
       @JsonKey(name: '_frequencyMax')
           Element frequencyMaxElement,
+      @JsonKey(name: extension)
+          Decimal period,
       @JsonKey(name: '_period')
           Element periodElement,
+      @JsonKey(name: extension)
+          Decimal periodMax,
       @JsonKey(name: '_periodMax')
           Element periodMaxElement,
+      @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
+          TimingRepeatPeriodUnit periodUnit,
       @JsonKey(name: '_periodUnit')
           Element periodUnitElement,
+      @JsonKey(name: extension)
+          List<Code> dayOfWeek,
       @JsonKey(name: '_dayOfWeek')
-          List<Element> dayOfWeekElement,
+          Element dayOfWeekElement,
+      @JsonKey(name: extension)
+          List<Time> timeOfDay,
       @JsonKey(name: '_timeOfDay')
-          List<Element> timeOfDayElement,
+          Element timeOfDayElement,
+      @JsonKey(name: extension)
+          List<TimingRepeatWhen> when,
       @JsonKey(name: '_when')
-          List<Element> whenElement,
+          Element whenElement,
+      @JsonKey(name: extension)
+          UnsignedInt offset,
       @JsonKey(name: '_offset')
           Element offsetElement}) = _$_TimingRepeat;
 
@@ -9235,87 +10091,104 @@ abstract class _TimingRepeat implements TimingRepeat {
       _$_TimingRepeat.fromJson;
 
   @override
+  @JsonKey(name: extension)
   String get id;
   @override
-  @JsonKey(name: 'extension')
+  @JsonKey(name: extension)
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(name: extension)
   List<FhirExtension> get modifierExtension;
   @override
+  @JsonKey(name: extension)
   Duration get boundsDuration;
   @override
+  @JsonKey(name: extension)
   Range get boundsRange;
   @override
+  @JsonKey(name: extension)
   Period get boundsPeriod;
   @override
+  @JsonKey(name: extension)
   PositiveInt get count;
-  @override
-  PositiveInt get countMax;
-  @override
-  Decimal get duration;
-  @override
-  Decimal get durationMax;
-  @override
-  @JsonKey(unknownEnumValue: RepeatDurationUnit.unknown)
-  RepeatDurationUnit get durationUnit;
-  @override
-  PositiveInt get frequency;
-  @override
-  PositiveInt get frequencyMax;
-  @override
-  Decimal get period;
-  @override
-  Decimal get periodMax;
-  @override
-  @JsonKey(unknownEnumValue: RepeatPeriodUnit.unknown)
-  RepeatPeriodUnit get periodUnit;
-  @override
-  List<Code> get dayOfWeek;
-  @override
-  List<Time> get timeOfDay;
-  @override
-  List<RepeatWhen> get when;
-  @override
-  UnsignedInt get offset;
   @override
   @JsonKey(name: '_count')
   Element get countElement;
   @override
+  @JsonKey(name: extension)
+  PositiveInt get countMax;
+  @override
   @JsonKey(name: '_countMax')
   Element get countMaxElement;
+  @override
+  @JsonKey(name: extension)
+  Decimal get duration;
   @override
   @JsonKey(name: '_duration')
   Element get durationElement;
   @override
+  @JsonKey(name: extension)
+  Decimal get durationMax;
+  @override
   @JsonKey(name: '_durationMax')
   Element get durationMaxElement;
+  @override
+  @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
+  TimingRepeatDurationUnit get durationUnit;
   @override
   @JsonKey(name: '_durationUnit')
   Element get durationUnitElement;
   @override
+  @JsonKey(name: extension)
+  PositiveInt get frequency;
+  @override
   @JsonKey(name: '_frequency')
   Element get frequencyElement;
+  @override
+  @JsonKey(name: extension)
+  PositiveInt get frequencyMax;
   @override
   @JsonKey(name: '_frequencyMax')
   Element get frequencyMaxElement;
   @override
+  @JsonKey(name: extension)
+  Decimal get period;
+  @override
   @JsonKey(name: '_period')
   Element get periodElement;
+  @override
+  @JsonKey(name: extension)
+  Decimal get periodMax;
   @override
   @JsonKey(name: '_periodMax')
   Element get periodMaxElement;
   @override
+  @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
+  TimingRepeatPeriodUnit get periodUnit;
+  @override
   @JsonKey(name: '_periodUnit')
   Element get periodUnitElement;
   @override
+  @JsonKey(name: extension)
+  List<Code> get dayOfWeek;
+  @override
   @JsonKey(name: '_dayOfWeek')
-  List<Element> get dayOfWeekElement;
+  Element get dayOfWeekElement;
+  @override
+  @JsonKey(name: extension)
+  List<Time> get timeOfDay;
   @override
   @JsonKey(name: '_timeOfDay')
-  List<Element> get timeOfDayElement;
+  Element get timeOfDayElement;
+  @override
+  @JsonKey(name: extension)
+  List<TimingRepeatWhen> get when;
   @override
   @JsonKey(name: '_when')
-  List<Element> get whenElement;
+  Element get whenElement;
+  @override
+  @JsonKey(name: extension)
+  UnsignedInt get offset;
   @override
   @JsonKey(name: '_offset')
   Element get offsetElement;

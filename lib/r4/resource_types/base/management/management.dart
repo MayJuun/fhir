@@ -1,342 +1,365 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '../../../../fhir_r4.dart';
+
+import 'management.enums.dart';
+part 'management.freezed.dart';
+part 'management.g.dart';
+
 @freezed
-abstract class Encounter implements Encounter, Resource {
-factoryEncounter({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-statusHistory statusHistory,
-class class,
-classHistory classHistory,
-type type,
-serviceType serviceType,
-priority priority,
-subject subject,
-episodeOfCare episodeOfCare,
-basedOn basedOn,
-participant participant,
-appointment appointment,
-period period,
-length length,
-reasonCode reasonCode,
-reasonReference reasonReference,
-diagnosis diagnosis,
-account account,
-hospitalization hospitalization,
-location location,
-serviceProvider serviceProvider,
-partOf partOf,
-}) = _Encounter
+abstract class Encounter implements _$Encounter , Resource {
+Encounter._();
+factory Encounter({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  List<EncounterStatusHistory> statusHistory,
+  @required Coding class,
+  List<EncounterClassHistory> classHistory,
+  List<CodeableConcept> type,
+  CodeableConcept serviceType,
+  CodeableConcept priority,
+  Reference subject,
+  List<Reference> episodeOfCare,
+  List<Reference> basedOn,
+  List<EncounterParticipant> participant,
+  List<Reference> appointment,
+  Period period,
+  Duration length,
+  List<CodeableConcept> reasonCode,
+  List<Reference> reasonReference,
+  List<EncounterDiagnosis> diagnosis,
+  List<Reference> account,
+  EncounterHospitalization hospitalization,
+  List<EncounterLocation> location,
+  Reference serviceProvider,
+  Reference partOf,
+}) = _Encounter;
 
  factory Encounter.fromJson(Map<String,dynamic> json) => _$EncounterFromJson(json);
 }
 
 @freezed
-abstract class EncounterStatusHistory implements EncounterStatusHistory, Resource {
-factoryEncounterStatusHistory({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-status status,
-_status _status,
-period period,
-}) = _EncounterStatusHistory
+abstract class EncounterStatusHistory implements _$EncounterStatusHistory  {
+EncounterStatusHistory._();
+factory EncounterStatusHistory({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+@JsonKey(unknownEnumValue: EncounterStatusHistoryStatus.unknown) EncounterStatusHistoryStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  @required Period period,
+}) = _EncounterStatusHistory;
 
  factory EncounterStatusHistory.fromJson(Map<String,dynamic> json) => _$EncounterStatusHistoryFromJson(json);
 }
 
 @freezed
-abstract class EncounterClassHistory implements EncounterClassHistory, Resource {
-factoryEncounterClassHistory({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-class class,
-period period,
-}) = _EncounterClassHistory
+abstract class EncounterClassHistory implements _$EncounterClassHistory  {
+EncounterClassHistory._();
+factory EncounterClassHistory({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required Coding class,
+  @required Period period,
+}) = _EncounterClassHistory;
 
  factory EncounterClassHistory.fromJson(Map<String,dynamic> json) => _$EncounterClassHistoryFromJson(json);
 }
 
 @freezed
-abstract class EncounterParticipant implements EncounterParticipant, Resource {
-factoryEncounterParticipant({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-period period,
-individual individual,
-}) = _EncounterParticipant
+abstract class EncounterParticipant implements _$EncounterParticipant  {
+EncounterParticipant._();
+factory EncounterParticipant({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ List<CodeableConcept> type,
+ Period period,
+ Reference individual,
+}) = _EncounterParticipant;
 
  factory EncounterParticipant.fromJson(Map<String,dynamic> json) => _$EncounterParticipantFromJson(json);
 }
 
 @freezed
-abstract class EncounterDiagnosis implements EncounterDiagnosis, Resource {
-factoryEncounterDiagnosis({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-condition condition,
-use use,
-rank rank,
-_rank _rank,
-}) = _EncounterDiagnosis
+abstract class EncounterDiagnosis implements _$EncounterDiagnosis  {
+EncounterDiagnosis._();
+factory EncounterDiagnosis({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required Reference condition,
+  CodeableConcept use,
+  PositiveInt rank,
+  @JsonKey(name: '_rank')   Element rankElement,
+}) = _EncounterDiagnosis;
 
  factory EncounterDiagnosis.fromJson(Map<String,dynamic> json) => _$EncounterDiagnosisFromJson(json);
 }
 
 @freezed
-abstract class EncounterHospitalization implements EncounterHospitalization, Resource {
-factoryEncounterHospitalization({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-preAdmissionIdentifier preAdmissionIdentifier,
-origin origin,
-admitSource admitSource,
-reAdmission reAdmission,
-dietPreference dietPreference,
-specialCourtesy specialCourtesy,
-specialArrangement specialArrangement,
-destination destination,
-dischargeDisposition dischargeDisposition,
-}) = _EncounterHospitalization
+abstract class EncounterHospitalization implements _$EncounterHospitalization  {
+EncounterHospitalization._();
+factory EncounterHospitalization({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Identifier preAdmissionIdentifier,
+ Reference origin,
+ CodeableConcept admitSource,
+ CodeableConcept reAdmission,
+ List<CodeableConcept> dietPreference,
+ List<CodeableConcept> specialCourtesy,
+ List<CodeableConcept> specialArrangement,
+ Reference destination,
+ CodeableConcept dischargeDisposition,
+}) = _EncounterHospitalization;
 
  factory EncounterHospitalization.fromJson(Map<String,dynamic> json) => _$EncounterHospitalizationFromJson(json);
 }
 
 @freezed
-abstract class EncounterLocation implements EncounterLocation, Resource {
-factoryEncounterLocation({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-location location,
-status status,
-_status _status,
-physicalType physicalType,
-period period,
-}) = _EncounterLocation
+abstract class EncounterLocation implements _$EncounterLocation  {
+EncounterLocation._();
+factory EncounterLocation({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required Reference location,
+@JsonKey(unknownEnumValue: EncounterLocationStatus.unknown) EncounterLocationStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  CodeableConcept physicalType,
+  Period period,
+}) = _EncounterLocation;
 
  factory EncounterLocation.fromJson(Map<String,dynamic> json) => _$EncounterLocationFromJson(json);
 }
 
 @freezed
-abstract class EpisodeOfCare implements EpisodeOfCare, Resource {
-factoryEpisodeOfCare({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-statusHistory statusHistory,
-type type,
-diagnosis diagnosis,
-patient patient,
-managingOrganization managingOrganization,
-period period,
-referralRequest referralRequest,
-careManager careManager,
-team team,
-account account,
-}) = _EpisodeOfCare
+abstract class EpisodeOfCare implements _$EpisodeOfCare , Resource {
+EpisodeOfCare._();
+factory EpisodeOfCare({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown) EpisodeOfCareStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  List<EpisodeOfCareStatusHistory> statusHistory,
+  List<CodeableConcept> type,
+  List<EpisodeOfCareDiagnosis> diagnosis,
+  @required Reference patient,
+  Reference managingOrganization,
+  Period period,
+  List<Reference> referralRequest,
+  Reference careManager,
+  List<Reference> team,
+  List<Reference> account,
+}) = _EpisodeOfCare;
 
  factory EpisodeOfCare.fromJson(Map<String,dynamic> json) => _$EpisodeOfCareFromJson(json);
 }
 
 @freezed
-abstract class EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory, Resource {
-factoryEpisodeOfCareStatusHistory({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-status status,
-_status _status,
-period period,
-}) = _EpisodeOfCareStatusHistory
+abstract class EpisodeOfCareStatusHistory implements _$EpisodeOfCareStatusHistory  {
+EpisodeOfCareStatusHistory._();
+factory EpisodeOfCareStatusHistory({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+@JsonKey(unknownEnumValue: EpisodeOfCareStatusHistoryStatus.unknown) EpisodeOfCareStatusHistoryStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  @required Period period,
+}) = _EpisodeOfCareStatusHistory;
 
  factory EpisodeOfCareStatusHistory.fromJson(Map<String,dynamic> json) => _$EpisodeOfCareStatusHistoryFromJson(json);
 }
 
 @freezed
-abstract class EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis, Resource {
-factoryEpisodeOfCareDiagnosis({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-condition condition,
-role role,
-rank rank,
-_rank _rank,
-}) = _EpisodeOfCareDiagnosis
+abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis  {
+EpisodeOfCareDiagnosis._();
+factory EpisodeOfCareDiagnosis({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required Reference condition,
+  CodeableConcept role,
+  PositiveInt rank,
+  @JsonKey(name: '_rank')   Element rankElement,
+}) = _EpisodeOfCareDiagnosis;
 
  factory EpisodeOfCareDiagnosis.fromJson(Map<String,dynamic> json) => _$EpisodeOfCareDiagnosisFromJson(json);
 }
 
 @freezed
-abstract class Flag implements Flag, Resource {
-factoryFlag({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-category category,
-code code,
-subject subject,
-period period,
-encounter encounter,
-author author,
-}) = _Flag
+abstract class Flag implements _$Flag , Resource {
+Flag._();
+factory Flag({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  List<CodeableConcept> category,
+  @required CodeableConcept code,
+  @required Reference subject,
+  Period period,
+  Reference encounter,
+  Reference author,
+}) = _Flag;
 
  factory Flag.fromJson(Map<String,dynamic> json) => _$FlagFromJson(json);
 }
 
 @freezed
-abstract class Library implements Library, Resource {
-factoryLibrary({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-url url,
-_url _url,
-identifier identifier,
-version version,
-_version _version,
-name name,
-_name _name,
-title title,
-_title _title,
-subtitle subtitle,
-_subtitle _subtitle,
-status status,
-_status _status,
-experimental experimental,
-_experimental _experimental,
-type type,
-subjectCodeableConcept subjectCodeableConcept,
-subjectReference subjectReference,
-date date,
-_date _date,
-publisher publisher,
-_publisher _publisher,
-contact contact,
-description description,
-_description _description,
-useContext useContext,
-jurisdiction jurisdiction,
-purpose purpose,
-_purpose _purpose,
-usage usage,
-_usage _usage,
-copyright copyright,
-_copyright _copyright,
-approvalDate approvalDate,
-_approvalDate _approvalDate,
-lastReviewDate lastReviewDate,
-_lastReviewDate _lastReviewDate,
-effectivePeriod effectivePeriod,
-topic topic,
-author author,
-editor editor,
-reviewer reviewer,
-endorser endorser,
-relatedArtifact relatedArtifact,
-parameter parameter,
-dataRequirement dataRequirement,
-content content,
-}) = _Library
+abstract class Library implements _$Library , Resource {
+Library._();
+factory Library({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  FhirUri url,
+  @JsonKey(name: '_url')   Element urlElement,
+  List<Identifier> identifier,
+  String version,
+  @JsonKey(name: '_version')   Element versionElement,
+  String name,
+  @JsonKey(name: '_name')   Element nameElement,
+  String title,
+  @JsonKey(name: '_title')   Element titleElement,
+  String subtitle,
+  @JsonKey(name: '_subtitle')   Element subtitleElement,
+@JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  Boolean experimental,
+  @JsonKey(name: '_experimental')   Element experimentalElement,
+  @required CodeableConcept type,
+  CodeableConcept subjectCodeableConcept,
+  Reference subjectReference,
+  FhirDateTime date,
+  @JsonKey(name: '_date')   Element dateElement,
+  String publisher,
+  @JsonKey(name: '_publisher')   Element publisherElement,
+  List<ContactDetail> contact,
+  Markdown description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  List<UsageContext> useContext,
+  List<CodeableConcept> jurisdiction,
+  Markdown purpose,
+  @JsonKey(name: '_purpose')   Element purposeElement,
+  String usage,
+  @JsonKey(name: '_usage')   Element usageElement,
+  Markdown copyright,
+  @JsonKey(name: '_copyright')   Element copyrightElement,
+  Date approvalDate,
+  @JsonKey(name: '_approvalDate')   Element approvalDateElement,
+  Date lastReviewDate,
+  @JsonKey(name: '_lastReviewDate')   Element lastReviewDateElement,
+  Period effectivePeriod,
+  List<CodeableConcept> topic,
+  List<ContactDetail> author,
+  List<ContactDetail> editor,
+  List<ContactDetail> reviewer,
+  List<ContactDetail> endorser,
+  List<RelatedArtifact> relatedArtifact,
+  List<ParameterDefinition> parameter,
+  List<DataRequirement> dataRequirement,
+  List<Attachment> content,
+}) = _Library;
 
  factory Library.fromJson(Map<String,dynamic> json) => _$LibraryFromJson(json);
 }
 
 @freezed
-abstract class List implements List, Resource {
-factoryList({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-mode mode,
-_mode _mode,
-title title,
-_title _title,
-code code,
-subject subject,
-encounter encounter,
-date date,
-_date _date,
-source source,
-orderedBy orderedBy,
-note note,
-entry entry,
-emptyReason emptyReason,
-}) = _List
+abstract class List_ implements _$List_ , Resource {
+List_._();
+factory List_({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: List_Status.unknown) List_Status status,
+  @JsonKey(name: '_status')   Element statusElement,
+@JsonKey(unknownEnumValue: List_Mode.unknown) List_Mode mode,
+  @JsonKey(name: '_mode')   Element modeElement,
+  String title,
+  @JsonKey(name: '_title')   Element titleElement,
+  CodeableConcept code,
+  Reference subject,
+  Reference encounter,
+  FhirDateTime date,
+  @JsonKey(name: '_date')   Element dateElement,
+  Reference source,
+  CodeableConcept orderedBy,
+  List<Annotation> note,
+  List<ListEntry> entry,
+  CodeableConcept emptyReason,
+}) = _List_;
 
- factory List.fromJson(Map<String,dynamic> json) => _$ListFromJson(json);
+ factory List_.fromJson(Map<String,dynamic> json) => _$List_FromJson(json);
 }
 
 @freezed
-abstract class ListEntry implements ListEntry, Resource {
-factoryListEntry({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-flag flag,
-deleted deleted,
-_deleted _deleted,
-date date,
-_date _date,
-item item,
-}) = _ListEntry
+abstract class ListEntry implements _$ListEntry  {
+ListEntry._();
+factory ListEntry({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  CodeableConcept flag,
+  Boolean deleted,
+  @JsonKey(name: '_deleted')   Element deletedElement,
+  FhirDateTime date,
+  @JsonKey(name: '_date')   Element dateElement,
+  @required Reference item,
+}) = _ListEntry;
 
  factory ListEntry.fromJson(Map<String,dynamic> json) => _$ListEntryFromJson(json);
 }

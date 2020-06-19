@@ -1,1274 +1,1338 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
+
+import '../../../../fhir_r4.dart';
+
+part 'general.freezed.dart';
+part 'general.g.dart';
+
 @freezed
-abstract class Account implements Account, Resource {
-factoryAccount({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-type type,
-name name,
-_name _name,
-subject subject,
-servicePeriod servicePeriod,
-coverage coverage,
-owner owner,
-description description,
-_description _description,
-guarantor guarantor,
-partOf partOf,
-}) = _Account
+abstract class Account implements _$Account , Resource {
+Account._();
+factory Account({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  CodeableConcept type,
+  String name,
+  @JsonKey(name: '_name')   Element nameElement,
+  List<Reference> subject,
+  Period servicePeriod,
+  List<AccountCoverage> coverage,
+  Reference owner,
+  String description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  List<AccountGuarantor> guarantor,
+  Reference partOf,
+}) = _Account;
 
  factory Account.fromJson(Map<String,dynamic> json) => _$AccountFromJson(json);
 }
 
 @freezed
-abstract class AccountCoverage implements AccountCoverage, Resource {
-factoryAccountCoverage({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-coverage coverage,
-priority priority,
-_priority _priority,
-}) = _AccountCoverage
+abstract class AccountCoverage implements _$AccountCoverage  {
+AccountCoverage._();
+factory AccountCoverage({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required Reference coverage,
+  PositiveInt priority,
+  @JsonKey(name: '_priority')   Element priorityElement,
+}) = _AccountCoverage;
 
  factory AccountCoverage.fromJson(Map<String,dynamic> json) => _$AccountCoverageFromJson(json);
 }
 
 @freezed
-abstract class AccountGuarantor implements AccountGuarantor, Resource {
-factoryAccountGuarantor({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-party party,
-onHold onHold,
-_onHold _onHold,
-period period,
-}) = _AccountGuarantor
+abstract class AccountGuarantor implements _$AccountGuarantor  {
+AccountGuarantor._();
+factory AccountGuarantor({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required Reference party,
+  Boolean onHold,
+  @JsonKey(name: '_onHold')   Element onHoldElement,
+  Period period,
+}) = _AccountGuarantor;
 
  factory AccountGuarantor.fromJson(Map<String,dynamic> json) => _$AccountGuarantorFromJson(json);
 }
 
 @freezed
-abstract class ChargeItem implements ChargeItem, Resource {
-factoryChargeItem({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-definitionUri definitionUri,
-_definitionUri _definitionUri,
-definitionCanonical definitionCanonical,
-status status,
-_status _status,
-partOf partOf,
-code code,
-subject subject,
-context context,
-occurrenceDateTime occurrenceDateTime,
-_occurrenceDateTime _occurrenceDateTime,
-occurrencePeriod occurrencePeriod,
-occurrenceTiming occurrenceTiming,
-performer performer,
-performingOrganization performingOrganization,
-requestingOrganization requestingOrganization,
-costCenter costCenter,
-quantity quantity,
-bodysite bodysite,
-factorOverride factorOverride,
-_factorOverride _factorOverride,
-priceOverride priceOverride,
-overrideReason overrideReason,
-_overrideReason _overrideReason,
-enterer enterer,
-enteredDate enteredDate,
-_enteredDate _enteredDate,
-reason reason,
-service service,
-productReference productReference,
-productCodeableConcept productCodeableConcept,
-account account,
-note note,
-supportingInformation supportingInformation,
-}) = _ChargeItem
+abstract class ChargeItem implements _$ChargeItem , Resource {
+ChargeItem._();
+factory ChargeItem({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  List<FhirUri> definitionUri,
+  @JsonKey(name: '_definitionUri')   Element definitionUriElement,
+  List<Canonical> definitionCanonical,
+@JsonKey(unknownEnumValue: ChargeItemStatus.unknown) ChargeItemStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  List<Reference> partOf,
+  @required CodeableConcept code,
+  @required Reference subject,
+  Reference context,
+  FhirDateTime occurrenceDateTime,
+  @JsonKey(name: '_occurrenceDateTime')   Element occurrenceDateTimeElement,
+  Period occurrencePeriod,
+  Timing occurrenceTiming,
+  List<ChargeItemPerformer> performer,
+  Reference performingOrganization,
+  Reference requestingOrganization,
+  Reference costCenter,
+  Quantity quantity,
+  List<CodeableConcept> bodysite,
+  Decimal factorOverride,
+  @JsonKey(name: '_factorOverride')   Element factorOverrideElement,
+  Money priceOverride,
+  String overrideReason,
+  @JsonKey(name: '_overrideReason')   Element overrideReasonElement,
+  Reference enterer,
+  FhirDateTime enteredDate,
+  @JsonKey(name: '_enteredDate')   Element enteredDateElement,
+  List<CodeableConcept> reason,
+  List<Reference> service,
+  Reference productReference,
+  CodeableConcept productCodeableConcept,
+  List<Reference> account,
+  List<Annotation> note,
+  List<Reference> supportingInformation,
+}) = _ChargeItem;
 
  factory ChargeItem.fromJson(Map<String,dynamic> json) => _$ChargeItemFromJson(json);
 }
 
 @freezed
-abstract class ChargeItemPerformer implements ChargeItemPerformer, Resource {
-factoryChargeItemPerformer({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-function function,
-actor actor,
-}) = _ChargeItemPerformer
+abstract class ChargeItemPerformer implements _$ChargeItemPerformer  {
+ChargeItemPerformer._();
+factory ChargeItemPerformer({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  CodeableConcept function,
+  @required Reference actor,
+}) = _ChargeItemPerformer;
 
  factory ChargeItemPerformer.fromJson(Map<String,dynamic> json) => _$ChargeItemPerformerFromJson(json);
 }
 
 @freezed
-abstract class ChargeItemDefinition implements ChargeItemDefinition, Resource {
-factoryChargeItemDefinition({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-url url,
-_url _url,
-identifier identifier,
-version version,
-_version _version,
-title title,
-_title _title,
-derivedFromUri derivedFromUri,
-_derivedFromUri _derivedFromUri,
-partOf partOf,
-replaces replaces,
-status status,
-_status _status,
-experimental experimental,
-_experimental _experimental,
-date date,
-_date _date,
-publisher publisher,
-_publisher _publisher,
-contact contact,
-description description,
-_description _description,
-useContext useContext,
-jurisdiction jurisdiction,
-copyright copyright,
-_copyright _copyright,
-approvalDate approvalDate,
-_approvalDate _approvalDate,
-lastReviewDate lastReviewDate,
-_lastReviewDate _lastReviewDate,
-effectivePeriod effectivePeriod,
-code code,
-instance instance,
-applicability applicability,
-propertyGroup propertyGroup,
-}) = _ChargeItemDefinition
+abstract class ChargeItemDefinition implements _$ChargeItemDefinition , Resource {
+ChargeItemDefinition._();
+factory ChargeItemDefinition({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  FhirUri url,
+  @JsonKey(name: '_url')   Element urlElement,
+  List<Identifier> identifier,
+  String version,
+  @JsonKey(name: '_version')   Element versionElement,
+  String title,
+  @JsonKey(name: '_title')   Element titleElement,
+  List<FhirUri> derivedFromUri,
+  @JsonKey(name: '_derivedFromUri')   Element derivedFromUriElement,
+  List<Canonical> partOf,
+  List<Canonical> replaces,
+@JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown) ChargeItemDefinitionStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  Boolean experimental,
+  @JsonKey(name: '_experimental')   Element experimentalElement,
+  FhirDateTime date,
+  @JsonKey(name: '_date')   Element dateElement,
+  String publisher,
+  @JsonKey(name: '_publisher')   Element publisherElement,
+  List<ContactDetail> contact,
+  Markdown description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  List<UsageContext> useContext,
+  List<CodeableConcept> jurisdiction,
+  Markdown copyright,
+  @JsonKey(name: '_copyright')   Element copyrightElement,
+  Date approvalDate,
+  @JsonKey(name: '_approvalDate')   Element approvalDateElement,
+  Date lastReviewDate,
+  @JsonKey(name: '_lastReviewDate')   Element lastReviewDateElement,
+  Period effectivePeriod,
+  CodeableConcept code,
+  List<Reference> instance,
+  List<ChargeItemDefinitionApplicability> applicability,
+  List<ChargeItemDefinitionPropertyGroup> propertyGroup,
+}) = _ChargeItemDefinition;
 
  factory ChargeItemDefinition.fromJson(Map<String,dynamic> json) => _$ChargeItemDefinitionFromJson(json);
 }
 
 @freezed
-abstract class ChargeItemDefinitionApplicability implements ChargeItemDefinitionApplicability, Resource {
-factoryChargeItemDefinitionApplicability({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-description description,
-_description _description,
-language language,
-_language _language,
-expression expression,
-_expression _expression,
-}) = _ChargeItemDefinitionApplicability
+abstract class ChargeItemDefinitionApplicability implements _$ChargeItemDefinitionApplicability  {
+ChargeItemDefinitionApplicability._();
+factory ChargeItemDefinitionApplicability({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ String description,
+  @JsonKey(name: '_description')  Element descriptionElement,
+ String language,
+  @JsonKey(name: '_language')  Element languageElement,
+ String expression,
+  @JsonKey(name: '_expression')  Element expressionElement,
+}) = _ChargeItemDefinitionApplicability;
 
  factory ChargeItemDefinitionApplicability.fromJson(Map<String,dynamic> json) => _$ChargeItemDefinitionApplicabilityFromJson(json);
 }
 
 @freezed
-abstract class ChargeItemDefinitionPropertyGroup implements ChargeItemDefinitionPropertyGroup, Resource {
-factoryChargeItemDefinitionPropertyGroup({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-applicability applicability,
-priceComponent priceComponent,
-}) = _ChargeItemDefinitionPropertyGroup
+abstract class ChargeItemDefinitionPropertyGroup implements _$ChargeItemDefinitionPropertyGroup  {
+ChargeItemDefinitionPropertyGroup._();
+factory ChargeItemDefinitionPropertyGroup({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ List<ChargeItemDefinitionApplicability> applicability,
+ List<ChargeItemDefinitionPriceComponent> priceComponent,
+}) = _ChargeItemDefinitionPropertyGroup;
 
  factory ChargeItemDefinitionPropertyGroup.fromJson(Map<String,dynamic> json) => _$ChargeItemDefinitionPropertyGroupFromJson(json);
 }
 
 @freezed
-abstract class ChargeItemDefinitionPriceComponent implements ChargeItemDefinitionPriceComponent, Resource {
-factoryChargeItemDefinitionPriceComponent({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-_type _type,
-code code,
-factor factor,
-_factor _factor,
-amount amount,
-}) = _ChargeItemDefinitionPriceComponent
+abstract class ChargeItemDefinitionPriceComponent implements _$ChargeItemDefinitionPriceComponent  {
+ChargeItemDefinitionPriceComponent._();
+factory ChargeItemDefinitionPriceComponent({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Code type,
+  @JsonKey(name: '_type')  Element typeElement,
+ CodeableConcept code,
+ Decimal factor,
+  @JsonKey(name: '_factor')  Element factorElement,
+ Money amount,
+}) = _ChargeItemDefinitionPriceComponent;
 
  factory ChargeItemDefinitionPriceComponent.fromJson(Map<String,dynamic> json) => _$ChargeItemDefinitionPriceComponentFromJson(json);
 }
 
 @freezed
-abstract class Contract implements Contract, Resource {
-factoryContract({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-url url,
-_url _url,
-version version,
-_version _version,
-status status,
-_status _status,
-legalState legalState,
-instantiatesCanonical instantiatesCanonical,
-instantiatesUri instantiatesUri,
-_instantiatesUri _instantiatesUri,
-contentDerivative contentDerivative,
-issued issued,
-_issued _issued,
-applies applies,
-expirationType expirationType,
-subject subject,
-authority authority,
-domain domain,
-site site,
-name name,
-_name _name,
-title title,
-_title _title,
-subtitle subtitle,
-_subtitle _subtitle,
-alias alias,
-_alias _alias,
-author author,
-scope scope,
-topicCodeableConcept topicCodeableConcept,
-topicReference topicReference,
-type type,
-subType subType,
-contentDefinition contentDefinition,
-term term,
-supportingInfo supportingInfo,
-relevantHistory relevantHistory,
-signer signer,
-friendly friendly,
-legal legal,
-rule rule,
-legallyBindingAttachment legallyBindingAttachment,
-legallyBindingReference legallyBindingReference,
-}) = _Contract
+abstract class Contract implements _$Contract , Resource {
+Contract._();
+factory Contract({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+  FhirUri url,
+  @JsonKey(name: '_url')   Element urlElement,
+  String version,
+  @JsonKey(name: '_version')   Element versionElement,
+  Code status,
+  @JsonKey(name: '_status')   Element statusElement,
+  CodeableConcept legalState,
+  Reference instantiatesCanonical,
+  FhirUri instantiatesUri,
+  @JsonKey(name: '_instantiatesUri')   Element instantiatesUriElement,
+  CodeableConcept contentDerivative,
+  FhirDateTime issued,
+  @JsonKey(name: '_issued')   Element issuedElement,
+  Period applies,
+  CodeableConcept expirationType,
+  List<Reference> subject,
+  List<Reference> authority,
+  List<Reference> domain,
+  List<Reference> site,
+  String name,
+  @JsonKey(name: '_name')   Element nameElement,
+  String title,
+  @JsonKey(name: '_title')   Element titleElement,
+  String subtitle,
+  @JsonKey(name: '_subtitle')   Element subtitleElement,
+  List<String> alias,
+  @JsonKey(name: '_alias')   Element aliasElement,
+  Reference author,
+  CodeableConcept scope,
+  CodeableConcept topicCodeableConcept,
+  Reference topicReference,
+  CodeableConcept type,
+  List<CodeableConcept> subType,
+  ContractContentDefinition contentDefinition,
+  List<ContractTerm> term,
+  List<Reference> supportingInfo,
+  List<Reference> relevantHistory,
+  List<ContractSigner> signer,
+  List<ContractFriendly> friendly,
+  List<ContractLegal> legal,
+  List<ContractRule> rule,
+  Attachment legallyBindingAttachment,
+  Reference legallyBindingReference,
+}) = _Contract;
 
  factory Contract.fromJson(Map<String,dynamic> json) => _$ContractFromJson(json);
 }
 
 @freezed
-abstract class ContractContentDefinition implements ContractContentDefinition, Resource {
-factoryContractContentDefinition({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-subType subType,
-publisher publisher,
-publicationDate publicationDate,
-_publicationDate _publicationDate,
-publicationStatus publicationStatus,
-_publicationStatus _publicationStatus,
-copyright copyright,
-_copyright _copyright,
-}) = _ContractContentDefinition
+abstract class ContractContentDefinition implements _$ContractContentDefinition  {
+ContractContentDefinition._();
+factory ContractContentDefinition({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept type,
+  CodeableConcept subType,
+  Reference publisher,
+  FhirDateTime publicationDate,
+  @JsonKey(name: '_publicationDate')   Element publicationDateElement,
+  Code publicationStatus,
+  @JsonKey(name: '_publicationStatus')   Element publicationStatusElement,
+  Markdown copyright,
+  @JsonKey(name: '_copyright')   Element copyrightElement,
+}) = _ContractContentDefinition;
 
  factory ContractContentDefinition.fromJson(Map<String,dynamic> json) => _$ContractContentDefinitionFromJson(json);
 }
 
 @freezed
-abstract class ContractTerm implements ContractTerm, Resource {
-factoryContractTerm({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-issued issued,
-_issued _issued,
-applies applies,
-topicCodeableConcept topicCodeableConcept,
-topicReference topicReference,
-type type,
-subType subType,
-text text,
-_text _text,
-securityLabel securityLabel,
-offer offer,
-asset asset,
-action action,
-group group,
-}) = _ContractTerm
+abstract class ContractTerm implements _$ContractTerm  {
+ContractTerm._();
+factory ContractTerm({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Identifier identifier,
+  FhirDateTime issued,
+  @JsonKey(name: '_issued')   Element issuedElement,
+  Period applies,
+  CodeableConcept topicCodeableConcept,
+  Reference topicReference,
+  CodeableConcept type,
+  CodeableConcept subType,
+  String text,
+  @JsonKey(name: '_text')   Element textElement,
+  List<ContractSecurityLabel> securityLabel,
+  @required ContractOffer offer,
+  List<ContractAsset> asset,
+  List<ContractAction> action,
+  List<ContractTerm> group,
+}) = _ContractTerm;
 
  factory ContractTerm.fromJson(Map<String,dynamic> json) => _$ContractTermFromJson(json);
 }
 
 @freezed
-abstract class ContractSecurityLabel implements ContractSecurityLabel, Resource {
-factoryContractSecurityLabel({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-number number,
-_number _number,
-classification classification,
-category category,
-control control,
-}) = _ContractSecurityLabel
+abstract class ContractSecurityLabel implements _$ContractSecurityLabel  {
+ContractSecurityLabel._();
+factory ContractSecurityLabel({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<UnsignedInt> number,
+  @JsonKey(name: '_number')   Element numberElement,
+  @required Coding classification,
+  List<Coding> category,
+  List<Coding> control,
+}) = _ContractSecurityLabel;
 
  factory ContractSecurityLabel.fromJson(Map<String,dynamic> json) => _$ContractSecurityLabelFromJson(json);
 }
 
 @freezed
-abstract class ContractOffer implements ContractOffer, Resource {
-factoryContractOffer({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-party party,
-topic topic,
-type type,
-decision decision,
-decisionMode decisionMode,
-answer answer,
-text text,
-_text _text,
-linkId linkId,
-_linkId _linkId,
-securityLabelNumber securityLabelNumber,
-_securityLabelNumber _securityLabelNumber,
-}) = _ContractOffer
+abstract class ContractOffer implements _$ContractOffer  {
+ContractOffer._();
+factory ContractOffer({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ List<Identifier> identifier,
+ List<ContractParty> party,
+ Reference topic,
+ CodeableConcept type,
+ CodeableConcept decision,
+ List<CodeableConcept> decisionMode,
+ List<ContractAnswer> answer,
+ String text,
+  @JsonKey(name: '_text')  Element textElement,
+ List<String> linkId,
+  @JsonKey(name: '_linkId')  Element linkIdElement,
+ List<UnsignedInt> securityLabelNumber,
+  @JsonKey(name: '_securityLabelNumber')  Element securityLabelNumberElement,
+}) = _ContractOffer;
 
  factory ContractOffer.fromJson(Map<String,dynamic> json) => _$ContractOfferFromJson(json);
 }
 
 @freezed
-abstract class ContractParty implements ContractParty, Resource {
-factoryContractParty({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-reference reference,
-role role,
-}) = _ContractParty
+abstract class ContractParty implements _$ContractParty  {
+ContractParty._();
+factory ContractParty({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required List<Reference> reference,
+  @required CodeableConcept role,
+}) = _ContractParty;
 
  factory ContractParty.fromJson(Map<String,dynamic> json) => _$ContractPartyFromJson(json);
 }
 
 @freezed
-abstract class ContractAnswer implements ContractAnswer, Resource {
-factoryContractAnswer({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-valueBoolean valueBoolean,
-_valueBoolean _valueBoolean,
-valueDecimal valueDecimal,
-_valueDecimal _valueDecimal,
-valueInteger valueInteger,
-_valueInteger _valueInteger,
-valueDate valueDate,
-_valueDate _valueDate,
-valueDateTime valueDateTime,
-_valueDateTime _valueDateTime,
-valueTime valueTime,
-_valueTime _valueTime,
-valueString valueString,
-_valueString _valueString,
-valueUri valueUri,
-_valueUri _valueUri,
-valueAttachment valueAttachment,
-valueCoding valueCoding,
-valueQuantity valueQuantity,
-valueReference valueReference,
-}) = _ContractAnswer
+abstract class ContractAnswer implements _$ContractAnswer  {
+ContractAnswer._();
+factory ContractAnswer({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Boolean valueBoolean,
+  @JsonKey(name: '_valueBoolean')  Element valueBooleanElement,
+ Decimal valueDecimal,
+  @JsonKey(name: '_valueDecimal')  Element valueDecimalElement,
+ Integer valueInteger,
+  @JsonKey(name: '_valueInteger')  Element valueIntegerElement,
+ Date valueDate,
+  @JsonKey(name: '_valueDate')  Element valueDateElement,
+ FhirDateTime valueDateTime,
+  @JsonKey(name: '_valueDateTime')  Element valueDateTimeElement,
+ Time valueTime,
+  @JsonKey(name: '_valueTime')  Element valueTimeElement,
+ String valueString,
+  @JsonKey(name: '_valueString')  Element valueStringElement,
+ FhirUri valueUri,
+  @JsonKey(name: '_valueUri')  Element valueUriElement,
+ Attachment valueAttachment,
+ Coding valueCoding,
+ Quantity valueQuantity,
+ Reference valueReference,
+}) = _ContractAnswer;
 
  factory ContractAnswer.fromJson(Map<String,dynamic> json) => _$ContractAnswerFromJson(json);
 }
 
 @freezed
-abstract class ContractAsset implements ContractAsset, Resource {
-factoryContractAsset({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-scope scope,
-type type,
-typeReference typeReference,
-subtype subtype,
-relationship relationship,
-context context,
-condition condition,
-_condition _condition,
-periodType periodType,
-period period,
-usePeriod usePeriod,
-text text,
-_text _text,
-linkId linkId,
-_linkId _linkId,
-answer answer,
-securityLabelNumber securityLabelNumber,
-_securityLabelNumber _securityLabelNumber,
-valuedItem valuedItem,
-}) = _ContractAsset
+abstract class ContractAsset implements _$ContractAsset  {
+ContractAsset._();
+factory ContractAsset({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept scope,
+ List<CodeableConcept> type,
+ List<Reference> typeReference,
+ List<CodeableConcept> subtype,
+ Coding relationship,
+ List<ContractContext> context,
+ String condition,
+  @JsonKey(name: '_condition')  Element conditionElement,
+ List<CodeableConcept> periodType,
+ List<Period> period,
+ List<Period> usePeriod,
+ String text,
+  @JsonKey(name: '_text')  Element textElement,
+ List<String> linkId,
+  @JsonKey(name: '_linkId')  Element linkIdElement,
+ List<ContractAnswer> answer,
+ List<UnsignedInt> securityLabelNumber,
+  @JsonKey(name: '_securityLabelNumber')  Element securityLabelNumberElement,
+ List<ContractValuedItem> valuedItem,
+}) = _ContractAsset;
 
  factory ContractAsset.fromJson(Map<String,dynamic> json) => _$ContractAssetFromJson(json);
 }
 
 @freezed
-abstract class ContractContext implements ContractContext, Resource {
-factoryContractContext({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-reference reference,
-code code,
-text text,
-_text _text,
-}) = _ContractContext
+abstract class ContractContext implements _$ContractContext  {
+ContractContext._();
+factory ContractContext({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Reference reference,
+ List<CodeableConcept> code,
+ String text,
+  @JsonKey(name: '_text')  Element textElement,
+}) = _ContractContext;
 
  factory ContractContext.fromJson(Map<String,dynamic> json) => _$ContractContextFromJson(json);
 }
 
 @freezed
-abstract class ContractValuedItem implements ContractValuedItem, Resource {
-factoryContractValuedItem({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-entityCodeableConcept entityCodeableConcept,
-entityReference entityReference,
-identifier identifier,
-effectiveTime effectiveTime,
-_effectiveTime _effectiveTime,
-quantity quantity,
-unitPrice unitPrice,
-factor factor,
-_factor _factor,
-points points,
-_points _points,
-net net,
-payment payment,
-_payment _payment,
-paymentDate paymentDate,
-_paymentDate _paymentDate,
-responsible responsible,
-recipient recipient,
-linkId linkId,
-_linkId _linkId,
-securityLabelNumber securityLabelNumber,
-_securityLabelNumber _securityLabelNumber,
-}) = _ContractValuedItem
+abstract class ContractValuedItem implements _$ContractValuedItem  {
+ContractValuedItem._();
+factory ContractValuedItem({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept entityCodeableConcept,
+ Reference entityReference,
+ Identifier identifier,
+ FhirDateTime effectiveTime,
+  @JsonKey(name: '_effectiveTime')  Element effectiveTimeElement,
+ Quantity quantity,
+ Money unitPrice,
+ Decimal factor,
+  @JsonKey(name: '_factor')  Element factorElement,
+ Decimal points,
+  @JsonKey(name: '_points')  Element pointsElement,
+ Money net,
+ String payment,
+  @JsonKey(name: '_payment')  Element paymentElement,
+ FhirDateTime paymentDate,
+  @JsonKey(name: '_paymentDate')  Element paymentDateElement,
+ Reference responsible,
+ Reference recipient,
+ List<String> linkId,
+  @JsonKey(name: '_linkId')  Element linkIdElement,
+ List<UnsignedInt> securityLabelNumber,
+  @JsonKey(name: '_securityLabelNumber')  Element securityLabelNumberElement,
+}) = _ContractValuedItem;
 
  factory ContractValuedItem.fromJson(Map<String,dynamic> json) => _$ContractValuedItemFromJson(json);
 }
 
 @freezed
-abstract class ContractAction implements ContractAction, Resource {
-factoryContractAction({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-doNotPerform doNotPerform,
-_doNotPerform _doNotPerform,
-type type,
-subject subject,
-intent intent,
-linkId linkId,
-_linkId _linkId,
-status status,
-context context,
-contextLinkId contextLinkId,
-_contextLinkId _contextLinkId,
-occurrenceDateTime occurrenceDateTime,
-_occurrenceDateTime _occurrenceDateTime,
-occurrencePeriod occurrencePeriod,
-occurrenceTiming occurrenceTiming,
-requester requester,
-requesterLinkId requesterLinkId,
-_requesterLinkId _requesterLinkId,
-performerType performerType,
-performerRole performerRole,
-performer performer,
-performerLinkId performerLinkId,
-_performerLinkId _performerLinkId,
-reasonCode reasonCode,
-reasonReference reasonReference,
-reason reason,
-_reason _reason,
-reasonLinkId reasonLinkId,
-_reasonLinkId _reasonLinkId,
-note note,
-securityLabelNumber securityLabelNumber,
-_securityLabelNumber _securityLabelNumber,
-}) = _ContractAction
+abstract class ContractAction implements _$ContractAction  {
+ContractAction._();
+factory ContractAction({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Boolean doNotPerform,
+  @JsonKey(name: '_doNotPerform')   Element doNotPerformElement,
+  @required CodeableConcept type,
+  List<ContractSubject> subject,
+  @required CodeableConcept intent,
+  List<String> linkId,
+  @JsonKey(name: '_linkId')   Element linkIdElement,
+  @required CodeableConcept status,
+  Reference context,
+  List<String> contextLinkId,
+  @JsonKey(name: '_contextLinkId')   Element contextLinkIdElement,
+  FhirDateTime occurrenceDateTime,
+  @JsonKey(name: '_occurrenceDateTime')   Element occurrenceDateTimeElement,
+  Period occurrencePeriod,
+  Timing occurrenceTiming,
+  List<Reference> requester,
+  List<String> requesterLinkId,
+  @JsonKey(name: '_requesterLinkId')   Element requesterLinkIdElement,
+  List<CodeableConcept> performerType,
+  CodeableConcept performerRole,
+  Reference performer,
+  List<String> performerLinkId,
+  @JsonKey(name: '_performerLinkId')   Element performerLinkIdElement,
+  List<CodeableConcept> reasonCode,
+  List<Reference> reasonReference,
+  List<String> reason,
+  @JsonKey(name: '_reason')   Element reasonElement,
+  List<String> reasonLinkId,
+  @JsonKey(name: '_reasonLinkId')   Element reasonLinkIdElement,
+  List<Annotation> note,
+  List<UnsignedInt> securityLabelNumber,
+  @JsonKey(name: '_securityLabelNumber')   Element securityLabelNumberElement,
+}) = _ContractAction;
 
  factory ContractAction.fromJson(Map<String,dynamic> json) => _$ContractActionFromJson(json);
 }
 
 @freezed
-abstract class ContractSubject implements ContractSubject, Resource {
-factoryContractSubject({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-reference reference,
-role role,
-}) = _ContractSubject
+abstract class ContractSubject implements _$ContractSubject  {
+ContractSubject._();
+factory ContractSubject({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required List<Reference> reference,
+  CodeableConcept role,
+}) = _ContractSubject;
 
  factory ContractSubject.fromJson(Map<String,dynamic> json) => _$ContractSubjectFromJson(json);
 }
 
 @freezed
-abstract class ContractSigner implements ContractSigner, Resource {
-factoryContractSigner({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-party party,
-signature signature,
-}) = _ContractSigner
+abstract class ContractSigner implements _$ContractSigner  {
+ContractSigner._();
+factory ContractSigner({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required Coding type,
+  @required Reference party,
+  @required List<Signature> signature,
+}) = _ContractSigner;
 
  factory ContractSigner.fromJson(Map<String,dynamic> json) => _$ContractSignerFromJson(json);
 }
 
 @freezed
-abstract class ContractFriendly implements ContractFriendly, Resource {
-factoryContractFriendly({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-contentAttachment contentAttachment,
-contentReference contentReference,
-}) = _ContractFriendly
+abstract class ContractFriendly implements _$ContractFriendly  {
+ContractFriendly._();
+factory ContractFriendly({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Attachment contentAttachment,
+ Reference contentReference,
+}) = _ContractFriendly;
 
  factory ContractFriendly.fromJson(Map<String,dynamic> json) => _$ContractFriendlyFromJson(json);
 }
 
 @freezed
-abstract class ContractLegal implements ContractLegal, Resource {
-factoryContractLegal({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-contentAttachment contentAttachment,
-contentReference contentReference,
-}) = _ContractLegal
+abstract class ContractLegal implements _$ContractLegal  {
+ContractLegal._();
+factory ContractLegal({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Attachment contentAttachment,
+ Reference contentReference,
+}) = _ContractLegal;
 
  factory ContractLegal.fromJson(Map<String,dynamic> json) => _$ContractLegalFromJson(json);
 }
 
 @freezed
-abstract class ContractRule implements ContractRule, Resource {
-factoryContractRule({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-contentAttachment contentAttachment,
-contentReference contentReference,
-}) = _ContractRule
+abstract class ContractRule implements _$ContractRule  {
+ContractRule._();
+factory ContractRule({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Attachment contentAttachment,
+ Reference contentReference,
+}) = _ContractRule;
 
  factory ContractRule.fromJson(Map<String,dynamic> json) => _$ContractRuleFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefit implements ExplanationOfBenefit, Resource {
-factoryExplanationOfBenefit({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-type type,
-subType subType,
-use use,
-_use _use,
-patient patient,
-billablePeriod billablePeriod,
-created created,
-_created _created,
-enterer enterer,
-insurer insurer,
-provider provider,
-priority priority,
-fundsReserveRequested fundsReserveRequested,
-fundsReserve fundsReserve,
-related related,
-prescription prescription,
-originalPrescription originalPrescription,
-payee payee,
-referral referral,
-facility facility,
-claim claim,
-claimResponse claimResponse,
-outcome outcome,
-_outcome _outcome,
-disposition disposition,
-_disposition _disposition,
-preAuthRef preAuthRef,
-_preAuthRef _preAuthRef,
-preAuthRefPeriod preAuthRefPeriod,
-careTeam careTeam,
-supportingInfo supportingInfo,
-diagnosis diagnosis,
-procedure procedure,
-precedence precedence,
-_precedence _precedence,
-insurance insurance,
-accident accident,
-item item,
-addItem addItem,
-adjudication adjudication,
-total total,
-payment payment,
-formCode formCode,
-form form,
-processNote processNote,
-benefitPeriod benefitPeriod,
-benefitBalance benefitBalance,
-}) = _ExplanationOfBenefit
+abstract class ExplanationOfBenefit implements _$ExplanationOfBenefit , Resource {
+ExplanationOfBenefit._();
+factory ExplanationOfBenefit({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown) ExplanationOfBenefitStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  @required CodeableConcept type,
+  CodeableConcept subType,
+  Code use,
+  @JsonKey(name: '_use')   Element useElement,
+  @required Reference patient,
+  Period billablePeriod,
+  FhirDateTime created,
+  @JsonKey(name: '_created')   Element createdElement,
+  Reference enterer,
+  @required Reference insurer,
+  @required Reference provider,
+  CodeableConcept priority,
+  CodeableConcept fundsReserveRequested,
+  CodeableConcept fundsReserve,
+  List<ExplanationOfBenefitRelated> related,
+  Reference prescription,
+  Reference originalPrescription,
+  ExplanationOfBenefitPayee payee,
+  Reference referral,
+  Reference facility,
+  Reference claim,
+  Reference claimResponse,
+  Code outcome,
+  @JsonKey(name: '_outcome')   Element outcomeElement,
+  String disposition,
+  @JsonKey(name: '_disposition')   Element dispositionElement,
+  List<String> preAuthRef,
+  @JsonKey(name: '_preAuthRef')   Element preAuthRefElement,
+  List<Period> preAuthRefPeriod,
+  List<ExplanationOfBenefitCareTeam> careTeam,
+  List<ExplanationOfBenefitSupportingInfo> supportingInfo,
+  List<ExplanationOfBenefitDiagnosis> diagnosis,
+  List<ExplanationOfBenefitProcedure> procedure,
+  PositiveInt precedence,
+  @JsonKey(name: '_precedence')   Element precedenceElement,
+  @required List<ExplanationOfBenefitInsurance> insurance,
+  ExplanationOfBenefitAccident accident,
+  List<ExplanationOfBenefitItem> item,
+  List<ExplanationOfBenefitAddItem> addItem,
+  List<ExplanationOfBenefitAdjudication> adjudication,
+  List<ExplanationOfBenefitTotal> total,
+  ExplanationOfBenefitPayment payment,
+  CodeableConcept formCode,
+  Attachment form,
+  List<ExplanationOfBenefitProcessNote> processNote,
+  Period benefitPeriod,
+  List<ExplanationOfBenefitBenefitBalance> benefitBalance,
+}) = _ExplanationOfBenefit;
 
  factory ExplanationOfBenefit.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitRelated implements ExplanationOfBenefitRelated, Resource {
-factoryExplanationOfBenefitRelated({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-claim claim,
-relationship relationship,
-reference reference,
-}) = _ExplanationOfBenefitRelated
+abstract class ExplanationOfBenefitRelated implements _$ExplanationOfBenefitRelated  {
+ExplanationOfBenefitRelated._();
+factory ExplanationOfBenefitRelated({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Reference claim,
+ CodeableConcept relationship,
+ Identifier reference,
+}) = _ExplanationOfBenefitRelated;
 
  factory ExplanationOfBenefitRelated.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitRelatedFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayee implements ExplanationOfBenefitPayee, Resource {
-factoryExplanationOfBenefitPayee({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-party party,
-}) = _ExplanationOfBenefitPayee
+abstract class ExplanationOfBenefitPayee implements _$ExplanationOfBenefitPayee  {
+ExplanationOfBenefitPayee._();
+factory ExplanationOfBenefitPayee({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept type,
+ Reference party,
+}) = _ExplanationOfBenefitPayee;
 
  factory ExplanationOfBenefitPayee.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitPayeeFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitCareTeam implements ExplanationOfBenefitCareTeam, Resource {
-factoryExplanationOfBenefitCareTeam({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-sequence sequence,
-_sequence _sequence,
-provider provider,
-responsible responsible,
-_responsible _responsible,
-role role,
-qualification qualification,
-}) = _ExplanationOfBenefitCareTeam
+abstract class ExplanationOfBenefitCareTeam implements _$ExplanationOfBenefitCareTeam  {
+ExplanationOfBenefitCareTeam._();
+factory ExplanationOfBenefitCareTeam({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  PositiveInt sequence,
+  @JsonKey(name: '_sequence')   Element sequenceElement,
+  @required Reference provider,
+  Boolean responsible,
+  @JsonKey(name: '_responsible')   Element responsibleElement,
+  CodeableConcept role,
+  CodeableConcept qualification,
+}) = _ExplanationOfBenefitCareTeam;
 
  factory ExplanationOfBenefitCareTeam.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitCareTeamFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitSupportingInfo implements ExplanationOfBenefitSupportingInfo, Resource {
-factoryExplanationOfBenefitSupportingInfo({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-sequence sequence,
-_sequence _sequence,
-category category,
-code code,
-timingDate timingDate,
-_timingDate _timingDate,
-timingPeriod timingPeriod,
-valueBoolean valueBoolean,
-_valueBoolean _valueBoolean,
-valueString valueString,
-_valueString _valueString,
-valueQuantity valueQuantity,
-valueAttachment valueAttachment,
-valueReference valueReference,
-reason reason,
-}) = _ExplanationOfBenefitSupportingInfo
+abstract class ExplanationOfBenefitSupportingInfo implements _$ExplanationOfBenefitSupportingInfo  {
+ExplanationOfBenefitSupportingInfo._();
+factory ExplanationOfBenefitSupportingInfo({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  PositiveInt sequence,
+  @JsonKey(name: '_sequence')   Element sequenceElement,
+  @required CodeableConcept category,
+  CodeableConcept code,
+  Date timingDate,
+  @JsonKey(name: '_timingDate')   Element timingDateElement,
+  Period timingPeriod,
+  Boolean valueBoolean,
+  @JsonKey(name: '_valueBoolean')   Element valueBooleanElement,
+  String valueString,
+  @JsonKey(name: '_valueString')   Element valueStringElement,
+  Quantity valueQuantity,
+  Attachment valueAttachment,
+  Reference valueReference,
+  Coding reason,
+}) = _ExplanationOfBenefitSupportingInfo;
 
  factory ExplanationOfBenefitSupportingInfo.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitSupportingInfoFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitDiagnosis implements ExplanationOfBenefitDiagnosis, Resource {
-factoryExplanationOfBenefitDiagnosis({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-sequence sequence,
-_sequence _sequence,
-diagnosisCodeableConcept diagnosisCodeableConcept,
-diagnosisReference diagnosisReference,
-type type,
-onAdmission onAdmission,
-packageCode packageCode,
-}) = _ExplanationOfBenefitDiagnosis
+abstract class ExplanationOfBenefitDiagnosis implements _$ExplanationOfBenefitDiagnosis  {
+ExplanationOfBenefitDiagnosis._();
+factory ExplanationOfBenefitDiagnosis({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ PositiveInt sequence,
+  @JsonKey(name: '_sequence')  Element sequenceElement,
+ CodeableConcept diagnosisCodeableConcept,
+ Reference diagnosisReference,
+ List<CodeableConcept> type,
+ CodeableConcept onAdmission,
+ CodeableConcept packageCode,
+}) = _ExplanationOfBenefitDiagnosis;
 
  factory ExplanationOfBenefitDiagnosis.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitDiagnosisFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcedure implements ExplanationOfBenefitProcedure, Resource {
-factoryExplanationOfBenefitProcedure({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-sequence sequence,
-_sequence _sequence,
-type type,
-date date,
-_date _date,
-procedureCodeableConcept procedureCodeableConcept,
-procedureReference procedureReference,
-udi udi,
-}) = _ExplanationOfBenefitProcedure
+abstract class ExplanationOfBenefitProcedure implements _$ExplanationOfBenefitProcedure  {
+ExplanationOfBenefitProcedure._();
+factory ExplanationOfBenefitProcedure({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ PositiveInt sequence,
+  @JsonKey(name: '_sequence')  Element sequenceElement,
+ List<CodeableConcept> type,
+ FhirDateTime date,
+  @JsonKey(name: '_date')  Element dateElement,
+ CodeableConcept procedureCodeableConcept,
+ Reference procedureReference,
+ List<Reference> udi,
+}) = _ExplanationOfBenefitProcedure;
 
  factory ExplanationOfBenefitProcedure.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitProcedureFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitInsurance implements ExplanationOfBenefitInsurance, Resource {
-factoryExplanationOfBenefitInsurance({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-focal focal,
-_focal _focal,
-coverage coverage,
-preAuthRef preAuthRef,
-_preAuthRef _preAuthRef,
-}) = _ExplanationOfBenefitInsurance
+abstract class ExplanationOfBenefitInsurance implements _$ExplanationOfBenefitInsurance  {
+ExplanationOfBenefitInsurance._();
+factory ExplanationOfBenefitInsurance({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  Boolean focal,
+  @JsonKey(name: '_focal')   Element focalElement,
+  @required Reference coverage,
+  List<String> preAuthRef,
+  @JsonKey(name: '_preAuthRef')   Element preAuthRefElement,
+}) = _ExplanationOfBenefitInsurance;
 
  factory ExplanationOfBenefitInsurance.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitInsuranceFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitAccident implements ExplanationOfBenefitAccident, Resource {
-factoryExplanationOfBenefitAccident({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-date date,
-_date _date,
-type type,
-locationAddress locationAddress,
-locationReference locationReference,
-}) = _ExplanationOfBenefitAccident
+abstract class ExplanationOfBenefitAccident implements _$ExplanationOfBenefitAccident  {
+ExplanationOfBenefitAccident._();
+factory ExplanationOfBenefitAccident({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Date date,
+  @JsonKey(name: '_date')  Element dateElement,
+ CodeableConcept type,
+ Address locationAddress,
+ Reference locationReference,
+}) = _ExplanationOfBenefitAccident;
 
  factory ExplanationOfBenefitAccident.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitAccidentFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitItem implements ExplanationOfBenefitItem, Resource {
-factoryExplanationOfBenefitItem({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-sequence sequence,
-_sequence _sequence,
-careTeamSequence careTeamSequence,
-_careTeamSequence _careTeamSequence,
-diagnosisSequence diagnosisSequence,
-_diagnosisSequence _diagnosisSequence,
-procedureSequence procedureSequence,
-_procedureSequence _procedureSequence,
-informationSequence informationSequence,
-_informationSequence _informationSequence,
-revenue revenue,
-category category,
-productOrService productOrService,
-modifier modifier,
-programCode programCode,
-servicedDate servicedDate,
-_servicedDate _servicedDate,
-servicedPeriod servicedPeriod,
-locationCodeableConcept locationCodeableConcept,
-locationAddress locationAddress,
-locationReference locationReference,
-quantity quantity,
-unitPrice unitPrice,
-factor factor,
-_factor _factor,
-net net,
-udi udi,
-bodySite bodySite,
-subSite subSite,
-encounter encounter,
-noteNumber noteNumber,
-_noteNumber _noteNumber,
-adjudication adjudication,
-detail detail,
-}) = _ExplanationOfBenefitItem
+abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem  {
+ExplanationOfBenefitItem._();
+factory ExplanationOfBenefitItem({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  PositiveInt sequence,
+  @JsonKey(name: '_sequence')   Element sequenceElement,
+  List<PositiveInt> careTeamSequence,
+  @JsonKey(name: '_careTeamSequence')   Element careTeamSequenceElement,
+  List<PositiveInt> diagnosisSequence,
+  @JsonKey(name: '_diagnosisSequence')   Element diagnosisSequenceElement,
+  List<PositiveInt> procedureSequence,
+  @JsonKey(name: '_procedureSequence')   Element procedureSequenceElement,
+  List<PositiveInt> informationSequence,
+  @JsonKey(name: '_informationSequence')   Element informationSequenceElement,
+  CodeableConcept revenue,
+  CodeableConcept category,
+  @required CodeableConcept productOrService,
+  List<CodeableConcept> modifier,
+  List<CodeableConcept> programCode,
+  Date servicedDate,
+  @JsonKey(name: '_servicedDate')   Element servicedDateElement,
+  Period servicedPeriod,
+  CodeableConcept locationCodeableConcept,
+  Address locationAddress,
+  Reference locationReference,
+  Quantity quantity,
+  Money unitPrice,
+  Decimal factor,
+  @JsonKey(name: '_factor')   Element factorElement,
+  Money net,
+  List<Reference> udi,
+  CodeableConcept bodySite,
+  List<CodeableConcept> subSite,
+  List<Reference> encounter,
+  List<PositiveInt> noteNumber,
+  @JsonKey(name: '_noteNumber')   Element noteNumberElement,
+  List<ExplanationOfBenefitAdjudication> adjudication,
+  List<ExplanationOfBenefitDetail> detail,
+}) = _ExplanationOfBenefitItem;
 
  factory ExplanationOfBenefitItem.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitItemFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitAdjudication implements ExplanationOfBenefitAdjudication, Resource {
-factoryExplanationOfBenefitAdjudication({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-category category,
-reason reason,
-amount amount,
-value value,
-_value _value,
-}) = _ExplanationOfBenefitAdjudication
+abstract class ExplanationOfBenefitAdjudication implements _$ExplanationOfBenefitAdjudication  {
+ExplanationOfBenefitAdjudication._();
+factory ExplanationOfBenefitAdjudication({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept category,
+  CodeableConcept reason,
+  Money amount,
+  Decimal value,
+  @JsonKey(name: '_value')   Element valueElement,
+}) = _ExplanationOfBenefitAdjudication;
 
  factory ExplanationOfBenefitAdjudication.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitAdjudicationFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail implements ExplanationOfBenefitDetail, Resource {
-factoryExplanationOfBenefitDetail({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-sequence sequence,
-_sequence _sequence,
-revenue revenue,
-category category,
-productOrService productOrService,
-modifier modifier,
-programCode programCode,
-quantity quantity,
-unitPrice unitPrice,
-factor factor,
-_factor _factor,
-net net,
-udi udi,
-noteNumber noteNumber,
-_noteNumber _noteNumber,
-adjudication adjudication,
-subDetail subDetail,
-}) = _ExplanationOfBenefitDetail
+abstract class ExplanationOfBenefitDetail implements _$ExplanationOfBenefitDetail  {
+ExplanationOfBenefitDetail._();
+factory ExplanationOfBenefitDetail({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  PositiveInt sequence,
+  @JsonKey(name: '_sequence')   Element sequenceElement,
+  CodeableConcept revenue,
+  CodeableConcept category,
+  @required CodeableConcept productOrService,
+  List<CodeableConcept> modifier,
+  List<CodeableConcept> programCode,
+  Quantity quantity,
+  Money unitPrice,
+  Decimal factor,
+  @JsonKey(name: '_factor')   Element factorElement,
+  Money net,
+  List<Reference> udi,
+  List<PositiveInt> noteNumber,
+  @JsonKey(name: '_noteNumber')   Element noteNumberElement,
+  List<ExplanationOfBenefitAdjudication> adjudication,
+  List<ExplanationOfBenefitSubDetail> subDetail,
+}) = _ExplanationOfBenefitDetail;
 
  factory ExplanationOfBenefitDetail.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitDetailFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitSubDetail implements ExplanationOfBenefitSubDetail, Resource {
-factoryExplanationOfBenefitSubDetail({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-sequence sequence,
-_sequence _sequence,
-revenue revenue,
-category category,
-productOrService productOrService,
-modifier modifier,
-programCode programCode,
-quantity quantity,
-unitPrice unitPrice,
-factor factor,
-_factor _factor,
-net net,
-udi udi,
-noteNumber noteNumber,
-_noteNumber _noteNumber,
-adjudication adjudication,
-}) = _ExplanationOfBenefitSubDetail
+abstract class ExplanationOfBenefitSubDetail implements _$ExplanationOfBenefitSubDetail  {
+ExplanationOfBenefitSubDetail._();
+factory ExplanationOfBenefitSubDetail({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  PositiveInt sequence,
+  @JsonKey(name: '_sequence')   Element sequenceElement,
+  CodeableConcept revenue,
+  CodeableConcept category,
+  @required CodeableConcept productOrService,
+  List<CodeableConcept> modifier,
+  List<CodeableConcept> programCode,
+  Quantity quantity,
+  Money unitPrice,
+  Decimal factor,
+  @JsonKey(name: '_factor')   Element factorElement,
+  Money net,
+  List<Reference> udi,
+  List<PositiveInt> noteNumber,
+  @JsonKey(name: '_noteNumber')   Element noteNumberElement,
+  List<ExplanationOfBenefitAdjudication> adjudication,
+}) = _ExplanationOfBenefitSubDetail;
 
  factory ExplanationOfBenefitSubDetail.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitSubDetailFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitAddItem implements ExplanationOfBenefitAddItem, Resource {
-factoryExplanationOfBenefitAddItem({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-itemSequence itemSequence,
-_itemSequence _itemSequence,
-detailSequence detailSequence,
-_detailSequence _detailSequence,
-subDetailSequence subDetailSequence,
-_subDetailSequence _subDetailSequence,
-provider provider,
-productOrService productOrService,
-modifier modifier,
-programCode programCode,
-servicedDate servicedDate,
-_servicedDate _servicedDate,
-servicedPeriod servicedPeriod,
-locationCodeableConcept locationCodeableConcept,
-locationAddress locationAddress,
-locationReference locationReference,
-quantity quantity,
-unitPrice unitPrice,
-factor factor,
-_factor _factor,
-net net,
-bodySite bodySite,
-subSite subSite,
-noteNumber noteNumber,
-_noteNumber _noteNumber,
-adjudication adjudication,
-detail detail,
-}) = _ExplanationOfBenefitAddItem
+abstract class ExplanationOfBenefitAddItem implements _$ExplanationOfBenefitAddItem  {
+ExplanationOfBenefitAddItem._();
+factory ExplanationOfBenefitAddItem({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<PositiveInt> itemSequence,
+  @JsonKey(name: '_itemSequence')   Element itemSequenceElement,
+  List<PositiveInt> detailSequence,
+  @JsonKey(name: '_detailSequence')   Element detailSequenceElement,
+  List<PositiveInt> subDetailSequence,
+  @JsonKey(name: '_subDetailSequence')   Element subDetailSequenceElement,
+  List<Reference> provider,
+  @required CodeableConcept productOrService,
+  List<CodeableConcept> modifier,
+  List<CodeableConcept> programCode,
+  Date servicedDate,
+  @JsonKey(name: '_servicedDate')   Element servicedDateElement,
+  Period servicedPeriod,
+  CodeableConcept locationCodeableConcept,
+  Address locationAddress,
+  Reference locationReference,
+  Quantity quantity,
+  Money unitPrice,
+  Decimal factor,
+  @JsonKey(name: '_factor')   Element factorElement,
+  Money net,
+  CodeableConcept bodySite,
+  List<CodeableConcept> subSite,
+  List<PositiveInt> noteNumber,
+  @JsonKey(name: '_noteNumber')   Element noteNumberElement,
+  List<ExplanationOfBenefitAdjudication> adjudication,
+  List<ExplanationOfBenefitDetail1> detail,
+}) = _ExplanationOfBenefitAddItem;
 
  factory ExplanationOfBenefitAddItem.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitAddItemFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail1 implements ExplanationOfBenefitDetail1, Resource {
-factoryExplanationOfBenefitDetail1({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-productOrService productOrService,
-modifier modifier,
-quantity quantity,
-unitPrice unitPrice,
-factor factor,
-_factor _factor,
-net net,
-noteNumber noteNumber,
-_noteNumber _noteNumber,
-adjudication adjudication,
-subDetail subDetail,
-}) = _ExplanationOfBenefitDetail1
+abstract class ExplanationOfBenefitDetail1 implements _$ExplanationOfBenefitDetail1  {
+ExplanationOfBenefitDetail1._();
+factory ExplanationOfBenefitDetail1({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept productOrService,
+  List<CodeableConcept> modifier,
+  Quantity quantity,
+  Money unitPrice,
+  Decimal factor,
+  @JsonKey(name: '_factor')   Element factorElement,
+  Money net,
+  List<PositiveInt> noteNumber,
+  @JsonKey(name: '_noteNumber')   Element noteNumberElement,
+  List<ExplanationOfBenefitAdjudication> adjudication,
+  List<ExplanationOfBenefitSubDetail1> subDetail,
+}) = _ExplanationOfBenefitDetail1;
 
  factory ExplanationOfBenefitDetail1.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitDetail1FromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitSubDetail1 implements ExplanationOfBenefitSubDetail1, Resource {
-factoryExplanationOfBenefitSubDetail1({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-productOrService productOrService,
-modifier modifier,
-quantity quantity,
-unitPrice unitPrice,
-factor factor,
-_factor _factor,
-net net,
-noteNumber noteNumber,
-_noteNumber _noteNumber,
-adjudication adjudication,
-}) = _ExplanationOfBenefitSubDetail1
+abstract class ExplanationOfBenefitSubDetail1 implements _$ExplanationOfBenefitSubDetail1  {
+ExplanationOfBenefitSubDetail1._();
+factory ExplanationOfBenefitSubDetail1({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept productOrService,
+  List<CodeableConcept> modifier,
+  Quantity quantity,
+  Money unitPrice,
+  Decimal factor,
+  @JsonKey(name: '_factor')   Element factorElement,
+  Money net,
+  List<PositiveInt> noteNumber,
+  @JsonKey(name: '_noteNumber')   Element noteNumberElement,
+  List<ExplanationOfBenefitAdjudication> adjudication,
+}) = _ExplanationOfBenefitSubDetail1;
 
  factory ExplanationOfBenefitSubDetail1.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitSubDetail1FromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitTotal implements ExplanationOfBenefitTotal, Resource {
-factoryExplanationOfBenefitTotal({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-category category,
-amount amount,
-}) = _ExplanationOfBenefitTotal
+abstract class ExplanationOfBenefitTotal implements _$ExplanationOfBenefitTotal  {
+ExplanationOfBenefitTotal._();
+factory ExplanationOfBenefitTotal({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept category,
+  @required Money amount,
+}) = _ExplanationOfBenefitTotal;
 
  factory ExplanationOfBenefitTotal.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitTotalFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayment implements ExplanationOfBenefitPayment, Resource {
-factoryExplanationOfBenefitPayment({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-adjustment adjustment,
-adjustmentReason adjustmentReason,
-date date,
-_date _date,
-amount amount,
-identifier identifier,
-}) = _ExplanationOfBenefitPayment
+abstract class ExplanationOfBenefitPayment implements _$ExplanationOfBenefitPayment  {
+ExplanationOfBenefitPayment._();
+factory ExplanationOfBenefitPayment({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept type,
+ Money adjustment,
+ CodeableConcept adjustmentReason,
+ Date date,
+  @JsonKey(name: '_date')  Element dateElement,
+ Money amount,
+ Identifier identifier,
+}) = _ExplanationOfBenefitPayment;
 
  factory ExplanationOfBenefitPayment.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitPaymentFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcessNote implements ExplanationOfBenefitProcessNote, Resource {
-factoryExplanationOfBenefitProcessNote({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-number number,
-_number _number,
-type type,
-_type _type,
-text text,
-_text _text,
-language language,
-}) = _ExplanationOfBenefitProcessNote
+abstract class ExplanationOfBenefitProcessNote implements _$ExplanationOfBenefitProcessNote  {
+ExplanationOfBenefitProcessNote._();
+factory ExplanationOfBenefitProcessNote({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ PositiveInt number,
+  @JsonKey(name: '_number')  Element numberElement,
+@JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown) ExplanationOfBenefitProcessNoteType type,
+  @JsonKey(name: '_type')  Element typeElement,
+ String text,
+  @JsonKey(name: '_text')  Element textElement,
+ CodeableConcept language,
+}) = _ExplanationOfBenefitProcessNote;
 
  factory ExplanationOfBenefitProcessNote.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitProcessNoteFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitBenefitBalance implements ExplanationOfBenefitBenefitBalance, Resource {
-factoryExplanationOfBenefitBenefitBalance({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-category category,
-excluded excluded,
-_excluded _excluded,
-name name,
-_name _name,
-description description,
-_description _description,
-network network,
-unit unit,
-term term,
-financial financial,
-}) = _ExplanationOfBenefitBenefitBalance
+abstract class ExplanationOfBenefitBenefitBalance implements _$ExplanationOfBenefitBenefitBalance  {
+ExplanationOfBenefitBenefitBalance._();
+factory ExplanationOfBenefitBenefitBalance({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept category,
+  Boolean excluded,
+  @JsonKey(name: '_excluded')   Element excludedElement,
+  String name,
+  @JsonKey(name: '_name')   Element nameElement,
+  String description,
+  @JsonKey(name: '_description')   Element descriptionElement,
+  CodeableConcept network,
+  CodeableConcept unit,
+  CodeableConcept term,
+  List<ExplanationOfBenefitFinancial> financial,
+}) = _ExplanationOfBenefitBenefitBalance;
 
  factory ExplanationOfBenefitBenefitBalance.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitBenefitBalanceFromJson(json);
 }
 
 @freezed
-abstract class ExplanationOfBenefitFinancial implements ExplanationOfBenefitFinancial, Resource {
-factoryExplanationOfBenefitFinancial({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-allowedUnsignedInt allowedUnsignedInt,
-_allowedUnsignedInt _allowedUnsignedInt,
-allowedString allowedString,
-_allowedString _allowedString,
-allowedMoney allowedMoney,
-usedUnsignedInt usedUnsignedInt,
-_usedUnsignedInt _usedUnsignedInt,
-usedMoney usedMoney,
-}) = _ExplanationOfBenefitFinancial
+abstract class ExplanationOfBenefitFinancial implements _$ExplanationOfBenefitFinancial  {
+ExplanationOfBenefitFinancial._();
+factory ExplanationOfBenefitFinancial({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept type,
+  UnsignedInt allowedUnsignedInt,
+  @JsonKey(name: '_allowedUnsignedInt')   Element allowedUnsignedIntElement,
+  String allowedString,
+  @JsonKey(name: '_allowedString')   Element allowedStringElement,
+  Money allowedMoney,
+  UnsignedInt usedUnsignedInt,
+  @JsonKey(name: '_usedUnsignedInt')   Element usedUnsignedIntElement,
+  Money usedMoney,
+}) = _ExplanationOfBenefitFinancial;
 
  factory ExplanationOfBenefitFinancial.fromJson(Map<String,dynamic> json) => _$ExplanationOfBenefitFinancialFromJson(json);
 }
 
 @freezed
-abstract class InsurancePlan implements InsurancePlan, Resource {
-factoryInsurancePlan({
-resourceType resourceType,
-id id,
-meta meta,
-implicitRules implicitRules,
-_implicitRules _implicitRules,
-language language,
-_language _language,
-text text,
-contained contained,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-status status,
-_status _status,
-type type,
-name name,
-_name _name,
-alias alias,
-_alias _alias,
-period period,
-ownedBy ownedBy,
-administeredBy administeredBy,
-coverageArea coverageArea,
-contact contact,
-endpoint endpoint,
-network network,
-coverage coverage,
-plan plan,
-}) = _InsurancePlan
+abstract class InsurancePlan implements _$InsurancePlan , Resource {
+InsurancePlan._();
+factory InsurancePlan({
+@JsonKey(defaultValue: 'className') @required String resourceType,
+  Id id,
+  Meta meta,
+  FhirUri implicitRules,
+  @JsonKey(name: '_implicitRules')   Element implicitRulesElement,
+  Code language,
+  @JsonKey(name: '_language')   Element languageElement,
+  Narrative text,
+  List<Resource> contained,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  List<Identifier> identifier,
+@JsonKey(unknownEnumValue: InsurancePlanStatus.unknown) InsurancePlanStatus status,
+  @JsonKey(name: '_status')   Element statusElement,
+  List<CodeableConcept> type,
+  String name,
+  @JsonKey(name: '_name')   Element nameElement,
+  List<String> alias,
+  @JsonKey(name: '_alias')   Element aliasElement,
+  Period period,
+  Reference ownedBy,
+  Reference administeredBy,
+  List<Reference> coverageArea,
+  List<InsurancePlanContact> contact,
+  List<Reference> endpoint,
+  List<Reference> network,
+  List<InsurancePlanCoverage> coverage,
+  List<InsurancePlanPlan> plan,
+}) = _InsurancePlan;
 
  factory InsurancePlan.fromJson(Map<String,dynamic> json) => _$InsurancePlanFromJson(json);
 }
 
 @freezed
-abstract class InsurancePlanContact implements InsurancePlanContact, Resource {
-factoryInsurancePlanContact({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-purpose purpose,
-name name,
-telecom telecom,
-address address,
-}) = _InsurancePlanContact
+abstract class InsurancePlanContact implements _$InsurancePlanContact  {
+InsurancePlanContact._();
+factory InsurancePlanContact({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept purpose,
+ HumanName name,
+ List<ContactPoint> telecom,
+ Address address,
+}) = _InsurancePlanContact;
 
  factory InsurancePlanContact.fromJson(Map<String,dynamic> json) => _$InsurancePlanContactFromJson(json);
 }
 
 @freezed
-abstract class InsurancePlanCoverage implements InsurancePlanCoverage, Resource {
-factoryInsurancePlanCoverage({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-network network,
-benefit benefit,
-}) = _InsurancePlanCoverage
+abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage  {
+InsurancePlanCoverage._();
+factory InsurancePlanCoverage({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept type,
+  List<Reference> network,
+  @required List<InsurancePlanBenefit> benefit,
+}) = _InsurancePlanCoverage;
 
  factory InsurancePlanCoverage.fromJson(Map<String,dynamic> json) => _$InsurancePlanCoverageFromJson(json);
 }
 
 @freezed
-abstract class InsurancePlanBenefit implements InsurancePlanBenefit, Resource {
-factoryInsurancePlanBenefit({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-requirement requirement,
-_requirement _requirement,
-limit limit,
-}) = _InsurancePlanBenefit
+abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit  {
+InsurancePlanBenefit._();
+factory InsurancePlanBenefit({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept type,
+  String requirement,
+  @JsonKey(name: '_requirement')   Element requirementElement,
+  List<InsurancePlanLimit> limit,
+}) = _InsurancePlanBenefit;
 
  factory InsurancePlanBenefit.fromJson(Map<String,dynamic> json) => _$InsurancePlanBenefitFromJson(json);
 }
 
 @freezed
-abstract class InsurancePlanLimit implements InsurancePlanLimit, Resource {
-factoryInsurancePlanLimit({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-value value,
-code code,
-}) = _InsurancePlanLimit
+abstract class InsurancePlanLimit implements _$InsurancePlanLimit  {
+InsurancePlanLimit._();
+factory InsurancePlanLimit({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ Quantity value,
+ CodeableConcept code,
+}) = _InsurancePlanLimit;
 
  factory InsurancePlanLimit.fromJson(Map<String,dynamic> json) => _$InsurancePlanLimitFromJson(json);
 }
 
 @freezed
-abstract class InsurancePlanPlan implements InsurancePlanPlan, Resource {
-factoryInsurancePlanPlan({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-identifier identifier,
-type type,
-coverageArea coverageArea,
-network network,
-generalCost generalCost,
-specificCost specificCost,
-}) = _InsurancePlanPlan
+abstract class InsurancePlanPlan implements _$InsurancePlanPlan  {
+InsurancePlanPlan._();
+factory InsurancePlanPlan({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ List<Identifier> identifier,
+ CodeableConcept type,
+ List<Reference> coverageArea,
+ List<Reference> network,
+ List<InsurancePlanGeneralCost> generalCost,
+ List<InsurancePlanSpecificCost> specificCost,
+}) = _InsurancePlanPlan;
 
  factory InsurancePlanPlan.fromJson(Map<String,dynamic> json) => _$InsurancePlanPlanFromJson(json);
 }
 
 @freezed
-abstract class InsurancePlanGeneralCost implements InsurancePlanGeneralCost, Resource {
-factoryInsurancePlanGeneralCost({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-groupSize groupSize,
-_groupSize _groupSize,
-cost cost,
-comment comment,
-_comment _comment,
-}) = _InsurancePlanGeneralCost
+abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost  {
+InsurancePlanGeneralCost._();
+factory InsurancePlanGeneralCost({
+ String id,
+ List<FhirExtension> extension,
+ List<FhirExtension> modifierExtension,
+ CodeableConcept type,
+ PositiveInt groupSize,
+  @JsonKey(name: '_groupSize')  Element groupSizeElement,
+ Money cost,
+ String comment,
+  @JsonKey(name: '_comment')  Element commentElement,
+}) = _InsurancePlanGeneralCost;
 
  factory InsurancePlanGeneralCost.fromJson(Map<String,dynamic> json) => _$InsurancePlanGeneralCostFromJson(json);
 }
 
 @freezed
-abstract class InsurancePlanSpecificCost implements InsurancePlanSpecificCost, Resource {
-factoryInsurancePlanSpecificCost({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-category category,
-benefit benefit,
-}) = _InsurancePlanSpecificCost
+abstract class InsurancePlanSpecificCost implements _$InsurancePlanSpecificCost  {
+InsurancePlanSpecificCost._();
+factory InsurancePlanSpecificCost({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept category,
+  List<InsurancePlanBenefit1> benefit,
+}) = _InsurancePlanSpecificCost;
 
  factory InsurancePlanSpecificCost.fromJson(Map<String,dynamic> json) => _$InsurancePlanSpecificCostFromJson(json);
 }
 
 @freezed
-abstract class InsurancePlanBenefit1 implements InsurancePlanBenefit1, Resource {
-factoryInsurancePlanBenefit1({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-cost cost,
-}) = _InsurancePlanBenefit1
+abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1  {
+InsurancePlanBenefit1._();
+factory InsurancePlanBenefit1({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept type,
+  List<InsurancePlanCost> cost,
+}) = _InsurancePlanBenefit1;
 
  factory InsurancePlanBenefit1.fromJson(Map<String,dynamic> json) => _$InsurancePlanBenefit1FromJson(json);
 }
 
 @freezed
-abstract class InsurancePlanCost implements InsurancePlanCost, Resource {
-factoryInsurancePlanCost({
-id id,
-extension extension,
-modifierExtension modifierExtension,
-type type,
-applicability applicability,
-qualifiers qualifiers,
-value value,
-}) = _InsurancePlanCost
+abstract class InsurancePlanCost implements _$InsurancePlanCost  {
+InsurancePlanCost._();
+factory InsurancePlanCost({
+  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+  @required CodeableConcept type,
+  CodeableConcept applicability,
+  List<CodeableConcept> qualifiers,
+  Quantity value,
+}) = _InsurancePlanCost;
 
  factory InsurancePlanCost.fromJson(Map<String,dynamic> json) => _$InsurancePlanCostFromJson(json);
 }
